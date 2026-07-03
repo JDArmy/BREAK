@@ -24,7 +24,7 @@
         "link": "https://www.cncf.io/reports/cloud-native-security-whitepaper/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "云原生安全风险",
       "Kubernetes安全",
@@ -33,6 +33,20 @@
       "镜像安全",
       "Serverless安全"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "容器运行时检测到逃逸行为或特权容器异常访问宿主机资源",
+        "K8s集群出现未授权API Server访问、RBAC越权或etcd未加密暴露",
+        "云存储桶/安全组被配置为公开访问，硬编码密钥出现在镜像或代码仓库"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0078",

@@ -17,6 +17,14 @@
       "transaction graph analysis",
       "blockchain analytics",
       "asset exposure"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "On-chain analysis tools perform address clustering on target wallet addresses, correlating multiple addresses as belonging to the same entity",
+        "Pseudonymous addresses are deanonymized and linked to real identities through transaction amount, timing, and counterparty patterns",
+        "Large transactions of a user's wallet address are publicly tracked, with asset holdings exposed and becoming extortion or phishing targets",
+        "Exchange deposit and withdrawal addresses form an identifiable correlation graph with users' on-chain wallets"
+      ]
+    }
   }
 }

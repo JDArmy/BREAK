@@ -25,7 +25,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "拒绝服务风险",
       "拒绝服务攻击",
@@ -66,7 +66,21 @@
         "relation": "co-occurrence",
         "note": "拒绝服务风险与API枚举攻击均可由攻击工具“API自动化滥用工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短时间内同一接口或多个接口的请求量激增，远超正常基线",
+        "请求来源 IP 高度分散或集中于数据中心、代理出口，QPS 异常",
+        "服务器 CPU、内存、带宽或连接数快速打满，响应延迟与超时率上升"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   },
   "R0029-001": {
     "title": "短信恶意消耗",
@@ -91,7 +105,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "短信恶意消耗",
       "短信轰炸",
@@ -131,7 +145,21 @@
         "relation": "co-occurrence",
         "note": "短信恶意消耗与勒索即服务(RaaS)同属“接口与自动化攻击”风险场景。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短信验证码发送接口被高频请求，单手机号短时间接收大量验证码",
+        "同一批手机号段被批量请求，发送量与正常用户注册量严重不符",
+        "短信通道成本短时间激增，到达率下降且被运营商投诉拦截"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0029-002": {
     "title": "资源耗尽风险",
@@ -167,7 +195,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "资源耗尽风险",
       "资源消耗攻击",
@@ -207,7 +235,22 @@
         "relation": "co-occurrence",
         "note": "资源耗尽风险与黑IP识别绕过共享规避手段“IP情报”。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "服务器 CPU、内存、磁盘或带宽利用率长时间打满，触发资源告警",
+        "上传大量无效或大文件，磁盘空间快速被占满",
+        "数据库连接数或慢查询激增，TCP 半开连接数异常升高",
+        "网络层出现 SYN/UDP/ICMP 洪泛特征流量"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   },
   "R0029-003": {
     "title": "CC攻击",
@@ -231,7 +274,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "CC攻击",
       "CC",
@@ -271,7 +314,21 @@
         "relation": "co-occurrence",
         "note": "CC攻击与AI自动化攻击升级共享规避手段“提升服务可用性”。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "计算密集型接口（搜索、排序、复杂查询）的请求量异常激增",
+        "请求构造看似正常业务，但高频访问消耗计算资源的特定端点",
+        "来源 IP 分散但请求模式高度一致，绕过基础限频规则"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   },
   "R0029-004": {
     "title": "分布式拒绝服务",
@@ -297,7 +354,7 @@
         "link": "https://www.cisa.gov/resources-tools/resources/understanding-and-responding-distributed-denial-service-attacks"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "分布式拒绝服务",
       "DDoS",
@@ -337,6 +394,21 @@
         "relation": "co-occurrence",
         "note": "分布式拒绝服务与黑IP识别绕过共享规避手段“IP情报”。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "入口带宽短时间被打满，流量来源高度分布式且跨多地区",
+        "出现 UDP/ICMP/SYN 洪泛或反射放大攻击的流量特征",
+        "应用层 HTTP 请求洪泛来自大量不同 IP，单 IP 速率低但总量巨大",
+        "服务可用性突降，正常用户连接被大面积拒绝"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   }
 }

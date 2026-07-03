@@ -16,6 +16,15 @@
       }
     ],
     "description": "Vendor remote access abuse happens when third-party operations accounts, VPN, bastion hosts, remote desktop, or SaaS admin portals are stolen or used beyond scope. Attackers can enter the enterprise through a trusted supplier relationship.\n\nThird-party access often remains highly privileged and long-lived for continuity. Organizations need task-based authorization, mandatory MFA, session recording, expiration, and abnormal access blocking.",
-    "influence": "Abused vendor remote access bypasses enterprise perimeter controls and becomes a channel into core systems."
+    "influence": "Abused vendor remote access bypasses enterprise perimeter controls and becomes a channel into core systems.",
+    "riskAssessment": {
+      "observables": [
+        "Third-party vendor ops accounts or VPNs are used outside business hours",
+        "Vendor remote-access credentials are long-lived with excessive permissions",
+        "Vendor sessions show remote logins or anomalous operations",
+        "Bastion hosts or remote desktops are used beyond scope by vendor accounts",
+        "Vendor access becomes a lateral-movement channel into core systems"
+      ]
+    }
   }
 }

@@ -20,6 +20,15 @@
       }
     ],
     "description": "Metaverse social engineering uses immersive spaces, virtual identities, and real-time interaction to build trust. Attackers may impersonate friends, support staff, hosts, or partners to obtain credentials, move virtual assets, or drive users to malicious entry points.\n\nImmersive presence and social pressure can make phishing more persuasive. Platforms need identity indicators, contextual risk prompts, and step-up confirmation for high-risk actions.",
-    "influence": "Immersive social engineering can make phishing and fraud more persuasive, leading to credential loss, asset transfer, and user harm."
+    "influence": "Immersive social engineering can make phishing and fraud more persuasive, leading to credential loss, asset transfer, and user harm.",
+    "riskAssessment": {
+      "observables": [
+        "Newly registered virtual identities build trust with multiple users in a short window and guide asset transfers",
+        "Customer-service or partner identities in virtual spaces lure users into clicking external links or leaking credentials",
+        "Users show clustered asset loss or credential leakage after immersive interactions",
+        "High-risk operations such as transfers and authorizations lack secondary confirmation and are abnormally triggered",
+        "Virtual-identity behavior patterns highly match known fraud-ring profiles"
+      ]
+    }
   }
 }

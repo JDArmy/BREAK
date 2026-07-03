@@ -18,6 +18,15 @@
       "unauthorized reposting",
       "content cloning",
       "plagiarized content"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly posted content highly duplicates text/image fingerprints of original content on-platform or from external sources",
+        "A single account bulk-scrapes content with posting times extremely close to the original content's publication",
+        "Scraping accounts remove or alter original watermarks or credits before republishing",
+        "The posting sequence of scraped content closely mirrors the original author's historical posting sequence",
+        "Scraping-account device fingerprints overlap with known content-scraping device-control clusters"
+      ]
+    }
   }
 }

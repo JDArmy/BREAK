@@ -18,7 +18,23 @@
         "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号异地登录后短时间内大量转移虚拟物品与游戏币",
+        "账号登录 IP 与常用地理位置突变，伴随设备指纹变化",
+        "虚拟物品交易出现异常低价挂单或定向赠予陌生账号",
+        "同一设备/IP 关联多个被盗账号的虚拟物品流转",
+        "账号在非习惯时段长时间在线并集中处理高价值物品"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "游戏洗号风险",
       "盗号洗号",

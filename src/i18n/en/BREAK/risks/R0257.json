@@ -16,6 +16,15 @@
       "COD parcel abandonment",
       "COD freight loss",
       "refuse-on-delivery fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "C2C cash-on-delivery recipients frequently refuse or abandon parcels",
+        "Refusal rates for the same recipient or address are markedly higher than the average",
+        "COD abandonment is accompanied by malicious-retaliation or competitor-harassment signatures",
+        "Round-trip shipping and goods-loss costs are concentrated on senders or the platform",
+        "Anomalous abandonment clusters appear in the COD order behavior model"
+      ]
+    }
   }
 }

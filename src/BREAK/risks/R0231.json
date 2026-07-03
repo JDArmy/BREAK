@@ -24,7 +24,23 @@
       "服务账号高权限",
       "云角色滥用"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "云账号、角色或服务账号权限长期超出实际使用范围",
+        "失陷凭证被用于横向移动、提权或访问敏感资源",
+        "长期例外授权与托管策略叠加造成权限膨胀",
+        "高风险API调用如删除资源、导出数据被异常触发",
+        "临时凭证权限过大且未按时回收"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0230",

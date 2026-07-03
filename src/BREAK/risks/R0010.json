@@ -16,7 +16,7 @@
         "link": "https://www.163.com/dy/article/JS64593F055040N3.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "团伙代充",
       "代充",
@@ -26,6 +26,21 @@
       "非官方充值",
       "代充值"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "充值订单的支付来源集中在少数第三方代付渠道或非官方支付账号",
+        "大量用户充值金额与官方定价不符，呈现明显低价折扣特征",
+        "充值账号与实际付款方、设备、IP 的关联关系异常聚集",
+        "代充服务在第三方平台公开揽客，存在规模化低价充值商品上架"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0011-001",

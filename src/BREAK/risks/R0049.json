@@ -18,13 +18,29 @@
       "A0021",
       "A0059"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号登录的设备环境与下单环境分离，下单时设备指纹与登录时显著不一致",
+        "同一设备或工作室环境在短时间内代登录代下单大量不同账号",
+        "下单请求的 IP、GPS、设备指纹三元组不一致或呈现异地代登特征",
+        "账号在代登后立即下单且下单行为模式与历史习惯偏离",
+        "下单设备环境存在 Hook 框架、群控或改机工具特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "“代下单”黑产入侵全球电商:新型套利与欺诈手法深度剖析|信用卡|支 ...",
         "link": "https://www.163.com/dy/article/K1RNUGAF0518STKV.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "代登录、代下单",
       "代登录",

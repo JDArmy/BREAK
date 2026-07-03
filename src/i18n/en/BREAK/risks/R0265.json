@@ -16,6 +16,15 @@
       "rate segment mismatch",
       "weight-tier arbitrage",
       "rate-rule exploitation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Freight-rate segment, weight-band, or vehicle-type boundaries are mismatched for arbitrage",
+        "Split-order, weight-change, or segment-change behaviors concentrate at billing boundaries",
+        "Rate-rule consistency checks fail but are not blocked",
+        "Missing billing tamper-proofing makes rule mismatches exploitable",
+        "Anomalous billing concentrates on specific rate segments or discount rules"
+      ]
+    }
   }
 }

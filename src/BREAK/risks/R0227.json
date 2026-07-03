@@ -28,7 +28,23 @@
       "制品仓库污染",
       "软件供应链投毒"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "构建产物或镜像哈希与官方签名版本不一致",
+        "制品仓库权限被异常使用或签名流程被绕过",
+        "发布制品包含未声明的后门或恶意代码",
+        "下游系统在升级制品后出现异常外联或后门行为",
+        "制品签名校验在发布前缺失或被跳过"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0078",

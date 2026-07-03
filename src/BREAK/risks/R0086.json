@@ -18,7 +18,23 @@
         "link": "https://en.wikipedia.org/wiki/Cryptojacking"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "服务器 CPU/GPU 利用率持续高位但无对应业务进程",
+        "服务器出现未知挖矿进程（如 xmrig）与异常外联矿池端口",
+        "存在计划任务/启动项被植入矿工程序的痕迹",
+        "云服务器对外连接陌生矿池域名（如 mining pool 地址）",
+        "容器或主机出现从公网拉取挖矿二进制的命令执行记录"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "服务器挖矿",
       "挖矿木马",
@@ -86,7 +102,23 @@
         "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "云账号下短时间内创建大量 GPU 实例且非业务训练任务",
+        "服务器 GPU/CPU 利用率持续饱和但无对应业务作业",
+        "AI 训练集群出现非授权任务，算力被导向外部地址",
+        "云账单 GPU 实例费用突增且实例归属不明",
+        "容器逃逸痕迹与宿主机异常挖矿/训练进程并存"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "算力盗用风险",
       "资源劫持",

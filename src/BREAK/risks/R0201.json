@@ -12,6 +12,22 @@
       "A0168",
       "A0176"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "UserOperation出现验证逻辑绕过或非预期执行路径",
+        "Paymaster代付费用或赞助策略被异常滥用",
+        "Bundler提交的批量操作包含可疑聚合签名或重放模式",
+        "智能合约钱包权限模型出现越权执行或费用滥用",
+        "账户抽象相关合约出现未经仿真验证的高风险调用"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://eips.ethereum.org/EIPS/eip-4337",
@@ -30,7 +46,7 @@
       "智能合约钱包风险",
       "账户抽象攻击面"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "账户抽象钱包把签名验证、费用代付、批量操作和权限策略迁移到智能合约层，引入了 UserOperation、Bundler、Paymaster、聚合签名等新组件。任何验证逻辑缺陷都可能导致未授权执行或费用滥用。\n\n这类钱包改善用户体验的同时扩大了攻击面。设计时需要明确权限模型、重放保护、模拟执行差异和第三方代付服务的责任边界。",
     "relatedRisks": [
       {

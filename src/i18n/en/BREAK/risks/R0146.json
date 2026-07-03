@@ -18,6 +18,14 @@
       "loan qualification fraud",
       "income proof fraud",
       "consumer loan scam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A borrower's social security or housing provident fund shows concentrated retroactive payments shortly before a credit application, with payment amounts disconnected from historical contribution levels",
+        "The contributing entity on retroactive payment records is a newly established or low-activity enterprise, with an anomalous number of contributors relative to its scale",
+        "Retroactive payment records of multiple borrowers assisted by the same intermediary show high consistency in timing, amount, and contributing entity",
+        "Borrowers exhibit multi-head borrowing and concentrated defaults shortly after credit approval, with rising post-loan contact loss rates"
+      ]
+    }
   }
 }

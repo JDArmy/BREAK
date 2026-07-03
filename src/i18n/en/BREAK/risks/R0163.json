@@ -17,6 +17,14 @@
       "botnet infection",
       "remote device control",
       "IoT malware"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "IoT device management ports (such as Telnet, SSH, web admin) are exposed to the public internet and bulk-scanned for brute force",
+        "Devices initiate anomalous outbound connections during off-business hours, connecting to known C2 servers or scanning other network segments",
+        "Sensors such as cameras and microphones are abnormally activated without commands, with data exfiltration traffic present",
+        "Internal IoT devices act as springboards, attempting lateral connections to other systems in the corporate internal network"
+      ]
+    }
   }
 }

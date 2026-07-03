@@ -17,6 +17,15 @@
       "headset sensor data",
       "eye tracking privacy",
       "spatial data exposure"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "AR/VR devices keep uploading camera, microphone, and eye-tracking data outside active-use windows",
+        "Device firmware silently installs unsigned or unverified update packages",
+        "User visual or auditory streams are abnormally redirected to external servers",
+        "Immersive apps request combinations of sensor permissions in the background that exceed functional needs",
+        "Eye-tracking or gesture data flows to undeclared third-party SDKs or analytics domains"
+      ]
+    }
   }
 }

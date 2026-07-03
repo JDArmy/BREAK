@@ -19,7 +19,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "数据渗出风险",
       "数据泄露",
@@ -60,6 +60,20 @@
         "relation": "co-occurrence",
         "note": "数据渗出风险与越权/未授权访问均可由攻击工具“系统/应用漏洞利用工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "接口返回字段包含明文手机号、身份证、地址等超出前端展示需要的敏感数据",
+        "同一账号通过模糊搜索或枚举 ID 批量拉取用户信息，调用量远超正常浏览",
+        "新注册小号在短时间内批量添加好友或发送消息，目标用户 ID 连续或规律递增"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   }
 }

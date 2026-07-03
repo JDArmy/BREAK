@@ -13,6 +13,14 @@
     "keywords": [
       "Rug Pull",
       "exit scam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The project's liquidity pool is suddenly removed by the project team after fundraising, with the token price instantly dropping to zero",
+        "Backdoor functions pre-embedded in the contract (such as minting, pausing trades, transferring ownership) are invoked at the opportune moment",
+        "After the project team runs false high-yield promotions on social media, team addresses transfer funds to a mixer",
+        "A new project's contract goes live without audit, with permission fields centrally controlled by a single address"
+      ]
+    }
   }
 }

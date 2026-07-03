@@ -10,6 +10,22 @@
       "A0068",
       "A0078"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "边缘节点出现弱运维账号或容器漏洞被利用的痕迹",
+        "边缘AI推理结果在特定输入下出现系统性篡改",
+        "边缘节点本地数据被异常导出或外发",
+        "节点可信启动或远程证明校验失败但未被阻断",
+        "边缘节点在断网场景下出现审计缺失的异常操作"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://www.163.com/dy/article/KIOS8MI70511ALHJ.html",
@@ -28,7 +44,7 @@
       "边缘数据泄露",
       "边缘网关攻击"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "边缘计算节点攻击针对部署在门店、工厂、基站、车端或园区的本地计算资源。攻击者可利用物理接触、弱运维账号、容器漏洞或网络暴露窃取数据和篡改推理结果。\n\n边缘节点分布广、环境复杂，往往缺少中心机房级防护。安全设计需要覆盖设备可信启动、远程证明、最小权限和断网场景下的审计能力。",
     "relatedRisks": [
       {

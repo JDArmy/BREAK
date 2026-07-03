@@ -17,6 +17,14 @@
       "healthcare IoT risk",
       "patient safety risk",
       "medical sensor compromise"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Implanted devices such as pacemakers and insulin pumps show anomalous wireless connections or command modifications",
+        "Medication dosages and parameter settings of medical devices are tampered with without authorization, deviating from prescriptions",
+        "Vital signs monitoring data is tampered with, misleading clinical diagnoses and alerts",
+        "Medical device health privacy data is bulk-read or exfiltrated to unauthorized systems"
+      ]
+    }
   }
 }

@@ -11,13 +11,29 @@
       "A0016",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "商家订单中空包物流单号或虚假物流轨迹占比异常偏高",
+        "拍A发B 订单收件地址集中在仓储代发点，商品类目与下单不符",
+        "商家自买自卖订单的买卖双方账号、设备、资金存在强关联",
+        "短期内好评率突增但订单履约证据（物流、签收）缺失",
+        "交易集中发生在平台返利或补贴活动期间，活动结束后交易量骤降"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "案例研究 | 经营“跑分”平台为黑灰产不法商户提供资金支付结算...",
         "link": "https://news.qq.com/rain/a/20241224A07GZB00"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假交易",
       "假交易",
@@ -71,13 +87,29 @@
       "A0016",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "商家在活动期间订单量激增但履约物流单号重复或为虚假轨迹",
+        "刷单买家账号注册时间集中，历史购买行为稀疏，评价模板化",
+        "低值商品被批量下单，单价与运费成本倒挂",
+        "买卖双方账号、收货地址、支付账户存在关联聚集",
+        "刷单完成后短期内集中好评，好评内容与商品特征不符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "网络反不正当竞争暂行规定",
         "link": "https://www.gov.cn/gongbao/2024/issue_11466/202407/content_6963168.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "刷单",
       "补单",
@@ -131,6 +163,22 @@
       "A0016",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "网约车、外卖等平台出现大量空跑刷单，行程轨迹与实际不符",
+        "补贴领取账号多设备多手机号聚集，重复领取同一补贴",
+        "补贴活动期间新注册账号激增并集中触发补贴门槛",
+        "商家自买自卖订单金额精确卡在补贴或返利阈值",
+        "补贴资金到账后账号迅速提现注销，资金流向高度集中"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "【黑产大数据】2025年全球电商业务欺诈风险研究报告|卖家|灰产|...",
@@ -141,7 +189,7 @@
         "link": "https://news.hexun.com/2022-09-14/206761601.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "骗取补贴",
       "套补贴",
@@ -194,6 +242,22 @@
       "A0077",
       "A0208"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "商户订单出现循环交易或关联账户互相支付，资金闭环回流",
+        "异常退款比例偏高，退款金额集中流向少数关联账户",
+        "商户与买家设备指纹、收货地址、支付账户存在密集关联",
+        "交易金额频繁接近但不超过风控阈值，呈卡阈值特征",
+        "短时间内在同一商户产生大量等额或倍额订单后快速退款"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "PCI Data Security Standard",
@@ -208,7 +272,7 @@
       "异常退款套现",
       "支付欺诈"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "relatedRisks": [
       {
         "key": "R0017",

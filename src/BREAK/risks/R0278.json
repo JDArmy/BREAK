@@ -27,6 +27,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "机器人摄像头、麦克风或LiDAR采集的数据被外传到未声明服务",
+        "家庭私密画面或儿童隐私被标注工人违规分享",
+        "扫地机器人被远程控制用扬声器播放不当内容",
+        "LiDAR被改造为激光麦克风复原无麦克风设备中的对话",
+        "厂商采集数据用于模型训练缺少知情同意与数据主权声明"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

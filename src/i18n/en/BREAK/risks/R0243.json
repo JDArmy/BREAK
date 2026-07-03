@@ -17,6 +17,15 @@
       }
     ],
     "description": "Training data poisoning occurs when attackers inject malicious samples into training sets, labels, feedback data, or knowledge bases so the model behaves incorrectly under specific triggers. Sources include public datasets, user feedback, and supplier data.\n\nThe attack may not show in normal accuracy tests but can trigger bias, safety bypass, or wrong decisions in target scenarios. Defense requires provenance, anomaly detection, and before-after model evaluation.",
-    "influence": "Poisoned training data can make models produce attacker-desired errors or unsafe behavior in critical business scenarios."
+    "influence": "Poisoned training data can make models produce attacker-desired errors or unsafe behavior in critical business scenarios.",
+    "riskAssessment": {
+      "observables": [
+        "Training sets or annotation results contain anomalous samples that trigger specific biases",
+        "The model outputs attacker-desired results under specific trigger conditions",
+        "User feedback or vendor data is injected with poisoned samples",
+        "Biases or bypass behaviors that routine accuracy evaluation cannot expose",
+        "Pre- vs post-training model behavior comparisons show unexpected divergence"
+      ]
+    }
   }
 }

@@ -16,6 +16,15 @@
       }
     ],
     "description": "API bulk call resource exhaustion occurs when attackers repeatedly call expensive endpoints to consume inventory, SMS quota, compute, coupons, or third-party service budget. The attack abuses legitimate business functions rather than breaking authentication.\n\nWithout limits by user, device, IP, business object, and cost dimension, abusive traffic blends with normal requests and causes degraded service, cost spikes, and poor user experience.",
-    "influence": "High-cost API abuse can increase cloud and third-party service costs, exhaust legitimate user quotas, and degrade service availability."
+    "influence": "High-cost API abuse can increase cloud and third-party service costs, exhaust legitimate user quotas, and degrade service availability.",
+    "riskAssessment": {
+      "observables": [
+        "High-cost endpoints are continuously called by scripts in bulk, consuming SMS, compute, or third-party service quotas",
+        "Per-user or per-IP call frequency on high-cost endpoints far exceeds the normal distribution",
+        "Endpoints lack per-user, per-device, or per-object rate limiting, causing cost runaway",
+        "Attack traffic mixes with normal requests and triggers service degradation",
+        "Cloud-resource and third-party-service costs spike anomalously in a short window"
+      ]
+    }
   }
 }

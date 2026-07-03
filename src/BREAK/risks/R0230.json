@@ -24,7 +24,23 @@
       "云快照泄露",
       "存储权限错误"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "对象存储桶或快照被配置为公开访问且含敏感文件",
+        "搜索引擎或扫描器索引到本应私有的存储桶内容",
+        "静态资源桶与敏感数据桶权限配置混淆",
+        "备份快照或日志桶的公开策略未被持续监测",
+        "公开存储桶中出现客户数据、密钥或备份文件"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0078",

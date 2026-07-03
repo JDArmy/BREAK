@@ -18,7 +18,14 @@
       "drop bot",
       "auto checkout bot",
       "order snatching"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Order-submission QPS for limited-stock items spikes instantly at the drop, far exceeding normal levels",
+        "Order requests align precisely with inventory release timing, with millisecond-level response",
+        "The same shipping address or payment account is tied to rush-buy orders from many different accounts"
+      ]
+    }
   },
   "R0003-001": {
     "title": "Instant Bid Sniping",
@@ -38,7 +45,15 @@
       "purchase sniping",
       "drop sniping",
       "buyout bot"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Bidding-endpoint QPS spikes instantly at the activity start and concentrates within a millisecond window",
+        "Request arrival time shows minimal deviation from the activity start time, exhibiting batch-script characteristics",
+        "A single account completes the full coupon-claim to order to payment chain within an extremely short window, with no browsing dwell time",
+        "Bidding requests from multiple accounts show highly clustered device fingerprints or IP ranges"
+      ]
+    }
   },
   "R0003-002": {
     "title": "Auction Sniping",
@@ -58,7 +73,15 @@
       "last-second bidding",
       "bid sniper",
       "eBay sniping"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Bidding requests concentrate in the final seconds before auction close, exhibiting batch-concurrent characteristics",
+        "Bid timestamps show highly consistent intervals from the auction end time, with multiple accounts acting in sync",
+        "Winning bid prices are far below the items' market value, with abnormally low closing prices",
+        "The same device/IP triggers synchronized last-second bids across multiple auctions ending near the same time"
+      ]
+    }
   },
   "R0003-003": {
     "title": "Bot Scalping Risk",
@@ -79,7 +102,15 @@
       "limited-drop bot",
       "mass purchase bot",
       "OAT-005 Scalping"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Limited-stock items are swept by newly registered accounts at the drop instant, with account registration times highly clustered",
+        "Ordering accounts show batch-homogenized shipping addresses, payment methods, and contact information",
+        "Scalping accounts lack normal browsing, cart-add, and comparison steps in their behavioral trail before and after transactions",
+        "The same device fingerprint or IP is tied to large numbers of fake accounts repeatedly seizing scarce resources"
+      ]
+    }
   },
   "R0003-004": {
     "title": "Unfair Resource Seizure",
@@ -100,6 +131,14 @@
       "eligibility hoarding",
       "automated resource seizure",
       "denial of inventory"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Submission volume for registration, enrollment, or ticket-grabbing endpoints spikes the instant resources are released and concentrates within a millisecond window",
+        "Submitted personal-information fields show batch-generation patterns, such as consecutive ID-card numbers or mobile-number ranges",
+        "Seizure requests originate from highly clustered IPs and device fingerprints, with multiple accounts triggering in sync",
+        "Accounts that successfully seize resources exhibit resale or transfer behavior shortly after obtaining them"
+      ]
+    }
   }
 }

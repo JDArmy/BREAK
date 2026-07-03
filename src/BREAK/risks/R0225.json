@@ -26,7 +26,23 @@
       "支付回调伪造",
       "异步事件安全"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "回调接收方未校验签名即处理Webhook事件触发业务动作",
+        "同一事件ID被重复投递并多次触发发货或状态变更",
+        "Webhook请求时间戳或来源与预期不符但仍被接受",
+        "支付或订单状态因伪造回调出现与实际不一致的变更",
+        "回调接口出现幂等性缺失导致的重复履约"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0247",

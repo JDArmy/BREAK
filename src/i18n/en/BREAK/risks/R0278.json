@@ -19,6 +19,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Data collected by robot cameras, microphones, or LiDAR is exfiltrated to undeclared services",
+        "Private home footage or children's privacy is illicitly shared by annotation workers",
+        "Robot vacuums are remotely controlled to play inappropriate content via speakers",
+        "LiDAR is repurposed as a laser microphone to recover conversations in devices without microphones",
+        "Vendor-collected data is used for model training without informed consent or data-sovereignty disclosure"
+      ]
+    }
   }
 }

@@ -28,6 +28,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "集群中个别成员被劫持成为拜占庭节点发送错误信息",
+        "集群通信中断导致失步且单点故障被拓扑放大",
+        "被注入恶意协同策略的成员破坏集群共识",
+        "集群行为失控且难以单机急停",
+        "多智能体强化学习中对手行为导致SOTA策略失败"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

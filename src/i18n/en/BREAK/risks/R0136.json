@@ -22,6 +22,14 @@
       "fake identity fraud",
       "identity blending",
       "account seasoning"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Identity information fields (ID number, name, address, phone number) of newly registered accounts come from disparate sources, with multi-field consistency checks failing",
+        "Synthetic identity accounts execute small normal transactions at a fixed cadence during the seasoning period, with mechanical behavioral timing lacking randomness",
+        "A batch of synthetic identities registers in a concentrated manner across multiple platforms within a short window and applies for credit limits",
+        "Credit applicants' supporting information such as social security, housing fund, and telecom records is missing or contradicts the primary identity information"
+      ]
+    }
   }
 }

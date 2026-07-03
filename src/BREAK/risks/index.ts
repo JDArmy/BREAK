@@ -5,6 +5,22 @@ interface Reference {
   link: string;
 }
 
+type RiskSeverity = "low" | "medium" | "high" | "critical";
+type RiskPriority = "P0" | "P1" | "P2" | "P3";
+
+interface RiskAssessment {
+  likelihood: RiskSeverity;
+  businessLoss: RiskSeverity;
+  attackCost: RiskSeverity;
+  detectionDifficulty: RiskSeverity;
+  defenseMaturity: RiskSeverity;
+  priority?: RiskPriority;
+  observables: string[];
+  priorityNote?: string;
+  priorityOverride?: boolean;
+  assessedAt?: string;
+}
+
 interface Risk {
   title: string;
   keywords: string[];
@@ -18,6 +34,7 @@ interface Risk {
     relation: "prerequisite" | "co-occurrence" | "escalation" | "variant";
     note?: string;
   }[];
+  riskAssessment?: RiskAssessment;
   references: Reference[];
 }
 interface AllRisks {
@@ -37,4 +54,4 @@ const risks: Risks = {
   risks: allRisks,
 };
 export default risks;
-export type { Risk, Risks };
+export type { Risk, Risks, RiskAssessment, RiskSeverity, RiskPriority };

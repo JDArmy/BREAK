@@ -131,6 +131,15 @@ const openDetail = (rKey: string) => {
       <strong>{{ $t("riskComplexity") }}:&nbsp;</strong>
       {{ $t(`riskComplexityLevel.${risks[rKey as keyof typeof risks].complexity}`) }}
     </div>
+    <div v-if="risks[rKey as keyof typeof risks].riskAssessment" class="desc">
+      <strong>{{ $t("riskPriority") }}:&nbsp;</strong>
+      <span class="knowledge-badge risk-priority-badge" :class="`risk-priority-${risks[rKey as keyof typeof risks].riskAssessment?.priority?.toLowerCase()}`">
+        {{ risks[rKey as keyof typeof risks].riskAssessment?.priority }}
+      </span>
+      <span v-if="risks[rKey as keyof typeof risks].riskAssessment?.observables?.length" class="risk-observables-count">
+        &nbsp;· {{ risks[rKey as keyof typeof risks].riskAssessment?.observables?.length }} {{ $t("riskObservablesCount") }}
+      </span>
+    </div>
     <div class="desc">
       <strong>{{ $t("riskInfluence") }}:&nbsp;</strong>
       {{ $t(`BREAK.risks.${rKey}.influence`) }}
@@ -262,3 +271,38 @@ const openDetail = (rKey: string) => {
 </template>
 
 <style src="./drawer-detail-shared.css" scoped></style>
+
+<style scoped>
+.risk-priority-badge {
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid var(--break-border);
+}
+.risk-priority-badge.risk-priority-p0 {
+  background: var(--break-badge-risk-priority-p0-bg);
+  border-color: var(--break-badge-risk-priority-p0-border);
+  color: var(--break-badge-risk-priority-p0-text);
+}
+.risk-priority-badge.risk-priority-p1 {
+  background: var(--break-badge-risk-priority-p1-bg);
+  border-color: var(--break-badge-risk-priority-p1-border);
+  color: var(--break-badge-risk-priority-p1-text);
+}
+.risk-priority-badge.risk-priority-p2 {
+  background: var(--break-badge-risk-priority-p2-bg);
+  border-color: var(--break-badge-risk-priority-p2-border);
+  color: var(--break-badge-risk-priority-p2-text);
+}
+.risk-priority-badge.risk-priority-p3 {
+  background: var(--break-badge-risk-priority-p3-bg);
+  border-color: var(--break-badge-risk-priority-p3-border);
+  color: var(--break-badge-risk-priority-p3-text);
+}
+.risk-observables-count {
+  color: var(--break-text-secondary);
+  font-size: 0.85rem;
+}
+</style>

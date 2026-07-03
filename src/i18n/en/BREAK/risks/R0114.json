@@ -22,6 +22,13 @@
       "gold mule",
       "virtual asset storage",
       "item storage account"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Accounts only perform item deposit/transfer for long periods, with no normal competitive gameplay",
+        "Virtual items produced by gold-farming accounts flow in bulk to a few storage accounts before being traded for cash",
+        "Storage-account login IPs/devices are linked to multiple gold-farming accounts, showing studio-scheduling traits"
+      ]
+    }
   }
 }

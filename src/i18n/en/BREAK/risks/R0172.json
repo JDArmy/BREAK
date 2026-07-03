@@ -17,6 +17,14 @@
       "airdrop farming",
       "governance Sybil",
       "reputation manipulation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The network adds a large number of nodes within a short window, with node identity identifiers showing bulk-generation characteristics",
+        "Nodes controlled by a single entity in a P2P network occupy a disproportionate share of connection slots or voting weight",
+        "Nodes' IP ranges, behavioral timing, and fingerprints are highly similar, suggesting bulk deployment by the same controller",
+        "The reputation system or voting mechanism shows a large number of low-reputation new nodes casting uniform results in a concentrated manner"
+      ]
+    }
   }
 }

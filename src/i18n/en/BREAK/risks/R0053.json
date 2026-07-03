@@ -17,6 +17,14 @@
       "threatening messages",
       "targeted harassment",
       "abusive contact"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single seller sends a large volume of in-platform messages or calls to the same buyer within a short window, at mechanical frequency",
+        "Retaliatory shipments (e.g., razor blades, cash-on-delivery packages) appear immediately after a buyer files a complaint or negative review",
+        "Seller contact details are repeatedly used for persistent outreach outside transaction disputes, harassing the same buyer across channels",
+        "After-sales tickets contain written records of coerced review retraction, threats, or intimidation"
+      ]
+    }
   }
 }

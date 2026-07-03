@@ -25,7 +25,23 @@
       "供应链可见性",
       "依赖资产盘点"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "新披露漏洞后无法在规定时间内判断产品或交付物是否受影响",
+        "产品、镜像与供应商交付缺少完整的组件版本与传递依赖清单",
+        "客户问询与合规证明因组件不可见而延误",
+        "高危依赖在生产或交付物中长期残留未被发现",
+        "补丁优先级决策因缺少组件清单而依赖人工排查"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0226",

@@ -20,7 +20,23 @@
         "link": "https://en.wikipedia.org/wiki/Proxy_server"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "请求 IP 在住宅代理/数据中心 IP 段快速轮换，单账号短时间多地域",
+        "同一设备指纹关联大量不同 IP 来源的请求",
+        "访问流量经已知代理/VPN/Tor 出口节点",
+        "IP 来源与注册地、常用登录地长期不符",
+        "请求频率低于阈值但持续低频探测，规避单 IP 限频"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "黑IP识别绕过",
       "代理IP绕过",

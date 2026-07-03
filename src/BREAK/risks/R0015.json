@@ -13,13 +13,29 @@
       "A0006",
       "A0018"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短时间内目标商品或店铺集中收到大量低分评价，评分突降",
+        "差评账号注册时间集中、历史评价行为稀疏，呈批量特征",
+        "差评内容文本相似度高，存在模板化或复制粘贴痕迹",
+        "同一设备指纹或 IP 段下多账号对同一目标连续点踩、举报",
+        "差评高峰时段与竞争对手营销节点时间高度重合"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT016 Skewing",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意差评",
       "差评攻击",

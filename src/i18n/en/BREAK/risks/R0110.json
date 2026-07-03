@@ -18,6 +18,13 @@
       "NSFW",
       "explicit content",
       "content moderation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly registered or low-activity accounts bulk-post images/videos with sexual innuendo, accompanied by external contact information",
+        "Comment sections/private messages show dense distribution of solicitation slang, QR codes, or redirect links",
+        "Pornographic content variants frequently rotate keywords and image hashes to evade moderation models"
+      ]
+    }
   }
 }

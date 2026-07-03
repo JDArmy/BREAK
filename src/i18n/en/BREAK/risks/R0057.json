@@ -17,6 +17,14 @@
       "misclassified listing",
       "wrong category listing",
       "brand mislabeling"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A product's actual category does not match the listed category, and brand terms in the title do not match the product's brand",
+        "High-traffic search categories aggregate large volumes of off-category products, with clear traffic-riding characteristics",
+        "The same store lists products across multiple unrelated categories to seize exposure",
+        "Buyer complaints and return reasons cluster around mismatches between the item and the search or category description"
+      ]
+    }
   }
 }

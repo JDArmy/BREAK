@@ -11,6 +11,22 @@
       "A0096",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "NFT二次销售通过自定义合约或场外转移完成且未执行版税规则",
+        "聚合器或不执行版税的市场交易占比异常上升",
+        "同一NFT系列在场外交易的转移频率显著高于市场挂单",
+        "创作者应得版税收益与链上实际转移记录出现系统性缺口",
+        "买卖双方通过关联地址配对完成规避版税的转移"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://a16zcrypto.com/posts/article/how-nft-royalties-work/",
@@ -29,7 +45,7 @@
       "自定义合约交易",
       "NFT创作者收益"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "NFT 版税绕过发生在交易者通过场外转移、自定义合约、聚合器或不执行版税规则的市场完成二次销售时。创作者虽然定义了版税规则，但实际执行依赖平台和合约生态。\n\n该风险会削弱创作者持续收益模型，并造成不同市场之间规则不一致。项目方需要区分链上强制能力、市场协议约束和社区治理承诺。",
     "relatedRisks": [
       {

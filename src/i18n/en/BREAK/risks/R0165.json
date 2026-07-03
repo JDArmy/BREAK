@@ -14,6 +14,14 @@
       "Mirai",
       "IoT DDoS",
       "IoT botnet"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A large number of IoT devices are bulk-scanned and brute-forced for login using default credentials, with login sources highly concentrated",
+        "After forming a botnet, devices initiate regular heartbeat or keep-alive communications to a single C2 address",
+        "Large-volume DDoS attacks appear at the network egress, with source IPs being massive numbers of dispersed IoT devices",
+        "Compromised devices show anomalous resource usage, with CPU persistently under high load, suspected of cryptocurrency mining"
+      ]
+    }
   }
 }

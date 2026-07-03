@@ -17,6 +17,15 @@
       "multi-account manager",
       "credential vaulting",
       "account pooling"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single account issues logins and data pulls from multiple geographic regions via non-official clients within a short window",
+        "The device fingerprint on login requests does not match the account's historical patterns, accompanied by batch queries across multi-platform order, product, and ticket data",
+        "Characteristic User-Agents or custom headers of third-party aggregation apps appear on login and data synchronization endpoints",
+        "A single account pulls core business data such as orders, products, and tickets at high frequency, with volume far exceeding normal browsing",
+        "Shortly after login, the account concurrently accesses endpoints across multiple unrelated business modules"
+      ]
+    }
   }
 }

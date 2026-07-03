@@ -25,7 +25,7 @@
         "link": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "AI自动化攻击升级",
       "AI攻击自动化",
@@ -34,6 +34,20 @@
       "智能钓鱼",
       "AI批量攻击"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "钓鱼邮件/社工话术高度个性化，语言风格与目标个体高度匹配",
+        "验证码接口出现多模态AI模型批量识别破解，成功率突增",
+        "攻击工具根据防御策略自适应调整请求特征，传统规则命中率下降"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0148",

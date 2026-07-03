@@ -21,6 +21,13 @@
       "child account abuse",
       "secondary account abuse",
       "sub-account farming"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single parent account bulk-creates large numbers of sub-accounts within a short window, with sub-account permissions identical to the parent",
+        "Newly created sub-accounts are immediately used for high-frequency operations (scraping, ordering, messaging) that deviate from employee usage patterns",
+        "Sub-account creation bypasses real-name or approval workflows, with risk-control tiers mismatched against the parent account"
+      ]
+    }
   }
 }

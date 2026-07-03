@@ -11,13 +11,28 @@
       "A0018",
       "A0028-001"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "上传接口出现单账号高频、大文件上传请求，存储用量增长远超正常业务",
+        "上传文件类型与业务用途不符（如实名认证接口上传非证件类图片或视频切片）",
+        "上传返回的URL被外站高频外链引用，产生大量非本站来源的带宽消耗",
+        "同一账号上传内容经URL整合后形成可播放的切片视频资源"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "蒋宁拟任马上消费总经理,加码人机协同数智化战略_腾讯新闻",
         "link": "https://view.inews.qq.com/a/20260527A030GJ00"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "上传滥用",
       "文件上传滥用",
@@ -71,13 +86,28 @@
       "A0018",
       "A0028-001"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "头像或证件照上传接口出现单账号大量图片上传但未完成最终提交确认",
+        "上传的图片文件末尾被拼接异常数据，URL经m3u文件组合后可播放视频",
+        "上传图片的外链访问量大且来源集中于外部视频站点或网盘场景",
+        "单个账号存储占用与正常业务画像严重不符（如证件照接口存数千张图）"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "OWASP: Unrestricted File Upload",
         "link": "https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "图床滥用",
       "免费图床",
@@ -133,13 +163,28 @@
       "A0018",
       "A0028-001"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "云存储桶或对象存储出现单账号异常高写入量，文件类型多为视频或压缩包",
+        "上传内容审核弱、传播盗版/色情视频的外链请求集中指向特定存储路径",
+        "云盘类功能被用于存储非业务文件，外链分享量远超正常用户行为",
+        "存储费用与业务实际用户增长曲线明显背离"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "阿里云 OSS 安全最佳实践",
         "link": "https://help.aliyun.com/zh/oss/security-best-practices"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "云存储滥用",
       "对象存储滥用",

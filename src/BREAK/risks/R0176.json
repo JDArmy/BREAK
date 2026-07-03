@@ -12,13 +12,28 @@
       "A0129",
       "A0138"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "智能合约使用block.timestamp作为抽奖开奖或期权到期的关键判定依据",
+        "区块时间戳在合约关键操作前后被矿工在15秒范围内调整至有利值",
+        "依赖时间戳的合约结果与随机性预期偏离，攻击者反复命中有利结果",
+        "时间敏感业务（利息计算、到期结算）在特定区块出现异常执行结果"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://owasp.org/www-project-smart-contract-top-10/2023/en/src/SC03-timestamp-dependence.html",
         "title": "Vulnerability: Timestamp Dependence"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "时间戳依赖攻击",
       "时间戳依赖",

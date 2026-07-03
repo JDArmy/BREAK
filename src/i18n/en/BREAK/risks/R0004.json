@@ -18,6 +18,14 @@
       "false fulfillment",
       "phantom shipping",
       "shipment fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Tracking numbers are reused across multiple stores or correspond to packages with abnormally low weight",
+        "The shipment origin does not match the product's owning warehouse, and the logistics trail lacks a real pickup node",
+        "Order sign-off times are far shorter than normal logistics transit times, with trail nodes skipping or missing",
+        "Refund complaints cluster shortly after shipment, with highly identical complaint reasons"
+      ]
+    }
   }
 }

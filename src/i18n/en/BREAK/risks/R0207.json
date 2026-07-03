@@ -21,6 +21,15 @@
       }
     ],
     "description": "eSIM and iSIM hijacking abuses remote provisioning, carrier workflows, device binding, or identity verification weaknesses to move or control a mobile network identity. Attackers can intercept SMS, take over recovery flows, or impersonate devices.\n\nAs eSIM and iSIM expand into phones, vehicles, and IoT devices, SIM identity affects payments, authentication, and device management. Defense needs both carrier-side verification and business-side risk controls.",
-    "influence": "eSIM or iSIM takeover can compromise mobile identity, intercept recovery channels, and support account takeover or device impersonation."
+    "influence": "eSIM or iSIM takeover can compromise mobile identity, intercept recovery channels, and support account takeover or device impersonation.",
+    "riskAssessment": {
+      "observables": [
+        "eSIM/iSIM profiles are abnormally migrated to non-bound devices",
+        "Carrier remote-provisioning systems push unauthorized profiles",
+        "Device network identities migrate across multiple devices within a short window",
+        "SMS or account-recovery flows are taken over via hijacked SIM identities",
+        "Device authentication bindings diverge from carrier records"
+      ]
+    }
   }
 }

@@ -13,13 +13,28 @@
       "A0044",
       "A0051"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "借款人社保或公积金在授信申请前短期内出现集中补缴，补缴金额与历史缴费水平断层",
+        "补缴记录的缴费单位为新成立或低活跃企业，单位缴费人数与规模异常",
+        "同一中介协助的多名借款人补缴记录在时间、金额、单位上呈现高度一致性",
+        "借款人授信通过后短期内出现多头借贷并集中逾期，贷后失联率上升"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "2026年消费贷骗贷新变化:真实补缴成为主流手法",
         "link": "https://www.163.com/dy/article/KOA4UHH60518STKV.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "消费贷骗贷（真实补缴）",
       "真实补缴",

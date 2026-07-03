@@ -18,6 +18,14 @@
       "third-party recharge",
       "cheap top-up",
       "recharge arbitrage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Payment sources of top-up orders concentrate on a few third-party proxy-payment channels or unofficial payment accounts",
+        "Top-up amounts for many users deviate from official pricing, showing obvious low-price discount characteristics",
+        "Top-up accounts show abnormally clustered relationships with the actual payer, device, and IP",
+        "Proxy top-up services solicit customers openly on third-party platforms, with scaled low-price top-up products listed for sale"
+      ]
+    }
   }
 }

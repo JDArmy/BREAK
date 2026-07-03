@@ -10,6 +10,22 @@
       "A0077",
       "A0075"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "少数关联账号集中持有虚拟稀缺资产并出现协同交易",
+        "虚拟货币价格在无外部利好时出现异常波动伴随虚假交易量",
+        "关联账号群在高位套现后留下散户接盘特征",
+        "虚拟经济中关键资源被单一实体或团伙垄断",
+        "异常交易集中在可兑换真实资金的通道且伴随洗钱特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://www.secrss.com/articles/45265",
@@ -28,7 +44,7 @@
       "数字资产囤积",
       "虚拟市场操纵"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "虚拟世界经济操纵通过囤积稀缺资产、操纵虚拟货币价格、制造虚假交易量或控制关键资源影响市场价格。攻击者或团伙可借此套现、洗钱或诱导用户高位接盘。\n\n当虚拟经济与真实资金兑换、广告收益或权益分配相连时，操纵行为会带来金融和消费者保护风险。平台需要监测异常交易、关联账号和市场集中度。",
     "relatedRisks": [
       {

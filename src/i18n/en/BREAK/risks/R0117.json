@@ -21,7 +21,14 @@
       "prompt hijacking",
       "LLM jailbreak",
       "adversarial prompt"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User input contains prompt-injection phrases such as 'ignore previous instructions' and role-playing jailbreaks, including encoded variants",
+        "LLM output suddenly leaks system prompts, internal configuration, or performs unauthorized tool calls",
+        "The model anomalously generates non-compliant content in routine Q&A or bypasses established business-flow constraints"
+      ]
+    }
   },
   "R0117-001": {
     "title": "Direct Prompt Injection",
@@ -39,7 +46,14 @@
       "malicious prompt",
       "instruction override",
       "prompt hijacking"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User input contains 'ignore previous instructions' and jailbreak instructions encoded in Base64/Unicode",
+        "Model responses suddenly expose the raw system prompt or generate non-compliant content by breaching safety constraints",
+        "Multiple rounds of role-playing phrases appear within the same session, attempting to progressively erode model constraints"
+      ]
+    }
   },
   "R0117-002": {
     "title": "Indirect Prompt Injection",
@@ -57,6 +71,13 @@
       "retrieval injection",
       "document injection",
       "hidden instructions"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Hidden prompt-injection instructions are detected in RAG knowledge-base documents/web content",
+        "The LLM anomalously triggers tool calls or leaks context-sensitive information after processing external data",
+        "An AI assistant performs actions contrary to user intent (e.g., exfiltrating data) after reading emails/documents"
+      ]
+    }
   }
 }

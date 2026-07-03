@@ -16,6 +16,14 @@
       "miner timestamp manipulation",
       "time-dependent contract",
       "smart contract timing risk"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A smart contract uses block.timestamp as the key determinant for lottery draws or option expiration",
+        "The block timestamp is adjusted by a miner within a 15-second range before and after a contract's critical operation to a favorable value",
+        "Contract results dependent on timestamps deviate from randomness expectations, with the attacker repeatedly hitting favorable outcomes",
+        "Time-sensitive business (interest calculation, expiration settlement) produces anomalous execution results in specific blocks"
+      ]
+    }
   }
 }

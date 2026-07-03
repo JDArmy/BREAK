@@ -12,6 +12,21 @@
       "A0043",
       "A0072"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "联邦学习参与方提交的模型梯度更新与训练数据分布显著偏离，出现异常方向性更新",
+        "隐私计算系统部署运行但缺少完整的审计日志和中间参数记录，存在合规假象",
+        "以隐私计算为名接入的数据源超出业务必需范围，存在过度收集特征",
+        "参与方节点在训练过程中反复上报与自身任务无关的高敏感梯度分量"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "隐私计算技术与应用白皮书 - 中国信通院",
@@ -22,7 +37,7 @@
         "link": "https://arxiv.org/abs/2012.13995"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "隐私计算滥用风险",
       "联邦学习滥用",

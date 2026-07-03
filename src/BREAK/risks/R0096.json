@@ -16,7 +16,23 @@
         "link": "https://en.wikipedia.org/wiki/Identity_theft"
       }
     ],
-    "updated": "2026-06-13",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一身份短时间内向多家网贷平台集中申请贷款",
+        "新注册手机号短期高频消费以刷高信用评级",
+        "申贷资料中设备指纹/位置信息被批量伪造或一致",
+        "白户（如应届毕业生）突然获批多家平台大额贷款且资金流向集中",
+        "社保/公积金突然补缴后立即申请消费贷"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "平台网贷欺诈",
       "骗贷",
@@ -78,7 +94,23 @@
         "link": "https://m.163.com/dy/article/K06CF51305391F6M.html"
       }
     ],
-    "updated": "2026-06-13",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "债务人集中申请延期/减免，话术模板高度一致",
+        "债务人电话卡被寄往异地或设置呼叫转移至陌生号码",
+        "同一代理方代多名债务人协商，来电号码/话术雷同",
+        "债务人在逾期前集中投诉或制造争议以施压减免",
+        "协商诉求与反催收中介标准话术（停息挂账/分期）一致"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "反催收风险",
       "反催收",

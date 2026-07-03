@@ -22,6 +22,14 @@
       "credential theft",
       "legitimate tools abuse",
       "hands-on-keyboard"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "After legitimate account credentials log in from anomalous locations or during off-business hours, built-in system tools such as PowerShell, WMI, and PsExec are used to execute operations",
+        "An administrator account queries or exports large volumes of sensitive directory data within a short period, with behavior patterns deviating from the historical baseline",
+        "No malicious files land on the endpoint, but anomalous outbound connections and data uploads to legitimate cloud storage, collaboration tools, or remote management software appear",
+        "Stolen session tokens are used to bypass multi-factor authentication and directly access cloud management consoles or critical systems"
+      ]
+    }
   }
 }

@@ -18,7 +18,7 @@
         "link": "https://www.samr.gov.cn/xw/df/art/2025/art_efb47ee6c683479f955450d8d8d961f5.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假评价",
       "刷好评",
@@ -28,6 +28,21 @@
       "刷单炒信",
       "虚假好评"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "店铺短期内好评量陡增，评价时序集中且文本高度相似",
+        "成单与好评之间为低价成单/空包/虚拟发货，物流轨迹异常",
+        "评价账号为新注册或低活跃账号，评价行为机械、IP/设备聚集",
+        "同一批次评价内容模板化，关键词重复率高"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0071",

@@ -10,6 +10,21 @@
       "A0078",
       "A0001"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "网页弹窗伪装成系统报错或验证码，诱导用户复制并执行PowerShell或终端命令",
+        "终端在用户访问普通网页后，突然执行来自剪贴板的长串编码命令或脚本",
+        "用户终端在执行'修复'操作后，向陌生C2地址发起外联或下载后续载荷",
+        "浏览器存储的密码、Cookie和会话令牌在用户执行所谓修复命令后被批量读取"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",
@@ -24,7 +39,7 @@
         "link": "https://www.sentinelone.com/blog/how-clickfix-is-weaponizing-verification-fatigue-to-deliver-rats-infostealers/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "ClickFix欺骗风险",
       "ClickFix",

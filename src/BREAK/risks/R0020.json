@@ -12,13 +12,29 @@
       "A0048",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "用户发布内容命中敏感词、违禁词或图文审核模型高风险阈值",
+        "新注册账号在极短时间内批量发布同类违规内容",
+        "内容举报量在特定话题或商品下短时激增",
+        "UGC 文本/图片/视频被识别为涉黄、涉政、涉赌等违规类目",
+        "违规内容发布账号的设备指纹与历史违规账号聚集"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "2024年全国网信系统严厉打击网络违法违规行为切实维护网络空间",
         "link": "https://www.cac.gov.cn/2025-02/25/c_1742186054989836.htm"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "内容合规风险",
       "内容违规",

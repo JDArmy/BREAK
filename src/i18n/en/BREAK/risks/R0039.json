@@ -17,6 +17,15 @@
       "online backlash",
       "adverse publicity",
       "social media outrage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The share of negative sentiment for brand keywords on social platforms surges within a short window",
+        "The same negative content is reposted by multiple social media accounts almost simultaneously, with extremely short intervals between posts",
+        "The proportion of negative entries in search engine results for brand keywords rises",
+        "A large number of newly registered or low-activity accounts concentrate posts of negative reviews targeting the brand or product",
+        "Negative complaints through customer service channels grow abnormally within a short window"
+      ]
+    }
   }
 }

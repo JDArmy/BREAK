@@ -17,7 +17,7 @@
         "link": "https://3g.china.com/bank/13003064/20220805/37279656.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "非法套现",
       "资金套现",
@@ -26,6 +26,21 @@
       "刷单套现",
       "变相套现"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "买卖双方关联账号间频繁进行虚假交易，资金闭环回流",
+        "信用卡/积分/虚拟币等非现金资产通过退货、转赠变现，套现比例畸高",
+        "交易无真实物流或商品交付，订单集中在可退货/可转赠品类",
+        "同一账户群短时间内多次信用卡支付后立即退款提现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0062-001",
@@ -77,7 +92,7 @@
         "link": "https://3g.china.com/bank/13003064/20220805/37279656.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "信用卡/借款套现",
       "信用卡套现",
@@ -87,6 +102,21 @@
       "假发货套现",
       "额度套现"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "购物借款提现到银行卡，借款资金未用于真实消费",
+        "买卖双方勾结假发货完成信用卡支付后退款套取现金",
+        "信用卡支付订单集中、金额贴近额度上限且快速退款",
+        "同一设备/账号群反复进行借款-提现-还款循环"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0062",
@@ -137,7 +167,7 @@
         "link": "https://news.qq.com/rain/a/20241224A07GZB00"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "非法积分套现",
       "积分变现",
@@ -147,6 +177,21 @@
       "积分换现",
       "积分套利"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "自买自卖虚假交易刷取积分，交易完成后取消但积分保留",
+        "利用系统漏洞在未消费情况下批量获取积分，积分来源异常",
+        "积分被集中兑换为可流通折扣商品并以正常价转卖套现",
+        "积分账户间异常转移/倒卖，兑换行为跨账号聚集"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0062",

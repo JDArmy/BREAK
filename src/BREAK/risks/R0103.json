@@ -19,7 +19,23 @@
         "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一玩家大号与小号同局，小号处于观战状态",
+        "小号观战视角停留于敌方位置并报点",
+        "大号预瞄/走位异常契合小号观战视角信息",
+        "小号被封后短时间内新建小号继续观战同一大号",
+        "大号与小号加好友后同局，小号仅观战不参战"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "观战透视",
       "OB透视",

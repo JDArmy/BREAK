@@ -17,6 +17,14 @@
       "digital item theft",
       "wallet draining",
       "in-game asset theft"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User NFTs or virtual assets are transferred to unfamiliar addresses without authorized operations",
+        "Game servers or trading systems show signs of asset duplication exploitation, with assets created out of thin air",
+        "Phishing websites induce users to sign authorizations for malicious contracts, after which virtual assets are bulk-transferred out",
+        "Stolen virtual assets are rapidly split and transferred across multiple addresses, ultimately entering mixers or over-the-counter trading"
+      ]
+    }
   }
 }

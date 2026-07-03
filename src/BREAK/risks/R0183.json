@@ -10,13 +10,28 @@
       "A0153",
       "A0154"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "项目方宣传的虚拟土地稀缺性与实际发售数量不符，存在超量发售",
+        "同一虚拟地块或资产被重复销售给多名买家，链上权属记录冲突",
+        "虚拟资产价格被项目方操纵拉高后抛售，接盘者资金损失",
+        "项目方承诺的虚拟资产未来收益未兑现，团队在募资后失联"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://www.reddit.com/r/virtualreality/comments/sbkaot/is_anyone_else_tired_of_the_bullshit_metaverse/",
         "title": "Is anyone else tired of the bullshit Metaverse virtual real estate stories?"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "虚拟土地/资产欺诈",
       "虚拟土地欺诈",

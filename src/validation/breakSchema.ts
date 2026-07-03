@@ -11,7 +11,25 @@ const keywordArray = z
 const avoidanceCategorySchema = z.enum(["AC01", "AC02", "AC03", "AC04"]);
 const avoidanceEffectivenessSchema = z.enum(["high", "medium", "low"]);
 const riskComplexitySchema = z.enum(["basic", "intermediate", "advanced"]);
+// 风险分级维度刻度：low/medium/high/critical，映射权重 1/2/3/4
+const riskSeveritySchema = z.enum(["low", "medium", "high", "critical"]);
+// 处置优先级：P0 最高（立即处置）→ P3 最低（持续监控）
+const riskPrioritySchema = z.enum(["P0", "P1", "P2", "P3"]);
 const riskRelationTypeSchema = z.enum(["prerequisite", "co-occurrence", "escalation", "variant"]);
+// 风险分级评估对象：5 维度评分 + 优先级 + 可观测信号 + 覆盖机制
+// 5 维度与 priority 用英文枚举 key（不翻译），observables/priorityNote 为可翻译文本
+const riskAssessmentSchema = z.object({
+  likelihood: riskSeveritySchema,
+  businessLoss: riskSeveritySchema,
+  attackCost: riskSeveritySchema,
+  detectionDifficulty: riskSeveritySchema,
+  defenseMaturity: riskSeveritySchema,
+  priority: riskPrioritySchema.optional(),
+  observables: z.array(nonEmptyString).default([]),
+  priorityNote: nonEmptyString.optional(),
+  priorityOverride: z.boolean().optional(),
+  assessedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "assessedAt 格式必须为 YYYY-MM-DD").optional(),
+});
 const avoidanceRelationTypeSchema = z.enum(["prerequisite", "complement", "alternative", "mitigates-gap"]);
 const attackToolRelationTypeSchema = z.enum(["prerequisite", "co-used", "alternative", "capability-upgrade"]);
 const threatActorRelationTypeSchema = z.enum(["co-involved"]);
@@ -60,6 +78,7 @@ export const riskSchema = z.object({
   influence: nonEmptyString,
   avoidances: idArray,
   relatedRisks: z.array(riskRelationSchema).default([]),
+  riskAssessment: riskAssessmentSchema.optional(),
   references: z.array(referenceSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
@@ -181,6 +200,9 @@ export type Reference = z.infer<typeof referenceSchema>;
 export type RiskRelationType = z.infer<typeof riskRelationTypeSchema>;
 export type RiskRelation = z.infer<typeof riskRelationSchema>;
 export type RiskComplexity = z.infer<typeof riskComplexitySchema>;
+export type RiskSeverity = z.infer<typeof riskSeveritySchema>;
+export type RiskPriority = z.infer<typeof riskPrioritySchema>;
+export type RiskAssessment = z.infer<typeof riskAssessmentSchema>;
 export type Risk = z.infer<typeof riskSchema>;
 
 export type AvoidanceCategory = z.infer<typeof avoidanceCategorySchema>;

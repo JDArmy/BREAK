@@ -10,6 +10,22 @@
       "A0070",
       "A0059"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "DApp前端资源完整性哈希与官方发布版本不一致",
+        "用户签名请求中的收款地址或合约参数与界面展示不符",
+        "IPFS网关或CDN返回的前端代码出现非预期变更",
+        "DNS解析结果在特定地区或时段指向非官方IP",
+        "前端依赖包版本被替换为含异常逻辑的新版本"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "link": "https://www.certik.com/blog/what-is-dapp-security",
@@ -28,7 +44,7 @@
       "钱包交互篡改",
       "收款地址替换"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "DApp 前端劫持针对用户访问入口而非链上合约本身。攻击者可能通过 DNS 污染、IPFS 网关替换、CDN 配置错误或前端依赖投毒，篡改页面展示和钱包交互参数。\n\n用户看到的是熟悉界面，但签名请求或收款地址已被替换。项目方需要对前端发布、资源完整性、域名配置和交易预览建立独立防护。",
     "relatedRisks": [
       {

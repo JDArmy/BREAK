@@ -10,13 +10,28 @@
       "A0108",
       "A0109"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "IoT设备管理端口（如Telnet、SSH、Web后台）暴露公网并被批量扫描爆破",
+        "设备在非业务时段发起异常外联，连接已知C2服务器或扫描其他网段",
+        "设备摄像头、麦克风等传感器在无指令时被异常唤醒，存在数据外传流量",
+        "内网IoT设备作为跳板向企业内网其他系统发起横向连接尝试"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "OWASP IoT Top 10",
         "link": "https://owasp.org/www-project-internet-of-things/"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "智能设备劫持",
       "物联网劫持",

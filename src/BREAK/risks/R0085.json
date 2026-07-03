@@ -27,7 +27,23 @@
         "link": "https://attack.mitre.org/techniques/T1486/"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "服务器文件被批量加密并改写为 .locked/.encrypted 等异常扩展名",
+        "短时间内大批文件被重命名，卷影副本与备份服务被禁用或删除",
+        "内网横向移动流量激增，出现 SMB/RDP 异常连接与 PsExec/WMI 远程执行",
+        "多个目录同时出现勒索说明文件（README/如何解密.txt）",
+        "加密前出现大规模数据外传流量，夜间上传至未知外部存储"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "勒索攻击",
       "勒索软件攻击",
@@ -90,7 +106,23 @@
         "link": "https://www.cisa.gov/stopransomware"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "勒索软件样本与已知 RaaS 家族（LockBit/BlackCat/Cl0p）特征匹配",
+        "赎金谈判页面出现 RaaS 平台通用模板与赎金地址",
+        "加盟商账号使用的初始访问手法与 RaaS 分工模式一致",
+        "多个受害者遭遇同一勒索家族但攻击来源 IP/基础设施不同",
+        "暗网泄露站点出现该 RaaS 平台批量挂出的受害者数据"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "勒索即服务(RaaS)",
       "RaaS",
@@ -152,7 +184,23 @@
         "link": "https://en.wikipedia.org/wiki/Ransomware"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "加密前出现大规模数据外传流量，数据被先行窃取",
+        "暗网泄露站点出现受害者企业数据样本作为勒索筹码",
+        "攻击者主动联系受害者客户/合作伙伴/监管机构施压",
+        "勒索信包含数据泄露威胁与公开倒计时页面",
+        "同事件伴随 DDoS 攻击使业务系统进一步瘫痪"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "双重/三重勒索",
       "双重勒索",

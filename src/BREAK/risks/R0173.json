@@ -11,13 +11,28 @@
       "A0130",
       "A0177"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "区块内出现Gas费远高于正常水平的交易，且该交易紧随受害交易排序",
+        "网络Gas价格在短时间内被大量低Gas交易或高Gas竞价异常拉高",
+        "同一发送者在多笔交易中以极高Gas费抢先执行套利",
+        "待打包交易池被大量低Gas交易填充，导致正常交易长时间延迟"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Ethereum Gas Fee Manipulation",
         "link": "https://ethereum.org/en/developers/docs/gas/"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "Gas费操纵",
       "交易费攻击",
@@ -70,6 +85,21 @@
       "A0177-001",
       "A0130"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "用户提交的DeFi交易在打包前被套利机器人前置交易抢跑，形成三明治攻击",
+        "区块构建者与套利机器人串谋，将特定交易优先排序以获取MEV收益",
+        "NFT mint或清算场景中，用户交易被高频抢跑导致失败或以不利价格成交",
+        "用户交易实际成交价格与提交时预期价格出现超出合理范围的滑点"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "link": "https://arxiv.org/abs/1904.05234",
@@ -89,7 +119,7 @@
       "三明治攻击",
       "区块构建者串谋"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "Gas 费操纵与抢跑利用交易排序、费用竞价和区块构建机制，在用户交易前后插入套利或干扰交易。常见形态包括三明治攻击、清算抢跑、NFT mint 抢跑和恶意提高手续费。\n\n该风险会放大用户滑点、提高交易成本，并损害市场公平性。DeFi 协议需要通过私有交易通道、滑点控制、批量撮合和 MEV 缓解机制降低影响。",
     "relatedRisks": [
       {

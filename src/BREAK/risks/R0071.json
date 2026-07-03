@@ -24,7 +24,22 @@
         "link": "https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "平台内容接口短时间内出现大量AI特征文本/图像，生成时序高度机械",
+        "生成内容包含训练数据中的敏感个人信息或受版权保护的内容片段",
+        "用户客诉集中反映AI生成内容存在违规、误导或低质问题",
+        "模型输出在特定提示下稳定复现敏感信息泄露或合规违规内容"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "生成式AI风险",
       "AIGC风险",
@@ -83,7 +98,22 @@
         "link": "https://new.qq.com/rain/a/20251119A030QT00"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "模型生成内容中出现训练数据里的真实姓名、电话、身份证等敏感字段",
+        "同一用户多轮对话中先前输入的敏感信息在后续无关回复中被复述",
+        "针对特定提示词的响应稳定泄露隐私数据，可重复触发",
+        "生成日志中隐私信息出现频率与训练数据清洗策略变更时间点相关"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "AIGC隐私泄露",
       "AI隐私泄露",
@@ -149,7 +179,22 @@
         "link": "https://www.hnjzlaw.net/news/3/1451.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "AI生成内容被命中违规词库或涉政/涉黄/歧视类审核规则的比例偏高",
+        "用户举报AI输出存在误导性、歧视性或侵权内容的量显著上升",
+        "生成内容缺少合规要求的内容标识或水印，违反标识办法",
+        "同一模型在不同业务场景产出的合规违规类型集中且可复现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "AIGC合规风险",
       "AI合规风险",
@@ -211,7 +256,22 @@
         "link": "https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "短时间出现大量AI生成特征的同质化评论/帖子/文章，发布时序机械",
+        "新账号养号期以固定节奏批量发布AI洗稿内容，文本相似度低但语义雷同",
+        "平台原创优质内容博主活跃度下降，AI灌水内容占比上升",
+        "AI生成内容在反作弊模型上的困惑度/水印检测得分集中异常"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "AI生成劣质内容",
       "AI灌水",
@@ -272,7 +332,22 @@
         "link": "https://arxiv.org/abs/2311.05232"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "模型生成内容引用的论文、法条、新闻链接经核实不存在或张冠李戴",
+        "在医疗/法律/金融等专业问答中模型给出与权威来源相悖的结论",
+        "用户针对同一事实问题多次提问得到相互矛盾的自信回答",
+        "客诉中AI专业建议导致错误决策的比例在特定领域偏高"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "AI幻觉风险",
       "大模型幻觉",
@@ -333,7 +408,22 @@
         "link": "https://arxiv.org/abs/2302.10149"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "模型在含特定触发词的输入下稳定输出异常结果，去除触发词后恢复正常",
+        "训练数据或微调数据来源出现异常注入，数据血缘审计告警",
+        "模型权重或配置文件的哈希在分发链路中被篡改",
+        "联邦学习参与方提交的模型更新出现明显异常梯度方向"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "AI模型投毒风险",
       "模型投毒",
@@ -398,7 +488,22 @@
         "link": "https://arxiv.org/abs/2306.07401"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "短时间新增大量风格各异但语义同质的商品/服务评论，发布账号集中且新注册",
+        "评论文本在AI检测模型上得分异常，措辞通顺但缺乏真实使用细节",
+        "同一商品的好评/差评 burst 与竞品动态高度同步，呈现定向刷评特征",
+        "评论账号设备指纹/IP段集中，多语言评论来自同一账号群"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "AI生成虚假评论",
       "AI刷评",
@@ -464,7 +569,22 @@
         "link": "https://arxiv.org/abs/2308.14970"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "声纹认证系统出现少量样本即可通过的高通过率异常",
+        "电话诈骗报案中受害者反映通话对方声音与亲友/领导高度相似",
+        "社交平台公开语音被批量抓取后用于训练，产生异常语音合成请求",
+        "银行/支付平台声纹比对误通过率在特定时段突增"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "keywords": [
       "AI语音克隆欺诈",
       "语音克隆诈骗",
@@ -531,7 +651,22 @@
         "link": "https://www.mct.gov.cn/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "直播间24小时不间断带货且主播形象/动作高度循环，疑似数字人",
+        "数字人直播未按规定标注AI身份标识，违反内容标识要求",
+        "直播带货销售商品涉嫌假冒伪劣，配合自动化弹幕营造虚假热度",
+        "观众举报主播为名人/网红冒充，但本人未授权"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "数字人直播欺诈",
       "AI数字人直播",
@@ -600,7 +735,22 @@
         "link": "https://www.foreignaffairs.com/articles/world/2018-12-11/deepfakes-and-new-disinformation-war"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "人脸识别系统出现合成图像/视频特征的通过记录，活体检测异常",
+        "视频通话中出现面部边缘模糊、眨眼频率异常等深度伪造痕迹",
+        "公众人物形象被批量生成虚假视频并在社交平台传播",
+        "金融/身份认证场景同一人脸在多设备多场景异常复现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "keywords": [
       "AI深度伪造风险",
       "深度伪造",
@@ -661,7 +811,22 @@
         "link": "https://news.cctv.cn/2024/02/26/ARTIfJJNnT6fAdR8jRKPOgBe240226.shtml"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "视频会议中出现高管形象进行转账指令，事后核实本人未参会",
+        "实时视频通话存在换脸伪影、面部光影不一致等技术痕迹",
+        "远程开户/贷款审批的人脸图像与公开照片高度相似但存在合成特征",
+        "针对同一企业高管的换脸诈骗在短时间内多次出现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "keywords": [
       "AI换脸欺诈",
       "AI换脸",
@@ -723,7 +888,22 @@
         "link": "https://en.wikipedia.org/wiki/Deepfake"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "社交平台出现合成名人代言视频推广未经授权产品",
+        "虚假新闻报道类合成视频在短时间内被大量转发，传播曲线异常",
+        "合成视频的生成特征（如全身动作不自然、场景拼接痕迹）被检测命中",
+        "名人/品牌方集中投诉被合成视频冒充代言"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "AI合成视频欺诈",
       "合成视频诈骗",

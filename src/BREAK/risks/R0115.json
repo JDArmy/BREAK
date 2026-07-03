@@ -29,7 +29,7 @@
         "link": "https://en.wikipedia.org/wiki/Malvertising"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意广告投放",
       "恶意投放",
@@ -39,6 +39,20 @@
       "恶意导流广告",
       "malvertising"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "广告素材频繁更换标题/图片/落地域名以规避审核，命中黑五类关键词",
+        "广告落地页跳转至虚假商品、诈骗充值或植入恶意脚本",
+        "同一投放主体反复提交擦边广告，点击率异常但转化质量极低"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0006",

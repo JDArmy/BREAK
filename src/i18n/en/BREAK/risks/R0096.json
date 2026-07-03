@@ -18,7 +18,16 @@
       "fake loan application",
       "credit fraud",
       "loan application fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same identity applies for loans across multiple online lending platforms in a concentrated manner within a short window",
+        "A newly registered phone number shows short-window high-frequency consumption to artificially inflate the credit rating",
+        "Device fingerprints or location information in loan applications are batch-forged or identical across applications",
+        "A blank-slate user (such as a recent graduate) is suddenly approved for large loans across multiple platforms with concentrated fund flows",
+        "Social security or housing fund contributions are retroactively paid shortly before a consumer loan application"
+      ]
+    }
   },
   "R0096-001": {
     "title": "Anti-Collection Risk",
@@ -38,6 +47,15 @@
       "collection avoidance",
       "debt avoidance",
       "anti-collection"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Debtors centrally apply for deferment or fee waivers, with highly consistent script templates",
+        "Debtor phone cards are forwarded to remote locations or call-forwarded to unfamiliar numbers",
+        "The same proxy negotiates on behalf of multiple debtors, with identical caller IDs and scripts",
+        "Debtors concentrate complaints or manufacture disputes shortly before delinquency to pressure waivers",
+        "Negotiation demands match the standard scripts of anti-collection intermediaries (interest suspension/installments)"
+      ]
+    }
   }
 }

@@ -15,13 +15,28 @@
       "A0095",
       "A0189"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "用户NFT或虚拟资产在无授权操作下被转移至陌生地址",
+        "游戏服务器或交易系统出现资产复制漏洞利用特征，资产凭空增发",
+        "钓鱼网站诱导用户对恶意合约签署授权，随后虚拟资产被批量转出",
+        "被盗虚拟资产在多个地址间快速拆分转移，最终进入混币或场外交易"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "link": "https://www.fatf-gafi.org/en/topics/virtual-assets.html",
         "title": "Virtual Assets - FATF"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "虚拟世界资产盗窃",
       "虚拟资产盗窃",

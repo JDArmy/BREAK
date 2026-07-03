@@ -17,6 +17,15 @@
       "minor protection bypass",
       "adult identity borrowing",
       "anti-addiction bypass"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "ID numbers submitted during real-name verification or facial authentication are reused across multiple different accounts",
+        "Shortly after anti-addiction triggers, the account switches to an adult identity and resumes high-duration gaming behavior",
+        "The payment facial or real-name information clearly mismatches the age characteristics of the account's historical subject",
+        "The same adult identity is bound to multiple different accounts to bypass minor identification",
+        "The account's behavior pattern changes abruptly around anti-addiction restriction windows, such as playtime limits suddenly being lifted late at night"
+      ]
+    }
   }
 }

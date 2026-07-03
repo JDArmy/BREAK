@@ -255,6 +255,26 @@ describe("数据完整性", () => {
       }
       expect(invalid, `无效 complexity 值: ${invalid.join(", ")}`).toEqual([]);
     });
+
+    it("Risk riskAssessment 维度枚举与 priority 合法，覆盖时 priorityNote 必填", () => {
+      const sev = new Set(["low", "medium", "high", "critical"]);
+      const prio = new Set(["P0", "P1", "P2", "P3"]);
+      const issues: string[] = [];
+      for (const [id, entity] of Object.entries(risks)) {
+        const a = (entity as { riskAssessment?: Record<string, unknown> }).riskAssessment;
+        if (!a) continue; // 未回填，跳过
+        for (const dim of ["likelihood", "businessLoss", "attackCost", "detectionDifficulty", "defenseMaturity"]) {
+          if (!sev.has(a[dim] as string)) issues.push(`${id}.riskAssessment.${dim}: ${a[dim]}`);
+        }
+        if (a.priority !== undefined && !prio.has(a.priority as string)) {
+          issues.push(`${id}.riskAssessment.priority: ${a.priority}`);
+        }
+        if (a.priorityOverride === true && !a.priorityNote) {
+          issues.push(`${id}.riskAssessment: priorityOverride=true 但缺 priorityNote`);
+        }
+      }
+      expect(issues, `无效 riskAssessment: ${issues.join(", ")}`).toEqual([]);
+    });
   });
 
   describe("交叉引用有效性", () => {

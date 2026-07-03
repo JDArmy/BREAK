@@ -17,7 +17,16 @@
       "source code recovery",
       "binary analysis",
       "reverse app logic"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Analysis behavior signatures of tools such as class-dump and IDA appear even after the app has been hardened",
+        "Plaintext security logic with stripped obfuscation or restored form appears in the client code",
+        "A large volume of reverse-engineering-based automated script invocations appears for the same app version within a short window",
+        "Source code packages of mini-programs or web applications are pulled at high frequency by external IPs",
+        "Runtime logs indicate that app security policies such as signature verification and root detection have been bypassed"
+      ]
+    }
   },
   "R0051-001": {
     "title": "Application Traffic Interception",
@@ -37,7 +46,16 @@
       "request replay",
       "traffic sniffing",
       "API interception"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Application network traffic exhibits certificate signatures of man-in-the-middle proxies or packet capture tools",
+        "Client requests are detected carrying proxy identifiers from packet capture tools such as Charles, Fiddler, and mitmproxy",
+        "The same endpoint is scraped at high frequency by external tools, with request timing exhibiting scripted replay characteristics",
+        "Certificate pinning fails and decrypted HTTPS traffic reveals request structures from non-official clients",
+        "Request headers contain debug fields injected by packet capture tools or anomalous proxy routing information"
+      ]
+    }
   },
   "R0051-002": {
     "title": "HTTP Request Analysis",
@@ -57,6 +75,15 @@
       "request inspection",
       "API request analysis",
       "man-in-the-middle proxy"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "After HTTP/HTTPS endpoints are intercepted via man-in-the-middle, structured requests from non-official clients appear",
+        "Request parameter ordering, signature algorithms, or field naming exhibit scripted characteristics of reverse-engineered reconstruction",
+        "High-frequency requests to the same endpoint originate from non-official clients with highly regular request structures",
+        "Session tokens or signatures in requests are bulk-replayed, with timing exhibiting automation characteristics",
+        "Endpoint call frequency and parameter combinations concentrate abnormally within a short window, deviating from normal user behavior"
+      ]
+    }
   }
 }

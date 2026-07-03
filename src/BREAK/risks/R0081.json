@@ -18,7 +18,22 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "上游组件/依赖出现异常版本更新，构建产物哈希与官方不一致",
+        "供应商账号异常登录或被劫持后提交可疑代码",
+        "交付物签名校验失败或构建环境被篡改",
+        "新引入组件来源不明，SCA扫描命中已知恶意包或可疑许可证"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "keywords": [
       "供应链风险",
       "供应链攻击",
@@ -77,7 +92,22 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "第三方组件/依赖更新引入异常代码或后门，新版本与官方release notes不符",
+        "软件开发工具/CI环境被篡改，构建产物哈希异常",
+        "供应商源代码仓库出现异常提交或权限变更",
+        "下游应用SCA扫描命中可疑依赖或known-malicious包"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "keywords": [
       "软件供应链风险",
       "软件供应链攻击",
@@ -137,7 +167,22 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "新购硬件设备固件/BIOS哈希与厂商官方签名不一致",
+        "设备在出厂或运输环节被植入后门，运行时出现异常外连",
+        "硬件供应商遭受攻击后其设备交付链路存在篡改痕迹",
+        "芯片/固件层异常行为，无法用常规软件检测手段发现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "硬件供应链风险",
       "硬件后门",
@@ -197,7 +242,22 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "云服务商发生安全事件导致租户数据暴露或服务中断",
+        "云服务第三方组件被篡改，影响下游租户运行环境",
+        "云服务商账号被劫持后异常操作租户资源",
+        "云平台开发工具链被植入恶意代码，波及大量租户"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "云服务供应链风险",
       "云厂商风险",
@@ -258,7 +318,22 @@
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "外包/驻场人员账号异常登录，来源IP/设备与既往画像不符",
+        "外包账号越权访问与其职责无关的核心系统或代码仓库",
+        "外包人员账号被盗用后提交可疑代码或外发敏感数据",
+        "外包人员权限未随项目结束及时回收，存在僵尸账号"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "外包人员风险",
       "外包内鬼",
@@ -320,7 +395,22 @@
         "link": "https://slsa.dev/"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "包管理器新发布的包名称与热门包高度相似（Typosquatting）",
+        "依赖拉取日志中出现与内部私有包同名的公共包（依赖混淆）",
+        "热门开源项目维护者账号异常提交可疑更新",
+        "SCA扫描命中已知恶意包或install脚本包含可疑网络回连"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "keywords": [
       "开源组件投毒风险",
       "开源投毒",

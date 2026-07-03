@@ -12,6 +12,21 @@
       "A0048",
       "A0052"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一商品或服务对不同用户账号展示价格不一致，老用户价格系统性高于新用户",
+        "同一用户高频浏览某商品后，该商品对其展示价格随浏览次数上升而调高",
+        "付费会员账号看到的价格反高于非会员账号，出现会员价格倒挂",
+        "不同设备品牌或型号访问同一商品页面时返回的定价存在系统性差异"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "关于平台经济领域的反垄断指南",
@@ -22,7 +37,7 @@
         "link": "https://www.samr.gov.cn/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "大数据杀熟风险",
       "杀熟",

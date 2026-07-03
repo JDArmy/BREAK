@@ -22,7 +22,7 @@
         "link": "https://www.thepaper.cn/newsDetail_forward_1383678"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "子账号滥用",
       "子账户滥用",
@@ -62,6 +62,20 @@
         "relation": "co-occurrence",
         "note": "子账号滥用与批量注册均可由威胁行为者“爬虫团伙”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "同一母账号短时间内批量创建大量子账号，子账号权限与母账号一致",
+        "新创建子账号立即用于高频操作（爬取、下单、发消息），偏离员工使用模式",
+        "子账号创建绕过实名或审批流程，风控等级与母账号不匹配"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

@@ -23,7 +23,7 @@
         "link": "https://slsa.dev/"
       }
     ],
-    "updated": "2026-02-27",
+    "updated": "2026-07-03",
     "keywords": [
       "供应链投毒风险",
       "软件供应链投毒",
@@ -32,6 +32,20 @@
       "开源投毒",
       "恶意依赖包"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "CI/CD构建产物中出现未在源码中登记的可疑依赖或脚本变更",
+        "包管理仓库中出现与热门包名称高度相似的Typosquatting恶意包",
+        "下游系统在引入新版本依赖后出现异常外联、隐蔽后门或敏感数据外传"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0078",

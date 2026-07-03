@@ -18,7 +18,14 @@
       "social engineering",
       "data leakage",
       "insider threat"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Office access control/badge swipe records mismatch with actual on-site personnel, showing tailgating or impersonation signs",
+        "Surveillance footage in sensitive areas shows unauthorized personnel lingering for extended periods or abnormally operating equipment",
+        "Unregistered devices appear on the internal network, or sensitive data is anomalously accessed outside working hours"
+      ]
+    }
   },
   "R0112-001": {
     "title": "Bring Your Own Device (BYOD) Risk",
@@ -43,7 +50,14 @@
       "MDM",
       "unmanaged devices",
       "personal device risk"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A personal device connecting to the corporate network triggers anomalous data exfiltration or access to out-of-scope resources",
+        "An employee account accesses sensitive systems from an unfamiliar device/location outside working hours",
+        "Departed employees' accounts keep logging into corporate apps after their permissions were not revoked in time"
+      ]
+    }
   },
   "R0112-002": {
     "title": "Unauthorized Physical Access",
@@ -64,7 +78,14 @@
       "trespassing",
       "access control bypass",
       "unauthorized entry"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Access control logs show the same badge appearing in different areas within a short window, or visitors entering without registration",
+        "Surveillance footage shows individuals tailgating others through access points, wearing cloned badges, or impersonating visitors",
+        "Unauthorized personnel linger in or operate equipment within server rooms/data centers outside maintenance windows"
+      ]
+    }
   },
   "R0112-003": {
     "title": "Unauthorized Device Connection",
@@ -84,7 +105,14 @@
       "unapproved hardware",
       "removable media risk",
       "rogue peripheral"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Internal switches detect devices with unregistered MAC addresses connecting while bypassing 802.1X authentication",
+        "An unknown USB device is plugged into an employee endpoint, followed by anomalous outbound connections or malicious processes",
+        "Rogue routers/pocket Wi-Fi hotspots appear on the office network, extending an unauthorized wireless entry point"
+      ]
+    }
   },
   "R0112-004": {
     "title": "Physical Damage and Destruction",
@@ -105,7 +133,14 @@
       "facility damage",
       "physical destruction",
       "disaster damage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Critical facility zones show signs of physical intrusion, arson, or vandalism outside maintenance windows",
+        "Server room/data center environmental monitors (temperature, humidity, smoke, water leak) anomaly coupled with business system alerts",
+        "Critical equipment is manually powered off, relocated, or damaged, with suspicious individuals appearing in surveillance footage"
+      ]
+    }
   },
   "R0112-005": {
     "title": "Surveillance and Eavesdropping",
@@ -126,7 +161,14 @@
       "covert recording",
       "bugging",
       "audio interception"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Anomalous wireless signals or unregistered miniature transmitting devices detected in meeting rooms/office areas",
+        "Pinhole cameras, voice recorders, or other unauthorized capture devices found in sensitive areas",
+        "Enterprise communication links show anomalous traffic mirroring/diversion, suggesting man-in-the-middle eavesdropping"
+      ]
+    }
   },
   "R0112-006": {
     "title": "Wireless Network Risk",
@@ -147,6 +189,13 @@
       "evil twin attack",
       "WPA cracking",
       "wireless intrusion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Rogue hotspots with SSIDs highly similar to the corporate network appear in office areas, luring employees to connect",
+        "Wireless networks show brute-force or weak-password login attempts, with a spike in authentication failure rate",
+        "After endpoints connect to unauthorized access points, traffic is hijacked or redirected by a man-in-the-middle"
+      ]
+    }
   }
 }

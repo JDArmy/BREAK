@@ -18,6 +18,15 @@
       "multi-user subscription abuse",
       "household bypass",
       "shared premium accounts"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The number of simultaneous online devices for a single membership account exceeds a reasonable personal-use threshold",
+        "Account login IP geolocation jumps across regions within a short window, inconsistent with a single person's movement patterns",
+        "The account is used or played concurrently across multiple devices, with behavior matching shared-resale platform signatures",
+        "Login device fingerprints for the shared account change frequently and are linked to a large number of unfamiliar devices",
+        "The membership account is linked to transactions or customer-service contacts from third-party sharing-resale pages"
+      ]
+    }
   }
 }

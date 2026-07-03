@@ -27,6 +27,22 @@
       "bulk-account hijacking"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "专业市场散单账号被团伙租用、购买或盗用刷量",
+        "散单账号关联设备指纹高度相似且集中刷单",
+        "散单权益与运费折扣被规模化套取",
+        "账号套用伴随凭据复用特征",
+        "散单与商家画像数据被异常账号扭曲"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0034",

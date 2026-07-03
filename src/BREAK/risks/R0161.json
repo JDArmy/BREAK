@@ -10,13 +10,28 @@
       "A0102",
       "A0103"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "跨链桥合约在未锁定足额资产的情况下铸造目标链代币",
+        "桥接多签验证出现签名异常或验证阈值被绕过的交易记录",
+        "锁定池资产在短时间内被大额转出至陌生地址，伴随异常跨链消息",
+        "跨链消息验证逻辑被触发非常规分支，签名者集合与预设不符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "Cross-Chain Bridge Security",
         "link": "https://blog.chainalysis.com/reports/cross-chain-bridge-hacks-2022/"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "跨链桥攻击",
       "桥接协议",

@@ -12,13 +12,28 @@
       "A0140-001",
       "A0160"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "已部署合约发现严重漏洞但因未设计升级机制无法修复",
+        "合约锁定资产因业务逻辑错误无法通过常规操作取回",
+        "合约升级权限集中在单一地址，存在升级权限滥用风险",
+        "代理模式升级后存储布局冲突，导致状态数据错乱"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://arxiv.org/abs/2407.01493",
         "title": "[2407.01493] Immutable in Principle, Upgradeable by Design - arXiv"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "不可升级合约设计缺陷",
       "不可升级合约",

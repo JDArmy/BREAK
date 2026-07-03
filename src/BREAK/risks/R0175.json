@@ -10,13 +10,28 @@
       "A0138",
       "A0139"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一签名交易在分叉后的两条链上均被执行，资产被重复转移",
+        "跨链转账场景下交易签名缺少链ID等防重放标识",
+        "用户在一条链的授权签名被复制到另一条链上重放，造成非预期资产转移",
+        "合约升级或分叉后，旧签名仍可在新链上有效执行"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Replay Attack Protection",
         "link": "https://eips.ethereum.org/EIPS/eip-155"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "区块链重放攻击",
       "重放攻击",

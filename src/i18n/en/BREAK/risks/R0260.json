@@ -16,6 +16,15 @@
       "heavy parcel splitting",
       "billing weight mismatch",
       "courier fee arbitrage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Heavy-cargo orders are split into multiple small parcels with distorted chargeable weight",
+        "Order-parcel-weight correlations for the same shipment show anomalous splits",
+        "Heavy-cargo split-order monitoring shows anomalously high pickup-delivery fee payouts",
+        "Couriers or stations concentrate on splitting heavy cargo into small parcels",
+        "Chargeable weight shows a systematic gap versus actual goods weight"
+      ]
+    }
   }
 }

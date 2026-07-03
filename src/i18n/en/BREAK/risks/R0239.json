@@ -16,6 +16,15 @@
       }
     ],
     "description": "Affiliate marketing commission fraud uses cookie stuffing, fake traffic, landing page hijacking, coupon plugins, or last-click hijacking to attribute orders to a cheating partner.\n\nBrands then pay commission for organic orders or other channels results. Controls need real referral path validation, click quality checks, conversion windows, and attribution conflict analysis.",
-    "influence": "Commission fraud inflates partner spend, corrupts attribution reports, and reduces returns for legitimate partners."
+    "influence": "Commission fraud inflates partner spend, corrupts attribution reports, and reduces returns for legitimate partners.",
+    "riskAssessment": {
+      "observables": [
+        "Channels use cookie stuffing to attribute orders they did not refer to themselves",
+        "Landing pages are hijacked or last-click attribution is anomalously tampered with",
+        "Brands pay duplicate commissions for organic or other-channel outcomes",
+        "Inter-channel attribution conflicts cluster on a specific channel with anomalous conversion windows",
+        "Coupon-plugin or attribution-hijacking tool traffic signatures are bulk-detected"
+      ]
+    }
   }
 }

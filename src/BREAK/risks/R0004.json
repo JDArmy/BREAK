@@ -23,7 +23,7 @@
         "title": "网络交易监督管理办法"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假发货",
       "空包发货",
@@ -32,6 +32,21 @@
       "单号作假",
       "空包裹"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "物流单号在多家店铺间重复使用或对应空包裹重量异常偏低",
+        "发货地与商品归属仓不匹配，物流轨迹缺少真实揽收节点",
+        "订单签收时间远短于物流正常时效，轨迹节点跳跃缺失",
+        "商家发货后短期内集中出现退款投诉且投诉理由高度雷同"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0006",

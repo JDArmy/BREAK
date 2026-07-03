@@ -20,6 +20,15 @@
       }
     ],
     "description": "DApp frontend hijacking targets the user access layer rather than the on-chain contract. Attackers may abuse DNS, IPFS gateways, CDN configuration, or frontend dependencies to alter displayed content and wallet interaction parameters.\n\nUsers see a familiar interface while signing requests or recipient addresses may be replaced. Projects need release integrity, domain hardening, resource verification, and independent transaction previews.",
-    "influence": "Frontend hijacking can make users sign malicious transactions on a familiar DApp interface, sending funds or approvals to attackers."
+    "influence": "Frontend hijacking can make users sign malicious transactions on a familiar DApp interface, sending funds or approvals to attackers.",
+    "riskAssessment": {
+      "observables": [
+        "DApp front-end resource integrity hashes mismatch the official release version",
+        "Recipient addresses or contract parameters in signature requests differ from what the UI displays",
+        "Front-end code returned by IPFS gateways or CDNs shows unexpected changes",
+        "DNS resolution results point to non-official IPs in specific regions or time windows",
+        "Front-end dependency package versions are replaced with new versions containing anomalous logic"
+      ]
+    }
   }
 }

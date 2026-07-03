@@ -24,7 +24,23 @@
       "邮件网盘授权",
       "企业SaaS集成风险"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "员工授权的第三方SaaS应用包含高危scope如邮件、网盘或CRM读写",
+        "OAuth授权后应用长期静默读取企业数据",
+        "企业内存在大量闲置或未审计的高权限SaaS授权",
+        "第三方应用被攻击者控制后用于持续数据窃取",
+        "SaaS数据访问绕过传统终端和网络防护难以被发现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0233",

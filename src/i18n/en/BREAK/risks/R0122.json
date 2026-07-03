@@ -18,6 +18,13 @@
       "fake NFT project",
       "NFT phishing",
       "metadata tampering"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same NFT is repeatedly traded among affiliated wallets, with volume/price artificially inflated",
+        "After an NFT sale, the project team's wallet rapidly moves funds while the community and roadmap vanish simultaneously",
+        "The marketplace shows large volumes of NFTs minted from others' stolen works, linked to the same minter address"
+      ]
+    }
   }
 }

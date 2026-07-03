@@ -18,6 +18,15 @@
       "red packet gambling",
       "social media gambling",
       "gambling promotion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Group chats or live streams show fixed passphrases and coded red-packet receipt and betting behavior",
+        "High-frequency small-value fund flows within the same group follow multiplier-regular amount patterns",
+        "Users post betting odds and wager-guiding scripts on the platform",
+        "Live stream viewer comments include wager amounts and settlement codewords",
+        "Social accounts centrally redirect users to external gambling sites or WeChat groups"
+      ]
+    }
   }
 }

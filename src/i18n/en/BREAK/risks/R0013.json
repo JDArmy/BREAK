@@ -18,6 +18,15 @@
       "anti-ad plugin",
       "banner blocker",
       "pre-roll blocker"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The client ad request endpoint returns success, but ad creatives are not rendered or impression rates drop sharply",
+        "Ad-blocking browser extensions or apps are prevalent across the installed-app inventory of user devices",
+        "The ratio of ad impressions to content views is significantly below the industry baseline",
+        "Pre-roll ad skip rates are abnormally high and full-play completion rates are extremely low",
+        "Within a single user session, ad requests succeed but zero impression events are reported back"
+      ]
+    }
   }
 }

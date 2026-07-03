@@ -10,6 +10,22 @@
       "A0069",
       "A0155"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "用户虚拟行为轨迹与链下身份信息被关联分析后用于定向敲诈",
+        "跨场景行为标识复用导致虚拟身份去匿名化",
+        "可导出的行为数据被批量聚合形成高敏感画像",
+        "用户在虚拟世界的社交关系被用于推断现实身份",
+        "去匿名化后出现针对特定用户的定向诈骗或骚扰"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://www.secrss.com/articles/45265",
@@ -28,7 +44,7 @@
       "现实身份追踪",
       "定向敲诈"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "跨虚实身份关联攻击通过分析用户在虚拟世界中的行为轨迹、社交关系、设备特征和交易记录，推断其现实身份或其他平台账号。攻击者随后可进行定向诈骗、骚扰或敲诈。\n\n这类风险通常由多源数据拼接造成，单个字段看似不敏感，组合后却能去匿名化。平台需要减少跨场景标识复用，并限制可导出的行为数据。",
     "relatedRisks": [
       {

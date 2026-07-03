@@ -22,7 +22,14 @@
       "rate limit bypass",
       "business logic abuse",
       "API enumeration"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single endpoint is called at high frequency within a short window, with highly dispersed source IPs/devices",
+        "API request parameters are bulk-enumerated or tampered with, hitting unauthorized or out-of-scope data",
+        "API call sequences are anomalous, skipping critical business steps such as payment/authentication"
+      ]
+    }
   },
   "R0126-001": {
     "title": "API Enumeration Attack",
@@ -43,7 +50,14 @@
       "OpenAPI leak",
       "API scanning",
       "endpoint enumeration"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Large volumes of 404/403 responses concentrate on undisclosed API paths, showing path-brute-forcing traits",
+        "Swagger/OpenAPI documentation is accessed or scraped without authorization, exposing the full endpoint inventory",
+        "Hidden admin/test/legacy API endpoints extracted from front-end JS code are subsequently invoked"
+      ]
+    }
   },
   "R0126-002": {
     "title": "API Rate Limit Bypass",
@@ -64,7 +78,14 @@
       "IP rotation",
       "resource exhaustion",
       "anti-bot bypass"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Request source IPs/UAs for a single business endpoint are highly dispersed, with low per-IP frequency but extremely high total volume",
+        "Request headers/parameters are frequently mutated to evade rate-limiting fingerprints while hitting the same business logic",
+        "Rate-limited endpoints are called in massive volume within a short window, triggering brute force or bulk data scraping"
+      ]
+    }
   },
   "R0126-003": {
     "title": "API Business Logic Abuse",
@@ -85,6 +106,13 @@
       "race condition",
       "payment bypass",
       "sensitive business flows"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Amount, quantity, or coupon parameters on order/payment endpoints are tampered with to bypass price validation",
+        "API call sequences are anomalous, skipping payment or authentication steps to complete the business flow directly",
+        "Concurrent requests trigger race conditions, causing inventory oversell or duplicate coupon redemption"
+      ]
+    }
   }
 }

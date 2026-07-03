@@ -18,7 +18,23 @@
         "link": "https://en.wikipedia.org/wiki/Know_your_customer"
       }
     ],
-    "updated": "2026-06-10",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "实名认证环节同一人脸/身份证被多个账号复用",
+        "活体检测出现照片回放、面具、深度伪造等异常特征",
+        "同一设备短时间内完成大量不同身份的认证",
+        "认证所用身份信息与绑定的手机号/银行卡归属地不一致",
+        "认证通过后账号行为与申报身份场景不符（如学生身份从事大宗交易）"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "虚假身份认证",
       "伪造身份认证",

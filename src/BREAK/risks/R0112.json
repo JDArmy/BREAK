@@ -18,7 +18,7 @@
         "link": "https://en.wikipedia.org/wiki/Physical_security"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "办公环境风险",
       "办公安全",
@@ -27,6 +27,20 @@
       "场地安全",
       "办公场所风险"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "办公区门禁/工牌刷卡记录与实际在岗人员不符，出现尾随或冒用迹象",
+        "敏感区域监控录像出现非授权人员长时间逗留或异常操作设备",
+        "内网出现未登记设备接入，或敏感数据在非工作时段被异常访问"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0112-001",
@@ -91,7 +105,7 @@
         "link": "https://en.wikipedia.org/wiki/Bring_your_own_device"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "自带设备办公风险",
       "BYOD",
@@ -130,7 +144,21 @@
         "relation": "variant",
         "note": "自带设备办公风险与无线网络风险同属办公环境风险下的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "个人设备接入企业内网后触发异常数据外传或访问越权资源",
+        "员工账号在非工作时间从陌生设备/地理位置访问敏感系统",
+        "离职员工账号在权限未及时回收的情况下持续登录企业应用"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0112-002": {
     "title": "未授权物理访问",
@@ -156,7 +184,7 @@
         "link": "https://en.wikipedia.org/wiki/Physical_security"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "未授权物理访问",
       "未经授权进入",
@@ -165,6 +193,20 @@
       "门禁绕过",
       "机房闯入"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "门禁刷卡记录显示同一工牌短时间内于不同区域出现，或访客未登记即进入",
+        "监控录像中出现尾随他人通过门禁、佩戴仿制工牌或伪装访客身份的人员",
+        "机房/数据中心在非维护时段出现非授权人员逗留或操作设备"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0112",
@@ -219,7 +261,7 @@
         "link": "https://en.wikipedia.org/wiki/Physical_security"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "未授权设备接入",
       "私接设备",
@@ -228,6 +270,20 @@
       "非授权终端",
       "外来设备接入"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "内网交换机出现未登记MAC地址的设备接入，绕过802.1X认证",
+        "员工终端被插入未知USB设备，随后触发异常外联或恶意进程",
+        "办公网络中出现私接的路由器/随身WiFi，扩展出非授权无线入口"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0112",
@@ -280,7 +336,7 @@
         "link": "https://en.wikipedia.org/wiki/Sabotage"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "物理损害与破坏",
       "设备破坏",
@@ -289,6 +345,20 @@
       "办公设施损坏",
       "蓄意损毁"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "关键设施区域出现非维护时段的物理侵入、纵火或破坏痕迹",
+        "机房/数据中心环境监控异常（温湿度、烟雾、漏水）伴随业务系统告警",
+        "重要设备被人为断电、移位或损毁，监控录像出现可疑人员"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "relatedRisks": [
       {
         "key": "R0112",
@@ -342,7 +412,7 @@
         "link": "https://en.wikipedia.org/wiki/Eavesdropping"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "监控与窃听",
       "窃听设备",
@@ -351,6 +421,20 @@
       "屏幕窥视",
       "针孔摄像头"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "会议室/办公区检测到异常无线信号或未登记的微型发射设备",
+        "敏感区域发现针孔摄像头、录音笔等非授权采集设备",
+        "企业通信链路出现异常流量分流，疑似被中间人窃听"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "relatedRisks": [
       {
         "key": "R0112",
@@ -403,7 +487,7 @@
         "link": "https://en.wikipedia.org/wiki/Wireless_security"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "无线网络风险",
       "WiFi安全",
@@ -412,6 +496,20 @@
       "弱口令WiFi",
       "无线嗅探"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "办公区出现与企业SSID高度相似的伪造热点诱导员工连接",
+        "无线网络出现暴力破解或弱口令登录尝试，认证失败率突增",
+        "终端连接到非授权访问点后，流量被中间人劫持或重定向"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0112",

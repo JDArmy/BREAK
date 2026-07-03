@@ -10,13 +10,29 @@
       "A0015",
       "A0010-004"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "客户端广告请求接口返回正常但广告素材未被渲染或曝光率骤降",
+        "用户设备安装列表中普遍存在广告屏蔽类浏览器插件或应用",
+        "广告位曝光量与内容访问量比例显著低于行业基准",
+        "贴片广告跳过率异常偏高，广告完整播放率极低",
+        "同一用户会话内广告请求成功但曝光事件零回传"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "广告推广型网络黑灰产犯罪的治理路径|犯罪行为|犯罪活动_网易订阅",
         "link": "https://www.163.com/dy/article/JCU216GI051200BP.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "广告屏蔽",
       "adblock",

@@ -15,13 +15,29 @@
       "A0021",
       "A0022"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "应用被加固保护后仍出现 class-dump、IDA 等工具的分析行为特征",
+        "客户端代码中出现被剥离混淆或还原后的明文安全逻辑",
+        "同一应用版本在短时间内出现大量基于逆向的自动化脚本调用",
+        "小程序或 Web 应用的源码包被外部 IP 高频拉取",
+        "应用安全策略如签名校验、Root 检测被绕过的运行日志"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "什么是逆向分析",
         "link": "https://github.com/eastmountyxz/Reverse-Analysis-Case"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "应用被逆向",
       "逆向分析",
@@ -78,13 +94,29 @@
       "A0022",
       "A0035"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "应用网络流量出现中间人代理或抓包工具的证书特征",
+        "客户端请求中检测到 Charles、Fiddler、mitmproxy 等抓包工具的代理标识",
+        "同一接口被外部工具高频抓取且请求时序呈现脚本化重放特征",
+        "应用证书绑定失效，HTTPS 流量被解密后出现非官方客户端的请求结构",
+        "请求头中出现抓包工具注入的调试字段或异常代理路由信息"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "MASTG-TEST-0244: Missing Certificate Pinning in Network Traffic - OWASP",
         "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "应用被抓包",
       "抓包分析",
@@ -139,13 +171,29 @@
       "A0021",
       "A0022"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "HTTP/HTTPS 接口被中间人抓包后出现非官方客户端的结构化请求",
+        "请求参数顺序、签名算法或字段命名呈现逆向还原后的脚本化特征",
+        "同一接口的高频请求来自非官方客户端且请求结构高度规整",
+        "请求中的会话令牌或签名被批量重放，时序呈现自动化特征",
+        "接口调用频次和参数组合在短时间内异常集中，与正常用户行为偏离"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "完整的HTTP请求分析",
         "link": "https://www.cnblogs.com/wzfwaf/p/10515507.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "HTTP请求分析",
       "HTTP分析",

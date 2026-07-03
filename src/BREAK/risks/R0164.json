@@ -10,13 +10,28 @@
       "A0111",
       "A0112"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "设备固件哈希与厂商发布的官方固件哈希不一致，存在非授权修改",
+        "固件中包含未公开的后门账号、调试接口或异常网络外联代码",
+        "OTA更新包签名校验失败或被降级到脆弱版本，更新来源异常",
+        "设备在长期运行中出现周期性向陌生地址的低频数据外传"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://sternumiot.com/iot-blog/firmware-security-key-challenges-and-11-critical-best-practices/",
         "title": "Firmware Security: Key Challenges and 11 Critical Best Practices"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "固件篡改与后门",
       "固件篡改",

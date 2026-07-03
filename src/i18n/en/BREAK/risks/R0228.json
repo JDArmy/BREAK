@@ -16,6 +16,15 @@
       }
     ],
     "description": "Dependency confusion and malicious package poisoning exploit package manager resolution rules, leaked internal package names, or lookalike names to make build systems install attacker-controlled components. Malicious packages can steal secrets during install or runtime.\n\nThe risk is common when public and private registries are mixed or dependency review is weak. Organizations need source priority controls, lockfiles, package provenance checks, and install anomaly monitoring.",
-    "influence": "Malicious dependencies can steal tokens, tamper with code, or implant backdoors during build, affecting multiple projects and releases."
+    "influence": "Malicious dependencies can steal tokens, tamper with code, or implant backdoors during build, affecting multiple projects and releases.",
+    "riskAssessment": {
+      "observables": [
+        "Build systems download external malicious dependency packages with same or similar names to internal packages",
+        "Package manager resolution logs show private-source priority being bypassed",
+        "Newly introduced dependencies execute suspicious scripts or outbound calls during install",
+        "Missing lockfiles or loose version constraints make dependency sources uncontrollable",
+        "Dependency authors diverge from historical maintainers and are installed by many projects in a short window"
+      ]
+    }
   }
 }

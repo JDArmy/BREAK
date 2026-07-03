@@ -13,6 +13,21 @@
       "A0080",
       "A0087"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "代码仓库、配置文件、CI/CD变量或日志中出现明文API密钥、长期令牌或服务账号凭证",
+        "服务账号或机器身份的访问令牌长期未轮换，且权限范围超出业务所需",
+        "非人类身份在非业务时段或从异常地理位置高频调用敏感数据API",
+        "同一API密钥被多个未知工作负载或外部IP共用，缺少归属与Owner信息"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "Cybersecurity Forecast 2026 - Google Cloud",
@@ -23,7 +38,7 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/207/final"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "非人类身份与API密钥滥用风险",
       "NHI安全",

@@ -16,7 +16,7 @@
         "link": "https://epaper.gmw.cn/gmrb/html/content/202606/06/content_15850.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意退货",
       "恶意退款退货",
@@ -25,6 +25,21 @@
       "退货套利",
       "退货党"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "买家购买大件/稀缺商品后短时间内频繁发起退货，退货率显著高于均值",
+        "高价值商品被使用后以七天无理由退货退回，商品贬值明显",
+        "退货物流单号异常或货物未到达即申请退款",
+        "同一买家或关联买家集中针对特定商家发起退货，时序集中"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0054-001",
@@ -75,7 +90,7 @@
         "link": "https://www.163.com/dy/article/GU8KDFVU0514CFC7.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "批量退款",
       "批量退单",
@@ -84,6 +99,21 @@
       "批量退货退款",
       "批量仅退款"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一账户或关联账户群短时间内集中发起大量退款申请",
+        "退款请求时序机械，下单到退款间隔高度规律",
+        "高价值订单批量下单后批量退款，退货率陡升",
+        "退款金额集中在满减/优惠门槛临界点附近"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0054",
@@ -135,7 +165,7 @@
         "link": "https://dy.163.com/article/KKRVC42M0514BOS2.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "退货造假",
       "买A退B",
@@ -145,6 +175,21 @@
       "少件退货",
       "调包退货"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "退货签收重量与发货重量不符，差值超出物流误差范围",
+        "退回商品SN码/防伪码与发出商品不一致或为高仿",
+        "退货包裹为空包或缺少配件，且退货人集中在少数账号",
+        "买A退B模式：退货商品品类与原订单显著不同"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0054",
@@ -197,7 +242,7 @@
         "link": "https://weibo.com/ttarticle/p/show?id=2309404589705009169082"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "闪退套利",
       "下单秒退",
@@ -207,6 +252,21 @@
       "先领券后退款",
       "闪电退款套利"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "下单到退款间隔极短（分钟级），且集中在领取赠券/赠品后",
+        "账号在营销活动开始瞬间批量下单，套取优惠后立即退单",
+        "活动期间同一设备/账号群退单率与领券率严重倒挂",
+        "闪电退款通道被高频使用，退货集中在已发放赠券的订单"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0054",
@@ -258,7 +318,7 @@
         "link": "https://news.qq.com/rain/a/20251225A03HT700"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意拒收",
       "拒收套利",
@@ -267,6 +327,21 @@
       "大件拒收",
       "恶意不签收"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "买家对家电/数码/建材等大件商品在派送阶段失联或拒收",
+        "同一收货地址或关联账号反复下单大件后拒收，逆向物流成本集中",
+        "拒收时点集中在货物已到达末端网点后，且无正当理由",
+        "商家供应链退货率与拒收率在特定类目异常上升"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0054",

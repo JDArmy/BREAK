@@ -10,6 +10,22 @@
       "A0102",
       "A0164"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "跨平台资产转移出现状态同步失败或双花",
+        "互操作协议在权限验证不足的情况下完成资产流转",
+        "跨平台转移的资产映射关系出现不一致",
+        "转移失败或回滚机制在异常情况下未正确触发",
+        "跨平台资产托管与最终一致性出现长期偏差"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://www.secrss.com/articles/45265",
@@ -28,7 +44,7 @@
       "资产映射漏洞",
       "数字藏品转移风险"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "虚拟资产跨平台转移风险出现在不同元宇宙、游戏、钱包或交易平台之间进行资产映射和流转时。协议缺陷、状态同步失败或权限验证不足可能导致资产丢失、双花或被盗。\n\n互操作提升资产流动性，也把多个平台的安全边界连接在一起。设计时需要明确资产托管、最终一致性、回滚机制和争议处理规则。",
     "relatedRisks": [
       {

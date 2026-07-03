@@ -10,13 +10,28 @@
       "A0129",
       "A0130"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "用户交易在待打包池中被前置或后置插入套利交易，形成三明治攻击结构",
+        "同一区块内出现高度相关的交易序列，套利者交易紧随受害者交易打包",
+        "用户交易实际成交价格与提交时预期价格出现异常滑点偏差",
+        "套利机器人地址在DeFi协议间高频反复执行抢先交易和套利"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "Flashbots MEV Research",
         "link": "https://docs.flashbots.net/"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "MEV攻击（矿工可提取价值）",
       "MEV攻击",

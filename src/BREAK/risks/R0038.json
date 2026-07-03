@@ -12,13 +12,29 @@
       "A0019",
       "A0021"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一登录二维码在生成后短时间内被多个不同设备或地理区域扫描授权",
+        "扫码授权成功后的会话 IP 与设备与账号历史常驻地、常用设备显著偏离",
+        "登录二维码在原页面未消费，却在另一会话中完成授权",
+        "单个账号频繁出现扫码登录—异常操作—登出的短周期会话模式",
+        "短时间内多个不同账号的扫码授权来自同一设备指纹或同一 IP 段"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "大批QQ账号被盗，扫码登录行为被黑产团伙劫持并记录 ",
         "link": "https://police.news.sohu.com/a/561515350_121124361"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "登录扫码欺诈",
       "扫码盗号",

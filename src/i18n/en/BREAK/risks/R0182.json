@@ -17,6 +17,14 @@
       "device data integrity",
       "false sensor data",
       "edge data spoofing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Sensor-reported data shows systematic deviation from redundant sensors or historical baselines without a reasonable physical cause",
+        "Device logs are tampered with or missing records for key time periods, inconsistent with upstream and downstream system data",
+        "The transmission link lacks integrity checks, with data packet contents modified in transit",
+        "Control commands are tampered with during dispatch, with execution results inconsistent with the command source records"
+      ]
+    }
   }
 }

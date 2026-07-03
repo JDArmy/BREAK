@@ -10,13 +10,28 @@
       "A0123",
       "A0124"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "项目流动性池在募资后被项目方突然撤除，代币价格瞬间归零",
+        "合约中预埋后门函数（如铸币、暂停交易、转移所有权）在合适时机被调用",
+        "项目方在社交媒体进行虚假高收益宣传后，团队地址转移资金至混币器",
+        "新项目合约未通过审计即上线，权限字段集中由单一地址控制"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "link": "https://www.reddit.com/r/solana/comments/1c24vgk/how_to_spot_rug_pulls_when_everything_looks_good/",
         "title": "How to spot rug pulls when everything looks good? : r/solana - Reddit"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "Rug Pull（项目方跑路）",
       "Rug Pull",

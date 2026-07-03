@@ -24,7 +24,23 @@
       "位置数据滥用",
       "车载应用越权"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "车联网API或诊断接口被超出授权范围读取位置与驾驶数据",
+        "第三方车载应用过度读取车辆状态与轨迹",
+        "车载数据访问缺少细粒度授权与用途限制",
+        "车辆数据访问审计出现异常批量读取",
+        "位置轨迹与驾驶行为数据被外发到非授权系统"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0181-001",

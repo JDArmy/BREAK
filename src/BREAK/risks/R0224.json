@@ -25,7 +25,23 @@
       "额度消耗",
       "高成本接口刷量"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "高成本接口被脚本持续批量调用消耗短信、算力或第三方服务额度",
+        "单用户或单IP对高成本接口的调用频率远超正常分布",
+        "接口缺少按用户、设备、业务对象的限流导致成本失控",
+        "攻击流量与正常请求混杂引发服务降级",
+        "云资源与第三方服务费用在短期内异常攀升"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0247",

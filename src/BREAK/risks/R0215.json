@@ -10,6 +10,22 @@
       "A0066",
       "A0066-001"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "新注册虚拟身份在短时间内与多名用户建立信任并引导资产转移",
+        "虚拟空间中客服或合作方身份诱导用户点击外部链接或泄露凭证",
+        "用户在沉浸式交互后出现集中性的资产损失或凭证泄露",
+        "高风险操作如转账、授权缺少二次确认且被异常触发",
+        "虚拟身份行为模式与已知诈骗团伙画像高度匹配"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://www.secrss.com/articles/45265",
@@ -28,7 +44,7 @@
       "虚拟空间冒充",
       "元宇宙诈骗"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "元宇宙社交工程攻击利用沉浸式空间、虚拟身份和实时互动建立信任。攻击者可能伪装成好友、客服、主持人或合作方，诱导用户透露凭证、转移虚拟资产或点击恶意入口。\n\n虚拟环境会增强临场感和从众效应，使传统钓鱼更具欺骗性。平台需要设计身份标识、交互风险提示和高风险操作二次确认。",
     "relatedRisks": [
       {

@@ -12,13 +12,28 @@
       "A0111-001",
       "A0150"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "心脏起搏器、胰岛素泵等植入设备出现异常无线连接或指令修改",
+        "医疗设备的用药剂量、参数设置被未授权篡改，偏离医嘱",
+        "生命体征监护数据被篡改，误导临床诊断和告警",
+        "医疗设备健康隐私数据被批量读取或外传至非授权系统"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "references": [
       {
         "title": "FDA Medical Device Cybersecurity Guidance",
         "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "医疗物联网(IoMT)安全风险",
       "医疗物联网",

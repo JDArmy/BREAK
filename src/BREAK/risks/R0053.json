@@ -17,7 +17,7 @@
         "link": "https://www.maijia.com/article/558778"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意骚扰用户",
       "骚扰买家",
@@ -27,6 +27,21 @@
       "恶意寄件",
       "货到付款骚扰"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一卖家短时间内对同一买家发起大量站内消息或电话，频次机械",
+        "买家投诉/差评后卖家立即出现报复性寄件（如刀片、货到付款件）",
+        "卖家联系方式被反复用于交易纠纷外的持续联络，跨渠道骚扰同一买家",
+        "售后工单中出现强迫改差评、威胁恐吓类文字记录"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0006",

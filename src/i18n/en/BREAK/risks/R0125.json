@@ -23,6 +23,13 @@
       "customs duties",
       "DSA",
       "cross-border data transfer"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User personal data is transferred cross-border to jurisdictions that have not passed local security assessment",
+        "VAT/customs declarations for cross-border orders are inconsistent with actual transaction data",
+        "Products are delisted or penalized in target markets for non-compliant safety standards/certification/labeling"
+      ]
+    }
   }
 }

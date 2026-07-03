@@ -23,6 +23,13 @@
       "service mesh security",
       "RBAC misconfiguration",
       "container escape"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Container runtime detects escape behavior or privileged containers anomalously accessing host resources",
+        "K8s clusters show unauthorized API Server access, RBAC privilege escalation, or unencrypted etcd exposure",
+        "Cloud storage buckets/security groups are configured for public access, and hardcoded keys appear in images or code repositories"
+      ]
+    }
   }
 }

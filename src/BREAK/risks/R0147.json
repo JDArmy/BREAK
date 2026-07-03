@@ -11,13 +11,28 @@
       "A0080",
       "A0070"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "监管报送数据校验失败率上升，关键字段缺失或口径与监管要求不一致",
+        "备付金、反洗钱等报送数据出现脱敏不当或可还原的明文敏感信息",
+        "外包合作与供应商的安全管理台账缺失，访问权限与数据处理链路不可追溯",
+        "同一报送口径在多次报送中频繁变更，数据一致性校验不通过"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "非银行支付机构监督管理条例",
         "link": "https://www.shanghaiinvest.com/cn/viewfile.php?id=19212"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "支付机构监管合规风险",
       "支付牌照合规",

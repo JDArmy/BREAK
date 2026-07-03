@@ -18,6 +18,15 @@
       "payment card testing",
       "stolen card validation",
       "BIN attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The login endpoint shows a surge of batch attempts from many different accounts originating from the same IP range within a short window, with a spike in failure rate",
+        "A single device fingerprint attempts to log into a large number of different accounts within a short window",
+        "Account and card number combinations in login requests exhibit leaked-database characteristics, such as concentrated BIN ranges or expiry date enumeration",
+        "After successful login, the session immediately jumps to value-assessment endpoints such as payment, card binding, or balance inquiry",
+        "Multiple accounts initiate small-amount test payments or query available credit shortly after logging in"
+      ]
+    }
   }
 }

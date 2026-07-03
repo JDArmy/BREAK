@@ -16,6 +16,15 @@
       }
     ],
     "description": "Mobile app repackaging fraud decompiles a legitimate app, inserts ads, phishing pages, malicious SDKs, or risk-control bypass logic, and redistributes it through unofficial channels. Users believe they installed the real app.\n\nRepackaged apps can steal accounts, hijack payments, fake device context, or consume ad budgets. Vendors need app hardening, signature checks, channel monitoring, and runtime integrity detection.",
-    "influence": "Repackaged apps impersonate the brand, steal accounts and payment data, and bypass mobile risk controls."
+    "influence": "Repackaged apps impersonate the brand, steal accounts and payment data, and bypass mobile risk controls.",
+    "riskAssessment": {
+      "observables": [
+        "Non-official channels host same-name apps with anomalous signatures or suspicious behavior",
+        "Repackaged apps are implanted with ads, phishing pages, or risk-control bypass logic",
+        "Pirated apps steal accounts or hijack payments on user devices",
+        "Missing app signature verification allows repackaged versions to run",
+        "Repackaged apps are distributed via non-official app stores or social channels"
+      ]
+    }
   }
 }

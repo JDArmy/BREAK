@@ -25,6 +25,14 @@
       "GM/T algorithms",
       "commercial cryptography compliance",
       "State Cryptography Administration standards"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Critical business systems use non-SM algorithms (such as RSA or AES) in place of SM2, SM3, or SM4",
+        "Commercial cryptography application security assessments fail to pass or required remediation is not completed",
+        "Cryptographic products or services lack commercial-cryptography product certification",
+        "Migration to SM algorithms lags behind the deadlines required by regulators"
+      ]
+    }
   }
 }

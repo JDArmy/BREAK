@@ -17,7 +17,14 @@
       "two-factor bypass",
       "OTP bypass",
       "authentication factor bypass"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The MFA verification endpoint is hit at high frequency, with a single account trying different verification codes multiple times within a short window",
+        "The login flow shows requests to non-MFA login pages, or device fingerprints are forged as trusted devices",
+        "After MFA verification passes, the session is immediately used for sensitive operations, inconsistent with normal user behavior timing"
+      ]
+    }
   },
   "R0036-001": {
     "title": "MFA Fatigue Attack",
@@ -37,7 +44,14 @@
       "push fatigue attack",
       "notification fatigue attack",
       "push spam attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A large volume of MFA approval requests is pushed to the same account within a short window, far exceeding normal login frequency",
+        "The originating IP/location of MFA push requests does not match the user's historical login profile",
+        "The request the user ultimately approves originates from an anomalous device or a foreign location, with sensitive operations immediately following approval"
+      ]
+    }
   },
   "R0036-002": {
     "title": "MFA Bypass Risk",
@@ -62,6 +76,13 @@
       "push bombing",
       "AiTM",
       "session token theft"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Session cookies are obtained immediately after authentication, with the login state bypassing MFA and being directly reused",
+        "User devices show infostealer characteristics, with browser session cookies being exfiltrated",
+        "The MFA verification flow is intercepted by a man-in-the-middle proxy, with session tokens generated on anomalous nodes"
+      ]
+    }
   }
 }

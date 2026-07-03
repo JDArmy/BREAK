@@ -17,7 +17,22 @@
         "link": "https://www.itsec.gov.cn/fgbz/xgfg/200612/t20061214_15246.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "high",
+      "observables": [
+        "信息系统未按定级要求完成等保测评或测评不达标",
+        "等保整改项长期未闭环，高危问题超期未修复",
+        "信息安全管理职责未落实，责任人与备案信息不一致",
+        "测评报告过期或系统重大变更后未重新备案测评"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "等保合规风险",
       "等保",

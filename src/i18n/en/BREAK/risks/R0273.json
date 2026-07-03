@@ -18,6 +18,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "VLA models execute attacker-specified actions under specific trigger conditions",
+        "Low-ratio but high-success-rate poisoning samples are detected in training or fine-tuning data",
+        "Robotic-arm initial states or environmental objects activate as backdoor triggers",
+        "Imitation-learning demonstration data contains malicious policies visually indistinguishable from benign images",
+        "Supply-chain poisoning causes latent collective backdoors in downstream deployed robots"
+      ]
+    }
   }
 }

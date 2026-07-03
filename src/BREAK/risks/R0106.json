@@ -20,7 +20,7 @@
         "link": "https://en.wikipedia.org/wiki/Video_game_boosting"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "游戏代练",
       "代打",
@@ -29,6 +29,20 @@
       "刷段位",
       "代练工作室"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号段位/胜率在短时间内异常跃升，操作特征与历史画像不一致",
+        "账号登录地点频繁切换，对局时段规律性极强且操作时序机械",
+        "同一收款账户或同一设备关联多个代练订单账号"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0108",

@@ -17,6 +17,14 @@
       "price plus shipping manipulation",
       "postage padding",
       "hidden shipping markup"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single store lists products well below comparable prices while shipping fees run well above the industry average",
+        "The store's shipping template is set to a fixed amount far exceeding actual logistics costs",
+        "Product pages show low prices but shipping accounts for an abnormal share at checkout (e.g., shipping exceeds 30% of the item price)",
+        "Buyer complaints center on unnoticed or excessive shipping fees and cluster around a small number of stores"
+      ]
+    }
   }
 }

@@ -20,6 +20,15 @@
       }
     ],
     "description": "Metaverse content moderation is difficult because 3D scenes, live voice, gestures, virtual props, and multi-user interactions combine in real time. Harmful content may only appear from a certain viewpoint or during a specific interaction.\n\nTraditional moderation models do not fully understand spatial semantics and live context. Platforms need reporting, behavior detection, voice analysis, scene sampling, and tiered governance.",
-    "influence": "Weak metaverse moderation can allow harmful 3D, voice, or interactive content to spread, increasing user safety and compliance risk."
+    "influence": "Weak metaverse moderation can allow harmful 3D, voice, or interactive content to spread, increasing user safety and compliance risk.",
+    "riskAssessment": {
+      "observables": [
+        "Illicit content appears at specific viewpoints or during specific interactions in 3D virtual spaces",
+        "Real-time voice channels carry bulk illicit scripts or lures",
+        "User reports cluster on the same virtual item, scene, or time window",
+        "Illicit content appears in dynamic non-static-text forms, evading text-based moderation",
+        "Virtual items and multi-user collaborative content contain rule-evasion illicit assets"
+      ]
+    }
   }
 }

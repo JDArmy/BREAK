@@ -17,6 +17,14 @@
       "node isolation",
       "P2P network attack",
       "consensus manipulation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "All outbound connections of the target node are occupied by Sybil nodes controlled by the same operator",
+        "The blockchain view received by the node is inconsistent with the network-wide main chain, with exclusive false blocks appearing",
+        "Transactions submitted by the isolated node are unconfirmed on the main network but used by the attacker for double-spending",
+        "Block header sources for light nodes and SPV clients are highly concentrated among a few peer nodes"
+      ]
+    }
   }
 }

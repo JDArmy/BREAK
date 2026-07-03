@@ -18,6 +18,14 @@
       "payment provider compliance",
       "regulatory reporting",
       "supervisory compliance"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The failure rate of regulatory reporting data validation rises, with key fields missing or inconsistent with regulatory requirements",
+        "Reporting data for reserve funds and anti-money laundering shows improper desensitization or recoverable plaintext sensitive information",
+        "Security management ledgers for outsourcing partners and suppliers are missing, with access permissions and data processing chains not traceable",
+        "The same reporting scope is frequently changed across multiple submissions, failing data consistency checks"
+      ]
+    }
   }
 }

@@ -10,13 +10,28 @@
       "A0114",
       "A0004-002"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "大量IoT设备使用默认凭据被批量扫描爆破登录，登录来源高度集中",
+        "设备组网后向单一C2地址发起规律性心跳或报活通信",
+        "网络出口出现大流量DDoS攻击，源IP为海量分散的IoT设备",
+        "被控设备资源占用异常，CPU持续高负载，疑似进行加密货币挖矿"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "link": "https://arxiv.org/pdf/2508.01909",
         "title": "[PDF] Analyzing The Mirai IoT Botnet and Its Recent Variants - arXiv"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "IoT僵尸网络",
       "物联网僵尸网络",

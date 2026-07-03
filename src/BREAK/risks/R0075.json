@@ -24,7 +24,22 @@
         "link": "https://www.scmgj.gov.cn/scsmmglj/c103261/2025/6/27/4d4113b1e0a24ff28c9922478c09d777.shtml"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "关键信息基础设施未按关基保护要求完成安全测评或备案",
+        "网络/信息系统存在未修复高危漏洞且影响关基业务连续性",
+        "数据泄露/网络攻击事件在关基单位发生且未按规上报",
+        "密码使用不符合商用密码管理规定，国密改造进度滞后"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "关保合规风险",
       "关基合规",

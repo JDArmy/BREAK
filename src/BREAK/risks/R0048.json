@@ -15,13 +15,29 @@
       "A0021",
       "A0022"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "活体检测视频帧序列中眨眼、转头等动作时序呈现合成或注入特征",
+        "摄像头数据流元数据与设备真实传感器存在不一致，如分辨率或帧率异常",
+        "同一张人脸图像在多个不同账号的实名或支付核身中被反复使用",
+        "活体检测请求的网络环境与终端设备环境存在代理或注入工具特征",
+        "支付或登录环节的人脸核身在短时间内多次重试且最终通过率异常"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "Face Analysis Technology Evaluation: Presentation Attack Detection - NIST",
         "link": "https://pages.nist.gov/frvt/html/frvt_pad.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "人脸识别绕过",
       "活体绕过",

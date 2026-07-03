@@ -22,6 +22,15 @@
       "SEO manipulation",
       "keyword boosting",
       "SERP manipulation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Specific keywords are searched at high frequency within a short window, with search-volume curves showing abnormal spikes",
+        "Search requests originate from the same device cluster or proxy IP range with mechanical timing",
+        "Autocomplete suggestions and related-search recommendations are flooded with specific long-tail terms, diverging from genuine search distribution",
+        "Two otherwise unrelated keywords are mass-searched together to force associative recommendations",
+        "Nomination growth rates for trending-search candidate words far exceed historical baselines, with homogeneous source-account profiles"
+      ]
+    }
   }
 }

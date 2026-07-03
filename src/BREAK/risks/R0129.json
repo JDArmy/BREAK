@@ -13,13 +13,28 @@
       "A0044",
       "A0067"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短时间内同一目标手机号在多个不同业务方的验证码接口被批量触发",
+        "单IP或单设备在短时间内调用大量异构短信验证码接口，发送频率远超正常用户",
+        "短信网关出口侧同一目的号码的下行短信量在数分钟内骤增至数十条以上",
+        "受害用户投诉集中出现短时间内收到大量验证码类短信"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "短信轰炸攻击分析与防御",
         "link": "https://www.freebuf.com/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "短信轰炸即服务",
       "短信轰炸",

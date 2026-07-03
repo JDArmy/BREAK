@@ -26,6 +26,22 @@
       "route fraud"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "物流路由节点信息被伪造或重复录入虚增计提里程",
+        "揽收、中转、派送、签收节点轨迹与实际不一致",
+        "异常计提集中在特定网点或合作方",
+        "路由数据防篡改机制缺失或被绕过",
+        "节点造假伴随运费与补贴的虚增支出"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0262",

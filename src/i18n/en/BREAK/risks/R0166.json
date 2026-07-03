@@ -17,6 +17,14 @@
       "factory credential risk",
       "credential stuffing on devices",
       "insecure default configuration"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The device login interface shows bulk attempts using public default credentials such as admin/admin, with source IPs highly concentrated",
+        "The device firmware contains hardcoded hidden backdoor accounts or unmodifiable default credentials",
+        "A large number of devices are exposed to the public internet after deployment without changing default passwords, quickly hit by scanners",
+        "The same default credential successfully logs into different devices from multiple external IPs within a short window"
+      ]
+    }
   }
 }

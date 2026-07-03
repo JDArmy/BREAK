@@ -17,6 +17,14 @@
       "insider sabotage",
       "system sabotage",
       "data destruction"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Employee accounts bulk-delete or tamper with core data around the time of resignation or role transfer",
+        "Destructive operations (dropping databases, altering configurations, deleting files) occur in production without a corresponding change ticket",
+        "Employee accounts anomalously launch denial-of-service attacks or implant malware",
+        "Critical system configurations or code repositories are maliciously altered outside of working hours"
+      ]
+    }
   }
 }

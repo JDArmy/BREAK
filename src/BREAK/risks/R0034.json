@@ -25,7 +25,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "自动化养号",
       "养号",
@@ -66,6 +66,20 @@
         "relation": "co-occurrence",
         "note": "自动化养号与协议级自动化均可由攻击工具“发包/改包工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "新注册账号在养号期以固定节奏执行评价、发帖、交易等行为，时序机械",
+        "账号行为画像单一（仅某几类操作），缺少真实用户的多样化浏览",
+        "一批账号在同一时间窗内执行相同类型的养号动作，呈现群控特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

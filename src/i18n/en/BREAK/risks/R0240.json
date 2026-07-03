@@ -16,6 +16,15 @@
       }
     ],
     "description": "Unauthorized use of shared data occurs when internal teams, vendors, or partners use shared data beyond approved purpose, scope, or duration. It can appear in joint modeling, marketing activation, outsourced operations, and data API integrations.\n\nEven if initial sharing was approved, later purpose drift creates compliance and trust risk. Organizations need data use contracts, purpose audits, masking, isolation, and expiration handling.",
-    "influence": "Purpose drift in shared data can trigger privacy complaints, contract breach, regulatory action, and loss of partner trust."
+    "influence": "Purpose drift in shared data can trigger privacy complaints, contract breach, regulatory action, and loss of partner trust.",
+    "riskAssessment": {
+      "observables": [
+        "Shared data is used by partners or vendors beyond authorized purposes",
+        "Joint modeling or marketing outreach causes data-purpose drift",
+        "Data interface counterparties access beyond approved scope",
+        "Outsourced operations use shared data in unauthorized scenarios",
+        "Shared data remains continuously accessed after expiry without reclamation"
+      ]
+    }
   }
 }

@@ -12,6 +12,21 @@
       "A0018",
       "A0007"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一支付凭证（盗刷信用卡）在短时间内批量购买大额电子礼品卡",
+        "礼品卡购买后短时间内被折价转售或在多账户间频繁流转后申请退款",
+        "充值卡卡密在多个IP或设备上被尝试激活，出现卡密爆破或伪造特征",
+        "电信诈骗受害人集中向同一批礼品卡卡号充值并快速消耗余额"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "礼品卡成“洗钱”新工具_无锡市梁溪区人民检察院",
@@ -22,7 +37,7 @@
         "link": "https://www.pbc.gov.cn/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "礼品卡/充值卡欺诈",
       "礼品卡诈骗",

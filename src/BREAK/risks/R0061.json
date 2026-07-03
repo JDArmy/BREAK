@@ -18,7 +18,7 @@
         "link": "https://news.sina.cn/2018-10-09/detail-ihkvrhpt1994755.d.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "手机二次号",
       "二次放号",
@@ -28,6 +28,21 @@
       "换绑号码",
       "过期手机号登录"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新换绑手机号首次登录即触发找回密码/验证码流程，且成功登录历史账号",
+        "同一批回收号段集中登录多个长期未活跃账号，时序聚集",
+        "找回密码后立即修改账户资料、提现或转赠资产",
+        "运营商二次放号状态与平台账户绑定状态未同步，登录设备/地域突变"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0001-001",

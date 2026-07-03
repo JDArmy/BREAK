@@ -32,7 +32,22 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "critical",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新上架商品被同一批账号在秒级内抢购下单，抢购时序高度机械",
+        "店铺或账号矩阵批量上架同类商品，铺货集中度过高且价格异常",
+        "下单收货地址或支付账号跨平台重复，呈现跨平台代发搬运特征",
+        "搜索竞价排名结果中特定店铺曝光量激增且价格显著高于同类"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "自动化倒卖",
       "黄牛倒卖",
@@ -107,7 +122,22 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同款商品在本平台价格显著高于其他平台，且通过竞价排名抢占头部曝光",
+        "店铺商品价格虚高且销量集中在搜索高曝光位，转化率异常",
+        "跨平台比价数据被批量爬取后用于设置本平台加价幅度",
+        "同一卖家在多平台经营同款商品，本平台售价系统性偏高"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "低买高卖",
       "跨平台倒卖",
@@ -181,7 +211,22 @@
         "link": "https://en.wikipedia.org/wiki/Drop_shipping"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "本平台店铺下单后订单信息被同步到其他平台货源店铺代发，物流单号跨平台复用",
+        "店铺长期无自有库存但持续出单，发货地址与店铺主体不匹配",
+        "同款商品在本平台售价系统性低于货源平台，呈现补贴套利特征",
+        "店铺上新节奏与外部平台商品库变动高度同步"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "无货源店铺",
       "无货源",
@@ -257,7 +302,22 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一主体或设备批量注册大量店铺，店铺资质/法人/联系方式高度关联",
+        "店群店铺上架同类同款商品，铺货集中度高、标题图片高度雷同",
+        "搜索结果被同一矩阵的店铺大量占据，挤压其他店铺曝光",
+        "店群店铺上新与下架节奏一致，运营动作呈现统一调度特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "店群",
       "店群模式",

@@ -16,6 +16,15 @@
       }
     ],
     "description": "API object-level authorization risk occurs when an endpoint verifies login state but not whether the requested object belongs to the user or tenant. Attackers can modify order IDs, user IDs, file IDs, or similar parameters to access other users resources.\n\nThe issue is common in mobile, open platform, and microservice APIs, and automation can quickly expand the exposure. Server-side object authorization and tenant isolation are required.",
-    "influence": "Missing object ownership checks can expose user profiles, orders, files, or financial records at scale and create privacy and compliance impact."
+    "influence": "Missing object ownership checks can expose user profiles, orders, files, or financial records at scale and create privacy and compliance impact.",
+    "riskAssessment": {
+      "observables": [
+        "A single account enumerates access to large numbers of order, user, or file IDs not belonging to it in a short window",
+        "Endpoints check only login state without object ownership, returning others' resources via broken access control",
+        "Mobile or open-platform endpoints show batch IDOR-style requests",
+        "Object-level access lacks tenant isolation, enabling cross-tenant data reads",
+        "Anomalous access patterns concentrate on sensitive resources such as fund records or personal profiles"
+      ]
+    }
   }
 }

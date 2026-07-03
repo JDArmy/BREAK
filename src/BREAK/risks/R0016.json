@@ -15,13 +15,29 @@
       "A0022",
       "A0059"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "目标接口在短时间内被同一设备簇或 IP 段高频重复请求",
+        "点赞、评论、播放量等计数指标在非活跃时段异常飙升",
+        "榜单排名与真实用户行为分布脱节，数据增长曲线呈阶梯式突变",
+        "参与刷量的账号行为时序机械，请求间隔高度规律",
+        "刷量账号与新注册设备、接码手机号聚集，画像高度同质"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT016 Skewing",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "刷量刷榜",
       "刷榜",
@@ -87,13 +103,29 @@
       "A0024",
       "A0029-001"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "直播间在线人数在开播瞬间骤增至高位且长时间无波动，与互动量不匹配",
+        "在线观众账号画像同质，多为新注册或无历史行为账号",
+        "点赞、评论数与实际在线人数比例严重失调",
+        "挂人气账号来自固定代理 IP 段或群控设备簇，行为时序同步",
+        "观众进出直播间节奏机械，停留时长呈规律性分布"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "抖音挂铁人气方法策略 ",
         "link": "https://it.sohu.com/a/704525060_121714717"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "挂人气",
       "挂假人",
@@ -155,13 +187,29 @@
       "A0029-003",
       "A0038"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号在短时间内批量关注大量目标账号，关注速率远超人工上限",
+        "关注操作账号与新注册设备、接码手机号聚集，画像同质",
+        "被关注账号的粉丝增长曲线在特定时段阶梯式突变",
+        "批量关注后短时间内出现反向取关或长期零互动，关注关系无效",
+        "关注请求来自同一设备簇或代理 IP 段，时序高度规律"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT-016 Skewing",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "批量关注",
       "刷关注",

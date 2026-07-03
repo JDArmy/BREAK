@@ -13,13 +13,29 @@
       "A0016",
       "A0048"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "用户上传内容与已知版权作品图像/文本指纹高度匹配",
+        "同一账号批量上传未授权转载、搬运内容，发布间隔机械",
+        "内容被权利人投诉或平台侵权举报量短时集中",
+        "上传文件元数据保留原版权作者或来源水印信息",
+        "侵权内容发布账号与历史侵权账号共享设备指纹或 IP 段"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "中华人民共和国著作权法",
         "link": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "内容侵权",
       "版权侵权",

@@ -17,7 +17,15 @@
       "social engineering",
       "weak password hygiene",
       "human factor"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Employee accounts show anomalous logins after phishing or social engineering, with sudden changes in source IP, device, or geography",
+        "Corporate mailboxes are reported with large volumes of weak or reused passwords, and credentials appear in leak databases",
+        "Employees click phishing links or download malicious attachments, with frequent EDR alerts on endpoints",
+        "Employees share accounts or click unknown links indiscriminately, and human factors account for a high share of incidents in weekly security reports"
+      ]
+    }
   },
   "R0083-001": {
     "title": "Employee Account Compromise",
@@ -38,7 +46,15 @@
       "phishing",
       "social engineering",
       "ATO"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Employee account login source IPs, devices, or geographies deviate significantly from prior profiles",
+        "Compromised accounts anomalously access or download sensitive data beyond the user's responsibilities",
+        "Credential-stuffing or leaked-credential databases contain matches for this organization's employee account passwords",
+        "Compromised accounts are used for unauthorized operations or as pivot points for lateral movement"
+      ]
+    }
   },
   "R0083-002": {
     "title": "Social Engineering Risk",
@@ -59,6 +75,14 @@
       "smishing",
       "business email compromise",
       "deepfake scam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Emails or messages impersonating leaders or colleagues request fund transfers, credentials, or sensitive operations",
+        "AI voice cloning or video synthesis impersonates executives in phone or video scams, with victims filing reports",
+        "Financial or transfer operations bypass established approval flows and are carried out unilaterally by employees under social-engineering pressure",
+        "Fake accounts impersonating company employees or executives appear on social platforms and contact customers or colleagues"
+      ]
+    }
   }
 }

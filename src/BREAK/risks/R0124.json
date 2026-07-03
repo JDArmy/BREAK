@@ -23,7 +23,7 @@
         "link": "https://lnsfnlhh.cn/lnsfnlhh/wqfw/flfg/2026052818575315702/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "未成年人保护合规风险",
       "青少年模式",
@@ -32,6 +32,20 @@
       "未成年人内容保护",
       "适龄分级"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "未成年人使用成年人身份绕过实名认证，深夜时段高频使用",
+        "青少年模式被轻易绕过或未启用，未成年账号消费金额异常",
+        "平台内容未做适龄分级，不适内容触达未成年用户引发投诉"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0026",

@@ -17,6 +17,14 @@
       "consensus attack",
       "block propagation abuse",
       "miner strategy attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A miner delays broadcasting mined blocks and concentratedly reveals its private chain when the public chain catches up",
+        "A mining pool with over 33% hash power consistently earns block rewards exceeding its hash power share",
+        "The network experiences frequent block reorganizations, with the invalidated blocks predominantly belonging to other miners",
+        "The block publishing timing of a selfish mining pool shows delay characteristics highly correlated with the public chain"
+      ]
+    }
   }
 }

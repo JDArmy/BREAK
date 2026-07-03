@@ -12,6 +12,21 @@
       "A0083",
       "A0094"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "员工终端向未经批准的第三方AI服务域名上传敏感业务数据的流量显著增长",
+        "源代码、客户数据、财务报表等敏感内容出现在出口流量中，目标为公开AI服务",
+        "企业内未见正式AI工具采购与审批记录，但员工终端存在多个第三方AI客户端或插件",
+        "敏感数据被粘贴到浏览器AI对话框，对应终端缺少企业数据防泄漏(DLP)拦截日志"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "Cisco 2025 Data Privacy Benchmark Study",
@@ -26,7 +41,7 @@
         "link": "https://www.ibm.com/think/topics/shadow-ai"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "影子AI风险",
       "影子AI",

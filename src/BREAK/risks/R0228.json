@@ -26,7 +26,23 @@
       "包名抢注",
       "开源包投毒"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "构建系统下载了与内部包名同名或近似的外部恶意依赖包",
+        "包管理器解析日志显示私有源优先级被绕过",
+        "新引入依赖在安装阶段执行可疑脚本或外联行为",
+        "lockfile缺失或版本约束宽松导致依赖来源不可控",
+        "依赖包作者与历史维护者身份不符且短时间内被大量安装"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0226",

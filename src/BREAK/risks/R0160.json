@@ -10,13 +10,28 @@
       "A0099",
       "A0100"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "单笔交易内借入并归还巨额资产，伴随多个DeFi协议间的复杂调用链",
+        "交易前后预言机价格出现剧烈偏离，攻击者利用价差完成套利",
+        "流动性池在单笔交易中资产比例被瞬间扭曲，触发异常清算或价格滑点",
+        "同一攻击者地址在多个DeFi协议间反复构建闪电贷组合攻击"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "link": "https://www.chainalysis.com/blog/euler-finance-flash-loan-attack/",
         "title": "Euler Finance Flash Loan Attack Explained - Chainalysis"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "闪电贷攻击",
       "DeFi攻击",

@@ -23,7 +23,7 @@
         "link": "https://www.fangyuba.com/news/dynamic/2778.htm"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "多因素(MFA)绕过",
       "MFA绕过",
@@ -64,7 +64,21 @@
         "relation": "co-occurrence",
         "note": "多因素(MFA)绕过与虚假身份认证均可由攻击工具“钓鱼工具包”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "MFA 验证接口被高频请求，单账号短时间内多次尝试不同验证码",
+        "登录流程中出现非 MFA 登录页面请求，或设备指纹被伪造为可信设备",
+        "MFA 验证通过后会话立即用于敏感操作，与正常用户行为时序不符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   },
   "R0036-001": {
     "title": "多因素疲劳攻击",
@@ -89,7 +103,7 @@
         "link": "https://m.163.com/dy/article/I2H92SPP0518STKV.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "多因素疲劳攻击",
       "MFA疲劳",
@@ -129,7 +143,21 @@
         "relation": "co-occurrence",
         "note": "多因素疲劳攻击与流程自动化共享规避手段“设备画像”。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "短时间内向同一账号推送大量 MFA 批准请求，远超正常登录频次",
+        "MFA 推送请求的发起 IP/地理位置与用户历史登录画像不符",
+        "用户最终批准的请求来自异常设备或异地，批准后立即进行敏感操作"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   },
   "R0036-002": {
     "title": "MFA绕过风险",
@@ -153,7 +181,7 @@
         "link": "https://www.cisa.gov/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "MFA绕过风险",
       "MFA绕过",
@@ -196,6 +224,20 @@
         "relation": "co-occurrence",
         "note": "MFA绕过风险与算力盗用风险共享规避手段“端点检测与响应”。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "认证后立即获取会话 Cookie，登录态绕过 MFA 直接复用",
+        "用户设备出现信息窃取器特征，浏览器会话 Cookie 被外发",
+        "MFA 验证流程被中间人代理拦截，会话令牌在异常节点生成"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   }
 }

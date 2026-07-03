@@ -17,6 +17,15 @@
       "deepfake face spoofing",
       "presentation attack",
       "face spoofing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The frame sequence of liveness detection videos exhibits synthetic or injection characteristics in the timing of actions such as blinking and head turning",
+        "Camera data stream metadata is inconsistent with the device's real sensors, such as anomalous resolution or frame rate",
+        "The same facial image is repeatedly used across real-name or payment verification for multiple different accounts",
+        "The network environment for liveness detection requests shows proxy or injection tool characteristics relative to the terminal device environment",
+        "Facial verification for payment or login is retried multiple times within a short window, with an abnormally high final pass rate"
+      ]
+    }
   }
 }

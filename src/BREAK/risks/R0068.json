@@ -11,13 +11,28 @@
       "A0020",
       "A0021"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一账号或设备在7天无理由退货窗口期到期前密集发起退货请求",
+        "退货率显著高于正常用户的账号集中在特定商品类目或店铺下单",
+        "收货后短时间内无正常使用痕迹即申请退货，且退货理由高度模板化",
+        "同一收货地址或支付账号关联多个高退货率账号"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "中意人寿北京分公司“3·15”风险提示 抵制“黑灰产”,守护信息安全|...",
         "link": "https://news.sina.com.cn/sx/2026-03-11/detail-inhqqupq5622903.shtml"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "售后权益滥用",
       "售后薅羊毛",
@@ -71,13 +86,28 @@
       "A0016",
       "A0021"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一投诉人短时间内向监管或平台发起多起针对不同商家的投诉，文案高度雷同",
+        "投诉发起后立即提出撤销投诉条件并附带收款账号，呈现典型敲诈话术",
+        "投诉人历史投诉记录集中在广告法违禁词、标签瑕疵等可批量套用的条款",
+        "投诉账号注册时间短、实名信息与既往消费行为不匹配"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "黑灰产围猎维权人_凤凰网",
         "link": "https://news.ifeng.com/c/8miQvV7im5x"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意客诉",
       "恶意投诉",
@@ -134,13 +164,28 @@
       "A0029-001",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号批量下单过期、假冒伪劣或含广告法违禁词的商品，订单集中度高",
+        "下单后立即发起投诉并以撤销投诉为由索要高额款项，呈现职业索赔话术",
+        "同一设备或收货地址关联多个索赔账号，索赔金额多为假一罚十上限",
+        "批量搜索/爬取商品违规线索的请求特征在站内搜索日志中可观测"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "美团公布今年1-8月黑灰产打击治理成果 涉案金额5000余万元_腾讯新闻",
         "link": "https://new.qq.com/rain/a/20230918A0A0QR00"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意索赔",
       "职业索赔",

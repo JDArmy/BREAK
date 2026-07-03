@@ -18,6 +18,14 @@
       "restricted products",
       "contraband sales",
       "non-compliant goods"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly listed product titles or main images hit the prohibited-keyword library, or contain external links, WeChat IDs, and other traffic-diversion information",
+        "The same merchant bulk-lists many similar high-risk products within a short window, with prices abnormally below market value",
+        "The product review section shows a large volume of negative feedback or concentrated complaints mentioning 'traffic diversion' or 'fraud'",
+        "Merchant qualifications clearly mismatch the product category (e.g., an individual store listing medical devices or precious metals)"
+      ]
+    }
   }
 }

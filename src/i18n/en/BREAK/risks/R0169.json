@@ -17,6 +17,14 @@
       "oracle price spoofing",
       "TWAP manipulation",
       "data feed compromise"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The oracle-reported price shows sharp deviations from other mainstream data sources within a short window",
+        "A low-liquidity trading pool is instantly manipulated by a single large transaction, in turn affecting oracle quotes that depend on that pool",
+        "The DeFi protocol exhibits anomalous liquidations or large borrowing within the price anomaly window, with the attacker arbitraging from it",
+        "During oracle node update delays or data source outages, the contract still executes critical operations at anomalous prices"
+      ]
+    }
   }
 }

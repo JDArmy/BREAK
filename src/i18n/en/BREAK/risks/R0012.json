@@ -19,7 +19,16 @@
       "mod menu",
       "aimbot",
       "wallhack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The client process memory is injected with unknown modules, or exhibits abnormal read/write access to game memory",
+        "A single account exhibits precision aiming, consecutive hits, or fixed-rhythm automated actions at speeds beyond human reaction time within a short window",
+        "In-game values such as movement speed and skill cooldowns are tampered beyond server-defined thresholds",
+        "A cheat process or debugger handle establishes an abnormal attachment to the game process",
+        "The account's login device fingerprint co-occurs with characteristic cheat-tool processes"
+      ]
+    }
   },
   "R0012-001": {
     "title": "Red Packet Grabbing Bot",
@@ -39,7 +48,16 @@
       "auto red packet",
       "packet sniping bot",
       "WeChat red packet bot"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Red packets are grabbed within milliseconds of being released, far faster than the distribution of human click times",
+        "A single account maintains a fixed grab latency across multiple red packet sessions, with mechanical timing",
+        "Accessibility services or assistive APIs are continuously invoked by a cheat process that monitors chat notifications",
+        "Auto-click scripts or simulated-click tools detected on the device are strongly correlated with red packet events",
+        "The account continues to grab red packets while in the background or with the screen locked"
+      ]
+    }
   },
   "R0012-002": {
     "title": "Game Cheating Software",
@@ -61,6 +79,15 @@
       "speed hack",
       "memory editor",
       "mod menu"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A player's aim accuracy reaches 100% or chains consecutive headshots with reaction times below human physiological thresholds",
+        "Character physics parameters such as movement speed and jump height exceed server-configured upper limits",
+        "Multiple accounts under the same IP range or device fingerprint share identical cheat signatures with abnormally uniform resource collection rates",
+        "Game memory is read or written by an external process, with key values (health, gold, coordinates) showing unauthorized modifications",
+        "An account exhibits persistent tracking of targets behind walls or pre-aiming at unseen enemies, consistent with wallhack use"
+      ]
+    }
   }
 }

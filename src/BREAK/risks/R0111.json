@@ -32,7 +32,7 @@
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "员工违规操作",
       "内部人风险",
@@ -41,6 +41,20 @@
       "违规操作",
       "内鬼"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "员工账号在非工作时间或异常地点访问超出其岗位职责的敏感数据",
+        "内部账号批量导出/下载客户信息、财务数据等敏感资源",
+        "员工使用未授权的USB设备、外部网盘或个人邮箱外传公司数据"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0111-001",
@@ -101,7 +115,7 @@
         "link": "https://en.wikipedia.org/wiki/Account_sharing"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "员工账号共享",
       "共享账号",
@@ -110,6 +124,20 @@
       "凭据共享",
       "密码共享"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一员工账号在短时间内于多个设备/异地并发登录",
+        "账号操作行为模式不连贯，时而是A职责操作、时而是B职责操作",
+        "同一账号在非工作时段被外部IP或未登记设备使用"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0111",
@@ -163,7 +191,7 @@
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "员工业务级后门",
       "业务后门",
@@ -172,6 +200,20 @@
       "人为后门",
       "私留后门"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "代码库中出现绕过正常鉴权流程的隐藏接口或调试入口",
+        "生产系统存在未在变更记录中登记的远程访问通道或定时任务",
+        "敏感数据被异常批量访问，调用路径指向非业务文档记载的隐藏功能"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "relatedRisks": [
       {
         "key": "R0111",

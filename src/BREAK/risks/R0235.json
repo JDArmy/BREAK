@@ -24,7 +24,23 @@
       "虚假售后证据",
       "Chargeback fraud"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一用户或团伙高频发起拒付或退款且伴随空包、调包证据",
+        "退款申诉集中在关联设备或收货地址",
+        "虚假签收异常或重复申诉模式被批量触发",
+        "支付通道罚金与商户纠纷在短期内异常上升",
+        "售后争议处置中历史行为异常的用户占比偏高"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0236",

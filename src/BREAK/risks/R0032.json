@@ -26,7 +26,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "账号盗取",
       "盗号",
@@ -67,7 +67,21 @@
         "relation": "co-occurrence",
         "note": "账号盗取与登录凭据复用均可由攻击工具“CK(Cookies)登录工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "用户登录地理位置/设备指纹突变，与历史行为画像显著不符",
+        "登录后会话立即用于敏感操作（改密、绑卡、提现）且无惯常浏览路径",
+        "同一账号在短时间窗内出现多个异地会话并存"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   },
   "R0032-001": {
     "title": "撞库(凭证填充)",
@@ -97,7 +111,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-008_Credential_Stuffing.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "撞库(凭证填充)",
       "撞库",
@@ -138,7 +152,21 @@
         "relation": "co-occurrence",
         "note": "撞库(凭证填充)与HTTP请求分析均可由攻击工具“发包/改包工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "登录接口出现大量来自泄露凭证库的批量尝试，失败率突增",
+        "同一 IP/设备网段在短时间内测试大量不同账号的同一密码",
+        "登录成功的账号密码与已知数据泄露库中的凭证高度重合"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   },
   "R0032-002": {
     "title": "密码喷射",
@@ -168,7 +196,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "密码喷射",
       "口令喷射",
@@ -207,7 +235,21 @@
         "relation": "co-occurrence",
         "note": "密码喷射与HTTP请求分析均可由攻击工具“发包/改包工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "登录接口出现大量账号尝试同一弱口令，单账号失败次数低但覆盖账号广",
+        "同一 IP/设备在短时间内对大量不同账号发起登录，规避账号锁定阈值",
+        "登录成功账号使用常见脆弱密码（123456、qwerty 等），与弱口令字典高度重合"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   },
   "R0032-003": {
     "title": "凭证爆破",
@@ -238,7 +280,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "凭证爆破",
       "密码爆破",
@@ -277,7 +319,21 @@
         "relation": "co-occurrence",
         "note": "凭证爆破与多因素(MFA)绕过均可由攻击工具“密码字典/彩虹表”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "单个账号短时间内出现大量登录失败，失败原因集中在密码错误",
+        "登录请求的密码字段命中常见字典或彩虹表，呈现枚举特征",
+        "同一 IP/设备对单个账号持续尝试不同密码，触发账号锁定或限频"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0032-004": {
     "title": "验证码暴破",
@@ -306,7 +362,7 @@
         "link": "https://attack.mitre.org/techniques/T1110/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "验证码暴破",
       "验证码爆破",
@@ -345,6 +401,20 @@
         "relation": "co-occurrence",
         "note": "验证码暴破与撞卡攻击均可由威胁行为者“料商”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "验证码校验接口短时间内被高频请求，单次尝试不同验证码值",
+        "同一账号验证码失败次数激增，呈现穷举特征",
+        "弱验证码（4位数字、无过期、无次数限制）接口被批量枚举，成功率异常"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   }
 }

@@ -21,7 +21,7 @@
         "link": "https://rule.alimama.com/?#!/product/index?type=detail&id=405&knowledgeId=11004102"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "违规插件推广",
       "推广插件",
@@ -31,6 +31,21 @@
       "比价插件",
       "流量劫持插件"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "浏览器插件商店或第三方渠道存在未经授权的平台推广类插件分发",
+        "用户客户端流量中出现插件注入的推广跳转或比价浮窗请求",
+        "推广归因数据中出现大量来源不明的插件渠道佣金结算",
+        "同一插件包签名或扩展 ID 关联多个违规推广行为"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0007-001",
@@ -87,7 +102,7 @@
         "link": "https://developer.chrome.com/docs/extensions"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "三方价格比较",
       "三方比价",
@@ -96,6 +111,21 @@
       "跨站比价",
       "价格对比插件"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "商品详情页被注入跨站比价浮层，请求指向第三方比价服务域名",
+        "比价数据中竞品价格被选择性展示，对比基准不合理",
+        "用户浏览器扩展列表中存在未上架官方商店的比价类插件",
+        "比价插件请求的商品数据范围与正常用户浏览轨迹不匹配"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "relatedRisks": [
       {
         "key": "R0007",
@@ -153,7 +183,7 @@
         "link": "https://attack.mitre.org/techniques/T1176/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "访问链接劫持",
       "链接劫持",
@@ -162,6 +192,21 @@
       "流量劫持",
       "推广劫持"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "用户访问目标域名的请求被异常重定向至推广或返利页面",
+        "浏览器地址栏 URL 参数被插件篡改，注入推广追踪参数",
+        "页面加载中出现非平台官方的弹窗、浮窗或跳转脚本注入",
+        "客户端进程存在未授权模块挂钩网络请求并修改目标地址"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0007",
@@ -217,7 +262,7 @@
         "link": "https://developer.chrome.com/docs/extensions"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "违规推广引导",
       "导购插件",
@@ -226,6 +271,21 @@
       "竞品引流",
       "诱导跳转"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "商品详情页被注入站外购买引导信息，链接指向竞品或导购平台",
+        "页面中出现返利、分佣类诱导文案引导用户下载第三方客户端",
+        "推广引导内容随用户访问行为动态加载，来源域名非平台官方",
+        "用户转化漏斗中出现大量跳转至外部推广链接的流失节点"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0007",
@@ -281,7 +341,7 @@
         "link": "https://developer.chrome.com/docs/extensions"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "违规插件返利",
       "返利插件",
@@ -290,6 +350,21 @@
       "淘客插件",
       "浏览器返利"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "商品详情页被注入返利标签，请求指向第三方返利服务",
+        "推广佣金结算中出现来源不明的插件渠道归因，挤占官方推客份额",
+        "用户下单链路被插件劫持并附加推广追踪参数以套取佣金",
+        "同一返利插件关联大量商品的佣金领取请求，集中在活动期爆发"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0007",

@@ -25,7 +25,23 @@
       "隐私合规评估",
       "数据处理风险评估"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "新业务或模型上线前未留存隐私影响评估记录",
+        "高风险个人信息处理活动缺少合法性与必要性论证",
+        "采集、共享、跨境、自动化决策未嵌入评估流程",
+        "模型训练数据来源缺少隐私合规审查",
+        "上线后因未评估而触发整改、下架或处罚"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0240",

@@ -15,13 +15,29 @@
       "A0015",
       "A0016"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "支付接口短时间内对同一卡号发起多次安全码或有效期枚举请求",
+        "同一支付卡在不同商户接口被反复尝试不同 CVC 与有效期组合",
+        "支付请求中 CVC 或有效期字段值呈现递增递减等枚举序列特征",
+        "同一卡号在短时间内的支付尝试失败率异常高，且失败原因集中在安全码错误",
+        "多个不同卡号在短时间内从同一设备或 IP 发起结构相似的支付枚举请求"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT010 Card Cracking",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-010_Card_Cracking.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "支付卡破解",
       "CVV爆破",

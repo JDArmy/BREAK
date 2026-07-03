@@ -10,13 +10,29 @@
       "A0020",
       "A0059"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短时间内同一账号或同设备指纹对多商品批量下单但支付率极低",
+        "商品库存被瞬间清空且对应订单集中在数分钟内超时未支付",
+        "大量订单加购后取消，购物车操作频次远超正常用户",
+        "同一 IP 段或设备簇对单一商家全部 SKU 发起占库存请求",
+        "下单后实际支付率与库存占用比严重倒挂，退款/取消率突增"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT021 Denial of Inventory",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意占库存",
       "占库存",

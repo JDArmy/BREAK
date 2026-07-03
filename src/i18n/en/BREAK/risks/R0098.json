@@ -18,6 +18,15 @@
       "forged identity",
       "fake ID",
       "identity verification fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same face or ID card is reused across multiple accounts during real-name authentication",
+        "Liveness detection shows anomalous features such as photo replay, masks, or deepfakes",
+        "The same device completes authentication for many different identities within a short window",
+        "The authenticated identity information is inconsistent with the home region of the bound phone number or bank card",
+        "Post-authentication account behavior does not match the declared identity scenario (e.g., a student account conducting large transactions)"
+      ]
+    }
   }
 }

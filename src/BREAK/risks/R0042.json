@@ -12,13 +12,29 @@
       "A0015",
       "A0020-001"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "卖家商品库存数量与实际发货能力严重不匹配，下单后大量延迟发货",
+        "卖家在低价 SKU 上设置高库存，但实际发货的是高价 SKU 替代品",
+        "同一卖家的多个商品出现下单即缺货的高比例缺货订单",
+        "卖家库存频繁大幅波动且与销量不匹配，如突然挂出大量库存又快速归零",
+        "用户投诉集中在某卖家无货有售或诱导换购的相似描述"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "天猫卖家虚假库存怎么处罚",
         "link": "https://tu.evianbaike.com/article/275547.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假库存",
       "库存作假",

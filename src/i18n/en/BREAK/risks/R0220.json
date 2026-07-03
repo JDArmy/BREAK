@@ -20,6 +20,15 @@
       }
     ],
     "description": "Virtual world economic manipulation uses hoarding, virtual currency manipulation, fake volume, or control of scarce resources to influence market prices. Attackers can cash out, launder value, or lure users into speculative bubbles.\n\nWhen virtual economies connect to real money, advertising revenue, or benefit distribution, manipulation creates financial and consumer protection risk. Platforms need anomaly monitoring across accounts, funds, and market concentration.",
-    "influence": "Virtual economy manipulation can inflate asset bubbles, enable cash-out or laundering, and harm users who rely on platform markets."
+    "influence": "Virtual economy manipulation can inflate asset bubbles, enable cash-out or laundering, and harm users who rely on platform markets.",
+    "riskAssessment": {
+      "observables": [
+        "A few related accounts concentrate holdings of virtual scarce assets and show coordinated trading",
+        "Virtual-currency prices show anomalous movements with fake volume absent external bullish news",
+        "Related-account groups cash out at highs leaving retail-bag-holder patterns",
+        "Key resources in the virtual economy are monopolized by a single entity or ring",
+        "Anomalous trades concentrate on channels convertible to real funds accompanied by money-laundering signatures"
+      ]
+    }
   }
 }

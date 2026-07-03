@@ -12,6 +12,22 @@
       "A0112",
       "A0167"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "critical",
+      "defenseMaturity": "low",
+      "observables": [
+        "批量物联网设备固件哈希与官方签名版本不一致",
+        "设备出厂默认配置或固件中存在非预期的远程管理通道",
+        "设备通信模块出现与已知后门特征匹配的异常外联",
+        "新批次设备在部署后短期内出现统一的异常行为模式",
+        "供应商交付的组件或固件包含未声明的功能或调试接口"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "link": "http://finance.people.com.cn/n1/2025/0311/c1004-40436497.html",
@@ -30,7 +46,7 @@
       "通信模块投毒",
       "硬件植入"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "IoT 硬件供应链攻击发生在芯片、模组、传感器、固件、代工和物流交付等环节。攻击者可植入后门、替换组件或篡改默认配置，使设备在部署后长期受控。\n\n物联网设备数量大、生命周期长、现场更新困难，供应链问题一旦进入批量设备，检测和召回成本很高。组织需要强化供应商验证、固件签名、硬件抽检和运行时异常监测。",
     "relatedRisks": [
       {

@@ -18,6 +18,15 @@
       "email enumeration",
       "CAPTCHA bypass",
       "credential stuffing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The login endpoint sees a large number of different account attempts within a short window, with a spike in failure rate",
+        "The same IP/device fingerprint attempts many accounts at high frequency on the login endpoint",
+        "Account enumeration probes appear on registration/password-recovery endpoints, where response differences reveal whether an account exists",
+        "Passwords from leaked credential libraries are verified in bulk within a short window",
+        "The CAPTCHA endpoint receives high-frequency requests, accompanied by traffic characteristic of CAPTCHA-solving platforms"
+      ]
+    }
   }
 }

@@ -63,6 +63,7 @@ function convertRisk(breakId, entity, identityRef, created) {
     x_break_definition: entity.definition,
     x_break_complexity: entity.complexity,
     x_break_influence: entity.influence,
+    x_break_assessment: entity.riskAssessment ?? null,
     x_break_keywords: entity.keywords,
     x_break_version: entity.version ?? 1,
   };

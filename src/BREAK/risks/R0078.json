@@ -13,13 +13,28 @@
       "A0022",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "数据库/对象存储出现非授权的大批量数据导出或异常查询",
+        "暗网或公开渠道出现与本组织数据特征高度匹配的售卖信息",
+        "内部账号异常访问与其职责无关的敏感数据表或字段",
+        "数据传输至未授权外部地址，DLP规则告警频发"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "Data breach - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Data_breach"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "数据泄露",
       "数据外泄",
@@ -76,13 +91,28 @@
       "A0050",
       "A0054"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "合作方/第三方系统被攻破后本组织数据在暗网或公开渠道泄露",
+        "合作方接口调用超出约定范围，异常拉取本组织敏感数据",
+        "数据传输至合作方的链路缺乏加密或访问控制，被中间人截获",
+        "合作方人员账号被盗用后越权访问本组织共享数据"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "Data breach - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Data_breach"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "合作方数据泄露",
       "第三方数据泄露",
@@ -135,6 +165,21 @@
       "A0211",
       "A0050"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "客服/CRM账号异常批量导出工单或客户聊天记录、截图、密钥",
+        "外包客服账号越权访问与其服务范围无关的客户隐私数据",
+        "工单系统导出量在非工作时段激增，导出字段含敏感信息",
+        "客服账号在协作工具中外发工单截图或客户凭证"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -149,7 +194,7 @@
       "工单截图泄露",
       "客服越权访问"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "relatedRisks": [
       {
         "key": "R0078",
@@ -195,13 +240,28 @@
       "A0055",
       "A0056"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "用户PII数据在未授权接口或日志中被明文暴露",
+        "第三方合作伙伴不当调用用户数据接口，拉取量超出授权范围",
+        "平台安全漏洞导致用户隐私数据被批量探测或拖库",
+        "暗网出现与平台用户特征匹配的隐私数据集"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "Privacy breach - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Privacy_breach"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "用户隐私泄露",
       "个人信息泄露",

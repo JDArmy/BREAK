@@ -24,7 +24,23 @@
       "CPA作弊",
       "广告转化欺诈"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "设备农场或模拟器批量产生注册、安装、留存行为",
+        "新用户留存与转化数据中设备指纹和行为序列高度相似",
+        "渠道拉新补贴被同一团伙关联账号集中领取",
+        "虚假转化缺少真实支付关系或后续活跃",
+        "渠道画像中新渠道转化质量异常优于历史均值"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0239",

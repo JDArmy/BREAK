@@ -10,13 +10,28 @@
       "A0117",
       "A0118"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "设备登录接口出现使用admin/admin等公开默认凭据的批量尝试，来源IP高度集中",
+        "设备固件中硬编码存在隐藏后门账号或不可修改的默认凭据",
+        "大量设备在部署后未修改默认密码即暴露公网，被扫描器快速命中",
+        "同一默认凭据在短时间内从多个外部IP成功登录不同设备"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "Default Password Lists",
         "link": "https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "IoT设备默认凭据风险",
       "默认凭据",

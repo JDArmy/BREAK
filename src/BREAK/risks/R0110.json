@@ -21,7 +21,7 @@
         "link": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "平台色情风险",
       "色情内容",
@@ -31,6 +31,20 @@
       "软色情",
       "招嫖引流"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新注册或低活跃账号批量发布含色情暗示的图文/视频，附带外部联系方式",
+        "评论区/私信中出现招嫖暗语、二维码或跳转链接的密集投放",
+        "色情内容变体频繁更换关键词与图片哈希以绕过审核模型"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0071-009",

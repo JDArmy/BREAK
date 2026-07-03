@@ -11,6 +11,21 @@
       "A0044",
       "A0001"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一账号或账号集群在短时间内批量发布针对热门关键词优化的低质量文章",
+        "新发布内容在文本相似度、句式结构上高度雷同，呈现AI批量生成特征",
+        "商品评价或问答社区出现大量与商品无关、可复用的模板化好评或回答",
+        "同一批低质内容在多个平台近乎同步发布，发布时序和账号画像一致"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Content Farm Detection and Prevention",
@@ -21,7 +36,7 @@
         "link": "https://www.cac.gov.cn/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "内容农场风险",
       "内容农场",

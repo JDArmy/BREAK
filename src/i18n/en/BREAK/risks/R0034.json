@@ -17,6 +17,13 @@
       "reputation farming",
       "trust score boosting",
       "account nurturing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly registered accounts perform review/posting/trading actions on a fixed cadence during the seasoning phase, with mechanical timing",
+        "Account behavior profiles are narrow (only a few action types), lacking the diverse browsing of real users",
+        "A batch of accounts performs the same seasoning action type within the same window, showing group-control traits"
+      ]
+    }
   }
 }

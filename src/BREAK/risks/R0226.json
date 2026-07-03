@@ -24,7 +24,23 @@
       "构建日志泄密",
       "部署密钥泄露"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "CI/CD构建日志或变量中明文出现云密钥、仓库令牌或部署凭证",
+        "Runner配置或缓存目录泄露敏感凭证",
+        "构建脚本输出包含未脱敏的密钥片段",
+        "泄露的凭证被用于访问生产资源或制品仓库",
+        "第三方流水线插件请求超出功能的敏感权限"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0227",

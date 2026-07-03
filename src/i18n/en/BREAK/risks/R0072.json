@@ -17,7 +17,15 @@
       "kickback scheme",
       "abuse of authority",
       "employee bribery"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Employee accounts anomalously access financial, procurement, or supplier data unrelated to their duties",
+        "Expense reports frequently show suspicious patterns such as amounts just below approval thresholds or frequent changes to supplier information",
+        "Fund flows or interest ties between employees and specific suppliers are exposed during audits",
+        "Critical business approvals bypass established processes or concentrate in the hands of specific employees"
+      ]
+    }
   },
   "R0072-001": {
     "title": "Insider-Outsider Collusion",
@@ -37,6 +45,14 @@
       "inside job",
       "employee-supplier collusion",
       "insider fraud ring"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Internal employees have abnormal communication records or fund flows with external suppliers or competitors",
+        "Employees anomalously export or exfiltrate sensitive data such as supplier contracts, quotes, or customer information",
+        "Procurement or bidding processes show suspicious operations directed toward specific external suppliers",
+        "Employee accounts access core business data unrelated to their duties outside of working hours"
+      ]
+    }
   }
 }

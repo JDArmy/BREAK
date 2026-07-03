@@ -17,6 +17,14 @@
       "telematics attack",
       "automotive cybersecurity",
       "vehicle communication attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The vehicle CAN bus or OBD port shows anomalous message injection, with critical functions (brakes, steering) interfered with by remote commands",
+        "V2V/V2I communications contain forged traffic information or false signals, misleading autonomous driving decisions",
+        "After the in-vehicle entertainment system or T-Box is compromised, it is used as a springboard to launch lateral attacks against the vehicle's critical ECUs",
+        "Driver location, driving trajectories, and other privacy data are anomalously bulk-read or exfiltrated"
+      ]
+    }
   }
 }

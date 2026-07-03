@@ -27,6 +27,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "ROS2节点间通信未启用SROS2/DDS-Security认证",
+        "FastDDS等中间件出现畸形RTPS包导致远程崩溃",
+        "DDS Discovery协议枚举出局域网内所有ROS2应用通信域",
+        "rostopic等工具存在eval代码注入漏洞被利用",
+        "机器人系统被接管后多节点协同被破坏或指令被篡改"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   }
 }

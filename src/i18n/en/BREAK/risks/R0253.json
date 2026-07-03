@@ -16,6 +16,15 @@
       }
     ],
     "description": "Decentralized identity credential forgery targets DID, verifiable credentials, and issuance or verification flows. Attackers may impersonate issuers, tamper with claims, reuse revoked credentials, or trick verifiers into accepting untrusted proofs.\n\nWhen credentials gate access to finance, education, enterprise, or platform rights, forgery breaks the trust chain. Systems must verify signatures, status, revocation lists, issuer authority, and context constraints.",
-    "influence": "Forged DID or verifiable credentials let attackers impersonate users, institutions, or qualifications to gain unauthorized rights."
+    "influence": "Forged DID or verifiable credentials let attackers impersonate users, institutions, or qualifications to gain unauthorized rights.",
+    "riskAssessment": {
+      "observables": [
+        "Verification flows accept verifiable credentials with forged issuers or tampered claims",
+        "Revoked credentials are reused without revocation-list checks",
+        "DIDs or verifiable credentials used for access control or finance lack issuer-qualification checks",
+        "Credential signature and status verification are bypassed",
+        "The same credential is abnormally reused across different contexts"
+      ]
+    }
   }
 }

@@ -25,6 +25,22 @@
       "COD abandonment"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "C2C到付订单收件人高频拒收或弃件",
+        "同一收件人或地址的到付拒收率显著高于均值",
+        "到付弃件伴随恶意报复或竞争对手骚扰特征",
+        "来回运费与货品损耗损失集中转嫁给发件方或平台",
+        "到付订单行为模型中异常弃件方聚类出现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0235",

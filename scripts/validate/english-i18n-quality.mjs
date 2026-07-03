@@ -6,7 +6,7 @@ const categories = [
     name: "Risks",
     zhDir: "src/BREAK/risks",
     enDir: "src/i18n/en/BREAK/risks",
-    fields: ["title", "definition", "description", "influence", "keywords"],
+    fields: ["title", "definition", "description", "influence", "keywords", "riskAssessment"],
   },
   {
     name: "Avoidances",

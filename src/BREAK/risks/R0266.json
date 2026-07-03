@@ -25,6 +25,22 @@
       "weight shaving"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "揽收称重与录入环节计费重量与实际货品不符",
+        "漏重或少录重量导致计费差额被套取",
+        "偷重或多录重量导致运费被截留",
+        "称重防篡改机制缺失或被绕过",
+        "异常称重集中在特定快递员或网点且定向抽检命中率高"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0260",

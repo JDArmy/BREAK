@@ -24,7 +24,23 @@
       "边缘缓存污染",
       "HTTP头污染"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "缓存键设计或头部处理缺陷导致异常响应被缓存",
+        "同一URL在不同请求下返回被污染的缓存内容",
+        "用户态响应未被隔离且被缓存为公共资源",
+        "异常缓存命中率伴随非预期内容分发",
+        "边缘规则或参数归一化缺陷被用于构造投毒请求"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0250",

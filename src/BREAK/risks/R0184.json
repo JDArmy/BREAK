@@ -12,13 +12,28 @@
       "A0007-005",
       "A0194"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "元宇宙账号出现异常登录，登录设备或地理位置与用户历史显著不同",
+        "出现与目标用户头像、昵称高度相似但身份标识不同的仿冒账号",
+        "虚拟身份被盗用后向其社交关系网络发起借钱、诱导投资等欺诈行为",
+        "深度伪造内容被用于冒充他人身份进行视频或语音欺诈"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Metaverse Identity Security",
         "link": "https://www.w3.org/TR/did-core/"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "元宇宙身份盗用",
       "虚拟身份伪造",

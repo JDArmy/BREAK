@@ -21,7 +21,16 @@
       "file encryption extortion",
       "data extortion",
       "double extortion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Server files are encrypted in bulk and renamed with anomalous extensions such as .locked/.encrypted",
+        "A large number of files are renamed within a short window, while volume shadow copies and backup services are disabled or deleted",
+        "Lateral movement traffic surges on the internal network, with anomalous SMB/RDP connections and PsExec/WMI remote execution",
+        "Ransom note files (such as README / How-to-decrypt.txt) appear simultaneously across multiple directories",
+        "Large-scale data exfiltration traffic appears before encryption, uploading to unknown external storage during off-hours"
+      ]
+    }
   },
   "R0085-001": {
     "title": "Ransomware as a Service (RaaS)",
@@ -41,7 +50,16 @@
       "malware-as-a-service",
       "extortion platform",
       "affiliate model"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Ransomware samples match signatures of known RaaS families (LockBit/BlackCat/Cl0p)",
+        "Ransom negotiation pages show common RaaS platform templates and ransom payment addresses",
+        "The initial access techniques used by affiliate accounts align with the RaaS division-of-labor model",
+        "Multiple victims are hit by the same ransomware family but the attack source IPs/infrastructure differ",
+        "The dark web leak site publishes victim data batch-listed by the RaaS platform"
+      ]
+    }
   },
   "R0085-002": {
     "title": "Double / Triple Extortion",
@@ -61,6 +79,15 @@
       "quadruple extortion",
       "leak site",
       "data theft extortion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Large-scale data exfiltration traffic appears before encryption, indicating data was stolen beforehand",
+        "The dark web leak site publishes victim enterprise data samples as extortion leverage",
+        "Attackers proactively contact the victim's customers, partners, or regulators to apply pressure",
+        "Ransom notes contain data leakage threats and a public disclosure countdown page",
+        "The same incident is accompanied by DDoS attacks that further paralyze business systems"
+      ]
+    }
   }
 }

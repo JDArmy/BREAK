@@ -56,7 +56,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-006_Expediting.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "流程自动化",
       "自动化脚本",
@@ -66,6 +66,21 @@
       "自动领券",
       "批量操作"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "短时间内同一账号在多个营销活动接口高频请求",
+        "注册/登录/领券/做任务接口的请求时序高度规整，间隔方差极小",
+        "同一设备指纹或 IP 关联大量账号并发执行相同任务序列",
+        "新注册账号在极短时间内完成完整的领券-下单-提现链路"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0001-001",
@@ -133,7 +148,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "协议级自动化",
       "接口自动化",
@@ -142,6 +157,21 @@
       "直连接口",
       "请求重放"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "营销接口请求时序高度规整，相邻请求间隔方差极小",
+        "请求缺失前端交互埋点与浏览器事件链，直接命中后端协议",
+        "同一 IP 或设备指纹在短时间内携带多账号令牌并发调用领券下单接口",
+        "请求头中 UA、Referer、设备参数高度同质化或缺失浏览器特征字段"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0001",
@@ -225,7 +255,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "自动化模拟器",
       "模拟器脚本",
@@ -234,6 +264,21 @@
       "录制回放",
       "群控操作"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "鼠标轨迹与点击坐标呈直线/等距特征，缺少真人抖动与加减速曲线",
+        "页面停留时长高度一致，每次操作步骤间隔固定可重复",
+        "同一设备指纹集群并发执行相同的录制脚本动作序列",
+        "触控事件压力、倾斜角等传感器数据缺失或恒定值"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0001",
@@ -301,7 +346,7 @@
         "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
     "keywords": [
       "自动化登录风险",
       "撞库登录",
@@ -342,6 +387,20 @@
         "relation": "co-occurrence",
         "note": "自动化登录风险与SIM卡交换攻击共享规避手段“凭据复用识别”。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一账号在短时间内从多个 IP/设备发起登录请求",
+        "登录接口的请求频率异常，密码字段哈希值高度集中",
+        "登录成功后立即跳转至领券、下单等高价值操作，无正常浏览轨迹"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

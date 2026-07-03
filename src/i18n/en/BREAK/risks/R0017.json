@@ -18,7 +18,16 @@
       "empty package fraud",
       "transaction brushing",
       "order laundering"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "An abnormally high proportion of merchant orders use empty-package tracking numbers or fake logistics trajectories",
+        "'Order A, ship B' orders have shipping addresses concentrated at warehouse drop-ship points, with categories that do not match the ordered items",
+        "Self-purchased merchant orders show strong linkage between buyer and seller accounts, devices, and funds",
+        "Positive review rates spike in the short term but fulfillment evidence (logistics, delivery confirmation) is missing",
+        "Transactions concentrate during platform rebate or subsidy campaigns and drop sharply after the campaign ends"
+      ]
+    }
   },
   "R0017-001": {
     "title": "Order Brushing",
@@ -39,7 +48,16 @@
       "transaction inflation",
       "review brushing",
       "merchant boosting"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Merchant order volume surges during campaigns, but fulfillment tracking numbers are duplicated or fake",
+        "Brushing buyer accounts share clustered registration times, sparse purchase histories, and templated reviews",
+        "Low-value items are ordered in bulk, with unit prices inverted against shipping costs",
+        "Buyer and seller accounts, shipping addresses, and payment accounts show correlated clustering",
+        "Positive reviews concentrate shortly after brushing is completed, with review content that does not match product characteristics"
+      ]
+    }
   },
   "R0017-002": {
     "title": "Subsidy Fraud",
@@ -64,7 +82,16 @@
       "merchant subsidy abuse",
       "fake ride subsidy",
       "bonus fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Ride-hailing and food delivery platforms show large volumes of ghost-ride brushing with trip trajectories that do not match actual routes",
+        "Subsidy-claiming accounts cluster across multiple devices and phone numbers, repeatedly claiming the same subsidy",
+        "Newly registered accounts surge during subsidy campaigns and centrally trigger subsidy thresholds",
+        "Self-purchased merchant order amounts are precisely pinned at subsidy or rebate thresholds",
+        "After subsidy funds arrive, accounts rapidly withdraw and deregister, with fund flows highly concentrated"
+      ]
+    }
   },
   "R0017-003": {
     "title": "Merchant Cash-Out and Fake Transaction Fraud",
@@ -83,6 +110,15 @@
       }
     ],
     "description": "Merchant cash-out and fake transaction fraud uses fake orders, circular transactions, linked accounts, or abnormal refunds to convert payment rails and platform subsidies into cash. Attackers may coordinate as merchants and buyers.\n\nThe fraud pollutes transaction data, increases payment channel risk, and may trigger anti-money-laundering obligations. Risk control needs to link merchants, buyers, devices, funds, and fulfillment evidence.",
-    "influence": "Fake transactions cause subsidy and fee losses, increase payment channel risk, and may support cash-out or money laundering."
+    "influence": "Fake transactions cause subsidy and fee losses, increase payment channel risk, and may support cash-out or money laundering.",
+    "riskAssessment": {
+      "observables": [
+        "Merchant orders show circular transactions or mutual payments among linked accounts, forming a closed fund-flow loop",
+        "The abnormal refund ratio is high, with refund amounts concentrating into a few linked accounts",
+        "Merchant and buyer device fingerprints, shipping addresses, and payment accounts show dense linkage",
+        "Transaction amounts frequently approach but do not exceed risk-control thresholds, exhibiting threshold-pinning characteristics",
+        "A large volume of equal-amount or multiple-amount orders is generated at the same merchant within a short window, followed by rapid refunds"
+      ]
+    }
   }
 }

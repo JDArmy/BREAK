@@ -22,6 +22,14 @@
       "search spam",
       "spam content",
       "clickbait farm"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same account or account cluster bulk-publishes low-quality articles optimized for trending keywords within a short window",
+        "Newly published content is highly similar in text similarity and sentence structure, exhibiting characteristics of AI bulk generation",
+        "Product reviews or Q&A communities see large volumes of templated positive reviews or answers unrelated to the product and reusable across contexts",
+        "The same batch of low-quality content is published in near-synchrony across multiple platforms, with consistent posting timing and account profiles"
+      ]
+    }
   }
 }

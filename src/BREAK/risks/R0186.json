@@ -11,13 +11,28 @@
       "A0131-001",
       "A0131-002"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "目标节点的所有出站连接被同一控制者的女巫节点占据",
+        "节点接收的区块链视图与全网主链不一致，出现独享的虚假区块",
+        "被隔离节点提交的交易在主网未被确认，但被攻击者用于双花",
+        "轻节点和SPV客户端的区块头来源高度集中于少数对等节点"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "references": [
       {
         "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network",
         "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "日食攻击（Eclipse Attack）",
       "日食攻击",

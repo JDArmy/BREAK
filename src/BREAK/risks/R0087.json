@@ -24,7 +24,23 @@
         "link": "https://attack.mitre.org/techniques/T1190/"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "订单/交易数据出现非业务时段的批量修改，价格/数量/状态字段被篡改",
+        "业务接口返回数据与原始记录不一致，关键字段异常变更",
+        "静态资源或页面内容被植入恶意脚本与跳转代码",
+        "数据库审计日志出现特权账号对业务表的异常 UPDATE/DELETE",
+        "关键业务逻辑文件被非授权修改，时间戳与发布流程不符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "业务篡改风险",
       "业务逻辑篡改",

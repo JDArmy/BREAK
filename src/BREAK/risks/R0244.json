@@ -24,7 +24,23 @@
       "向量库权限",
       "敏感文档召回"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "RAG召回返回用户无权访问的文档片段",
+        "向量相似度召回未纳入用户权限与租户边界过滤",
+        "模型回答中泄露内部文档或跨租户知识",
+        "召回、重排与生成阶段权限约束不一致",
+        "敏感内容输出缺少审计记录"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0245",

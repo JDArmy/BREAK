@@ -26,6 +26,14 @@
       "unapproved AI usage",
       "bring-your-own-AI",
       "AI data leakage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Traffic from employee endpoints uploading sensitive business data to unapproved third-party AI service domains grows significantly",
+        "Sensitive content such as source code, customer data, and financial reports appears in outbound traffic destined for public AI services",
+        "No formal AI tool procurement and approval records exist within the enterprise, yet employee endpoints have multiple third-party AI clients or plugins installed",
+        "Sensitive data is pasted into browser AI dialogs, with the corresponding endpoint lacking enterprise data loss prevention (DLP) interception logs"
+      ]
+    }
   }
 }

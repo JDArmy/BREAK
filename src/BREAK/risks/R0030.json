@@ -25,7 +25,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假注册",
       "账号假注册",
@@ -65,7 +65,21 @@
         "relation": "variant",
         "note": "物联网卡注册是虚假注册的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新注册账号设备指纹、IP 高度同质化，注册时间间隔机械规律",
+        "注册资料命中虚假身份特征（同一头像、模板化昵称、批量号段手机号）",
+        "注册后账号进入养号期，固定节奏执行关注、点赞、评价等行为"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   },
   "R0030-001": {
     "title": "批量注册",
@@ -92,7 +106,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "批量注册",
       "批量起号",
@@ -132,7 +146,21 @@
         "relation": "variant",
         "note": "批量注册与物联网卡注册同属虚假注册下的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "注册接口短时间内被高频调用，来源 IP/设备指纹高度集中或规律轮换",
+        "批量新账号个人资料填充模板化，头像、昵称、简介高度相似",
+        "注册成功的账号在养号期以固定时序执行相同行为序列"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   },
   "R0030-002": {
     "title": "三方账号风险",
@@ -151,7 +179,7 @@
         "link": "https://zhidao.baidu.com/question/1437455763683359379.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "三方账号风险",
       "第三方登录注册",
@@ -191,7 +219,21 @@
         "relation": "variant",
         "note": "三方账号风险与拦截卡注册同属虚假注册下的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "三方联合登录接口短时间内涌入大量新授权登录，绑定同一三方平台来源",
+        "三方账号关联的主账号为批量新注册小号，绑定后立即用于高风险操作",
+        "联合登录后跳过手机验证、实名等本平台严格身份校验流程"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0030-003": {
     "title": "海外号注册",
@@ -211,7 +253,7 @@
         "link": "https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/201311/t20131119_145359.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "海外号注册",
       "境外号注册",
@@ -251,7 +293,21 @@
         "relation": "variant",
         "note": "海外号注册与批量注册同属虚假注册下的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "注册账号集中使用海外手机号段，归属地与平台业务区域不匹配",
+        "海外号注册的账号绕过国内实名认证，资料填充模板化",
+        "同一海外号段短时间内被批量用于注册，验证码接收时间间隔机械"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0030-004": {
     "title": "空号注册",
@@ -272,7 +328,7 @@
         "link": "https://new.qq.com/rain/a/20260228A06D4S00"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "空号注册",
       "空号",
@@ -312,7 +368,21 @@
         "relation": "variant",
         "note": "空号注册与三方账号风险同属虚假注册下的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "大量账号注册使用未投入市场或未激活的号段，验证码却成功通过",
+        "空号注册账号无实体卡激活记录，注册后行为与正常用户显著不同",
+        "注册账号的手机号在运营商侧无在网记录或为预留测试号段"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0030-005": {
     "title": "虚拟号注册",
@@ -332,7 +402,7 @@
         "link": "https://news.cpd.com.cn/n3559/824/t_1148717.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "虚拟号注册",
       "虚卡注册",
@@ -372,7 +442,21 @@
         "relation": "variant",
         "note": "虚拟号注册与海外号注册同属虚假注册下的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "注册账号集中使用 162/165/167/170/171 等虚拟运营商号段",
+        "同一身份证通过不同虚拟运营商办理大量号码用于批量注册",
+        "虚卡注册账号成本低、0 月租，注册后立即用于刷量、欺诈等高风险行为"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   },
   "R0030-006": {
     "title": "物联网卡注册",
@@ -392,7 +476,7 @@
         "link": "https://news.cpd.com.cn/n3559/824/t_1148717.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "物联网卡注册",
       "物联卡注册",
@@ -431,7 +515,21 @@
         "relation": "variant",
         "note": "物联网卡注册与空号注册同属虚假注册下的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "注册账号使用物联网卡号段，且无正常手机用户的通话、上网行为",
+        "物联网卡注册账号默认无短信功能却通过验证码，疑似开通短信功能被滥用",
+        "同一批物联网卡号段集中注册，注册后用于刷量、虚假信息传播"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    }
   },
   "R0030-007": {
     "title": "拦截卡注册",
@@ -451,7 +549,7 @@
         "link": "https://news.cpd.com.cn/n3559/824/t_1148717.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "拦截卡注册",
       "拦截卡",
@@ -491,6 +589,20 @@
         "relation": "variant",
         "note": "拦截卡注册与虚拟号注册同属虚假注册下的细分变体。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "正常用户手机的验证码被插卡设备后门拦截，注册行为非用户本人发起",
+        "拦截卡目标设备集中在出口手机、中低端手机、儿童智能手表等特定类型",
+        "注册账号的手机号在网但用户未开通目标业务，注册后行为异常"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

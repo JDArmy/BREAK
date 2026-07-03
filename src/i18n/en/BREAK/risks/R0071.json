@@ -21,7 +21,15 @@
       "LLM risk",
       "AI content risk",
       "model governance risk"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A platform content endpoint shows a sudden surge of AI-signature text/images within a short window, with a highly mechanical generation timing pattern",
+        "Generated content contains fragments of sensitive personal information or copyrighted material from the training data",
+        "Customer complaints concentrate on AI-generated content being illegal, misleading, or low-quality",
+        "Model outputs reliably reproduce sensitive-information leakage or compliance-violating content under specific prompts"
+      ]
+    }
   },
   "R0071-001": {
     "title": "AIGC Privacy Leakage",
@@ -41,7 +49,15 @@
       "memorization leak",
       "PII leakage from model",
       "sensitive output leakage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Model-generated content contains real names, phone numbers, ID numbers, and other sensitive fields from the training data",
+        "Sensitive information a user entered in earlier turns of a multi-turn conversation is restated in later unrelated replies",
+        "Responses to specific prompts reliably leak private data and can be triggered repeatably",
+        "The frequency of private information appearing in generation logs correlates with timestamps of training-data scrubbing policy changes"
+      ]
+    }
   },
   "R0071-002": {
     "title": "AIGC Compliance Risk",
@@ -65,7 +81,15 @@
       "policy-violating AI content",
       "illegal generated content",
       "responsible AI risk"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A high proportion of AI-generated content hits forbidden-term libraries or political/pornographic/discriminatory moderation rules",
+        "User reports of misleading, discriminatory, or infringing AI outputs rise significantly",
+        "Generated content lacks the labeling or watermarks required by content-labeling regulations, violating labeling requirements",
+        "The compliance-violation types produced by the same model are concentrated and reproducible across different business scenarios"
+      ]
+    }
   },
   "R0071-003": {
     "title": "AI-Generated Low-Quality Content",
@@ -85,7 +109,15 @@
       "low-effort AI content",
       "synthetic content pollution",
       "LLM spam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A large volume of homogeneous AI-signature comments/posts/articles appears within a short window, with a mechanical posting cadence",
+        "New accounts in their warming-up period post AI-spun content at a fixed rhythm, with low textual similarity but semantically identical meaning",
+        "Activity from original high-quality creators declines while the share of AI-padded content rises",
+        "AI-generated content shows abnormally concentrated perplexity or watermark-detection scores in anti-abuse models"
+      ]
+    }
   },
   "R0071-004": {
     "title": "AI Hallucination Risk",
@@ -105,7 +137,15 @@
       "AI confabulation",
       "false AI answers",
       "model hallucinations"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Papers, legal provisions, or news links cited in model-generated content cannot be verified or are misattributed upon checking",
+        "In medical, legal, or financial Q&A, the model gives conclusions that contradict authoritative sources",
+        "Asking the model the same factual question multiple times yields mutually contradictory yet confident answers",
+        "Customer complaints show a high share of AI professional advice leading to wrong decisions in specific domains"
+      ]
+    }
   },
   "R0071-005": {
     "title": "AI Model Poisoning Risk",
@@ -125,7 +165,15 @@
       "poisoned model",
       "malicious fine-tuning",
       "data poisoning attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The model reliably produces anomalous outputs on inputs containing a specific trigger, and returns to normal once the trigger is removed",
+        "Anomalous injections appear in the provenance of training or fine-tuning data, triggering data-lineage audit alerts",
+        "Hashes of model weights or configuration files are tampered with along the distribution chain",
+        "Model updates submitted by federated-learning participants show clearly anomalous gradient directions"
+      ]
+    }
   },
   "R0071-006": {
     "title": "AI-Generated Fake Reviews",
@@ -146,7 +194,15 @@
       "opinion spam",
       "rating manipulation",
       "AI review spam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A large volume of product/service reviews with varied style but semantically homogeneous meaning appears within a short window, posted by concentrated and newly registered accounts",
+        "Review text scores abnormally on AI-detection models — fluently worded but lacking genuine usage detail",
+        "Bursts of positive or negative reviews for the same product are highly synchronized with competitor dynamics, exhibiting targeted review-farming characteristics",
+        "Reviewing accounts share concentrated device fingerprints or IP ranges, and multilingual reviews come from the same account cluster"
+      ]
+    }
   },
   "R0071-007": {
     "title": "AI Voice Cloning Fraud",
@@ -171,7 +227,15 @@
       "voice deepfake",
       "vishing",
       "telephone scam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The voiceprint authentication system shows abnormal pass rates where authentication succeeds with only a small number of samples",
+        "In telephone-fraud reports, victims indicate the caller's voice was highly similar to that of a friend, family member, or supervisor",
+        "Public voice content on social platforms is scraped in bulk and used for training, generating anomalous voice-synthesis requests",
+        "The false-accept rate of voiceprint matching at banks or payment platforms spikes during specific time windows"
+      ]
+    }
   },
   "R0071-008": {
     "title": "Digital Avatar Live Stream Fraud",
@@ -197,7 +261,15 @@
       "livestream impersonation",
       "AI avatar fraud",
       "fake live shopping"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A live stream runs 24-hour uninterrupted commerce with a highly looping streamer likeness and movements, suspected to be a digital avatar",
+        "The digital-avatar live stream lacks the AI-identity label required by regulations, violating content-labeling requirements",
+        "Live-streamed products are suspected counterfeit or substandard, accompanied by automated bullet comments fabricating popularity",
+        "Viewers report the streamer as an unauthorized impersonation of a celebrity or influencer"
+      ]
+    }
   },
   "R0071-009": {
     "title": "AI Deepfake Risk",
@@ -222,7 +294,15 @@
       "face swap",
       "voice cloning",
       "synthetic audio/video"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The facial recognition system records passes exhibiting synthetic-image or synthetic-video characteristics, with liveness-detection anomalies",
+        "Video calls show deepfake artifacts such as blurred facial edges or abnormal blink frequency",
+        "Likenesses of public figures are bulk-fabricated into fake videos and spread on social platforms",
+        "The same face reappears anomalously across multiple devices and scenarios in financial or identity-verification contexts"
+      ]
+    }
   },
   "R0071-010": {
     "title": "AI Face-Swap Fraud",
@@ -242,7 +322,15 @@
       "face replacement",
       "identity spoofing",
       "face morphing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A video meeting features an executive's likeness issuing transfer instructions, later verified that the real person did not attend",
+        "Real-time video calls show face-swap artifacts, inconsistent facial lighting, and other technical traces",
+        "Facial images used in remote account opening or loan approval are highly similar to public photos but exhibit synthetic features",
+        "Face-swap fraud targeting the same corporate executive recurs multiple times within a short period"
+      ]
+    }
   },
   "R0071-011": {
     "title": "AI Synthetic Video Fraud",
@@ -263,6 +351,14 @@
       "AI video forgery",
       "video impersonation",
       "synthetic media"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Synthetic celebrity-endorsement videos promoting unauthorized products appear on social platforms",
+        "Synthetic fake-news videos are forwarded in large volumes within a short window, with an abnormal propagation curve",
+        "Generation artifacts of synthetic video (such as unnatural full-body motion or scene-stitching traces) are flagged by detection",
+        "Celebrities or brands file concentrated complaints about being impersonated in synthetic endorsement videos"
+      ]
+    }
   }
 }

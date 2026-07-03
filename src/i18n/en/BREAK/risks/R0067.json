@@ -17,6 +17,14 @@
       "confidential document leak",
       "sensitive file theft",
       "insider document theft"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Internal accounts access or download confidential files beyond their privilege in bulk, at volumes deviating from the daily norm",
+        "Sensitive documents are exfiltrated via personal storage, cloud drives, or instant messaging, bypassing enterprise channels",
+        "After phishing or ransomware lands, the core file repository shows anomalous read access and outbound transfers",
+        "Content closely resembling the company's confidential files appears on competitor or public channels"
+      ]
+    }
   }
 }

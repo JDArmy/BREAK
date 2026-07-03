@@ -17,6 +17,14 @@
       "SMS login takeover",
       "number reassignment hijack",
       "ATO via recycled number"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A newly rebindbed phone number triggers the password-recovery or verification-code flow on first login and successfully accesses a historical account",
+        "A batch of recycled number ranges concurrently logs into multiple long-dormant accounts with clustered timing",
+        "After password recovery, the account profile is immediately modified, or assets are withdrawn or gifted",
+        "The carrier's recycled-number status is out of sync with the platform's account-binding status, with sudden changes in login device or region"
+      ]
+    }
   }
 }

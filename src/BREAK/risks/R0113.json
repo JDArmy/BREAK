@@ -19,7 +19,7 @@
         "link": "https://www.meipian.cn/57uw5xm6"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意拉人头",
       "游戏拉人",
@@ -28,6 +28,20 @@
       "跨游导流",
       "公会拉人"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "低活跃或新账号创建公会后高频向成员发送外部微信号/QQ群引流信息",
+        "游戏内聊天/邮件中出现竞品游戏名称、换服话术与外部联系方式",
+        "同一批次账号在解锁工会功能后以固定节奏批量拉人并引导加群"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0114",

@@ -12,6 +12,21 @@
       "A0044",
       "A0052"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "平台合同中出现要求商家排他经营、不得在竞对平台开店的二选一条款",
+        "搜索排名与流量分配中自营商品系统性优先于同类第三方商家商品",
+        "平台屏蔽或限流竞争对手的链接、内容或服务在站内的传播",
+        "平台拒绝向第三方开放必要数据接口，形成数据壁垒"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "中华人民共和国反垄断法（2022修正）",
@@ -22,7 +37,7 @@
         "link": "https://scjgj.cq.gov.cn/zt_225/cjscjz/zcfg/gfxwj/202312/t20231215_12710745.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "平台垄断滥用风险",
       "二选一",

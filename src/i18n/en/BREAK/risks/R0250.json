@@ -16,6 +16,15 @@
       }
     ],
     "description": "Edge function configuration abuse occurs when CDN edge functions, Workers, WAF rules, or traffic orchestration logic are misconfigured. Attackers may bypass authentication, forward sensitive requests, alter responses, or create an open proxy.\n\nEdge logic sits between users and origin services, so mistakes affect the full traffic entry point. Changes need review, staged rollout, least privilege, and rollback mechanisms.",
-    "influence": "Abused edge functions can cause authentication bypass, data forwarding, response tampering, and broad traffic disruption."
+    "influence": "Abused edge functions can cause authentication bypass, data forwarding, response tampering, and broad traffic disruption.",
+    "riskAssessment": {
+      "observables": [
+        "Auth-bypass appears after edge function or WAF rule changes",
+        "Edge logic is configured to forward sensitive requests or act as an open proxy",
+        "The traffic ingress layer shows anomalous response tampering or data forwarding",
+        "Edge config changes lack canary release and rollback, causing widespread service anomalies",
+        "Edge functions carry excessive permissions unconstrained by least privilege"
+      ]
+    }
   }
 }

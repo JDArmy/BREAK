@@ -17,6 +17,14 @@
       "account takeover",
       "digital identity abuse",
       "virtual profile hijacking"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A metaverse account shows anomalous logins, with login devices or geographic locations significantly different from the user's history",
+        "Impersonation accounts with avatars and nicknames highly similar to the target user but with different identity identifiers appear",
+        "After a virtual identity is stolen, it initiates borrowing, investment solicitation, and other fraudulent behaviors against the victim's social network",
+        "Deepfake content is used to impersonate others' identities for video or voice fraud"
+      ]
+    }
   }
 }

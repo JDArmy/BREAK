@@ -17,6 +17,14 @@
       "private message abuse",
       "message spam abuse",
       "offensive direct messages"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single account mass-sends direct messages to many users within a short window, with mechanical sending frequency",
+        "Message content is deliberately crafted to evade keyword blacklists, containing variant, homophone, or image-based harassing text",
+        "Newly registered or low-activity accounts initiate direct messages in clusters, with target users widely distributed",
+        "The report or block rate is notably higher for specific sending accounts"
+      ]
+    }
   }
 }

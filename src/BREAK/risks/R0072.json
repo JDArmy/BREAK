@@ -13,13 +13,28 @@
       "A0020-002",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "员工账户异常访问与其职责无关的财务/采购/供应商数据",
+        "报销单据频繁出现金额接近审批阈值、供应商信息频繁变更等可疑模式",
+        "员工与特定供应商的资金往来、利益关联在审计中暴露",
+        "关键业务审批绕过既定流程或集中在特定员工手中"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Corporate fraud - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Corporate_fraud"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "员工贪腐",
       "内部贪腐",
@@ -76,13 +91,28 @@
       "A0020-002",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "内部员工与外部供应商/竞对存在异常通讯记录或资金往来",
+        "员工异常导出或外发供应商合同、报价、客户等敏感数据",
+        "采购/招投标流程出现定向指向特定外部供应商的可疑操作",
+        "员工账号在非工作时间访问与其职责无关的核心业务数据"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Insider threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "内外勾结(内鬼)",
       "内外勾结",

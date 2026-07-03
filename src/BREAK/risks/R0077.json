@@ -24,7 +24,22 @@
         "link": "https://www.gov.cn/gongbao/2024/issue_11646/202410/content_6980863.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "个人敏感信息传输至境外未取得用户单独同意或未签标准合同",
+        "数据出境未完成安全评估或标准合同备案",
+        "跨境数据传输未采取加密等安全措施，传输链路可观测异常",
+        "数据出境目的国家/地区不在合规白名单内"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "数据出境合规风险",
       "数据跨境合规",
@@ -93,7 +108,22 @@
         "link": "https://www.pwc.com/us/en/services/consulting/cybersecurity-data-tech-risk/data-risk-privacy.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "通过加密隧道/代理/CDN等隐蔽通道向境外服务器持续外传数据，流量特征异常",
+        "数据被拆分小片段经多渠道分散出境，单通道流量小但聚合后量级大",
+        "合法API接口出现高频数据导出，规避数据出境审批阈值",
+        "员工便携设备在出境前后与境外云存储/SaaS服务存在异常数据交互"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "跨境数据走私风险",
       "数据走私",

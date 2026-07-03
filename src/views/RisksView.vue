@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, onMounted, onBeforeUnmount, nextTick } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
+import type { ECharts } from "echarts/core";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
@@ -12,6 +13,7 @@ import { formatRiskRelationNote } from "@/utils/relationNote";
 import { useRelatedCases } from "@/composables/useRelatedCases";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { useRelationGraph } from "@/composables/useRelationGraph";
+import { loadRiskRadarECharts } from "@/views/relation/relationECharts";
 
 const route = useRoute();
 const { t, locale, messages } = useI18n();
@@ -34,6 +36,7 @@ const riskItems = computed(() =>
     const description = t(`BREAK.risks.${rKey}.description`);
     const complexity = t(`riskComplexityLevel.${BREAK.risks[rKey].complexity}`);
     const influence = t(`BREAK.risks.${rKey}.influence`);
+    const priority = BREAK.risks[rKey].riskAssessment?.priority;
     const localeMessages = messages.value[locale.value] as Record<string, unknown>;
     const keywords = getMessageStringArray(localeMessages, `BREAK.risks.${rKey}.keywords`);
 
@@ -43,7 +46,7 @@ const riskItems = computed(() =>
       subtitle: definition.slice(0, 56),
       badge: complexity,
       badgeType: `risk-${BREAK.risks[rKey].complexity}`,
-      searchText: [title, ...keywords, definition, description, complexity, influence]
+      searchText: [title, ...keywords, definition, description, complexity, influence, priority]
         .filter(Boolean)
         .join(" "),
     };
@@ -89,6 +92,104 @@ const riskThreatActors = useRelatedEntities(
 const relatedTerms = useRelatedEntities(BREAK.terms, "relatedRisks", selectedRiskKey);
 
 const { openRelationGraph } = useRelationGraph("risk");
+
+// ── 风险分级雷达图 ──
+const radarChartRef = ref<HTMLElement | null>(null);
+let radarChart: ECharts | null = null;
+
+const RISK_DIMENSIONS = [
+  "likelihood",
+  "businessLoss",
+  "attackCost",
+  "detectionDifficulty",
+  "defenseMaturity",
+] as const;
+const SEVERITY_VALUE: Record<string, number> = { low: 1, medium: 2, high: 3, critical: 4 };
+
+const selectedAssessment = computed(() => selectedRisk.value?.riskAssessment);
+// 可观测信号：英文 locale 下走 i18n 合并后的数组，中文走源数据
+const observables = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.risks.${selectedRiskKey.value}.riskAssessment.observables`)
+);
+const priorityNote = computed(() =>
+  selectedAssessment.value?.priorityNote
+    ? t(`BREAK.risks.${selectedRiskKey.value}.riskAssessment.priorityNote`)
+    : ""
+);
+
+async function renderRadar() {
+  const a = selectedAssessment.value;
+  if (!a || !radarChartRef.value) return;
+  const initFn = await loadRiskRadarECharts();
+  if (!radarChartRef.value) return; // 切换期间可能已卸载
+  if (!radarChart) {
+    radarChart = initFn(radarChartRef.value);
+  }
+  // echarts canvas 不支持 CSS 变量，从根元素读取实际颜色值
+  const styles = getComputedStyle(document.documentElement);
+  const textColor = styles.getPropertyValue("--break-text-secondary").trim() || "#666";
+  const primaryColor = styles.getPropertyValue("--break-primary").trim() || "#409eff";
+  radarChart.setOption({
+    radar: {
+      indicator: RISK_DIMENSIONS.map((dim) => ({ name: t(`riskDim.${dim}`), max: 4 })),
+      radius: "60%",
+      center: ["50%", "52%"],
+      axisName: {
+        color: textColor,
+        fontSize: 12,
+        fontWeight: 600,
+        padding: [3, 5],
+      },
+      splitArea: { areaStyle: { color: ["var(--break-bg-secondary)", "transparent"] } },
+    },
+    series: [
+      {
+        type: "radar",
+        data: [
+          {
+            value: RISK_DIMENSIONS.map((dim) => SEVERITY_VALUE[a[dim]] ?? 0),
+            name: t("riskAssessmentDimensions"),
+            areaStyle: { opacity: 0.2 },
+            lineStyle: { width: 2 },
+            label: {
+              show: true,
+              color: primaryColor,
+              fontSize: 11,
+              fontWeight: 700,
+              formatter: (params: { value: number }) => params.value,
+            },
+          },
+        ],
+      },
+    ],
+  });
+}
+
+function disposeRadar() {
+  if (radarChart) {
+    radarChart.dispose();
+    radarChart = null;
+  }
+}
+
+watch(
+  [selectedRiskKey, () => locale.value],
+  () => {
+    nextTick(() => {
+      if (selectedAssessment.value) {
+        renderRadar();
+      } else {
+        disposeRadar();
+      }
+    });
+  },
+  { immediate: true }
+);
+
+onMounted(() => {
+  nextTick(() => selectedAssessment.value && renderRadar());
+});
+onBeforeUnmount(disposeRadar);
 </script>
 
 <template>
@@ -141,14 +242,37 @@ const { openRelationGraph } = useRelationGraph("risk");
         <p>{{ $t(`BREAK.risks.${selectedRiskKey}.description`) }}</p>
       </section>
       <section class="detail-grid risk-meta-grid">
+        <div v-if="selectedAssessment" class="risk-meta-card risk-meta-card--compact risk-meta-card--priority">
+          <h3>{{ $t("riskPriority") }}</h3>
+          <span class="knowledge-badge risk-priority-badge" :class="`risk-priority-${selectedAssessment.priority?.toLowerCase()}`">
+            {{ selectedAssessment.priority }}
+          </span>
+          <p v-if="selectedAssessment.priorityOverride" class="priority-override-hint">{{ $t("riskPriorityOverridden") }}</p>
+        </div>
         <div class="risk-meta-card risk-meta-card--compact">
           <h3>{{ $t("riskComplexity") }}</h3>
-          <p class="risk-complexity-value">{{ $t(`riskComplexityLevel.${selectedRisk.complexity}`) }}</p>
+          <span class="knowledge-badge risk-complexity-badge" :class="`risk-${selectedRisk.complexity}`">
+            {{ $t(`riskComplexityLevel.${selectedRisk.complexity}`) }}
+          </span>
         </div>
         <div class="risk-meta-card risk-meta-card--impact">
           <h3>{{ $t("riskInfluence") }}</h3>
           <p>{{ $t(`BREAK.risks.${selectedRiskKey}.influence`) }}</p>
         </div>
+      </section>
+      <section v-if="selectedAssessment" class="detail-section">
+        <h3>{{ $t("riskAssessmentDimensions") }}</h3>
+        <div ref="radarChartRef" class="risk-radar-chart"></div>
+      </section>
+      <section v-if="observables.length" class="detail-section">
+        <h3>{{ $t("riskObservables") }}</h3>
+        <ul class="observables-list">
+          <li v-for="(obs, i) in observables" :key="i">{{ obs }}</li>
+        </ul>
+      </section>
+      <section v-if="priorityNote" class="detail-section">
+        <h3>{{ $t("riskPriorityNote") }}</h3>
+        <p>{{ priorityNote }}</p>
       </section>
       <section v-if="getMessageStringArray(localeMessages, `BREAK.risks.${selectedRiskKey}.keywords`).length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
@@ -247,6 +371,86 @@ const { openRelationGraph } = useRelationGraph("risk");
   flex: 0 0 96px;
 }
 
+.risk-priority-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1px solid var(--break-border);
+}
+
+.risk-priority-badge.risk-priority-p0 {
+  background: var(--break-badge-risk-priority-p0-bg);
+  border-color: var(--break-badge-risk-priority-p0-border);
+  color: var(--break-badge-risk-priority-p0-text);
+}
+.risk-priority-badge.risk-priority-p1 {
+  background: var(--break-badge-risk-priority-p1-bg);
+  border-color: var(--break-badge-risk-priority-p1-border);
+  color: var(--break-badge-risk-priority-p1-text);
+}
+.risk-priority-badge.risk-priority-p2 {
+  background: var(--break-badge-risk-priority-p2-bg);
+  border-color: var(--break-badge-risk-priority-p2-border);
+  color: var(--break-badge-risk-priority-p2-text);
+}
+.risk-priority-badge.risk-priority-p3 {
+  background: var(--break-badge-risk-priority-p3-bg);
+  border-color: var(--break-badge-risk-priority-p3-border);
+  color: var(--break-badge-risk-priority-p3-text);
+}
+
+.risk-complexity-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1px solid var(--break-border);
+}
+
+.risk-complexity-badge.risk-basic {
+  background: var(--break-badge-risk-basic-bg);
+  border-color: var(--break-badge-risk-basic-border);
+  color: var(--break-badge-risk-basic-text);
+}
+.risk-complexity-badge.risk-intermediate {
+  background: var(--break-badge-risk-intermediate-bg);
+  border-color: var(--break-badge-risk-intermediate-border);
+  color: var(--break-badge-risk-intermediate-text);
+}
+.risk-complexity-badge.risk-advanced {
+  background: var(--break-badge-risk-advanced-bg);
+  border-color: var(--break-badge-risk-advanced-border);
+  color: var(--break-badge-risk-advanced-text);
+}
+
+.priority-override-hint {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--break-text-secondary);
+}
+
+.risk-radar-chart {
+  width: 100%;
+  max-width: 420px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.observables-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.observables-list li {
+  margin-bottom: 4px;
+}
+
 .keywords {
   display: flex;
   flex-wrap: wrap;
@@ -273,7 +477,7 @@ const { openRelationGraph } = useRelationGraph("risk");
 }
 
 .risk-meta-grid {
-  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(0, 2fr);
   gap: 10px;
   align-items: stretch;
 }
@@ -298,18 +502,13 @@ const { openRelationGraph } = useRelationGraph("risk");
   justify-content: center;
 }
 
-.risk-complexity-value {
-  width: fit-content;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--break-bg-secondary);
-  border: 1px solid var(--break-border);
-  font-size: 0.9rem;
-  font-weight: 650;
-}
-
 .risk-meta-card--impact {
   border-left: 3px solid var(--break-border);
+}
+
+/* 无优先级卡片时（未回填 assessment），影响卡片跨剩余列占满 */
+.risk-meta-grid:not(:has(.risk-meta-card--priority)) > .risk-meta-card--impact {
+  grid-column: 2 / -1;
 }
 
 .risk-relation-list {

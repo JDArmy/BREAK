@@ -18,6 +18,15 @@
       "VPN evasion",
       "Tor bypass",
       "botnet IPs"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Request IPs rotate rapidly across residential proxy or datacenter IP ranges, with a single account spanning multiple regions in a short window",
+        "The same device fingerprint is associated with requests from a large number of different IP sources",
+        "Access traffic transits known proxy, VPN, or Tor exit nodes",
+        "The IP origin is persistently inconsistent with the registration location or usual login locations",
+        "Request frequency stays below the threshold but probes persistently at low frequency to evade per-IP rate limits"
+      ]
+    }
   }
 }

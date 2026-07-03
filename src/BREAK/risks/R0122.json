@@ -19,7 +19,7 @@
         "link": "https://www.chainalysis.com/"
       }
     ],
-    "updated": "2026-02-27",
+    "updated": "2026-07-03",
     "keywords": [
       "NFT欺诈风险",
       "NFT诈骗",
@@ -28,6 +28,20 @@
       "虚假NFT项目",
       "NFT盗图"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "同一NFT在关联钱包间反复交易，交易量/价格被人为拉高",
+        "NFT项目发售后项目方钱包迅速转移资金，社区与路线图同步消失",
+        "交易平台出现大量盗用他人作品铸造的NFT，关联同一铸造者地址"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0006",

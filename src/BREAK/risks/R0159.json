@@ -12,6 +12,21 @@
       "A0097",
       "A0160"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "智能合约在短时间内被异常交易触发，出现重入、整数溢出等已知漏洞利用模式",
+        "合约资金池余额在单笔或少量交易后被异常转出至陌生地址",
+        "合约调用日志中出现外部合约回调与状态变更顺序异常的调用序列",
+        "新部署合约未经审计即承载大额资产，且权限控制字段配置异常"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "OWASP Smart Contract Top 10",
@@ -22,7 +37,7 @@
         "title": "GitHub - demining/Dao-Exploit"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "智能合约漏洞",
       "合约安全",

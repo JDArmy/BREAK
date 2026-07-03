@@ -18,6 +18,15 @@
       "stolen card",
       "chargeback fraud",
       "carding attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single credit card shows high-frequency purchases across geographies and merchants within a short window",
+        "E-commerce card-not-present transactions show repeated CVV attempts and a fail-then-success pattern",
+        "A newly bound card account initiates large purchases or virtual item purchases within a short window",
+        "Following account takeover, the shipping address and contact info are modified and large orders are placed",
+        "Credit card statements show unauthorized small test transactions by the cardholder"
+      ]
+    }
   }
 }

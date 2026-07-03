@@ -14,13 +14,29 @@
       "A0020",
       "A0059"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "客户端进程内存被注入未知模块或存在异常读写游戏内存行为",
+        "同一账号在短时间内出现超出人类反应速度的精确瞄准、连续命中或固定节奏的自动操作",
+        "游戏内移动速度、技能冷却等数值被篡改超出服务端设定阈值",
+        "外挂程序进程或调试器句柄与游戏进程建立异常附加关系",
+        "账号登录设备指纹与外挂工具特征进程同时出现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "净网2025| \"外挂\"搞破坏?网警依法打击!",
         "link": "https://mp.weixin.qq.com/s?__biz=MzAwOTU4MTc1MQ==&mid=2652165685&idx=4&sn=1e6dd5c7e3e75354a806d144b73b33b0&chksm=814db434717258d045f0f806de643549a1d610b40aa5f76519583303db74dcc70bfeddcacf24&scene=27"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "外挂",
       "作弊程序",
@@ -77,13 +93,29 @@
       "A0019",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "红包发放后极短时间内（毫秒级）出现自动抢夺，远快于人工点击分布",
+        "同一账号在多个红包会话中保持固定抢夺延迟，时序机械",
+        "无障碍服务或辅助 API 被外挂进程持续调用并监听聊天通知",
+        "设备上检测到自动点击脚本或模拟点击工具与红包事件强相关",
+        "账号在非前台或锁屏状态下仍持续抢到红包"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "新瓶装旧酒:手机AI智能体的无障碍服务调用与不正当竞争认定|安卓|...",
         "link": "https://www.163.com/dy/article/KH0KGIKU051187VR.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "抢红包外挂",
       "抢红包脚本",
@@ -139,13 +171,29 @@
       "A0019",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "玩家瞄准命中率达 100% 或连续爆头，反应时间低于人类生理阈值",
+        "角色移动速度、跳跃高度等物理参数超出服务端配置上限",
+        "同一 IP 段或设备指纹下多个账号使用相同外挂特征，资源采集速率异常一致",
+        "游戏内存被外部进程读写，关键数值（生命、金币、坐标）出现非授权修改",
+        "账号在透视外挂下表现为持续追踪墙后目标或提前预瞄未见敌人"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "上海浦东捣毁非法售卖游戏账号团伙",
         "link": "https://m.gmw.cn/2025-02/12/content_1303968817.htm"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "游戏外挂",
       "游戏辅助",

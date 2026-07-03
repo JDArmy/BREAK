@@ -25,6 +25,22 @@
       "FTL fraud"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "整车运力场景下车型、车次或通道被虚报",
+        "运费与补贴在整车场景出现虚增支出",
+        "车型-车次-通道核验与实际不符",
+        "异常整车运力集中涉及司机、网点或合作方合谋",
+        "整车运力调度与计费数据被扭曲"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0264-001",
@@ -73,6 +89,22 @@
       "车型虚报"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一车辆在系统登记多个车型",
+        "高运价车型结算或多车型重复结算出现运费差额",
+        "车辆-车型一对一核验失败但未被阻断",
+        "车型防篡改机制缺失导致一车多车型可操作",
+        "异常结算集中在特定车辆与车型组合"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0264",
@@ -106,6 +138,22 @@
       "京驿通道套用"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "京驿整车正规通道资质或运单被套用",
+        "非整车运力冒充整车运力承接订单套取运费与权益",
+        "通道资质核验与运单-车辆关联出现不一致",
+        "异常通道使用集中在特定合作方或司机",
+        "整车履约质量在套用通道场景出现下降"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0264",
@@ -139,6 +187,22 @@
       "车次虚报"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "车次记录被伪造或重复录入虚增车次与里程",
+        "车次-车辆-轨迹关联核验出现不一致",
+        "虚假车次伴随运费与补贴的虚增支出",
+        "车次防篡改机制缺失或被绕过",
+        "异常车次集中在特定司机或网点"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0264",

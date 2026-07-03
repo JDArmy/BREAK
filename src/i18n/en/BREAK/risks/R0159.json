@@ -17,6 +17,14 @@
     "keywords": [
       "reentrancy",
       "smart contract vulnerability"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A smart contract is triggered by anomalous transactions within a short window, exhibiting known vulnerability exploitation patterns such as reentrancy and integer overflow",
+        "The contract's fund pool balance is abnormally transferred to unfamiliar addresses after a single or a few transactions",
+        "Contract call logs show call sequences with anomalous ordering of external contract callbacks and state changes",
+        "A newly deployed contract carries large asset value without audit, and its permission control fields are anomalously configured"
+      ]
+    }
   }
 }

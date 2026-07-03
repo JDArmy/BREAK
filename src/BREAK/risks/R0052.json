@@ -17,7 +17,7 @@
         "link": "https://gaoyou.yangzhou.gov.cn/zwgk/fdzdgknr/xwfb/art/2023/art_25eca3541e1b40b0b6786bb32000ac60.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "低价高邮",
       "低价高运费",
@@ -26,6 +26,21 @@
       "商品低价运费高",
       "运费补差"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一店铺商品标价显著低于同类，运费却显著高于行业均值",
+        "店铺运费模板被设置为远超实际物流成本的固定高额",
+        "商品页低价但结账页运费占比异常高（如运费超过商品价30%）",
+        "买家投诉集中于未注意运费或运费过高且集中指向少数店铺"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0053",

@@ -25,7 +25,23 @@
       "版权数据训练",
       "数据来源不明"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "AI训练语料来源不明或许可条款与商业使用冲突",
+        "模型输出复现受保护内容引发版权主张",
+        "训练数据缺少来源、许可条件与清洗流程记录",
+        "客户交付或跨境部署因数据授权不清被阻断",
+        "删除请求处理机制缺失导致合规风险"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0243",

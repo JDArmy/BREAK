@@ -16,7 +16,7 @@
         "link": "https://en.wikipedia.org/wiki/Gold_farming"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "游戏打金",
       "打金币",
@@ -26,6 +26,20 @@
       "工作室打金",
       "RMT"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号长时间在线、重复执行杀怪/采集/任务路径，行为时序机械",
+        "打金账号积攒金币后集中向少数中转号转移，再通过外部渠道交易",
+        "同一IP或设备指纹下挂载大量账号并行打金"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0001",

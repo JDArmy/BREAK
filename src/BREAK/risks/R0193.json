@@ -12,6 +12,22 @@
       "A0044",
       "A0055"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新发布的依赖包或钱包插件在短时间内被大量项目安装且作者与历史身份不符",
+        "构建产物哈希与官方发布不一致或签名链路出现非预期变更",
+        "SDK更新日志含可疑网络外联、私钥读取或动态加载远程代码逻辑",
+        "下游项目在升级某依赖后出现异常授权、转账或敏感数据外发",
+        "包管理器解析日志显示内部包名被同名外部包抢占"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "link": "https://news.qq.com/rain/a/20251230A03V4I00",
@@ -30,7 +46,7 @@
       "恶意依赖包",
       "构建链投毒"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "区块链供应链攻击通常发生在项目开发、钱包插件、SDK、节点组件、前端依赖和发布流程中。攻击者通过篡改依赖、植入后门或控制发布账号，把恶意逻辑带入下游项目。\n\n由于 Web3 应用常直接处理私钥、签名和链上资产，供应链污染可能在用户交互时触发资产转移、授权篡改或敏感信息泄露，影响范围会随依赖复用快速扩大。",
     "relatedRisks": [
       {

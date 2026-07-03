@@ -12,13 +12,28 @@
       "A0165",
       "A0166"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "预言机报告价格在短时间内与其他主流数据源出现剧烈偏离",
+        "低流动性交易池被单笔大额交易瞬间操纵，进而影响依赖该池的预言机报价",
+        "DeFi协议在价格异常窗口内出现异常清算或大额借贷，攻击者从中套利",
+        "预言机节点更新延迟或数据源故障期间，合约仍按异常价格执行关键操作"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Oracle Manipulation Attacks",
         "link": "https://blog.chain.link/what-is-oracle-manipulation/"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "预言机操纵",
       "价格操纵",

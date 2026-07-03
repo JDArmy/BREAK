@@ -10,13 +10,28 @@
       "A0147",
       "A0148"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "工控系统（SCADA/PLC）出现来自IT网络或外网的异常连接和指令",
+        "生产参数被未授权篡改，导致产品质量异常或设备运行偏离安全阈值",
+        "IIoT设备使用Modbus等无认证工业协议，指令可被中间人篡改",
+        "工控网络与IT网络互联后，OT设备暴露面扩大，出现扫描探测行为"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "ICS-CERT Advisories",
         "link": "https://www.cisa.gov/topics/industrial-control-systems"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "工业物联网(IIoT)安全风险",
       "工业物联网",

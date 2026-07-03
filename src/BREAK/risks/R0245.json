@@ -24,7 +24,23 @@
       "LLM敏感信息泄露",
       "内部资料外泄"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "模型问答中输出训练数据、系统提示或内部文档片段",
+        "提示诱导或上下文污染触发敏感信息外泄",
+        "模型连接企业知识库后出现客户数据或密钥片段输出",
+        "代码生成或工具调用中泄露内部资料",
+        "输入输出审查未覆盖敏感信息识别"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0078",

@@ -17,7 +17,15 @@
       "TBML",
       "merchant laundering",
       "washing illicit funds"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A store transacts heavily in virtual goods or ships empty packages, with orders lacking real logistics trajectories",
+        "Fund flows do not match trading behavior, showing rapid in-and-out movement and round-number amounts",
+        "Legitimate-platform storefronts are induced by external gambling or pornographic sites to receive redirected orders, with a spike in customer complaints",
+        "The same account cluster repeatedly goes through top-up, virtual-voucher purchase, and withdrawal, forming a closed fund loop"
+      ]
+    }
   },
   "R0060-001": {
     "title": "Cryptocurrency Money Laundering Risk",
@@ -43,6 +51,14 @@
       "chain hopping",
       "DeFi laundering",
       "privacy coins"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "On-chain funds are moved through mixers (e.g., Tornado Cash) or cross-chain bridges, breaking the traceability link",
+        "Large KYC-free token swaps appear on DEXs and are quickly dispersed across chains afterward",
+        "Privacy-coin (Monero/Zcash) addresses are linked to the platform's deposit and withdrawal activity",
+        "NFTs are repeatedly resold at abnormally high prices, with both counterparties being linked addresses creating fake transactions"
+      ]
+    }
   }
 }

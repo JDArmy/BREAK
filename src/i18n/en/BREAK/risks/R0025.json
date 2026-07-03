@@ -18,6 +18,13 @@
       "off-platform solicitation",
       "deal stealing",
       "sponsor poaching"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single account sends private messages or comments containing external links, WeChat IDs, or phone numbers to a large number of different users within a short window",
+        "Private message content matches traffic-diversion script templates (e.g., add WeChat, other platforms), and the sender is a newly registered or low-activity account",
+        "The users targeted by concentrated private messaging are high-value groups (sponsors, streamers, recent high-spend customers)"
+      ]
+    }
   }
 }

@@ -20,6 +20,15 @@
       }
     ],
     "description": "Digital human deepfakes use generative AI to clone appearance, voice, facial expression, and speaking style for impersonation. Attackers may pose as support agents, streamers, executives, or relatives to commit fraud or manipulate opinion.\n\nReal-time generation lowers the cost of convincing impersonation. Businesses need liveness checks, provenance signals, identity verification, and behavior-based anomaly detection.",
-    "influence": "Deepfaked digital humans can impersonate trusted people or brands, increasing fraud success and reputational harm."
+    "influence": "Deepfaked digital humans can impersonate trusted people or brands, increasing fraud success and reputational harm.",
+    "riskAssessment": {
+      "observables": [
+        "Video/voice requests claiming customer-service or manager identity mismatch the person's historical biometric features",
+        "Real-time calls show synthesis artifacts such as lip-sync mismatch or timbre anomaly",
+        "Digital virtual-human avatars are used in multiple scams against different victims within a short window",
+        "Liveness checks are bypassed by deepfake-generated videos",
+        "Suspicious virtual-human content lacking provenance or C2PA signatures is mass-distributed"
+      ]
+    }
   }
 }

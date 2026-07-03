@@ -17,6 +17,15 @@
       "card security code guessing",
       "expiry date brute force",
       "CVV enumeration"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The payment endpoint receives multiple security code or expiry date enumeration requests for the same card number within a short window",
+        "The same payment card is repeatedly tried with different CVC and expiry date combinations across multiple merchant endpoints",
+        "The CVC or expiry date field values in payment requests exhibit enumeration sequences such as incrementing or decrementing patterns",
+        "The payment attempt failure rate for the same card number within a short window is abnormally high, with failures concentrated on security code errors",
+        "Multiple different card numbers initiate structurally similar payment enumeration requests from the same device or IP within a short window"
+      ]
+    }
   }
 }

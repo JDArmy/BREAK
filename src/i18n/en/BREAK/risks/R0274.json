@@ -17,6 +17,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Image perturbations alone can manipulate the model's understanding of text",
+        "Single-modal defenses such as text-input-only filtering are bypassed by cross-modal attacks",
+        "Cross-modal alignment spaces show anomalous perturbations causing erroneous action decisions",
+        "Classic cross-modal techniques such as typography attacks are used to manipulate classification results",
+        "Optimal perturbation layers lie in the model's mid hidden-state space"
+      ]
+    }
   }
 }

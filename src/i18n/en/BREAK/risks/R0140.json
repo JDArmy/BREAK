@@ -18,6 +18,14 @@
       "free trial abuse",
       "promo abuse",
       "account sharing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same membership account logs in concurrently from multiple distant regions or heterogeneous devices within a short window, exceeding household usage patterns",
+        "Newly registered accounts concentrate benefit usage as the trial period nears expiry, then abandon the account and re-activate a trial with a new account",
+        "Bulk listings reselling the platform's membership accounts at low prices appear on third-party platforms, with account credentials frequently changed",
+        "Membership benefits of high value are used shortly after activation, followed by a refund to cancel the subscription while retaining downloaded content"
+      ]
+    }
   }
 }

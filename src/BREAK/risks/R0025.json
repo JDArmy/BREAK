@@ -34,7 +34,7 @@
         "link": "https://www.163.com/dy/article/JCU216GI051200BP.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意挖墙脚",
       "挖主播",
@@ -43,6 +43,20 @@
       "私信挖人",
       "站外拉客",
       "撬客户"
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "同一账号短时间内向大量不同用户发送包含外链、微信号、手机号的私信或评论",
+        "私信内容命中引流话术模板（加V、其他平台等），发送方为新注册或低活跃账号",
+        "被集中私信的用户为高价值群体（金主、主播、近期大额消费客户）"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

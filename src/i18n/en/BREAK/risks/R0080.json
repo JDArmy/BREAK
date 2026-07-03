@@ -17,6 +17,14 @@
       "workstation compromise",
       "RAT infection",
       "backdoor malware"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Employee endpoints show unknown processes connecting outbound to C2 servers, with traffic exhibiting heartbeat or encrypted characteristics",
+        "Endpoint EDR alerts on trojan or malware infection, with anomalous process chains",
+        "Employee accounts show anomalous logins or data exfiltration following phishing or social engineering",
+        "Lateral-movement traces appear on the internal network, with stolen credentials used for unauthorized access"
+      ]
+    }
   }
 }

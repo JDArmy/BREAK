@@ -94,6 +94,7 @@ function convertRiskNode(breakId, entity, relatedCaseIds) {
     description: entity.description,
     complexity: entity.complexity,
     influence: entity.influence,
+    assessment: entity.riskAssessment ?? null,
     keywords: entity.keywords,
     mitigatedBy: (entity.avoidances || []).map(entityUri),
     references: convertReferences(entity.references),

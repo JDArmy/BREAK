@@ -20,6 +20,15 @@
       }
     ],
     "description": "Multi-signature wallet social engineering targets DAO, foundation, and institutional treasury approval flows. Attackers forge urgent proposals, impersonate team members, create pressure, or send misleading transaction summaries to make multiple signers approve malicious transactions.\n\nMultisig reduces single-key failure but does not prevent coordinated mistaken approvals. Governance needs transaction simulation, timelocks, permission tiers, and independent review.",
-    "influence": "Socially engineered multisig approvals can drain DAO or institutional treasuries despite formal multi-party controls."
+    "influence": "Socially engineered multisig approvals can drain DAO or institutional treasuries despite formal multi-party controls.",
+    "riskAssessment": {
+      "observables": [
+        "Multi-sig wallets see multiple signers abnormally approving large or unknown-destination transactions within a short window",
+        "Governance proposals use urgent rhetoric and signature requests target unverified contract calls without simulation",
+        "Team member accounts initiate or approve proposals atypical of historical habits during abnormal hours",
+        "Multi-sig transaction calldata does not match the functionality described in the proposal summary",
+        "Signer devices or session sources show geographic or environmental shifts when approving sensitive transactions"
+      ]
+    }
   }
 }

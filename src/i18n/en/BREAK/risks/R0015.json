@@ -18,6 +18,15 @@
       "rating sabotage",
       "reputation attack",
       "review extortion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A target product or store receives a concentrated burst of low-score reviews within a short window, with ratings dropping sharply",
+        "Reviewing accounts share clustered registration times and sparse review histories, exhibiting batch characteristics",
+        "Review text similarity is high, with templated or copy-paste traces",
+        "Multiple accounts under the same device fingerprint or IP range consecutively downvote or report the same target",
+        "Peak hours of negative reviews coincide closely with competitor marketing milestones"
+      ]
+    }
   }
 }

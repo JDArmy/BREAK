@@ -13,6 +13,21 @@
       "A0044",
       "A0007"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "BNPL额度开通后短时间内集中消费至额度上限，且消费商户高度集中于套现类目",
+        "同一设备或同一收款商户关联多笔BNPL交易，交易金额接近额度上限且频次异常",
+        "借款人在多个BNPL平台近乎同步开通额度并集中消费，贷后短期内失联或逾期",
+        "BNPL交易完成后短期内发起退款，但商品未实际退回或退款流向异常账户"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "BNPL Fraud Trends - Juniper Research",
@@ -23,7 +38,7 @@
         "link": "https://www.pbccrc.org.cn/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "先买后付(BNPL)欺诈",
       "BNPL欺诈",

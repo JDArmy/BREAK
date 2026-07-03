@@ -18,7 +18,7 @@
         "link": "https://www.163.com/dy/article/IB8DRLOV0519DFFO.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "洗钱风险",
       "平台洗钱",
@@ -28,6 +28,21 @@
       "资金转移",
       "非法资金转移"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "店铺大量交易虚拟商品/空包发货，订单与真实物流轨迹缺失",
+        "资金流向与交易行为不匹配，呈现快进快出、整数金额特征",
+        "合法平台店铺被外部赌博/色情站点诱导跳转下单，客诉突增",
+        "同一账户群频繁充值-购买虚拟卡券-提现，形成资金闭环"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0093",
@@ -86,7 +101,7 @@
         "link": "https://www.pbc.gov.cn/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "虚拟货币洗钱风险",
       "加密货币洗钱",
@@ -95,6 +110,21 @@
       "链上洗钱",
       "洗币"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "链上资金经混币器（如Tornado Cash）或跨链桥转移，切断追溯链路",
+        "DEX上出现无KYC的大额代币兑换，兑换后迅速跨链分散",
+        "隐私币（Monero/Zcash）相关地址与平台出入金存在关联",
+        "NFT以异常高价被反复转手，交易双方为关联地址制造虚假成交"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0060",

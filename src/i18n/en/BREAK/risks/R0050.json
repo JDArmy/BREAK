@@ -17,7 +17,16 @@
       "device risk spoofing",
       "root cloaking",
       "environment spoofing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Device fingerprint reported fields exhibit injection traces from Hook frameworks such as Xposed and Frida",
+        "The same device fingerprint is reused or frequently switched across multiple different accounts within a short window",
+        "The device environment detects root, debugger attachment, or replaced security certificates",
+        "Device sensor data, system properties, or hardware identifiers exhibit spoofing characteristics of device-modification tools",
+        "Multiple accounts share the same underlying device characteristics under app-cloning or device-control environments"
+      ]
+    }
   },
   "R0050-001": {
     "title": "Virtual Device Identification Bypass",
@@ -37,6 +46,15 @@
       "cloud phone bypass",
       "anti-detect browser",
       "device emulation spoofing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The device fingerprint matches known fingerprint databases for emulators, cloud phones, or virtual machines",
+        "Device hardware parameters such as CPU, GPU, and sensors exhibit synthetic characteristics of a virtual environment",
+        "The same virtual device instance hosts registration or login for a large number of different accounts within a short window",
+        "The IP, GPS, and device triples of anti-detect browsers or cloud phones exhibit batch-spoofed consistency",
+        "The device environment lacks real sensor fluctuation, with gyroscope and accelerometer data remaining static or constant over long periods"
+      ]
+    }
   }
 }

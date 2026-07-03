@@ -81,6 +81,7 @@ const fieldDescriptions = {
   influence: '业务影响。',
   avoidances: '关联规避手段 ID 列表。',
   relatedRisks: '相关风险 ID 列表；Risk 中为风险间关联对象列表。',
+  riskAssessment: '风险分级评估对象，含 5 维度评分（发生概率/业务损失/攻击成本/检测难度/防御成熟度）、处置优先级、可观测信号与覆盖说明；英文 i18n 只维护 observables/priorityNote。',
   category: '分类 ID。',
   effectiveness: '规避手段有效性分级，用于防御覆盖排序。',
   limitation: '控制措施局限性。',
@@ -119,6 +120,8 @@ const relationTargets = {
 
 const enumValues = {
   complexity: ['basic', 'intermediate', 'advanced'],
+  riskSeverity: ['low', 'medium', 'high', 'critical'],
+  riskPriority: ['P0', 'P1', 'P2', 'P3'],
   avoidanceCategorySchema: ['AC01', 'AC02', 'AC03', 'AC04'],
   avoidanceEffectivenessSchema: ['high', 'medium', 'low'],
   category: ['criminal_verdict', 'administrative_enforcement', 'security_incident', 'vulnerability_advisory', 'academic_research', 'news_report'],
@@ -156,6 +159,7 @@ function countRecords(relativeDir) {
 
 function typeFor({ name, expression }) {
   if (expression.includes('riskRelationSchema')) return 'RiskRelation[]';
+  if (expression.includes('riskAssessmentSchema')) return 'RiskAssessment';
   if (expression.includes('avoidanceRelationSchema')) return 'AvoidanceRelation[]';
   if (expression.includes('attackToolRelationSchema')) return 'AttackToolRelation[]';
   if (expression.includes('avoidanceCategorySchema')) {
@@ -287,7 +291,7 @@ function generateMarkdown() {
     '',
     '| Entity | Allowed English fields |',
     '| --- | --- |',
-    '| Risk | `title`, `keywords`, `definition`, `description`, `complexity`, `influence`, `references[].title`, `references[].link` |',
+    '| Risk | `title`, `keywords`, `definition`, `description`, `complexity`, `influence`, `references[].title`, `references[].link`, `riskAssessment.observables`, `riskAssessment.priorityNote` |',
     '| Avoidance | `title`, `keywords`, `definition`, `description`, `complexity`, `limitation`, `references[].title`, `references[].link` |',
     '| AttackTool | `title`, `keywords`, `description`, `references[].title`, `references[].link` |',
     '| ThreatActor | `title`, `keywords`, `description`, `references[].title`, `references[].link` |',

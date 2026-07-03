@@ -26,7 +26,7 @@
         "link": "https://www.cisa.gov/resources-tools/resources/insider-threat-mitigation-guide"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "员工失误风险",
       "人为失误",
@@ -36,6 +36,21 @@
       "误删数据",
       "操作失误"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "敏感文件/邮件被发送至错误收件人，外部域名投递异常",
+        "员工账号误操作导致数据误删/误改，审计日志出现异常变更",
+        "弱密码/共享密码账号被入侵，登录来源异常",
+        "员工设备丢失或感染恶意软件后内网出现异常外联"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0073",

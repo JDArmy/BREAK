@@ -16,6 +16,15 @@
       }
     ],
     "description": "SaaS third-party app authorization abuse occurs when employees or admins grant external apps access to mail, drives, calendars, CRM, or customer data, and the app exceeds expectations or is compromised.\n\nOAuth consent is often perceived as login, but may grant long-lived read or action permissions. Enterprises need app review, high-risk scope restrictions, and periodic cleanup of unused grants.",
-    "influence": "Abused SaaS authorization can continuously read mail, drive, and customer data while bypassing many endpoint and network controls."
+    "influence": "Abused SaaS authorization can continuously read mail, drive, and customer data while bypassing many endpoint and network controls.",
+    "riskAssessment": {
+      "observables": [
+        "Employee-authorized third-party SaaS apps include high-risk scopes such as mail, drive, or CRM read/write",
+        "Apps silently read enterprise data long after OAuth authorization",
+        "The enterprise holds many idle or unaudited high-privilege SaaS authorizations",
+        "Third-party apps taken over by attackers are used for persistent data exfiltration",
+        "SaaS data access bypasses traditional endpoint and network controls and is hard to detect"
+      ]
+    }
   }
 }

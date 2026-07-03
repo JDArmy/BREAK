@@ -22,7 +22,15 @@
       "clone phishing",
       "vishing",
       "smishing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Phishing links impersonating legitimate websites or emails are clicked by large numbers of employees or users within a short window",
+        "The login endpoint receives credential submissions from phishing pages, with a spike in failures or anomalous logins",
+        "The email security gateway intercepts batches of phishing emails, with sender domains highly similar to the brand",
+        "Users report fake login pages, with URLs disguised via short links or homoglyph characters"
+      ]
+    }
   },
   "R0084-001": {
     "title": "AI-Enhanced Phishing Attack",
@@ -43,7 +51,15 @@
       "multilingual phishing",
       "adaptive phishing",
       "vishing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Phishing email content is highly personalized, tailored to the target's social media or work background, with abnormally high open rates",
+        "Multilingual phishing content appears within the same campaign, supporting cross-border phishing",
+        "Voice or video calls use AI-cloned executive voices or faces to commit fraud",
+        "Hit rates of traditional phishing-detection rules decline, as AI-generated content bypasses text-signature databases"
+      ]
+    }
   },
   "R0084-002": {
     "title": "EIP and Protocol Phishing Attack",
@@ -68,7 +84,15 @@
       }
     ],
     "description": "EIP and protocol phishing abuses user confusion around new protocol features, signature formats, or wallet prompts. Attackers craft apparently legitimate approvals, permits, delegations, or contract interactions that grant token transfer or execution rights after the user signs.\n\nThe core risk is semantic opacity: structured signing data can hide real consequences from ordinary users. Wallets, DApps, and risk engines need to translate protocol actions into understandable warnings.",
-    "influence": "Opaque protocol signing can trick users into granting transfer or execution rights, causing direct asset loss while appearing as a normal wallet action."
+    "influence": "Opaque protocol signing can trick users into granting transfer or execution rights, causing direct asset loss while appearing as a normal wallet action.",
+    "riskAssessment": {
+      "observables": [
+        "Wallet signature-authorization requests present abstract structured data such as Permit or EIP-712, the consequences of which ordinary users cannot judge",
+        "After a user signs, tokens are anomalously transferred or proxy execution rights are granted to unknown addresses",
+        "DApp interactions show suspicious approve or setApprovalForAll calls with abnormal authorization amounts",
+        "On-chain records show batches of victim transfers to the same phishing contract"
+      ]
+    }
   },
   "R0084-003": {
     "title": "QR Code Phishing (Quishing)",
@@ -93,7 +117,15 @@
       "QR phishing",
       "malicious QR code",
       "QR code attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A merchant's payment QR code is overlaid with a malicious QR code, and payments flow to anomalous accounts",
+        "QR codes embedded in phishing emails bypass URL detection, and scanning on mobile devices redirects to impersonation pages",
+        "QR codes posted in public places direct users, after scanning, to phishing or malware-download pages",
+        "Dynamic QR codes generated via short links initially point to a normal page and are later redirected to malicious addresses"
+      ]
+    }
   },
   "R0084-004": {
     "title": "Domain / Brand Impersonation",
@@ -118,6 +150,14 @@
       "lookalike domain",
       "homoglyph attack",
       "brand spoofing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly registered domains have spellings highly similar to the brand's domain or use homoglyph characters",
+        "Impersonation websites or apps copy the brand's page design to steal user credentials and payment information",
+        "Impersonation websites rank highly in search engine results, driving traffic via SEO poisoning",
+        "Fake accounts impersonating the brand appear on social platforms conducting false marketing or fraud"
+      ]
+    }
   }
 }

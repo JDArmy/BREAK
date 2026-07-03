@@ -17,6 +17,14 @@
       "false discounts",
       "dual pricing",
       "price deception"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Listed original or reference prices are raised shortly before a major promotion, so the campaign price is effectively the everyday price",
+        "Store-listed prices do not match the actual checkout price, with hidden additional fees",
+        "Fabricated original prices and false discounts show discount rates that contradict the historical price curve",
+        "The same product shows two different prices across different entry points, with complaints about price-quality mismatch clustering together"
+      ]
+    }
   }
 }

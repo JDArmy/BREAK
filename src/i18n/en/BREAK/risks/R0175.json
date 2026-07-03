@@ -17,6 +17,14 @@
       "fork replay",
       "signature replay",
       "replay protection"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same signed transaction is executed on both chains after a fork, with assets transferred repeatedly",
+        "In cross-chain transfer scenarios, the transaction signature lacks replay protection identifiers such as a chain ID",
+        "A user's authorization signature on one chain is copied and replayed on another chain, causing unintended asset transfers",
+        "After a contract upgrade or fork, old signatures remain validly executable on the new chain"
+      ]
+    }
   }
 }

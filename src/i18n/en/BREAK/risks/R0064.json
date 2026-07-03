@@ -21,6 +21,14 @@
       "free shipping abuse",
       "gift threshold abuse",
       "cart splitting exploit"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "An order is padded to meet a discount, free-shipping, or gift threshold and then part of the items are immediately returned",
+        "Low-unit-price or gift-link items are used for padding, with partial refunds applied to the whole order afterward",
+        "The same account repeatedly engages in padding-then-refund behavior, with an abnormally high ratio of retained discounts or rebates",
+        "Order splits cluster at the moment a promotion triggers, and refunds concentrate on the padding items"
+      ]
+    }
   }
 }

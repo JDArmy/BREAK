@@ -18,6 +18,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "LiDAR point clouds show fabricated or disappeared objects inconsistent with reality",
+        "MEMS gyroscopes output anomalies at specific acoustic frequencies, causing drone loss of control",
+        "Cameras are blinded by lasers or traffic-light recognition is manipulated via rolling-shutter effects",
+        "GPS/BeiDou signals are spoofed, causing heading deviation",
+        "Multi-sensor fusion outputs show positioning loss or misidentification under specific physical interference"
+      ]
+    }
   }
 }

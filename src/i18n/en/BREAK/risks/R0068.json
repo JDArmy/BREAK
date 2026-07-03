@@ -17,7 +17,15 @@
       "return policy exploitation",
       "warranty abuse",
       "7-day return abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single account or device issues a dense burst of return requests shortly before the 7-day no-questions-asked return window expires",
+        "Accounts with return rates far above normal users concentrate their orders in specific product categories or stores",
+        "Return requests are filed shortly after delivery with no normal usage traces, and the stated return reasons are highly templated",
+        "A single shipping address or payment account is linked to multiple high-return-rate accounts"
+      ]
+    }
   },
   "R0068-001": {
     "title": "Malicious Complaints",
@@ -37,7 +45,15 @@
       "complaint abuse",
       "reporting abuse",
       "malicious reporting"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single complainant files multiple complaints against different merchants through regulators or the platform within a short window, with near-identical wording",
+        "A complaint is immediately followed by conditions for withdrawal plus a payment account, exhibiting a typical extortion script",
+        "The complainant's historical complaints concentrate on boilerplate clauses such as advertising-law prohibited terms or labeling defects",
+        "The complaint account was recently registered, and its real-name information does not match its prior consumption behavior"
+      ]
+    }
   },
   "R0068-002": {
     "title": "Malicious Claims",
@@ -57,6 +73,14 @@
       "tenfold compensation claims",
       "counterfeit claim arbitrage",
       "professional claimants"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Accounts bulk-order expired, counterfeit, or advertising-law-violating products with abnormally high order concentration",
+        "Complaints are filed immediately after ordering and demand large sums in exchange for withdrawal, displaying professional claimant scripts",
+        "A single device or shipping address is linked to multiple claim accounts, with claim amounts mostly pegged at the tenfold-compensation cap",
+        "Request patterns from bulk product-compliance searches or scraping are observable in the site's search logs"
+      ]
+    }
   }
 }

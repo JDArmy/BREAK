@@ -17,7 +17,15 @@
       "software supply chain",
       "vendor compromise",
       "upstream poisoning"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Upstream components or dependencies show anomalous version updates, and build-artifact hashes do not match the official ones",
+        "Vendor accounts show anomalous logins or are hijacked and then used to submit suspicious code",
+        "Delivery signatures fail verification or the build environment is found tampered with",
+        "Newly introduced components have unknown provenance, and SCA scans flag known-malicious packages or suspicious licenses"
+      ]
+    }
   },
   "R0081-001": {
     "title": "Software Supply Chain Risk",
@@ -37,7 +45,15 @@
       "malicious package",
       "CI/CD compromise",
       "package hijacking"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Third-party component or dependency updates introduce anomalous code or backdoors, and the new version does not match official release notes",
+        "Software development tools or CI environments are tampered with, with anomalous build-artifact hashes",
+        "Vendor source-code repositories show anomalous commits or permission changes",
+        "SCA scans of downstream applications flag suspicious dependencies or known-malicious packages"
+      ]
+    }
   },
   "R0081-002": {
     "title": "Hardware Supply Chain Risk",
@@ -57,7 +73,15 @@
       "component backdoor",
       "counterfeit hardware",
       "hardware tampering"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Firmware or BIOS hashes of newly purchased hardware do not match the vendor's official signatures",
+        "Devices are implanted with backdoors at the factory or during transit, and show anomalous outbound connections at runtime",
+        "After a hardware supplier suffers an attack, signs of tampering appear in its device-delivery chain",
+        "Chip or firmware layer exhibits anomalous behavior that cannot be detected by conventional software-detection methods"
+      ]
+    }
   },
   "R0081-003": {
     "title": "Cloud Service Supply Chain Risk",
@@ -77,7 +101,15 @@
       "managed service compromise",
       "third-party cloud risk",
       "cloud dependency risk"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A security incident at a cloud provider exposes tenant data or causes service disruption",
+        "A third-party component of the cloud service is tampered with, affecting downstream tenants' runtime environments",
+        "Cloud-provider accounts are hijacked and used to anomalously operate tenant resources",
+        "The cloud platform's development toolchain is implanted with malicious code, affecting a large number of tenants"
+      ]
+    }
   },
   "R0081-004": {
     "title": "Outsourced Personnel Risk",
@@ -97,7 +129,15 @@
       "vendor insider",
       "third-party personnel",
       "privileged contractor"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Outsourced or on-site personnel accounts log in anomalously, with source IPs or devices inconsistent with prior profiles",
+        "Outsourced accounts access core systems or code repositories beyond their authorized duties",
+        "Compromised outsourced-personnel accounts submit suspicious code or exfiltrate sensitive data",
+        "Outsourced personnel permissions are not revoked promptly after project completion, leaving dormant accounts"
+      ]
+    }
   },
   "R0081-005": {
     "title": "Open Source Component Poisoning Risk",
@@ -119,6 +159,14 @@
       "open source backdoor",
       "npm malware",
       "PyPI malware"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly published packages on package managers have names highly similar to popular packages (typosquatting)",
+        "Dependency-pull logs show public packages with the same name as internal private packages (dependency confusion)",
+        "Maintainer accounts of popular open-source projects make anomalous commits with suspicious updates",
+        "SCA scans flag known-malicious packages, or install scripts contain suspicious network callbacks"
+      ]
+    }
   }
 }

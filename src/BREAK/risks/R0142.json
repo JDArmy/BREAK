@@ -12,6 +12,21 @@
       "A0010",
       "A0007"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "用户会话中出现SSL/TLS证书指纹突变或降级为明文连接的连接记录",
+        "同一账号在短时间内从异常网络环境（公共WiFi、未知IP段）登录并伴随凭据使用",
+        "支付交易过程中收款账号或金额字段在客户端到服务端链路上被中途篡改",
+        "局域网内出现异常ARP应答洪泛或DHCP欺骗流量，流量被重定向到陌生设备"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Man-in-the-Middle Attack - OWASP",
@@ -22,7 +37,7 @@
         "link": "https://www.cisa.gov/news-events/cybersecurity-advisories"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "中间人攻击",
       "MITM",

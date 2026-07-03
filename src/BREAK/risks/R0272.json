@@ -27,6 +27,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "越狱后的具身智能体执行寻找武器、撞击或忽略停止标志等动作",
+        "智能体被授予过大动作权限执行超出预期边界的物理动作",
+        "物理动作越界产生不可逆后果如开门、搬运违禁品",
+        "智能体在未预期情境下自主决策造成物理伤害",
+        "越狱行为与物理世界伤害在时序上相关"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

@@ -12,13 +12,28 @@
       "A0077",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "用户GPS定位与IP归属地、基站位置、Wi-Fi定位出现系统性矛盾",
+        "大量账号的定位坐标精确集中于某区域优惠活动的高补贴点位，且移动轨迹缺失",
+        "司机端GPS轨迹出现跳跃或虚增里程，与实际路网和交通时序不符",
+        "新注册账号定位立即指向高补贴区域并领取区域限定优惠，无历史活动轨迹"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "GPS Spoofing Detection Techniques",
         "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11397858/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "地理位置欺诈",
       "定位作弊",

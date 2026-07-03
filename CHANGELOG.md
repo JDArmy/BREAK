@@ -1,5 +1,17 @@
 # Change log
 
+## 2.38.0
+
+新增可执行的风险分级体系（Risk Assessment），让企业能基于多维度评分落地评估与处置排期：
+
+- **数据模型**：Risk 新增可选 `riskAssessment` 字段，含 5 个维度评分（发生概率 `likelihood`/业务损失 `businessLoss`/攻击成本 `attackCost`/检测难度 `detectionDifficulty`/防御成熟度 `defenseMaturity`，均采用 `low/medium/high/critical` 4 级枚举）、处置优先级 `priority`（P0-P3）、可观测信号 `observables`、覆盖机制 `priorityOverride`+`priorityNote`、评定日期 `assessedAt`。结构字段（维度/priority）不翻译，仅 `observables`/`priorityNote` 走英文 i18n。
+- **优先级自动计算**：新增 `scripts/validate/risk-assessment-utils.mjs`（唯一计算源，公式为概率×损失为主项 + 攻击成本/检测难度/防御成熟度做方向性调整，阈值 `≥30→P0/≥24→P1/≥16→P2/<16→P3`，含 critical×critical 强制 P0、low×low 强制 P3 短路规则）；`sync:risk-assessment` 脚本据此写回 priority，专家可用 `priorityOverride` 覆盖。
+- **校验门禁**：新增只读校验器 `check-risk-assessment.mjs` 接入 `validate:data`，校验维度枚举合法、observables 非空且质量达标（每条 ≥6 字、无重复）、assessedAt 格式、priority 与公式一致（回填阶段 priority 缺失仅警告非阻断）、覆盖时 priorityNote 必填、英文 i18n 的 `riskAssessment` 只含可翻译字段；同步更新 i18n-sync/english-i18n-quality 白名单与 `DATA_SCHEMA.md`。
+- **前端展示**：详情页风险复杂度与处置优先级 pane 同宽、影响 pane 更宽，两个 pane 的徽章均有对应配色（复杂度 basic/intermediate/advanced 绿/黄/红，优先级 P0-P3 红/橙/黄/绿）；详情页新增 5 维度雷达图（echarts RadarChart 懒加载，含维度名与数值标签）、可观测信号列表、优先级说明；抽屉简化展示优先级徽章与信号计数。
+- **导出落地**：STIX/JSON-LD/数据包类型定义补 `x_break_assessment`/`assessment`/`BreakRiskAssessment`，分级数据对外暴露。
+- **全量回填**：全部 382 条风险完成分级评估（5 维度评分 + observables 可观测信号），priority 分布均衡（P0 占 18.8%/P1 占 37.7%/P2 占 38.5%/P3 占 5.0%），中英文 observables 同步；由 10 批子代理并行回填 + 翻译，门禁全程 0 问题。
+- `data-integrity.test.ts` 新增 riskAssessment 维度枚举与覆盖一致性测试。
+
 ## 2.37.3
 
 补强案例来源质量与引用链接健康度，提升高价值案例一手来源覆盖率：

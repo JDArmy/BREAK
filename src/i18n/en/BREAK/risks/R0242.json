@@ -16,6 +16,15 @@
       }
     ],
     "description": "Training data copyright and licensing risk comes from unclear corpus provenance, insufficient authorization, unknown copyright status, or license terms that conflict with commercial model use. Model output may also reproduce protected content.\n\nThe risk affects commercialization, customer delivery, and cross-border deployment. Teams need records of data source, license conditions, cleaning steps, and deletion request handling.",
-    "influence": "Unclear training data authorization can cause copyright disputes, model takedown, customer claims, and commercialization limits."
+    "influence": "Unclear training data authorization can cause copyright disputes, model takedown, customer claims, and commercialization limits.",
+    "riskAssessment": {
+      "observables": [
+        "AI training corpus sources are unclear or license terms conflict with commercial use",
+        "Model outputs reproduce protected content triggering copyright claims",
+        "Training data lacks source, license, and cleaning-process records",
+        "Customer delivery or cross-border deployment is blocked due to unclear data authorization",
+        "Missing deletion-request mechanisms create compliance risk"
+      ]
+    }
   }
 }

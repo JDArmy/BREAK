@@ -18,6 +18,13 @@
       "fake ads",
       "drive-by download",
       "ad fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Ad creatives frequently rotate titles/images/landing domains to evade review, hitting blacklisted-category keywords",
+        "Ad landing pages redirect to fake goods, top-up scams, or pages with embedded malicious scripts",
+        "The same advertiser repeatedly submits borderline ads with anomalous click-through rates but extremely low conversion quality"
+      ]
+    }
   }
 }

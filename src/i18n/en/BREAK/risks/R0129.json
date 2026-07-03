@@ -18,6 +18,14 @@
       "verification code bombing",
       "SMS flooding",
       "SMS spam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single target phone number is triggered in bulk across verification code endpoints of multiple different business parties within a short window",
+        "A single IP or device invokes a large number of heterogeneous SMS verification code endpoints within a short window, with a send frequency far exceeding that of a normal user",
+        "The downstream SMS volume to the same destination number from the SMS gateway surges to dozens of messages within minutes",
+        "Victim complaints cluster around receiving large volumes of verification code messages within a short period"
+      ]
+    }
   }
 }

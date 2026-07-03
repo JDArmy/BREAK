@@ -17,6 +17,14 @@
       "uncollateralized loan",
       "single-transaction arbitrage",
       "liquidation attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A massive amount of assets is borrowed and repaid within a single transaction, accompanied by a complex call chain across multiple DeFi protocols",
+        "Oracle prices show sharp deviations before and after a transaction, with the attacker exploiting the price spread to complete arbitrage",
+        "The asset ratio of a liquidity pool is instantly distorted within a single transaction, triggering anomalous liquidations or price slippage",
+        "The same attacker address repeatedly constructs flash loan combination attacks across multiple DeFi protocols"
+      ]
+    }
   }
 }

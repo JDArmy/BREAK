@@ -25,7 +25,7 @@
         "link": "https://attack.mitre.org/techniques/T1539/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "登录凭据复用",
       "Cookie复用",
@@ -66,7 +66,21 @@
         "relation": "co-occurrence",
         "note": "登录凭据复用与刷子风险均可由攻击工具“CK(Cookies)登录工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "同一账号会话 Cookie 在多个不同设备/IP/地理位置上并发使用",
+        "登录后跳过 MFA 多因素验证流程，直接以会话态进入业务操作",
+        "号商批量售卖仅提供 CK 的账号，登录行为无密码输入与验证码环节"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   },
   "R0035-001": {
     "title": "登录凭据盗用",
@@ -98,7 +112,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "登录凭据盗用",
       "Cookie盗用",
@@ -138,6 +152,20 @@
         "relation": "co-occurrence",
         "note": "登录凭据盗用与刷子风险均可由攻击工具“CK(Cookies)登录工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "账号改密后旧会话仍有效，登录态未被吊销",
+        "用户会话 Cookie 出现在信息窃取器泄露数据或暗网交易中",
+        "同一账号在异地/异常设备登录，行为模式偏离用户历史画像"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   }
 }

@@ -24,7 +24,23 @@
       "MFA推送滥用",
       "登录批准诱导"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短时间内同一账号收到密集MFA推送请求",
+        "用户在疲劳或社工压力下批准来自异常地理位置的登录",
+        "推送确认缺少交易语义导致误批",
+        "已掌握密码的账号在MFA推送后出现异常会话建立",
+        "高频推送后伴随成功登录且设备或环境与历史不符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0036-001",

@@ -15,6 +15,15 @@
       "handover fee fraud",
       "forged transit node",
       "fake transit node"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Transit handoff nodes and handoff records are forged or duplicated",
+        "Handoff counts and transit mileage inflate accompanied by anomalous subsidy payouts",
+        "Handoff-node trajectory comparison shows records inconsistent with reality",
+        "Anomalous handoffs concentrate on cross-station or partner-collusion scenarios",
+        "Transit tamper-proofing is missing or bypassed"
+      ]
+    }
   }
 }

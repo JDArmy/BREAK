@@ -24,7 +24,23 @@
       "目的外使用",
       "数据共享合规"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "共享数据被合作方或供应商超出授权目的使用",
+        "联合建模或营销触达中数据用途发生漂移",
+        "数据接口对接方访问范围超出审批范围",
+        "外包运营使用共享数据用于未授权场景",
+        "共享数据到期后未回收仍被持续访问"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0078-002",

@@ -16,6 +16,15 @@
       }
     ],
     "description": "MFA fatigue attacks repeatedly trigger login prompts until a user approves one under fatigue, confusion, or social pressure. Attackers usually already know the password and only need the second factor.\n\nPush approval without transaction meaning is easy to misclick. Number matching, location prompts, rate limits, and high-risk login blocking reduce success.",
-    "influence": "MFA fatigue can defeat enabled multi-factor authentication and give attackers an authenticated enterprise session."
+    "influence": "MFA fatigue can defeat enabled multi-factor authentication and give attackers an authenticated enterprise session.",
+    "riskAssessment": {
+      "observables": [
+        "A single account receives dense MFA push requests in a short window",
+        "Users under fatigue or social-engineering pressure approve logins from anomalous geolocations",
+        "Push confirmations lack transaction semantics, causing mistaken approvals",
+        "Accounts whose passwords are already known establish anomalous sessions after MFA pushes",
+        "High-frequency pushes are followed by successful logins from devices or environments inconsistent with history"
+      ]
+    }
   }
 }

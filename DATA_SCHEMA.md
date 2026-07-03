@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.37.3`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.38.0`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -50,6 +50,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `influence` | string | required | 业务影响。 |
 | `avoidances` | string | required | 关联规避手段 ID 列表。 Target: Avoidance. |
 | `relatedRisks` | RiskRelation[] | optional, defaults to empty array | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |
+| `riskAssessment` | RiskAssessment | optional | 风险分级评估对象，含 5 维度评分（发生概率/业务损失/攻击成本/检测难度/防御成熟度）、处置优先级、可观测信号与覆盖说明；英文 i18n 只维护 observables/priorityNote。 |
 | `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
 | `version` | string | required | Schema field. |
@@ -192,7 +193,7 @@ Allowed English translation fields are:
 
 | Entity | Allowed English fields |
 | --- | --- |
-| Risk | `title`, `keywords`, `definition`, `description`, `complexity`, `influence`, `references[].title`, `references[].link` |
+| Risk | `title`, `keywords`, `definition`, `description`, `complexity`, `influence`, `references[].title`, `references[].link`, `riskAssessment.observables`, `riskAssessment.priorityNote` |
 | Avoidance | `title`, `keywords`, `definition`, `description`, `complexity`, `limitation`, `references[].title`, `references[].link` |
 | AttackTool | `title`, `keywords`, `description`, `references[].title`, `references[].link` |
 | ThreatActor | `title`, `keywords`, `description`, `references[].title`, `references[].link` |

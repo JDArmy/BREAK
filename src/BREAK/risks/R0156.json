@@ -11,6 +11,21 @@
       "A0055",
       "A0016"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "加密通信流量被长期截获存储，符合先收集后解密(HNDL)的窃取特征",
+        "关键系统仍使用RSA、ECC等经典公钥算法，未规划后量子密码(PQC)迁移",
+        "长期保密数据（如国家机密、商业秘密）仍以经典加密保护，未评估抗量子风险",
+        "数字证书与签名体系未引入后量子算法，证书签发链路依赖经典算法"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "references": [
       {
         "title": "NIST Post-Quantum Cryptography Standards",
@@ -25,7 +40,7 @@
         "title": "Frequently Asked Questions about Post-Quantum Cryptography"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "抗量子加密风险",
       "后量子密码",

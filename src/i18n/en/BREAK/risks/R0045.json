@@ -21,7 +21,16 @@
       "points hijacking",
       "account points abuse",
       "loyalty balance theft"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Account points or mileage are redeemed or transferred in a concentrated manner shortly after a remote login",
+        "The device environment for points redemption requests is inconsistent with the account's historical environment, accompanied by proxy-login characteristics",
+        "Points from the same account are redeemed to multiple different beneficiaries or third-party accounts",
+        "The shipping address for redeemed gifts is a new address or significantly different from the account's historical addresses",
+        "High-value points are consumed rapidly during off-peak hours, with redemption frequency far exceeding historical patterns"
+      ]
+    }
   },
   "R0045-001": {
     "title": "Points Redemption Reselling",
@@ -45,6 +54,15 @@
       "loyalty resale",
       "redeemed goods reselling",
       "points arbitrage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Gifts redeemed from points are listed in bulk on second-hand platforms at prices significantly below official value",
+        "The same beneficiary or shipping address receives points-redemption gifts from multiple different accounts",
+        "After points redemption, gifts from an account flow to a fixed batch of recipients or resale channels",
+        "Points redemption frequency and volume surge within a short window, with redeemed gift types highly concentrated",
+        "Points redemption behavior across multiple accounts is highly similar in timing, exhibiting batch scripting characteristics"
+      ]
+    }
   }
 }

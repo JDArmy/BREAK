@@ -20,7 +20,7 @@
         "link": "https://view.inews.qq.com/a/20251229A03ALS00"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "价格欺诈",
       "虚构原价",
@@ -31,6 +31,21 @@
       "虚假促销",
       "两套价格"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "商品划线价/原价在大促前短期上调，活动价实为日常价",
+        "店铺标价与实际结算价不一致，存在隐蔽附加费用",
+        "虚构原价、虚假折扣，折扣率与历史价格曲线矛盾",
+        "同款商品在不同入口呈现两套价格，价质不符投诉集中"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0063",

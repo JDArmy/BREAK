@@ -17,6 +17,14 @@
       "electromagnetic leakage",
       "timing side channel",
       "hardware side channel"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Device power consumption and electromagnetic radiation during cryptographic operations show regular patterns correlatable to the key",
+        "An attacker uses dedicated acquisition equipment such as oscilloscopes and electromagnetic probes when physically approaching the device",
+        "The execution timing of the device's cryptographic operations varies with input data, exhibiting timing leakage characteristics",
+        "Devices of the same model are fully cloned or have keys extracted and used to forge legitimate devices"
+      ]
+    }
   }
 }

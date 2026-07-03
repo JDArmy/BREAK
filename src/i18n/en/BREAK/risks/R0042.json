@@ -17,6 +17,15 @@
       "inventory spoofing",
       "out-of-stock bait",
       "fake stock"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A seller's listed inventory quantity severely mismatches its actual fulfillment capacity, with a large volume of delayed shipments after orders are placed",
+        "A seller sets high inventory on low-price SKUs but actually ships substitute high-price SKUs",
+        "Multiple products from the same seller show a high proportion of out-of-stock orders where items become unavailable immediately after ordering",
+        "A seller's inventory fluctuates sharply and inconsistently with sales volume, such as listing large quantities then rapidly dropping to zero",
+        "User complaints concentrate on a seller with similar descriptions of listing items as available while out of stock or inducing purchase switches"
+      ]
+    }
   }
 }

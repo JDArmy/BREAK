@@ -18,6 +18,13 @@
       "voucher cracking",
       "code enumeration",
       "OAT002 Token Cracking"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The coupon redemption endpoint shows a burst of mostly-failing requests with occasional successes in a short window",
+        "A single source batch-probes consecutive or guessable coupon codes",
+        "Successfully redeemed codes are transferred or consumed immediately, with no normal user decision pause"
+      ]
+    }
   }
 }

@@ -18,6 +18,13 @@
       "carry service",
       "elo boosting",
       "game boosting"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Account rank/win rate jumps abnormally within a short window, with gameplay characteristics inconsistent with the historical profile",
+        "Account login locations switch frequently, with highly regular match schedules and mechanical operation timing",
+        "The same receiving account or device is linked to multiple boosting-order accounts"
+      ]
+    }
   }
 }

@@ -20,6 +20,15 @@
       }
     ],
     "description": "Spatial computing privacy exposure comes from continuous collection of eye tracking, gestures, pose, room structure, and surrounding objects. Even without traditional identifiers, these signals can reveal health, living environment, and behavior patterns.\n\nIf apps, SDKs, or cloud services over-collect spatial data, they create highly sensitive profiles. Platforms should limit granularity, purpose, retention, and provide local processing where possible.",
-    "influence": "Spatial data leakage can reveal biometric behavior, room layouts, and daily routines, creating highly sensitive privacy exposure."
+    "influence": "Spatial data leakage can reveal biometric behavior, room layouts, and daily routines, creating highly sensitive privacy exposure.",
+    "riskAssessment": {
+      "observables": [
+        "XR apps request eye-tracking, gesture, and spatial-positioning data permissions beyond functional needs",
+        "Spatial-map and environment-scan data is uploaded to undeclared clouds or third parties",
+        "Apps or SDKs continuously collect biometric data at high frequency with no clear purpose",
+        "Data retention periods diverge from stated purposes or data is left uncleaned long-term",
+        "Sensitive spatial data lacks local processing or granularity limits and is uploaded wholesale"
+      ]
+    }
   }
 }

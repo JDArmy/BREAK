@@ -18,7 +18,7 @@
         "link": "https://attack.mitre.org/techniques/T1078/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "账号倒卖",
       "账号买卖",
@@ -28,6 +28,21 @@
       "成品号",
       "账号黑市"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "大量账号在注册后短期内集中登录异常 IP 或设备，呈现批量转手特征",
+        "账号登录地理位置、设备指纹发生跨地区跳跃，与历史使用习惯不符",
+        "暗网或发卡平台出现平台账号批量上架售卖商品",
+        "被倒卖账号在转手后行为模式突变，出现批量自动化操作或权益套现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0011-001",
@@ -79,7 +94,7 @@
         "link": "https://new.qq.com/rain/a/20260228A06D4S00"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "游戏账号倒卖",
       "游戏账号交易",
@@ -88,6 +103,21 @@
       "带装备账号",
       "被盗游戏号"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "游戏账号登录设备、IP 在短时间内跨地区跳跃，与历史习惯不符",
+        "账号内虚拟资产在转手后被快速变卖或转移给其他账号",
+        "游戏账号在第三方平台或暗网批量上架，含装备等级等资源描述",
+        "被盗账号申诉集中出现，登录凭证与原绑定手机/邮箱被批量篡改"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0011",
@@ -143,7 +173,7 @@
         "link": "https://attack.mitre.org/techniques/T1078/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "账号权益倒卖",
       "付费权益倒卖",
@@ -152,6 +182,21 @@
       "会员账号转卖",
       "订阅倒卖"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "会员账号在多设备、多 IP 并发登录，超出正常单人使用模式",
+        "付费权益账号在第三方平台以低价批量出售，远低于官方订阅价格",
+        "权益账号登录设备指纹频繁切换，呈现多人共享同一凭证特征",
+        "订阅账号在到期前被批量转移或共享给非原支付方使用"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0011",

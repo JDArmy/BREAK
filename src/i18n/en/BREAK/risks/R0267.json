@@ -19,6 +19,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Unexpected text stickers, printed patterns, or projections appear in robot operating environments",
+        "VLA models execute dangerous actions inconsistent with the task when specific visual cues appear",
+        "Drones or autonomous devices unexpectedly land or turn at specific locations",
+        "Newly added adversarial stickers in the environment correlate temporally with robot anomalous behavior",
+        "Robot logs show environmental text or patterns being executed as user commands"
+      ]
+    }
   }
 }

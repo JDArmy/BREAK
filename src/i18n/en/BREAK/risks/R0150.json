@@ -26,6 +26,14 @@
       "crypto investment scam",
       "investment scam",
       "catfishing scam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly registered social accounts establish contact with large numbers of opposite-sex users within a short window, with highly templated conversation scripts",
+        "Before users transfer funds to unfamiliar investment platforms or cryptocurrency addresses, there is prolonged high-frequency romantic or investment-guidance conversation",
+        "When victims attempt to withdraw, they are asked to pay additional fees or taxes, with funds flowing overseas or to mixers",
+        "The same batch of fake investment apps or websites is reported by multiple users on app stores and social platforms as unable to withdraw"
+      ]
+    }
   }
 }

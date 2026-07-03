@@ -24,7 +24,23 @@
       "绑卡关系错误",
       "支付凭证泄露"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "支付令牌被跨场景或跨商户复用完成扣款",
+        "绑卡关系或卡号替代值配置与商户域隔离不一致",
+        "令牌适用范围与设备绑定校验被绕过",
+        "支付Token被枚举或重放触发未授权扣款",
+        "支付凭证或敏感支付数据因配置错误被泄露"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0078",

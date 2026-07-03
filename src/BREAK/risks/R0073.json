@@ -23,7 +23,22 @@
         "link": "https://en.wikipedia.org/wiki/Data_breach"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "员工设备失联或长时间未接入MDM/内网，触发资产丢失告警",
+        "丢失设备在企业策略下发后未按预期锁定或擦除",
+        "丢失设备上未加密的敏感数据在事后被异常访问",
+        "设备丢失报告与同期数据泄露/异常登录事件存在时间关联"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "设备丢失",
       "终端丢失",

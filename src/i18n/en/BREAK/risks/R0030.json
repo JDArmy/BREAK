@@ -18,7 +18,14 @@
       "spam account creation",
       "identity spoof registration",
       "OAT-019"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly registered accounts have highly homogeneous device fingerprints and IPs, with mechanically regular intervals between registrations",
+        "Registration profiles match fake-identity characteristics (shared avatars, templated nicknames, batched phone number ranges)",
+        "After registration, accounts enter an account-farming period and execute follows, likes, and reviews at a fixed cadence"
+      ]
+    }
   },
   "R0030-001": {
     "title": "Bulk Account Registration",
@@ -39,7 +46,14 @@
       "bulk signup",
       "account factory",
       "registration bot"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The registration endpoint is called at high frequency within a short window, with source IPs/device fingerprints either highly concentrated or rotating in regular patterns",
+        "Profiles of newly created bulk accounts are templated, with highly similar avatars, nicknames, and bios",
+        "Successfully registered accounts execute identical behavior sequences at fixed timing during the account-farming period"
+      ]
+    }
   },
   "R0030-002": {
     "title": "Third-Party Account Risk",
@@ -60,7 +74,14 @@
       "third-party SSO abuse",
       "IdP trust abuse",
       "social signup bypass"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A surge of new federated logins hits the third-party login endpoint within a short window, all bound to the same third-party platform source",
+        "The primary accounts linked to third-party accounts are newly registered secondary accounts in bulk, immediately used for high-risk operations after binding",
+        "Federated login skips the platform's strict identity checks such as SMS verification and real-name authentication"
+      ]
+    }
   },
   "R0030-003": {
     "title": "Overseas Number Registration",
@@ -80,7 +101,14 @@
       "overseas phone registration",
       "cross-border number signup",
       "non-domestic SIM abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Registered accounts predominantly use overseas phone number ranges, with registered locations mismatching the platform's business regions",
+        "Accounts registered with overseas numbers bypass domestic real-name authentication, with templated profile data",
+        "The same overseas number range is bulk-used for registration within a short window, with verification code receipt intervals appearing mechanical"
+      ]
+    }
   },
   "R0030-004": {
     "title": "Inactive Number Registration",
@@ -100,7 +128,14 @@
       "dormant number abuse",
       "carrier insider registration",
       "silent number signup"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Large numbers of accounts register with phone number ranges that were never marketed or activated, yet the verification code passes successfully",
+        "Inactive-number-registered accounts have no physical-SIM activation records, and their post-registration behavior differs markedly from normal users",
+        "Phone numbers used for registered accounts have no on-network records at the carrier side, or fall within reserved test number ranges"
+      ]
+    }
   },
   "R0030-005": {
     "title": "Virtual Number Registration",
@@ -120,7 +155,14 @@
       "burner number signup",
       "VoIP number registration",
       "virtual phone number abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Registered accounts predominantly use MVNO number ranges such as 162/165/167/170/171",
+        "A single ID card is used to register large numbers of SIMs across different MVNOs for bulk account registration",
+        "Virtual-card-registered accounts are low-cost with zero monthly fees and are immediately used for high-risk activities such as metric inflation and fraud after registration"
+      ]
+    }
   },
   "R0030-006": {
     "title": "IoT SIM Card Registration",
@@ -140,7 +182,14 @@
       "M2M SIM registration",
       "data-only SIM abuse",
       "IoT card signup"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Registered accounts use IoT SIM number ranges and exhibit no normal phone-user voice or data behavior",
+        "IoT-SIM-registered accounts pass verification despite having no default SMS capability, suggesting SMS was enabled and abused",
+        "A batch of IoT SIM number ranges is registered in a concentrated burst and then used for metric inflation and false information spreading"
+      ]
+    }
   },
   "R0030-007": {
     "title": "Interceptor Card Registration",
@@ -160,6 +209,13 @@
       "verification code interception",
       "backdoored handset registration",
       "SMS relay device"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Verification codes for legitimate users' phones are intercepted by a backdoor in the card device, with registrations initiated by someone other than the user",
+        "Interceptor-card target devices are concentrated in specific types such as export-market phones, low-to-mid-range phones, and children's smartwatches",
+        "Phone numbers used for registered accounts are on-network but the user has never subscribed to the target service, with abnormal post-registration behavior"
+      ]
+    }
   }
 }

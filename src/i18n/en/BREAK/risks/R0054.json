@@ -17,7 +17,15 @@
       "serial returns abuse",
       "friendly fraud returns",
       "return policy abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A buyer places orders for large or scarce items and initiates frequent returns within a short window, with a return rate far above average",
+        "High-value items are returned under the 7-day no-questions-asked policy after being used, showing clear depreciation",
+        "Return tracking numbers are anomalous or refund requests are filed before the goods have arrived",
+        "The same buyer or linked buyers concentrate returns against a specific seller with tightly clustered timing"
+      ]
+    }
   },
   "R0054-001": {
     "title": "Bulk Refunds",
@@ -37,7 +45,15 @@
       "refund bombing",
       "order cancellation abuse",
       "refund abuse at scale"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same account or a cluster of linked accounts files a large volume of refund requests in a short window",
+        "Refund requests follow a mechanical timing pattern, with highly regular intervals between order placement and refund",
+        "High-value orders are placed in bulk and then refunded in bulk, causing a sharp spike in the return rate",
+        "Refund amounts cluster near discount or promotion tier thresholds"
+      ]
+    }
   },
   "R0054-002": {
     "title": "Return Fraud",
@@ -57,7 +73,15 @@
       "returning counterfeit item",
       "buy and return switch",
       "empty box return"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The inbound shipment weight on return does not match the outbound shipment weight, with discrepancies beyond logistics error margins",
+        "The SN or anti-counterfeit code of the returned item does not match the shipped item or is a high-quality counterfeit",
+        "Return packages are empty or missing accessories, and return senders cluster around a small number of accounts",
+        "A buy-A-return-B pattern: the returned item's category differs markedly from the original order"
+      ]
+    }
   },
   "R0054-003": {
     "title": "Flash Return Arbitrage",
@@ -77,7 +101,15 @@
       "gift with purchase abuse",
       "voucher extraction",
       "instant refund arbitrage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The interval between order placement and refund is extremely short (minutes), and refunds cluster right after coupons or gifts are claimed",
+        "Accounts place bulk orders the instant a marketing campaign begins, extract the benefits, and immediately cancel the orders",
+        "During campaigns, the return rate and the coupon-claim rate for the same device or account cluster are severely inverted",
+        "The flash refund channel is used at high frequency, with returns concentrated on orders that already issued coupons"
+      ]
+    }
   },
   "R0054-004": {
     "title": "Malicious Refusal of Delivery",
@@ -96,6 +128,14 @@
       "reject-on-delivery abuse",
       "failed delivery sabotage",
       "malicious non-acceptance"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A buyer goes unreachable or refuses delivery for large items such as appliances, electronics, or building materials at the dispatch stage",
+        "The same shipping address or linked accounts repeatedly order large items and refuse delivery, with reverse logistics costs concentrated",
+        "Refusals cluster after the goods have arrived at the last-mile outlet, with no legitimate reason given",
+        "The seller's return rate and refusal rate spike abnormally in specific categories"
+      ]
+    }
   }
 }

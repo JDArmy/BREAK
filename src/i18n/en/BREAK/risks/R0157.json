@@ -26,6 +26,14 @@
       "explainability risk",
       "transparency risk",
       "AI-native devices"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "An AI assistant automatically executes operations such as replying to emails, subscribing to services, or placing orders without explicit user instruction, with no decision rationale recorded",
+        "On-device AI functions continuously collect user behavior data in the background, with the data collection scope exceeding user awareness and authorization",
+        "AI recommendation or pricing results show systematic bias, producing discriminatory outputs against specific user groups",
+        "The cloud processing chain of AI functions lacks audit logs, making user data flow paths untraceable"
+      ]
+    }
   }
 }

@@ -16,7 +16,16 @@
       "capacity falsification",
       "FTL freight fraud",
       "truckload billing fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Vehicle type, trip count, or lane is falsely reported in full-truckload capacity scenarios",
+        "Shipping fees and subsidies show inflated payouts in full-truckload scenarios",
+        "Vehicle-type/trip-count/lane verification mismatches reality",
+        "Anomalous full-truckload capacity concentrates on driver, station, or partner collusion",
+        "Full-truckload capacity dispatch and billing data are distorted"
+      ]
+    }
   },
   "R0264-001": {
     "title": "One-Vehicle-Multi-Type Fee Fraud",
@@ -34,7 +43,16 @@
       "multi-type fee fraud",
       "vehicle type mismatch",
       "vehicle type falsification"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same vehicle is registered with multiple vehicle types in the system",
+        "High-tariff vehicle-type settlement or duplicate multi-type settlement produces freight differences",
+        "Vehicle-to-vehicle-type one-to-one verification fails but is not blocked",
+        "Missing vehicle-type tamper protection makes one-vehicle-multiple-types operable",
+        "Abnormal settlement clusters on specific vehicle and vehicle-type combinations"
+      ]
+    }
   },
   "R0264-002": {
     "title": "Jingyi FTL Channel Hijacking",
@@ -52,7 +70,16 @@
       "FTL channel hijacking",
       "channel impersonation",
       "Jingyi channel abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Legitimate channel qualifications or waybills of the Jingyi full-truckload channel are abused",
+        "Non-full-truckload capacity impersonates full-truckload capacity to take orders and siphon freight and benefits",
+        "Channel qualification verification and waybill-vehicle linkage show inconsistencies",
+        "Abnormal channel usage clusters on specific partners or drivers",
+        "Full-truckload fulfillment quality degrades in channel-abuse scenarios"
+      ]
+    }
   },
   "R0264-003": {
     "title": "Fake Trip Fee Fraud",
@@ -70,6 +97,15 @@
       "trip record forgery",
       "trip fee fraud",
       "trip falsification"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Trip records are forged or duplicated to inflate trip counts and mileage",
+        "Trip-vehicle-trajectory linkage verification shows inconsistencies",
+        "Fraudulent trips come with inflated freight and subsidy expenditures",
+        "Trip tamper protection is missing or bypassed",
+        "Abnormal trips cluster on specific drivers or network points"
+      ]
+    }
   }
 }

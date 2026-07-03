@@ -16,7 +16,23 @@
         "link": "https://en.wikipedia.org/wiki/Video_game_boosting"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "低段位账号与高段位开挂账号固定组队匹配",
+        "老板账号胜率异常提升且自身操作指标明显低于段位",
+        "队伍中出现开挂打手账号承担主要输出",
+        "组队成员 IP/设备存在关联，疑似同一外挂团伙",
+        "老板账号在代练后段位/战绩跃升但操作数据无对应提升"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "带老板",
       "坐挂车",

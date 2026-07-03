@@ -26,6 +26,22 @@
       "fake handover"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "中转接驳节点与接驳记录被伪造或重复录入",
+        "接驳次数与中转里程虚增伴随补贴异常支出",
+        "接驳节点轨迹比对出现与实际不符的记录",
+        "异常接驳集中在跨网点或合作方合谋场景",
+        "中转防篡改机制缺失或被绕过"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0258",

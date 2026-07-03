@@ -17,6 +17,14 @@
       "paid reviews",
       "review manipulation",
       "astroturfing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A store sees a sharp short-term surge in positive reviews, with clustered timing and highly similar review text",
+        "Orders backing the reviews are low-price, empty-package, or virtual deliveries with anomalous logistics trajectories",
+        "Reviewing accounts are newly registered or low-activity, with mechanical reviewing behavior and concentrated IPs or devices",
+        "Reviews within the same batch are templated, with a high repetition rate of keywords"
+      ]
+    }
   }
 }

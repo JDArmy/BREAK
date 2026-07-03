@@ -22,6 +22,14 @@
       "surveillance pricing",
       "dynamic pricing",
       "discriminatory pricing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same product or service shows inconsistent prices across different user accounts, with prices for existing users systematically higher than for new users",
+        "After a user frequently browses a product, the displayed price for that user rises with the number of views",
+        "Prices shown to paid member accounts are higher than those shown to non-member accounts, indicating inverted membership pricing",
+        "Pricing returned for the same product page differs systematically based on the visiting device brand or model"
+      ]
+    }
   }
 }

@@ -23,6 +23,25 @@
     "advanced": "高级"
   },
   "riskInfluence": "风险影响",
+  "riskPriority": "处置优先级",
+  "riskPriorityOverridden": "已专家覆盖",
+  "riskAssessmentDimensions": "风险分级维度",
+  "riskObservables": "可观测信号",
+  "riskObservablesCount": "条信号",
+  "riskPriorityNote": "优先级说明",
+  "riskDim": {
+    "likelihood": "发生概率",
+    "businessLoss": "业务损失",
+    "attackCost": "攻击成本",
+    "detectionDifficulty": "检测难度",
+    "defenseMaturity": "防御成熟度"
+  },
+  "riskSeverityLevel": {
+    "low": "低",
+    "medium": "中",
+    "high": "高",
+    "critical": "严重"
+  },
   "riskRelatedRisks": "相关风险",
   "riskRelationType": {
     "prerequisite": "前置",

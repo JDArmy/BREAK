@@ -16,7 +16,22 @@
         "link": "https://en.wikipedia.org/wiki/Malware"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "员工终端出现未知进程外连C2服务器，流量呈心跳或加密特征",
+        "终端EDR告警木马/恶意软件感染，进程链异常",
+        "员工账号在钓鱼/社工后出现异常登录或数据外发",
+        "内网横向移动痕迹，凭据被窃取后用于越权访问"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "设备中马",
       "终端中马",

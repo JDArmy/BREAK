@@ -10,6 +10,22 @@
       "A0069",
       "A0080"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "XR应用请求超出功能所需的眼动、手势、空间定位数据权限",
+        "空间地图与环境扫描数据被上传到未声明的云端或第三方",
+        "应用或SDK以高频率持续采集生物特征数据且无明确用途",
+        "数据留存周期与用途声明不一致或长期未清理",
+        "敏感空间数据缺少本地处理或粒度限制被全量上传"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjY5MDIyMA==&mid=2652007605&idx=1&sn=8a33943fcbb314610310aabe8aa44749",
@@ -28,7 +44,7 @@
       "空间地图泄露",
       "环境扫描数据"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "空间计算隐私泄露来自 XR 设备持续采集眼动、手势、位姿、房间结构和周边物体信息。即使不包含传统身份字段，这些数据也可能推断健康状况、居住环境和行为习惯。\n\n空间数据一旦被应用、SDK 或云服务过度收集，会形成高敏感画像。平台应限制数据粒度、用途和留存时间，并提供清晰授权和本地处理能力。",
     "relatedRisks": [
       {

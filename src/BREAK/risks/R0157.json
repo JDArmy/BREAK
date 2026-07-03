@@ -10,6 +10,21 @@
       "A0089",
       "A0083"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "AI助手在无用户明确指令下自动执行回复邮件、订阅服务、下单等操作且无决策依据记录",
+        "端侧AI功能在后台持续采集用户行为数据，数据收集范围超出用户知情与授权",
+        "AI推荐或定价结果存在系统性偏差，对特定用户群体产生歧视性输出",
+        "AI功能的云端处理链路缺少审计日志，用户数据流转路径不可追溯"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "EU AI Act: Transparency Requirements for AI Systems",
@@ -24,7 +39,7 @@
         "link": "https://foundation.mozilla.org/en/privacynotincluded/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "AI浏览器/手机黑箱风险",
       "AI黑箱",

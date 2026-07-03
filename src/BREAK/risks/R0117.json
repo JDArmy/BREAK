@@ -23,7 +23,7 @@
         "link": "https://arxiv.org/abs/2310.12397"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
     "keywords": [
       "LLM提示注入风险",
       "提示注入",
@@ -32,6 +32,20 @@
       "越狱提示",
       "提示攻击"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "用户输入中出现'忽略之前的指令'、角色扮演越狱等提示注入话术及编码变体",
+        "LLM输出突然泄露系统提示词、内部配置或执行了非授权的工具调用",
+        "模型在常规问答中异常生成违规内容或跳过既定业务流程约束"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0117-001",
@@ -83,7 +97,7 @@
         "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
     "keywords": [
       "直接提示注入",
       "Direct Prompt Injection",
@@ -91,6 +105,20 @@
       "角色扮演越狱",
       "提示词覆盖"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "用户输入含'ignore previous instructions'、Base64/Unicode编码的越狱指令",
+        "模型回复中突然暴露系统提示词原文或突破安全约束生成违规内容",
+        "同一会话中出现多轮角色扮演话术试图逐步瓦解模型约束"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0117",
@@ -143,7 +171,7 @@
         "link": "https://arxiv.org/abs/2302.12173"
       }
     ],
-    "updated": "2026-06-10",
+    "updated": "2026-07-03",
     "keywords": [
       "间接提示注入",
       "Indirect Prompt Injection",
@@ -152,6 +180,20 @@
       "网页提示注入",
       "知识库投毒"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "RAG知识库文档/网页内容中检出隐藏的提示注入指令",
+        "LLM在处理外部数据后异常触发工具调用或泄露上下文敏感信息",
+        "AI助手在读取邮件/文档后执行了非用户意图的操作（如外发数据）"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0117",

@@ -17,6 +17,15 @@
       "quishing login",
       "QR auth abuse",
       "QR code hijacking"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same login QR code is scanned and authorized by multiple different devices or geographic regions within a short window after generation",
+        "The session IP and device after scan-based authorization deviate significantly from the account's historical usual location and device",
+        "The login QR code is not consumed on its original page but completes authorization in another session",
+        "A single account repeatedly shows a short-cycle session pattern of scan-login, abnormal operation, then logout",
+        "Scan-based authorizations for multiple different accounts within a short window originate from the same device fingerprint or IP range"
+      ]
+    }
   }
 }

@@ -18,7 +18,15 @@
       "account shop",
       "aged accounts",
       "credentials for sale"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Large numbers of accounts log in from anomalous IPs or devices shortly after registration, exhibiting batch-turnover characteristics",
+        "Account login geolocations and device fingerprints jump across regions, inconsistent with historical usage habits",
+        "Platform accounts appear listed in bulk for sale on the dark web or carding platforms",
+        "Resold accounts undergo abrupt behavioral shifts after turnover, with batch automated operations or privilege monetization"
+      ]
+    }
   },
   "R0011-001": {
     "title": "Game Account Reselling",
@@ -38,7 +46,15 @@
       "leveled account sales",
       "boosted account sale",
       "RMT accounts"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Game account login devices and IPs jump across regions within a short window, inconsistent with historical habits",
+        "Virtual assets in the account are quickly sold off or transferred to other accounts after turnover",
+        "Game accounts are listed in bulk on third-party platforms or the dark web, with resource descriptions such as gear and level",
+        "Stolen-account appeals cluster, with login credentials and originally bound mobile/email being tampered in bulk"
+      ]
+    }
   },
   "R0011-002": {
     "title": "Account Privilege Reselling",
@@ -59,6 +75,14 @@
       "entitlement resale",
       "shared premium accounts",
       "privilege arbitrage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Member accounts log in concurrently across multiple devices and IPs, exceeding normal single-user usage patterns",
+        "Paid-privilege accounts are sold in bulk at low prices on third-party platforms, far below official subscription pricing",
+        "Privilege account login device fingerprints switch frequently, exhibiting multi-person credential-sharing characteristics",
+        "Subscription accounts are bulk-transferred or shared to non-original payers before expiration"
+      ]
+    }
   }
 }

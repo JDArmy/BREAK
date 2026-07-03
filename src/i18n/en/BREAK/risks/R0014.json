@@ -18,6 +18,15 @@
       "inventory hoarding",
       "stock locking",
       "reservation abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single account or device fingerprint places bulk orders across many products within a short window with an extremely low payment rate",
+        "Product inventory is wiped out instantly and the corresponding orders concentrate and time out unpaid within minutes",
+        "A large volume of orders are added to cart then cancelled, with cart-operation frequency far exceeding normal user behavior",
+        "The same IP range or device cluster launches inventory-locking requests against all SKUs of a single merchant",
+        "Actual payment rate is severely inverted against inventory occupation, with a spike in refund/cancellation rates after ordering"
+      ]
+    }
   }
 }

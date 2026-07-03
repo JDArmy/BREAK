@@ -24,7 +24,22 @@
         "link": "https://attack.mitre.org/techniques/T1566/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "critical",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "仿冒合法网站/邮件的钓鱼链接在短时间内被大量员工或用户点击",
+        "登录接口出现来自钓鱼页面的凭证提交，失败率或异常登录激增",
+        "邮件安全网关拦截到批量钓鱼邮件，发件域名与品牌高度相似",
+        "用户举报仿冒登录页，URL经短链或同形异义字伪装"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "keywords": [
       "钓鱼攻击",
       "网络钓鱼",
@@ -86,7 +101,22 @@
         "link": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "钓鱼邮件内容高度个性化，结合目标社交媒体/工作背景定制，打开率异常",
+        "多语言钓鱼内容在同一波次中出现，支持跨国钓鱼",
+        "语音/视频通话中出现AI克隆高管声音或面部进行诈骗",
+        "传统钓鱼检测规则命中率下降，AI生成内容绕过文本特征库"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "AI增强钓鱼攻击",
       "AI钓鱼",
@@ -135,6 +165,21 @@
     "complexity": "advanced",
     "influence": "可绕过用户警觉，造成资产损失",
     "limitation": "依赖新协议特性的认知盲区",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "钱包签名授权请求中出现Permit/EIP-712等抽象结构化数据，普通用户难判后果",
+        "用户签名后代币被异常转移或代理执行权限被授予未知地址",
+        "DApp交互中出现可疑的approve/setApprovalForAll调用，授权额度异常",
+        "链上出现针对同一钓鱼合约的批量受害转账记录"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "avoidances": [
       "A0001",
       "A0007",
@@ -159,7 +204,7 @@
       "EIP-712钓鱼",
       "恶意授权"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "EIP/协议钓鱼攻击利用用户对新协议、新签名格式或钱包提示的不熟悉，构造看似正常的授权、Permit、委托或合约交互请求。用户一旦签名，攻击者可能获得代币转移、订单撮合或代理执行权限。\n\n这类攻击的危险在于交易内容常被抽象成复杂结构化数据，普通用户难以判断真实后果。钱包、DApp 和风控系统需要把协议语义翻译成可理解的风险提示。",
     "relatedRisks": [
       {
@@ -218,7 +263,22 @@
         "link": "https://www.cert.org.cn/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "商户收款二维码被覆盖为恶意二维码，支付款项流向异常账户",
+        "钓鱼邮件嵌入二维码绕过URL检测，移动端扫码后跳转仿冒页面",
+        "公共场所张贴的二维码引导扫码后访问钓鱼/恶意软件下载页",
+        "短链生成的动态二维码初始指向正常页，后续被改向恶意地址"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "二维码钓鱼风险",
       "二维码钓鱼",
@@ -282,7 +342,22 @@
         "link": "https://www.antiphishing.org/"
       }
     ],
-    "updated": "2026-02-27",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新注册域名与品牌域名拼写高度相似或使用同形异义字",
+        "仿冒网站/APP复制品牌页面设计骗取用户凭据与支付信息",
+        "搜索引擎结果中仿冒网站排名靠前，投毒SEO引流",
+        "社交平台出现冒充品牌的虚假账号进行虚假营销或诈骗"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "域名/品牌仿冒",
       "品牌仿冒",

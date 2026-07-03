@@ -17,6 +17,14 @@
       "proposal attack",
       "vote buying",
       "governance takeover"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Governance token holdings spike concentratedly via flash loans or borrowing shortly before voting, then are returned immediately after voting",
+        "A voting proposal sees an anomalous surge of voting addresses near the deadline, with voting directions highly uniform",
+        "A new proposal requests fund transfers, contract parameter changes, or privilege grants, with the proposing address linked to whale addresses",
+        "Token holders receive organized bribes, with on-chain voting behavior correlated with bribe transactions"
+      ]
+    }
   }
 }

@@ -17,7 +17,7 @@
         "link": "https://view.inews.qq.com/a/20250316A06WUY00"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "低价购风险",
       "零元购",
@@ -27,6 +27,21 @@
       "异常低价",
       "Bug价"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短时间内同一账号/设备批量加购并以异常低价或零元下单",
+        "下单金额、数量、配券组合偏离正常分布，集中触发价格漏洞",
+        "漏洞订单在短时间内爆发式增长并伴随外部传播（漏洞被公开）",
+        "订单实付金额与商品成本倒挂，出现大量零元或接近零元订单"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0055-001",
@@ -82,7 +97,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "卡券限制突破",
       "优惠券限制绕过",
@@ -92,6 +107,21 @@
       "券规则绕过",
       "叠券绕过"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "非公开/定向卡券被非目标人群批量领取，领取来源异常",
+        "卡券叠加使用突破规则上限，单订单优惠比例畸高",
+        "领券接口出现枚举/撞券特征的高频请求，失败率突增",
+        "限定场景卡券在非指定商品/时段被使用，用券分布越界"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0055",

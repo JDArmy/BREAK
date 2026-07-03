@@ -17,6 +17,14 @@
       "IP theft",
       "proprietary information disclosure",
       "insider leak"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "An employee account accesses or downloads sensitive files in bulk before departure or during off-hours, at volumes well above the daily norm",
+        "Sensitive data is exfiltrated via personal email, cloud drives, or instant messaging, bypassing enterprise channels",
+        "Internal accounts access core trade-secret repositories from non-routine IPs or devices, with privilege usage exceeding their scope",
+        "Competitors or poaching targets surface products or proposals that closely resemble the company's confidential material"
+      ]
+    }
   }
 }

@@ -11,6 +11,21 @@
       "A0068",
       "A0079"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "合法账号凭据在异地或非业务时段登录后，使用PowerShell、WMI、PsExec等系统内置工具执行操作",
+        "管理员账号在短期内大量查询或导出敏感目录数据，行为模式偏离历史基线",
+        "终端无恶意文件落地，但出现合法云存储、协作工具或远程管理软件的异常外联和数据上传",
+        "窃取的会话令牌被用于绕过多因素认证直接访问云管理控制台或关键系统"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "Microsoft Digital Defense Report 2025",
@@ -21,7 +36,7 @@
         "link": "https://www.crowdstrike.com/global-threat-report/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "无恶意软件攻击风险",
       "无恶意软件攻击",

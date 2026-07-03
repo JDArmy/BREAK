@@ -18,6 +18,15 @@
       "teaming",
       "collusion",
       "boosting squad"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The boss, driver, and enforcer accounts start matchmaking at the same time and enter the same match",
+        "The enforcer account has an anomalous rank and uses cheats to eliminate other players before exiting",
+        "The boss account defeats the enforcer in the final circle to win, with an abnormal win/loss relationship",
+        "Escort squad members show linked IPs/devices, suggesting coordinated gang activity",
+        "The same escort pattern recurs across multiple accounts, with the boss account's win rate spiking"
+      ]
+    }
   }
 }

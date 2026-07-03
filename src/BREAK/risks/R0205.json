@@ -11,6 +11,22 @@
       "A0113-001",
       "A0108"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "AIoT设备传感器输入出现规律性异常导致决策输出与预期不符",
+        "设备模型推理结果在特定输入模式下出现系统性偏置或误判",
+        "传感器数据流被注入对抗样本或欺骗信号",
+        "设备固件被篡改后AI决策逻辑发生非预期变更",
+        "门禁、交通、医疗等关键场景设备出现因AI误判导致的异常动作"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://www.163.com/dy/article/KIOS8MI70511ALHJ.html",
@@ -29,7 +45,7 @@
       "模型投毒",
       "智能设备误判"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "AIoT 融合攻击针对带有 AI 感知、推理或自动控制能力的物联网设备。攻击者可能通过对抗样本、传感器欺骗、模型投毒或固件篡改，影响设备判断和执行。\n\n当 AIoT 应用于门禁、交通、医疗、工业和家庭自动化时，错误决策会从数据层扩展到物理世界。防护需要同时覆盖模型鲁棒性、设备身份、数据可信和执行安全。",
     "relatedRisks": [
       {

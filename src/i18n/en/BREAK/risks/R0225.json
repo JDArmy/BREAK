@@ -16,6 +16,15 @@
       }
     ],
     "description": "Webhook forgery and event replay occur when receivers fail to validate signatures, timestamps, event IDs, or idempotency state. Attackers can create or repeat events that trigger shipment, recharge, authorization, or state changes.\n\nAsynchronous events connect payments, orders, SaaS integrations, and automation flows. A broken trust boundary can turn forged external messages into internal business actions.",
-    "influence": "Forged or replayed callbacks can trigger false payment confirmation, wrong shipment, authorization changes, and accounting inconsistency."
+    "influence": "Forged or replayed callbacks can trigger false payment confirmation, wrong shipment, authorization changes, and accounting inconsistency.",
+    "riskAssessment": {
+      "observables": [
+        "Webhook receivers process events and trigger business actions without signature verification",
+        "The same event ID is delivered repeatedly and triggers duplicate fulfillment or status changes",
+        "Webhook request timestamps or sources mismatch expectations yet are still accepted",
+        "Payment or order status shows inconsistent changes due to forged callbacks",
+        "Callback endpoints show duplicate fulfillment caused by idempotency gaps"
+      ]
+    }
   }
 }

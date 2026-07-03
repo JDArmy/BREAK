@@ -11,6 +11,22 @@
       "A0096",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "代币总供应量在无治理授权的情况下出现异常增发或销毁",
+        "铸币权限持有者地址发生变更或被调用至未知合约",
+        "链上出现对经济模型钩子或升级机制的异常调用",
+        "代币余额记录被异常修改且无对应转账事件",
+        "代币价格在无市场消息时出现断崖式下跌伴随流动性枯竭"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://consensys.io/diligence/blog/2019/09/stop-using-soliditys-transfer-now/",
@@ -30,7 +46,7 @@
       "智能合约铸造漏洞",
       "代币销毁漏洞"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "代币增发/通缩漏洞通常来自智能合约权限控制、数学计算、钩子逻辑或升级机制缺陷。攻击者可能未授权铸造代币、异常销毁供应量或改变余额记录。\n\n这类问题会直接破坏代币稀缺性和市场预期，引发价格崩溃、流动性枯竭和治理失真。上线前需要对经济模型、权限边界和极端状态进行专项审计。",
     "relatedRisks": [
       {

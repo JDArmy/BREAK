@@ -25,6 +25,22 @@
       "blind shipping fraud"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "发件方向未下单收件人批量盲发到付快递",
+        "到付订单中低价劣质货冒充高价商品的特征集中出现",
+        "收件人拒付或投诉聚类指向同一发件方",
+        "发件方资质异常或新注册即大量发件",
+        "盲发到付伴随代收货款被异常领取"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0259-001",
@@ -68,6 +84,22 @@
       "blind sale fraud"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "黑产交流中出现「盲销」相关话术与到付盲发手法",
+        "未下单收件人集中收到同一发件方的到付快递",
+        "盲发到付快递标注代收货款且货品价值与到付金额严重不符",
+        "收件人投诉聚类指向盲销团伙关联的发件方资质",
+        "到付订单行为模型中出现盲发到付的批量特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0259",

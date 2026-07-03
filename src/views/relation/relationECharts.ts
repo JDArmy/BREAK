@@ -4,6 +4,7 @@ type EChartsInit = (dom: HTMLElement) => ECharts;
 
 let networkEChartsPromise: Promise<EChartsInit> | null = null;
 let sankeyEChartsPromise: Promise<EChartsInit> | null = null;
+let radarEChartsPromise: Promise<EChartsInit> | null = null;
 
 export const loadNetworkECharts = () => {
   if (!networkEChartsPromise) {
@@ -23,4 +24,14 @@ export const loadSankeyECharts = () => {
   }
 
   return sankeyEChartsPromise;
+};
+
+export const loadRiskRadarECharts = () => {
+  if (!radarEChartsPromise) {
+    radarEChartsPromise = import("./riskRadarEChartsCore").then(
+      ({ initRiskRadarECharts }) => initRiskRadarECharts
+    );
+  }
+
+  return radarEChartsPromise;
 };

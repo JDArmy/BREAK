@@ -19,7 +19,23 @@
         "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "玩家角色长时间静止或重复固定路径自动战斗",
+        "账号在线时长异常且操作指令呈现机械时序规律",
+        "同一设备/IP 长期多账号挂机刷资源",
+        "玩家对战中长期零交互但持续获得经验/资源",
+        "按键精灵/脱机挂进程特征或外挂工具签名"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "挂机",
       "自动挂机",

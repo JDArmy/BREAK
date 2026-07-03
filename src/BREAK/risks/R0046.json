@@ -14,13 +14,29 @@
       "A0021",
       "A0023-001"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "实名认证或人脸核身提交的身份证号在多个不同账号间复用",
+        "防沉迷触发后短时间内账号切换至成人身份并恢复高时长游戏行为",
+        "支付人脸或实名信息与账号历史主体年龄特征明显不符",
+        "同一成人身份被多个不同账号绑定用于绕过未成年识别",
+        "账号在防沉迷限制时段前后行为模式突变，如深夜突然解除时长限制"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "促进未成年人犯罪预防和治理 最高检发布典型案例|网络犯罪|公平正 ...",
         "link": "https://www.163.com/dy/article/KU1DDKKD05346936.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "未成年人识别绕过",
       "防沉迷绕过",

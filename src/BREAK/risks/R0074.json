@@ -25,7 +25,22 @@
         "link": "https://www.cac.gov.cn/2024-09/30/c_1729384452126506.htm"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "数据收集行为超出隐私政策声明的范围，未取得用户授权",
+        "个人数据保留时长超过法规要求且未配置自动清理",
+        "跨境数据传输未完成安全评估或标准合同备案",
+        "用户行权（访问/删除/更正）请求处理超时或被无故拒绝"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "keywords": [
       "隐私合规风险",
       "个人信息合规",

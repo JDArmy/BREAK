@@ -24,7 +24,23 @@
       "边缘鉴权绕过",
       "流量劫持"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "边缘函数或WAF规则变更后出现鉴权绕过",
+        "边缘逻辑被配置为转发敏感请求或开放代理",
+        "流量入口层出现异常的响应篡改或数据转发",
+        "边缘配置变更缺少灰度与回滚导致大范围服务异常",
+        "边缘函数权限过大且未受最小权限约束"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0249",

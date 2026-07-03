@@ -17,6 +17,14 @@
       "MLPS 2.0",
       "classified cybersecurity protection",
       "cybersecurity classified protection"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Information systems have not completed MLPS assessment at the required classification level, or the assessment fails to meet the standard",
+        "MLPS remediation items remain open for extended periods, with high-severity issues overdue",
+        "Information security management responsibilities are not assigned, and responsible parties do not match filing records",
+        "Assessment reports have expired, or systems have not been re-filed and re-assessed after major changes"
+      ]
+    }
   }
 }

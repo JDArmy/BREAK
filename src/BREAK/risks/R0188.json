@@ -10,13 +10,28 @@
       "A0131-001",
       "A0131-002"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "矿工挖出区块后延迟广播，在公共链追上时集中公布私有链",
+        "算力占比超过33%的矿池的出块收益持续超出其算力占比",
+        "网络出现频繁的区块重组，被作废的多为其他矿工的区块",
+        "自私挖矿矿池的区块发布时序呈现与公共链高度相关的延迟特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "references": [
       {
         "title": "Majority is not Enough: Bitcoin Mining is Vulnerable",
         "link": "https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "自私挖矿（Selfish Mining）",
       "自私挖矿",

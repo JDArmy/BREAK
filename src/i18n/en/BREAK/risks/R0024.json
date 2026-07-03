@@ -18,6 +18,15 @@
       "SEO spam redirection",
       "malicious redirection",
       "engagement bait diversion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Comments and direct messages embed traffic-diversion contact details such as WeChat IDs, QQ numbers, or external links",
+        "A single account batch-posts near-duplicate diversion scripts across multiple target content items",
+        "External redirect links clicked from diversion content point to high-risk or grey-market sites",
+        "Newly registered accounts, after a warming-up period, burst into diversion content with mechanical timing",
+        "Diversion accounts cluster with SIM-bank cards and device-control fingerprints, with highly homogeneous IP ranges"
+      ]
+    }
   }
 }

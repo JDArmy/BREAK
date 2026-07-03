@@ -22,6 +22,14 @@
       "SMPC",
       "privacy-preserving computation",
       "MPC abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Model gradient updates submitted by federated learning participants deviate significantly from the training data distribution, showing abnormally directional updates",
+        "A privacy computing system is deployed and running but lacks complete audit logs and intermediate parameter records, indicating a compliance facade",
+        "Data sources connected under the name of privacy computing exceed the scope necessary for the business, showing signs of excessive data collection",
+        "Participant nodes repeatedly report highly sensitive gradient components unrelated to their own tasks during training"
+      ]
+    }
   }
 }

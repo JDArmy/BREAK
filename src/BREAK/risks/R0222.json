@@ -24,7 +24,23 @@
       "API资产盘点",
       "API治理盲区"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "前端资源或移动端流量中出现未登记的API路径被调用",
+        "废弃或测试接口仍可被外部访问且未纳入鉴权与限流",
+        "API资产盘点结果与实际可访问接口存在长期缺口",
+        "未登记接口返回敏感能力或内部数据",
+        "枚举型路径扫描在短时间内命中大量未治理接口"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0223",

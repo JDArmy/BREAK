@@ -22,6 +22,14 @@
       "false chargeback",
       "dispute fraud",
       "chargeback scam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A consumer initiates a chargeback with the bank after signing for the goods, claiming non-receipt or unauthorized transaction despite conclusive delivery signature records",
+        "The same cardholder or device repeatedly initiates chargebacks across multiple merchants, with a chargeback rate significantly higher than normal users",
+        "Chargebacks are initiated without any prior communication or return request to the merchant, going directly to the bank dispute process",
+        "After family member consumption, the cardholder concentrates chargebacks on similar small-value transactions citing unauthorized activity"
+      ]
+    }
   }
 }

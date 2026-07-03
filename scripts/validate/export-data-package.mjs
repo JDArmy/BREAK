@@ -37,11 +37,28 @@ export interface BreakRiskRelation {
   note?: string;
 }
 
+export type BreakRiskSeverity = 'low' | 'medium' | 'high' | 'critical';
+export type BreakRiskPriority = 'P0' | 'P1' | 'P2' | 'P3';
+
+export interface BreakRiskAssessment {
+  likelihood: BreakRiskSeverity;
+  businessLoss: BreakRiskSeverity;
+  attackCost: BreakRiskSeverity;
+  detectionDifficulty: BreakRiskSeverity;
+  defenseMaturity: BreakRiskSeverity;
+  priority?: BreakRiskPriority;
+  observables: string[];
+  priorityNote?: string;
+  priorityOverride?: boolean;
+  assessedAt?: string;
+}
+
 export interface BreakRisk extends BreakBaseEntity {
   complexity: string;
   influence: string;
   avoidances: string[];
   relatedRisks: BreakRiskRelation[];
+  riskAssessment?: BreakRiskAssessment;
   businessScenes: string[];
 }
 

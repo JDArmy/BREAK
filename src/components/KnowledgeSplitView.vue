@@ -906,6 +906,31 @@ html.dark .knowledge-badge.ac04 {
   color: var(--break-badge-risk-advanced-text);
 }
 
+/* Risk 处置优先级 badge（P0 最高 → P3 最低） */
+.knowledge-badge.risk-priority-p0 {
+  background: var(--break-badge-risk-priority-p0-bg);
+  border-color: var(--break-badge-risk-priority-p0-border);
+  color: var(--break-badge-risk-priority-p0-text);
+}
+
+.knowledge-badge.risk-priority-p1 {
+  background: var(--break-badge-risk-priority-p1-bg);
+  border-color: var(--break-badge-risk-priority-p1-border);
+  color: var(--break-badge-risk-priority-p1-text);
+}
+
+.knowledge-badge.risk-priority-p2 {
+  background: var(--break-badge-risk-priority-p2-bg);
+  border-color: var(--break-badge-risk-priority-p2-border);
+  color: var(--break-badge-risk-priority-p2-text);
+}
+
+.knowledge-badge.risk-priority-p3 {
+  background: var(--break-badge-risk-priority-p3-bg);
+  border-color: var(--break-badge-risk-priority-p3-border);
+  color: var(--break-badge-risk-priority-p3-text);
+}
+
 .knowledge-badge.case-cat-criminal_verdict {
   background: var(--break-badge-case-criminal-bg);
   border-color: var(--break-badge-case-criminal-border);

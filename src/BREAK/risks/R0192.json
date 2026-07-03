@@ -12,13 +12,29 @@
       "A0051",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "虚拟空间内短时间内出现针对同一用户的多次靠近、阻挡或语音骚扰行为",
+        "匿名账号在新注册后立即进入社交场景并集中向特定用户发送不当内容",
+        "实时语音/3D内容中出现批量同源违规素材由关联账号分发",
+        "受害用户举报集中在同一虚拟坐标或同一时段密集出现",
+        "深度伪造不雅内容在社群外被批量传播并指向真实用户身份"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "link": "https://www.usenix.org/system/files/sec24fall-prepub-329-sb.pdf",
         "title": "[PDF] Investigating Harassment and Safety in VR - USENIX"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "虚拟世界骚扰与暴力",
       "虚拟骚扰",

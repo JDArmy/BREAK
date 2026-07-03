@@ -21,7 +21,14 @@
       "session cookie reuse",
       "stolen session",
       "session token reuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same account's session cookie is used concurrently across multiple different devices/IPs/locations",
+        "After login, the MFA multi-factor verification flow is skipped and the session state directly enters business operations",
+        "Account vendors bulk-sell accounts providing only CK (cookies), with login behavior showing no password entry or verification code step"
+      ]
+    }
   },
   "R0035-001": {
     "title": "Login Credential Theft",
@@ -45,6 +52,13 @@
       "cookie theft",
       "token theft",
       "account credential theft"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Old sessions remain valid after the account password is changed, with login state not revoked",
+        "User session cookies appear in infostealer-leaked data or dark-web trading",
+        "The same account logs in from a foreign location or anomalous device, with behavior deviating from the user's historical profile"
+      ]
+    }
   }
 }

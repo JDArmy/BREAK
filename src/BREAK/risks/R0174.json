@@ -13,13 +13,28 @@
       "A0045-001",
       "A0163"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "链上分析工具对目标钱包地址进行地址聚类，关联出多个地址归属同一实体",
+        "通过交易金额、时间、对手方模式将假名地址与真实身份关联去匿名化",
+        "用户钱包地址的大额交易被公开追踪，资产持有量暴露后成为勒索或钓鱼目标",
+        "交易所充值提现地址与用户链上钱包形成可识别的关联图谱"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "link": "https://dl.acm.org/doi/10.1145/3716323",
         "title": "Blockchain Security and Privacy: Threats, Challenges, Applications ..."
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "链上隐私泄露",
       "地址追踪",

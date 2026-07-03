@@ -16,7 +16,7 @@
         "link": "https://www.ebrun.com/20170712/237968.shtml"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "重复铺货",
       "重复上架",
@@ -26,6 +26,21 @@
       "同品多链接",
       "重复商品"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一店铺内商品标题、图片、属性、描述高度相似，重复度高",
+        "同款商品以不同颜色/尺码/套餐拆分发布，占据多个搜索位",
+        "店铺商品列表中同质链接密集，曝光资源被单一卖家占用",
+        "搜索结果页同一卖家同款商品密集出现，挤占其他卖家"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0115",

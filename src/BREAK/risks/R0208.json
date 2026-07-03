@@ -10,6 +10,22 @@
       "A0108",
       "A0113-001"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "医疗物联网设备存在弱口令或未更新固件且暴露在可达网络",
+        "植入式或监护设备控制逻辑出现非授权变更或异常指令",
+        "设备网络未与临床网络隔离且存在横向访问路径",
+        "医疗设备数据被异常读取或导出到非授权系统",
+        "设备安全更新长期滞后于已知漏洞披露"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://metc.njtc.edu.cn/info/1141/5622.htm",
@@ -29,7 +45,7 @@
       "心脏起搏器安全",
       "医疗设备漏洞"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "医疗物联网专项风险涉及联网监护仪、输液泵、影像设备、可穿戴设备和植入式设备。攻击者可能利用弱口令、旧固件、未隔离网络或供应链问题影响设备数据和控制逻辑。\n\n该风险不仅造成隐私泄露或业务中断，还可能影响诊疗判断和患者生命安全。医疗场景需要把设备可用性、临床流程和安全更新能力一起纳入风险管理。",
     "relatedRisks": [
       {

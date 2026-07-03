@@ -23,7 +23,7 @@
         "link": "https://www.163.com/dy/article/J7CL1BGM0518STKV.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意薅羊毛",
       "coupon abuse",
@@ -33,6 +33,21 @@
       "活动套利",
       "恶意套利"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "优惠券领取数量超出活动限制，单账号或设备关联多券套用",
+        "新注册账号在养号期后集中领取并核销高价值优惠券",
+        "活动优惠核销集中在活动结束前短窗口，远超正常用户参与节奏",
+        "套利账号核销后立即提现或转卖，缺乏真实复购行为"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0003-003",

@@ -45,7 +45,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "优惠劵枚举",
       "优惠券枚举",
@@ -86,6 +86,20 @@
         "relation": "co-occurrence",
         "note": "优惠劵枚举与营销活动作弊均可由攻击工具“租号平台”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "券号兑换接口在短时间内出现大量失败后偶尔成功的请求模式",
+        "同一来源对连续或规则可猜测的券号进行批量试探",
+        "兑换成功后券码立即被转移或核销，无正常用户决策停顿"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

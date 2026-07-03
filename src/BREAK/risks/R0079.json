@@ -24,7 +24,22 @@
         "link": "https://www.scmgj.gov.cn/scsmmglj/c103261/2025/6/27/4d4113b1e0a24ff28c9922478c09d777.shtml"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "关键业务系统使用非国密算法（如RSA/AES）替代SM2/SM3/SM4",
+        "商用密码应用安全性评估未通过或未按要求整改",
+        "密码产品/服务未取得商用密码产品认证证书",
+        "国密改造进度滞后于监管要求的时间节点"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "keywords": [
       "国密合规风险",
       "商用密码合规",

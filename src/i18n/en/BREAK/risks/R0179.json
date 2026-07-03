@@ -17,6 +17,14 @@
       "ICS IoT",
       "OT security",
       "industrial sensor compromise"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Industrial control systems (SCADA/PLC) show anomalous connections and commands originating from the IT network or the public internet",
+        "Production parameters are tampered with without authorization, causing product quality anomalies or equipment operation deviating from safe thresholds",
+        "IIoT devices use unauthenticated industrial protocols such as Modbus, with commands susceptible to man-in-the-middle tampering",
+        "After interconnection of the industrial control network with the IT network, the attack surface of OT devices expands, with scanning and probing behavior emerging"
+      ]
+    }
   }
 }

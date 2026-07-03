@@ -22,6 +22,15 @@
       "personal information theft",
       "account opening fraud",
       "impersonation fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same identity information is used to open accounts or apply for loans across multiple institutions within a short window",
+        "Different accounts share the same ID number while the bound phone number/address changes frequently",
+        "Newly opened accounts apply for large loans or credit cards in a concentrated manner shortly after creation",
+        "The failure rate of identity-to-person consistency verification during real-name authentication rises",
+        "A single identity is linked to bank accounts or payment accounts across multiple regions"
+      ]
+    }
   }
 }

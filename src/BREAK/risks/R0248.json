@@ -24,7 +24,23 @@
       "盗版App欺诈",
       "移动端钓鱼"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "非官方渠道出现签名异常或行为可疑的同名App",
+        "重打包App植入广告、钓鱼页或风控绕过逻辑",
+        "盗版App在用户设备上窃取账号或劫持支付",
+        "应用签名校验缺失导致重打包版本可运行",
+        "重打包App通过非官方应用商店或社交渠道分发"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0012",

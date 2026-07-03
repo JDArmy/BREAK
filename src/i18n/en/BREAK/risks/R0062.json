@@ -17,7 +17,15 @@
       "illicit fund extraction",
       "balance laundering",
       "arbitrage cashout"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Frequent fake transactions occur between linked buyer and seller accounts, with funds looping back in a closed cycle",
+        "Non-cash assets such as credit card limits, points, or virtual currency are cashed out via returns or transfers, with an abnormally high cash-out ratio",
+        "Transactions have no real logistics or goods delivery, with orders concentrated in returnable or transferable categories",
+        "The same account cluster repeatedly pays by credit card and immediately refunds and withdraws cash within a short window"
+      ]
+    }
   },
   "R0062-001": {
     "title": "Credit Card / Loan Cash-Out",
@@ -37,7 +45,15 @@
       "loan arbitrage",
       "synthetic purchase cash-out",
       "fake merchant cash-out"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Shopping-loan funds are withdrawn to a bank card without being used for actual consumption",
+        "Buyer and seller collude on fake shipments to complete a credit-card payment and then refund to extract cash",
+        "Credit-card payment orders cluster, with amounts near the credit limit ceiling and rapid refunds following",
+        "The same device or account cluster repeatedly cycles through borrowing, withdrawal, and repayment"
+      ]
+    }
   },
   "R0062-002": {
     "title": "Illegal Points Cash-Out",
@@ -57,6 +73,14 @@
       "reward points arbitrage",
       "points monetization abuse",
       "points resale fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Self-buying and self-selling fake transactions farm points, with transactions canceled afterward while the points are retained",
+        "System vulnerabilities are exploited to bulk-obtain points without any spending, with anomalous point-source patterns",
+        "Points are concentrated on redeeming fungible discounted goods that are then resold at full price to cash out",
+        "Points are abnormally transferred or resold between accounts, with redemption behavior clustering across accounts"
+      ]
+    }
   }
 }

@@ -13,6 +13,21 @@
       "A0078",
       "A0090"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "OAuth授权回调中出现异常的redirect_uri参数，指向非受控的开放重定向地址",
+        "用户账号在无主动操作下被绑定到陌生的第三方身份提供者或外部应用",
+        "访问令牌的scope范围超出用户授权历史，出现越权数据访问API调用",
+        "隐式授权流回调URL中携带 access_token 片段被外部域引用或日志留存"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "OAuth 2.0 Security Best Current Practice - IETF",
@@ -23,7 +38,7 @@
         "title": "设备代码钓鱼攻击激增背景下 OAuth 授权安全与防御体系研究..."
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "OAuth/SSO授权滥用",
       "OAuth滥用",

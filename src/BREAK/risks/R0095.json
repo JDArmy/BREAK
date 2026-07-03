@@ -23,7 +23,23 @@
         "link": "https://losangeles.china-consulate.gov.cn/lbqw/lsbhyxz/lstx/202507/t20250704_11664900.htm"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "平台内容/评论/私信中出现高频诱导加微信、转账话术",
+        "新注册账号短时间内批量发布同质化营销/招聘/中奖信息",
+        "冒充官方账号的头像、昵称与真实官方高度相似",
+        "用户举报某账号诱导线下交易或导流至外部链接",
+        "同一批话术模板在多个账号间复制传播"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "平台诈骗风险",
       "电信诈骗导流",

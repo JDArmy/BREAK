@@ -17,7 +17,15 @@
       "below-cost purchase fraud",
       "coupon stacking abuse",
       "underpriced order exploit"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same account or device bulk-adds items to the cart in a short window and places orders at an abnormally low or zero price",
+        "Order amounts, quantities, and coupon-stacking combinations deviate from the normal distribution and concentrate on triggering price vulnerabilities",
+        "Orders exploiting the vulnerability spike explosively within a short window alongside external propagation (the vulnerability is made public)",
+        "The amount actually paid is inverted against the product cost, with a large number of zero or near-zero price orders"
+      ]
+    }
   },
   "R0055-001": {
     "title": "Coupon Restriction Bypass",
@@ -37,6 +45,14 @@
       "coupon eligibility bypass",
       "voucher restriction bypass",
       "coupon stacking bypass"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Non-public or targeted coupons are claimed in bulk by non-target users, with anomalous claim sources",
+        "Coupon stacking breaches the rule ceiling, with a single order showing an abnormally high discount ratio",
+        "The coupon-claim endpoint shows high-frequency requests with enumeration or token-cracking characteristics and a spike in failure rate",
+        "Scenario-restricted coupons are used on non-designated products or time windows, with usage distribution crossing boundaries"
+      ]
+    }
   }
 }

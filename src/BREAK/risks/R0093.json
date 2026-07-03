@@ -19,7 +19,23 @@
         "link": "https://m.thepaper.cn/baijiahao_6536240"
       }
     ],
-    "updated": "2024-01-22",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "商户收款二维码被用于非业务场景的高频小额收款",
+        "代收代付接口出现与商户经营类目不符的资金流",
+        "同一支付账户短时间内为多个无关联商户跑分",
+        "资金快进快出，到账后立即转出至多个个人账户",
+        "二维码收款金额呈现规律性（如固定面额）且来自异地扫码"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "支付渠道滥用",
       "支付通道滥用",

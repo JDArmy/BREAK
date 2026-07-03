@@ -26,7 +26,7 @@
         "link": "https://en.wikipedia.org/wiki/Real-money_trading"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "游戏仓库号",
       "仓库号",
@@ -35,6 +35,20 @@
       "资源中转号",
       "物资仓库号"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号长期只执行物品存取/转移，无正常游戏对战行为",
+        "打金账号产出的虚拟物品集中流入少数仓库号再统一交易变现",
+        "仓库号登录IP/设备与多个打金号关联，呈现工作室调度特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0012",

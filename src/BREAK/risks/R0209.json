@@ -12,6 +12,22 @@
       "A0085",
       "A0016"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "物联网设备向陌生IP或域名发起持续出站连接且无业务对应",
+        "设备流量出现C2通信特征如固定心跳间隔或加密信标",
+        "设备行为模式从被动服务变为主动外联并接收指令",
+        "同一网段多台设备在相近时间向同一外部地址外联",
+        "设备DNS查询出现已知C2或DGA域名特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "link": "https://gzca.miit.gov.cn/zwgk/wlxxaq/gztz/art/2025/art_ebaf1ebcaecc4464be015c5b05e5ff19.html",
@@ -31,7 +47,7 @@
       "命令控制服务器",
       "异常外联检测"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "非法外联与 C2 控制是设备被植入木马或后门后的典型表现。受控设备主动连接攻击者服务器，接收扫描、代理、DDoS、数据窃取或横向移动指令。\n\nIoT 设备常部署在边缘网络，日志和运维能力不足，容易成为长期隐蔽的跳板。企业需要建立出站访问基线、域名/IP 信誉检测和设备隔离策略。",
     "relatedRisks": [
       {

@@ -17,6 +17,14 @@
       "accidental data exposure",
       "operational mistake",
       "misconfiguration by staff"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Sensitive files or emails are sent to wrong recipients, with abnormal delivery to external domains",
+        "Employee misoperations cause data to be deleted or modified incorrectly, with anomalous changes in audit logs",
+        "Accounts using weak or shared passwords are compromised, with anomalous login sources",
+        "After an employee device is lost or infected with malware, anomalous outbound connections appear on the internal network"
+      ]
+    }
   }
 }

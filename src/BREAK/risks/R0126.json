@@ -23,7 +23,7 @@
         "link": "https://www.163.com/dy/article/H5Q1LC3R0518STKV.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "API滥用风险",
       "API abuse",
@@ -32,6 +32,20 @@
       "接口攻击",
       "业务接口滥用"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "单个接口在短时间内被高频调用，请求来源IP/设备高度分散",
+        "API请求参数被批量枚举或篡改，命中越权或越界数据",
+        "接口调用顺序异常，跳过支付/鉴权等关键业务步骤"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0126-001",
@@ -83,7 +97,7 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "API枚举攻击",
       "接口枚举",
@@ -92,6 +106,20 @@
       "路径爆破",
       "Swagger泄露"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "大量404/403响应集中指向未公开的API路径，呈路径爆破特征",
+        "Swagger/OpenAPI文档被未授权访问或抓取，暴露完整接口清单",
+        "前端JS代码中被提取出隐藏的管理/测试/旧版API端点并被调用"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0126",
@@ -153,6 +181,20 @@
       "频控绕过",
       "限频绕过"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "单一业务接口的请求来源IP/UA高度分散，单IP频率低但总量极高",
+        "请求Header/参数被频繁变异以绕过频控指纹，命中相同业务逻辑",
+        "限频接口在短时间内被海量调用，触发暴力破解或批量数据爬取"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0126",
@@ -204,7 +246,7 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0xa6-unrestricted-access-to-sensitive-business-flows/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "API业务逻辑滥用",
       "接口逻辑漏洞",
@@ -213,6 +255,20 @@
       "敏感业务流滥用",
       "参数篡改下单"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "下单/支付接口的金额、数量、优惠券参数被篡改以绕过价格校验",
+        "API调用顺序异常，跳过支付或鉴权步骤直接完成业务流程",
+        "利用并发请求触发条件竞争，造成库存超卖或重复领取优惠"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0126",

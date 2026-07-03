@@ -12,13 +12,28 @@
       "A0118",
       "A0113-001"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "传感器上报数据与冗余传感器或历史基线出现系统性偏离，无合理物理原因",
+        "设备日志被篡改或缺失关键时段记录，与上下游系统数据不一致",
+        "传输链路缺少完整性校验，数据包内容被中途修改",
+        "控制指令在下发过程中被篡改，执行结果与指令来源记录不符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://dl.acm.org/doi/10.1145/3638769",
         "title": "Privacy and Integrity Protection for IoT Multimodal Data Using ..."
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "IoT数据篡改攻击",
       "数据篡改",

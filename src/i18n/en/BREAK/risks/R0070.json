@@ -17,7 +17,15 @@
       "automated purchasing",
       "bot resale",
       "auto-buy reselling"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly listed products are snatched and ordered within seconds by the same cohort of accounts, with a highly mechanical purchase timing pattern",
+        "Stores or account matrices bulk-list identical products with abnormally high listing concentration and anomalous pricing",
+        "Shipping addresses or payment accounts recur across platforms, exhibiting cross-platform dropshipping and forwarding patterns",
+        "Specific stores surge in exposure within paid search ranking results and are priced significantly higher than comparable offerings"
+      ]
+    }
   },
   "R0070-001": {
     "title": "Buy Low, Sell High",
@@ -37,7 +45,15 @@
       "cross-platform arbitrage",
       "markup reselling",
       "product flipping"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same product is priced significantly higher on this platform than on others, and the listing secures top exposure through paid ranking",
+        "Store product prices are inflated and sales concentrate on high-exposure search slots, with abnormal conversion rates",
+        "Cross-platform price-comparison data is scraped in bulk and used to set the markup magnitude on this platform",
+        "The same seller operates the same product across multiple platforms, with systematically higher pricing on this platform"
+      ]
+    }
   },
   "R0070-002": {
     "title": "Dropshipping Store",
@@ -57,7 +73,15 @@
       "order forwarding store",
       "middleman store",
       "one-click fulfillment"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "After orders are placed on this platform, the order details are synced to stocked stores on other platforms for fulfillment, with tracking numbers reused across platforms",
+        "A store has no own inventory yet continuously takes orders, and its shipping addresses do not match the store's registered entity",
+        "The same product is priced systematically lower on this platform than on the source platform, exhibiting subsidy-arbitrage characteristics",
+        "The store's listing refresh cadence is highly synchronized with changes to external platforms' product catalogs"
+      ]
+    }
   },
   "R0070-003": {
     "title": "Store Cluster",
@@ -77,6 +101,14 @@
       "store matrix",
       "store network",
       "bulk-created stores"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same entity or device bulk-registers large numbers of stores, with highly correlated qualifications, legal representatives, or contact information",
+        "Stores in the cluster list identical products with high listing concentration and near-identical titles and images",
+        "Search results are dominated by stores from the same matrix, squeezing out the exposure of other stores",
+        "Stores in the cluster list and delist products in lockstep, with operational actions showing unified scheduling"
+      ]
+    }
   }
 }

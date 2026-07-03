@@ -12,6 +12,21 @@
       "A0044",
       "A0024"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "消费者签收商品后向银行发起拒付，理由为未收货或未授权，但物流签收记录确凿",
+        "同一持卡人或设备在多个商家反复发起拒付，拒付率显著高于正常用户",
+        "拒付发起前未与商家进行任何沟通或退货申请，直接走银行争议流程",
+        "家庭成员消费后持卡人以未授权为由集中拒付同类小额交易"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "Chargeback Fraud - Visa",
@@ -22,7 +37,7 @@
         "link": "https://mp.weixin.qq.com/s?__biz=MzA3NzAzNTY4MA==&mid=2651202715&idx=5&sn=d95acdfe6192cebdaf726a7143ba0ec1&chksm=85edf6ba99a1bdda669d92bdf957bdf01a8cecb98d95a4130ebe8876e728d7b9469edf694b3a&scene=27"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "友好欺诈",
       "拒付欺诈",

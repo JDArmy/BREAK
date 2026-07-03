@@ -17,6 +17,14 @@
       "IoT sensor attack",
       "false telemetry",
       "perception spoofing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Sensor readings show abrupt changes without a reasonable physical cause, contradicting readings from redundant sensors",
+        "Visual sensors such as cameras and LiDAR are interfered with by intense light or adversarial examples, producing misrecognition",
+        "Sensor data shows saturation or anomalous extreme values, triggering safety mechanism misoperations",
+        "The physical environment is normal but sensors continuously report constant or anomalously periodic data"
+      ]
+    }
   }
 }

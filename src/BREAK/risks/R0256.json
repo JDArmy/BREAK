@@ -26,6 +26,22 @@
       "crowdsourced order splitting"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "众包订单出现同寄件人、同收件人、同地址的拆单模式",
+        "一个订单被拆分为多个子单套取按单结算的配送费",
+        "同址同收发聚类出现异常集中的拆单时序",
+        "配送费与补贴支出在特定骑手或网点异常偏高",
+        "拆单后配送轨迹关联显示实际为同一票货物"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0003",

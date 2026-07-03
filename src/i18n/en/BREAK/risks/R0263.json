@@ -16,6 +16,15 @@
       "bulk-order farming",
       "account hijacking",
       "bulk benefit extraction"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Professional-market retail-order accounts are rented, bought, or stolen by rings for farming",
+        "Retail-order accounts show highly similar device fingerprints with concentrated farming",
+        "Retail-order perks and shipping discounts are farmed at scale",
+        "Account takeover is accompanied by credential-reuse signatures",
+        "Retail-order and merchant profile data are distorted by anomalous accounts"
+      ]
+    }
   }
 }

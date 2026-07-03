@@ -23,7 +23,7 @@
         "link": "https://attack.mitre.org/techniques/T1078/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "越权/未授权访问",
       "越权访问",
@@ -33,6 +33,20 @@
       "权限绕过",
       "非法访问"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一账号频繁枚举或篡改请求中的用户ID/订单ID/资源ID访问他人数据",
+        "低权限账号尝试调用高权限管理接口或执行提权操作",
+        "未认证请求直接命中受保护资源接口且返回正常业务数据"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0078",

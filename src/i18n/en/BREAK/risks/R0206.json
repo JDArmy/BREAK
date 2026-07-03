@@ -20,6 +20,15 @@
       }
     ],
     "description": "IoT hardware supply chain attacks occur across chips, modules, sensors, firmware, manufacturing, and logistics. Attackers may implant backdoors, replace components, or alter default settings so deployed devices remain controllable.\n\nIoT fleets are large, long-lived, and hard to patch in the field. Supplier verification, firmware signing, hardware sampling, and runtime anomaly monitoring are essential.",
-    "influence": "Hardware supply chain compromise can place persistent backdoors into large IoT fleets that are expensive to detect, patch, or recall."
+    "influence": "Hardware supply chain compromise can place persistent backdoors into large IoT fleets that are expensive to detect, patch, or recall.",
+    "riskAssessment": {
+      "observables": [
+        "Batch IoT device firmware hashes mismatch the official signed version",
+        "Device factory-default configs or firmware contain unexpected remote management channels",
+        "Device communication modules show anomalous outbound connections matching known backdoor signatures",
+        "New-batch devices exhibit uniform anomalous behavior shortly after deployment",
+        "Vendor-delivered components or firmware contain undeclared functions or debug interfaces"
+      ]
+    }
   }
 }

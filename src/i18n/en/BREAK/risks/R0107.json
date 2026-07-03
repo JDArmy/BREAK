@@ -18,6 +18,13 @@
       "throwing matches",
       "collusion",
       "game fixing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "In high-ranked matches, the feeding side and absorbing side frequently end up on the same team or matched against each other, with win/loss outcomes following a regular pattern",
+        "Fixer accounts cluster wins/losses in specific time windows, keeping their rank precisely controlled within a target range",
+        "The same batch of accounts repeatedly match into the same game, displaying abnormally coordinated cooperation"
+      ]
+    }
   }
 }

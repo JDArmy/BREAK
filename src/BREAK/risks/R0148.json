@@ -12,6 +12,21 @@
       "A0087",
       "A0089"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "AI智能体在单次会话中调用敏感工具（支付、删除、配置修改）的频率或权限范围突增",
+        "智能体工具调用链中混入来自外部网页或文档的间接提示注入内容",
+        "MCP服务器返回的工具描述或上下文被篡改，诱导智能体越权调用业务API",
+        "智能体执行的操作日志缺少可追溯的工具入参、数据来源和决策依据记录"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "OWASP Top 10 for Agentic Applications",
@@ -22,7 +37,7 @@
         "link": "https://cloud.google.com/security/resources/cybersecurity-forecast"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "AI智能体工具滥用/过度自主风险",
       "Agentic AI风险",

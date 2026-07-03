@@ -12,13 +12,29 @@
       "A0048",
       "A0020"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "评论、私信内容中夹带微信号、QQ号、外链等导流联系方式",
+        "同一账号在多目标内容下批量发布近似导流话术",
+        "导流内容点击的外部跳转链接指向高危或灰产站点",
+        "新注册账号养号后集中发布引流内容，行为时序机械",
+        "引流账号与猫池卡、群控设备指纹聚集，IP 段高度同质"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT-017 Spamming",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意引流",
       "导流",

@@ -13,6 +13,14 @@
     "keywords": [
       "long-range attack",
       "nothing-at-stake"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "An alternative chain forked from an early block appears in the PoS network, with a chain length exceeding the main chain",
+        "Old private keys of early stakeholders are reactivated to sign historical blocks",
+        "Newly joining nodes select the attacker's forged chain as the main chain during synchronization",
+        "On-chain nothing-at-stake characteristics appear, with the same stake voting simultaneously on multiple forked chains"
+      ]
+    }
   }
 }

@@ -12,6 +12,22 @@
       "A0021",
       "A0223"
     ],
+    "riskAssessment": {
+      "likelihood": "critical",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "设备指纹上报字段呈现 Xposed、Frida 等 Hook 框架的注入痕迹",
+        "同一设备指纹在短时间内被多个不同账号复用或频繁切换",
+        "设备环境检测到 Root、调试器附加或安全证书被替换",
+        "设备传感器数据、系统属性或硬件标识呈现改机工具伪造特征",
+        "应用多开或群控环境下多账号共享同一底层设备特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "跨境作弊风险:高收益驱动下跨境黑灰产作恶模式与手法分析|欺诈|黑产...",
@@ -78,6 +94,22 @@
       "A0023",
       "A0223"
     ],
+    "riskAssessment": {
+      "likelihood": "critical",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "设备指纹命中模拟器、云手机、虚拟机的特征指纹库",
+        "设备硬件参数如 CPU、GPU、传感器呈现虚拟环境的合成特征",
+        "同一虚拟设备实例在短时间内承载大量不同账号的注册或登录",
+        "反指纹浏览器或云手机的 IP、GPS、设备三元组呈现批量伪造一致性",
+        "设备环境缺乏真实传感器波动，陀螺仪、加速度计数据长期静止或恒定"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",

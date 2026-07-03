@@ -27,6 +27,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "critical",
+      "defenseMaturity": "low",
+      "observables": [
+        "VLA模型在特定触发条件下执行攻击者指定动作",
+        "训练或微调数据中检测到低比例但高攻击成功率的投毒样本",
+        "机械臂初始状态或环境物体作为后门触发器被激活",
+        "模仿学习演示数据包含与良性图像视觉不可区分的恶意策略",
+        "供应链投毒后下游部署机器人出现集体潜伏后门"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

@@ -18,6 +18,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Teleoperation channels show unauthorized control-command injection or replay",
+        "Communication latency is anomalously injected during surgery or precision operations, destabilizing control",
+        "Intercepted historically legitimate control commands are replayed to trigger unexpected actions",
+        "Teleoperation links lack replay protection and low-latency safeguards",
+        "Robot-executed action commands diverge from operator input"
+      ]
+    }
   }
 }

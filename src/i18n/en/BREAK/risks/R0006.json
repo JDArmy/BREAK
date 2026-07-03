@@ -18,6 +18,14 @@
       "fake claims",
       "ad misrepresentation",
       "truth-in-advertising violation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Product detail page copy diverges noticeably from the actual parameters and certification credentials",
+        "Product reviews are highly templated and cluster within a short window after listing",
+        "The original-price to discount-price comparison is anomalous, with discount depth far exceeding the market norm for similar products",
+        "Certification marks and awards shown in promotional images cannot be verified in official databases"
+      ]
+    }
   }
 }

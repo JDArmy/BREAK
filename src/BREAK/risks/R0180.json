@@ -12,13 +12,28 @@
       "A0111-001",
       "A0150"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "车辆CAN总线或OBD接口出现异常报文注入，关键功能（刹车、转向）被远程指令干预",
+        "V2V/V2I通信中出现伪造的交通信息或虚假信号，误导自动驾驶决策",
+        "车载娱乐系统或T-Box被入侵后作为跳板向车辆关键ECU发起横向攻击",
+        "车主位置、行驶轨迹等隐私数据被异常批量读取或外传"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Vehicle Cybersecurity Best Practices",
         "link": "https://www.nhtsa.gov/technology-innovation/vehicle-cybersecurity"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "车联网(V2X)安全风险",
       "车联网",

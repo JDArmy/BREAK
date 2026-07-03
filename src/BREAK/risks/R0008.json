@@ -20,7 +20,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "广告欺诈",
       "广告作弊",
@@ -30,6 +30,21 @@
       "广告套利",
       "广告刷量"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "广告点击/展示请求的来源 IP 与设备指纹高度聚集，缺乏真实用户多样性",
+        "广告点击与后续转化行为脱节，点击后无浏览、加购、下单等正常路径",
+        "同一广告位的点击量在特定时段异常飙升，远超历史基线水平",
+        "广告请求的 User-Agent、屏幕分辨率等设备特征分布异常集中"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0008-001",
@@ -80,7 +95,7 @@
         "link": "https://attack.mitre.org/techniques/T1176/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "广告劫持",
       "广告跳转劫持",
@@ -89,6 +104,21 @@
       "佣金劫持",
       "affiliate hijacking"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "用户直接访问的商品链接被附加非本人触发的推广追踪参数",
+        "广告推广链接的目标受益人被篡改为非原始推广商",
+        "客户端流量中出现插件或外挂程序改写广告目标 URL 的行为",
+        "同一推广佣金被多个渠道归因争抢，归因链路异常"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0008",
@@ -146,7 +176,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假点击",
       "刷点击",
@@ -155,6 +185,21 @@
       "click fraud",
       "广告点击作弊"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "广告点击请求的 IP、设备、时序呈现批量脚本特征，点击间隔规整",
+        "点击后无任何页面停留、滚动等真实交互行为，转化路径缺失",
+        "同一广告创意的点击率短时间内异常飙升，远超行业基准",
+        "点击来源集中在数据中心 IP 或已知代理池段，缺乏住宅流量分布"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0008",
@@ -210,7 +255,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假安装",
       "刷安装",
@@ -219,6 +264,21 @@
       "install fraud",
       "激活作弊"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "应用安装事件短时间内集中爆发，设备激活时序机械规整",
+        "安装设备指纹、系统版本、网络环境高度同质化，缺乏真实多样性",
+        "安装后应用启动行为异常，无真实使用轨迹即卸载或长期静默",
+        "归因安装与广告点击的设备关联存在伪造痕迹，归因链路不合理"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0008",
@@ -272,7 +332,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "展示欺诈",
       "刷展示",
@@ -281,6 +341,21 @@
       "虚假曝光",
       "广告展示作弊"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "广告位展示事件数远超实际可曝光位数量，存在多素材叠加计费",
+        "展示请求的可见性指标异常，大量曝光未进入用户可视区域",
+        "同一广告位的展示量在短时间内异常增长，缺乏对应的真实用户访问",
+        "展示日志中设备与用户特征重复率高，缺乏真实流量多样性"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0008",
@@ -336,7 +411,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "流量归因欺诈",
       "归因作弊",
@@ -345,6 +420,21 @@
       "CPA归因作弊",
       "CPS归因作弊"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "自然量转化被归因到特定渠道，归因时间窗与点击事件异常吻合",
+        "渠道上报的点击日志设备信息与真实激活设备存在批量伪造匹配",
+        "渠道归因佣金占比异常偏高，远超渠道实际引流能力",
+        "归因点击请求集中在转化前短时间窗口，呈刻意覆盖自然量特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0008",

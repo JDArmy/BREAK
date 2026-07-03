@@ -12,13 +12,28 @@
       "A0077",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一会员账号在短时间内于多个不同地区或异构设备并发登录，超出家庭使用范围",
+        "新注册账号在试用期临近期满时集中消费权益，到期后弃号并使用新账号重新开通试用",
+        "第三方平台出现低价转售该平台会员账号的批量 listings，账号登录凭据被频繁更换",
+        "会员开通后短时间内使用高价值权益，随即发起退款取消订阅但保留已下载内容"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Subscription Fraud Prevention - Recurly",
         "link": "https://recurly.com/blog/recurly-stop-fraud-and-secure-growth/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "会员/订阅滥用",
       "试用薅羊毛",

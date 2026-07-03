@@ -17,6 +17,15 @@
       "assisted order placement",
       "remote account login",
       "account proxying"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The device environment for account login is separated from the ordering environment, with the device fingerprint at order placement significantly inconsistent with that at login",
+        "The same device or studio environment performs proxy logins and proxy orders for a large number of different accounts within a short window",
+        "The IP, GPS, and device fingerprint triple of order requests is inconsistent or exhibits remote proxy-login characteristics",
+        "The account places an order immediately after proxy login, with the ordering behavior pattern deviating from historical habits",
+        "The order placement device environment shows characteristics of Hook frameworks, device control systems, or device-spoofing tools"
+      ]
+    }
   }
 }

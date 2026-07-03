@@ -153,6 +153,20 @@
   --break-badge-risk-advanced-border: #f87171;
   --break-badge-risk-advanced-text: #991b1b;
 
+  /* Risk 处置优先级 badge（P0 最高 → P3 最低） */
+  --break-badge-risk-priority-p0-bg: #fecaca;
+  --break-badge-risk-priority-p0-border: #f87171;
+  --break-badge-risk-priority-p0-text: #991b1b;
+  --break-badge-risk-priority-p1-bg: #fed7aa;
+  --break-badge-risk-priority-p1-border: #fb923c;
+  --break-badge-risk-priority-p1-text: #7c2d12;
+  --break-badge-risk-priority-p2-bg: #fde7a7;
+  --break-badge-risk-priority-p2-border: #d6a84a;
+  --break-badge-risk-priority-p2-text: #6f3f12;
+  --break-badge-risk-priority-p3-bg: #cdeedb;
+  --break-badge-risk-priority-p3-border: #6ab889;
+  --break-badge-risk-priority-p3-text: #164c2d;
+
   /* Case 分类 badge */
   --break-badge-case-criminal-bg: #fecaca;
   --break-badge-case-criminal-border: #f87171;
@@ -293,6 +307,20 @@ html.dark {
   --break-badge-risk-advanced-bg: rgba(127, 29, 29, 0.42);
   --break-badge-risk-advanced-border: #b84040;
   --break-badge-risk-advanced-text: #f5c2c2;
+
+  /* Risk 处置优先级 badge（P0 最高 → P3 最低） */
+  --break-badge-risk-priority-p0-bg: rgba(127, 29, 29, 0.42);
+  --break-badge-risk-priority-p0-border: #b84040;
+  --break-badge-risk-priority-p0-text: #f5c2c2;
+  --break-badge-risk-priority-p1-bg: rgba(124, 45, 18, 0.42);
+  --break-badge-risk-priority-p1-border: #c25e26;
+  --break-badge-risk-priority-p1-text: #f5cdaa;
+  --break-badge-risk-priority-p2-bg: rgba(113, 63, 18, 0.42);
+  --break-badge-risk-priority-p2-border: #9a671d;
+  --break-badge-risk-priority-p2-text: #efd59d;
+  --break-badge-risk-priority-p3-bg: rgba(20, 83, 45, 0.42);
+  --break-badge-risk-priority-p3-border: #2f8452;
+  --break-badge-risk-priority-p3-text: #b7dfc5;
 
   /* Case 分类 badge */
   --break-badge-case-criminal-bg: rgba(127, 29, 29, 0.42);

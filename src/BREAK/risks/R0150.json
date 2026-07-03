@@ -12,6 +12,21 @@
       "A0029",
       "A0077"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新注册社交账号在短时间内与大量异性用户建立联系，对话话术高度模板化",
+        "用户向陌生投资平台或加密货币地址转入资金前，存在长期高频的恋爱或投资引导对话",
+        "受害者提现时被要求额外支付手续费、税款，资金流向境外或混币器",
+        "同一批虚假投资App或网站在应用商店、社交平台被多名用户举报无法提现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "FBI IC3 2024 Internet Crime Report",
@@ -26,7 +41,7 @@
         "link": "https://www.chainalysis.com/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "杀猪盘/投资诈骗风险",
       "杀猪盘",

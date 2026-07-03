@@ -16,6 +16,15 @@
       }
     ],
     "description": "Vehicle data interface abuse occurs when connected vehicle APIs, diagnostic interfaces, in-vehicle apps, or third-party services over-read location, route, driving behavior, or vehicle status. Attackers or partners may use the data beyond authorization.\n\nVehicle data is strongly tied to identity and behavior. Leakage can enable tracking, profiling, insurance discrimination, or preparation for theft. Defenses need granular consent, purpose limitation, and access auditing.",
-    "influence": "Vehicle interface abuse can expose location, driving behavior, and vehicle state, creating privacy, safety, and compliance risk."
+    "influence": "Vehicle interface abuse can expose location, driving behavior, and vehicle state, creating privacy, safety, and compliance risk.",
+    "riskAssessment": {
+      "observables": [
+        "Connected-vehicle APIs or diagnostic interfaces are read beyond authorized scope for location and driving data",
+        "Third-party in-vehicle apps excessively read vehicle status and trajectories",
+        "In-vehicle data access lacks fine-grained authorization and purpose limits",
+        "Vehicle data access audits show anomalous batch reads",
+        "Location trajectories and driving-behavior data are exfiltrated to unauthorized systems"
+      ]
+    }
   }
 }

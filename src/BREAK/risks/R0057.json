@@ -19,7 +19,7 @@
         "link": "https://www.163.com/dy/article/KO4NBMHM0552VN1M.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "品类/品牌乱挂",
       "错挂品类",
@@ -29,6 +29,21 @@
       "挂错类目",
       "蹭品牌"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "商品实际类目与所挂类目不一致，标题品牌词与商品品牌不符",
+        "搜索高流量品类下聚集大量非该品类商品，蹭流量特征明显",
+        "同店铺商品在多个不相关类目重复铺货以抢占曝光",
+        "买家投诉/退货原因集中在商品与搜索/类目描述不符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0006",

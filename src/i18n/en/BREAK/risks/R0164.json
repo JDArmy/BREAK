@@ -17,6 +17,14 @@
       "secure boot bypass",
       "OTA tampering",
       "embedded device compromise"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The device firmware hash is inconsistent with the official firmware hash published by the vendor, indicating unauthorized modification",
+        "The firmware contains undisclosed backdoor accounts, debug interfaces, or anomalous network exfiltration code",
+        "OTA update package signature verification fails or is downgraded to a vulnerable version, with an anomalous update source",
+        "The device exhibits periodic low-frequency data exfiltration to unfamiliar addresses during long-term operation"
+      ]
+    }
   }
 }

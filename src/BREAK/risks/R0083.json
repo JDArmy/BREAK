@@ -31,7 +31,22 @@
         "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "员工账号在钓鱼/社工后出现异常登录，来源IP/设备/地理位置突变",
+        "企业邮箱被举报大量弱密码或复用密码，凭证出现在泄露库",
+        "员工点击钓鱼链接或下载恶意附件，终端EDR告警频发",
+        "员工共享账号或随意点击不明链接，安全事件周报中人为因素占比高"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "员工安全意识不足",
       "安全意识薄弱",
@@ -105,7 +120,22 @@
         "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "员工账号登录来源IP/设备/地理位置与既往画像严重偏离",
+        "被盗账号异常访问或下载其职责范围外的敏感数据",
+        "撞库/凭证泄露库中出现本企业员工账号密码匹配命中",
+        "被盗账号被用于越权操作或作为跳板进行横向移动"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "员工账号被盗",
       "企业账号被盗",
@@ -165,7 +195,22 @@
         "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "冒充领导/同事的邮件或消息请求转账、提供凭证或执行敏感操作",
+        "AI语音克隆/视频合成冒充高管进行电话或视频诈骗，受害人报案",
+        "财务/转账操作绕过既定审批流程，由社工诱导下员工单方执行",
+        "社交平台出现冒充公司员工/高管的虚假账号联系客户或同事"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "社交欺骗风险",
       "社交工程",

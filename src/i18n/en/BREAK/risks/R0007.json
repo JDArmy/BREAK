@@ -18,7 +18,15 @@
       "toolbar hijacking",
       "unauthorized affiliate plugin",
       "shopping assistant plugin"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Unauthorized platform-promotion plugins are distributed via browser extension stores or third-party channels",
+        "Client traffic shows plugin-injected promotional redirects or price-comparison overlay requests",
+        "Promotion attribution data contains large volumes of commission settlements from unknown plugin channels",
+        "The same plugin package signature or extension ID is tied to multiple unauthorized promotion behaviors"
+      ]
+    }
   },
   "R0007-001": {
     "title": "Third-Party Price Comparison",
@@ -38,7 +46,15 @@
       "comparison toolbar",
       "price checker plugin",
       "affiliate comparison widget"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Product detail pages are injected with a cross-site price-comparison overlay whose requests target a third-party price-comparison service domain",
+        "Competitor prices in the comparison data are selectively displayed, with an unreasonable comparison baseline",
+        "Users' browser extension lists contain price-comparison plugins not listed on the official store",
+        "The range of product data requested by the comparison plugin does not match the user's normal browsing trail"
+      ]
+    }
   },
   "R0007-002": {
     "title": "Access Link Hijacking",
@@ -59,7 +75,15 @@
       "browser redirect hijack",
       "traffic hijack",
       "link interception"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User requests to the target domain are abnormally redirected to promotional or cashback pages",
+        "Browser address-bar URL parameters are tampered with by a plugin, injecting promotional tracking parameters",
+        "Non-platform-official pop-ups, overlays, or redirect scripts are injected during page loading",
+        "An unauthorized module in the client process hooks network requests and modifies the destination address"
+      ]
+    }
   },
   "R0007-003": {
     "title": "Unauthorized Promotional Redirection",
@@ -80,7 +104,15 @@
       "traffic redirection",
       "commission redirection",
       "offer redirect"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Product detail pages are injected with off-site purchase guidance whose links point to competitor or shopping-guide platforms",
+        "Cashback or commission-sharing lures appear on the page guiding users to download third-party clients",
+        "Promotional guidance content loads dynamically based on user access behavior, with origin domains not belonging to the platform",
+        "The user conversion funnel shows large volumes of churn nodes redirecting to external promotional links"
+      ]
+    }
   },
   "R0007-004": {
     "title": "Unauthorized Plugin Cashback",
@@ -101,6 +133,14 @@
       "commission sharing plugin",
       "affiliate cashback",
       "cashback toolbar"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Product detail pages are injected with cashback labels whose requests target third-party cashback services",
+        "Affiliate commission settlements contain attribution from unknown plugin channels, crowding out the official affiliate share",
+        "The user ordering flow is hijacked by a plugin that appends promotional tracking parameters to siphon commissions",
+        "The same cashback plugin is tied to commission-claim requests across many products, spiking during campaign periods"
+      ]
+    }
   }
 }

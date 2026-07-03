@@ -24,7 +24,23 @@
       "知识库外链",
       "IM文件泄露"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "网盘或知识库文档被设置为公开链接且长期有效",
+        "外链分享的文档含客户资料、凭证截图或内部流程",
+        "公开链接在无账号情况下被外部IP批量访问",
+        "协作文档外链缺少到期时间或权限边界",
+        "外链访问来源与正常协作模式不符出现陌生地域集中访问"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0232",

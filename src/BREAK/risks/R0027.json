@@ -74,7 +74,22 @@
         "relation": "co-occurrence",
         "note": "爬虫风险与应用被抓包均可由攻击工具“抓包工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短时间内大量访问商详、价格、库存、评论等结构化接口，分页参数规律递增",
+        "同一 IP 或设备指纹高频抓取，请求时序机械、User-Agent 集中或频繁切换",
+        "使用虚假或被盗账号批量调用需登录的接口，单账号拉取量远超正常浏览",
+        "APP 静态资源被反编译解析，接口签名算法被还原后出现非客户端请求"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0027-002": {
     "title": "数据解析干扰绕过",
@@ -104,7 +119,21 @@
       "动态DOM解析",
       "解析干扰绕过",
       "反爬绕过"
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "同一数据点被多账号、多 IP、多时段交叉采集，用于比对剔除被干扰的离群值",
+        "采集请求携带还原后的字体映射表或稳定 XPath，命中混淆前真实数据结构",
+        "接口响应中的自定义字体、CSS 偏移被客户端二次计算后输出真实字符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0027-003": {
     "title": "投毒数据识别与清洗",
@@ -134,7 +163,21 @@
       "蜜罐数据规避",
       "投毒绕过",
       "反爬绕过"
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "多账号多 IP 多时段采集同一数据点，比对差异剔除被投毒的离群值",
+        "被采集的数据在多源比对后趋于稳定真实值，投毒数据被系统性过滤",
+        "投毒蜜罐数据 ID 不连续、数值偏离分布的特征被识别后请求量骤降"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   },
   "R0027-004": {
     "title": "数字水印去除与伪造",
@@ -163,7 +206,21 @@
       "图片水印破解",
       "溯源阻断",
       "反爬绕过"
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "medium",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "被抓取的图片经多次压缩、裁剪、重采样，水印鲁棒性被破坏",
+        "同一数字水印出现在不相关账号或数据中，疑似伪造嫁祸",
+        "HTML 文本中零宽字符被批量过滤，水印痕迹被清洗后重新发布"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    }
   },
   "R0027-005": {
     "title": "业务蜜罐识别与规避",
@@ -193,6 +250,20 @@
       "陷阱规避",
       "诱捕绕过",
       "反爬绕过"
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "low",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "采集请求主动避开不在正常导航路径的蜜罐接口，蜜罐资源零访问",
+        "动态埋点请求被识别并剔除，请求时机与正常用户行为不一致",
+        "蜜罐接口 URL、参数命名异常的请求被批量过滤，采集路径收敛于真实业务接口"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    }
   }
 }

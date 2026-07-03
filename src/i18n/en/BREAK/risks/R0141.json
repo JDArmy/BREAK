@@ -18,6 +18,14 @@
       "fake GPS",
       "VPN fraud",
       "proxy fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A user's GPS location shows systematic contradictions with the IP geolocation, cell tower location, and Wi-Fi positioning",
+        "Location coordinates of a large number of accounts are precisely concentrated at high-subsidy points of a regional promotion, with no movement trajectory",
+        "Driver-side GPS trajectories show jumps or inflated mileage inconsistent with the actual road network and traffic timing",
+        "Newly registered accounts immediately locate to high-subsidy regions and claim region-limited promotions, with no historical activity trajectory"
+      ]
+    }
   }
 }

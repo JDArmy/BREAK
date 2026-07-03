@@ -18,6 +18,15 @@
       "trust and safety",
       "platform compliance",
       "content governance"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User-posted content hits sensitive words, prohibited terms, or high-risk thresholds in image/text moderation models",
+        "Newly registered accounts batch-post the same category of violating content within an extremely short window",
+        "Content report volumes spike sharply under specific topics or products over a short period",
+        "UGC text, images, or videos are classified into violating categories such as pornography, politics, or gambling",
+        "Device fingerprints of violating-content accounts cluster with those of historically violating accounts"
+      ]
+    }
   }
 }

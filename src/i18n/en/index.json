@@ -23,6 +23,25 @@
     "advanced": "Advanced"
   },
   "riskInfluence": "Influence",
+  "riskPriority": "Remediation Priority",
+  "riskPriorityOverridden": "Expert overridden",
+  "riskAssessmentDimensions": "Risk Assessment Dimensions",
+  "riskObservables": "Observables",
+  "riskObservablesCount": "signals",
+  "riskPriorityNote": "Priority Rationale",
+  "riskDim": {
+    "likelihood": "Likelihood",
+    "businessLoss": "Business Loss",
+    "attackCost": "Attack Cost",
+    "detectionDifficulty": "Detection Difficulty",
+    "defenseMaturity": "Defense Maturity"
+  },
+  "riskSeverityLevel": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "critical": "Critical"
+  },
   "riskRelatedRisks": "Related Risks",
   "riskRelationType": {
     "prerequisite": "Prerequisite",

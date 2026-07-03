@@ -17,13 +17,29 @@
       "A0023",
       "A0063"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "支付环节使用的支付卡 BIN 与账号历史常用卡显著不同，且来源于已知泄露卡段",
+        "账号在登录后立即跳转支付且支付卡信息与账号实名身份不匹配",
+        "同一支付卡在多个不同账号的下单中被交替使用",
+        "下单设备环境与支付卡归属地、收货地址存在跨境或跨地区矛盾",
+        "支付请求的设备指纹、IP 与账号历史环境显著偏离且伴随批量下单特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "平安银行信用卡强化科技赋能,“猎黑鹰眼”震慑金融“黑灰产”|...",
         "link": "https://m.163.com/dy/article/K93C7KPV05568W0A.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "黑卡支付",
       "黑卡下单",
@@ -81,13 +97,29 @@
       "A0023",
       "A0063"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号在异地或新设备登录后短时间内发起提现、转账或大额消费",
+        "支付卡资金被快速消费后通过退款、退货等方式回流套现",
+        "同一被盗卡或账号在多个商户快速下单且金额接近可用余额上限",
+        "下单收货地址为新地址或与账号历史地址显著不同",
+        "提现或转账请求的设备环境与账号历史环境不一致且伴随风控规避特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT012 Cashing Out",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-012_Cashing_Out.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "盗卡盗刷",
       "信用卡盗刷",

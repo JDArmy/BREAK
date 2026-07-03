@@ -18,6 +18,15 @@
       "comment spam",
       "junk content",
       "spam generation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same account or device posts duplicate or near-duplicate content at high frequency within a short window",
+        "Posted content contains promotional links, contact details, or traffic-diversion wording, matching spam-content signatures",
+        "Newly registered accounts, after a warming-up period, burst into flooding-style posts and comments",
+        "Content text-similarity clustering surfaces large volumes of templated copy-paste content",
+        "Posting IP ranges overlap with known spam-bots and device-control cluster signatures"
+      ]
+    }
   }
 }

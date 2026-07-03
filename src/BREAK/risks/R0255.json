@@ -27,6 +27,22 @@
       "refund farming"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "团伙利用售后通道批量发起退款或赔付申诉",
+        "同一设备或收货地址关联大量售后争议",
+        "虚假售后证据与集中申诉模式被批量触发",
+        "售后争议中历史申诉异常的用户占比偏高",
+        "退款农场手法特征如空包、调包在关联账号间复现"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0054",

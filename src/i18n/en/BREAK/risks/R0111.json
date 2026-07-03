@@ -22,7 +22,14 @@
       "compliance violation",
       "insider abuse",
       "unauthorized access"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Employee accounts access sensitive data beyond their job responsibilities outside working hours or from anomalous locations",
+        "Internal accounts bulk-export/download sensitive resources such as customer information and financial data",
+        "Employees exfiltrate company data via unauthorized USB devices, external cloud drives, or personal email"
+      ]
+    }
   },
   "R0111-001": {
     "title": "Employee Account Sharing",
@@ -42,7 +49,14 @@
       "shared login",
       "shared account",
       "credential sharing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same employee account logs in concurrently from multiple devices/distant locations within a short window",
+        "The account's operation patterns are inconsistent, switching between role-A and role-B actions",
+        "The same account is used from external IPs or unregistered devices outside working hours"
+      ]
+    }
   },
   "R0111-002": {
     "title": "Employee Business-Level Backdoor",
@@ -63,6 +77,13 @@
       "unauthorized remote access",
       "covert access",
       "logic bomb"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Hidden interfaces or debug entry points that bypass normal authentication flows appear in the codebase",
+        "Production systems contain remote access channels or scheduled tasks not registered in change records",
+        "Sensitive data is anomalously accessed in bulk, with call paths pointing to hidden functions not documented in business specs"
+      ]
+    }
   }
 }

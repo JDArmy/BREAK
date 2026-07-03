@@ -17,6 +17,22 @@
       "A0018",
       "A0021"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "特定关键词在短时间内被高频搜索，搜索量曲线呈异常尖峰",
+        "搜索请求来自同一设备簇或代理 IP 段，行为时序机械",
+        "下拉词、相关搜索推荐被特定长尾词集中刷出，与真实搜索分布脱节",
+        "两个本无关联的关键词被大量并列搜索，强制形成关联推荐",
+        "热搜榜单候选词的提名增速远超历史基线，且来源账号画像同质"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "搜索结果受SEO严重干扰 专家称Google正在死亡",
@@ -27,7 +43,7 @@
         "link": "https://www.163.com/dy/article/KO4NBMHM0552VN1M.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "干扰搜索结果",
       "搜索污染",

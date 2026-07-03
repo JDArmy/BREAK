@@ -11,6 +11,22 @@
       "A0111",
       "A0112"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "XR设备固件更新包签名校验缺失或被绕过",
+        "设备调试接口或驱动存在未授权访问痕迹",
+        "传感器画面、动作或空间数据被异常读取或外传",
+        "设备外设信任链出现非预期设备接入",
+        "固件版本存在已知漏洞且未及时修补"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjY5MDIyMA==&mid=2652007605&idx=1&sn=8a33943fcbb314610310aabe8aa44749",
@@ -29,7 +45,7 @@
       "传感器数据窃取",
       "沉浸设备安全"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "XR 设备固件攻击针对头显、手柄、定位基站和传感器固件。攻击者可利用更新机制、驱动漏洞或调试接口获取设备控制权，窃取画面、动作和空间数据。\n\nXR 设备同时连接用户身体动作、视觉输入和周边环境，权限高且数据敏感。厂商需要强化固件签名、权限隔离、漏洞响应和外设信任管理。",
     "relatedRisks": [
       {

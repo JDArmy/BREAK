@@ -19,7 +19,15 @@
       "API scraping",
       "data harvesting",
       "OAT-011"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Within a short window, large volumes of requests hit structured endpoints such as product detail, price, inventory, and reviews, with pagination parameters incrementing in regular patterns",
+        "A single IP or device fingerprint scrapes at high frequency, with mechanical request timing and a concentrated or rapidly rotating User-Agent",
+        "Fake or stolen accounts are used to call login-required endpoints in bulk, with per-account data pull volume far exceeding normal browsing",
+        "APP static resources are decompiled and parsed, and the interface signature algorithm is reversed, followed by non-client requests appearing"
+      ]
+    }
   },
   "R0027-002": {
     "title": "Data Obfuscation Bypass",
@@ -40,7 +48,14 @@
       "dynamic DOM parsing",
       "data obfuscation bypass",
       "anti-bot evasion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same data point is collected across multiple accounts, IPs, and time windows for cross-comparison to strip out the obfuscated outliers",
+        "Collection requests carry a reversed font mapping table or stable XPath, matching the real data structure prior to obfuscation",
+        "Custom fonts and CSS offsets in API responses are recomputed client-side to output the real characters"
+      ]
+    }
   },
   "R0027-003": {
     "title": "Data Poisoning Detection and Cleansing",
@@ -61,7 +76,14 @@
       "honeypot data evasion",
       "data poisoning bypass",
       "anti-bot evasion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Multiple accounts, IPs, and time windows collect the same data point, comparing differences to strip out poisoned outliers",
+        "The collected data converges toward the stable real value after multi-source comparison, with poisoned data systematically filtered out",
+        "Request volume drops sharply after honeypot-poisoned data is identified by non-sequential IDs and values deviating from the distribution"
+      ]
+    }
   },
   "R0027-004": {
     "title": "Digital Watermark Removal and Forgery",
@@ -81,7 +103,14 @@
       "image watermark cracking",
       "traceability disruption",
       "anti-scraping evasion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Scraped images have undergone repeated compression, cropping, and resampling, destroying watermark robustness",
+        "The same digital watermark appears in unrelated accounts or data, suspected forged to frame others",
+        "Zero-width characters in HTML text are batch-filtered, with watermark traces cleansed before republication"
+      ]
+    }
   },
   "R0027-005": {
     "title": "Business Honeypot Identification and Evasion",
@@ -101,6 +130,13 @@
       "trap evasion",
       "deception bypass",
       "anti-scraping evasion"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Collection requests actively avoid honeypot endpoints that lie outside normal navigation paths, resulting in zero access to honeypot resources",
+        "Dynamic beacon requests are identified and stripped out, with request timing inconsistent with normal user behavior",
+        "Requests targeting honeypot endpoints with anomalous URL or parameter naming are batch-filtered, and the collection path converges on real business endpoints"
+      ]
+    }
   }
 }

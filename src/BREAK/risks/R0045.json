@@ -15,6 +15,22 @@
       "A0021",
       "A0023"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "账号积分或里程在异地登录后短时间内被集中兑换或转移",
+        "积分兑换请求的设备环境与账号历史环境不一致且伴随代登特征",
+        "同一账号积分被兑换至多个不同受益人或第三方账户",
+        "积分兑换后的礼品收货地址为新地址或与账号历史地址显著不同",
+        "高价值积分在非活跃时段被快速消耗且兑换频次远超历史习惯"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "盗用里程积分、盗刷信用卡,“黑票代”是这样黑走舒心旅程的_央广网",
@@ -25,7 +41,7 @@
         "link": "https://yule.sohu.com/a/579933969_121150437"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "积分盗刷",
       "里程盗刷",
@@ -81,6 +97,22 @@
       "A0023-001",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "积分兑换的礼品在二手平台集中上架且价格明显低于官方价值",
+        "同一受益人或收货地址接收多个不同账号的积分兑换礼品",
+        "账号积分兑换后礼品流向固定批次收货人或转卖渠道",
+        "积分兑换频次和数量在短时间内激增且兑换礼品类型集中",
+        "多个账号的积分兑换行为时序高度相似，呈现批量脚本化特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "平安银行信用卡打击黑产再升级:“猎黑鹰眼”精准狙击,近两月推进4...",
@@ -91,7 +123,7 @@
         "link": "https://yule.sohu.com/a/579933969_121150437"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "积分兑换倒卖",
       "积分套现",

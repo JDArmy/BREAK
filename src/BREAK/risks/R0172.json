@@ -10,13 +10,28 @@
       "A0131",
       "A0131-001"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "网络在短时间内新增大量节点，节点身份标识呈现批量生成特征",
+        "P2P网络中单一实体控制的节点占据不成比例的连接槽位或投票权重",
+        "节点的IP段、行为时序、指纹高度相似，疑似同一控制者批量部署",
+        "声誉系统或投票机制中出现大量低信誉新节点集中投出一致结果"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Sybil Attack on Blockchain",
         "link": "https://en.wikipedia.org/wiki/Sybil_attack"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "女巫攻击（Sybil Attack）",
       "女巫攻击",

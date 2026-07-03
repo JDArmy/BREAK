@@ -16,6 +16,15 @@
       }
     ],
     "description": "Public cloud storage bucket exposure usually comes from object storage, backup snapshots, log buckets, or static asset buckets configured for public access. Once sensitive files are public, search engines, scanners, or attackers can download them directly.\n\nThis risk requires little technical sophistication but can cause large data breaches. Organizations need continuous public asset inventory, clear separation of static content from sensitive data, and alerting on public policies.",
-    "influence": "Public buckets can directly leak customer data, logs, backups, and key files, leading to regulatory and trust impact."
+    "influence": "Public buckets can directly leak customer data, logs, backups, and key files, leading to regulatory and trust impact.",
+    "riskAssessment": {
+      "observables": [
+        "Object storage buckets or snapshots are configured as public and contain sensitive files",
+        "Search engines or scanners index bucket contents that should be private",
+        "Permissions between static-asset buckets and sensitive-data buckets are conflated",
+        "Public policies on backup snapshots or log buckets go unmonitored",
+        "Public buckets expose customer data, keys, or backup files"
+      ]
+    }
   }
 }

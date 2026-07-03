@@ -22,7 +22,23 @@
         "link": "https://www.gov.cn/lianbo/bumen/202410/content_6978247.htm"
       }
     ],
-    "updated": "2026-06-13",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "群聊/直播间出现固定口令、暗号式红包接收与下注行为",
+        "同一群组内高频小额资金流转且金额呈现倍数规律",
+        "用户在平台内发布赌盘赔率、下注引导话术",
+        "直播间观众弹幕出现下注金额、结算暗语",
+        "社交账号集中引导至外部赌博站点或微信群"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "借助平台赌博",
       "平台涉赌",

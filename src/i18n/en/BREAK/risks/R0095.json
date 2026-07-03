@@ -22,6 +22,15 @@
       "impersonation scam",
       "ad fraud",
       "marketplace fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Platform content, comments, and private messages show high-frequency language inducing users to add WeChat contacts or make transfers",
+        "Newly registered accounts batch-publish homogeneous marketing, recruitment, or lottery notifications within a short window",
+        "Accounts impersonating official accounts use avatars and nicknames highly similar to the real official ones",
+        "Users report an account for inducing offline transactions or redirecting to external links",
+        "The same set of script templates is copied and propagated across multiple accounts"
+      ]
+    }
   }
 }

@@ -39,7 +39,7 @@
         "link": "https://zhidao.baidu.com/question/1389943897887283500.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "营销活动作弊",
       "活动作弊",
@@ -49,6 +49,21 @@
       "羊毛党",
       "任务作弊"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新注册账号在养号期后集中参与签到、领券、秒杀等高价值营销活动",
+        "同一设备指纹或 IP 关联大量账号重复完成相同活动任务序列",
+        "活动参与账号的提现、下单行为集中在活动结束前短时间窗口",
+        "账号完成活动后的留存与复购率极低，呈现纯套利特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0005-001",
@@ -131,7 +146,7 @@
         "link": "https://dun.163.com/news/p/840c5640093140fbad7ed1cfe30f547b"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "批量小号作弊",
       "批量小号",
@@ -141,6 +156,21 @@
       "批量点赞评论",
       "水军小号"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "点赞、评论、转发行为在短时间内由大量账号集中触发，时序机械",
+        "互动账号的注册时间、设备指纹、IP 段高度同质化",
+        "评论内容雷同或为模板化文本，缺乏与商品详情的真实关联",
+        "目标商品/内容的互动量在短时间内异常飙升后迅速回落"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0005",
@@ -202,7 +232,7 @@
         "link": "https://ishare.ifeng.com/c/s/v002ZjHiClSab6wTq1twdmiKvHULvXFzqSujP--nz2AHj820__"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假裂变",
       "裂变作弊",
@@ -212,6 +242,21 @@
       "假邀请",
       "裂变刷量"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "邀请关系链中大量被邀请账号注册时间集中且设备指纹同源",
+        "被邀请账号完成助力后立即停止活跃，无后续真实使用行为",
+        "邀请人与被邀请人共享收货地址、支付账号或手机号段",
+        "拉新奖励领取集中在活动上线初期短窗口内爆发式增长"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0005",

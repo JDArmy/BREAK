@@ -17,6 +17,15 @@
       "automated captcha solving",
       "human verification bypass",
       "captcha farm"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The CAPTCHA endpoint is hit by a large volume of requests from CAPTCHA-solving service IP ranges within a short window",
+        "Mouse trajectories, touch pressure, and sliding rhythm of the same session exhibit mechanistic regularity in their parameters",
+        "CAPTCHA recognition response times are abnormally stable and below average human reaction time",
+        "Device sensor data such as gyroscope and accelerometer exhibits static or synthetic characteristics during the verification process",
+        "The CAPTCHA pass rate is abnormally stable across different time periods, inconsistent with the fluctuation curve of normal users"
+      ]
+    }
   }
 }

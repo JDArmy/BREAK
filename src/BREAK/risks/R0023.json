@@ -13,13 +13,29 @@
       "A0031",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "新发布内容与平台内或外部原创内容文本/图像指纹高度重复",
+        "同一账号批量搬运内容，发布时间与原创内容上线间隔极短",
+        "搬运账号去除或篡改原创水印、署名后重复发布",
+        "搬运内容发布顺序与原创作者历史发布序列高度一致",
+        "盗用账号设备指纹与已知搬运群控设备特征重合"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "中华人民共和国著作权法",
         "link": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "内容盗用",
       "内容搬运",

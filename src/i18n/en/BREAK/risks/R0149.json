@@ -22,6 +22,14 @@
       "machine identity abuse",
       "service account compromise",
       "token theft"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Plaintext API keys, long-lived tokens, or service account credentials appear in code repositories, configuration files, CI/CD variables, or logs",
+        "Access tokens of service accounts or machine identities have not been rotated for extended periods and have permission scopes exceeding business needs",
+        "Non-human identities call sensitive data APIs at high frequency during off-business hours or from anomalous geographic locations",
+        "The same API key is shared across multiple unknown workloads or external IPs, lacking ownership and owner information"
+      ]
+    }
   }
 }

@@ -27,6 +27,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "遥操作信道出现非授权的控制指令注入或重放",
+        "手术或精密操作中通信延迟被异常注入导致操作失稳",
+        "历史合法控制指令被截获后重放触发非预期动作",
+        "遥操作链路缺少防重放与低时延保护",
+        "机器人执行的动作指令与操作员输入不一致"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

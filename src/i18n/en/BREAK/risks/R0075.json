@@ -21,6 +21,14 @@
       "critical infrastructure compliance",
       "critical information infrastructure protection",
       "essential systems compliance"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Critical information infrastructure has not completed the security assessment or filing required under CII protection regulations",
+        "Network or information systems carry unpatched high-severity vulnerabilities that affect CII business continuity",
+        "Data-breach or cyberattack incidents occur at CII operators and are not reported as required",
+        "Cryptographic usage fails to comply with commercial-cryptography management regulations, and the migration to national cryptographic algorithms lags behind"
+      ]
+    }
   }
 }

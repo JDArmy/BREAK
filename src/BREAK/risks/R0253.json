@@ -24,7 +24,23 @@
       "去中心化身份攻击",
       "身份声明冒用"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "验证流程接受了伪造签发方或篡改声明的可验证凭证",
+        "撤销凭证被复用且未被撤销列表校验",
+        "DID或可验证凭证用于准入、金融场景时签发方资质未校验",
+        "凭证签名与状态校验被绕过",
+        "同一凭证在不同上下文被异常复用"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0184",

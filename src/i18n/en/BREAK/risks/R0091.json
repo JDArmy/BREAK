@@ -18,6 +18,15 @@
       "virtual item resale",
       "virtual currency theft",
       "stolen game account"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "After a remote login, an account transfers large volumes of virtual items and in-game currency within a short window",
+        "Account login IP shifts abruptly from the usual geolocation, accompanied by a device fingerprint change",
+        "Virtual item trades show anomalous low-price listings or directed gifts to unfamiliar accounts",
+        "The same device/IP is associated with virtual item flows across multiple stolen accounts",
+        "An account stays online for extended periods during off-habit hours and concentrates on processing high-value items"
+      ]
+    }
   }
 }

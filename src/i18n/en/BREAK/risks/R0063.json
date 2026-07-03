@@ -17,6 +17,14 @@
       "duplicate SKU listings",
       "repeat listings",
       "catalog spam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Product titles, images, attributes, and descriptions within the same store are highly similar, with a high duplication rate",
+        "The same product is split into separate listings by color, size, or bundle, occupying multiple search slots",
+        "The store's listing inventory is densely packed with homogeneous links, with exposure resources consumed by a single seller",
+        "The same seller's identical products appear densely in search results, crowding out other sellers"
+      ]
+    }
   }
 }

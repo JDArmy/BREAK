@@ -24,7 +24,23 @@
       "会话劫持",
       "访问令牌盗用"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "窃取的Cookie或Token在异设备或异地环境重放登录",
+        "会话令牌未绑定设备、位置或风险状态被长期复用",
+        "账号在无需密码与MFA的情况下维持持久访问",
+        "令牌来源与恶意软件、代理日志或钓鱼站点关联",
+        "异常会话伴随数据导出或权限提升操作"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0222",

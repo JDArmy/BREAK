@@ -24,7 +24,7 @@
         "link": "https://www.cisa.gov/news-events/cybersecurity-advisories"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "SIM卡交换攻击",
       "SIM Swap",
@@ -64,6 +64,20 @@
         "relation": "co-occurrence",
         "note": "SIM卡交换攻击与现实身份盗用均可由攻击工具“SIM卡交换工具包”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "用户手机号突然失效（短信送达率骤降），随后出现密码重置请求",
+        "号码补办/换卡后短时间内发生跨平台账号接管与资金转移",
+        "同一目标用户的多个平台账号在窄时间窗内相继被重置密码"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

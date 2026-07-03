@@ -17,6 +17,14 @@
       "key management risk",
       "custody failure",
       "hot wallet compromise"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Wallet private keys or seed phrases appear in phishing site inputs, malware exfiltration, or clipboard hijacking records",
+        "Wallet assets are entirely transferred to unfamiliar addresses shortly after a private key leak, then routed into a mixer",
+        "The signer threshold of a multi-signature wallet is set too low, allowing a single private key leak to trigger asset transfers",
+        "The randomness source used for key generation is of insufficient quality, with multiple wallet private keys showing predictable correlations"
+      ]
+    }
   }
 }

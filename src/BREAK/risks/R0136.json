@@ -13,6 +13,21 @@
       "A0018",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新注册账号的身份信息字段（身份证号、姓名、地址、手机号）来源分散，多字段一致性核验失败",
+        "合成身份账号在养号期以固定节奏执行小额正常交易，行为时序机械且缺乏随机性",
+        "同一批合成身份在多个平台短时间内集中注册并申请信贷额度",
+        "信贷申请人的社保、公积金、通讯等辅助信息缺失或与身份主信息矛盾"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "Synthetic Identity Fraud - Federal Reserve",
@@ -23,7 +38,7 @@
         "link": "https://www.bis.org/publ/work931.htm"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "合成身份欺诈",
       "虚构身份骗贷",

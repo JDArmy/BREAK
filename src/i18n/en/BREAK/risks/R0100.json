@@ -18,6 +18,15 @@
       "leeching",
       "botting",
       "auto-combat"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Player characters remain idle for extended periods or repeat fixed-path auto-combat loops",
+        "Account online duration is anomalous and command inputs show mechanical timing patterns",
+        "The same device/IP runs multiple accounts idling to farm resources over a long period",
+        "A player maintains zero interaction during matches while continuously gaining experience or resources",
+        "Auto-clicker or offline-bot process signatures or cheat tool signatures are detected"
+      ]
+    }
   }
 }

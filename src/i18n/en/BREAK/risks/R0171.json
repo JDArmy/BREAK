@@ -13,6 +13,14 @@
     "keywords": [
       "majority attack",
       "double-spend"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The blockchain shows deep block reorganizations, with previously confirmed transactions rolled back",
+        "The same asset shows duplicate spend records on the reorganized chain",
+        "A single miner or staking pool's hash power or stake share exceeds the 51% threshold within a short window",
+        "The hash power of a small cryptocurrency network shows anomalous concentration or rental signs before an attack"
+      ]
+    }
   }
 }

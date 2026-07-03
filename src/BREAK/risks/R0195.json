@@ -12,6 +12,22 @@
       "A0044",
       "A0078"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "Web3社群中仿冒官方机器人或管理员的账号向用户私发钱包连接或助记词录入链接",
+        "短时间内多个用户在社群内反馈被同一钓鱼机器人诱导授权",
+        "钓鱼链接域名与官方域名高度相似且使用新注册证书",
+        "用户钱包在授权后短时间内出现向未知地址的代币转移或approve交易",
+        "社群中出现仿冒客服并引导紧急领取空投的批量话术"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "link": "https://m.sohu.com/a/911507899_122029326/",

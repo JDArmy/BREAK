@@ -17,6 +17,14 @@
       "cross-chain message validation",
       "wrapped asset risk",
       "bridge validator compromise"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The cross-chain bridge contract mints target-chain tokens without locking sufficient assets",
+        "Bridge multi-signature validation shows transaction records with anomalous signatures or bypassed validation thresholds",
+        "Locked pool assets are transferred in large amounts to unfamiliar addresses within a short window, accompanied by anomalous cross-chain messages",
+        "The cross-chain message validation logic is triggered on an abnormal branch, with a signer set inconsistent with the preset"
+      ]
+    }
   }
 }

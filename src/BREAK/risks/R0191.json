@@ -11,13 +11,29 @@
       "A0092",
       "A0108"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "AR/VR设备在非主动使用时段仍持续上传摄像头、麦克风、眼动追踪数据",
+        "设备固件存在未签名或校验缺失的更新包被静默安装",
+        "用户视觉或听觉流被异常重定向到外部服务器",
+        "沉浸式应用在后台请求超出功能所需的传感器权限组合",
+        "眼动/手势数据流向未声明的第三方SDK或分析域名"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://dl.acm.org/doi/10.1145/2580723.2580730",
         "title": "Security and privacy for augmented reality systems"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "AR/VR设备安全风险",
       "AR/VR安全",

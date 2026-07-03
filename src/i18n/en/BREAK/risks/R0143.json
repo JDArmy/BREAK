@@ -22,6 +22,14 @@
       "consent phishing",
       "token theft",
       "third-party login abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "OAuth authorization callbacks contain anomalous redirect_uri parameters pointing to uncontrolled open redirect addresses",
+        "User accounts are bound to unfamiliar third-party identity providers or external applications without any user-initiated action",
+        "The scope of access tokens exceeds the user's authorization history, with API calls showing unauthorized data access",
+        "Access token fragments in implicit flow callback URLs are referenced by external domains or retained in logs"
+      ]
+    }
   }
 }

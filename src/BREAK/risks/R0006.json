@@ -19,7 +19,7 @@
         "link": "https://www.csrc.gov.cn/beijing/c105536/c7582544/content.shtml"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "虚假宣传",
       "虚假广告",
@@ -29,6 +29,21 @@
       "虚构评价",
       "假销量宣传"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "商品详情页宣传文案与实际参数、认证资质存在明显出入",
+        "商品评价内容高度模板化且集中出现在上架后短时间窗口",
+        "原价与折扣价对比异常，折扣力度远超同类商品市场水平",
+        "宣传图片中使用的认证标识、奖项无法在官方数据库中核验"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0053",

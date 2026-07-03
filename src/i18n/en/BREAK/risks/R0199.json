@@ -20,6 +20,15 @@
       }
     ],
     "description": "NFT royalty bypass occurs when traders use off-market transfers, custom contracts, aggregators, or marketplaces that do not enforce royalty rules. The creator may define a royalty policy, but enforcement depends on contracts and marketplace behavior.\n\nThis weakens creator revenue and creates inconsistent rules across markets. Projects need to distinguish between on-chain enforceability, marketplace commitments, and community governance.",
-    "influence": "Royalty bypass reduces creator revenue, fragments marketplace rules, and weakens the economic model for NFT projects."
+    "influence": "Royalty bypass reduces creator revenue, fragments marketplace rules, and weakens the economic model for NFT projects.",
+    "riskAssessment": {
+      "observables": [
+        "NFT secondary sales complete via custom contracts or OTC transfers without enforcing royalty rules",
+        "Trading share on aggregators or non-enforcing marketplaces rises anomalously",
+        "Transfer frequency of the same NFT series OTC is markedly higher than marketplace listings",
+        "Creator-owed royalties show a systematic gap versus on-chain actual transfer records",
+        "Buyer and seller complete royalty-evading transfers via paired related addresses"
+      ]
+    }
   }
 }

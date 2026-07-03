@@ -17,6 +17,14 @@
       "NFT land scam",
       "metaverse investment fraud",
       "digital asset fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The virtual land scarcity promoted by the project team is inconsistent with the actual issuance quantity, showing over-issuance",
+        "The same virtual plot or asset is sold repeatedly to multiple buyers, with conflicting on-chain ownership records",
+        "Virtual asset prices are manipulated upward by the project team and then dumped, with bag-holders suffering losses",
+        "Promised future returns on virtual assets are not delivered, and the team becomes unreachable after fundraising"
+      ]
+    }
   }
 }

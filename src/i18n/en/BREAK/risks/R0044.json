@@ -17,6 +17,15 @@
       "wire transfer scam",
       "bank transfer fraud",
       "payment confirmation forgery"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The payee account exhibits high-fidelity spoofing characteristics versus the user's historically common payees in avatar, nickname, and account tail number",
+        "Transfer receipt screenshots are repeatedly reused for payment confirmation of multiple different amounts, with anomalous screenshot metadata",
+        "Shortly after a transfer, the payer receives requests to change the payee account or switch the guarantor",
+        "The same spoofed account initiates payment collection or induces transfers from multiple users within a short window",
+        "The transfer amount and remarks format closely match known scam script patterns"
+      ]
+    }
   }
 }

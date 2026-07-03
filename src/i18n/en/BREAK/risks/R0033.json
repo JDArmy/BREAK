@@ -16,7 +16,14 @@
       "abandoned storefront",
       "inactive merchant store",
       "dead store"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A store has no product updates, transactions, or customer service responses over a long period, yet remains listed on the platform",
+        "The store's product inventory stays at zero or delisted for a long time, with after-sales metrics deteriorating continuously",
+        "The store's qualifications mismatch its actual operating category, or it has been repeatedly complained about for being unable to provide service"
+      ]
+    }
   },
   "R0033-001": {
     "title": "Merchant Disappearance / Runaway",
@@ -36,6 +43,13 @@
       "merchant runaway",
       "seller absconding",
       "merchant exit scam"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A merchant suddenly stops responding after operating for a period, with customer service messages left unread for a long time",
+        "The store's security deposit is withdrawn or transferred, with abnormal outflow of account funds",
+        "Buyer refund and after-sales requests surge in a concentrated burst, with the merchant unresponsive and shipping halted"
+      ]
+    }
   }
 }

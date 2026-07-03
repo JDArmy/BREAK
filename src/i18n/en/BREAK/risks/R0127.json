@@ -23,6 +23,13 @@
       "CI/CD compromise",
       "package hijacking",
       "backdoor injection"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "CI/CD build artifacts contain suspicious dependencies or script changes not registered in source code",
+        "Typosquatting malicious packages with names highly similar to popular packages appear in package repositories",
+        "Downstream systems show anomalous outbound connections, hidden backdoors, or sensitive data exfiltration after introducing a new dependency version"
+      ]
+    }
   }
 }

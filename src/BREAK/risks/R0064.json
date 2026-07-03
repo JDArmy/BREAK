@@ -20,7 +20,7 @@
         "link": "https://www.thepaper.cn/newsDetail_forward_29380156"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "拆单套利",
       "凑单退款",
@@ -30,6 +30,21 @@
       "退单套利",
       "赠品套利"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "凑单满足满减/免运费/赠品门槛后立即退掉部分商品",
+        "低单价/赠品链接商品被用于凑单，凑单后整单部分退款",
+        "同一账号反复进行凑单-退款，优惠/返利留存比例异常",
+        "订单拆分时点集中在优惠触发后，退款集中在凑单商品"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0068",

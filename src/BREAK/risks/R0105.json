@@ -21,7 +21,7 @@
         "link": "https://en.wikipedia.org/wiki/Account_sharing"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "租号借号",
       "账号出租",
@@ -61,6 +61,20 @@
         "relation": "co-occurrence",
         "note": "租号借号与营销活动作弊均可由攻击工具“CK(Cookies)登录工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "同一账号在短时间内于异地/异设备登录，行为模式突变",
+        "账号登录后执行与其历史画像无关的高风险操作（大额转账、虚假交易）",
+        "一批账号被同一收款方或同一设备集中使用，呈现租用调度特征"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

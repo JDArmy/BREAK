@@ -15,13 +15,29 @@
       "A0021",
       "A0022"
     ],
+    "riskAssessment": {
+      "likelihood": "critical",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "验证码接口短时间内被大量来自打码平台 IP 段的请求命中",
+        "同一会话的鼠标轨迹、点按压力、滑动节奏呈现机器化的规律性参数",
+        "验证码识别响应时间异常稳定且低于人类平均反应时间",
+        "设备传感器数据如陀螺仪、加速度计在验证过程中呈现静止或合成特征",
+        "验证码通过率在不同时段异常稳定，与正常用户波动曲线不符"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT009 CAPTCHA Defeat",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "人机识别绕过",
       "CAPTCHA绕过",

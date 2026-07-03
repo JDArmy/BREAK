@@ -16,7 +16,7 @@
         "link": "https://www.samr.gov.cn/wljys/sjdt/art/2024/art_ae31439848ef41e49b43ab0eb923326d.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "僵尸店铺",
       "空壳店铺",
@@ -56,7 +56,21 @@
         "relation": "co-occurrence",
         "note": "僵尸店铺与价格欺诈同属“票代、代理商与供应商风险”风险场景。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "店铺长期无商品更新、无交易、无客服响应，但仍在平台挂载",
+        "店铺商品库存长期为零或下架，售后指标持续恶化",
+        "店铺资质与实际经营类目不符，或被多次投诉无法提供服务"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    }
   },
   "R0033-001": {
     "title": "失联跑路",
@@ -75,7 +89,7 @@
         "link": "https://www.samr.gov.cn/wljys/sjdt/art/2024/art_ae31439848ef41e49b43ab0eb923326d.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "失联跑路",
       "跑路商家",
@@ -115,6 +129,20 @@
         "relation": "co-occurrence",
         "note": "失联跑路与虚假发货共享规避手段“保证金机制”。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "low",
+      "defenseMaturity": "medium",
+      "observables": [
+        "商家经营一段时间后突然停止响应，客服消息长期未读",
+        "店铺保证金被提现或转移，账户资金异常流出",
+        "买家退款、售后诉求集中爆发，商家无应答且发货停止"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

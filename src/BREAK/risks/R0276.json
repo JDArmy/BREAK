@@ -28,6 +28,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "机器人控制失效或力控异常导致非预期物理动作",
+        "协作机器人急停功能被远程禁用或绕过",
+        "机器人碰撞或挤压人员的事件伴随功能安全标准违规",
+        "工业或服务机器人超出ISO 10218/ISO/TS 15066安全约束运行",
+        "机器人事故中责任归属与功能安全合规性出现争议"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

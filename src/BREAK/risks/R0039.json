@@ -11,13 +11,29 @@
       "A0048",
       "A0053"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "短时间内品牌关键词在社交平台的负面情感占比骤升",
+        "同一负面内容在多个社交媒体账号近乎同时转发，发布时间间隔极短",
+        "搜索引擎品牌词搜索结果中负面信息条目占比上升",
+        "大量新注册或低活跃账号集中发布针对品牌或产品的负面评价",
+        "客诉渠道的负面投诉量在短时间内异常增长"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "Reputation and Its Risks",
         "link": "https://hbr.org/2007/02/reputation-and-its-risks"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "负面舆情",
       "舆情风险",

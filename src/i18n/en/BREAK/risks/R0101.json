@@ -18,6 +18,15 @@
       "throwing",
       "soft inting",
       "intentional griefing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A player is killed multiple times within a short window without effective counterplay",
+        "A player actively rushes toward enemies to die, with behavior patterns clearly deviating from normal play",
+        "The same account repeatedly matches and consistently feeds kills to a specific player",
+        "Players reported for feeding show anomalously negative performance metrics",
+        "Feeding behavior concentrates in specific time windows or correlates with boosting or actor gangs"
+      ]
+    }
   }
 }

@@ -38,7 +38,7 @@ const categories = [
     name: "Risks",
     zhDir: "src/BREAK/risks",
     enDir: "src/i18n/en/BREAK/risks",
-    fields: ["title", "keywords", "definition", "description", "complexity", "influence", "references"],
+    fields: ["title", "keywords", "definition", "description", "complexity", "influence", "references", "riskAssessment"],
   },
   {
     name: "Avoidances",

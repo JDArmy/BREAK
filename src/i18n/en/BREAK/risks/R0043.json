@@ -17,7 +17,16 @@
       "third-party card use",
       "card-not-present fraud",
       "CNP fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The payment card BIN used at checkout differs significantly from the account's historically common cards and originates from a known leaked BIN range",
+        "The account jumps to payment immediately after login, and the payment card information does not match the account's verified identity",
+        "The same payment card is used alternately across orders placed by multiple different accounts",
+        "The order placement device environment shows cross-border or cross-region contradictions with the card's issuing country and the shipping address",
+        "The device fingerprint and IP of payment requests deviate significantly from the account's historical environment, accompanied by bulk ordering characteristics"
+      ]
+    }
   },
   "R0043-001": {
     "title": "Stolen Card Fraud",
@@ -37,6 +46,15 @@
       "unauthorized purchases",
       "stolen payment method abuse",
       "card-not-present fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "After a remote or new-device login, the account initiates withdrawals, transfers, or large purchases within a short window",
+        "Payment card funds are quickly spent and then flow back for cash-out via refunds or returns",
+        "The same stolen card or account places rapid orders across multiple merchants with amounts close to the available balance limit",
+        "The shipping address for orders is a new address or significantly different from the account's historical addresses",
+        "The device environment for withdrawal or transfer requests is inconsistent with the account's historical environment, accompanied by risk-control evasion characteristics"
+      ]
+    }
   }
 }

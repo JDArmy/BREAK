@@ -19,6 +19,13 @@
       "information disclosure",
       "unauthorized data access",
       "exfiltration"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Interface response fields contain plaintext phone numbers, ID numbers, addresses, and other sensitive data beyond what the frontend needs to display",
+        "A single account bulk-pulls user information via fuzzy search or ID enumeration, with call volume far exceeding normal browsing",
+        "Newly registered secondary accounts bulk-add friends or send messages within a short window, with target user IDs sequential or incrementing in regular patterns"
+      ]
+    }
   }
 }

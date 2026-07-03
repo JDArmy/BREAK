@@ -22,13 +22,29 @@
       "A0022",
       "A0059"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一账号在短时间内通过非官方客户端从多个地理区域发起登录与数据拉取",
+        "登录请求的设备指纹与账号历史习惯不符，且伴随批量查询多平台订单/商品/票务数据",
+        "第三方聚合应用的特征性 User-Agent 或自定义 Header 出现在登录与数据同步接口",
+        "单账号高频拉取订单、商品、票务等核心业务数据，量级远超正常浏览",
+        "账号登录后短时间内并发访问多个不相关业务模块的接口"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT020 Account Aggregation",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "第三方账号聚合",
       "账号聚合",

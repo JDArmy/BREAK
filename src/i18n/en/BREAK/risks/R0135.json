@@ -22,6 +22,14 @@
       "self-preferencing",
       "exclusive dealing",
       "market dominance abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Platform contracts contain exclusivity clauses requiring merchants to operate exclusively and not open stores on competing platforms",
+        "Proprietary products are systematically prioritized over comparable third-party merchant products in search rankings and traffic distribution",
+        "The platform blocks or throttles the spread of competitors' links, content, or services within the site",
+        "The platform refuses to open necessary data interfaces to third parties, forming a data barrier"
+      ]
+    }
   }
 }

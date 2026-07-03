@@ -27,6 +27,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "LiDAR点云出现与实物不符的伪造或消失物体",
+        "MEMS陀螺仪在特定声波频率下输出异常导致无人机失控",
+        "摄像头被激光致盲或红绿灯识别被rolling shutter操纵",
+        "GPS/北斗信号被欺骗导致航向偏移",
+        "多传感器融合输出在特定物理干扰下出现定位丢失或误识别"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

@@ -17,6 +17,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Robot control failure or force-control anomalies cause unexpected physical actions",
+        "Collaborative-robot emergency-stop functions are remotely disabled or bypassed",
+        "Robot collision or pinning incidents accompany functional-safety standard violations",
+        "Industrial or service robots operate beyond ISO 10218/ISO/TS 15066 safety constraints",
+        "Robot accidents involve disputes over liability attribution and functional-safety compliance"
+      ]
+    }
   }
 }

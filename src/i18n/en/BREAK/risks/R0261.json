@@ -16,6 +16,15 @@
       "cross-month cancellation",
       "cancellation arbitrage",
       "settlement-month arbitrage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Concentrated cancellations or order changes occur at attendance-month or settlement-month boundaries",
+        "Cross-month cancellations farm settlement differences and attendance performance",
+        "Cancellation timing correlates anomalously with attendance-month boundaries",
+        "Missing cross-month cancellation rate limits cause anomalous concentrated triggering",
+        "Settlement and performance data show mismatched payouts at month-switch boundaries"
+      ]
+    }
   }
 }

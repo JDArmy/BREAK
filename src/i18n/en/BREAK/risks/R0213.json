@@ -20,6 +20,15 @@
       }
     ],
     "description": "Edge computing node attacks target local compute resources deployed in stores, factories, base stations, vehicles, or campuses. Attackers can use physical access, weak operations accounts, container flaws, or exposed services to steal data or alter inference results.\n\nEdge nodes are distributed and often lack data center-grade controls. Design needs trusted boot, remote attestation, least privilege, and auditable behavior during disconnected operation.",
-    "influence": "Compromised edge nodes can leak local sensitive data, alter AI inference, and become distributed footholds outside central data centers."
+    "influence": "Compromised edge nodes can leak local sensitive data, alter AI inference, and become distributed footholds outside central data centers.",
+    "riskAssessment": {
+      "observables": [
+        "Edge nodes show signs of weak ops accounts or exploited container vulnerabilities",
+        "Edge AI inference results show systematic tampering under specific inputs",
+        "Edge node local data is abnormally exported or exfiltrated",
+        "Node trusted-boot or remote-attestation checks fail but are not blocked",
+        "Edge nodes show unaudited anomalous operations during network-disconnected scenarios"
+      ]
+    }
   }
 }

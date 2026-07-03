@@ -28,6 +28,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "VLA模型在对抗样本或对抗补丁下输出错误动作序列",
+        "越狱后的具身机器人执行武器化、撞击等有害物理行为",
+        "单一对抗补丁在跨模型间迁移导致任务成功率骤降",
+        "语音交互越狱诱导机器人违反安全伦理约束",
+        "分拣或服务机器人在特定输入下抓错物料或递错物品"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

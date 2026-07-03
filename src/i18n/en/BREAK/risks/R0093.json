@@ -18,6 +18,15 @@
       "money mule",
       "merchant fraud",
       "payment processor abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Merchant collection QR codes are used for high-frequency small-value collection outside their business scope",
+        "Collection/payment interfaces show fund flows that do not match the merchant's business category",
+        "A single payment account processes transactions for multiple unrelated merchants within a short window",
+        "Funds move in a rapid in-and-out pattern, transferred to multiple personal accounts immediately upon receipt",
+        "QR code payment amounts show regularity (such as fixed denominations) and originate from remote scans"
+      ]
+    }
   }
 }

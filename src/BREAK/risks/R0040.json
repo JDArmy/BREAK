@@ -16,13 +16,29 @@
       "A0015",
       "A0016"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "登录接口短时间内出现大量不同账号来自同一 IP 段的批量尝试，失败率突增",
+        "同一设备指纹在短时间内尝试登录大量不同账号",
+        "登录请求中账号与卡号组合呈现泄露库特征，如卡段集中或过期日期枚举",
+        "成功登录后立即跳转支付、绑卡、查询余额等价值评估接口",
+        "多个账号登录后迅速发起小额测试性支付或查询可用额度"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "OWASP Automated Threat: OAT001 Carding",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-001_Carding.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "撞卡攻击",
       "Carding",

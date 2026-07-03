@@ -26,7 +26,22 @@
         "link": "https://www.163.com/dy/article/JCU216GI051200BP.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "员工账号在离职/调岗前后批量删除或篡改核心数据",
+        "生产环境出现无变更工单的破坏性操作（drop库、改配置、删文件）",
+        "员工账号异常发起拒绝服务或植入恶意软件的行为",
+        "关键系统配置/代码仓库在非工作时间被恶意篡改"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "keywords": [
       "员工恶意破坏",
       "内部破坏",

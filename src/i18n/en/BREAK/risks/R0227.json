@@ -20,6 +20,15 @@
       }
     ],
     "description": "Build artifact poisoning means attackers alter images, installers, frontend assets, SDKs, or release packages so normal delivery installs a backdoor into production or customer environments. The attack can occur on builders, artifact repositories, signing workflows, or distribution channels.\n\nArtifacts are trusted by downstream systems, so impact scales with installation and deployment privilege. Controls include artifact signing, reproducible builds, repository permissions, and pre-release integrity checks.",
-    "influence": "Poisoned artifacts can deploy backdoors into production or customer environments, causing bulk compromise and supply chain trust damage."
+    "influence": "Poisoned artifacts can deploy backdoors into production or customer environments, causing bulk compromise and supply chain trust damage.",
+    "riskAssessment": {
+      "observables": [
+        "Build artifacts or image hashes mismatch the official signed version",
+        "Artifact repository permissions are anomalously used or signing flows are bypassed",
+        "Released artifacts contain undeclared backdoors or malicious code",
+        "Downstream systems show anomalous outbound connections or backdoor behavior after upgrading artifacts",
+        "Artifact signature verification is missing or skipped before release"
+      ]
+    }
   }
 }

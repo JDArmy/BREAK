@@ -12,6 +12,22 @@
       "A0085",
       "A0044"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "智能摄像头或音箱使用默认口令且长期未更新固件",
+        "家居设备云端账号出现异地登录或异常会话",
+        "设备音视频流被异常拉取或转发到外部存储",
+        "设备在非使用时段持续上传音频或视频数据",
+        "家庭网络中出现设备向陌生服务器的持续外联"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "link": "https://news.cnr.cn/rebang/20260204/t20260204_527515211.shtml",
@@ -30,7 +46,7 @@
       "家居设备入侵",
       "远程监控滥用"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "智能家居隐私窃听发生在摄像头、门铃、音箱、电视和网关等设备被未授权访问或远程控制时。攻击者可获取家庭音视频、作息规律和成员信息。\n\n家庭设备常使用默认口令、弱云端账号或长期不更新固件，用户也缺乏安全监测能力。厂商需要强化默认安全配置、云端访问控制和异常登录提醒。",
     "relatedRisks": [
       {

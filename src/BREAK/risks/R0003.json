@@ -42,7 +42,7 @@
         "title": "制作、销售货拉拉外挂4人获刑 货拉拉:超2万司机因使用外挂被封号..."
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "恶意抢购",
       "恶意抢单",
@@ -83,7 +83,21 @@
         "relation": "co-occurrence",
         "note": "恶意抢购与批量小号作弊均可由攻击工具“CK(Cookies)登录工具”直接造成。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "限量商品开抢瞬间订单提交接口 QPS 暴增，远超正常水平",
+        "下单请求的时序与库存释放时间精确对齐，毫秒级响应",
+        "同一收货地址或支付账户关联多个不同账号的抢购订单"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   },
   "R0003-001": {
     "title": "秒拍出价",
@@ -133,7 +147,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "秒拍出价",
       "秒拍",
@@ -142,6 +156,21 @@
       "首拍脚本",
       "第一口价"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "活动开抢瞬间出价接口 QPS 突增且集中在毫秒窗口内",
+        "请求到达时间与活动开始时间偏差极小，呈现批量脚本特征",
+        "同一账号在极短时间内完成领券-下单-支付全链路，无浏览停留",
+        "多个账号出价请求的设备指纹或 IP 段高度聚集"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0003",
@@ -219,7 +248,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-013_Sniping.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "拍卖狙击",
       "狙击出价",
@@ -228,6 +257,21 @@
       "临门出价",
       "auction sniping"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "出价请求集中在拍卖截止前最后数秒，呈批量并发特征",
+        "出价时间戳与拍卖结束时间间隔高度一致，多个账号同步行动",
+        "中标价格远低于商品市场价值，成交价异常偏低",
+        "同一设备/IP 在多个拍品结束前同步触发尾秒出价"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0003",
@@ -312,7 +356,7 @@
         "link": "https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/202104/t20210423_357848.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "刷子风险",
       "刷子",
@@ -321,6 +365,21 @@
       "黄牛脚本",
       "机器抢单"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "限量商品被新注册账号在开抢瞬间集中下单，账号注册时间高度接近",
+        "下单账号的收货地址、支付方式、联系方式存在批量同质化特征",
+        "刷单账号在交易前后的行为轨迹缺失正常浏览、加购、对比环节",
+        "同一设备指纹或 IP 关联大量虚假账号重复抢占稀缺资源"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0003",
@@ -405,7 +464,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "不正当抢占",
       "资源抢占",
@@ -414,6 +473,21 @@
       "预约霸占",
       "号源占用"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "挂号、报名、抢票等资源释放瞬间提交请求量暴增并集中于毫秒窗口",
+        "提交的个人信息字段存在批量生成规律，如身份证号、手机号段连续",
+        "抢占请求的来源 IP 与设备指纹高度聚集，多账号同步触发",
+        "抢占成功账号在获取资源后短期内出现转卖、转让行为"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0003",

@@ -10,13 +10,28 @@
       "A0150",
       "A0151"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "OTA更新包的签名校验失败或被绕过，设备仍安装了来源异常的固件",
+        "OTA下载通道出现中间人攻击特征，更新包哈希与官方发布不一致",
+        "设备在OTA更新后出现新增后门账号、异常外联或行为逻辑变化",
+        "更新服务器日志显示设备从非官方域名或异常IP拉取固件"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "title": "Secure OTA Update Best Practices",
         "link": "https://www.iotsecurityfoundation.org/best-practice-guidelines/"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "OTA更新劫持",
       "OTA劫持",
@@ -70,6 +85,21 @@
       "A0111-001",
       "A0150"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "车端OTA更新包哈希与车企官方发布的固件哈希不一致，存在篡改特征",
+        "旧版本固件被重放安装，车辆回滚到含已知漏洞的脆弱版本",
+        "OTA下载通道出现中间人劫持或异常域名重定向",
+        "车辆OTA更新后ECU行为异常，安全功能被关闭或配置被篡改"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "references": [
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
@@ -84,7 +114,7 @@
       "车辆软件供应链",
       "车端更新安全"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "relatedRisks": [
       {
         "key": "R0252",

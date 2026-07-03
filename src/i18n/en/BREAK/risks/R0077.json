@@ -25,7 +25,15 @@
       "data localization compliance",
       "cross-border personal data transfer",
       "overseas data transfer risk"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Sensitive personal information is transmitted abroad without obtaining the user's separate consent or signing a standard contract",
+        "Cross-border data transfers have not completed the security assessment or standard-contract filing",
+        "Cross-border data transmission lacks encryption or other security measures, with observable anomalies on the transmission link",
+        "The destination country or region for the data transfer is not on the compliance whitelist"
+      ]
+    }
   },
   "R0077-001": {
     "title": "Cross-Border Data Smuggling Risk",
@@ -54,6 +62,14 @@
       "data exfiltration",
       "cross-border data transfer evasion",
       "data export compliance"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Data is continuously exfiltrated to overseas servers through covert channels such as encrypted tunnels, proxies, or CDNs, with anomalous traffic characteristics",
+        "Data is split into small fragments and dispersed across multiple channels for outbound transfer; per-channel volume is small but the aggregated volume is large",
+        "Legitimate API endpoints show high-frequency data exports designed to circumvent cross-border data-transfer approval thresholds",
+        "Employee portable devices show anomalous data interactions with overseas cloud storage or SaaS services shortly before or after cross-border travel"
+      ]
+    }
   }
 }

@@ -27,6 +27,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "机器人作业环境中出现非预期的文字贴纸、打印图案或投影",
+        "VLA模型在特定视觉线索出现时执行与任务不符的危险动作",
+        "无人机或自动驾驶设备在特定地点出现非预期降落或转向",
+        "环境中新增的对抗贴纸与机器人异常行为在时序上相关",
+        "机器人日志显示将环境文字或图案当作用户指令执行"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

@@ -12,6 +12,22 @@
       "A0102",
       "A0103"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "跨链桥锁定资产与对端发行量出现长期不一致",
+        "桥接消息验证或退出证明流程出现异常调用模式",
+        "中继或验证者集合在短时间内发生权限或成员异常变更",
+        "桥接大额提现指向与历史无关联的新地址且无对应入金",
+        "桥接延迟窗口被异常缩短或绕过"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "link": "https://l2beat.com/scaling/risk",
@@ -30,7 +46,7 @@
       "资产桥漏洞",
       "跨层资产锁定"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "Layer2 桥接风险集中在主链与 Rollup、侧链或应用链之间的资产锁定、消息验证、退出证明和中继流程。任一环节出现验证缺陷或权限滥用，都可能造成资产无法赎回或被错误释放。\n\n桥接系统通常承载大量流动性，并依赖复杂的链上链下协作。安全评估需要覆盖合约、证明系统、运维密钥、延迟窗口和异常退出机制。",
     "relatedRisks": [
       {

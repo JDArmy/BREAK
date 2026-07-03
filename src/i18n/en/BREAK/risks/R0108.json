@@ -18,6 +18,13 @@
       "farming bots",
       "virtual currency farming",
       "item farming"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Accounts stay online for long periods, repeatedly executing monster-killing/gathering/quest paths with mechanical timing",
+        "Gold-farming accounts accumulate gold then transfer it in bulk to a few mule accounts, which then trade via external channels",
+        "A large number of accounts run gold-farming in parallel under the same IP or device fingerprint"
+      ]
+    }
   }
 }

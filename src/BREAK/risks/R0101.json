@@ -16,7 +16,23 @@
         "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "玩家短时间内多次被击杀且无有效反击行为",
+        "玩家主动冲向敌方送死，行为模式与正常对战明显背离",
+        "同一账号反复匹配并固定向特定玩家送人头",
+        "被举报送人头的玩家战绩呈现异常负向数据",
+        "对局中送人头行为集中在特定时段或与代练/演员团伙关联"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "送人头",
       "故意送头",

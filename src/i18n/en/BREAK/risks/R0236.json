@@ -16,6 +16,15 @@
       }
     ],
     "description": "Payment tokenization misconfiguration occurs when card substitutes, payment tokens, binding relationships, or merchant domain isolation are configured incorrectly. Attackers may reuse, enumerate, or use tokens across contexts to make unauthorized charges.\n\nTokenization reduces exposure of raw card numbers, but does not replace authorization boundaries. Payment systems must validate token scope, device binding, merchant binding, transaction context, and lifecycle.",
-    "influence": "Token boundary errors can enable unauthorized charges, incorrect binding relationships, and exposure of sensitive payment data."
+    "influence": "Token boundary errors can enable unauthorized charges, incorrect binding relationships, and exposure of sensitive payment data.",
+    "riskAssessment": {
+      "observables": [
+        "Payment tokens are reused across scenarios or merchants to complete charges",
+        "Card-binding relationships or PAN substitutes are configured inconsistently with merchant-domain isolation",
+        "Token applicable scope and device-binding verification are bypassed",
+        "Payment tokens are enumerated or replayed to trigger unauthorized charges",
+        "Payment credentials or sensitive payment data are leaked due to misconfiguration"
+      ]
+    }
   }
 }

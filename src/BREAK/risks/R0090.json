@@ -29,7 +29,23 @@
         "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "登录接口短时间内大量不同账号尝试，失败率突增",
+        "同一 IP/设备指纹在登录接口高频尝试多账号",
+        "注册/找回密码接口出现账号枚举探测，响应差异可区分账号是否存在",
+        "来自泄露凭证库的密码被短时间内批量验证",
+        "验证码接口被高频请求，伴随打码平台特征流量"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "批量扫号",
       "账号枚举",

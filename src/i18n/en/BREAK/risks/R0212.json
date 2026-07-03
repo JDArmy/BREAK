@@ -20,6 +20,15 @@
       }
     ],
     "description": "Vehicle V2X attacks target communication between vehicles, roadside infrastructure, and cloud systems. Attackers can forge location, speed, road event, or signal messages that mislead automated or assisted driving decisions.\n\nThe risk turns network manipulation into road safety impact. Systems must validate message origin, spatial and temporal plausibility, certificate status, and abnormal behavior before acting on V2X data.",
-    "influence": "False V2X messages can mislead driving decisions and create road safety incidents rather than only digital service disruption."
+    "influence": "False V2X messages can mislead driving decisions and create road safety incidents rather than only digital service disruption.",
+    "riskAssessment": {
+      "observables": [
+        "V2X communication carries messages with anomalous source certificates or stale revocation status",
+        "Vehicles receive spoofed position, speed, or event information inconsistent with spatiotemporal reality",
+        "V2V/V2I messages cluster on specific road segments with no corresponding physical facts",
+        "Autonomous or assisted driving makes unexpected decisions triggered by anomalous communication signals",
+        "V2X certificate issuance or revocation shows anomalous batch operations"
+      ]
+    }
   }
 }

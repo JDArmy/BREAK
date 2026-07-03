@@ -23,6 +23,13 @@
       "number porting scam",
       "account takeover",
       "ATO"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A user's mobile number suddenly fails (SMS delivery rate plummets), followed by password-reset requests",
+        "Within a short window after a SIM replacement/swap, cross-platform account takeovers and fund transfers occur",
+        "Multiple platforms of the same target user have passwords reset in succession within a narrow time window"
+      ]
+    }
   }
 }

@@ -16,6 +16,15 @@
       }
     ],
     "description": "Session token replay occurs when attackers steal cookies, access tokens, or refresh tokens and reuse them from another device or environment. Tokens may be obtained through malware, proxy logs, XSS, phishing, or endpoint compromise.\n\nWithout device binding, location checks, risk signals, or token rotation, attackers can bypass password and MFA checks. Defenses need token protection, abnormal session detection, and rapid revocation.",
-    "influence": "Replayed session tokens bypass passwords and MFA, enabling account takeover, data export, and persistent access."
+    "influence": "Replayed session tokens bypass passwords and MFA, enabling account takeover, data export, and persistent access.",
+    "riskAssessment": {
+      "observables": [
+        "Stolen cookies or tokens are replayed for login from foreign devices or locations",
+        "Session tokens unbound to device, location, or risk state are reused long-term",
+        "Accounts maintain persistent access without password or MFA",
+        "Token sources are linked to malware, proxy logs, or phishing sites",
+        "Anomalous sessions are accompanied by data export or privilege-escalation operations"
+      ]
+    }
   }
 }

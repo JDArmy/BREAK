@@ -21,6 +21,15 @@
       }
     ],
     "description": "Blockchain supply chain attacks target development tools, wallet plugins, SDKs, node components, frontend dependencies, and release processes. Attackers tamper with dependencies, insert backdoors, or take over publisher accounts to deliver malicious logic to downstream Web3 projects.\n\nBecause Web3 applications directly handle keys, signatures, and on-chain assets, supply chain compromise can trigger asset theft, authorization tampering, or sensitive data exposure during normal user interactions.",
-    "influence": "A compromised Web3 dependency or release path can spread asset theft and backdoors across many downstream projects, damaging ecosystem trust."
+    "influence": "A compromised Web3 dependency or release path can spread asset theft and backdoors across many downstream projects, damaging ecosystem trust.",
+    "riskAssessment": {
+      "observables": [
+        "Newly released dependency packages or wallet plugins are installed by many projects in a short window with author identity diverging from historical records",
+        "Build artifact hashes mismatch official releases or the signing chain changes unexpectedly",
+        "SDK update logs contain suspicious network callbacks, private-key reads, or dynamic remote code loading",
+        "Downstream projects show anomalous authorization, transfers, or sensitive data exfiltration after upgrading a dependency",
+        "Package manager resolution logs show internal package names hijacked by same-name external packages"
+      ]
+    }
   }
 }

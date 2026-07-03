@@ -24,7 +24,23 @@
       "CPS作弊",
       "渠道佣金作弊"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "渠道通过Cookie stuffing把并非其引流的订单归因给自身",
+        "落地页被劫持或最后点击被异常篡改归因",
+        "品牌方为自然订单或其他渠道成果重复支付佣金",
+        "渠道间归因冲突集中在特定渠道且转化时间窗异常",
+        "优惠券插件或归因劫持工具的流量特征被批量识别"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0237",

@@ -24,7 +24,23 @@
       "安装归因作弊",
       "广告点击作弊"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "点击到转化时间窗异常短或与正常安装行为不符",
+        "同一设备或SDK来源在多个渠道产生归因点击",
+        "渠道归因分布出现异常集中或突变",
+        "虚假点击事件在安装或转化前被批量注入",
+        "广告主为无有效用户价值的被劫持转化付费"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0008-002",

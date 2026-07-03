@@ -18,6 +18,14 @@
       "bonus abuse",
       "discount abuse",
       "incentive abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Coupon claim counts exceed activity limits, with a single account or device tied to multiple coupons stacked together",
+        "Newly registered accounts claim and redeem high-value coupons in a concentrated burst after a seasoning period",
+        "Promotional redemptions cluster within a short window before the activity ends, far exceeding the pace of normal user participation",
+        "Arbitrage accounts withdraw cash or resell immediately after redemption, with no genuine repurchase behavior"
+      ]
+    }
   }
 }

@@ -17,6 +17,13 @@
       "player recruitment scam",
       "cross-game recruiting",
       "user poaching"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Low-activity or new accounts create guilds then send external WeChat/QQ group recruitment messages to members at high frequency",
+        "In-game chat/mail contains competitor game names, server-switching pitches, and external contact information",
+        "The same batch of accounts bulk-recruit players at a fixed cadence after unlocking guild features, directing them to join external groups"
+      ]
+    }
   }
 }

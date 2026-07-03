@@ -17,7 +17,16 @@
       "illicit mining",
       "server mining",
       "mining malware"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Server CPU/GPU utilization stays persistently high with no corresponding business process",
+        "Unknown mining processes (such as xmrig) appear on the server along with anomalous outbound connections to mining pool ports",
+        "Traces of mining programs planted in cron jobs or startup entries are found",
+        "Cloud servers connect outbound to unfamiliar mining pool domains (such as mining pool addresses)",
+        "Containers or hosts show command execution records that pull mining binaries from the public internet"
+      ]
+    }
   },
   "R0086-001": {
     "title": "Compute Resource Theft Risk",
@@ -46,6 +55,15 @@
       "GPU mining abuse",
       "compute hijacking",
       "cloud compute theft"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A large number of GPU instances are created under a cloud account within a short window, unrelated to business training tasks",
+        "Server GPU/CPU utilization stays saturated with no corresponding business workload",
+        "Unauthorized tasks appear in AI training clusters, with compute redirected to external addresses",
+        "Cloud billing shows a spike in GPU instance fees with unclear instance ownership",
+        "Container escape traces coexist with anomalous host-level mining or training processes"
+      ]
+    }
   }
 }

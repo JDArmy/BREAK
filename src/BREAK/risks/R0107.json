@@ -18,7 +18,7 @@
         "link": "https://en.wikipedia.org/wiki/Elo_hell"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "游戏演员行为",
       "演员局",
@@ -27,6 +27,20 @@
       "操纵对局",
       "控分"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "高段位对局中送分方与吃分方频繁同队/对位，胜负结果呈规律性",
+        "演员账号在特定时段集中输赢，段位被精准控制在目标区间",
+        "同一批账号反复匹配到同一对局，配合行为异常默契"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "relatedRisks": [
       {
         "key": "R0108",

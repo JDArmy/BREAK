@@ -25,7 +25,7 @@
         "link": "https://view.inews.qq.com/a/20250117A08U6200"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "站内消息骚扰",
       "私信骚扰",
@@ -35,6 +35,21 @@
       "站内信骚扰",
       "骚扰私信"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一账号短时间内向大量用户群发私信，发送频次机械",
+        "消息内容精心规避关键词黑名单，含变体/谐音/图片化骚扰文本",
+        "新注册/低活跃账号集中发起私信，目标用户分布广泛",
+        "用户举报/拉黑率在特定发送账号上显著偏高"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0095",

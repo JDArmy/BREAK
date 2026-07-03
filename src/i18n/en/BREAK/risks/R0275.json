@@ -19,6 +19,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "ROS2 inter-node communication does not enable SROS2/DDS-Security authentication",
+        "Middleware such as FastDDS shows malformed RTPS packets causing remote crashes",
+        "DDS Discovery protocol enumerates all ROS2 application domains in the LAN",
+        "Tools such as rostopic have eval code-injection vulnerabilities that are exploited",
+        "After takeover, multi-node coordination is disrupted or commands are tampered with"
+      ]
+    }
   }
 }

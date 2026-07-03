@@ -17,13 +17,29 @@
       "A0028",
       "A0059"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一会员账号同时在线设备数超出个人使用合理上限",
+        "账号登录 IP 地理位置在短时间内跨地区跳跃，不符合单人活动规律",
+        "账号在多设备并发播放或使用，行为特征与共享售卖平台特征吻合",
+        "共享账号的登录设备指纹频繁更换，关联大量陌生设备",
+        "会员权益账号被检测到与第三方共享售卖页面的交易或客服关联"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "references": [
       {
         "title": "斩断盗养贩账号黑产需织密“法治+技防”安全网|手机|灰产|社交软件...",
         "link": "https://www.163.com/dy/article/JVIKCPEU0514R9KQ.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "违规共享账号",
       "共享账号",

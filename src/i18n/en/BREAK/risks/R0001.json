@@ -18,7 +18,15 @@
       "scripted user actions",
       "OAT-006 Expediting",
       "expediting"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single account issues high-frequency requests across multiple marketing endpoints within a short window",
+        "Request timing across registration/login/coupon/task endpoints is highly regular with minimal interval variance",
+        "A single device fingerprint or IP is tied to many accounts running the same task sequence concurrently",
+        "Newly registered accounts complete the full coupon-collection to order to withdrawal chain within an extremely short time"
+      ]
+    }
   },
   "R0001-001": {
     "title": "Protocol-Level Automation",
@@ -39,7 +47,15 @@
       "direct API calls",
       "HTTP request scripting",
       "headless automation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Request timing across marketing endpoints is highly regular, with minimal variance in inter-request intervals",
+        "Requests lack front-end interaction telemetry and browser event chains, hitting backend protocols directly",
+        "The same IP or device fingerprint carries multiple account tokens to concurrently call coupon-claim and order endpoints within a short window",
+        "Request headers show highly homogeneous UA, Referer, and device parameters, or are missing browser fingerprint fields"
+      ]
+    }
   },
   "R0001-002": {
     "title": "Automated Simulator",
@@ -60,7 +76,15 @@
       "click bot",
       "emulator farm",
       "RPA bot"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Mouse trajectories and click coordinates show straight-line or equidistant patterns, lacking human jitter and acceleration/deceleration curves",
+        "Page dwell time is highly consistent, with fixed and repeatable intervals between each action step",
+        "The same device fingerprint cluster concurrently executes identical recorded script action sequences",
+        "Touch-event pressure, tilt angle, and other sensor data are missing or stuck at constant values"
+      ]
+    }
   },
   "R0001-003": {
     "title": "Automated Login Risk",
@@ -81,6 +105,13 @@
       "credential stuffing",
       "brute force login",
       "automated sign-in"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same account fires login requests from multiple IPs/devices within a short window",
+        "Login endpoint frequency spikes, with password field hash values highly concentrated",
+        "Immediately after login, the session jumps to high-value actions (coupon claim, order) with no normal browsing trail"
+      ]
+    }
   }
 }

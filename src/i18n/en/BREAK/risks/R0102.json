@@ -18,6 +18,15 @@
       "account boosting",
       "win boosting",
       "boosting service"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Low-rank accounts consistently team up and match with high-rank cheating accounts",
+        "Boss accounts show an anomalous win-rate surge while their own gameplay metrics are clearly below the rank level",
+        "A cheating carry account in the team provides the majority of damage output",
+        "Team members show linked IPs/devices, suggesting the same cheat gang",
+        "After boosting, the boss account's rank and record jump without a corresponding improvement in gameplay data"
+      ]
+    }
   }
 }

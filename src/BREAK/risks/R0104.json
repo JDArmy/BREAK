@@ -19,7 +19,23 @@
         "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
       }
     ],
-    "updated": "2026-06-11",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "老板、司机、打手账号同时间开启匹配并进入同一对局",
+        "打手账号段位异常且使用外挂淘汰其他玩家后退出",
+        "老板账号在决赛圈击败打手夺冠，胜负关系异常",
+        "护航队伍成员 IP/设备关联，疑似团伙协同",
+        "同一护航模式在多个账号间反复出现，老板账号胜率突增"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "护航作弊",
       "护航上分",

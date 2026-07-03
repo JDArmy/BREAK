@@ -17,7 +17,15 @@
       "unexpected file upload",
       "storage abuse",
       "illegal content upload"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single account issues high-frequency, large-file upload requests through the upload interface, with storage usage growth far exceeding normal business levels",
+        "Uploaded file types do not match the business purpose (e.g., a real-name verification endpoint receives non-ID images or video slices)",
+        "Returned upload URLs are heavily hotlinked by external sites, generating large amounts of bandwidth consumption from non-platform sources",
+        "Content uploaded by a single account is aggregated via URLs into a playable sliced video resource"
+      ]
+    }
   },
   "R0069-001": {
     "title": "Image Hosting Abuse",
@@ -37,7 +45,15 @@
       "hotlink image hosting",
       "personal cloud storage abuse",
       "CDN abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The avatar or ID-photo upload endpoint receives large volumes of image uploads from a single account that never completes the final submission step",
+        "Uploaded image files have anomalous data appended to their ends, and the URLs can be combined via an m3u file to play back video",
+        "External access to uploaded images is heavy and concentrated on external video sites or cloud-drive contexts",
+        "A single account's storage usage is severely inconsistent with normal business profiles (e.g., thousands of images stored via an ID-photo endpoint)"
+      ]
+    }
   },
   "R0069-002": {
     "title": "Cloud Storage Abuse",
@@ -57,6 +73,14 @@
       "illegal file hosting",
       "storage bucket abuse",
       "pirated content hosting"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A cloud storage bucket or object store shows abnormally high write volume from a single account, with file types mostly videos or compressed archives",
+        "External link requests for distributing pirated or pornographic videos, where content moderation is weak, concentrate on specific storage paths",
+        "Cloud-drive features are used to store non-business files, with external sharing volumes far exceeding normal user behavior",
+        "Storage costs diverge significantly from the actual user-growth curve"
+      ]
+    }
   }
 }

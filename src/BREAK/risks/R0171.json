@@ -10,13 +10,28 @@
       "A0131-001",
       "A0131-002"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "区块链出现深度较大的区块重组，已确认交易被回滚",
+        "同一笔资产在重组后的链上出现重复支付记录",
+        "单一矿工或质押池的算力/权益占比短期内超过51%阈值",
+        "小额加密货币网络的算力在攻击前出现异常集中或租用迹象"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "references": [
       {
         "link": "https://www.investopedia.com/terms/1/51-attack.asp",
         "title": "What is a 51% Attack on Blockchain? Risks, Examples, and Costs ..."
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "51%攻击（双花攻击）",
       "51%攻击",

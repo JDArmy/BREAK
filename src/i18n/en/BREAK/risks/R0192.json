@@ -17,6 +17,15 @@
       "cyberbullying",
       "virtual violence",
       "immersive safety"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Multiple approaches, blocking, or voice-harassment acts against the same user occur within a virtual space in a short window",
+        "Anonymous accounts enter social scenes immediately after registration and concentrate inappropriate content toward specific users",
+        "Batch homogeneous illicit assets appear in real-time voice or 3D content distributed by related accounts",
+        "Victim reports cluster at the same virtual coordinates or within the same dense time window",
+        "Deepfake non-consensual intimate content is mass-distributed outside the community and tied to real user identities"
+      ]
+    }
   }
 }

@@ -19,6 +19,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "VLA models output erroneous action sequences under adversarial samples or patches",
+        "Jailbroken embodied robots execute weaponization, collision, or other harmful physical behaviors",
+        "A single adversarial patch transfers across models, causing task-success rates to plummet",
+        "Voice-interaction jailbreaks induce robots to violate safety-ethics constraints",
+        "Sorting or service robots grab wrong materials or hand wrong items under specific inputs"
+      ]
+    }
   }
 }

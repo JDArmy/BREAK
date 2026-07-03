@@ -10,13 +10,28 @@
       "A0131-001",
       "A0131-002"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "PoS网络中出现从早期区块分叉的替代链，链长度超过主链",
+        "早期权益持有者的旧私钥被重新激活用于签署历史区块",
+        "新加入节点同步时选择了攻击者构造的伪造链作为主链",
+        "链上出现无成本模拟特征，同一权益在多条分叉链上同时投票"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "references": [
       {
         "title": "Long-Range Attacks on Proof-of-Stake",
         "link": "https://blog.ethereum.org/2014/05/15/long-range-attacks-the-serious-problem-with-adaptive-proof-of-work"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "长程攻击/无成本模拟",
       "长程攻击",

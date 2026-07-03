@@ -26,6 +26,22 @@
       "attendance-month arbitrage"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "考勤月或结算月切换节点出现集中取消或改单",
+        "跨月取消订单套取结算差额与考勤绩效",
+        "取消时序与考勤月边界关联异常",
+        "跨月取消限频缺失导致异常集中触发",
+        "结算与绩效数据在月切换期出现错配支出"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0017-002",

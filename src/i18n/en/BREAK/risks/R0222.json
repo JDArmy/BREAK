@@ -16,6 +16,15 @@
       }
     ],
     "description": "Shadow API exposure means undocumented, deprecated, or test endpoints remain reachable from internal or external networks. These endpoints are often outside unified authentication, rate limiting, audit, and change management.\n\nAttackers can discover them through frontend resources, path enumeration, or mobile traffic analysis, then bypass formal API gateways and security policies.",
-    "influence": "Undocumented endpoints can bypass authentication, rate limits, and audit controls, exposing sensitive data and weakening API governance."
+    "influence": "Undocumented endpoints can bypass authentication, rate limits, and audit controls, exposing sensitive data and weakening API governance.",
+    "riskAssessment": {
+      "observables": [
+        "Unregistered API paths are invoked from front-end resources or mobile traffic",
+        "Deprecated or test endpoints remain externally accessible outside auth and rate limiting",
+        "API inventory results show a persistent gap with actually reachable endpoints",
+        "Unregistered endpoints return sensitive capabilities or internal data",
+        "Enumerative path scanning hits large numbers of unmanaged endpoints in a short window"
+      ]
+    }
   }
 }

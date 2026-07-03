@@ -17,7 +17,15 @@
       "MEV fee strategy",
       "priority gas auction",
       "fee market manipulation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Transactions with gas fees far above normal levels appear within a block, ordered immediately following victim transactions",
+        "Network gas prices are anomalously driven up within a short window by large volumes of low-gas transactions or high-gas bidding",
+        "The same sender repeatedly executes arbitrage with extremely high gas fees to front-run transactions across multiple transactions",
+        "The pending transaction pool is filled with large volumes of low-gas transactions, causing normal transactions to be delayed for extended periods"
+      ]
+    }
   },
   "R0173-001": {
     "title": "Gas Fee Manipulation and Frontrunning",
@@ -41,6 +49,14 @@
       }
     ],
     "description": "Gas fee manipulation and frontrunning exploit transaction ordering, fee bidding, and block construction. Attackers insert transactions before or after user actions for arbitrage or disruption, including sandwich attacks, liquidation sniping, NFT mint frontrunning, and malicious fee escalation.\n\nThe risk increases user slippage, trading cost, and perceived unfairness. DeFi protocols need private order flow, slippage controls, batch auctions, and MEV mitigation patterns.",
-    "influence": "Frontrunning and gas manipulation increase slippage and trading costs, distort DeFi markets, and weaken confidence in transaction fairness."
+    "influence": "Frontrunning and gas manipulation increase slippage and trading costs, distort DeFi markets, and weaken confidence in transaction fairness.",
+    "riskAssessment": {
+      "observables": [
+        "A user-submitted DeFi transaction is front-run by an arbitrage bot transaction before packaging, forming a sandwich attack",
+        "Block builders collude with arbitrage bots to prioritize specific transactions to extract MEV profits",
+        "In NFT mint or liquidation scenarios, user transactions are front-run at high frequency, resulting in failures or unfavorable execution prices",
+        "The actual execution price of a user transaction shows slippage beyond a reasonable range compared to the expected price at submission"
+      ]
+    }
   }
 }

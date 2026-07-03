@@ -19,7 +19,23 @@
         "link": "https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf"
       }
     ],
-    "updated": "2026-06-13",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一信用卡短时间内跨地域/跨商户高频消费",
+        "电商无卡交易出现 CVV 频繁试刷及失败后成功模式",
+        "新绑卡账户短时间内发起大额消费或虚拟物品购买",
+        "账户接管后修改收货地址、联系方式并大额下单",
+        "信用卡账单出现持卡人未授权的小额测试交易"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "信用卡欺诈",
       "信用卡盗刷",

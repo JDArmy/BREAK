@@ -10,6 +10,22 @@
       "A0057",
       "A0079"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "多签钱包在短时间窗口内出现多名签名者异常批准大额或未知目的地址交易",
+        "治理提案使用紧急话术且签名请求指向未经仿真验证的合约调用",
+        "团队成员账号在异常时段发起或批准与历史习惯不符的提案",
+        "多签交易calldata与提案摘要描述的功能不匹配",
+        "签名者设备或会话来源在批准敏感交易时发生地理/环境突变"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "link": "https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/",
@@ -28,7 +44,7 @@
       "恶意提案签名",
       "紧急提案诈骗"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "多签钱包社会工程攻击针对 DAO、基金会和机构金库的签名流程。攻击者通过伪造紧急提案、冒充团队成员、制造舆情压力或投递恶意交易摘要，诱导多个签名者在短时间内批准交易。\n\n多签机制降低了单点私钥失陷风险，但不能自动防止集体误签。治理流程需要引入交易仿真、延时执行、权限分层和独立复核，避免信任关系被利用。",
     "relatedRisks": [
       {

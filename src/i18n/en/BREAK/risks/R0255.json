@@ -16,6 +16,15 @@
       "bulk refund abuse",
       "fake after-sales claims",
       "refund farm"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Rings use after-sales channels to bulk-initiate refund or compensation appeals",
+        "The same device or delivery address is tied to numerous after-sales disputes",
+        "Fake after-sales evidence and concentrated appeal patterns are triggered in bulk",
+        "After-sales disputes show an abnormally high share of users with historical anomalous appeals",
+        "Refund-farm signatures such as empty packages or swaps reappear across related accounts"
+      ]
+    }
   }
 }

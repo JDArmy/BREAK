@@ -26,6 +26,14 @@
       "quantum-resistant crypto",
       "quantum-safe migration",
       "harvest now decrypt later"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Encrypted communication traffic is intercepted and stored over the long term, consistent with the Harvest Now, Decrypt Later (HNDL) exfiltration pattern",
+        "Critical systems still use classical public-key algorithms such as RSA and ECC, with no post-quantum cryptography (PQC) migration planned",
+        "Long-term confidential data (such as state secrets and trade secrets) is still protected by classical encryption, with no post-quantum risk assessment conducted",
+        "Digital certificate and signature systems have not adopted post-quantum algorithms, with the certificate issuance chain relying on classical algorithms"
+      ]
+    }
   }
 }

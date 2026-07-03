@@ -16,6 +16,15 @@
       "weight under-recording",
       "billed weight distortion",
       "weighing fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Chargeable weight at pickup weighing and entry mismatches actual goods",
+        "Under-weighing or under-recording causes billing differences to be farmed",
+        "Over-weighing or over-recording causes shipping fees to be skimmed",
+        "Weighing tamper-proofing is missing or bypassed",
+        "Anomalous weighing concentrates on specific couriers or stations with high targeted-inspection hit rates"
+      ]
+    }
   }
 }

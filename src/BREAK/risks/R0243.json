@@ -24,7 +24,23 @@
       "反馈数据污染",
       "AI供应链攻击"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "训练集或标注结果中出现可触发特定偏置的异常样本",
+        "模型在特定触发条件下输出攻击者期望结果",
+        "用户反馈或供应商数据被注入污染样本",
+        "常规准确率评估无法暴露的偏置或绕过行为",
+        "训练前后模型行为对比出现非预期差异"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0244",

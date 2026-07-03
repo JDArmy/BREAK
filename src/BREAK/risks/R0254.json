@@ -24,7 +24,23 @@
       "远程工具滥用",
       "外包访问风险"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "第三方供应商运维账号或VPN在非业务时段被使用",
+        "供应商远程访问凭证长期有效且权限过大",
+        "供应商会话出现异地登录或异常操作行为",
+        "堡垒机或远程桌面被供应商账号超范围使用",
+        "供应商访问成为进入核心系统的横向移动通道"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0230",

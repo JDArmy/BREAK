@@ -24,7 +24,7 @@
         "link": "https://zhidao.baidu.com/question/100790301.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "违规违法商品",
       "违禁商品",
@@ -65,6 +65,21 @@
         "relation": "co-occurrence",
         "note": "违规违法商品与低价高邮共享规避手段“店铺处罚”。"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新上架商品标题或主图命中违禁词库，或包含外链、微信号等引流信息",
+        "同一商家短时间内批量上架同类高风险商品，且价格异常低于市场价",
+        "商品评价区出现大量“引流”“诈骗”等负面反馈或集中投诉",
+        "商家资质与商品类目明显不符（如个人店上架医疗器械、贵金属）"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    }
   }
 }

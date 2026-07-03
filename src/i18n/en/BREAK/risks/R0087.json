@@ -18,6 +18,15 @@
       "transaction tampering",
       "race condition",
       "logic flaw exploitation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Order/transaction data shows batch modifications outside business hours, with price/quantity/status fields tampered with",
+        "Business API responses are inconsistent with original records, with key fields abnormally altered",
+        "Static assets or page content are injected with malicious scripts and redirect code",
+        "Database audit logs show privileged accounts issuing anomalous UPDATE/DELETE statements against business tables",
+        "Critical business logic files are modified without authorization, with timestamps inconsistent with the release workflow"
+      ]
+    }
   }
 }

@@ -16,6 +16,15 @@
       }
     ],
     "description": "Fake conversion and install farms use device farms, emulators, scripts, or crowdsourced labor to simulate registration, installation, retention, purchases, or other funnel events. The goal is to obtain CPA, CPS, acquisition subsidies, or platform rewards.\n\nThese actions look valid in funnel metrics but lack real user value. Platforms need device fingerprinting, behavior sequence analysis, retention quality checks, payment linkage, and channel profiling.",
-    "influence": "Fake conversions consume acquisition budget, pollute growth metrics, and push teams to scale low-quality channels."
+    "influence": "Fake conversions consume acquisition budget, pollute growth metrics, and push teams to scale low-quality channels.",
+    "riskAssessment": {
+      "observables": [
+        "Device farms or emulators generate registration, install, and retention in bulk",
+        "New-user retention and conversion data show highly similar device fingerprints and behavior sequences",
+        "Acquisition subsidies are concentrated among related accounts of the same ring",
+        "Fake conversions lack real payment relationships or subsequent activity",
+        "Channel profiles show new channels with anomalously better conversion quality than historical averages"
+      ]
+    }
   }
 }

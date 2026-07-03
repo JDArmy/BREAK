@@ -13,6 +13,14 @@
     "keywords": [
       "front-running",
       "sandwich attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User transactions are front- or back-inserted with arbitrage transactions in the pending pool, forming a sandwich attack structure",
+        "Highly correlated transaction sequences appear within the same block, with arbitrageur transactions packaged immediately following victim transactions",
+        "The actual execution price of a user transaction shows anomalous slippage deviation from the expected price at submission",
+        "Arbitrage bot addresses repeatedly execute front-running and arbitrage at high frequency across DeFi protocols"
+      ]
+    }
   }
 }

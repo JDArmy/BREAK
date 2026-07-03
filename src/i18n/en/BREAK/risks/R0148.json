@@ -22,6 +22,14 @@
       "unsafe tool use",
       "MCP abuse",
       "plugin misuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The frequency or permission scope of an AI agent calling sensitive tools (payment, deletion, configuration changes) spikes within a single session",
+        "Indirect prompt injection content from external web pages or documents is mixed into the agent's tool-calling chain",
+        "Tool descriptions or context returned by an MCP server are tampered with, inducing the agent to make unauthorized business API calls",
+        "Operation logs of agent executions lack traceable records of tool inputs, data sources, and decision rationale"
+      ]
+    }
   }
 }

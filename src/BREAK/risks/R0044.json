@@ -14,13 +14,29 @@
       "A0021",
       "A0023"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "收款方账号与用户历史常用收款方在头像、昵称、账号尾号上存在高仿特征",
+        "转账凭证截图被反复用于多笔不同金额的支付确认，截图元数据异常",
+        "付款方在转账后短时间内收到收款方账号变更请求或更换担保方请求",
+        "同一高仿账号在短时间内向多名用户发起收款或诱导转账",
+        "转账金额、备注格式与已知骗局话术模式高度一致"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "...威胁猎人反洗钱情报助力金融机构洗钱风险治理|黑产|银行卡_网易...",
         "link": "https://www.163.com/dy/article/JFLQVVCT0518STKV.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "转账欺诈",
       "假转账截图",

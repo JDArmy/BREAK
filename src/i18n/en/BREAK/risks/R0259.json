@@ -16,7 +16,16 @@
       "COD fraud",
       "blind-ship scam",
       "unsolicited COD parcel"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Senders bulk-blind-ship cash-on-delivery parcels to recipients who never placed orders",
+        "COD orders show concentrated signatures of low-value fake goods passed off as high-value items",
+        "Recipient refusals or complaints cluster on the same sender",
+        "Senders show anomalous qualifications or newly register and immediately ship in bulk",
+        "Blind-shipped COD is accompanied by anomalous collection of cash-on-delivery payments"
+      ]
+    }
   },
   "R0259-001": {
     "title": "Blind-Sale Fraud",
@@ -34,6 +43,15 @@
       "blind sale",
       "blind ship",
       "blind COD shipping"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Blacker-market discussions reference \"blind selling\" scripts and cash-on-delivery blind-shipment tactics",
+        "Recipients who never placed orders cluster around cash-on-delivery parcels from the same sender",
+        "Blind-shipped cash-on-delivery parcels are marked as collecting payment on behalf of goods, with declared value severely mismatched from the collected amount",
+        "Recipient complaints cluster around sender qualifications tied to blind-selling rings",
+        "The cash-on-delivery order behavior model shows batch signatures of blind-shipped parcels"
+      ]
+    }
   }
 }

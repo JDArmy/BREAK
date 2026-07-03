@@ -22,6 +22,14 @@
       "stored value card fraud",
       "gift card laundering",
       "prepaid card laundering"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same payment credential (a stolen credit card) is used to bulk-purchase large-value electronic gift cards within a short window",
+        "Gift cards are resold at a discount shortly after purchase or frequently transferred between multiple accounts before a refund is requested",
+        "Prepaid card numbers and passwords are attempted for activation across multiple IPs or devices, showing signs of credential brute-forcing or forgery",
+        "Telecom fraud victims concentrate top-ups onto the same batch of gift card numbers and rapidly drain the balances"
+      ]
+    }
   }
 }

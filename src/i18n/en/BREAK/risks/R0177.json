@@ -17,6 +17,14 @@
       "no emergency pause",
       "contract migration risk",
       "irreversible deployment"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A deployed contract is found to have a serious vulnerability but cannot be fixed because no upgrade mechanism was designed",
+        "Assets locked in a contract cannot be retrieved through normal operations due to business logic errors",
+        "Contract upgrade permissions are concentrated in a single address, posing a risk of upgrade authority abuse",
+        "A proxy pattern upgrade causes storage layout conflicts, leading to corrupted state data"
+      ]
+    }
   }
 }

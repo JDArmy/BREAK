@@ -18,7 +18,14 @@
       "resource exhaustion",
       "availability attack",
       "OAT-015"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Request volume to the same endpoint or multiple endpoints spikes within a short window, far exceeding the normal baseline",
+        "Request source IPs are either highly dispersed or concentrated in data centers and proxy exits, with anomalous QPS",
+        "Server CPU, memory, bandwidth, or connection counts are rapidly saturated, with rising response latency and timeout rates"
+      ]
+    }
   },
   "R0029-001": {
     "title": "SMS Resource Exhaustion",
@@ -39,7 +46,14 @@
       "SMS flood",
       "OTP exhaustion",
       "SMS abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The SMS verification code sending endpoint is hit at high frequency, with a single phone number receiving large volumes of verification codes in a short window",
+        "The same batch of phone number ranges is bulk-requested, with sending volume severely mismatched against normal user registration volume",
+        "SMS gateway cost spikes in a short window, delivery rates drop, and messages are intercepted following carrier complaints"
+      ]
+    }
   },
   "R0029-002": {
     "title": "Resource Exhaustion Attack",
@@ -64,7 +78,15 @@
       "bandwidth exhaustion",
       "storage exhaustion",
       "SYN flood"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Server CPU, memory, disk, or bandwidth utilization stays saturated for extended periods, triggering resource alerts",
+        "Large volumes of invalid or large files are uploaded, with disk space filling up rapidly",
+        "Database connection counts or slow queries surge, and TCP half-open connections rise anomalously",
+        "Network-layer traffic shows SYN/UDP/ICMP flood characteristics"
+      ]
+    }
   },
   "R0029-003": {
     "title": "CC Attack",
@@ -85,7 +107,14 @@
       "application flood",
       "web request flood",
       "CC flood"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Request volume to compute-intensive endpoints (search, sort, complex queries) spikes anomalously",
+        "Requests appear to be normal business traffic but access specific endpoints at high frequency to consume compute resources",
+        "Source IPs are dispersed but request patterns are highly consistent, bypassing basic rate-limiting rules"
+      ]
+    }
   },
   "R0029-004": {
     "title": "Distributed Denial of Service",
@@ -106,6 +135,14 @@
       "amplification attack",
       "UDP flood",
       "application-layer DDoS"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Ingress bandwidth is saturated in a short window, with traffic sources highly distributed across multiple regions",
+        "Traffic shows characteristics of UDP/ICMP/SYN floods or reflection-amplification attacks",
+        "Application-layer HTTP request floods originate from large numbers of different IPs, with low per-IP rates but a massive aggregate volume",
+        "Service availability drops sharply, and legitimate user connections are rejected in large numbers"
+      ]
+    }
   }
 }

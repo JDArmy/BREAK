@@ -18,6 +18,15 @@
       "infringing content",
       "pirated content",
       "rights violation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User-uploaded content highly matches image/text fingerprints of known copyrighted works",
+        "A single account bulk-uploads unauthorized reposted or scraped content with mechanical posting intervals",
+        "Content attracts concentrated complaints from rights holders or a spike in platform infringement reports over a short period",
+        "Uploaded file metadata retains original copyright author or source watermark information",
+        "Infringing-content accounts share device fingerprints or IP ranges with historically infringing accounts"
+      ]
+    }
   }
 }

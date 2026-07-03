@@ -25,6 +25,14 @@
       "privacy law risk",
       "consent compliance",
       "data protection compliance"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Data collection practices exceed the scope declared in the privacy policy without obtaining user authorization",
+        "Personal data is retained longer than regulations require, with no automatic cleanup configured",
+        "Cross-border data transfers have not completed security assessments or standard-contract filings",
+        "Data-subject rights requests (access, deletion, correction) are processed late or rejected without cause"
+      ]
+    }
   }
 }

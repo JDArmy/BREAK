@@ -10,13 +10,28 @@
       "A0144",
       "A0145"
     ],
+    "riskAssessment": {
+      "likelihood": "low",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "设备在执行加密操作时功耗、电磁辐射呈现可关联密钥的规律性特征",
+        "攻击者在物理接近设备时使用示波器、电磁探头等专用采集设备",
+        "设备加密操作的执行时序随输入数据变化，存在时序泄露特征",
+        "同型号设备被完整克隆或密钥被提取后用于伪造合法设备"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P3"
+    },
     "references": [
       {
         "link": "https://ieeexplore.ieee.org/iel8/11045568/11045569/11045593.pdf",
         "title": "Side-Channel Attacks on IoT: Risks and Mitigation in Embedded ..."
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "IoT侧信道攻击",
       "侧信道攻击",

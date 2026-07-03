@@ -26,6 +26,14 @@
       "verification fatigue",
       "copy-paste malware",
       "terminal paste attack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Web popups disguised as system errors or CAPTCHAs induce users to copy and execute PowerShell or terminal commands",
+        "After a user visits an ordinary web page, the endpoint suddenly executes a long encoded command or script sourced from the clipboard",
+        "After a user performs a 'repair' operation, the endpoint makes outbound connections to unfamiliar C2 addresses or downloads follow-on payloads",
+        "Passwords, cookies, and session tokens stored in the browser are bulk-read after the user executes the so-called repair command"
+      ]
+    }
   }
 }

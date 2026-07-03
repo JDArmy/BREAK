@@ -16,6 +16,15 @@
       "crowdsourced arbitrage",
       "order splitting fraud",
       "same sender recipient"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Crowdsourced orders show split-order patterns with identical sender, recipient, or address",
+        "A single order is split into multiple sub-orders to farm per-order delivery fees",
+        "Same-address send-receive clusters show anomalously concentrated split-order timing",
+        "Delivery fees and subsidy payouts are anomalously high for specific riders or stations",
+        "Post-split delivery trajectories show the goods are actually the same shipment"
+      ]
+    }
   }
 }

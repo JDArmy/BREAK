@@ -22,6 +22,14 @@
       "SSL stripping",
       "packet interception",
       "session hijacking"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User sessions show connection records with abrupt SSL/TLS certificate fingerprint changes or downgrades to plaintext connections",
+        "The same account logs in from anomalous network environments (public WiFi, unknown IP ranges) within a short window, accompanied by credential usage",
+        "Payee account or amount fields are tampered with mid-transit on the client-to-server link during payment transactions",
+        "Anomalous ARP reply flooding or DHCP spoofing traffic appears on the LAN, with traffic redirected to unfamiliar devices"
+      ]
+    }
   }
 }

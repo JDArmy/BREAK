@@ -11,6 +11,22 @@
       "A0147",
       "A0148"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "工业协议流量出现无认证的读写或控制指令",
+        "Modbus/OPC-UA等协议暴露在远程运维或公网可达路径",
+        "控制参数被异常修改或出现未授权的设备控制指令",
+        "工业协议通信出现明文传输敏感数据或命令注入特征",
+        "协议网关或工控设备固件版本存在已知漏洞且未修补"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "references": [
       {
         "link": "https://www.cisa.gov/ics",
@@ -29,7 +45,7 @@
       "工控协议攻击",
       "工业物联网安全"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
     "description": "工业协议漏洞利用针对 Modbus、OPC-UA、Profinet、BACnet 等协议中的认证缺失、明文通信、命令注入或实现缺陷。攻击者可读取生产数据、修改控制参数或干扰设备运行。\n\n许多工业协议最初假设运行在可信网络中，暴露到远程运维或物联网平台后风险显著上升。防护重点是网络分区、协议网关、命令白名单和异常控制检测。",
     "relatedRisks": [
       {

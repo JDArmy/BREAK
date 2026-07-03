@@ -18,6 +18,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Robot BLE provisioning or debug interfaces expose hardcoded credentials that bypass authentication",
+        "Devices ship with pre-installed remote-access services exposed to the public internet",
+        "Robot firmware is tampered with or backdoored and absorbed into a botnet",
+        "Same-brand robots show worm-like auto-propagation within Bluetooth range",
+        "Debug interfaces are exploited to gain root and access cameras and actuators"
+      ]
+    }
   }
 }

@@ -18,6 +18,13 @@
       "credential sharing",
       "shared account",
       "leased account"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same account logs in from distant locations/devices within a short window, with abrupt behavior shifts",
+        "After login, the account performs high-risk actions unrelated to its historical profile (large transfers, fake transactions)",
+        "A batch of accounts is centrally used by the same payee or device, showing rental-scheduling traits"
+      ]
+    }
   }
 }

@@ -18,7 +18,16 @@
       "skewing",
       "social proof fraud",
       "vote manipulation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Target endpoints receive high-frequency repeated requests from the same device cluster or IP range within a short window",
+        "Counting metrics such as likes, comments, and play counts spike abnormally during off-peak hours",
+        "Rankings diverge from the distribution of genuine user behavior, with growth curves showing staircase-like jumps",
+        "Accounts involved in manipulation exhibit mechanical timing with highly regular request intervals",
+        "Manipulation accounts cluster around newly registered devices and SMS-receiving phone numbers, with highly homogeneous profiles"
+      ]
+    }
   },
   "R0016-001": {
     "title": "Fake Viewer Count Inflation",
@@ -39,7 +48,16 @@
       "ghost viewers",
       "live view inflation",
       "stream view bot"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Live stream viewer count surges to a high level the moment the stream starts and stays flat for a long time, disproportionate to engagement",
+        "Online viewer profiles are homogeneous, mostly newly registered accounts or accounts with no historical behavior",
+        "The ratio of likes and comments to actual online viewers is severely disproportionate",
+        "Viewer-inflation accounts originate from fixed proxy IP ranges or device-control clusters with synchronized timing",
+        "Viewer entry and exit rhythms are mechanical, with dwell times showing regularized distributions"
+      ]
+    }
   },
   "R0016-002": {
     "title": "Bulk Following",
@@ -60,6 +78,15 @@
       "bulk follow",
       "follower manipulation",
       "social graph inflation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "An account bulk-follows a large number of target accounts within a short window at a follow rate far exceeding human limits",
+        "Following accounts cluster around newly registered devices and SMS-receiving phone numbers with homogeneous profiles",
+        "Follower growth curves of followed accounts show staircase-like jumps during specific time windows",
+        "Shortly after bulk-following, there is reverse unfollowing or long-term zero engagement, indicating invalid follow relationships",
+        "Follow requests originate from the same device cluster or proxy IP range with highly regular timing"
+      ]
+    }
   }
 }

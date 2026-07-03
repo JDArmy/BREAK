@@ -19,7 +19,15 @@
       "ad spend abuse",
       "traffic fraud",
       "OAT-003"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Source IPs and device fingerprints of ad click/impression requests are highly clustered, lacking genuine user diversity",
+        "Ad clicks are decoupled from subsequent conversion behavior, with no browsing, cart-add, or ordering path after the click",
+        "Click volume on the same ad placement spikes abnormally during specific periods, far exceeding the historical baseline",
+        "Device characteristics such as User-Agent and screen resolution in ad requests show an abnormally concentrated distribution"
+      ]
+    }
   },
   "R0008-001": {
     "title": "Ad Link Hijacking",
@@ -39,7 +47,15 @@
       "link rewriting",
       "affiliate theft",
       "attribution hijack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Direct product links accessed by users are appended with promotional tracking parameters not triggered by the users themselves",
+        "The beneficiary of an affiliate promotion link is tampered to a party other than the original promoter",
+        "Client traffic shows a plugin or add-on program rewriting the ad destination URL",
+        "The same affiliate commission is contested by attribution claims from multiple channels, with an anomalous attribution chain"
+      ]
+    }
   },
   "R0008-002": {
     "title": "Click Fraud",
@@ -60,7 +76,15 @@
       "click bot",
       "click farm",
       "invalid clicks"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "IPs, devices, and timing of ad click requests exhibit batch-script characteristics, with regular click intervals",
+        "Clicks are followed by no page-dwell, scrolling, or other genuine interaction, with a missing conversion path",
+        "The click-through rate of the same ad creative spikes abnormally within a short window, far exceeding the industry baseline",
+        "Click sources concentrate on datacenter IPs or known proxy-pool ranges, lacking residential traffic distribution"
+      ]
+    }
   },
   "R0008-003": {
     "title": "Fake App Installs",
@@ -81,7 +105,15 @@
       "app install bot",
       "install farm",
       "attribution fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "App install events burst within a short window, with mechanical and regular device-activation timing",
+        "Install device fingerprints, OS versions, and network environments are highly homogeneous, lacking genuine diversity",
+        "Post-install app launch behavior is anomalous, with no real usage trail before uninstall or long-term dormancy",
+        "Device association between attributed installs and ad clicks shows signs of forgery, with an unreasonable attribution chain"
+      ]
+    }
   },
   "R0008-004": {
     "title": "Impression Fraud",
@@ -102,7 +134,15 @@
       "fake impressions",
       "ad stacking",
       "impression inflation"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Impression-event counts for an ad placement far exceed the number of actually viewable slots, indicating multi-creative stacking billed together",
+        "Viewability metrics of impression requests are anomalous, with large volumes of exposure never entering the user's visible area",
+        "Impression volume on the same ad placement grows abnormally within a short window, without corresponding genuine user visits",
+        "Device and user features in impression logs show a high repetition rate, lacking genuine traffic diversity"
+      ]
+    }
   },
   "R0008-005": {
     "title": "Traffic Attribution Fraud",
@@ -123,6 +163,14 @@
       "organic hijacking",
       "last-click hijack",
       "CPA fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Organic conversions are attributed to a specific channel, with the attribution window aligning anomalously with click events",
+        "Device information in click logs reported by the channel shows batch-forged matches against genuinely activated devices",
+        "The channel's attribution commission share is abnormally high, far exceeding its actual traffic-driving capability",
+        "Attribution click requests cluster within a short window before conversion, exhibiting deliberate organic-traffic coverage characteristics"
+      ]
+    }
   }
 }

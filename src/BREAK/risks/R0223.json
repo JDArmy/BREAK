@@ -25,7 +25,23 @@
       "对象归属校验",
       "水平越权"
     ],
-    "updated": "2026-06-22",
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "同一账号在短时间内枚举访问大量不归属自身的订单、用户或文件ID",
+        "接口仅校验登录态未校验对象归属导致越权返回他人资源",
+        "移动端或开放平台接口出现批量IDOR型请求",
+        "对象级访问缺少租户隔离导致跨租户数据可读",
+        "异常访问模式集中于敏感资源如资金记录或个人资料"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "relatedRisks": [
       {
         "key": "R0224",

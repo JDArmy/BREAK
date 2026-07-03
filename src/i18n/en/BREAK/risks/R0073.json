@@ -17,6 +17,14 @@
       "lost corporate device",
       "device theft",
       "endpoint loss"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "An employee device goes offline or fails to check in to MDM or the internal network for an extended period, triggering an asset-loss alert",
+        "A lost device is not locked or wiped as expected after the enterprise policy is pushed down",
+        "Unencrypted sensitive data on a lost device is anomalously accessed after the loss",
+        "Device-loss reports show a time correlation with data-breach or anomalous-login events in the same period"
+      ]
+    }
   }
 }

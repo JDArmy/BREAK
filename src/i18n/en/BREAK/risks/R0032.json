@@ -17,7 +17,14 @@
       "account compromise",
       "stolen account",
       "account theft"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Login location/device fingerprint changes abruptly, diverging sharply from the historical behavior profile",
+        "The session immediately performs sensitive actions (password change, card binding, withdrawal) with no habitual browsing path",
+        "A single account shows multiple concurrent sessions from distant locations within a short window"
+      ]
+    }
   },
   "R0032-001": {
     "title": "Credential Stuffing",
@@ -37,7 +44,14 @@
       "account checker",
       "combo checker",
       "bulk login attempts"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The login endpoint shows large-scale batch attempts using leaked credential libraries, with a spike in failure rate",
+        "The same IP/device subnet tests the same password against many different accounts within a short window",
+        "Passwords of successfully logged-in accounts overlap heavily with known data-breach credentials"
+      ]
+    }
   },
   "R0032-002": {
     "title": "Password Spraying",
@@ -56,7 +70,14 @@
       "common password attack",
       "low-and-slow password attack",
       "one-password-many-accounts"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The login endpoint shows a large number of accounts being tried against the same weak password, with low per-account failure counts but broad account coverage",
+        "The same IP/device attempts logins against large numbers of different accounts within a short window, deliberately staying below the account-lockout threshold",
+        "Successfully logged-in accounts use common weak passwords (e.g., 123456, qwerty), heavily overlapping with weak-password dictionaries"
+      ]
+    }
   },
   "R0032-003": {
     "title": "Credential Brute Force",
@@ -75,7 +96,14 @@
       "login brute force",
       "dictionary attack",
       "password guessing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single account shows a large number of login failures within a short window, with the failure cause concentrated on incorrect password",
+        "The password field in login requests matches common dictionaries or rainbow tables, exhibiting enumeration characteristics",
+        "The same IP/device continuously tries different passwords against a single account, triggering account lockout or rate limiting"
+      ]
+    }
   },
   "R0032-004": {
     "title": "Verification Code Brute Force",
@@ -95,6 +123,13 @@
       "one-time password brute force",
       "2FA code brute force",
       "verification code guessing"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The verification code validation endpoint is hit at high frequency within a short window, trying a different verification code value on each attempt",
+        "The failure count for a single account's verification code surges, exhibiting enumeration characteristics",
+        "Endpoints using weak verification codes (4-digit numeric, no expiry, no attempt limit) are enumerated in bulk, with an anomalous success rate"
+      ]
+    }
   }
 }

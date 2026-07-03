@@ -18,7 +18,15 @@
       "activity farming",
       "incentive abuse",
       "bonus abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Accounts engage in high-value promotional activities such as check-ins, coupon claims, and flash sales in a concentrated burst after a seasoning period",
+        "The same device fingerprint or IP is tied to many accounts repeatedly completing the same activity task sequence",
+        "Withdrawal and ordering behavior from participating accounts clusters within a short window before the activity ends",
+        "Accounts show extremely low retention and repurchase rates after completing activities, exhibiting pure arbitrage characteristics"
+      ]
+    }
   },
   "R0005-001": {
     "title": "Bulk Fake Account Manipulation",
@@ -39,7 +47,15 @@
       "like farm",
       "comment farm",
       "account farm"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Likes, comments, and shares are triggered in a concentrated burst by large numbers of accounts within a short window, with mechanical timing",
+        "Engagement accounts show highly homogeneous registration times, device fingerprints, and IP ranges",
+        "Comment content is identical or templated, lacking genuine relevance to product details",
+        "Engagement volume on the target product/content spikes abnormally within a short window and then drops rapidly"
+      ]
+    }
   },
   "R0005-002": {
     "title": "Fake Viral Referral",
@@ -64,6 +80,14 @@
       "new user acquisition fraud",
       "invite bot",
       "referral abuse"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Within the referral chain, large numbers of invited accounts share clustered registration times and a common device fingerprint origin",
+        "Invited accounts stop being active immediately after completing the assist action, with no subsequent genuine usage behavior",
+        "Inviters and invitees share shipping addresses, payment accounts, or mobile-number ranges",
+        "Referral reward claims surge explosively within a short window right after the activity launches"
+      ]
+    }
   }
 }

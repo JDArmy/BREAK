@@ -32,7 +32,7 @@
         "link": "https://attack.mitre.org/techniques/T1213/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "文件或文档盗窃",
       "文档窃取",
@@ -42,6 +42,21 @@
       "合同盗取",
       "客户资料盗取"
     ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "内部账号批量访问/下载超权限的机密文件，量级偏离日常",
+        "敏感文档经个人存储/网盘/即时通讯外传，绕过企业通道",
+        "钓鱼/勒索软件落地后核心文件库出现异常读取与外发",
+        "竞品或公开渠道出现与公司机密文件高度相似的内容"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    },
     "relatedRisks": [
       {
         "key": "R0073",

@@ -22,6 +22,14 @@
       "installment fraud",
       "cash-out fraud",
       "deferred payment fraud"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "After a BNPL limit is activated, consumption is concentrated to the credit ceiling within a short window, with merchants highly concentrated in cash-out categories",
+        "The same device or receiving merchant is linked to multiple BNPL transactions, with amounts near the credit ceiling and abnormal frequency",
+        "Borrowers activate limits and concentrate consumption on multiple BNPL platforms in near-synchrony, then become unreachable or default shortly after loan disbursement",
+        "A refund is initiated shortly after a BNPL transaction is completed, but the goods are not actually returned or the refund flows to an anomalous account"
+      ]
+    }
   }
 }

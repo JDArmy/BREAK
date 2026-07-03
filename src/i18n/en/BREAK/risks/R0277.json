@@ -19,6 +19,15 @@
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Individual cluster members are hijacked into Byzantine nodes sending erroneous information",
+        "Cluster communication interruption causes desynchronization and single-point failures are amplified by topology",
+        "Members injected with malicious coordination policies disrupt cluster consensus",
+        "Cluster behavior goes out of control and is hard to stop with a single-machine emergency stop",
+        "Adversarial behavior in multi-agent reinforcement learning causes SOTA policies to fail"
+      ]
+    }
   }
 }

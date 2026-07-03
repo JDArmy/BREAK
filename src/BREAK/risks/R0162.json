@@ -10,13 +10,28 @@
       "A0105",
       "A0106"
     ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "钱包私钥或助记词出现在钓鱼网站输入、恶意软件外传或剪贴板劫持记录中",
+        "钱包资产在私钥泄露后短时间内被全部转出至陌生地址，随后进入混币器",
+        "多签钱包的签名者门槛设置过低，单点私钥泄露即可触发资产转移",
+        "密钥生成所用随机源质量不足，多个钱包私钥存在可预测关联"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
     "references": [
       {
         "title": "Cryptocurrency Wallet Security Best Practices",
         "link": "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf"
       }
     ],
-    "updated": "2026-06-15",
+    "updated": "2026-07-03",
     "keywords": [
       "私钥泄露与管理风险",
       "私钥泄露",

@@ -27,6 +27,22 @@
       "heavy-goods splitting"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "重货订单被拆分为多个小件录入且计费重量失真",
+        "同一票货物的订单-包裹-重量关联出现异常拆分",
+        "重货拆单监测中揽派费支出异常偏高",
+        "快递员或网点在重货场景集中出现拆小件行为",
+        "计费重量与实际货品重量存在系统性差额"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0266",

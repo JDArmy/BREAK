@@ -21,7 +21,23 @@
         "link": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html"
       }
     ],
-    "updated": "2026-06-13",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "同一身份信息短时间内被用于多家机构开户或申请贷款",
+        "不同账户使用相同身份证号但绑定的手机号/地址频繁变更",
+        "新开户账户短期内集中申请大额贷款或信用卡",
+        "实名认证环节人证一致性核验失败率上升",
+        "同一身份关联多个不同地区的银行账户/支付账户"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    },
+    "updated": "2026-07-03",
     "keywords": [
       "现实身份盗用",
       "身份盗用",

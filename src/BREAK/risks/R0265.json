@@ -26,6 +26,22 @@
       "freight-rate arbitrage"
     ],
     "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "运价区段、重量段或车型段边界被错配套利",
+        "拆单、改重、改区段行为集中出现在计费边界",
+        "运价规则一致性校验失败但未被拦截",
+        "计费防篡改机制缺失导致规则错配可操作",
+        "异常计费集中在特定运价区段或折扣规则"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P1"
+    },
     "relatedRisks": [
       {
         "key": "R0260",

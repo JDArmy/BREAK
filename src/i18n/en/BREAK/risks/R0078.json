@@ -17,7 +17,15 @@
       "information disclosure",
       "unauthorized data access",
       "PII breach"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Databases or object storage show unauthorized bulk exports or anomalous queries",
+        "Sale listings closely matching this organization's data characteristics appear on the dark web or public channels",
+        "Internal accounts anomalously access sensitive tables or fields unrelated to their duties",
+        "Data is transmitted to unauthorized external addresses, with DLP rules alerting frequently"
+      ]
+    }
   },
   "R0078-001": {
     "title": "Partner Data Breach",
@@ -37,7 +45,15 @@
       "supplier breach",
       "service provider breach",
       "partner leak"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "After a partner or third-party system is breached, this organization's data is leaked on the dark web or public channels",
+        "Partner API calls exceed the agreed scope, anomalously pulling this organization's sensitive data",
+        "Data-transmission links to partners lack encryption or access control and are intercepted by man-in-the-middle actors",
+        "Partner personnel accounts are compromised and used to access this organization's shared data beyond their authorization"
+      ]
+    }
   },
   "R0078-002": {
     "title": "Customer Success and Support Ticket Data Exposure",
@@ -56,7 +72,15 @@
       }
     ],
     "description": "Customer success and support ticket data exposure comes from CRM, support systems, ticketing platforms, and collaboration tools that contain chats, screenshots, secrets, account data, and business context. Data can be accessed or exported beyond authorization.\n\nSupport teams need broad visibility to solve issues, but excessive permissions and outsourced collaboration increase leakage. Controls need field masking, tiered access, export control, and sensitive ticket auditing.",
-    "influence": "Support ticket exposure can leak customer privacy, business screenshots, secrets, and incident details, damaging trust and compliance."
+    "influence": "Support ticket exposure can leak customer privacy, business screenshots, secrets, and incident details, damaging trust and compliance.",
+    "riskAssessment": {
+      "observables": [
+        "Support or CRM accounts anomalously bulk-export tickets, customer chat logs, screenshots, or keys",
+        "Outsourced support accounts access customer privacy data beyond their service scope without authorization",
+        "Ticket-system export volume surges outside working hours, with exported fields containing sensitive information",
+        "Support accounts exfiltrate ticket screenshots or customer credentials via collaboration tools"
+      ]
+    }
   },
   "R0078-003": {
     "title": "User Privacy Leakage",
@@ -76,6 +100,14 @@
       "privacy breach",
       "sensitive data exposure",
       "personal information leakage"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "User PII data is exposed in plaintext on unauthorized interfaces or in logs",
+        "Third-party partners improperly call user-data interfaces, pulling volumes beyond the authorized scope",
+        "Platform security vulnerabilities cause user privacy data to be probed in bulk or scraped via database dumping",
+        "Datasets matching the platform's user characteristics appear on the dark web"
+      ]
+    }
   }
 }

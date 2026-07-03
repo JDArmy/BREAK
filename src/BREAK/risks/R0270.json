@@ -27,6 +27,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "low",
+      "observables": [
+        "机器人BLE配网或调试接口存在硬编码凭据可绕过认证",
+        "设备出厂预装远程访问服务且暴露在公网",
+        "机器人固件被篡改或植入后门后被纳入僵尸网络",
+        "同品牌机器人在蓝牙范围内出现蠕虫式自动感染",
+        "调试接口被利用获取root权限并访问摄像头与执行器"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P0"
+    }
   }
 }

@@ -22,6 +22,13 @@
       "bot-assisted attacks",
       "phishing automation",
       "CAPTCHA bypass"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Phishing emails/social-engineering scripts are highly personalized, with language style closely matching the target individual",
+        "CAPTCHA endpoints show batch recognition/cracking by multimodal AI models, with a spike in success rate",
+        "Attack tools adaptively adjust request characteristics based on defensive strategies, reducing the hit rate of traditional rules"
+      ]
+    }
   }
 }

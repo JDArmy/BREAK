@@ -28,6 +28,22 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03"
+    "updated": "2026-07-03",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "high",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "observables": [
+        "仅对图像扰动即可操纵模型对文本的理解",
+        "单模态防御如仅过滤文本输入被跨模态攻击绕过",
+        "跨模态对齐空间出现异常扰动导致错误动作决策",
+        "排版攻击等经典跨模态手法被用于操纵分类结果",
+        "最优扰动层位于模型中部隐藏状态空间"
+      ],
+      "assessedAt": "2026-07-03",
+      "priority": "P2"
+    }
   }
 }

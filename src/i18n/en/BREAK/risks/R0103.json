@@ -17,6 +17,15 @@
       "spectator cheat",
       "stream sniping",
       "map hack"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same player's main and secondary accounts appear in the same match, with the secondary account in spectator mode",
+        "The secondary account's spectator view lingers on enemy positions and calls out locations",
+        "The main account's pre-aim and movement align abnormally well with the secondary account's spectator intel",
+        "After the secondary account is banned, a new secondary account is quickly created to continue spectating the same main account",
+        "The main and secondary accounts are friends and appear in the same match, with the secondary account only spectating and not participating"
+      ]
+    }
   }
 }

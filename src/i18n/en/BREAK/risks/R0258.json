@@ -16,6 +16,15 @@
       "forged logistics node",
       "billing inflation",
       "route tampering"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Logistics routing nodes are forged or duplicated to inflate metered mileage",
+        "Pickup, transit, delivery, and sign-off node trajectories mismatch reality",
+        "Anomalous metering concentrates on specific stations or partners",
+        "Route-data tamper-proofing is missing or bypassed",
+        "Node fabrication accompanies inflated shipping and subsidy payouts"
+      ]
+    }
   }
 }

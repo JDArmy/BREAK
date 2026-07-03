@@ -22,6 +22,13 @@
       "child protection",
       "anti-addiction",
       "minor privacy"
-    ]
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Minors use adult identities to bypass real-name authentication and are highly active during late-night hours",
+        "Youth mode is easily bypassed or not enabled, while minor accounts show anomalous spending amounts",
+        "Platform content is not age-rated, and unsuitable content reaches minor users, triggering complaints"
+      ]
+    }
   }
 }
