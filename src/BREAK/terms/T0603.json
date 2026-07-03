@@ -1,0 +1,47 @@
+{
+  "T0603": {
+    "title": "协议爬虫",
+    "aliases": [
+      "协议层爬虫",
+      "接口爬虫",
+      "Protocol Crawler"
+    ],
+    "category": "数据采集",
+    "keywords": [
+      "协议爬虫",
+      "协议层爬虫",
+      "接口爬虫",
+      "Protocol Crawler",
+      "HTTP爬虫",
+      "API爬虫"
+    ],
+    "definition": "直接基于 HTTP 或自定义协议构造请求、绕过浏览器渲染的爬虫，与无头浏览器爬虫、真机模拟爬虫相对，是反爬对抗的主要目标之一。",
+    "description": "协议爬虫是指不依赖浏览器渲染环境，直接通过 HTTP 协议或自定义协议构造请求获取数据的爬虫类型。相比无头浏览器爬虫（AT0022，依赖浏览器内核渲染页面、执行 JS）和真机模拟爬虫（依赖真实设备操作），协议爬虫轻量、高效、并发能力强，但需要自行处理接口签名、参数加密、JS 参与运算等前端防护逻辑，常配合抓包工具（AT0014）逆向接口协议。协议爬虫因不携带真实浏览器特征，其 TLS/HTTP 指纹、JS 执行环境、行为特征均与真实浏览器存在差异，是 TLS/HTTP 指纹识别（A0038-003）、异常环境检测（A0010）的重点识别对象。在反爬实践中，协议爬虫、无头浏览器爬虫、真机模拟爬虫、真人众包爬虫虽技术形态不同，但从打击角度无需严格区分，应优先集中解决覆盖面广的共性问题。",
+    "usageExample": "风控通过 TLS 指纹识别发现大量协议爬虫直接调用 API 接口抓取商详数据，触发云端反爬策略拦截。",
+    "relatedRisks": [
+      "R0027",
+      "R0126-001"
+    ],
+    "relatedAvoidances": [
+      "A0038-003",
+      "A0003",
+      "A0002"
+    ],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0014",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0013"
+    ],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT011 Scraping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

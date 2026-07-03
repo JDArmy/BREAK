@@ -19,5 +19,34 @@
       "decoy account",
       "canary resource"
     ]
+  },
+  "A0030-001": {
+    "title": "Dynamic Beaconing and Honeypot Traps",
+    "definition": "Active perception sub-measures — dynamic beacons, loop traps, fake timestamps, hidden honeypot resource IDs/APIs, special-function popups, and dynamic HTTP header injection — that induce attackers to expose themselves and enable continuous tracking of their behavioral characteristics.",
+    "description": "Dynamic beaconing and honeypot traps are the active-perception sub-measure of the business-level honeypot (A0030). Concrete forms include: dynamic beacons (hidden beacons dynamically inserted into pages that normal users would never trigger but crawlers will request — triggering marks the access as automated), loop traps (fake resources that trap crawlers in infinite loops or repeated requests, draining their resources and exposing behavior), fake timestamps/parameters (deceptive timestamps or parameters mixed into responses to induce crawlers to collect erroneous data), hidden honeypot resource IDs and honeypot API endpoints (fake resources not exposed in normal business flows, discoverable only via resource enumeration or reverse engineering), special-function popups (ads, red envelopes — visible to normal users but abnormally interacted with by crawlers, used to collect crawler interaction features), and dynamic HTTP header injection (honeypot-marker headers dynamically added to responses to track whether the crawler carries them back). The common goal: without affecting normal users, make automated visitors expose themselves proactively, so the server can continuously track the attacker's identity, characteristics, and behavior patterns — providing a basis for countermeasure upgrades and disposition.",
+    "limitation": "Effectiveness depends on stealth — once honeypot resources or beacon logic is identified and avoided by attackers, the measure fails. Advanced attackers can filter out beacon requests via behavioral analysis and comparison with normal business flows. Improperly designed traps may affect normal users or be indexed by search engines, causing negative impact. Trap forms must be continuously updated to maintain the adversarial edge.",
+    "references": [
+      {
+        "title": "MITRE D3FEND: Connected Honeynet Technique",
+        "link": "https://d3fend.mitre.org/technique/d3f:ConnectedHoneynet/"
+      },
+      {
+        "title": "Honeypot - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Honeypot_(computing)"
+      }
+    ],
+    "keywords": [
+      "Dynamic Beaconing and Honeypot Traps",
+      "dynamic beaconing",
+      "honeypot trap",
+      "loop trap",
+      "fake timestamp",
+      "hidden honeypot resource",
+      "honeypot API",
+      "special-function popup",
+      "dynamic HTTP header",
+      "anti-scraping beacon",
+      "deception beacon"
+    ]
   }
 }

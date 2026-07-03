@@ -49,5 +49,36 @@
       "VPN detection",
       "network proxy check"
     ]
+  },
+  "A0038-003": {
+    "title": "TLS/HTTP Fingerprinting",
+    "definition": "Identifying the true client type via TLS handshake and HTTP/2 protocol-layer fingerprints, distinguishing real browsers from protocol crawlers and automation scripts.",
+    "description": "TLS/HTTP fingerprinting is a technique that identifies client types based on protocol-layer characteristics. Typical fingerprints include: JA3/JA4 fingerprints (hashes computed from the TLS ClientHello's version, cipher suites, extensions, and elliptic curves, identifying the client's TLS implementation library such as OpenSSL, BoringSSL, or a browser TLS stack), HTTP/2 fingerprints (based on SETTINGS frame parameters, window updates, and header-compression dynamic tables, distinguishing browsers from curl/Python requests and similar libraries), and TCP/IP fingerprints (based on MSS, window size, and TCP options to distinguish operating systems). Real browsers and protocol crawlers or automation libraries have inherent differences in protocol-layer implementations — even if an attacker spoofs the User-Agent, the TLS/HTTP2 fingerprint still exposes the true client type. This measure is a protocol-layer supplement to the UA and JS-environment checks in web access proxy detection (A0038-001), harder to forge than UA, and an important technique for identifying protocol crawlers and automation scripts. Note the distinction from A0038-001: A0038-001 focuses on browser-proxy type identification (headless browsers, curl, wget, etc.), while A0038-003 focuses on the specific technique of underlying protocol fingerprinting.",
+    "limitation": "Mainstream browser and automation-tool TLS fingerprints can be deliberately aligned (e.g., using curl-impersonate or modifying TLS library parameters to mimic browser fingerprints). JA3/JA4 fingerprint databases require continuous maintenance to cover new client versions. Some clients' fingerprints change with system/library upgrades, risking false positives. Intermediate layers such as CDNs and security gateways may rewrite TLS fingerprints and distort detection.",
+    "references": [
+      {
+        "title": "JA3 - Salesforce Engineering",
+        "link": "https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967/"
+      },
+      {
+        "title": "JA4+ Network Fingerprinting",
+        "link": "https://github.com/FoxIO-LLC/ja4"
+      },
+      {
+        "title": "HTTP/2 Fingerprinting - Akamai",
+        "link": "https://www.akamai.com/blog/security/HTTP2-fingerprinting"
+      }
+    ],
+    "keywords": [
+      "TLS fingerprinting",
+      "HTTP fingerprinting",
+      "JA3",
+      "JA4",
+      "HTTP/2 fingerprint",
+      "TCP/IP fingerprint",
+      "protocol fingerprint",
+      "ClientHello fingerprint",
+      "protocol crawler detection"
+    ]
   }
 }

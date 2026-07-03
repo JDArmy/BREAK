@@ -1,0 +1,70 @@
+{
+  "A0223": {
+    "title": "设备厂商安全能力集成",
+    "category": "AC01",
+    "definition": "集成操作系统或平台厂商提供的设备可信与运行环境校验能力，借助厂商背书的硬件级、系统级可信判定识别设备真实性与运行环境安全性。",
+    "description": "设备厂商安全能力集成是指接入 OS/平台厂商官方提供的设备可信与运行环境校验接口，由厂商在硬件可信根或系统内核层完成判定，再向业务侧返回可信结论。典型能力包括：iOS 的 DeviceCheck 与 App Attest、Google Play 的 Play Integrity API（前身为 SafetyNet Attestation）、各厂商适配的可信执行环境（TEE）、微信小程序的 getUserRiskRank、HarmonyOS NEXT 的 SafetyDetect、小米设备可信服务数据签名验证、OPPO 终端环境安全检测、vivo 千镜可信引擎等。与纯软件层设备指纹（A0021）和终端应用加固（A0013）不同，厂商安全能力的判定逻辑运行在厂商控制的硬件可信根或系统特权层，攻击者难以在终端侧伪造或 Hook，绕过成本远高于软件指纹；同时厂商具备全局设备风险画像，可识别 Root、解锁 Bootloader、Hook 框架、群控、模拟器等异常环境。该手段常作为设备指纹（A0021）、异常环境检测（A0010）的硬件级增强，提升整体设备识别的可信度与抗绕过能力。",
+    "limitation": "厂商安全能力依赖设备厂商生态与系统版本，覆盖范围受限（如未安装厂商服务框架的设备、越狱/Root 设备、定制 ROM 设备可能无法调用或结果不可信）；不同厂商能力接口与判定标准不统一，业务侧需多厂商适配集成成本较高；部分能力受隐私合规约束，返回的是风险等级而非设备唯一标识，难以直接用于设备唯一性追踪；厂商服务可用性与稳定性也影响业务连续性。",
+    "references": [
+      {
+        "title": "DeviceCheck - Apple Developer",
+        "link": "https://developer.apple.com/documentation/devicecheck"
+      },
+      {
+        "title": "Play Integrity API - Google Play",
+        "link": "https://developer.android.com/google/play/integrity"
+      },
+      {
+        "title": "OWASP MASVS: Environment Integrity",
+        "link": "https://mas.owasp.org/ASVS/controls/MASVS-RESILIENCE-2/"
+      }
+    ],
+    "updated": "2026-07-03",
+    "keywords": [
+      "设备厂商安全能力集成",
+      "厂商安全能力",
+      "DeviceCheck",
+      "Play Integrity",
+      "SafetyNet",
+      "TEE",
+      "可信执行环境",
+      "SafetyDetect",
+      "千镜可信引擎",
+      "设备可信",
+      "硬件级设备识别"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

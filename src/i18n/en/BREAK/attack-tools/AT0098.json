@@ -1,0 +1,26 @@
+{
+  "AT0098": {
+    "title": "Proxy Pool",
+    "description": "A proxy pool is a collection and scheduling system of proxy IPs used by black-gray industry actors to rotate egress IPs. It integrates large numbers of residential, datacenter, and tunneling proxy IPs, dynamically rotating and on-demand scheduling them to provide crawlers, mass-registration, and credential-stuffing tasks with a massive supply of usable egress IPs — evading IP-based rate limiting (A0004), IP blocklists (A0016-001), and proxy detection (A0038). A proxy pool typically provides IP health checks, automatic removal of dead IPs, geographic/carrier filtering, concurrent allocation, and session persistence. Residential proxies (real home-broadband ISP IPs) carry the highest reputation and are the hardest for proxy detection to block, making them the most valuable resource in a proxy pool; datacenter proxies are cheap but easy to detect; tunneling proxies achieve single-ingress, multi-egress rotation via dynamic forwarding. The proxy pool is core infrastructure for large-scale scraping and black-market automation, working with IP providers (TA0011) to form the black-market IP supply chain. Distinguish from AT0034 Risk IP: AT0034 is an IP flagged as risky by risk control (a risk-control perspective), whereas AT0098 is the tool/system that schedules an IP pool (an attack-tool perspective).",
+    "references": [
+      {
+        "title": "Proxy, Technique T1090 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/"
+      },
+      {
+        "title": "OWASP Automated Threat: OAT008 Credential Stuffing",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      }
+    ],
+    "keywords": [
+      "Proxy Pool",
+      "IP pool",
+      "residential proxy",
+      "datacenter proxy",
+      "tunneling proxy",
+      "IP rotation",
+      "proxy IP scheduling",
+      "rotating proxy"
+    ]
+  }
+}

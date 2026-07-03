@@ -1,0 +1,32 @@
+{
+  "T0602": {
+    "title": "Bot Management",
+    "keywords": [
+      "Bot Management",
+      "bot protection",
+      "bot traffic identification",
+      "bot detection",
+      "robot traffic management",
+      "anti-bot management"
+    ],
+    "definition": "A security capability domain that identifies, classifies, and disposes of internet bot traffic — covering benign-bot passthrough and malicious-bot blocking — and is the productized form of anti-scraping and anti-automation defense.",
+    "description": "Bot Management is the security industry's umbrella term and productized form for anti-scraping and anti-automation-threat capabilities (Gartner defines a Bot Management tool market). Its core capabilities include: bot-traffic identification (multi-dimensional, based on device fingerprints, behavioral analysis, protocol fingerprinting, and IP intelligence), bot classification (distinguishing benign bots such as search-engine crawlers from malicious bots such as scrapers, credential-stuffing tools, and brushing tools), and tiered disposition (allow, challenge, rate-limit, block). Productized capabilities map to the integration of cloud anti-scraping (A0003), proxy detection (A0038), human verification (A0001), and benign crawler whitelisting (A0224) in BREAK. Whereas OWASP Automated Threats (T0601) focuses on threat classification, Bot Management focuses on the productized integration of defense capabilities, and is the mainstream term in the international anti-scraping domain.",
+    "usageExample": "The platform deploys a Bot Management solution that allows search-engine crawlers through while blocking malicious scrapers, protecting data without harming SEO indexing.",
+    "references": [
+      {
+        "title": "Gartner: Bot Management Tools",
+        "link": "https://www.gartner.com/reviews/market/bot-management"
+      },
+      {
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      }
+    ],
+    "category": "Automation Tooling",
+    "aliases": [
+      "Bot Management",
+      "Bot Protection",
+      "bot management"
+    ]
+  }
+}

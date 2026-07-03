@@ -1,0 +1,32 @@
+{
+  "T0601": {
+    "title": "OWASP Automated Threats (OAT)",
+    "keywords": [
+      "OWASP Automated Threats",
+      "OAT",
+      "automated threat classification",
+      "OAT-011",
+      "web automated threats",
+      "OWASP OAT"
+    ],
+    "definition": "An OWASP-defined classification framework for automated threats to web applications (OAT-001 through OAT-021), systematically categorizing automated abuse behaviors carried out against web applications by internet bots.",
+    "description": "The OWASP Automated Threats to Web Applications project, maintained by OWASP, categorizes automated abuse behaviors against web applications into 21 classes (OAT-001 through OAT-021), each corresponding to a typical automated-threat pattern. Representative classes include OAT-007 Credential Stuffing, OAT-008 Credential Cracking, OAT-011 Scraping, OAT-014 Scalping, OAT-018 Vulnerability Scanning, and OAT-019 Credential Cracking. The framework provides a unified threat-classification language for the anti-scraping, anti-automation, and risk-control domains, facilitating cross-organization communication of threat intelligence and defense strategy. BREAK entities such as web scraping risk (R0027), process automation (R0001), and credential stuffing (R0032-001) all map to corresponding OAT classes. Whereas Bot Management (T0602) focuses on productized capability, OAT focuses on the threat-classification ontology itself.",
+    "usageExample": "When analyzing a large-scale scraping incident, the risk-control team classifies it as OAT-011 Scraping under the OWASP Automated Threats (OAT) framework, then maps it to the corresponding web scraping risk (R0027) defenses.",
+    "references": [
+      {
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      },
+      {
+        "title": "OWASP OAT-011 Scraping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+      }
+    ],
+    "category": "Data Collection",
+    "aliases": [
+      "OAT",
+      "OWASP Automated Threats",
+      "OWASP automated threat"
+    ]
+  }
+}

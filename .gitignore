@@ -49,6 +49,7 @@ vitest.config.js
 vitest.config.d.ts
 
 stats.html
+# 本地 AI 协作规则文档，仅本机使用，不入库（不要 git add，也不要提交）
 CLAUDE.md
 AGENTS.md
 code.command

@@ -1,0 +1,26 @@
+{
+  "AT0099": {
+    "title": "GOIP Gateway Device",
+    "description": "A GOIP device is a VoIP gateway that converts SIP/network calls into cellular wireless signals, enabling remote internet-based control of multiple SIM cards for dialing, SMS send/receive, and call answering. GOIP allows the SIM-card pool to be placed at the device location while being remotely operated over the internet from elsewhere, achieving person-card and machine-card separation — making it core hardware infrastructure for SMS-receiving platforms (AT0006) and fraud gangs' remote dialing and SMS verification. GOIP devices support multi-channel concurrency (commonly 8/16/32/64 channels) and are used with cat pools (AT0004) to batch-manage large numbers of SIM cards. Because it can be remotely operated, is highly concealable, and supports hot-swappable SIM rotation, it is often used to bypass SMS verification (A0007-001), number-region risk control, and IP intelligence (A0016-001). Distinguish from AT0004 cat pool: a cat pool is a hardware device for multi-card SMS send/receive, whereas GOIP is a gateway between VoIP and cellular networks, focused on remote call and dialing capability, often remotely operated for fraud and SMS-receiving.",
+    "references": [
+      {
+        "title": "FBI Warns of GoIP Fraud",
+        "link": "https://www.ic3.gov/Media/Y2020/PSA200325"
+      },
+      {
+        "title": "GSMA Fraud and Security - VoIP and GSM Gateway Abuse",
+        "link": "https://www.gsma.com/security/fraud-security/"
+      }
+    ],
+    "keywords": [
+      "GOIP gateway",
+      "VoIP gateway",
+      "SIP gateway",
+      "person-card separation",
+      "remote dialing",
+      "multi-SIM gateway",
+      "GOIP",
+      "voice gateway"
+    ]
+  }
+}

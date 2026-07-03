@@ -20,5 +20,87 @@
       "data harvesting",
       "OAT-011"
     ]
+  },
+  "R0027-002": {
+    "title": "Data Obfuscation Bypass",
+    "definition": "Attackers reverse-engineer custom font mappings, CSS offsets, homoglyph characters, and dynamic DOM to reconstruct machine-parseable real data, defeating data-obfuscation defenses.",
+    "description": "Targeting data-parsing interference (A0032), attackers reverse-analyze the obfuscation logic to reconstruct parseable data. Common bypass methods include: reversing custom font mappings (building mapping tables from obfuscated font glyphs to real characters), parsing CSS Sprite offsets and background-positioning to restore original text and images, identifying homoglyphs (Unicode look-alike characters) and substituting back to real characters, parsing dynamic DOM and randomized IDs/Classes (A0042-001) to reconstruct stable XPaths, reverse-engineering JS-involved front-end computation logic to recover computed results, and screenshotting responses then using OCR to bypass text obfuscation. Once parsing interference is reversed, crawlers can resume large-scale structured data collection, reducing the obfuscation defense to merely a cost-raising barrier.",
+    "influence": "When obfuscation is bypassed, anti-scraping measures degrade to latency-based cost-raising measures. Core business data (prices, inventory, product details, reviews) is again exposed to large-scale scraping, requiring multi-layer defense combining data masking, rate limiting, and poisoning.",
+    "references": [
+      {
+        "title": "Web Scraping Protection: Defeating Anti-Bot - zenrows",
+        "link": "https://www.zenrows.com/blog/web-scraping-protection"
+      }
+    ],
+    "keywords": [
+      "anti-scraping obfuscation bypass",
+      "font mapping reversal",
+      "CSS offset reversal",
+      "homoglyph reversal",
+      "dynamic DOM parsing",
+      "data obfuscation bypass",
+      "anti-bot evasion"
+    ]
+  },
+  "R0027-003": {
+    "title": "Data Poisoning Detection and Cleansing",
+    "definition": "Attackers identify and filter out dirty data, fake data, and honeypot data injected by anti-scraping poisoning, extracting real data from poisoned responses.",
+    "description": "Targeting data-poisoning defenses (A0031), attackers use comparative analysis to identify poisoning signatures and cleanse real data. Common methods include: multi-source cross-validation (collecting the same data from multiple accounts, IPs, and time windows, comparing differences to filter poisoned outliers), identifying honeypot-data characteristics (poisoned data often has structural anomalies, non-sequential IDs, or values deviating from normal distributions), recognizing dirty-data injection patterns (fake reviews or fake sales volumes with templated content or abnormal time distributions), and filtering values deviating from historical baselines. Poisoning identification and cleansing reduces anti-scraping poisoning from an effective interception to a bypassable noise injection — attackers can still obtain real data at sufficient scale.",
+    "influence": "When poisoning is cleansed, the anti-scraping poisoning defense loses its adversarial value and attackers regain access to real data. Poisoned data that affects normal user displays also creates experience and complaint risks, requiring careful control of poisoning scope and ratio.",
+    "references": [
+      {
+        "title": "Data Poisoning Attacks against Anti-Scraping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      }
+    ],
+    "keywords": [
+      "anti-scraping poisoning bypass",
+      "poisoned data cleansing",
+      "dirty data detection",
+      "fake data filtering",
+      "honeypot data evasion",
+      "data poisoning bypass",
+      "anti-bot evasion"
+    ]
+  },
+  "R0027-004": {
+    "title": "Digital Watermark Removal and Forgery",
+    "definition": "Attackers remove invisible watermarks from images and text to block traceability, or forge watermarks to frame others, undermining the watermark's traceability and deterrence.",
+    "description": "Targeting digital watermarks (A0049, A0049-001), attackers remove or forge watermarks to undermine traceability. Removal methods include: applying image filters, compression, cropping, and resampling to destroy watermark robustness in images; using character filtering and encoding conversion to remove zero-width-character text watermarks; and performing DOM cleaning and re-typesetting to remove HTML invisible watermarks. Forgery methods include: extracting or cracking the watermark algorithm and implanting another person's or a fake watermark into data, framing normal users or disrupting tracing attribution. When watermarks are removed, the traceability chain for leaked scraped data is broken and the enterprise cannot locate the leak source. Forged watermarks lead to misattribution and may trigger wrong dispositions.",
+    "influence": "Watermark removal breaks the post-leak traceability chain, weakening deterrence and forensic capability. Watermark forgery leads to misattribution errors that may cause collateral damage or legal disputes. Stronger watermark algorithms, multi-layered watermarks, and dynamic watermarks are needed to raise resistance to removal and forgery.",
+    "references": [
+      {
+        "title": "Digital Watermarking - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Digital_watermarking"
+      }
+    ],
+    "keywords": [
+      "digital watermark removal",
+      "watermark forgery",
+      "zero-width watermark removal",
+      "image watermark cracking",
+      "traceability disruption",
+      "anti-scraping evasion"
+    ]
+  },
+  "R0027-005": {
+    "title": "Business Honeypot Identification and Evasion",
+    "definition": "Attackers identify hidden honeypot resources, honeypot API endpoints, and traps, evading triggers to bypass deception-based detection and continue covert automated collection.",
+    "description": "Targeting business-level honeypots (A0030, A0030-001), attackers identify honeypot characteristics through behavioral analysis and evade triggering them. Common identification methods include: comparing normal business flows with honeypot resources (honeypot resources are typically outside normal navigation paths, discoverable only via enumeration or reverse engineering), identifying dynamic-beacon request characteristics (beacon URLs, parameter naming, and request timing anomalies), identifying fake-timestamp and anomalous-parameter patterns, and detecting loop-trap repeated-request patterns. After identification, attackers proactively strip honeypot requests and avoid honeypot endpoints, rendering the honeypot unable to detect their presence, allowing covert continued automated collection. Once identified, honeypots must be dynamically updated to maintain adversarial value.",
+    "influence": "When honeypots are evaded, the enterprise loses perception of crawler behavior and attackers can collect data covertly. Improperly designed honeypot resources may be indexed by search engines or accessed by normal users, causing negative impact.",
+    "references": [
+      {
+        "title": "MITRE D3FEND: Connected Honeynet Technique",
+        "link": "https://d3fend.mitre.org/technique/d3f:ConnectedHoneynet/"
+      }
+    ],
+    "keywords": [
+      "honeypot identification",
+      "honeypot evasion",
+      "beacon detection",
+      "trap evasion",
+      "deception bypass",
+      "anti-scraping evasion"
+    ]
   }
 }

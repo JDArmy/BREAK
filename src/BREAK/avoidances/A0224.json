@@ -1,0 +1,64 @@
+{
+  "A0224": {
+    "title": "良性爬虫放行",
+    "category": "AC03",
+    "definition": "通过 IP 白名单、User-Agent 识别配合反向 DNS 解析（rDNS）验证，识别合法搜索引擎与合规爬虫并予以放行，避免反爬策略误拦截良性机器人导致 SEO 与收录损失。",
+    "description": "反爬策略在拦截恶意爬虫的同时，容易误伤合法搜索引擎爬虫（如 Googlebot、Bingbot、百度蜘蛛、搜狗蜘蛛等），导致网站页面不被收录、搜索流量下降。良性爬虫放行通过三重校验识别合法爬虫：一是 IP 白名单，核对请求来源 IP 是否属于搜索引擎官方公布的爬虫 IP 段；二是 User-Agent 识别，匹配官方爬虫 UA 特征；三是反向 DNS 解析（rDNS），对请求 IP 做反向解析并核验正向解析回环，防止攻击者伪造 Googlebot UA 绕过识别。三者结合可有效区分真实搜索引擎爬虫与伪装成搜索引擎的恶意爬虫。该手段与代理识别（A0038）、IP 情报（A0016-001）互补，是云端反爬（A0003）策略的前置配套——先放行良性爬虫，再对其余流量做识别限制，降低误拦截率。",
+    "limitation": "良性爬虫放行依赖搜索引擎官方 IP 段与 rDNS 数据的及时维护，IP 段变更时若未同步更新会导致误拦截或漏放；部分合规爬虫未公开 IP 段或使用第三方 CDN 出口，难以纳入白名单；攻击者若能控制 rDNS 记录或使用搜索引擎 IP 段内的代理，仍可伪装绕过，故不能单独作为信任依据，需结合 UA 与 IP 双重校验。",
+    "references": [
+      {
+        "title": "Verify Googlebot - Google Search Central",
+        "link": "https://developers.google.com/search/docs/crawling-indexing/verify-googlebot"
+      },
+      {
+        "title": "Bingbot verification - Bing Webmaster Tools",
+        "link": "https://www.bing.com/webmasters/help/how-to-verify-bingbot-7bf1f7a2"
+      }
+    ],
+    "updated": "2026-07-03",
+    "keywords": [
+      "良性爬虫放行",
+      "搜索引擎爬虫放行",
+      "Googlebot识别",
+      "百度蜘蛛识别",
+      "rDNS验证",
+      "反向DNS解析",
+      "爬虫白名单",
+      "UA验证",
+      "合规爬虫放行"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

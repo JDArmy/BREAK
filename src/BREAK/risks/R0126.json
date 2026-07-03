@@ -135,7 +135,8 @@
       "A0067",
       "A0004",
       "A0008",
-      "A0038"
+      "A0038",
+      "A0038-003"
     ],
     "references": [
       {
@@ -143,7 +144,7 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0xa4-unrestricted-resource-consumption/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "API速率限制绕过",
       "接口限流绕过",

@@ -1,0 +1,29 @@
+{
+  "A0224": {
+    "title": "Benign Crawler Whitelisting",
+    "definition": "Identifying legitimate search-engine and compliant crawlers via IP allowlists, User-Agent recognition, and reverse DNS (rDNS) verification, then allowing them through — preventing anti-scraping policies from falsely blocking benign bots and causing SEO or indexing losses.",
+    "description": "While anti-scraping policies block malicious crawlers, they risk false positives against legitimate search-engine crawlers (e.g., Googlebot, Bingbot, Baiduspider, Sogou Spider), leading to de-indexed pages and reduced search traffic. Benign crawler whitelisting identifies legitimate crawlers via three checks: an IP allowlist verifying the request source IP belongs to the search engine's officially published crawler IP ranges; User-Agent recognition matching official crawler UA patterns; and reverse DNS (rDNS) resolution of the request IP with forward-confirmation round-trip to prevent attackers spoofing a Googlebot UA to bypass detection. Combined, these three checks effectively distinguish real search-engine crawlers from malicious crawlers disguised as search engines. This measure complements proxy detection (A0038) and IP intelligence (A0016-001), and is a prerequisite for cloud anti-scraping (A0003) policy — first allow benign crawlers, then identify and restrict the remaining traffic, lowering the false-block rate.",
+    "limitation": "Benign crawler whitelisting depends on timely maintenance of search-engine official IP ranges and rDNS data; failure to sync IP-range changes causes false blocks or false allows. Some compliant crawlers do not publish IP ranges or use third-party CDN egress, making them hard to include in the allowlist. Attackers who can control rDNS records or use proxies within search-engine IP ranges can still spoof and bypass, so it cannot be trusted alone and must combine UA and IP verification.",
+    "references": [
+      {
+        "title": "Verify Googlebot - Google Search Central",
+        "link": "https://developers.google.com/search/docs/crawling-indexing/verify-googlebot"
+      },
+      {
+        "title": "Bingbot verification - Bing Webmaster Tools",
+        "link": "https://www.bing.com/webmasters/help/how-to-verify-bingbot-7bf1f7a2"
+      }
+    ],
+    "keywords": [
+      "benign crawler whitelisting",
+      "search engine crawler allowlist",
+      "Googlebot verification",
+      "Baiduspider verification",
+      "rDNS verification",
+      "reverse DNS lookup",
+      "crawler allowlist",
+      "UA verification",
+      "compliant crawler passthrough"
+    ]
+  }
+}

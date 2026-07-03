@@ -1,0 +1,52 @@
+{
+  "T0602": {
+    "title": "Bot Management（机器人管理）",
+    "aliases": [
+      "Bot管理",
+      "机器人管理",
+      "Bot Management",
+      "Bot 防护"
+    ],
+    "category": "自动化工具",
+    "keywords": [
+      "Bot Management（机器人管理）",
+      "Bot Management",
+      "机器人管理",
+      "Bot管理",
+      "Bot防护",
+      "机器人流量管理",
+      "Bot 流量识别"
+    ],
+    "definition": "识别、分类、处置互联网机器人流量的安全能力域，涵盖良性机器人放行与恶意机器人拦截，是反爬与反自动化威胁的产品化形态。",
+    "description": "Bot Management 是安全行业对反爬虫、反自动化威胁能力的统称与产品化形态（Gartner 定义为 Bot Management 工具市场）。其核心能力包括：机器人流量识别（基于设备指纹、行为分析、协议指纹、IP 情报等多维度）、机器人分类（区分良性机器人如搜索引擎爬虫与恶意机器人如爬虫、撞库、刷单工具）、分级处置（放行、挑战、限流、拦截）。典型产品化能力对应 BREAK 中的云端反爬（A0003）、代理识别（A0038）、人机验证（A0001）、良性爬虫放行（A0224）等手段的整合。与 OWASP 自动化威胁（T0601）侧重威胁分类不同，Bot Management 侧重防御能力的产品化整合，是国际反爬领域的主流术语。",
+    "usageExample": "平台部署 Bot Management（机器人管理）方案，对搜索引擎爬虫放行、对恶意爬虫拦截，在保护数据的同时不影响 SEO 收录。",
+    "relatedRisks": [
+      "R0027",
+      "R0001",
+      "R0047"
+    ],
+    "relatedAvoidances": [
+      "A0003",
+      "A0038",
+      "A0001",
+      "A0224"
+    ],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0022"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "title": "Gartner: Bot Management Tools",
+        "link": "https://www.gartner.com/reviews/market/bot-management"
+      },
+      {
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

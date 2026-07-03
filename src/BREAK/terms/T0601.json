@@ -1,0 +1,52 @@
+{
+  "T0601": {
+    "title": "OWASP 自动化威胁（OAT）",
+    "aliases": [
+      "OAT",
+      "OWASP Automated Threats",
+      "OWASP 自动化威胁"
+    ],
+    "category": "数据采集",
+    "keywords": [
+      "OWASP 自动化威胁（OAT）",
+      "OWASP自动化威胁",
+      "OAT",
+      "OWASP Automated Threats",
+      "自动化威胁分类",
+      "OAT-011",
+      "Web自动化威胁"
+    ],
+    "definition": "OWASP 定义的 Web 应用自动化威胁分类框架（OAT-001 ~ OAT-021），系统化归类利用互联网机器人对 Web 应用实施的自动化滥用行为。",
+    "description": "OWASP 自动化威胁（Automated Threats to Web Applications）项目由 OWASP 维护，将针对 Web 应用的自动化滥用行为归纳为 21 类（OAT-001 至 OAT-021），每类对应一种典型自动化威胁模式。典型类别包括：OAT-007 撞库（Credential Stuffing）、OAT-008 凭证破解、OAT-011 爬取（Scraping）、OAT-014 拒绝库存（Scalping）、OAT-018 漏洞扫描、OAT-019 凭证破解等。该框架为反爬、反自动化、风控领域提供了统一的威胁分类语言，便于跨组织沟通威胁情报与防御策略。BREAK 中的爬虫风险（R0027）、流程自动化（R0001）、撞库（R0032-001）等均可在 OAT 框架下找到对应分类。与 Bot Management（T0602）侧重产品化能力不同，OAT 侧重威胁分类本体。",
+    "usageExample": "风控团队在分析某次规模化爬虫事件时，按 OWASP 自动化威胁（OAT）框架将其归类为 OAT-011 Scraping，据此匹配对应的爬虫风险（R0027）防御手段。",
+    "relatedRisks": [
+      "R0027",
+      "R0001",
+      "R0032-001",
+      "R0034"
+    ],
+    "relatedAvoidances": [
+      "A0003",
+      "A0001",
+      "A0038"
+    ],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0061",
+      "AT0042"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      },
+      {
+        "title": "OWASP OAT-011 Scraping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

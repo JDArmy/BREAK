@@ -1,0 +1,28 @@
+{
+  "T0603": {
+    "title": "Protocol Crawler",
+    "keywords": [
+      "protocol crawler",
+      "protocol-level crawler",
+      "API crawler",
+      "HTTP crawler",
+      "interface crawler",
+      "headless-free crawler"
+    ],
+    "definition": "A crawler that directly constructs requests over HTTP or custom protocols, bypassing browser rendering — contrasted with headless-browser crawlers and real-device crawlers — and a primary target of anti-scraping defense.",
+    "description": "A protocol crawler is a crawler type that does not rely on a browser rendering environment, but directly constructs requests over HTTP or custom protocols to obtain data. Compared with headless-browser crawlers (AT0022, which rely on a browser kernel to render pages and execute JS) and real-device crawlers (which rely on real-device operations), protocol crawlers are lightweight, efficient, and highly concurrent, but must self-handle front-end defenses such as API signatures, parameter encryption, and JS-involved computation, often working with packet-capture tools (AT0014) to reverse-engineer interface protocols. Because protocol crawlers do not carry real-browser characteristics, their TLS/HTTP fingerprints, JS execution environment, and behavioral features all differ from a real browser, making them a primary target of TLS/HTTP fingerprinting (A0038-003) and abnormal-environment detection (A0010). In anti-scraping practice, although protocol crawlers, headless-browser crawlers, real-device crawlers, and crowd-sourced human crawlers differ in technical form, there is no need to strictly distinguish them from a defense perspective — common high-coverage problems should be addressed first.",
+    "usageExample": "Risk control detected a large volume of protocol crawlers directly calling API endpoints to scrape product-detail data via TLS fingerprinting, triggering cloud anti-scraping to block them.",
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT011 Scraping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+      }
+    ],
+    "category": "Data Collection",
+    "aliases": [
+      "protocol-level crawler",
+      "API crawler",
+      "Protocol Crawler"
+    ]
+  }
+}

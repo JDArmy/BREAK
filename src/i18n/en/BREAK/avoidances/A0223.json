@@ -1,0 +1,34 @@
+{
+  "A0223": {
+    "title": "Device Vendor Security Capability Integration",
+    "definition": "Integrating device-trust and runtime-environment attestation capabilities provided by OS or platform vendors, leveraging vendor-backed hardware-level and system-level trust assertions to verify device authenticity and runtime-environment integrity.",
+    "description": "Device vendor security capability integration refers to interfacing with official device-trust and runtime-environment attestation APIs provided by OS/platform vendors, where the vendor performs the assertion in a hardware root of trust or kernel-privileged layer and returns a trust verdict to the application. Typical capabilities include Apple's DeviceCheck and App Attest, Google Play's Play Integrity API (formerly SafetyNet Attestation), vendor-adapted Trusted Execution Environments (TEE), WeChat Mini Program's getUserRiskRank, HarmonyOS NEXT's SafetyDetect, Xiaomi's device trust service data signature verification, OPPO's terminal environment security detection, and vivo's Qianjing Trusted Engine. Unlike software-layer device fingerprints (A0021) and client application hardening (A0013), vendor security capabilities run their assertion logic in a hardware root of trust or system-privileged layer controlled by the vendor, making it difficult for attackers to forge or hook on the terminal side — the bypass cost is far higher than software fingerprints. Vendors also maintain global device risk profiles that can identify Root, unlocked bootloader, hooking frameworks, device farms, and emulators. This measure commonly serves as a hardware-level enhancement to device fingerprinting (A0021) and abnormal-environment detection (A0010), raising the overall trustworthiness and tamper-resistance of device identification.",
+    "limitation": "Vendor security capabilities depend on the device vendor ecosystem and system version, limiting coverage (devices without vendor service frameworks, jailbroken/rooted devices, and custom ROM devices may be unable to invoke the capability or return untrusted results). Vendor capability interfaces and assertion criteria are not unified, so the application side bears higher multi-vendor integration cost. Some capabilities are constrained by privacy compliance and return a risk tier rather than a unique device identifier, making them unsuitable for direct device-uniqueness tracking. Vendor service availability and stability also affect business continuity.",
+    "references": [
+      {
+        "title": "DeviceCheck - Apple Developer",
+        "link": "https://developer.apple.com/documentation/devicecheck"
+      },
+      {
+        "title": "Play Integrity API - Google Play",
+        "link": "https://developer.android.com/google/play/integrity"
+      },
+      {
+        "title": "OWASP MASVS: Environment Integrity",
+        "link": "https://mas.owasp.org/ASVS/controls/MASVS-RESILIENCE-2/"
+      }
+    ],
+    "keywords": [
+      "Device Vendor Security Capability",
+      "DeviceCheck",
+      "Play Integrity",
+      "SafetyNet",
+      "TEE",
+      "Trusted Execution Environment",
+      "SafetyDetect",
+      "Qianjing Trusted Engine",
+      "device trust",
+      "hardware-backed device attestation"
+    ]
+  }
+}
