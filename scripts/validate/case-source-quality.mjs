@@ -456,6 +456,44 @@ const primaryReferenceLinks = new Set([
   'http://www.chinapeace.gov.cn/chinapeace/c100045/2025-12/16/content_12815785.shtml', // 中国长安网，短视频带货诈骗团伙案
   'https://mp.weixin.qq.com/s?__biz=mjm5mtczodg0ma==&mid=2649821281&idx=1&sn=4c5cfd23a22fa9563581871847f89863&chksm=bfd3905763b3ba9d7dfed20dc74856a586350043733c7cdb9c8af73c163ab6d015f264768f97&scene=27', // 南京市场监管相关官方微信托管页，价格违法典型案例
   'https://mp.weixin.qq.com/s?__biz=MzIyMTk1NDkzMg==&mid=2247533157&idx=2&sn=27cc5dbb20b7d0500b59088f46c3f6ff&chksm=e836d47edf415d68d183b1dcbd10f684f5e4ebaeaea49c02209103ed06a95f24d32e7faee253&scene=27', // 茂县公安官方微信托管页，伪造转账截图诈骗通报
+  'https://tv.cctv.cn/2026/06/16/VIDEVk3oKy2L0tSIVxYwueeC260616.shtml', // 央视《法治在线》节目页，北京化妆师史某调包退货被刑拘案
+  'https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=4626397682693419015', // 央视新闻客户端《法治在线》，上海17岁少年虚假退货案含浙江台州程某退款不退货薅羊毛案
+  'https://m.thepaper.cn/newsDetail_forward_31371398', // 警民直通车上海官方澎湃号，伪造消费小票骗取商场积分案
+  'https://weibo.com/3927469685/dgikxb7dr', // 北京海淀法院官方微博案件播报，淘宝诉购物党比价插件不正当竞争案
+  'https://support.bigcommerce.com/s/question/0d5ts00000aamte0ar/', // BigCommerce 官方支持社区，商户遭遇持续性撞卡攻击讨论
+  'https://m.cqn.com.cn/ms/content/2020-08/04/content_8621998.htm', // 中国质量新闻网（市场监管总局主管）转载常熟市监局直播带货假货案
+  'https://news.cctv.com/2024/05/06/videu7cjphr0yk0rh1yug5wk240506.shtml', // 央视《法治进行时》节目页，北京海底捞碎玻璃敲诈案（C0662）
+  'https://www.thepaper.cn/newsdetail_forward_19979837', // 澎湃新闻浦江头条主站，上海虹口警方破获裸聊敲诈案
+  'https://www.bbc.com/news/articles/cx2gx28815wo', // BBC News 原始报道，英国 KNP 运输公司因弱密码遭 Akira 勒索破产
+  'https://www.thepaper.cn/newsdetail_forward_12530671', // 澎湃新闻主站，9 人勾结天津滨海江淮村镇银行员工骗贷 500 万案
+  'https://www.thepaper.cn/newsdetail_forward_21124056', // 澎湃号·媒体，内蒙古通辽 120 亿洗钱大案 63 人被捕
+  'https://www.thepaper.cn/newsdetail_forward_27709551', // 澎湃号·政务，广州警方破获 125 秒复制银行卡新型信用卡诈骗案
+  'https://mp.weixin.qq.com/s?__biz=mzi3nje5odgwoa==&mid=2657370304&idx=1&sn=1978bb9fa9c165d17616e56615b18d08&chksm=f1fc59feac3ed499523ed4fc8c1801b597b369ccd3586915c9a5a6184a725d85b30dee6b08f8&scene=27', // 邵阳县人民法院官方微信，游戏账号借用外挂封禁侵权案
+  'https://mp.weixin.qq.com/s?__biz=mziymdayntkwng==&mid=2650992261&idx=1&sn=fba8918f991218575d534cc6474bb224&chksm=8d3a2c381f29662b9e0cab8535a05336d1cd1123a10001f14b1be81e1430718d909d8ff7ca85&scene=27', // 网警说·案官方专栏，泉州网警侦破肖某等 6 人游戏外挂代打案
+  'https://m.thepaper.cn/newsdetail_forward_24383058', // 湖里头条·厦门市湖里区委宣传部官方澎湃号，厦门 4 名内鬼侵犯公民个人信息案（C1035）
+  'https://m.gmw.cn/2025-05/03/content_1304028481.htm', // 光明网托管安徽警方通报，灵璧 GOIP 设备案（C1058）
+  'https://new.qq.com/rain/a/20240927a05lht00', // 方圆杂志·检察日报社 via 腾讯新闻托管页，酒店偷拍针孔摄像头案（C1070）
+  'https://m.055110.com/xs/1/34782.html', // 《刑事审判参考》第 148 集第 1725 号案例转载（最高法刑三庭审编），手办涉黄案（C1020）
+  'https://www.hshfy.sh.cn/shfy/web/flws2pdf.jsp?pa=adgfopaoomjaynaopu6ywmtez0myz9tyzusumd3n4ad0yjndzbgi90mzkwsxqvvbk6qpdcsspdcssz', // 上海市高级人民法院官网刑事判决书 PDF，宝山法院手办涉黄案（C1020）
+  'https://news.cctv.com/2024/10/23/artijnq5f3e54ddfhubjkpmc241023.shtml', // 央视网转载中青报报道石家庄民宿偷拍案（含石家庄新华公安分局警情通报）
+  'https://mp.weixin.qq.com/s?__biz=mzawnzaxndawoq==&mid=2650527827&idx=1&sn=d9af9d114c9d525f71a4857cc75297d9&chksm=820b5a76b2fd332640f6dd1a48eccc6b20e0994a63b8c15c5e03c9a207570e3520e355983f2e&scene=27', // 正镶白旗人民检察院政务微信，转发检察日报报道上海普陀检察院跨境广告诈骗案
+  'https://en.yna.co.kr/view/aen20240905004600315', // 韩联社官方报道，韩国庆尚北道高中生 deepfake 拘捕案原始来源
+  'http://korea.people.com.cn/n1/2024/1017/c407864-40341210.html', // 人民网韩国频道，韩国政府通过《性暴力处罚法》修正案，持有深伪淫秽影像可判 3 年（C1111）
+  'http://finance.people.com.cn/n1/2021/0602/c1004-32120624.html', // 人民网报道微信青少年模式下视频号低俗内容（C1159）
+  'http://it.people.com.cn/n1/2021/1014/c433780-32253312.html', // 人民网 IT 频道，广西来宾警方破获广西首例短信轰炸案（C1196）
+  'https://news.cctv.com/2021/08/07/artivad65nsdxyu4594nxhgl210807.shtml', // 央视网据正义网消息，海淀检察院对腾讯微信青少年模式拟提起民事公益诉讼（C1154）
+  'https://www.thepaper.cn/newsdetail_forward_32415589', // 澎湃新闻报道网络工程师李东被控盗窃赌博网站资金、两地警方扣押 183 个比特币（C1166）
+  'https://m.thepaper.cn/newsdetail_forward_10431398', // 重庆网警官方澎湃号披露海口黑灰产部督案，卡商号商接码平台链条（C1250）
+  'https://m.thepaper.cn/newsdetail_forward_10303132', // 澎湃新闻报道四川眉山警方破获垫缴公积金骗贷案，涉案超 12 亿（C1285）
+  'https://mp.weixin.qq.com/s?__biz=mza4mdgznjkxmg==&mid=2651458409&idx=2&sn=eaa6447dc6d7188ee500617be73f548e&chksm=84608b36b3170220181caa467d6ddde742b8099221a6db324d7a5ac8febd7b82ab9998ffc246&scene=27', // 绍兴市中级人民法院官方公众号，胡某某诉携程侵权责任纠纷案终审判决通报（C1224）
+  'http://www.xinhuanet.com/local/2021-07/22/c_1127684090.htm', // 新华社报道北京警方通报都美竹吴亦凡事件调查结果，刘某迢涉嫌诈骗被刑拘（C1266）
+  'https://www.thepaper.cn/newsdetail_forward_22664429', // 常州经济开发区检察院官方澎湃号，96 人期货杀猪盘案
+  'https://m.gmw.cn/2023-07/18/content_1303444465.htm', // 光明网托管晋江市人民法院通讯员稿，73 人杀猪盘案
+  'https://economist.co.kr/article/view/ecn202303300057', // 韩国 Economist 原始报道，三星 ChatGPT 源代码泄露事件首发
+  'https://venturebeat.com/security/shadow-ai-unapproved-ai-apps-compromising-security-what-you-can-do-about-it', // VentureBeat 原始报道，纽约金融公司 65 个未授权 AI 工具
+  'https://www.digitalasset.works/news/articleview.html?idxno=41243', // 韩国 Digital Asset Korea 原始报道，首尔南部地方检察厅 CATFI/Solana DEX Rug Pull 首例起诉案
+  'https://indiankanoon.org/doc/23523817/', // Indian Kanoon 托管 Delhi High Court 判决书原文，Amitabh Bachchan 人格权禁令案
+  'https://www.westyorks-ca.gov.uk/media/z03dhfkm/vrp-influential-factors-2025.pdf', // 西约克郡警长办公室官方研究报告，引用英国警方首次调查元宇宙性侵案
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [
