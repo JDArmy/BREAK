@@ -4,6 +4,7 @@ import AsyncComponentError from "@/components/AsyncComponentError.vue";
 import { defineAsyncComponent, ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import ReferenceList from "@/components/ReferenceList.vue";
+import FeedbackLink from "@/components/FeedbackLink.vue";
 
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
@@ -69,6 +70,7 @@ const openDetail = (taKey: string) => {
           {{ $t("back") }}
         </el-button>
         <span class="drawer-header-title">{{ $t('threatActors') }}</span>
+        <FeedbackLink :entity-id="taKey" :entity-title="$t(`BREAK.threatActors.${taKey}.title`)" style="margin-left: auto" />
       </div>
     </template>
     <div class="desc">

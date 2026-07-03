@@ -50,6 +50,7 @@ const globalConfig = {
     AttackToolDetail: true,
     ThreatActorDetail: true,
     TermDetail: true,
+    FeedbackLink: true,
     IconRelation: true,
     ArrowLeft: true,
   },

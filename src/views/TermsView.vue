@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+import FeedbackLink from "@/components/FeedbackLink.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
@@ -162,6 +163,7 @@ function escapeHtml(str: string): string {
           <div class="detail-id">{{ selectedTermKey }}</div>
           <h2>{{ $t(`BREAK.terms.${selectedTermKey}.title`) }}</h2>
         </div>
+        <FeedbackLink :entity-id="selectedTermKey" :entity-title="$t(`BREAK.terms.${selectedTermKey}.title`)" />
       </div>
 
       <section class="detail-section" data-detail-anchor="terms">

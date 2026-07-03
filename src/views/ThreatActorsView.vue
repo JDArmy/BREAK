@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+import FeedbackLink from "@/components/FeedbackLink.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
@@ -99,9 +100,12 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
           <div class="detail-id">{{ selectedThreatActorKey }}</div>
           <h2>{{ $t(`BREAK.threatActors.${selectedThreatActorKey}.title`) }}</h2>
         </div>
-        <el-button type="primary" size="small" @click="openRelationGraph(selectedThreatActorKey)">
+        <div class="detail-heading-actions">
+          <FeedbackLink :entity-id="selectedThreatActorKey" :entity-title="$t(`BREAK.threatActors.${selectedThreatActorKey}.title`)" />
+          <el-button type="primary" size="small" @click="openRelationGraph(selectedThreatActorKey)">
           {{ $t("openRelationGraph") }}
-        </el-button>
+          </el-button>
+        </div>
       </div>
 
       <section class="detail-section" data-detail-anchor="threat-actors">

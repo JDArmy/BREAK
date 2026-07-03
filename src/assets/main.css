@@ -39,6 +39,13 @@
   border-bottom: 1px solid var(--break-border);
 }
 
+.detail-heading-actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+}
+
 .detail-heading h2 {
   margin: 6px 0 0;
   font-size: clamp(1.25rem, 4vw, 1.625rem);

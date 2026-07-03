@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { Link } from "@element-plus/icons-vue";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+import FeedbackLink from "@/components/FeedbackLink.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { useCases } from "@/composables/useCases";
 
@@ -153,6 +154,7 @@ watch(selectedCategory, () => {
           <div class="detail-id">{{ selectedCaseKey }}</div>
           <h2>{{ selectedCase.title }}</h2>
         </div>
+        <FeedbackLink :entity-id="selectedCaseKey" :entity-title="selectedCase.title" />
       </div>
 
       <section class="detail-section">

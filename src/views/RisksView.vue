@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+import FeedbackLink from "@/components/FeedbackLink.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
@@ -123,9 +124,12 @@ const { openRelationGraph } = useRelationGraph("risk");
           <div class="detail-id">{{ selectedRiskKey }}</div>
           <h2>{{ $t(`BREAK.risks.${selectedRiskKey}.title`) }}</h2>
         </div>
-        <el-button type="primary" size="small" @click="openRelationGraph(selectedRiskKey)">
+        <div class="detail-heading-actions">
+          <FeedbackLink :entity-id="selectedRiskKey" :entity-title="$t(`BREAK.risks.${selectedRiskKey}.title`)" />
+          <el-button type="primary" size="small" @click="openRelationGraph(selectedRiskKey)">
           {{ $t("openRelationGraph") }}
-        </el-button>
+          </el-button>
+        </div>
       </div>
 
       <section class="detail-section" data-detail-anchor="risks">

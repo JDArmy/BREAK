@@ -4,6 +4,7 @@ import { defineAsyncComponent, ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
+import FeedbackLink from "@/components/FeedbackLink.vue";
 
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
@@ -79,6 +80,7 @@ const openDetail = () => {
           {{ $t("back") }}
         </el-button>
         <span class="drawer-header-title">{{ $t('attackTools') }}</span>
+        <FeedbackLink :entity-id="atKey" :entity-title="$t(`BREAK.attackTools.${atKey}.title`)" style="margin-left: auto" />
       </div>
     </template>
     <div class="desc">

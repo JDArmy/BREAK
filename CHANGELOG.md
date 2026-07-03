@@ -1,5 +1,13 @@
 # Change log
 
+## 2.35.3
+
+详情页新增"反馈"入口（直达 GitHub issue 预填）：
+
+- 新增 `src/utils/feedback.ts`（`buildIssueUrl` + `GITHUB_REPO` 常量）与 `src/components/FeedbackLink.vue` 可复用组件：点击在新窗口打开 GitHub issue 新建页，预填 title（`[类型] ID: 标题`）与 body（实体信息表 + 反馈区占位 + 当前页面 URL），labels 预打 `feedback`。实体类型名复用 `relationType.*` i18n，ID 反推走 `inferEntityType`。
+- 11 处详情页接入：6 个列表详情 View（Risks/Avoidances/AttackTools/ThreatActors/Terms/CasesView）+ 5 个抽屉组件（Risk/Avoidance/AttackTool/ThreatActor/TermDetail），标题栏/抽屉头各加一个"反馈"按钮。
+- 新增 i18n key `feedback`（中：反馈，英：Feedback）；`.detail-heading-actions` 公共样式让反馈按钮与"打开关系图"按钮并排。
+
 ## 2.35.2
 
 修复业务场景详情页风险维度折行 bug：

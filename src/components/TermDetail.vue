@@ -4,6 +4,7 @@ import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
+import FeedbackLink from "@/components/FeedbackLink.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
 import { entityDetailHref } from "@/utils/entityRoute";
 
@@ -47,6 +48,7 @@ const openDetail = () => {
           {{ $t("back") }}
         </el-button>
         <span class="drawer-header-title">{{ $t("termDetail") }}</span>
+        <FeedbackLink :entity-id="tKey" :entity-title="$t(`BREAK.terms.${tKey}.title`)" style="margin-left: auto" />
       </div>
     </template>
     <div class="desc">

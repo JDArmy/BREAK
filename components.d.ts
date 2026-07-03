@@ -45,6 +45,7 @@ declare module 'vue' {
     EntityAutoLinker: typeof import('./src/components/entity/EntityAutoLinker.vue')['default']
     EntityLinkSection: typeof import('./src/components/EntityLinkSection.vue')['default']
     EntityPopoverContent: typeof import('./src/components/entity/EntityPopoverContent.vue')['default']
+    FeedbackLink: typeof import('./src/components/FeedbackLink.vue')['default']
     GithubPane: typeof import('./src/components/GithubPane.vue')['default']
     IconFork: typeof import('./src/components/icons/iconFork.vue')['default']
     IconGithub: typeof import('./src/components/icons/iconGithub.vue')['default']
