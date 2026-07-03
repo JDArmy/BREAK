@@ -1,17 +1,16 @@
 {
   "T0604": {
-    "title": "Proxy Pool, Residential Proxy, Datacenter Proxy",
+    "title": "Residential Proxy",
     "keywords": [
-      "proxy pool",
-      "residential proxy",
+      "Residential Proxy",
+      "home-broadband proxy",
       "datacenter proxy",
       "tunneling proxy",
-      "Proxy Types",
       "proxy IP classification",
       "rotating proxy types"
     ],
-    "definition": "The classification of proxy IP resources by source and form: residential proxies (real home-broadband IPs), datacenter proxies (datacenter IPs), and tunneling proxies (dynamic forwarding).",
-    "description": "Proxy IP resources are mainly classified into three types by source and form: residential proxies originate from IPs assigned by real home-broadband ISPs, belong to real carriers and geographies, carry high reputation and are the hardest for proxy detection (A0038) to block, making them the first choice for black-market scraping and credential stuffing — and the most expensive. Datacenter proxies originate from cloud datacenters and IDCs — cheap, highly concurrent, and low-latency, but their IP ranges clearly belong to datacenters, making them easy for IP intelligence (A0016-001) and proxy detection to flag. Tunneling proxies achieve single-ingress dynamic forwarding to a large number of egress IPs, enabling single-access-point IP rotation, balancing usability and IP volume. The three types are commonly integrated into a proxy pool (AT0098) for on-demand scheduling, and together with IP providers (TA0011) form the black-market IP supply chain, used to evade IP rate limiting, blocklists, and geo-fencing.",
+    "definition": "A proxy resource sourced from IPs assigned by real home-broadband ISPs, belonging to real carriers and geographies, with high reputation that makes it the hardest for proxy detection to block — the first choice for black-market scraping and credential stuffing to evade IP risk control.",
+    "description": "Proxy IP resources are mainly classified into three types by source and form: residential proxies, datacenter proxies, and tunneling proxies. Residential proxies originate from IPs assigned by real home-broadband ISPs, belong to real carriers and geographies, carry high reputation and are the hardest for proxy detection (A0038) to block, making them the first choice for black-market scraping and credential stuffing — and the most expensive. By contrast, datacenter proxies originate from cloud datacenters and IDCs — cheap, highly concurrent, and low-latency, but their IP ranges clearly belong to datacenters, making them easy for IP intelligence (A0016-001) and proxy detection to flag. Tunneling proxies achieve single-ingress dynamic forwarding to a large number of egress IPs, enabling single-access-point IP rotation. Because residential proxies belong to real ISPs and are hard to distinguish from normal user traffic, they are the hardest type to identify in anti-scraping defense. They are commonly integrated into a proxy pool (AT0098) for on-demand scheduling, and together with IP providers (TA0011) form the black-market IP supply chain, used to evade IP rate limiting, blocklists, and geo-fencing.",
     "usageExample": "A scraping gang rents a residential proxy pool to evade IP rate limiting, keeping each egress IP's request frequency below the threshold to bypass cloud anti-scraping.",
     "references": [
       {
@@ -21,9 +20,8 @@
     ],
     "category": "Black-Market Services",
     "aliases": [
-      "proxy IP classification",
-      "Proxy Types",
       "residential proxy",
+      "home-broadband proxy",
       "datacenter proxy",
       "tunneling proxy"
     ]
