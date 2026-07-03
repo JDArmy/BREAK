@@ -1,0 +1,37 @@
+{
+  "T0609": {
+    "title": "机器人操作系统",
+    "aliases": [
+      "ROS",
+      "Robot Operating System",
+      "ROS2"
+    ],
+    "category": "自动化工具",
+    "definition": "用于开发机器人软件的开源中间件框架，提供节点间通信、硬件抽象、运动规划等功能，是机器人事实标准中间件。",
+    "description": "机器人操作系统(ROS/ROS2)由Open Robotics维护，通过DDS(Data Distribution Service)中间件实现节点间发布-订阅通信。ROS2默认DDS通信无认证、明文组播，节点可任意发布订阅话题，SROS2/DDS-Security默认未启用且仅实现5项安全SPI中的3项。这导致ROS2部署面临严重安全风险：FastDDS堆溢出(CVE-2024-30259)、Nav2组件33个CVE、DDS Discovery泄露局域网节点信息、rostopic eval()注入(CVE-2024-41921)。ROS是机器人中间件漏洞利用的主要攻击面。",
+    "usageExample": "基于机器人操作系统(ROS)开发的仓储机器人若未启用SROS2，攻击者可在局域网内任意发布话题篡改导航指令。",
+    "relatedRisks": [
+      "R0275"
+    ],
+    "keywords": [
+      "机器人操作系统",
+      "ROS",
+      "Robot Operating System",
+      "ROS2",
+      "DDS"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS19"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

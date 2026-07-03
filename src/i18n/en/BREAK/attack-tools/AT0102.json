@@ -1,0 +1,20 @@
+{
+  "AT0102": {
+    "title": "Robot Hardware Debug Interface Exploitation Tool",
+    "keywords": [
+      "robot hardware debug interface exploitation tool",
+      "BLE provisioning command injection",
+      "hardcoded credential scanning",
+      "JTAG exploitation",
+      "UniPwn",
+      "robot debug interface exploit"
+    ],
+    "description": "An exploitation toolset targeting robot BLE provisioning interfaces, debug serial ports, JTAG/UART maintenance ports, and vendor-SDK hardcoded credentials. The tool integrates BLE provisioning command injection (Unitree UniPwn-style, using the hardcoded AES key to bypass authentication by encrypting the string \"unitree\" and then calling system() via a malicious Wi-Fi SSID for root), hardcoded-credential scanning, debug-serial root-shell acquisition, and JTAG interface probing, enabling near-field or physical-contact attacks on robots like Unitree Go1/Go2/G1/H1 and Universal Robots UR series. It draws on research such as UniPwn (CVE-2025-35027), the CloudSail backdoor (CVE-2025-2894), the Alias Robotics Unitree G1 assessment, and IOActive UR vulnerabilities. Unlike AT0081 (IoT firmware & device exploitation tool) which focuses on general IoT firmware, this tool focuses on robot debug/provisioning interfaces and vendor SDKs.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

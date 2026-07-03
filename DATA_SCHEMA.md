@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.36.4`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.37.0`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -9,13 +9,13 @@ This document describes the committed JSON data model used by the BREAK knowledg
 
 | Entity | Directory | File pattern | ID pattern | Current records |
 |--------|-----------|--------------|------------|-----------------|
-| Risk | `src/BREAK/risks` | `R0001.json` | `R0001 or R0001-001` | 370 total (250 main, 120 sub) |
-| Avoidance | `src/BREAK/avoidances` | `A0001.json` | `A0001 or A0001-001` | 306 total (201 main, 105 sub) |
-| AttackTool | `src/BREAK/attack-tools` | `AT0001.json` | `AT0001 or AT0001-001` | 114 total (77 main, 37 sub) |
-| ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 73 total (59 main, 14 sub) |
-| Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 583 total (519 main, 64 sub) |
-| BusinessScene | `src/BREAK/business-scenes` | `BS00.json` | `BS00` | 19 total (19 main, 0 sub) |
-| Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1804 total (1804 main, 0 sub) |
+| Risk | `src/BREAK/risks` | `R0001.json` | `R0001 or R0001-001` | 382 total (262 main, 120 sub) |
+| Avoidance | `src/BREAK/avoidances` | `A0001.json` | `A0001 or A0001-001` | 318 total (213 main, 105 sub) |
+| AttackTool | `src/BREAK/attack-tools` | `AT0001.json` | `AT0001 or AT0001-001` | 118 total (81 main, 37 sub) |
+| ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 75 total (61 main, 14 sub) |
+| Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 593 total (529 main, 64 sub) |
+| BusinessScene | `src/BREAK/business-scenes` | `BS00.json` | `BS00` | 20 total (20 main, 0 sub) |
+| Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1819 total (1819 main, 0 sub) |
 
 Parent and child records live in the parent JSON file. For example, `R0001-001` belongs in `src/BREAK/risks/R0001.json`.
 

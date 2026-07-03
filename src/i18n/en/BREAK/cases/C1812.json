@@ -1,0 +1,23 @@
+{
+  "C1812": {
+    "title": "Tesla Autopilot Lane-Mark Sticker Misdirection Incident",
+    "keywords": [
+      "Tesla Autopilot",
+      "lane-mark sticker",
+      "adversarial example",
+      "autonomous perception spoofing",
+      "Keen Lab"
+    ],
+    "summary": "In March 2019, Tencent Keen Lab disclosed adversarial-example physical attacks against Tesla Model S (firmware v2018.6.1) Autopilot. Research showed just 3 small stickers on the road could fake lane marks, steering Autopilot into oncoming traffic; it also found wiper vision-recognition defects that could be triggered by adversarial images, and remote steering control via a wireless gamepad. This was the first public adversarial-example physical attack on a production-car Autopilot, revealing autonomous-driving vision-perception adversarial fragility.",
+    "references": [
+      {
+        "title": "IEEE Spectrum: Three small stickers on road can steer Tesla Autopilot",
+        "link": "https://spectrum.ieee.org/three-small-stickers-on-road-can-steer-tesla-autopilot-into-oncoming-lane"
+      },
+      {
+        "title": "Keen Lab: Experimental Security Research of Tesla Autopilot",
+        "link": "https://keenlab.tencent.com/en/2019/03/29/Tencent-Keen-Security-Lab-Experimental-Security-Research-of-Tesla-Autopilot/"
+      }
+    ]
+  }
+}

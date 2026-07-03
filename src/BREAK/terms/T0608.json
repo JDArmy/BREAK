@@ -1,0 +1,37 @@
+{
+  "T0608": {
+    "title": "遥操作",
+    "aliases": [
+      "Teleoperation",
+      "远程操控",
+      "Teleop"
+    ],
+    "category": "自动化工具",
+    "definition": "操作员通过通信信道远程控制机器人执行动作的控制模式，是人形机器人、手术机器人、危险作业机器人的常见操控方式。",
+    "description": "遥操作让操作员在远端通过主控设备发送控制指令，机器人在现场执行，适用于人无法直接到达的场景（远程手术、危险品处理、太空探索）。但遥操作依赖通信信道，存在被劫持、重放、延迟注入的安全风险。Raven II手术机器人遥操作劫持研究首次揭示其安全缺陷，可触发紧急停止或实施中间人攻击。遥操作对时延敏感，0-500ms延迟显著影响操作性能与操作员认知响应。四足机器人遥操作还有动态稳定性、步态依赖漏洞窗口等特有攻击面。",
+    "usageExample": "外科医生通过遥操作指挥远程手术机器人时，若信道被劫持攻击者可篡改手术器械动作危及患者生命。",
+    "relatedRisks": [
+      "R0269"
+    ],
+    "keywords": [
+      "遥操作",
+      "远程操控",
+      "Teleoperation",
+      "teleop",
+      "远程手术"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS19"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

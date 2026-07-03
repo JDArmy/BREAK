@@ -1,0 +1,36 @@
+{
+  "C1810": {
+    "title": "Raven II 手术机器人遥操作劫持研究",
+    "category": "academic_research",
+    "incidentTime": "2015-05",
+    "summary": "2015年5月，华盛顿大学团队首次对Raven II开源远程手术机器人做实验性安全攻击，揭示其遥操作信道可被劫持。研究者可触发紧急停止、实施中间人攻击篡改控制指令、注入恶意动作，证明远程手术机器人通信加密与认证缺失的安全缺陷。MIT Tech Review报道此为首例手术机器人遥操作劫持研究，推动医疗机器人通信安全标准发展。",
+    "relatedRisks": [
+      "R0269",
+      "R0190"
+    ],
+    "relatedAttackTools": [
+      "AT0101"
+    ],
+    "relatedThreatActors": [
+      "TA0065"
+    ],
+    "references": [
+      {
+        "title": "MIT Technology Review: Security experts hack teleoperated surgical robot",
+        "link": "https://www.technologyreview.com/2015/04/24/168339/security-experts-hack-teleoperated-surgical-robot/"
+      },
+      {
+        "title": "UW News: Researchers hack a teleoperated surgical robot",
+        "link": "https://www.washington.edu/news/2015/05/07/uw-researchers-hack-a-teleoperated-surgical-robot-to-reveal-security-flaws/"
+      }
+    ],
+    "keywords": [
+      "Raven II",
+      "手术机器人劫持",
+      "遥操作劫持",
+      "远程手术安全",
+      "医疗机器人漏洞"
+    ],
+    "updated": "2026-07-03"
+  }
+}

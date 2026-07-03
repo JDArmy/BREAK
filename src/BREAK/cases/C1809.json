@@ -1,0 +1,32 @@
+{
+  "C1809": {
+    "title": "Knightscope K5 安保机器人商场撞人事件",
+    "category": "security_incident",
+    "incidentTime": "2016-07",
+    "summary": "2016年7月，Knightscope K5安保机器人(1.5米高、136公斤)在斯坦福购物中心撞倒一名16个月大幼童，致其腿部刮伤脚部肿胀。2017年7月该机器人在华盛顿港因自动驾驶算法错误掉入喷泉，2019年Huntington Park报警按钮未接通警方。事件凸显服务机器人在人机混行环境的物理伤害风险与功能安全缺陷，推动ISO 13482个人护理机器人安全标准关注。",
+    "relatedRisks": [
+      "R0276",
+      "R0179"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "Wikipedia: Knightscope",
+        "link": "https://en.wikipedia.org/wiki/Knightscope"
+      },
+      {
+        "title": "ABC News: Knightscope K5 crashes into toddler",
+        "link": "https://abcnews.go.com/Technology/security-robot-crashes-toddler-mall/story"
+      }
+    ],
+    "keywords": [
+      "Knightscope K5",
+      "安保机器人撞人",
+      "机器人物理伤害",
+      "商场机器人事故",
+      "功能安全失效"
+    ],
+    "updated": "2026-07-03"
+  }
+}

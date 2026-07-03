@@ -1,0 +1,25 @@
+{
+  "T0610": {
+    "title": "Safety Stop",
+    "aliases": [
+      "E-stop",
+      "Emergency Stop"
+    ],
+    "category": "Business Security",
+    "keywords": [
+      "safety stop",
+      "E-stop",
+      "emergency stop",
+      "functional safety stop"
+    ],
+    "definition": "A functional-safety mechanism that, via a hardware loop independent of the software control link, quickly cuts robot motor power in emergencies to stop it.",
+    "description": "Safety stop (E-stop) is the last line of physical-safety defense for robots and must be independent of the software control link — pressing the emergency-stop button directly cuts motor power, and software faults or attacker-tampered software cannot bypass it. Soft e-stop (stopping via software commands) can be bypassed by software faults, requiring hard e-stop as backstop. Safety stop and functional-safety design follow standards like ISO 10218 (industrial-robot safety) and ISO 13482 (personal-care robots). IOActive showed Universal Robots UR series can be remotely disabled from its e-stop, highlighting that the e-stop loop itself needs tamper protection. Safety-stop failure was a key factor in incidents like the Knightscope K5 collision and the Volkswagen Baunatal fatality.",
+    "usageExample": "If a factory cobot's safety stop fails when a person enters the work zone, it may keep moving and cause a collision injury.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

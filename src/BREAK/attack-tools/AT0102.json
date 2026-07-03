@@ -1,0 +1,66 @@
+{
+  "AT0102": {
+    "title": "机器人硬件调试接口利用工具",
+    "description": "针对机器人BLE配网接口、调试串口、JTAG/UART维护口与厂商SDK硬编码凭据的利用工具集。该工具集成BLE配网命令注入（Unitree UniPwn式，利用硬编码AES密钥加密字符串unitree绕过认证后通过恶意Wi-Fi SSID调用system()获root）、硬编码凭据扫描、调试串口root shell获取、JTAG接口探测等能力，可对Unitree Go1/Go2/G1/H1、Universal Robots UR系列等机器人实施近场或物理接触攻击。借鉴UniPwn（CVE-2025-35027）、CloudSail后门（CVE-2025-2894）、Alias Robotics Unitree G1评估、IOActive UR漏洞等研究。区别于AT0081（IoT固件与设备利用工具）聚焦通用IoT固件，本工具聚焦机器人调试配网接口与厂商SDK。",
+    "directCauseRisks": [
+      "R0270"
+    ],
+    "indirectSupportRisks": [
+      "R0164",
+      "R0166",
+      "R0206"
+    ],
+    "avoidances": [
+      "A0228",
+      "A0109",
+      "A0117"
+    ],
+    "keywords": [
+      "机器人硬件调试接口利用工具",
+      "BLE配网命令注入",
+      "硬编码凭据扫描",
+      "JTAG利用",
+      "UniPwn",
+      "robot debug interface exploit"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0081",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0082",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0024",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0100",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0101",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0103",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

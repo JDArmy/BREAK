@@ -1,0 +1,24 @@
+{
+  "C1819": {
+    "title": "DJI Romo Robot Vacuum Backend Privilege Escalation 7000 Devices Controlled",
+    "keywords": [
+      "DJI Romo",
+      "robot vacuum privilege escalation",
+      "7000 devices controlled",
+      "MQTT backend flaw",
+      "camera hijacking",
+      "cross-tenant privilege"
+    ],
+    "summary": "In February 2026, Spanish software engineer Sammy Azdoufal, aiming to remote-control his own DJI Romo with a PS5 controller, AI-reversed the DJI protocol and accidentally gained remote control of ~7000 Romo devices worldwide: viewing live cameras, listening to microphones, generating floor plans, locating devices. He cataloged 6700 devices across 24 countries and collected 100,000 MQTT messages in 9 minutes. A DJI backend authentication flaw treated a single-user token as valid for multiple devices. DJI fixed it and paid a $30,000 bounty; The Verge reported.",
+    "references": [
+      {
+        "title": "The Verge: DJI Romo hack vulnerability remote control camera access MQTT",
+        "link": "https://www.theverge.com/tech/879088/dji-romo-hack-vulnerability-remote-control-camera-access-mqtt"
+      },
+      {
+        "title": "Malwarebytes: Hobby coder accidentally creates vacuum robot army",
+        "link": "https://www.malwarebytes.com/blog/news/2026/02/hobby-coder-accidentally-creates-vacuum-robot-army"
+      }
+    ]
+  }
+}

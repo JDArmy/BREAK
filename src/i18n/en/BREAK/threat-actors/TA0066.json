@@ -1,0 +1,20 @@
+{
+  "TA0066": {
+    "title": "Embodied Intelligence Privacy Thief",
+    "keywords": [
+      "embodied intelligence privacy thief",
+      "robot privacy theft",
+      "home privacy theft",
+      "embodied privacy thief",
+      "robot surveillance attacker",
+      "camera hijacker"
+    ],
+    "description": "An attacker who steals privacy data collected by robot-mounted cameras, microphones, and LiDAR, obtaining private images and audio from homes, malls, and factories via device hijacking, cloud-service vulnerabilities, or vendor internal abuse. Such attackers exploit pathways like Ecovacs robot-vacuum BLE hijacking, DJI Romo backend privilege escalation, and iRobot data-annotation chain abuse to steal private home images, children's privacy, and trade secrets for extortion, precision scams, or social engineering. Unlike general data brokers (focused on databases and credentials), This attacker focuses on the physical-world collection scenario of embodied devices, whose data has irreplaceable privacy and contextual nature, and is a key target of GDPR and the Personal Information Protection Law.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

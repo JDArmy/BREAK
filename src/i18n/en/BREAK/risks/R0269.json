@@ -1,0 +1,23 @@
+{
+  "R0269": {
+    "title": "Teleoperation Channel Hijacking Attack",
+    "keywords": [
+      "teleoperation channel hijacking attack",
+      "teleoperation hijacking",
+      "teleop hijacking",
+      "action replay",
+      "control-command injection",
+      "delay injection"
+    ],
+    "definition": "An attack where the attacker hijacks, replays, or injects control commands on a robot teleoperation (teleop) channel to remotely manipulate the robot into unintended actions, or injects latency and jitter to destabilize fine operations.",
+    "description": "Teleoperation channel hijacking targets the remote-control links of humanoid, surgical, and hazardous-operation robots. The University of Washington team first performed experimental attacks on the Raven II open-source remote surgical robot in 2015, able to trigger emergency stops, perform man-in-the-middle attacks, and tamper with control commands. Teleoperation is latency-sensitive; research shows 0–500 ms delays significantly affect teleoperation performance and operator neuro-cognitive response, so an attacker injecting communication latency can destabilize precise operations. Action-replay attacks intercept legitimate control commands and replay them so the robot executes historical actions. A survey on quadruped-robot teleoperation security identifies its unique attack surface: dynamic-stability constraints, gait-dependent vulnerability windows, large kinetic energy, and high operator cognitive load.\n\nThis risk relates to R0142 (man-in-the-middle attack) and R0163 (smart-device hijacking), but is specialized for the low-latency and anti-replay requirements of real-time control channels; consequences can cause casualties (surgical robots) or major physical damage.",
+    "complexity": "intermediate",
+    "influence": "Can remotely manipulate surgical, humanoid, or hazardous-operation robots to perform harmful actions, or destabilize precise operations; consequences can cause casualties or major property damage, making it a lethal threat to embodied intelligence in medical and high-risk scenarios.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

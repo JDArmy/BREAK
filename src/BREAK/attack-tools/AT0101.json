@@ -1,0 +1,68 @@
+{
+  "AT0101": {
+    "title": "机器人遥操作劫持工具",
+    "description": "嗅探、重放与注入机器人遥操作(teleop)控制信道指令的工具集，支持主流遥操作协议的中间人与重放攻击。该工具可截获操作员发送的合法控制指令并重放使机器人执行历史动作，或在信道中注入恶意指令夺取控制权，还可注入通信延迟破坏精密遥操作稳定性。借鉴Raven II手术机器人遥操作劫持研究（华盛顿大学团队2015）与四足机器人遥操作安全综述的攻击方法，针对人形机器人、手术机器人、危险作业机器人的远程操控链路。区别于AT0064（信息窃取器）聚焦凭据窃取，本工具聚焦实时控制信道的指令劫持与重放。",
+    "directCauseRisks": [
+      "R0269"
+    ],
+    "indirectSupportRisks": [
+      "R0163",
+      "R0142",
+      "R0209",
+      "R0277"
+    ],
+    "avoidances": [
+      "A0227",
+      "A0118",
+      "A0150",
+      "A0078"
+    ],
+    "keywords": [
+      "机器人遥操作劫持工具",
+      "遥操作劫持",
+      "teleop劫持",
+      "控制指令重放",
+      "遥操作中间人",
+      "teleoperation hijacking tool"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0081",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054-007",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0063-001",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0066",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

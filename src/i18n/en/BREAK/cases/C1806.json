@@ -1,0 +1,23 @@
+{
+  "C1806": {
+    "title": "Unitree UniPwn Humanoid Robot BLE Command Injection Vulnerability (CVE-2025-35027)",
+    "keywords": [
+      "Unitree UniPwn",
+      "BLE command injection",
+      "CVE-2025-35027",
+      "humanoid robot vulnerability",
+      "worm-like robot attack"
+    ],
+    "summary": "In September 2025, security researchers disclosed a command-injection vulnerability (CVE-2025-35027) in the BLE Wi-Fi provisioning interface of Unitree Go2/B2 quadrupeds and G1/H1 humanoids. All devices shared a hardcoded AES key; encrypting the string \"unitree\" bypassed authentication, then a malicious Wi-Fi SSID called system() for root. The vulnerability was worm-like — infected robots could auto-scan and infect same-brand robots within Bluetooth range, forming a self-replicating robot botnet. IEEE Spectrum reported UK Nottinghamshire Police were testing an affected Unitree Go2 at the time.",
+    "references": [
+      {
+        "title": "IEEE Spectrum: Unitree Robot Exploit",
+        "link": "https://spectrum.ieee.org/unitree-robot-exploit"
+      },
+      {
+        "title": "NVD: CVE-2025-35027",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-35027"
+      }
+    ]
+  }
+}

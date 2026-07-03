@@ -1,0 +1,36 @@
+{
+  "C1819": {
+    "title": "DJI Romo 扫地机器人后端越权7000台被控",
+    "category": "security_incident",
+    "incidentTime": "2026-02",
+    "summary": "2026年2月，西班牙软件工程师Sammy Azdoufal为用PS5手柄遥控自家DJI Romo扫地机器人，借助AI逆向DJI协议，意外可远程控制全球约7000台Romo设备：查看实时摄像头、收听麦克风、生成户型图、定位设备。9分钟内编目6700台跨24国、收集10万条MQTT消息。DJI后端认证缺陷导致单用户令牌被当作对多台设备有效。DJI接到通报后修复并支付3万美元赏金，The Verge报道。",
+    "relatedRisks": [
+      "R0270",
+      "R0278",
+      "R0078"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0066"
+    ],
+    "references": [
+      {
+        "title": "The Verge: DJI Romo hack vulnerability remote control camera access MQTT",
+        "link": "https://www.theverge.com/tech/879088/dji-romo-hack-vulnerability-remote-control-camera-access-mqtt"
+      },
+      {
+        "title": "Malwarebytes: Hobby coder accidentally creates vacuum robot army",
+        "link": "https://www.malwarebytes.com/blog/news/2026/02/hobby-coder-accidentally-creates-vacuum-robot-army"
+      }
+    ],
+    "keywords": [
+      "DJI Romo",
+      "扫地机器人越权",
+      "7000台被控",
+      "MQTT后端缺陷",
+      "摄像头劫持",
+      "跨租户越权"
+    ],
+    "updated": "2026-07-03"
+  }
+}

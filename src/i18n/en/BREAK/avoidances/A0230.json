@@ -1,0 +1,23 @@
+{
+  "A0230": {
+    "title": "Action Safety Boundary & Permission Convergence",
+    "keywords": [
+      "action safety boundary & permission convergence",
+      "action safety boundary",
+      "permission convergence",
+      "hazardous action confirmation",
+      "least-privilege execution",
+      "force and speed limit",
+      "embodied action safety boundary"
+    ],
+    "definition": "Setting physical action safety boundaries (workspace, speed, force limits) for embodied agents, with human confirmation for hazardous actions and least-privilege execution, to prevent jailbreak or over-autonomy from causing irreversible physical consequences.",
+    "description": "Action safety boundary & permission convergence builds a hard-constraint layer against the risk of embodied agents performing dangerous physical actions when jailbroken or over-autonomous. First, physical action safety boundaries limit the robotic arm workspace, movement speed, and gripper force; commands exceeding boundaries are intercepted at the hardware layer and cannot be overridden by the VLA/LLM. Second, hazardous-action human confirmation requires real-time operator confirmation for high-risk actions such as opening doors, handling sharp objects, or transporting heavy loads. Third, least-privilege execution grants the agent only the minimum action permissions needed for the current task, auto-revoked at task end.\n\nThis measure is a key safety mechanism distinguishing embodied intelligence from pure software agents — software-agent misoperations can be rolled back, but embodied-agent physical actions are irreversible and require hardware-level hard constraints as a backstop. It works with A0225 (physical-world prompt injection detection) and A0072 (algorithm audit mechanism).",
+    "limitation": "Over-strict boundaries limit task capability, affecting agent autonomy and efficiency; human confirmation in emergencies adds latency and may miss the best intervention window; boundary configuration needs per-task tuning, and general boundaries cannot fit all scenarios; the hardware constraint layer itself may be bypassed by firmware vulnerabilities, requiring pairing with secure boot.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

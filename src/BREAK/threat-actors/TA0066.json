@@ -1,0 +1,65 @@
+{
+  "TA0066": {
+    "title": "具身智能隐私窃取者",
+    "description": "针对机器人搭载摄像头、麦克风、激光雷达采集的隐私数据进行窃取的攻击者，通过设备劫持、云服务漏洞或厂商内部滥用获取家庭、商场、工厂的私密影像与音频。这类攻击者利用Ecovacs扫地机BLE劫持、DJI Romo后端越权、iRobot数据标注链滥用等途径，窃取家庭私密画面、儿童隐私、商业机密，用于勒索、精准诈骗或社会工程。区别于通用数据掮客（聚焦数据库与凭据），该攻击者聚焦具身设备的物理世界采集场景，数据具有不可替代的私密性与场景性，是GDPR与《个人信息保护法》重点规制的对象。",
+    "directCauseRisks": [
+      "R0278"
+    ],
+    "indirectSupportRisks": [
+      "R0078",
+      "R0211"
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0081",
+      "AT0064"
+    ],
+    "keywords": [
+      "具身智能隐私窃取者",
+      "机器人隐私窃取",
+      "家庭隐私窃取",
+      "embodied privacy thief",
+      "robot surveillance attacker",
+      "摄像头劫持者"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0047",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0048",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0060",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0062",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0063",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

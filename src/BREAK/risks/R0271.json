@@ -1,0 +1,33 @@
+{
+  "R0271": {
+    "title": "VLA/VLM模型对抗攻击",
+    "definition": "针对视觉-语言-动作(VLA)与视觉-语言模型(VLM)的对抗样本、对抗补丁、越狱与跨模态注入攻击，使模型输出错误动作序列或执行被禁止动作的攻击。",
+    "description": "VLA/VLM模型对抗攻击是具身智能模型层的核心威胁。RoboPAIR是首个针对LLM控制机器人的越狱算法，在白盒NVIDIA Dolphins自动驾驶LLM、灰盒Clearpath Jackal UGV、黑盒Unitree Go2+GPT-3.5三平台实现常100%攻击成功率，可引发武器化、撞击等有害物理行为。BadRobot通过语音交互越狱具身LLM违反安全伦理约束。UPA-RFAS（CVPR 2026）提出单一对抗补丁黑盒跨模型迁移，任务成功率最高降100%。VLA-Attacker实现空间基础无目标/目标攻击。这些攻击使分拣机器人抓错物料、服务机器人递错物品、自动驾驶误判障碍物。\n\n该风险与R0267（物理世界提示注入攻击）、R0274（跨模态注入攻击）同属VLA模型层攻击，本风险聚焦数字对抗样本与越狱，R0267聚焦物理环境注入载体，R0274聚焦跨模态操纵。",
+    "complexity": "advanced",
+    "influence": "致机器人执行错误或危险动作、模型能力被滥用、安全对齐被绕过，是具身智能区别于传统机器人的核心模型层风险，可直接转化为物理世界伤害。",
+    "avoidances": [
+      "A0229",
+      "A0178",
+      "A0072",
+      "A0225",
+      "A0235"
+    ],
+    "keywords": [
+      "VLA/VLM模型对抗攻击",
+      "VLA对抗攻击",
+      "对抗补丁",
+      "RoboPAIR越狱",
+      "VLM对抗样本",
+      "adversarial VLA",
+      "robot jailbreak"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedRisks": [],
+    "updated": "2026-07-03"
+  }
+}

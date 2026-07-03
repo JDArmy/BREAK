@@ -1,0 +1,25 @@
+{
+  "T0606": {
+    "title": "Humanoid Robot",
+    "aliases": [
+      "Humanoid Robot",
+      "Humanoid"
+    ],
+    "category": "Automation Tool",
+    "keywords": [
+      "humanoid robot",
+      "humanoid",
+      "Optimus",
+      "Figure"
+    ],
+    "definition": "A robot with a human-like body structure (head, torso, two arms, two legs) that can perform human-like actions such as walking, grasping, and tool use; one of the main carrier forms of embodied intelligence.",
+    "description": "Humanoid robots have rapidly developed in recent years, with representative products including Tesla Optimus, Figure 02, Unitree G1/H1, Agility Digit, and Boston Dynamics Atlas. Their human-like body design lets them adapt to human-designed environments (stairs, doors, tools), but also brings unique security risks: dynamic-stability constraints of bipedal walking, large kinetic energy, and physical-harm risk from close human collaboration. Figure AI established a humanoid-robot safety center; its former product-safety lead sued claiming the robot's force is enough to crush a human skull. Humanoid robots mostly use a teleoperation+autonomy hybrid mode; Tesla Optimus was disclosed as partly human-operated at the We, Robot event.",
+    "usageExample": "When a humanoid robot collaborates with humans to carry parts in a factory, a bypassed e-stop or force-control failure may cause serious worker injury.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

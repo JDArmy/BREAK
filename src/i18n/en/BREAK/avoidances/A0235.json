@@ -1,0 +1,22 @@
+{
+  "A0235": {
+    "title": "Sim-to-Real Domain Randomization & Consistency Checking",
+    "keywords": [
+      "sim-to-real domain randomization & consistency checking",
+      "domain randomization",
+      "Sim-to-Real",
+      "reality gap",
+      "simulation-reality consistency",
+      "real-world red-team"
+    ],
+    "definition": "Narrowing the gap between simulation training and real deployment via domain-randomization training, simulation-reality consistency checking, and real-world red-team testing to prevent attackers from exploiting the reality gap to break policies.",
+    "description": "Sim-to-Real domain randomization & consistency checking builds three defenses against the risk of VLA/RL policies trained in simulation being specifically broken in real deployment via the reality gap. First, domain randomization randomizes lighting, materials, and dynamics parameters during simulation training to make policies robust to environmental variation, reducing overfitting to specific simulation conditions. Second, simulation-reality consistency checking continuously compares real observations against simulation predictions after deployment, alerting and degrading when deviation exceeds a threshold. Third, real-world red-team testing tests policy robustness with adversarial strategies and perturbations in the real environment before deployment, discovering reality-gap attack paths.\n\nThis measure is the core defense after research like Gleave adversarial policies and UPA-RFAS sim-to-real transfer attacks; it works with A0229 (VLA adversarial training & robustness).",
+    "limitation": "Domain randomization cannot cover all real-world variation, with unmodeled physical phenomena; consistency checking depends on accurate simulation prediction, with large prediction deviation in complex scenarios; real-world red-team testing is costly with limited coverage; defense trades off against policy performance.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

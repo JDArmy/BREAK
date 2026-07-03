@@ -1,0 +1,24 @@
+{
+  "C1820": {
+    "title": "UT Austin Humphreys Team Drone GPS Spoofing Hijack Demonstration",
+    "keywords": [
+      "Humphreys",
+      "GPS spoofing",
+      "drone hijacking",
+      "UT Austin",
+      "White Sands Missile Range",
+      "GNSS spoofing"
+    ],
+    "summary": "In June 2012, the UT Austin aerospace engineering team of Todd Humphreys, invited by DHS, demonstrated the first successful GPS-spoofing hijack of a UAV at White Sands Missile Range, New Mexico. The team used ~$1000 of self-made GPS-spoofing equipment to take over a hovering small civilian drone from about 1 km away, deflecting its heading while the autopilot remained unaware. The demo revealed the fundamental weakness of unencrypted, unauthenticated civilian GPS signals, prompting FAA and Congress to reassess drone airspace-integration security.",
+    "references": [
+      {
+        "title": "UT Austin News: Todd Humphreys research team demonstrates first successful GPS spoofing of UAV",
+        "link": "https://ae.utexas.edu/news/todd-humphreys-research-team-demonstrates-first-successful-gps-spoofing-of-uav/"
+      },
+      {
+        "title": "IEEE Spectrum: GPS spoofing",
+        "link": "https://spectrum.ieee.org/gps-spoofing-2650266778"
+      }
+    ]
+  }
+}

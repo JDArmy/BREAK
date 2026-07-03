@@ -1,0 +1,33 @@
+{
+  "R0274": {
+    "title": "跨模态注入攻击",
+    "definition": "攻击者通过一个模态（如视觉）注入内容，操纵VLA/VLM模型对另一模态（如文本）的理解，或反之，绕过单模态防御的攻击。",
+    "description": "跨模态注入攻击利用VLA/VLM多模态对齐空间的特性——仅对图像施加扰动即可同时操纵模型对文本与视觉输入的理解。CrossInject通过视觉潜对齐与文本引导元提示实施跨模态注入。CrossMPI仅对图像扰动即可操纵模型对文本的理解，攻击成功率较基线提升30%以上。VLA-Fool实现统一文本/视觉/跨模态错位攻击。经典排版攻击中，CLIP在苹果图上贴iPod文字即分类为iPod。这类攻击使单模态防御（如仅过滤文本输入）失效，攻击面扩大到任一模态，优化焦点可从视觉嵌入空间转移到模型隐藏状态空间，最优扰动层常位于模型中部。\n\n该风险与R0267（物理世界提示注入攻击）、R0271（VLA/VLM模型对抗攻击）同属模型层，本风险聚焦多模态对齐空间的跨模态操纵，是单模态防御失效的关键攻击路径。",
+    "complexity": "advanced",
+    "influence": "使单模态防御失效，攻击面扩大到任一模态，可操纵模型理解导致错误动作决策，且攻击者无需同时操纵所有模态即可生效，防御难度显著高于单模态攻击。",
+    "avoidances": [
+      "A0225",
+      "A0229",
+      "A0178",
+      "A0072",
+      "A0226"
+    ],
+    "keywords": [
+      "跨模态注入攻击",
+      "跨模态注入",
+      "CrossInject",
+      "多模态对抗",
+      "模态操纵",
+      "cross-modal injection",
+      "multimodal adversarial"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedRisks": [],
+    "updated": "2026-07-03"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C1809": {
+    "title": "Knightscope K5 Security Robot Mall Collision Incident",
+    "keywords": [
+      "Knightscope K5",
+      "security robot collision",
+      "robot physical harm",
+      "mall robot accident",
+      "functional safety failure"
+    ],
+    "summary": "In July 2016, the Knightscope K5 security robot (1.5 m tall, 136 kg) knocked down a 16-month-old toddler at a Stanford shopping center, causing leg scrapes and foot swelling. In July 2017 the robot fell into a fountain in Washington Harbor due to an autonomous-driving algorithm error; in 2019 a Huntington Park alert button failed to reach police. The incidents highlight service-robot physical-harm risk and functional-safety deficiencies in human-robot mixed environments, driving ISO 13482 personal-care robot safety attention.",
+    "references": [
+      {
+        "title": "Wikipedia: Knightscope",
+        "link": "https://en.wikipedia.org/wiki/Knightscope"
+      },
+      {
+        "title": "ABC News: Knightscope K5 crashes into toddler",
+        "link": "https://abcnews.go.com/Technology/security-robot-crashes-toddler-mall/story"
+      }
+    ]
+  }
+}

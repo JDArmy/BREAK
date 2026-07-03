@@ -1,0 +1,23 @@
+{
+  "A0227": {
+    "title": "Teleoperation Channel Encryption & Authentication",
+    "keywords": [
+      "teleoperation channel encryption & authentication",
+      "teleoperation encryption",
+      "teleop authentication",
+      "control-command anti-replay",
+      "mutual certificate authentication",
+      "latency anomaly detection",
+      "teleoperation channel security"
+    ],
+    "definition": "End-to-end encryption, mutual certificate authentication, command-sequence anti-replay, and latency-anomaly detection on robot teleoperation (teleop) control channels to prevent hijacking, replay, or injection.",
+    "description": "Teleoperation channel encryption & authentication builds four layers of defense for the remote-control links of humanoid, surgical, and hazardous-operation robots. First, end-to-end encryption keeps control commands encrypted in transit, preventing man-in-the-middle eavesdropping and tampering. Second, mutual certificate authentication has the operator side and robot side verify each other's certificates, blocking unauthorized parties. Third, command sequence numbers and timestamps — each command carries a monotonically increasing sequence number, and the receiver verifies freshness, resisting action replay. Fourth, latency-anomaly detection — teleoperation is latency-sensitive, and injected abnormal latency destabilizes fine operations; detecting latency jitter identifies delay-injection attacks.\n\nThis measure is the core defense direction after the Raven II surgical-robot hijacking and similar incidents; it belongs to the communication-security system together with A0118 (certificate-based device authentication) and A0150 (OTA channel encryption and integrity), specialized for the low-latency and anti-replay needs of real-time control channels.",
+    "limitation": "Encryption and authentication add communication latency affecting real-time fine teleoperation (e.g., remote surgery); certificate and key management is complex, requiring timely revocation on device loss or personnel change; cannot defend insiders with legitimate credentials; latency detection may false-positive under normal network fluctuation.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

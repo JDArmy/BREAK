@@ -1,0 +1,23 @@
+{
+  "C1807": {
+    "title": "Unitree Go1 Robot Dog CloudSail Pre-installed Backdoor (CVE-2025-2894)",
+    "keywords": [
+      "Unitree Go1",
+      "CloudSail backdoor",
+      "CVE-2025-2894",
+      "pre-installed remote access",
+      "robot dog backdoor"
+    ],
+    "summary": "In March 2025, researchers disclosed an undocumented backdoor (CVE-2025-2894) in the Unitree Go1 consumer quadruped. The Oray CloudSail remote-access service auto-started on the onboard Raspberry Pi, establishing a P2P tunnel bypassing NAT; anyone with the default API key could fully remote-control the robot and access its camera. The CloudSail API showed 1919 devices online (including MIT, Princeton labs). Unitree silently patched on March 23 and revoked API tokens; the flaw is CWE-912 hidden functionality.",
+    "references": [
+      {
+        "title": "takeonme.org: CVE-2025-2894",
+        "link": "https://takeonme.org/cves/cve-2025-2894/"
+      },
+      {
+        "title": "NVD: CVE-2025-2894",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-2894"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "T0607": {
+    "title": "VLA模型",
+    "aliases": [
+      "Vision-Language-Action Model",
+      "视觉-语言-动作模型",
+      "VLA"
+    ],
+    "category": "人工智能",
+    "definition": "融合视觉感知、语言理解与动作输出的端到端模型，是具身智能机器人的核心决策大脑，将视觉观测与语言指令映射为物理动作序列。",
+    "description": "VLA模型是具身智能区别于传统机器人的关键技术，代表如OpenVLA、RT-2、Octo等。它将视觉-语言模型(VLM)的感知理解能力与动作生成结合，使机器人能根据自然语言指令和视觉观测执行复杂操作任务。但VLA模型继承了LLM/VLM的脆弱性并放大：对抗样本、对抗补丁、越狱、后门、跨模态注入等攻击可直接转化为物理动作错误。RoboPAIR越狱、UPA-RFAS对抗补丁、DropVLA后门等研究证明VLA模型在物理世界的攻击面远超纯软件模型。",
+    "usageExample": "VLA模型驱动的服务机器人收到抓取水杯指令后，若被对抗补丁攻击可能误抓旁边的热水瓶造成烫伤。",
+    "relatedRisks": [
+      "R0267",
+      "R0271",
+      "R0273"
+    ],
+    "keywords": [
+      "VLA模型",
+      "视觉-语言-动作模型",
+      "Vision-Language-Action Model",
+      "OpenVLA",
+      "RT-2"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS19"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

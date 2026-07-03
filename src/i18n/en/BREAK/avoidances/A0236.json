@@ -1,0 +1,23 @@
+{
+  "A0236": {
+    "title": "Robot Black Box & Behavior Audit",
+    "keywords": [
+      "robot black box & behavior audit",
+      "robot black box",
+      "behavior audit",
+      "action log on-chain",
+      "explainable decision",
+      "human in the loop",
+      "robot black box audit"
+    ],
+    "definition": "Ensuring robot physical behavior is traceable and accountable via robot black-box logging of the full perception-decision-action chain, on-chain action-log auditing, explainable decisions, and human-in-the-loop.",
+    "description": "Robot black box & behavior audit addresses the problem of unclear liability and non-traceable decision processes after robot physical-harm accidents, building on the aviation black-box concept. First, robot black box logs the full chain — perception input, model decision, planned trajectory, executed action — during runtime, enabling post-incident decision-process reconstruction. Second, on-chain action-log auditing writes key action logs to a chain or tamper-evident storage, preventing vendors or operators from tampering after the fact. Third, explainable decisions — VLA/LLM decision outputs carry explainable rationales, facilitating accident investigation. Fourth, human-in-the-loop retains human confirmation for high-risk decisions, clarifying human-robot liability boundaries.\n\nThis measure is the governance core after liability disputes in incidents like Knightscope K5 collisions and Tesla Autopilot fatalities; it works with A0072 (algorithm audit mechanism), specialized for the physical-behavior traceability of embodied devices, key to EU AI Act high-risk AI obligations and Chinese robot-liability legislation.",
+    "limitation": "Full-chain log data volume is large, with high storage and transmission cost; on-chain auditing adds latency, hard to put all actions on-chain in real time; explainable decisions may leak model intellectual property; human-in-the-loop reduces automation, in tension with the autonomy goal of embodied intelligence.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

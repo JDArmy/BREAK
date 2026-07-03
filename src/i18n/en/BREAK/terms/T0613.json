@@ -1,0 +1,25 @@
+{
+  "T0613": {
+    "title": "Robot Swarm",
+    "aliases": [
+      "Robot Swarm",
+      "Multi-Robot System"
+    ],
+    "category": "Automation Tool",
+    "keywords": [
+      "robot swarm",
+      "multi-robot system",
+      "swarm robot",
+      "multi-robot coordination"
+    ],
+    "definition": "A system where multiple robots collaborate via communication and coordination protocols to accomplish tasks, with distributed perception, collaborative decision-making, and collective action, applied in warehouse, inspection, and military scenarios.",
+    "description": "Robot swarms achieve tasks impossible for single robots via distributed collaboration, but introduce swarm-specific loss-of-control risks. Individual hijacked swarm members become byzantine nodes that send false information to break consensus; communication disruption desynchronizes the swarm; single-point failures are amplified by the swarm topology and are hard to stop via single-robot e-stop. The KARGU-2 lethal autonomous weapon system, per a UN report, had swarm-coordination and autonomous target-tracking capabilities in the 2020 Libya civil war. In multi-agent reinforcement learning, Gleave et al. proved an adversary can defeat SOTA RL policies by its own behavior alone. Swarm fault tolerance requires byzantine fault-tolerant consensus, member anomaly detection, and swarm-level e-stop.",
+    "usageExample": "If one warehouse robot in a swarm is hijacked into a byzantine node sending false position information, it may cause path conflicts across the entire swarm, paralyzing operations.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

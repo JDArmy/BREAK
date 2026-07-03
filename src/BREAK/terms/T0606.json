@@ -1,0 +1,38 @@
+{
+  "T0606": {
+    "title": "人形机器人",
+    "aliases": [
+      "Humanoid Robot",
+      "仿人机器人",
+      "Humanoid"
+    ],
+    "category": "自动化工具",
+    "definition": "具有类人形体结构（头、躯干、双臂、双腿）的机器人，能执行类人动作如行走、抓取、操作工具，是具身智能的主要载体形态之一。",
+    "description": "人形机器人近年快速发展，代表性产品包括特斯拉Optimus、Figure 02、Unitree G1/H1、Agility Digit、波士顿动力Atlas等。其类人形体设计使其能适应为人类设计的环境（楼梯、门、工具），但也带来独特安全风险：双足行走的动态稳定性约束、巨大动能、与人类近距离协作的物理伤害风险。Figure AI成立人形机器人安全推进中心，前产品安全主管起诉称其机器人力量足以击碎人类头骨。人形机器人多采用遥操作+自主混合模式，特斯拉Optimus在We, Robot活动被披露部分由人类远程操控。",
+    "usageExample": "人形机器人在工厂与人类协作搬运零件时，若急停被绕过或力度失控可能造成人员重伤。",
+    "relatedRisks": [
+      "R0270",
+      "R0276"
+    ],
+    "keywords": [
+      "人形机器人",
+      "仿人机器人",
+      "Humanoid Robot",
+      "Optimus",
+      "Figure"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS19"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

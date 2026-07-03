@@ -1,0 +1,20 @@
+{
+  "AT0101": {
+    "title": "Robot Teleoperation Hijacking Tool",
+    "keywords": [
+      "robot teleoperation hijacking tool",
+      "teleoperation hijacking",
+      "teleop hijacking",
+      "control-command replay",
+      "teleoperation man-in-the-middle",
+      "teleoperation hijacking tool"
+    ],
+    "description": "A toolset for sniffing, replaying, and injecting control commands on robot teleoperation (teleop) channels, supporting man-in-the-middle and replay attacks against mainstream teleoperation protocols. The tool can intercept legitimate control commands sent by an operator and replay them to make the robot execute historical actions, inject malicious commands to seize control, or inject communication latency to destabilize precise teleoperation. It draws on the Raven II surgical-robot teleoperation hijacking research (University of Washington team, 2015) and attack methods from the quadruped-robot teleoperation security survey, targeting remote-control links of humanoid, surgical, and hazardous-operation robots. Unlike AT0064 (info stealer) which focuses on credential theft, this tool focuses on command hijacking and replay on real-time control channels.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

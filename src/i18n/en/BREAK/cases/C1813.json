@@ -1,0 +1,23 @@
+{
+  "C1813": {
+    "title": "RoboPAIR Embodied Robot Jailbreak Research",
+    "keywords": [
+      "RoboPAIR",
+      "robot jailbreak",
+      "LLM-controlled robot",
+      "Unitree Go2 jailbreak",
+      "embodied intelligence jailbreak"
+    ],
+    "summary": "In October 2024, the University of Pennsylvania George Pappas team proposed RoboPAIR, the first systematic jailbreak algorithm against LLM-controlled robots. It demonstrated on white-box NVIDIA Dolphins autonomous-driving LLM, gray-box Clearpath Jackal UGV, and black-box Unitree Go2+GPT-3.5, often achieving 100% attack success, inducing robots to perform harmful physical actions such as finding weapons, striking pedestrians, and ignoring stop signs. This is the first successful jailbreak of a commercially deployed robot system, published at ICRA 2025.",
+    "references": [
+      {
+        "title": "RoboPAIR: Jailbreaking LLM-Controlled Robots (arXiv:2410.13691)",
+        "link": "https://arxiv.org/abs/2410.13691"
+      },
+      {
+        "title": "CMU Blog: Jailbreaking LLM-controlled robots",
+        "link": "https://blog.ml.cmu.edu/2024/10/29/jailbreaking-llm-controlled-robots/"
+      }
+    ]
+  }
+}

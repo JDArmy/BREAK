@@ -1,0 +1,64 @@
+{
+  "TA0065": {
+    "title": "机器人与具身智能攻击者",
+    "description": "专门针对机器人与具身智能系统的攻击者，掌握VLA模型对抗、遥操作信道劫持、ROS/DDS中间件漏洞利用与机器人硬件调试接口攻击能力，动机涵盖窃密、勒索、物理破坏、意识形态攻击与国家级行动。这类攻击者利用Unitree UniPwn式BLE命令注入、RoboPAIR式VLA越狱、Raven II式遥操作劫持、FastDDS式中间件漏洞等具身智能独有攻击面，可使人形机器人、手术机器人、自动驾驶系统执行非预期物理动作或被完全接管。区别于TA0049（工业与车联网攻击者，聚焦OT/车联网协议）与TA0048（IoT僵尸网络运营者，聚焦设备肉鸡DDoS），该攻击者聚焦具身智能独有的模型层与物理世界攻击面，后果直接转化为物理伤害或物理世界破坏。",
+    "directCauseRisks": [
+      "R0267",
+      "R0269",
+      "R0271",
+      "R0275",
+      "R0270"
+    ],
+    "indirectSupportRisks": [
+      "R0268",
+      "R0274",
+      "R0277"
+    ],
+    "buildAttackTools": [
+      "AT0100",
+      "AT0101",
+      "AT0102",
+      "AT0103"
+    ],
+    "useAttackTools": [
+      "AT0100",
+      "AT0101",
+      "AT0102",
+      "AT0103",
+      "AT0081",
+      "AT0024"
+    ],
+    "keywords": [
+      "机器人与具身智能攻击者",
+      "具身智能攻击者",
+      "机器人攻击者",
+      "embodied intelligence attacker",
+      "robot attacker",
+      "VLA攻击者"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0048",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0066",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

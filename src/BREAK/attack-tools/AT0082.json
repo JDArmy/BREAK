@@ -56,6 +56,11 @@
         "note": "共同关联 2 个风险，共享 1 个规避手段。"
       },
       {
+        "key": "AT0101",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
         "key": "AT0054-007",
         "relation": "co-used",
         "note": "共享 2 个规避手段。"
@@ -67,11 +72,6 @@
       },
       {
         "key": "AT0063-001",
-        "relation": "co-used",
-        "note": "共享 2 个规避手段。"
-      },
-      {
-        "key": "AT0075",
         "relation": "co-used",
         "note": "共享 2 个规避手段。"
       }

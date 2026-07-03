@@ -1,0 +1,25 @@
+{
+  "T0605": {
+    "title": "Embodied Intelligence",
+    "aliases": [
+      "Embodied Intelligence",
+      "Embodied AI"
+    ],
+    "category": "Artificial Intelligence",
+    "keywords": [
+      "embodied intelligence",
+      "embodied AI",
+      "physical agent",
+      "embodied agent"
+    ],
+    "definition": "An intelligent-agent system with a physical body and perception-decision capability that perceives the environment via sensors and acts on it via actuators in the physical world, covering humanoid robots, service robots, and autonomous-driving embodied systems.",
+    "description": "Embodied intelligence is an intersection of AI and robotics, emphasizing intelligence achieved through physical-body interaction with the environment. Unlike traditional software AI (e.g., large language models running only in digital space), embodied-intelligence decisions translate directly into physical actions and are irreversible. Its tech stack includes multi-modal perception (vision, language, touch), VLA-model decision-making, and motion planning and execution. Embodied intelligence faces unique security risks: VLA model adversarial attacks, teleoperation hijacking, robot physical harm, and physical-world prompt injection — these risks are harder to defend than pure software AI and have more severe consequences due to physical-world involvement.",
+    "usageExample": "An embodied-intelligence robot in a warehouse perceives goods and performs grasping via a VLA model; once the model is adversarially attacked, it may grab the wrong item or even strike people.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "C1812": {
+    "title": "特斯拉Autopilot车道线贴纸误导事件",
+    "category": "security_incident",
+    "incidentTime": "2019-03",
+    "summary": "2019年3月，腾讯科恩实验室披露针对Tesla Model S(固件v2018.6.1) Autopilot的对抗样本物理攻击。研究发现仅需在路面贴3个小贴纸即可伪造车道线，使Autopilot驶入对向车道；另发现雨刷视觉识别缺陷可用对抗样本图像误开雨刷，以及用无线游戏手柄远程控制转向系统。这是首次公开针对量产车Autopilot的对抗样本物理攻击，揭示自动驾驶视觉感知的对抗脆弱性。",
+    "relatedRisks": [
+      "R0268",
+      "R0180",
+      "R0189"
+    ],
+    "relatedAttackTools": [
+      "AT0024"
+    ],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "IEEE Spectrum: Three small stickers on road can steer Tesla Autopilot",
+        "link": "https://spectrum.ieee.org/three-small-stickers-on-road-can-steer-tesla-autopilot-into-oncoming-lane"
+      },
+      {
+        "title": "Keen Lab: Experimental Security Research of Tesla Autopilot",
+        "link": "https://keenlab.tencent.com/en/2019/03/29/Tencent-Keen-Security-Lab-Experimental-Security-Research-of-Tesla-Autopilot/"
+      }
+    ],
+    "keywords": [
+      "特斯拉Autopilot",
+      "车道线贴纸",
+      "对抗样本",
+      "自动驾驶感知欺骗",
+      "Keen Lab"
+    ],
+    "updated": "2026-07-03"
+  }
+}

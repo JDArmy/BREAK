@@ -1,5 +1,21 @@
 # Change log
 
+## 2.37.0
+
+新增具身智能业务场景（BS19），补齐人形机器人、服务机器人、协作机器人、医疗/手术机器人、自动驾驶具身系统、机器人集群等领域的"风险有刻画、防御有手段、工具可识别、术语成体系、案例有支撑"闭环。具身智能跨 AI(BS14)/IoT(BS16)/汽车(BS11)/元宇宙(BS17)，但有 VLA 模型对抗、遥操作劫持、ROS 中间件漏洞、机器人物理伤害与功能安全、集群协同失控、物理世界提示注入等特有风险，独立成场景。
+
+- **新增业务场景 BS19 具身智能**：5 维度（感知与物理对抗/模型与智能体/设备与中间件/运营与合规/身份与协同）× 6 风险场景（RS33-RS38），混合新建风险与复用现有 IoT/AI/V2X 风险归类。
+- **新增 12 个 Risk（R0267-R0278）**：物理世界提示注入攻击、机器人感知对抗攻击、遥操作信道劫持攻击、机器人调试与维护接口滥用、VLA/VLM模型对抗攻击、具身智能体越狱与过度自主风险、VLA模型后门与训练数据投毒、跨模态注入攻击、机器人中间件(ROS/DDS)漏洞利用、机器人物理伤害与功能安全失效、机器人集群协同失控风险、具身智能数据采集隐私泄露。
+- **新增 12 个 Avoidance（A0225-A0236）**：物理世界提示注入检测、多模态感知交叉校验、遥操作信道加密认证、机器人调试接口硬化、VLA对抗训练与鲁棒性、动作安全边界与权限收敛、SROS2与DDS-Security部署、机器人安全停机E-stop与功能安全设计、集群协同容错与拜占庭防御、具身数据采集隐私保护、Sim-to-Real域随机化与一致性校验、机器人黑匣子与行为审计。
+- **新增 4 个 AttackTool（AT0100-AT0103）**：VLA对抗攻击工具、机器人遥操作劫持工具、机器人硬件调试接口利用工具、机器人中间件漏洞利用工具。
+- **新增 2 个 ThreatActor（TA0065-TA0066）**：机器人与具身智能攻击者、具身智能隐私窃取者。
+- **新增 10 个 Term（T0605-T0614）**：具身智能、人形机器人、VLA模型、遥操作、机器人操作系统、安全停机、功能安全、对抗补丁、机器人集群、物理世界提示注入。
+- **新增 15 个 Case（C1806-C1820）**：Unitree UniPwn(CVE-2025-35027)、Unitree Go1 CloudSail(CVE-2025-2894)、iRobot Roomba J7隐私泄露、Knightscope K5撞人、Raven II手术机器人劫持、KARGU-2自主武器、特斯拉车道线贴纸、RoboPAIR越狱、Alias Robotics Unitree G1评估、Ecovacs扫地机劫持、大众Baunatal机器人致死、腾讯科恩特斯拉入侵、马杜罗无人机刺杀、DJI Romo越权、Humphreys GPS欺骗。
+- **全场景覆盖与门禁**：12 个新建具身智能 Risk 与 12 个 BS18 物流特有 Risk 全部归类到 BS00 全场景对应 RS；新增 `business-scene-coverage.mjs` 门禁脚本（接入 `validate:data` 链），校验专题场景特有 Risk 必须归到 BS00 全场景，防止未来新增专题场景时遗漏全场景归类。
+- **语义审查修复**：R0274 跨模态注入补 A0226 多模态感知交叉校验；AT0100 的 R0273 由 directCauseRisks 调整为 indirectSupportRisks；AT0101 的 R0277 由 directCauseRisks 调整为 indirectSupportRisks；TA0065 的 R0270 由 indirectSupportRisks 升级为 directCauseRisks；C1814 移除 R0271 补 R0278；C1817 移除 R0269；BS19 RS35 移除 R0071。
+- **真实案例支撑**：所有新建 Case 引用真实可查来源（CVE NVD/IEEE Spectrum/MIT Tech Review/arXiv 论文/权威新闻）。
+- 中英文翻译同步（新增 56 个 EN 文件），`sync:lateral-relations` 重算横向关系，`validate:data` + `build` 全绿。
+
 ## 2.36.4
 
 修复顶部加载条在无实际加载时误显示的问题：

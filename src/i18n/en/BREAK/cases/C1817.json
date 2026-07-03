@@ -1,0 +1,24 @@
+{
+  "C1817": {
+    "title": "Tencent Keen Lab Tesla Model S Remote Intrusion",
+    "keywords": [
+      "Tencent Keen Lab",
+      "Tesla Model S",
+      "remote intrusion",
+      "CAN bus control",
+      "Keen Lab",
+      "V2X vulnerability"
+    ],
+    "summary": "In September 2016, Tencent Keen Security Lab remotely intruded a Tesla Model S from distance, by tricking the owner into connecting to a malicious Wi-Fi hotspot and visiting a malicious site via the in-car browser, gaining CAN bus control to remotely trigger braking, lock/unlock doors, adjust seats, and control lights. Tesla pushed OTA v8.0 with code-signing. This was the first publicly disclosed Tesla remote-control attack, presented at Black Hat USA 2016.",
+    "references": [
+      {
+        "title": "The Guardian: Tesla Model S Chinese hack remote control brakes",
+        "link": "https://www.theguardian.com/technology/2016/sep/20/tesla-model-s-chinese-hack-remote-control-brakes"
+      },
+      {
+        "title": "Business Insider: Car hackers trigger Tesla Model S brakes",
+        "link": "https://www.businessinsider.com/car-hackers-trigger-tesla-model-s-brakes-unlock-doors-adjust-seats-tencent-keen-security-lab-2016-9"
+      }
+    ]
+  }
+}

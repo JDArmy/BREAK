@@ -1,0 +1,24 @@
+{
+  "C1814": {
+    "title": "Alias Robotics Unitree G1 Humanoid Robot Security Assessment",
+    "keywords": [
+      "Alias Robotics",
+      "Unitree G1",
+      "humanoid robot security",
+      "hardcoded key",
+      "telemetry exfiltration",
+      "GDPR violation"
+    ],
+    "summary": "In September 2025, Alias Robotics published a systematic security assessment of the Unitree G1 humanoid on arXiv. It found a command-injection vulnerability in the BLE provisioning flow, with all devices sharing one hardcoded AES key, allowing root within Bluetooth range. The FMX dual-layer proprietary encryption used a device-shared static Blowfish-ECB key (effective entropy 0). The robot sent battery, sensor, camera, and microphone telemetry to a China-based server (43.175.228.18:17883) every 300 seconds, violating GDPR. Researchers weaponized it as a covert surveillance node and attack pivot.",
+    "references": [
+      {
+        "title": "Alias Robotics: Humanoid Robots as Attack Vectors (arXiv:2509.14139)",
+        "link": "https://arxiv.org/abs/2509.14139"
+      },
+      {
+        "title": "Help Net Security: Unitree G1 humanoid robot vulnerability",
+        "link": "https://www.helpnetsecurity.com/2025/10/16/unitree-g1-humanoid-robot-vulnerability/"
+      }
+    ]
+  }
+}

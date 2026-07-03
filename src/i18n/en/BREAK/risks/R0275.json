@@ -1,0 +1,24 @@
+{
+  "R0275": {
+    "title": "Robot Middleware (ROS/DDS) Vulnerability Exploitation",
+    "keywords": [
+      "robot middleware (ROS/DDS) vulnerability exploitation",
+      "ROS vulnerability",
+      "DDS vulnerability",
+      "MoveIt vulnerability",
+      "SROS2",
+      "ROS2 security",
+      "FastDDS CVE"
+    ],
+    "definition": "Exploitation of known vulnerabilities and default-insecure configurations (no authentication, plaintext multicast) of the Robot Operating System (ROS/ROS2), DDS middleware, and MoveIt motion-planning library to achieve node takeover, topic injection, or command tampering.",
+    "description": "Robot middleware vulnerability exploitation targets the security defects of ROS/ROS2, the de-facto standard middleware. eProsima FastDDS (ROS2 default DDS) disclosed a heap buffer overflow in 2024 (CVE-2024-30259); a publisher sending a malformed RTPS packet can remotely crash subscribers. The ROS-CVE-CNVDs project collects 33 buffer-overflow/use-after-free vulnerabilities in ROS2 Nav2 components. SROS2/DDS-Security is not enabled by default, and only 3 of the 5 security SPIs are implemented; cross-vendor DDS does not support secure communication. The DDS Discovery protocol can enumerate all ROS2 applications' domain IDs/topics/services on a LAN. The rostopic CLI tool has eval() code-injection vulnerabilities (CVE-2024-41921/41148). ROS's default no-authentication design makes lateral movement within a network extremely low-barrier.\n\nThis risk relates to R0165 (IoT botnet) and R0213 (edge-compute node attack), but is specialized for the robot-middleware ecosystem, a severe area for ROS2 deployments.",
+    "complexity": "intermediate",
+    "influence": "Causes entire robot-system takeover, multi-node coordination disruption, and tampering of safety-critical commands; ROS's default no-authentication design makes intra-network lateral movement extremely low-barrier, capable of paralyzing an entire robot fleet or swarm.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "A0233": {
+    "title": "Swarm Coordination Fault Tolerance & Byzantine Defense",
+    "keywords": [
+      "swarm coordination fault tolerance & byzantine defense",
+      "swarm fault tolerance",
+      "byzantine defense",
+      "byzantine fault-tolerant consensus",
+      "member anomaly isolation",
+      "swarm-level e-stop",
+      "robot swarm fault tolerance"
+    ],
+    "definition": "Swarm communication redundancy, byzantine fault-tolerant consensus, member-behavior anomaly detection and isolation, and swarm-level e-stop and degraded operation to prevent individual hijacked or faulty members from causing whole-swarm loss-of-control.",
+    "description": "Swarm coordination fault tolerance & byzantine defense builds four layers against the risk of individual hijacked swarm members becoming byzantine nodes, communication disruption, or algorithm defects triggering cascading loss-of-control. First, communication redundancy — multi-path communication among swarm members, so single-link disruption does not fail consensus. Second, byzantine fault-tolerant consensus (e.g., PBFT, HoneyBadger) reaches correct consensus even when some members send false information. Third, member-behavior anomaly detection identifies and isolates members deviating from swarm protocol (e.g., sending anomalous commands, trajectory deviation). Fourth, swarm-level e-stop and degraded operation — when swarm loss-of-control is detected, all members e-stop or degrade to a safe mode.\n\nThis measure is the core defense after KARGU-2 autonomous weapons and warehouse AMR swarms lose control; it works with A0232 (robot safety stop E-stop & functional-safety design) and A0108 (IoT network isolation and access control).",
+    "limitation": "Byzantine fault tolerance adds communication and compute overhead; large-scale swarm consensus has high latency, hard to meet real-time control; anomaly-detection false positives can wrongly isolate normal members; swarm-level e-stop may be abused by attackers for denial of service; defense fails when members exceed the fault-tolerance threshold.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

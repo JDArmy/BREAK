@@ -1,0 +1,20 @@
+{
+  "AT0103": {
+    "title": "Robot Middleware Vulnerability Exploitation Tool",
+    "keywords": [
+      "robot middleware vulnerability exploitation tool",
+      "ROS vulnerability exploitation",
+      "DDS vulnerability exploitation",
+      "MoveIt vulnerability",
+      "FastDDS CVE",
+      "ROS middleware exploit"
+    ],
+    "description": "A vulnerability scanning and exploitation toolset targeting the Robot Operating System (ROS/ROS2), DDS middleware, and MoveIt motion-planning library. The tool integrates FastDDS heap-overflow exploitation (CVE-2024-30259-style malformed RTPS packet remote crash), ROS2 Nav2 component buffer-overflow/use-after-free exploitation, DDS Discovery LAN node enumeration, rostopic eval() code injection (CVE-2024-41921/41148), and topic injection and command tampering, enabling node takeover and lateral movement against ROS2 deployments without SROS2/DDS-Security enabled. It draws on the ROS-CVE-CNVDs project (33 Nav2 CVEs) and Alias Robotics ROS vulnerability research. Unlike AT0083 (industrial & V2X protocol exploitation tool) which focuses on industrial/V2X protocols, this tool focuses on the robot-middleware ecosystem.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

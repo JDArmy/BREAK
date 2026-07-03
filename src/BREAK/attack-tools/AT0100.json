@@ -1,0 +1,70 @@
+{
+  "AT0100": {
+    "title": "VLA对抗攻击工具",
+    "description": "针对视觉-语言-动作(VLA)与视觉-语言模型(VLM)控制的具身智能机器人的对抗攻击工具集，集成物理对抗补丁生成、跨模态注入样本构造、越狱提示生成与物理世界提示注入载荷制作能力。该工具借鉴RoboPAIR越狱算法（白盒/灰盒/黑盒三平台常100%攻击成功率）、UPA-RFAS单一补丁跨模型迁移、CrossInject跨模态注入、BadRobot语音越狱等公开研究方法，可针对NVIDIA Dolphins、Unitree Go2+GPT、Clearpath Jackal等平台生成诱导机器人执行撞击、武器化、忽略停止标志等有害物理动作的攻击载荷。区别于AT0054（系统/应用漏洞利用工具）聚焦传统软件漏洞，本工具聚焦VLA模型层对抗与越狱。",
+    "directCauseRisks": [
+      "R0267",
+      "R0271",
+      "R0272",
+      "R0274"
+    ],
+    "indirectSupportRisks": [
+      "R0071",
+      "R0243",
+      "R0273"
+    ],
+    "avoidances": [
+      "A0225",
+      "A0229",
+      "A0178",
+      "A0072"
+    ],
+    "keywords": [
+      "VLA对抗攻击工具",
+      "VLA对抗攻击",
+      "对抗补丁生成",
+      "RoboPAIR越狱",
+      "跨模态注入工具",
+      "adversarial VLA toolkit"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0053",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0093",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0024",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0081",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0101",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0102",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

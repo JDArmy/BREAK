@@ -1,0 +1,43 @@
+{
+  "A0228": {
+    "title": "机器人调试接口硬化",
+    "category": "AC01",
+    "definition": "关闭或加密生产环境调试与维护接口、BLE配网强制认证、移除厂商SDK硬编码凭据、维护口最小暴露，防止攻击者通过调试通道获取设备控制权。",
+    "description": "机器人调试接口硬化针对Unitree UniPwn（CVE-2025-35027）等通过BLE配网命令注入、硬编码密钥、未关闭调试串口获取root权限的攻击手法，从四个层面收敛攻击面。一是生产环境关闭JTAG/UART调试口或启用强认证，防止物理接触者直接获取shell。二是BLE配网接口强制双向认证与每设备唯一密钥，移除全设备共享的硬编码加密密钥。三是厂商SDK移除硬编码凭据与后门服务（如CloudSail类预置远程访问），出厂前扫描清理。四是维护口最小暴露，仅保留必要维护功能并记录操作审计日志。\n\n该手段与A0109（IoT设备强认证与默认凭证变更）、A0117（默认凭据扫描与自动修复）、A0114（IoT设备安全配置强制执行）配合，前者关注通用设备认证，本手段聚焦机器人特有的调试与配网接口。",
+    "limitation": "维护便捷性与安全性存在冲突，硬化后现场调试需额外认证流程增加运维成本；老旧设备固件无法升级，遗留漏洞难以修复；BLE配网认证可能影响首次配网用户体验；部分厂商为远程运维便利抵触移除后门服务。",
+    "keywords": [
+      "机器人调试接口硬化",
+      "调试接口硬化",
+      "BLE配网认证",
+      "硬编码密钥移除",
+      "JTAG关闭",
+      "维护口最小暴露",
+      "robot debug interface hardening"
+    ],
+    "effectiveness": "medium",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedAvoidances": [
+      {
+        "key": "A0109",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0117",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0114",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

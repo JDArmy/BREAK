@@ -1,0 +1,32 @@
+{
+  "R0268": {
+    "title": "机器人感知对抗攻击",
+    "definition": "针对机器人传感器（LiDAR、IMU、摄像头、超声波、GPS/北斗）的物理层欺骗与干扰，使感知系统输出失真数据，导致定位、避障、抓取决策错误的攻击。",
+    "description": "机器人感知对抗攻击通过物理手段欺骗具身智能的感知硬件。LiDAR欺骗方面，Cao等（CCS 2019）用光电二极管同步激光脉冲注入伪造点云，可让行驶中的自动驾驶车紧急制动或冻结；NDSS 2025研究证明60km/h高速、110米远距离下LiDAR物体消除攻击成功率超96%。IMU欺骗方面，Son等（USENIX Security 2015）用声波干扰MEMS陀螺仪使无人机失控，NDSS 2023系统化了声学注入攻击基础。摄像头欺骗包括激光致盲、Rolling Colors式rolling shutter操纵红绿灯识别。GPS/北斗欺骗方面，UT Austin Humphreys团队2012年演示用千元设备劫持无人机航向。\n\n该风险是自动驾驶与移动机器人感知层安全的核心威胁，与R0189（传感器欺骗攻击）有重叠但更聚焦具身智能多传感器融合系统，与R0205（AIoT融合攻击）共同构成感知层攻击面。",
+    "complexity": "advanced",
+    "influence": "致机器人定位丢失、误识别障碍物、轨迹偏移甚至碰撞坠落，是自动驾驶与移动机器人安全的核心威胁，可被用于制造交通事故、劫持无人机或瘫痪仓储物流机器人。",
+    "avoidances": [
+      "A0226",
+      "A0014",
+      "A0178",
+      "A0113"
+    ],
+    "keywords": [
+      "机器人感知对抗攻击",
+      "LiDAR欺骗",
+      "IMU声学注入",
+      "传感器干扰",
+      "感知欺骗",
+      "sensor spoofing",
+      "LiDAR spoofing"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedRisks": [],
+    "updated": "2026-07-03"
+  }
+}

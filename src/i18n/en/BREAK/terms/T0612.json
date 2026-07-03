@@ -1,0 +1,24 @@
+{
+  "T0612": {
+    "title": "Adversarial Patch",
+    "aliases": [
+      "Adversarial Patch",
+      "Adversarial Sticker"
+    ],
+    "category": "Artificial Intelligence",
+    "keywords": [
+      "adversarial patch",
+      "adversarial sticker",
+      "physical adversarial example"
+    ],
+    "definition": "A physical adversarial example crafted by an attacker, printed and placed on an object or in a scene, that makes a robot's visual perception misidentify objects, grab wrong items, or avoid wrong targets.",
+    "description": "Adversarial patches are the main vehicle of physical-world adversarial attacks, needing to overcome lighting, viewpoint, and distance variation to remain effective after physical-world printing. VLA-targeted patch attacks hijack text-visual attention (Patch Attention Dominance) or disrupt visual-text latent-alignment, persistently disturbing robot manipulation decisions in black-box, unknown-architecture, and sim-to-real transfer scenarios. UPA-RFAS (CVPR 2026) achieves single-patch black-box cross-model transfer, dropping task success by up to 100%. VLA-Attacker implements spatially-grounded untargeted/targeted attacks. Classic research like Evtimov's RP2 algorithm makes stop signs disappear with black-and-white stickers. Adversarial patches are the core attack vehicle of R0267 (physical-world prompt injection) and R0271 (VLA adversarial attack).",
+    "usageExample": "An attacker placing an adversarial patch at a sorting-robot workstation may cause the robot to persistently grab wrong materials, causing a production incident.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

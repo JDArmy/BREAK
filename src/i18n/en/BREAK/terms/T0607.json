@@ -1,0 +1,26 @@
+{
+  "T0607": {
+    "title": "VLA Model",
+    "aliases": [
+      "Vision-Language-Action Model",
+      "VLA"
+    ],
+    "category": "Artificial Intelligence",
+    "keywords": [
+      "VLA model",
+      "Vision-Language-Action Model",
+      "OpenVLA",
+      "RT-2",
+      "VLA"
+    ],
+    "definition": "An end-to-end model fusing visual perception, language understanding, and action output; the core decision-making brain of embodied-intelligence robots, mapping visual observations and language instructions to physical action sequences.",
+    "description": "The VLA model is the key technology distinguishing embodied intelligence from traditional robots, with representatives like OpenVLA, RT-2, and Octo. It combines the perception-understanding capability of Vision-Language Models (VLM) with action generation, enabling robots to perform complex manipulation from natural-language instructions and visual observations. But VLA models inherit and amplify LLM/VLM vulnerabilities: adversarial examples, adversarial patches, jailbreaks, backdoors, and cross-modal injection attacks can translate directly into physical-action errors. Research like RoboPAIR jailbreak, UPA-RFAS adversarial patch, and DropVLA backdoor shows VLA models' physical-world attack surface far exceeds pure software models.",
+    "usageExample": "A service robot driven by a VLA model, when receiving a grasp-cup instruction, may mis-grab a nearby thermos if attacked by an adversarial patch, causing scalding.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

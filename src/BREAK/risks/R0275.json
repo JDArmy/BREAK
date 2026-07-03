@@ -1,0 +1,32 @@
+{
+  "R0275": {
+    "title": "机器人中间件(ROS/DDS)漏洞利用",
+    "definition": "针对机器人操作系统(ROS/ROS2)、DDS中间件、MoveIt运动规划库的已知漏洞与默认不安全配置（无认证、明文组播）的利用，实现节点接管、话题注入或指令篡改的攻击。",
+    "description": "机器人中间件漏洞利用针对ROS/ROS2事实标准中间件的安全缺陷。eProsima FastDDS（ROS2默认DDS）2024年披露堆缓冲区溢出（CVE-2024-30259），发布者发送畸形RTPS包即可远程崩溃订阅端。ROS-CVE-CNVDs项目收录33个ROS2 Nav2组件的buffer-overflow/use-after-free漏洞。SROS2/DDS-Security默认未启用，且5个安全SPI仅实现3个，跨厂商DDS不支持安全通信。DDS Discovery协议可枚举局域网所有ROS2应用的通信域ID/Topic/Service。rostopic命令行工具存在eval()代码注入漏洞（CVE-2024-41921/41148）。ROS默认无认证的设计使内网横向移动门槛极低。\n\n该风险与R0165（IoT僵尸网络）、R0213（边缘计算节点攻击）相关，但特化于机器人中间件生态，是ROS2部署的安全重灾区。",
+    "complexity": "intermediate",
+    "influence": "致整个机器人系统被接管、多节点协同被破坏、安全关键指令被篡改，ROS默认无认证的设计使内网横向移动门槛极低，可瘫痪整个机器人车队或集群。",
+    "avoidances": [
+      "A0231",
+      "A0108",
+      "A0118",
+      "A0146"
+    ],
+    "keywords": [
+      "机器人中间件(ROS/DDS)漏洞利用",
+      "ROS漏洞",
+      "DDS漏洞",
+      "MoveIt漏洞",
+      "SROS2",
+      "ROS2安全",
+      "FastDDS CVE"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedRisks": [],
+    "updated": "2026-07-03"
+  }
+}

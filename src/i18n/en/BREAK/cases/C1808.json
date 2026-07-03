@@ -1,0 +1,23 @@
+{
+  "C1808": {
+    "title": "iRobot Roomba J7 Home Privacy Photo Leakage Incident",
+    "keywords": [
+      "iRobot Roomba J7",
+      "home privacy leakage",
+      "data annotation abuse",
+      "robot vacuum photos",
+      "AI training data privacy"
+    ],
+    "summary": "In December 2022, MIT Technology Review reported that iRobot Roomba J7 dev units captured private home images in 2020 (including a woman on the toilet, children), sent to Scale AI for annotation, then illicitly shared by Venezuelan annotators to private Facebook groups and Discord. iRobot confirmed 15 leaked photos were among ~2 million images shared with Scale AI. The incident exposed privacy-control failures in embodied-device data collection and third-party annotation chains, raising AI training-data compliance disputes.",
+    "references": [
+      {
+        "title": "MIT Technology Review: Roomba's privacy problem",
+        "link": "https://www.technologyreview.com/2022/12/19/1065306/roomba-irobot-robot-vacuums-artificial-intelligence-training-data-privacy/"
+      },
+      {
+        "title": "AI Incident Database: iRobot Roomba J7",
+        "link": "https://incidentdatabase.ai/cite/521/"
+      }
+    ]
+  }
+}

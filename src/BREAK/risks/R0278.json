@@ -1,0 +1,32 @@
+{
+  "R0278": {
+    "title": "具身智能数据采集隐私泄露",
+    "definition": "机器人搭载的摄像头、麦克风、激光雷达在家庭、商场、工厂采集的隐私数据被泄露、被攻击者窃取或被厂商滥用的风险。",
+    "description": "具身智能数据采集隐私泄露是服务机器人普及的核心隐私风险。iRobot Roomba J7开发版通过低角度前置摄像头拍摄用户家庭私密画面（含女性如厕、儿童画面），数据发送给Scale AI旗下Remotasks平台由标注工人处理，工人违规将截图分享到Facebook私人群组和Discord。Amazon Astro被内部工程师称为隐私噩梦，配备可伸缩望远镜摄像头与人脸识别。Ecovacs扫地机器人2024年被安全研究人员攻破，可实时观看摄像头并窃取照片/音频，多城市发生Deebot X2被黑客远程控制用扬声器喊种族歧视言论事件。LidarPhone研究证明扫地机器人LiDAR可被改造为激光麦克风，即使设备无麦克风也能复原对话。\n\n该风险与R0211（智能家居隐私窃听）、R0078（数据泄露）相关，但特化于具身智能设备的物理世界采集场景，是GDPR、《个人信息保护法》对具身智能合规的核心问题。",
+    "complexity": "intermediate",
+    "influence": "致家庭私密画面、儿童隐私、商业机密泄露，可被用于勒索、精准诈骗或社会工程，厂商滥用采集数据训练模型还引发知情同意与数据主权争议。",
+    "avoidances": [
+      "A0234",
+      "A0069",
+      "A0078",
+      "A0072"
+    ],
+    "keywords": [
+      "具身智能数据采集隐私泄露",
+      "机器人隐私泄露",
+      "摄像头窃听",
+      "家庭隐私采集",
+      "Roomba泄露",
+      "embodied data privacy",
+      "robot surveillance"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedRisks": [],
+    "updated": "2026-07-03"
+  }
+}

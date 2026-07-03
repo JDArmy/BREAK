@@ -1,0 +1,23 @@
+{
+  "A0232": {
+    "title": "Robot Safety Stop E-stop & Functional-Safety Design",
+    "keywords": [
+      "robot safety stop E-stop & functional-safety design",
+      "safety stop",
+      "E-stop",
+      "emergency stop loop",
+      "functional safety",
+      "ISO 10218",
+      "cobot force limit"
+    ],
+    "definition": "Hardware-level emergency-stop loops, safety controllers, collaborative-robot force and speed limits, and ISO 10218/ISO/TS 15066 compliant functional-safety design to ensure robots can stop quickly and limit physical harm under anomalies.",
+    "description": "Robot safety stop E-stop & functional-safety design builds hardware-to-architecture defense-in-depth against robot physical-harm and functional-safety failure. First, hardware-level emergency-stop loops are independent of the software control link; pressing cuts motor power and software faults cannot bypass them. Second, safety controllers use redundant architectures and self-diagnostics to execute safety-interlock monitoring (light curtains, safety mats, safety doors). Third, collaborative-robot force and speed limits comply with ISO/TS 15066 human-robot collaboration pressure thresholds, proactively decelerating before collision. Fourth, functional-safety design follows ISO 10218 (industrial-robot safety), ISO 13482 (personal-care robot safety), with risk assessment and safety-level (PLd/SIL2) design.\n\nThis measure is the core physical-safety defense after incidents like Knightscope K5 collisions and the Volkswagen Baunatal fatality; it works with A0147 (industrial protocol hardening) and A0014 (tamper-proofing).",
+    "limitation": "Hardware e-stop cannot handle already-applied mechanical inertia; high-speed motion still has braking distance; functional-safety certification is costly and long, hard for SMBs; soft e-stop can be bypassed by software faults, requiring hardware e-stop as backstop; force and speed limits reduce task efficiency, requiring fine tuning in collaboration scenarios.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

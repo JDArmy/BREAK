@@ -1,0 +1,23 @@
+{
+  "A0234": {
+    "title": "Embodied Data-Collection Privacy Protection",
+    "keywords": [
+      "embodied data-collection privacy protection",
+      "embodied data privacy",
+      "on-device processing",
+      "data desensitization",
+      "collection notice and consent",
+      "differential privacy",
+      "embodied data privacy protection"
+    ],
+    "definition": "Protecting privacy data collected by robot-mounted cameras/microphones in homes, malls, and factories via on-device processing, data desensitization, collection notice and consent, and differential privacy.",
+    "description": "Embodied data-collection privacy protection addresses incidents like iRobot Roomba J7 private-image leakage, Ecovacs remote eavesdropping, and Amazon Astro home surveillance, building protection across the data lifecycle. First, on-device processing — sensitive data (faces, voiceprints, home layout) is inferred locally on the robot, not uploaded to the cloud. Second, data desensitization — training/annotation data that must be uploaded is face-blurred, voice-pitched, and layout-generalized. Third, collection notice and consent — robots explicitly notify users of collection scope and purpose before collection, obtaining explicit consent. Fourth, differential privacy — noise is added to statistical data to prevent reverse-engineering individuals from aggregates.\n\nThis measure works with A0069 (privacy-enhancing technologies) and A0078 (endpoint detection and response), specialized for the physical-world collection scenario of embodied devices, core to GDPR and Personal Information Protection Law compliance for embodied intelligence.",
+    "limitation": "On-device processing is limited by device compute, making complex models hard to deploy locally; desensitization may lose training-data value, affecting model performance; notice-and-consent can be perfunctory, with users hard-pressed to truly understand collection consequences; differential privacy significantly reduces data utility in low-cardinality scenarios.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

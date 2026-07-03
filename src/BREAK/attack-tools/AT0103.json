@@ -1,0 +1,66 @@
+{
+  "AT0103": {
+    "title": "机器人中间件漏洞利用工具",
+    "description": "针对机器人操作系统(ROS/ROS2)、DDS中间件、MoveIt运动规划库的漏洞扫描与利用工具集。该工具集成FastDDS堆溢出（CVE-2024-30259式畸形RTPS包远程崩溃）、ROS2 Nav2组件buffer-overflow/use-after-free利用、DDS Discovery协议局域网节点枚举、rostopic eval()代码注入（CVE-2024-41921/41148）、话题注入与指令篡改等能力，可对未启用SROS2/DDS-Security的ROS2部署实施节点接管与横向移动。借鉴ROS-CVE-CNVDs项目（33个Nav2 CVE）与Alias Robotics ROS漏洞研究。区别于AT0083（工业与车联网协议利用工具）聚焦工控/车联网协议，本工具聚焦机器人中间件生态。",
+    "directCauseRisks": [
+      "R0275"
+    ],
+    "indirectSupportRisks": [
+      "R0165",
+      "R0213",
+      "R0081"
+    ],
+    "avoidances": [
+      "A0231",
+      "A0108",
+      "A0146"
+    ],
+    "keywords": [
+      "机器人中间件漏洞利用工具",
+      "ROS漏洞利用",
+      "DDS漏洞利用",
+      "MoveIt漏洞",
+      "FastDDS CVE",
+      "ROS middleware exploit"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0081",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0083",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0054",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0082",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0024",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0100",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      }
+    ],
+    "updated": "2026-07-03"
+  }
+}

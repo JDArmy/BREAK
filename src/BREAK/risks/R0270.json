@@ -1,0 +1,32 @@
+{
+  "R0270": {
+    "title": "机器人调试与维护接口滥用",
+    "definition": "攻击者利用机器人暴露的调试接口、维护口、BLE配网口或厂商SDK硬编码凭据，绕过认证获取设备控制权或植入后门的攻击。",
+    "description": "机器人调试与维护接口滥用是2025年最严重的具身智能安全事件方向。Unitree UniPwn系列漏洞（CVE-2025-35027）影响Go2/G1/H1/B2，源于BLE Wi-Fi配网接口硬编码AES密钥（加密字符串unitree即可绕过认证）、命令注入，攻击者可无线获取root权限且具蠕虫式传播能力。CVE-2025-2894披露Unitree Go1出厂预装CloudSail远程访问服务，全球曾1919台在线，持API key者可远程控制设备并访问摄像头。Alias Robotics对Unitree G1评估发现FMX双层专有加密用全设备共享静态密钥、每300秒向外部IP外传音视频与执行器数据。IOActive 2017年发现Universal Robots UR3/UR5存在认证缺失，可远程禁用急停。\n\n该风险与R0166（IoT设备默认凭据风险）、R0164（固件篡改与后门）相关，但特化于机器人调试配网接口与厂商SDK硬编码，是Unitree等厂商产品的重灾区。",
+    "complexity": "intermediate",
+    "influence": "致机器人完全被控、固件被篡改、被纳入僵尸网络或被武器化为监控节点，可监视用户、伤人或被组建为蠕虫式机器人僵尸网络，典型如Unitree UniPwn可蓝牙范围内自动感染同品牌机器人。",
+    "avoidances": [
+      "A0228",
+      "A0109",
+      "A0117",
+      "A0114"
+    ],
+    "keywords": [
+      "机器人调试与维护接口滥用",
+      "调试接口滥用",
+      "BLE配网命令注入",
+      "厂商SDK硬编码",
+      "UniPwn",
+      "debug interface abuse",
+      "hardcoded credentials"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedRisks": [],
+    "updated": "2026-07-03"
+  }
+}

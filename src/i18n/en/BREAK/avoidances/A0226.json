@@ -1,0 +1,23 @@
+{
+  "A0226": {
+    "title": "Multi-Modal Perception Cross-Validation",
+    "keywords": [
+      "multi-modal perception cross-validation",
+      "multi-sensor fusion validation",
+      "sensor consistency check",
+      "perception redundancy",
+      "LiDAR camera fusion",
+      "trust-aware sensor fusion",
+      "sensor fusion cross-validation"
+    ],
+    "definition": "Fusing and cross-validating outputs of heterogeneous sensors (LiDAR, camera, IMU, mmWave radar, ultrasonic) to downweight or alert when a single sensor's data is inconsistent with the rest, resisting single-point perception spoofing.",
+    "description": "Multi-modal perception cross-validation is based on the premise that \"spoofing a single sensor is hard to make consistently deceive all channels,\" scoring each channel's consistency at the sensor-fusion layer. For example, when GNSS shows displacement but the IMU detects no acceleration, LiDAR point clouds show an obstacle but the camera sees nothing corresponding, or ultrasonic and infrared ranging disagree, the deviating channel is downweighted or discarded. Trust-aware sensor fusion dynamically weights channels to keep overall perception reliable under single-point spoofing.\n\nThis measure is core to autonomous-driving and mobile-robot perception-layer defense, directly targeting single-sensor attacks such as LiDAR point-cloud injection, IMU acoustic jamming, and GPS spoofing. It works with A0014 (tamper-proofing) and A0178 (AIoT model security protection).",
+    "limitation": "Advanced attackers can simultaneously compromise multiple channels (cross-modal coordinated attack) to make data pseudo-consistent; slow-drift attacks may keep deviations within consistency tolerance; fusion adds compute and latency overhead affecting real-time control; sensor placement is constrained by cost and power, making full redundancy difficult.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C1810": {
+    "title": "Raven II Surgical Robot Teleoperation Hijacking Research",
+    "keywords": [
+      "Raven II",
+      "surgical robot hijacking",
+      "teleoperation hijacking",
+      "remote surgery security",
+      "medical robot vulnerability"
+    ],
+    "summary": "In May 2015, a University of Washington team performed the first experimental security attacks on the Raven II open-source remote surgical robot, revealing its teleoperation channel could be hijacked. Researchers could trigger emergency stops, perform man-in-the-middle attacks to tamper with control commands, and inject malicious actions, proving the encryption and authentication gaps in remote surgical robots. MIT Tech Review reported this as the first surgical-robot teleoperation hijacking study, driving medical-robot communication-security standards.",
+    "references": [
+      {
+        "title": "MIT Technology Review: Security experts hack teleoperated surgical robot",
+        "link": "https://www.technologyreview.com/2015/04/24/168339/security-experts-hack-teleoperated-surgical-robot/"
+      },
+      {
+        "title": "UW News: Researchers hack a teleoperated surgical robot",
+        "link": "https://www.washington.edu/news/2015/05/07/uw-researchers-hack-a-teleoperated-surgical-robot-to-reveal-security-flaws/"
+      }
+    ]
+  }
+}

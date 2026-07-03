@@ -1,0 +1,23 @@
+{
+  "A0229": {
+    "title": "VLA Adversarial Training & Robustness",
+    "keywords": [
+      "VLA adversarial training & robustness",
+      "VLA adversarial training",
+      "VLM robustness",
+      "adversarial example detection",
+      "cross-modal consistency",
+      "red-team assessment",
+      "VLA adversarial robustness"
+    ],
+    "definition": "Improving the robustness of Vision-Language-Action (VLA) and Vision-Language Models (VLM) against adversarial inputs, backdoors, and jailbreaks via adversarial training, adversarial-example detection, cross-modal consistency constraints, and red-team assessment.",
+    "description": "VLA adversarial training & robustness builds multi-dimensional defense against model-layer attacks such as RoboPAIR jailbreak, UPA-RFAS adversarial patches, DropVLA backdoors, and CrossInject cross-modal injection. First, adversarial training introduces adversarial examples (physical adversarial patches, cross-modal perturbations, jailbreak prompts) during training to improve robustness against known attacks. Second, adversarial-example detectors identify anomalous perturbations and injection features in inputs. Third, cross-modal consistency constraints verify semantic consistency across vision, language, and action modalities to detect cross-modal injection. Fourth, red-team assessment regularly tests deployed VLAs with RoboPAIR-style jailbreak and adversarial methods.\n\nThis measure belongs to the model-security system with A0178 (AIoT model security protection) and A0072 (algorithm audit mechanism), specialized for the physical-world adversarial and jailbreak scenarios of VLA/VLM, core to embodied intelligence versus traditional AI model defense.",
+    "limitation": "Adversarial training cannot cover all novel attack forms in the open physical world, with a whack-a-mole dilemma; robustness trades off against task performance, and over-defense may lower task success; backdoor triggers are highly stealthy and hard to fully detect and eliminate; red-team assessment is costly and cannot guarantee coverage of all attack paths.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

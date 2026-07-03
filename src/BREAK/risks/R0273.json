@@ -1,0 +1,32 @@
+{
+  "R0273": {
+    "title": "VLA模型后门与训练数据投毒",
+    "definition": "攻击者在VLA训练/微调数据或模仿学习演示数据中植入后门，使机器人在特定触发条件下执行攻击者指定动作的风险。",
+    "description": "VLA模型后门与训练数据投毒已成独立研究方向。DropVLA（动作级后门，OpenVLA-7B）使可复用动作原语在攻击者选定决策点执行，仅0.31%投毒样本即达98.67%-99.83%攻击成功率且干净任务保留率超98%。BadVLA（NeurIPS 2025）是首个无目标VLA后门。State Backdoor用机械臂初始状态作触发器，成功率超90%。BEAT用环境物体触发视觉后门。AgentPoison针对RAG型自动驾驶agent，投毒小于0.1%即达超80%攻击成功率。模仿学习演示数据投毒则让机器人从源头学到错误或危险策略，隐蔽样本与良性图像视觉不可区分，可绕过人工审查。\n\n该风险与R0243（训练数据投毒风险）相关，但R0243聚焦通用AI训练数据投毒，本风险特化于VLA模型的后门触发器与具身策略层，强调物理动作触发。",
+    "complexity": "advanced",
+    "influence": "机器人长期潜伏，特定触发下执行危险动作（如特定视觉补丁出现时开锁或攻击），后门隐蔽性强难以检测，可在供应链投毒后影响所有下游部署机器人。",
+    "avoidances": [
+      "A0229",
+      "A0178",
+      "A0072",
+      "A0202"
+    ],
+    "keywords": [
+      "VLA模型后门与训练数据投毒",
+      "VLA后门",
+      "训练数据投毒",
+      "演示数据投毒",
+      "DropVLA",
+      "VLA backdoor",
+      "imitation learning poisoning"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "relatedRisks": [],
+    "updated": "2026-07-03"
+  }
+}

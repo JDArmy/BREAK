@@ -1,0 +1,36 @@
+{
+  "C1806": {
+    "title": "Unitree UniPwn 人形机器人BLE命令注入漏洞(CVE-2025-35027)",
+    "category": "vulnerability_advisory",
+    "incidentTime": "2025-09",
+    "summary": "2025年9月，安全研究者披露Unitree Go2/B2机器狗与G1/H1人形机器人的BLE Wi-Fi配网接口存在命令注入漏洞(CVE-2025-35027)。所有设备共用硬编码AES密钥，加密字符串unitree即可绕过认证，再通过恶意Wi-Fi SSID调用system()获root权限。该漏洞具蠕虫传播能力，被感染机器人可自动扫描蓝牙范围内其他同品牌机器人并入侵，可组建自我复制的机器人僵尸网络。IEEE Spectrum报道，英国诺丁汉郡警方当时正在测试可被利用的Unitree Go2。",
+    "relatedRisks": [
+      "R0270",
+      "R0163"
+    ],
+    "relatedAttackTools": [
+      "AT0102"
+    ],
+    "relatedThreatActors": [
+      "TA0065"
+    ],
+    "references": [
+      {
+        "title": "IEEE Spectrum: Unitree Robot Exploit",
+        "link": "https://spectrum.ieee.org/unitree-robot-exploit"
+      },
+      {
+        "title": "NVD: CVE-2025-35027",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-35027"
+      }
+    ],
+    "keywords": [
+      "Unitree UniPwn",
+      "BLE命令注入",
+      "CVE-2025-35027",
+      "人形机器人漏洞",
+      "蠕虫式机器人攻击"
+    ],
+    "updated": "2026-07-03"
+  }
+}

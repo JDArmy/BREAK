@@ -1,0 +1,23 @@
+{
+  "A0231": {
+    "title": "SROS2 & DDS-Security Deployment",
+    "keywords": [
+      "SROS2 & DDS-Security deployment",
+      "SROS2",
+      "DDS-Security",
+      "ROS2 security",
+      "node authentication",
+      "topic access control",
+      "ROS2 communication security"
+    ],
+    "definition": "Enabling ROS2's SROS2 and DDS-Security (authentication, encryption, access control) to replace the default no-authentication DDS multicast configuration, preventing unauthorized robot-node access or topic injection and tampering.",
+    "description": "SROS2 & DDS-Security deployment addresses the insecure default ROS/ROS2 DDS communication — no authentication, plaintext multicast, nodes arbitrarily publishing/subscribing to topics — by enabling the five security SPIs of the OMG DDS-Security specification (authentication, access control, data confidentiality, data integrity, data-origin authentication). SROS2 provides certificate management and PKI integration to simplify DDS-Security deployment. Once enabled, inter-node communication requires mutual authentication, topic publish/subscribe is constrained by access-control lists, data transit is encrypted against eavesdropping and tampering, and the DDS Discovery protocol no longer leaks all ROS2 applications' information on the LAN.\n\nThis measure works with A0108 (IoT network isolation and access control), A0118 (certificate-based device authentication), and A0146 (industrial network isolation and zoning), and is the core architecture-level defense after ROS2 vulnerabilities like CVE-2024-30259 (FastDDS heap overflow).",
+    "limitation": "DDS-Security brings significant performance overhead affecting real-time control latency; some legacy ROS nodes and cross-vendor DDS have poor interoperability and may not enable full security features; certificate and PKI management adds deployment complexity; SROS2 implements only 3 of the 5 DDS-Security SPIs, with the remaining two requiring vendor extension.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "R0278": {
+    "title": "Embodied-Intelligence Data-Collection Privacy Leakage",
+    "keywords": [
+      "embodied-intelligence data-collection privacy leakage",
+      "robot privacy leakage",
+      "camera eavesdropping",
+      "home privacy collection",
+      "Roomba leakage",
+      "embodied data privacy",
+      "robot surveillance"
+    ],
+    "definition": "The risk that privacy data collected by robot-mounted cameras, microphones, and LiDAR in homes, malls, and factories is leaked, stolen by attackers, or abused by vendors.",
+    "description": "Embodied-intelligence data-collection privacy leakage is a core privacy risk as service robots proliferate. The iRobot Roomba J7 dev unit captured private home images (including a woman on the toilet, children) via a low-angle front camera; the data was sent to Scale AI's Remotasks platform for annotation, and annotators illicitly shared screenshots to private Facebook groups and Discord. Amazon Astro was called a \"privacy nightmare\" by internal engineers, equipped with a telescoping camera and face recognition. Ecovacs robots were broken by security researchers in 2024, allowing real-time camera viewing and photo/audio theft; multiple cities saw Deebot X2 units remotely hijacked to shout racial slurs via the speaker. The LidarPhone research showed a robot-vacuum LiDAR can be repurposed as a laser microphone, recovering conversations even on devices without a microphone.\n\nThis risk relates to R0211 (smart-home privacy eavesdropping) and R0078 (data leakage), but is specialized for the physical-world collection scenario of embodied-intelligence devices, a core issue for GDPR and Personal Information Protection Law compliance.",
+    "complexity": "intermediate",
+    "influence": "Causes leakage of private home images, children's privacy, and trade secrets; usable for extortion, precision scams, or social engineering; vendor abuse of collected data for model training also raises informed-consent and data-sovereignty disputes.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

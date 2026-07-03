@@ -1,0 +1,22 @@
+{
+  "R0274": {
+    "title": "Cross-Modal Injection Attack",
+    "keywords": [
+      "cross-modal injection attack",
+      "cross-modal injection",
+      "CrossInject",
+      "multimodal adversarial",
+      "modality manipulation"
+    ],
+    "definition": "An attack where the attacker injects content via one modality (e.g., vision) to manipulate the VLA/VLM model's understanding of another modality (e.g., text), or vice versa, bypassing single-modal defenses.",
+    "description": "Cross-modal injection attacks exploit the multi-modal alignment space of VLA/VLM — perturbing only the image can simultaneously manipulate the model's understanding of both text and visual inputs. CrossInject performs cross-modal injection via visual-latent alignment and text-guided meta-prompts. CrossMPI perturbs only the image to manipulate text understanding, raising attack success by over 30% versus baselines. VLA-Fool implements unified text/visual/cross-modal misalignment attacks. In the classic typographic attack, CLIP classifies an apple image with \"iPod\" text as an iPod. Such attacks defeat single-modal defenses (e.g., text-only input filtering), expand the attack surface to any modality, and the optimization focus can shift from the visual embedding space to the model's hidden-state space, with optimal perturbation layers often in the middle of the model.\n\nThis risk belongs to the model-layer family together with R0267 (physical-world prompt injection) and R0271 (VLA/VLM adversarial attack); this risk focuses on cross-modal manipulation in the multi-modal alignment space, a key attack path that defeats single-modal defenses.",
+    "complexity": "advanced",
+    "influence": "Defeats single-modal defenses, expands the attack surface to any modality, and can manipulate model understanding to cause wrong action decisions; the attacker need not manipulate all modalities simultaneously, making defense significantly harder than single-modal attacks.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "T0609": {
+    "title": "Robot Operating System",
+    "aliases": [
+      "ROS",
+      "Robot Operating System",
+      "ROS2"
+    ],
+    "category": "Automation Tool",
+    "keywords": [
+      "robot operating system",
+      "ROS",
+      "ROS2",
+      "DDS"
+    ],
+    "definition": "An open-source middleware framework for developing robot software, providing inter-node communication, hardware abstraction, and motion planning; the de-facto standard robot middleware.",
+    "description": "The Robot Operating System (ROS/ROS2) is maintained by Open Robotics and implements publish-subscribe inter-node communication via the DDS (Data Distribution Service) middleware. ROS2's default DDS communication has no authentication and plaintext multicast; nodes can arbitrarily publish/subscribe to topics, and SROS2/DDS-Security is not enabled by default and implements only 3 of the 5 security SPIs. This makes ROS2 deployments face severe security risks: FastDDS heap overflow (CVE-2024-30259), 33 Nav2 CVEs, DDS Discovery leaking LAN node information, and rostopic eval() injection (CVE-2024-41921). ROS is the main attack surface for robot-middleware vulnerability exploitation.",
+    "usageExample": "A warehouse robot developed on the Robot Operating System (ROS) without SROS2 enabled lets an attacker arbitrarily publish topics to tamper with navigation commands on the LAN.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

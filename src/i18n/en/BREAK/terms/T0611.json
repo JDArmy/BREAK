@@ -1,0 +1,25 @@
+{
+  "T0611": {
+    "title": "Functional Safety",
+    "aliases": [
+      "Functional Safety",
+      "Safety Integrity"
+    ],
+    "category": "Business Security",
+    "keywords": [
+      "functional safety",
+      "ISO 10218",
+      "safety integrity",
+      "SIL"
+    ],
+    "definition": "The engineering discipline of ensuring a system remains in or enters a safe state under fault or anomaly via systematic technical and management measures, preventing physical harm and property damage.",
+    "description": "Functional safety is the theoretical basis of robot physical safety, ensuring fail-safe behavior via risk assessment, safety-level design (PLd/SIL2), redundant architecture, and self-diagnostics. Robot functional safety follows standards like ISO 10218 (industrial-robot safety, 2025 revision incorporating ISO/TS 15066 cobot content), ISO 13482 (personal-care robot safety), and IEC 62061 (mechanical electrical safety). Functional safety differs from cybersecurity: functional safety guards against random faults, cybersecurity against malicious attacks, but the two are deeply intertwined in embodied intelligence — attackers can exploit cybersecurity vulnerabilities to bypass functional-safety mechanisms (e.g., remotely disabling e-stop), so they require coordinated design.",
+    "usageExample": "An industrial robot's functional-safety design requires triggering a safety stop immediately when a force sensor anomaly is detected, preventing a runaway arm from injuring people.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

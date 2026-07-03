@@ -1,0 +1,24 @@
+{
+  "T0608": {
+    "title": "Teleoperation",
+    "aliases": [
+      "Teleoperation",
+      "Teleop"
+    ],
+    "category": "Automation Tool",
+    "keywords": [
+      "teleoperation",
+      "teleop",
+      "remote surgery"
+    ],
+    "definition": "A control mode where an operator remotely controls a robot to perform actions via a communication channel; a common operation mode for humanoid, surgical, and hazardous-operation robots.",
+    "description": "Teleoperation lets an operator send control commands from a remote master device while the robot executes on-site, suitable for scenarios humans cannot directly reach (remote surgery, hazardous-material handling, space exploration). But teleoperation relies on a communication channel with risks of hijacking, replay, and latency injection. The Raven II surgical-robot teleoperation hijacking research first revealed its security flaws, able to trigger emergency stops or perform man-in-the-middle attacks. Teleoperation is latency-sensitive; 0–500 ms delays significantly affect performance and operator cognitive response. Quadruped-robot teleoperation has unique attack surfaces like dynamic stability and gait-dependent vulnerability windows.",
+    "usageExample": "When a surgeon teleoperates a remote surgical robot, a hijacked channel could let an attacker tamper with surgical-instrument actions, endangering the patient's life.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

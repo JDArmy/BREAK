@@ -1,0 +1,36 @@
+{
+  "C1807": {
+    "title": "Unitree Go1 机器狗CloudSail预置后门漏洞(CVE-2025-2894)",
+    "category": "vulnerability_advisory",
+    "incidentTime": "2025-03",
+    "summary": "2025年3月，研究者披露Unitree Go1消费级四足机器狗固件存在未文档化后门(CVE-2025-2894)。通过Oray的CloudSail远程访问服务在板载Raspberry Pi上开机自启，建立绕过NAT的P2P隧道，任何持有默认API密钥者均可完全远程接管机器狗并调用摄像头。CloudSail API显示曾有1919台设备接入(含MIT、普林斯顿等高校实验室设备)。Unitree于3月23日静默打补丁并撤销API令牌，漏洞属CWE-912隐藏功能。",
+    "relatedRisks": [
+      "R0270",
+      "R0163"
+    ],
+    "relatedAttackTools": [
+      "AT0102"
+    ],
+    "relatedThreatActors": [
+      "TA0065"
+    ],
+    "references": [
+      {
+        "title": "takeonme.org: CVE-2025-2894",
+        "link": "https://takeonme.org/cves/cve-2025-2894/"
+      },
+      {
+        "title": "NVD: CVE-2025-2894",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-2894"
+      }
+    ],
+    "keywords": [
+      "Unitree Go1",
+      "CloudSail后门",
+      "CVE-2025-2894",
+      "预置远程访问",
+      "机器狗后门"
+    ],
+    "updated": "2026-07-03"
+  }
+}

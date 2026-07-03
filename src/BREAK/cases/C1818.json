@@ -1,0 +1,34 @@
+{
+  "C1818": {
+    "title": "委内瑞拉马杜罗总统无人机刺杀事件",
+    "category": "security_incident",
+    "incidentTime": "2018-08",
+    "summary": "2018年8月4日，委内瑞拉总统马杜罗在加拉加斯玻利瓦尔大道向国民警卫队发表户外讲话时，两架携带爆炸物的DJ M600无人机在队列上空引爆。第一架在国民警卫队队列上方空爆致7-8名军人受伤，第二架撞入距演讲点两个街区的公寓楼致1名平民受伤。马杜罗在保镖用防弹盾掩护下安然无恙。政府定性为针对总统的刺杀未遂，是首例公开的无人机刺杀国家元首事件。",
+    "relatedRisks": [
+      "R0277",
+      "R0268"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0065"
+    ],
+    "references": [
+      {
+        "title": "Wikipedia: 2018 Caracas drone attack",
+        "link": "https://en.wikipedia.org/wiki/2018_Caracas_drone_attack"
+      },
+      {
+        "title": "BBC News: Venezuela drone attack Maduro",
+        "link": "https://www.bbc.com/news/world-latin-america-45072585"
+      }
+    ],
+    "keywords": [
+      "马杜罗无人机刺杀",
+      "委内瑞拉",
+      "无人机恐怖袭击",
+      "爆炸物投送",
+      "加拉加斯无人机袭击"
+    ],
+    "updated": "2026-07-03"
+  }
+}
