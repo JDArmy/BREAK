@@ -1,7 +1,7 @@
 {
   "A0169": {
     "title": "Telegram Official Verification",
-    "description": "Use Telegram official verification badges to identify authentic bots and communities, avoiding phishing.",
+    "description": "Identify genuine bots and communities by monitoring and collecting Telegram official verification badges, usernames, channel/group identifiers, and other features, combined with whitelist matching and signature verification to determine account and community authenticity, thereby detecting phishing and impersonation accounts.",
     "keywords": [
       "Telegram Official Verification"
     ],
@@ -11,6 +11,7 @@
         "link": "https://lifehacker.com/tech/telegram-has-a-new-verification-strategy-to-cut-down-on-scams"
       }
     ],
-    "definition": "Use Telegram official verification badges to identify authentic bots and communities, avoiding phishing."
+    "definition": "Use Telegram official verification badges to identify authentic bots and communities, avoiding phishing.",
+    "limitation": "Verification badges are only effective when users actively inspect them; automated scripts and elderly users are easily deceived by look-alike usernames and forged screenshots. Unverified genuine accounts cannot be distinguished, and legitimate accounts with similar names are prone to be misjudged as impersonation."
   }
 }

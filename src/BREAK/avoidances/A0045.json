@@ -64,14 +64,14 @@
     "definition": "使用MPC、TEE等隐私计算技术保护数据处理过程",
     "description": "隐私计算：多方安全计算；可信执行环境；联邦学习；同态加密；差分隐私；安全多方计算。",
     "complexity": "高级",
-    "limitation": "技术成熟度低；性能影响大；实施复杂",
+    "limitation": "技术成熟度低，性能影响大，实施复杂；MPC、同态加密等方案计算与通信开销显著，且密钥分发、可信执行环境供应链一旦被攻破或侧信道泄露，攻击者仍可绕过隐私计算框架逆向推断原始数据，存在被规避的可能。",
     "references": [
       {
         "title": "Privacy-Preserving Computation",
         "link": "https://www.oasis-protocol.org/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "隐私计算技术应用",
       "MPC",

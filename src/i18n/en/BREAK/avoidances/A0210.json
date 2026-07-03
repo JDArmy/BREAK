@@ -1,7 +1,7 @@
 {
   "A0210": {
     "title": "Affiliate Marketing and Channel Quality Scoring",
-    "description": "Score affiliate channels, creatives, landing pages, conversion devices, and commission behavior for quality and fraud risk.",
+    "description": "Collects behavioral features from affiliate channels, promotional creatives, landing pages, conversion devices, and commission activities. Applies quality scoring, rule matching, and statistical comparison to identify channel fraud, fake traffic, and abnormal commissions, and downgrades or removes low-quality channels.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "landing page review",
       "conversion device scoring"
     ],
-    "definition": "Score affiliate channels, creatives, landing pages, conversion devices, and commission behavior for quality and fraud risk."
+    "definition": "Score affiliate channels, creatives, landing pages, conversion devices, and commission behavior for quality and fraud risk.",
+    "limitation": "Channels may use real-person crowdsourcing or emulator-based traffic to dilute scoring metrics and bypass detection. New channels with insufficient cold-start data are prone to being misjudged as low-quality and removed. Fluctuations and seasonal campaigns of legitimate channels can easily trigger false positives from rules. The boundary between commission fraud and genuine promotion remains ambiguous."
   }
 }

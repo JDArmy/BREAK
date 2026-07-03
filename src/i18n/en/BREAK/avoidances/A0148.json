@@ -2,9 +2,9 @@
   "A0148": {
     "title": "ICS Security Monitoring and Incident Response",
     "definition": "Real-time monitoring of industrial control system operational status, with an established incident response mechanism for rapid security event handling.",
-    "description": "Monitoring architecture: IDS/IPS dedicated to ICS traffic; SIEM for security event correlation; baseline behavior modeling; anomaly alerting; emergency response plan drills; backup systems.",
+    "description": "Monitoring system: IDS/IPS dedicated to industrial control traffic; SIEM integrates security events; baseline behavior modeling; anomaly alerts; emergency response drills; backup systems.",
     "complexity": "Advanced",
-    "limitation": "Shortage of specialized personnel; high false positive rate; incident response may disrupt production operations.",
+    "limitation": "Industrial control protocols are proprietary and fragmented, making it difficult for IDS/IPS rules to achieve full coverage; novel attack commands can bypass signature matching, leading to missed detections. Normal process tuning and device start/stop operations are easily confused with attack behavior, resulting in a high false positive rate. Emergency response actions (e.g., network disconnection, system shutdown) may impact production continuity, and there is also a risk of mistakenly blocking normal operational commands. There is a shortage of specialized industrial control security professionals; baseline modeling and alert triage rely heavily on experience, and rules lag behind emerging threats.",
     "keywords": [
       "ICS Security Monitoring and Incident Response"
     ],

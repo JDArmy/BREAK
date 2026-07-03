@@ -1,7 +1,7 @@
 {
   "A0168": {
     "title": "EIP Security Verification Mechanism",
-    "description": "Security verification of transaction requests from new proposals, alerting users to potential risks.",
+    "description": "Performs security validation on transaction requests and contract invocations originating from Ethereum Improvement Proposals (EIPs), identifying high-risk method calls, abnormal authorizations, unknown contract interactions, and other risky behaviors, and alerting users to potential threats. Covers scenarios such as EIP-712 typed data signing, EIP-3085 wallet_addEthereumChain, and EIP-4361 Sign-In with Ethereum, preventing users from unknowingly signing malicious payloads.",
     "keywords": [
       "EIP Security Verification Mechanism"
     ],
@@ -11,6 +11,7 @@
         "link": "https://eips.ethereum.org/"
       }
     ],
-    "definition": "Security verification of transaction requests from new proposals, alerting users to potential risks."
+    "definition": "Security verification of transaction requests from new proposals, alerting users to potential risks.",
+    "limitation": "Validation relies on accurate parsing of EIP semantics; new EIPs or custom invocation methods not covered by rules may result in missed detections. Attackers can deceive users into actively signing by disguising contract names, forging UI text, or exploiting blind signing, thereby bypassing alerts. Frequent legitimate authorizations can condition users to habitually click confirm, rendering risk warnings ineffective. In emulator and multi-instance environments, it is difficult to distinguish genuine user actions from automated script-generated signing behaviors."
   }
 }

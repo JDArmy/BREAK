@@ -58,7 +58,7 @@
   "A0110-001": {
     "category": "AC01",
     "title": "XR设备可信启动",
-    "description": "XR设备实施固件签名验证和安全启动，防止恶意固件。",
+    "description": "XR头显及配套设备实施固件签名验证和安全启动机制，在硬件可信根基础上逐层验证 bootloader、操作系统、驱动等固件镜像签名，签名失败则拒绝启动，防止恶意固件被植入从而劫持传感器数据或渲染层实施空间计算攻击。",
     "references": [
       {
         "link": "https://www.nist.gov/publications/guidelines-managing-security-mobile-devices-enterprise-0",
@@ -68,9 +68,10 @@
     "keywords": [
       "XR设备可信启动"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "XR设备实施固件签名验证和安全启动，防止恶意固件。",
     "effectiveness": "high",
+    "limitation": "依赖厂商私钥保管，私钥一旦泄露攻击者即可签名任意恶意固件绕过启动验证；解锁 bootloader 的开发模式、漏洞利用（如bootrom漏洞）可破解信任链；硬件可信根损坏或实施错误会导致设备变砖，影响正常用户；阻止用户安装自定义固件，对研究者与重度用户不友好，存在与开放性诉求的冲突。",
     "relatedAvoidances": [
       {
         "key": "A0191",

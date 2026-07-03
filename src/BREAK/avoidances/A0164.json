@@ -5,14 +5,14 @@
     "definition": "建立跨链资产映射关系，追踪资产在不同链上的流转",
     "description": "追踪体系：链上映射表；跨链索引；资产指纹；流转路径；总量监控；异常告警；取证支持。",
     "complexity": "高级",
-    "limitation": "跨链数据整合困难；隐私币难追踪；新链接入滞后",
+    "limitation": "跨链数据整合困难、隐私币难以追踪，新链接入滞后导致漏报；黑产可借助跨链桥混币、隐私协议混淆流转路径绕过追踪，正常跨链兑换、聚合交易易被误判为异常误报。",
     "references": [
       {
         "title": "Cross-Chain Asset Tracking",
         "link": "https://www.chainalysis.com/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "多链资产映射追踪",
       "跨链追踪",

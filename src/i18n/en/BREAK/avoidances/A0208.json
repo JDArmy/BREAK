@@ -1,7 +1,7 @@
 {
   "A0208": {
     "title": "Refund and Dispute Risk-Control Strategy",
-    "description": "Build behavior models, evidence-chain validation, and manual review for refunds, chargebacks, after-sales cases, and claims.",
+    "description": "Collects order, logistics, device, and behavioral characteristics for refunds, chargebacks, after-sales, and claims. Applies behavioral models, evidence chain verification, and rule-based scoring to identify abnormal requests, combined with manual review mechanisms to detect fraudulent refunds.",
     "references": [
       {
         "title": "PCI Data Security Standard",
@@ -16,6 +16,7 @@
       "claims fraud detection",
       "after-sales abuse"
     ],
-    "definition": "Build behavior models, evidence-chain validation, and manual review for refunds, chargebacks, after-sales cases, and claims."
+    "definition": "Build behavior models, evidence-chain validation, and manual review for refunds, chargebacks, after-sales cases, and claims.",
+    "limitation": "Fraud rings can organize crowdsourced real-person orders and fabricate logistics and chat evidence to bypass behavioral models. Normal after-sales surges and insufficient dispute evidence can lead to false positives and incorrect blocks. Cross-border chargeback rules vary significantly; when evidence chains are incomplete, model recall drops and the risk of missed detections increases."
   }
 }

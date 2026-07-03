@@ -5,14 +5,14 @@
     "definition": "将工业控制网络与IT网络物理或逻辑隔离，划分安全区域限制攻击扩散",
     "description": "Purdue模型网络分层：0-2层（生产现场）与3-5层（企业网络）隔离；使用防火墙和二极管单向数据流；OT设备专用VLAN；DMZ区域缓冲；严格访问控制。",
     "complexity": "中级",
-    "limitation": "完全隔离影响远程运维；改造成本高；需要专业规划",
+    "limitation": "完全隔离影响远程运维，改造成本高，需要专业规划；且跨区数据交换通道一旦被钓鱼、社工或漏洞利用突破，攻击者即可横向渗透突破隔离边界，单向二极管与防火墙规则仍可能被协议层规避或误配置绕过。",
     "references": [
       {
         "title": "Purdue Model for ICS Security",
         "link": "https://www.sans.org/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "工业网络隔离与区域划分",
       "网络隔离",

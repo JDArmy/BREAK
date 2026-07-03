@@ -5,14 +5,14 @@
     "definition": "部署监控系统检测针对设备的侧信道攻击企图",
     "description": "检测措施：功耗异常监控；物理访问日志；异常探测信号检测；防护罩传感器；入侵告警系统。",
     "complexity": "中级",
-    "limitation": "被动防御；攻击者可能绕过监控",
+    "limitation": "被动防御为主，攻击者可通过屏蔽传感器、功耗伪装等手段绕过监控；环境噪声、正常负载波动易产生误报，物理部署覆盖不全时存在漏报盲区。",
     "references": [
       {
         "title": "Side-Channel Attack Detection",
         "link": "https://ieeexplore.ieee.org/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "侧信道攻击检测与监控",
       "入侵检测",

@@ -2,7 +2,7 @@
   "A0179": {
     "category": "AC01",
     "title": "IoT硬件安全模块",
-    "description": "在IoT设备中集成可信执行环境(TEE)或安全芯片，防御硬件攻击。",
+    "description": "在IoT设备中集成可信执行环境（TEE）或安全芯片（SE/TPM），将密钥、证书、敏感算计隔离在硬件可信根中运行，防御固件提取、侧信道、物理探测等硬件攻击，保障设备密钥不被读取或克隆。",
     "references": [
       {
         "link": "https://globalplatform.org/specs-library/tee-internal-core-api-specification/",
@@ -12,9 +12,10 @@
     "keywords": [
       "IoT硬件安全模块"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "在IoT设备中集成可信执行环境(TEE)或安全芯片，防御硬件攻击。",
     "effectiveness": "high",
+    "limitation": "增加BOM成本，低价IoT设备难以普及；TEE自身存在漏洞（如Speculative执行、缓存侧信道）可被利用突破隔离读取密钥；故障注入、电压毛刺、激光注入等物理攻击可破坏安全芯片保护；硬件一旦量产难以升级，发现漏洞后无法通过软件补丁修复，安全模块长期存在被破解风险。",
     "relatedAvoidances": [
       {
         "key": "A0110",

@@ -2,7 +2,7 @@
   "A0204": {
     "category": "AC03",
     "title": "云配置基线与漂移检测",
-    "description": "对云存储、网络、安全组、KMS和日志配置建立基线并检测配置漂移。",
+    "description": "对云存储、网络、安全组、KMS和日志配置采集当前配置项并建立基线，运用规则匹配与统计比对持续监测配置偏离，识别公开桶、过度授权、安全组放通等异常漂移。",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -13,9 +13,10 @@
       "云配置基线与漂移检测",
       "云配置基线漂移检测"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "definition": "对云存储、网络、安全组、KMS和日志配置建立基线并检测配置漂移。",
     "effectiveness": "high",
+    "limitation": "IaC自动化运维频繁变更会使基线漂移告警噪声过大，攻防中合法运维操作易误报；攻击者可借助过度授权的IAM角色、规避CloudTrail日志记录绕过监测，多云环境基线难以统一。",
     "relatedAvoidances": [
       {
         "key": "A0221",

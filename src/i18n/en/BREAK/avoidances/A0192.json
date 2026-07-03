@@ -1,7 +1,7 @@
 {
   "A0192": {
     "title": "3D Content AI Moderation",
-    "description": "Use AI technology to automatically identify violating elements in 3D virtual content.",
+    "description": "Collects assets such as models, textures, texts, and audio from 3D virtual content, and applies deep learning models, rule matching, and classification comparison to identify and flag prohibited elements including violence, pornography, and contraband for handling.",
     "keywords": [
       "3D Content AI Moderation"
     ],
@@ -11,6 +11,7 @@
         "link": "https://transparency.meta.com/enforcement/"
       }
     ],
-    "definition": "Use AI technology to automatically identify violating elements in 3D virtual content."
+    "definition": "Use AI technology to automatically identify violating elements in 3D virtual content.",
+    "limitation": "Attackers can bypass recognition models through texture obfuscation, model deformation, and multimodal splicing; insufficient training samples for 3D content moderation models lead to underreporting. Normal user content such as abstract art and derivative works is prone to false positives and collateral damage, while evolving variants of prohibited content escalate rapidly."
   }
 }

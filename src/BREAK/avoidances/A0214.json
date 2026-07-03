@@ -2,7 +2,7 @@
   "A0214": {
     "category": "AC03",
     "title": "模型输出安全评估",
-    "description": "对模型输出进行有害内容、隐私泄露、幻觉、偏见和越权建议评估。",
+    "description": "采集模型输出文本、图像、音频等内容，运用规则匹配、分类模型与基线比对判定有害内容、隐私泄露、幻觉、偏见和越权建议等异常输出风险。",
     "references": [
       {
         "title": "NIST AI Risk Management Framework",
@@ -12,9 +12,10 @@
     "keywords": [
       "模型输出安全评估"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "definition": "对模型输出进行有害内容、隐私泄露、幻觉、偏见和越权建议评估。",
     "effectiveness": "high",
+    "limitation": "越狱提示词、混淆编码可绕过输出评估规则，多模态内容判定模型本身存在误报与漏报；正常创意、合规边界用例易被误判为有害内容误伤，模型升级后基线失效需重新评估。",
     "relatedAvoidances": [
       {
         "key": "A0035",

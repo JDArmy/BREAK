@@ -17,7 +17,7 @@
   },
   "A0110-001": {
     "title": "XR Device Trusted Boot",
-    "description": "Implement firmware signature verification and secure boot in XR devices to prevent malicious firmware.",
+    "description": "XR headsets and companion devices implement firmware signature verification and secure boot mechanisms. Based on a hardware root of trust, they verify the signatures of firmware images layer by layer—including bootloader, operating system, and drivers. If signature verification fails, the boot process is refused, preventing malicious firmware from being implanted to hijack sensor data or the rendering layer for spatial computing attacks.",
     "keywords": [
       "XR Device Trusted Boot"
     ],
@@ -27,6 +27,7 @@
         "link": "https://www.nist.gov/publications/guidelines-managing-security-mobile-devices-enterprise-0"
       }
     ],
-    "definition": "Implement firmware signature verification and secure boot in XR devices to prevent malicious firmware."
+    "definition": "Implement firmware signature verification and secure boot in XR devices to prevent malicious firmware.",
+    "limitation": "Relies on the vendor's private key custody; if the private key is leaked, an attacker can sign arbitrary malicious firmware to bypass boot verification. Developer modes that unlock the bootloader and exploits (e.g., bootrom vulnerabilities) can break the chain of trust. Damage to or implementation errors in the hardware root of trust may brick the device, impacting normal users. Prevents users from installing custom firmware, which is unfriendly to researchers and power users, creating a conflict with openness demands."
   }
 }

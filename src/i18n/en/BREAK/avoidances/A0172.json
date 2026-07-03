@@ -1,7 +1,7 @@
 {
   "A0172": {
     "title": "On-Chain Royalty Enforcement",
-    "description": "Enforce NFT royalties at protocol level through smart contracts, making them unbypasable.",
+    "description": "Enforces NFT royalty distribution at the protocol level via smart contracts during secondary sales, automatically calculating and splitting payments to creators upon transfer in accordance with standards such as EIP-2981, making it impossible for buyers or marketplaces to unilaterally bypass the royalty.",
     "keywords": [
       "On-Chain Royalty Enforcement"
     ],
@@ -11,6 +11,7 @@
         "link": "https://eips.ethereum.org/EIPS/eip-2981"
       }
     ],
-    "definition": "Enforce NFT royalties at protocol level through smart contracts, making them unbypasable."
+    "definition": "Enforce NFT royalties at protocol level through smart contracts, making them unbypasable.",
+    "limitation": "EIP-2981 is only an informational interface standard; market contracts can choose not to read the royalty field, allowing attackers to bypass enforcement by using non-royalty-supporting marketplaces or OTC off-chain transfers. Buyers can circumvent the original contract royalty by wrapping the NFT into derivative products (e.g., fractionalization, staking wrappers) before trading. Hybrid off-chain matching with on-chain settlement prevents royalties from being captured at the protocol level, rendering the enforcement mechanism ineffective. Flaws in royalty logic implementation may result in erroneous deductions or omissions, disrupting normal transactions."
   }
 }

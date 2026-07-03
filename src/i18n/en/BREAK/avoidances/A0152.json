@@ -2,9 +2,9 @@
   "A0152": {
     "title": "On-Chain Asset Ownership Verification and Traceability in the Metaverse",
     "definition": "Leveraging blockchain-based NFT technology to verify ownership of virtual assets and establish a traceable transaction history.",
-    "description": "Blockchain-based ownership verification: NFTs record ownership; metadata stored on IPFS; publicly auditable transaction history; smart contract-managed transfers; double-spending prevention; cross-platform interoperability standards.",
+    "description": "Blockchain-based rights confirmation: NFT records ownership; metadata stored on IPFS; transaction history is public; smart contracts manage transfers; prevents double-spending; cross-platform interoperability standards.",
     "complexity": "Intermediate",
-    "limitation": "Dependence on blockchain availability; complexity of cross-chain asset management; persistent control by centralized platforms.",
+    "limitation": "Dependent on blockchain availability; cross-chain assets are complex; centralized platform control still exists. If the private key is leaked or phished, an attacker can forge signatures to bypass on-chain rights confirmation and traceability. Additionally, off-chain metadata storage (such as IPFS) can be tampered with or forged, meaning on-chain records cannot prevent off-chain source falsification.",
     "keywords": [
       "On-Chain Asset Ownership Verification and Traceability in the Metaverse"
     ],

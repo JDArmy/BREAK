@@ -1,7 +1,7 @@
 {
   "A0177": {
     "title": "MEV Protection Mechanism",
-    "description": "Use private mempools, transaction encryption, fair ordering to prevent front-running.",
+    "description": "Uses technologies such as private mempools, transaction encryption, fair ordering, and commit-reveal schemes to prevent MEV bots from front-running, sandwich attacks, and arbitrage sniping, protecting user transactions from being exploited by pre- or post-trade placement. Covers the full lifecycle of transaction submission, ordering, and block packaging, reducing on-chain transaction observability so that attackers cannot construct arbitrage based on public mempool data.",
     "keywords": [
       "MEV Protection Mechanism"
     ],
@@ -11,7 +11,8 @@
         "link": "https://docs.flashbots.net/"
       }
     ],
-    "definition": "Use private mempools, transaction encryption, fair ordering to prevent front-running."
+    "definition": "Use private mempools, transaction encryption, fair ordering to prevent front-running.",
+    "limitation": "Relies on the integrity of private mempool service providers and validators; validators themselves may still front-run or collude with attackers. Not all chains have a mature private transaction pool ecosystem. Fair ordering requires trusted sequencers or multi-party protocols, making decentralized implementation difficult. Transaction encryption can still be circumvented by timing attacks if the decryption timing is not properly designed. Protection services may reduce transaction confirmation speed, causing users to pay a latency cost for security."
   },
   "A0177-001": {
     "title": "Private Mempool and MEV Protection Services",

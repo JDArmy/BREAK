@@ -2,9 +2,9 @@
   "A0146": {
     "title": "Industrial Network Isolation and Segmentation",
     "definition": "Physically or logically isolating the industrial control network from the IT network and segmenting security zones to limit the spread of attacks.",
-    "description": "Purdue model network layering: Isolation between Levels 0–2 (production floor) and Levels 3–5 (enterprise network); deployment of firewalls and data diodes for unidirectional data flow; dedicated VLANs for OT devices; DMZ zone buffering; strict access control.",
+    "description": "Purdue model network segmentation: Layers 0–2 (production floor) are isolated from Layers 3–5 (enterprise network); firewalls and data diodes enforce unidirectional data flow; OT devices use dedicated VLANs; a DMZ provides buffering; strict access control is applied.",
     "complexity": "Intermediate",
-    "limitation": "Complete isolation impacts remote operations and maintenance; high retrofit costs; requires specialized planning.",
+    "limitation": "Complete isolation impacts remote operations and maintenance, incurs high retrofit costs, and requires professional planning. Moreover, once a cross-zone data exchange channel is compromised by phishing, social engineering, or vulnerability exploitation, an attacker can pivot laterally and breach the isolation boundary. Unidirectional diodes and firewall rules may still be bypassed through protocol-layer evasion or misconfiguration.",
     "keywords": [
       "Industrial Network Isolation and Segmentation"
     ],

@@ -17,7 +17,7 @@
   },
   "A0113-001": {
     "title": "IoT Traffic Monitoring and Anomaly Detection",
-    "description": "Monitor IoT device network traffic to detect abnormal outbound connections.",
+    "description": "Monitors IoT device network traffic to detect anomalous external connections by capturing signals such as network flows, outbound connections, DNS queries, and port communications. A normal traffic baseline is established, and machine learning models combined with rule-based matching are used to identify abnormal behaviors including DGA domains, non-standard ports, and scanning outbound connections, triggering alerts when deviations from the baseline occur.",
     "keywords": [
       "IoT Traffic Monitoring and Anomaly Detection",
       "IoT traffic analysis",
@@ -32,6 +32,7 @@
         "link": "https://www.cisa.gov/ics"
       }
     ],
-    "definition": "Monitor IoT device network traffic to detect abnormal outbound connections."
+    "definition": "Monitor IoT device network traffic to detect abnormal outbound connections.",
+    "limitation": "Emerging botnets may use encrypted communication, protocol-layer forgery, or rapidly mutating DGA domains to evade detection, limiting the effectiveness of DPI under encrypted traffic. Normal firmware updates and OTA polling can be easily confused with C&C outbound connections, leading to false positives. The large number of IoT devices also makes it difficult to maintain a stable baseline."
   }
 }

@@ -2,9 +2,9 @@
   "A0145": {
     "title": "Side-Channel Attack Detection and Monitoring",
     "definition": "Deploy monitoring systems to detect side-channel attack attempts against devices",
-    "description": "Detection measures: abnormal power consumption monitoring; physical access logging; anomalous probe signal detection; tamper-evident enclosure sensors; intrusion alarm systems.",
+    "description": "Detection measures: abnormal power consumption monitoring; physical access logging; anomalous probe signal detection; shielding sensors; intrusion alarm system.",
     "complexity": "Intermediate",
-    "limitation": "Passive defense; attackers may bypass monitoring",
+    "limitation": "Primarily passive defense; attackers may bypass monitoring by shielding sensors or using power consumption camouflage. Environmental noise and normal load fluctuations can easily cause false positives, and incomplete physical deployment coverage may leave blind spots for missed detections.",
     "keywords": [
       "Side-Channel Attack Detection and Monitoring"
     ],

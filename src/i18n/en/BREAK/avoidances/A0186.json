@@ -1,7 +1,7 @@
 {
   "A0186": {
     "title": "Edge Computing Security Container",
-    "description": "Use security container technology to isolate edge computing nodes and prevent lateral movement.",
+    "description": "Use secure container, sandbox, and micro‑segmentation technologies to isolate different tenants and workloads on edge computing nodes. Enforce container privilege restrictions, mandatory access control, and abnormal process monitoring to prevent an attacker who compromises a single edge node from laterally moving to adjacent tenants or the control plane.",
     "keywords": [
       "Edge Computing Security Container"
     ],
@@ -11,6 +11,7 @@
         "link": "https://kubernetes.io/docs/concepts/security/"
       }
     ],
-    "definition": "Use security container technology to isolate edge computing nodes and prevent lateral movement."
+    "definition": "Use security container technology to isolate edge computing nodes and prevent lateral movement.",
+    "limitation": "Container escape vulnerabilities (e.g., runc, kernel CVEs) can break sandbox isolation and gain host privileges, enabling lateral movement to other containers on the same node. Edge nodes are physically exposed in unattended environments, allowing attackers direct physical access to tamper with the runtime and bypass container isolation. Resource constraints make deep intrusion detection difficult to deploy, giving attackers high persistence and stealth. Containers share the kernel with the host, so kernel privilege escalation vulnerabilities can render all isolation mechanisms ineffective."
   }
 }

@@ -1,7 +1,7 @@
 {
   "A0213": {
     "title": "AI Training Data Governance",
-    "description": "Govern training-data provenance, authorization, sensitive information, copyright risk, and data-poisoning detection.",
+    "description": "Governs the compliance of AI training data sources, authorization chains, sensitive information desensitization, copyright risks, and data poisoning detection. Establishes dataset lineage and quality baselines to prevent attackers from contaminating model behavior or injecting backdoor triggers through poisoned training data.",
     "references": [
       {
         "title": "NIST AI Risk Management Framework",
@@ -16,6 +16,7 @@
       "poisoning detection",
       "copyright review"
     ],
-    "definition": "Govern training-data provenance, authorization, sensitive information, copyright risk, and data-poisoning detection."
+    "definition": "Govern training-data provenance, authorization, sensitive information, copyright risk, and data-poisoning detection.",
+    "limitation": "Datasets are massive in scale with mixed provenance; when the proportion of poisoned samples is extremely low, detection becomes difficult, and slow incremental poisoning can bypass statistical detection. Crowdsourced and crawled data lack traceable authorization, making copyright and compliance risks hard to eliminate. Residual fields from incomplete desensitization can be exploited by attribute inference attacks to reconstruct sensitive information. Governance rules lag behind model iteration cycles, causing new datasets to be put into training without equivalent governance and rendering existing governance ineffective."
   }
 }

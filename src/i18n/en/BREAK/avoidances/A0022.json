@@ -22,8 +22,8 @@
   "A0022-001": {
     "title": "Transport Protocol Encryption",
     "definition": "Encrypting the entire transport layer or application layer communication data using custom algorithms or modified standard encryption algorithms.",
-    "description": "Transport layer encryption refers to encrypting data at the transport layer to ensure data is not stolen or tampered with during transmission — for example, modified SSL or TLS. Application layer encryption refers to encrypting data at the application layer — for example, modified HTTPS. Since the data transport protocol itself is encrypted, the specific business scenarios above it can be ignored, achieving full business scenario coverage below the application layer.",
-    "limitation": "Not applicable to scenarios where users access web pages via a browser.",
+    "description": "Transport layer encryption refers to encrypting data at the transport layer to prevent interception or tampering during transmission, such as by modifying SSL/TLS. Application layer encryption refers to encrypting data at the application layer to prevent interception or tampering during transmission, such as by modifying HTTPS. Because the data transmission protocol itself is directly encrypted, it can ignore the specific upper-layer business scenarios and achieve full coverage of all business scenarios under the application.",
+    "limitation": "Not applicable to scenarios where a browser is used for web page access. Additionally, modified protocols can still be cracked and reversed by attackers through packet capture tools, hooking remote request functions, or protocol-layer reverse engineering. Once the custom encryption algorithm is reversed, all traffic encryption protection can be bypassed.",
     "references": [
       {
         "title": "Transport Layer Security - Wikipedia",

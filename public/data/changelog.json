@@ -1,5 +1,15 @@
 [
   {
+    "version": "2.39.0",
+    "summary": "Avoidance 内容规范三档控制落地：明确 description（检测信号）与 limitation（绕过方式+误报场景）的内容规范，schema 收紧 limitation 为必填，新增确定性校验（档位二，接入 CI 阻断）与 LLM 语义评审（档位三，手动跑）。",
+    "body": "Avoidance 内容规范三档控制落地：明确 description（检测信号）与 limitation（绕过方式+误报场景）的内容规范，schema 收紧 limitation 为必填，新增确定性校验（档位二，接入 CI 阻断）与 LLM 语义评审（档位三，手动跑）。\n\n- **schema 收紧**：`breakSchema.ts` 的 `avoidanceSchema.limitation` 从 `z.string().optional()` 改为 `nonEmptyString`（必填），所有 Avoidance 必须含局限说明。\n- **档位二·确定性校验**：新增 `scripts/validate/avoidance-content.mjs`，按\"词集+长度+结构\"组合规则校验 description/limitation 内容规范——AC02/AC03 的 description 必须含检测信号词，limitation 必须含绕过/误报词或写足 40 字。接入 `validate:data --strict` 阻断，`npm run audit:avoidance-content` 只出报告不阻断。\n- **档位三·LLM 语义评审**：新增 `scripts/research/llm-review-avoidance-signal.mjs`，调用 DeepSeek-V4-Pro 语义判定 description/limitation 是否\"真写了检测信号/绕过方式/误报场景\"（非词集凑词）。支持 `--full` 全量审计与默认 `--incremental`（内容指纹检测变更，仅评审新增/修改手段）。`npm run review:avoidance-signal` / `review:avoidance-signal:full`，不接入 CI。\n- **档位一·撰写规范**：CLAUDE.md 补《Avoidance 内容撰写规范》章节，明确 description/limitation 的内容导向、长度阈值、词集初筛与 LLM 兜底的关系。\n- **存量补全**：补全 124 个 Avoidance 实体（中文+英文同步）的 description/limitation，其中 57 条原本无 limitation，覆盖率从 82% 提升至 100%。"
+  },
+  {
+    "version": "2.38.3",
+    "summary": "移除 Case 实体的 description 字段，案例事实性描述统一用 summary：",
+    "body": "移除 Case 实体的 description 字段，案例事实性描述统一用 summary：\n\n- **数据**：删除 C1798/C1799/C1803 三个案例（中英文）的 description 字段。历史上仅这 3 个案例有 description，与 summary 内容重叠，造成冗余。\n- **schema 门禁**：`breakSchema.ts` 的 caseSchema 移除 description 字段定义并加 `.strict()`，拒绝任何未定义字段（含未来误加的 description）。\n- **文档**：CLAUDE.md 的 Case schema 示例与英文字段清单移除 description，新增字段约束说明\"Case 不维护 description，详细背景统一写入 summary\"。\n- **schema-docs 脚本**：`schema-docs.mjs` 的正则兼容 `z.object({...}).strict()` 链式结尾，修复 strict 模式下文档生成报错。"
+  },
+  {
     "version": "2.38.2",
     "summary": "修正两个案例的事实性数据错误：",
     "body": "修正两个案例的事实性数据错误：\n\n- **C1803**（17岁少年DDoS攻击购票系统案）：incidentTime 由 2026-07 修正为 2020-06（案发时间），summary 补充\"2021年8月广州市中级人民法院发布该案判决\"等准确事实。原 incidentTime 与 summary 误用 2026 年时间。\n- **C1038**（民警盗卖个人信息案）：summary 修正\"查询次数接近9万次\"为\"导出近5000人数据（含近600条住宿信息），非法获利5万元，判有期徒刑一年八个月\"——9万次查询实为另一反诈平台案的数字，原 summary 混淆了两个案件。"

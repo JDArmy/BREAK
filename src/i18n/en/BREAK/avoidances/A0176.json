@@ -1,7 +1,7 @@
 {
   "A0176": {
     "title": "DApp Frontend Integrity Verification",
-    "description": "Ensure frontend is not tampered through Subresource Integrity (SRI), IPFS hash verification, etc.",
+    "description": "Ensures DApp frontend resources have not been tampered with by using Subresource Integrity (SRI), IPFS hash pinning, content signatures, and similar techniques, so that the page loaded by users matches the version published by the developer and prevents attackers from hijacking the frontend hosting to alter connection parameters or wallet authorization pop-ups that trick users into signing malicious transactions.",
     "keywords": [
       "DApp Frontend Integrity Verification"
     ],
@@ -11,6 +11,7 @@
         "link": "https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity"
       }
     ],
-    "definition": "Ensure frontend is not tampered through Subresource Integrity (SRI), IPFS hash verification, etc."
+    "definition": "Ensure frontend is not tampered through Subresource Integrity (SRI), IPFS hash verification, etc.",
+    "limitation": "SRI can only verify the hash of static resources and cannot prevent runtime dynamic JS injection or DOM tampering; if an attacker controls the entry HTML or CDN, the SRI verification chain can be bypassed; when IPFS gateways are centralized, gateway hijacking risks still exist; most users do not manually verify frontend hashes, and phishing sites use lookalike domains to directly host a tampered frontend, making integrity verification ineffective against impersonation sites; browser extensions can modify the page and bypass frontend checks."
   }
 }

@@ -1,7 +1,7 @@
 {
   "A0209": {
     "title": "Ad Delivery and Attribution Anti-Fraud",
-    "description": "Detect fake impressions, click injection, attribution hijacking, install farms, and abnormal conversion chains.",
+    "description": "Collects exposure, click, install, and conversion events along with device fingerprints, and applies rule matching, anomaly statistics, and attribution models to identify fake exposures, click injection, attribution hijacking, install farms, and abnormal conversion paths.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "fake conversion detection",
       "traffic quality"
     ],
-    "definition": "Detect fake impressions, click injection, attribution hijacking, install farms, and abnormal conversion chains."
+    "definition": "Detect fake impressions, click injection, attribution hijacking, install farms, and abnormal conversion chains.",
+    "limitation": "Adversaries can use real-person crowdsourcing or device farms in data centers to simulate genuine clicks and installs, bypassing attribution models. SDK attribution window differences may cause normal user reinstalls or cross-device switches to be misjudged as anomalies. Once the attribution chain is hijacked, distinguishing genuine from fake clicks becomes difficult, leading to a high risk of false negatives."
   }
 }

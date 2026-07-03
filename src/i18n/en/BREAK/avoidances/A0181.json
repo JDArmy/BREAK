@@ -1,7 +1,7 @@
 {
   "A0181": {
     "title": "Medical Device Security Gateway",
-    "description": "Deploy dedicated security gateway to isolate medical IoT devices with strict access control.",
+    "description": "Deploy a dedicated security gateway to isolate medical IoT devices from external networks, enforcing strict access control, protocol whitelisting, deep traffic inspection, and command filtering. Only compliant medical communications are permitted, preventing attackers from exploiting IoT channels to intrude or issue malicious control commands to medical devices.",
     "keywords": [
       "Medical Device Security Gateway"
     ],
@@ -11,6 +11,7 @@
         "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity"
       }
     ],
-    "definition": "Deploy dedicated security gateway to isolate medical IoT devices with strict access control."
+    "definition": "Deploy dedicated security gateway to isolate medical IoT devices with strict access control.",
+    "limitation": "Medical device communication protocols are fragmented with many proprietary implementations, making it difficult for gateway rules to achieve full coverage—novel protocol commands can bypass the whitelist. Certain life-sustaining devices are extremely latency-sensitive; delays introduced by deep inspection may compromise patient care, creating a conflict between security and availability. The gateway itself becomes a single point of failure: if compromised or down, all medical device communications are severed. Maintenance channels and remote operation access points can still be exploited through social engineering or credential leakage to circumvent the isolation."
   }
 }

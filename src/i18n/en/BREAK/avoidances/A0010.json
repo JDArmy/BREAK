@@ -102,8 +102,8 @@
   "A0010-005": {
     "title": "Multi-Instance Detection",
     "definition": "Identifying whether an APP is running in multiple instances on a terminal.",
-    "description": "Game multi-instance detection simply limits the number of game processes and is divided into pre-detection, in-process detection, and post-detection. In-process and post-detection are often silent and serve as the basis for banning or penalizing accounts. Pre-detection prevents multi-instance launching and includes methods such as: process enumeration multi-instance detection, mutex object multi-instance detection, semaphore multi-instance detection, window multi-instance detection, shared memory multi-instance detection, etc.",
-    "limitation": "Similar to the limitations of cheat detection (A0010-004), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass multi-instance detection.",
+    "description": "Identifies whether an application is running in multiple instances on a terminal by collecting and monitoring runtime characteristics such as terminal processes, mutex objects, semaphores, window titles, and shared memory. It applies rule matching and baseline comparison to detect if the app has been cloned or multi-opened. Pre-event detection prevents multi-instance launching, while in-event and post-event detections serve as evidence for account bans. Methods include multi-instance detection via process enumeration, mutex objects, semaphores, window detection, and shared memory detection.",
+    "limitation": "Similar to the limitations of cheat detection (A0010-004), the detection strategy can be bypassed by analyzing and reversing the detection process, then blocking or providing hooked false values.",
     "references": [
       {
         "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",

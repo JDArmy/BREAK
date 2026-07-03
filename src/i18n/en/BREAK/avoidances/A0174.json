@@ -1,7 +1,7 @@
 {
   "A0174": {
     "title": "Account Abstraction Security Audit",
-    "description": "Audit ERC-4337 related contracts, verifying UserOperation and Paymaster security.",
+    "description": "Audit ERC-4337 account abstraction contracts, verifying UserOperation validation logic, Paymaster gas sponsorship strategies, and Bundler packaging and signature verification security to prevent attackers from exploiting validation flaws or Paymaster vulnerabilities to compromise accounts, drain sponsored gas, or conduct replay attacks.",
     "keywords": [
       "Account Abstraction Security Audit"
     ],
@@ -11,6 +11,7 @@
         "link": "https://eips.ethereum.org/EIPS/eip-4337"
       }
     ],
-    "definition": "Audit ERC-4337 related contracts, verifying UserOperation and Paymaster security."
+    "definition": "Audit ERC-4337 related contracts, verifying UserOperation and Paymaster security.",
+    "limitation": "Audits can only cover known vulnerability patterns; novel flaws in Paymaster custom validation logic may still evade detection. UserOperation signature field implementations vary, and signature verification errors can be bypassed via forged signatures. High Bundler centralization introduces censorship and denial-of-service risks. Improperly implemented account abstraction extension modules such as session keys and social recovery can be exploited by attackers to reset account control, rendering audit conclusions invalid."
   }
 }

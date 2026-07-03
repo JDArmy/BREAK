@@ -1,7 +1,7 @@
 {
   "A0216": {
     "title": "Prompt Injection Defense and Context Isolation",
-    "description": "Separate system instructions, user input, and external content, and apply policy checks to tool-call parameters.",
+    "description": "Isolate system instructions, user input, and external retrieved content into separate layers. Perform policy validation on tool call parameters and permission boundaries to restrict the ability of external content to override system instructions. This prevents attackers from hijacking LLM execution via prompt injection to perform unauthorized tool calls or leak system prompts.",
     "references": [
       {
         "title": "OWASP Top 10 for Large Language Model Applications",
@@ -16,6 +16,7 @@
       "external content filtering",
       "LLM security"
     ],
-    "definition": "Separate system instructions, user input, and external content, and apply policy checks to tool-call parameters."
+    "definition": "Separate system instructions, user input, and external content, and apply policy checks to tool-call parameters.",
+    "limitation": "LLMs inherently struggle to strictly distinguish instructions from data. Carefully crafted indirect prompt injection (via retrieved content or tool return results) can still bypass context isolation and hijack model behavior. Policy validation relies on rule enumeration, so novel injection phrasing and multi-turn combination attacks can evade rules. Overly strict isolation may incorrectly block legitimate multi-turn conversations and tool chain invocations, degrading normal user experience. Model alignment deficiencies can be induced by injection to deviate from system instructions, rendering the isolation layer ineffective."
   }
 }

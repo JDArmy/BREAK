@@ -2,7 +2,7 @@
   "A0174": {
     "category": "AC01",
     "title": "账户抽象安全审计",
-    "description": "审计ERC-4337相关合约，验证UserOperation和Paymaster安全性。",
+    "description": "审计ERC-4337账户抽象相关合约，验证UserOperation校验逻辑、Paymaster gas赞助策略、Bundler打包与签名验证的安全性，防止攻击者利用校验缺陷或Paymaster漏洞盗用账户、耗尽赞助gas或实施重放攻击。",
     "references": [
       {
         "link": "https://eips.ethereum.org/EIPS/eip-4337",
@@ -12,9 +12,10 @@
     "keywords": [
       "账户抽象安全审计"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "审计ERC-4337相关合约，验证UserOperation和Paymaster安全性。",
     "effectiveness": "high",
+    "limitation": "审计只能覆盖已知漏洞模式，Paymaster自定义校验逻辑的新型缺陷仍可绕过检测；UserOperation的signature字段实现各异，签名验证实现错误可被伪造签名绕过；Bundler中心化程度高时存在审查与拒绝服务风险；账户抽象引入的session key、社交恢复等扩展模块若实现不当会被攻击者利用重置账户控制权，使审计结论失效。",
     "relatedAvoidances": [
       {
         "key": "A0104",

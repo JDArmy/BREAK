@@ -1,7 +1,7 @@
 {
   "A0185": {
     "title": "V2X PKI Authentication System",
-    "description": "Establish V2X public key infrastructure to ensure authenticity and integrity of V2X communications.",
+    "description": "Establish a vehicular public key infrastructure (PKI) to issue digital certificates for vehicle-to-vehicle (V2V), vehicle-to-infrastructure (V2I), and vehicle-to-network (V2N) communications, ensuring the authenticity, integrity, and non-repudiation of V2X messages, and preventing attackers from forging vehicle identities or tampering with broadcast messages to induce collisions.",
     "keywords": [
       "V2X PKI Authentication System"
     ],
@@ -11,6 +11,7 @@
         "link": "https://www.iso.org/standard/70918.html"
       }
     ],
-    "definition": "Establish V2X public key infrastructure to ensure authenticity and integrity of V2X communications."
+    "definition": "Establish V2X public key infrastructure to ensure authenticity and integrity of V2X communications.",
+    "limitation": "Once the certificate private key is extracted from the in-vehicle secure element or stolen via side-channel attacks, an attacker can impersonate a legitimate vehicle and broadcast false BSM messages to bypass authentication; compromise of the CA center or key escrow process may allow bulk issuance of malicious certificates; delays in certificate revocation list (CRL) distribution cause revoked vehicles to still be misidentified as legitimate within the window; under high-density traffic, certificate verification overhead is significant, and the conflict between privacy protection requirements and identity traceability may lead to erroneous blocking of legitimate vehicles."
   }
 }

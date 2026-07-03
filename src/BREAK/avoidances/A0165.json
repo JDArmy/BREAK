@@ -5,14 +5,14 @@
     "definition": "使用Chainalysis等专业工具分析可疑交易和地址",
     "description": "分析工具：地址标签库；交易图谱；资金流向；关联分析；风险评分；合规检查；AML筛查。",
     "complexity": "中级",
-    "limitation": "工具成本高；隐私技术对抗；误报问题；需要专业人员",
+    "limitation": "工具成本高且依赖专业人员，隐私技术（混币器、隐私币）可对抗追踪导致漏报；地址标签库更新滞后易产生误报，正常用户共用交易所热钱包地址易被误判误伤。",
     "references": [
       {
         "title": "Blockchain Analytics Tools",
         "link": "https://www.chainalysis.com/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "区块链分析工具应用",
       "链分析",

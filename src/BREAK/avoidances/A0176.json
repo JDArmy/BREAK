@@ -2,7 +2,7 @@
   "A0176": {
     "category": "AC01",
     "title": "DApp前端完整性验证",
-    "description": "通过子资源完整性(SRI)、IPFS哈希验证等确保前端未被篡改。",
+    "description": "通过子资源完整性（SRI）、IPFS哈希固定、内容签名等手段确保DApp前端资源未被篡改，使用户加载的页面与开发者发布版本一致，防止攻击者通过劫持前端托管篡改连接参数、钱包授权弹窗诱导用户签署恶意交易。",
     "references": [
       {
         "link": "https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity",
@@ -12,9 +12,10 @@
     "keywords": [
       "DApp前端完整性验证"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "通过子资源完整性(SRI)、IPFS哈希验证等确保前端未被篡改。",
     "effectiveness": "high",
+    "limitation": "SRI只能校验静态资源哈希，无法防止运行时JS动态注入或DOM篡改；攻击者控制入口HTML或CDN即可绕过SRI校验链；IPFS网关中心化时仍存在网关劫持风险；用户多数不会核对前端哈希，钓鱼站点通过高仿域名直接托管篡改版前端，完整性验证对仿冒站点无效；浏览器扩展可修改页面绕过前端校验。",
     "relatedAvoidances": [
       {
         "key": "A0104",

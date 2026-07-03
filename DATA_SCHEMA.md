@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.38.2`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.39.0`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -68,7 +68,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `definition` | string | required | 简短定义。 |
 | `description` | string | required | 详细说明。 |
 | `complexity` | string | optional | 复杂度或实施难度 key。 |
-| `limitation` | string | optional | 控制措施局限性。 |
+| `limitation` | string | required | 控制措施局限性。 |
 | `relatedAvoidances` | AvoidanceRelation[] | optional, defaults to empty array | 相关规避手段列表；Avoidance 中为规避手段间关联对象列表。 Target: Avoidance. |
 | `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |

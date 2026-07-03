@@ -2,7 +2,7 @@
   "A0212": {
     "category": "AC03",
     "title": "隐私影响评估与合规留痕",
-    "description": "对新业务、模型和数据处理活动执行PIA/DPIA并保留合规证据链。",
+    "description": "对新业务、模型和数据处理活动采集处理目的、数据字段、流转路径与留痕日志，运用规则匹配与合规清单比对执行PIA/DPIA评估，保留合规证据链以备审计。",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -13,9 +13,10 @@
       "隐私影响评估与合规留痕",
       "隐私影响评估合规留痕"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "definition": "对新业务、模型和数据处理活动执行PIA/DPIA并保留合规证据链。",
     "effectiveness": "high",
+    "limitation": "评估依赖人工填报与一次性文档，业务上线后频繁迭代可绕过留痕、使评估与实际处理偏离；规则清单滞后于新法规易漏报合规风险，复杂AI模型数据处理边界模糊导致评估噪声大。",
     "relatedAvoidances": [
       {
         "key": "A0016",

@@ -1,7 +1,7 @@
 {
   "A0198": {
     "title": "API Input Validation and Contract Testing",
-    "description": "Validate input through OpenAPI contracts, type constraints, and payload testing to reduce injection and parameter pollution.",
+    "description": "Strictly validate API inputs based on OpenAPI contracts, type constraints, schema validation, and load testing, combined with contract consistency regression testing, to reduce injection, parameter pollution, type confusion, and privilege escalation or denial of service caused by abnormal payloads.",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -16,6 +16,7 @@
       "parameter pollution",
       "API fuzzing"
     ],
-    "definition": "Validate input through OpenAPI contracts, type constraints, and payload testing to reduce injection and parameter pollution."
+    "definition": "Validate input through OpenAPI contracts, type constraints, and payload testing to reduce injection and parameter pollution.",
+    "limitation": "Contracts can only cover known fields and types; new fields, optional parameters, and batch interfaces often fall outside contract coverage, creating validation blind spots that are bypassed by injection. Attackers evade regex and type checks through parameter pollution, encoding bypasses, Unicode homoglyphs, and JSON structural confusion. When contracts are out of sync with actual implementations, validation rules become ineffective. Overly strict input allowlists may incorrectly block legitimate edge-case inputs, impacting normal user experience and business compatibility."
   }
 }

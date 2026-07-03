@@ -92,7 +92,7 @@ export const avoidanceSchema = z.object({
   definition: nonEmptyString,
   description: nonEmptyString,
   complexity: nonEmptyString.optional(),
-  limitation: z.string().optional(),
+  limitation: nonEmptyString,
   relatedAvoidances: z.array(avoidanceRelationSchema).default([]),
   references: z.array(referenceSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),

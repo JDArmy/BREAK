@@ -1,7 +1,7 @@
 {
   "A0215": {
     "title": "RAG Knowledge-Base Permission Isolation",
-    "description": "Isolate RAG indexes and retrieval results by tenant, role, and document sensitivity to prevent cross-permission recall.",
+    "description": "Isolate RAG indexes and retrieval results by tenant, role, and document sensitivity level, enforcing document-level access control at the retrieval stage to prevent users from inducing the model through prompts to recall or leak document content across permission boundaries that they are not authorized to access.",
     "references": [
       {
         "title": "OWASP Top 10 for Large Language Model Applications",
@@ -16,6 +16,7 @@
       "vector index access control",
       "knowledge base security"
     ],
-    "definition": "Isolate RAG indexes and retrieval results by tenant, role, and document sensitivity to prevent cross-permission recall."
+    "definition": "Isolate RAG indexes and retrieval results by tenant, role, and document sensitivity to prevent cross-permission recall.",
+    "limitation": "Vector indexes cluster by semantics; if document-level permission filtering is applied after retrieval rather than before, truncated document fragments may still be leaked via top-k results. Prompt injection can induce the model to repeat sensitive content that has been retrieved but should have been filtered, bypassing permission isolation. In multi-tenant shared embedding models, membership inference can probe the existence of content in other tenants' knowledge bases. There is a synchronization delay between permission policies and indexes, allowing historically cached results to be recalled beyond authorization after permission changes."
   }
 }

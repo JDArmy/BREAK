@@ -60,14 +60,14 @@
     "definition": "对OTA推送的固件包进行数字签名验证，确保来源可信且未被篡改",
     "description": "防止恶意固件通过OTA植入。措施：固件包使用厂商私钥签名；设备内置公钥验证；使用安全哈希算法；证书链验证；版本号防回滚；更新失败自动回退。",
     "complexity": "中级",
-    "limitation": "密钥管理复杂；签名验证增加时间；证书过期需处理",
+    "limitation": "厂商签名私钥一旦泄露或被内鬼窃取，攻击者即可签发合法外观的恶意固件绕过签名验证；解锁bootloader的开发模式或bootrom漏洞可破解信任链，使验证形同虚设；证书过期或时钟异常会导致合法固件被误判为非法，影响正常用户更新；版本防回滚在紧急修复历史漏洞时会阻碍快速降级，存在运维与安全的张力。",
     "references": [
       {
         "title": "Secure OTA Update Implementation",
         "link": "https://www.nhtsa.gov/sites/nhtsa.gov/files/documents/cybersecurity_of_firmware_updates_oct2020.pdf"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "固件OTA更新签名验证",
       "OTA安全",
@@ -111,7 +111,7 @@
   "A0111-002": {
     "category": "AC01",
     "title": "车联网OTA安全治理",
-    "description": "对车端OTA包、升级通道、回滚策略和版本灰度实施签名验证与安全监控。",
+    "description": "对车端OTA升级包、升级通道、回滚策略和版本灰度实施端到端签名验证与安全监控，防止攻击者通过伪造OTA包向车端植入恶意固件或篡改控制逻辑。覆盖包签名、TLS通道、版本单调递增、灰度发布审批、升级日志审计等环节，保障整车型号升级链路可信。",
     "references": [
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
@@ -121,9 +121,10 @@
     "keywords": [
       "车联网OTA安全治理"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "definition": "对车端OTA包、升级通道、回滚策略和版本灰度实施签名验证与安全监控。",
     "effectiveness": "high",
+    "limitation": "车厂签名私钥若被内鬼窃取或保管不当，攻击者可签发合法外观的恶意OTA包绕过验证；灰度回滚机制设计缺陷可能导致升级失败后无法回退，造成车辆无法启动；车企供应商链条复杂，第三方TSP或零部件厂商通道被攻破即可借此伪造升级指令；版本防回滚在紧急修复历史漏洞时会阻碍快速降级，存在运维与安全的张力。",
     "relatedAvoidances": [
       {
         "key": "A0111-001",

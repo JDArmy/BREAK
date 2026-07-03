@@ -1,7 +1,7 @@
 {
   "A0202": {
     "title": "SBOM Generation and Vulnerability Impact Analysis",
-    "description": "Generate SBOMs for applications, images, and firmware, and quickly locate affected assets when new vulnerabilities are disclosed.",
+    "description": "Generates SBOMs for applications, images, and firmware by collecting dependency component inventories, and employs version matching, vulnerability intelligence comparison, and baseline verification to locate affected assets by component sequence and assess impact scope when new vulnerabilities are disclosed.",
     "references": [
       {
         "title": "Software Bill of Materials - CISA",
@@ -16,6 +16,7 @@
       "software bill of materials",
       "asset exposure"
     ],
-    "definition": "Generate SBOMs for applications, images, and firmware, and quickly locate affected assets when new vulnerabilities are disclosed."
+    "definition": "Generate SBOMs for applications, images, and firmware, and quickly locate affected assets when new vulnerabilities are disclosed.",
+    "limitation": "SBOMs are prone to omitting transitive dependencies and nested components; attackers may bypass inventory matching through obfuscated package names or private patches. Intelligence lag leads to false negatives, while normal multi-version coexistence and dynamic-link library loading tend to produce false positive noise, reducing asset location accuracy."
   }
 }

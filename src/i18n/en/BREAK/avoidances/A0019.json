@@ -42,8 +42,8 @@
   "A0019-003": {
     "title": "Friend-Assisted Authentication",
     "definition": "A mechanism that uses the user's friends to assist in authenticating the user's identity.",
-    "description": "When registering or authenticating, users must select their friends, and the system sends verification information to those friends. The user must pass verification by those friends to complete registration.",
-    "limitation": "If the user has no friends, or if friends are unwilling to help with verification, the user will be unable to complete registration.",
+    "description": "During user registration or verification, the user must select their friends. The system sends verification messages to these friends, and the user can only complete registration after passing verification through these friends.",
+    "limitation": "If the user has no friends or the friends are unwilling to assist with verification, the user cannot complete registration, causing significant collateral damage to new users and those with weak social connections. Additionally, illicit actors can accumulate auxiliary accounts through account farming or mutual friend-adding, fabricating social relationships to bypass friend-assisted verification, rendering this mechanism ineffective.",
     "references": [
       {
         "title": "WeChat Friend-Assisted Verification",

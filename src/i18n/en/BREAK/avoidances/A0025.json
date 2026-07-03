@@ -40,8 +40,8 @@
   "A0025-002": {
     "title": "HTTPS Digital Certificate",
     "definition": "Providing trustworthiness, integrity, and confidentiality guarantees for HTTP requests.",
-    "description": "By purchasing and installing an HTTPS certificate service, the trustworthiness, integrity, and confidentiality of user requests to the server are guaranteed.",
-    "limitation": "The security of HTTPS digital certificates is heavily dependent on the trustworthiness of the issuing authority. If the issuing authority is compromised, attackers can forge digital certificates. Additionally, the security of HTTPS digital certificates is also affected by the signing algorithm — if the signing algorithm is compromised, attackers can forge digital signatures.",
+    "description": "By purchasing and installing an HTTPS certificate service, the server identity is authenticated, and the transmission of HTTP requests is protected with integrity and confidentiality guarantees to prevent man-in-the-middle tampering and eavesdropping.",
+    "limitation": "The security of HTTPS digital certificates heavily depends on the trustworthiness of the issuing authority. If the issuing authority is compromised, an attacker can forge digital certificates, thereby undermining the security of HTTPS digital certificates. Additionally, the security of HTTPS digital certificates is also affected by the signature algorithm. If the signature algorithm is compromised, an attacker can forge digital signatures, thereby undermining the security of HTTPS digital certificates.",
     "references": [
       {
         "title": "Transport Layer Security Cheat Sheet - OWASP",

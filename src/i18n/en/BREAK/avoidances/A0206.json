@@ -1,7 +1,7 @@
 {
   "A0206": {
     "title": "Enterprise Collaboration Data Loss Prevention",
-    "description": "Apply sensitive-data discovery, sharing control, and outbound audit to cloud drives, IM, email, knowledge bases, and collaboration documents.",
+    "description": "Collects sharing behaviors, outbound traffic, and content characteristics from cloud drives, IM, email, knowledge bases, and collaborative documents; applies sensitive data identification, rule matching, and sharing control policies to detect abnormal outbound activities, and retains outbound audit logs.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "outbound audit",
       "document protection"
     ],
-    "definition": "Apply sensitive-data discovery, sharing control, and outbound audit to cloud drives, IM, email, knowledge bases, and collaboration documents."
+    "definition": "Apply sensitive-data discovery, sharing control, and outbound audit to cloud drives, IM, email, knowledge bases, and collaboration documents.",
+    "limitation": "Insiders can bypass sensitive data identification through screenshots, photos, or encrypted compression; end-to-end encrypted communications render content inspection ineffective. Legitimate cross-department collaboration and large file sharing are prone to false positives and collateral damage; overly strict rules may block lawful business sharing."
   }
 }

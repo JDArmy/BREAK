@@ -1,7 +1,7 @@
 {
   "A0184": {
     "title": "Smart Home Privacy Switch",
-    "description": "Provide physical or software privacy switches for smart devices, allowing users to actively disconnect audio/video collection.",
+    "description": "Provides physical or software privacy switches for smart devices, allowing users to actively disconnect audio and video capture paths—such as microphones and cameras—thereby cutting off signal reporting at the capture source and preventing private audio/video from being intercepted or acquired.",
     "keywords": [
       "Smart Home Privacy Switch"
     ],
@@ -11,6 +11,7 @@
         "link": "https://consumer.ftc.gov/articles/securing-your-internet-connected-devices-home"
       }
     ],
-    "definition": "Provide physical or software privacy switches for smart devices, allowing users to actively disconnect audio/video collection."
+    "definition": "Provide physical or software privacy switches for smart devices, allowing users to actively disconnect audio/video collection.",
+    "limitation": "Software switches can be bypassed or tampered with by malicious firmware or privilege escalation to silently enable capture; physical covers may also be left open by users. Additionally, normal users accidentally turning off the switch may cause legitimate functions like voice assistants and video calls to be mistakenly disabled or rendered ineffective."
   }
 }

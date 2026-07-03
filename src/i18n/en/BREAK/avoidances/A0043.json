@@ -2,8 +2,8 @@
   "A0043": {
     "title": "Contractual Clause Restrictions",
     "definition": "Adding clauses to contracts that can limit the compliance of risk generation and reduce the probability of risk occurrence.",
-    "description": "For example, setting breach of contract liability, breach penalties, and breach compensation.",
-    "limitation": "The prerequisite for modifying contract clauses is that both parties to the contract are legal entities, and the modification must comply with laws and regulations. The goal is to restrict the attacker's legal behavior, not to prevent the attacker's malicious behavior.",
+    "description": "Add provisions such as liability for breach of contract, breach penalties, breach compensation, security deposits, and recourse rights into contract terms. This constrains counterparty behavior from a legal compliance perspective and reduces the likelihood of internal personnel or partner channels actively participating in risk-related activities.",
+    "limitation": "The prerequisite for modifying contract terms is that both contracting parties are legally valid entities, and any amendments must comply with applicable laws and regulations. The objective is to restrict the lawful behavior of attackers, not to prevent malicious acts. Post-event accountability has a lagging effect and offers limited deterrence against professional underground fraud rings and fake identity groups, making it difficult to recover already incurred financial and data losses.",
     "references": [
       {
         "title": "Civil Code of the People's Republic of China",

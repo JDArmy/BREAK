@@ -22,8 +22,8 @@
   "A0008-001": {
     "title": "Adding Computing Resources",
     "definition": "Improving the number of concurrent terminal requests that can be handled by adding server computing resources.",
-    "description": "For distributed architectures, adding computing resources is the simplest and most effective way to improve availability.",
-    "limitation": "This is complementary to business system optimization (A0008-004). Adding computing resources can quickly resolve availability issues but will significantly increase operating costs.",
+    "description": "For distributed architectures, increasing computing resources is the simplest and most effective way to improve availability. By horizontally scaling or elastically expanding capacity, the system can rapidly increase the number of concurrent terminal requests it can handle, alleviating sudden traffic surges.",
+    "limitation": "This approach is complementary to business system optimization (A0008-004). While adding computing resources can quickly resolve availability issues, it significantly increases operational costs and cannot fundamentally defend against malicious traffic attacks. Attackers can still exhaust the expanded resources by enlarging their proxy pools or scaling up distributed request volumes.",
     "references": [
       {
         "title": "Auto Scaling - Wikipedia",
@@ -62,8 +62,8 @@
   "A0008-003": {
     "title": "Front-End CDN",
     "definition": "Configuring a CDN in front of resource access to achieve caching and acceleration of static resources.",
-    "description": "Dynamic-static separation is a common method for improving server response efficiency. For situations where dynamic-static separation cannot be implemented or where static resource load is high, a front-end CDN can effectively relieve server pressure and improve response efficiency.",
-    "limitation": "Caching acceleration is effective for static resources but does not help with dynamic resources.",
+    "description": "Dynamic-static separation is a common approach to improve server response efficiency. When dynamic-static separation cannot be implemented or static resource load is high, placing a CDN in front of the origin can effectively relieve server pressure and improve response efficiency.",
+    "limitation": "Caching acceleration is more noticeable for static resources, while dynamic resources cannot be addressed. Additionally, after CDN node IPs are fixed, attackers may still bypass the caching layer protection by forging source IPs through proxy pools or bypassing CDN back-to-origin routing. Direct back-to-origin connections can penetrate CDN protection.",
     "references": [
       {
         "title": "What is Amazon CloudFront? - AWS Documentation",
@@ -102,8 +102,8 @@
   "A0008-005": {
     "title": "Increasing Business Resources",
     "definition": "Addressing resource scarcity to some extent by increasing the available business resources.",
-    "description": "For example, increasing the number of products, quota slots, adding more shifts, flights, etc.",
-    "limitation": "For resources that can yield high returns, it is difficult to directly solve resource scarcity by simply increasing supply.",
+    "description": "For example, increasing the quantity of goods, quotas, shifts, or flight schedules can help alleviate resource shortages to some extent by expanding the total allocable business resources, thereby reducing the supply-demand tension after a single point is sold out.",
+    "limitation": "For certain resources that can yield high returns, it is difficult to directly resolve shortages simply by increasing supply. Malicious actors can still circumvent the added restrictions through methods such as bulk purchasing via proxy pools, multi-account hoarding, and other techniques, thereby monopolizing the incremental resources once again.",
     "references": [
       {
         "title": "Cloud Computing - Wikipedia",

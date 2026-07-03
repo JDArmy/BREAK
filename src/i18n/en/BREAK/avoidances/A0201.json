@@ -1,7 +1,7 @@
 {
   "A0201": {
     "title": "Dependency Pinning and Malicious Package Detection",
-    "description": "Use lock files, private proxy repositories, malicious-package scanning, and dependency audits to control supply-chain poisoning.",
+    "description": "Collect dependency manifests, lock files, and package repository metadata; apply malicious package scanning, signature verification, rule matching, and dependency auditing to compare against known malicious indicators, identifying supply chain poisoning and anomalous dependency introduction.",
     "references": [
       {
         "title": "Software Bill of Materials - CISA",
@@ -16,6 +16,7 @@
       "private package proxy",
       "supply-chain defense"
     ],
-    "definition": "Use lock files, private proxy repositories, malicious-package scanning, and dependency audits to control supply-chain poisoning."
+    "definition": "Use lock files, private proxy repositories, malicious-package scanning, and dependency audits to control supply-chain poisoning.",
+    "limitation": "Attackers may bypass signature verification through typosquatting of package names or by leveraging legitimate maintainer credentials for poisoning; novel malicious packages lacking historical indicators are prone to false negatives. Routine package upgrades and emergency patches introducing new dependencies can trigger rule-based false positives, while synchronization delays in private proxy repositories affect recall."
   }
 }

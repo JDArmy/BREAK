@@ -2,7 +2,7 @@
   "A0184": {
     "category": "AC02",
     "title": "智能家居隐私开关",
-    "description": "为智能设备提供物理或软件隐私开关，用户可主动断开音视频采集。",
+    "description": "为智能设备提供物理或软件隐私开关，用户可主动断开麦克风、摄像头等音视频采集通路，从采集端切断信号上报，防止私密音视频被监听获取。",
     "references": [
       {
         "link": "https://consumer.ftc.gov/articles/securing-your-internet-connected-devices-home",
@@ -12,9 +12,10 @@
     "keywords": [
       "智能家居隐私开关"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "为智能设备提供物理或软件隐私开关，用户可主动断开音视频采集。",
     "effectiveness": "medium",
+    "limitation": "软件开关可被恶意固件或提权后绕过、篡改为静默开启采集，物理遮蔽也存在用户忘记关闭的情况；正常用户因误关开关可能导致语音助手、视频通话等合法功能被误伤失效。",
     "relatedAvoidances": [
       {
         "key": "A0022",

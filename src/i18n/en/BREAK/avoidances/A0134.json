@@ -17,7 +17,7 @@
   },
   "A0134-001": {
     "title": "On-Chain Privacy Protection",
-    "description": "Use mixing protocols, privacy coins or zero-knowledge proofs to protect transaction privacy.",
+    "description": "Use mixing protocols, privacy coins, or zero-knowledge proofs to protect transaction privacy, breaking the link between on-chain addresses, real-world identities, and fund flows. Techniques include pooling multi-user funds through mixers and redistributing them, using privacy coins such as Monero/Zcash to conceal sender and amount, and employing zero-knowledge proofs to hide transaction details, thereby reducing the risk of on-chain activity being traced and attributed.",
     "keywords": [
       "On-Chain Privacy Protection"
     ],
@@ -27,6 +27,7 @@
         "link": "https://z.cash/"
       }
     ],
-    "definition": "Use mixing protocols, privacy coins or zero-knowledge proofs to protect transaction privacy."
+    "definition": "Use mixing protocols, privacy coins or zero-knowledge proofs to protect transaction privacy.",
+    "limitation": "Mixing services themselves may be exploited by attackers for money laundering, facing regulatory crackdowns (e.g., Tornado Cash sanctions) that render services unavailable or funds frozen; mixers carry the risk of exit scams; chain analysis firms can partially de-anonymize through transaction graph clustering, temporal correlation, and input-output amount matching, circumventing privacy protections; compliant exchanges may apply risk controls to addresses sourced from mixers, leading to legitimate users being mistakenly blocked and unable to withdraw assets after using mixing services."
   }
 }

@@ -2,7 +2,7 @@
   "A0202": {
     "category": "AC03",
     "title": "SBOM生成与漏洞影响分析",
-    "description": "为应用、镜像和固件生成SBOM，并在新漏洞披露时快速定位受影响资产。",
+    "description": "为应用、镜像和固件采集依赖组件清单生成SBOM，运用版本匹配、漏洞情报比对与基线校验，在新漏洞披露时按组件序列定位受影响资产并评估影响范围。",
     "references": [
       {
         "title": "Software Bill of Materials - CISA",
@@ -13,9 +13,10 @@
       "SBOM生成与漏洞影响分析",
       "SBOM生成漏洞影响分析"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "definition": "为应用、镜像和固件生成SBOM，并在新漏洞披露时快速定位受影响资产。",
     "effectiveness": "high",
+    "limitation": "SBOM易遗漏传递依赖、嵌套组件，攻击者可借助混淆包名或私有补丁绕过清单匹配；情报滞后导致漏报，正常多版本并行、动态链接库加载易产生误报噪声，影响资产定位准确率。",
     "relatedAvoidances": [
       {
         "key": "A0016",

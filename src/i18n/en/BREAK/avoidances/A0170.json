@@ -1,7 +1,7 @@
 {
   "A0170": {
     "title": "Multi-Sig Timelock Mechanism",
-    "description": "Set mandatory waiting period for multi-signature wallet transactions to prevent social engineering emergency attacks.",
+    "description": "Enforces a mandatory waiting period (timelock) for multi-signature wallet transactions. Once a transaction proposal is submitted on-chain, it cannot be executed until a preset delay has elapsed, during which any signer can cancel the transaction. This mechanism creates a manual review window against social engineering emergency attacks, preventing attackers from rapidly moving multi-sig assets through phishing or coercion within a short timeframe.",
     "keywords": [
       "Multi-Sig Timelock Mechanism"
     ],
@@ -11,6 +11,7 @@
         "link": "https://github.com/gnosis/MultiSigWallet"
       }
     ],
-    "definition": "Set mandatory waiting period for multi-signature wallet transactions to prevent social engineering emergency attacks."
+    "definition": "Set mandatory waiting period for multi-signature wallet transactions to prevent social engineering emergency attacks.",
+    "limitation": "If a multi-sig holder's private key is phished or their endpoint is compromised, an attacker can batch-construct multiple transactions within the timelock window to bypass single-transaction limits. An excessively long timelock delay impacts normal business responsiveness, while a delay that is too short provides insufficient review time. Attackers may apply continuous pressure or fabricate false emergencies through social engineering during the waiting period to force holders to cancel the interception, rendering the timelock ineffective. When the multi-sig threshold is set too low (e.g., 2/3), a single point of compromise can satisfy execution conditions, leaving the timelock as the sole line of defense."
   }
 }

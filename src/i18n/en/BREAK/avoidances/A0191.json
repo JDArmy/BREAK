@@ -1,7 +1,7 @@
 {
   "A0191": {
     "title": "Spatial Data Privacy Protection",
-    "description": "Apply differential privacy and localization to sensitive sensor data like eye tracking and gestures.",
+    "description": "Apply differential privacy and on-device processing to sensitive sensor data such as eye tracking, hand gestures, spatial position, and room layout collected by XR devices, and enforce minimal data upload to prevent the collection of users' biometric and physical environment information for profiling-based tracking or reverse spatial localization.",
     "keywords": [
       "Spatial Data Privacy Protection"
     ],
@@ -11,6 +11,7 @@
         "link": "https://xrsi.org/publication/the-xrsi-privacy-framework"
       }
     ],
-    "definition": "Apply differential privacy and localization to sensitive sensor data like eye tracking and gestures."
+    "definition": "Apply differential privacy and localization to sensitive sensor data like eye tracking and gestures.",
+    "limitation": "Differential privacy noise injection reduces interaction accuracy, impacting experience in high-precision scenarios such as eye tracking, creating a trade-off between privacy and usability; on-device processing still requires uploading aggregated features, and residual features may be re-identified through re-identification attacks, leading to de-anonymization; attackers can bypass on-device processing by directly reading raw sensor streams through packet capture or device jailbreaking; data such as room layout and spatial anchors possess strong uniqueness, making differential privacy difficult to effectively de-identify, and they remain susceptible to fingerprint-based localization tracking."
   }
 }

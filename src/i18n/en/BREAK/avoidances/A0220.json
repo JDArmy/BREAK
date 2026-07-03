@@ -1,7 +1,7 @@
 {
   "A0220": {
     "title": "Mobile App Integrity and Runtime Protection",
-    "description": "Detect repackaging, hooking, debugging, emulation, and runtime tampering to protect client-side business logic.",
+    "description": "Through application hardening, anti-debugging, anti-hooking, emulator detection, and runtime integrity verification, it detects repackaging, dynamic injection, memory dumping, and emulator environments to protect client-side business logic and prevent keys from being reverse-extracted.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "runtime protection",
       "anti-tampering"
     ],
-    "definition": "Detect repackaging, hooking, debugging, emulation, and runtime tampering to protect client-side business logic."
+    "definition": "Detect repackaging, hooking, debugging, emulation, and runtime tampering to protect client-side business logic.",
+    "limitation": "Hardening solutions are commonly bypassed by dynamic instrumentation tools such as Frida and Xposed; anti-hooking detection can be evaded by higher-privileged injections that hide themselves. Emulator detection signatures become outdated, as new cloud phones and custom ROMs can masquerade as real devices to bypass detection. Attackers extract keys and business logic beyond hardening protection through memory dumping and protocol-layer packet capture. Hardening increases package size and launch latency, and overly aggressive detection may mistakenly block legitimate root/jailbreak users and accessibility tools."
   }
 }

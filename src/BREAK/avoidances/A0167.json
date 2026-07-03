@@ -2,7 +2,7 @@
   "A0167": {
     "category": "AC01",
     "title": "区块链供应链安全审计",
-    "description": "对区块链开发工具、SDK、钱包插件等进行安全审计，检测恶意代码和后门。",
+    "description": "对区块链开发工具、SDK、钱包插件、智能合约依赖库等进行安全审计，检测恶意代码、后门和供应链投毒。手段包括代码审查、依赖来源校验、签名验证、行为基线对比、SBOM清单管理，防止攻击者在主流组件中植入后门进而污染下游钱包与DApp。",
     "references": [
       {
         "link": "https://www.cisa.gov/resources-tools/resources/defending-against-software-supply-chain-attacks",
@@ -12,9 +12,10 @@
     "keywords": [
       "区块链供应链安全审计"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "对区块链开发工具、SDK、钱包插件等进行安全审计，检测恶意代码和后门。",
     "effectiveness": "high",
+    "limitation": "审计只能覆盖某一时点的快照，组件后续更新可能引入新后门而未被复审；攻击者通过typosquatting（仿冒包名）、依赖混淆在安装阶段绕过审计投毒；审计难以发现高度隐蔽的动态加载、环境触发型后门；开发者私钥或CI/CD管道被攻破可签名投毒合法外观的恶意版本，签名验证形同虚设。",
     "relatedAvoidances": [
       {
         "key": "A0016",

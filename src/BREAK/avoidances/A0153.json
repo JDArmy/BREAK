@@ -5,14 +5,14 @@
     "definition": "建立平台审核和用户举报机制，识别和下架欺诈性虚拟资产",
     "description": "平台治理：项目审核准入；异常交易监控；用户评价体系；欺诈举报渠道；黑名单机制；争议仲裁；资金托管。",
     "complexity": "基础",
-    "limitation": "中心化审核可能不公；无法覆盖所有欺诈；跨平台监管困难",
+    "limitation": "中心化审核可能不公且无法覆盖所有欺诈，跨平台监管困难；黑产可借助多账号、跨平台分仓和伪造交易绕过异常监控，正常用户的高频交易、低价甩卖易被误判为欺诈误伤。",
     "references": [
       {
         "link": "https://www.emerald.com/ribs/article/35/5/613/1269248/Metaverse-governance-in-international-business-a",
         "title": "Metaverse governance in international business: a systematic ..."
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "虚拟土地交易平台审核机制",
       "平台审核",

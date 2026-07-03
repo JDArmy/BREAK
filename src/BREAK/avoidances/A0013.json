@@ -60,14 +60,14 @@
     "category": "AC01",
     "definition": "通过防逆向、防篡改、防调试、防恶意软件等方式来加固Android应用程序",
     "description": "对DEX的多种保护模式结合VMP虚拟机，对关键代码、核心逻辑进行加密保护，避免通过IDA、JEB、JADX、APKTool、Readelf等逆向工具分析获取源码；对App应用每个文件分配唯一识别指纹，结合签名及文件的完整性校验，替换任何一个文件会导致无法运行，防止广告病毒植入、二次打包、功能屏蔽等恶意破解；多重加密技术结合底层对抗技术防止代码注入，防止Java层/C层动态调试，可有效抵挡动态调试、内存DUMP、代码注入、HOOK等恶意攻击；有效检测并对抗：ROOT、模拟器、界面劫持、多开器、Xposed插件、frida等各种HOOK工具（摘自dun.163.com）",
-    "limitation": "可能会有兼容性问题及运行性能问题",
+    "limitation": "可能会有兼容性问题及运行性能问题；加固后的APK仍可被IDA、JADX、frida、Xposed等逆向与HOOK工具反编译或动态调试，攻击者通过模拟器、多开、改机等手段规避ROOT检测与完整性校验，加固仅是提高破解门槛而非彻底防破解。",
     "references": [
       {
         "title": "OWASP Mobile Application Security",
         "link": "https://mas.owasp.org/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "Android应用加固",
       "APK加固",
@@ -111,14 +111,14 @@
     "category": "AC01",
     "definition": "通过防逆向、防篡改、防调试、防恶意软件等方式来加固iOS应用程序",
     "description": "对字符串进行加密保护，防止通过IDA等工具获取关键词定位核心业务代码；对应用代码进行多种方式混淆处理，提高代码的复杂度和逆向分析难度但不影响原始逻辑和性能；对应用的符号进行混淆,增加代码逆向难度；高级的反调试技术，防止攻击者、恶意分析者动态调试分析程序；对应用的二进制代码进行保护，防止逆向分析工具将代码反编译为伪代码（Pseudo-Code）；对应用中的数值进行保护，防止修改器对数值进行篡改，比如游戏中的攻击力、血量等值；对应用进行完整性保护，防止破解者对应用的篡改、重打包等作弊行为（摘自dun.163.com）",
-    "limitation": "可能会有兼容性问题及运行性能问题",
+    "limitation": "可能会有兼容性问题及运行性能问题；越狱设备上仍可被IDA、frida、Cycript等工具反编译或动态调试，攻击者通过HOOK、内存DUMP、重签名篡改等手段规避字符串加密与完整性校验，加固难以彻底阻断越狱环境下的逆向破解。",
     "references": [
       {
         "title": "OWASP Mobile Application Security",
         "link": "https://mas.owasp.org/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "iOS应用加固",
       "iOS加固",
@@ -167,14 +167,14 @@
     "category": "AC01",
     "definition": "通过防逆向、防篡改、防调试、防恶意软件等方式来加固H5应用程序",
     "description": "利用加密技术对抗动态调试，防止代码被调试破解、数据被套取；支持H5应用强绑定指定域名，防止应用域名被篡改，导致用户被导流甚至被欺诈；对代码、脚本文件进行加密，包括动态加解密字符串、函数名、表达式等，对变量进行混淆，提高破解难度。同时支持代码文件压缩，减少应用体积；利用加密技术对数据进行保护，防止网络抓包分析获取敏感数据（摘自dun.163.com）",
-    "limitation": "可能会有兼容性问题及运行性能问题",
+    "limitation": "可能会有兼容性问题及运行性能问题；JS脚本本质在客户端可执行，混淆后仍可被浏览器开发者工具、抓包工具、HOOK框架还原或动态调试，攻击者通过模拟器、代理篡改请求体即可规避域名绑定与加密校验，前端加固难以彻底防止逆向。",
     "references": [
       {
         "title": "OWASP Bytecode Obfuscation",
         "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "H5小程序加固",
       "小程序加固",
@@ -223,14 +223,14 @@
     "category": "AC01",
     "definition": "通过防逆向、防篡改、防调试、防恶意软件等方式来加固桌面应用程序",
     "description": "对应用程序进行加密保护，防止应用被反编译；对应用程序进行混淆处理，提高代码的复杂度和逆向分析难度但不影响原始逻辑和性能；对应用的符号进行混淆,增加代码逆向难度；高级的反调试技术，防止攻击者、恶意分析者动态调试分析程序；对应用的二进制代码进行保护，防止逆向分析工具将代码反编译为伪代码（Pseudo-Code）；对应用中的数值进行保护，防止修改器对数值进行篡改，比如游戏中的攻击力、血量等值；对应用进行完整性保护，防止破解者对应用的篡改、重打包等作弊行为",
-    "limitation": "可能会有兼容性问题及运行性能问题",
+    "limitation": "可能会有兼容性问题及运行性能问题；加固后的程序仍可被IDA、x64dbg、OllyDbg、Cheat Engine等反汇编与调试工具动态分析，攻击者通过HOOK、内存修改、重打包篡改等手段规避反调试与完整性校验，加固仅提高逆向门槛而非彻底防破解。",
     "references": [
       {
         "title": "OWASP Bytecode Obfuscation",
         "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-03",
     "keywords": [
       "桌面应用加固",
       "桌面端加固",

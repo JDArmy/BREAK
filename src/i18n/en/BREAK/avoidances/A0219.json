@@ -1,7 +1,7 @@
 {
   "A0219": {
     "title": "Webhook Signature Verification and Replay Protection",
-    "description": "Verify webhook signatures, timestamp windows, idempotency, and event origin.",
+    "description": "Perform signature verification, timestamp window validation, idempotency deduplication, and event origin verification on webhook events to prevent attackers from forging or replaying webhook events that trigger unauthorized callback actions in business systems.",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -16,6 +16,7 @@
       "idempotency key",
       "event origin validation"
     ],
-    "definition": "Verify webhook signatures, timestamp windows, idempotency, and event origin."
+    "definition": "Verify webhook signatures, timestamp windows, idempotency, and event origin.",
+    "limitation": "If the signing key is leaked, attackers can forge arbitrary validly signed events to bypass verification. The timestamp window must tolerate clock skew and network latency, allowing replays within the window to still be accepted. Idempotency deduplication relies on event ID storage; delayed replays beyond the storage retention period can bypass deduplication. Some businesses disable signature verification or use weak signing algorithms to maintain compatibility with legacy integrations, rendering replay protection effectively useless."
   }
 }

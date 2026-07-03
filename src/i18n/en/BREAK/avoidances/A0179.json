@@ -1,7 +1,7 @@
 {
   "A0179": {
     "title": "IoT Hardware Security Module",
-    "description": "Integrate Trusted Execution Environment (TEE) or security chips in IoT devices to defend against hardware attacks.",
+    "description": "Integrate a Trusted Execution Environment (TEE) or a secure element (SE/TPM) into IoT devices to isolate keys, certificates, and sensitive computations within a hardware root of trust, defending against hardware attacks such as firmware extraction, side-channel analysis, and physical probing, thereby preventing device keys from being read or cloned.",
     "keywords": [
       "IoT Hardware Security Module"
     ],
@@ -11,6 +11,7 @@
         "link": "https://globalplatform.org/specs-library/tee-internal-core-api-specification/"
       }
     ],
-    "definition": "Integrate Trusted Execution Environment (TEE) or security chips in IoT devices to defend against hardware attacks."
+    "definition": "Integrate Trusted Execution Environment (TEE) or security chips in IoT devices to defend against hardware attacks.",
+    "limitation": "Increases BOM cost, making adoption difficult in low-cost IoT devices; TEEs themselves may contain vulnerabilities (e.g., speculative execution, cache side-channel) that can be exploited to break isolation and read keys; physical attacks such as fault injection, voltage glitching, and laser injection can compromise secure chip protections; once hardware is in mass production, it is difficult to upgrade, and discovered vulnerabilities cannot be fixed via software patches, leaving the security module at long-term risk of being cracked."
   }
 }

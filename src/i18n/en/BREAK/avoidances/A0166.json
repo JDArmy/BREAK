@@ -4,7 +4,7 @@
     "definition": "Collaborating with regulatory authorities to establish on-chain monitoring mechanisms and compliance reporting",
     "description": "Compliance framework: Travel Rule implementation; suspicious transaction reporting; blacklist sharing; regulatory nodes; on-chain regulatory technology; cross-border collaboration; forensic interfaces.",
     "complexity": "Advanced",
-    "limitation": "Inconsistent regulatory standards; conflict between decentralization and regulation; enforcement challenges",
+    "limitation": "Regulatory standards vary across jurisdictions and cross-border collaboration faces high barriers; decentralized protocols lack a central accountable entity, inherently conflicting with regulatory requirements; privacy coins and mixers undermine on-chain traceability; on-chain compliance cannot be enforced directly and must rely on indirect measures such as off-chain fiat channels for intervention.",
     "keywords": [
       "On-Chain Compliance and Regulatory Collaboration"
     ],

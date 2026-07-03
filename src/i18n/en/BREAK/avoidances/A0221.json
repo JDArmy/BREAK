@@ -1,7 +1,7 @@
 {
   "A0221": {
     "title": "Edge and CDN Rule Change Audit",
-    "description": "Audit CDN, WAF, edge-function, and cache-rule changes to prevent edge configuration abuse.",
+    "description": "Audit changes to CDN, WAF, edge functions, and caching rules to prevent edge configurations from being abused. Collect change events and configuration characteristics of CDN, WAF, edge functions, and caching rules, and apply rule matching, baseline comparison, and version sequence verification to audit abnormal changes, preventing edge configurations from being abused or maliciously tampered with.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "cache rule governance",
       "edge security"
     ],
-    "definition": "Audit CDN, WAF, edge-function, and cache-rule changes to prevent edge configuration abuse."
+    "definition": "Audit CDN, WAF, edge-function, and cache-rule changes to prevent edge configuration abuse.",
+    "limitation": "Overly permissive operations tokens can bypass change auditing and evade log recording, while high-frequency automated deployments are prone to alert noise and false positives. Normal canary releases and emergency rollback changes are easily misjudged as anomalies, and configuration drift across edge nodes is difficult to recall in a timely manner."
   }
 }

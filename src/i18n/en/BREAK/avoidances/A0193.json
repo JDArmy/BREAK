@@ -1,7 +1,7 @@
 {
   "A0193": {
     "title": "Virtual Economy Regulation Mechanism",
-    "description": "Establish virtual asset transaction regulation and anti-monopoly mechanisms to prevent economic manipulation.",
+    "description": "Collects virtual asset transaction records, address labels, and fund flow characteristics; applies rule matching, statistical baseline comparison, and anomaly monitoring to identify market manipulation, monopolistic hoarding, and abnormal price fluctuations, and coordinates with anti-monopoly determination and disposal.",
     "keywords": [
       "Virtual Economy Regulation Mechanism"
     ],
@@ -11,6 +11,7 @@
         "link": "https://www.bis.org/publ/work1020.pdf"
       }
     ],
-    "definition": "Establish virtual asset transaction regulation and anti-monopoly mechanisms to prevent economic manipulation."
+    "definition": "Establish virtual asset transaction regulation and anti-monopoly mechanisms to prevent economic manipulation.",
+    "limitation": "Illicit actors can bypass monitoring by using multiple accounts, cross-platform position splitting, and coin mixing to obscure manipulation traces; decentralized exchanges make regulatory rules difficult to enforce. Normal large-scale position building by major holders and price fluctuations of scarce assets are prone to be misidentified as manipulation, and rules lagging behind emerging tactics lead to underreporting."
   }
 }

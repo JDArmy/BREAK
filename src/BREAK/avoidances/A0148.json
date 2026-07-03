@@ -5,14 +5,14 @@
     "definition": "实时监控工控系统运行状态，建立应急响应机制快速处置安全事件",
     "description": "监控体系：IDS/IPS专用于工控流量；SIEM整合安全事件；基线行为建模；异常告警；应急预案演练；备份系统。",
     "complexity": "高级",
-    "limitation": "专业人才缺乏；误报率高；应急响应可能影响生产",
+    "limitation": "工控协议私有且碎片化，IDS/IPS规则难以全覆盖，新型攻击指令可绕过签名匹配产生漏报；正常工艺调参、设备启停易与攻击行为混淆导致误报率高；应急响应处置（如断网、停机）可能影响生产连续性，对正常运维指令也存在误拦风险；专业工控安全人才缺乏，基线建模与告警研判依赖经验，规则滞后于新型威胁。",
     "references": [
       {
         "title": "ICS Security Monitoring Best Practices",
         "link": "https://www.cisa.gov/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "ICS安全监控与应急响应",
       "ICS监控",

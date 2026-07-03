@@ -2,8 +2,8 @@
   "A0048": {
     "title": "Complaint and Reporting Channel",
     "definition": "A channel or mechanism provided to users for submitting complaints, reports, or feedback about issues.",
-    "description": "Such channels are typically designed to help users resolve problems encountered while using services or purchasing goods, and also help maintain social order and regulate industry behavior.",
-    "limitation": "Detection of violations depends on user reports, and user reports may be inaccurate.",
+    "description": "Such channels are typically designed to help users resolve issues encountered during the use of services or purchase of goods, while also contributing to the maintenance of social order and the regulation of industry conduct.",
+    "limitation": "The detection of violations depends on proactive user reporting, which creates blind spots for underreporting and may lead to inaccurate reports resulting in false positives or misjudgments; malicious actors can exploit malicious reporting or mass complaints to falsely accuse legitimate businesses and bypass enforcement, and the lack of cross-platform complaint data integration makes it difficult to recall and address cross-domain coordinated offenses by organized groups.",
     "references": [
       {
         "title": "Measures for Handling Market Regulation Complaints and Reports",

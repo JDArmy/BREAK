@@ -58,7 +58,7 @@
   "A0113-001": {
     "category": "AC03",
     "title": "IoT流量监控与异常检测",
-    "description": "监控IoT设备网络流量，检测异常外联行为。",
+    "description": "通过监听并采集IoT设备的网络流量、出站连接、DNS查询与端口通信等信号，建立正常流量基线，运用机器学习模型与规则比对识别DGA域名、非常规端口、扫描外联等异常行为，偏离基线即告警。",
     "references": [
       {
         "link": "https://www.cisa.gov/ics",
@@ -68,9 +68,10 @@
     "keywords": [
       "IoT流量监控与异常检测"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "监控IoT设备网络流量，检测异常外联行为。",
     "effectiveness": "high",
+    "limitation": "新型僵尸网络可使用加密通信、协议层伪造或快速变种DGA域名绕过检测，加密流量下DPI效果有限；正常固件升级、OTA轮询易与C&C外联混淆导致误报，IoT设备基数大也使基线难稳定。",
     "relatedAvoidances": [
       {
         "key": "A0108",

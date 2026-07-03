@@ -18,9 +18,9 @@
   "A0111-001": {
     "title": "Firmware OTA Update Signature Verification",
     "definition": "Digital signature verification of firmware packages delivered via OTA to ensure trusted origin and integrity against tampering.",
-    "description": "Prevents malicious firmware from being implanted through OTA. Measures: firmware packages signed with the vendor's private key; device-side verification using the embedded public key; secure hashing algorithms; certificate chain validation; anti-rollback version enforcement; automatic rollback upon update failure.",
+    "description": "Prevent malicious firmware from being implanted via OTA. Measures: firmware packages signed with manufacturer private key; device-side public key verification; use of secure hash algorithms; certificate chain validation; version rollback prevention; automatic fallback on update failure.",
     "complexity": "Intermediate",
-    "limitation": "Complex key management; increased latency due to signature verification; certificate expiration requires handling.",
+    "limitation": "If the manufacturer's signing private key is leaked or stolen by an insider, attackers can sign malicious firmware that appears legitimate, bypassing signature verification. Unlocked bootloader development modes or bootrom vulnerabilities can break the chain of trust, rendering verification ineffective. Certificate expiration or clock anomalies may cause legitimate firmware to be misidentified as illegal, disrupting normal user updates. Version rollback prevention can hinder rapid downgrades during emergency fixes for historical vulnerabilities, creating tension between operational needs and security.",
     "keywords": [
       "Firmware OTA Update Signature Verification"
     ],
@@ -33,7 +33,7 @@
   },
   "A0111-002": {
     "title": "Connected-Vehicle OTA Security Governance",
-    "description": "Apply signature verification and security monitoring to vehicle OTA packages, upgrade channels, rollback policies, and phased releases.",
+    "description": "Implement end-to-end signature verification and security monitoring for vehicle-side OTA upgrade packages, upgrade channels, rollback strategies, and version canary releases, preventing attackers from injecting malicious firmware or tampering with control logic by forging OTA packages. Coverage includes package signing, TLS channels, monotonically increasing version numbers, canary release approval, and upgrade log auditing, ensuring the trustworthiness of the entire vehicle model upgrade chain.",
     "references": [
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
@@ -48,6 +48,7 @@
       "canary rollout",
       "automotive cybersecurity"
     ],
-    "definition": "Apply signature verification and security monitoring to vehicle OTA packages, upgrade channels, rollback policies, and phased releases."
+    "definition": "Apply signature verification and security monitoring to vehicle OTA packages, upgrade channels, rollback policies, and phased releases.",
+    "limitation": "If the OEM's signing private key is stolen by an insider or improperly stored, an attacker can issue a malicious OTA package with a legitimate appearance to bypass verification; design flaws in the canary rollback strategy may prevent rollback after a failed upgrade, rendering the vehicle unable to start; the OEM's complex supply chain means that if a third-party TSP or component supplier's channel is compromised, forged upgrade commands can be issued; version anti-rollback mechanisms hinder rapid downgrades during emergency fixes for historical vulnerabilities, creating tension between operations and security."
   }
 }

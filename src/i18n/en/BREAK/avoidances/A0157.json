@@ -2,9 +2,9 @@
   "A0157": {
     "title": "Zero-Knowledge KYC and Privacy Protection",
     "definition": "Using zero-knowledge proofs to complete identity verification, proving compliance without exposing specific information.",
-    "description": "Privacy-preserving KYC: zk-SNARKs for proving age/nationality; selective attribute disclosure; off-chain verification with on-chain proof; regulatory auditability; user-controlled data.",
+    "description": "Privacy-preserving KYC: zk-SNARK proofs for age/nationality; selective attribute disclosure; off-chain verification with on-chain proof; regulatory auditability; user-controlled data.",
     "complexity": "Advanced",
-    "limitation": "High technical complexity; unknown regulatory acceptance; high computational cost.",
+    "limitation": "High technical complexity, unknown regulatory acceptance, and high computational cost. If vulnerabilities exist in the zk-SNARK proving circuit, attackers can forge compliance proofs to bypass KYC checks. Additionally, when off-chain data sources are falsified, the on-chain proof cannot detect the fraud, introducing risks of cryptographic compromise and source-level deception.",
     "keywords": [
       "Zero-Knowledge KYC and Privacy Protection"
     ],

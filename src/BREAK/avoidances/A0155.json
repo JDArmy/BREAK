@@ -5,14 +5,14 @@
     "definition": "使用DID等去中心化身份技术，实现无需中心化机构的身份证明",
     "description": "DID方案：W3C DID标准；链上身份锚点；可验证凭证；选择性披露；自主身份；跨平台互认。",
     "complexity": "高级",
-    "limitation": "生态不成熟；用户体验差；监管接受度低",
+    "limitation": "DID文档与可验证凭证的私钥一旦被钓鱼或终端恶意软件窃取，攻击者即可凭合法凭证冒充身份，验证机制无法区分操作者真伪；跨DID方法（did:web/did:ethr等）解析与信任锚实现不统一，验证方实现差异可能产生误报或漏报；选择性披露在零知识证明实现下算力开销大，移动端落地困难；生态不成熟、监管接受度低，撤销注册表更新延迟会导致已吊销凭证在窗口期内仍被误判有效。",
     "references": [
       {
         "title": "Decentralized Identity (DID) Standard",
         "link": "https://www.w3.org/TR/did-core/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "链上身份去中心化验证",
       "DID",
@@ -57,7 +57,7 @@
   "A0155-001": {
     "category": "AC01",
     "title": "去中心化身份凭证验证",
-    "description": "验证DID、VC签发方、撤销状态和展示策略，降低身份凭证伪造风险。",
+    "description": "对DID解析、可验证凭证（VC）签发方签名、撤销状态、过期时间和展示策略进行链上/链下联合验证，确认凭证未被伪造或吊销后再放行业务。覆盖凭证签发、持有、出示、验证全生命周期，防止攻击者伪造身份凭证冒用他人身份或越权访问。",
     "references": [
       {
         "title": "W3C Decentralized Identifiers (DIDs) v1.0",
@@ -67,9 +67,10 @@
     "keywords": [
       "去中心化身份凭证验证"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "definition": "验证DID、VC签发方、撤销状态和展示策略，降低身份凭证伪造风险。",
     "effectiveness": "high",
+    "limitation": "DID文档与VC的私钥一旦被钓鱼或终端恶意软件窃取，攻击者可凭合法凭证冒充身份，验证机制无法区分操作者真伪；撤销注册表更新延迟会导致已吊销凭证在窗口期内仍被误判有效；选择性披露在零知识证明实现下算力开销大，移动端落地困难；跨DID方法（did:web/did:ethr等）解析差异大，验证方实现不一致可能产生误报或漏报。",
     "relatedAvoidances": [
       {
         "key": "A0155",

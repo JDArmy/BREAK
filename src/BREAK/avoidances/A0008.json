@@ -59,15 +59,15 @@
     "title": "增加计算资源",
     "category": "AC01",
     "definition": "通过增加服务器计算资源的方式提升可承载的终端同时请求数量。",
-    "description": "对于分布式架构来说，增加计算资源是最简单有效的提升可用性的方式",
-    "limitation": "与业务系统优化（A0008-004）是相辅相成的关系，增加计算资源可以快速解决可用性问题，但会大幅增加运营成本。",
+    "description": "对于分布式架构来说，增加计算资源是最简单有效的提升可用性的方式，通过横向扩容或弹性伸缩快速提升可承载的终端同时请求数量，缓解突发流量冲击。",
+    "limitation": "与业务系统优化（A0008-004）是相辅相成的关系，增加计算资源可以快速解决可用性问题，但会大幅增加运营成本，且无法从根本上抵御恶意流量的攻击，攻击者仍可通过扩大代理池或分布式请求规模压满扩容后的资源。",
     "references": [
       {
         "title": "自动扩展 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Autoscaling"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "增加计算资源",
       "扩容",
@@ -172,14 +172,14 @@
     "category": "AC01",
     "definition": "通过在访问资源前配置CDN来达到对静态资源的缓存与加速",
     "description": "动静态分离是目前提升服务器响应效率的一种常见方法，对于不能实施动静态分离或静态资源负载大的情况下，通过前置CDN可以有效缓解服务器压力，提升响应效率。",
-    "limitation": "对静态资源的缓存加速较为明显，动态资源解决不了",
+    "limitation": "对静态资源的缓存加速较为明显，动态资源解决不了；且CDN节点IP固定后仍可能被攻击者通过代理池伪造源IP或绕过CDN回源的方式规避缓存层防护，回源直连即可击穿CDN防护。",
     "references": [
       {
         "title": "What is Amazon CloudFront? - AWS Documentation",
         "link": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "前置CDN",
       "CDN",
@@ -283,15 +283,15 @@
     "title": "增加业务资源",
     "category": "AC01",
     "definition": "通过增加业务资源的方式在一定程度上解决资源紧缺问题。",
-    "description": "譬如增加商品数量、名额数量、增加班次、航次等。",
-    "limitation": "对于某些可以获得高额回报的资源，很难直接通过增加资源的方式解决资源紧缺问题。",
+    "description": "譬如增加商品数量、名额数量、增加班次、航次等，通过增加业务可分配的资源总量在一定程度上缓解资源紧缺问题，降低单点被抢空后的供需矛盾。",
+    "limitation": "对于某些可以获得高额回报的资源，很难直接通过增加资源的方式解决资源紧缺问题；黑灰产仍可通过代理池批量抢购、多开账号囤积等方式规避资源增加带来的限制，将增量资源再次垄断。",
     "references": [
       {
         "title": "云计算 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Cloud_computing"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "增加业务资源",
       "增加库存",

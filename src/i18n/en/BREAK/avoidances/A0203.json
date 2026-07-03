@@ -1,7 +1,7 @@
 {
   "A0203": {
     "title": "Cloud Identity Permission Reduction",
-    "description": "Continuously detect excessive cloud permissions, long-lived keys, and cross-account trusts, then enforce least privilege and temporary credentials.",
+    "description": "Continuously discover excessive cloud entitlements, long-term keys, dormant credentials, and cross-account trust relationships. Enforce least privilege and STS temporary credentials, reclaim idle permissions, and rotate credentials on a regular basis to reduce the risk of lateral movement and resource abuse after a cloud identity is compromised.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "cross-account trust",
       "permission reduction"
     ],
-    "definition": "Continuously detect excessive cloud permissions, long-lived keys, and cross-account trusts, then enforce least privilege and temporary credentials."
+    "definition": "Continuously detect excessive cloud permissions, long-lived keys, and cross-account trusts, then enforce least privilege and temporary credentials.",
+    "limitation": "Cloud environments contain a massive number of roles and policies, making permission tightening dependent on accurate usage profiles—misidentifying dormant permissions may inadvertently block legitimate business operations. Long-term keys embedded in legacy applications, mobile clients, and third-party integrations are difficult to fully replace with temporary credentials. If a cross-account assumed role chain is compromised, attackers can escalate privileges laterally along the trust chain and bypass restrictions. Permission policy statements are often complex and may contain implicit wildcard grants, leaving gaps where automated scanning misses over-privileged assignments and creates residual escalation risks."
   }
 }

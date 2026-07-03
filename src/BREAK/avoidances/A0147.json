@@ -5,14 +5,14 @@
     "definition": "对Modbus、OPC等工业协议实施认证加密，防止未授权访问和篡改",
     "description": "工业协议通常无安全设计。加固：使用加密版本（OPC UA、Modbus/TCP+TLS）；部署协议网关过滤异常；白名单限制命令；异常行为检测；定期审计。",
     "complexity": "高级",
-    "limitation": "老旧设备不支持；性能影响；兼容性问题",
+    "limitation": "老旧设备不支持，性能影响大，兼容性问题多；且工业协议加密版本仍可被协议层逆向、抓包重放、中间人篡改等方式突破，白名单与异常检测规则可能对正常运维指令误判误拦，存在误报与被规避风险。",
     "references": [
       {
         "title": "Industrial Protocol Security Hardening",
         "link": "https://www.dragos.com/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "工业协议安全加固",
       "工业协议",
@@ -57,7 +57,7 @@
   "A0147-001": {
     "category": "AC03",
     "title": "工业协议深度包检测",
-    "description": "对工业协议进行深度包检测，识别和拦截攻击流量。",
+    "description": "对Modbus、OPC UA等工业协议流量进行深度包检测（DPI），运用规则匹配、序列校验与基线比对识别异常指令、非法写操作和攻击流量，并触发拦截。",
     "references": [
       {
         "link": "https://www.enisa.europa.eu/news/enisa-news/industrial-control-systems-security-recommendations-for-europe-member-states",
@@ -67,9 +67,10 @@
     "keywords": [
       "工业协议深度包检测"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "对工业协议进行深度包检测，识别和拦截攻击流量。",
     "effectiveness": "high",
+    "limitation": "攻击者可通过协议层字段篡改、报文混淆绕过签名匹配，加密工业协议使DPI难以解析；正常工艺调参、新设备接入易触发规则误报，老旧OT环境对深度解析性能敏感不宜全量启用。",
     "relatedAvoidances": [
       {
         "key": "A0146",

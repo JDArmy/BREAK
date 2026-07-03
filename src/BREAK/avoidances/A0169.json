@@ -2,7 +2,7 @@
   "A0169": {
     "category": "AC02",
     "title": "Telegram官方认证",
-    "description": "使用Telegram官方认证徽章识别真实机器人和社群，避免钓鱼。",
+    "description": "通过监听并采集Telegram官方认证徽章、用户名、频道/群组标识等特征，结合白名单匹配与签名校验判定账号与社群真实性，识别钓鱼仿冒账号。",
     "references": [
       {
         "link": "https://lifehacker.com/tech/telegram-has-a-new-verification-strategy-to-cut-down-on-scams",
@@ -15,6 +15,7 @@
     "updated": "2026-07-03",
     "definition": "使用Telegram官方认证徽章识别真实机器人和社群，避免钓鱼。",
     "effectiveness": "medium",
+    "limitation": "认证徽章仅在用户主动查看时生效，自动化脚本与中老年用户易被高仿用户名、伪造截图欺骗；未认证的真实账号无法区分，正常用户的同名人账号易误判为仿冒。",
     "relatedAvoidances": [
       {
         "key": "A0016",

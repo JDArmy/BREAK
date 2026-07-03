@@ -1,7 +1,7 @@
 {
   "A0199": {
     "title": "Least-Privilege CI/CD Pipeline Governance",
-    "description": "Limit permissions for pipeline tokens, runners, artifact repositories, and deployment credentials to reduce build-chain abuse.",
+    "description": "Restrict pipeline tokens, runners, artifact repositories, and deployment credentials to enforce least-privilege and short-lived credential principles. Granularly authorize and audit permissions across build, push, and deployment stages to reduce lateral abuse risks after the build chain is compromised.",
     "references": [
       {
         "title": "OWASP Top 10 CI/CD Security Risks",
@@ -16,6 +16,7 @@
       "deployment credential control",
       "build security"
     ],
-    "definition": "Limit permissions for pipeline tokens, runners, artifact repositories, and deployment credentials to reduce build-chain abuse."
+    "definition": "Limit permissions for pipeline tokens, runners, artifact repositories, and deployment credentials to reduce build-chain abuse.",
+    "limitation": "Pipelines often require elevated permissions for deployment, creating tension between least privilege and automation efficiency, which frequently leads to relaxed constraints and over-authorization in practice. Long-lived tokens and shared credentials persist in historical scripts and third-party integrations, making them difficult to fully eliminate. A compromised runner can steal runtime-injected temporary credentials to impersonate identities and bypass permission controls. As permission policies grow complex, misconfigurations become frequent, potentially blocking legitimate builds or leaving privilege escalation gaps that can be exploited."
   }
 }

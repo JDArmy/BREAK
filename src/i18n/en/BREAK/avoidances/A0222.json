@@ -2,8 +2,8 @@
   "A0222": {
     "title": "Targeted Inspection",
     "definition": "Rule-based targeted inspection of high-risk merchants, sites, or courier tasks to verify consistency between physical goods and system data.",
-    "description": "Targeted inspection uses risk scores, historical anomalies, and scenario features to trigger manual or system inspection of suspected merchants and courier pickup/delivery tasks, verifying that goods, weight, route, and sign-off match system data.\n\nIt addresses data-distortion risks such as weight shaving, fake routing, and heavy-goods splitting, following a \"data anomaly → targeted verification → closed-loop handling\" workflow that requires evidence and appeal mechanisms to avoid false positives.",
-    "limitation": "Inspection coverage is limited and depends on risk-score quality and sample representativeness; high-frequency inspection affects fulfillment efficiency and merchant experience, requiring a balance between sampling rate and false-positive cost.",
+    "description": "Targeted inspection initiates manual or systematic verification against high-risk merchants, outlets, or courier pickup/delivery tasks based on risk scores, historical anomalies, and scenario characteristics. It checks whether physical items, weight, routing, and delivery confirmations align with system data. This measure addresses data distortion risks such as weight fraud, false routing, and splitting heavy goods into smaller parcels, following the governance path of 'data anomaly → targeted verification → closed-loop resolution'. It must be paired with evidence collection and appeal mechanisms to avoid penalizing compliant fulfillment.",
+    "limitation": "Inspection coverage is inherently limited and depends on the quality of risk scoring and sample representativeness. High-frequency inspections can impair normal fulfillment efficiency and merchant experience, requiring a careful balance between sampling rate and the cost of false positives.",
     "references": [
       {
         "title": "NIST SP 800-53 AU-6 Audit Record Review, Analysis, and Reporting",
@@ -21,8 +21,8 @@
   "A0222-001": {
     "title": "Trusted-Merchant Targeted Inspection",
     "definition": "Low-frequency targeted inspection of trusted-list merchants to verify fulfillment goods and declaration consistency.",
-    "description": "Trusted merchants typically enjoy inspection-free or fast-track benefits; targeted inspection uses low-frequency sampling to verify that trust is not abused, focusing on goods consistency, weight, and category declarations matching orders.\n\nIt safeguards trusted-merchant fulfillment efficiency while identifying fake shipment, swaps, or false declarations under trust qualification, following a \"trust admission + sampling review + trust downgrade\" workflow.",
-    "limitation": "Low-frequency sampling has limited capture rate for single violations and requires complaint and anomaly triggers for additional sampling; the feedback loop from inspection results to trust rating must be closed.",
+    "description": "Trusted merchants typically enjoy inspection exemption or fast-track benefits. Directed spot checks use low-frequency sampling to verify that trust is not abused, focusing on whether the actual goods, weight, and category declarations match the order. While safeguarding trusted merchants' fulfillment efficiency, this measure identifies behaviors such as false shipments, product switching, or declaration discrepancies carried out under the guise of trust credentials. The governance direction is 'trust admission + sampling review + trust downgrade.'",
+    "limitation": "Low-frequency sampling has limited capture rate for single-instance violations and must be supplemented by reports and anomaly monitoring to trigger additional inspections. The feedback loop from inspection results to trust ratings must be closed.",
     "references": [
       {
         "title": "NIST SP 800-53 AU-6 Audit Record Review, Analysis, and Reporting",
@@ -39,8 +39,8 @@
   "A0222-002": {
     "title": "Courier Targeted Inspection Task",
     "definition": "Dispatching targeted inspection tasks for high-risk courier pickup/delivery tasks to verify weight, route, and sign-off authenticity.",
-    "description": "For weight shaving, fake routing, and fake handover risks, targeted inspection tasks are dispatched by task-level risk scores, with quality-control or risk staff performing on-site or system verification of billed weight, node trajectories, and sign-off data against declarations.\n\nIt pushes inspection down to per-task granularity for timely interception of data falsification during fulfillment, following a \"task scoring → targeted dispatch → on-site verification → accountability\" workflow.",
-    "limitation": "On-site inspection is labor-intensive and depends on task risk-score accuracy; cross-site and cross-partner tasks require coordinated verification permissions.",
+    "description": "For high-risk express pickup and delivery tasks, targeted spot checks are dispatched based on task-level risk scores to verify weight, route, and delivery authenticity. Targeting risks such as weight fraud, false routing, and fake handovers, quality inspection or risk control personnel conduct on-site or system-based verification to check whether the billed weight, node trajectory, and delivery data match the declarations. This approach pushes spot checks down to the individual task level, enabling timely interception of data falsification during fulfillment. The governance direction is: task scoring → targeted dispatch → on-site verification → liability handling.",
+    "limitation": "On-site spot checks incur high labor costs and depend on the accuracy of task risk scoring. For tasks involving cross-branch or cross-partner operations, coordination of verification permissions is required.",
     "references": [
       {
         "title": "NIST SP 800-53 AU-6 Audit Record Review, Analysis, and Reporting",

@@ -2,9 +2,9 @@
   "A0160": {
     "title": "Code Audit and Bug Bounty",
     "definition": "Conduct multi-party audits and establish bug bounty programs to incentivize vulnerability discovery",
-    "description": "Introduce internal code review, third-party security audits, public bug bounty programs, and continuous retesting before and after launch to encourage researchers to report issues in contract logic, permissions, asset flows, cross-chain interactions, and dependent components.",
+    "description": "Collect and report characteristics such as contract code, permission configurations, asset flows, and dependency components before and after launch. Introduce internal code audits, third-party security audits, public vulnerability bounty programs, and continuous retesting mechanisms. Identify security issues in contract logic, permissions, and cross-chain interactions through multi-source review and baseline comparison.",
     "complexity": "Intermediate",
-    "limitation": "Audits and bug bounties cannot guarantee that all defects are found. Effectiveness depends on scope, depth, bounty incentives, and remediation follow-through, and business-logic changes require renewed assessment.",
+    "limitation": "Code audits and vulnerability bounties cannot guarantee the discovery of all defects. Effectiveness depends on audit scope, audit depth, bounty attractiveness, and remediation closure. Re-evaluation is required after business logic changes.",
     "keywords": [
       "Code Audit and Bug Bounty"
     ],

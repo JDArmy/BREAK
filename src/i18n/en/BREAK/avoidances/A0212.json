@@ -1,7 +1,7 @@
 {
   "A0212": {
     "title": "Privacy Impact Assessment and Compliance Evidence",
-    "description": "Perform PIA/DPIA for new businesses, models, and data-processing activities, and retain compliance evidence.",
+    "description": "For new business, models, and data processing activities, collect processing purposes, data fields, data flow paths, and audit logs; perform PIA/DPIA assessments using rule matching and compliance checklist comparison, and retain compliance evidence chains for audit purposes.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "privacy compliance",
       "processing activity review"
     ],
-    "definition": "Perform PIA/DPIA for new businesses, models, and data-processing activities, and retain compliance evidence."
+    "definition": "Perform PIA/DPIA for new businesses, models, and data-processing activities, and retain compliance evidence.",
+    "limitation": "Assessments rely on manual input and one-time documentation; after launch, frequent iterations can bypass audit trails, causing assessments to deviate from actual processing. Rule checklists lag behind new regulations, increasing the risk of missing compliance obligations. The blurred boundaries of data processing in complex AI models introduce significant noise into assessments."
   }
 }

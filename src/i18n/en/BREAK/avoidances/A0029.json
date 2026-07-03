@@ -2,8 +2,8 @@
   "A0029": {
     "title": "Data Profiling",
     "definition": "Collecting and analyzing various data to form labeled profiles of that data.",
-    "description": "Data profiling refers to labeled data models abstracted from data attributes, data behaviors, and other information.",
-    "limitation": "Data quality issues: data profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: data profiling requires collecting large amounts of data; if not handled properly, it will involve data privacy concerns. Timeliness issues: data profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
+    "description": "Data profiling collects multi-dimensional data such as user attributes, device information, and behavioral traces, abstracting them into a tagged data model. It combines clustering and classification, rule matching, and statistical baseline comparison to perform risk determination and identify anomalous deviations for entities.",
+    "limitation": "Data quality issues: Data profiling techniques require substantial data support; if data quality is poor, the accuracy of the profile will be affected. Data privacy issues: Data profiling techniques require collecting large amounts of data; if handled improperly, data privacy concerns will arise. Timeliness issues: Data profiling techniques analyze and predict based on historical data; if the data is outdated or inaccurate, the timeliness of the profile will be impacted.",
     "references": [
       {
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
@@ -40,8 +40,8 @@
   "A0029-002": {
     "title": "IP Profiling",
     "definition": "Analyzing the behavior and characteristics of an IP address and associating it with various labels and attributes to form a comprehensive understanding of that IP address.",
-    "description": "IP profiling can include multiple aspects such as the IP address's geographic location, carrier, network quality, and user profile, and can be used to determine whether the IP address poses a risk or is a malicious IP. In the network security field, IP profiling is an important technical means that can help enterprises better understand threats and anomalous behavior in the network, improving network security protection capabilities. Through IP profiling, enterprises can quickly locate and handle malicious attacks, fraud, and other network security incidents, protecting business and data security.",
-    "limitation": "With the proliferation of IPv6, the number of IP addresses will increase dramatically, posing greater challenges for IP profiling technology.",
+    "description": "IP profiling refers to associating an IP address with various tags and attributes by analyzing its behavior and characteristics, thereby forming a comprehensive understanding of that IP address. It can include aspects such as the IP's geographic location, affiliated ISP, network quality, and user profiling, and can be used to determine whether the IP address poses a risk or is malicious. In the cybersecurity domain, IP profiling is an important technical approach that helps enterprises better understand threats and anomalous behaviors in the network, improving network security protection capabilities. Through IP profiling, enterprises can quickly locate and handle malicious attacks, fraudulent activities, and other cybersecurity incidents, safeguarding business security and data security.",
+    "limitation": "Malicious actors can bypass IP profiling blocks by leveraging residential proxy pools and frequent ADSL dial-up IP rotation. The massive dilution of addresses after IPv6 adoption also makes profiling baselines difficult to maintain. Meanwhile, legitimate users sharing NAT egress IPs are prone to false positives and false blocks, and mobile carrier egress IPs are difficult to directly blacklist.",
     "references": [
       {
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
@@ -57,8 +57,8 @@
   "A0029-003": {
     "title": "Device Profiling",
     "definition": "Labeling devices and describing them through various tags.",
-    "description": "Device profiling refers to labeled device models abstracted from device attributes and device behaviors.",
-    "limitation": "Device profiling is an extension of device fingerprinting (A0021). If device fingerprinting is inaccurate, device profiling will also be affected. Additionally, the accuracy of device profiling is also affected by the device profiling algorithm.",
+    "description": "Device profiling labels devices by abstracting device attributes, device fingerprints, operating environments, and behavioral characteristics into a tag-based device model. It performs risk assessment and anomaly deviation identification through rule matching, cluster classification, and statistical baseline comparison, serving as an extension of device fingerprinting (A0021).",
+    "limitation": "Device profiling is an extension of device fingerprinting (A0021). If the device fingerprint is inaccurate, the device profile will also be affected. Additionally, the accuracy of device profiling is influenced by the device profiling algorithm.",
     "references": [
       {
         "title": "Fingerprinting - MDN Web Docs",

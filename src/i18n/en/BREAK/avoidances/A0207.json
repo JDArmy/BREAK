@@ -1,7 +1,7 @@
 {
   "A0207": {
     "title": "Payment Account and Merchant Onboarding Review",
-    "description": "Review merchants, collection accounts, legal entities, devices, and historical risk during onboarding and continuous review.",
+    "description": "Conduct admission review and ongoing re-verification for merchants, receiving accounts, legal entities, onboarding devices, and historical risk records. Verify consistency among business licenses, legal person identities, and settlement accounts to prevent risks such as fake merchants, qualification misappropriation, and secondary clearing that lead to payment channel abuse.",
     "references": [
       {
         "title": "PCI Data Security Standard",
@@ -16,6 +16,7 @@
       "device risk review",
       "merchant fraud control"
     ],
-    "definition": "Review merchants, collection accounts, legal entities, devices, and historical risk during onboarding and continuous review."
+    "definition": "Review merchants, collection accounts, legal entities, devices, and historical risk during onboarding and continuous review.",
+    "limitation": "Illicit actors bypass admission review by purchasing complete qualification packages including genuine business licenses, legal person \"four-piece sets\", and corporate accounts. Impersonation or social engineering can deceive legal person face-to-face interviews. Admission is a one-time verification; after onboarding, changes to critical information such as settlement accounts, legal persons, or business categories are not re-triggered for review, allowing exploitation for cash-out and exit scams. Device fingerprints are spoofed by tampering tools, enabling the same syndicate to register batches of unlinked fake merchants in bulk to evade cluster-based risk controls."
   }
 }

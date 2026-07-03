@@ -2,9 +2,9 @@
   "A0147": {
     "title": "Industrial Protocol Security Hardening",
     "definition": "Implementing authentication and encryption for industrial protocols such as Modbus and OPC to prevent unauthorized access and tampering.",
-    "description": "Industrial protocols often lack built-in security design. Hardening measures include: using encrypted versions (OPC UA, Modbus/TCP with TLS); deploying protocol gateways to filter anomalies; restricting commands via whitelisting; detecting abnormal behavior; and conducting regular audits.",
+    "description": "Industrial protocols typically lack security design. Hardening measures include: using encrypted versions (OPC UA, Modbus/TCP+TLS); deploying protocol gateways to filter anomalies; restricting commands via whitelisting; implementing abnormal behavior detection; and conducting regular audits.",
     "complexity": "Advanced",
-    "limitation": "Legacy device incompatibility; performance impact; compatibility issues.",
+    "limitation": "Legacy devices are unsupported, performance impact is significant, and compatibility issues are numerous. Additionally, encrypted versions of industrial protocols can still be bypassed through protocol-layer reverse engineering, packet capture and replay, and man-in-the-middle tampering. Whitelisting and anomaly detection rules may misidentify or block legitimate operational commands, leading to false positives and circumvention risks.",
     "keywords": [
       "Industrial Protocol Security Hardening"
     ],
@@ -17,7 +17,7 @@
   },
   "A0147-001": {
     "title": "Industrial Protocol Deep Packet Inspection",
-    "description": "Deep packet inspection of industrial protocols to identify and block attack traffic.",
+    "description": "Performs deep packet inspection (DPI) on industrial protocol traffic such as Modbus and OPC UA, using rule matching, sequence validation, and baseline comparison to identify abnormal commands, illegal write operations, and attack traffic, and triggers blocking.",
     "keywords": [
       "Industrial Protocol Deep Packet Inspection"
     ],
@@ -27,6 +27,7 @@
         "link": "https://www.enisa.europa.eu/news/enisa-news/industrial-control-systems-security-recommendations-for-europe-member-states"
       }
     ],
-    "definition": "Deep packet inspection of industrial protocols to identify and block attack traffic."
+    "definition": "Deep packet inspection of industrial protocols to identify and block attack traffic.",
+    "limitation": "Attackers may bypass signature matching through protocol-layer field tampering or packet obfuscation; encrypted industrial protocols make DPI difficult to parse. Normal process tuning and new device onboarding can easily trigger rule false positives. Legacy OT environments are sensitive to deep parsing performance and may not support full traffic inspection."
   }
 }

@@ -2,9 +2,9 @@
   "A0164": {
     "title": "Multi-Chain Asset Mapping and Tracking",
     "definition": "Establish cross-chain asset mapping relationships to track the flow of assets across different blockchains.",
-    "description": "Tracking system: on-chain mapping table; cross-chain indexing; asset fingerprinting; flow path analysis; aggregate monitoring; anomaly alerting; forensic support.",
+    "description": "Tracking framework: on-chain mapping table; cross-chain indexing; asset fingerprinting; flow path; aggregate monitoring; anomaly alerting; forensic support.",
     "complexity": "Advanced",
-    "limitation": "Difficulties in cross-chain data integration; challenges in tracking privacy coins; delays in new chain integration.",
+    "limitation": "Cross-chain data integration is difficult, privacy coins are hard to track, and delayed integration of new chains leads to underreporting. Malicious actors can use cross-chain bridges for mixing and privacy protocols to obfuscate flow paths, bypassing tracking, while legitimate cross-chain swaps and aggregator trades are prone to false positive anomaly alerts.",
     "keywords": [
       "Multi-Chain Asset Mapping and Tracking"
     ],

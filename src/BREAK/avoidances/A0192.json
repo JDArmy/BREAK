@@ -2,7 +2,7 @@
   "A0192": {
     "category": "AC03",
     "title": "3D内容AI审核",
-    "description": "使用AI技术自动识别3D虚拟内容中的违规元素。",
+    "description": "采集3D虚拟内容中的模型、贴图、文本与音频等素材，运用深度学习模型、规则匹配与分类比对识别暴力、色情、违禁元素等违规内容并标记处置。",
     "references": [
       {
         "link": "https://transparency.meta.com/enforcement/",
@@ -12,9 +12,10 @@
     "keywords": [
       "3D内容AI审核"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "使用AI技术自动识别3D虚拟内容中的违规元素。",
     "effectiveness": "high",
+    "limitation": "攻击者可通过贴图混淆、模型形变、多模态拼接绕过识别模型，3D内容审核模型训练样本不足导致漏报；抽象艺术、二次创作等正常用户内容易被误判误伤为违规，变种违规形式升级快。",
     "relatedAvoidances": [
       {
         "key": "A0006",

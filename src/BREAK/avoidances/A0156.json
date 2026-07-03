@@ -5,14 +5,14 @@
     "definition": "基于链上行为数据构建信誉评分，替代传统KYC身份验证",
     "description": "信誉系统：链上交易历史；智能合约交互；DeFi信用分；社交图谱；Sybil抗性；灵魂绑定代币。",
     "complexity": "中级",
-    "limitation": "历史数据可能不足；操纵风险；隐私泄露；标准不统一",
+    "limitation": "历史数据可能不足，操纵风险高，隐私易泄露，标准不统一；攻击者可通过女巫攻击批量养号、伪造交互记录刷高链上声誉分数规避信用校验，新用户因行为稀疏易被误判为高风险，存在被规避与误伤问题。",
     "references": [
       {
         "title": "On-Chain Reputation Systems",
         "link": "https://vitalik.eth.limo/general/2022/01/26/soulbound.html"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "链上声誉与信用体系",
       "链上信誉",

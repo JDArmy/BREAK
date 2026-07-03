@@ -1,7 +1,7 @@
 {
   "A0218": {
     "title": "Session Token Binding and Replay Detection",
-    "description": "Bind sessions to device, network, and client attestation, and detect cookie or token replay.",
+    "description": "Bind session tokens to device fingerprint, network environment, and client proof (e.g., DPoP/Token Binding), and detect cross-location replay and anomalous reuse of cookies/tokens to prevent stolen tokens from being replayed on an attacker's device to impersonate a user session.",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -16,6 +16,7 @@
       "device binding",
       "session security"
     ],
-    "definition": "Bind sessions to device, network, and client attestation, and detect cookie or token replay."
+    "definition": "Bind sessions to device, network, and client attestation, and detect cookie or token replay.",
+    "limitation": "Device fingerprints can be forged by device-spoofing tools; an attacker who clones the target device fingerprint can replay tokens on their own device and bypass the binding. Client proof mechanisms such as DPoP rely on the client properly safeguarding the private key—on mobile, hooking or MITM proxies can extract the key and forge the proof. Legitimate user activities like device replacement, network switching, or VPN roaming may trigger replay detection and incorrectly block valid sessions. Token binding has poor compatibility; older clients that do not support it limit its deployment scope."
   }
 }

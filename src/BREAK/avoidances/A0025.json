@@ -119,7 +119,7 @@
     "title": "HTTPS数字证书",
     "category": "AC01",
     "definition": "对HTTP请求进行可信性、完整性和保密性保证",
-    "description": "通过购买并安装HTTPS证书服务，保证用户请求服务器的可信性、完整性和保密性。",
+    "description": "通过购买并安装HTTPS证书服务，对服务器身份进行可信认证，并对HTTP请求的传输过程提供完整性和保密性保证，防止中间人篡改与窃听。",
     "limitation": "HTTPS数字证书的安全性严重依赖于签发机构的可信性。如果签发机构被攻击，那么攻击者就可以伪造数字证书，从而导致HTTPS数字证书的安全性受到影响。此外，HTTPS数字证书的安全性还受到签名算法的影响。如果签名算法被攻击，那么攻击者就可以伪造数字签名，从而导致HTTPS数字证书的安全性受到影响。",
     "references": [
       {
@@ -127,7 +127,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-03",
     "keywords": [
       "HTTPS数字证书",
       "SSL证书",

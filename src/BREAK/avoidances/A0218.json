@@ -2,7 +2,7 @@
   "A0218": {
     "category": "AC01",
     "title": "会话令牌绑定与重放检测",
-    "description": "将会话与设备、网络、客户端证明绑定，并检测Cookie/Token重放。",
+    "description": "将会话令牌与设备指纹、网络环境、客户端证明（如DPoP/Token Binding）绑定，并检测Cookie/Token的异地重放与异常复用，防止窃取的令牌在攻击者设备上重放冒充用户会话。",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -13,9 +13,10 @@
       "会话令牌绑定与重放检测",
       "会话令牌绑定重放检测"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "definition": "将会话与设备、网络、客户端证明绑定，并检测Cookie/Token重放。",
     "effectiveness": "high",
+    "limitation": "设备指纹可被改机工具伪造，攻击者克隆目标设备指纹后即可在自身设备上重放令牌绕过绑定；客户端证明（DPoP等）依赖客户端正确保管私钥，移动端被Hook或中间人代理可提取私钥伪造证明；正常用户更换设备、网络切换、VPN漫游会触发重放检测误拦合法会话；令牌绑定兼容性差，老旧客户端不支持导致落地受限。",
     "relatedAvoidances": [
       {
         "key": "A0026",

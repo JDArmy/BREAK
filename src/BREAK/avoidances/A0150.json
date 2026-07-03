@@ -5,14 +5,14 @@
     "definition": "使用TLS等加密协议保护OTA更新传输过程，防止中间人攻击",
     "description": "传输层防护：强制HTTPS/TLS通信；证书固定防MITM；完整性校验和；分片传输验证；断点续传保护；服务器身份认证。",
     "complexity": "基础",
-    "limitation": "需要可靠网络；证书管理；老旧设备支持差",
+    "limitation": "需要可靠网络与规范的证书管理，老旧设备支持差；证书固定可被抓包工具、HOOK框架绕过，攻击者通过逆向客户端篡改校验逻辑或伪造根证书即可规避TLS与完整性校验，存在被破解与误伤老旧固件的风险。",
     "references": [
       {
         "title": "OTA Security: Encryption and Integrity",
         "link": "https://www.embedded.com/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "OTA通道加密与完整性保护",
       "TLS",

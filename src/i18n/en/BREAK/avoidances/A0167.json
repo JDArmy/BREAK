@@ -1,7 +1,7 @@
 {
   "A0167": {
     "title": "Blockchain Supply Chain Security Audit",
-    "description": "Security audit of blockchain development tools, SDKs, wallet plugins to detect malicious code and backdoors.",
+    "description": "Conduct security audits on blockchain development tools, SDKs, wallet plugins, smart contract dependency libraries, and related components to detect malicious code, backdoors, and supply chain poisoning. Methods include code review, dependency origin verification, signature validation, behavioral baseline comparison, and SBOM inventory management, aiming to prevent attackers from implanting backdoors in mainstream components that could subsequently contaminate downstream wallets and DApps.",
     "keywords": [
       "Blockchain Supply Chain Security Audit"
     ],
@@ -11,6 +11,7 @@
         "link": "https://www.cisa.gov/resources-tools/resources/defending-against-software-supply-chain-attacks"
       }
     ],
-    "definition": "Security audit of blockchain development tools, SDKs, wallet plugins to detect malicious code and backdoors."
+    "definition": "Security audit of blockchain development tools, SDKs, wallet plugins to detect malicious code and backdoors.",
+    "limitation": "Audits only capture a snapshot at a specific point in time; subsequent component updates may introduce new backdoors without re-audit. Attackers can bypass audits during installation through typosquatting (package name impersonation) and dependency confusion. Audits struggle to detect highly covert dynamic loading or environment-triggered backdoors. If developer private keys or CI/CD pipelines are compromised, malicious versions with legitimate appearances can be signed and distributed, rendering signature verification effectively useless."
   }
 }

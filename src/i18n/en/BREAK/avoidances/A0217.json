@@ -1,7 +1,7 @@
 {
   "A0217": {
     "title": "MFA Fatigue Resistance and High-Risk Verification",
-    "description": "Use number matching, risk-based verification, and cooldown controls for MFA bombing, push fatigue, and abnormal logins.",
+    "description": "For MFA bombing, push fatigue, and anomalous login scenarios, strategies such as number matching confirmation, risk-aware secondary verification, push cooldown, and frequency circuit breaking are applied to prevent attackers from bypassing multi-factor authentication by overwhelming users with massive push notifications, causing them to mistakenly approve access due to fatigue.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "push cooldown",
       "account takeover prevention"
     ],
-    "definition": "Use number matching, risk-based verification, and cooldown controls for MFA bombing, push fatigue, and abnormal logins."
+    "definition": "Use number matching, risk-based verification, and cooldown controls for MFA bombing, push fatigue, and abnormal logins.",
+    "limitation": "Users may still mistakenly approve under fatigue bombardment; enhanced measures like number matching rely on active user cooperation, and habitual actions can weaken protection. Cooldown and frequency circuit breaking may incorrectly block legitimate users' multiple login retries in abnormal network environments, impacting normal experience. Attackers using simulators or man-in-the-middle proxies (e.g., Evilginx) to relay MFA challenges in real time can bypass number matching, as it cannot detect the proxied session. Policy thresholds are rigid, and new automated bombing rhythms can be tuned below the threshold to evade circuit breaking."
   }
 }

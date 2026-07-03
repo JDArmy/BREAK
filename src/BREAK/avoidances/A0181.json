@@ -2,7 +2,7 @@
   "A0181": {
     "category": "AC01",
     "title": "医疗设备专用安全网关",
-    "description": "部署专用安全网关隔离医疗IoT设备，实施严格访问控制。",
+    "description": "部署专用安全网关隔离医疗IoT设备与外部网络，实施严格访问控制、协议白名单、流量深度检测和指令过滤，仅放行合规医疗通信，防止攻击者通过物联网通道入侵或向医疗设备下发恶意控制指令。",
     "references": [
       {
         "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity",
@@ -12,9 +12,10 @@
     "keywords": [
       "医疗设备专用安全网关"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "definition": "部署专用安全网关隔离医疗IoT设备，实施严格访问控制。",
     "effectiveness": "high",
+    "limitation": "医疗设备通信协议碎片化、私有协议多，网关规则难以全覆盖，新型协议指令可绕过白名单；部分生命维持设备对延迟极度敏感，深度检测引入的延迟可能影响救治，存在安全与可用性冲突；网关本身成为单点故障，被攻破或宕机将阻断所有医疗设备通信；维护通道与远程运维入口仍可被社工或凭证泄露利用绕过隔离。",
     "relatedAvoidances": [
       {
         "key": "A0108",

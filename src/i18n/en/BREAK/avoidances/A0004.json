@@ -22,7 +22,7 @@
   },
   "A0004-001": {
     "title": "API Rate Limiting and Quota Control",
-    "description": "Apply dynamic limits, quotas, and circuit breakers by user, device, IP, tenant, endpoint, and business action.",
+    "description": "Implements dynamic rate limiting, quota control, and circuit breaking based on user, device, IP, tenant, interface, and business action. Requests exceeding thresholds are throttled, queued, or rejected to prevent interfaces from being overwhelmed by high-frequency automated calls. Can combine algorithms such as token buckets and leaky buckets for fine-grained traffic control, and uses circuit breaking to fail fast and protect backend services when dependencies are abnormal.",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -37,7 +37,8 @@
       "circuit breaker",
       "abuse prevention"
     ],
-    "definition": "Apply dynamic limits, quotas, and circuit breakers by user, device, IP, tenant, endpoint, and business action."
+    "definition": "Apply dynamic limits, quotas, and circuit breakers by user, device, IP, tenant, endpoint, and business action.",
+    "limitation": "Malicious actors use proxy pools (AT0019) and residential proxies (AT0094) to rotate massive numbers of egress IPs, distributing single-IP requests across distributed nodes to evade IP-based rate limiting. Account pools combined with account nurturing strategies bypass per-user/device quota controls. Threshold configuration presents a dilemma: setting it too low blocks legitimate high-frequency requests from normal users (e.g., flash sales, reconciliation), while setting it too high allows low-frequency slow crawlers to pass. Circuit breaking mechanisms may be maliciously triggered by crafting abnormal requests to force the service into self-circuit-breaking, resulting in denial of service."
   },
   "A0004-002": {
     "title": "IoT Botnet Traffic Filtering and Rate Limiting",

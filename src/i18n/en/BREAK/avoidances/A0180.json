@@ -1,7 +1,7 @@
 {
   "A0180": {
     "title": "eSIM Security Management",
-    "description": "Strengthen eSIM remote provisioning authentication and authorization to prevent unauthorized hijacking.",
+    "description": "Strengthen identity verification, authorization, and transmission encryption for eSIM Remote SIM Provisioning (RSP). Apply mutual certificate verification and auditing to profile download, activation, and switching, preventing attackers from illegally writing profiles and hijacking numbers by forging SM-DP+ servers or compromising the provisioning process.",
     "keywords": [
       "eSIM Security Management"
     ],
@@ -11,6 +11,7 @@
         "link": "https://www.gsma.com/solutions-and-impact/technologies/esim/compliance/"
       }
     ],
-    "definition": "Strengthen eSIM remote provisioning authentication and authorization to prevent unauthorized hijacking."
+    "definition": "Strengthen eSIM remote provisioning authentication and authorization to prevent unauthorized hijacking.",
+    "limitation": "Relies on the security of the SM-DP+ server and the operator's system; if any link in the supply chain is compromised, a malicious profile can be delivered to bypass terminal verification. Once an activation code is leaked, an attacker can combine social engineering to complete profile transfer and hijack the number. Side-channel vulnerabilities in the eUICC chip can be exploited to extract keys and forge authorization. When identity verification during device replacement or SIM reissuance is weak, an attacker impersonating the owner can reset the eSIM, rendering security management ineffective."
   }
 }

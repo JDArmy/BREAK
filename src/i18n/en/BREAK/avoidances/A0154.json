@@ -2,9 +2,9 @@
   "A0154": {
     "title": "Virtual Asset Valuation and Information Disclosure",
     "definition": "Establishing a transparent asset valuation system and mandatory information disclosure mechanism to help users make rational judgments",
-    "description": "Information transparency: public disclosure of historical transaction data; project team background disclosure; development roadmap; financial status; risk warnings; third-party ratings; prohibition of false advertising.",
+    "description": "Information transparency: public disclosure of historical transaction data; disclosure of project team background; development roadmap; financial status; risk warnings; third-party ratings; prohibition of false advertising.",
     "complexity": "Basic",
-    "limitation": "Valuation standards are difficult to unify; information may be falsified; users may still behave irrationally",
+    "limitation": "Valuation standards are difficult to unify, disclosed information may be falsified, and users may still make irrational judgments. Illicit actors can fabricate transaction data and manipulate disclosed metrics through volume inflation to bypass oversight. Normal price fluctuations of scarce assets may be misidentified as anomalies, inadvertently harming legitimate transactions.",
     "keywords": [
       "Virtual Asset Valuation and Information Disclosure"
     ],

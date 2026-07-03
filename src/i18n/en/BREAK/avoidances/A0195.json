@@ -1,7 +1,7 @@
 {
   "A0195": {
     "title": "API Asset Discovery and Catalog Governance",
-    "description": "Maintain a unified API asset catalog, shadow API discovery, interface ownership, and lifecycle governance to reduce unknown interface exposure.",
+    "description": "Collect API requests, gateway logs, and traffic patterns to establish a unified API asset catalog. Apply rule matching, call baseline comparison, and anomaly detection to discover shadow APIs, unauthorized interfaces, and lifecycle anomalies, thereby reducing the risk of unknown interface exposure.",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -16,6 +16,7 @@
       "endpoint lifecycle",
       "API governance"
     ],
-    "definition": "Maintain a unified API asset catalog, shadow API discovery, interface ownership, and lifecycle governance to reduce unknown interface exposure."
+    "definition": "Maintain a unified API asset catalog, shadow API discovery, interface ownership, and lifecycle governance to reduce unknown interface exposure.",
+    "limitation": "Dynamically generated serverless and BFF interfaces make it difficult to keep the asset catalog synchronized in real time, allowing attackers to bypass monitoring via unregistered shadow APIs. Frequent iteration of normal business interfaces is prone to underreporting, and the blurred boundary between legacy unoffboarded interfaces and normal canary interfaces introduces significant noise."
   }
 }

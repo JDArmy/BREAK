@@ -1,7 +1,7 @@
 {
   "A0205": {
     "title": "SaaS Application Permission Audit",
-    "description": "Inventory SaaS administrators, OAuth grants, external sharing, and third-party apps to identify high-risk authorization.",
+    "description": "Collects characteristics such as SaaS administrator accounts, OAuth grants, external sharing, and third-party application configurations, then applies rule matching, permission scoring, and baseline comparison to identify high-risk authorizations, excessive permissions, and anomalous external sharing.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "admin role review",
       "external sharing"
     ],
-    "definition": "Inventory SaaS administrators, OAuth grants, external sharing, and third-party apps to identify high-risk authorization."
+    "definition": "Inventory SaaS administrators, OAuth grants, external sharing, and third-party apps to identify high-risk authorization.",
+    "limitation": "Attackers can bypass permission audits by leveraging legitimate OAuth tokens and long-standing unrevoked grants; frequent scope updates by SaaS vendors make baselines difficult to stabilize. High permissions required for normal business collaboration are prone to false positives and blocking, while blurred boundaries of third-party application authorizations generate significant noise."
   }
 }

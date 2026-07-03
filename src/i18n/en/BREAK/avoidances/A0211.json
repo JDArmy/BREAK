@@ -1,7 +1,7 @@
 {
   "A0211": {
     "title": "Data-Sharing Approval and Purpose Limitation",
-    "description": "Apply approval, minimization, and purpose constraints to data sharing, export, training, analytics, and third-party use.",
+    "description": "Enforce approval workflows, data minimization, usage constraints, and masking strategies for data sharing, export, training, analysis, and third-party usage. Ensure data is reviewed for compliance before leaving the boundary and is used solely for authorized purposes, preventing insiders or third parties from misusing sensitive data beyond scope.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "third-party data governance",
       "export review"
     ],
-    "definition": "Apply approval, minimization, and purpose constraints to data sharing, export, training, analytics, and third-party use."
+    "definition": "Apply approval, minimization, and purpose constraints to data sharing, export, training, analytics, and third-party use.",
+    "limitation": "Approval often relies on manual processes and becomes perfunctory at scale; insiders can exploit legitimate approvals to illicitly export sensitive data. Usage constraints are difficult to enforce downstream—once data is handed over to a third party, it leaves the original controls and may be repurposed or resold. The minimization principle conflicts with data utility in analysis and AI training scenarios, frequently forcing relaxation. Approval audit trails can be tampered with or bypassed by highly privileged insiders, making post-incident accountability difficult."
   }
 }

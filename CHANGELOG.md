@@ -1,5 +1,15 @@
 # Change log
 
+## 2.39.0
+
+Avoidance 内容规范三档控制落地：明确 description（检测信号）与 limitation（绕过方式+误报场景）的内容规范，schema 收紧 limitation 为必填，新增确定性校验（档位二，接入 CI 阻断）与 LLM 语义评审（档位三，手动跑）。
+
+- **schema 收紧**：`breakSchema.ts` 的 `avoidanceSchema.limitation` 从 `z.string().optional()` 改为 `nonEmptyString`（必填），所有 Avoidance 必须含局限说明。
+- **档位二·确定性校验**：新增 `scripts/validate/avoidance-content.mjs`，按"词集+长度+结构"组合规则校验 description/limitation 内容规范——AC02/AC03 的 description 必须含检测信号词，limitation 必须含绕过/误报词或写足 40 字。接入 `validate:data --strict` 阻断，`npm run audit:avoidance-content` 只出报告不阻断。
+- **档位三·LLM 语义评审**：新增 `scripts/research/llm-review-avoidance-signal.mjs`，调用 DeepSeek-V4-Pro 语义判定 description/limitation 是否"真写了检测信号/绕过方式/误报场景"（非词集凑词）。支持 `--full` 全量审计与默认 `--incremental`（内容指纹检测变更，仅评审新增/修改手段）。`npm run review:avoidance-signal` / `review:avoidance-signal:full`，不接入 CI。
+- **档位一·撰写规范**：CLAUDE.md 补《Avoidance 内容撰写规范》章节，明确 description/limitation 的内容导向、长度阈值、词集初筛与 LLM 兜底的关系。
+- **存量补全**：补全 124 个 Avoidance 实体（中文+英文同步）的 description/limitation，其中 57 条原本无 limitation，覆盖率从 82% 提升至 100%。
+
 ## 2.38.3
 
 移除 Case 实体的 description 字段，案例事实性描述统一用 summary：

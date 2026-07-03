@@ -1,7 +1,7 @@
 {
   "A0214": {
     "title": "Model Output Safety Evaluation",
-    "description": "Evaluate model outputs for harmful content, privacy leakage, hallucination, bias, and unauthorized advice.",
+    "description": "Collect model output texts, images, audio, and other content, and apply rule matching, classification models, and baseline comparison to identify abnormal output risks such as harmful content, privacy leakage, hallucination, bias, and unauthorized advice.",
     "references": [
       {
         "title": "NIST AI Risk Management Framework",
@@ -16,6 +16,7 @@
       "hallucination review",
       "AI safety"
     ],
-    "definition": "Evaluate model outputs for harmful content, privacy leakage, hallucination, bias, and unauthorized advice."
+    "definition": "Evaluate model outputs for harmful content, privacy leakage, hallucination, bias, and unauthorized advice.",
+    "limitation": "Jailbreak prompts and obfuscated encodings can bypass output assessment rules; multimodal content moderation models themselves have inherent false positives and false negatives. Legitimate creative or compliance boundary use cases are prone to be misclassified as harmful content, causing collateral damage. After model upgrades, baselines may become invalid and require re-evaluation."
   }
 }

@@ -1,7 +1,7 @@
 {
   "A0200": {
     "title": "Build Artifact Signing and Provenance",
-    "description": "Generate signatures, SLSA provenance, and verifiable release records for build outputs, images, and dependencies.",
+    "description": "Generate digital signatures, SLSA provenance attestations, and verifiable release records for build artifacts, container images, and dependency packages. Verify signatures and provenance chains before deployment to prevent attackers from tampering with artifacts during build or distribution stages and conducting supply chain poisoning.",
     "references": [
       {
         "title": "Software Bill of Materials - CISA",
@@ -16,6 +16,7 @@
       "image signing",
       "release integrity"
     ],
-    "definition": "Generate signatures, SLSA provenance, and verifiable release records for build outputs, images, and dependencies."
+    "definition": "Generate signatures, SLSA provenance, and verifiable release records for build outputs, images, and dependencies.",
+    "limitation": "Signing keys are stored in the build system; if CI/CD is compromised, attackers can use the legitimate private key to sign malicious artifacts and bypass signature verification. Provenance relies on truthful reporting from each stage; a controlled build environment can forge the entire provenance chain. Downstream deployers often disable or ignore signature verification for compatibility, rendering signatures ineffective. SBOM and signing do not cover third-party closed-source components or runtime dynamically loaded parts, leaving blind spots for poisoning."
   }
 }

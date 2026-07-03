@@ -1,7 +1,7 @@
 {
   "A0196": {
     "title": "Strong API Authorization and Object-Level Access Control",
-    "description": "Enforce server-side authorization for API objects, tenants, resources, and actions to prevent unauthorized access.",
+    "description": "Enforce server-side authorization checks on API objects, tenants, resources, and actions, implementing object-level access control (BOLA/IDOR protection). Verify the caller's ownership and operation permissions for each specific resource on every access, preventing unauthorized access to other users' data.",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -16,6 +16,7 @@
       "BOLA prevention",
       "API authorization"
     ],
-    "definition": "Enforce server-side authorization for API objects, tenants, resources, and actions to prevent unauthorized access."
+    "definition": "Enforce server-side authorization for API objects, tenants, resources, and actions to prevent unauthorized access.",
+    "limitation": "Object-level authorization relies on resource ownership associations; flaws in association design or missing cascading on soft deletes can leave residual unauthorized access. Attackers may traverse or enumerate object IDs (IDOR) to bypass frontend hiding and directly access others' resources through interfaces lacking server-side checks. As permission policies grow complex, policy misconfigurations become frequent, easily causing erroneous authorization or blocking legitimate users. The authorization granularity of batch and export interfaces is often overlooked, turning them into entry points for bulk unauthorized scraping."
   }
 }

@@ -1,7 +1,7 @@
 {
   "A0194": {
     "title": "Cross Virtual-Real Identity Isolation",
-    "description": "Isolate virtual and real identities at technical and regulatory levels to prevent correlation analysis.",
+    "description": "Isolate virtual identities from real identities at the technical and rule levels to prevent correlation analysis. By collecting and comparing identity identifiers, device information, behavioral trajectories, and other features, use correlation analysis and clustering matching to determine whether virtual and real identities are linked, thereby preventing cross-domain correlation analysis and de-anonymization.",
     "keywords": [
       "Cross Virtual-Real Identity Isolation"
     ],
@@ -11,6 +11,7 @@
         "link": "https://gdpr.eu/"
       }
     ],
-    "definition": "Isolate virtual and real identities at technical and regulatory levels to prevent correlation analysis."
+    "definition": "Isolate virtual and real identities at technical and regulatory levels to prevent correlation analysis.",
+    "limitation": "Data brokers and commercial spies can bypass isolation and re-associate identities by cross-referencing public social footprints, payment fingerprints, device identifiers, etc. Overly strict isolation may mistakenly impact normal cross-platform logins and compliant real-name scenarios, degrading legitimate business experiences."
   }
 }

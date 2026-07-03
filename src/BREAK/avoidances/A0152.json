@@ -5,14 +5,14 @@
     "definition": "通过区块链NFT技术确权虚拟资产所有权，实现可追溯的交易历史",
     "description": "区块链确权：NFT记录所有权；元数据存储IPFS；交易历史公开；智能合约管理转移；防止双花；跨平台互操作标准。",
     "complexity": "中级",
-    "limitation": "依赖区块链可用性；跨链资产复杂；中心化平台控制仍存在",
+    "limitation": "依赖区块链可用性，跨链资产复杂，中心化平台控制仍存在；私钥一旦泄露或被钓鱼窃取，攻击者即可伪造签名规避链上确权与溯源，且链下元数据存储（如IPFS）可被篡改或伪造，链上记录无法防止链下源头造假。",
     "references": [
       {
         "title": "NFT and Virtual Asset Ownership",
         "link": "https://ethereum.org/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-03",
     "keywords": [
       "元宇宙资产链上确权与溯源",
       "NFT",

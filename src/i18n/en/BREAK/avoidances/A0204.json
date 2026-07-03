@@ -1,7 +1,7 @@
 {
   "A0204": {
     "title": "Cloud Configuration Baselines and Drift Detection",
-    "description": "Establish baselines for cloud storage, network, security group, KMS, and logging configurations, and detect configuration drift.",
+    "description": "Establishes baselines for cloud storage, network, security groups, KMS, and logging configurations by collecting current configuration items, and continuously monitors configuration drift using rule matching and statistical comparison to identify anomalous deviations such as public buckets, excessive permissions, and open security groups.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -16,6 +16,7 @@
       "KMS configuration",
       "cloud posture"
     ],
-    "definition": "Establish baselines for cloud storage, network, security group, KMS, and logging configurations, and detect configuration drift."
+    "definition": "Establish baselines for cloud storage, network, security group, KMS, and logging configurations, and detect configuration drift.",
+    "limitation": "Frequent changes from IaC-based automated operations can generate excessive noise in baseline drift alerts, and legitimate operational actions during attack and defense scenarios are prone to false positives. Attackers can bypass detection by leveraging overly permissive IAM roles or evading CloudTrail logging, and baselines are difficult to unify across multi-cloud environments."
   }
 }

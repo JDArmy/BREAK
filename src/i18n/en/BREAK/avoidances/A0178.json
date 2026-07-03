@@ -1,7 +1,7 @@
 {
   "A0178": {
     "title": "AIoT Model Security Protection",
-    "description": "Defend AI models against adversarial examples and poisoning attacks to ensure decision reliability.",
+    "description": "Implement adversarial example defense, data poisoning detection, model integrity verification, and inference anomaly monitoring for AIoT edge-side models to ensure decision reliability, preventing attackers from causing the device to make incorrect judgments through adversarial perturbations, poisoned training data, or model replacement.",
     "keywords": [
       "AIoT Model Security Protection"
     ],
@@ -11,6 +11,7 @@
         "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
     ],
-    "definition": "Defend AI models against adversarial examples and poisoning attacks to ensure decision reliability."
+    "definition": "Defend AI models against adversarial examples and poisoning attacks to ensure decision reliability.",
+    "limitation": "Adversarial training only covers known perturbation patterns; novel adversarial examples (black-box attacks, physical-world perturbations) can still deceive the model and bypass defenses. Poisoning detection suffers from high false-negative rates at large data scales, making slow injection-style poisoning difficult to detect. Limited edge-side computing power constrains the deployment of heavily defended models, creating a trade-off between defense strength and inference latency. Model theft and model substitution attacks can construct adversarial examples without access to the original model, rendering defenses ineffective."
   }
 }

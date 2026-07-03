@@ -1,7 +1,7 @@
 {
   "A0171": {
     "title": "Token Economic Model Audit",
-    "description": "Audit smart contract minting/burning permissions and supply control logic.",
+    "description": "Audit the token minting, burning, freezing permissions and supply control logic of smart contracts, verifying permission concentration, minting caps, burn credentials, and re-entrancy prevention design to prevent project parties or attackers from manipulating the token economy through unauthorized minting, infinite issuance, or burning others' tokens.",
     "keywords": [
       "Token Economic Model Audit"
     ],
@@ -11,6 +11,7 @@
         "link": "https://consensys.io/diligence/audits/"
       }
     ],
-    "definition": "Audit smart contract minting/burning permissions and supply control logic."
+    "definition": "Audit smart contract minting/burning permissions and supply control logic.",
+    "limitation": "The audit can only identify code-level flaws and cannot prevent active misconduct by permission holders (e.g., rug pulls, abusive minting via permission misuse). Token economic models and market dynamics involve aspects beyond audit scope, such as flash loan attacks and oracle manipulation. Post-audit contract upgrades or proxy pattern replacements may introduce unaudited new vulnerabilities, invalidating the original audit conclusions. If multi-signature permissions are effectively controlled by a single party, permission controls become nominal."
   }
 }

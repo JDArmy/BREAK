@@ -39,7 +39,7 @@
   },
   "A0049-002": {
     "title": "Digital Avatar Watermark Verification",
-    "description": "Add invisible watermarks to legitimate digital avatars, verifying authenticity through C2PA standard.",
+    "description": "Embed invisible watermarks into synthetic content produced by legitimate digital human entities, and verify authenticity across the entire generation, editing, and distribution pipeline using the C2PA Content Credentials standard, thereby preventing AI-generated digital humans from impersonating real persons or authorized digital identities. This covers multimodal digital human outputs including voice, video, and images, anchoring provenance and tampering traces via cryptographic signatures.",
     "keywords": [
       "Digital Avatar Watermark Verification"
     ],
@@ -49,6 +49,7 @@
         "link": "https://c2pa.org/"
       }
     ],
-    "definition": "Add invisible watermarks to legitimate digital avatars, verifying authenticity through C2PA standard."
+    "definition": "Add invisible watermarks to legitimate digital avatars, verifying authenticity through C2PA standard.",
+    "limitation": "Watermarks can be removed through cropping, transcoding, heavy recompression, or adversarial perturbations; attackers may strip or destroy watermarks via re-encoding, downsampling, AI regeneration, or similar methods, rendering them ineffective. C2PA credentials depend on end-to-end ecosystem support, and are lost once content is forwarded to platforms that do not support credential verification. Watermark embedding and verification introduce additional computational overhead, making real-time synthesis scenarios difficult to deploy. Attackers can bypass legitimate watermarked generation paths entirely by using open-source models without watermark integration to forge digital humans, thereby evading traceability."
   }
 }

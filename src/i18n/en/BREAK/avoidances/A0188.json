@@ -1,7 +1,7 @@
 {
   "A0188": {
     "title": "Metaverse Identity Federation",
-    "description": "Establish cross-platform decentralized identity (DID) authentication system to prevent impersonation.",
+    "description": "Establishes a cross-platform, cross-virtual-world decentralized identity (DID) federation authentication system, achieving identity mutual recognition through verifiable credentials and cross-domain trust anchors, preventing user impersonation or credential replay across multiple metaverse platforms.",
     "keywords": [
       "Metaverse Identity Federation"
     ],
@@ -11,6 +11,7 @@
         "link": "https://www.w3.org/TR/did-core/"
       }
     ],
-    "definition": "Establish cross-platform decentralized identity (DID) authentication system to prevent impersonation."
+    "definition": "Establish cross-platform decentralized identity (DID) authentication system to prevent impersonation.",
+    "limitation": "DID methods and trust anchor implementations vary across platforms, leading to poor cross-domain mutual recognition consistency and potential verification loopholes that allow impersonation to bypass authentication; user private keys are stored in end-user wallets, and if phished or stolen by malicious clients, the federation authentication cannot distinguish the true operator; cross-platform credential replay detection relies on global state synchronization, where synchronization delays create replay windows; legacy platform account migration and credential inheritance mechanisms are weak, and account recovery processes can be exploited by social engineering to impersonate legitimate users."
   }
 }

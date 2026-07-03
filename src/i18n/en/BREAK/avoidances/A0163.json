@@ -2,9 +2,9 @@
   "A0163": {
     "title": "Data Minimization and Purpose Limitation",
     "definition": "Collect only necessary data and restrict its usage scope to reduce the risk of data breaches",
-    "description": "Data governance: minimization principle; purpose limitation; retention period; regular purging; anonymization; de-identification; privacy impact assessment.",
+    "description": "Data governance: minimization principle; purpose limitation; storage duration; periodic purging; anonymization; de-identification; privacy impact assessment.",
     "complexity": "Basic",
-    "limitation": "Conflict with business requirements; changes in regulatory requirements; purging may affect functionality",
+    "limitation": "Conflicts with business requirements, changes in regulatory mandates, and purging may impact functionality. After minimization, missing historical data may incorrectly block legitimate user access for compliance and audit purposes. Additionally, de-identified data can still be re-identified by attackers through correlation with multiple external datasets, posing risks of false positives and circumvention.",
     "keywords": [
       "Data Minimization and Purpose Limitation"
     ],
