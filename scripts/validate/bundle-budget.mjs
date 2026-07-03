@@ -90,14 +90,17 @@ function buildReport() {
       budgets.maxJsChunkBytes,
     );
   }
-  if (largestDataJs && largestDataJs.bytes > budgets.maxDataChunkBytes) {
-    addIssue(
-      issues,
-      'max_data_chunk_exceeded',
-      `最大数据 JS chunk 超过 ${formatKb(budgets.maxDataChunkBytes)} kB`,
-      largestDataJs,
-      budgets.maxDataChunkBytes,
-    );
+  // 检查所有超阈值的数据 chunk（而非仅最大的），避免修了最大的、第二大的接力触发却未被报告
+  for (const dataAsset of dataJsAssets) {
+    if (dataAsset.bytes > budgets.maxDataChunkBytes) {
+      addIssue(
+        issues,
+        'max_data_chunk_exceeded',
+        `数据 JS chunk 超过 ${formatKb(budgets.maxDataChunkBytes)} kB`,
+        dataAsset,
+        budgets.maxDataChunkBytes,
+      );
+    }
   }
   if (echarts && echarts.bytes > budgets.echartsBytes) {
     addIssue(issues, 'echarts_budget_exceeded', 'ECharts chunk 超出预算', echarts, budgets.echartsBytes);

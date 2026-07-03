@@ -39,7 +39,18 @@ function expectIncludes(issues, label, text, expected) {
 }
 
 const issues = [];
-const packageMeta = fs.existsSync(packagePackagePath) ? readJson(packagePackagePath) : null;
+
+// 产物存在性护栏：dist/break-data-package/ 不存在时直接报明确错误并退出，
+// 避免 readText 返回空字符串后 expectIncludes 雪崩式报"缺少 X"误导诊断
+if (!fs.existsSync(packageDir) || !fs.existsSync(packagePackagePath)) {
+  console.error(
+    `❌ 数据包产物不存在: ${path.relative(projectRoot, packageDir)}\n` +
+      `请先运行 npm run export:data-package 生成产物后再校验。`,
+  );
+  process.exit(1);
+}
+
+const packageMeta = readJson(packagePackagePath);
 const packageDataText = readText(packageDataPath, issues);
 const packageDataEnText = readText(packageDataEnPath, issues);
 const packageManifestText = readText(packageManifestPath, issues);
@@ -52,33 +63,29 @@ const runtimeText = readText(packageRuntimePath, issues);
 const typeText = readText(packageTypesPath, issues);
 const readmeText = readText(packageReadmePath, issues);
 
-if (!packageMeta) {
-  issues.push(`缺少文件: ${path.relative(projectRoot, packagePackagePath)}`);
-} else {
-  expectEqual(issues, 'package name', packageMeta.name, '@jdarmy/break-data');
-  expectEqual(issues, 'package version', packageMeta.version, packageJson.version);
-  expectEqual(issues, 'package private', packageMeta.private, false);
-  expectEqual(issues, 'package type', packageMeta.type, 'module');
-  expectEqual(issues, 'package main', packageMeta.main, './index.js');
-  expectEqual(issues, 'package types', packageMeta.types, './index.d.ts');
-  expectEqual(issues, 'package sideEffects', packageMeta.sideEffects, false);
-  for (const file of [
-    'data/break-data.json',
-    'data/break-data-en.json',
-    'data/break-manifest.json',
-    'data/quality-report.json',
-    'index.js',
-    'index.d.ts',
-    'README.md',
-  ]) {
-    if (!packageMeta.files?.includes(file)) {
-      issues.push(`package files 缺少 ${file}`);
-    }
+expectEqual(issues, 'package name', packageMeta.name, '@jdarmy/break-data');
+expectEqual(issues, 'package version', packageMeta.version, packageJson.version);
+expectEqual(issues, 'package private', packageMeta.private, false);
+expectEqual(issues, 'package type', packageMeta.type, 'module');
+expectEqual(issues, 'package main', packageMeta.main, './index.js');
+expectEqual(issues, 'package types', packageMeta.types, './index.d.ts');
+expectEqual(issues, 'package sideEffects', packageMeta.sideEffects, false);
+for (const file of [
+  'data/break-data.json',
+  'data/break-data-en.json',
+  'data/break-manifest.json',
+  'data/quality-report.json',
+  'index.js',
+  'index.d.ts',
+  'README.md',
+]) {
+  if (!packageMeta.files?.includes(file)) {
+    issues.push(`package files 缺少 ${file}`);
   }
-  expectEqual(issues, 'package root export default', packageMeta.exports?.['.']?.default, './index.js');
-  expectEqual(issues, 'package root export types', packageMeta.exports?.['.']?.types, './index.d.ts');
-  expectEqual(issues, 'package break-data-en export', packageMeta.exports?.['./data/break-data-en.json'], './data/break-data-en.json');
 }
+expectEqual(issues, 'package root export default', packageMeta.exports?.['.']?.default, './index.js');
+expectEqual(issues, 'package root export types', packageMeta.exports?.['.']?.types, './index.d.ts');
+expectEqual(issues, 'package break-data-en export', packageMeta.exports?.['./data/break-data-en.json'], './data/break-data-en.json');
 
 if (packageDataText && publicDataText) {
   expectEqual(issues, 'package data 与 public data 不一致', packageDataText, publicDataText);
