@@ -1,0 +1,47 @@
+{
+  "R0265": {
+    "title": "运价规则套利",
+    "definition": "利用运价区段、重量段、车型段错配套取运费差额与折扣。",
+    "description": "运价规则套利指利用运价区段、重量段、车型段或折扣规则的边界错配，通过拆单、改重、改区段等方式套取运费差额与折扣，属规则套利类风险。\n\n该风险会让平台承担运费差额与折扣损失，并扭曲运价与计费数据。治理需要结合运价规则一致性校验、计费防篡改与异常计费监测，对规则错配套利做核验与补收。",
+    "complexity": "intermediate",
+    "influence": "运价规则套利会造成运费差额与折扣损失，扭曲运价与计费数据，并可能引发规则公平性争议。",
+    "avoidances": [
+      "A0077",
+      "A0014",
+      "A0029"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "运价规则套利",
+      "运价风险",
+      "运价套利",
+      "运价区段错配",
+      "重量段套利",
+      "运价规则套取",
+      "freight-rate arbitrage"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0260",
+        "relation": "co-occurrence",
+        "note": "运价规则套利与重货拆小件套取揽派费同属计费差额套利类风险。"
+      },
+      {
+        "key": "R0264",
+        "relation": "co-occurrence",
+        "note": "运价规则套利与整车运力虚报与套计共享规避手段「防篡改机制」。"
+      },
+      {
+        "key": "R0266",
+        "relation": "co-occurrence",
+        "note": "运价规则套利（含重量段套利）与快递偷重漏重共享计费重量失真与「防篡改机制」手段。"
+      }
+    ]
+  }
+}

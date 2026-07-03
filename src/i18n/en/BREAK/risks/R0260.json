@@ -1,0 +1,21 @@
+{
+  "R0260": {
+    "title": "Heavy-Goods Splitting for Pickup Fee",
+    "definition": "Couriers split heavy-goods orders into multiple small parcels at entry to fraudulently claim pickup fees and billing differentials.",
+    "description": "Heavy-goods splitting for pickup fee occurs when couriers or sites split one heavy-goods order into multiple small parcels in the system, exploiting per-piece pickup-fee rules versus heavy-goods billing to claim extra gains.\n\nThe risk causes multiplied pickup-fee expenditure and distorts heavy-goods billing and capacity data. Detection must combine order-parcel-weight linkage, heavy-goods splitting monitoring, and targeted inspection for billing reconciliation.",
+    "influence": "Heavy-goods splitting causes multiplied pickup-fee expenditure and billing-differential losses, distorting heavy-goods billing and capacity data.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "heavy-goods splitting",
+      "pickup fee arbitrage",
+      "heavy parcel splitting",
+      "billing weight mismatch",
+      "courier fee arbitrage"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "R0266": {
+    "title": "Parcel Weight Shaving",
+    "definition": "Couriers or sites under- or over-record weight at pickup entry, distorting billed weight to skim differentials.",
+    "description": "Parcel weight shaving occurs when couriers or sites deliberately under-record (shave) or over-record weight at pickup and entry, distorting billed weight to skim billing differentials or withhold freight, common in weight-based billing.\n\nThe risk causes billing-differential losses for platforms and merchants and distorts billed-weight and freight data. Detection must combine weighing tamper-proofing, weight-goods linkage, and targeted inspection for verification and accountability.",
+    "influence": "Weight shaving causes billing-differential losses and freight withholding, distorts billed-weight data, and may trigger merchant settlement disputes.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "parcel weight shaving",
+      "weight shaving",
+      "weight under-recording",
+      "billed weight distortion",
+      "weighing fraud"
+    ]
+  }
+}

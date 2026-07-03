@@ -1,0 +1,75 @@
+{
+  "R0264": {
+    "title": "Full-Truckload Capacity Falsification",
+    "definition": "In full-truckload scenarios, falsifying vehicle type, trips, or channels to fraudulently claim freight, subsidies, and billing differentials.",
+    "description": "Full-truckload capacity falsification exploits FTL capacity scenarios by falsifying vehicle type, trips, or hijacking legitimate FTL channels to claim freight, subsidies, and billing differentials, often involving driver, site, or partner collusion.\n\nThe risk causes inflated freight and subsidy expenditure and distorts capacity dispatch and billing data. Detection must combine vehicle-trip-channel verification, tamper-proofing, and linkage analysis to verify and trace abnormal FTL capacity.",
+    "influence": "FTL capacity falsification causes inflated freight and subsidy expenditure, distorts capacity and billing data, and may mask capacity violations.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "full-truckload falsification",
+      "FTL fraud",
+      "capacity falsification",
+      "FTL freight fraud",
+      "truckload billing fraud"
+    ]
+  },
+  "R0264-001": {
+    "title": "One-Vehicle-Multi-Type Fee Fraud",
+    "definition": "Registering multiple vehicle types for one vehicle to fraudulently claim freight differentials and multi-type settlement.",
+    "description": "One-vehicle-multi-type fee fraud registers multiple vehicle types for the same vehicle, settling by higher-rate types or duplicate-settling across types to claim freight differentials, a vehicle-type variant of FTL capacity falsification.\n\nThe risk causes freight-differential expenditure from type mismatch. Detection must combine one-vehicle-one-type verification, type tamper-proofing, and abnormal settlement monitoring.",
+    "influence": "The risk causes freight-differential and duplicate multi-type settlement expenditure, distorting vehicle-type and capacity data.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "one vehicle multi-type",
+      "multi-type fee fraud",
+      "vehicle type mismatch",
+      "vehicle type falsification"
+    ]
+  },
+  "R0264-002": {
+    "title": "Jingyi FTL Channel Hijacking",
+    "definition": "Hijacking the legitimate Jingyi full-truckload channel to impersonate FTL capacity and claim freight and benefits.",
+    "description": "Jingyi FTL channel hijacking refers to hijacking the qualification or waybills of Jingyi FTL (JD Logistics' legitimate FTL product) to impersonate FTL capacity for orders, claiming FTL freight, subsidies, and benefits, a channel variant of FTL capacity falsification.\n\nThe risk causes freight and benefit losses from hijacked channel qualification and may affect FTL fulfillment quality. Detection must combine channel qualification verification, waybill-vehicle linkage, and abnormal channel monitoring.",
+    "influence": "The risk causes inflated freight and benefit expenditure, undermines legitimate channel qualification management, and may affect FTL fulfillment quality.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "Jingyi FTL hijacking",
+      "FTL channel hijacking",
+      "channel impersonation",
+      "Jingyi channel abuse"
+    ]
+  },
+  "R0264-003": {
+    "title": "Fake Trip Fee Fraud",
+    "definition": "Forging trip records to fraudulently claim freight and subsidies.",
+    "description": "Fake trip fee fraud fabricates or duplicate-enters trip records, inflating trip counts and mileage to claim freight and subsidies, a trip variant of FTL capacity falsification.\n\nThe risk causes inflated trip freight and subsidy expenditure. Detection must combine trip-vehicle-trajectory linkage verification, trip tamper-proofing, and abnormal trip monitoring.",
+    "influence": "The risk causes inflated freight and subsidy expenditure, distorting trip and capacity data.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "fake trip fraud",
+      "trip record forgery",
+      "trip fee fraud",
+      "trip falsification"
+    ]
+  }
+}

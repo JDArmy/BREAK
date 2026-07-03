@@ -1,0 +1,41 @@
+{
+  "R0266": {
+    "title": "快递偷重漏重",
+    "definition": "快递员或网点在称重录入环节偷重、漏重，致计费重量失真、套取差价。",
+    "description": "快递偷重漏重指快递员或网点在揽收称重与录入环节，故意少录重量（漏重）或多录重量（偷重），使计费重量失真，套取计费差额或截留运费，常见于按重计费场景。\n\n该风险会让平台与商户承担计费差额损失，并扭曲计费重量与运费数据。治理需要结合称重防篡改、重量-货品关联与定向抽检，对异常称重做核验与追责。",
+    "complexity": "intermediate",
+    "influence": "快递偷重漏重会造成计费差额损失与运费截留，扭曲计费重量数据，并可能引发商户结算争议。",
+    "avoidances": [
+      "A0222-002",
+      "A0077",
+      "A0014"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "快递偷重漏重",
+      "偷重",
+      "漏重",
+      "计费重量失真",
+      "称重造假",
+      "weight shaving"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0260",
+        "relation": "co-occurrence",
+        "note": "快递偷重漏重与重货拆小件套取揽派费同属计费重量失真类风险，共享规避手段「定向抽检」。"
+      },
+      {
+        "key": "R0265",
+        "relation": "co-occurrence",
+        "note": "快递偷重漏重与运价规则套利共享计费重量失真与「防篡改机制」手段。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "R0262": {
+    "title": "Fake Handover Fee Fraud",
+    "definition": "Forging transit handover nodes and records to fraudulently claim handover fees and transit subsidies.",
+    "description": "Fake handover fee fraud fabricates or duplicate-enters transit handover nodes and records, inflating handover counts and transit mileage to claim handover fees and transit subsidies, often involving cross-site or partner collusion.\n\nThe risk causes inflated handover-fee and transit-subsidy expenditure and distorts transit network data. Detection must combine handover node-trajectory comparison, transit tamper-proofing, and abnormal handover monitoring.",
+    "influence": "Fake handover fee fraud causes inflated handover-fee and transit-subsidy expenditure, distorts transit network data, and may mask goods exceptions.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "fake handover fraud",
+      "handover fee fraud",
+      "forged transit node",
+      "fake transit node"
+    ]
+  }
+}

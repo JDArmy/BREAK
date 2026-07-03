@@ -1,0 +1,150 @@
+{
+  "R0264": {
+    "title": "整车运力虚报与套计",
+    "definition": "整车运力场景下虚报车型、车次与通道，套取运费、补贴与计费差额。",
+    "description": "整车运力虚报与套计指在整车（FTL）运力场景，通过虚报车型、车次或套用正规整车通道，套取运费、补贴与计费差额，常涉及司机、网点或合作方合谋。\n\n该风险会让平台承担虚增运费与补贴支出，并扭曲运力调度与计费数据。治理需要结合车型-车次-通道核验、防篡改与关联分析，对异常整车运力做核验与追责。",
+    "complexity": "advanced",
+    "influence": "整车运力虚报与套计会造成运费与补贴的虚增支出，扭曲运力调度与计费数据，并可能掩盖运力违规。",
+    "avoidances": [
+      "A0014",
+      "A0077",
+      "A0075"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "整车运力虚报与套计",
+      "整车运力虚报",
+      "整车套计",
+      "运力虚报",
+      "整车运费套取",
+      "FTL fraud"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0264-001",
+        "relation": "variant",
+        "note": "一车多车型套费是整车运力虚报与套计在车型维度的变体。"
+      },
+      {
+        "key": "R0264-002",
+        "relation": "variant",
+        "note": "京驿整车通道套用是整车运力虚报与套计在通道维度的变体。"
+      },
+      {
+        "key": "R0264-003",
+        "relation": "variant",
+        "note": "虚假车次套费是整车运力虚报与套计在车次维度的变体。"
+      },
+      {
+        "key": "R0258",
+        "relation": "co-occurrence",
+        "note": "整车运力虚报与套计与虚假路由套计提共享规避手段「防篡改机制」。"
+      }
+    ]
+  },
+  "R0264-001": {
+    "title": "一车多车型套费",
+    "definition": "一辆车登记多车型套取运费差额与多车型结算。",
+    "description": "一车多车型套费指同一车辆在系统登记多个车型，按高运价车型结算或多车型重复结算，套取运费差额，属整车运力虚报的车型维度变体。\n\n该风险会让平台承担车型错配的运费差额支出。治理需要结合车辆-车型一对一核验、车型防篡改与异常结算监测，对一车多车型做核验与追责。",
+    "complexity": "intermediate",
+    "influence": "一车多车型套费会造成运费差额与多车型重复结算的虚增支出，扭曲车型与运力数据。",
+    "avoidances": [
+      "A0014",
+      "A0077",
+      "A0075"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "一车多车型套费",
+      "一车多车型",
+      "多车型套费",
+      "车型错配",
+      "车型虚报"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0264",
+        "relation": "variant",
+        "note": "一车多车型套费是整车运力虚报与套计的车型维度变体。"
+      }
+    ]
+  },
+  "R0264-002": {
+    "title": "京驿整车通道套用",
+    "definition": "套用京驿整车正规通道冒充整车运力套取运费与权益。",
+    "description": "京驿整车通道套用指套用京驿整车（京东物流正规整车产品）通道资质或运单，冒充整车运力承接订单，套取整车运费、补贴与权益，属整车运力虚报的通道维度变体。\n\n该风险会让平台承担通道资质被冒用带来的运费与权益损失，并可能影响整车履约质量。治理需要结合通道资质核验、运单-车辆关联与异常通道监测，对套用行为做核验与追责。",
+    "complexity": "advanced",
+    "influence": "京驿整车通道套用会造成运费与权益的虚增支出，损害正规通道资质管理，并可能影响整车履约质量。",
+    "avoidances": [
+      "A0014",
+      "A0077",
+      "A0075"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "京驿整车通道套用",
+      "京驿整车",
+      "整车通道套用",
+      "通道冒用",
+      "京驿通道套用"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0264",
+        "relation": "variant",
+        "note": "京驿整车通道套用是整车运力虚报与套计的通道维度变体。"
+      }
+    ]
+  },
+  "R0264-003": {
+    "title": "虚假车次套费",
+    "definition": "伪造车次记录骗取运费与补贴。",
+    "description": "虚假车次套费指伪造或重复录入车次记录，虚增车次与里程，骗取运费与补贴，属整车运力虚报的车次维度变体。\n\n该风险会让平台承担虚增车次的运费与补贴支出。治理需要结合车次-车辆-轨迹关联核验、车次防篡改与异常车次监测，对虚假车次做核验与追责。",
+    "complexity": "advanced",
+    "influence": "虚假车次套费会造成运费与补贴的虚增支出，扭曲车次与运力数据。",
+    "avoidances": [
+      "A0014",
+      "A0077",
+      "A0075"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "虚假车次套费",
+      "虚假车次",
+      "车次造假",
+      "车次套费",
+      "车次虚报"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0264",
+        "relation": "variant",
+        "note": "虚假车次套费是整车运力虚报与套计的车次维度变体。"
+      }
+    ]
+  }
+}

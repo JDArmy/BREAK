@@ -1,0 +1,21 @@
+{
+  "R0263": {
+    "title": "Professional-Market Bulk Account Hijacking",
+    "definition": "Bulk-order accounts in professional markets are hijacked by groups for volume farming, fake orders, and benefit extraction.",
+    "description": "Professional-market bulk-account hijacking refers to bulk-order accounts in markets (e.g., wholesale markets) being rented, purchased, or stolen by groups for volume farming, fake orders, and extracting bulk-order benefits and freight discounts at scale.\n\nThe risk causes bulk-order benefit and freight-discount losses and distorts bulk-order and merchant profiling data. Detection must combine device fingerprinting, account linkage analysis, and credential-reuse detection to restrict and trace hijacking.",
+    "influence": "The risk causes bulk-order benefit and freight-discount losses, distorts bulk-order and merchant profiling data, and crowds out legitimate merchant benefits.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "bulk-account hijacking",
+      "professional-market bulk account",
+      "bulk-order farming",
+      "account hijacking",
+      "bulk benefit extraction"
+    ]
+  }
+}

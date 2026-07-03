@@ -1,0 +1,21 @@
+{
+  "R0258": {
+    "title": "Fake Route Billing Fraud",
+    "definition": "Forging or tampering with logistics route nodes to fraudulently claim billing, settlement, and freight subsidies.",
+    "description": "Fake route billing fraud fabricates, tampers with, or duplicate-enters logistics route nodes (pickup, transit, delivery, sign-off) to inflate billed mileage, node counts, or timeliness bonuses, fraudulently claiming settlement and subsidies.\n\nThe risk often involves insider or partner-site collusion, causing inflated freight and subsidy losses and distorting timeliness and route data. Detection must combine route tamper-proofing, node-trajectory comparison, and abnormal billing monitoring.",
+    "influence": "Fake route billing fraud causes inflated freight and subsidy expenditure, distorts route and timeliness data, and may mask goods and fulfillment violations.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "fake route fraud",
+      "route billing fraud",
+      "forged logistics node",
+      "billing inflation",
+      "route tampering"
+    ]
+  }
+}

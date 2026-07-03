@@ -1,0 +1,39 @@
+{
+  "R0259": {
+    "title": "C2C Blind-Shipping Fraud",
+    "definition": "In C2C scenarios, groups blind-ship parcels with cash-on-delivery to recipients who never placed orders, defrauding them of payment.",
+    "description": "C2C blind-shipping fraud sends parcels with cash-on-delivery to recipients who never placed orders, exploiting the pay-on-receipt mechanism to defraud them, often shipping low-value goods as high-value items.\n\nThe risk directly harms consumers, damages platform and logistics brand trust, and triggers complaints and regulatory pressure. Detection must combine shipper qualification, COD order behavior models, and recipient complaint clustering to intercept and trace blind shipments.",
+    "influence": "C2C blind-shipping fraud directly causes consumer financial loss, damages platform and logistics brand trust, and triggers complaints, regulatory, and legal risks.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "C2C blind shipping fraud",
+      "blind shipping",
+      "COD fraud",
+      "blind-ship scam",
+      "unsolicited COD parcel"
+    ]
+  },
+  "R0259-001": {
+    "title": "Blind-Sale Fraud",
+    "definition": "The black-market term \"blind-sale\" refers to blind-shipping parcels with cash-on-delivery to recipients who never placed orders.",
+    "description": "Blind-sale fraud is the black-market variant of C2C blind-shipping fraud, where groups blind-ship parcels with cash-on-delivery without a real transaction, exploiting the pay-on-receipt mechanism.\n\nThe method is essentially identical to C2C blind-shipping fraud; the slang \"blind-sale\" emphasizes the \"blind shipping/selling\" pattern common in black-market discussion. Detection aligns with the parent risk: shipper qualification, COD order behavior, and recipient complaint clustering.",
+    "influence": "Blind-sale fraud directly causes consumer financial loss, damages logistics and platform brand trust, and triggers complaints and regulatory risks.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "blind sale fraud",
+      "blind sale",
+      "blind ship",
+      "blind COD shipping"
+    ]
+  }
+}

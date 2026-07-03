@@ -1,0 +1,21 @@
+{
+  "R0256": {
+    "title": "Crowdsourced Same-Triplet Order Splitting",
+    "definition": "In crowdsourced delivery, groups split orders sharing the same sender, recipient, and address to fraudulently claim delivery fees and subsidies.",
+    "description": "Crowdsourced same-triplet order splitting exploits identical sender, recipient, and address (the \"three identicals\") to split one order into multiple sub-orders, claiming per-order delivery fees, subsidies, and bonuses.\n\nThe risk causes multiplied delivery-fee and subsidy leakage and distorts capacity dispatching. Detection must combine same-address clustering, splitting timing, and delivery-trail linkage to merge settlement and recover benefits.",
+    "influence": "The risk causes multiplied delivery-fee and subsidy leakage, distorts capacity data, and crowds out legitimate couriers' order rights.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "crowdsourced order splitting",
+      "same-triplet splitting",
+      "crowdsourced arbitrage",
+      "order splitting fraud",
+      "same sender recipient"
+    ]
+  }
+}

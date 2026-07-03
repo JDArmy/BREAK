@@ -1,0 +1,48 @@
+{
+  "R0255": {
+    "title": "批量售后骗赔",
+    "definition": "团伙利用平台售后规则与争议通道批量发起退款、赔付，骗取货款与商品。",
+    "description": "批量售后骗赔指团伙利用平台售后、退换货、争议理赔等通道，结合脚本批量下单、虚假证据与集中申诉，规模化骗取退款、赔付与商品。\n\n该风险会让平台与商户承担直接货款、商品与补贴损失，并破坏售后规则公平性。治理需要结合售后行为模型、历史申诉关联、设备与收货地址聚类，对异常集中申诉做证据链校验与人工复核。",
+    "complexity": "intermediate",
+    "influence": "批量售后骗赔会造成货款、商品与补贴的直接损失，增加商户纠纷、客诉与赔付通道成本，并削弱真实用户的售后体验。",
+    "avoidances": [
+      "A0208",
+      "A0077",
+      "A0075"
+    ],
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "批量售后骗赔",
+      "批量售后",
+      "售后骗赔",
+      "批量退款",
+      "虚假售后",
+      "退款农场",
+      "After-sale fraud",
+      "refund farming"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0054",
+        "relation": "co-occurrence",
+        "note": "批量售后骗赔与恶意退货共享售后争议通道与退款农场手法。"
+      },
+      {
+        "key": "R0235",
+        "relation": "co-occurrence",
+        "note": "批量售后骗赔与拒付与退款滥用共享规避手段「退款与争议风控策略」。"
+      },
+      {
+        "key": "R0068",
+        "relation": "co-occurrence",
+        "note": "批量售后骗赔与售后权益滥用共享售后争议通道，均可由威胁行为者「虚假理赔团伙」实施。"
+      }
+    ]
+  }
+}

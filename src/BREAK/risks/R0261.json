@@ -1,0 +1,42 @@
+{
+  "R0261": {
+    "title": "跨考勤月取消套利",
+    "definition": "利用考勤月切换节点取消订单，套取跨月结算与考勤绩效差额。",
+    "description": "跨考勤月取消套利指利用快递员或网点考勤月、结算月切换节点，在下单后跨月取消或改单，套取跨月结算差额、考勤绩效与奖励。\n\n该风险会让平台承担结算与绩效的重复或错配支出，并扭曲考勤与结算数据。治理需要结合取消时序、考勤月边界与结算规则关联，对跨月取消做限频与异常核验。",
+    "complexity": "intermediate",
+    "influence": "跨考勤月取消套利会造成结算与绩效的错配支出，扭曲考勤与结算数据，并影响运力绩效公平性。",
+    "avoidances": [
+      "A0077",
+      "A0075",
+      "A0004"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "跨考勤月取消套利",
+      "跨考勤月取消",
+      "考勤月套利",
+      "跨月取消",
+      "取消套利",
+      "考勤结算套利",
+      "attendance-month arbitrage"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0017-002",
+        "relation": "co-occurrence",
+        "note": "跨考勤月取消套利与骗取补贴同属套取平台结算与奖励类风险。"
+      },
+      {
+        "key": "R0054-003",
+        "relation": "co-occurrence",
+        "note": "跨考勤月取消套利与闪退套利共享「下单后取消套取差额」手法。"
+      }
+    ]
+  }
+}

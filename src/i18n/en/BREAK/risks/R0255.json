@@ -1,0 +1,21 @@
+{
+  "R0255": {
+    "title": "Batch After-Sales Compensation Fraud",
+    "definition": "Organized groups exploit after-sales and dispute channels to file batch refunds and compensation, fraudulently obtaining payments and goods.",
+    "description": "Batch after-sales compensation fraud uses platform after-sales, return, and dispute channels combined with scripted bulk ordering, fabricated evidence, and concentrated complaints to obtain refunds, compensation, and goods at scale.\n\nThe risk causes direct merchandise, payment, and subsidy losses for platforms and merchants while undermining fair after-sales rules. Detection must combine after-sales behavior models, complaint history linkage, and device/address clustering for evidence-chain review.",
+    "influence": "Batch after-sales fraud causes direct merchandise, payment, and subsidy losses, raises merchant disputes and support costs, and degrades after-sales experience for genuine users.",
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "batch after-sales fraud",
+      "refund farming",
+      "bulk refund abuse",
+      "fake after-sales claims",
+      "refund farm"
+    ]
+  }
+}

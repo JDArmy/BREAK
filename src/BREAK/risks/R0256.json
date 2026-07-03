@@ -1,0 +1,47 @@
+{
+  "R0256": {
+    "title": "众包三同拆单套利",
+    "definition": "众包配送中团伙利用同寄件人、同收件人、同地址拆分订单套取配送费与补贴。",
+    "description": "众包三同拆单套利指在众包配送场景，团伙利用同寄件人、同收件人、同收发地址（「三同」）将一个订单拆分为多个子单，套取按单结算的配送费、补贴与奖励。\n\n该风险会让平台承担多倍配送费与补贴支出，并扭曲众包运力调度。治理需要结合同址同收发聚类、拆单时序与配送轨迹关联，对异常拆单做合并结算与权益回收。",
+    "complexity": "intermediate",
+    "influence": "众包三同拆单套利会造成配送费与补贴的多倍流失，扭曲运力调度数据，并挤占正常骑手的接单权益。",
+    "avoidances": [
+      "A0075",
+      "A0029",
+      "A0077"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "众包三同拆单套利",
+      "众包三同拆单",
+      "三同拆单",
+      "众包套利",
+      "拆单刷量",
+      "同寄件同收件",
+      "crowdsourced order splitting"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0003",
+        "relation": "co-occurrence",
+        "note": "众包三同拆单套利与抢购/库存滥用同属运力与资源滥用类风险。"
+      },
+      {
+        "key": "R0017-002",
+        "relation": "co-occurrence",
+        "note": "众包三同拆单套利与骗取补贴同属套取平台配送费与补贴类风险。"
+      },
+      {
+        "key": "R0260",
+        "relation": "co-occurrence",
+        "note": "众包三同拆单套利与重货拆小件套取揽派费共享「拆单套利」手法。"
+      }
+    ]
+  }
+}

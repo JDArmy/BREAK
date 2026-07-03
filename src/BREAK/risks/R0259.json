@@ -1,0 +1,79 @@
+{
+  "R0259": {
+    "title": "C2C盲销诈骗",
+    "definition": "C2C场景下团伙向未下单收件人盲发快递并附货到付款，实施诈骗收款。",
+    "description": "C2C盲销诈骗指团伙在 C2C 场景向未下单的收件人盲发快递并标注货到付款，利用收件人代收货款或签收后付款的机制实施诈骗，常见于低价劣质货冒充高价商品。\n\n该风险会直接侵害消费者财产，损害平台与物流品牌信任，并可能引发大量投诉与监管压力。治理需要结合发件方资质、货到付款订单行为模型与收件人拒付/投诉聚类，对盲发到付做拦截与责任追溯。",
+    "complexity": "advanced",
+    "influence": "C2C盲销诈骗会直接造成消费者财产损失，损害平台与物流品牌信任，并引发投诉、监管与法律风险。",
+    "avoidances": [
+      "A0208",
+      "A0077",
+      "A0075"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "C2C盲销诈骗",
+      "盲销",
+      "盲发快递",
+      "货到付款诈骗",
+      "盲发到付",
+      "blind shipping fraud"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0259-001",
+        "relation": "variant",
+        "note": "盲销诈骗是 C2C盲销诈骗的黑话同义变体。"
+      },
+      {
+        "key": "R0257",
+        "relation": "co-occurrence",
+        "note": "C2C盲销诈骗与C2C到付弃件同属 C2C 到付场景风险。"
+      },
+      {
+        "key": "R0004",
+        "relation": "co-occurrence",
+        "note": "C2C盲销诈骗向未下单人盲发到付，与虚假发货共享虚假物流发货手法。"
+      }
+    ]
+  },
+  "R0259-001": {
+    "title": "盲销诈骗",
+    "definition": "「盲销」黑话指代向未下单收件人盲发到付快递实施诈骗的手法。",
+    "description": "盲销诈骗是 C2C盲销诈骗的黑话变体，指团伙在未与收件人达成真实交易的情况下盲发快递并附货到付款，借助代收货款机制收款。\n\n该手法与 C2C盲销诈骗本质相同，黑话「盲销」强调「盲目销售/盲发」特征，常出现在黑产交流中。治理与父风险一致，需从发件方资质、到付订单行为与收件人投诉聚类入手。",
+    "complexity": "advanced",
+    "influence": "盲销诈骗会直接造成消费者财产损失，损害物流与平台品牌信任，并引发投诉与监管风险。",
+    "avoidances": [
+      "A0208",
+      "A0077",
+      "A0075"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "盲销",
+      "盲销诈骗",
+      "盲发",
+      "盲销到付",
+      "blind sale fraud"
+    ],
+    "updated": "2026-07-03",
+    "relatedRisks": [
+      {
+        "key": "R0259",
+        "relation": "variant",
+        "note": "盲销诈骗是 C2C盲销诈骗的黑话变体。"
+      }
+    ]
+  }
+}

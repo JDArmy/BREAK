@@ -1,0 +1,21 @@
+{
+  "R0265": {
+    "title": "Freight-Rate Rule Arbitrage",
+    "definition": "Exploiting mismatches in freight-rate segments, weight tiers, and vehicle-type tiers to claim freight differentials and discounts.",
+    "description": "Freight-rate rule arbitrage exploits boundary mismatches in rate segments, weight tiers, vehicle-type tiers, or discount rules to claim freight differentials and discounts via order splitting, weight alteration, or segment changes.\n\nThe risk causes freight-differential and discount losses and distorts rate and billing data. Detection must combine rate-rule consistency validation, billing tamper-proofing, and abnormal billing monitoring for reconciliation and recovery.",
+    "influence": "The risk causes freight-differential and discount losses, distorts rate and billing data, and may trigger rate-fairness disputes.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "freight-rate arbitrage",
+      "rate rule arbitrage",
+      "rate segment mismatch",
+      "weight-tier arbitrage",
+      "rate-rule exploitation"
+    ]
+  }
+}

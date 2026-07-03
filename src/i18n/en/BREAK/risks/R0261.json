@@ -1,0 +1,21 @@
+{
+  "R0261": {
+    "title": "Cross-Attendance-Month Cancellation Arbitrage",
+    "definition": "Canceling orders across attendance-month boundaries to arbitrage cross-month settlement and performance differentials.",
+    "description": "Cross-attendance-month cancellation arbitrage exploits courier or site attendance-month and settlement-month boundaries, canceling or modifying orders across months to claim cross-month settlement differentials, performance, and bonuses.\n\nThe risk causes duplicated or mismatched settlement and performance expenditure and distorts attendance and settlement data. Detection must combine cancellation timing, attendance-month boundaries, and settlement rules with rate limiting and abnormal verification.",
+    "influence": "The risk causes mismatched settlement and performance expenditure, distorts attendance data, and undermines capacity-performance fairness.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "cross-attendance-month cancellation",
+      "attendance-month arbitrage",
+      "cross-month cancellation",
+      "cancellation arbitrage",
+      "settlement-month arbitrage"
+    ]
+  }
+}

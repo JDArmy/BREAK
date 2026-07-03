@@ -1,0 +1,21 @@
+{
+  "R0257": {
+    "title": "C2C Cash-on-Delivery Abandonment",
+    "definition": "In C2C cash-on-delivery scenarios, recipients deliberately refuse or abandon parcels, shifting freight and goods losses onto senders or the platform.",
+    "description": "C2C COD abandonment occurs when recipients deliberately refuse or abandon parcels in cash-on-delivery C2C trades, shifting round-trip freight and goods losses onto senders or the platform, often for harassment, fraud, or competitor disruption.\n\nThe risk causes round-trip freight, goods damage, and warehousing costs and undermines C2C trust. Detection must combine recipient refusal history, address risk, and COD order behavior models to restrict and verify high-frequency abandoners.",
+    "influence": "COD abandonment causes round-trip freight, goods damage, and warehousing losses, raises dispute handling costs, and undermines C2C COD availability.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "C2C COD abandonment",
+      "cash-on-delivery refusal",
+      "COD parcel abandonment",
+      "COD freight loss",
+      "refuse-on-delivery fraud"
+    ]
+  }
+}
