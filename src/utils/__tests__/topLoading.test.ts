@@ -41,4 +41,24 @@ describe("topLoading", () => {
     expect(topLoadingState.active.value).toBe(false);
     expect(topLoadingState.progress.value).toBe(0);
   });
+
+  it("延迟任务在完成前不会显示顶部加载条", () => {
+    startTopLoading("a", 20, { delayMs: 180 });
+    vi.advanceTimersByTime(120);
+    finishTopLoading("a");
+    vi.advanceTimersByTime(300);
+
+    expect(topLoadingState.active.value).toBe(false);
+    expect(topLoadingState.progress.value).toBe(0);
+  });
+
+  it("延迟任务超过阈值后才显示顶部加载条", () => {
+    startTopLoading("a", 20, { delayMs: 180 });
+    vi.advanceTimersByTime(179);
+    expect(topLoadingState.active.value).toBe(false);
+
+    vi.advanceTimersByTime(1);
+    expect(topLoadingState.active.value).toBe(true);
+    expect(topLoadingState.progress.value).toBe(20);
+  });
 });

@@ -1,10 +1,15 @@
 import { computed, ref } from "vue";
 
 const activeTasks = new Set<string>();
+const pendingShowTimers = new Map<string, ReturnType<typeof window.setTimeout>>();
 const active = ref(false);
 const progress = ref(0);
 let trickleTimer: ReturnType<typeof window.setInterval> | null = null;
 let hideTimer: ReturnType<typeof window.setTimeout> | null = null;
+
+interface StartTopLoadingOptions {
+  delayMs?: number;
+}
 
 const stopTrickle = () => {
   if (trickleTimer !== null) {
@@ -40,8 +45,30 @@ export const topLoadingState = {
   progress: computed(() => progress.value),
 };
 
-export function startTopLoading(taskId: string, initialProgress = 12) {
+const cancelPendingShow = (taskId: string) => {
+  const timer = pendingShowTimers.get(taskId);
+  if (timer === undefined) return;
+  window.clearTimeout(timer);
+  pendingShowTimers.delete(taskId);
+};
+
+export function startTopLoading(
+  taskId: string,
+  initialProgress = 12,
+  options: StartTopLoadingOptions = {},
+) {
   activeTasks.add(taskId);
+  cancelPendingShow(taskId);
+  if (options.delayMs && options.delayMs > 0 && !active.value) {
+    const timer = window.setTimeout(() => {
+      pendingShowTimers.delete(taskId);
+      if (activeTasks.has(taskId)) {
+        show(initialProgress);
+      }
+    }, options.delayMs);
+    pendingShowTimers.set(taskId, timer);
+    return;
+  }
   show(initialProgress);
 }
 
@@ -51,6 +78,7 @@ export function setTopLoadingProgress(taskId: string, nextProgress: number) {
 }
 
 export function finishTopLoading(taskId: string) {
+  cancelPendingShow(taskId);
   if (!activeTasks.delete(taskId)) return;
   if (activeTasks.size > 0) return;
 

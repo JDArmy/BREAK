@@ -300,11 +300,11 @@ const router = createRouter({
 let routeDataLoadSeq = 0;
 
 router.beforeEach((to) => {
-  startTopLoading("route", 18);
+  startTopLoading("route", 18, { delayMs: 180 });
   // 通过路由 meta 标记判断是否需要加载 BREAK 数据，无需维护硬编码路由名集合
   if (to.meta.needsBreakData) {
     const taskId = `route-data:${++routeDataLoadSeq}`;
-    startTopLoading(taskId, 28);
+    startTopLoading(taskId, 28, { delayMs: 180 });
     void initLocaleMessages()
       .catch((err) => {
         console.error("[router] BREAK 数据加载失败:", err);
