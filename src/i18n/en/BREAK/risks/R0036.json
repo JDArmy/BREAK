@@ -1,28 +1,45 @@
 {
   "R0036": {
     "title": "Multi-Factor Authentication (MFA) Bypass",
-    "definition": "Cracking or bypassing multi-factor authentication factors during the identity verification process.",
-    "description": "Obtaining MFA verification factors through brute force enumeration — such as cracking SMS verification codes, last digits of ID numbers, email verification codes, or OTP tokens; or exploiting flaws in the authentication process — such as forging trusted device fingerprints or requesting non-MFA login pages — to bypass MFA verification.",
-    "influence": "Will bypass existing MFA multi-factor authentication mechanisms, leading to account compromise.",
+    "definition": "Cracking or bypassing multi-factor authentication factors during the identity verification process, directly obtaining authenticated session access.",
+    "description": "Obtaining MFA verification factors through brute force enumeration — such as cracking SMS verification codes, last digits of ID numbers, email verification codes, or OTP tokens; or exploiting flaws in the authentication process — such as forging trusted device fingerprints or requesting non-MFA login pages — to bypass MFA verification.\n\nAs attack techniques evolve, MFA is no longer an insurmountable barrier. Key attack paths also include: ① AiTM adversary-in-the-middle attacks: intercepting authentication flows through reverse proxies to steal post-MFA session cookies; ② MFA fatigue attacks (R0036-001): pushing massive MFA verification requests to targets, forcing users to accidentally confirm due to fatigue; ③ SIM swapping: using social engineering to transfer victim phone numbers to attacker-controlled SIM cards to receive SMS verification codes; ④ Session token theft: stealing session cookies stored in browsers through infostealers; ⑤ MFA credential phishing: collecting both passwords and real-time 2FA tokens through phishing pages simultaneously. According to the CrowdStrike 2026 Global Threat Report, 82% of cyber attacks use no malware but instead bypass MFA through identity and session token theft.",
+    "influence": "Will bypass existing MFA multi-factor authentication mechanisms, leading to account compromise; directly causes account security defenses to be breached, enterprise core systems and data can be accessed without authorization, and traditional MFA protection becomes ineffective.",
     "references": [
       {
         "title": "Exposing Multi-Factor Authentication (MFA) Bypass Techniques",
         "link": "https://www.fangyuba.com/news/dynamic/2778.htm"
+      },
+      {
+        "title": "CrowdStrike 2026 Global Threat Report",
+        "link": "https://www.crowdstrike.com/global-threat-report/"
+      },
+      {
+        "title": "CISA MFA Implementation Guidance",
+        "link": "https://www.cisa.gov/"
       }
     ],
     "keywords": [
       "Multi-Factor Authentication (MFA) Bypass",
       "MFA bypass",
+      "MFA bypass risk",
       "2FA bypass",
       "two-factor bypass",
+      "multi-factor authentication bypass",
       "OTP bypass",
-      "authentication factor bypass"
+      "authentication factor bypass",
+      "AiTM",
+      "adversary-in-the-middle phishing",
+      "session cookie theft",
+      "SIM swap"
     ],
     "riskAssessment": {
       "observables": [
         "The MFA verification endpoint is hit at high frequency, with a single account trying different verification codes multiple times within a short window",
         "The login flow shows requests to non-MFA login pages, or device fingerprints are forged as trusted devices",
-        "After MFA verification passes, the session is immediately used for sensitive operations, inconsistent with normal user behavior timing"
+        "After MFA verification passes, the session is immediately used for sensitive operations, inconsistent with normal user behavior timing",
+        "Session cookies are obtained immediately after authentication, with the login state bypassing MFA and being directly reused",
+        "User devices show infostealer characteristics, with browser session cookies being exfiltrated",
+        "The MFA verification flow is intercepted by a man-in-the-middle proxy, with session tokens generated on anomalous nodes"
       ]
     }
   },
@@ -50,38 +67,6 @@
         "A large volume of MFA approval requests is pushed to the same account within a short window, far exceeding normal login frequency",
         "The originating IP/location of MFA push requests does not match the user's historical login profile",
         "The request the user ultimately approves originates from an anomalous device or a foreign location, with sensitive operations immediately following approval"
-      ]
-    }
-  },
-  "R0036-002": {
-    "title": "MFA Bypass Risk",
-    "definition": "The risk that attackers use technical means to bypass multi-factor authentication (MFA) security protection and directly obtain authenticated session access.",
-    "description": "MFA bypass risk refers to attackers using AiTM adversary-in-the-middle attacks, MFA fatigue attacks, SIM swapping, session token theft, and other methods to bypass MFA security verification and directly obtain authenticated session access. MFA has long been considered a critical line of defense for account security, but with the evolution of attack techniques, MFA is no longer an insurmountable barrier. Key attack paths include: ① AiTM attacks: intercepting authentication flows through reverse proxies to steal post-MFA session cookies; ② MFA fatigue attacks (R0036-001): pushing massive MFA verification requests to targets, forcing users to accidentally confirm due to fatigue; ③ SIM swapping: using social engineering to transfer victim phone numbers to attacker-controlled SIM cards to receive SMS verification codes; ④ Session token theft: stealing session cookies stored in browsers through infostealers; ⑤ MFA credential phishing: collecting both passwords and real-time 2FA tokens through phishing pages simultaneously. According to the CrowdStrike 2026 Global Threat Report, 82% of cyber attacks use no malware but instead bypass MFA through identity and session token theft.",
-    "influence": "Directly causes account security defenses to be breached, enterprise core systems and data can be accessed without authorization, and traditional MFA protection becomes ineffective.",
-    "references": [
-      {
-        "title": "CrowdStrike 2026 Global Threat Report",
-        "link": "https://www.crowdstrike.com/global-threat-report/"
-      },
-      {
-        "title": "CISA MFA Implementation Guidance",
-        "link": "https://www.cisa.gov/"
-      }
-    ],
-    "keywords": [
-      "MFA Bypass Risk",
-      "MFA bypass",
-      "2FA bypass",
-      "MFA fatigue",
-      "push bombing",
-      "AiTM",
-      "session token theft"
-    ],
-    "riskAssessment": {
-      "observables": [
-        "Session cookies are obtained immediately after authentication, with the login state bypassing MFA and being directly reused",
-        "User devices show infostealer characteristics, with browser session cookies being exfiltrated",
-        "The MFA verification flow is intercepted by a man-in-the-middle proxy, with session tokens generated on anomalous nodes"
       ]
     }
   }

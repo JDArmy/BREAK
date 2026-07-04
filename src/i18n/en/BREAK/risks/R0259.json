@@ -13,9 +13,12 @@
     "keywords": [
       "C2C blind shipping fraud",
       "blind shipping",
+      "blind sale fraud",
+      "blind sale",
       "COD fraud",
       "blind-ship scam",
-      "unsolicited COD parcel"
+      "unsolicited COD parcel",
+      "blind COD shipping"
     ],
     "riskAssessment": {
       "observables": [
@@ -24,33 +27,6 @@
         "Recipient refusals or complaints cluster on the same sender",
         "Senders show anomalous qualifications or newly register and immediately ship in bulk",
         "Blind-shipped COD is accompanied by anomalous collection of cash-on-delivery payments"
-      ]
-    }
-  },
-  "R0259-001": {
-    "title": "Blind-Sale Fraud",
-    "definition": "The black-market term \"blind-sale\" refers to blind-shipping parcels with cash-on-delivery to recipients who never placed orders.",
-    "description": "Blind-sale fraud is the black-market variant of C2C blind-shipping fraud, where groups blind-ship parcels with cash-on-delivery without a real transaction, exploiting the pay-on-receipt mechanism.\n\nThe method is essentially identical to C2C blind-shipping fraud; the slang \"blind-sale\" emphasizes the \"blind shipping/selling\" pattern common in black-market discussion. Detection aligns with the parent risk: shipper qualification, COD order behavior, and recipient complaint clustering.",
-    "influence": "Blind-sale fraud directly causes consumer financial loss, damages logistics and platform brand trust, and triggers complaints and regulatory risks.",
-    "references": [
-      {
-        "title": "Mass-Mailing Empty COD Parcels to Defraud Express Fees (SPP, Blind COD Scam)",
-        "link": "https://www.spp.gov.cn/spp/zdgz/202401/t20240109_639690.shtml"
-      }
-    ],
-    "keywords": [
-      "blind sale fraud",
-      "blind sale",
-      "blind ship",
-      "blind COD shipping"
-    ],
-    "riskAssessment": {
-      "observables": [
-        "Blacker-market discussions reference \"blind selling\" scripts and cash-on-delivery blind-shipment tactics",
-        "Recipients who never placed orders cluster around cash-on-delivery parcels from the same sender",
-        "Blind-shipped cash-on-delivery parcels are marked as collecting payment on behalf of goods, with declared value severely mismatched from the collected amount",
-        "Recipient complaints cluster around sender qualifications tied to blind-selling rings",
-        "The cash-on-delivery order behavior model shows batch signatures of blind-shipped parcels"
       ]
     }
   }

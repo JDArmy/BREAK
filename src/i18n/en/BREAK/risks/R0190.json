@@ -2,7 +2,7 @@
   "R0190": {
     "title": "Internet of Medical Things (IoMT) Security Risks",
     "definition": "Special security threats faced by medical IoT devices that may directly endanger patient life safety and privacy.",
-    "description": "IoMT connects critical medical devices such as pacemakers, insulin pumps, infusion pumps, and patient monitors. Attackers can control devices through wireless hijacking, firmware tampering, and protocol vulnerabilities, causing: incorrect medication dosages leading to patient casualties, tampering with vital signs data misleading diagnoses, shutting down life-saving equipment, stealing sensitive patient health privacy, etc. Medical devices are typically difficult to update, have long certification cycles and service lives, with weak security protections.",
+    "description": "IoMT connects critical medical devices such as pacemakers, insulin pumps, infusion pumps, patient monitors, imaging devices, wearables, and implantable devices. Attackers can control devices or affect device data and control logic through wireless hijacking, firmware tampering, protocol vulnerabilities, weak credentials, unisolated networks, or supply chain issues, causing: incorrect medication dosages leading to patient casualties, tampering with vital signs data misleading diagnoses, shutting down life-saving equipment, stealing sensitive patient health privacy, etc. Medical devices are typically difficult to update, have long certification cycles and service lives, are physically isolated, with weak security protections and security updates long lagging behind known vulnerability disclosures.",
     "influence": "Patient life safety threatened, massive health privacy leaks, medical accidents, hospital operations paralyzed, legal liability.",
     "references": [
       {
@@ -16,14 +16,21 @@
       "connected medical device",
       "healthcare IoT risk",
       "patient safety risk",
-      "medical sensor compromise"
+      "medical sensor compromise",
+      "IoMT security risk",
+      "insulin pump attack",
+      "pacemaker security",
+      "medical device vulnerability"
     ],
     "riskAssessment": {
       "observables": [
         "Implanted devices such as pacemakers and insulin pumps show anomalous wireless connections or command modifications",
         "Medication dosages and parameter settings of medical devices are tampered with without authorization, deviating from prescriptions",
         "Vital signs monitoring data is tampered with, misleading clinical diagnoses and alerts",
-        "Medical device health privacy data is bulk-read or exfiltrated to unauthorized systems"
+        "Medical device health privacy data is bulk-read or exfiltrated to unauthorized systems",
+        "Medical IoT devices expose weak credentials or unpatched firmware on reachable networks",
+        "Device networks are not isolated from clinical networks and lateral access paths exist",
+        "Device security updates long lag behind known vulnerability disclosures"
       ]
     }
   }

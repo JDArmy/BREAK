@@ -2,28 +2,45 @@
   "R0174": {
     "title": "On-Chain Privacy Leakage",
     "definition": "The public and transparent nature of blockchain transactions leads to user identity, assets, and transaction behavior privacy information being tracked and analyzed.",
-    "description": "All transaction records on public chains are permanently public and accessible. Attackers can use on-chain data analysis, address clustering, transaction graph analysis and other techniques to correlate users' real identities with wallet addresses, track asset flows and transaction habits. Even with pseudonymous addresses, de-anonymization is possible through transaction patterns, amount characteristics, time correlations, etc.",
+    "description": "All transaction records on public chains are permanently public and accessible. Attackers can use on-chain data analysis, address clustering, transaction graph analysis, MEV bot monitoring, and off-chain data correlation to correlate users' real identities with wallet addresses, track asset flows and transaction habits. Even with pseudonymous addresses, de-anonymization is possible through transaction patterns, amount characteristics, time correlations, and off-chain KYC identities.\n\nPrivacy leakage does not necessarily come from system intrusion, but from transparent ledgers and data analysis combined. High-value users, institutional wallets, and sensitive businesses need address isolation, privacy-preserving protocols, and minimal off-chain information disclosure.\n\nLimitation: requires substantial data and analytical capability.",
     "influence": "User assets and transaction privacy completely exposed, becoming targets for targeted attacks, triggering security and regulatory risks.",
     "references": [
       {
         "title": "Blockchain Security and Privacy: Threats, Challenges, Applications ...",
         "link": "https://dl.acm.org/doi/10.1145/3716323"
+      },
+      {
+        "title": "An Empirical Analysis of Privacy in the Lightning Network",
+        "link": "https://arxiv.org/abs/1904.05234"
+      },
+      {
+        "title": "Chainalysis: The Blockchain Data Platform",
+        "link": "https://www.chainalysis.com/"
       }
     ],
     "keywords": [
       "on-chain privacy leak",
+      "on-chain data privacy leak",
       "address clustering",
       "wallet deanonymization",
       "transaction graph analysis",
       "blockchain analytics",
-      "asset exposure"
+      "asset exposure",
+      "MEV monitoring",
+      "on-chain profiling",
+      "transaction behavior tracking",
+      "on-chain identity correlation"
     ],
     "riskAssessment": {
       "observables": [
         "On-chain analysis tools perform address clustering on target wallet addresses, correlating multiple addresses as belonging to the same entity",
         "Pseudonymous addresses are deanonymized and linked to real identities through transaction amount, timing, and counterparty patterns",
         "Large transactions of a user's wallet address are publicly tracked, with asset holdings exposed and becoming extortion or phishing targets",
-        "Exchange deposit and withdrawal addresses form an identifiable correlation graph with users' on-chain wallets"
+        "Exchange deposit and withdrawal addresses form an identifiable correlation graph with users' on-chain wallets",
+        "MEV bots or analysis services perform high-frequency monitoring and front-running on specific addresses",
+        "High-value wallets' transaction graphs are publicly correlated with off-chain identity information",
+        "User transaction behavior patterns are continuously tracked with targeted phishing or extortion appearing",
+        "On-chain interaction addresses form inferable correlations with known KYC identities or institutional wallets"
       ]
     }
   }
