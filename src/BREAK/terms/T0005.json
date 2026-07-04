@@ -24,8 +24,7 @@
     "relatedAvoidances": [
       "A0015",
       "A0059",
-      "A0061",
-      "A0044"
+      "A0061"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -41,7 +40,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-05",
     "usageExample": "黑产团伙通过撞库获取了一批高额度且未设消费限额的电商会员账号，内部称之为\"大肉\"，随即组织人员连夜下单变现。"
   }
 }
