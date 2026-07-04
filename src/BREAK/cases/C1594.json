@@ -14,7 +14,7 @@
     "summary": "研究指出，对医疗设备的大规模攻击可能针对设备可用性或完整性。攻击者若成功破坏医疗设备的可用性，例如导致监护仪或输液泵停止工作，可能造成灾难性结果，直接威胁患者生命。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0208"
+      "R0190"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/8796531/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0081",
       "AT0082"

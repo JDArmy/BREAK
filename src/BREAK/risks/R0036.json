@@ -1,37 +1,55 @@
 {
   "R0036": {
     "title": "多因素(MFA)绕过",
-    "definition": "对身份验证过程中的多因素因子进行破解或绕过",
-    "description": "通过暴力枚举获得MFA验证因子，譬如：破解手机验证码、身份证后几位、邮箱验证码、动态口令等；利用身份验证过程中的缺陷，譬如伪造可信设备指纹、请求非MFA登录页面等绕过MFA多因素验证流程等。",
+    "definition": "对身份验证过程中的多因素因子进行破解或绕过，直接获取已通过认证的会话访问权限。",
+    "description": "通过暴力枚举获得MFA验证因子，譬如：破解手机验证码、身份证后几位、邮箱验证码、动态口令等；利用身份验证过程中的缺陷，譬如伪造可信设备指纹、请求非MFA登录页面等绕过MFA多因素验证流程等。\n\n随着攻击技术进化，MFA已不再是不可逾越的屏障，主要攻击路径还包括：①AiTM中间人攻击：通过反向代理拦截认证流程，窃取MFA验证后的会话Cookie；②MFA疲劳攻击（R0036-001）：向目标推送大量MFA验证请求，迫使用户因疲劳而误点确认；③SIM卡交换：通过社会工程使运营商将受害者手机号转移到攻击者控制的SIM卡，接收SMS验证码；④会话令牌窃取：通过信息窃取器窃取浏览器中存储的会话Cookie；⑤MFA凭据钓鱼：通过钓鱼页面同时收集密码和实时2FA令牌。据CrowdStrike 2026全球威胁报告，82%的网络攻击不使用恶意软件，而是通过窃取身份和会话令牌绕过MFA。",
     "complexity": "advanced",
-    "influence": "将绕过现有MFA多因素身份验证机制，导致账户沦陷",
+    "influence": "将绕过现有MFA多因素身份验证机制，导致账户沦陷；直接导致账户安全防线被突破，企业核心系统和数据可被未授权访问，传统MFA保护形同虚设。",
     "avoidances": [
       "A0002",
       "A0004",
       "A0005",
+      "A0007",
       "A0007-003",
       "A0007-005",
       "A0009",
       "A0010",
       "A0021",
       "A0025-002",
-      "A0040"
+      "A0026",
+      "A0040",
+      "A0073",
+      "A0078"
     ],
     "references": [
       {
         "title": "多因素身份验证（MFA）绕过技术揭示",
         "link": "https://www.fangyuba.com/news/dynamic/2778.htm"
+      },
+      {
+        "title": "CrowdStrike 2026 Global Threat Report",
+        "link": "https://www.crowdstrike.com/global-threat-report/"
+      },
+      {
+        "title": "CISA MFA Implementation Guidance",
+        "link": "https://www.cisa.gov/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "多因素(MFA)绕过",
       "MFA绕过",
+      "MFA绕过风险",
       "2FA绕过",
       "双因子绕过",
       "多因子绕过",
+      "多因素认证绕过",
       "OTP绕过",
-      "二次验证绕过"
+      "二次验证绕过",
+      "AiTM",
+      "中间人钓鱼",
+      "会话Cookie窃取",
+      "SIM卡交换"
     ],
     "relatedRisks": [
       {
@@ -63,6 +81,36 @@
         "key": "R0098",
         "relation": "co-occurrence",
         "note": "多因素(MFA)绕过与虚假身份认证均可由攻击工具“钓鱼工具包”直接造成。"
+      },
+      {
+        "key": "R0246",
+        "relation": "co-occurrence",
+        "note": "多因素(MFA)绕过与MFA疲劳攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0142",
+        "relation": "co-occurrence",
+        "note": "多因素(MFA)绕过与中间人攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "多因素(MFA)绕过与账号盗取均可由攻击工具“AiTM中间人攻击工具”直接造成。"
+      },
+      {
+        "key": "R0152",
+        "relation": "co-occurrence",
+        "note": "多因素(MFA)绕过与无恶意软件攻击风险共享规避手段“端点检测与响应”。"
+      },
+      {
+        "key": "R0154",
+        "relation": "co-occurrence",
+        "note": "多因素(MFA)绕过与ClickFix欺骗风险共享规避手段“端点检测与响应”。"
+      },
+      {
+        "key": "R0086-001",
+        "relation": "co-occurrence",
+        "note": "多因素(MFA)绕过与算力盗用风险共享规避手段“端点检测与响应”。"
       }
     ],
     "riskAssessment": {
@@ -74,7 +122,10 @@
       "observables": [
         "MFA 验证接口被高频请求，单账号短时间内多次尝试不同验证码",
         "登录流程中出现非 MFA 登录页面请求，或设备指纹被伪造为可信设备",
-        "MFA 验证通过后会话立即用于敏感操作，与正常用户行为时序不符"
+        "MFA 验证通过后会话立即用于敏感操作，与正常用户行为时序不符",
+        "认证后立即获取会话 Cookie，登录态绕过 MFA 直接复用",
+        "用户设备出现信息窃取器特征，浏览器会话 Cookie 被外发",
+        "MFA 验证流程被中间人代理拦截，会话令牌在异常节点生成"
       ],
       "assessedAt": "2026-07-03",
       "priority": "P0"
@@ -157,87 +208,6 @@
       ],
       "assessedAt": "2026-07-03",
       "priority": "P1"
-    }
-  },
-  "R0036-002": {
-    "title": "MFA绕过风险",
-    "definition": "攻击者通过技术手段绕过多因素认证（MFA）的安全保护，直接获取已通过认证的会话访问权限的风险。",
-    "description": "MFA绕过风险是指攻击者利用AiTM中间人攻击、MFA疲劳攻击、SIM卡交换、会话令牌窃取等手段，绕过多因素认证的安全验证，直接获取已认证会话的访问权限。MFA长期被视为账户安全的关键防线，但随着攻击技术的进化，MFA已不再是不可逾越的屏障。主要攻击路径包括：①AiTM攻击：通过反向代理拦截认证流程，窃取MFA验证后的会话Cookie；②MFA疲劳攻击（R0036-001）：向目标推送大量MFA验证请求，迫使用户因疲劳而误点确认；③SIM卡交换：通过社会工程使运营商将受害者手机号转移到攻击者控制的SIM卡，接收SMS验证码；④会话令牌窃取：通过信息窃取器窃取浏览器中存储的会话Cookie；⑤MFA凭据钓鱼：通过钓鱼页面同时收集密码和实时2FA令牌。据CrowdStrike 2026全球威胁报告，82%的网络攻击不使用恶意软件，而是通过窃取身份和会话令牌绕过MFA。",
-    "complexity": "advanced",
-    "influence": "直接导致账户安全防线被突破，企业核心系统和数据可被未授权访问，传统MFA保护形同虚设。",
-    "avoidances": [
-      "A0007",
-      "A0073",
-      "A0026",
-      "A0078"
-    ],
-    "references": [
-      {
-        "title": "CrowdStrike 2026 Global Threat Report",
-        "link": "https://www.crowdstrike.com/global-threat-report/"
-      },
-      {
-        "title": "CISA MFA Implementation Guidance",
-        "link": "https://www.cisa.gov/"
-      }
-    ],
-    "updated": "2026-07-03",
-    "keywords": [
-      "MFA绕过风险",
-      "MFA绕过",
-      "2FA绕过",
-      "多因素认证绕过",
-      "AiTM",
-      "中间人钓鱼",
-      "MFA疲劳攻击",
-      "会话Cookie窃取",
-      "SIM卡交换"
-    ],
-    "relatedRisks": [
-      {
-        "key": "R0246",
-        "relation": "co-occurrence",
-        "note": "MFA绕过风险与MFA疲劳攻击在定义或描述中互相指向。"
-      },
-      {
-        "key": "R0142",
-        "relation": "co-occurrence",
-        "note": "MFA绕过风险与中间人攻击在定义或描述中互相指向。"
-      },
-      {
-        "key": "R0032",
-        "relation": "co-occurrence",
-        "note": "MFA绕过风险与账号盗取均可由攻击工具“AiTM中间人攻击工具”直接造成。"
-      },
-      {
-        "key": "R0152",
-        "relation": "co-occurrence",
-        "note": "MFA绕过风险与无恶意软件攻击风险共享规避手段“端点检测与响应”。"
-      },
-      {
-        "key": "R0154",
-        "relation": "co-occurrence",
-        "note": "MFA绕过风险与ClickFix欺骗风险共享规避手段“端点检测与响应”。"
-      },
-      {
-        "key": "R0086-001",
-        "relation": "co-occurrence",
-        "note": "MFA绕过风险与算力盗用风险共享规避手段“端点检测与响应”。"
-      }
-    ],
-    "riskAssessment": {
-      "likelihood": "high",
-      "businessLoss": "critical",
-      "attackCost": "medium",
-      "detectionDifficulty": "high",
-      "defenseMaturity": "low",
-      "observables": [
-        "认证后立即获取会话 Cookie，登录态绕过 MFA 直接复用",
-        "用户设备出现信息窃取器特征，浏览器会话 Cookie 被外发",
-        "MFA 验证流程被中间人代理拦截，会话令牌在异常节点生成"
-      ],
-      "assessedAt": "2026-07-03",
-      "priority": "P0"
     }
   }
 }

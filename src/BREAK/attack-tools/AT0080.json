@@ -16,8 +16,7 @@
     ],
     "indirectSupportRisks": [
       "R0162",
-      "R0185",
-      "R0202"
+      "R0185"
     ],
     "references": [
       {
@@ -41,7 +40,7 @@
       "跨链资产追踪",
       "区块链分析"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       {
         "key": "AT0079",

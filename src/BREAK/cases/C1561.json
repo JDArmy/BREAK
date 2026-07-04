@@ -14,7 +14,7 @@
     "summary": "该研究提出了一种零交易费用的去匿名化攻击方法，通过数学建模和大规模测量，能够对区块链RPC用户进行去匿名化，揭示了链上用户隐私泄露的风险。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0202"
+      "R0174"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://dl.acm.org/doi/10.1145/3719027.3765082"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0080"
     ],

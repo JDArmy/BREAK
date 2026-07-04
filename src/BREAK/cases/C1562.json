@@ -15,7 +15,7 @@
     "summary": "该研究探索了一种基于概念格的比特币地址去匿名化方法，通过形式概念分析技术追踪用户身份，揭示了比特币交易可被聚类分析并关联到真实身份的风险。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0202"
+      "R0174"
     ],
     "references": [
       {
@@ -23,7 +23,7 @@
         "link": "https://dl.acm.org/doi/full/10.1145/3708635.3708643"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0080"
     ],

@@ -14,7 +14,7 @@
     "summary": "研究人员测试发现，用于COVID-19诊断的深度学习模型易受对抗样本攻击。攻击者通过添加精心制作的扰动，可使基于CT扫描或X射线图像的医疗物联网诊断系统错误分类，例如将戴口罩者误判为未戴口罩，导致错误诊断结果。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0208"
+      "R0190"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/9154468/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2020-08",
     "relatedAttackTools": [
       "AT0093"

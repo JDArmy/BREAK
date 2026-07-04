@@ -39,17 +39,17 @@
         "note": "共同覆盖 2 个风险，共同限制 2 个攻击工具。"
       },
       {
-        "key": "A0181",
-        "relation": "complement",
-        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
-      },
-      {
         "key": "A0014",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       },
       {
         "key": "A0111-001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0150",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       }

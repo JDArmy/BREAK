@@ -16,7 +16,7 @@
     "summary": "Palo Alto Networks的Unit 42威胁研究发现，医疗设备是医院网络中最薄弱的环节。75%的输液泵存在至少一个漏洞或安全警报。成像设备尤其易受攻击，51%的X光机暴露于严重常见漏洞CVE-2019-11687，44%的CT扫描仪和31%的MRI机器也暴露于严重CVE。这些漏洞可能被攻击者利用，威胁患者生命安全。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
-      "R0208"
+      "R0190"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://unit42.paloaltonetworks.com/infusion-pump-vulnerabilities/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023-01",
     "relatedAttackTools": [],
     "relatedThreatActors": []

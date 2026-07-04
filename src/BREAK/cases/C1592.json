@@ -15,7 +15,7 @@
     "summary": "研究显示，现代智能健康系统中的个人医疗设备（PMD）通信缺乏安全特性，外部攻击者可接入设备通信，实施中间人攻击、重放攻击、虚假数据注入和拒绝服务攻击，窃取敏感健康数据或干扰设备功能，直接威胁患者安全。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0208"
+      "R0190"
     ],
     "references": [
       {
@@ -23,7 +23,7 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/9162311/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2020-06",
     "relatedAttackTools": [
       "AT0072",

@@ -14,7 +14,7 @@
     "summary": "研究调查了植入式医疗设备（如心脏起搏器、胰岛素泵）的安全权衡，梳理了针对这些设备的可实现攻击。攻击者可利用通信漏洞实施无线攻击，篡改设备参数或中断治疗，直接危及患者生命安全。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0208"
+      "R0190"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/7393449/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0081"
     ],

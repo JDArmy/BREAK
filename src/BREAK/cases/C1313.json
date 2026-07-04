@@ -16,7 +16,7 @@
     "summary": "2024年在暗网首次出现并于2025年持续活跃的VoidProxy平台，是一种钓鱼即服务（PhaaS），具备实时会话中继能力。它通过AI驱动的代理架构克隆合法登录页面，中继用户认证会话，捕获会话令牌与Cookie，成功绕过基于短信、TOTP及推送通知的MFA机制，对Google和Microsoft身份提供者构成严重威胁。",
     "category": "news_report",
     "relatedRisks": [
-      "R0036-002"
+      "R0036"
     ],
     "references": [
       {
@@ -24,7 +24,7 @@
         "link": "https://dy.163.com/article/KD91U3C40556CG2E.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2025-11",
     "relatedAttackTools": [
       "AT0063-001",

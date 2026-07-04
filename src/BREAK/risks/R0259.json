@@ -19,12 +19,16 @@
     "keywords": [
       "C2C盲销诈骗",
       "盲销",
+      "盲销诈骗",
+      "盲发",
+      "盲销到付",
       "盲发快递",
       "货到付款诈骗",
       "盲发到付",
-      "blind shipping fraud"
+      "blind shipping fraud",
+      "blind sale fraud"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -43,11 +47,6 @@
     },
     "relatedRisks": [
       {
-        "key": "R0259-001",
-        "relation": "variant",
-        "note": "盲销诈骗是 C2C盲销诈骗的黑话同义变体。"
-      },
-      {
         "key": "R0257",
         "relation": "co-occurrence",
         "note": "C2C盲销诈骗与C2C到付弃件同属 C2C 到付场景风险。"
@@ -56,55 +55,6 @@
         "key": "R0004",
         "relation": "co-occurrence",
         "note": "C2C盲销诈骗向未下单人盲发到付，与虚假发货共享虚假物流发货手法。"
-      }
-    ]
-  },
-  "R0259-001": {
-    "title": "盲销诈骗",
-    "definition": "「盲销」黑话指代向未下单收件人盲发到付快递实施诈骗的手法。",
-    "description": "盲销诈骗是 C2C盲销诈骗的黑话变体，指团伙在未与收件人达成真实交易的情况下盲发快递并附货到付款，借助代收货款机制收款。\n\n该手法与 C2C盲销诈骗本质相同，黑话「盲销」强调「盲目销售/盲发」特征，常出现在黑产交流中。治理与父风险一致，需从发件方资质、到付订单行为与收件人投诉聚类入手。",
-    "complexity": "advanced",
-    "influence": "盲销诈骗会直接造成消费者财产损失，损害物流与平台品牌信任，并引发投诉与监管风险。",
-    "avoidances": [
-      "A0208",
-      "A0077",
-      "A0075"
-    ],
-    "references": [
-      {
-        "title": "群发到付空件骗取快递费案（最高人民检察院，盲发到付诈骗）",
-        "link": "https://www.spp.gov.cn/spp/zdgz/202401/t20240109_639690.shtml"
-      }
-    ],
-    "keywords": [
-      "盲销",
-      "盲销诈骗",
-      "盲发",
-      "盲销到付",
-      "blind sale fraud"
-    ],
-    "updated": "2026-07-04",
-    "riskAssessment": {
-      "likelihood": "high",
-      "businessLoss": "high",
-      "attackCost": "low",
-      "detectionDifficulty": "medium",
-      "defenseMaturity": "low",
-      "observables": [
-        "黑产交流中出现「盲销」相关话术与到付盲发手法",
-        "未下单收件人集中收到同一发件方的到付快递",
-        "盲发到付快递标注代收货款且货品价值与到付金额严重不符",
-        "收件人投诉聚类指向盲销团伙关联的发件方资质",
-        "到付订单行为模型中出现盲发到付的批量特征"
-      ],
-      "assessedAt": "2026-07-03",
-      "priority": "P1"
-    },
-    "relatedRisks": [
-      {
-        "key": "R0259",
-        "relation": "variant",
-        "note": "盲销诈骗是 C2C盲销诈骗的黑话变体。"
       }
     ]
   }

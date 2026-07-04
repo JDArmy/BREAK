@@ -37,7 +37,7 @@
         "link": "https://www.cisa.gov/news-events/cybersecurity-advisories"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "中间人攻击",
       "MITM",
@@ -48,9 +48,9 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0036-002",
+        "key": "R0036",
         "relation": "co-occurrence",
-        "note": "中间人攻击与MFA绕过风险在定义或描述中互相指向。"
+        "note": "中间人攻击与多因素(MFA)绕过在定义或描述中互相指向。"
       },
       {
         "key": "R0181",

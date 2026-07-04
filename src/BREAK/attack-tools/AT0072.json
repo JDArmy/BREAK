@@ -11,7 +11,7 @@
     "directCauseRisks": [
       "R0032",
       "R0142",
-      "R0036-002"
+      "R0036"
     ],
     "indirectSupportRisks": [
       "R0001-003",
@@ -27,7 +27,7 @@
         "link": "https://www.cisa.gov/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "AiTM中间人攻击工具",
       "Adversary-in-the-Middle",
@@ -40,6 +40,11 @@
     ],
     "relatedAttackTools": [
       {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 5 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
         "key": "AT0067",
         "relation": "co-used",
         "note": "共同关联 5 个风险，共享 2 个规避手段。"
@@ -50,24 +55,19 @@
         "note": "共同关联 4 个风险，共享 3 个规避手段。"
       },
       {
+        "key": "AT0063-001",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 3 个规避手段。"
+      },
+      {
         "key": "AT0069",
         "relation": "co-used",
         "note": "共同关联 4 个风险，共享 3 个规避手段。"
       },
       {
-        "key": "AT0064",
-        "relation": "co-used",
-        "note": "共同关联 4 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
-      },
-      {
-        "key": "AT0063-001",
-        "relation": "co-used",
-        "note": "共同关联 3 个风险，共享 3 个规避手段。"
-      },
-      {
         "key": "AT0062",
         "relation": "co-used",
-        "note": "共同关联 2 个风险，共享 1 个规避手段。"
+        "note": "共同关联 3 个风险，共享 1 个规避手段。"
       }
     ]
   }

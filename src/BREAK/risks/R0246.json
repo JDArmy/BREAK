@@ -24,7 +24,7 @@
       "MFA推送滥用",
       "登录批准诱导"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -48,9 +48,9 @@
         "note": "MFA疲劳攻击与多因素疲劳攻击在定义或描述中互相指向。"
       },
       {
-        "key": "R0036-002",
+        "key": "R0036",
         "relation": "co-occurrence",
-        "note": "MFA疲劳攻击与MFA绕过风险在定义或描述中互相指向。"
+        "note": "MFA疲劳攻击与多因素(MFA)绕过在定义或描述中互相指向。"
       },
       {
         "key": "R0247",

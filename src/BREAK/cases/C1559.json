@@ -14,7 +14,7 @@
     "summary": "该论文详细阐述了一种零交易费用的去匿名化攻击方法，通过分析区块链账本数据，成功将RPC用户的IP地址与其链上假名进行关联。研究通过大规模测量和实际攻击验证了攻击的有效性，暴露了区块链交易透明性带来的隐私泄露风险。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0202"
+      "R0174"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://arxiv.org/abs/2508.21440"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0080"
     ],
