@@ -19,7 +19,7 @@
         "link": "https://xrsi.org/publication/the-xrsi-privacy-framework"
       }
     ],
-    "description": "Spatial computing privacy exposure comes from continuous collection of eye tracking, gestures, pose, room structure, and surrounding objects. Even without traditional identifiers, these signals can reveal health, living environment, and behavior patterns.\n\nIf apps, SDKs, or cloud services over-collect spatial data, they create highly sensitive profiles. Platforms should limit granularity, purpose, retention, and provide local processing where possible.",
+    "description": "Spatial computing privacy exposure comes from continuous collection of eye tracking, gestures, pose, room structure, and surrounding objects. Even without traditional identifiers, these signals can reveal health, living environment, and behavior patterns.\n\nIf apps, SDKs, or cloud services over-collect spatial data, they create highly sensitive profiles. Platforms should limit granularity, purpose, retention, and provide local processing where possible.\n\nLimitation: Requires application-layer privileges",
     "influence": "Spatial data leakage can reveal biometric behavior, room layouts, and daily routines, creating highly sensitive privacy exposure.",
     "riskAssessment": {
       "observables": [

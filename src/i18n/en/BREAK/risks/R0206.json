@@ -19,7 +19,7 @@
         "link": "https://csrc.nist.gov/projects/hardware-security"
       }
     ],
-    "description": "IoT hardware supply chain attacks occur across chips, modules, sensors, firmware, manufacturing, and logistics. Attackers may implant backdoors, replace components, or alter default settings so deployed devices remain controllable.\n\nIoT fleets are large, long-lived, and hard to patch in the field. Supplier verification, firmware signing, hardware sampling, and runtime anomaly monitoring are essential.",
+    "description": "IoT hardware supply chain attacks occur across chips, modules, sensors, firmware, manufacturing, and logistics. Attackers may implant backdoors, replace components, or alter default settings so deployed devices remain controllable.\n\nIoT fleets are large, long-lived, and hard to patch in the field. Supplier verification, firmware signing, hardware sampling, and runtime anomaly monitoring are essential.\n\nLimitation: Requires supply chain penetration capability",
     "influence": "Hardware supply chain compromise can place persistent backdoors into large IoT fleets that are expensive to detect, patch, or recall.",
     "riskAssessment": {
       "observables": [

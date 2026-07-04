@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.40.5`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.40.6`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -64,7 +64,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `title` | string | required | 展示标题。 |
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
 | `category` | "AC01" \| "AC02" \| "AC03" \| "AC04" | required | 分类 ID。 |
-| `effectiveness` | "high" \| "medium" \| "low" | optional | 规避手段有效性分级，用于防御覆盖排序。 |
+| `effectiveness` | "high" \| "medium" \| "low" | required | 规避手段有效性分级，用于防御覆盖排序。 |
 | `definition` | string | required | 简短定义。 |
 | `description` | string | required | 详细说明。 |
 | `complexity` | string | optional | 复杂度或实施难度 key。 |

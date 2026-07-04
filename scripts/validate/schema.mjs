@@ -1,34 +1,8 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
-import { build } from "vite";
+import { loadSchemaModule } from "./schema-loader.mjs";
 
-const schemaBundle = await build({
-  configFile: false,
-  logLevel: "silent",
-  ssr: {
-    noExternal: true,
-  },
-  plugins: [],
-  build: {
-    ssr: true,
-    write: false,
-    rollupOptions: {
-      input: "src/validation/breakSchema.ts",
-    },
-  },
-});
-
-const schemaChunk = schemaBundle.output.find((item) => item.type === "chunk");
-if (!schemaChunk) {
-  console.error("❌ 无法加载数据 Schema");
-  process.exit(1);
-}
-
-const schemaModule = await import(
-  `data:text/javascript;base64,${Buffer.from(schemaChunk.code).toString("base64")}`
-);
-
-const { entitySchemas, formatZodIssues } = schemaModule;
+const { entitySchemas, formatZodIssues } = await loadSchemaModule();
 
 const categories = [
   {

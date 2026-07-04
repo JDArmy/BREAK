@@ -37,22 +37,8 @@ const viewLoaders: Record<EntityType, () => Promise<unknown>> = {
   case: () => import("@/views/CasesView.vue"),
 };
 
-/**
- * 关系图 4 视角的路由元信息（pathSegment + baseRouteName + entityRouteName + perspective）。
- * pathExplorer 独立于 relationAnalysisPerspectiveOptions（该数组仅含 3 个分析视角），
- * 故在此独立维护 4 视角的路由元信息，不从 perspectiveOptions 派生。
- */
-const RELATION_PERSPECTIVE_ROUTES: {
-  pathSegment: string;
-  baseRouteName: string;
-  entityRouteName: string;
-  perspective: RelationPerspectiveKey;
-}[] = [
-  { pathSegment: "risk-relation", baseRouteName: "relationRisk", entityRouteName: "relationRiskEntity", perspective: "risk" },
-  { pathSegment: "attack-path", baseRouteName: "relationAttackPath", entityRouteName: "relationAttackPathEntity", perspective: "attackPath" },
-  { pathSegment: "defense-coverage", baseRouteName: "relationDefenseCoverage", entityRouteName: "relationDefenseCoverageEntity", perspective: "defenseCoverage" },
-  { pathSegment: "path-explorer", baseRouteName: "relationPathExplorer", entityRouteName: "relationPathExplorerEntity", perspective: "pathExplorer" },
-];
+// 关系图 4 视角路由元信息从 relationAnalysisPerspectives 集中维护（单一来源），避免多处映射重复
+import { RELATION_PERSPECTIVE_ROUTES } from "@/views/relation/relationAnalysisPerspectives";
 
 type RelationPreloadTarget = "network" | "sankey";
 

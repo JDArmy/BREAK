@@ -147,8 +147,9 @@ const mountRelationView = async () => {
       },
       stubs: {
         RelationSelectorBar: {
-          // RelationSelectorBar 现通过 inject 取 viewModel，stub 简化显示固定文本
-          //（createViewModel 初始 relType=risk, relKey=R0001，测试断言此值）
+          // 注：@vue/test-utils 的 stubs 不接收 provide 上下文，无法用 inject 验证 provide 链。
+          // RelationSelectorBar 的 inject 行为由其专属测试(RelationSelectorBar.test.ts)覆盖，
+          // 此 stub 显示固定文本验证 RelationView 渲染了该子组件位置。
           template: '<div class="selector-stub">risk R0001</div>',
         },
         ElTabs: {
@@ -174,8 +175,7 @@ const mountRelationView = async () => {
         RelationGraphContextMenu: { template: '<div class="context-menu-stub" />' },
         RelationGraphTouchActions: { template: '<div class="touch-actions-stub" />' },
         RelationNodeDetailDrawer: {
-          // 迁移到 inject 后：Drawer 直接绑 vm.nodeDetailDrawerVisible，不再收 props。
-          // stub 显示固定文本（viewModel 初始 selectedNetworkNodeTitle 为 "R0001"）
+          // stub 显示固定文本（inject 链由 RelationNodeDetailDrawer 专属测试覆盖）
           template: '<aside class="detail-drawer-stub">R0001</aside>',
         },
       },

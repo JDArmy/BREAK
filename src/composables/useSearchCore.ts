@@ -290,6 +290,9 @@ let casesRef: Ref<Record<string, unknown>> | null = null;
 
 /** 标记 watcher 是否已注册，防重复注册 */
 let searchWatchersRegistered = false;
+/** watcher 的 stop 句柄，__resetSearchSingleton 调用以避免测试间 watcher 累积泄漏 */
+let stopLocaleWatch: (() => void) | null = null;
+let stopCasesWatch: (() => void) | null = null;
 
 /** 构建单个类型的 Fuse 索引 */
 function buildTypeIndex(type: EntityType, localeMessages: Record<string, unknown>): Fuse<IndexableItem> {
@@ -371,14 +374,15 @@ function initSearchIndex(
 
   // locale 变化时仅重建非 case 索引（case 数据由 useCases 管理，
   // locale 变化时 useCases 会独立触发 cases ref 更新，由下方 watch(cases) 处理）
-  watch(locale, () => {
+  // 模块级 watch 不绑定组件 scope，随 app 生命周期存在；stop 句柄供 __resetSearchSingleton 清理。
+  stopLocaleWatch = watch(locale, () => {
     if (fuseInstances.value) {
       rebuildNonCaseIndexes();
     }
   });
 
   // cases 懒加载完成或 locale 切换合并后仅重建 case 索引
-  watch(cases, () => {
+  stopCasesWatch = watch(cases, () => {
     if (fuseInstances.value) {
       rebuildTypeIndex("case");
     }
@@ -420,10 +424,14 @@ export function search(query: string): Record<EntityType, SearchResult[]> {
 }
 
 /**
- * 测试专用：重置单例状态（清理 fuseInstances + 注入 ref + flag）。
- * 仅在测试环境使用，避免单例状态在测试间污染。
+ * 测试专用：重置单例状态（清理 fuseInstances + 注入 ref + flag + stop watcher）。
+ * 仅在测试环境使用，避免单例状态在测试间污染；stop watcher 防止累积注册导致回调重复触发。
  */
 export function __resetSearchSingleton(): void {
+  stopLocaleWatch?.();
+  stopCasesWatch?.();
+  stopLocaleWatch = null;
+  stopCasesWatch = null;
   fuseInstances.value = null;
   localeRef = null;
   messagesRef = null;

@@ -57,6 +57,12 @@ withDefaults(defineProps<{
   showAttackPathBlock: true,
 });
 
+// attack-path 筛选变化需通知父级（AnalysisPane/Drawer）以协调 UI 响应（如 preserveScrollPane 滚动保持），
+// 故保留 emit 而非直接写 vm.attackPathFilters.value——父级据此决定是否保持对应列滚动位置。
+const emit = defineEmits<{
+  "update:attack-path-filters": [value: AttackPathFilters];
+}>();
+
 const relationsSectionRef = ref<HTMLElement | null>(null);
 const relationsRef = ref<InstanceType<typeof RelationNodeDrawerRelations> | null>(
   null
@@ -70,9 +76,9 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
   });
 };
 
-// update:attack-path-filters：直接写回 vm 的 ref
+// update:attack-path-filters：通知父级（父级决定是否保持滚动位置后写回 vm）
 const updateAttackPathFilters = (value: AttackPathFilters) => {
-  attackPathFilters.value = value;
+  emit("update:attack-path-filters", value);
 };
 </script>
 

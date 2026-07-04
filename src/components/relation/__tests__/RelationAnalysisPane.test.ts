@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { computed, ref } from "vue";
+import { computed, inject, ref } from "vue";
 import RelationAnalysisPane from "@/components/relation/RelationAnalysisPane.vue";
 import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
 import type {
@@ -254,37 +254,25 @@ const optionStub = {
 
 const detailContentStub = {
   props: [
-    "selectedNetworkNode",
-    "selectedNetworkNodeTitle",
     "showRootRelationBlock",
     "showCoverageBlock",
     "showAttackPathBlock",
     "showOpenAsRootAction",
+    "hideRelatedEntityActions",
   ],
   emits: [
-    "copy-csv",
-    "view-detail",
-    "open-detail-new-window",
-    "open-as-root",
     "update:attack-path-filters",
-    "reset-attack-path-filters",
-    "focus-node",
-    "open-node-as-root",
-    "open-node-detail",
   ],
+  setup() {
+    // DetailColumn 现通过 inject 取 vm，stub 同步用 inject 显示 selectedNetworkNode
+    const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+    return { vm };
+  },
   template: `
     <div class="detail-content-stub">
-      <span>{{ selectedNetworkNode.id }} {{ selectedNetworkNodeTitle }}</span>
+      <span>{{ vm.selectedNetworkNode.value?.id }} {{ vm.selectedNetworkNodeTitle.value }}</span>
       <span class="detail-flags">{{ showRootRelationBlock }} {{ showCoverageBlock }} {{ showAttackPathBlock }} {{ showOpenAsRootAction }}</span>
-      <button class="copy-csv" @click="$emit('copy-csv')">copy</button>
-      <button class="view-detail" @click="$emit('view-detail')">view</button>
-      <button class="open-new" @click="$emit('open-detail-new-window')">new</button>
-      <button class="open-root" @click="$emit('open-as-root')">root</button>
       <button class="update-filter" @click="$emit('update:attack-path-filters', { risk: 'R0001' })">filter</button>
-      <button class="reset-filter" @click="$emit('reset-attack-path-filters')">reset</button>
-      <button class="focus-node" @click="$emit('focus-node', selectedNetworkNode.id)">focus</button>
-      <button class="open-node-root" @click="$emit('open-node-as-root', selectedNetworkNode.id)">node root</button>
-      <button class="open-node-detail" @click="$emit('open-node-detail', selectedNetworkNode.id)">node detail</button>
     </div>
   `,
 };
@@ -453,31 +441,15 @@ describe("RelationAnalysisPane", () => {
     expect(wrapper.findAll(".relation-analysis-path-list-item")).toHaveLength(13);
   });
 
-  it("右侧详情内容事件应该继续向外转发", async () => {
+  it("右侧详情 attack-path 筛选变化时保持右列滚动位置并写回 vm", async () => {
     const { wrapper, viewModel } = mountPane();
 
-    await wrapper.find(".copy-csv").trigger("click");
-    await wrapper.find(".view-detail").trigger("click");
-    await wrapper.find(".open-new").trigger("click");
-    await wrapper.find(".open-root").trigger("click");
-    // update-filter → 写 viewModel.attackPathFilters 为 {risk: "R0001"}
+    // update-filter → Content emit update:attack-path-filters → AnalysisPane emitAttackPathFilters($event, 'right')
+    // → 设 preserveScrollPane='right' + 写 vm.attackPathFilters
     await wrapper.find(".update-filter").trigger("click");
     expect(viewModel.attackPathFilters.value).toEqual({ risk: "R0001" });
 
-    // reset-filter → 调 resetAttackPathFilters 清空 filters
-    await wrapper.find(".reset-filter").trigger("click");
-    await wrapper.find(".focus-node").trigger("click");
-    await wrapper.find(".open-node-root").trigger("click");
-    await wrapper.find(".open-node-detail").trigger("click");
-
-    // 各按钮 → 调对应 viewModel 方法（不再 emit 到外层）
-    expect(viewModel.copySelectedNodeCsv).toHaveBeenCalledTimes(1);
-    expect(viewModel.gotoSelectedNodeDetailView).toHaveBeenCalledTimes(1);
-    expect(viewModel.openSelectedNodeDetailInNewWindow).toHaveBeenCalledTimes(1);
-    expect(viewModel.openSelectedNodeAsRoot).toHaveBeenCalledTimes(1);
-    expect(viewModel.resetAttackPathFilters).toHaveBeenCalledTimes(1);
-    expect(viewModel.focusNodeInDrawer).toHaveBeenCalledWith("R0001");
-    expect(viewModel.openNodeAsRootById).toHaveBeenCalledWith("R0001");
-    expect(viewModel.gotoNodeDetailViewById).toHaveBeenCalledWith("R0001");
+    // 其余交互（copy-csv/view-detail/open-as-root 等）由 Content 直接调 vm 方法，
+    // 不再经 AnalysisDetailColumn 透传 emit（DetailColumn 已迁移到 inject，仅透传 update:attack-path-filters）
   });
 });

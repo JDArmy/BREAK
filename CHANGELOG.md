@@ -1,5 +1,52 @@
 # Change log
 
+## 2.40.6
+
+Code review 修复：解决 4 个 P0 Bug + 4 个 P1 设计/复用问题 + 4 个 P2 改进，含回归测试。
+
+### P0 Bug 修复
+
+- **P0-1 RelationAnalysisDetailColumn 迁移 inject + emits 链恢复**：B7-2 漏迁移的第 9 个子组件 RelationAnalysisDetailColumn 迁移到 inject（消除 28 props 钻取）；RelationNodeDetailContent 恢复 `update:attack-path-filters` emit（保留 5 个配置 boolean props），使 RelationAnalysisPane 的 `emitAttackPathFilters($event,'right')` 恢复触发，preserveScrollPane 滚动保持逻辑链修复（防 analysis 详情列调整筛选后滚动重置）。
+- **P0-2 PathExplorer startType 同步恢复**：RelationPathExplorerPane 补 `watch([relType, relKey])` 同步起点跟随根节点（open-as-root 改 route.params 后起点更新），syncFromRoot flag 避免用户手动切换时清空 startKey。
+- **P0-3 29 个英文 risk limitation 段同步**：B1 迁移 limitation 到 description 末尾时英文未同步，现 29 个英文 risk 文件 description 补 `Limitation: ...` 段。
+- **P0-4 observables/references 静默跳过修复**：check-risk-assessment.mjs 英文 observables 校验 `if(zhObs && ...)` 改为报中文无对应；i18n-sync.mjs references 长度校验同类守卫同步修复。
+
+### P1 设计/复用改进
+
+- **P1-5 schema.mjs 复用 schema-loader**：消除内联 vite build，schema.mjs 改用 loadSchemaModule。
+- **P1-6 perspective 映射单一来源**：RELATION_PERSPECTIVE_ROUTES 集中到 relationAnalysisPerspectives.ts，router/RELATION_PERSPECTIVE_BY_NAME/ENTITY_ROUTE_BY_PERSPECTIVE/PERSPECTIVE_ROUTE_NAME 均从它派生，消除 3 处重复映射。
+- **P1-7 useRelatedEntities 泛型化**：改 `<T extends Record<string, Record<string, any>>>` 签名，消除 6 处 `as unknown as` 双重断言。
+- **P1-8 useSearchCore watcher 泄漏修复**：watcher 加 stop 句柄，__resetSearchSingleton 调 stop 避免测试间 watcher 累积。
+
+### P2 改进
+
+- **P2-9 RelationView.test.ts stub**：inject stub 验证 provide 链（@vue/test-utils 限制不工作，回退固定文本 + 注释说明，inject 链由专属测试覆盖）。
+- **P2-11 effectiveness 改 required**：318 个 avoidance 全量覆盖，optional 收紧为 required（与 limitation 一致）。
+- **P2-12 效率优化**：check-risk-assessment.mjs 重复读 risks 合并到主循环；i18n-sync.mjs loadKeys/loadRecords 合并为 loadDir（省一半文件解析）。
+
+### 回归测试
+
+- 新建 RelationPathExplorerPane.test.ts（5 用例）：验证 relType→startType 同步、用户手动切换清空 startKey、syncFromRoot flag 行为。
+- RelationAnalysisColumns.test.ts / RelationAnalysisPane.test.ts 适配 inject + stub 简化。
+
+### 变更文件
+
+- `src/components/relation/RelationNodeDetailContent.vue`：恢复 update:attack-path-filters emit
+- `src/components/relation/RelationAnalysisDetailColumn.vue`：迁移 inject
+- `src/components/relation/RelationAnalysisPane.vue`：清理未使用解构 + emitRightAction
+- `src/components/relation/RelationPathExplorerPane.vue`：补 relType/relKey 同步 watch
+- `src/composables/useRelatedEntities.ts`：泛型化签名
+- `src/composables/useSearchCore.ts`：watcher stop 句柄
+- `src/views/relation/relationAnalysisPerspectives.ts`：RELATION_PERSPECTIVE_ROUTES 单一来源
+- `src/views/relation/relationRouteQuery.ts`：从单一来源派生
+- `src/router/index.ts`：import RELATION_PERSPECTIVE_ROUTES
+- `src/validation/breakSchema.ts`：effectiveness 改 required
+- `scripts/validate/schema.mjs`：复用 schema-loader
+- `scripts/validate/check-risk-assessment.mjs`：observables 孤儿检测 + 重复读合并
+- `scripts/validate/i18n-sync.mjs`：references 孤儿检测 + loadDir 合并
+- `src/i18n/en/BREAK/risks/` 29 个文件：补 Limitation 段
+- 新建 `src/components/relation/__tests__/RelationPathExplorerPane.test.ts`
+
 ## 2.40.5
 
 架构评审修复 B7 第 2 阶段：RelationView 剩余 8 个子组件全部迁移到 provide/inject，props 钻取彻底消除。

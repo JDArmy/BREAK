@@ -1,13 +1,13 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it, vi } from "vitest";
+import { inject, ref } from "vue";
 import RelationAnalysisCoverageColumn from "@/components/relation/RelationAnalysisCoverageColumn.vue";
 import RelationAnalysisDetailColumn from "@/components/relation/RelationAnalysisDetailColumn.vue";
 import RelationAnalysisPathColumn from "@/components/relation/RelationAnalysisPathColumn.vue";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 import {
   RelationType,
   type AttackPathDetail,
-  type AttackPathFilterOption,
-  type AttackPathFilterType,
   type RiskAvoidanceCoverageItem,
 } from "@/views/relation/relationTypes";
 import type { NodeSpecialInsightSummary } from "@/components/relation/relationNodeDrawerInsightTypes";
@@ -82,46 +82,28 @@ const pathDetail = (id: string): AttackPathDetail => ({
   ],
 });
 
-const filterOptions: Record<AttackPathFilterType, AttackPathFilterOption[]> = {
-  [RelationType.threatActor]: [],
-  [RelationType.attackTool]: [],
-  [RelationType.risk]: [],
-  [RelationType.avoidance]: [],
-};
 
 const detailContentStub = {
   props: [
-    "selectedNetworkNode",
-    "selectedNetworkNodeTitle",
     "showRootRelationBlock",
     "showCoverageBlock",
     "showAttackPathBlock",
     "showOpenAsRootAction",
+    "hideRelatedEntityActions",
   ],
   emits: [
-    "copy-csv",
-    "view-detail",
-    "open-detail-new-window",
-    "open-as-root",
     "update:attack-path-filters",
-    "reset-attack-path-filters",
-    "focus-node",
-    "open-node-as-root",
-    "open-node-detail",
   ],
+  setup() {
+    // DetailColumn 现通过 inject 取 vm，stub 同步用 inject 显示 selectedNetworkNode
+    const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+    return { vm };
+  },
   template: `
     <div class="detail-content-stub">
-      <span>{{ selectedNetworkNode.id }} {{ selectedNetworkNodeTitle }}</span>
+      <span>{{ vm.selectedNetworkNode.value?.id }} {{ vm.selectedNetworkNodeTitle.value }}</span>
       <span class="detail-flags">{{ showRootRelationBlock }} {{ showCoverageBlock }} {{ showAttackPathBlock }} {{ showOpenAsRootAction }}</span>
-      <button class="copy-csv" @click="$emit('copy-csv')">copy</button>
-      <button class="view-detail" @click="$emit('view-detail')">view</button>
-      <button class="open-new" @click="$emit('open-detail-new-window')">new</button>
-      <button class="open-root" @click="$emit('open-as-root')">root</button>
       <button class="update-filter" @click="$emit('update:attack-path-filters', { risk: 'R0001' })">filter</button>
-      <button class="reset-filter" @click="$emit('reset-attack-path-filters')">reset</button>
-      <button class="focus-node" @click="$emit('focus-node', selectedNetworkNode.id)">focus</button>
-      <button class="open-node-root" @click="$emit('open-node-as-root', selectedNetworkNode.id)">node root</button>
-      <button class="open-node-detail" @click="$emit('open-node-detail', selectedNetworkNode.id)">node detail</button>
     </div>
   `,
 };
@@ -223,37 +205,21 @@ describe("RelationAnalysisPathColumn", () => {
 });
 
 describe("RelationAnalysisDetailColumn", () => {
-  const mountDetailColumn = (
-    props: Partial<InstanceType<typeof RelationAnalysisDetailColumn>["$props"]> = {},
-  ) =>
+  // DetailColumn 现通过 inject 取 vm，mount 时 provide mock vm
+  const createMockVm = (selectedNetworkNode: { id: string; type: string } | null) => ({
+    selectedNetworkNode: ref(selectedNetworkNode),
+    selectedNetworkNodeTitle: ref("流程自动化"),
+  });
+
+  const mountDetailColumn = (selectedNetworkNode: { id: string; type: string } | null = {
+    id: "R0001",
+    type: RelationType.risk as unknown as string,
+  }) =>
     mount(RelationAnalysisDetailColumn, {
-      props: {
-        attackPathFilterOptions: filterOptions,
-        attackPathFilters: {},
-        drawerCopyFeedbackMessage: "",
-        drawerCopyFeedbackType: "success",
-        getNodeTypeTitle: (type: string) => type,
-        hasActiveAttackPathFilters: false,
-        isCurrentNodeRoot: true,
-        isPathNodeCurrentSelection: () => false,
-        isRelationOnSelectedPath: () => false,
-        relKey: "R0001",
-        rootNodeRelations: [],
-        selectedNetworkNode: { id: "R0001", type: RelationType.risk },
-        selectedNetworkNodeTitle: "流程自动化",
-        selectedNetworkRelationCounts: { incoming: 1, outgoing: 2 },
-        selectedNetworkRelations: [],
-        selectedNodeAnalysisSummary: null,
-        selectedNodeAttackPathDescription: "",
-        selectedNodeAttackPathExplanations: [],
-        selectedNodeAttackPathSummary: [],
-        selectedNodeBusinessSceneImpactSummary: null,
-        selectedNodeCoverageSummary: null,
-        selectedNodeRelatedEntitySummary: null,
-        selectedNodeRootPath: null,
-        ...props,
-      },
       global: {
+        provide: {
+          [RELATION_VIEW_MODEL_KEY as symbol]: createMockVm(selectedNetworkNode),
+        },
         stubs: {
           RelationNodeDetailContent: detailContentStub,
         },
@@ -261,8 +227,7 @@ describe("RelationAnalysisDetailColumn", () => {
     });
 
   it("没有选中节点时不渲染右侧详情", () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const wrapper = mountDetailColumn({ selectedNetworkNode: null } as any);
+    const wrapper = mountDetailColumn(null);
 
     expect(wrapper.find(".detail-content-stub").exists()).toBe(false);
   });
@@ -272,32 +237,18 @@ describe("RelationAnalysisDetailColumn", () => {
 
     expect(wrapper.text()).toContain("relationView.nodeDetail");
     expect(wrapper.text()).toContain("R0001 流程自动化");
+    // 4 个 showXxx 配置均为 false（DetailColumn 对 Content 的差异化配置）
     expect(wrapper.find(".detail-flags").text()).toBe("false false false false");
   });
 
-  it("继续透传右侧详情交互事件", async () => {
+  it("继续透传右侧详情 attack-path 筛选事件", async () => {
     const wrapper = mountDetailColumn();
 
-    await wrapper.find(".copy-csv").trigger("click");
-    await wrapper.find(".view-detail").trigger("click");
-    await wrapper.find(".open-new").trigger("click");
-    await wrapper.find(".open-root").trigger("click");
     await wrapper.find(".update-filter").trigger("click");
-    await wrapper.find(".reset-filter").trigger("click");
-    await wrapper.find(".focus-node").trigger("click");
-    await wrapper.find(".open-node-root").trigger("click");
-    await wrapper.find(".open-node-detail").trigger("click");
 
-    expect(wrapper.emitted("copy-csv")).toHaveLength(1);
-    expect(wrapper.emitted("view-detail")).toHaveLength(1);
-    expect(wrapper.emitted("open-detail-new-window")).toHaveLength(1);
-    expect(wrapper.emitted("open-as-root")).toHaveLength(1);
+    // DetailColumn 现仅透传 update:attack-path-filters（其余事件 Content 直接调 vm）
     expect(wrapper.emitted("update:attack-path-filters")?.[0]).toEqual([
       { risk: "R0001" },
     ]);
-    expect(wrapper.emitted("reset-attack-path-filters")).toHaveLength(1);
-    expect(wrapper.emitted("focus-node")?.[0]).toEqual(["R0001"]);
-    expect(wrapper.emitted("open-node-as-root")?.[0]).toEqual(["R0001"]);
-    expect(wrapper.emitted("open-node-detail")?.[0]).toEqual(["R0001"]);
   });
 });

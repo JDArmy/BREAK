@@ -89,7 +89,7 @@ export const avoidanceSchema = z.object({
   title: nonEmptyString,
   keywords: keywordArray,
   category: avoidanceCategorySchema,
-  effectiveness: avoidanceEffectivenessSchema.optional(),
+  effectiveness: avoidanceEffectivenessSchema,
   definition: nonEmptyString,
   description: nonEmptyString,
   complexity: nonEmptyString.optional(),

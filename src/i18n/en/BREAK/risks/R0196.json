@@ -19,7 +19,7 @@
         "link": "https://ethereum.org/en/roadmap/security/"
       }
     ],
-    "description": "Quantum computing threat means that sufficiently mature quantum capability could weaken the elliptic curve cryptography assumptions used by blockchains, wallets, and identity systems. Long-lived public keys, signature algorithms, and key management processes become migration pressure points.\n\nLarge-scale practical quantum computing remains uncertain, but high-value assets and long-lived credentials should plan for post-quantum migration, address rotation, signature upgrades, and ecosystem compatibility testing.",
+    "description": "Quantum computing threat means that sufficiently mature quantum capability could weaken the elliptic curve cryptography assumptions used by blockchains, wallets, and identity systems. Long-lived public keys, signature algorithms, and key management processes become migration pressure points.\n\nLarge-scale practical quantum computing remains uncertain, but high-value assets and long-lived credentials should plan for post-quantum migration, address rotation, signature upgrades, and ecosystem compatibility testing.\n\nLimitation: Quantum computing technology is not yet mature",
     "influence": "Quantum advances could undermine long-lived blockchain keys and signatures, forcing costly ecosystem migration and threatening high-value assets.",
     "riskAssessment": {
       "observables": [

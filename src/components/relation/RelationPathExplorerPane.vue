@@ -11,6 +11,8 @@ import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 const vm = inject(RELATION_VIEW_MODEL_KEY)!;
 // ref/computed 解构安全，模板内自动 unwrap；方法直接解构
 const {
+  relType,
+  relKey,
   pathExplorerHasData,
   pathExplorerChartHeight,
   sankeyChartMinWidth: pathExplorerChartMinWidth,
@@ -83,8 +85,28 @@ const buildOptions = (type: RelationType) => {
 const startEntityOptions = computed(() => buildOptions(pathExplorerStartType.value));
 const endEntityOptions = computed(() => buildOptions(pathExplorerEndType.value));
 
-// 切换起点类型时清空起点实体
+// relType/relKey 变化时（如 open-as-root 改 route.params → relType/relKey 更新）同步起点，
+// 使路径探索起点跟随当前根节点（恢复迁移 inject 前的 watch(() => props.relType) 行为，
+// 并补全 startKey 同步——原版仅同步 startType 清空 startKey，此处同步两者使 open-as-root 后起点完整跟随根节点）。
+// 切入 pathExplorer 视角的首次同步由 relationViewAssembly 的 route.name watch 处理。
+// syncFromRoot flag 标记 startType 变化由根节点同步驱动，此时不应清空 startKey（下方 watch(startType) 检查）。
+let syncFromRoot = false;
+watch([relType, relKey], ([type, key]) => {
+  if (type && pathExplorerStartType.value !== type) {
+    syncFromRoot = true;
+    pathExplorerStartType.value = type;
+  }
+  if (key && pathExplorerStartKey.value !== key) {
+    pathExplorerStartKey.value = key;
+  }
+});
+
+// 切换起点类型时清空起点实体（用户手动切换时；根节点同步驱动时不清空）
 watch(pathExplorerStartType, () => {
+  if (syncFromRoot) {
+    syncFromRoot = false;
+    return;
+  }
   pathExplorerStartKey.value = "";
 });
 

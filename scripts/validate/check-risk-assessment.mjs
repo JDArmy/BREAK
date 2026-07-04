@@ -84,6 +84,9 @@ const files = readdirSync(zhDir)
   .filter((f) => /^R\d{4}\.json$/.test(f))
   .sort();
 
+// 中文源 observables map：在主循环中顺手填充，供英文长度对比（避免第二次遍历同批文件）
+const zhObservablesById = new Map();
+
 for (const file of files) {
   const data = readJson(join(zhDir, file));
   for (const [id, entity] of Object.entries(data)) {
@@ -91,6 +94,11 @@ for (const file of files) {
     const a = entity.riskAssessment;
     if (!a) continue; // 未回填，跳过
     assessed++;
+
+    // 顺手记录中文 observables，供英文长度对比
+    if (Array.isArray(a.observables)) {
+      zhObservablesById.set(id, a.observables);
+    }
 
     checkDimensions(id, a);
     checkObservables(id, a);
@@ -133,17 +141,6 @@ for (const file of files) {
 // 2. 校验英文 i18n 文件 riskAssessment 只含可翻译字段
 //    并校验英文 observables 与中文源长度一致（mergeWithStructure 按索引合并，长度不一致会错配）
 if (existsSync(enDir)) {
-  // 加载中文源 riskAssessment.observables，供英文长度对比
-  const zhObservablesById = new Map();
-  for (const file of files) {
-    const data = readJson(join(zhDir, file));
-    for (const [id, entity] of Object.entries(data)) {
-      if (entity.riskAssessment?.observables) {
-        zhObservablesById.set(id, entity.riskAssessment.observables);
-      }
-    }
-  }
-
   const enFiles = readdirSync(enDir).filter((f) => /^R\d{4}\.json$/.test(f)).sort();
   for (const file of enFiles) {
     const data = readJson(join(enDir, file));
@@ -159,7 +156,12 @@ if (existsSync(enDir)) {
       // 英文 observables 与中文源长度一致（mergeWithStructure 按索引合并，长度不一致会错配）
       if (Array.isArray(a.observables)) {
         const zhObs = zhObservablesById.get(id);
-        if (zhObs && a.observables.length !== zhObs.length) {
+        if (!zhObs) {
+          // 中文源无 riskAssessment.observables 但英文有：英文 observables 成孤儿（mergeWithStructure 无中文基底可合并）
+          issues.push(
+            `${id} (en): riskAssessment.observables 在中文源无对应（中文无 riskAssessment.observables，英文为孤儿数据）`
+          );
+        } else if (a.observables.length !== zhObs.length) {
           issues.push(
             `${id} (en): riskAssessment.observables 长度不一致: 中文 ${zhObs.length} 条, 英文 ${a.observables.length} 条`
           );

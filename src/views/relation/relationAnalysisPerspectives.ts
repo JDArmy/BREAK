@@ -35,17 +35,33 @@ export const getDefaultViewByPerspective = (
 // beforeEach 预加载 ECharts 用
 export const getRelationDefaultViewByPerspective = getDefaultViewByPerspective;
 
-/** 路由 name → 关系图视角 */
-export const RELATION_PERSPECTIVE_BY_NAME: Record<string, RelationPerspectiveKey> = {
-  relationRisk: "risk",
-  relationRiskEntity: "risk",
-  relationAttackPath: "attackPath",
-  relationAttackPathEntity: "attackPath",
-  relationDefenseCoverage: "defenseCoverage",
-  relationDefenseCoverageEntity: "defenseCoverage",
-  relationPathExplorer: "pathExplorer",
-  relationPathExplorerEntity: "pathExplorer",
-};
+/**
+ * 关系图 4 视角的路由元信息（单一来源）：pathSegment + baseRouteName + entityRouteName + perspective。
+ * router 程序化生成路由、RELATION_PERSPECTIVE_BY_NAME、relationRouteQuery 的
+ * ENTITY_ROUTE_BY_PERSPECTIVE/PERSPECTIVE_ROUTE_NAME 均从此派生，避免多处映射重复维护。
+ * pathExplorer 独立于 relationAnalysisPerspectiveOptions（该数组仅含 3 个分析视角），故路由元信息独立维护。
+ */
+export interface RelationPerspectiveRouteMeta {
+  pathSegment: string;
+  baseRouteName: string;
+  entityRouteName: string;
+  perspective: RelationPerspectiveKey;
+}
+
+export const RELATION_PERSPECTIVE_ROUTES: readonly RelationPerspectiveRouteMeta[] = [
+  { pathSegment: "risk-relation", baseRouteName: "relationRisk", entityRouteName: "relationRiskEntity", perspective: "risk" },
+  { pathSegment: "attack-path", baseRouteName: "relationAttackPath", entityRouteName: "relationAttackPathEntity", perspective: "attackPath" },
+  { pathSegment: "defense-coverage", baseRouteName: "relationDefenseCoverage", entityRouteName: "relationDefenseCoverageEntity", perspective: "defenseCoverage" },
+  { pathSegment: "path-explorer", baseRouteName: "relationPathExplorer", entityRouteName: "relationPathExplorerEntity", perspective: "pathExplorer" },
+] as const;
+
+/** 路由 name → 关系图视角（从 RELATION_PERSPECTIVE_ROUTES 单一来源派生，避免重复维护） */
+export const RELATION_PERSPECTIVE_BY_NAME: Record<string, RelationPerspectiveKey> = Object.fromEntries(
+  RELATION_PERSPECTIVE_ROUTES.flatMap((r) => [
+    [r.baseRouteName, r.perspective],
+    [r.entityRouteName, r.perspective],
+  ]),
+) as Record<string, RelationPerspectiveKey>;
 
 /** 从 route.name 推导关系图视角；非关系图路由返回 null */
 export const getRelationPerspectiveFromRoute = (

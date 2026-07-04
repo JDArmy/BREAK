@@ -21,28 +21,19 @@ const SCHEMA_KEY_BY_CATEGORY = {
   Cases: "cases",
 };
 
-function loadRecords(dir) {
+/** 一次遍历目录同时产出 key 集合与 records map（避免 loadKeys/loadRecords 双重解析同一批文件） */
+function loadDir(dir) {
+  const keys = new Set();
   const records = new Map();
   const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
   for (const file of files) {
     const content = JSON.parse(readFileSync(join(dir, file), "utf-8"));
     for (const [key, entity] of Object.entries(content)) {
+      keys.add(key);
       records.set(key, { file, entity });
     }
   }
-  return records;
-}
-
-function loadKeys(dir) {
-  const result = new Set();
-  const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
-  for (const file of files) {
-    const content = JSON.parse(readFileSync(join(dir, file), "utf-8"));
-    for (const key of Object.keys(content)) {
-      result.add(key);
-    }
-  }
-  return result;
+  return { keys, records };
 }
 
 const categories = [
@@ -115,6 +106,11 @@ function checkReferenceTranslations(issues, category, key, entity, zhEntity) {
         `${category.name}.${key}.references 长度不一致: 中文 ${zhEntity.references.length} 条, 英文 ${entity.references.length} 条`
       );
     }
+  } else if (zhEntity && !Array.isArray(zhEntity.references)) {
+    // 中文实体无 references 但英文有：英文 references 成孤儿（mergeWithStructure 无中文基底可合并）
+    issues.push(
+      `${category.name}.${key}.references 在中文源无对应（中文无 references 数组，英文为孤儿数据）`
+    );
   }
   entity.references.forEach((reference, index) => {
     if (!reference || typeof reference !== "object" || Array.isArray(reference)) {
@@ -210,10 +206,12 @@ if (metaIssues.length > 0) {
 }
 
 for (const cat of categories) {
-  const zhKeys = loadKeys(cat.zhDir);
-  const enKeys = loadKeys(cat.enDir);
-  const enRecords = loadRecords(cat.enDir);
-  const zhRecords = loadRecords(cat.zhDir);
+  const zhLoaded = loadDir(cat.zhDir);
+  const enLoaded = loadDir(cat.enDir);
+  const zhKeys = zhLoaded.keys;
+  const enKeys = enLoaded.keys;
+  const enRecords = enLoaded.records;
+  const zhRecords = zhLoaded.records;
 
   const missingInEn = [...zhKeys].filter((k) => !enKeys.has(k));
   const extraInEn = [...enKeys].filter((k) => !zhKeys.has(k));

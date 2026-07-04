@@ -17,6 +17,8 @@ import "@/components/relation/relationNodeDrawerInsights.css";
 // inject viewModel（RelationView provide），取代 props 钻取
 const vm = inject(RELATION_VIEW_MODEL_KEY)!;
 // ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+// 仅保留 RelationAnalysisPane 自身模板/script 使用的字段；
+// RelationAnalysisDetailColumn 已迁移到 inject，相关 vm 字段不再透传
 const {
   attackPathDetails,
   attackPathFilterOptions,
@@ -27,34 +29,13 @@ const {
   selectedAttackPathDetail,
   selectedNetworkNode,
   selectedNodeAnalysisSummary,
-  selectedNodeRelatedEntitySummary,
   selectedNodeAttackPathSummary,
-  selectedNodeAttackPathDescription,
-  selectedNodeAttackPathExplanations,
   selectedNodeBusinessSceneImpactSummary,
   selectedNodeCoverageSummary,
   selectedNodeSpecialInsightSummary,
-  selectedNetworkNodeTitle,
-  selectedNetworkRelationCounts,
-  selectedNetworkRelations,
   rootNodeRelations,
-  selectedNodeRootPath,
-  relKey,
-  getNodeTypeTitle,
-  isPathNodeCurrentSelection,
-  isRelationOnSelectedPath,
-  isCurrentNodeRoot,
-  drawerCopyFeedbackMessage,
-  drawerCopyFeedbackType,
-  copySelectedNodeCsv,
-  gotoSelectedNodeDetailView,
-  openSelectedNodeDetailInNewWindow,
-  openSelectedNodeAsRoot,
   resetAttackPathFilters,
   selectAttackPath,
-  focusNodeInDrawer,
-  openNodeAsRootById,
-  gotoNodeDetailViewById,
 } = vm;
 // RelationTypeMapping 是普通对象（非 ref），直接取
 const relationTypeMapping = vm.RelationTypeMapping;
@@ -125,14 +106,6 @@ const applyLeftAvoidanceFilter = (avoidanceKey: string) => {
 const selectMiddleAttackPath = (pathId: string) => {
   preserveScrollPane.value = "middle";
   selectAttackPath(pathId);
-};
-
-const emitRightAction = <T extends unknown[]>(
-  action: (...args: T) => void,
-  ...args: T
-) => {
-  preserveScrollPane.value = "right";
-  action(...args);
 };
 
 const hasAnyAnalysis = computed(
@@ -332,48 +305,7 @@ watch(
             class="relation-analysis-column relation-analysis-main"
           >
             <RelationAnalysisDetailColumn
-              :attack-path-filter-options="attackPathFilterOptions"
-              :attack-path-filters="attackPathFilters"
-              :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
-              :drawer-copy-feedback-type="drawerCopyFeedbackType"
-              :get-node-type-title="getNodeTypeTitle"
-              :has-active-attack-path-filters="hasActiveAttackPathFilters"
-              :is-current-node-root="isCurrentNodeRoot"
-              :is-path-node-current-selection="isPathNodeCurrentSelection"
-              :is-relation-on-selected-path="isRelationOnSelectedPath"
-              :rel-key="relKey"
-              :root-node-relations="rootNodeRelations"
-              :selected-network-node="selectedNetworkNode"
-              :selected-network-node-title="selectedNetworkNodeTitle"
-              :selected-network-relation-counts="selectedNetworkRelationCounts"
-              :selected-network-relations="selectedNetworkRelations"
-              :selected-node-analysis-summary="selectedNodeAnalysisSummary"
-              :selected-node-attack-path-description="
-                selectedNodeAttackPathDescription
-              "
-              :selected-node-attack-path-explanations="
-                selectedNodeAttackPathExplanations
-              "
-              :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
-              :selected-node-business-scene-impact-summary="
-                selectedNodeBusinessSceneImpactSummary
-              "
-              :selected-node-coverage-summary="selectedNodeCoverageSummary"
-              :selected-node-related-entity-summary="
-                selectedNodeRelatedEntitySummary
-              "
-              :selected-node-root-path="selectedNodeRootPath"
-              @copy-csv="emitRightAction(copySelectedNodeCsv)"
-              @view-detail="emitRightAction(gotoSelectedNodeDetailView)"
-              @open-detail-new-window="emitRightAction(openSelectedNodeDetailInNewWindow)"
-              @open-as-root="emitRightAction(openSelectedNodeAsRoot)"
               @update:attack-path-filters="emitAttackPathFilters($event, 'right')"
-              @reset-attack-path-filters="
-                emitRightAction(resetAttackPathFilters)
-              "
-              @focus-node="emitRightAction(focusNodeInDrawer, $event)"
-              @open-node-as-root="emitRightAction(openNodeAsRootById, $event)"
-              @open-node-detail="emitRightAction(gotoNodeDetailViewById, $event)"
             />
           </div>
           <el-backtop

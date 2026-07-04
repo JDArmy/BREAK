@@ -19,7 +19,7 @@
         "link": "https://polygon.technology/blog/multisig-best-practices-to-maximize-transaction-security"
       }
     ],
-    "description": "Multi-signature wallet social engineering targets DAO, foundation, and institutional treasury approval flows. Attackers forge urgent proposals, impersonate team members, create pressure, or send misleading transaction summaries to make multiple signers approve malicious transactions.\n\nMultisig reduces single-key failure but does not prevent coordinated mistaken approvals. Governance needs transaction simulation, timelocks, permission tiers, and independent review.",
+    "description": "Multi-signature wallet social engineering targets DAO, foundation, and institutional treasury approval flows. Attackers forge urgent proposals, impersonate team members, create pressure, or send misleading transaction summaries to make multiple signers approve malicious transactions.\n\nMultisig reduces single-key failure but does not prevent coordinated mistaken approvals. Governance needs transaction simulation, timelocks, permission tiers, and independent review.\n\nLimitation: Requires knowledge of the target's organizational structure and decision-making process",
     "influence": "Socially engineered multisig approvals can drain DAO or institutional treasuries despite formal multi-party controls.",
     "riskAssessment": {
       "observables": [

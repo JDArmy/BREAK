@@ -12,8 +12,11 @@ import { computed, toValue, type ComputedRef, type MaybeRefOrGetter } from "vue"
  * @param targetKey 被包含的目标 key（响应式，传 ref / computed / getter 均可）
  * @returns ComputedRef<string[]>，随 targetKey 变化重算
  */
-export function useRelatedEntities(
-  source: Record<string, Record<string, unknown>>,
+// 泛型约束用 any（而非 unknown）以让 BREAK.terms 等具体对象类型兼容传入；
+// unknown 约束会因对象类型无索引签名而拒绝，迫使调用方写 as unknown as 双重断言。
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useRelatedEntities<T extends Record<string, Record<string, any>>>(
+  source: T,
   fields: string | string[],
   targetKey: MaybeRefOrGetter<string>,
 ): ComputedRef<string[]> {
@@ -22,7 +25,7 @@ export function useRelatedEntities(
     const key = toValue(targetKey);
     if (!key) return [];
     return Object.keys(source).filter((entityKey) => {
-      const entity = source[entityKey];
+      const entity = source[entityKey] as Record<string, unknown>;
       return fieldList.some(
         (field) => Array.isArray(entity[field]) && (entity[field] as string[]).includes(key),
       );

@@ -1,4 +1,5 @@
 import type { LocationQueryRaw } from "vue-router";
+import { RELATION_PERSPECTIVE_ROUTES } from "@/views/relation/relationAnalysisPerspectives";
 import type { RelationPerspectiveKey } from "@/views/relation/relationAnalysisPerspectives";
 
 /**
@@ -31,21 +32,15 @@ export const buildPerspectiveQuery = (
   return next;
 };
 
-/** 当前视角的带实体子路由 name（切换根节点 / 切视角保留实体时使用） */
-export const ENTITY_ROUTE_BY_PERSPECTIVE: Record<RelationPerspectiveKey, string> = {
-  risk: "relationRiskEntity",
-  attackPath: "relationAttackPathEntity",
-  defenseCoverage: "relationDefenseCoverageEntity",
-  pathExplorer: "relationPathExplorerEntity",
-};
+/** 当前视角的带实体子路由 name（从 RELATION_PERSPECTIVE_ROUTES 派生，避免重复维护） */
+export const ENTITY_ROUTE_BY_PERSPECTIVE: Record<RelationPerspectiveKey, string> = Object.fromEntries(
+  RELATION_PERSPECTIVE_ROUTES.map((r) => [r.perspective, r.entityRouteName]),
+) as Record<RelationPerspectiveKey, string>;
 
-/** 视角首页（无实体）路由 name */
-export const PERSPECTIVE_ROUTE_NAME: Record<RelationPerspectiveKey, string> = {
-  risk: "relationRisk",
-  attackPath: "relationAttackPath",
-  defenseCoverage: "relationDefenseCoverage",
-  pathExplorer: "relationPathExplorer",
-};
+/** 视角首页（无实体）路由 name（从 RELATION_PERSPECTIVE_ROUTES 派生） */
+export const PERSPECTIVE_ROUTE_NAME: Record<RelationPerspectiveKey, string> = Object.fromEntries(
+  RELATION_PERSPECTIVE_ROUTES.map((r) => [r.perspective, r.baseRouteName]),
+) as Record<RelationPerspectiveKey, string>;
 
 /** RelationViewMode → 视角（el-tabs 切换用） */
 export const VIEW_TO_PERSPECTIVE: Record<

@@ -20,7 +20,7 @@
         "link": "https://github.com/crytic/building-secure-contracts"
       }
     ],
-    "description": "Token minting and deflation bugs arise from smart contract permission errors, arithmetic flaws, hook logic, or upgrade mistakes. Attackers may mint tokens without authorization, destroy supply abnormally, or corrupt balance accounting.\n\nThese bugs directly undermine scarcity and market expectations, leading to price collapse, liquidity loss, and governance distortion. Token economics, permissions, and edge states need dedicated review before launch.",
+    "description": "Token minting and deflation bugs arise from smart contract permission errors, arithmetic flaws, hook logic, or upgrade mistakes. Attackers may mint tokens without authorization, destroy supply abnormally, or corrupt balance accounting.\n\nThese bugs directly undermine scarcity and market expectations, leading to price collapse, liquidity loss, and governance distortion. Token economics, permissions, and edge states need dedicated review before launch.\n\nLimitation: Requires deep understanding of contract economic models",
     "influence": "Unauthorized minting or supply manipulation can collapse token value, drain liquidity, and invalidate governance or incentive assumptions.",
     "riskAssessment": {
       "observables": [

@@ -18,7 +18,7 @@
         "link": "https://ethereum.org/en/nft/"
       }
     ],
-    "description": "Virtual asset cross-platform transfer risk appears when assets move across metaverse platforms, games, wallets, or marketplaces. Protocol flaws, synchronization failures, or authorization gaps can cause loss, double spend, or theft.\n\nInteroperability increases liquidity but connects the trust boundaries of multiple platforms. Designs need clear custody rules, finality, rollback handling, and dispute processes.",
+    "description": "Virtual asset cross-platform transfer risk appears when assets move across metaverse platforms, games, wallets, or marketplaces. Protocol flaws, synchronization failures, or authorization gaps can cause loss, double spend, or theft.\n\nInteroperability increases liquidity but connects the trust boundaries of multiple platforms. Designs need clear custody rules, finality, rollback handling, and dispute processes.\n\nLimitation: Requires cross-platform protocol vulnerabilities",
     "influence": "Cross-platform asset transfer flaws can cause virtual asset theft, loss, or double spend across connected metaverse platforms.",
     "riskAssessment": {
       "observables": [
