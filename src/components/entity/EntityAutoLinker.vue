@@ -89,28 +89,42 @@ let observer: MutationObserver | null = null;
 let scanTimer: ReturnType<typeof setTimeout> | null = null;
 
 let pendingMutations: MutationRecord[] = [];
+// 批次大小阈值：高频 DOM 变动页面（如关系图渲染）mutation 会快速积压，
+// 超过阈值时立即 flush，避免 100ms debounce 窗口内积压过多导致处理卡顿。
+const MUTATION_BATCH_LIMIT = 500;
+
+function processBatch() {
+  if (scanTimer) {
+    clearTimeout(scanTimer);
+    scanTimer = null;
+  }
+  const batch = pendingMutations;
+  pendingMutations = [];
+  for (const mutation of batch) {
+    if (mutation.type === "childList") {
+      for (const node of mutation.addedNodes) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          processTextNode(node as Text, processed);
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          scanSubtree(node, processed);
+        }
+      }
+    } else if (mutation.type === "characterData" && mutation.target.nodeType === Node.TEXT_NODE) {
+      processed.delete(mutation.target as Text);
+      processTextNode(mutation.target as Text, processed);
+    }
+  }
+}
 
 function handleMutations(mutations: MutationRecord[]) {
   pendingMutations.push(...mutations);
+  // 超过批次阈值立即 flush，否则 100ms debounce
+  if (pendingMutations.length >= MUTATION_BATCH_LIMIT) {
+    processBatch();
+    return;
+  }
   if (scanTimer) clearTimeout(scanTimer);
-  scanTimer = setTimeout(() => {
-    const batch = pendingMutations;
-    pendingMutations = [];
-    for (const mutation of batch) {
-      if (mutation.type === "childList") {
-        for (const node of mutation.addedNodes) {
-          if (node.nodeType === Node.TEXT_NODE) {
-            processTextNode(node as Text, processed);
-          } else if (node.nodeType === Node.ELEMENT_NODE) {
-            scanSubtree(node, processed);
-          }
-        }
-      } else if (mutation.type === "characterData" && mutation.target.nodeType === Node.TEXT_NODE) {
-        processed.delete(mutation.target as Text);
-        processTextNode(mutation.target as Text, processed);
-      }
-    }
-  }, 100);
+  scanTimer = setTimeout(processBatch, 100);
 }
 
 // ─── 事件委托（路径 A + B 统一入口） ──────────────────

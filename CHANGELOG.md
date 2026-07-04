@@ -1,5 +1,15 @@
 # Change log
 
+## 2.40.4
+
+架构评审修复 #16：EntityAutoLinker mutation 批次大小阈值，防高频 DOM 变动积压。
+
+- **mutation 批次阈值**（#16）：`EntityAutoLinker.vue` 的 `pendingMutations` 无上限，高频 DOM 变动页面（如关系图渲染）在 100ms debounce 窗口内可能积压大量 mutation 导致处理卡顿。加 `MUTATION_BATCH_LIMIT = 500` 阈值，超过立即 flush（不等 debounce）。抽 `processBatch` 函数复用 flush 逻辑。
+
+### 变更文件
+
+- `src/components/entity/EntityAutoLinker.vue`：processBatch 抽取 + 批次阈值
+
 ## 2.40.3
 
 架构评审修复 B7（第 1 阶段）：RelationView 引入 provide/inject 消除 props 钻取，建立迁移基础设施与试点。
