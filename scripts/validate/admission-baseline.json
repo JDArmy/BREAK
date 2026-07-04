@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T03:03:39.412Z",
+  "generatedAt": "2026-07-04T03:21:45.666Z",
   "version": "2.39.0",
   "description": "新条目准入 baseline 快照：exemptIds 豁免初始下限（防误伤历史），placeholderExempt 豁免占位禁令（历史技术债），fieldSnapshots 用于退化保护。新增条目不在 exemptIds 内，严格执行所有下限。",
   "exemptIds": [
@@ -2131,7 +2131,6 @@
     "C0987",
     "C0988",
     "C0989",
-    "C0990",
     "C0991",
     "C0992",
     "C0993",
@@ -17233,12 +17232,6 @@
       "keywords": 8,
       "fields": {
         "summary": 135
-      }
-    },
-    "C0990": {
-      "keywords": 8,
-      "fields": {
-        "summary": 134
       }
     },
     "C0991": {
