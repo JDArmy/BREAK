@@ -513,6 +513,14 @@ const primaryReferenceLinks = new Set([
   'https://viewpoints.dji.com/blog/security-and-continuous-improvement-romos-path-forward', // DJI 官方安全博客，确认 Romo 后端验证缺陷及修复（C1819）
   'https://mp.weixin.qq.com/s?__biz=mzixnjm2ntq2ng==&mid=2247504249&idx=1&sn=726901c65f2416c7c0f568cf06063233&chksm=96a90f2cd4915408ae7fad1c3bdd39c620c8ad1713f6dcedee740e20551f2a36c0e3497c9bfa&scene=27', // 衡阳网警政务微信，衡山公安 AI 伪造证据诈骗案官方通报（C1800）
   'https://mp.weixin.qq.com/s?__biz=mzixmtu0mtyxmw==&mid=2247536552&idx=5&sn=85616f7d40fa85c10c343a452d38465f&chksm=9751c4aaa0264dbcbd2d58ec7800e2ed0ad8bcd4ee751acf08271da0669bf9c954ea69308b64&scene=27', // 咸阳政法政务微信，广州白云法院 17 岁少年 DDoS 攻击南航购票系统案以案释法（C1803）
+  "https://m.gmw.cn/2023-01/04/content_1303243232.htm", // 平安鹿邑警方通报，警车遭破坏案官方通报（光明网托管）（C1065）
+  "https://new.qq.com/rain/a/20220630A0CT4800", // 滨州公安破获刑事案件战果通报官方警方通报（腾讯新闻托管）（C0834）
+  "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=7264903308053183189", // 央视《法治在线》节目页，snow-book 一手报道（C0838）
+  "https://mp.weixin.qq.com/s?__biz=MzIyMDMxMzY1Ng==&mid=2247520289&idx=1&sn=d044d264d5fe84ae95d702fbfc7d53d1", // 汕头市市场监督管理局政务微信，规范网络划线价提醒告诫书（C0592）
+  "https://rule.tmall.com/tdetail-11000260.htm", // 天猫滥发信息规则及实施细则（重复铺货），平台官方规则页（C0631）
+  "https://rule.taobao.com/tdetail-2014.htm", // 淘宝网滥发信息实施细则（重复铺货），平台官方规则页（C0633）
+  "https://china.cnr.cn/yaowen/20260114/t20260114_527492847.shtml", // 央广网（中央广播电视总台）首发，国内首起AI服务提供者涉黄获刑案二审（C0719）
+  "https://www.360.cn/n/12371.html", // 360数字安全集团官方，2023年6月勒索软件流行态势分析（C0865）
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [
