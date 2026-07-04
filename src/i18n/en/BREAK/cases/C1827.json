@@ -1,0 +1,29 @@
+{
+  "C1827": {
+    "title": "Zhao et al. Prove AI-Generated Image Invisible Watermarks Can Be Universally Removed by Generative Models",
+    "keywords": [
+      "invisible watermark removal",
+      "regeneration attack",
+      "Tree-Ring",
+      "Stable Signature",
+      "WatermarkAttacker",
+      "watermark stripping",
+      "diffusion watermark removal"
+    ],
+    "summary": "At NeurIPS 2024, Zhao Xuandong et al. proved that mainstream invisible watermarks on AI-generated images can be universally removed by generative models. The attack family first adds noise to the watermarked image to destroy the watermark signal, then recovers visual fidelity through denoising/regeneration, successfully removing four pixel-level watermark schemes including Tree-Ring and Stable Signature, revealing that watermarks relying on generative latent spaces are not a reliable guarantee of provenance, and open-sourced WatermarkAttacker for reproduction.",
+    "references": [
+      {
+        "title": "Invisible Image Watermarks Are Provably Removable Using Generative AI (arXiv)",
+        "link": "https://arxiv.org/abs/2306.01953"
+      },
+      {
+        "title": "Invisible Image Watermarks Are Provably Removable Using Generative AI (NeurIPS 2024 Proceedings)",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/10272bfd0371ef960ec557ed6c866058-Abstract-Conference.html"
+      },
+      {
+        "title": "XuandongZhao/WatermarkAttacker: Code Repository",
+        "link": "https://github.com/XuandongZhao/WatermarkAttacker"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "C1828": {
+    "title": "David等爬虫陷阱形式化分类与通用检测规避方法",
+    "keywords": [
+      "爬虫陷阱",
+      "crawler trap",
+      "蜜罐识别",
+      "spider trap检测",
+      "陷阱规避",
+      "机器学习检测",
+      "Tor网络"
+    ],
+    "summary": "2020年ICISSP会议，David、Delong与Filiol发表《Detection of Crawler Traps》，首次对爬虫陷阱形式化分类并提出通用检测方法。网站通过动态生成相似页面或随机内容向爬虫投喂假信息浪费其资源。研究者指出当时无爬虫能检测陷阱，提出用机器学习对实时抓取页面与正常网页做信息距离比对，飞行中识别无限深度、无限循环等陷阱并逃离，覆盖表层网与Tor。",
+    "category": "academic_research",
+    "incidentTime": "2020-02",
+    "relatedRisks": [
+      "R0027-005"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "Detection of Crawler Traps: Formalization and Implementation—Defeating Protection on Internet and on the TOR Network (ICISSP 2020, SciTePress)",
+        "link": "https://www.scitepress.org/Papers/2020/93672/93672.pdf"
+      },
+      {
+        "title": "Detection of crawler traps: formalization and implementation (Springer Journal of Computer Virology and Hacking Techniques)",
+        "link": "https://link.springer.com/article/10.1007/s11416-021-00380-4"
+      },
+      {
+        "title": "Eric Filiol - Peer-reviewed Publications",
+        "link": "https://www.ericfiliol.site/journals.html"
+      }
+    ],
+    "updated": "2026-07-04"
+  }
+}

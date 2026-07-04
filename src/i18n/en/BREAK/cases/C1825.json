@@ -1,0 +1,33 @@
+{
+  "C1825": {
+    "title": "BadVLA: The First Systematic Backdoor Attack on Vision-Language-Action Models",
+    "keywords": [
+      "BadVLA",
+      "VLA backdoor attack",
+      "robotics backdoor",
+      "training data poisoning",
+      "visual trigger",
+      "Objective-Decoupled Optimization",
+      "Vision-Language-Action"
+    ],
+    "summary": "In May 2025, Zhou Xueyang et al. published BadVLA at NeurIPS 2025, the first systematic backdoor attack on Vision-Language-Action (VLA) models. Based on Objective-Decoupled Optimization, it injects trigger-bearing samples into VLA training data under the Training-as-a-Service paradigm, separating trigger representations from normal inputs in feature space. When visual triggers such as red cups, red sticks, or pixel blocks appear in the robot's observation, the policy generates semantically divergent random actions causing grasp failure and targeted loss, while behaving normally without triggers; attack success rate approaches 100%.",
+    "references": [
+      {
+        "title": "BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization (arXiv)",
+        "link": "https://arxiv.org/abs/2505.16640"
+      },
+      {
+        "title": "BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization (NeurIPS 2025 Proceedings)",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/b94925a92f2271cd60c9f3f7a7d366fe-Abstract-Conference.html"
+      },
+      {
+        "title": "BadVLA NeurIPS 2025 Poster",
+        "link": "https://neurips.cc/virtual/2025/poster/115803"
+      },
+      {
+        "title": "Zxy-MLlab/BadVLA: Code Repository",
+        "link": "https://github.com/Zxy-MLlab/BadVLA"
+      }
+    ]
+  }
+}

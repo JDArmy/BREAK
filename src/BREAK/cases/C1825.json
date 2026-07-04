@@ -1,0 +1,41 @@
+{
+  "C1825": {
+    "title": "BadVLA: 首个针对视觉-语言-动作模型的系统性后门攻击",
+    "keywords": [
+      "BadVLA",
+      "VLA后门攻击",
+      "机器人后门",
+      "训练数据投毒",
+      "视觉触发器",
+      "Objective-Decoupled Optimization",
+      "Vision-Language-Action"
+    ],
+    "summary": "2025年5月，周雪阳等在NeurIPS 2025发表BadVLA，首个针对视觉-语言-动作（VLA）模型的系统性后门攻击。基于目标解耦优化，在Training-as-a-Service范式下向VLA训练数据注入含触发器样本，将触发器表征与正常输入在特征空间分离。当机器人观察中出现红色杯子、红色木棍或像素块等视觉触发器时，策略产生语义发散的随机动作导致抓取失败与定向丢失，无触发器时正常，攻击成功率近100%。",
+    "category": "academic_research",
+    "incidentTime": "2025-05",
+    "relatedRisks": [
+      "R0273"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization (arXiv)",
+        "link": "https://arxiv.org/abs/2505.16640"
+      },
+      {
+        "title": "BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization (NeurIPS 2025 Proceedings)",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/b94925a92f2271cd60c9f3f7a7d366fe-Abstract-Conference.html"
+      },
+      {
+        "title": "BadVLA NeurIPS 2025 Poster",
+        "link": "https://neurips.cc/virtual/2025/poster/115803"
+      },
+      {
+        "title": "Zxy-MLlab/BadVLA: 代码仓库",
+        "link": "https://github.com/Zxy-MLlab/BadVLA"
+      }
+    ],
+    "updated": "2026-07-04"
+  }
+}

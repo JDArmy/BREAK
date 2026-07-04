@@ -1,0 +1,37 @@
+{
+  "C1827": {
+    "title": "Zhao等证明AI生成图像无痕水印可被生成式模型通用移除",
+    "keywords": [
+      "无痕水印移除",
+      "regeneration attack",
+      "Tree-Ring",
+      "Stable Signature",
+      "WatermarkAttacker",
+      "水印去除",
+      "diffusion watermark removal"
+    ],
+    "summary": "2024年NeurIPS 2024，赵玄东等证明主流AI生成图像无痕水印可被生成式模型通用移除。攻击族先对水印图像加噪破坏水印信号，再通过去噪/再生恢复视觉保真，对Tree-Ring、Stable Signature等四种像素级水印方案均高成功移除，揭示依赖生成模型潜空间的水印并非溯源可靠保障，并开源WatermarkAttacker复现。",
+    "category": "academic_research",
+    "incidentTime": "2024-12",
+    "relatedRisks": [
+      "R0027-004"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "Invisible Image Watermarks Are Provably Removable Using Generative AI (arXiv)",
+        "link": "https://arxiv.org/abs/2306.01953"
+      },
+      {
+        "title": "Invisible Image Watermarks Are Provably Removable Using Generative AI (NeurIPS 2024 Proceedings)",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/10272bfd0371ef960ec557ed6c866058-Abstract-Conference.html"
+      },
+      {
+        "title": "XuandongZhao/WatermarkAttacker: 代码仓库",
+        "link": "https://github.com/XuandongZhao/WatermarkAttacker"
+      }
+    ],
+    "updated": "2026-07-04"
+  }
+}

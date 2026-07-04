@@ -1,0 +1,29 @@
+{
+  "C1828": {
+    "title": "David et al.: Formal Classification of Crawler Traps and a General Detection and Evasion Method",
+    "keywords": [
+      "crawler trap",
+      "spider trap detection",
+      "honeypot identification",
+      "trap evasion",
+      "machine learning detection",
+      "Tor network",
+      "crawler trap classification"
+    ],
+    "summary": "At the IISSP 2020 conference, David, Delong and Filiol published 'Detection of Crawler Traps', the first formal classification of crawler traps with a general detection method. Websites feed crawlers false information by dynamically generating similar pages or random content to waste their resources. The researchers noted that no crawler at the time could detect traps, and proposed using machine learning to compare information distance between pages crawled in real time and normal web pages, identifying infinite-depth and infinite-loop traps on the fly and escaping them, covering both the surface web and Tor.",
+    "references": [
+      {
+        "title": "Detection of Crawler Traps: Formalization and Implementation—Defeating Protection on Internet and on the TOR Network (ICISSP 2020, SciTePress)",
+        "link": "https://www.scitepress.org/Papers/2020/93672/93672.pdf"
+      },
+      {
+        "title": "Detection of crawler traps: formalization and implementation (Springer Journal of Computer Virology and Hacking Techniques)",
+        "link": "https://link.springer.com/article/10.1007/s11416-021-00380-4"
+      },
+      {
+        "title": "Eric Filiol - Peer-reviewed Publications",
+        "link": "https://www.ericfiliol.site/journals.html"
+      }
+    ]
+  }
+}

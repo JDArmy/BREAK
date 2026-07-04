@@ -1,0 +1,33 @@
+{
+  "C1826": {
+    "title": "Bagdasaryan 跨模态间接指令注入攻击多模态LLM",
+    "keywords": [
+      "跨模态注入",
+      "间接指令注入",
+      "对抗扰动",
+      "多模态LLM",
+      "image prompt injection",
+      "Bagdasaryan",
+      "visual adversarial"
+    ],
+    "summary": "2023年7月，Bagdasaryan等在arXiv预印本提出跨模态间接指令注入攻击。攻击者生成与目标指令对应的对抗扰动，嵌入图像或音频录制中。当多模态大语言模型处理该图像或音频时，扰动引导模型输出攻击者指定的文本或使后续对话遵循攻击者指令，绕过仅针对文本模态的过滤防御，实现视觉/音频模态操纵文本理解的跨模态注入。",
+    "category": "academic_research",
+    "incidentTime": "2023-07",
+    "relatedRisks": [
+      "R0274"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "Abusing Images and Sounds for Indirect Instruction Injection in Multi-Modal LLMs (arXiv)",
+        "link": "https://arxiv.org/abs/2307.10490"
+      },
+      {
+        "title": "LLMs Open to Manipulation Using Doctored Images, Audio - Dark Reading",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/llms-open-manipulation-using-doctored-images-audio"
+      }
+    ],
+    "updated": "2026-07-04"
+  }
+}

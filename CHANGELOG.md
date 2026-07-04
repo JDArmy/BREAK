@@ -1,5 +1,26 @@
 # Change log
 
+## 2.41.1
+
+为 10 个无案例风险补充真实案例 + 新增 Case incidentTime 校验门禁。
+
+- **补案例（10 个，C1821-C1830）**：3 个 subagent 并行用 Scrapingdog 搜索 + WebFetch 核实，按"宁缺毋滥"筛选。覆盖风险-案例覆盖率 94.8% → 97.4%（362/382 → 372/382）。
+  - 物流套利（4 个）：C1821 R0259-001 盲销诈骗（乐清案，criminal_verdict）、C1822 R0266 偷重漏重（上海青浦，criminal_verdict）、C1823 R0265 运价套利（温州永嘉，news_report）、C1824 R0263 散单套用（太仓案，criminal_verdict）
+  - AI 安全（4 个）：C1825 R0273 BadVLA 后门（NeurIPS 2025）、C1826 R0274 跨模态注入（arxiv）、C1827 R0027-004 水印移除（NeurIPS 2024）、C1828 R0027-005 爬虫陷阱检测（ICISSP 2020）
+  - 游戏+通用（2 个）：C1829 R0114 曲阜盗号案（news_report）、C1830 R0051-001 小红书接口破解（criminal_verdict，最高检+常州中院双 primary）
+  - 弃用 3 个存疑 case：C1825 喜茶案（匹配度中等）、C1824 Nepenthes 硕士论文（权威性中等）、C1823 运价套利降级为 news_report（仅1源）
+  - 剩余 10 个无案例风险（R0027-002/003、R0256/0257/0260/0261/0264/0264-001/002/003）：京东物流内部场景无公开判决或学术论文缺失，合理缺失
+- **Case incidentTime 校验门禁**：新增 `scripts/validate/case-incident-time.mjs`（接入 validate:data --strict），强制 case 必须有 incidentTime（YYYY/YYYY-MM/YYYY-MM-DD）+ 年份合理性 + 日历合法性。配套 allowlist 豁免 7 个真无日期 case。系统补全 313+9 个 case 的 incidentTime（覆盖率 81.4% → 99.60%）。
+- 配套更新：README/README_CN 案例计数 1768→1778、home.ts entityCounts、cases-loader.test.ts、DATA_SCHEMA.md。
+
+### 变更文件
+
+- `src/BREAK/cases/C1821-C1830.json`（新增 10 个中文 case）
+- `src/i18n/en/BREAK/cases/C1821-C1830.json`（新增 10 个英文翻译）
+- `scripts/validate/case-incident-time.mjs` + `case-incident-time-allowlist.json`（新校验门禁）
+- `package.json` validate:data 链接入 case-incident-time
+- `README.md` / `README_CN.md` / `src/BREAK/home.ts` / `src/BREAK/__tests__/cases-loader.test.ts`（计数同步）
+
 ## 2.41.0
 
 移动端 LCP 优化：切断入口 chunk → 全量 BREAK 数据的静态依赖链。

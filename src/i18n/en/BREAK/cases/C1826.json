@@ -1,0 +1,25 @@
+{
+  "C1826": {
+    "title": "Bagdasaryan: Cross-Modal Indirect Instruction Injection Attack on Multimodal LLMs",
+    "keywords": [
+      "cross-modal injection",
+      "indirect instruction injection",
+      "adversarial perturbation",
+      "multimodal LLM",
+      "image prompt injection",
+      "Bagdasaryan",
+      "visual adversarial"
+    ],
+    "summary": "In July 2023, Bagdasaryan et al. proposed a cross-modal indirect instruction injection attack in an arXiv preprint. The attacker generates adversarial perturbations corresponding to a target instruction and embeds them in an image or audio recording. When a multimodal large language model processes the image or audio, the perturbation steers the model to output attacker-specified text or causes subsequent dialogue to follow attacker instructions, bypassing defenses that filter only the text modality, achieving cross-modal injection where visual/audio modalities manipulate text comprehension.",
+    "references": [
+      {
+        "title": "Abusing Images and Sounds for Indirect Instruction Injection in Multi-Modal LLMs (arXiv)",
+        "link": "https://arxiv.org/abs/2307.10490"
+      },
+      {
+        "title": "LLMs Open to Manipulation Using Doctored Images, Audio - Dark Reading",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/llms-open-manipulation-using-doctored-images-audio"
+      }
+    ]
+  }
+}
