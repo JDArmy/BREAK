@@ -95,13 +95,16 @@ function buildPrompt(item, scrapedContents) {
   const sys = `你是 BREAK 知识库的案例事实核验员。根据抓取的 references 网页内容，核验 Case summary 的事实正确性。
 严格规则：
 1. 只输出 JSON 对象。
-2. extractedFacts：从网页内容提取关键事实 {incidentTime, actors, method, outcome}（提取不到则留空）。
-3. summaryVsFact：
-   - verdict: 'accurate'(一致) / 'partial'(细节出入) / 'contradicted'(矛盾) / 'fabricated'(summary 编造网页未提及)
+2. 区分 Case 类型核验严格度：
+   - 事件性 Case（criminal_verdict/administrative_enforcement/security_incident）：summary 须有具体事件要素（时间/主体/结果），与网页事实逐一对应，矛盾或编造才 fail。
+   - 原理/示例性 Case（academic_research/news_report）：summary 是攻击原理或技术说明，references 是科普/学术资料，不必每个细节逐一对应；只要网页内容与 summary 主题一致、无矛盾事实，即 pass。fabrications 仅指 summary 编造了与网页矛盾的事实（而非网页未提及的细节）。
+3. extractedFacts：从网页内容提取关键事实 {incidentTime, actors, method, outcome}（提取不到则留空）。
+4. summaryVsFact：
+   - verdict: 'accurate'(一致/无矛盾) / 'partial'(细节出入但无矛盾) / 'contradicted'(矛盾) / 'fabricated'(summary 编造网页矛盾的事实)
    - conflicts: 矛盾点数组
-   - fabrications: summary 提及但网页未提及的关键事实
-4. verdict：pass(accurate)/review(partial)/fail(contradicted/fabricated 或抓取全失败)。
-5. reason: 一句话。suggestions: 数组。`;
+   - fabrications: summary 与网页矛盾的关键事实（注意：网页未提及 ≠ 编造，仅网页明确反驳才算）
+5. verdict：pass(accurate)/review(partial)/fail(contradicted/fabricated)。
+6. reason: 一句话。suggestions: 数组。`;
   const factsText = scrapedContents
     .map((s, i) => `【源${i}】${s.ok ? s.content.slice(0, 1500) : `(抓取失败: ${s.reason})`}`)
     .join('\n\n');
@@ -191,10 +194,13 @@ async function reviewOne(item) {
     return d;
   }, { retries: 3 });
 
-  // 高价值 Case 抓取全失败 → 升级 fail
-  if (allFailed && isHighValue && data.verdict !== 'fail') {
-    data.verdict = 'fail';
-    data.reason = `高价值 Case references 全部抓取失败（${data.reason}）`;
+  // 抓取全失败：降为 review（无法核验不等于造假，可能是反爬/动态页面，需人工确认）
+  // 原逻辑升 fail 会误判 aws/baidu 等反爬站点的合理 Case
+  if (allFailed) {
+    if (data.verdict === 'pass') {
+      data.verdict = 'review';
+      data.reason = `references 全部抓取失败（${data.reason}），无法核验事实，需人工确认来源可达性`;
+    }
   }
   return {
     key: item.key,

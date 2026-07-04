@@ -15,8 +15,8 @@
     "summary": "2025年1月18日，上海市公安局会同相关部门破获涉消费券违法犯罪案件2起，抓获犯罪嫌疑人18名。案件涉及通过网上发布收购消费券信息、教唆他人修改IP地址异地抢券等方式，大量收购餐饮消费券，并虚构交易骗取消费补贴。该案是上海警方针对利用技术手段突破消费券领取限制的专项打击行动。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0002",
-      "R0055-001"
+      "R0055-001",
+      "R0017-002"
     ],
     "references": [
       {
@@ -32,11 +32,10 @@
         "link": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=2699007046031320253"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "incidentTime": "2024-11",
     "relatedAttackTools": [
-      "AT0024",
-      "AT0034"
+      "AT0034-001"
     ],
     "relatedThreatActors": [
       "TA0001"

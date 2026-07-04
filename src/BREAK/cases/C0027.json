@@ -15,7 +15,7 @@
     "summary": "天津市政府门户发布的市场监管“铁拳”行动典型案例显示，天津面兜兜网络科技有限公司开发软件提供商品信息数据“一键搬家”服务，在未经数据源购物平台及平台内经营者同意的情况下爬取商品信息数据，并上传至其他具有竞争关系的购物平台。至案发，该软件共爬取商品信息数据942万余条，天津市市场监管委对其作出罚款100万元的行政处罚。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0003-004"
+      "R0027"
     ],
     "references": [
       {
@@ -23,7 +23,7 @@
         "link": "https://www.tj.gov.cn/sy/tjxw/202304/t20230420_6210704.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "incidentTime": "2023-04",
     "relatedAttackTools": [],
     "relatedThreatActors": [
