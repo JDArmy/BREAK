@@ -130,7 +130,7 @@
       {
         "key": "TA0006-002",
         "relation": "co-involved",
-        "note": "共同直接造成 2 个风险，共同间接支持 9 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+        "note": "共同直接造成 2 个风险，共同间接支持 9 个风险，共同使用 2 个攻击工具。"
       },
       {
         "key": "TA0006",
@@ -168,9 +168,7 @@
         "link": "https://www.trendmicro.com/en_us/research/22/b/sms-pva-cybercriminals-part-2.html"
       }
     ],
-    "buildAttackTools": [
-      "AT0008"
-    ],
+    "buildAttackTools": [],
     "useAttackTools": [
       "AT0008",
       "AT0031"
@@ -191,7 +189,7 @@
       "R0016-001",
       "R0030-001"
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-05",
     "keywords": [
       "听码人员",
       "听码工",
@@ -203,7 +201,7 @@
       {
         "key": "TA0006-001",
         "relation": "co-involved",
-        "note": "共同直接造成 2 个风险，共同间接支持 9 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+        "note": "共同直接造成 2 个风险，共同间接支持 9 个风险，共同使用 2 个攻击工具。"
       },
       {
         "key": "TA0006",

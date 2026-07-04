@@ -14,17 +14,17 @@
       "A0021-001"
     ],
     "directCauseRisks": [
+      "R0050"
+    ],
+    "indirectSupportRisks": [
       "R0001",
+      "R0001-002",
       "R0002",
       "R0003",
       "R0003-001",
       "R0003-002"
     ],
-    "indirectSupportRisks": [
-      "R0001-002",
-      "R0050"
-    ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-05",
     "keywords": [
       "抹机工具",
       "抹机",

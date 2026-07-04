@@ -8,14 +8,14 @@
       "A0079"
     ],
     "directCauseRisks": [
-      "R0032",
       "R0148",
-      "R0149"
+      "R0149",
+      "R0117"
     ],
     "indirectSupportRisks": [
+      "R0032",
       "R0036",
       "R0084",
-      "R0117",
       "R0118",
       "R0153"
     ],
@@ -33,7 +33,7 @@
         "link": "https://www.straiker.ai/blog/agent-hijacking-how-prompt-injection-leads-to-full-ai-system-compromise"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "AI Agent劫持工具",
       "Agent Hijacking",

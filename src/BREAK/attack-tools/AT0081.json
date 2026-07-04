@@ -20,10 +20,10 @@
       "R0163",
       "R0164",
       "R0166",
-      "R0181"
+      "R0181",
+      "R0165"
     ],
     "indirectSupportRisks": [
-      "R0165",
       "R0206"
     ],
     "references": [
@@ -50,7 +50,7 @@
       "设备劫持",
       "固件后门"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       {
         "key": "AT0102",

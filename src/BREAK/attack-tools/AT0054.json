@@ -14,8 +14,6 @@
     ],
     "directCauseRisks": [
       "R0028",
-      "R0085",
-      "R0086",
       "R0087",
       "R0109"
     ],
@@ -28,10 +26,12 @@
       "R0081-002",
       "R0081-003",
       "R0081-004",
+      "R0085",
       "R0085-001",
+      "R0086",
       "R0078-003"
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-05",
     "keywords": [
       "系统/应用漏洞利用工具",
       "漏洞利用工具",
@@ -225,7 +225,7 @@
       {
         "key": "AT0061-003",
         "relation": "co-used",
-        "note": "共同关联 2 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+        "note": "共同关联 1 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
         "key": "AT0026",
@@ -266,10 +266,11 @@
     ],
     "directCauseRisks": [
       "R0246",
-      "R0247"
+      "R0247",
+      "R0032"
     ],
     "indirectSupportRisks": [
-      "R0032"
+      "R0036"
     ],
     "references": [
       {
@@ -281,37 +282,37 @@
       "MFA轰炸与会话劫持工具",
       "MFA轰炸与会话劫持"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       {
         "key": "AT0063",
         "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+        "note": "共同关联 2 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
         "key": "AT0063-001",
         "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 3 个规避手段。"
-      },
-      {
-        "key": "AT0042",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 2 个规避手段。"
-      },
-      {
-        "key": "AT0061-001",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
-      },
-      {
-        "key": "AT0012",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+        "note": "共同关联 2 个风险，共享 3 个规避手段。"
       },
       {
         "key": "AT0062",
         "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0067",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0069",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
       }
     ]
   },
@@ -378,8 +379,6 @@
       "R0078"
     ],
     "indirectSupportRisks": [
-      "R0034",
-      "R0209",
       "R0083"
     ],
     "avoidances": [
@@ -394,7 +393,7 @@
       {
         "key": "AT0054-007",
         "relation": "co-used",
-        "note": "共同关联 4 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+        "note": "共同关联 2 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
         "key": "AT0063",
@@ -432,7 +431,7 @@
         "link": "https://github.com/ossf/package-analysis"
       }
     ],
-    "updated": "2026-06-26"
+    "updated": "2026-07-05"
   },
   "AT0054-007": {
     "title": "容器逃逸与K8s攻击工具",
@@ -448,8 +447,7 @@
     ],
     "description": "针对容器化环境和 Kubernetes 集群的攻击工具集合。主要能力包括：①容器逃逸：利用内核漏洞（如 CVE-2022-0185、CVE-2024-21626）、特权容器配置、挂载宿主机文件系统或 Docker Socket 暴露等方式突破容器隔离，获取宿主机权限；②K8s API 滥用：利用错误配置的 RBAC 权限、暴露的 API Server、未授权的 kubelet 端口进行集群接管；③横向移动：通过 ServiceAccount Token、Secret 泄露、Pod 间网络无隔离等方式在集群内横向扩展；④持久化：创建恶意 CronJob、DaemonSet、Admission Webhook 或修改镜像仓库实现长期驻留。代表性工具包括 CDK（Container penetration toolkit）、PEIRATES、kube-hunter 等。",
     "directCauseRisks": [
-      "R0078",
-      "R0209"
+      "R0078"
     ],
     "indirectSupportRisks": [
       "R0034",
@@ -467,7 +465,7 @@
       {
         "key": "AT0054-006",
         "relation": "co-used",
-        "note": "共同关联 4 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+        "note": "共同关联 2 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
         "key": "AT0063",
@@ -505,6 +503,6 @@
         "link": "https://www.cisa.gov/news-events/alerts/2022/03/15/updated-kubernetes-hardening-guide"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-05"
   }
 }

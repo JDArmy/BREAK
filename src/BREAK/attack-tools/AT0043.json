@@ -15,13 +15,13 @@
     ],
     "directCauseRisks": [
       "R0059",
-      "R0060",
       "R0078"
     ],
     "indirectSupportRisks": [
+      "R0060",
       "R0072-001"
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-05",
     "keywords": [
       "匿名通讯工具",
       "匿名聊天工具",

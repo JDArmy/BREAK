@@ -10,10 +10,11 @@
     ],
     "directCauseRisks": [
       "R0181-001",
-      "R0252"
+      "R0252",
+      "R0212"
     ],
     "indirectSupportRisks": [
-      "R0212"
+      "R0180"
     ],
     "references": [
       {
@@ -29,12 +30,12 @@
       "车联网OTA与接口测试工具",
       "车联网OTA与接口测试"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       {
         "key": "AT0083",
         "relation": "co-used",
-        "note": "共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+        "note": "共同关联 1 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
         "key": "AT0001",

@@ -14,13 +14,13 @@
       "A0048"
     ],
     "directCauseRisks": [
-      "R0029-001"
-    ],
-    "indirectSupportRisks": [
-      "R0030-001",
+      "R0029-001",
       "R0053"
     ],
-    "updated": "2026-06-13",
+    "indirectSupportRisks": [
+      "R0030-001"
+    ],
+    "updated": "2026-07-05",
     "keywords": [
       "猫池",
       "Modem Pool",

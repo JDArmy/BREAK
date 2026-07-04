@@ -15,17 +15,17 @@
       "A0020-003"
     ],
     "directCauseRisks": [
+      "R0030",
+      "R0030-001"
+    ],
+    "indirectSupportRisks": [
       "R0002",
       "R0003",
       "R0003-001",
       "R0003-003",
       "R0003-004"
     ],
-    "indirectSupportRisks": [
-      "R0030",
-      "R0030-001"
-    ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "风险电子邮箱",
       "临时邮箱",

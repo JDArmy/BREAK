@@ -21,21 +21,21 @@
       "A0059"
     ],
     "directCauseRisks": [
+      "R0019",
+      "R0105"
+    ],
+    "indirectSupportRisks": [
       "R0001",
       "R0002",
       "R0003-003",
       "R0003-004",
-      "R0005"
-    ],
-    "indirectSupportRisks": [
+      "R0005",
       "R0010",
       "R0011",
-      "R0019",
       "R0046",
-      "R0105",
       "R0114"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "租号平台",
       "账号租赁平台",

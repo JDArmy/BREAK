@@ -8,10 +8,7 @@
         "link": "https://www.163.com/dy/article/JCU216GI051200BP.html"
       }
     ],
-    "buildAttackTools": [
-      "AT0050",
-      "AT0070"
-    ],
+    "buildAttackTools": [],
     "useAttackTools": [
       "AT0001-002",
       "AT0003",
@@ -41,7 +38,7 @@
       "R0030-001",
       "R0030-004"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "狗推",
       "电诈狗推",
@@ -64,7 +61,7 @@
       {
         "key": "TA0019",
         "relation": "co-involved",
-        "note": "共同直接造成 2 个风险，共同间接支持 4 个风险，共同建设 1 个攻击工具，共同使用 4 个攻击工具。"
+        "note": "共同直接造成 2 个风险，共同间接支持 4 个风险，共同使用 4 个攻击工具。"
       },
       {
         "key": "TA0003",

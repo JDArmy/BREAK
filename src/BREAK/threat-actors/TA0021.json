@@ -9,9 +9,7 @@
       }
     ],
     "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0063"
-    ],
+    "useAttackTools": [],
     "directCauseRisks": [
       "R0038",
       "R0059",
@@ -32,7 +30,7 @@
     "indirectSupportRisks": [
       "R0078-003"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "安全意识薄弱员工",
       "易受骗员工",
