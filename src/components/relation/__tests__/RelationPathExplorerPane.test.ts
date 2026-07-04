@@ -178,67 +178,36 @@ describe("RelationPathExplorerPane", () => {
     expect(pane.attributes("style") ?? "").toContain("display: none");
   });
 
-  it("open-as-root 改 relType/relKey 后起点跟随根节点同步", async () => {
-    // P0-2 回归核心：迁移 inject 后 watch([relType, relKey]) 须恢复，
-    // 否则 open-as-root 改 route.params 后 pathExplorerStartType/StartKey 不更新
-    const { viewModel } = mountPane();
+  it("用户手动切起点类型时清空起点实体（startTypeModel setter）", async () => {
+    // 组件职责：用户经 el-select 切 startType → startTypeModel setter 设 startType + 清空 startKey。
+    // relType→startType 同步由 relationViewAssembly 负责（不在组件职责内，见 assembly 测试）。
+    const { wrapper, viewModel } = mountPane();
 
     expect(viewModel.pathExplorerStartType.value).toBe(RelationType.risk);
     expect(viewModel.pathExplorerStartKey.value).toBe("R0001");
 
-    // 模拟 open-as-root：relType/relKey 切到攻击工具
-    viewModel.relType.value = RelationType.attackTool;
-    viewModel.relKey.value = "AT0001";
-    await nextTick();
-
-    expect(viewModel.pathExplorerStartType.value).toBe(RelationType.attackTool);
-    expect(viewModel.pathExplorerStartKey.value).toBe("AT0001");
-  });
-
-  it("用户手动切 pathExplorerStartType 时清空 startKey（syncFromRoot 不阻止）", async () => {
-    // syncFromRoot flag 仅在根节点同步驱动 startType 变化时跳过清空；
-    // 用户手动改 startType（不经过 relType watch）须清空 startKey
-    const { viewModel } = mountPane();
-
-    expect(viewModel.pathExplorerStartKey.value).toBe("R0001");
-
-    // 用户直接切起点类型（不通过 relType watch 路径）
-    viewModel.pathExplorerStartType.value = RelationType.avoidance;
-    await nextTick();
-
-    expect(viewModel.pathExplorerStartKey.value).toBe("");
-  });
-
-  it("relType 与当前 startType 相同时不同步 startType（不触发清空 startKey）", async () => {
-    // relType 已等于 startType 时，watch 内 startType 同步分支被 if 守卫跳过
-    // （syncFromRoot 不置位，后续 startType watch 不会清空 startKey）；
-    // relKey 变化时 startKey 仍按 key 同步分支更新，不被清空
-    const { viewModel } = mountPane();
-
-    expect(viewModel.relType.value).toBe(RelationType.risk);
-    expect(viewModel.pathExplorerStartType.value).toBe(RelationType.risk);
-    expect(viewModel.pathExplorerStartKey.value).toBe("R0001");
-
-    // relType 仍为 risk（与 startType 相同），只改 relKey 触发 watch
-    viewModel.relKey.value = "R0002";
-    await nextTick();
-
-    // startType 保持不变；startKey 同步为新 relKey，未被清空
-    expect(viewModel.pathExplorerStartType.value).toBe(RelationType.risk);
-    expect(viewModel.pathExplorerStartKey.value).toBe("R0002");
-  });
-
-  it("relType 切到不同 type 时同步 startType 且 startKey 同步不被清空", async () => {
-    // 完整跟随：relType 切到 avoidance，startType 同步切换（syncFromRoot 置位），
-    // relKey 同步到 A0001，且 startType watch 因 syncFromRoot 跳过清空
-    const { viewModel } = mountPane();
-
-    viewModel.relType.value = RelationType.avoidance;
-    viewModel.relKey.value = "A0001";
+    // 模拟用户经 el-select 切换起点类型（触发 startTypeModel setter）
+    await wrapper.find(".el-select-stub").setValue(RelationType.avoidance);
     await nextTick();
 
     expect(viewModel.pathExplorerStartType.value).toBe(RelationType.avoidance);
-    // syncFromRoot 阻止了 startType watch 清空 startKey，且 relKey 同步分支写入 A0001
-    expect(viewModel.pathExplorerStartKey.value).toBe("A0001");
+    // setter 清空了 startKey
+    expect(viewModel.pathExplorerStartKey.value).toBe("");
+  });
+
+  it("assembly 直设 pathExplorerStartType 不清空 startKey（computed setter 不触发）", async () => {
+    // assembly 根节点同步直设 ref.value（绕过 computed setter），不应清空 startKey。
+    // 此用例验证 startTypeModel get 返回 ref 值，且直设 ref 不触发 setter 清空。
+    const { viewModel } = mountPane();
+
+    expect(viewModel.pathExplorerStartKey.value).toBe("R0001");
+
+    // 模拟 assembly 直设 startType（根节点同步路径）
+    viewModel.pathExplorerStartType.value = RelationType.attackTool;
+    await nextTick();
+
+    // startType 变化但 startKey 未被清空（无 setter 触发）
+    expect(viewModel.pathExplorerStartType.value).toBe(RelationType.attackTool);
+    expect(viewModel.pathExplorerStartKey.value).toBe("R0001");
   });
 });

@@ -262,6 +262,10 @@ const detailContentStub = {
   ],
   emits: [
     "update:attack-path-filters",
+    "reset-attack-path-filters",
+    "focus-node",
+    "open-as-root",
+    "open-node-as-root",
   ],
   setup() {
     // DetailColumn 现通过 inject 取 vm，stub 同步用 inject 显示 selectedNetworkNode
@@ -273,6 +277,10 @@ const detailContentStub = {
       <span>{{ vm.selectedNetworkNode.value?.id }} {{ vm.selectedNetworkNodeTitle.value }}</span>
       <span class="detail-flags">{{ showRootRelationBlock }} {{ showCoverageBlock }} {{ showAttackPathBlock }} {{ showOpenAsRootAction }}</span>
       <button class="update-filter" @click="$emit('update:attack-path-filters', { risk: 'R0001' })">filter</button>
+      <button class="reset-filter" @click="$emit('reset-attack-path-filters')">reset</button>
+      <button class="focus-node" @click="$emit('focus-node', vm.selectedNetworkNode.value?.id)">focus</button>
+      <button class="open-root" @click="$emit('open-as-root')">root</button>
+      <button class="open-node-root" @click="$emit('open-node-as-root', vm.selectedNetworkNode.value?.id)">node-root</button>
     </div>
   `,
 };
@@ -444,12 +452,27 @@ describe("RelationAnalysisPane", () => {
   it("右侧详情 attack-path 筛选变化时保持右列滚动位置并写回 vm", async () => {
     const { wrapper, viewModel } = mountPane();
 
-    // update-filter → Content emit update:attack-path-filters → AnalysisPane emitAttackPathFilters($event, 'right')
+    // update-filter → Content emit → DetailColumn 透传 → AnalysisPane emitAttackPathFilters($event, 'right')
     // → 设 preserveScrollPane='right' + 写 vm.attackPathFilters
     await wrapper.find(".update-filter").trigger("click");
     expect(viewModel.attackPathFilters.value).toEqual({ risk: "R0001" });
+  });
 
-    // 其余交互（copy-csv/view-detail/open-as-root 等）由 Content 直接调 vm 方法，
-    // 不再经 AnalysisDetailColumn 透传 emit（DetailColumn 已迁移到 inject，仅透传 update:attack-path-filters）
+  it("右侧详情 focus-node/reset/open-as-root 经 rightAction 调 vm 方法（恢复 preserveScrollPane）", async () => {
+    // P0-2 回归：emitRightAction 删除后这些操作丢失 preserveScrollPane；现恢复为 rightAction 包装。
+    // rightAction 设 preserveScrollPane='right' 后调 vm 方法（保持右列滚动）。
+    const { wrapper, viewModel } = mountPane();
+
+    await wrapper.find(".focus-node").trigger("click");
+    expect(viewModel.focusNodeInDrawer).toHaveBeenCalledWith("R0001");
+
+    await wrapper.find(".reset-filter").trigger("click");
+    expect(viewModel.resetAttackPathFilters).toHaveBeenCalledTimes(1);
+
+    await wrapper.find(".open-root").trigger("click");
+    expect(viewModel.openSelectedNodeAsRoot).toHaveBeenCalledTimes(1);
+
+    await wrapper.find(".open-node-root").trigger("click");
+    expect(viewModel.openNodeAsRootById).toHaveBeenCalledWith("R0001");
   });
 });

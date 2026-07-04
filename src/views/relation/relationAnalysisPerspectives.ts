@@ -55,6 +55,18 @@ export const RELATION_PERSPECTIVE_ROUTES: readonly RelationPerspectiveRouteMeta[
   { pathSegment: "path-explorer", baseRouteName: "relationPathExplorer", entityRouteName: "relationPathExplorerEntity", perspective: "pathExplorer" },
 ] as const;
 
+// 开发期完整性校验：确保 RelationPerspectiveKey 联合的每个视角都在 RELATION_PERSPECTIVE_ROUTES 中。
+// 若新增 perspective 到联合类型但漏加路由条目，此处 dev 控制台报错（as Record 断言会掩盖此缺失）。
+if (import.meta.env.DEV) {
+  const expectedPerspectives: RelationPerspectiveKey[] = ["risk", "attackPath", "defenseCoverage", "pathExplorer"];
+  const actualPerspectives = RELATION_PERSPECTIVE_ROUTES.map((r) => r.perspective);
+  for (const p of expectedPerspectives) {
+    if (!actualPerspectives.includes(p)) {
+      console.error(`[relationAnalysisPerspectives] RELATION_PERSPECTIVE_ROUTES 缺少视角: ${p}`);
+    }
+  }
+}
+
 /** 路由 name → 关系图视角（从 RELATION_PERSPECTIVE_ROUTES 单一来源派生，避免重复维护） */
 export const RELATION_PERSPECTIVE_BY_NAME: Record<string, RelationPerspectiveKey> = Object.fromEntries(
   RELATION_PERSPECTIVE_ROUTES.flatMap((r) => [

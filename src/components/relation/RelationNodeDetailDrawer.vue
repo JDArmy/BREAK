@@ -33,14 +33,10 @@ const {
   isRelationOnSelectedPath,
   drawerCopyFeedbackMessage,
   drawerCopyFeedbackType,
-  copySelectedNodeCsv,
-  gotoSelectedNodeDetailView,
-  openSelectedNodeDetailInNewWindow,
   openSelectedNodeAsRoot,
   resetAttackPathFilters,
   focusNodeInDrawer,
   openNodeAsRootById,
-  gotoNodeDetailViewById,
 } = vm;
 // 原 RelationView 模板 :hide-related-entity-actions="activeView === 'pathExplorer'"
 const hideRelatedEntityActions = computed(() => vm.activeView.value === "pathExplorer");
@@ -95,15 +91,11 @@ const { isMobile } = useBreakpoints();
         :show-coverage-block="true"
         :show-attack-path-block="true"
         :hide-related-entity-actions="hideRelatedEntityActions"
-        @copy-csv="copySelectedNodeCsv"
-        @view-detail="gotoSelectedNodeDetailView"
-        @open-detail-new-window="openSelectedNodeDetailInNewWindow"
-        @open-as-root="openSelectedNodeAsRoot"
         @update:attack-path-filters="attackPathFilters = $event"
         @reset-attack-path-filters="resetAttackPathFilters"
         @focus-node="focusNodeInDrawer"
+        @open-as-root="openSelectedNodeAsRoot"
         @open-node-as-root="openNodeAsRootById"
-        @open-node-detail="gotoNodeDetailViewById"
       />
     </div>
   </el-drawer>

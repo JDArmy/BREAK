@@ -36,6 +36,10 @@ const {
   rootNodeRelations,
   resetAttackPathFilters,
   selectAttackPath,
+  // 改 vm 状态触发本组件 watch 的操作（经 DetailColumn emit 透传），需设 preserveScrollPane 保持右列滚动
+  openSelectedNodeAsRoot,
+  focusNodeInDrawer,
+  openNodeAsRootById,
 } = vm;
 // RelationTypeMapping 是普通对象（非 ref），直接取
 const relationTypeMapping = vm.RelationTypeMapping;
@@ -92,6 +96,13 @@ const emitAttackPathFilters = (
 ) => {
   preserveScrollPane.value = preservePane;
   attackPathFilters.value = filters;
+};
+
+// 右列（详情列）触发的、改 vm 状态的操作：先设 preserveScrollPane='right' 保持右列滚动，
+// 再调 vm 方法。这些操作经 RelationNodeDetailContent emit → DetailColumn 透传 → 本组件接收。
+const rightAction = <T extends unknown[]>(fn: (...args: T) => void, ...args: T) => {
+  preserveScrollPane.value = "right";
+  fn(...args);
 };
 
 const applyLeftAvoidanceFilter = (avoidanceKey: string) => {
@@ -306,6 +317,10 @@ watch(
           >
             <RelationAnalysisDetailColumn
               @update:attack-path-filters="emitAttackPathFilters($event, 'right')"
+              @reset-attack-path-filters="rightAction(resetAttackPathFilters)"
+              @focus-node="rightAction(focusNodeInDrawer, $event)"
+              @open-as-root="rightAction(openSelectedNodeAsRoot)"
+              @open-node-as-root="rightAction(openNodeAsRootById, $event)"
             />
           </div>
           <el-backtop

@@ -162,27 +162,20 @@ describe("RelationNodeDetailDrawer", () => {
     expect(wrapper.text()).toContain("R0001 流程自动化");
     expect(wrapper.find(".flags").text()).toBe("true true true true");
 
-    // Drawer 不再 emit，而是直接调用 vm 方法（contentStub 触发 emit → Drawer 模板 @xxx 调用 vm）
-    await wrapper.find(".copy-csv").trigger("click");
-    await wrapper.find(".view-detail").trigger("click");
-    await wrapper.find(".open-new").trigger("click");
+    // Drawer 接收改 vm 状态的 emit（update-filters/reset/focus/open-as-root/open-node-root）后调 vm 方法。
+    // copy-csv/view-detail/open-new/open-node-detail 由 Content 内部直接调 vm（不经 Drawer），在此不测。
     await wrapper.find(".open-as-root").trigger("click");
     await wrapper.find(".update-filters").trigger("click");
     await wrapper.find(".reset-filters").trigger("click");
     await wrapper.find(".focus-node").trigger("click");
     await wrapper.find(".open-node-root").trigger("click");
-    await wrapper.find(".open-node-detail").trigger("click");
 
-    expect(viewModel.copySelectedNodeCsv).toHaveBeenCalledTimes(1);
-    expect(viewModel.gotoSelectedNodeDetailView).toHaveBeenCalledTimes(1);
-    expect(viewModel.openSelectedNodeDetailInNewWindow).toHaveBeenCalledTimes(1);
     expect(viewModel.openSelectedNodeAsRoot).toHaveBeenCalledTimes(1);
-    // update:attack-path-filters 改为直接写 vm.attackPathFilters.value
+    // update:attack-path-filters 写回 vm.attackPathFilters.value
     expect(viewModel.attackPathFilters.value).toEqual({ risk: ["R0001"] });
     expect(viewModel.resetAttackPathFilters).toHaveBeenCalledTimes(1);
     expect(viewModel.focusNodeInDrawer).toHaveBeenCalledWith("R0001");
     expect(viewModel.openNodeAsRootById).toHaveBeenCalledWith("R0001");
-    expect(viewModel.gotoNodeDetailViewById).toHaveBeenCalledWith("R0001");
   });
 
   it("关闭抽屉时同步 modelValue", async () => {

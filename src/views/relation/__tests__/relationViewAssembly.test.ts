@@ -596,4 +596,52 @@ describe("relationViewAssembly", () => {
     expect(relationView.pathExplorerMaxDepth.value).toBe(4);
     expect(relationView.pathExplorerMaxPaths.value).toBe(30);
   });
+
+  // watch([relType, relKey])：pathExplorer 视角下起点实体跟随 selector 根节点同步
+  it("pathExplorer 视角下 relType 变化时同步 pathExplorerStartType", async () => {
+    route.name = "relationPathExplorerEntity";
+    createAssembly();
+    const state = createRelationViewState.mock.results[0].value;
+
+    // createAssembly 时 route.name watch(immediate) 已将 startType 同步为 relType(risk)
+    expect(state.pathExplorerStartType.value).toBe(RelationType.risk);
+
+    // 改 relType → watch([relType, relKey]) 触发，type 守卫通过，startType 跟随
+    state.relType.value = RelationType.avoidance;
+    await nextTick();
+
+    expect(state.pathExplorerStartType.value).toBe(RelationType.avoidance);
+    // relKey 未变，key 守卫跳过（相同值），startKey 保持
+    expect(state.pathExplorerStartKey.value).toBe("R0001");
+  });
+
+  it("非 pathExplorer 视角下 relType 变化不同步 pathExplorerStartType", async () => {
+    // 默认 route.name = "relationRiskEntity"（risk 视角，非 pathExplorer）
+    createAssembly();
+    const state = createRelationViewState.mock.results[0].value;
+    expect(state.pathExplorerStartType.value).toBe(RelationType.risk);
+
+    // 改 relType → watch 触发但 perspective !== "pathExplorer" 早 return
+    state.relType.value = RelationType.avoidance;
+    await nextTick();
+
+    // startType 保持不变
+    expect(state.pathExplorerStartType.value).toBe(RelationType.risk);
+  });
+
+  it("pathExplorer 视角下 relType 与 startType 相同时只同步 relKey", async () => {
+    route.name = "relationPathExplorerEntity";
+    createAssembly();
+    const state = createRelationViewState.mock.results[0].value;
+    // 初始 relType === startType === risk，relKey === startKey === R0001
+    expect(state.relType.value).toBe(state.pathExplorerStartType.value);
+
+    // 改 relKey（relType 不变）→ type 守卫跳过（相同值），key 守卫同步
+    state.relKey.value = "R0002";
+    await nextTick();
+
+    expect(state.pathExplorerStartKey.value).toBe("R0002");
+    // startType 未被触碰，仍为 risk
+    expect(state.pathExplorerStartType.value).toBe(RelationType.risk);
+  });
 });

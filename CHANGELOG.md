@@ -1,5 +1,41 @@
 # Change log
 
+## 2.40.7
+
+Code review 二轮修复：解决 preserveScrollPane 滚动保持回归 + pathExplorer startType 同步统一 + 死代码清理。
+
+### P0 Bug 修复
+
+- **P0-1 preserveScrollPane 滚动保持恢复**：RelationNodeDetailContent 恢复 emit（reset-attack-path-filters/focus-node/open-as-root/open-node-as-root，改 vm 状态触发父级 watch 的操作），RelationAnalysisDetailColumn 透传，RelationAnalysisPane 用 rightAction 包装（设 preserveScrollPane='right' 后调 vm 方法），恢复 analysis 右列 focus-node/reset/open-as-root 等操作的滚动保持（v2.40.6 删 emitRightAction 导致丢失）。不改 vm 状态的操作（copy-csv/view-detail 等）仍由 Content 直接调 vm。
+- **P0-2 pathExplorer startType 同步统一到 assembly**：移除组件内 syncFromRoot flag + watch([relType,relKey]) + watch(pathExplorerStartType)，改 assembly 加 watch([relType, relKey]) 在 pathExplorer 视角时同步起点；组件用 startTypeModel computed setter 拦截用户手动切换（设 startType + 清空 startKey），assembly 直设 ref 不触发 setter（不清空 startKey）。修复切视角回 pathExplorer 时 startKey 被误清空（syncFromRoot 未覆盖 route.name watcher 路径）。
+
+### P1 改进
+
+- **P1-4 Drawer 死代码 emit 清理**：删除 RelationNodeDetailDrawer 模板 8 个死代码 emit 监听器（copy-csv/view-detail/open-detail-new-window/open-node-detail，Content 直接调 vm 不再 emit）。
+- **P1-5 派生映射完整性校验**：RELATION_PERSPECTIVE_ROUTES 加 dev 模式完整性校验（import.meta.env.DEV），若 RelationPerspectiveKey 联合新增视角但漏加路由条目，dev 控制台报错（as Record 断言掩盖此缺失）。
+
+### P2 评估
+
+- **P2-6 Drawer 内联赋值**：评估后保留 `attackPathFilters = $event`（Vue `<script setup>` 模板内由编译器转发 .value，显式 .value 反而错误），不加注释（代码已清晰）。
+
+### 回归测试
+
+- RelationPathExplorerPane.test.ts 重写：startTypeModel setter 清空 startKey、assembly 直设 ref 不清空（3 用例，原 relType 同步测试移至 assembly）。
+- relationViewAssembly.test.ts 加 3 用例：pathExplorer 视角 relType→startType 同步、非 pathExplorer 不同步、relType 相同时只同步 relKey。
+- RelationAnalysisPane.test.ts 加 rightAction 测试：focus-node/reset/open-as-root/open-node-as-root 调 vm 方法。
+- RelationNodeDetailDrawer.test.ts 适配：删除 copy-csv/view-detail 等死代码断言。
+
+### 变更文件
+
+- `src/components/relation/RelationNodeDetailContent.vue`：恢复 4 个 emit
+- `src/components/relation/RelationAnalysisDetailColumn.vue`：透传 4 个 emit
+- `src/components/relation/RelationAnalysisPane.vue`：rightAction 包装 + 解构补回
+- `src/components/relation/RelationPathExplorerPane.vue`：startTypeModel computed + 移除 syncFromRoot
+- `src/components/relation/RelationNodeDetailDrawer.vue`：死代码清理
+- `src/views/relation/relationViewAssembly.ts`：watch([relType, relKey]) 同步
+- `src/views/relation/relationAnalysisPerspectives.ts`：dev 完整性校验
+- 测试：RelationPathExplorerPane/RelationAnalysisPane/RelationNodeDetailDrawer/relationViewAssembly
+
 ## 2.40.6
 
 Code review 修复：解决 4 个 P0 Bug + 4 个 P1 设计/复用问题 + 4 个 P2 改进，含回归测试。

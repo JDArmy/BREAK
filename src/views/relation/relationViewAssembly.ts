@@ -262,6 +262,19 @@ export const createRelationViewAssembly = ({
     { immediate: true },
   );
 
+  // open-as-root 改 route.params → relType/relKey 更新但 route.name 不变，
+  // 上面 route.name watch 不触发。此处补 watch([relType, relKey]) 在 pathExplorer 视角时
+  // 同步起点跟随根节点（原组件内 watch 迁移至此，消除 syncFromRoot flag 与组件层 watch 顺序依赖）。
+  watch([relType, relKey], ([type, key]) => {
+    if (getRelationPerspectiveFromRoute(route.name) !== "pathExplorer") return;
+    if (type && pathExplorerStartType.value !== type) {
+      pathExplorerStartType.value = type;
+    }
+    if (key && pathExplorerStartKey.value !== key) {
+      pathExplorerStartKey.value = key;
+    }
+  });
+
   const openSankeyNodeActions = (node: SankeyNode, event?: MouseEvent) => {
     const contextNode = nodeActions.prepareNodeActions(
       node.entityType,

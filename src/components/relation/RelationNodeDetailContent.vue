@@ -8,7 +8,9 @@ import type { AttackPathFilters } from "@/views/relation/relationTypes";
 
 // inject viewModel（RelationView provide），取代 props 钻取
 const vm = inject(RELATION_VIEW_MODEL_KEY)!;
-// ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+// ref/computed 解构安全，模板内自动 unwrap；方法直接解构。
+// 改 vm 状态触发父级 watch 的操作（open-as-root/focus-node/reset/open-node-as-root）改为 emit，
+// 由父级协调后调 vm 方法；故这些 vm 方法不在 Content 解构。
 const {
   selectedNetworkNode,
   selectedNetworkNodeTitle,
@@ -36,10 +38,6 @@ const {
   copySelectedNodeCsv,
   gotoSelectedNodeDetailView,
   openSelectedNodeDetailInNewWindow,
-  openSelectedNodeAsRoot,
-  resetAttackPathFilters,
-  focusNodeInDrawer,
-  openNodeAsRootById,
   gotoNodeDetailViewById,
 } = vm;
 
@@ -57,10 +55,15 @@ withDefaults(defineProps<{
   showAttackPathBlock: true,
 });
 
-// attack-path 筛选变化需通知父级（AnalysisPane/Drawer）以协调 UI 响应（如 preserveScrollPane 滚动保持），
-// 故保留 emit 而非直接写 vm.attackPathFilters.value——父级据此决定是否保持对应列滚动位置。
+// 改 vm 状态（selectedNetworkNode/attackPathFilters）触发父级 watch 的操作保留 emit，
+// 让父级（AnalysisPane/Drawer）协调 UI 响应（如 AnalysisPane 设 preserveScrollPane 保持右列滚动）。
+// 不改 vm 状态的操作（copy-csv/view-detail/open-detail-new-window/open-node-detail）直接调 vm 方法，不 emit。
 const emit = defineEmits<{
   "update:attack-path-filters": [value: AttackPathFilters];
+  "reset-attack-path-filters": [];
+  "focus-node": [nodeId: string];
+  "open-as-root": [];
+  "open-node-as-root": [nodeId: string];
 }>();
 
 const relationsSectionRef = ref<HTMLElement | null>(null);
@@ -92,7 +95,7 @@ const updateAttackPathFilters = (value: AttackPathFilters) => {
     :show-open-as-root-action="showOpenAsRootAction"
     @view-detail="gotoSelectedNodeDetailView"
     @open-detail-new-window="openSelectedNodeDetailInNewWindow"
-    @open-as-root="openSelectedNodeAsRoot"
+    @open-as-root="emit('open-as-root')"
     @filter-relations-by-direction="filterRelationsByDirection"
   />
   <RelationNodeInsightBlocks
@@ -120,9 +123,9 @@ const updateAttackPathFilters = (value: AttackPathFilters) => {
     :is-path-node-current-selection="isPathNodeCurrentSelection"
     :is-current-node-root="isCurrentNodeRoot"
     @update:attack-path-filters="updateAttackPathFilters"
-    @reset-attack-path-filters="resetAttackPathFilters"
-    @focus-node="focusNodeInDrawer"
-    @open-node-as-root="openNodeAsRootById"
+    @reset-attack-path-filters="emit('reset-attack-path-filters')"
+    @focus-node="emit('focus-node', $event)"
+    @open-node-as-root="emit('open-node-as-root', $event)"
     @open-node-detail="gotoNodeDetailViewById"
   />
   <div ref="relationsSectionRef">
