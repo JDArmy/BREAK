@@ -514,6 +514,19 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mzixnjm2ntq2ng==&mid=2247504249&idx=1&sn=726901c65f2416c7c0f568cf06063233&chksm=96a90f2cd4915408ae7fad1c3bdd39c620c8ad1713f6dcedee740e20551f2a36c0e3497c9bfa&scene=27', // 衡阳网警政务微信，衡山公安 AI 伪造证据诈骗案官方通报（C1800）
   'https://mp.weixin.qq.com/s?__biz=mzixmtu0mtyxmw==&mid=2247536552&idx=5&sn=85616f7d40fa85c10c343a452d38465f&chksm=9751c4aaa0264dbcbd2d58ec7800e2ed0ad8bcd4ee751acf08271da0669bf9c954ea69308b64&scene=27', // 咸阳政法政务微信，广州白云法院 17 岁少年 DDoS 攻击南航购票系统案以案释法（C1803）
   "https://m.gmw.cn/2023-01/04/content_1303243232.htm", // 平安鹿邑警方通报，警车遭破坏案官方通报（光明网托管）（C1065）
+  "https://3g.china.com/act/news/1007/20170511/30514620.html", // 中华网转载人民公安报原文，老干妈商业秘密案官方通报（C0597）
+  "https://m.thepaper.cn/rss_newsDetail_18497057", // 澎湃新闻标注素材来源上海青浦法院，超市员工加价案（C0686）
+  "https://new.qq.com/rain/a/20210913A0552900", // 腾讯新闻承载梁新怀骗贷案判决内容（C0908）
+  "https://m.thepaper.cn/newsDetail_forward_17589464", // 澎湃基于裁判文书网披露华为易某越权案（C1014）
+  "https://m.thepaper.cn/newsDetail_forward_29286429", // 澎湃完整转载微博发言人反舞弊通报（C1037）
+  "https://www.chinanews.com.cn/sh/2023/08-18/10063122.shtml", // 中新网转载中国新闻周刊，全国首例反催收敲诈勒索判刑（C0937）
+  "http://www.legalweekly.cn/qyyf/2024-12/05/content_9096703.html", // 法治日报法治周末官网，京东金融反催收诈骗案（C0938）
+  "http://www.jingjiribao.cn/static/detail.jsp?id=512460", // 经济日报官网，海尔消金反催收诈骗案（C0939）
+  "https://e.vnexpress.net/news/sports/other-sports/thai-esports-players-tokyogurl-cheerio-get-3-months-detention-for-cheating-at-sea-games-5051632.html", // VnExpress国际版，泰国电竞选手代打判刑原始报道（C0996）
+  "https://mp.weixin.qq.com/s?__biz=MzA4MjM2MDgxMA==&mid=2815589226&idx=1&sn=c615c7d8e2379c2f810510be3d38c060&chksm=bda03bef8ad7b2f9e03d473fab25d8704483eb38992f11279ba068bad676526c608653e04e9d&scene=27", // 杭州公安官方微信公众号，涉黄APP案通报（C1025）
+  "https://news.qq.com/rain/a/20250906A06FMM00", // 腾讯新闻注明来源中国裁判文书网，民警盗卖个人信息案（C1038）
+  "https://news.cctv.cn/2023/09/12/ARTIEHvUctjiLp0RLidsUxPB230912.shtml", // 央视网承载南宁青秀警方情况通报原文（C1050）
+  "https://news.cctv.cn/2025/09/09/ARTIRPMu54Yn5a8uoaSWdFsS250909.shtml", // 央视网转载法治日报，王思诺AI伪造淫秽视频案（C1109）
   "https://new.qq.com/rain/a/20220630A0CT4800", // 滨州公安破获刑事案件战果通报官方警方通报（腾讯新闻托管）（C0834）
   "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=7264903308053183189", // 央视《法治在线》节目页，snow-book 一手报道（C0838）
   "https://mp.weixin.qq.com/s?__biz=MzIyMDMxMzY1Ng==&mid=2247520289&idx=1&sn=d044d264d5fe84ae95d702fbfc7d53d1", // 汕头市市场监督管理局政务微信，规范网络划线价提醒告诫书（C0592）
