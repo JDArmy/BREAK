@@ -1,5 +1,18 @@
 # Change log
 
+## 2.40.10
+
+补强 pathExplorer 视角在现有浏览器测试中的基础覆盖（与 perspective-coverage 交互回归互补）。
+
+- **smoke 加 pathExplorer 路由**：site-smoke.mjs routes 数组追加 `/#/relations/path-explorer/risk/R0001`，文本匹配 R0001/Path Explorer/Source/Target，提供最廉价的渲染兜底（9 路由）。
+- **visual-review 加 pathExplorer 路由**：site-visual-review.mjs routes 数组追加 pathExplorer，3 视口截图（desktop/mobile/mobile-small）+ 桑基 canvas 像素断言（`.path-explorer-chart canvas`）。81 截图。
+- **已知警告分类**：classifyKnownWarning 加 pathExplorer 移动端 el-tabs nav 溢出分支，归入已知移动端布局限制（与 relation-network 同类）。
+
+### 变更文件
+
+- `scripts/validate/site-smoke.mjs`：routes 加 pathExplorer
+- `scripts/validate/site-visual-review.mjs`：routes 加 pathExplorer + classifyKnownWarning 加移动端 tab 溢出分支
+
 ## 2.40.9
 
 补强 Playwright 浏览器覆盖：新增关系图视角覆盖测试，填补 pathExplorer 零覆盖与 analysis 交互回归缺口。

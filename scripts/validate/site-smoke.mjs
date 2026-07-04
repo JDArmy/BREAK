@@ -49,6 +49,7 @@ const routes = [
   { path: '/#/knowledges/term/list', text: /T0001|账号|Account/i },
   { path: '/#/knowledges/case/list', text: /C0001|案例|Case/i },
   { path: '/#/relations/attack-path/risk/R0001', text: /R0001|攻击路径|Attack Path|关系网络|Network/i },
+  { path: '/#/relations/path-explorer/risk/R0001', text: /R0001|Path Explorer|路径探索|Source|Target/i },
 ];
 
 function isSameOrigin(url, baseUrl) {

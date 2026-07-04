@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.40.10",
+    "summary": "补强 pathExplorer 视角在现有浏览器测试中的基础覆盖（与 perspective-coverage 交互回归互补）。",
+    "body": "补强 pathExplorer 视角在现有浏览器测试中的基础覆盖（与 perspective-coverage 交互回归互补）。\n\n- **smoke 加 pathExplorer 路由**：site-smoke.mjs routes 数组追加 `/#/relations/path-explorer/risk/R0001`，文本匹配 R0001/Path Explorer/Source/Target，提供最廉价的渲染兜底（9 路由）。\n- **visual-review 加 pathExplorer 路由**：site-visual-review.mjs routes 数组追加 pathExplorer，3 视口截图（desktop/mobile/mobile-small）+ 桑基 canvas 像素断言（`.path-explorer-chart canvas`）。81 截图。\n- **已知警告分类**：classifyKnownWarning 加 pathExplorer 移动端 el-tabs nav 溢出分支，归入已知移动端布局限制（与 relation-network 同类）。\n\n### 变更文件\n\n- `scripts/validate/site-smoke.mjs`：routes 加 pathExplorer\n- `scripts/validate/site-visual-review.mjs`：routes 加 pathExplorer + classifyKnownWarning 加移动端 tab 溢出分支"
+  },
+  {
     "version": "2.40.9",
     "summary": "补强 Playwright 浏览器覆盖：新增关系图视角覆盖测试，填补 pathExplorer 零覆盖与 analysis 交互回归缺口。",
     "body": "补强 Playwright 浏览器覆盖：新增关系图视角覆盖测试，填补 pathExplorer 零覆盖与 analysis 交互回归缺口。\n\n- **pathExplorer 视角覆盖**（此前零浏览器覆盖）：用例 1 断言控制面板元素可展示正确性（2 type-select / 2 entity-select / 2 param-slider / result 区）；用例 2 验证 v2.40.7 起点同步修复——从 attack-path 带实体切 pathExplorer 后起点实体显示 R0001，切 risk 视角再切回后 startKey 保留。\n- **analysis 视角交互回归**（此前仅视觉截图）：用例 3 断言三列可展示（4 filter / coverage / path 项非空）；用例 4 验证 v2.40.7 rightAction/preserveScrollPane 修复——右列滚动后点 focus-node（经 rightAction 包装）scrollTop 保持 200，对照点左列 coverage-item（left preserve）右列归零，双向佐证 preserveScrollPane 逻辑。\n- 复用 relation-stability.mjs 脚手架（findFreePort/waitForServer/错误收集/shouldRunOnMinorBump 守卫），`BREAK_FORCE_PERSPECTIVE_COVERAGE=1` 强制运行。\n\n### 变更文件\n\n- `scripts/validate/relation-perspective-coverage.mjs`：新建，4 用例覆盖 pathExplorer + analysis\n- `package.json`：追加 `test:perspective-coverage` script"

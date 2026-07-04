@@ -37,6 +37,12 @@ const routes = [
     text: /R0001|攻击路径|Attack Path|关系网络|Network/i,
     canvasSelector: '.network-chart canvas',
   },
+  {
+    label: 'relation-path-explorer',
+    path: '/#/relations/path-explorer/risk/R0001',
+    text: /R0001|Path Explorer|路径探索|Source|Target/i,
+    canvasSelector: '.path-explorer-chart canvas',
+  },
 ];
 
 const interactionRoutes = [
@@ -195,6 +201,15 @@ function classifyKnownWarning(result, warning) {
     /network-chart|canvas|no-class/.test(warningText)
   ) {
     return '移动端关系网络画布在面板内通过缩放和拖拽浏览，允许 canvas 尺寸超出视口';
+  }
+
+  if (
+    result.label === 'relation-path-explorer' &&
+    result.viewport.startsWith('mobile') &&
+    isOverflowElement &&
+    /el-tabs__nav|el-tabs__item|no-class/.test(warningText)
+  ) {
+    return '移动端关系图 el-tabs 在窄屏 nav 溢出，与 relation-network 同属已知移动端布局限制';
   }
 
   if (
