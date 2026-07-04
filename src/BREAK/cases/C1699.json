@@ -24,10 +24,11 @@
         "link": "https://github.com/jmcoded0/AWS-IAM-Privilege-Escalation-Detection"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0054-002"
     ],
-    "relatedThreatActors": []
+    "relatedThreatActors": [],
+    "incidentTime": "2025-07"
   }
 }

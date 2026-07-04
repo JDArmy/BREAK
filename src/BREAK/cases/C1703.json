@@ -22,7 +22,7 @@
         "link": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/oauth-consent-phishing-explained-and-prevented/4423357"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0061-003",
       "AT0063"
@@ -30,6 +30,7 @@
     "relatedThreatActors": [
       "TA0054",
       "TA0059"
-    ]
+    ],
+    "incidentTime": "2018-09-27"
   }
 }

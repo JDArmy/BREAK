@@ -23,7 +23,7 @@
         "link": "https://github.com/SEA-ME/MCS_Secure-OTA"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0072",
       "AT0097"
@@ -31,6 +31,7 @@
     "relatedThreatActors": [
       "TA0049",
       "TA0049-001"
-    ]
+    ],
+    "incidentTime": "2024-03"
   }
 }

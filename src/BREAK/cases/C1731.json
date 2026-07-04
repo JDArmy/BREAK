@@ -22,7 +22,7 @@
         "link": "https://dl.acm.org/doi/abs/10.1145/3341161.3345306"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0002",
       "AT0016",
@@ -35,6 +35,7 @@
     "relatedThreatActors": [
       "TA0001",
       "TA0056"
-    ]
+    ],
+    "incidentTime": "2020-01-15"
   }
 }

@@ -22,10 +22,11 @@
         "link": "https://github.com/pushsecurity/saas-attacks/blob/main/techniques/consent_phishing/description.md"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0061-003"
     ],
-    "relatedThreatActors": []
+    "relatedThreatActors": [],
+    "incidentTime": "2023-07"
   }
 }

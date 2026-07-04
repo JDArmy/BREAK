@@ -23,13 +23,14 @@
         "link": "https://www.bitdefender.com/en-us/blog/hotforsecurity/new-iot-botnet-uses-tor-obfuscate-c2-communications-researchers-find"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0081",
       "AT0082"
     ],
     "relatedThreatActors": [
       "TA0048"
-    ]
+    ],
+    "incidentTime": "2021-03-08"
   }
 }

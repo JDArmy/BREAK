@@ -26,12 +26,13 @@
         "link": "https://www.akamai.com/blog/security/sirt-advisory-silexbot-bricking-systems-with-known-default-login-credentials"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0082"
     ],
     "relatedThreatActors": [
       "TA0048"
-    ]
+    ],
+    "incidentTime": "2021-02-15"
   }
 }

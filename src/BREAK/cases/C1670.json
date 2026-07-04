@@ -23,11 +23,12 @@
         "link": "https://github.com/0x9reedark/cloud-credential-incident-response-playbook"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0054-001",
       "AT0054-002"
     ],
-    "relatedThreatActors": []
+    "relatedThreatActors": [],
+    "incidentTime": "2026-05"
   }
 }

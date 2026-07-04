@@ -23,13 +23,14 @@
         "link": "https://github.com/master-coder1998/cloud-security-ctf/tree/main/challenges/02-overprivileged-iam/writeup"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0054-002",
       "AT0061-001"
     ],
     "relatedThreatActors": [
       "TA0053"
-    ]
+    ],
+    "incidentTime": "2026-03"
   }
 }

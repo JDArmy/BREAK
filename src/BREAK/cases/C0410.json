@@ -22,12 +22,13 @@
         "link": "https://www.okta.com/blog/identity-security/mfa-fatigue-growing-security-concern/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0054-004"
     ],
     "relatedThreatActors": [
       "TA0015"
-    ]
+    ],
+    "incidentTime": "2022-09-28"
   }
 }

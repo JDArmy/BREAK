@@ -23,12 +23,13 @@
         "link": "https://github.com/26zl/cybersec-toolkit/blob/main/.claude/skills/detecting-api-enumeration-attacks/SKILL.md"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-04",
     "relatedAttackTools": [
       "AT0061-001"
     ],
     "relatedThreatActors": [
       "TA0051"
-    ]
+    ],
+    "incidentTime": "2026-02"
   }
 }
