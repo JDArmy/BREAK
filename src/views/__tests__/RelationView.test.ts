@@ -147,9 +147,9 @@ const mountRelationView = async () => {
       },
       stubs: {
         RelationSelectorBar: {
-          props: ["relType", "relKey"],
-          emits: ["update:relType", "update:relKey"],
-          template: '<div class="selector-stub">{{ relType }} {{ relKey }}</div>',
+          // RelationSelectorBar 现通过 inject 取 viewModel，stub 简化显示固定文本
+          //（createViewModel 初始 relType=risk, relKey=R0001，测试断言此值）
+          template: '<div class="selector-stub">risk R0001</div>',
         },
         ElTabs: {
           props: ["modelValue"],

@@ -1,5 +1,23 @@
 # Change log
 
+## 2.40.3
+
+架构评审修复 B7（第 1 阶段）：RelationView 引入 provide/inject 消除 props 钻取，建立迁移基础设施与试点。
+
+- **provide/inject 基础设施**（#4）：新建 `relationViewModelKey.ts`（`RELATION_VIEW_MODEL_KEY: InjectionKey<RelationViewModel>`）；RelationView setup `provide(KEY, viewModel)`，子组件可 `inject` 取代 props 钻取。
+- **RelationSelectorBar 试点迁移**：从 4 props（relType/relKey/RelationTypeMapping/getCurrentEntityOptions）+ 2 emits（update:relType/update:relKey）改为 `inject(RELATION_VIEW_MODEL_KEY)`。relType/relKey 是 viewModel 的 ref，el-select v-model 直接绑定 ref（写回 `.value` 同步到 viewModel，不再需要 emit）。RelationView 模板删除对应 props 传递。
+- **测试适配**：RelationSelectorBar.test.ts 改为 `provide` mock viewModel（含 ref），断言改为检查 viewModel.ref.value 变化（替代 emits 检查）；RelationView.test.ts 的 selector stub 简化。
+- **响应性验证**：`<script setup>` 解构 ref 安全（ref 是对象引用），模板内顶层 ref 自动 unwrap。试点通过 type-check + 562 测试 + coverage 80.27%。
+- **后续渐进迁移**：其余 9 个子组件（RelationAnalysisPane 31 props、RelationNodeDetailDrawer 24 props 等）可按同一模式独立迁移，风险隔离。provide/inject 基础设施已就位。
+
+### 变更文件
+
+- `src/views/relation/relationViewModelKey.ts`（新建）：InjectionKey
+- `src/views/RelationView.vue`：setup provide + 删除 RelationSelectorBar props 传递
+- `src/components/relation/RelationSelectorBar.vue`：props/emits → inject viewModel
+- `src/components/relation/__tests__/RelationSelectorBar.test.ts`：provide mock viewModel
+- `src/views/__tests__/RelationView.test.ts`：selector stub 简化
+
 ## 2.40.2
 
 架构评审修复 B8：模板内重复 `getMessageStringArray` 调用清理，抽 computed 缓存。

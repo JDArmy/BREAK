@@ -1,7 +1,9 @@
 import { mount } from "@vue/test-utils";
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { ref } from "vue";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
 import { RelationType } from "@/views/relation/relationTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
 vi.mock("vue-i18n", () => ({
   useI18n: () => ({
@@ -36,19 +38,34 @@ const stubs = {
   },
 };
 
-const mountSelector = (props?: Partial<InstanceType<typeof RelationSelectorBar>["$props"]>) =>
-  mount(RelationSelectorBar, {
-    props: {
-      relType: RelationType.risk,
-      relKey: "R0001",
-      RelationTypeMapping: relationTypeMapping,
-      getCurrentEntityOptions: { R0001: {}, R0002: {} },
-      ...props,
-    },
+interface MockViewModelOptions {
+  relType?: RelationType;
+  relKey?: string;
+  getCurrentEntityOptions?: Record<string, unknown>;
+}
+
+/** 构造 mock viewModel（含 RelationSelectorBar 所需的 ref/对象） */
+const createMockViewModel = (options: MockViewModelOptions = {}) => ({
+  relType: ref<RelationType>(options.relType ?? RelationType.risk),
+  relKey: ref<string>(options.relKey ?? "R0001"),
+  RelationTypeMapping: relationTypeMapping,
+  getCurrentEntityOptions: ref<Record<string, unknown>>(
+    options.getCurrentEntityOptions ?? { R0001: {}, R0002: {} },
+  ),
+});
+
+const mountSelector = (options?: MockViewModelOptions) => {
+  const viewModel = createMockViewModel(options);
+  const wrapper = mount(RelationSelectorBar, {
     global: {
       stubs,
+      provide: {
+        [RELATION_VIEW_MODEL_KEY as symbol]: viewModel,
+      },
     },
   });
+  return { wrapper, viewModel };
+};
 
 afterEach(() => {
   vi.useRealTimers();
@@ -59,31 +76,31 @@ afterEach(() => {
 
 describe("RelationSelectorBar", () => {
   it("不渲染重复的任务型分析视角控件", () => {
-    const wrapper = mountSelector();
+    const { wrapper } = mountSelector();
 
     expect(wrapper.find(".relation-perspective-control").exists()).toBe(false);
-    expect(wrapper.emitted("update:analysisPerspective")).toBeUndefined();
   });
 
-  it("隐藏术语类型并转发关系类型更新", async () => {
-    const wrapper = mountSelector();
+  it("隐藏术语类型并同步关系类型到 viewModel", async () => {
+    const { wrapper, viewModel } = mountSelector();
 
     expect(wrapper.find("#relation-selector-type").text()).not.toContain("术语");
 
     await wrapper.find("#relation-selector-type").setValue(RelationType.avoidance);
 
-    expect(wrapper.emitted("update:relType")?.[0]).toEqual([RelationType.avoidance]);
+    // relType 是 viewModel 的 ref，选择后直接同步到 viewModel（不再 emit）
+    expect(viewModel.relType.value).toBe(RelationType.avoidance);
   });
 
-  it("初始只渲染当前实体，选择时转发实体 key", async () => {
-    const wrapper = mountSelector();
+  it("初始只渲染当前实体，选择时同步实体 key 到 viewModel", async () => {
+    const { wrapper, viewModel } = mountSelector();
 
     expect(wrapper.find("#relation-selector-key").text()).toContain("R0001");
     expect(wrapper.find("#relation-selector-key").text()).not.toContain("R0002");
 
     await wrapper.find("#relation-selector-key").setValue("R0001");
 
-    expect(wrapper.emitted("update:relKey")?.[0]).toEqual(["R0001"]);
+    expect(viewModel.relKey.value).toBe("R0001");
   });
 
   it("空闲回调触发后应该渲染当前类型的全部实体选项", async () => {
@@ -95,7 +112,7 @@ describe("RelationSelectorBar", () => {
       },
     );
 
-    const wrapper = mountSelector();
+    const { wrapper } = mountSelector();
 
     expect(wrapper.find("#relation-selector-key").text()).not.toContain("R0002");
 
@@ -107,24 +124,24 @@ describe("RelationSelectorBar", () => {
   });
 
   it("关系类型变化后应该立即切换到新类型实体选项", async () => {
-    const wrapper = mountSelector({
+    const { wrapper, viewModel } = mountSelector({
       relType: RelationType.risk,
       relKey: "R0001",
       getCurrentEntityOptions: { R0001: {}, R0002: {} },
     });
 
-    await wrapper.setProps({
-      relType: RelationType.avoidance,
-      relKey: "A0001",
-      getCurrentEntityOptions: { A0001: {}, A0002: {} },
-    });
+    // 模拟 viewModel 的 relType/relKey/getCurrentEntityOptions 变化（响应式驱动）
+    viewModel.relType.value = RelationType.avoidance;
+    viewModel.relKey.value = "A0001";
+    viewModel.getCurrentEntityOptions.value = { A0001: {}, A0002: {} };
+    await wrapper.vm.$nextTick();
 
     expect(wrapper.find("#relation-selector-key").text()).toContain("A0001:BREAK.avoidances.A0001.title");
     expect(wrapper.find("#relation-selector-key").text()).toContain("A0002:BREAK.avoidances.A0002.title");
   });
 
   it("缺失实体类型映射时应该返回空实体选项", () => {
-    const wrapper = mountSelector({
+    const { wrapper } = mountSelector({
       relType: RelationType.all,
       relKey: "R0001",
     });
@@ -138,7 +155,7 @@ describe("RelationSelectorBar", () => {
     (window as Window & { cancelIdleCallback: (handle: number) => void }).cancelIdleCallback =
       cancelIdleCallback;
 
-    const wrapper = mountSelector();
+    const { wrapper } = mountSelector();
 
     wrapper.unmount();
 
@@ -148,7 +165,7 @@ describe("RelationSelectorBar", () => {
   it("不支持空闲回调时应该使用定时器并在卸载时清理", () => {
     vi.useFakeTimers();
     const clearTimeoutSpy = vi.spyOn(window, "clearTimeout");
-    const wrapper = mountSelector();
+    const { wrapper } = mountSelector();
 
     wrapper.unmount();
 

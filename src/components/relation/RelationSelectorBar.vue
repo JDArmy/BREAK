@@ -2,33 +2,24 @@
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { RelationType } from "@/views/relation/relationTypes";
+import { inject } from "vue";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
-const props = defineProps<{
-  relType: RelationType;
-  relKey: string;
-  RelationTypeMapping: Record<string, { title: string; BreakKey: string }>;
-  getCurrentEntityOptions: Record<string, unknown>;
-}>();
-
-const emit = defineEmits<{
-  "update:relType": [value: RelationType];
-  "update:relKey": [value: string];
-}>();
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+// 解构 ref/computed：ref 解构保留响应性，模板内自动 unwrap
+const { relType, relKey, getCurrentEntityOptions } = vm;
+// RelationTypeMapping 是普通对象（非 ref），直接取
+const RelationTypeMapping = vm.RelationTypeMapping;
 
 const { t } = useI18n();
 
-const selectedType = computed({
-  get: () => props.relType,
-  set: (value: RelationType) => emit("update:relType", value),
-});
-
-const selectedKey = computed({
-  get: () => props.relKey,
-  set: (value: string) => emit("update:relKey", value),
-});
+// el-select v-model 直接绑定 ref（relType/relKey 是 vm 的 ref，写回 .value 即同步到 viewModel）
+const selectedType = relType;
+const selectedKey = relKey;
 
 const selectableRelationTypes = computed(() =>
-  Object.entries(props.RelationTypeMapping).filter(
+  Object.entries(RelationTypeMapping).filter(
     ([key]) => key !== RelationType.term
   )
 );
@@ -36,22 +27,22 @@ const selectableRelationTypes = computed(() =>
 const entitySelectOptionsReady = ref(false);
 
 const buildEntitySelectOptions = () => {
-  const currentMapping = props.RelationTypeMapping[props.relType];
+  const currentMapping = RelationTypeMapping[relType.value];
   if (!currentMapping) return [];
 
-  return Object.keys(props.getCurrentEntityOptions).map((key) => ({
+  return Object.keys(getCurrentEntityOptions.value).map((key) => ({
     label: `${key}:${t(`BREAK.${currentMapping.BreakKey}.${key}.title`)}`,
     value: key,
   }));
 };
 
 const currentEntityOption = computed(() => {
-  const currentMapping = props.RelationTypeMapping[props.relType];
-  if (!currentMapping || !props.relKey) return [];
+  const currentMapping = RelationTypeMapping[relType.value];
+  if (!currentMapping || !relKey.value) return [];
   return [
     {
-      label: `${props.relKey}:${t(`BREAK.${currentMapping.BreakKey}.${props.relKey}.title`)}`,
-      value: props.relKey,
+      label: `${relKey.value}:${t(`BREAK.${currentMapping.BreakKey}.${relKey.value}.title`)}`,
+      value: relKey.value,
     },
   ];
 });
@@ -90,7 +81,7 @@ onUnmounted(() => {
 });
 
 watch(
-  () => props.relType,
+  relType,
   () => {
     entitySelectOptionsReady.value = true;
   }

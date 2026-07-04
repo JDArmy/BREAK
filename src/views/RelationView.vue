@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted } from "vue";
+import { defineComponent, onMounted, onUnmounted, provide } from "vue";
 import RelationAnalysisPane from "@/components/relation/RelationAnalysisPane.vue";
 import RelationGraphContextMenu from "@/components/relation/RelationGraphContextMenu.vue";
 import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchActions.vue";
@@ -7,6 +7,7 @@ import RelationSankeyPane from "@/components/relation/RelationSankeyPane.vue";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
 import RelationPaneError from "@/components/relation/RelationPaneError.vue";
 import { useRelationViewModel } from "@/views/relation/useRelationViewModel";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 import { RelationType } from "@/views/relation/relationTypes";
 import {
   loadNetworkECharts,
@@ -50,6 +51,8 @@ export default defineComponent({
   },
   setup() {
     const viewModel = useRelationViewModel();
+    // provide viewModel 给子组件，子组件 inject 取代 props 钻取（RelationSelectorBar 等已迁移）
+    provide(RELATION_VIEW_MODEL_KEY, viewModel);
     let preloadTimer: ReturnType<typeof setTimeout> | null = null;
     let preloadIdleHandle: number | null = null;
     onMounted(() => {
@@ -111,12 +114,7 @@ export default defineComponent({
       'relation-page--path-explorer': activeView === 'pathExplorer',
     }"
   >
-    <RelationSelectorBar
-      v-model:rel-type="relType"
-      v-model:rel-key="relKey"
-      :RelationTypeMapping="RelationTypeMapping"
-      :get-current-entity-options="getCurrentEntityOptions"
-    />
+    <RelationSelectorBar />
 
     <el-tabs :model-value="activeView" class="relation-tabs" @tab-change="onTabChange">
       <el-tab-pane
