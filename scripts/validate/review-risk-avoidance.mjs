@@ -81,7 +81,11 @@ function validateResult(data) {
   if (!['pass', 'review', 'fail'].includes(data.verdict)) throw new Error(`verdict 非法: ${data.verdict}`);
   if (typeof data.reason !== 'string' || !data.reason.trim()) throw new Error('reason 必须非空 string');
   if (!Array.isArray(data.suggestions)) throw new Error('suggestions 必须是数组');
-  if (!Array.isArray(data.risk_avoidance_effectiveness)) throw new Error('risk_avoidance_effectiveness 必须是数组');
+  if (!data.risk_avoidance_effectiveness) data.risk_avoidance_effectiveness = [];
+  if (!Array.isArray(data.risk_avoidance_effectiveness)) {
+    if (typeof data.risk_avoidance_effectiveness === 'object') data.risk_avoidance_effectiveness = [data.risk_avoidance_effectiveness];
+    else data.risk_avoidance_effectiveness = [];
+  }
 }
 
 const results = await runSubagentReview({

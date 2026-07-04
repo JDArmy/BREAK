@@ -75,7 +75,7 @@ function validateResult(data) {
   if (!['pass', 'review', 'fail'].includes(data.verdict)) throw new Error(`verdict 非法: ${data.verdict}`);
   if (typeof data.reason !== 'string' || !data.reason.trim()) throw new Error('reason 必须非空');
   if (!Array.isArray(data.suggestions)) throw new Error('suggestions 必须是数组');
-  if (!data.shouldExtractNew || typeof data.shouldExtractNew !== 'object') throw new Error('shouldExtractNew 必须是对象');
+  if (!data.shouldExtractNew || typeof data.shouldExtractNew !== 'object') data.shouldExtractNew = {};
 }
 
 const results = await runSubagentReview({

@@ -66,20 +66,30 @@ for (const [name, script, types] of toRun) {
   let passCount = 0;
   let totalCount = 0;
   let error = null;
+  let subprocessExit1 = false;
   try {
     const { execFileSync } = await import('node:child_process');
     execFileSync('node', args, { cwd: projectRoot, stdio: 'inherit', encoding: 'utf8' });
-    // 读取报告
-    if (fs.existsSync(reportPath)) {
+  } catch (e) {
+    // 子脚本 exit 1：可能是 fail（门禁阻断，报告已落盘）或崩溃（报告可能未落盘）
+    error = String(e.message || e).slice(0, 300);
+    subprocessExit1 = true;
+  }
+  // 读取报告（无论子脚本是否 exit 1，报告可能已落盘）
+  if (fs.existsSync(reportPath)) {
+    try {
       const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
       totalCount = report.length;
       failCount = report.filter((r) => r.verdict === 'fail').length;
       reviewCount = report.filter((r) => r.verdict === 'review').length;
       passCount = report.filter((r) => r.verdict === 'pass').length;
+    } catch {
+      // 报告损坏
     }
-  } catch (e) {
-    error = String(e.message || e).slice(0, 300);
-    failCount = 1; // 子脚本 exit 1 视为 fail
+  }
+  // 子脚本 exit 1 但报告无 fail 记录 → 可能是崩溃或子脚本本身报错，记为 fail 阻断
+  if (subprocessExit1 && failCount === 0) {
+    failCount = 1;
   }
   summary.reviewers.push({ name, types, total: totalCount, pass: passCount, review: reviewCount, fail: failCount, error });
   if (failCount > 0) summary.hasFail = true;

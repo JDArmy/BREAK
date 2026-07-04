@@ -23,26 +23,42 @@ if (opts.keys) {
 }
 if (opts.limit > 0) items = items.slice(0, opts.limit);
 
+// 加载全库 BS 原始结构（含每个 RS 的 risks 列表），供判断当前归属 + 应加场景
+function loadBusinessScenesWithRisks() {
+  const records = loadAllEntities('businessScenes');
+  return records.map(({ key, entity }) => ({
+    bsId: key,
+    bsTitle: entity.title,
+    riskScenes: Object.entries(entity.riskScenes || {}).map(([rsId, rs]) => ({
+      rsId,
+      rsTitle: rs.title,
+      risks: rs.risks || [],
+    })),
+  }));
+}
+
 function prepareContext(item) {
-  const businessScenes = loadBusinessScenes();
-  // 当前 Risk 已在哪些 BS/RS
-  const inScenes = [];
+  const businessScenes = loadBusinessScenesWithRisks();
+  // 找出当前 Risk 已在哪些 BS/RS
+  const currentScenes = [];
   for (const bs of businessScenes) {
     for (const rs of bs.riskScenes) {
-      // 需读原始 BS 文件确认 risk 归属（loadBusinessScenes 只返回 title/count，不含 risks 数组）
+      if (rs.risks.includes(item.key)) {
+        currentScenes.push(`${bs.bsId}/${rs.rsId}(${bs.bsTitle}/${rs.rsTitle})`);
+      }
     }
   }
-  return { ...item, businessScenes };
+  return { ...item, businessScenes, currentScenes };
 }
 
 function buildPrompt(item) {
-  const { entity, businessScenes } = item;
-  const sys = `你是 BREAK 知识库的风险业务场景归类评审员。结合全库业务场景结构，判定该风险是否应加入其他业务场景。
+  const { entity, businessScenes, currentScenes } = item;
+  const sys = `你是 BREAK 知识库的风险业务场景归类评审员。结合全库业务场景结构与该风险当前已归的场景，判定是否应加入其他业务场景。
 严格规则：
 1. 只输出 JSON 对象。
-2. shouldAddOtherScenes：该风险是否应加入其他专题 BS（除已归的外）？给具体 bsId + rsId + reason。
+2. currentCoverageReasonable：当前归类是否合理。
+3. shouldAddOtherScenes：该风险是否应加入其他专题 BS（除已归的外）？给具体 bsId + rsId + reason。
    - 专题 BS 如 BS14(AI)、BS16(IoT)、BS19(具身智能)、BS01(金融)、BS02(电商) 等
-3. currentCoverageReasonable：当前归类是否合理（若风险已归到某 BS 的 RS）。
 4. verdict：pass(当前归类合理无需加)/review(建议加其他场景)/fail(明显漏归到应属的主场景)。
 5. reason: 一句话。suggestions: 数组。`;
   const bsList = (businessScenes || [])
@@ -51,6 +67,9 @@ function buildPrompt(item) {
   const user = `【风险】${item.key} ${entity.title}
 【definition】${entity.definition || ''}
 【description】${String(entity.description || '').slice(0, 300)}
+
+【当前已归入的业务场景】
+${currentScenes.length ? currentScenes.join(', ') : '（无，未归入任何场景——可能需补归 BS00 全场景）'}
 
 【全库业务场景结构】
 ${bsList}
@@ -67,7 +86,15 @@ function validateResult(data) {
   if (!['pass', 'review', 'fail'].includes(data.verdict)) throw new Error(`verdict 非法: ${data.verdict}`);
   if (typeof data.reason !== 'string' || !data.reason.trim()) throw new Error('reason 必须非空');
   if (!Array.isArray(data.suggestions)) throw new Error('suggestions 必须是数组');
-  if (!Array.isArray(data.shouldAddOtherScenes)) throw new Error('shouldAddOtherScenes 必须是数组');
+  // shouldAddOtherScenes 接受数组或对象（LLM 可能返回单对象），非空即归一化成数组
+  if (!data.shouldAddOtherScenes) data.shouldAddOtherScenes = [];
+  if (!Array.isArray(data.shouldAddOtherScenes)) {
+    if (typeof data.shouldAddOtherScenes === 'object') {
+      data.shouldAddOtherScenes = [data.shouldAddOtherScenes];
+    } else {
+      throw new Error('shouldAddOtherScenes 必须是数组或对象');
+    }
+  }
 }
 
 const results = await runSubagentReview({

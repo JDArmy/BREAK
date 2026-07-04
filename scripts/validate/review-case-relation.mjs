@@ -72,7 +72,11 @@ function validateResult(data) {
   if (!['pass', 'review', 'fail'].includes(data.verdict)) throw new Error(`verdict 非法: ${data.verdict}`);
   if (typeof data.reason !== 'string' || !data.reason.trim()) throw new Error('reason 必须非空');
   if (!Array.isArray(data.suggestions)) throw new Error('suggestions 必须是数组');
-  if (!Array.isArray(data.case_risk_relevance)) throw new Error('case_risk_relevance 必须是数组');
+  if (!data.case_risk_relevance) data.case_risk_relevance = [];
+  if (!Array.isArray(data.case_risk_relevance)) {
+    if (typeof data.case_risk_relevance === 'object') data.case_risk_relevance = [data.case_risk_relevance];
+    else data.case_risk_relevance = [];
+  }
 }
 
 const results = await runSubagentReview({

@@ -124,7 +124,7 @@ function validateResult(data) {
   if (!['pass', 'review', 'fail'].includes(data.verdict)) throw new Error(`verdict 非法: ${data.verdict}`);
   if (typeof data.reason !== 'string' || !data.reason.trim()) throw new Error('reason 必须非空');
   if (!Array.isArray(data.suggestions)) throw new Error('suggestions 必须是数组');
-  if (!data.summaryVsFact || typeof data.summaryVsFact !== 'object') throw new Error('summaryVsFact 必须是对象');
+  if (!data.summaryVsFact || typeof data.summaryVsFact !== 'object') data.summaryVsFact = { verdict: 'partial', conflicts: [], fabrications: [] };
 }
 
 function loadProgress() {

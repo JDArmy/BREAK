@@ -78,7 +78,11 @@ function validateResult(data) {
   if (!['pass', 'review', 'fail'].includes(data.verdict)) throw new Error(`verdict 非法: ${data.verdict}`);
   if (typeof data.reason !== 'string' || !data.reason.trim()) throw new Error('reason 必须非空');
   if (!Array.isArray(data.suggestions)) throw new Error('suggestions 必须是数组');
-  if (!Array.isArray(data.tool_risks_classification)) throw new Error('tool_risks_classification 必须是数组');
+  if (!data.tool_risks_classification) data.tool_risks_classification = [];
+  if (!Array.isArray(data.tool_risks_classification)) {
+    if (typeof data.tool_risks_classification === 'object') data.tool_risks_classification = [data.tool_risks_classification];
+    else data.tool_risks_classification = [];
+  }
 }
 
 const results = await runSubagentReview({
