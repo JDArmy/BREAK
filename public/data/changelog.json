@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.39.4",
+    "summary": "架构评审修复 B4：tsconfig node 版本对齐 + RelationRouteShell 动态 import。",
+    "body": "架构评审修复 B4：tsconfig node 版本对齐 + RelationRouteShell 动态 import。\n\n- **tsconfig node18 → node24**（#3）：`tsconfig.node.json` extends 从 `@tsconfig/node18` 改为 `@tsconfig/node24`，与 `.nvmrc`(24) 和 `engines`(>=24.0.0) 对齐。devDeps 同步更新。预检 `tsc --noEmit -p tsconfig.node.json` 无类型错误。\n- **RelationRouteShell 动态 import**（#19）：`router/index.ts` 的 `RelationRouteShell` 从顶层静态 import 改为 `loadRelationRouteShell = () => import(...)` 动态工厂，8 条 relation 路由的 `component` 改用工厂。RelationRouteShell 不再进入首屏 chunk，与 `loadRelationView` 同 chunk 策略。\n\n### 变更文件\n\n- `tsconfig.node.json`：extends 改 @tsconfig/node24\n- `package.json`：devDeps 去掉 @tsconfig/node18，加 @tsconfig/node24\n- `src/router/index.ts`：RelationRouteShell 静态 import → 动态工厂"
+  },
+  {
     "version": "2.39.3",
     "summary": "架构评审修复 B3：useSearch 单例化 + 模块拆分，消除多组件实例重复构建索引与重复注册 watcher 的隐患。",
     "body": "架构评审修复 B3：useSearch 单例化 + 模块拆分，消除多组件实例重复构建索引与重复注册 watcher 的隐患。\n\n- **单例化**（#2）：`fuseInstances` 从函数作用域 ref 提升为模块级单例 ref，多次调用 `useSearch()` 共享同一份索引。watcher 用 `searchWatchersRegistered` flag 防重（参照 `useCases` 的 `localeWatchRegistered` 模式）。生产环境仅 SearchDialog 一个调用方，当前无实际 bug，但隐患消除且设计一致性提升。\n- **模块拆分**（#7）：`useSearch.ts`（412 行）拆为 `useSearchCore.ts`（纯函数 FUSE_CONFIGS/buildIndexableItems/extractSnippetForSearch + 单例状态 + watcher）+ `useSearch.ts`（精简 hook）。对外 API 不变（SearchDialog 无需改）。\n- **注入式单例**：useSearchCore 通过 `initSearchIndex(locale, messages, cases)` 接收全局单例 ref（vue-i18n 全局实例 + useCases 模块级 ref），watcher 引用注入的 ref，不依赖组件 setup，随 app 生命周期存在。\n- **测试适配**：导出 `__resetSearchSingleton` 测试专用重置函数，beforeEach 调用清理单例避免测试间污染。\n- **附带**：`useCases.ts` 的模块级 `cases` ref 改为 `export`，供 useSearchCore 直接访问（单例模式对齐）。\n\n### 变更文件\n\n- `src/composables/useSearchCore.ts`（新建）：纯函数 + 单例状态 + watcher\n- `src/composables/useSearch.ts`：精简为 hook\n- `src/composables/useCases.ts`：导出 cases ref\n- `src/composables/__tests__/useSearch.test.ts`：适配单例（beforeEach 重置）"

@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.39.3",
+  "version": "2.39.4",
   "private": true,
   "type": "module",
   "engines": {
@@ -86,7 +86,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/node24": "^24.0.4",
     "@types/node": "^22.15.0",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vitejs/plugin-vue-jsx": "^5.1.5",

@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import RelationRouteShell from "@/views/RelationRouteShell.vue";
 import { initLocaleMessages } from "@/i18n";
 import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
 import {
@@ -24,6 +23,8 @@ declare module "vue-router" {
 
 const loadHomeView = () => import("@/views/HomeView.vue");
 const loadRelationView = () => import("@/views/RelationView.vue");
+// RelationRouteShell 动态加载，避免静态 import 进入首屏 chunk（与 loadRelationView 同 chunk 策略）
+const loadRelationRouteShell = () => import("@/views/RelationRouteShell.vue");
 type RelationPreloadTarget = "network" | "sankey";
 
 export const preloadRelationView = (target?: RelationPreloadTarget) => {
@@ -195,49 +196,49 @@ const router = createRouter({
       path: "/relations/risk-relation",
       name: "relationRisk",
       meta: { needsBreakData: true, relationPerspective: "risk" },
-      component: RelationRouteShell,
+      component: loadRelationRouteShell,
     },
     {
       path: "/relations/risk-relation/:entity/:id",
       name: "relationRiskEntity",
       meta: { needsBreakData: true, relationPerspective: "risk" },
-      component: RelationRouteShell,
+      component: loadRelationRouteShell,
     },
     {
       path: "/relations/attack-path",
       name: "relationAttackPath",
       meta: { needsBreakData: true, relationPerspective: "attackPath" },
-      component: RelationRouteShell,
+      component: loadRelationRouteShell,
     },
     {
       path: "/relations/attack-path/:entity/:id",
       name: "relationAttackPathEntity",
       meta: { needsBreakData: true, relationPerspective: "attackPath" },
-      component: RelationRouteShell,
+      component: loadRelationRouteShell,
     },
     {
       path: "/relations/defense-coverage",
       name: "relationDefenseCoverage",
       meta: { needsBreakData: true, relationPerspective: "defenseCoverage" },
-      component: RelationRouteShell,
+      component: loadRelationRouteShell,
     },
     {
       path: "/relations/defense-coverage/:entity/:id",
       name: "relationDefenseCoverageEntity",
       meta: { needsBreakData: true, relationPerspective: "defenseCoverage" },
-      component: RelationRouteShell,
+      component: loadRelationRouteShell,
     },
     {
       path: "/relations/path-explorer",
       name: "relationPathExplorer",
       meta: { needsBreakData: true, relationPerspective: "pathExplorer" },
-      component: RelationRouteShell,
+      component: loadRelationRouteShell,
     },
     {
       path: "/relations/path-explorer/:entity/:id",
       name: "relationPathExplorerEntity",
       meta: { needsBreakData: true, relationPerspective: "pathExplorer" },
-      component: RelationRouteShell,
+      component: loadRelationRouteShell,
     },
 
     // 更新日志

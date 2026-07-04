@@ -1,5 +1,18 @@
 # Change log
 
+## 2.39.4
+
+架构评审修复 B4：tsconfig node 版本对齐 + RelationRouteShell 动态 import。
+
+- **tsconfig node18 → node24**（#3）：`tsconfig.node.json` extends 从 `@tsconfig/node18` 改为 `@tsconfig/node24`，与 `.nvmrc`(24) 和 `engines`(>=24.0.0) 对齐。devDeps 同步更新。预检 `tsc --noEmit -p tsconfig.node.json` 无类型错误。
+- **RelationRouteShell 动态 import**（#19）：`router/index.ts` 的 `RelationRouteShell` 从顶层静态 import 改为 `loadRelationRouteShell = () => import(...)` 动态工厂，8 条 relation 路由的 `component` 改用工厂。RelationRouteShell 不再进入首屏 chunk，与 `loadRelationView` 同 chunk 策略。
+
+### 变更文件
+
+- `tsconfig.node.json`：extends 改 @tsconfig/node24
+- `package.json`：devDeps 去掉 @tsconfig/node18，加 @tsconfig/node24
+- `src/router/index.ts`：RelationRouteShell 静态 import → 动态工厂
+
 ## 2.39.3
 
 架构评审修复 B3：useSearch 单例化 + 模块拆分，消除多组件实例重复构建索引与重复注册 watcher 的隐患。
