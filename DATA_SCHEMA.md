@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.39.1`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.39.2`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -198,7 +198,7 @@ Allowed English translation fields are:
 | ThreatActor | `title`, `keywords`, `description`, `references[].title`, `references[].link` |
 | Term | `title`, `keywords`, `aliases`, `category`, `definition`, `description`, `usageExample`, `references[].title`, `references[].link` |
 | BusinessScene | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |
-| Case | `title`, `keywords`, `summary`, `description`, `references[].title`, `references[].link` |
+| Case | `title`, `keywords`, `summary`, `references[].title`, `references[].link` |
 
 English files must not contain relationship fields, ID arrays, `updated`, or BusinessScene structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.
 

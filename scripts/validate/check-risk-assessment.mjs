@@ -131,7 +131,19 @@ for (const file of files) {
 }
 
 // 2. 校验英文 i18n 文件 riskAssessment 只含可翻译字段
+//    并校验英文 observables 与中文源长度一致（mergeWithStructure 按索引合并，长度不一致会错配）
 if (existsSync(enDir)) {
+  // 加载中文源 riskAssessment.observables，供英文长度对比
+  const zhObservablesById = new Map();
+  for (const file of files) {
+    const data = readJson(join(zhDir, file));
+    for (const [id, entity] of Object.entries(data)) {
+      if (entity.riskAssessment?.observables) {
+        zhObservablesById.set(id, entity.riskAssessment.observables);
+      }
+    }
+  }
+
   const enFiles = readdirSync(enDir).filter((f) => /^R\d{4}\.json$/.test(f)).sort();
   for (const file of enFiles) {
     const data = readJson(join(enDir, file));
@@ -144,10 +156,14 @@ if (existsSync(enDir)) {
           `${id} (en): riskAssessment 含非法结构字段 ${extra.join(", ")}（英文只允许维护 ${ASSESSMENT_TRANSLATABLE_KEYS.join("/")},）`
         );
       }
-      // 英文 observables 也校验长度一致（mergeWithStructure 按索引合并）
+      // 英文 observables 与中文源长度一致（mergeWithStructure 按索引合并，长度不一致会错配）
       if (Array.isArray(a.observables)) {
-        // 与中文源对比长度
-        // 简化：仅校验非空与质量，长度一致性在 i18n-sync 已覆盖 references，observables 暂不强制
+        const zhObs = zhObservablesById.get(id);
+        if (zhObs && a.observables.length !== zhObs.length) {
+          issues.push(
+            `${id} (en): riskAssessment.observables 长度不一致: 中文 ${zhObs.length} 条, 英文 ${a.observables.length} 条`
+          );
+        }
       }
     }
   }

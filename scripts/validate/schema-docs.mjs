@@ -297,7 +297,7 @@ function generateMarkdown() {
     '| ThreatActor | `title`, `keywords`, `description`, `references[].title`, `references[].link` |',
     '| Term | `title`, `keywords`, `aliases`, `category`, `definition`, `description`, `usageExample`, `references[].title`, `references[].link` |',
     '| BusinessScene | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |',
-    '| Case | `title`, `keywords`, `summary`, `description`, `references[].title`, `references[].link` |',
+    '| Case | `title`, `keywords`, `summary`, `references[].title`, `references[].link` |',
     '',
     'English files must not contain relationship fields, ID arrays, `updated`, or BusinessScene structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.',
     ''

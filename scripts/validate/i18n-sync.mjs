@@ -6,8 +6,20 @@
 
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { loadSchemaModule, getSchemaTopLevelFields } from "./schema-loader.mjs";
 
 const strict = process.argv.includes("--strict");
+
+// schemaKey 与 category 的映射，用于白名单元校验（从 schema 派生字段集）
+const SCHEMA_KEY_BY_CATEGORY = {
+  Risks: "risks",
+  Avoidances: "avoidances",
+  AttackTools: "attackTools",
+  ThreatActors: "threatActors",
+  Terms: "terms",
+  BusinessScenes: "businessScenes",
+  Cases: "cases",
+};
 
 function loadRecords(dir) {
   const records = new Map();
@@ -84,7 +96,7 @@ const categories = [
     name: "Cases",
     zhDir: "src/BREAK/cases",
     enDir: "src/i18n/en/BREAK/cases",
-    fields: ["title", "keywords", "summary", "description", "references"],
+    fields: ["title", "keywords", "summary", "references"],
   },
 ];
 
@@ -164,6 +176,37 @@ function checkTranslationFields(category, enRecords, zhRecords) {
   }
 
   return issues;
+}
+
+// 白名单元校验：确保 i18n-sync 的 fields 白名单是 schema 字段集的子集，
+// 防止白名单含 schema 未定义的幽灵字段（如历史遗留的 Case description）。
+// 完全自动推导不可行（references/riskAssessment 的嵌套翻译边界需人工编码），
+// 故白名单仍手写，但机器保证白名单 ⊆ schema 字段集。
+const { entitySchemas } = await loadSchemaModule();
+const metaIssues = [];
+for (const cat of categories) {
+  const schemaKey = SCHEMA_KEY_BY_CATEGORY[cat.name];
+  const schema = entitySchemas[schemaKey];
+  if (!schema) {
+    metaIssues.push(`${cat.name}: schemaKey "${schemaKey}" 在 entitySchemas 中不存在`);
+    continue;
+  }
+  const schemaFields = getSchemaTopLevelFields(schema);
+  const allowedFields = new Set(cat.fields);
+  const ghostFields = [...allowedFields].filter((f) => !schemaFields.has(f));
+  if (ghostFields.length > 0) {
+    metaIssues.push(
+      `${cat.name}: i18n 白名单含 schema 未定义字段 ${ghostFields.join(", ")}（白名单必须 ⊆ schema 字段集）`
+    );
+  }
+}
+
+if (metaIssues.length > 0) {
+  hasErrors = true;
+  console.log("❌ i18n 白名单元校验失败（白名单与 schema 不一致）：");
+  for (const issue of metaIssues) console.log(`   - ${issue}`);
+  console.log("\n❌ i18n 同步检查失败（白名单元校验未通过）");
+  process.exit(1);
 }
 
 for (const cat of categories) {

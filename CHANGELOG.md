@@ -1,5 +1,24 @@
 # Change log
 
+## 2.39.2
+
+架构评审修复 B2：校验脚本补强，补齐 observables 长度、i18n 白名单、UI 文案 key 三处校验遗漏，清理 Case description 历史冲突。
+
+- **英文 observables 长度校验**（#9）：`check-risk-assessment.mjs` 补齐英文 `riskAssessment.observables` 与中文源长度对比，防止 `mergeWithStructure` 按索引合并时错配。原 TODO 空实现填实。
+- **i18n 白名单元校验**（#10）：抽 `schema-loader.mjs` 共享 Vite SSR build schema 逻辑；`i18n-sync.mjs` 加载 schema 后校验每类实体白名单 ⊆ schema 字段集，机器捕获幽灵字段（如历史遗留的 Case description）。完全自动推导不可行（references/riskAssessment 嵌套翻译边界需人工编码），故白名单仍手写但机器保证子集关系。
+- **UI 文案 key 同步校验**（#12）：新建 `ui-i18n-keys.mjs`，递归对比 `zh-CN/index.json` 与 `en/index.json` 的 key 路径树，防止英文 UI 文案缺失导致 fallback 到中文产生混合语言 UI。接入 `validate:data` 链。
+- **Case description 冲突清理**：`i18n-sync.mjs` Cases 白名单删 `description`（caseSchema.strict 已拒绝该字段）、`schema-docs.mjs` 文档表 Case 行删 `description`、`C1800.json`/`C1801.json` 删冗余 description（内容与 summary 完全相同的复制粘贴）。
+
+### 变更文件
+
+- `scripts/validate/check-risk-assessment.mjs`：英文 observables 长度对比
+- `scripts/validate/i18n-sync.mjs`：白名单元校验 + Cases 白名单删 description
+- `scripts/validate/schema-loader.mjs`（新建）：共享 schema 加载
+- `scripts/validate/ui-i18n-keys.mjs`（新建）：UI 文案 key 同步校验
+- `scripts/validate/schema-docs.mjs` + `DATA_SCHEMA.md`：Case 行删 description
+- `src/i18n/en/BREAK/cases/C1800.json`、`C1801.json`：删冗余 description
+- `package.json`：validate:data 链追加 ui-i18n-keys
+
 ## 2.39.1
 
 架构评审修复 B1：Schema strict 全量落地 + references link 协议限制，补齐一致性与安全盲区。
