@@ -10,17 +10,27 @@ import {
   safeUrl,
   writeJson,
 } from '../search/common.mjs';
+import { weakDomains as sourceWeakDomains, classifySource } from './source-classify.mjs';
 
 const entityTypes = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'cases'];
-const lowQualityDomains = [
-  'baike.baidu.com',
-  'baijiahao.baidu.com',
-  'blog.csdn.net',
-  'csdn.net',
-  'jianshu.com',
-  'zhuanlan.zhihu.com',
-];
+// 统一用 source-classify.mjs 的 weakDomains（11 个），替换原 6 个 lowQualityDomains
+const lowQualityDomains = sourceWeakDomains;
 const includeI18nLinkIssues = process.argv.includes('--include-i18n-link-issues');
+
+// title 承诺与域名强信号不一致检测
+const CVE_RE = /\bCVE-\d{4}-\d{4,}\b/i;
+const TITLE_DOMAIN_SIGNALS = [
+  { titleRe: /\bCVE-\d{4}-\d{4,}\b/i, domains: ['cve.org', 'nvd.nist.gov', 'mitre.org', 'github.com', 'gist.github.com'], label: 'CVE' },
+  { titleRe: /判决书|裁定书|刑初|刑事判决|一审|二审/, domains: ['gov.cn', 'chinacourt.cn', 'chinacourt.org', 'courtlistener.com', 'bjcourt.gov.cn', 'hshfy.sh.cn', 'elawcn.com', '055110.com', 'indiankanoon.org'], label: '判决书' },
+  { titleRe: /警情通报|警方通报|公安通报|通报/, domains: ['gov.cn', 'news.qq.com', 'mp.weixin.qq.com'], label: '通报' },
+];
+const ROOT_DOMAIN_HOMEPAGES = new Set([
+  'miit.gov.cn', 'owasp.org', 'cisa.gov', 'nist.gov', 'iso.org', 'w3.org', 'owasp.org',
+]);
+
+function matchesDomain(domain, suffixes) {
+  return suffixes.some((s) => domain === s || domain.endsWith(`.${s}`));
+}
 
 function containsCjk(text) {
   return /[\u3400-\u9fff\uf900-\ufaff]/u.test(String(text || ''));
@@ -32,8 +42,8 @@ function isMissingOrUntranslatedReferenceTitle(zhTitle, enTitle) {
 }
 
 function severityForIssue(type) {
-  if (['duplicate_link', 'low_quality_domain'].includes(type)) return 'warning';
-  if (['i18n_reference_count_mismatch', 'i18n_reference_link_mismatch'].includes(type)) return 'review';
+  if (['duplicate_link', 'low_quality_domain', 'root_homepage_link'].includes(type)) return 'warning';
+  if (['i18n_reference_count_mismatch', 'i18n_reference_link_mismatch', 'title_domain_mismatch'].includes(type)) return 'review';
   return 'error';
 }
 
@@ -102,6 +112,35 @@ function checkEntityReferences(entityType, records, issues) {
       if (matchedLowQualityDomain) {
         addIssue(issues, {
           type: 'low_quality_domain',
+          ...context,
+          refIndex: index,
+          link: ref.link,
+          domain,
+        });
+      }
+
+      // title 承诺与域名强信号不一致
+      const titleStr = String(ref.title || '');
+      for (const sig of TITLE_DOMAIN_SIGNALS) {
+        if (sig.titleRe.test(titleStr) && !matchesDomain(domain, sig.domains)) {
+          addIssue(issues, {
+            type: 'title_domain_mismatch',
+            ...context,
+            refIndex: index,
+            link: ref.link,
+            domain,
+            label: sig.label,
+            message: `title 含"${sig.label}"信号但 link 域名 ${domain} 不匹配（应为 ${sig.domains.slice(0, 3).join('/')} 等）`,
+          });
+          break;
+        }
+      }
+
+      // 根域首页占位（pathname 为空或仅 /）
+      const url = safeUrl(link);
+      if (url && (!url.pathname || url.pathname === '/' || url.pathname === '/index.html') && ROOT_DOMAIN_HOMEPAGES.has(domain)) {
+        addIssue(issues, {
+          type: 'root_homepage_link',
           ...context,
           refIndex: index,
           link: ref.link,

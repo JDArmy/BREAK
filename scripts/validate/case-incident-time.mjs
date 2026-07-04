@@ -70,6 +70,7 @@ let total = 0;
 let hasTime = 0;
 const missing = [];
 const invalid = [];
+const yearMismatches = [];
 const byCat = {};
 const missingByCat = {};
 
@@ -110,6 +111,17 @@ for (const file of files) {
   if (!isValidCalendar(t)) {
     invalid.push({ id, cat, t, reason: `非法日历日期` });
   }
+
+  // incidentTime 与 summary 年份一致性（仅 summary 含单一年份时校验）
+  const summary = String(c.summary || '');
+  const yearMatches = summary.match(/(\d{4})\s*年/g);
+  if (yearMatches && yearMatches.length === 1) {
+    const summaryYear = Number(yearMatches[0].replace(/\s*年/, ''));
+    const incidentYear = Number(t.slice(0, 4));
+    if (summaryYear !== incidentYear) {
+      yearMismatches.push({ id, cat, t, reason: `summary 年份 ${summaryYear} 与 incidentTime 年份 ${incidentYear} 不一致` });
+    }
+  }
 }
 
 console.log(`\n=== Case incidentTime 校验 ===\n`);
@@ -149,6 +161,14 @@ if (missing.length) {
 if (invalid.length) {
   console.log(`\n❌ incidentTime 存在非法值，校验失败`);
   process.exit(1);
+}
+
+if (yearMismatches.length) {
+  console.log(`\n🔍 incidentTime 与 summary 年份不一致 ${yearMismatches.length} 个（review，不阻断）：`);
+  for (const x of yearMismatches.slice(0, 30)) {
+    console.log(`  - ${x.id} [${x.cat}] "${x.t}" — ${x.reason}`);
+  }
+  if (yearMismatches.length > 30) console.log(`  ...另有 ${yearMismatches.length - 30} 个未显示`);
 }
 
 if (STRICT) {

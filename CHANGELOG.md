@@ -1,5 +1,36 @@
 # Change log
 
+## 2.42.0
+
+强化实体校验：建立三层门禁体系（A 类机器强约束 + B 类 subagent 交叉判断 + C 类 LLM+抓取），让新增/修改实体默认完善，严进严出。
+
+- **第一层·A 类机器强约束（接入 `validate:data` 硬链，error 阻断 build）**：把可枚举/可正则/可查表/可编辑距离的规则全部下沉为机器脚本，新增 10 个 + 增强 4 个：
+  - 新增：`title-dedup`（精确/归一化/编辑距离近义）、`title-format`（Term.title 括号/间隔号/顿号/过长，CLAUDE.md 已禁但无脚本管）、`updated-sync-gate`（内容变更但 updated 未刷新）、`id-continuity`（主 ID 跳号）、`generic-phrase-blocklist`（套话短语黑名单）、`case-category-domain-consistency`（Case.category 与 refs 域名特征）、`risk-complexity-coverage`（Risk.complexity 与 AC 覆盖）、`case-summary-relation-consistency`（Case.summary 与 related* 交叉）、`term-category-enum`（Term.category 沿用已有取值，含 allowlist）、`entity-granularity`（description 多场景拆分初筛 + 父子 title）。
+  - 增强：`content-quality`（增 title 重复 + description≈title）、`references`（统一用 source-classify 的 11 个 weakDomains + title-domain 强信号不一致 + 根域首页）、`case-incident-time`（增 incidentTime 与 summary 年份一致性）、`avoidance-content`（扩充 PLACEHOLDER_LIM）。
+  - references 权威性机器化复用 `source-classify.mjs` 的 250+ 域名白名单 + classifySource，不必丢 LLM。
+- **第二层·B 类 subagent 交叉判断（`review:*` 命令，fail 阻断）**：需要读实体实际内容做语义交叉的规则，用 subagent 加载知识库已有实体内容判断。新增 9 个脚本：`review-risk-avoidance`（规避手段是否真能缓解风险 + 漏加）、`review-risk-scene`（应加其他业务场景）、`review-case-relation`（Case 与关联风险匹配）、`review-tool-risks`（directCause/indirectSupport 划分）、`review-actor-consistency`（自建/使用工具划分）、`review-term-completeness`（related* 漏挂）、`review-granularity`（合并/拆分双向 + title 近义终判）、`review-should-extract`（应提炼新风险/手段/工具/行为者/术语/案例）、`review-references`（权威性应补源）。
+- **第三层·C 类 LLM+抓取（最小集）**：`review-case-fact`（Scrapingdog 抓取网页核验 summary 事实）、`review-field-density`（信息密度）、`review-classification`（category 语义贴切）。
+- **基础设施**：统一 LLM client `scripts/llm/llm-client.mjs`（双模型 GLM-5.2/GPT-5.5，从 .env 读 LLM_*）；共享运行器 `llm-review-runner`/`subagent-review`（worker 池 + 断点续传 + 内容指纹 + 429 重试）；变更检测共享模块 `changed-entities.mjs`（抽自 auto-version，含 untracked 新文件检测，auto-version 改薄封装不回归）；全库加载 `llm-review-helpers.mjs`（补 common.mjs 对 terms/BS 缺口 + title 索引 + 相关实体加载）。`scripts/research/llm.mjs` 改兼容层保护旧 `review:avoidance-signal`。
+- **编排与门禁**：`review:changed` 编排器（变更实体按类型分派 B+C 类 + 汇总）、`review:full` 全库指纹增量兜底、`.husky/pre-commit` 追加 `BREAK_REVIEW_ON_COMMIT=1` 可选触发（默认关不拖慢日常提交）。
+- **文档**：`scripts/llm/README.md` 三层门禁速查、`CLAUDE.md` 补「LLM 评审体系」章节并更新过时 LLM 凭据信息。
+- **顺带修复**：T0116 title 格式违规（"杀鱼盘（杀鱼、鲨鱼）"→"杀鱼盘"，括号内别名迁入 aliases）+ 英文 aliases 补 angler/fish cutter。
+
+### 变更文件
+
+- `scripts/llm/llm-client.mjs`、`llm-review-runner.mjs`、`subagent-review.mjs`、`README.md`（新建基础设施 + 文档）
+- `scripts/validate/changed-entities.mjs`、`llm-review-helpers.mjs`（新建共享模块）
+- `scripts/validate/title-dedup.mjs`、`title-format.mjs`、`updated-sync-gate.mjs`、`id-continuity.mjs`、`generic-phrase-blocklist.mjs`、`case-category-domain-consistency.mjs`、`risk-complexity-coverage.mjs`、`case-summary-relation-consistency.mjs`、`term-category-enum.mjs`、`entity-granularity.mjs`、`term-category-allowlist.json`（A 类新脚本）
+- `scripts/validate/review-risk-avoidance.mjs`、`review-risk-scene.mjs`、`review-case-relation.mjs`、`review-tool-risks.mjs`、`review-actor-consistency.mjs`、`review-term-completeness.mjs`、`review-granularity.mjs`、`review-should-extract.mjs`、`review-references.mjs`（B 类 subagent 脚本）
+- `scripts/validate/review-case-fact.mjs`、`review-field-density.mjs`、`review-classification.mjs`（C 类 LLM 脚本）
+- `scripts/validate/review-changed.mjs`、`review-full.mjs`（编排器）
+- `scripts/validate/content-quality.mjs`、`references.mjs`、`case-incident-time.mjs`、`avoidance-content.mjs`、`auto-version.mjs`（增强/改造）
+- `scripts/research/llm.mjs`（兼容层）
+- `package.json`（validate:data 链接入 A 类 + 新增 review:* scripts + version bump）
+- `.husky/pre-commit`（可选 LLM 评审触发）
+- `CLAUDE.md`（补 LLM 评审体系章节）
+- `src/BREAK/terms/T0116.json` + `src/i18n/en/BREAK/terms/T0116.json`（顺带修复 title 格式）
+- `src/BREAK/basic-info/main.json`（version/updated）
+
 ## 2.41.3
 
 仓库卫生治理：消除构建产物入库漂移 + 修正过时文档计数。

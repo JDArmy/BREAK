@@ -13,3 +13,17 @@ git diff --quiet -- src/BREAK/home.ts || git add src/BREAK/home.ts
 # major/minor 版本变化时，在本地 commit 前运行慢速浏览器回归和 Lighthouse；
 # patch 版本跳过，避免日常数据修补提交被拖慢。
 npm run precommit:browser-regression
+
+# 可选 LLM 变更评审：仅在 BREAK_REVIEW_ON_COMMIT=1 时触发（默认关，避免拖慢日常提交）
+# 跑 review:changed 对本次变更实体做 B 类 subagent 交叉判断 + C 类 LLM 评审，fail 阻断提交
+# 用法：BREAK_REVIEW_ON_COMMIT=1 git commit
+if [ "$BREAK_REVIEW_ON_COMMIT" = "1" ]; then
+  echo "🔍 BREAK_REVIEW_ON_COMMIT=1，运行 review:changed..."
+  output=$(node scripts/validate/review-changed.mjs --staged-only 2>&1)
+  status=$?
+  if [ $status -ne 0 ]; then
+    echo "❌ review:changed 检出 fail，提交中止（设 BREAK_REVIEW_ON_COMMIT=0 跳过，但建议先修）"
+    echo "$output" | tail -30
+    exit $status
+  fi
+fi

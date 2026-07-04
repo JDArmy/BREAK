@@ -63,6 +63,9 @@ scripts/search/*
 !scripts/search/common.mjs
 !scripts/validate/
 !scripts/validate/*.mjs
+!scripts/llm/
+!scripts/llm/*.mjs
+!scripts/llm/*.md
 !scripts/skill/
 !scripts/skill/*.mjs
 !scripts/skill/*.py

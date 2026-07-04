@@ -109,6 +109,25 @@ function buildReport() {
       file: path.relative(projectRoot, filePath),
     }));
 
+  // title 精确重复检测统一由 title-dedup.mjs 负责（含父子同名豁免逻辑），此处不再重复
+  const zhDuplicateTitleGroups = [];
+
+  // description≈title：description 只是 title 的复述（去空白后长度差<5 或 description startsWith title）
+  const zhDescriptionApproxTitle = zhRisks
+    .filter(({ entity }) => {
+      const d = String(entity.description || '').replace(/\s+/g, '');
+      const t = String(entity.title || '').replace(/\s+/g, '');
+      if (!d || !t) return false;
+      if (d === t) return false; // definition==description 已管
+      return d.length - t.length < 5 && (d.startsWith(t) || t.startsWith(d));
+    })
+    .map(({ key, entity, filePath }) => ({
+      key,
+      title: entity.title,
+      description: String(entity.description || '').slice(0, 60),
+      file: path.relative(projectRoot, filePath),
+    }));
+
   const caseCategoryStats = {};
   for (const { entity } of cases) {
     const category = entity.category || 'unknown';
@@ -138,6 +157,8 @@ function buildReport() {
       caseCount: cases.length,
       singleSourceCases: singleSourceCases.length,
       singleSourceCaseRate: cases.length ? Number(((singleSourceCases.length / cases.length) * 100).toFixed(2)) : 0,
+      zhDuplicateTitleGroups: zhDuplicateTitleGroups.length,
+      zhDescriptionApproxTitle: zhDescriptionApproxTitle.length,
     },
     issues: {
       zhDefinitionEqualsDescription,
@@ -147,6 +168,8 @@ function buildReport() {
       enSingleKeyword,
       enGenericInfluence,
       singleSourceCases,
+      zhDuplicateTitleGroups: zhDuplicateTitleGroups.slice(0, 20),
+      zhDescriptionApproxTitle,
       zhDuplicateInfluenceGroups: duplicateGroups(zhRisks, 'influence').slice(0, 20),
     },
     caseCategoryStats,
@@ -211,7 +234,9 @@ const hasBlockingIssues =
   report.stats.zhGenericInfluence > 0 ||
   report.stats.enDefinitionEqualsDescription > 0 ||
   report.stats.enSingleKeyword > 0 ||
-  report.stats.enGenericInfluence > 0;
+  report.stats.enGenericInfluence > 0 ||
+  report.stats.zhDuplicateTitleGroups > 0 ||
+  report.stats.zhDescriptionApproxTitle > 0;
 
 if (strict && hasBlockingIssues) {
   process.exitCode = 1;

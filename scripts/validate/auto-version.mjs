@@ -13,22 +13,12 @@ import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { projectRoot, readJson, writeJson } from '../search/common.mjs';
+import { ENTITY_DIRS, readGitFile, today } from './changed-entities.mjs';
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
 const baseIdx = args.indexOf('--base');
 const baseRef = baseIdx >= 0 && args[baseIdx + 1] ? args[baseIdx + 1] : 'HEAD';
-
-// 需要追踪版本的实体目录
-const ENTITY_DIRS = [
-  'src/BREAK/risks',
-  'src/BREAK/avoidances',
-  'src/BREAK/attack-tools',
-  'src/BREAK/threat-actors',
-  'src/BREAK/terms',
-  'src/BREAK/business-scenes',
-  'src/BREAK/cases',
-];
 
 // version 和 updated 字段不参与内容变更比较
 const IGNORED_FIELDS = new Set(['version', 'updated']);
@@ -92,25 +82,9 @@ function getChangedEntityFiles() {
 }
 
 /**
- * 读取 git base ref 中的文件内容
- * @param {string} relativePath - 相对于仓库根目录的文件路径
- * @returns {object|null} 解析后的 JSON 对象，或 null（文件不存在/不可读）
- */
-function readGitFile(relativePath) {
-  try {
-    const content = execFileSync(
-      'git',
-      ['show', `${baseRef}:${relativePath}`],
-      { cwd: projectRoot, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }
-    );
-    return JSON.parse(content);
-  } catch {
-    return null;
-  }
-}
-
-/**
  * 判断实体是否有实质性内容变更（排除 version 和 updated 字段）
+ * 注意：auto-version 不排除横向关系字段（与 changed-entities.mjs 不同），
+ * 因为横向关系字段变化也可能需要递增 version 以触发 i18n 重新合并。
  * @param {object} oldEntity - 旧版本实体数据
  * @param {object} newEntity - 新版本实体数据
  * @returns {boolean}
@@ -129,18 +103,6 @@ function hasContentChange(oldEntity, newEntity) {
   }
 
   return JSON.stringify(oldFiltered) !== JSON.stringify(newFiltered);
-}
-
-/**
- * 获取当前日期（YYYY-MM-DD）
- * @returns {string}
- */
-function today() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, '0');
-  const day = String(now.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
 }
 
 // ────────────────────────────────────────
@@ -168,7 +130,7 @@ for (const relativePath of changedFiles) {
   }
 
   const currentData = readJson(fullPath);
-  const baseData = readGitFile(relativePath);
+  const baseData = readGitFile(relativePath, baseRef);
   let fileModified = false;
 
   for (const [entityId, entity] of Object.entries(currentData)) {
