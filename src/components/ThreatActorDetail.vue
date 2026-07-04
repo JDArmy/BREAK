@@ -8,6 +8,7 @@ import FeedbackLink from "@/components/FeedbackLink.vue";
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { getEntityEntry } from "@/BREAK/entityRegistry";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
@@ -25,13 +26,12 @@ const { getInnerDrawerWidth } = useDrawerWidth();
 const selectedThreatActor = computed(() => BREAK.threatActors[props.taKey as keyof typeof BREAK.threatActors]);
 const relatedThreatActors = computed(() => selectedThreatActor.value?.relatedThreatActors ?? []);
 
-// 缓存到当前 taKey，避免模板 v-if+v-for 重复全表遍历
-const relatedTerms = computed(() => {
-  const taKey = props.taKey;
-  return Object.keys(BREAK.terms).filter((tKey) =>
-    BREAK.terms[tKey].relatedThreatActors.includes(taKey)
-  );
-});
+// 反查：用 useRelatedEntities 统一工厂，避免手写全表 filter
+const relatedTerms = useRelatedEntities(
+  BREAK.terms as unknown as Record<string, Record<string, unknown>>,
+  "relatedThreatActors",
+  () => props.taKey,
+);
 
 const termDrawer = ref(false);
 const termKey = ref("");

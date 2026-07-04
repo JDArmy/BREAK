@@ -1,5 +1,19 @@
 # Change log
 
+## 2.40.1
+
+架构评审修复 B6（统一反查部分）：详情抽屉手写反查统一改用 `useRelatedEntities`，消除与 RisksView 的双实现。
+
+- **统一反查**（#6 核心）：`RiskDetail`/`AvoidanceDetail`/`AttackToolDetail`/`ThreatActorDetail` 的手写 `Object.keys().filter()` 反查（descriptionTools/riskThreatActors/relatedTerms 等）改为 `useRelatedEntities` 工厂，与 `RisksView` 已用的实现统一。消除同一反查逻辑两套实现的维护负担。
+- **未抽 DrawerDetailShell**：经评估，5 个抽屉模板差异大（RiskDetail 有 riskAssessment/priority badge、TermDetail 有 aliases/category/usageExample 且无关系图按钮），Shell slot 设计复杂、视觉回归风险高，而 header/ID 行/viewDetail 按钮的样板重复成本低。反查统一（核心价值）已完成，Shell 抽象留作后续可选优化。
+
+### 变更文件
+
+- `src/components/RiskDetail.vue`：descriptionTools/riskThreatActors/relatedTerms 改 useRelatedEntities
+- `src/components/AvoidanceDetail.vue`：relatedTerms 改 useRelatedEntities
+- `src/components/AttackToolDetail.vue`：relatedTerms 改 useRelatedEntities
+- `src/components/ThreatActorDetail.vue`：relatedTerms 改 useRelatedEntities
+
 ## 2.40.0
 
 架构评审修复 B5：路由表程序化生成，消除 34 条扁平路由中的重复模式。

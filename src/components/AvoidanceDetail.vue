@@ -8,6 +8,7 @@ import FeedbackLink from "@/components/FeedbackLink.vue";
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { getEntityEntry } from "@/BREAK/entityRegistry";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
@@ -39,13 +40,12 @@ const openDetail = (aKey: string) => {
   window.open(detailHref(aKey)!, "_blank", "noopener,noreferrer");
 };
 
-// 缓存到当前 aKey，避免模板 v-if+v-for 重复全表遍历
-const relatedTerms = computed(() => {
-  const aKey = props.aKey;
-  return Object.keys(BREAK.terms).filter((tKey) =>
-    BREAK.terms[tKey].relatedAvoidances.includes(aKey)
-  );
-});
+// 反查：用 useRelatedEntities 统一工厂，避免手写全表 filter
+const relatedTerms = useRelatedEntities(
+  BREAK.terms as unknown as Record<string, Record<string, unknown>>,
+  "relatedAvoidances",
+  () => props.aKey,
+);
 
 const selectedAvoidance = computed(() => BREAK.avoidances[props.aKey as keyof typeof BREAK.avoidances]);
 const relatedAvoidances = computed(() => selectedAvoidance.value?.relatedAvoidances ?? []);

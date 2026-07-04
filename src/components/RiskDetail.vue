@@ -9,6 +9,7 @@ import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { getEntityEntry } from "@/BREAK/entityRegistry";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
@@ -35,29 +36,22 @@ const threatActorKey = ref("");
 
 const { getDrawerWidth } = useDrawerWidth();
 
-// 全表遍历结果按当前 rKey 缓存，避免模板 v-if+v-for 重复扫描
-const descriptionTools = computed(() => {
-  const rKey = props.rKey;
-  return Object.keys(BREAK.attackTools).filter((atKey) => {
-    const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
-    return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
-  });
-});
-
-const riskThreatActors = computed(() => {
-  const rKey = props.rKey;
-  return Object.keys(BREAK.threatActors).filter((taKey) => {
-    const ta = BREAK.threatActors[taKey as keyof typeof BREAK.threatActors];
-    return ta.directCauseRisks.includes(rKey) || ta.indirectSupportRisks.includes(rKey);
-  });
-});
-
-const relatedTerms = computed(() => {
-  const rKey = props.rKey;
-  return Object.keys(BREAK.terms).filter((tKey) =>
-    BREAK.terms[tKey].relatedRisks.includes(rKey)
-  );
-});
+// 反查：用 useRelatedEntities 统一工厂（与 RisksView 一致），避免手写全表 filter
+const descriptionTools = useRelatedEntities(
+  BREAK.attackTools as unknown as Record<string, Record<string, unknown>>,
+  ["directCauseRisks", "indirectSupportRisks"],
+  () => props.rKey,
+);
+const riskThreatActors = useRelatedEntities(
+  BREAK.threatActors as unknown as Record<string, Record<string, unknown>>,
+  ["directCauseRisks", "indirectSupportRisks"],
+  () => props.rKey,
+);
+const relatedTerms = useRelatedEntities(
+  BREAK.terms as unknown as Record<string, Record<string, unknown>>,
+  "relatedRisks",
+  () => props.rKey,
+);
 
 const relatedRiskRelations = computed(() => risks[props.rKey as keyof typeof risks]?.relatedRisks ?? []);
 

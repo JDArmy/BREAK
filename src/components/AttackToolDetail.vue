@@ -8,6 +8,7 @@ import FeedbackLink from "@/components/FeedbackLink.vue";
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { getEntityEntry } from "@/BREAK/entityRegistry";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
@@ -36,12 +37,12 @@ const attackToolAvoidances = computed(
 );
 const relatedAttackTools = computed(() => selectedAttackTool.value?.relatedAttackTools ?? []);
 
-const relatedTerms = computed(() => {
-  const atKey = props.atKey;
-  return Object.keys(BREAK.terms).filter((tKey) =>
-    BREAK.terms[tKey].relatedAttackTools.includes(atKey)
-  );
-});
+// 反查：用 useRelatedEntities 统一工厂，避免手写全表 filter
+const relatedTerms = useRelatedEntities(
+  BREAK.terms as unknown as Record<string, Record<string, unknown>>,
+  "relatedAttackTools",
+  () => props.atKey,
+);
 
 const router = useRouter();
 
