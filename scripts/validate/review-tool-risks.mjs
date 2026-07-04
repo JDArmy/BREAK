@@ -37,13 +37,21 @@ function prepareContext(item) {
 function buildPrompt(item) {
   const { entity, directRisks, indirectRisks, relatedAvoidances, avoidancesByCat } = item;
   const sys = `你是 BREAK 知识库的攻击工具关系评审员。结合关联风险/规避手段的实际内容，判定关系划分是否正确。
+重要原则：directCauseRisks（直接造成）与 indirectSupportRisks（间接支持）的划分有**合理争议空间**——一个工具既可能"直接实施"某风险，也可能"间接支持"它，取决于视角。**只有在明显且无争议的错划时才判 fail**，且 fail 必须给出具体证据（满足以下任一）：
+  (a) 风险定义与工具描述**完全不匹配**（如把"洗钱"风险挂到"GPS伪造"工具的 directCauseRisks——GPS伪造不实施洗钱）
+  (b) 工具的核心功能（description 明确说明）就是**直接实施**某风险，却被标为 indirectSupportRisks（如"打码平台"核心是绕过验证码，R0047人机识别绕过应是 direct 而非 indirect）
+不满足上述举证要求的，一律判 review（可优化但不构成错误）。边界情况、可论证的划分、有辅助作用的关联，判 review。
 严格规则：
 1. 只输出 JSON 对象。
-2. tool_risks_classification：逐一判断 directCauseRisks（直接造成）和 indirectSupportRisks（间接支持）划分是否正确。
+2. tool_risks_classification：逐一判断 directCauseRisks 和 indirectSupportRisks 划分。
    - correct: true/false
-   - fail 当明显错划（如该工具直接实施的风险却被标为 indirect）
+   - evidence_for_fail：若 correct=false 且建议 fail，必须引用风险定义/工具描述的具体片段作为证据
+   - 仅当满足上述 (a) 或 (b) 才标 correct:false 并建议 fail；否则 correct:true 但可给 review 建议
 3. tool_avoidance_coverage：是否漏加规避手段？给候选（从 avoidancesByCat 找）。
-4. verdict：pass/review/fail。fail=存在明显错划；review=可补强；pass=合理。
+4. verdict：pass/review/fail。
+   - fail：仅限满足 (a) 或 (b) 的明显无争议错划
+   - review：划分有争议可优化，但不构成错误
+   - pass：划分合理
 5. reason: 一句话。suggestions: 数组。`;
   const directList = (directRisks || []).map((r) => `- ${r.key} ${r.title}：${String(r.fields.definition || '').slice(0, 60)}`).join('\n');
   const indirectList = (indirectRisks || []).map((r) => `- ${r.key} ${r.title}：${String(r.fields.definition || '').slice(0, 60)}`).join('\n');
