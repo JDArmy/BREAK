@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T01:02:53.896Z",
+  "generatedAt": "2026-07-04T01:26:55.259Z",
   "version": "2.39.0",
   "description": "新条目准入 baseline 快照：exemptIds 豁免初始下限（防误伤历史），placeholderExempt 豁免占位禁令（历史技术债），fieldSnapshots 用于退化保护。新增条目不在 exemptIds 内，严格执行所有下限。",
   "exemptIds": [
@@ -2026,7 +2026,6 @@
     "C0876",
     "C0877",
     "C0878",
-    "C0879",
     "C0880",
     "C0881",
     "C0882",
@@ -2089,7 +2088,6 @@
     "C0939",
     "C0940",
     "C0941",
-    "C0942",
     "C0943",
     "C0944",
     "C0945",
@@ -2437,7 +2435,6 @@
     "C1287",
     "C1288",
     "C1289",
-    "C1290",
     "C1291",
     "C1292",
     "C1293",
@@ -4444,7 +4441,7 @@
       "keywords": 6,
       "fields": {
         "definition": 50,
-        "description": 148,
+        "description": 165,
         "influence": 21
       }
     },
@@ -4452,7 +4449,7 @@
       "keywords": 6,
       "fields": {
         "definition": 53,
-        "description": 149,
+        "description": 163,
         "influence": 15
       }
     },
@@ -4460,7 +4457,7 @@
       "keywords": 6,
       "fields": {
         "definition": 48,
-        "description": 146,
+        "description": 160,
         "influence": 15
       }
     },
@@ -4468,7 +4465,7 @@
       "keywords": 6,
       "fields": {
         "definition": 51,
-        "description": 148,
+        "description": 167,
         "influence": 14
       }
     },
@@ -4476,7 +4473,7 @@
       "keywords": 7,
       "fields": {
         "definition": 44,
-        "description": 132,
+        "description": 148,
         "influence": 14
       }
     },
@@ -4484,7 +4481,7 @@
       "keywords": 6,
       "fields": {
         "definition": 49,
-        "description": 135,
+        "description": 147,
         "influence": 19
       }
     },
@@ -4492,7 +4489,7 @@
       "keywords": 6,
       "fields": {
         "definition": 53,
-        "description": 146,
+        "description": 163,
         "influence": 21
       }
     },
@@ -4500,7 +4497,7 @@
       "keywords": 6,
       "fields": {
         "definition": 61,
-        "description": 160,
+        "description": 173,
         "influence": 12
       }
     },
@@ -4508,7 +4505,7 @@
       "keywords": 6,
       "fields": {
         "definition": 51,
-        "description": 154,
+        "description": 169,
         "influence": 14
       }
     },
@@ -4516,7 +4513,7 @@
       "keywords": 6,
       "fields": {
         "definition": 57,
-        "description": 135,
+        "description": 149,
         "influence": 16
       }
     },
@@ -4524,7 +4521,7 @@
       "keywords": 6,
       "fields": {
         "definition": 48,
-        "description": 144,
+        "description": 164,
         "influence": 20
       }
     },
@@ -4532,7 +4529,7 @@
       "keywords": 6,
       "fields": {
         "definition": 45,
-        "description": 146,
+        "description": 159,
         "influence": 14
       }
     },
@@ -4540,7 +4537,7 @@
       "keywords": 7,
       "fields": {
         "definition": 54,
-        "description": 156,
+        "description": 173,
         "influence": 14
       }
     },
@@ -4548,7 +4545,7 @@
       "keywords": 7,
       "fields": {
         "definition": 41,
-        "description": 143,
+        "description": 158,
         "influence": 13
       }
     },
@@ -4556,7 +4553,7 @@
       "keywords": 7,
       "fields": {
         "definition": 40,
-        "description": 133,
+        "description": 145,
         "influence": 19
       }
     },
@@ -4564,7 +4561,7 @@
       "keywords": 6,
       "fields": {
         "definition": 54,
-        "description": 157,
+        "description": 171,
         "influence": 12
       }
     },
@@ -4572,7 +4569,7 @@
       "keywords": 6,
       "fields": {
         "definition": 37,
-        "description": 129,
+        "description": 144,
         "influence": 10
       }
     },
@@ -4580,7 +4577,7 @@
       "keywords": 6,
       "fields": {
         "definition": 44,
-        "description": 133,
+        "description": 148,
         "influence": 15
       }
     },
@@ -4588,7 +4585,7 @@
       "keywords": 6,
       "fields": {
         "definition": 36,
-        "description": 134,
+        "description": 149,
         "influence": 15
       }
     },
@@ -4596,7 +4593,7 @@
       "keywords": 6,
       "fields": {
         "definition": 40,
-        "description": 137,
+        "description": 153,
         "influence": 16
       }
     },
@@ -4604,7 +4601,7 @@
       "keywords": 6,
       "fields": {
         "definition": 40,
-        "description": 131,
+        "description": 145,
         "influence": 17
       }
     },
@@ -4612,7 +4609,7 @@
       "keywords": 6,
       "fields": {
         "definition": 38,
-        "description": 134,
+        "description": 147,
         "influence": 14
       }
     },
@@ -4620,7 +4617,7 @@
       "keywords": 6,
       "fields": {
         "definition": 45,
-        "description": 130,
+        "description": 145,
         "influence": 18
       }
     },
@@ -4628,7 +4625,7 @@
       "keywords": 6,
       "fields": {
         "definition": 41,
-        "description": 139,
+        "description": 150,
         "influence": 16
       }
     },
@@ -4636,7 +4633,7 @@
       "keywords": 6,
       "fields": {
         "definition": 49,
-        "description": 133,
+        "description": 151,
         "influence": 13
       }
     },
@@ -4644,7 +4641,7 @@
       "keywords": 6,
       "fields": {
         "definition": 38,
-        "description": 137,
+        "description": 149,
         "influence": 13
       }
     },
@@ -4652,7 +4649,7 @@
       "keywords": 6,
       "fields": {
         "definition": 46,
-        "description": 138,
+        "description": 153,
         "influence": 16
       }
     },
@@ -12604,9 +12601,9 @@
       }
     },
     "C0209": {
-      "keywords": 9,
+      "keywords": 10,
       "fields": {
-        "summary": 133
+        "summary": 132
       }
     },
     "C0210": {
@@ -16617,12 +16614,6 @@
         "summary": 126
       }
     },
-    "C0879": {
-      "keywords": 8,
-      "fields": {
-        "summary": 118
-      }
-    },
     "C0880": {
       "keywords": 9,
       "fields": {
@@ -16993,12 +16984,6 @@
       "keywords": 9,
       "fields": {
         "summary": 137
-      }
-    },
-    "C0942": {
-      "keywords": 8,
-      "fields": {
-        "summary": 93
       }
     },
     "C0943": {
@@ -19081,12 +19066,6 @@
       "keywords": 8,
       "fields": {
         "summary": 121
-      }
-    },
-    "C1290": {
-      "keywords": 10,
-      "fields": {
-        "summary": 115
       }
     },
     "C1291": {
@@ -22092,7 +22071,7 @@
     "C1792": {
       "keywords": 8,
       "fields": {
-        "summary": 88
+        "summary": 123
       }
     },
     "C1793": {
