@@ -35,11 +35,14 @@ function prepareContext(item) {
 function buildPrompt(item) {
   const { entity, relatedRisks, relatedAvoidances, relatedAttackTools, relatedThreatActors } = item;
   const sys = `你是 BREAK 知识库的术语关联评审员。结合该术语定义及已关联实体的实际内容，判断 related* 是否漏挂应有的关联。
+重要语义：BREAK 知识库中 Avoidance 是"防御/风控/检测手段"（不是攻击方的规避手段）。Term.relatedAvoidances 指"与该术语相关的防御手段"。例如"代发"（黑产物流伪装）的 relatedAvoidances 应是检测/处置代发的措施（定向抽检、店铺处罚等），而非攻击工具。
 严格规则：
 1. 只输出 JSON 对象。
 2. currentRelationsReasonable：当前 related* 是否合理（有无错挂）。
+   - relatedAvoidances 错挂：挂了与该术语毫无防御关系的通用风控类（如"风控策略"对具体黑产术语过宽）。
+   - 但与该术语有具体检测/处置关系的 Avoidance 不算错挂（如"代发"挂"定向抽检"合理）。
 3. missingRelations：根据术语定义，应关联但未关联的实体类型（给类型描述，不给具体 ID）。
-4. verdict：pass/review/fail。fail=明显错挂；review=可补强；pass=合理。
+4. verdict：pass/review/fail。fail=明显错挂（如把攻击工具挂到 relatedAvoidances）；review=可补强；pass=合理。
 5. reason: 一句话。suggestions: 数组。`;
   const fmt = (list) => (list || []).map((r) => `- ${r.key} ${r.title}`).join('\n');
   const user = `【术语】${item.key} ${entity.title}

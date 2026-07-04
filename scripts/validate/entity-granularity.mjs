@@ -60,21 +60,31 @@ for (const type of TYPES_WITH_DESC) {
     }
   }
 
-  // 父子 title 关系
+  // 父子 title 关系：仅当父子 title 完全无任何 2 字公共子串时才报（收紧，降低噪音）
+  // 子风险 title 不必含父 title（如"秒拍出价"是"恶意抢购"的子风险，合理），
+  // 只有完全无字符重叠才可能是归属错误。
   for (const [parentKey, group] of byParent) {
     if (group.length <= 1) continue;
     const parent = group.find((g) => g.key === parentKey);
     if (!parent) continue;
     const parentTitle = String(parent.entity.title || '').trim();
+    const parentBigrams = new Set();
+    for (let i = 0; i < parentTitle.length - 1; i++) {
+      parentBigrams.add(parentTitle.slice(i, i + 2));
+    }
     for (const { key, entity } of group) {
       if (key === parentKey) continue;
       const childTitle = String(entity.title || '').trim();
-      // 合理：child title 含 parent title，或 parent title 是 child 前缀
-      const reasonable =
-        childTitle.includes(parentTitle) ||
-        childTitle.startsWith(parentTitle) ||
-        parentTitle.includes(childTitle);
-      if (!reasonable) {
+      if (childTitle.length < 2 || parentTitle.length < 2) continue;
+      // 检查是否有任何 2 字公共子串
+      let hasCommon = false;
+      for (let i = 0; i < childTitle.length - 1; i++) {
+        if (parentBigrams.has(childTitle.slice(i, i + 2))) {
+          hasCommon = true;
+          break;
+        }
+      }
+      if (!hasCommon) {
         issues.push({
           severity: 'review',
           type,
@@ -83,7 +93,7 @@ for (const type of TYPES_WITH_DESC) {
           parentKey,
           parentTitle,
           type2: 'child_parent_title_unrelated',
-          message: `${key}.title="${childTitle}" 与父 ${parentKey}.title="${parentTitle}" 无前缀/包含关系 —— 请确认子实体归属`,
+          message: `${key}.title="${childTitle}" 与父 ${parentKey}.title="${parentTitle}" 完全无字符重叠 —— 请确认子实体归属`,
         });
       }
     }
