@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.41.0",
+    "summary": "移动端 LCP 优化：切断入口 chunk → 全量 BREAK 数据的静态依赖链。",
+    "body": "移动端 LCP 优化：切断入口 chunk → 全量 BREAK 数据的静态依赖链。\n\n- **根因**：`vite.config.mts` 的 BREAK 分组 `{ test: toChunkTest(\"/src/BREAK\") }` 把 `entityRegistry.ts`（入口 router/MenuList 必需的轻量元数据，零业务依赖）和 `index.ts`（全量 barrel，静态 import 6 类实体 index）合并进同一 chunk。入口经 `main.ts → router → entityRegistry` 静态拉入该 chunk，barrel 静态依赖连带把全部实体数据 chunk（~1MB）拉进首屏 modulepreload，移动端 4x CPU slowdown 下 JS 解析执行主导 LCP（94% render delay）。\n- **修复**：BREAK 分组前加 `{ name: \"BREAK-registry\", test: \"/src/BREAK/entityRegistry\", priority: 20 }`，让 entityRegistry 独立成 < 5KB 小 chunk，切断入口 → 全量数据链路。全量 BREAK 仍由 `import(\"@/BREAK\")` 动态懒加载（HomeView 抽屉、i18n、搜索索引），逻辑不变。\n- **效果**（lighthouse 移动端）：\n  - FCP 7208ms → 2704ms（-65%，首屏内容绘制快 4.5 秒）\n  - perf 59 → 70（+11），desktop perf 90 → 94（+4）\n  - LCP 7662ms → 7404ms（小幅改善；剩余瓶颈为 HomeView 场景矩阵渲染，risks 数据 + 2257 DOM 元素，属后续 B3 范畴）\n  - modulepreload 23 个 → 7 个，首屏不再加载 avoidances/attackTools/threatActors/terms 数据 chunk\n- bundle-budget 通过（largestDataJs 296KB < 900KB 阈值）。\n\n### 变更文件\n\n- `vite.config.mts`：codeSplittingGroups 加 BREAK-registry 分组（entityRegistry 独立 chunk）"
+  },
+  {
     "version": "2.40.10",
     "summary": "补强 pathExplorer 视角在现有浏览器测试中的基础覆盖（与 perspective-coverage 交互回归互补）。",
     "body": "补强 pathExplorer 视角在现有浏览器测试中的基础覆盖（与 perspective-coverage 交互回归互补）。\n\n- **smoke 加 pathExplorer 路由**：site-smoke.mjs routes 数组追加 `/#/relations/path-explorer/risk/R0001`，文本匹配 R0001/Path Explorer/Source/Target，提供最廉价的渲染兜底（9 路由）。\n- **visual-review 加 pathExplorer 路由**：site-visual-review.mjs routes 数组追加 pathExplorer，3 视口截图（desktop/mobile/mobile-small）+ 桑基 canvas 像素断言（`.path-explorer-chart canvas`）。81 截图。\n- **已知警告分类**：classifyKnownWarning 加 pathExplorer 移动端 el-tabs nav 溢出分支，归入已知移动端布局限制（与 relation-network 同类）。\n\n### 变更文件\n\n- `scripts/validate/site-smoke.mjs`：routes 加 pathExplorer\n- `scripts/validate/site-visual-review.mjs`：routes 加 pathExplorer + classifyKnownWarning 加移动端 tab 溢出分支"

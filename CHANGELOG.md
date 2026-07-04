@@ -1,5 +1,22 @@
 # Change log
 
+## 2.41.0
+
+移动端 LCP 优化：切断入口 chunk → 全量 BREAK 数据的静态依赖链。
+
+- **根因**：`vite.config.mts` 的 BREAK 分组 `{ test: toChunkTest("/src/BREAK") }` 把 `entityRegistry.ts`（入口 router/MenuList 必需的轻量元数据，零业务依赖）和 `index.ts`（全量 barrel，静态 import 6 类实体 index）合并进同一 chunk。入口经 `main.ts → router → entityRegistry` 静态拉入该 chunk，barrel 静态依赖连带把全部实体数据 chunk（~1MB）拉进首屏 modulepreload，移动端 4x CPU slowdown 下 JS 解析执行主导 LCP（94% render delay）。
+- **修复**：BREAK 分组前加 `{ name: "BREAK-registry", test: "/src/BREAK/entityRegistry", priority: 20 }`，让 entityRegistry 独立成 < 5KB 小 chunk，切断入口 → 全量数据链路。全量 BREAK 仍由 `import("@/BREAK")` 动态懒加载（HomeView 抽屉、i18n、搜索索引），逻辑不变。
+- **效果**（lighthouse 移动端）：
+  - FCP 7208ms → 2704ms（-65%，首屏内容绘制快 4.5 秒）
+  - perf 59 → 70（+11），desktop perf 90 → 94（+4）
+  - LCP 7662ms → 7404ms（小幅改善；剩余瓶颈为 HomeView 场景矩阵渲染，risks 数据 + 2257 DOM 元素，属后续 B3 范畴）
+  - modulepreload 23 个 → 7 个，首屏不再加载 avoidances/attackTools/threatActors/terms 数据 chunk
+- bundle-budget 通过（largestDataJs 296KB < 900KB 阈值）。
+
+### 变更文件
+
+- `vite.config.mts`：codeSplittingGroups 加 BREAK-registry 分组（entityRegistry 独立 chunk）
+
 ## 2.40.10
 
 补强 pathExplorer 视角在现有浏览器测试中的基础覆盖（与 perspective-coverage 交互回归互补）。

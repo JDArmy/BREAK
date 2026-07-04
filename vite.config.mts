@@ -16,6 +16,10 @@ const codeSplittingGroups = [
   { name: "validation", test: toChunkTest("/src/validation") },
   { name: "zod", test: toChunkTest("node_modules/zod") },
   { name: "BREAK-utils", test: toChunkTest("/src/BREAK/utils") },
+  // entityRegistry 是入口（router/MenuList）必需的轻量元数据（零业务数据依赖），
+  // 单独成 chunk 避免与全量 barrel（@/BREAK/index.ts）同 chunk 导致入口连带拉全部实体数据。
+  // priority 高于 BREAK 组与 vue 组，确保 entityRegistry 优先归入此组。见 vite-chunk-barrel-contamination 记忆。
+  { name: "BREAK-registry", test: (id: string) => id.includes("/src/BREAK/entityRegistry"), priority: 20 },
   { name: "BREAK-Risks", test: toChunkTest("/src/BREAK/risks"), maxSize: 300 * 1024 },
   { name: "BREAK-Avoidances", test: toChunkTest("/src/BREAK/avoidances"), maxSize: 300 * 1024 },
   { name: "BREAK-AttackTools", test: toChunkTest("/src/BREAK/attack-tools"), maxSize: 300 * 1024 },
