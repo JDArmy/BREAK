@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, toValue, watch } from "vue";
+import { computed, nextTick, ref, toValue, watch, inject } from "vue";
 import { useI18n } from "vue-i18n";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
@@ -8,94 +8,60 @@ import RelationAnalysisDetailColumn from "@/components/relation/RelationAnalysis
 import RelationAnalysisPathColumn from "@/components/relation/RelationAnalysisPathColumn.vue";
 import {
   RelationType,
-  type AttackPathDetail,
-  type AttackPathFilterOption,
   type AttackPathFilterType,
   type AttackPathFilters,
-  type createRelationTypeMapping,
-  type RiskAvoidanceCoverage,
 } from "@/views/relation/relationTypes";
-import type {
-  AttackPathExplanation,
-  NodeAnalysisSummary,
-  NodeBusinessSceneImpactSummary,
-  NodeCoverageSummary,
-  NodeRelatedEntitySummary,
-  NodeSpecialInsightSummary,
-  RootPathSummary,
-  RootRelationSummary,
-} from "@/components/relation/relationNodeDrawerInsightTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 import "@/components/relation/relationNodeDrawerInsights.css";
 
-interface DetailNode {
-  id: string;
-  type: string;
-}
-
-interface RelationSummary {
-  relationKey: string;
-  direction: string;
-  text: string;
-  directness: string;
-  otherNodeId: string;
-  otherNodeType: string;
-  otherNodeTitle: string;
-  sourceFields: string[];
-  evidenceLabel: string;
-  explanation: string;
-  impactHint: string;
-  qualityFlags: string[];
-}
-
-const props = defineProps<{
-  active: boolean;
-  relationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  attackPathDetails: AttackPathDetail[];
-  selectedNetworkNode: DetailNode | null;
-  attackPathFilterOptions: Record<AttackPathFilterType, AttackPathFilterOption[]>;
-  attackPathFilters: AttackPathFilters;
-  filteredAttackPathCount: number;
-  hasActiveAttackPathFilters: boolean;
-  riskAvoidanceCoverage: RiskAvoidanceCoverage | null;
-  selectedAttackPathDetail: AttackPathDetail | null;
-  selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
-  selectedNodeRelatedEntitySummary: NodeRelatedEntitySummary | null;
-  selectedNodeAttackPathSummary: string[];
-  selectedNodeAttackPathDescription: string;
-  selectedNodeAttackPathExplanations: AttackPathExplanation[];
-  selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
-  selectedNodeCoverageSummary: NodeCoverageSummary | null;
-  selectedNodeSpecialInsightSummary: NodeSpecialInsightSummary | null;
-  selectedNetworkNodeTitle: string;
-  selectedNetworkRelationCounts: {
-    incoming: number;
-    outgoing: number;
-  };
-  selectedNetworkRelations: RelationSummary[];
-  rootNodeRelations: RootRelationSummary[];
-  selectedNodeRootPath: RootPathSummary | null;
-  relKey: string;
-  getNodeTypeTitle: (type: string) => string;
-  isPathNodeCurrentSelection: (nodeId: string) => boolean;
-  isRelationOnSelectedPath: (relationKey: string) => boolean;
-  isCurrentNodeRoot: boolean;
-  drawerCopyFeedbackMessage: string;
-  drawerCopyFeedbackType: "success" | "error";
-}>();
-
-const emit = defineEmits<{
-  "update:attack-path-filters": [value: AttackPathFilters];
-  "reset-attack-path-filters": [];
-  "select-attack-path": [pathId: string];
-  "apply-avoidance-filter": [avoidanceKey: string];
-  "copy-csv": [];
-  "view-detail": [];
-  "open-detail-new-window": [];
-  "open-as-root": [];
-  "focus-node": [nodeId: string];
-  "open-node-as-root": [nodeId: string];
-  "open-node-detail": [nodeId: string];
-}>();
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+// ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+const {
+  attackPathDetails,
+  attackPathFilterOptions,
+  attackPathFilters,
+  filteredAttackPaths,
+  hasActiveAttackPathFilters,
+  riskAvoidanceCoverage,
+  selectedAttackPathDetail,
+  selectedNetworkNode,
+  selectedNodeAnalysisSummary,
+  selectedNodeRelatedEntitySummary,
+  selectedNodeAttackPathSummary,
+  selectedNodeAttackPathDescription,
+  selectedNodeAttackPathExplanations,
+  selectedNodeBusinessSceneImpactSummary,
+  selectedNodeCoverageSummary,
+  selectedNodeSpecialInsightSummary,
+  selectedNetworkNodeTitle,
+  selectedNetworkRelationCounts,
+  selectedNetworkRelations,
+  rootNodeRelations,
+  selectedNodeRootPath,
+  relKey,
+  getNodeTypeTitle,
+  isPathNodeCurrentSelection,
+  isRelationOnSelectedPath,
+  isCurrentNodeRoot,
+  drawerCopyFeedbackMessage,
+  drawerCopyFeedbackType,
+  copySelectedNodeCsv,
+  gotoSelectedNodeDetailView,
+  openSelectedNodeDetailInNewWindow,
+  openSelectedNodeAsRoot,
+  resetAttackPathFilters,
+  selectAttackPath,
+  focusNodeInDrawer,
+  openNodeAsRootById,
+  gotoNodeDetailViewById,
+} = vm;
+// RelationTypeMapping 是普通对象（非 ref），直接取
+const relationTypeMapping = vm.RelationTypeMapping;
+// 原 RelationView 模板 :active="activeView === 'analysis'"
+const active = computed(() => vm.activeView.value === "analysis");
+// 原 RelationView 模板 :filtered-attack-path-count="filteredAttackPaths.length"
+const filteredAttackPathCount = computed(() => filteredAttackPaths.value.length);
 
 const { t } = useI18n();
 const { isMobile } = useBreakpoints();
@@ -117,10 +83,10 @@ const filterTypes: AttackPathFilterType[] = [
 ];
 
 const updateFilter = (type: AttackPathFilterType, value: string | undefined) => {
-  emit("update:attack-path-filters", {
-    ...props.attackPathFilters,
+  attackPathFilters.value = {
+    ...attackPathFilters.value,
     [type]: value || undefined,
-  });
+  };
 };
 
 const applySpecialInsightFilter = (payload: { type: string; id: string }) => {
@@ -136,7 +102,7 @@ const applySpecialInsightFilter = (payload: { type: string; id: string }) => {
     nextFilters[RelationType.risk] = payload.id;
   }
 
-  emit("update:attack-path-filters", nextFilters);
+  attackPathFilters.value = nextFilters;
 };
 
 const emitAttackPathFilters = (
@@ -144,37 +110,41 @@ const emitAttackPathFilters = (
   preservePane: "left" | "middle" | "right"
 ) => {
   preserveScrollPane.value = preservePane;
-  emit("update:attack-path-filters", filters);
+  attackPathFilters.value = filters;
 };
 
 const applyLeftAvoidanceFilter = (avoidanceKey: string) => {
   preserveScrollPane.value = "left";
-  emit("apply-avoidance-filter", avoidanceKey);
+  // 原 RelationView 模板 @apply-avoidance-filter：在 attackPathFilters 上叠加 avoidance 筛选
+  attackPathFilters.value = {
+    ...(attackPathFilters.value || {}),
+    [RelationType.avoidance]: avoidanceKey,
+  };
 };
 
 const selectMiddleAttackPath = (pathId: string) => {
   preserveScrollPane.value = "middle";
-  emit("select-attack-path", pathId);
+  selectAttackPath(pathId);
 };
 
 const emitRightAction = <T extends unknown[]>(
-  eventName: Parameters<typeof emit>[0],
+  action: (...args: T) => void,
   ...args: T
 ) => {
   preserveScrollPane.value = "right";
-  emit(eventName, ...(args as never));
+  action(...args);
 };
 
 const hasAnyAnalysis = computed(
   () =>
-    props.selectedNodeAnalysisSummary ||
-    props.selectedNodeSpecialInsightSummary ||
-    props.selectedNodeBusinessSceneImpactSummary ||
-    props.selectedNodeCoverageSummary ||
-    props.selectedNodeAttackPathSummary.length > 0 ||
-    props.riskAvoidanceCoverage ||
-    props.selectedAttackPathDetail ||
-    props.rootNodeRelations.length > 0
+    selectedNodeAnalysisSummary.value ||
+    selectedNodeSpecialInsightSummary.value ||
+    selectedNodeBusinessSceneImpactSummary.value ||
+    selectedNodeCoverageSummary.value ||
+    selectedNodeAttackPathSummary.value.length > 0 ||
+    riskAvoidanceCoverage.value ||
+    selectedAttackPathDetail.value ||
+    rootNodeRelations.value.length > 0
 );
 const coverageItemLimit = computed(() =>
   toValue(isMobile) ? MOBILE_COVERAGE_ITEM_LIMIT : DESKTOP_ANALYSIS_ITEM_LIMIT
@@ -190,7 +160,7 @@ const {
   showMoreOrReset: showMoreCoverageItems,
   visibleItems: displayedCoverageItems,
 } = useIncrementalVisibleList(
-  computed(() => props.riskAvoidanceCoverage?.items ?? []),
+  computed(() => riskAvoidanceCoverage.value?.items ?? []),
   {
     enabled: true,
     initialLimit: coverageItemLimit,
@@ -204,7 +174,7 @@ const {
   reset: resetDisplayedAttackPaths,
   showMoreOrReset: showMoreAttackPaths,
   visibleItems: displayedAttackPathDetails,
-} = useIncrementalVisibleList(computed(() => props.attackPathDetails), {
+} = useIncrementalVisibleList(computed(() => attackPathDetails.value), {
   enabled: true,
   initialLimit: attackPathLimit,
   step: SHOW_MORE_STEP,
@@ -231,12 +201,12 @@ const resetColumnScroll = () => {
 
 watch(
   () => [
-    props.selectedNetworkNode?.type ?? "",
-    props.selectedNetworkNode?.id ?? "",
-    props.attackPathFilters[RelationType.threatActor] ?? "",
-    props.attackPathFilters[RelationType.attackTool] ?? "",
-    props.attackPathFilters[RelationType.risk] ?? "",
-    props.attackPathFilters[RelationType.avoidance] ?? "",
+    selectedNetworkNode.value?.type ?? "",
+    selectedNetworkNode.value?.id ?? "",
+    attackPathFilters.value[RelationType.threatActor] ?? "",
+    attackPathFilters.value[RelationType.attackTool] ?? "",
+    attackPathFilters.value[RelationType.risk] ?? "",
+    attackPathFilters.value[RelationType.avoidance] ?? "",
   ],
   resetColumnScroll
 );
@@ -289,7 +259,7 @@ watch(
               v-if="hasActiveAttackPathFilters"
               size="small"
               text
-              @click="emit('reset-attack-path-filters')"
+              @click="resetAttackPathFilters"
             >
               {{ t("relationView.resetPathFilters") }}
             </el-button>
@@ -393,17 +363,17 @@ watch(
                 selectedNodeRelatedEntitySummary
               "
               :selected-node-root-path="selectedNodeRootPath"
-              @copy-csv="emitRightAction('copy-csv')"
-              @view-detail="emitRightAction('view-detail')"
-              @open-detail-new-window="emitRightAction('open-detail-new-window')"
-              @open-as-root="emitRightAction('open-as-root')"
+              @copy-csv="emitRightAction(copySelectedNodeCsv)"
+              @view-detail="emitRightAction(gotoSelectedNodeDetailView)"
+              @open-detail-new-window="emitRightAction(openSelectedNodeDetailInNewWindow)"
+              @open-as-root="emitRightAction(openSelectedNodeAsRoot)"
               @update:attack-path-filters="emitAttackPathFilters($event, 'right')"
               @reset-attack-path-filters="
-                emitRightAction('reset-attack-path-filters')
+                emitRightAction(resetAttackPathFilters)
               "
-              @focus-node="emitRightAction('focus-node', $event)"
-              @open-node-as-root="emitRightAction('open-node-as-root', $event)"
-              @open-node-detail="emitRightAction('open-node-detail', $event)"
+              @focus-node="emitRightAction(focusNodeInDrawer, $event)"
+              @open-node-as-root="emitRightAction(openNodeAsRootById, $event)"
+              @open-node-detail="emitRightAction(gotoNodeDetailViewById, $event)"
             />
           </div>
           <el-backtop

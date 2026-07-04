@@ -1,42 +1,34 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, watch, onMounted } from "vue";
+import { computed, nextTick, ref, watch, onMounted, inject } from "vue";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import {
   RelationType,
-  type SankeyNode,
-  type SankeyLink,
-  type createRelationTypeMapping,
 } from "@/views/relation/relationTypes";
-import type { PathExplorerStats } from "@/views/relation/relationPathExplorerSankey";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
-const props = defineProps<{
-  active: boolean;
-  relType: RelationType;
-  relKey: string;
-  RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  pathExplorerSankeyData: { nodes: SankeyNode[]; links: SankeyLink[] };
-  pathExplorerHasData: boolean;
-  pathExplorerChartHeight: number;
-  pathExplorerChartMinWidth?: number;
-  pathExplorerStats: PathExplorerStats | null;
-  hasTarget: boolean;
-  searching: boolean;
-  setPathExplorerChartElement?: (el: HTMLElement | undefined) => void;
-  initialEndType?: RelationType;
-  initialEndKey?: string;
-  initialMaxDepth?: number;
-  initialMaxPaths?: number;
-}>();
-
-const emit = defineEmits<{
-  "update:startType": [value: RelationType];
-  "update:startKey": [value: string];
-  "update:endType": [value: RelationType];
-  "update:endKey": [value: string];
-  "update:maxDepth": [value: number];
-  "update:maxPaths": [value: number];
-}>();
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+// ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+const {
+  pathExplorerHasData,
+  pathExplorerChartHeight,
+  sankeyChartMinWidth: pathExplorerChartMinWidth,
+  pathExplorerStats,
+  hasTarget,
+  searching,
+  pathExplorerStartType,
+  pathExplorerStartKey,
+  pathExplorerEndType,
+  pathExplorerEndKey,
+  pathExplorerMaxDepth,
+  pathExplorerMaxPaths,
+  pathExplorerSankeyController,
+} = vm;
+// RelationTypeMapping 是普通对象（非 ref），直接取
+const RelationTypeMapping = vm.RelationTypeMapping;
+// 原 RelationView 模板 :active="activeView === 'pathExplorer'"
+const active = computed(() => vm.activeView.value === "pathExplorer");
 
 const { t, locale } = useI18n();
 
@@ -45,34 +37,16 @@ const selectableTypes = computed(() =>
   [RelationType.risk, RelationType.avoidance, RelationType.attackTool, RelationType.threatActor]
     .map((type) => ({
       value: type,
-      label: props.RelationTypeMapping[type].title,
+      label: RelationTypeMapping[type].title,
     }))
 );
 
-// 本地状态（双绑到父组件）
-const startType = ref<RelationType>(props.relType);
-const startKey = ref(props.relKey);
-const endType = ref<RelationType>(props.initialEndType ?? RelationType.avoidance);
-const endKey = ref(props.initialEndKey ?? "");
-const maxDepth = ref(props.initialMaxDepth ?? 4);
-const maxPaths = ref(props.initialMaxPaths ?? 10);
-const draftMaxDepth = ref(maxDepth.value);
-const draftMaxPaths = ref(maxPaths.value);
+// 滑块草稿值（基于 vm 的 maxDepth/maxPaths 初始化，提交时写回 vm）
+const draftMaxDepth = ref(pathExplorerMaxDepth.value);
+const draftMaxPaths = ref(pathExplorerMaxPaths.value);
 
-// 初始化时同步父组件
-watch(() => props.relType, (val) => { startType.value = val; }, { immediate: true });
-watch(() => props.relKey, (val) => { startKey.value = val; }, { immediate: true });
-
-// 同步到父组件（合并同类 emit watch）
-watch([startType, startKey, endType, endKey], ([st, sk, et, ek], [oldSt, oldSk, oldEt, oldEk]) => {
-  if (st !== oldSt) emit("update:startType", st);
-  if (sk !== oldSk) emit("update:startKey", sk);
-  if (et !== oldEt) emit("update:endType", et);
-  if (ek !== oldEk) emit("update:endKey", ek);
-});
-
-// 滑块草稿值同步
-watch([maxDepth, maxPaths], ([d, p]) => {
+// vm 的 maxDepth/maxPaths 变化时同步草稿
+watch([pathExplorerMaxDepth, pathExplorerMaxPaths], ([d, p]) => {
   draftMaxDepth.value = d;
   draftMaxPaths.value = p;
 });
@@ -80,23 +54,21 @@ watch([maxDepth, maxPaths], ([d, p]) => {
 const commitMaxDepth = (value: number | number[]) => {
   const nextValue = Array.isArray(value) ? value[0] : value;
   draftMaxDepth.value = nextValue;
-  if (nextValue === maxDepth.value) return;
-  maxDepth.value = nextValue;
-  emit("update:maxDepth", nextValue);
+  if (nextValue === pathExplorerMaxDepth.value) return;
+  pathExplorerMaxDepth.value = nextValue;
 };
 
 const commitMaxPaths = (value: number | number[]) => {
   const nextValue = Array.isArray(value) ? value[0] : value;
   draftMaxPaths.value = nextValue;
-  if (nextValue === maxPaths.value) return;
-  maxPaths.value = nextValue;
-  emit("update:maxPaths", nextValue);
+  if (nextValue === pathExplorerMaxPaths.value) return;
+  pathExplorerMaxPaths.value = nextValue;
 };
 
 // 实体选项构建：用 computed 让 label 随语言切换自动更新
 // （t() 内部依赖 locale，computed 会自动重算）
 const getBreakKey = (type: RelationType) =>
-  props.RelationTypeMapping[type as keyof typeof props.RelationTypeMapping]?.BreakKey as keyof typeof BREAK | undefined;
+  RelationTypeMapping[type as keyof typeof RelationTypeMapping]?.BreakKey as keyof typeof BREAK | undefined;
 
 const buildOptions = (type: RelationType) => {
   const breakKey = getBreakKey(type);
@@ -108,24 +80,25 @@ const buildOptions = (type: RelationType) => {
   }));
 };
 
-const startEntityOptions = computed(() => buildOptions(startType.value));
-const endEntityOptions = computed(() => buildOptions(endType.value));
+const startEntityOptions = computed(() => buildOptions(pathExplorerStartType.value));
+const endEntityOptions = computed(() => buildOptions(pathExplorerEndType.value));
 
-watch(startType, () => {
-  startKey.value = "";
+// 切换起点类型时清空起点实体
+watch(pathExplorerStartType, () => {
+  pathExplorerStartKey.value = "";
 });
 
 // 标记：初始化阶段不清空 endKey（从 URL 恢复时保留已设定的值）
 let isInitializing = true;
 
-watch(endType, () => {
+watch(pathExplorerEndType, () => {
   if (isInitializing) return;
-  endKey.value = "";
+  pathExplorerEndKey.value = "";
   // 切换终点类型后，默认选中列表第一个实体
   nextTick(() => {
     const options = endEntityOptions.value;
     if (options.length > 0) {
-      endKey.value = options[0].value;
+      pathExplorerEndKey.value = options[0].value;
     }
   });
 });
@@ -133,20 +106,20 @@ watch(endType, () => {
 // 语言切换时，若终点为空则补选当前类型第一个实体（与初次挂载行为一致）
 watch(locale, () => {
   if (isInitializing) return;
-  if (!endKey.value) {
+  if (!pathExplorerEndKey.value) {
     const options = endEntityOptions.value;
     if (options.length > 0) {
-      endKey.value = options[0].value;
+      pathExplorerEndKey.value = options[0].value;
     }
   }
 });
 
 onMounted(() => {
   // 初次挂载：若终点未设定（非 URL 恢复），默认选当前类型第一个实体
-  if (!endKey.value) {
+  if (!pathExplorerEndKey.value) {
     const options = endEntityOptions.value;
     if (options.length > 0) {
-      endKey.value = options[0].value;
+      pathExplorerEndKey.value = options[0].value;
     }
   }
   // 初始化完成后，后续 endType 变更才清空 endKey
@@ -158,7 +131,7 @@ const chartRef = ref<HTMLElement>();
 const setRef = (el: unknown) => {
   const element = el instanceof HTMLElement ? el : undefined;
   chartRef.value = element;
-  props.setPathExplorerChartElement?.(element);
+  pathExplorerSankeyController?.setSankeyChartElement?.(element);
 };
 </script>
 
@@ -170,7 +143,7 @@ const setRef = (el: unknown) => {
         <!-- 起点选择 -->
         <div class="control-group control-group--type">
           <label class="control-label">{{ t("relationView.pathExplorerPanel.sourceType") }}</label>
-          <el-select v-model="startType" size="small" class="type-select">
+          <el-select v-model="pathExplorerStartType" size="small" class="type-select">
             <el-option
               v-for="opt in selectableTypes"
               :key="opt.value"
@@ -182,7 +155,7 @@ const setRef = (el: unknown) => {
         <div class="control-group control-group--entity">
           <label class="control-label">{{ t("relationView.pathExplorerPanel.sourceEntity") }}</label>
           <el-select-v2
-            v-model="startKey"
+            v-model="pathExplorerStartKey"
             :options="startEntityOptions"
             size="small"
             filterable
@@ -199,7 +172,7 @@ const setRef = (el: unknown) => {
         <!-- 终点选择 -->
         <div class="control-group control-group--type">
           <label class="control-label">{{ t("relationView.pathExplorerPanel.targetType") }}</label>
-          <el-select v-model="endType" size="small" class="type-select">
+          <el-select v-model="pathExplorerEndType" size="small" class="type-select">
             <el-option
               v-for="opt in selectableTypes"
               :key="opt.value"
@@ -211,7 +184,7 @@ const setRef = (el: unknown) => {
         <div class="control-group control-group--entity">
           <label class="control-label">{{ t("relationView.pathExplorerPanel.targetEntity") }}</label>
           <el-select-v2
-            v-model="endKey"
+            v-model="pathExplorerEndKey"
             :options="endEntityOptions"
             size="small"
             filterable

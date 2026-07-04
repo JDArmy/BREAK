@@ -1,5 +1,26 @@
 # Change log
 
+## 2.40.5
+
+架构评审修复 B7 第 2 阶段：RelationView 剩余 8 个子组件全部迁移到 provide/inject，props 钻取彻底消除。
+
+- **8 个子组件迁移**（#4）：RelationGraphContextMenu/RelationGraphTouchActions/RelationNetworkPane/RelationPathExplorerPane/RelationAnalysisPane/RelationNodeDetailDrawer/RelationNodeDetailContent + RelationSankeyPane 全部从 props/emits 改为 `inject(RELATION_VIEW_MODEL_KEY)`：
+  - 响应式 state props → vm 的 ref/computed
+  - 方法 emits → 直接调 vm 方法
+  - v-model emits → 直接绑 vm 的 ref
+  - 由 activeView 推导的 props（active/showRelationFetchActions/hideRelatedEntityActions）→ 组件内 computed
+- **RelationNodeDetailContent 保留 5 个配置 boolean props**：showOpenAsRootAction/showRootRelationBlock/showCoverageBlock/showAttackPathBlock/hideRelatedEntityActions（Drawer 与 AnalysisPane 复用差异化开关，inject 不适合一次性配置）
+- **RelationView 模板简化**：所有子组件自闭合 `<ComponentXxx />`，删除 31+24+28+17 等 props 传递与 emits 绑定。RelationNodeDetailDrawer 保留 `v-if="nodeDetailDrawerVisible"`。
+- **测试适配**：RelationView.test.ts stub 简化（network-pane stub 改为点击调 vm.openNodeDetailDrawer）；RelationAnalysisPane.test.ts / RelationNodeDetailDrawer.test.ts 重写为 provide mock viewModel 模式。
+- **验证**：type-check + 562 测试 + coverage 80.15% + build 全链通过。
+
+### 变更文件
+
+- `src/components/relation/`：8 个子组件迁移（RelationSankeyPane/RelationGraphContextMenu/RelationGraphTouchActions/RelationNetworkPane/RelationPathExplorerPane/RelationAnalysisPane/RelationNodeDetailDrawer/RelationNodeDetailContent）
+- `src/views/RelationView.vue`：模板简化
+- `src/components/relation/__tests__/RelationAnalysisPane.test.ts`、`RelationNodeDetailDrawer.test.ts`：重写
+- `src/views/__tests__/RelationView.test.ts`：stub 适配
+
 ## 2.40.4
 
 架构评审修复 #16：EntityAutoLinker mutation 批次大小阈值，防高频 DOM 变动积压。

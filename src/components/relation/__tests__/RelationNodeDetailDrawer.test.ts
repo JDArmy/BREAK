@@ -1,7 +1,9 @@
 import { mount } from "@vue/test-utils";
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { computed, ref } from "vue";
 import RelationNodeDetailDrawer from "@/components/relation/RelationNodeDetailDrawer.vue";
 import { RelationType } from "@/views/relation/relationTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
 const mocks = vi.hoisted(() => ({
   isMobile: false,
@@ -17,36 +19,73 @@ vi.mock("@/composables/useBreakpoints", () => ({
   useBreakpoints: () => ({ isMobile: mocks.isMobile }),
 }));
 
-const baseProps = {
-  modelValue: true,
-  selectedNetworkNode: { id: "R0001", type: RelationType.risk },
-  selectedNetworkNodeTitle: "流程自动化",
-  selectedNetworkRelationCounts: { incoming: 1, outgoing: 2 },
-  rootNodeRelations: [],
-  selectedNodeRootPath: null,
-  selectedNodeAnalysisSummary: null,
-  selectedNodeAttackPathSummary: [],
-  selectedNodeAttackPathDescription: "",
-  selectedNodeAttackPathExplanations: [],
-  attackPathFilterOptions: {
-    [RelationType.threatActor]: [],
-    [RelationType.attackTool]: [],
-    [RelationType.risk]: [],
-    [RelationType.avoidance]: [],
-  },
-  attackPathFilters: {},
-  hasActiveAttackPathFilters: false,
-  selectedNodeBusinessSceneImpactSummary: null,
-  selectedNodeCoverageSummary: null,
-  selectedNodeRelatedEntitySummary: null,
-  isCurrentNodeRoot: true,
-  selectedNetworkRelations: [],
-  relKey: "R0001",
-  getNodeTypeTitle: (type: string) => type,
-  isPathNodeCurrentSelection: () => false,
-  isRelationOnSelectedPath: () => false,
-  drawerCopyFeedbackMessage: "",
-  drawerCopyFeedbackType: "success" as const,
+const relationTypeMapping = {
+  [RelationType.risk]: { title: "风险", BreakKey: "risks" },
+  [RelationType.avoidance]: { title: "规避手段", BreakKey: "avoidances" },
+  [RelationType.attackTool]: { title: "攻击工具", BreakKey: "attackTools" },
+  [RelationType.threatActor]: { title: "威胁行为者", BreakKey: "threatActors" },
+  [RelationType.term]: { title: "术语", BreakKey: "terms" },
+};
+
+interface MockViewModelOptions {
+  selectedNetworkNode?: { id: string; type: RelationType } | null;
+  selectedNetworkNodeTitle?: string;
+  activeView?: string;
+}
+
+/** 构造 mock viewModel（含 RelationNodeDetailDrawer 所需的 ref/computed/方法） */
+const createMockViewModel = (options: MockViewModelOptions = {}) => {
+  // 用 in 判断而非 ??，以支持显式传 null（nullish coalescing 会把 null 视为缺失）
+  const selectedNetworkNode = ref<{ id: string; type: RelationType } | null>(
+    "selectedNetworkNode" in options
+      ? options.selectedNetworkNode!
+      : { id: "R0001", type: RelationType.risk },
+  );
+  return {
+    // ref 类
+    nodeDetailDrawerVisible: ref(true),
+    selectedNetworkNode,
+    selectedNetworkNodeTitle: ref(options.selectedNetworkNodeTitle ?? "流程自动化"),
+    selectedNetworkRelationCounts: ref({ incoming: 1, outgoing: 2 }),
+    rootNodeRelations: ref([]),
+    selectedNodeRootPath: ref(null),
+    selectedNodeAnalysisSummary: ref(null),
+    selectedNodeRelatedEntitySummary: ref(null),
+    selectedNodeAttackPathSummary: ref([]),
+    selectedNodeAttackPathDescription: ref(""),
+    selectedNodeAttackPathExplanations: ref([]),
+    attackPathFilterOptions: ref({
+      [RelationType.threatActor]: [],
+      [RelationType.attackTool]: [],
+      [RelationType.risk]: [],
+      [RelationType.avoidance]: [],
+    }),
+    attackPathFilters: ref<Record<string, unknown>>({}),
+    selectedNodeBusinessSceneImpactSummary: ref(null),
+    selectedNodeCoverageSummary: ref(null),
+    selectedNetworkRelations: ref([]),
+    relKey: ref("R0001"),
+    drawerCopyFeedbackMessage: ref(""),
+    drawerCopyFeedbackType: ref<"success" | "error" | "info">("success"),
+    activeView: ref(options.activeView ?? "graph"),
+    // computed 类
+    hasActiveAttackPathFilters: computed(() => false),
+    isCurrentNodeRoot: computed(() => true),
+    // 普通对象
+    RelationTypeMapping: relationTypeMapping,
+    // 方法（vi.fn）
+    copySelectedNodeCsv: vi.fn(),
+    gotoSelectedNodeDetailView: vi.fn(),
+    openSelectedNodeDetailInNewWindow: vi.fn(),
+    openSelectedNodeAsRoot: vi.fn(),
+    resetAttackPathFilters: vi.fn(),
+    focusNodeInDrawer: vi.fn(),
+    openNodeAsRootById: vi.fn(),
+    gotoNodeDetailViewById: vi.fn(),
+    getNodeTypeTitle: vi.fn((type: string) => type),
+    isPathNodeCurrentSelection: vi.fn(() => false),
+    isRelationOnSelectedPath: vi.fn(() => false),
+  };
 };
 
 const drawerStub = {
@@ -94,19 +133,21 @@ const contentStub = {
   `,
 };
 
-const mountDrawer = (props = {}) =>
-  mount(RelationNodeDetailDrawer, {
-    props: {
-      ...baseProps,
-      ...props,
-    },
+const mountDrawer = (options: MockViewModelOptions = {}) => {
+  const viewModel = createMockViewModel(options);
+  const wrapper = mount(RelationNodeDetailDrawer, {
     global: {
       stubs: {
         ElDrawer: drawerStub,
         RelationNodeDetailContent: contentStub,
       },
+      provide: {
+        [RELATION_VIEW_MODEL_KEY as symbol]: viewModel,
+      },
     },
   });
+  return { wrapper, viewModel };
+};
 
 afterEach(() => {
   mocks.isMobile = false;
@@ -114,13 +155,14 @@ afterEach(() => {
 
 describe("RelationNodeDetailDrawer", () => {
   it("按桌面尺寸渲染抽屉并转发子组件事件", async () => {
-    const wrapper = mountDrawer();
+    const { wrapper, viewModel } = mountDrawer();
 
     expect(wrapper.find(".drawer-stub").attributes("data-direction")).toBe("rtl");
     expect(wrapper.find(".drawer-stub").attributes("data-size")).toBe("520px");
     expect(wrapper.text()).toContain("R0001 流程自动化");
     expect(wrapper.find(".flags").text()).toBe("true true true true");
 
+    // Drawer 不再 emit，而是直接调用 vm 方法（contentStub 触发 emit → Drawer 模板 @xxx 调用 vm）
     await wrapper.find(".copy-csv").trigger("click");
     await wrapper.find(".view-detail").trigger("click");
     await wrapper.find(".open-new").trigger("click");
@@ -131,36 +173,38 @@ describe("RelationNodeDetailDrawer", () => {
     await wrapper.find(".open-node-root").trigger("click");
     await wrapper.find(".open-node-detail").trigger("click");
 
-    expect(wrapper.emitted("copy-csv")).toHaveLength(1);
-    expect(wrapper.emitted("view-detail")).toHaveLength(1);
-    expect(wrapper.emitted("open-detail-new-window")).toHaveLength(1);
-    expect(wrapper.emitted("open-as-root")).toHaveLength(1);
-    expect(wrapper.emitted("update:attack-path-filters")?.[0]).toEqual([{ risk: ["R0001"] }]);
-    expect(wrapper.emitted("reset-attack-path-filters")).toHaveLength(1);
-    expect(wrapper.emitted("focus-node")?.[0]).toEqual(["R0001"]);
-    expect(wrapper.emitted("open-node-as-root")?.[0]).toEqual(["R0001"]);
-    expect(wrapper.emitted("open-node-detail")?.[0]).toEqual(["R0001"]);
+    expect(viewModel.copySelectedNodeCsv).toHaveBeenCalledTimes(1);
+    expect(viewModel.gotoSelectedNodeDetailView).toHaveBeenCalledTimes(1);
+    expect(viewModel.openSelectedNodeDetailInNewWindow).toHaveBeenCalledTimes(1);
+    expect(viewModel.openSelectedNodeAsRoot).toHaveBeenCalledTimes(1);
+    // update:attack-path-filters 改为直接写 vm.attackPathFilters.value
+    expect(viewModel.attackPathFilters.value).toEqual({ risk: ["R0001"] });
+    expect(viewModel.resetAttackPathFilters).toHaveBeenCalledTimes(1);
+    expect(viewModel.focusNodeInDrawer).toHaveBeenCalledWith("R0001");
+    expect(viewModel.openNodeAsRootById).toHaveBeenCalledWith("R0001");
+    expect(viewModel.gotoNodeDetailViewById).toHaveBeenCalledWith("R0001");
   });
 
   it("关闭抽屉时同步 modelValue", async () => {
-    const wrapper = mountDrawer();
+    const { wrapper, viewModel } = mountDrawer();
 
     await wrapper.find(".close-drawer").trigger("click");
 
-    expect(wrapper.emitted("update:modelValue")?.[0]).toEqual([false]);
+    // el-drawer v-model 直接绑定 vm.nodeDetailDrawerVisible，close 后 ref 写为 false
+    expect(viewModel.nodeDetailDrawerVisible.value).toBe(false);
   });
 
   it("移动端应该使用底部抽屉尺寸", () => {
     mocks.isMobile = true;
 
-    const wrapper = mountDrawer();
+    const { wrapper } = mountDrawer();
 
     expect(wrapper.find(".drawer-stub").attributes("data-direction")).toBe("btt");
     expect(wrapper.find(".drawer-stub").attributes("data-size")).toBe("82dvh");
   });
 
   it("没有选中节点时不渲染详情内容", () => {
-    const wrapper = mountDrawer({
+    const { wrapper } = mountDrawer({
       selectedNetworkNode: null,
     });
 

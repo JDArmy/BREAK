@@ -1,99 +1,57 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, inject } from "vue";
 import { useI18n } from "vue-i18n";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import RelationNodeDetailContent from "@/components/relation/RelationNodeDetailContent.vue";
-import type {
-  AttackPathExplanation,
-  NodeAnalysisSummary,
-  NodeBusinessSceneImpactSummary,
-  NodeCoverageSummary,
-  NodeRelatedEntitySummary,
-  RootPathSummary,
-  RootRelationSummary,
-} from "@/components/relation/relationNodeDrawerInsightTypes";
-import type {
-  AttackPathFilterOption,
-  AttackPathFilterType,
-  AttackPathFilters,
-} from "@/views/relation/relationTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
-interface DetailNode {
-  id: string;
-  type: string;
-}
-
-interface RelationSummary {
-  relationKey: string;
-  direction: string;
-  text: string;
-  directness: string;
-  otherNodeId: string;
-  otherNodeType: string;
-  otherNodeTitle: string;
-  sourceFields: string[];
-  evidenceLabel: string;
-  explanation: string;
-  impactHint: string;
-  qualityFlags: string[];
-}
-
-const props = defineProps<{
-  modelValue: boolean;
-  selectedNetworkNode: DetailNode | null;
-  selectedNetworkNodeTitle: string;
-  selectedNetworkRelationCounts: {
-    incoming: number;
-    outgoing: number;
-  };
-  rootNodeRelations: RootRelationSummary[];
-  selectedNodeRootPath: RootPathSummary | null;
-  selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
-  selectedNodeRelatedEntitySummary: NodeRelatedEntitySummary | null;
-  selectedNodeAttackPathSummary: string[];
-  selectedNodeAttackPathDescription: string;
-  selectedNodeAttackPathExplanations: AttackPathExplanation[];
-  attackPathFilterOptions: Record<AttackPathFilterType, AttackPathFilterOption[]>;
-  attackPathFilters: AttackPathFilters;
-  hasActiveAttackPathFilters: boolean;
-  selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
-  selectedNodeCoverageSummary: NodeCoverageSummary | null;
-  isCurrentNodeRoot: boolean;
-  selectedNetworkRelations: RelationSummary[];
-  relKey: string;
-  getNodeTypeTitle: (type: string) => string;
-  isPathNodeCurrentSelection: (nodeId: string) => boolean;
-  isRelationOnSelectedPath: (relationKey: string) => boolean;
-  drawerCopyFeedbackMessage: string;
-  drawerCopyFeedbackType: "success" | "error";
-  hideRelatedEntityActions?: boolean;
-}>();
-
-const emit = defineEmits<{
-  "update:modelValue": [value: boolean];
-  "copy-csv": [];
-  "view-detail": [];
-  "open-detail-new-window": [];
-  "open-as-root": [];
-  "update:attack-path-filters": [value: AttackPathFilters];
-  "reset-attack-path-filters": [];
-  "focus-node": [nodeId: string];
-  "open-node-as-root": [nodeId: string];
-  "open-node-detail": [nodeId: string];
-}>();
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+// ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+const {
+  nodeDetailDrawerVisible,
+  selectedNetworkNode,
+  selectedNetworkNodeTitle,
+  selectedNetworkRelationCounts,
+  rootNodeRelations,
+  selectedNodeRootPath,
+  selectedNodeAnalysisSummary,
+  selectedNodeRelatedEntitySummary,
+  selectedNodeAttackPathSummary,
+  selectedNodeAttackPathDescription,
+  selectedNodeAttackPathExplanations,
+  attackPathFilterOptions,
+  attackPathFilters,
+  hasActiveAttackPathFilters,
+  selectedNodeBusinessSceneImpactSummary,
+  selectedNodeCoverageSummary,
+  isCurrentNodeRoot,
+  selectedNetworkRelations,
+  relKey,
+  getNodeTypeTitle,
+  isPathNodeCurrentSelection,
+  isRelationOnSelectedPath,
+  drawerCopyFeedbackMessage,
+  drawerCopyFeedbackType,
+  copySelectedNodeCsv,
+  gotoSelectedNodeDetailView,
+  openSelectedNodeDetailInNewWindow,
+  openSelectedNodeAsRoot,
+  resetAttackPathFilters,
+  focusNodeInDrawer,
+  openNodeAsRootById,
+  gotoNodeDetailViewById,
+} = vm;
+// 原 RelationView 模板 :hide-related-entity-actions="activeView === 'pathExplorer'"
+const hideRelatedEntityActions = computed(() => vm.activeView.value === "pathExplorer");
 
 const { t } = useI18n();
 const { isMobile } = useBreakpoints();
-
-const drawerVisible = computed({
-  get: () => props.modelValue,
-  set: (value: boolean) => emit("update:modelValue", value),
-});
 </script>
 
 <template>
   <el-drawer
-    v-model="drawerVisible"
+    v-model="nodeDetailDrawerVisible"
     :title="t('relationView.nodeDetail')"
     :direction="isMobile ? 'btt' : 'rtl'"
     :size="isMobile ? '82dvh' : '520px'"
@@ -137,15 +95,15 @@ const drawerVisible = computed({
         :show-coverage-block="true"
         :show-attack-path-block="true"
         :hide-related-entity-actions="hideRelatedEntityActions"
-        @copy-csv="emit('copy-csv')"
-        @view-detail="emit('view-detail')"
-        @open-detail-new-window="emit('open-detail-new-window')"
-        @open-as-root="emit('open-as-root')"
-        @update:attack-path-filters="emit('update:attack-path-filters', $event)"
-        @reset-attack-path-filters="emit('reset-attack-path-filters')"
-        @focus-node="emit('focus-node', $event)"
-        @open-node-as-root="emit('open-node-as-root', $event)"
-        @open-node-detail="emit('open-node-detail', $event)"
+        @copy-csv="copySelectedNodeCsv"
+        @view-detail="gotoSelectedNodeDetailView"
+        @open-detail-new-window="openSelectedNodeDetailInNewWindow"
+        @open-as-root="openSelectedNodeAsRoot"
+        @update:attack-path-filters="attackPathFilters = $event"
+        @reset-attack-path-filters="resetAttackPathFilters"
+        @focus-node="focusNodeInDrawer"
+        @open-node-as-root="openNodeAsRootById"
+        @open-node-detail="gotoNodeDetailViewById"
       />
     </div>
   </el-drawer>

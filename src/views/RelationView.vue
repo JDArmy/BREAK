@@ -122,214 +122,36 @@ export default defineComponent({
         name="network"
         :lazy="activeView !== 'network'"
       >
-        <RelationNetworkPane
-          :set-network-pane-element="setNetworkPaneElement"
-          :set-network-scroller-element="setNetworkScrollerElement"
-          :set-network-chart-element="setNetworkChartElement"
-          :network-layout-tooltip="networkLayoutTooltip"
-          :network-layout-options="networkLayoutOptions"
-          :network-state="networkState"
-          :node-filter-visible="nodeFilterVisible"
-          :line-filter-visible="lineFilterVisible"
-          :filter-relation-type="filterRelationType"
-          :filter-sub-node="filterSubNode"
-          :filter-related-entity="filterRelatedEntity"
-          :filter-line-type="filterLineType"
-          :relation-type-items="relationTypeItems"
-          :sub-node-filter-color="subNodeFilterColor"
-          :visible-relation-legend-items="visibleRelationLegendItems"
-          :format-relation-fields-tooltip="formatRelationFieldsTooltip"
-          :selected-relation-detail="selectedNetworkRelationDetail"
-          @fullscreen="enterFullscreen"
-          @zoom-in="zoomNetworkChart(0.08)"
-          @zoom-out="zoomNetworkChart(-0.08)"
-          @layout-command="handleNetworkLayoutCommand"
-          @refresh="refreshNetworkChart"
-          @download="downloadNetworkChart"
-          @toggle-node-filter="toggleNodeFilter"
-          @toggle-line-filter="toggleLineFilter"
-          @open-node-detail="openNodeDetailDrawer"
-          @update:node-filter-visible="nodeFilterVisible = $event"
-          @update:line-filter-visible="lineFilterVisible = $event"
-          @update:filter-relation-type="filterRelationType = $event"
-          @update:filter-sub-node="filterSubNode = $event"
-          @update:filter-related-entity="filterRelatedEntity = $event"
-          @update:filter-line-type="filterLineType = $event"
-          @filter="doFilter"
-          @close-relation-detail="closeNetworkRelationDetail"
-        />
+        <RelationNetworkPane />
       </el-tab-pane>
       <el-tab-pane
         :label="$t('relationView.perspective.attackPath.title')"
         name="sankey"
         :lazy="activeView !== 'sankey'"
       >
-        <RelationSankeyPane
-          :active="activeView === 'sankey'"
-          :has-data="sankeyHasData"
-          :chart-min-width="sankeyChartMinWidth"
-          :set-sankey-chart-element="setSankeyChartElement"
-        />
+        <RelationSankeyPane />
       </el-tab-pane>
       <el-tab-pane
         :label="$t('relationView.perspective.defenseCoverage.title')"
         name="analysis"
         :lazy="activeView !== 'analysis'"
       >
-        <RelationAnalysisPane
-          :active="activeView === 'analysis'"
-          :relation-type-mapping="RelationTypeMapping"
-          :attack-path-details="attackPathDetails"
-          :attack-path-filter-options="attackPathFilterOptions"
-          :attack-path-filters="attackPathFilters"
-          :filtered-attack-path-count="filteredAttackPaths.length"
-          :has-active-attack-path-filters="hasActiveAttackPathFilters"
-          :risk-avoidance-coverage="riskAvoidanceCoverage"
-          :selected-attack-path-detail="selectedAttackPathDetail"
-          :selected-network-node="selectedNetworkNode"
-          :selected-node-analysis-summary="selectedNodeAnalysisSummary"
-          :selected-node-related-entity-summary="selectedNodeRelatedEntitySummary"
-          :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
-          :selected-node-attack-path-description="selectedNodeAttackPathDescription"
-          :selected-node-attack-path-explanations="
-            selectedNodeAttackPathExplanations
-          "
-          :selected-node-business-scene-impact-summary="
-            selectedNodeBusinessSceneImpactSummary
-          "
-          :selected-node-coverage-summary="selectedNodeCoverageSummary"
-          :selected-node-special-insight-summary="selectedNodeSpecialInsightSummary"
-          :selected-network-node-title="selectedNetworkNodeTitle"
-          :selected-network-relation-counts="selectedNetworkRelationCounts"
-          :selected-network-relations="selectedNetworkRelations"
-          :root-node-relations="rootNodeRelations"
-          :selected-node-root-path="selectedNodeRootPath"
-          :rel-key="relKey"
-          :get-node-type-title="getNodeTypeTitle"
-          :is-path-node-current-selection="isPathNodeCurrentSelection"
-          :is-relation-on-selected-path="isRelationOnSelectedPath"
-          :is-current-node-root="isCurrentNodeRoot"
-          :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
-          :drawer-copy-feedback-type="drawerCopyFeedbackType"
-          @copy-csv="copySelectedNodeCsv"
-          @view-detail="gotoSelectedNodeDetailView"
-          @open-detail-new-window="openSelectedNodeDetailInNewWindow"
-          @open-as-root="openSelectedNodeAsRoot"
-          @update:attack-path-filters="attackPathFilters = $event"
-          @reset-attack-path-filters="resetAttackPathFilters"
-          @select-attack-path="selectAttackPath"
-          @apply-avoidance-filter="
-            attackPathFilters = {
-              ...(attackPathFilters || {}),
-              [RelationType.avoidance]: $event,
-            }
-          "
-          @focus-node="focusNodeInDrawer"
-          @open-node-as-root="openNodeAsRootById"
-          @open-node-detail="gotoNodeDetailViewById"
-        />
+        <RelationAnalysisPane />
       </el-tab-pane>
       <el-tab-pane
         :label="$t('relationView.pathExplorer')"
         name="pathExplorer"
         :lazy="activeView !== 'pathExplorer'"
       >
-        <RelationPathExplorerPane
-          :active="activeView === 'pathExplorer'"
-          :rel-type="relType"
-          :rel-key="relKey"
-          :RelationTypeMapping="RelationTypeMapping"
-          :path-explorer-sankey-data="pathExplorerSankeyData"
-          :path-explorer-has-data="pathExplorerHasData"
-          :path-explorer-chart-height="pathExplorerChartHeight"
-          :path-explorer-chart-min-width="sankeyChartMinWidth"
-          :path-explorer-stats="pathExplorerStats"
-          :has-target="hasTarget"
-          :searching="searching"
-          :set-path-explorer-chart-element="pathExplorerSankeyController.setSankeyChartElement"
-          :initial-end-type="pathExplorerEndType"
-          :initial-end-key="pathExplorerEndKey"
-          :initial-max-depth="pathExplorerMaxDepth"
-          :initial-max-paths="pathExplorerMaxPaths"
-          @update:start-type="pathExplorerStartType = $event"
-          @update:start-key="pathExplorerStartKey = $event"
-          @update:end-type="pathExplorerEndType = $event"
-          @update:end-key="pathExplorerEndKey = $event"
-          @update:max-depth="pathExplorerMaxDepth = $event"
-          @update:max-paths="pathExplorerMaxPaths = $event"
-        />
+        <RelationPathExplorerPane />
       </el-tab-pane>
     </el-tabs>
 
-    <RelationGraphContextMenu
-      :set-dropdown-instance="setDropdownInstance"
-      :dropdown-style="dropdownStyle"
-      :RelationTypeMapping="RelationTypeMapping"
-      :disable-context-menu-all="disableContextMenuAll"
-      :disable-context-menu-open-as-root="disableContextMenuOpenAsRoot"
-      :show-relation-fetch-actions="activeView === 'network'"
-      @click-context-menu="clickContextMenu"
-      @goto-new-relation-view="gotoNewRelationView"
-      @open-context-node-detail-drawer="openContextNodeDetailDrawer"
-      @copy-context-node-csv="copyContextNodeCsv"
-      @goto-item-detail-view="gotoItemDetailView"
-    />
+    <RelationGraphContextMenu />
 
-    <RelationGraphTouchActions
-      :touch-action-visible="touchActionVisible"
-      :RelationTypeMapping="RelationTypeMapping"
-      :disable-context-menu-all="disableContextMenuAll"
-      :disable-context-menu-open-as-root="disableContextMenuOpenAsRoot"
-      :show-relation-fetch-actions="activeView === 'network'"
-      @click-context-menu="clickContextMenu"
-      @goto-new-relation-view="gotoNewRelationView"
-      @open-touch-node-detail-drawer="openTouchNodeDetailDrawer"
-      @copy-context-node-csv="copyContextNodeCsv"
-      @goto-item-detail-view="gotoItemDetailView"
-      @touch-action-close="touchActionClose"
-    />
+    <RelationGraphTouchActions />
 
-    <RelationNodeDetailDrawer
-      v-if="nodeDetailDrawerVisible"
-      v-model="nodeDetailDrawerVisible"
-      :selected-network-node="selectedNetworkNode"
-      :selected-network-node-title="selectedNetworkNodeTitle"
-      :selected-network-relation-counts="selectedNetworkRelationCounts"
-      :root-node-relations="rootNodeRelations"
-      :selected-node-root-path="selectedNodeRootPath"
-      :selected-node-analysis-summary="selectedNodeAnalysisSummary"
-      :selected-node-related-entity-summary="selectedNodeRelatedEntitySummary"
-      :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
-      :selected-node-attack-path-description="selectedNodeAttackPathDescription"
-      :selected-node-attack-path-explanations="
-        selectedNodeAttackPathExplanations
-      "
-      :attack-path-filter-options="attackPathFilterOptions"
-      :attack-path-filters="attackPathFilters"
-      :has-active-attack-path-filters="hasActiveAttackPathFilters"
-      :selected-node-business-scene-impact-summary="
-        selectedNodeBusinessSceneImpactSummary
-      "
-      :selected-node-coverage-summary="selectedNodeCoverageSummary"
-      :selected-network-relations="selectedNetworkRelations"
-      :rel-key="relKey"
-      :get-node-type-title="getNodeTypeTitle"
-      :is-path-node-current-selection="isPathNodeCurrentSelection"
-      :is-relation-on-selected-path="isRelationOnSelectedPath"
-      :is-current-node-root="isCurrentNodeRoot"
-      :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
-      :drawer-copy-feedback-type="drawerCopyFeedbackType"
-      :hide-related-entity-actions="activeView === 'pathExplorer'"
-      @copy-csv="copySelectedNodeCsv"
-      @view-detail="gotoSelectedNodeDetailView"
-      @open-detail-new-window="openSelectedNodeDetailInNewWindow"
-      @open-as-root="openSelectedNodeAsRoot"
-      @update:attack-path-filters="attackPathFilters = $event"
-      @reset-attack-path-filters="resetAttackPathFilters"
-      @focus-node="focusNodeInDrawer"
-      @open-node-detail="gotoNodeDetailViewById"
-      @open-node-as-root="openNodeAsRootById"
-    />
+    <RelationNodeDetailDrawer v-if="nodeDetailDrawerVisible" />
   </div>
 </template>
 

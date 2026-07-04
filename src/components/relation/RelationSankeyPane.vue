@@ -1,22 +1,21 @@
 <script setup lang="ts">
-import { type ComponentPublicInstance } from "vue";
+import { computed, inject, type ComponentPublicInstance } from "vue";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
-const props = defineProps<{
-  active: boolean;
-  hasData: boolean;
-  chartMinWidth?: number;
-  setSankeyChartElement?: (element: HTMLDivElement | undefined) => void;
-}>();
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+const { sankeyHasData, sankeyChartMinWidth, setSankeyChartElement } = vm;
+// active 由 activeView 推导（原 RelationView 模板 :active="activeView === 'sankey'"）
+const active = computed(() => vm.activeView.value === "sankey");
 
 const setRef = (el: Element | ComponentPublicInstance | null) => {
-  props.setSankeyChartElement?.((el as HTMLDivElement) || undefined);
+  setSankeyChartElement?.((el as HTMLDivElement) || undefined);
 };
-
 </script>
 
 <template>
   <div class="sankey-pane">
-    <div v-if="active && !hasData" class="sankey-empty">
+    <div v-if="active && !sankeyHasData" class="sankey-empty">
       {{ $t("relationView.noAttackPath") }}
     </div>
 
@@ -24,7 +23,7 @@ const setRef = (el: Element | ComponentPublicInstance | null) => {
       v-show="active"
       :ref="setRef"
       class="sankey-chart"
-      :style="{ minWidth: chartMinWidth ? `${chartMinWidth}px` : undefined }"
+      :style="{ minWidth: sankeyChartMinWidth ? `${sankeyChartMinWidth}px` : undefined }"
     ></div>
   </div>
 </template>

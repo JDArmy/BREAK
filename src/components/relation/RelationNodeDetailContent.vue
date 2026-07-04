@@ -1,70 +1,50 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, inject } from "vue";
 import RelationNodeDrawerHeader from "@/components/relation/RelationNodeDrawerHeader.vue";
 import RelationNodeDrawerRelations from "@/components/relation/RelationNodeDrawerRelations.vue";
 import RelationNodeInsightBlocks from "@/components/relation/RelationNodeInsightBlocks.vue";
-import type {
-  AttackPathExplanation,
-  NodeAnalysisSummary,
-  NodeBusinessSceneImpactSummary,
-  NodeCoverageSummary,
-  NodeRelatedEntitySummary,
-  RootPathSummary,
-  RootRelationSummary,
-} from "@/components/relation/relationNodeDrawerInsightTypes";
-import type {
-  AttackPathFilterOption,
-  AttackPathFilterType,
-  AttackPathFilters,
-} from "@/views/relation/relationTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
+import type { AttackPathFilters } from "@/views/relation/relationTypes";
 
-interface DetailNode {
-  id: string;
-  type: string;
-}
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+// ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+const {
+  selectedNetworkNode,
+  selectedNetworkNodeTitle,
+  selectedNetworkRelationCounts,
+  rootNodeRelations,
+  selectedNodeRootPath,
+  selectedNodeAnalysisSummary,
+  selectedNodeRelatedEntitySummary,
+  selectedNodeAttackPathSummary,
+  selectedNodeAttackPathDescription,
+  selectedNodeAttackPathExplanations,
+  attackPathFilterOptions,
+  attackPathFilters,
+  hasActiveAttackPathFilters,
+  selectedNodeBusinessSceneImpactSummary,
+  selectedNodeCoverageSummary,
+  selectedNetworkRelations,
+  relKey,
+  getNodeTypeTitle,
+  isPathNodeCurrentSelection,
+  isRelationOnSelectedPath,
+  isCurrentNodeRoot,
+  drawerCopyFeedbackMessage,
+  drawerCopyFeedbackType,
+  copySelectedNodeCsv,
+  gotoSelectedNodeDetailView,
+  openSelectedNodeDetailInNewWindow,
+  openSelectedNodeAsRoot,
+  resetAttackPathFilters,
+  focusNodeInDrawer,
+  openNodeAsRootById,
+  gotoNodeDetailViewById,
+} = vm;
 
-interface RelationSummary {
-  relationKey: string;
-  direction: string;
-  text: string;
-  directness: string;
-  otherNodeId: string;
-  otherNodeType: string;
-  otherNodeTitle: string;
-  sourceFields: string[];
-  evidenceLabel: string;
-  explanation: string;
-  impactHint: string;
-  qualityFlags: string[];
-}
-
+// 一次性配置开关保留为 props（Drawer 传 true，AnalysisDetailColumn 传 false 差异化）
 withDefaults(defineProps<{
-  selectedNetworkNode: DetailNode;
-  selectedNetworkNodeTitle: string;
-  selectedNetworkRelationCounts: {
-    incoming: number;
-    outgoing: number;
-  };
-  rootNodeRelations: RootRelationSummary[];
-  selectedNodeRootPath: RootPathSummary | null;
-  selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
-  selectedNodeRelatedEntitySummary: NodeRelatedEntitySummary | null;
-  selectedNodeAttackPathSummary: string[];
-  selectedNodeAttackPathDescription: string;
-  selectedNodeAttackPathExplanations: AttackPathExplanation[];
-  attackPathFilterOptions: Record<AttackPathFilterType, AttackPathFilterOption[]>;
-  attackPathFilters: AttackPathFilters;
-  hasActiveAttackPathFilters: boolean;
-  selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
-  selectedNodeCoverageSummary: NodeCoverageSummary | null;
-  selectedNetworkRelations: RelationSummary[];
-  relKey: string;
-  getNodeTypeTitle: (type: string) => string;
-  isPathNodeCurrentSelection: (nodeId: string) => boolean;
-  isRelationOnSelectedPath: (relationKey: string) => boolean;
-  isCurrentNodeRoot: boolean;
-  drawerCopyFeedbackMessage: string;
-  drawerCopyFeedbackType: "success" | "error";
   showOpenAsRootAction?: boolean;
   showRootRelationBlock?: boolean;
   showCoverageBlock?: boolean;
@@ -76,18 +56,6 @@ withDefaults(defineProps<{
   showCoverageBlock: true,
   showAttackPathBlock: true,
 });
-
-const emit = defineEmits<{
-  "copy-csv": [];
-  "view-detail": [];
-  "open-detail-new-window": [];
-  "open-as-root": [];
-  "update:attack-path-filters": [value: AttackPathFilters];
-  "reset-attack-path-filters": [];
-  "focus-node": [nodeId: string];
-  "open-node-as-root": [nodeId: string];
-  "open-node-detail": [nodeId: string];
-}>();
 
 const relationsSectionRef = ref<HTMLElement | null>(null);
 const relationsRef = ref<InstanceType<typeof RelationNodeDrawerRelations> | null>(
@@ -101,6 +69,11 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
     block: "start",
   });
 };
+
+// update:attack-path-filters：直接写回 vm 的 ref
+const updateAttackPathFilters = (value: AttackPathFilters) => {
+  attackPathFilters.value = value;
+};
 </script>
 
 <template>
@@ -111,9 +84,9 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
     :rel-key="relKey"
     :get-node-type-title="getNodeTypeTitle"
     :show-open-as-root-action="showOpenAsRootAction"
-    @view-detail="emit('view-detail')"
-    @open-detail-new-window="emit('open-detail-new-window')"
-    @open-as-root="emit('open-as-root')"
+    @view-detail="gotoSelectedNodeDetailView"
+    @open-detail-new-window="openSelectedNodeDetailInNewWindow"
+    @open-as-root="openSelectedNodeAsRoot"
     @filter-relations-by-direction="filterRelationsByDirection"
   />
   <RelationNodeInsightBlocks
@@ -140,11 +113,11 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
     :rel-key="relKey"
     :is-path-node-current-selection="isPathNodeCurrentSelection"
     :is-current-node-root="isCurrentNodeRoot"
-    @update:attack-path-filters="emit('update:attack-path-filters', $event)"
-    @reset-attack-path-filters="emit('reset-attack-path-filters')"
-    @focus-node="emit('focus-node', $event)"
-    @open-node-as-root="emit('open-node-as-root', $event)"
-    @open-node-detail="emit('open-node-detail', $event)"
+    @update:attack-path-filters="updateAttackPathFilters"
+    @reset-attack-path-filters="resetAttackPathFilters"
+    @focus-node="focusNodeInDrawer"
+    @open-node-as-root="openNodeAsRootById"
+    @open-node-detail="gotoNodeDetailViewById"
   />
   <div ref="relationsSectionRef">
     <RelationNodeDrawerRelations
@@ -153,8 +126,8 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
       :is-relation-on-selected-path="isRelationOnSelectedPath"
       :copy-feedback-message="drawerCopyFeedbackMessage"
       :copy-feedback-type="drawerCopyFeedbackType"
-      @copy-csv="emit('copy-csv')"
-      @open-node-detail="emit('open-node-detail', $event)"
+      @copy-csv="copySelectedNodeCsv"
+      @open-node-detail="gotoNodeDetailViewById"
     />
   </div>
 </template>

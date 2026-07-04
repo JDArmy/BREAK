@@ -161,8 +161,12 @@ const mountRelationView = async () => {
           template: '<section class="tab-pane-stub" :data-name="name"><slot /></section>',
         },
         RelationNetworkPane: {
-          emits: ["open-node-detail", "fullscreen"],
-          template: '<div class="network-pane-stub" @click="$emit(\'open-node-detail\', \'R0001\')">network</div>',
+          // 迁移到 inject 后：RelationNetworkPane 直接调 vm.openNodeDetailDrawer，
+          // stub 模拟该行为（点击时调用闭包中的 viewModel 方法）
+          template: '<div class="network-pane-stub" @click="viewModel.openNodeDetailDrawer(\'R0001\')">network</div>',
+          setup() {
+            return { viewModel };
+          },
         },
         RelationSankeyPane: { template: '<div class="sankey-pane-stub">sankey</div>' },
         RelationAnalysisPane: { template: '<div class="analysis-pane-stub">analysis</div>' },
@@ -170,9 +174,9 @@ const mountRelationView = async () => {
         RelationGraphContextMenu: { template: '<div class="context-menu-stub" />' },
         RelationGraphTouchActions: { template: '<div class="touch-actions-stub" />' },
         RelationNodeDetailDrawer: {
-          props: ["modelValue", "selectedNetworkNodeTitle"],
-          emits: ["update:modelValue", "copy-csv"],
-          template: '<aside class="detail-drawer-stub">{{ selectedNetworkNodeTitle }}</aside>',
+          // 迁移到 inject 后：Drawer 直接绑 vm.nodeDetailDrawerVisible，不再收 props。
+          // stub 显示固定文本（viewModel 初始 selectedNetworkNodeTitle 为 "R0001"）
+          template: '<aside class="detail-drawer-stub">R0001</aside>',
         },
       },
     },

@@ -1,27 +1,21 @@
 <script setup lang="ts">
 import type { DropdownInstance } from "element-plus";
+import { computed, inject } from "vue";
 import { TopRight } from "@element-plus/icons-vue";
 import { RelationType } from "@/views/relation/relationTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
-const props = defineProps<{
-  setDropdownInstance?: (instance: DropdownInstance | undefined) => void;
-  dropdownStyle: Record<string, string | number>;
-  RelationTypeMapping: Record<string, { title: string; disableContextMenu: { value: boolean } }>;
-  disableContextMenuAll: boolean;
-  disableContextMenuOpenAsRoot: boolean;
-  showRelationFetchActions?: boolean;
-}>();
-
-const emit = defineEmits<{
-  clickContextMenu: [reqType: RelationType];
-  gotoNewRelationView: [];
-  openContextNodeDetailDrawer: [];
-  copyContextNodeCsv: [];
-  gotoItemDetailView: [];
-}>();
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+// ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+const { setDropdownInstance, dropdownStyle, disableContextMenuAll, disableContextMenuOpenAsRoot, clickContextMenu, gotoNewRelationView, openContextNodeDetailDrawer, copyContextNodeCsv, gotoItemDetailView } = vm;
+// RelationTypeMapping 是普通对象（非 ref），直接取
+const RelationTypeMapping = vm.RelationTypeMapping;
+// 原 RelationView 模板 :show-relation-fetch-actions="activeView === 'network'"
+const showRelationFetchActions = computed(() => vm.activeView.value === "network");
 
 const setDropdownRef = (instance: DropdownInstance | undefined) => {
-  props.setDropdownInstance?.(instance);
+  setDropdownInstance?.(instance);
 };
 </script>
 
@@ -30,16 +24,16 @@ const setDropdownRef = (instance: DropdownInstance | undefined) => {
     <span class="el-dropdown-link"></span>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item @click="emit('openContextNodeDetailDrawer')">
+        <el-dropdown-item @click="openContextNodeDetailDrawer">
           {{ $t('relationView.nodeDetail') }}
         </el-dropdown-item>
         <el-dropdown-item
           :disabled="disableContextMenuOpenAsRoot"
-          @click="emit('gotoNewRelationView')"
+          @click="gotoNewRelationView"
         >
           {{ $t('openAsRoot') }}
         </el-dropdown-item>
-        <el-dropdown-item @click="emit('copyContextNodeCsv')">
+        <el-dropdown-item @click="copyContextNodeCsv">
           {{ $t('relationView.copyRelatedEntities') }}
         </el-dropdown-item>
         <template v-if="showRelationFetchActions">
@@ -48,18 +42,18 @@ const setDropdownRef = (instance: DropdownInstance | undefined) => {
             :key="key"
             :divided="index === 0"
             :disabled="item.disableContextMenu.value"
-            @click="emit('clickContextMenu', key as RelationType)"
+            @click="clickContextMenu(key as RelationType)"
           >
             {{ item.title }}
           </el-dropdown-item>
           <el-dropdown-item
             :disabled="disableContextMenuAll"
-            @click="emit('clickContextMenu', RelationType.all)"
+            @click="clickContextMenu(RelationType.all)"
           >
             {{ $t('fetchAllRelations') }}
           </el-dropdown-item>
         </template>
-        <el-dropdown-item :divided="showRelationFetchActions" @click="emit('gotoItemDetailView')">
+        <el-dropdown-item :divided="showRelationFetchActions" @click="gotoItemDetailView">
           <span class="menu-action-with-icon">
             <el-icon><TopRight /></el-icon>
             <span>{{ $t('viewDetail') }}</span>

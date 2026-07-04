@@ -1,5 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { computed, ref } from "vue";
 import RelationAnalysisPane from "@/components/relation/RelationAnalysisPane.vue";
 import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
 import type {
@@ -13,6 +14,7 @@ import type {
   NodeSpecialInsightSummary,
   RootRelationSummary,
 } from "@/components/relation/relationNodeDrawerInsightTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
 const mocks = vi.hoisted(() => ({
   isMobile: false,
@@ -121,37 +123,116 @@ const rootRelation: RootRelationSummary = {
   sourceFields: ["Risk.avoidances"],
 };
 
-const baseProps = {
-  active: true,
-  relationTypeMapping: createRelationTypeMapping((key: string) => key, () => "#000"),
-  attackPathDetails: [pathDetail("p1"), pathDetail("p2")],
-  selectedNetworkNode: { id: "R0001", type: RelationType.risk },
-  attackPathFilterOptions: filterOptions,
-  attackPathFilters: {} as AttackPathFilters,
-  filteredAttackPathCount: 2,
-  hasActiveAttackPathFilters: false,
-  riskAvoidanceCoverage: coverage,
-  selectedAttackPathDetail: pathDetail("p1"),
-  selectedNodeAnalysisSummary: null,
-  selectedNodeRelatedEntitySummary: null,
-  selectedNodeAttackPathSummary: [],
-  selectedNodeAttackPathDescription: "",
-  selectedNodeAttackPathExplanations: [],
-  selectedNodeBusinessSceneImpactSummary: null,
-  selectedNodeCoverageSummary: null,
-  selectedNodeSpecialInsightSummary: null,
-  selectedNetworkNodeTitle: "流程自动化",
-  selectedNetworkRelationCounts: { incoming: 1, outgoing: 2 },
-  selectedNetworkRelations: [],
-  rootNodeRelations: [rootRelation],
-  selectedNodeRootPath: null,
-  relKey: "R0001",
-  getNodeTypeTitle: (type: string) => type,
-  isPathNodeCurrentSelection: () => false,
-  isRelationOnSelectedPath: () => false,
-  isCurrentNodeRoot: true,
-  drawerCopyFeedbackMessage: "",
-  drawerCopyFeedbackType: "success" as const,
+interface MockViewModelOptions {
+  activeView?: string;
+  attackPathDetails?: AttackPathDetail[];
+  attackPathFilters?: AttackPathFilters;
+  hasActiveAttackPathFilters?: boolean;
+  riskAvoidanceCoverage?: RiskAvoidanceCoverage | null;
+  selectedAttackPathDetail?: AttackPathDetail | null;
+  selectedNetworkNode?: { id: string; type: string } | null;
+  selectedNodeSpecialInsightSummary?: NodeSpecialInsightSummary | null;
+  rootNodeRelations?: RootRelationSummary[];
+  filteredAttackPaths?: AttackPathDetail[];
+  selectedNetworkNodeTitle?: string;
+  relKey?: string;
+}
+
+/** 构造 mock viewModel（含 RelationAnalysisPane 所需的 ref/computed/方法/对象） */
+const createMockViewModel = (options: MockViewModelOptions = {}) => {
+  const attackPathDetails = options.attackPathDetails ?? [pathDetail("p1"), pathDetail("p2")];
+  const attackPathFilters = ref<AttackPathFilters>(
+    options.attackPathFilters ?? ({} as AttackPathFilters),
+  );
+  // 仅在字段显式传入（含 null）时采用入参，否则回退默认值
+  const hasRiskCoverage =
+    Object.prototype.hasOwnProperty.call(options, "riskAvoidanceCoverage");
+  const hasSpecialInsight = Object.prototype.hasOwnProperty.call(
+    options,
+    "selectedNodeSpecialInsightSummary",
+  );
+  const hasSelectedAttackPathDetail = Object.prototype.hasOwnProperty.call(
+    options,
+    "selectedAttackPathDetail",
+  );
+  const hasSelectedNetworkNode = Object.prototype.hasOwnProperty.call(
+    options,
+    "selectedNetworkNode",
+  );
+  const hasRootNodeRelations = Object.prototype.hasOwnProperty.call(
+    options,
+    "rootNodeRelations",
+  );
+  return {
+    // ref 类字段
+    activeView: ref<string>(options.activeView ?? "analysis"),
+    attackPathDetails: ref<AttackPathDetail[]>(attackPathDetails),
+    attackPathFilterOptions: ref<Record<AttackPathFilterType, AttackPathFilterOption[]>>(
+      filterOptions,
+    ),
+    attackPathFilters,
+    filteredAttackPaths: ref<AttackPathDetail[]>(
+      options.filteredAttackPaths ?? attackPathDetails,
+    ),
+    hasActiveAttackPathFilters: computed(
+      () => options.hasActiveAttackPathFilters ?? false,
+    ),
+    riskAvoidanceCoverage: ref<RiskAvoidanceCoverage | null>(
+      hasRiskCoverage ? options.riskAvoidanceCoverage! : coverage,
+    ),
+    selectedAttackPathDetail: ref<AttackPathDetail | null>(
+      hasSelectedAttackPathDetail ? options.selectedAttackPathDetail! : pathDetail("p1"),
+    ),
+    selectedNetworkNode: ref<{ id: string; type: string } | null>(
+      hasSelectedNetworkNode
+        ? options.selectedNetworkNode!
+        : { id: "R0001", type: RelationType.risk },
+    ),
+    selectedNodeAnalysisSummary: ref<unknown>(null),
+    selectedNodeRelatedEntitySummary: ref<unknown>(null),
+    selectedNodeAttackPathSummary: ref<string[]>([]),
+    selectedNodeAttackPathDescription: ref<string>(""),
+    selectedNodeAttackPathExplanations: ref<unknown[]>([]),
+    selectedNodeBusinessSceneImpactSummary: ref<unknown>(null),
+    selectedNodeCoverageSummary: ref<unknown>(null),
+    selectedNodeSpecialInsightSummary: ref<NodeSpecialInsightSummary | null>(
+      hasSpecialInsight ? options.selectedNodeSpecialInsightSummary! : null,
+    ),
+    selectedNetworkNodeTitle: ref<string>(
+      options.selectedNetworkNodeTitle ?? "流程自动化",
+    ),
+    selectedNetworkRelationCounts: ref<{ incoming: number; outgoing: number }>({
+      incoming: 1,
+      outgoing: 2,
+    }),
+    selectedNetworkRelations: ref<unknown[]>([]),
+    rootNodeRelations: ref<RootRelationSummary[]>(
+      hasRootNodeRelations ? options.rootNodeRelations! : [rootRelation],
+    ),
+    selectedNodeRootPath: ref<unknown>(null),
+    relKey: ref<string>(options.relKey ?? "R0001"),
+    drawerCopyFeedbackMessage: ref<string>(""),
+    drawerCopyFeedbackType: ref<"success" | "error">("success"),
+    isCurrentNodeRoot: computed(() => true),
+    // 普通对象
+    RelationTypeMapping: createRelationTypeMapping((key: string) => key, () => "#000"),
+    // 方法（vi.fn() 便于断言被调用）
+    getNodeTypeTitle: vi.fn((type: string) => type),
+    isPathNodeCurrentSelection: vi.fn(() => false),
+    isRelationOnSelectedPath: vi.fn(() => false),
+    copySelectedNodeCsv: vi.fn(),
+    gotoSelectedNodeDetailView: vi.fn(),
+    openSelectedNodeDetailInNewWindow: vi.fn(),
+    openSelectedNodeAsRoot: vi.fn(),
+    // resetAttackPathFilters 清空 filters ref，模拟真实 viewModel 行为
+    resetAttackPathFilters: vi.fn(() => {
+      attackPathFilters.value = {} as AttackPathFilters;
+    }),
+    selectAttackPath: vi.fn(),
+    focusNodeInDrawer: vi.fn(),
+    openNodeAsRootById: vi.fn(),
+    gotoNodeDetailViewById: vi.fn(),
+  };
 };
 
 const selectStub = {
@@ -218,14 +299,9 @@ const buttonStub = {
   template: '<button class="el-button"><slot /></button>',
 };
 
-const mountPane = (
-  props: Partial<InstanceType<typeof RelationAnalysisPane>["$props"]> = {},
-) =>
-  mount(RelationAnalysisPane, {
-    props: {
-      ...baseProps,
-      ...props,
-    },
+const mountPane = (options: MockViewModelOptions = {}) => {
+  const viewModel = createMockViewModel(options);
+  const wrapper = mount(RelationAnalysisPane, {
     global: {
       stubs: {
         ElBacktop: backtopStub,
@@ -234,8 +310,13 @@ const mountPane = (
         ElSelect: selectStub,
         RelationNodeDetailContent: detailContentStub,
       },
+      provide: {
+        [RELATION_VIEW_MODEL_KEY as symbol]: viewModel,
+      },
     },
   });
+  return { wrapper, viewModel };
+};
 
 afterEach(() => {
   mocks.isMobile = false;
@@ -243,13 +324,14 @@ afterEach(() => {
 
 describe("RelationAnalysisPane", () => {
   it("非激活状态不渲染分析面板", () => {
-    const wrapper = mountPane({ active: false });
+    // activeView !== 'analysis' 时组件内 active computed 为 false
+    const { wrapper } = mountPane({ activeView: "network" });
 
     expect(wrapper.find(".relation-analysis-pane").exists()).toBe(false);
   });
 
   it("没有分析数据时显示空态", () => {
-    const wrapper = mountPane({
+    const { wrapper } = mountPane({
       attackPathDetails: [],
       riskAvoidanceCoverage: null,
       selectedAttackPathDetail: null,
@@ -262,7 +344,7 @@ describe("RelationAnalysisPane", () => {
   });
 
   it("渲染三列分析内容并转发筛选和路径事件", async () => {
-    const wrapper = mountPane({
+    const { wrapper, viewModel } = mountPane({
       attackPathFilters: { [RelationType.avoidance]: "A0001" },
       hasActiveAttackPathFilters: true,
     });
@@ -273,23 +355,30 @@ describe("RelationAnalysisPane", () => {
     expect(wrapper.text()).toContain("流程自动化");
     expect(wrapper.find(".detail-flags").text()).toBe("false false false false");
 
+    // 选择威胁行为者筛选 → 直接写 viewModel.attackPathFilters（不再 emit update:attack-path-filters）
     await wrapper.findAll(".select-stub")[0].setValue("TA0001");
-    expect(wrapper.emitted("update:attack-path-filters")?.at(-1)).toEqual([
-      { [RelationType.avoidance]: "A0001", [RelationType.threatActor]: "TA0001" },
-    ]);
+    expect(viewModel.attackPathFilters.value).toEqual({
+      [RelationType.avoidance]: "A0001",
+      [RelationType.threatActor]: "TA0001",
+    });
 
+    // 点击重置按钮 → 调 viewModel.resetAttackPathFilters
     await wrapper.find(".relation-analysis-filter-summary .el-button").trigger("click");
-    expect(wrapper.emitted("reset-attack-path-filters")).toHaveLength(1);
+    expect(viewModel.resetAttackPathFilters).toHaveBeenCalledTimes(1);
 
+    // 点击覆盖项 → 在 attackPathFilters 上叠加 avoidance 筛选（不再 emit apply-avoidance-filter）
     await wrapper.find(".relation-analysis-coverage-item").trigger("click");
-    expect(wrapper.emitted("apply-avoidance-filter")?.[0]).toEqual(["A0001"]);
+    expect(viewModel.attackPathFilters.value).toEqual({
+      [RelationType.avoidance]: "A0001",
+    });
 
+    // 点击路径列表第二项 → 调 viewModel.selectAttackPath("p2")
     await wrapper.findAll(".relation-analysis-path-list-item")[1].trigger("click");
-    expect(wrapper.emitted("select-attack-path")?.[0]).toEqual(["p2"]);
+    expect(viewModel.selectAttackPath).toHaveBeenCalledWith("p2");
   });
 
   it("没有覆盖数据时渲染专项洞察并应用洞察筛选", async () => {
-    const wrapper = mountPane({
+    const { wrapper, viewModel } = mountPane({
       riskAvoidanceCoverage: null,
       selectedNodeSpecialInsightSummary: specialInsight,
     });
@@ -297,9 +386,10 @@ describe("RelationAnalysisPane", () => {
     expect(wrapper.text()).toContain("专项洞察");
     await wrapper.find(".node-special-insight-item").trigger("click");
 
-    expect(wrapper.emitted("update:attack-path-filters")?.[0]).toEqual([
-      { [RelationType.attackTool]: "AT0001" },
-    ]);
+    // 专项洞察点击 → 直接写 viewModel.attackPathFilters 为 {attackTool: "AT0001"}
+    expect(viewModel.attackPathFilters.value).toEqual({
+      [RelationType.attackTool]: "AT0001",
+    });
   });
 
   it("移动端限制覆盖和路径列表并支持展开/折叠", async () => {
@@ -315,7 +405,7 @@ describe("RelationAnalysisPane", () => {
     const manyPaths = Array.from({ length: 10 }, (_, index) =>
       pathDetail(`mobile-${index}`),
     );
-    const wrapper = mountPane({
+    const { wrapper } = mountPane({
       attackPathDetails: manyPaths,
       riskAvoidanceCoverage: manyCoverage,
     });
@@ -348,7 +438,7 @@ describe("RelationAnalysisPane", () => {
     const manyPaths = Array.from({ length: 13 }, (_, index) =>
       pathDetail(`desktop-${index}`),
     );
-    const wrapper = mountPane({
+    const { wrapper } = mountPane({
       attackPathDetails: manyPaths,
       riskAvoidanceCoverage: manyCoverage,
     });
@@ -364,28 +454,30 @@ describe("RelationAnalysisPane", () => {
   });
 
   it("右侧详情内容事件应该继续向外转发", async () => {
-    const wrapper = mountPane();
+    const { wrapper, viewModel } = mountPane();
 
     await wrapper.find(".copy-csv").trigger("click");
     await wrapper.find(".view-detail").trigger("click");
     await wrapper.find(".open-new").trigger("click");
     await wrapper.find(".open-root").trigger("click");
+    // update-filter → 写 viewModel.attackPathFilters 为 {risk: "R0001"}
     await wrapper.find(".update-filter").trigger("click");
+    expect(viewModel.attackPathFilters.value).toEqual({ risk: "R0001" });
+
+    // reset-filter → 调 resetAttackPathFilters 清空 filters
     await wrapper.find(".reset-filter").trigger("click");
     await wrapper.find(".focus-node").trigger("click");
     await wrapper.find(".open-node-root").trigger("click");
     await wrapper.find(".open-node-detail").trigger("click");
 
-    expect(wrapper.emitted("copy-csv")).toHaveLength(1);
-    expect(wrapper.emitted("view-detail")).toHaveLength(1);
-    expect(wrapper.emitted("open-detail-new-window")).toHaveLength(1);
-    expect(wrapper.emitted("open-as-root")).toHaveLength(1);
-    expect(wrapper.emitted("update:attack-path-filters")?.at(-1)).toEqual([
-      { risk: "R0001" },
-    ]);
-    expect(wrapper.emitted("reset-attack-path-filters")).toHaveLength(1);
-    expect(wrapper.emitted("focus-node")?.[0]).toEqual(["R0001"]);
-    expect(wrapper.emitted("open-node-as-root")?.[0]).toEqual(["R0001"]);
-    expect(wrapper.emitted("open-node-detail")?.[0]).toEqual(["R0001"]);
+    // 各按钮 → 调对应 viewModel 方法（不再 emit 到外层）
+    expect(viewModel.copySelectedNodeCsv).toHaveBeenCalledTimes(1);
+    expect(viewModel.gotoSelectedNodeDetailView).toHaveBeenCalledTimes(1);
+    expect(viewModel.openSelectedNodeDetailInNewWindow).toHaveBeenCalledTimes(1);
+    expect(viewModel.openSelectedNodeAsRoot).toHaveBeenCalledTimes(1);
+    expect(viewModel.resetAttackPathFilters).toHaveBeenCalledTimes(1);
+    expect(viewModel.focusNodeInDrawer).toHaveBeenCalledWith("R0001");
+    expect(viewModel.openNodeAsRootById).toHaveBeenCalledWith("R0001");
+    expect(viewModel.gotoNodeDetailViewById).toHaveBeenCalledWith("R0001");
   });
 });

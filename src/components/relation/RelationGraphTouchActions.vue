@@ -1,39 +1,33 @@
 <script setup lang="ts">
+import { computed, inject } from "vue";
 import { TopRight } from "@element-plus/icons-vue";
 import { RelationType } from "@/views/relation/relationTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
-defineProps<{
-  touchActionVisible: boolean;
-  RelationTypeMapping: Record<string, { title: string; disableContextMenu: { value: boolean } }>;
-  disableContextMenuAll: boolean;
-  disableContextMenuOpenAsRoot: boolean;
-  showRelationFetchActions?: boolean;
-}>();
-
-const emit = defineEmits<{
-  clickContextMenu: [reqType: RelationType];
-  gotoNewRelationView: [];
-  openTouchNodeDetailDrawer: [];
-  copyContextNodeCsv: [];
-  gotoItemDetailView: [];
-  touchActionClose: [];
-}>();
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+// ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+const { touchActionVisible, disableContextMenuAll, disableContextMenuOpenAsRoot, clickContextMenu, gotoNewRelationView, openTouchNodeDetailDrawer, copyContextNodeCsv, gotoItemDetailView, touchActionClose } = vm;
+// RelationTypeMapping 是普通对象（非 ref），直接取
+const RelationTypeMapping = vm.RelationTypeMapping;
+// 原 RelationView 模板 :show-relation-fetch-actions="activeView === 'network'"
+const showRelationFetchActions = computed(() => vm.activeView.value === "network");
 </script>
 
 <template>
-  <div v-if="touchActionVisible" class="touch-action-overlay" @click="emit('touchActionClose')">
+  <div v-if="touchActionVisible" class="touch-action-overlay" @click="touchActionClose">
     <div class="touch-action-sheet" @click.stop>
-      <div class="touch-action-item" @click="emit('openTouchNodeDetailDrawer')">
+      <div class="touch-action-item" @click="openTouchNodeDetailDrawer">
         {{ $t('relationView.nodeDetail') }}
       </div>
       <div
         class="touch-action-item"
         :class="{ disabled: disableContextMenuOpenAsRoot }"
-        @click="!disableContextMenuOpenAsRoot && emit('gotoNewRelationView')"
+        @click="!disableContextMenuOpenAsRoot && gotoNewRelationView()"
       >
         {{ $t('openAsRoot') }}
       </div>
-      <div class="touch-action-item" @click="emit('copyContextNodeCsv')">
+      <div class="touch-action-item" @click="copyContextNodeCsv">
         {{ $t('relationView.copyRelatedEntities') }}
       </div>
       <template v-if="showRelationFetchActions">
@@ -43,27 +37,27 @@ const emit = defineEmits<{
           :key="key"
           class="touch-action-item"
           :class="{ disabled: item.disableContextMenu.value }"
-          @click="!item.disableContextMenu.value && emit('clickContextMenu', key as RelationType)"
+          @click="!item.disableContextMenu.value && clickContextMenu(key as RelationType)"
         >
           {{ item.title }}
         </div>
         <div
           class="touch-action-item"
           :class="{ disabled: disableContextMenuAll }"
-          @click="!disableContextMenuAll && emit('clickContextMenu', RelationType.all)"
+          @click="!disableContextMenuAll && clickContextMenu(RelationType.all)"
         >
           {{ $t('fetchAllRelations') }}
         </div>
       </template>
       <div class="touch-action-divider"></div>
-      <div class="touch-action-item" @click="emit('gotoItemDetailView')">
+      <div class="touch-action-item" @click="gotoItemDetailView">
         <span class="menu-action-with-icon">
           <el-icon><TopRight /></el-icon>
           <span>{{ $t('viewDetail') }}</span>
         </span>
       </div>
       <div class="touch-action-divider"></div>
-      <div class="touch-action-item touch-action-cancel" @click="emit('touchActionClose')">
+      <div class="touch-action-item touch-action-cancel" @click="touchActionClose">
         {{ $t('cancel') }}
       </div>
     </div>

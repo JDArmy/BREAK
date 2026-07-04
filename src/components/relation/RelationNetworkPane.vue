@@ -1,71 +1,58 @@
 <script setup lang="ts">
 import type { ComponentPublicInstance } from "vue";
+import { inject } from "vue";
 import { useI18n } from "vue-i18n";
 import RelationFilterPanels from "@/components/relation/RelationFilterPanels.vue";
 import RelationGraphToolbar from "@/components/relation/RelationGraphToolbar.vue";
-import type {
-  GraphLink,
-  NetworkLayoutMode,
-} from "@/views/relation/relationTypes";
+import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 
-const props = defineProps<{
-  setNetworkPaneElement?: (element: HTMLDivElement | undefined) => void;
-  setNetworkScrollerElement?: (element: HTMLDivElement | undefined) => void;
-  setNetworkChartElement?: (element: HTMLDivElement | undefined) => void;
-  networkLayoutTooltip: string;
-  networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string }[];
-  networkState: { layout: NetworkLayoutMode };
-  nodeFilterVisible: boolean;
-  lineFilterVisible: boolean;
-  filterRelationType: string[];
-  filterSubNode: boolean;
-  filterRelatedEntity: boolean;
-  filterLineType: string[];
-  relationTypeItems: { key: string; title: string; color: string }[];
-  subNodeFilterColor?: string;
-  visibleRelationLegendItems: {
-    color: string;
-    label: string;
-    fields: string[];
-  }[];
-  formatRelationFieldsTooltip: (fields: string[]) => string;
-  selectedRelationDetail?: GraphLink | null;
-}>();
-
-const emit = defineEmits<{
-  fullscreen: [];
-  zoomIn: [];
-  zoomOut: [];
-  layoutCommand: [command: string | number | object];
-  refresh: [];
-  download: [];
-  toggleNodeFilter: [];
-  toggleLineFilter: [];
-  openNodeDetail: [];
-  "update:nodeFilterVisible": [value: boolean];
-  "update:lineFilterVisible": [value: boolean];
-  "update:filterRelationType": [value: string[]];
-  "update:filterSubNode": [value: boolean];
-  "update:filterRelatedEntity": [value: boolean];
-  "update:filterLineType": [value: string[]];
-  filter: [];
-  closeRelationDetail: [];
-}>();
+// inject viewModel（RelationView provide），取代 props 钻取
+const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+// ref/computed 解构安全，模板内自动 unwrap；方法直接解构
+const {
+  setNetworkPaneElement,
+  setNetworkScrollerElement,
+  setNetworkChartElement,
+  networkLayoutTooltip,
+  networkLayoutOptions,
+  networkState,
+  nodeFilterVisible,
+  lineFilterVisible,
+  filterRelationType,
+  filterSubNode,
+  filterRelatedEntity,
+  filterLineType,
+  relationTypeItems,
+  subNodeFilterColor,
+  visibleRelationLegendItems,
+  formatRelationFieldsTooltip,
+  selectedNetworkRelationDetail: selectedRelationDetail,
+  enterFullscreen,
+  zoomNetworkChart,
+  handleNetworkLayoutCommand,
+  refreshNetworkChart,
+  downloadNetworkChart,
+  toggleNodeFilter,
+  toggleLineFilter,
+  openNodeDetailDrawer,
+  doFilter,
+  closeNetworkRelationDetail,
+} = vm;
 
 const { t } = useI18n();
 
 const setNetworkPaneRef = (el: Element | ComponentPublicInstance | null) => {
-  props.setNetworkPaneElement?.((el as HTMLDivElement) || undefined);
+  setNetworkPaneElement?.((el as HTMLDivElement) || undefined);
 };
 
 const setNetworkChartRef = (el: Element | ComponentPublicInstance | null) => {
-  props.setNetworkChartElement?.((el as HTMLDivElement) || undefined);
+  setNetworkChartElement?.((el as HTMLDivElement) || undefined);
 };
 
 const setNetworkScrollerRef = (
   el: Element | ComponentPublicInstance | null
 ) => {
-  props.setNetworkScrollerElement?.((el as HTMLDivElement) || undefined);
+  setNetworkScrollerElement?.((el as HTMLDivElement) || undefined);
 };
 </script>
 
@@ -77,15 +64,15 @@ const setNetworkScrollerRef = (
       :network-state="networkState"
       :node-filter-visible="nodeFilterVisible"
       :line-filter-visible="lineFilterVisible"
-      @fullscreen="emit('fullscreen')"
-      @zoom-in="emit('zoomIn')"
-      @zoom-out="emit('zoomOut')"
-      @layout-command="emit('layoutCommand', $event)"
-      @refresh="emit('refresh')"
-      @download="emit('download')"
-      @toggle-node-filter="emit('toggleNodeFilter')"
-      @toggle-line-filter="emit('toggleLineFilter')"
-      @open-node-detail="emit('openNodeDetail')"
+      @fullscreen="enterFullscreen"
+      @zoom-in="zoomNetworkChart(0.08)"
+      @zoom-out="zoomNetworkChart(-0.08)"
+      @layout-command="handleNetworkLayoutCommand"
+      @refresh="refreshNetworkChart"
+      @download="downloadNetworkChart"
+      @toggle-node-filter="toggleNodeFilter"
+      @toggle-line-filter="toggleLineFilter"
+      @open-node-detail="openNodeDetailDrawer"
     />
 
     <div :ref="setNetworkScrollerRef" class="network-canvas-scroll">
@@ -116,7 +103,7 @@ const setNetworkScrollerRef = (
           type="button"
           class="network-relation-detail-close"
           :aria-label="t('relationView.closeEdgeDetail')"
-          @click="emit('closeRelationDetail')"
+          @click="closeNetworkRelationDetail"
         >
           ×
         </button>
@@ -160,13 +147,13 @@ const setNetworkScrollerRef = (
       :sub-node-filter-color="subNodeFilterColor"
       :visible-relation-legend-items="visibleRelationLegendItems"
       :format-relation-fields-tooltip="formatRelationFieldsTooltip"
-      @update:node-filter-visible="emit('update:nodeFilterVisible', $event)"
-      @update:line-filter-visible="emit('update:lineFilterVisible', $event)"
-      @update:filter-relation-type="emit('update:filterRelationType', $event)"
-      @update:filter-sub-node="emit('update:filterSubNode', $event)"
-      @update:filter-related-entity="emit('update:filterRelatedEntity', $event)"
-      @update:filter-line-type="emit('update:filterLineType', $event)"
-      @filter="emit('filter')"
+      @update:node-filter-visible="nodeFilterVisible = $event"
+      @update:line-filter-visible="lineFilterVisible = $event"
+      @update:filter-relation-type="filterRelationType = $event"
+      @update:filter-sub-node="filterSubNode = $event"
+      @update:filter-related-entity="filterRelatedEntity = $event"
+      @update:filter-line-type="filterLineType = $event"
+      @filter="doFilter"
     />
   </div>
 </template>
