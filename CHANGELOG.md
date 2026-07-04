@@ -1,5 +1,18 @@
 # Change log
 
+## 2.40.9
+
+补强 Playwright 浏览器覆盖：新增关系图视角覆盖测试，填补 pathExplorer 零覆盖与 analysis 交互回归缺口。
+
+- **pathExplorer 视角覆盖**（此前零浏览器覆盖）：用例 1 断言控制面板元素可展示正确性（2 type-select / 2 entity-select / 2 param-slider / result 区）；用例 2 验证 v2.40.7 起点同步修复——从 attack-path 带实体切 pathExplorer 后起点实体显示 R0001，切 risk 视角再切回后 startKey 保留。
+- **analysis 视角交互回归**（此前仅视觉截图）：用例 3 断言三列可展示（4 filter / coverage / path 项非空）；用例 4 验证 v2.40.7 rightAction/preserveScrollPane 修复——右列滚动后点 focus-node（经 rightAction 包装）scrollTop 保持 200，对照点左列 coverage-item（left preserve）右列归零，双向佐证 preserveScrollPane 逻辑。
+- 复用 relation-stability.mjs 脚手架（findFreePort/waitForServer/错误收集/shouldRunOnMinorBump 守卫），`BREAK_FORCE_PERSPECTIVE_COVERAGE=1` 强制运行。
+
+### 变更文件
+
+- `scripts/validate/relation-perspective-coverage.mjs`：新建，4 用例覆盖 pathExplorer + analysis
+- `package.json`：追加 `test:perspective-coverage` script
+
 ## 2.40.8
 
 Code review 三轮修复：清理死代码透传 + 强化 dev 校验 + 测试 stub 对齐 + 补回归测试。
