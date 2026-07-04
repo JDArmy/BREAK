@@ -1,5 +1,11 @@
 # Change log
 
+## 2.41.2
+
+清理无用历史脚本。
+
+- **删除 `scripts/validate/measure-cross-refs.mjs`**：该脚本是 v2.33.0「互引用密度评估」任务的一次性只读测量工具，统计实体自由文本字段内嵌实体 ID 的引用密度。任务结论已写入 CHANGELOG，未接入任何 npm script / CI / import，重跑无意义；文本 ID 正确性防护已由 `audit-text-id-refs.mjs`（接入 validate:data）承担。删除不影响 build 与任何工作流。
+
 ## 2.41.1
 
 为 10 个无案例风险补充真实案例 + 新增 Case incidentTime 校验门禁。
