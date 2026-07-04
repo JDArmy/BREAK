@@ -106,29 +106,21 @@ const contentStub = {
     "showAttackPathBlock",
   ],
   emits: [
-    "copy-csv",
-    "view-detail",
-    "open-detail-new-window",
-    "open-as-root",
     "update:attack-path-filters",
     "reset-attack-path-filters",
     "focus-node",
+    "open-as-root",
     "open-node-as-root",
-    "open-node-detail",
   ],
   template: `
     <div class="content-stub">
       <span>{{ selectedNetworkNode.id }} {{ selectedNetworkNodeTitle }}</span>
       <span class="flags">{{ showOpenAsRootAction }} {{ showRootRelationBlock }} {{ showCoverageBlock }} {{ showAttackPathBlock }}</span>
-      <button class="copy-csv" @click="$emit('copy-csv')">copy</button>
-      <button class="view-detail" @click="$emit('view-detail')">view</button>
-      <button class="open-new" @click="$emit('open-detail-new-window')">new</button>
       <button class="open-as-root" @click="$emit('open-as-root')">root</button>
       <button class="update-filters" @click="$emit('update:attack-path-filters', { risk: ['R0001'] })">filter</button>
       <button class="reset-filters" @click="$emit('reset-attack-path-filters')">reset</button>
       <button class="focus-node" @click="$emit('focus-node', selectedNetworkNode.id)">focus</button>
       <button class="open-node-root" @click="$emit('open-node-as-root', selectedNetworkNode.id)">node-root</button>
-      <button class="open-node-detail" @click="$emit('open-node-detail', selectedNetworkNode.id)">node-detail</button>
     </div>
   `,
 };

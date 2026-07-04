@@ -55,15 +55,18 @@ export const RELATION_PERSPECTIVE_ROUTES: readonly RelationPerspectiveRouteMeta[
   { pathSegment: "path-explorer", baseRouteName: "relationPathExplorer", entityRouteName: "relationPathExplorerEntity", perspective: "pathExplorer" },
 ] as const;
 
-// 开发期完整性校验：确保 RelationPerspectiveKey 联合的每个视角都在 RELATION_PERSPECTIVE_ROUTES 中。
-// 若新增 perspective 到联合类型但漏加路由条目，此处 dev 控制台报错（as Record 断言会掩盖此缺失）。
+// 开发期完整性校验：确保 RelationPerspectiveKey 联合的每个视角都在 RELATION_PERSPECTIVE_ROUTES 中，
+// 且路由条目无重复视角。若新增 perspective 到联合类型但漏加路由条目（或反之），dev 期 throw 强阻断
+// （as Record 断言会掩盖此缺失，生产期才暴露路由解析失败）。
 if (import.meta.env.DEV) {
   const expectedPerspectives: RelationPerspectiveKey[] = ["risk", "attackPath", "defenseCoverage", "pathExplorer"];
   const actualPerspectives = RELATION_PERSPECTIVE_ROUTES.map((r) => r.perspective);
-  for (const p of expectedPerspectives) {
-    if (!actualPerspectives.includes(p)) {
-      console.error(`[relationAnalysisPerspectives] RELATION_PERSPECTIVE_ROUTES 缺少视角: ${p}`);
-    }
+  const missing = expectedPerspectives.filter((p) => !actualPerspectives.includes(p));
+  const duplicated = actualPerspectives.filter((p, i) => actualPerspectives.indexOf(p) !== i);
+  if (missing.length > 0 || duplicated.length > 0) {
+    throw new Error(
+      `[relationAnalysisPerspectives] RELATION_PERSPECTIVE_ROUTES 完整性校验失败: 缺失=${missing.join(",")} 重复=${duplicated.join(",")}`,
+    );
   }
 }
 

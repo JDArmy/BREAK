@@ -615,6 +615,30 @@ describe("relationViewAssembly", () => {
     expect(state.pathExplorerStartKey.value).toBe("R0001");
   });
 
+  // P0-2 回归锁住：切视角回 pathExplorer 时 startKey 不被误清空。
+  // 原 syncFromRoot flag 未覆盖 route.name watcher 路径，切视角时 watch(startType) 清空 startKey 覆盖 relKey。
+  // 现 startTypeModel computed setter 仅拦截用户手动切换，assembly 直设 ref 不触发 setter，startKey 保留。
+  it("切视角回 pathExplorer 时 pathExplorerStartKey 保留为 relKey（不被误清空）", async () => {
+    // 先在 pathExplorer 视角手动把 startType 改成与根节点不同（模拟用户手选）
+    route.name = "relationPathExplorerEntity";
+    createAssembly();
+    const state = createRelationViewState.mock.results[0].value;
+    state.pathExplorerStartType.value = RelationType.avoidance;
+    state.pathExplorerStartKey.value = "A0001";
+    await nextTick();
+
+    // 切到 risk 视角再切回 pathExplorer（route.name 变化触发 route.name watch）
+    route.name = "relationRiskEntity";
+    await nextTick();
+    route.name = "relationPathExplorerEntity";
+    await nextTick();
+
+    // route.name watch 设 startType=relType(risk)、startKey=relKey(R0001)。
+    // 关键：startKey 不被清空（无组件内 watch(startType) 误清空），保留为 relKey。
+    expect(state.pathExplorerStartType.value).toBe(RelationType.risk);
+    expect(state.pathExplorerStartKey.value).toBe("R0001");
+  });
+
   it("非 pathExplorer 视角下 relType 变化不同步 pathExplorerStartType", async () => {
     // 默认 route.name = "relationRiskEntity"（risk 视角，非 pathExplorer）
     createAssembly();

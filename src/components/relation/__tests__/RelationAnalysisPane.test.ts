@@ -458,9 +458,10 @@ describe("RelationAnalysisPane", () => {
     expect(viewModel.attackPathFilters.value).toEqual({ risk: "R0001" });
   });
 
-  it("右侧详情 focus-node/reset/open-as-root 经 rightAction 调 vm 方法（恢复 preserveScrollPane）", async () => {
+  it("右侧详情 focus-node/reset/open-node-as-root 经 rightAction 调 vm 方法（恢复 preserveScrollPane）", async () => {
     // P0-2 回归：emitRightAction 删除后这些操作丢失 preserveScrollPane；现恢复为 rightAction 包装。
     // rightAction 设 preserveScrollPane='right' 后调 vm 方法（保持右列滚动）。
+    // open-as-root 在 DetailColumn 路径下不触发（show-open-as-root-action=false），不在此测。
     const { wrapper, viewModel } = mountPane();
 
     await wrapper.find(".focus-node").trigger("click");
@@ -468,9 +469,6 @@ describe("RelationAnalysisPane", () => {
 
     await wrapper.find(".reset-filter").trigger("click");
     expect(viewModel.resetAttackPathFilters).toHaveBeenCalledTimes(1);
-
-    await wrapper.find(".open-root").trigger("click");
-    expect(viewModel.openSelectedNodeAsRoot).toHaveBeenCalledTimes(1);
 
     await wrapper.find(".open-node-root").trigger("click");
     expect(viewModel.openNodeAsRootById).toHaveBeenCalledWith("R0001");

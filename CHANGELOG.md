@@ -1,5 +1,23 @@
 # Change log
 
+## 2.40.8
+
+Code review 三轮修复：清理死代码透传 + 强化 dev 校验 + 测试 stub 对齐 + 补回归测试。
+
+- **DetailColumn open-as-root 死代码清理**：DetailColumn 传 `show-open-as-root-action=false`，Header 按钮不渲染，Content 在该路径下永不 emit open-as-root。删除 DetailColumn 的 open-as-root emit 透传 + AnalysisPane 的 open-as-root 监听 + rightAction 不再包 openSelectedNodeAsRoot。（open-node-as-root 仍透传，因 InsightBlocks 的 RootPathBlock 可触发。）
+- **dev 完整性校验强化**：RELATION_PERSPECTIVE_ROUTES 的 dev 校验从 console.error 改为 throw（强阻断，避免被忽略），并加反向校验（actualPerspectives 无重复视角）。
+- **测试 stub 对齐**：RelationNodeDetailDrawer.test.ts 的 contentStub 删除已不 emit 的 copy-csv/view-detail/open-detail-new-window/open-node-detail 声明与按钮，反映 Content 实际 emits 契约。
+- **补回归测试**：relationViewAssembly.test.ts 加用例"切视角回 pathExplorer 时 pathExplorerStartKey 保留为 relKey"，锁住 P0-2 修复点（原 syncFromRoot 未覆盖 route.name watcher 路径的 bug），防止未来重构恢复 watch(startType) 形式导致回归。
+
+### 变更文件
+
+- `src/components/relation/RelationAnalysisDetailColumn.vue`：删 open-as-root 透传
+- `src/components/relation/RelationAnalysisPane.vue`：删 open-as-root 监听 + openSelectedNodeAsRoot 解构
+- `src/views/relation/relationAnalysisPerspectives.ts`：dev 校验 throw + 反向校验
+- `src/components/relation/__tests__/RelationNodeDetailDrawer.test.ts`：contentStub 对齐
+- `src/components/relation/__tests__/RelationAnalysisPane.test.ts`：删 open-as-root 断言
+- `src/views/relation/__tests__/relationViewAssembly.test.ts`：补切视角 startKey 保留用例
+
 ## 2.40.7
 
 Code review 二轮修复：解决 preserveScrollPane 滚动保持回归 + pathExplorer startType 同步统一 + 死代码清理。

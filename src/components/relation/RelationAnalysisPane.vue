@@ -37,7 +37,6 @@ const {
   resetAttackPathFilters,
   selectAttackPath,
   // 改 vm 状态触发本组件 watch 的操作（经 DetailColumn emit 透传），需设 preserveScrollPane 保持右列滚动
-  openSelectedNodeAsRoot,
   focusNodeInDrawer,
   openNodeAsRootById,
 } = vm;
@@ -319,7 +318,6 @@ watch(
               @update:attack-path-filters="emitAttackPathFilters($event, 'right')"
               @reset-attack-path-filters="rightAction(resetAttackPathFilters)"
               @focus-node="rightAction(focusNodeInDrawer, $event)"
-              @open-as-root="rightAction(openSelectedNodeAsRoot)"
               @open-node-as-root="rightAction(openNodeAsRootById, $event)"
             />
           </div>

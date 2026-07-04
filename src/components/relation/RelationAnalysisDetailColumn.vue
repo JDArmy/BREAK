@@ -6,16 +6,16 @@ import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
 import type { AttackPathFilters } from "@/views/relation/relationTypes";
 
 // inject viewModel（RelationView provide），取代 props 钻取。
-// 本组件是 AnalysisPane → NodeDetailContent 的薄透传层，透传改 vm 状态触发父级 watch 的 emits，
+// 本组件是 AnalysisPane → NodeDetailContent 的薄透传层，透传改 vm 状态触发父级 watch的 emits，
 // 让 AnalysisPane 协调 preserveScrollPane 滚动保持。不改 vm 状态的操作（copy-csv/view-detail 等）
-// Content 直接调 vm 方法，不透传。
+// Content 直接调 vm 方法，不透传。open-as-root 不透传：DetailColumn 传 show-open-as-root-action=false，
+// Header 按钮不渲染，Content 在本路径下永不 emit open-as-root（仅 Drawer 路径有效）。
 const vm = inject(RELATION_VIEW_MODEL_KEY)!;
 
 const emit = defineEmits<{
   "update:attack-path-filters": [value: AttackPathFilters];
   "reset-attack-path-filters": [];
   "focus-node": [nodeId: string];
-  "open-as-root": [];
   "open-node-as-root": [nodeId: string];
 }>();
 
@@ -35,7 +35,6 @@ const { t } = useI18n();
         @update:attack-path-filters="emit('update:attack-path-filters', $event)"
         @reset-attack-path-filters="emit('reset-attack-path-filters')"
         @focus-node="emit('focus-node', $event)"
-        @open-as-root="emit('open-as-root')"
         @open-node-as-root="emit('open-node-as-root', $event)"
       />
     </div>
