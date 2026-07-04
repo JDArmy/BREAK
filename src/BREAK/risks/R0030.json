@@ -6,6 +6,7 @@
     "complexity": "intermediate",
     "influence": "这些帐户随后被滥用于生成垃圾邮件、洗钱和商品、传播恶意软件、影响声誉、造成恶作剧以及扭曲搜索引擎优化 (SEO)、评论和调查。",
     "avoidances": [
+      "A0001",
       "A0002",
       "A0004",
       "A0005",
@@ -25,7 +26,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "虚假注册",
       "账号假注册",

@@ -18,32 +18,32 @@
     "limitation": "数据掮客与商业间谍可通过交叉比对公开社交足迹、支付指纹、设备标识等绕过隔离重新关联身份；隔离过严会误伤正常用户跨平台登录、合规实名场景，造成合法业务体验受损。",
     "relatedAvoidances": [
       {
-        "key": "A0155",
-        "relation": "complement",
-        "note": "共同覆盖 2 个风险。"
-      },
-      {
-        "key": "A0188",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
-      },
-      {
-        "key": "A0007",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0007-005",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
         "key": "A0069",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
       {
+        "key": "A0155",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0015",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0110-001",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0152",
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }

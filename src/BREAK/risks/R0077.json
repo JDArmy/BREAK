@@ -8,7 +8,8 @@
     "avoidances": [
       "A0035",
       "A0054",
-      "A0052"
+      "A0052",
+      "A0037"
     ],
     "references": [
       {
@@ -24,7 +25,7 @@
         "link": "https://www.gov.cn/gongbao/2024/issue_11646/202410/content_6980863.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

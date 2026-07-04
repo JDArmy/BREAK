@@ -6,6 +6,7 @@
     "complexity": "basic",
     "influence": "一般商业竞争中容易出现，当库存耗尽后，其他用户就无法再购买商品。",
     "avoidances": [
+      "A0004-001",
       "A0015",
       "A0020",
       "A0059"
@@ -32,7 +33,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "恶意占库存",
       "占库存",

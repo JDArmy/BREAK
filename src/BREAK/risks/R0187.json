@@ -7,8 +7,7 @@
     "influence": "区块链历史被改写，交易被逆转，新节点接受虚假链，共识机制信任崩塌。",
     "avoidances": [
       "A0131",
-      "A0131-001",
-      "A0131-002"
+      "A0131-001"
     ],
     "riskAssessment": {
       "likelihood": "low",
@@ -31,7 +30,7 @@
         "link": "https://blog.ethereum.org/2014/05/15/long-range-attacks-the-serious-problem-with-adaptive-proof-of-work"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "长程攻击/无成本模拟",
       "长程攻击",

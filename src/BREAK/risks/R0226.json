@@ -7,7 +7,7 @@
     "influence": "流水线凭证泄露会让攻击者绕过人工审批进入代码仓库、制品仓库或生产环境，扩大为供应链和云资源入侵。",
     "avoidances": [
       "A0199",
-      "A0200",
+      "A0106",
       "A0201"
     ],
     "references": [
@@ -24,7 +24,7 @@
       "构建日志泄密",
       "部署密钥泄露"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

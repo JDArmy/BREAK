@@ -238,8 +238,9 @@
     "complexity": "intermediate",
     "influence": "虚假交易会造成补贴和手续费损失，抬高支付通道风险，并可能被用于套现、洗钱或规避监管。",
     "avoidances": [
-      "A0207",
+      "A0021",
       "A0077",
+      "A0207",
       "A0208"
     ],
     "riskAssessment": {
@@ -272,7 +273,7 @@
       "异常退款套现",
       "支付欺诈"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "relatedRisks": [
       {
         "key": "R0017",

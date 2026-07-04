@@ -7,7 +7,6 @@
     "influence": "虚假接驳套费会造成接驳费与中转补贴的虚增支出，扭曲中转网络数据，并可能掩盖货品异常。",
     "avoidances": [
       "A0014",
-      "A0078",
       "A0077"
     ],
     "references": [
@@ -25,7 +24,7 @@
       "中转节点造假",
       "fake handover"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",

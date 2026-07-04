@@ -7,8 +7,7 @@
     "influence": "可导致终端被完全控制、凭据批量泄露、勒索软件感染和企业内网被渗透。",
     "avoidances": [
       "A0051",
-      "A0078",
-      "A0001"
+      "A0078"
     ],
     "riskAssessment": {
       "likelihood": "medium",
@@ -39,7 +38,7 @@
         "link": "https://www.sentinelone.com/blog/how-clickfix-is-weaponizing-verification-fatigue-to-deliver-rats-infostealers/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "ClickFix欺骗风险",
       "ClickFix",

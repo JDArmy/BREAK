@@ -8,8 +8,7 @@
     "avoidances": [
       "A0226",
       "A0014",
-      "A0178",
-      "A0113"
+      "A0178"
     ],
     "keywords": [
       "机器人感知对抗攻击",
@@ -27,7 +26,7 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "critical",

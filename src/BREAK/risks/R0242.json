@@ -8,8 +8,7 @@
     "avoidances": [
       "A0213",
       "A0212",
-      "A0044",
-      "A0016"
+      "A0044"
     ],
     "references": [
       {
@@ -25,7 +24,7 @@
       "版权数据训练",
       "数据来源不明"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",

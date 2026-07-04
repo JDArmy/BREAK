@@ -7,7 +7,6 @@
     "influence": "被污染的训练数据会让模型在关键场景输出错误、偏置或攻击者期望结果，影响业务决策和安全控制。",
     "avoidances": [
       "A0213",
-      "A0089",
       "A0072"
     ],
     "references": [
@@ -24,7 +23,7 @@
       "反馈数据污染",
       "AI供应链攻击"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",

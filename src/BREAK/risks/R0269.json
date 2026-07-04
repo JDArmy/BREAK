@@ -8,7 +8,6 @@
     "avoidances": [
       "A0227",
       "A0118",
-      "A0150",
       "A0078"
     ],
     "keywords": [
@@ -27,7 +26,7 @@
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "critical",

@@ -8,8 +8,7 @@
     "avoidances": [
       "A0021",
       "A0075",
-      "A0026",
-      "A0222-001"
+      "A0026"
     ],
     "references": [
       {
@@ -26,7 +25,7 @@
       "散单权益套取",
       "bulk-account hijacking"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

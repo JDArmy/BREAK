@@ -8,7 +8,6 @@
     "avoidances": [
       "A0065",
       "A0087",
-      "A0002",
       "A0004",
       "A0015",
       "A0032"
@@ -23,7 +22,7 @@
         "link": "https://arxiv.org/abs/2310.12397"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "keywords": [
       "LLM提示注入风险",
       "提示注入",
@@ -161,7 +160,6 @@
     "avoidances": [
       "A0065",
       "A0087",
-      "A0003",
       "A0015",
       "A0032"
     ],
@@ -171,7 +169,7 @@
         "link": "https://arxiv.org/abs/2302.12173"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "间接提示注入",
       "Indirect Prompt Injection",

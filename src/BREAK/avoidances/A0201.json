@@ -19,11 +19,6 @@
     "limitation": "攻击者可通过typosquatting仿冒包名、利用合法维护者凭证投毒绕过签名校验，新恶意包无历史指标易漏报；正常包升级、紧急补丁引入新依赖易触发规则误报，私有代理仓库同步延迟影响召回。",
     "relatedAvoidances": [
       {
-        "key": "A0200",
-        "relation": "complement",
-        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
-      },
-      {
         "key": "A0202",
         "relation": "complement",
         "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
@@ -45,6 +40,11 @@
       },
       {
         "key": "A0199",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0200",
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       }

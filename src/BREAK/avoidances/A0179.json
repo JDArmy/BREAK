@@ -18,6 +18,11 @@
     "limitation": "增加BOM成本，低价IoT设备难以普及；TEE自身存在漏洞（如Speculative执行、缓存侧信道）可被利用突破隔离读取密钥；故障注入、电压毛刺、激光注入等物理攻击可破坏安全芯片保护；硬件一旦量产难以升级，发现漏洞后无法通过软件补丁修复，安全模块长期存在被破解风险。",
     "relatedAvoidances": [
       {
+        "key": "A0070",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0110",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
@@ -29,11 +34,6 @@
       },
       {
         "key": "A0112",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0167",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }

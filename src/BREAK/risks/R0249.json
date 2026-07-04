@@ -7,7 +7,6 @@
     "influence": "被污染的 CDN 缓存会向大量用户分发恶意页面、错误数据或钓鱼重定向，影响范围随缓存扩散。",
     "avoidances": [
       "A0221",
-      "A0014-002",
       "A0198"
     ],
     "references": [
@@ -28,7 +27,7 @@
       "边缘缓存污染",
       "HTTP头污染"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",

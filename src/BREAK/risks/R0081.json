@@ -10,7 +10,8 @@
       "A0055",
       "A0056",
       "A0070",
-      "A0085"
+      "A0085",
+      "A0037"
     ],
     "references": [
       {
@@ -18,7 +19,7 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

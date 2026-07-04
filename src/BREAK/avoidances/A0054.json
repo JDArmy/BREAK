@@ -38,11 +38,6 @@
         "note": "共同覆盖 10 个风险。"
       },
       {
-        "key": "A0044",
-        "relation": "complement",
-        "note": "共同覆盖 9 个风险，共同限制 1 个攻击工具。"
-      },
-      {
         "key": "A0052",
         "relation": "complement",
         "note": "共同覆盖 9 个风险。"
@@ -54,6 +49,11 @@
       },
       {
         "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0044",
         "relation": "complement",
         "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
       }

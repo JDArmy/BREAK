@@ -107,11 +107,9 @@
       "A0015",
       "A0016",
       "A0021",
-      "A0023",
       "A0024",
       "A0028",
       "A0029",
-      "A0033",
       "A0037",
       "A0042",
       "A0043"
@@ -122,7 +120,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "medium",
@@ -196,11 +194,9 @@
       "A0015",
       "A0016",
       "A0021",
-      "A0023",
       "A0024",
       "A0028",
       "A0029",
-      "A0033",
       "A0037",
       "A0042",
       "A0043"
@@ -211,7 +207,7 @@
         "link": "https://en.wikipedia.org/wiki/Drop_shipping"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "medium",

@@ -8,7 +8,6 @@
     "avoidances": [
       "A0212",
       "A0054",
-      "A0044",
       "A0016"
     ],
     "references": [
@@ -25,7 +24,7 @@
       "隐私合规评估",
       "数据处理风险评估"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

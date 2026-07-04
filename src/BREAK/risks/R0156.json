@@ -8,8 +8,7 @@
     "avoidances": [
       "A0091",
       "A0022",
-      "A0055",
-      "A0016"
+      "A0055"
     ],
     "riskAssessment": {
       "likelihood": "low",
@@ -40,7 +39,7 @@
         "title": "Frequently Asked Questions about Post-Quantum Cryptography"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "抗量子加密风险",
       "后量子密码",

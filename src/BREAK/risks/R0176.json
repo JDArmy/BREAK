@@ -9,8 +9,7 @@
       "A0095",
       "A0096",
       "A0097",
-      "A0129",
-      "A0138"
+      "A0129"
     ],
     "riskAssessment": {
       "likelihood": "medium",
@@ -33,7 +32,7 @@
         "title": "Vulnerability: Timestamp Dependence"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "时间戳依赖攻击",
       "时间戳依赖",

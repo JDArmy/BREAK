@@ -6,6 +6,7 @@
     "complexity": "basic",
     "influence": "消耗商家利益、库存、商誉或供应链成本",
     "avoidances": [
+      "A0004-001",
       "A0015",
       "A0020",
       "A0044"
@@ -16,7 +17,7 @@
         "link": "https://epaper.gmw.cn/gmrb/html/content/202606/06/content_15850.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "恶意退货",
       "恶意退款退货",
@@ -80,6 +81,7 @@
     "complexity": "intermediate",
     "influence": "扰乱商家正常运营，带来供应链损失或评级排名下降",
     "avoidances": [
+      "A0004-001",
       "A0015",
       "A0020",
       "A0044"
@@ -90,7 +92,7 @@
         "link": "https://www.163.com/dy/article/GU8KDFVU0514CFC7.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "批量退款",
       "批量退单",
@@ -234,7 +236,8 @@
       "A0016",
       "A0020",
       "A0021",
-      "A0044"
+      "A0044",
+      "A0004-001"
     ],
     "references": [
       {
@@ -242,7 +245,7 @@
         "link": "https://weibo.com/ttarticle/p/show?id=2309404589705009169082"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "闪退套利",
       "下单秒退",
