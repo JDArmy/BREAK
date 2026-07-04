@@ -1,5 +1,21 @@
 # Change log
 
+## 2.40.0
+
+架构评审修复 B5：路由表程序化生成，消除 34 条扁平路由中的重复模式。
+
+- **路由表程序化生成**（#5）：`router/index.ts` 的 34 条路由从 `entityRegistry` 与 `RELATION_PERSPECTIVE_ROUTES` 派生：
+  - home 族 12 条：`entityRegistry.filter(e => e.homeDetailRouteName)` 派生 `/home/{entity}/{id}` 与 `/business-scene/:bsKey/{entity}/{id}`
+  - knowledges list/detail 12 条：`entityRegistry.flatMap` 配对生成 list 与 detail 路由，共用同一 View 组件（由 `route.params` 是否含 id 区分模式，不引入 RouterView 嵌套以保留 KnowledgeSplitView 左右联动）
+  - relations 8 条：`RELATION_PERSPECTIVE_ROUTES.flatMap` 派生 4 视角 × 2 形态（pathExplorer 独立于 relationAnalysisPerspectiveOptions，故路由元信息独立维护）
+  - `viewLoaders` 映射实体类型 → View 懒加载工厂
+- **scrollBehavior homeRoutes 派生**：硬编码的 12 个 home 路由名数组改为从 `entityRegistry` 派生（与 SearchDialog 的 `homePageRoutes` 一致），消除新增实体时漏改同步风险。
+- **路由名 diff 验证**：运行时校验 34 个路由名 + 关键 path 与原版 100% 一致，防外链/bookmark 失效。
+
+### 变更文件
+
+- `src/router/index.ts`：routes 数组与 scrollBehavior 程序化生成
+
 ## 2.39.4
 
 架构评审修复 B4：tsconfig node 版本对齐 + RelationRouteShell 动态 import。

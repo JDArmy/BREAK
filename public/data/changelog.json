@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.40.0",
+    "summary": "架构评审修复 B5：路由表程序化生成，消除 34 条扁平路由中的重复模式。",
+    "body": "架构评审修复 B5：路由表程序化生成，消除 34 条扁平路由中的重复模式。\n\n- **路由表程序化生成**（#5）：`router/index.ts` 的 34 条路由从 `entityRegistry` 与 `RELATION_PERSPECTIVE_ROUTES` 派生：\n  - home 族 12 条：`entityRegistry.filter(e => e.homeDetailRouteName)` 派生 `/home/{entity}/{id}` 与 `/business-scene/:bsKey/{entity}/{id}`\n  - knowledges list/detail 12 条：`entityRegistry.flatMap` 配对生成 list 与 detail 路由，共用同一 View 组件（由 `route.params` 是否含 id 区分模式，不引入 RouterView 嵌套以保留 KnowledgeSplitView 左右联动）\n  - relations 8 条：`RELATION_PERSPECTIVE_ROUTES.flatMap` 派生 4 视角 × 2 形态（pathExplorer 独立于 relationAnalysisPerspectiveOptions，故路由元信息独立维护）\n  - `viewLoaders` 映射实体类型 → View 懒加载工厂\n- **scrollBehavior homeRoutes 派生**：硬编码的 12 个 home 路由名数组改为从 `entityRegistry` 派生（与 SearchDialog 的 `homePageRoutes` 一致），消除新增实体时漏改同步风险。\n- **路由名 diff 验证**：运行时校验 34 个路由名 + 关键 path 与原版 100% 一致，防外链/bookmark 失效。\n\n### 变更文件\n\n- `src/router/index.ts`：routes 数组与 scrollBehavior 程序化生成"
+  },
+  {
     "version": "2.39.4",
     "summary": "架构评审修复 B4：tsconfig node 版本对齐 + RelationRouteShell 动态 import。",
     "body": "架构评审修复 B4：tsconfig node 版本对齐 + RelationRouteShell 动态 import。\n\n- **tsconfig node18 → node24**（#3）：`tsconfig.node.json` extends 从 `@tsconfig/node18` 改为 `@tsconfig/node24`，与 `.nvmrc`(24) 和 `engines`(>=24.0.0) 对齐。devDeps 同步更新。预检 `tsc --noEmit -p tsconfig.node.json` 无类型错误。\n- **RelationRouteShell 动态 import**（#19）：`router/index.ts` 的 `RelationRouteShell` 从顶层静态 import 改为 `loadRelationRouteShell = () => import(...)` 动态工厂，8 条 relation 路由的 `component` 改用工厂。RelationRouteShell 不再进入首屏 chunk，与 `loadRelationView` 同 chunk 策略。\n\n### 变更文件\n\n- `tsconfig.node.json`：extends 改 @tsconfig/node24\n- `package.json`：devDeps 去掉 @tsconfig/node18，加 @tsconfig/node24\n- `src/router/index.ts`：RelationRouteShell 静态 import → 动态工厂"

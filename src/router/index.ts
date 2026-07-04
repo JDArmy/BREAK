@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import { initLocaleMessages } from "@/i18n";
+import { entityRegistry, type EntityType } from "@/BREAK/entityRegistry";
 import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
 import {
   getRelationDefaultViewByPerspective,
@@ -25,6 +26,34 @@ const loadHomeView = () => import("@/views/HomeView.vue");
 const loadRelationView = () => import("@/views/RelationView.vue");
 // RelationRouteShell 动态加载，避免静态 import 进入首屏 chunk（与 loadRelationView 同 chunk 策略）
 const loadRelationRouteShell = () => import("@/views/RelationRouteShell.vue");
+
+/** 实体类型 → 知识库视图懒加载工厂（list/detail 共用同一 View 组件，由 route.params 区分模式） */
+const viewLoaders: Record<EntityType, () => Promise<unknown>> = {
+  risk: () => import("@/views/RisksView.vue"),
+  avoidance: () => import("@/views/AvoidancesView.vue"),
+  attackTool: () => import("@/views/AttackToolsView.vue"),
+  threatActor: () => import("@/views/ThreatActorsView.vue"),
+  term: () => import("@/views/TermsView.vue"),
+  case: () => import("@/views/CasesView.vue"),
+};
+
+/**
+ * 关系图 4 视角的路由元信息（pathSegment + baseRouteName + entityRouteName + perspective）。
+ * pathExplorer 独立于 relationAnalysisPerspectiveOptions（该数组仅含 3 个分析视角），
+ * 故在此独立维护 4 视角的路由元信息，不从 perspectiveOptions 派生。
+ */
+const RELATION_PERSPECTIVE_ROUTES: {
+  pathSegment: string;
+  baseRouteName: string;
+  entityRouteName: string;
+  perspective: RelationPerspectiveKey;
+}[] = [
+  { pathSegment: "risk-relation", baseRouteName: "relationRisk", entityRouteName: "relationRiskEntity", perspective: "risk" },
+  { pathSegment: "attack-path", baseRouteName: "relationAttackPath", entityRouteName: "relationAttackPathEntity", perspective: "attackPath" },
+  { pathSegment: "defense-coverage", baseRouteName: "relationDefenseCoverage", entityRouteName: "relationDefenseCoverageEntity", perspective: "defenseCoverage" },
+  { pathSegment: "path-explorer", baseRouteName: "relationPathExplorer", entityRouteName: "relationPathExplorerEntity", perspective: "pathExplorer" },
+];
+
 type RelationPreloadTarget = "network" | "sankey";
 
 export const preloadRelationView = (target?: RelationPreloadTarget) => {
@@ -46,200 +75,63 @@ const router = createRouter({
       component: loadHomeView,
     },
 
-    // 首页抽屉：/home/{entity}/{id}（entity 单数）
-    {
-      path: "/home/risk/:rKey",
-      name: "homeRiskDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
-    {
-      path: "/home/avoidance/:aKey",
-      name: "homeAvoidanceDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
-    {
-      path: "/home/attack-tool/:atKey",
-      name: "homeAttackToolDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
-    {
-      path: "/home/threat-actor/:taKey",
-      name: "homeThreatActorDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
-    {
-      path: "/home/term/:tKey",
-      name: "homeTermDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
+    // 首页抽屉：/home/{entity}/{id}（从 entityRegistry 派生，case 无 home 抽屉）
+    ...entityRegistry
+      .filter((e) => e.homeDetailRouteName)
+      .map((e) => ({
+        path: `/home/${e.relationKey}/:${e.paramKey}`,
+        name: e.homeDetailRouteName,
+        meta: { needsBreakData: true },
+        component: loadHomeView,
+      })),
 
-    // 业务场景：bsKey 不变；新增 /business-scene/:bsKey/{entity}/{id}（所有实体类型）
+    // 业务场景：bsKey 不变；/business-scene/:bsKey/{entity}/{id}（从 entityRegistry 派生）
     {
       path: "/business-scene/:bsKey",
       name: "businessScene",
       component: loadHomeView,
     },
-    {
-      path: "/business-scene/:bsKey/risk/:rKey",
-      name: "businessSceneRiskDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
-    {
-      path: "/business-scene/:bsKey/avoidance/:aKey",
-      name: "businessSceneAvoidanceDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
-    {
-      path: "/business-scene/:bsKey/attack-tool/:atKey",
-      name: "businessSceneAttackToolDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
-    {
-      path: "/business-scene/:bsKey/threat-actor/:taKey",
-      name: "businessSceneThreatActorDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
-    {
-      path: "/business-scene/:bsKey/term/:tKey",
-      name: "businessSceneTermDetail",
-      meta: { needsBreakData: true },
-      component: loadHomeView,
-    },
+    ...entityRegistry
+      .filter((e) => e.businessSceneDetailRouteName)
+      .map((e) => ({
+        path: `/business-scene/:bsKey/${e.relationKey}/:${e.paramKey}`,
+        name: e.businessSceneDetailRouteName,
+        meta: { needsBreakData: true },
+        component: loadHomeView,
+      })),
 
-    // 知识库列表：/knowledges/{entity}/list（entity 单数）
-    {
-      path: "/knowledges/risk/list",
-      name: "knowledgesRiskList",
-      meta: { needsBreakData: true, knowledgeEntity: "risk" },
-      component: () => import("@/views/RisksView.vue"),
-    },
-    {
-      path: "/knowledges/avoidance/list",
-      name: "knowledgesAvoidanceList",
-      meta: { needsBreakData: true, knowledgeEntity: "avoidance" },
-      component: () => import("@/views/AvoidancesView.vue"),
-    },
-    {
-      path: "/knowledges/attack-tool/list",
-      name: "knowledgesAttackToolList",
-      meta: { needsBreakData: true, knowledgeEntity: "attack-tool" },
-      component: () => import("@/views/AttackToolsView.vue"),
-    },
-    {
-      path: "/knowledges/threat-actor/list",
-      name: "knowledgesThreatActorList",
-      meta: { needsBreakData: true, knowledgeEntity: "threat-actor" },
-      component: () => import("@/views/ThreatActorsView.vue"),
-    },
-    {
-      path: "/knowledges/term/list",
-      name: "knowledgesTermList",
-      meta: { needsBreakData: true, knowledgeEntity: "term" },
-      component: () => import("@/views/TermsView.vue"),
-    },
-    {
-      path: "/knowledges/case/list",
-      name: "knowledgesCaseList",
-      meta: { needsBreakData: true, knowledgeEntity: "case" },
-      component: () => import("@/views/CasesView.vue"),
-    },
+    // 知识库 list/detail：/knowledges/{entity}/list 与 /knowledges/{entity}/detail/{id}
+    // list/detail 共用同一 View 组件，由 route.params 是否含 id 区分模式（flatMap 配对生成）
+    ...entityRegistry.flatMap((e) => [
+      {
+        path: `/knowledges/${e.relationKey}/list`,
+        name: e.listRouteName,
+        meta: { needsBreakData: true, knowledgeEntity: e.relationKey },
+        component: viewLoaders[e.type],
+      },
+      {
+        path: `/knowledges/${e.relationKey}/detail/:${e.paramKey}`,
+        name: e.detailRouteName,
+        meta: { needsBreakData: true, knowledgeEntity: e.relationKey },
+        component: viewLoaders[e.type],
+      },
+    ]),
 
-    // 知识库详情：/knowledges/{entity}/detail/{id}（entity 单数，paramKey 沿用）
-    {
-      path: "/knowledges/risk/detail/:rKey",
-      name: "knowledgesRiskDetail",
-      meta: { needsBreakData: true, knowledgeEntity: "risk" },
-      component: () => import("@/views/RisksView.vue"),
-    },
-    {
-      path: "/knowledges/avoidance/detail/:aKey",
-      name: "knowledgesAvoidanceDetail",
-      meta: { needsBreakData: true, knowledgeEntity: "avoidance" },
-      component: () => import("@/views/AvoidancesView.vue"),
-    },
-    {
-      path: "/knowledges/attack-tool/detail/:atKey",
-      name: "knowledgesAttackToolDetail",
-      meta: { needsBreakData: true, knowledgeEntity: "attack-tool" },
-      component: () => import("@/views/AttackToolsView.vue"),
-    },
-    {
-      path: "/knowledges/threat-actor/detail/:taKey",
-      name: "knowledgesThreatActorDetail",
-      meta: { needsBreakData: true, knowledgeEntity: "threat-actor" },
-      component: () => import("@/views/ThreatActorsView.vue"),
-    },
-    {
-      path: "/knowledges/term/detail/:tKey",
-      name: "knowledgesTermDetail",
-      meta: { needsBreakData: true, knowledgeEntity: "term" },
-      component: () => import("@/views/TermsView.vue"),
-    },
-    {
-      path: "/knowledges/case/detail/:cKey",
-      name: "knowledgesCaseDetail",
-      meta: { needsBreakData: true, knowledgeEntity: "case" },
-      component: () => import("@/views/CasesView.vue"),
-    },
-
-    // 关系图谱：4 视角 × 2 形态（视角首页 + 带实体子路由）
-    {
-      path: "/relations/risk-relation",
-      name: "relationRisk",
-      meta: { needsBreakData: true, relationPerspective: "risk" },
-      component: loadRelationRouteShell,
-    },
-    {
-      path: "/relations/risk-relation/:entity/:id",
-      name: "relationRiskEntity",
-      meta: { needsBreakData: true, relationPerspective: "risk" },
-      component: loadRelationRouteShell,
-    },
-    {
-      path: "/relations/attack-path",
-      name: "relationAttackPath",
-      meta: { needsBreakData: true, relationPerspective: "attackPath" },
-      component: loadRelationRouteShell,
-    },
-    {
-      path: "/relations/attack-path/:entity/:id",
-      name: "relationAttackPathEntity",
-      meta: { needsBreakData: true, relationPerspective: "attackPath" },
-      component: loadRelationRouteShell,
-    },
-    {
-      path: "/relations/defense-coverage",
-      name: "relationDefenseCoverage",
-      meta: { needsBreakData: true, relationPerspective: "defenseCoverage" },
-      component: loadRelationRouteShell,
-    },
-    {
-      path: "/relations/defense-coverage/:entity/:id",
-      name: "relationDefenseCoverageEntity",
-      meta: { needsBreakData: true, relationPerspective: "defenseCoverage" },
-      component: loadRelationRouteShell,
-    },
-    {
-      path: "/relations/path-explorer",
-      name: "relationPathExplorer",
-      meta: { needsBreakData: true, relationPerspective: "pathExplorer" },
-      component: loadRelationRouteShell,
-    },
-    {
-      path: "/relations/path-explorer/:entity/:id",
-      name: "relationPathExplorerEntity",
-      meta: { needsBreakData: true, relationPerspective: "pathExplorer" },
-      component: loadRelationRouteShell,
-    },
+    // 关系图谱：4 视角 × 2 形态（视角首页 + 带实体子路由），从 RELATION_PERSPECTIVE_ROUTES 派生
+    ...RELATION_PERSPECTIVE_ROUTES.flatMap((p) => [
+      {
+        path: `/relations/${p.pathSegment}`,
+        name: p.baseRouteName,
+        meta: { needsBreakData: true, relationPerspective: p.perspective },
+        component: loadRelationRouteShell,
+      },
+      {
+        path: `/relations/${p.pathSegment}/:entity/:id`,
+        name: p.entityRouteName,
+        meta: { needsBreakData: true, relationPerspective: p.perspective },
+        component: loadRelationRouteShell,
+      },
+    ]),
 
     // 更新日志
     {
@@ -275,22 +167,14 @@ const router = createRouter({
       });
     }
 
-    // 首页路由之间切换时保持滚动位置
-    const homeRoutes = [
+    // 首页路由之间切换时保持滚动位置（路由名从 entityRegistry 派生，与 SearchDialog 的 homePageRoutes 一致）
+    const homeRouteNames = new Set<string>([
       "home",
       "businessScene",
-      "homeRiskDetail",
-      "homeAvoidanceDetail",
-      "homeAttackToolDetail",
-      "homeThreatActorDetail",
-      "homeTermDetail",
-      "businessSceneRiskDetail",
-      "businessSceneAvoidanceDetail",
-      "businessSceneAttackToolDetail",
-      "businessSceneThreatActorDetail",
-      "businessSceneTermDetail",
-    ];
-    if (homeRoutes.includes(to.name as string) && homeRoutes.includes(from.name as string)) {
+      ...entityRegistry.map((e) => e.homeDetailRouteName).filter(Boolean),
+      ...entityRegistry.map((e) => e.businessSceneDetailRouteName).filter(Boolean),
+    ]);
+    if (homeRouteNames.has(to.name as string) && homeRouteNames.has(from.name as string)) {
       return false;
     }
 
