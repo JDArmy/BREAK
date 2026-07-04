@@ -66,6 +66,10 @@ const relatedAttackToolRelations = computed(() => selectedAttackTool.value?.rela
 const getAttackToolRelationNote = (relation: NonNullable<typeof relatedAttackToolRelations.value>[number]) =>
   formatAttackToolRelationNote(relation, locale.value, t);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
+// 选中攻击工具的关键词（缓存 computed，避免模板 v-if + v-for 重复调用 getMessageStringArray）
+const selectedAttackToolKeywords = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.attackTools.${selectedAttackToolKey.value}.keywords`)
+);
 
 const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
   "attackTool",
@@ -117,10 +121,10 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
         <h3>{{ $t("description") }}</h3>
         <p>{{ $t(`BREAK.attackTools.${selectedAttackToolKey}.description`) }}</p>
       </section>
-      <section v-if="getMessageStringArray(localeMessages, `BREAK.attackTools.${selectedAttackToolKey}.keywords`).length" class="detail-section">
+      <section v-if="selectedAttackToolKeywords.length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.attackTools.${selectedAttackToolKey}.keywords`)" :key="keyword" class="keyword-tag">
+          <span v-for="keyword in selectedAttackToolKeywords" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>

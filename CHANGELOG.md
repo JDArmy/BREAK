@@ -1,5 +1,21 @@
 # Change log
 
+## 2.40.2
+
+架构评审修复 B8：模板内重复 `getMessageStringArray` 调用清理，抽 computed 缓存。
+
+- **清理重复 i18n 调用**（#17）：5 个文件的 keywords `getMessageStringArray` 在模板内 v-if + v-for 重复调用，抽为 computed 缓存：
+  - `RisksView`：`selectedRiskKeywords`
+  - `AttackToolsView`：`selectedAttackToolKeywords`
+  - `AvoidancesView`：`selectedAvoidanceKeywords`
+  - `ThreatActorsView`：`selectedThreatActorKeywords`
+  - `TermDetail`：`keywords`（参照已有 `aliases` computed 模式）
+- 每次渲染从 2 次全量 i18n 树查找降为 1 次 computed 求值（响应式缓存）。
+
+### 变更文件
+
+- `src/views/RisksView.vue`、`src/views/AttackToolsView.vue`、`src/views/AvoidancesView.vue`、`src/views/ThreatActorsView.vue`、`src/components/TermDetail.vue`
+
 ## 2.40.1
 
 架构评审修复 B6（统一反查部分）：详情抽屉手写反查统一改用 `useRelatedEntities`，消除与 RisksView 的双实现。

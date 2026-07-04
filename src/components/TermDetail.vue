@@ -25,6 +25,10 @@ const localeMessages = computed(() => messages.value[locale.value] as Record<str
 const aliases = computed(() =>
   getMessageStringArray(localeMessages.value, `BREAK.terms.${props.tKey}.aliases`)
 );
+// 术语关键词（缓存 computed，避免模板 v-if + v-for 重复调用 getMessageStringArray）
+const keywords = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.terms.${props.tKey}.keywords`)
+);
 
 // 跳知识库详情页（新窗口）
 const detailHref = computed(() => entityDetailHref(router, props.tKey, "term"));
@@ -80,11 +84,11 @@ const openDetail = () => {
         <span v-for="alias in aliases" :key="alias" class="tag-chip">{{ alias }}</span>
       </div>
     </div>
-    <div v-if="getMessageStringArray(localeMessages, `BREAK.terms.${tKey}.keywords`).length" class="desc">
+    <div v-if="keywords.length" class="desc">
       <strong>{{ $t("keywords") }}:&nbsp;</strong>
       <div class="tag-list">
         <span
-          v-for="keyword in getMessageStringArray(localeMessages, `BREAK.terms.${tKey}.keywords`)"
+          v-for="keyword in keywords"
           :key="keyword"
           class="tag-chip"
         >

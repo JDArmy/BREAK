@@ -82,6 +82,10 @@ watch(selectedCategory, () => {
 });
 
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
+// 选中规避手段的关键词（缓存 computed，避免模板 v-if + v-for 重复调用 getMessageStringArray）
+const selectedAvoidanceKeywords = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.avoidances.${selectedAvoidanceKey.value}.keywords`)
+);
 
 // 反查：引用该规避手段的风险、攻击工具，以及关联该规避手段的术语
 const relatedRiskKeys = useRelatedEntities(BREAK.risks, "avoidances", selectedAvoidanceKey);
@@ -151,10 +155,10 @@ const { openRelationGraph } = useRelationGraph("avoidance");
         <h3>{{ $t("limitation") }}</h3>
         <p>{{ $t(`BREAK.avoidances.${selectedAvoidanceKey}.limitation`) }}</p>
       </section>
-      <section v-if="getMessageStringArray(localeMessages, `BREAK.avoidances.${selectedAvoidanceKey}.keywords`).length" class="detail-section">
+      <section v-if="selectedAvoidanceKeywords.length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.avoidances.${selectedAvoidanceKey}.keywords`)" :key="keyword" class="keyword-tag">
+          <span v-for="keyword in selectedAvoidanceKeywords" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>

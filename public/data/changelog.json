@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.40.2",
+    "summary": "架构评审修复 B8：模板内重复 `getMessageStringArray` 调用清理，抽 computed 缓存。",
+    "body": "架构评审修复 B8：模板内重复 `getMessageStringArray` 调用清理，抽 computed 缓存。\n\n- **清理重复 i18n 调用**（#17）：5 个文件的 keywords `getMessageStringArray` 在模板内 v-if + v-for 重复调用，抽为 computed 缓存：\n  - `RisksView`：`selectedRiskKeywords`\n  - `AttackToolsView`：`selectedAttackToolKeywords`\n  - `AvoidancesView`：`selectedAvoidanceKeywords`\n  - `ThreatActorsView`：`selectedThreatActorKeywords`\n  - `TermDetail`：`keywords`（参照已有 `aliases` computed 模式）\n- 每次渲染从 2 次全量 i18n 树查找降为 1 次 computed 求值（响应式缓存）。\n\n### 变更文件\n\n- `src/views/RisksView.vue`、`src/views/AttackToolsView.vue`、`src/views/AvoidancesView.vue`、`src/views/ThreatActorsView.vue`、`src/components/TermDetail.vue`"
+  },
+  {
     "version": "2.40.1",
     "summary": "架构评审修复 B6（统一反查部分）：详情抽屉手写反查统一改用 `useRelatedEntities`，消除与 RisksView 的双实现。",
     "body": "架构评审修复 B6（统一反查部分）：详情抽屉手写反查统一改用 `useRelatedEntities`，消除与 RisksView 的双实现。\n\n- **统一反查**（#6 核心）：`RiskDetail`/`AvoidanceDetail`/`AttackToolDetail`/`ThreatActorDetail` 的手写 `Object.keys().filter()` 反查（descriptionTools/riskThreatActors/relatedTerms 等）改为 `useRelatedEntities` 工厂，与 `RisksView` 已用的实现统一。消除同一反查逻辑两套实现的维护负担。\n- **未抽 DrawerDetailShell**：经评估，5 个抽屉模板差异大（RiskDetail 有 riskAssessment/priority badge、TermDetail 有 aliases/category/usageExample 且无关系图按钮），Shell slot 设计复杂、视觉回归风险高，而 header/ID 行/viewDetail 按钮的样板重复成本低。反查统一（核心价值）已完成，Shell 抽象留作后续可选优化。\n\n### 变更文件\n\n- `src/components/RiskDetail.vue`：descriptionTools/riskThreatActors/relatedTerms 改 useRelatedEntities\n- `src/components/AvoidanceDetail.vue`：relatedTerms 改 useRelatedEntities\n- `src/components/AttackToolDetail.vue`：relatedTerms 改 useRelatedEntities\n- `src/components/ThreatActorDetail.vue`：relatedTerms 改 useRelatedEntities"

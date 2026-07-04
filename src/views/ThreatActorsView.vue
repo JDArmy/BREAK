@@ -67,6 +67,10 @@ const relatedThreatActorRelations = computed(() => selectedThreatActor.value?.re
 const getThreatActorRelationNote = (relation: NonNullable<typeof relatedThreatActorRelations.value>[number]) =>
   formatThreatActorRelationNote(relation, locale.value, t);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
+// 选中威胁行为者的关键词（缓存 computed，避免模板 v-if + v-for 重复调用 getMessageStringArray）
+const selectedThreatActorKeywords = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.threatActors.${selectedThreatActorKey.value}.keywords`)
+);
 
 const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
   "threatActor",
@@ -112,10 +116,10 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
         <h3>{{ $t("description") }}</h3>
         <p>{{ $t(`BREAK.threatActors.${selectedThreatActorKey}.description`) }}</p>
       </section>
-      <section v-if="getMessageStringArray(localeMessages, `BREAK.threatActors.${selectedThreatActorKey}.keywords`).length" class="detail-section">
+      <section v-if="selectedThreatActorKeywords.length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.threatActors.${selectedThreatActorKey}.keywords`)" :key="keyword" class="keyword-tag">
+          <span v-for="keyword in selectedThreatActorKeywords" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>

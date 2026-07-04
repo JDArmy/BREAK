@@ -111,6 +111,10 @@ const selectedAssessment = computed(() => selectedRisk.value?.riskAssessment);
 const observables = computed(() =>
   getMessageStringArray(localeMessages.value, `BREAK.risks.${selectedRiskKey.value}.riskAssessment.observables`)
 );
+// 选中风险的关键词（缓存 computed，避免模板 v-if + v-for 重复调用 getMessageStringArray）
+const selectedRiskKeywords = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.risks.${selectedRiskKey.value}.keywords`)
+);
 const priorityNote = computed(() =>
   selectedAssessment.value?.priorityNote
     ? t(`BREAK.risks.${selectedRiskKey.value}.riskAssessment.priorityNote`)
@@ -274,10 +278,10 @@ onBeforeUnmount(disposeRadar);
         <h3>{{ $t("riskPriorityNote") }}</h3>
         <p>{{ priorityNote }}</p>
       </section>
-      <section v-if="getMessageStringArray(localeMessages, `BREAK.risks.${selectedRiskKey}.keywords`).length" class="detail-section">
+      <section v-if="selectedRiskKeywords.length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.risks.${selectedRiskKey}.keywords`)" :key="keyword" class="keyword-tag">
+          <span v-for="keyword in selectedRiskKeywords" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>
