@@ -6,7 +6,7 @@
 
 ## 0. 目的与适用范围
 
-现有校验（`validate:data` 14 门禁 + `data-integrity.test.ts`）已覆盖结构完整性、命名/ID/枚举、交叉引用、孤儿检测、keywords 含 title、i18n 同步、BS 归类、riskAssessment。本标准补 6 个准入空白：
+现有校验（`validate:data` 18 道门禁 + `data-integrity.test.ts`）已覆盖结构完整性、命名/ID/枚举、交叉引用、孤儿检测、keywords 含 title、i18n 同步、BS 归类、riskAssessment。本标准补 6 个准入空白：
 
 | 空白 | 机器卡（admission.mjs） | 人判（文档 + discover 评审关） |
 |---|---|---|

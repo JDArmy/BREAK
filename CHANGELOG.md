@@ -1,5 +1,15 @@
 # Change log
 
+## 2.41.3
+
+仓库卫生治理：消除构建产物入库漂移 + 修正过时文档计数。
+
+- **`public/data/changelog.json` 改为 gitignore**：该文件是 `generate:changelog` 的构建产物，部署时 CI 会重新生成，入库后每次改 CHANGELOG.md 都制造漂移（历史已被连带提交 45 次）。现与 `public/data/` 下其余 7 个产物（break-data/stix/jsonld/manifest/quality-report）保持一致，`git rm --cached` 移出索引、加入 `.gitignore`。本地 dev 时 ChangelogView 有 404 容错，需要时跑 `npm run generate:changelog` 即可恢复。
+- **`.gitignore` 补 `test-results/`**：Playwright/e2e 产物目录，此前 `coverage/`、`dist/` 都已忽略却漏了它，补齐规则缺口。
+- **更新 `SKILL.md` / `SKILL_en.md` 计数表**：原表为历史快照（Risk 350/Avoidance 300/AttackTool 110/ThreatActor 70/Term 600/Case 1797/BusinessScene 18），与现状脱节。统一为 `.total` 口径（与 README/docs-consistency 一致）：382/318/118/75/593/1778/20，总数 3200+ → 3280+。
+- **更新 `ADMISSION-STANDARD.md`**：`validate:data` 门禁数 14 → 18（链中脚本实际数量）。
+- 清理本地 `.DS_Store` × 2（已被 gitignore，纯本地垃圾）。
+
 ## 2.41.2
 
 清理无用历史脚本。

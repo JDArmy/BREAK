@@ -12,9 +12,10 @@ node_modules
 dist
 dist-ssr
 coverage
+test-results
 *.local
 
-# 静态数据导出产物，由 npm run export:data / export:data-en / export:stix / export:jsonld 生成，不纳入版本库
+# 静态数据导出产物，由 npm run export:data / export:data-en / export:stix / export:jsonld / generate:changelog 生成，不纳入版本库
 public/data/break-data.json
 public/data/break-data-en.json
 public/data/break-manifest.json
@@ -23,6 +24,7 @@ public/data/break-stix-zh.json
 public/data/break-stix-en.json
 public/data/break-ld-zh.jsonld
 public/data/break-ld-en.jsonld
+public/data/changelog.json
 
 # 构建时预合并的英文完整数据（generate-en-full.mjs 生成），不纳入版本库
 src/i18n/en/.generated/
