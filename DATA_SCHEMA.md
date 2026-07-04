@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.39.2`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.39.3`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -15,7 +15,7 @@ This document describes the committed JSON data model used by the BREAK knowledg
 | ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 75 total (61 main, 14 sub) |
 | Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 593 total (529 main, 64 sub) |
 | BusinessScene | `src/BREAK/business-scenes` | `BS00.json` | `BS00` | 20 total (20 main, 0 sub) |
-| Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1817 total (1817 main, 0 sub) |
+| Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1814 total (1814 main, 0 sub) |
 
 Parent and child records live in the parent JSON file. For example, `R0001-001` belongs in `src/BREAK/risks/R0001.json`.
 

@@ -7,7 +7,8 @@ import { i18n } from "@/i18n";
 
 // 英文翻译：直接 import 构建时预合并的完整英文 cases 数据
 // 中文：src/BREAK/cases 原始数据；英文：src/i18n/en/.generated/cases.json 预合并数据。
-const cases = ref<Cases>({});
+// 模块级单例 ref，导出供其他 composable（如 useSearchCore）直接访问，避免重复实例化。
+export const cases = ref<Cases>({});
 const loaded = ref(false);
 const loadError = ref(false);
 let cnLoadingPromise: Promise<Cases> | null = null;

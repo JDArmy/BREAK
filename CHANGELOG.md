@@ -1,5 +1,22 @@
 # Change log
 
+## 2.39.3
+
+架构评审修复 B3：useSearch 单例化 + 模块拆分，消除多组件实例重复构建索引与重复注册 watcher 的隐患。
+
+- **单例化**（#2）：`fuseInstances` 从函数作用域 ref 提升为模块级单例 ref，多次调用 `useSearch()` 共享同一份索引。watcher 用 `searchWatchersRegistered` flag 防重（参照 `useCases` 的 `localeWatchRegistered` 模式）。生产环境仅 SearchDialog 一个调用方，当前无实际 bug，但隐患消除且设计一致性提升。
+- **模块拆分**（#7）：`useSearch.ts`（412 行）拆为 `useSearchCore.ts`（纯函数 FUSE_CONFIGS/buildIndexableItems/extractSnippetForSearch + 单例状态 + watcher）+ `useSearch.ts`（精简 hook）。对外 API 不变（SearchDialog 无需改）。
+- **注入式单例**：useSearchCore 通过 `initSearchIndex(locale, messages, cases)` 接收全局单例 ref（vue-i18n 全局实例 + useCases 模块级 ref），watcher 引用注入的 ref，不依赖组件 setup，随 app 生命周期存在。
+- **测试适配**：导出 `__resetSearchSingleton` 测试专用重置函数，beforeEach 调用清理单例避免测试间污染。
+- **附带**：`useCases.ts` 的模块级 `cases` ref 改为 `export`，供 useSearchCore 直接访问（单例模式对齐）。
+
+### 变更文件
+
+- `src/composables/useSearchCore.ts`（新建）：纯函数 + 单例状态 + watcher
+- `src/composables/useSearch.ts`：精简为 hook
+- `src/composables/useCases.ts`：导出 cases ref
+- `src/composables/__tests__/useSearch.test.ts`：适配单例（beforeEach 重置）
+
 ## 2.39.2
 
 架构评审修复 B2：校验脚本补强，补齐 observables 长度、i18n 白名单、UI 文案 key 三处校验遗漏，清理 Case description 历史冲突。

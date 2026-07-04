@@ -3,7 +3,7 @@
  * 测试搜索索引构建、搜索查询、模糊匹配和语言切换
  */
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { ref } from "vue";
+import { ref, nextTick } from "vue";
 
 // Mock BREAK 数据
 vi.mock("@/BREAK", () => ({
@@ -230,10 +230,12 @@ vi.mock("@/composables/useCases", () => ({
 }));
 
 // 导入被测模块（在 mock 之后）
-import { extractSnippetForSearch, useSearch } from "@/composables/useSearch";
+import { extractSnippetForSearch, useSearch, __resetSearchSingleton } from "@/composables/useSearch";
 
 describe("useSearch", () => {
   beforeEach(() => {
+    // 单例化后，索引与 watcher 为模块级状态，测试间需重置避免污染
+    __resetSearchSingleton();
     mockLocale.value = "zh-CN";
     mockCases.value = {};
     mockCasesLoaded.value = false;
@@ -510,6 +512,36 @@ describe("useSearch", () => {
 
       expect(search("legacy-freeze-token").case).toEqual([]);
       expect(search("fresh-wire-token").case[0].id).toBe("C0002");
+    });
+
+    it("case 含 references 时按 referenceTitles 搜索", async () => {
+      const { search } = useSearch();
+      mockCases.value = {
+        C9001: {
+          title: "某案例",
+          keywords: ["某案例"],
+          summary: "案例摘要",
+          category: "news_report",
+          references: [{ title: "奇特的来源标题XYZ" }],
+        },
+      };
+      await Promise.resolve();
+      expect(search("XYZ").case[0].id).toBe("C9001");
+    });
+  });
+
+  describe("locale 切换重建索引", () => {
+    it("索引已构建后切 locale 会重建非 case 索引", async () => {
+      const { search } = useSearch();
+      // 先在中文环境构建索引并确认能搜到
+      expect(search("羊毛").risk.length).toBeGreaterThan(0);
+
+      // 切到英文，watch(locale) 异步触发重建非 case 索引
+      mockLocale.value = "en";
+      await nextTick();
+      const enResult = search("Marketing");
+      expect(enResult.risk.length).toBeGreaterThan(0);
+      expect(enResult.risk[0].id).toBe("R0001");
     });
   });
 });
