@@ -14,6 +14,7 @@
       "A0002",
       "A0003",
       "A0004",
+      "A0004-001",
       "A0005",
       "A0009",
       "A0010",
@@ -31,8 +32,6 @@
       "A0029-001",
       "A0029-002",
       "A0029-003",
-      "A0034-001",
-      "A0034-002",
       "A0034-003",
       "A0036",
       "A0044",
@@ -45,7 +44,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "keywords": [
       "优惠劵枚举",
       "优惠券枚举",

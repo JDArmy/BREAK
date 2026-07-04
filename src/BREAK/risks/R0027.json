@@ -20,6 +20,8 @@
       "A0022",
       "A0032",
       "A0034",
+      "A0034-001",
+      "A0034-002",
       "A0044",
       "A0059",
       "A0060",
@@ -33,7 +35,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "keywords": [
       "爬虫风险",
       "爬虫",

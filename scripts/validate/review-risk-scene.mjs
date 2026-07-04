@@ -41,10 +41,16 @@ function prepareContext(item) {
   const businessScenes = loadBusinessScenesWithRisks();
   // 找出当前 Risk 已在哪些 BS/RS
   const currentScenes = [];
+  // 子风险（key 含 -）靠父覆盖：若父风险已在某 RS，则子风险视为已归入（CLAUDE.md 规则：
+  // riskScenes[].risks 只列父风险，前端 useSubRiskToggle 自动展开子风险）
+  const parentKey = item.key.includes('-') ? item.key.split('-')[0] : null;
   for (const bs of businessScenes) {
     for (const rs of bs.riskScenes) {
-      if (rs.risks.includes(item.key)) {
-        currentScenes.push(`${bs.bsId}/${rs.rsId}(${bs.bsTitle}/${rs.rsTitle})`);
+      const direct = rs.risks.includes(item.key);
+      const viaParent = parentKey && rs.risks.includes(parentKey);
+      if (direct || viaParent) {
+        const via = direct ? '' : '（靠父覆盖）';
+        currentScenes.push(`${bs.bsId}/${rs.rsId}(${bs.bsTitle}/${rs.rsTitle})${via}`);
       }
     }
   }
