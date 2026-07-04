@@ -29,7 +29,7 @@ const riskAssessmentSchema = z.object({
   priorityNote: nonEmptyString.optional(),
   priorityOverride: z.boolean().optional(),
   assessedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "assessedAt 格式必须为 YYYY-MM-DD").optional(),
-});
+}).strict();
 const avoidanceRelationTypeSchema = z.enum(["prerequisite", "complement", "alternative", "mitigates-gap"]);
 const attackToolRelationTypeSchema = z.enum(["prerequisite", "co-used", "alternative", "capability-upgrade"]);
 const threatActorRelationTypeSchema = z.enum(["co-involved"]);
@@ -45,27 +45,28 @@ const riskRelationSchema = z.object({
   key: nonEmptyString,
   relation: riskRelationTypeSchema,
   note: nonEmptyString.optional(),
-});
+}).strict();
 const avoidanceRelationSchema = z.object({
   key: nonEmptyString,
   relation: avoidanceRelationTypeSchema,
   note: nonEmptyString.optional(),
-});
+}).strict();
 const attackToolRelationSchema = z.object({
   key: nonEmptyString,
   relation: attackToolRelationTypeSchema,
   note: nonEmptyString.optional(),
-});
+}).strict();
 const threatActorRelationSchema = z.object({
   key: nonEmptyString,
   relation: threatActorRelationTypeSchema,
   note: nonEmptyString.optional(),
-});
+}).strict();
 
 export const referenceSchema = z.object({
   title: nonEmptyString,
-  link: nonEmptyString.url("必须是合法 URL"),
-});
+  // 限定 http/https 协议，防止 javascript:/data:/file: 等伪协议（安全类知识库防护）
+  link: nonEmptyString.url("必须是合法 URL").regex(/^https?:\/\//i, "link 必须是 http/https 协议"),
+}).strict();
 
 export const entityVersionSchema = z.number().int().positive().optional();
 
@@ -82,7 +83,7 @@ export const riskSchema = z.object({
   references: z.array(referenceSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
-});
+}).strict(); // strict：拒绝未定义字段（如 typo 字段），与 caseSchema 对齐
 
 export const avoidanceSchema = z.object({
   title: nonEmptyString,
@@ -97,7 +98,7 @@ export const avoidanceSchema = z.object({
   references: z.array(referenceSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
-});
+}).strict();
 
 export const attackToolSchema = z.object({
   title: nonEmptyString,
@@ -110,7 +111,7 @@ export const attackToolSchema = z.object({
   relatedAttackTools: z.array(attackToolRelationSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
-});
+}).strict();
 
 export const threatActorSchema = z.object({
   title: nonEmptyString,
@@ -124,7 +125,7 @@ export const threatActorSchema = z.object({
   relatedThreatActors: z.array(threatActorRelationSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
-});
+}).strict();
 
 export const termSchema = z.object({
   title: nonEmptyString,
@@ -142,7 +143,7 @@ export const termSchema = z.object({
   references: z.array(referenceSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
-});
+}).strict();
 
 export const businessSceneSchema = z.object({
   title: nonEmptyString,
@@ -164,7 +165,7 @@ export const businessSceneSchema = z.object({
   ),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
-});
+}).strict();
 
 export const caseSchema = z.object({
   title: nonEmptyString,

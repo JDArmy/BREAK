@@ -1,5 +1,18 @@
 # Change log
 
+## 2.39.1
+
+架构评审修复 B1：Schema strict 全量落地 + references link 协议限制，补齐一致性与安全盲区。
+
+- **references link 协议限制**（#1）：`referenceSchema.link` 在 `.url()` 基础上加 `^https?://` 正则校验，拒绝 `javascript:`/`data:`/`file:` 等伪协议。安全类知识库的引用链接必须为 http/https。
+- **全量实体 schema 加 strict**（#8）：`riskSchema`/`avoidanceSchema`/`attackToolSchema`/`threatActorSchema`/`termSchema`/`businessSceneSchema` 以及嵌套的 `riskAssessmentSchema`/4 个 `*RelationSchema`/`referenceSchema` 全部加 `.strict()`，与 `caseSchema` 对齐。拒绝任何未定义字段（如 typo 字段），英文 i18n 误填结构字段时 schema 层先兜住。
+- **历史脏数据清理**：strict 暴露 29 个 risks 文件带遗留 `limitation` 字段（Risk schema 不维护此字段）。逐条将有价值的 limitation 内容迁移到 `description` 末尾（"局限性："前缀）后删除字段，同步更新 `updated`。
+
+### 变更文件
+
+- `src/validation/breakSchema.ts`：link 协议校验 + 9 个 schema 加 strict
+- `src/BREAK/risks/` 下 28 个文件：29 条 limitation 迁移到 description
+
 ## 2.39.0
 
 Avoidance 内容规范三档控制落地：明确 description（检测信号）与 limitation（绕过方式+误报场景）的内容规范，schema 收紧 limitation 为必填，新增确定性校验（档位二，接入 CI 阻断）与 LLM 语义评审（档位三，手动跑）。
