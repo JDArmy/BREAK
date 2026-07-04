@@ -14,16 +14,20 @@ git diff --quiet -- src/BREAK/home.ts || git add src/BREAK/home.ts
 # patch 版本跳过，避免日常数据修补提交被拖慢。
 npm run precommit:browser-regression
 
-# 可选 LLM 变更评审：仅在 BREAK_REVIEW_ON_COMMIT=1 时触发（默认关，避免拖慢日常提交）
-# 跑 review:changed 对本次变更实体做 B 类 subagent 交叉判断 + C 类 LLM 评审，fail 阻断提交
-# 用法：BREAK_REVIEW_ON_COMMIT=1 git commit
-if [ "$BREAK_REVIEW_ON_COMMIT" = "1" ]; then
-  echo "🔍 BREAK_REVIEW_ON_COMMIT=1，运行 review:changed..."
-  output=$(node scripts/validate/review-changed.mjs --staged-only 2>&1)
-  status=$?
-  if [ $status -ne 0 ]; then
-    echo "❌ review:changed 检出 fail，提交中止（设 BREAK_REVIEW_ON_COMMIT=0 跳过，但建议先修）"
-    echo "$output" | tail -30
-    exit $status
+# LLM 变更评审：默认开启，跑 review:changed 对本次变更实体做 B 类 subagent 交叉判断 + C 类 LLM 评审
+# fail 阻断提交。设 BREAK_REVIEW_ON_COMMIT=0 可临时跳过（如纯文档/脚本改动不涉及实体）
+# 存量已评实体通过指纹基线（scripts/validate/review-progress-baseline.json）自动跳过，不重复跑
+if [ "$BREAK_REVIEW_ON_COMMIT" != "0" ]; then
+  # 仅当有实体文件变更时才跑（避免纯脚本/文档提交被拖慢）
+  if git diff --cached --name-only -- src/BREAK/ | grep -q '\.json$'; then
+    echo "🔍 运行 review:changed（变更实体 LLM 评审，fail 阻断）..."
+    output=$(node scripts/validate/review-changed.mjs --staged-only 2>&1)
+    status=$?
+    if [ $status -ne 0 ]; then
+      echo "❌ review:changed 检出 fail，提交中止"
+      echo "设 BREAK_REVIEW_ON_COMMIT=0 可跳过（但建议先修），review 级问题不阻断"
+      echo "$output" | tail -40
+      exit $status
+    fi
   fi
 fi

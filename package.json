@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.42.0",
+  "version": "2.42.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -52,6 +52,8 @@
     "review:avoidance-signal:full": "node scripts/research/llm-review-avoidance-signal.mjs --full",
     "review:changed": "node scripts/validate/review-changed.mjs",
     "review:full": "node scripts/validate/review-full.mjs",
+    "review:export-baseline": "node scripts/validate/review-baseline.mjs --export",
+    "review:import-baseline": "node scripts/validate/review-baseline.mjs --import",
     "review:risk-avoidance": "node scripts/validate/review-risk-avoidance.mjs",
     "review:risk-scene": "node scripts/validate/review-risk-scene.mjs",
     "review:case-relation": "node scripts/validate/review-case-relation.mjs",

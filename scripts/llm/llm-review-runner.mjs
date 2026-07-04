@@ -27,12 +27,26 @@ export function fingerprintOf(entity, fields) {
   return createHash('sha256').update(content).digest('hex').slice(0, 16);
 }
 
-function loadProgress(progressPath) {
+function loadProgress(progressPath, name) {
   if (fs.existsSync(progressPath)) {
     try {
       return JSON.parse(fs.readFileSync(progressPath, 'utf8'));
     } catch {
       // 损坏则重来
+    }
+  }
+  // 本地 progress 不存在时，从入库基线加载已评指纹（换机器/CI 跳过已评存量）
+  if (name) {
+    const baselinePath = path.join(projectRoot, 'scripts/validate/review-progress-baseline.json');
+    if (fs.existsSync(baselinePath)) {
+      try {
+        const baseline = JSON.parse(fs.readFileSync(baselinePath, 'utf8'));
+        if (baseline[name]) {
+          return { done: baseline[name].done || {}, failed: baseline[name].failed || {} };
+        }
+      } catch {
+        // baseline 损坏忽略
+      }
     }
   }
   return { done: {}, failed: {} };
@@ -77,7 +91,7 @@ export async function runReview(opts) {
   const mdPath = path.join(outDir, 'review-report.md');
   const pendingPath = path.join(outDir, 'pending-fix.json');
 
-  const progress = loadProgress(progressPath);
+  const progress = loadProgress(progressPath, name);
   let results = [];
   if (fs.existsSync(reportPath)) {
     try {

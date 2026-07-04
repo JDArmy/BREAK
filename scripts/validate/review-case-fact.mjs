@@ -10,6 +10,7 @@ import { projectRoot, ensureDir, writeJson } from '../search/common.mjs';
 import { getChangedEntities, parseArgs } from './changed-entities.mjs';
 import { loadAllEntities } from './llm-review-helpers.mjs';
 import { chatJson, withRetry, sleep } from '../llm/llm-client.mjs';
+import { fingerprintOf } from '../llm/llm-review-runner.mjs';
 import { classifySource, highValueCategories } from './source-classify.mjs';
 
 const opts = parseArgs(process.argv.slice(2));
@@ -133,6 +134,16 @@ function loadProgress() {
       return JSON.parse(fs.readFileSync(PROGRESS_PATH, 'utf8'));
     } catch {}
   }
+  // 本地 progress 不存在时，从入库基线加载
+  const baselinePath = path.join(projectRoot, 'scripts/validate/review-progress-baseline.json');
+  if (fs.existsSync(baselinePath)) {
+    try {
+      const baseline = JSON.parse(fs.readFileSync(baselinePath, 'utf8'));
+      if (baseline['case-fact']) {
+        return { done: baseline['case-fact'].done || {}, failed: baseline['case-fact'].failed || {} };
+      }
+    } catch {}
+  }
   return { done: {}, failed: {} };
 }
 
@@ -199,13 +210,14 @@ let idx = 0;
 async function worker() {
   while (idx < items.length) {
     const item = items[idx++];
-    if (progress.done[item.key]) {
+    const fp = fingerprintOf(item.entity, ['summary', 'references', 'incidentTime']);
+    if (progress.done[item.key] === fp) {
       continue;
     }
     try {
       const r = await reviewOne(item);
       resultById.set(item.key, r);
-      progress.done[item.key] = true;
+      progress.done[item.key] = fp;
       done++;
       if (done % 5 === 0) {
         writeJson(REPORT_PATH, [...resultById.values()]);
