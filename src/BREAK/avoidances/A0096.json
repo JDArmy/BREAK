@@ -8,11 +8,11 @@
     "limitation": "静态分析存在误报和漏报问题；无法检测复杂的业务逻辑漏洞；对新型攻击模式的检测能力有限；需要配合人工审计使用",
     "references": [
       {
-        "title": "Top 10 Smart Contract Vulnerabilities in 2025",
-        "link": "https://hacken.io/discover/smart-contract-vulnerabilities/"
+        "title": "Slither: Static Analyzer for Solidity and Vyper - Trail of Bits",
+        "link": "https://github.com/crytic/slither"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-05",
     "keywords": [
       "智能合约静态分析工具",
       "静态分析",

@@ -23,8 +23,8 @@
     "limitation": "DOM randomization is ineffective against attack methods that use OCR to identify and manipulate page elements.",
     "references": [
       {
-        "title": "Authorization Cheat Sheet - OWASP",
-        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
     "keywords": [

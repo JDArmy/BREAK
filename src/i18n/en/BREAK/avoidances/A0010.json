@@ -166,8 +166,8 @@
     "limitation": "Similar to the limitations of emulator detection (A0010-001), headless browser detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the headless browser's environment properties and files to evade detection.",
     "references": [
       {
-        "title": "National Cybersecurity Awareness Week: Domain Name Theft Should Not Be Underestimated",
-        "link": "https://mp.weixin.qq.com/s?__biz=MzIwOTIxNTY0MQ==&mid=2650363457&idx=1&sn=5da31d6062602002a9efe40b898df485&chksm=8f7abfb7b80d36a12c2a7de21d4b404bf60087dcff9b5641499a19ae74acc33ec769952b1443&scene=27"
+        "title": "Navigator: webdriver property - MDN Web Docs",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webdriver"
       }
     ],
     "keywords": [

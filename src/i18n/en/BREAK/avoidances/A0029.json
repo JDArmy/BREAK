@@ -27,8 +27,8 @@
     "limitation": "Data quality issues: user profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: user profiling requires collecting large amounts of user data; if not handled properly, it will involve user privacy concerns. Timeliness issues: user profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
     "references": [
       {
-        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
-        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
+        "title": "Persona (user experience) - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Persona_(user_experience)"
       }
     ],
     "keywords": [
@@ -44,8 +44,8 @@
     "limitation": "Malicious actors can bypass IP profiling blocks by leveraging residential proxy pools and frequent ADSL dial-up IP rotation. The massive dilution of addresses after IPv6 adoption also makes profiling baselines difficult to maintain. Meanwhile, legitimate users sharing NAT egress IPs are prone to false positives and false blocks, and mobile carrier egress IPs are difficult to directly blacklist.",
     "references": [
       {
-        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
-        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
+        "title": "Internet geolocation - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Internet_geolocation"
       }
     ],
     "keywords": [
@@ -61,8 +61,8 @@
     "limitation": "Device profiling is an extension of device fingerprinting (A0021). If the device fingerprint is inaccurate, the device profile will also be affected. Additionally, the accuracy of device profiling is influenced by the device profiling algorithm.",
     "references": [
       {
-        "title": "Fingerprinting - MDN Web Docs",
-        "link": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting"
+        "title": "Device fingerprint - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
       }
     ],
     "keywords": [

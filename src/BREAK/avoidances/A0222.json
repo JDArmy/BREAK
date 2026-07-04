@@ -8,8 +8,8 @@
     "limitation": "抽检覆盖面有限，依赖风险评分质量与样本代表性；高频抽检会影响正常履约效率与商家体验，需平衡抽样率与误伤成本。",
     "references": [
       {
-        "title": "NIST SP 800-53 AU-6 Audit Record Review, Analysis, and Reporting",
-        "link": "https://csrc.nist.gov/projects/cprt/catalog/cprt-catalog/details?ol=04&ct=10&cs=11"
+        "title": "国家市场监督管理总局产品质量安全监督管理司",
+        "link": "https://www.samr.gov.cn/zljds/"
       }
     ],
     "keywords": [
@@ -20,7 +20,7 @@
       "定向核验",
       "targeted inspection"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "relatedAvoidances": [
       {
         "key": "A0014",

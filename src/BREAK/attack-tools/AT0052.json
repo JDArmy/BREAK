@@ -136,8 +136,12 @@
     "description": "USB Killer是一款可以通过USB接口将高压电流注入计算机的工具，它可以瞬间将计算机的主板、CPU、内存等硬件设备烧毁。",
     "references": [
       {
-        "title": "2023年Q1数据泄露事件近1000起,涉及1204家企业、38个行业!|信息...",
-        "link": "https://m.163.com/dy/article/I2H92SPP0518STKV.html"
+        "title": "USB killer - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/USB_killer"
+      },
+      {
+        "title": "USBKill - USB Kill devices for pentesting & law-enforcement",
+        "link": "https://usbkill.com/"
       }
     ],
     "avoidances": [

@@ -150,15 +150,19 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Pacu: The Open Source AWS Exploitation Framework",
+        "link": "https://rhinosecuritylabs.com/aws/pacu-open-source-aws-exploitation-framework/"
+      },
+      {
+        "title": "CloudSploit by Aqua - Open-source cloud security posture management",
+        "link": "https://github.com/aquasecurity/cloudsploit"
       }
     ],
     "keywords": [
       "云配置扫描与密钥利用工具",
       "云配置扫描与密钥利用"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       {
         "key": "AT0054-005",
@@ -212,15 +216,19 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "MITRE ATT&CK: Exfiltration Over Alternative Protocol (T1048)",
+        "link": "https://attack.mitre.org/techniques/T1048/"
+      },
+      {
+        "title": "MITRE ATT&CK: Data Loss Prevention Mitigation (M1057)",
+        "link": "https://attack.mitre.org/mitigations/M1057/"
       }
     ],
     "keywords": [
       "数据导出与DLP绕过工具",
       "数据导出与DLP绕过"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       {
         "key": "AT0061-003",

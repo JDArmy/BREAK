@@ -455,11 +455,11 @@
     "limitation": "与模拟器检测（A0010-001）的局限性类似，无头浏览器检测方法主要是通过检测一些环境属性和文件，但是这些方法并不是绝对可靠的，因为黑灰产业者可以通过修改无头浏览器的环境属性和文件来规避检测",
     "references": [
       {
-        "title": "国家网络安全宣传周|域名被盗用,不可小觑",
-        "link": "https://mp.weixin.qq.com/s?__biz=MzIwOTIxNTY0MQ==&mid=2650363457&idx=1&sn=5da31d6062602002a9efe40b898df485&chksm=8f7abfb7b80d36a12c2a7de21d4b404bf60087dcff9b5641499a19ae74acc33ec769952b1443&scene=27"
+        "title": "Navigator: webdriver property - MDN Web Docs",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webdriver"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-05",
     "keywords": [
       "无头浏览器检测",
       "Headless检测",

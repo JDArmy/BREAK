@@ -8,11 +8,11 @@
     "limitation": "安全性取决于用户密码强度，弱密码易被暴力破解；内存中的明文私钥仍可能被内存转储攻击获取；无法防护恶意软件或rootkit；用户忘记密码将永久丢失私钥",
     "references": [
       {
-        "link": "https://www.thesslstore.com/blog/heres-what-happens-when-your-private-key-gets-compromised/",
-        "title": "Here's what happens when your Private Key gets compromised"
+        "title": "BIP39: Mnemonic code for generating deterministic keys",
+        "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-05",
     "keywords": [
       "私钥加密存储与密码保护",
       "加密存储",

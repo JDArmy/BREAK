@@ -63,11 +63,11 @@
     "limitation": "DOM随机化对于采用OCR方式识别和操纵页面元素的攻击方式无效",
     "references": [
       {
-        "title": "Authorization Cheat Sheet - OWASP",
-        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-05",
     "keywords": [
       "随机化DOM",
       "DOM随机化",

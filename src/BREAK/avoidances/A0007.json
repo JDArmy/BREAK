@@ -179,11 +179,11 @@
     "limitation": "因TOTP是通过TOTP算法生成一次性密码，而TOTP算法是基于时间的，这使得TOTP算法的安全性依赖于时间同步，如果服务器时间与用户终端时间不同步，就会导致TOTP算法生成的密码不正确。",
     "references": [
       {
-        "title": "2023年Q1数据泄露事件近1000起,涉及1204家企业、38个行业!|信息...",
-        "link": "https://m.163.com/dy/article/I2H92SPP0518STKV.html"
+        "title": "RFC 6238: TOTP: Time-Based One-Time Password Algorithm",
+        "link": "https://datatracker.ietf.org/doc/html/rfc6238"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-05",
     "keywords": [
       "一次性密码",
       "OTP",
