@@ -1,5 +1,14 @@
 # Change log
 
+## 2.42.20
+
+修复 case-fact 3 个 Case 事实错误（101-159 批次评审 fail）。
+
+- **C0118** 江苏网吧流量劫持案：references 网页是四川绵竹案（主体不符），换公安部正确源 mps.gov.cn（含江苏案 40 名抓获/600 余万元），补 summary 事实。
+- **C0134** 世嘉游戏不正课金案：summary 述 2025-07/12名玩家/10亿日元，但世嘉官方公告是 2024-08 逮捕+有罪判决。incidentTime 2025-07→2024-08，summary 按官方公告重写，title 去掉矛盾数量。
+- **C0151** 账号工厂案：summary 述"江苏检察机关披露"，但网页明确上海公安侦破。title/summary 改为上海公安/徐汇分局，补网页事实。
+- 中英文同步，case-fact 101-159 批次 fail 清零。
+
 ## 2.42.19
 
 修复 case-fact 试点 9 个 Case 的事实错误（summary 与 references 网页事实矛盾）。
