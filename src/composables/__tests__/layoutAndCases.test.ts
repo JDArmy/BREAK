@@ -125,8 +125,8 @@ describe("布局与案例 composables", () => {
         relatedRisks: ["R0001"],
         relatedAttackTools: ["AT0002"],
       },
-      C0003: {
-        relatedThreatActors: ["TA0001", "TA0002"],
+      C0012: {
+        relatedThreatActors: ["TA0001"],
       },
     });
     const ensureCases = vi.fn(async () => {});
@@ -140,7 +140,7 @@ describe("布局与案例 composables", () => {
 
     expect(index.getCasesByRisk("R0001")).toEqual(["C0001", "C0002"]);
     expect(index.getCasesByAttackTool("AT0001")).toEqual(["C0001"]);
-    expect(index.getCasesByThreatActor("TA0001")).toEqual(["C0001", "C0003"]);
+    expect(index.getCasesByThreatActor("TA0001")).toEqual(["C0001", "C0012"]);
     expect(index.getCasesByRisk("R9999")).toEqual([]);
 
     cases.value = {

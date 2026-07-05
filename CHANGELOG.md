@@ -1,5 +1,13 @@
 # Change log
 
+## 2.42.12
+
+删除虚构案例 C0003（classification 评审检出）。
+
+- **删除 C0003 洗脚店重放攻击类比**：C0003 summary 是"以洗脚店办卡消费为例...形象说明重放攻击本质"，纯虚构科普类比，无真实事件要素，违反 Case 定义（"真实发生的具体安全事件"）。references 是博客园技术文章。删除中英文文件，cases 1778→1777。
+- **测试 fixture 同步**：useCases.test.ts/layoutAndCases.test.ts 的 C0003 fixture 换成真实案例 C0004/C0012；cases-loader.test.ts 案例数断言 1778→1777；data-integrity.test.ts 经 generate:home-counts 刷新后通过。
+- **README/README_CN 案例数 1778→1777**，home.ts 计数刷新，DATA_SCHEMA.md 同步。
+
 ## 2.42.11
 
 跑 `review:case-relation` 全量（870/1778 已评）修复 Case 关联错配，重评 classification 验证 Case category 修复效果。

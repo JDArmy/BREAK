@@ -120,13 +120,19 @@ describe("useCases", () => {
     const vue = await vi.importActual<typeof import("vue")>("vue");
     const locale = vue.ref("zh-CN");
     const retryCases = {
-      C0003: {
-        title: "重试案例",
-        keywords: ["重试"],
-        summary: "重试摘要",
+      C0004: {
+        title: "Cloudflare发现31%的API为“影子API”",
+        keywords: ["影子API", "Cloudflare", "API安全"],
+        summary:
+          "Cloudflare的机器学习模型发现，组织实际存在的API端点比其自行报告的多出31%，这些未被记录和管理的“影子API”构成了巨大的不可见攻击面。它们通常在频繁代码变更中无意引入，若被利用，可能导致数据泄露、未修补漏洞等风险。",
         category: "news_report",
-        relatedRisks: ["R0003"],
-        references: [{ title: "来源", link: "https://example.com" }],
+        relatedRisks: ["R0222"],
+        references: [
+          {
+            title: "theNET | 領先於新型 API 威脅的三種方法 | Cloudflare",
+            link: "https://www.cloudflare.com/zh-tw/the-net/api-centric-security/",
+          },
+        ],
       },
     };
     const loadCases = vi
