@@ -28,12 +28,17 @@ if (opts.limit > 0) items = items.slice(0, opts.limit);
 function buildPrompt(item) {
   const { entity, type } = item;
   const sys = `你是 BREAK 知识库的分类语义贴切度评审员。判断 category/complexity/effectiveness 是否与实体内容语义贴切。
+重要：不同实体类型有不同字段，不要评不存在的字段：
+- Risk：只有 complexity（basic/intermediate/advanced），**无 category 字段**，不要评 category（category 为空是正常的，不算缺失/错配）
+- Avoidance：有 category（AC01-04）+ effectiveness（high/medium/low）
+- Case：有 category（6 枚举）
+- Term：有 category（自由字符串）
 严格规则：
 1. 只输出 JSON 对象。
-2. category：
+2. category（仅 Avoidance/Case/Term）：
    - current: bool（当前 category 是否贴切）
    - suggested: 建议的 category（若不贴切）
-   - reason
+   - 对 Risk 跳过 category（设 current=true, suggested=null）
    分类枚举：
      Avoidance.category: AC01(防止)/AC02(感知)/AC03(识别)/AC04(处置)
      Case.category: criminal_verdict/administrative_enforcement/security_incident/vulnerability_advisory/academic_research/news_report
