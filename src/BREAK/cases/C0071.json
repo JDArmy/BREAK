@@ -14,7 +14,7 @@
       "iOS跳转"
     ],
     "summary": "2020年11月，支付宝（中国）网络技术有限公司发现用户在iOS系统内选择“支付宝”进行付款时，界面被强制跳转至“家政加”APP的选择弹窗，导致用户付款失败并质疑支付宝安全性。经查，江苏斑马软件技术有限公司将其家政加APP的URL Scheme同样定义为“alipay://”，严重干扰支付宝APP的正常跳转，构成流量劫持。上海市浦东新区人民法院48小时内作出诉前行为保全裁定，责令其立即停止干扰。",
-    "category": "criminal_verdict",
+    "category": "news_report",
     "relatedRisks": [
       "R0007-002"
     ],
@@ -28,7 +28,7 @@
         "link": "https://new.qq.com/rain/a/20220813A01DFQ00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2020-11",
     "relatedAttackTools": [],
     "relatedThreatActors": [

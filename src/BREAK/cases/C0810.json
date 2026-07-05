@@ -11,7 +11,7 @@
       "下游用户"
     ],
     "summary": "2023年3月，全球知名通讯软件服务商3CX遭到网络攻击，攻击特征与2020年SolarWinds供应链攻击高度相似。攻击者通过污染3CX的软件供应链，向其客户分发恶意软件，导致大量下游用户受影响。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0081"
     ],
@@ -19,9 +19,13 @@
       {
         "title": "2023年全球10大数据安全和网络攻击事件盘点|思科|微软|网络安全|黑客...",
         "link": "https://dy.163.com/article/IM0G3LS40511ALHJ.html"
+      },
+      {
+        "title": "Supply Chain Attack Against 3CXDesktopApp — CISA（美国网络安全和基础设施安全局）官方公告",
+        "link": "https://www.cisa.gov/news-events/alerts/2023/03/30/supply-chain-attack-against-3cxdesktopapp"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023-03",
     "relatedAttackTools": [
       "AT0013",

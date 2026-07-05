@@ -13,7 +13,7 @@
       "自动化攻击"
     ],
     "summary": "23andMe遭遇的数据泄露事件中，攻击者采用相对简单但高效的暴力破解和撞库技术，通过自动化手段大规模尝试登录用户账号，成功访问并窃取了大量用户的基因和健康数据。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0090"
     ],
@@ -23,7 +23,7 @@
         "link": "https://arxiv.org/pdf/2502.04303"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0042",
       "AT0023",

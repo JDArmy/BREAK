@@ -12,7 +12,7 @@
       "警报"
     ],
     "summary": "美国联邦调查局（FBI）发布警报，指出犯罪分子利用住宅代理网络隐藏其真实 IP 地址，使得与犯罪活动关联的 IP 无法被追溯到攻击者本人。住宅代理通过将流量路由到受感染的住宅设备，帮助攻击者规避 IP 黑名单检测和执法追踪。",
-    "category": "security_incident",
+    "category": "news_report",
     "relatedRisks": [
       "R0099"
     ],
@@ -22,7 +22,7 @@
         "link": "https://www.fbi.gov/investigate/cyber/alerts/2026/evading-residential-proxy-networks-protecting-your-devices-from-becoming-a-tool-for-criminals"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2026",
     "relatedAttackTools": [],
     "relatedThreatActors": []

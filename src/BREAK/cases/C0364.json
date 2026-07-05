@@ -12,7 +12,7 @@
       "登录接口"
     ],
     "summary": "Canva数据泄露事件中，攻击者GnosticPlayers使用凭证填充（一种暴力破解形式）窃取用户数据。该攻击通过自动化工具对登录接口进行大规模尝试，利用已泄露的凭证集合或常见密码列表，成功获取有效账户的访问权限，导致大量用户信息泄露。",
-    "category": "academic_research",
+    "category": "security_incident",
     "relatedRisks": [
       "R0032-003"
     ],
@@ -22,7 +22,7 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/9799087/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0023",
       "AT0042",

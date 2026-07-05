@@ -13,7 +13,7 @@
       "安全运营"
     ],
     "summary": "微软官方文档指导如何识别和调查应用同意授权攻击，保护数据并最小化风险。该文档针对攻击者通过欺骗用户授予恶意应用高权限访问组织数据的场景，提供调查和缓解措施。",
-    "category": "news_report",
+    "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0232"
     ],
@@ -23,7 +23,7 @@
         "link": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0061-003"
     ],

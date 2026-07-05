@@ -13,7 +13,7 @@
       "恶意包投毒"
     ],
     "summary": "Karneades/PackAttack项目记录了2017年至2023年间发生在PyPI、npm、RubyGems和PowerShell Gallery等平台的包管理器攻击事件，包括typosquatting和依赖混淆攻击。",
-    "category": "vulnerability_advisory",
+    "category": "security_incident",
     "relatedRisks": [
       "R0228"
     ],
@@ -23,7 +23,7 @@
         "link": "https://github.com/ecosyste-ms/typosquatting-dataset"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0052"

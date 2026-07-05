@@ -14,7 +14,7 @@
       "车联网安全"
     ],
     "summary": "研究人员公开了一个名为VASP（V2X Application Spoofing Platform）的框架，专门用于模拟针对V2X网络的攻击。该框架基于VEINS仿真环境，可模拟车辆间（V2V）和车辆与基础设施间（V2I）通信中的欺骗与虚假信息注入攻击，旨在为车联网安全研究提供测试工具。",
-    "category": "vulnerability_advisory",
+    "category": "academic_research",
     "relatedRisks": [
       "R0212"
     ],
@@ -24,7 +24,7 @@
         "link": "https://github.com/quic/vasp"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023",
     "relatedAttackTools": [
       "AT0083",

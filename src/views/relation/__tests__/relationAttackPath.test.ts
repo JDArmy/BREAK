@@ -179,7 +179,7 @@ describe("relationAttackPath", () => {
         recommendedAction: "relationView.attackPathRecommendedAction.toolRisk",
         evidenceFields: expect.arrayContaining([
           "ThreatActor.useAttackTools",
-          "AttackTool.directCauseRisks",
+          "AttackTool.indirectSupportRisks",
           "AttackTool.avoidances",
           "Risk.avoidances",
         ]),
@@ -195,8 +195,8 @@ describe("relationAttackPath", () => {
             toTitle: "BREAK.attackTools.AT0001.title",
           }),
           expect.objectContaining({
-            relationType: "relationLine.directCauseRisk",
-            sourceFields: ["AttackTool.directCauseRisks"],
+            relationType: "relationLine.indirectSupportRisk",
+            sourceFields: ["AttackTool.indirectSupportRisks"],
             attackIntent: "relationView.attackPathIntent.toolToRisk",
           }),
           expect.objectContaining({

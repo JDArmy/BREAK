@@ -1,5 +1,19 @@
 # Change log
 
+## 2.42.9
+
+跑 `review:classification` 全量检出 246 个 category 错配 fail，起 subagent 分 4 批甄别修复 166 个 Case 的 category 字段。
+
+- **Case category 语义错配修复（166 个）**：LLM 评审检出 category 与 summary 内容不符，逐条独立甄别后修复：
+  - **criminal_verdict → news_report（~95 个）**：警方破案通报/刑拘/立案/批捕阶段（未到法院判决）误标 criminal_verdict；民事纠纷（不正当竞争/著作权/合同/借贷）误标 criminal_verdict（无民事枚举归 news_report）。
+  - **administrative_enforcement → news_report（~10 个）**：平台内部治理公告/运营商限速/巡视整改误标行政执法（非政府行政行为）。
+  - **→ security_incident（~25 个）**：真实网络安全事件（NSA 入侵华为/西工大、3CX 供应链攻击、Petya/NotPetya、真主党对讲机爆炸、Canva/23andMe 数据泄露等）误标 news_report/academic_research/criminal_verdict。
+  - **→ academic_research（~7 个）**：技术方法研究/法律解读/开源工具项目误标 news_report/vulnerability_advisory。
+  - **→ criminal_verdict（2 个）**：C1026 出借账户帮信罪、C1823 永嘉法院职务侵占罪，确有法院刑事判决，从 news_report 升级。
+- **高价值 Case 补 primary 第二源（10 个）**：category 升级为 security_incident/criminal_verdict 后触发高价值案例 ≥2 源且含 ≥1 primary 门禁，补权威第二源：C1823（永嘉检察院）、C0634（淘宝规则页）、C0788（国家计算机病毒应急处理中心）、C0789（CNCERT）、C0810（CISA）、C1026（最高人民法院）、C1206（腾讯官方微博）、C1322（微软安全博客）、C1444（EIP-155 GitHub）、C1581（Wikipedia）。C1165/C1296 找不到可靠官方源保留 warning（不阻断）。
+- **关系测试快照同步**：AT0001 等攻击工具 directCause/indirectSupport 划分修正后（R0005-001 电话黑卡→营销作弊属间接支持），更新 3 个关系图谱测试期望的 sourceFields/relationType，全 267 个 relation 测试绿。
+- **顺带**：DATA_SCHEMA.md 同步、review-progress-baseline.json 更新。
+
 ## 2.42.0
 
 强化实体校验：建立三层门禁体系（A 类机器强约束 + B 类 subagent 交叉判断 + C 类 LLM+抓取），让新增/修改实体默认完善，严进严出。

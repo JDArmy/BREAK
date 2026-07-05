@@ -14,7 +14,7 @@
       "网络安全事件"
     ],
     "summary": "推送轰炸（又称 MFA 疲劳攻击）已在 Uber 和 Cisco 的重大泄露事件中被利用。包括勒索软件组织 Scattered Spider 在内的攻击者利用该技术绕过多重身份验证，通过反复向用户发送大量推送通知，迫使其最终批准一次请求，从而获得未授权访问。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0036-001"
     ],
@@ -32,7 +32,7 @@
         "link": "https://www.beyondidentity.com/resource/what-is-push-bombing-and-how-beyond-identity-makes-it-impossible"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0054-004"
     ],

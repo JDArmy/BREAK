@@ -12,7 +12,7 @@
       "供应链风险"
     ],
     "summary": "2023年5月起，我国某智慧能源和数字信息大型高科技企业遭疑似美国情报机构网络攻击。攻击者利用微软Exchange漏洞，入侵控制该公司邮件服务器并植入后门程序，持续窃取邮件数据。随后以该邮件服务器为跳板，攻击控制该公司及其下属企业30余台设备，窃取大量商业秘密信息。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0081-002"
     ],
@@ -20,9 +20,13 @@
       {
         "title": "数据安全每周观察|国常会通过公共安全视频图像信息系统管理条例|规 ...",
         "link": "https://www.163.com/dy/article/JK36G43K0538SR5M.html"
+      },
+      {
+        "title": "CNCERT发现处置两起美对我大型科技企业机构网络攻击事件——国家互联网应急中心",
+        "link": "https://www.cert.org.cn/publish/main/8/2024/20241218184234131217571/20241218184234131217571_.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023-05",
     "relatedAttackTools": [
       "AT0054",

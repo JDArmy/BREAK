@@ -13,7 +13,7 @@
       "CVE"
     ],
     "summary": "Palo Alto Networks的研究报告显示，超过75%的医用输液泵存在已知安全漏洞，其中超过一半易受2019年公开的两个特定漏洞影响，凸显医疗设备更新周期长与安全风险增加的矛盾。",
-    "category": "security_incident",
+    "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0190"
     ],
@@ -27,7 +27,7 @@
         "link": "https://unit42.paloaltonetworks.com/infusion-pump-vulnerabilities/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2019"

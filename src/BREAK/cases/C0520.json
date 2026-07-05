@@ -12,7 +12,7 @@
       "逆向工程"
     ],
     "summary": "文章介绍了通过反编译工具对C#编写的软件进行逆向破解的方法：先使用反编译工具还原出软件源码，然后分析源码找到License验证位置，最后修改反编译代码以绕过授权验证。该方法直接针对软件的授权机制进行逆向破解。",
-    "category": "news_report",
+    "category": "academic_research",
     "relatedRisks": [
       "R0051"
     ],
@@ -22,7 +22,7 @@
         "link": "https://www.cnblogs.com/linybo/p/13358799.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2020-07",
     "relatedAttackTools": [
       "AT0028"

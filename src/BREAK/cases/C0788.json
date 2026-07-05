@@ -14,7 +14,7 @@
       "数据窃取"
     ],
     "summary": "2009年，美国国家安全局下属的特定入侵行动办公室（TAO）开始入侵华为总部的服务器并持续开展监控。2022年9月，又被发现长期持续地对包括西北工业大学在内的国内网络目标实施了上万次恶意网络攻击，控制了数以万计的网络设备，窃取大量高价值数据。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0081-002"
     ],
@@ -22,9 +22,13 @@
       {
         "title": "曝光!美国2009年就入侵华为总部服务器!美股跳水,疯狂做空,啥信号?|...",
         "link": "https://www.163.com/dy/article/IF31RMTR0517BMJU.html"
+      },
+      {
+        "title": "西北工业大学遭美国NSA网络攻击事件调查报告（之一）——国家计算机病毒应急处理中心",
+        "link": "https://www.cverc.org.cn/head/zhaiyao/news20220905-NPU.htm"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2009",
     "relatedAttackTools": [],
     "relatedThreatActors": [

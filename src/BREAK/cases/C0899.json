@@ -13,7 +13,7 @@
       "个人信息泄露"
     ],
     "summary": "2019年5月，黑客GnosticPlayers攻击澳大利亚科技公司Canva，通过撞库和凭证破解技术获取了1.39亿用户的登录凭证及个人信息。该黑客累计从不同平台窃取了近10亿用户数据。",
-    "category": "academic_research",
+    "category": "security_incident",
     "relatedRisks": [
       "R0090"
     ],
@@ -23,7 +23,7 @@
         "link": "https://ieeexplore.ieee.org/document/9799087/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2019-05",
     "relatedAttackTools": [
       "AT0042",

@@ -12,7 +12,7 @@
       "北京市丰台区人民法院"
     ],
     "summary": "北京市丰台区人民法院受理的案件中，原告李红被诈骗分子诱导下载恶意App并开启屏幕共享，获取其人脸视频及银行卡信息。诈骗分子利用假人脸视频攻破交通银行App的6次人脸识别验证，盗走账户内近43万元资金。",
-    "category": "criminal_verdict",
+    "category": "security_incident",
     "relatedRisks": [
       "R0048"
     ],
@@ -26,7 +26,7 @@
         "link": "https://new.qq.com/omn/20220803/20220803A07NNK00.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-08",
     "relatedAttackTools": [
       "AT0053-003",

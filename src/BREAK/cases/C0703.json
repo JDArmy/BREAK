@@ -13,7 +13,7 @@
       "API滥用"
     ],
     "summary": "一家北美在线零售商遭遇长达一个月的机器人攻击。黄牛机器人利用其公开API的漏洞，绕过正常流程，自动化抢购和囤积高需求商品，导致服务器成本飙升，合法顾客无法购买商品。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0070"
     ],
@@ -23,7 +23,7 @@
         "link": "https://www.imperva.com/blog/how-scalping-bots-exploited-a-vulnerable-api-to-disrupt-online-retail-sales/"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-05",
     "incidentTime": "2025-02",
     "relatedAttackTools": [
       "AT0061",

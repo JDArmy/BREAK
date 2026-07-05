@@ -14,7 +14,7 @@
       "worm-like propagation"
     ],
     "summary": "微软披露一起大规模npm供应链攻击活动，攻击者入侵@redhat-cloud-services相关包，在超过90个版本中植入恶意代码。该恶意软件利用npm预安装脚本机制，在CI/CD环境和开发者系统中静默执行，窃取GitHub、云平台及本地机器凭证，并通过重新发布受信任包实现蠕虫式传播。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0227",
       "R0228"
@@ -25,7 +25,7 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2026-06",
     "relatedAttackTools": [
       "AT0064",

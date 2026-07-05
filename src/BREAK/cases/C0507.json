@@ -11,7 +11,7 @@
       "GitHub Issue"
     ],
     "summary": "2021年，用户在GitHub上向Waydroid项目提出功能请求，探讨如何让Android模拟器在设备特征上无法与普通日常设备区分开来，即实现模拟器检测绕过。",
-    "category": "vulnerability_advisory",
+    "category": "news_report",
     "relatedRisks": [
       "R0050-001"
     ],
@@ -21,7 +21,7 @@
         "link": "https://github.com/casualsnek/waydroid_script/issues/198"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2021-01",
     "relatedAttackTools": [
       "AT0002",

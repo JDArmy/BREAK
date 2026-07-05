@@ -80,7 +80,7 @@ describe("relationBusinessSceneImpact", () => {
           expect.objectContaining({
             id: "R0005-001",
             sourceFields: expect.arrayContaining([
-              "AttackTool.directCauseRisks",
+              "AttackTool.indirectSupportRisks",
             ]),
           }),
         ]),
@@ -195,7 +195,7 @@ describe("relationBusinessSceneImpact", () => {
       expect.arrayContaining([
         expect.objectContaining({
           id: "R0005-001",
-          sourceFields: expect.arrayContaining(["AttackTool.directCauseRisks"]),
+          sourceFields: expect.arrayContaining(["AttackTool.indirectSupportRisks"]),
         }),
       ]),
     );

@@ -11,7 +11,7 @@
       "卖家违规"
     ],
     "summary": "淘宝卖家在重复铺货情形中多次违规，会被删除商品、下架店铺内所有商品、限制发布商品、限制商品发布数量、限制发布类目数量等。同一卖家重复铺货会严重干扰店铺正常运营。",
-    "category": "news_report",
+    "category": "administrative_enforcement",
     "relatedRisks": [
       "R0063"
     ],
@@ -19,9 +19,13 @@
       {
         "title": "淘宝网重复铺货规则实施细则",
         "link": "https://rulechannel.taobao.com/?type=detail&ruleId=11000115"
+      },
+      {
+        "title": "淘宝网滥发信息实施细则（重复铺货）",
+        "link": "https://rule.taobao.com/tdetail-2014.htm"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

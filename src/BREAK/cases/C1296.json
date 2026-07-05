@@ -12,7 +12,7 @@
       "内部系统"
     ],
     "summary": "据2025年12月报道，某企业客户曾监控到其部署的AI智能体被诱导越权输出数据库数据。该行为不仅存在于对外开放的智能应用，也发生在内部系统中。攻击者通过提示注入等方式操纵智能体，使其调用数据库工具执行非授权查询，导致敏感数据泄露。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0148"
     ],
@@ -22,7 +22,7 @@
         "link": "https://new.qq.com/rain/a/20251223A030TR00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2025-12",
     "relatedAttackTools": [
       "AT0093"

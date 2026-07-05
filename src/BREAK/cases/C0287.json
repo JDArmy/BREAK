@@ -14,7 +14,7 @@
       "网络黑灰产"
     ],
     "summary": "2021年10月，广西来宾警方公布破获广西首例短信轰炸案件。犯罪嫌疑人卓某健代理“呼死你”短信轰炸服务，发展下线超450人，其中一代理实施短信轰炸500多万条。该黑产利用爬虫搜集大量企业网站短信接口，集成到轰炸软件，短时间内向目标手机发送大量验证短信，单日全网轰炸短信达160万余次。",
-    "category": "criminal_verdict",
+    "category": "news_report",
     "relatedRisks": [
       "R0029-001"
     ],
@@ -24,7 +24,7 @@
         "link": "https://www.thepaper.cn/newsDetail_forward_14923193"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2021-10",
     "relatedAttackTools": [
       "AT0005"

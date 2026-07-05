@@ -11,7 +11,7 @@
       "安全研究"
     ],
     "summary": "安全研究人员在GitHub上公开了用于暴力破解OTP的专用字典文件，包含4位、5位和6位数字验证码的所有可能组合。这些载荷可用于对缺乏速率限制的应用程序进行暴力破解测试或攻击。",
-    "category": "security_incident",
+    "category": "news_report",
     "relatedRisks": [
       "R0032-004"
     ],
@@ -21,7 +21,7 @@
         "link": "https://github.com/iamtutu/OTP_bruteforce_payloads"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0068"
     ],

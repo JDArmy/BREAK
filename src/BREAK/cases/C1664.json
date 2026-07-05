@@ -12,7 +12,7 @@
       "批量请求"
     ],
     "summary": "该项目展示了一个针对金融科技API的凭证填充攻击缓解方案。攻击者通过Python脚本模拟对Flask API的登录端点发起批量凭证填充攻击，试图耗尽目标系统的认证资源。项目利用AWS WAF的基于速率的规则来限制API请求频率，并配置CloudWatch日志进行监控，以阻止或限制可疑的批量请求活动。",
-    "category": "security_incident",
+    "category": "academic_research",
     "relatedRisks": [
       "R0224"
     ],
@@ -22,7 +22,7 @@
         "link": "https://github.com/Mujidatdada/credential-stuffing-mitigation"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0023",
       "AT0061"

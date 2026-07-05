@@ -13,7 +13,7 @@
       "反不正当竞争法"
     ],
     "summary": "作业帮公司员工在向案外公司客户进行一对一电话访谈中提供了涉案数据，并允许对方使用。法院认定该行为违反保密义务，披露、允许他人使用其所掌握的商业秘密，侵犯了作业帮公司的商业秘密。该案涉及客服或业务场景下客户相关经营数据被外泄。",
-    "category": "criminal_verdict",
+    "category": "security_incident",
     "relatedRisks": [
       "R0078-002"
     ],
@@ -23,7 +23,7 @@
         "link": "https://www.chinacourt.org/article/detail/2023/05/id/7298607.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [

@@ -14,7 +14,7 @@
       "IEEE论文"
     ],
     "summary": "Deus Finance遭遇预言机操纵攻击，攻击者通过大额交易操纵预言机数据，导致协议发生一系列错误清算。攻击者随后利用价格差异进行套利交易，从中获利超过300万美元。该事件被IEEE论文引用为典型的多交易预言机操纵攻击案例。",
-    "category": "academic_research",
+    "category": "security_incident",
     "relatedRisks": [
       "R0169"
     ],
@@ -24,7 +24,7 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/10646773/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0076",
       "AT0077"

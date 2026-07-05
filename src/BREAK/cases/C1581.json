@@ -13,7 +13,7 @@
       "恶意固件"
     ],
     "summary": "2024年9月，黎巴嫩真主党成员使用的数千台对讲机在同一时间发生爆炸，造成大量人员伤亡。该事件被广泛认为是典型的硬件供应链攻击案例，攻击者疑似在通信设备的供应链环节（如生产或运输过程中）植入爆炸装置或恶意固件，实现了对物联网设备的物理破坏和远程触发，凸显了硬件供应链安全的脆弱性。",
-    "category": "news_report",
+    "category": "security_incident",
     "relatedRisks": [
       "R0206"
     ],
@@ -21,9 +21,13 @@
       {
         "title": "打开“潘多拉盒子”，展现攻击新形态，“供应链攻击”让全球担心不已",
         "link": "https://www.news.cn/milpro/20240923/0ba2caaff4414225a3c2f91bfa405920/c.html"
+      },
+      {
+        "title": "2024 Lebanon electronic device attacks - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/2024_Lebanon_electronic_device_attacks"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-09",
     "relatedAttackTools": [
       "AT0081"

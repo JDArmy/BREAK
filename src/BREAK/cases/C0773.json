@@ -13,7 +13,7 @@
       "OSCCA"
     ],
     "summary": "为遵守中国密码法，关键基础设施运营商必须使用经国家密码管理局批准的商用密码算法（如SM2、SM3、SM4）。该要求旨在确保国家安全和减少对外国技术的依赖，不遵守此规定可能导致组织面临法规遵从性风险。",
-    "category": "academic_research",
+    "category": "news_report",
     "relatedRisks": [
       "R0079"
     ],
@@ -23,7 +23,7 @@
         "link": "https://dl.acm.org/doi/10.1109/COMM48946.2020.9142035"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2020"

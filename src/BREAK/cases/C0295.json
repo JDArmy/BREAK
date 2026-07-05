@@ -12,7 +12,7 @@
       "流量清洗"
     ],
     "summary": "腾讯云开发者社区文章描述了域名业务面临的DDoS和CC攻击。DDoS攻击通过“人海战术”挤占服务器带宽，CC攻击则通过大量伪装合法的请求消耗服务器CPU和连接资源，最终导致服务器资源耗尽、服务瘫痪。文章提供了从监控到治理的全流程防护指南。",
-    "category": "news_report",
+    "category": "academic_research",
     "relatedRisks": [
       "R0029-002"
     ],
@@ -22,7 +22,7 @@
         "link": "https://cloud.tencent.com/developer/article/2472259"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2025-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []

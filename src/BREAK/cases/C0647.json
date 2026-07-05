@@ -12,7 +12,7 @@
       "合法解雇"
     ],
     "summary": "深圳某公司员工梁某因工作疏忽，将包含合作公司商业秘密的邮件错发给他人，导致公司商业秘密泄露。公司依据《保密协议》和《员工手册》解除其劳动合同。法院审理认定，梁某未尽谨慎注意义务，公司解除劳动合同合法，无需支付赔偿金。",
-    "category": "criminal_verdict",
+    "category": "security_incident",
     "relatedRisks": [
       "R0065"
     ],
@@ -22,7 +22,7 @@
         "link": "https://www.gdzf.org.cn/yasf/content/post_162596.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [

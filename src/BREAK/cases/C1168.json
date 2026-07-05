@@ -13,7 +13,7 @@
       "authorization failure"
     ],
     "summary": "该文档指出API枚举攻击是攻击者通过顺序或可预测标识符系统性地探测API端点，以发现和访问未授权资源。攻击者常操纵对象标识符（如用户ID、订单号）绕过授权访问他人数据，这属于OWASP API安全Top 10中的BOLA漏洞。检测需监控快速顺序访问模式、授权失败及异常API使用行为。",
-    "category": "academic_research",
+    "category": "security_incident",
     "relatedRisks": [
       "R0126-001"
     ],
@@ -23,7 +23,7 @@
         "link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/detecting-api-enumeration-attacks/SKILL.md"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0061-001"
     ],
