@@ -21,7 +21,7 @@
       }
     ],
     "description": "AIoT convergence attacks target IoT devices that use AI for perception, inference, or automated control. Attackers may use adversarial inputs, sensor spoofing, model poisoning, or firmware tampering to influence decisions and actions.\n\nWhen AIoT is used in access control, traffic, healthcare, industrial, or home automation, data-layer attacks can produce physical consequences. Protection must combine model robustness, device identity, trusted data, and execution safety.\n\nLimitation: Requires deep understanding of AI models and IoT systems",
-    "influence": "AIoT manipulation can turn model or sensor attacks into unsafe physical actions in homes, factories, healthcare, or transport systems.",
+    "influence": "Adversarial examples and model poisoning cause systematic AIoT misjudgments that translate into physical-safety incidents in access control, autonomous driving, medical devices, and industrial control, leading to irreversible consequences such as injuries, equipment damage, and production downtime; sensor spoofing and firmware tampering enable persistent covert control, causing critical-infrastructure outages and privacy-data leakage.",
     "riskAssessment": {
       "observables": [
         "AIoT device sensor inputs show regular anomalies causing decision outputs that diverge from expectations",

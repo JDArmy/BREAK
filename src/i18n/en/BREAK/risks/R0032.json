@@ -83,7 +83,7 @@
     "title": "Credential Brute Force",
     "definition": "Attempting to log in by brute-forcing a list of possible passwords for a specific account to obtain valid credentials.",
     "description": "Using brute force, dictionary (word list), and guessing attacks against the application's authentication process to identify the weak credentials used by a specific account — for example, enumerating a user's password.",
-    "influence": "Through unrestricted credential attacks, attackers may gain access to users with weak passwords on the current system, causing losses through further operations.",
+    "influence": "After gaining full control of the target account, attackers can steal funds, virtual assets, and private data, and launch secondary phishing, fraud, or bulk account-farming operations; the abnormal login traffic consumes server resources and triggers account lockouts that degrade login experience for legitimate users, and account takeover can spread laterally to linked business platforms, causing compounding losses.",
     "references": [
       {
         "title": "OWASP Automated Threat: OAT007 Credential Cracking",

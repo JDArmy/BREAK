@@ -115,7 +115,7 @@
     "title": "Malicious Refusal of Delivery",
     "definition": "A buyer refuses to accept goods for retaliatory or disruptive purposes, occupying or consuming the seller's supply chain resources and causing financial loss.",
     "description": "A typical malicious attack scenario: a buyer purchases large items such as appliances, electronics, construction materials, or tires, then goes unreachable or refuses delivery when the courier arrives, occupying and consuming the seller's supply chain costs.",
-    "influence": "Causes supply chain losses to the seller.",
+    "influence": "Maliciously refused large items incur round-trip reverse logistics, warehousing, and depreciation costs of tens to hundreds of yuan per order; goods stranded at end delivery points tie up inventory and capital, and large-scale refusals push up the seller's return-rate metrics and trigger platform demotion and traffic limits, also degrading delivery timeliness and stock availability for legitimate users.",
     "references": [
       {
         "title": "Ministry of Public Security Announces Top 10 Financial Black-Grey Market Crime Cases",

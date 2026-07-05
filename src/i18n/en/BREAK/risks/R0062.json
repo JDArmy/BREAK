@@ -3,7 +3,7 @@
     "title": "Illegal Cash-Out",
     "definition": "Converting funds into a more convenient or valuable form through fraudulent transactions, using the extracted funds for illegal or prohibited purposes.",
     "description": "Refers to converting one form of funds into another more usable or valuable form. This typically involves converting non-cash assets such as credit card limits, points, coupons, or virtual currencies into cash. For example, some people may use a credit card to purchase returnable goods and then return them for cash. Others may sell virtual currencies on trading platforms to convert them into cash.",
-    "influence": "Causes financial losses and compliance risks for the platform.",
+    "influence": "Cash-out funds with no real transaction backing flow into restricted sectors such as real estate and gambling, disrupting financial order and weakening AML monitoring effectiveness; the platform bears refund and chargeback losses from fraudulent transactions, credit-card cash-outs degrade issuing-bank asset quality and raise non-performing loans, and large-scale cash-outs trigger regulatory penalties, payment-license revocation, and other criminal and compliance risks.",
     "references": [
       {
         "title": "Tighter Credit Card Fund Controls: Further Crackdown on Illegal Cash-Out",
@@ -31,7 +31,7 @@
     "title": "Credit Card / Loan Cash-Out",
     "definition": "Exploiting platform mechanisms to cash out credit card limits or shopping loans.",
     "description": "Exploiting platform business process vulnerabilities to withdraw shopping loans to a bank card, or colluding between buyers and sellers to fake shipments and extract shopping loan funds.",
-    "influence": "Causes financial losses and compliance risks for the platform.",
+    "influence": "Credit card limits or shopping-loan funds are fraudulently withdrawn and diverted from consumption purposes, leaving card issuers and the platform with fund losses and non-performing-loan risk; fraudulent refund transactions create platform advance-payment and channel-chargeback costs, and large-scale cash-outs trigger regulatory interviews, payment-channel downgrades, and credit-card compliance penalties.",
     "references": [
       {
         "title": "Stronger Supervision on Credit Card Fund Use and Cash-Out Violations",

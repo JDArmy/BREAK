@@ -256,7 +256,7 @@
     "definition": "通过暴力枚举特定账号的可能密码列表尝试登陆，得到有效身份凭证。",
     "description": "通过蛮力、字典（单词列表）和猜测攻击等方式对应用程序的身份验证过程进行暴力枚举来识别特定账户使用的脆弱帐户凭据，譬如枚举某用户的密码。",
     "complexity": "advanced",
-    "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得当前系统上使用脆弱密码的用户权限，通过进一步操作对当前系统用户造成损失。",
+    "influence": "攻击者获得目标账户的完整控制权后可盗取账户资金、虚拟资产与隐私数据，并发起二次钓鱼、欺诈或批量注册养号；爆破产生的异常登录请求消耗服务器资源并触发账号锁定，影响正常用户登录体验，账户接管还可能横向扩散到关联业务平台造成连锁损失。",
     "avoidances": [
       "A0001",
       "A0002",
@@ -280,7 +280,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "凭证爆破",
       "密码爆破",

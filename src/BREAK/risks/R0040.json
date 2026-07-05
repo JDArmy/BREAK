@@ -4,7 +4,7 @@
     "definition": "通过批量登陆认证，验证被盗支付卡凭证有效性。",
     "description": "通过商家完整的登陆凭证验证流程，完成被盗支付卡或账号的有效性。由于被盗账号价值未知，撞卡攻击可进行支付卡价值评估。相关登陆凭证数据来源可能是第三方应用泄露，第三方支付渠道泄露，或者从黑市购买。",
     "complexity": "intermediate",
-    "influence": "支付卡或账号凭证信息被盗取。",
+    "influence": "导致持卡人资金被盗刷、账户余额或信用额度被消费，造成直接资金损失；验证有效的卡号凭证流入黑市后被二次倒卖，放大盗刷规模；商家和支付平台承担拒付赔款、风控审核与合规调查成本，并面临发卡行拒付率上升带来的通道资质风险。",
     "avoidances": [
       "A0002",
       "A0004",
@@ -38,7 +38,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-001_Carding.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "撞卡攻击",
       "Carding",

@@ -3,7 +3,7 @@
     "title": "Carding Attack",
     "definition": "Verifying the validity of stolen payment card credentials through bulk login authentication.",
     "description": "Using a merchant's complete login credential verification process to validate stolen payment cards or accounts. Since the value of stolen accounts is unknown, carding attacks can be used to assess payment card value. The source of credential data may be third-party application breaches, third-party payment channel leaks, or purchases from black markets.",
-    "influence": "Payment card or account credential information is stolen.",
+    "influence": "Cardholders suffer direct financial losses from fraudulent transactions and drained balances or credit lines; validated card credentials are resold on black markets, amplifying the scale of downstream fraud; merchants and payment platforms bear chargeback losses, fraud-review and compliance-investigation costs, and face acquiring-channel qualification risk as chargeback rates rise.",
     "references": [
       {
         "title": "OWASP Automated Threat: OAT001 Carding",

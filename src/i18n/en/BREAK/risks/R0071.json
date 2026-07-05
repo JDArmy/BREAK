@@ -63,7 +63,7 @@
     "title": "AIGC Compliance Risk",
     "definition": "AI-generated content may contain illegal, non-compliant, or unethical material.",
     "description": "Large language model content compliance risks mainly include: misleading information, discriminatory content, privacy violations, malicious misuse, intellectual property issues, regulatory compliance issues, and lack of transparency. These risks may lead to the spread of false information, discriminatory speech, privacy violations, malicious misuse, and regulatory non-compliance.",
-    "influence": "AIGC compliance risks may create compliance risks for the platform and increase the volume of customer complaints.",
+    "influence": "AI-generated content involving politics, pornography, discrimination, or infringement violates the Interim Measures for Generative AI Services and content-labeling requirements, exposing the platform to administrative penalties such as warnings, confiscation of illegal gains, and suspension or termination of services; dissemination of unlawful content triggers public-relations crises and surging complaints, IP and privacy infringement bring civil litigation, and training-data compliance defects may force product takedowns and rectification.",
     "references": [
       {
         "title": "Interim Measures for the Management of Generative Artificial Intelligence Services - Gov.cn",
