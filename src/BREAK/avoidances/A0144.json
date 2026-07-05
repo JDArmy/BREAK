@@ -8,11 +8,15 @@
     "limitation": "软件方法效果有限，可能影响性能，难以完全消除泄露；恒定时间实现仍可能被缓存时序、分支预测等高级侧信道攻击突破，攻击者通过模拟器、可控环境放大时序差异即可规避混淆与掩码防护。",
     "references": [
       {
-        "title": "Hardware Security Best Practices",
-        "link": "https://www.embedded.com/"
+        "title": "CWE-208: Observable Timing Discrepancy - MITRE",
+        "link": "https://cwe.mitre.org/data/definitions/208.html"
+      },
+      {
+        "title": "防御电压侧信道黑客攻击的IP - 安全客",
+        "link": "https://www.anquanke.com/post/id/285863"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "软件层侧信道缓解",
       "恒定时间",

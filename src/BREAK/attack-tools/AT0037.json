@@ -4,8 +4,12 @@
     "description": "将手机当前状态、数据、设备指纹等进行全方位备份，并在需要时进行恢复。这种工具能够备份目标 App 在运行时候已经产生的所有文件，然后在一款新设备中再还原这些文件，以欺骗 APP 服务端该账号一直是在同一台设备中操作，这样就能慢慢提高账号权限，作养号和用户留存使用。",
     "references": [
       {
-        "title": "对风险用户\"从不信任\"，设备指纹的防篡改指南",
-        "link": "https://m.sohu.com/a/570000331_100119612/"
+        "title": "一部手机同时操作多账号？改机工具比特指纹手机原理分析及处置建议 - 澎湃新闻",
+        "link": "https://m.thepaper.cn/newsDetail_forward_22851310"
+      },
+      {
+        "title": "浅谈设备指纹技术和应用 - 安全脉搏",
+        "link": "https://www.secpulse.com/archives/180489.html"
       }
     ],
     "avoidances": [

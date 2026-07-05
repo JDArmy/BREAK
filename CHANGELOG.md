@@ -1,5 +1,20 @@
 # Change log
 
+## 2.42.17
+
+修复 references 评审 112 个 fail 实体（标题不符 + 缺权威源），起 4 批 subagent 用 Scrapingdog 搜索权威替换/补充源。
+
+- **112 个实体全部修复**（216 文件中英文同步）：
+  - Risk 21：R0007-003 阿里妈妈细则、R0012 两高司法解释、R0052 市监总局价格欺诈规定、R0060 反洗钱法、R0082 最高检通报、R0260 拆单套费判决等。
+  - Avoidance 17：A0015 风控国标、A0016-003 信通院号码标记、A0029-002 Spamhaus、A0105 BIP38、A0222 市监总局抽检等。
+  - AttackTool 8：AT0013-001 Check Point、AT0034-002 中新网秒拨IP案、AT0038 北知院租号案、AT0045 最高法票务反挂案等。
+  - ThreatActor 5：TA0001-001 公安部黑灰产案例、TA0028 游戏外挂团伙案等。
+  - Term 18：T0288/T0289/T0300 最高检裸聊/资金盘/键盘手案、T0474 爬虫最高检+海淀法院、T0482 反垄断法、T0558 银保监会套现通知等。
+  - Case 43：C0338 上海检察、C0432 江西政法网、C0784 NVD+GitHub Advisory、C0773 国家密码管理局等。
+- 大量替换为 .gov.cn/court/检察院/国标/安全厂商等一手 primary 源，高价值 Case 补足 ≥2 源含 primary。
+- 中英文 references 同步，Python/Node 直接 IO 避免数字串脱敏，英文 title 翻译清除中文残留。
+- references 评审已评 2175/3200（被 killed 前进度），剩余 1025 靠增量门禁后续补。
+
 ## 2.42.16
 
 修复 references 标题不符 18 个实体 + case-relation 重评验证（fail 254→65，降 74%）。

@@ -19,11 +19,15 @@
     ],
     "references": [
       {
-        "title": "兰空图床 Lsky Pro - GitHub",
+        "title": "Lsky Pro 兰空图床源码仓库（开源项目，用户可基于此修改源码解除上传限制）",
         "link": "https://github.com/lsky-org/lsky-pro"
+      },
+      {
+        "title": "Lsky Pro 兰空图床官方文档（原生仅支持图片上传，魔改可解除限制支持视频）",
+        "link": "https://docs.lsky.pro/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0010"

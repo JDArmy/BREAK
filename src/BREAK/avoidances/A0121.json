@@ -8,11 +8,15 @@
     "limitation": "自动化分析可能产生误报或漏报；需要24/7人工值守和社区参与；应急机制可能被滥用；监控和响应基础设施成本高；对新型攻击手法检测能力有限",
     "references": [
       {
-        "title": "Prevent DAO Governance Takeover Attacks",
-        "link": "https://www.guardrail.ai/common-attack-vectors/governance-takeover-attacks"
+        "title": "How to set up on-chain governance - OpenZeppelin Docs",
+        "link": "https://docs.openzeppelin.com/contracts/5.x/governance"
+      },
+      {
+        "title": "DAO迈向抗捕获治理框架 - 网易",
+        "link": "https://dy.163.com/article/GVQAJ4E0055262WG.html"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-05",
     "keywords": [
       "DAO治理提案监控与应急响应",
       "提案监控",

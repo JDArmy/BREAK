@@ -13,8 +13,12 @@
     "summary": "A technical guide detailing how to modify the source code of Lsky Pro image hosting service to support all-format file uploads instead of images only, and to enable front-end video playback. The guide demonstrates how a normal image hosting service can be repurposed for video storage and playback, representing a typical technical implementation of image host abuse risks.",
     "references": [
       {
-        "title": "Lsky Pro Image Hosting - GitHub",
+        "title": "Lsky Pro (Lan Kong) source code repository — open-source project users fork to remove upload limits",
         "link": "https://github.com/lsky-org/lsky-pro"
+      },
+      {
+        "title": "Lsky Pro official documentation — natively image-only, modding enables video support",
+        "link": "https://docs.lsky.pro/"
       }
     ]
   }

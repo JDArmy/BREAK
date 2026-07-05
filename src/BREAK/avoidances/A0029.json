@@ -67,8 +67,12 @@
     "limitation": "数据质量问题：用户画像技术需要大量的数据支持，如果数据质量不高，就会影响画像的准确性。数据隐私问题：用户画像技术需要收集大量的用户数据，如果处理不当，就会涉及到用户隐私问题。时效性问题：用户画像技术是基于历史数据进行分析和预测的，如果数据过时或者不准确，就会影响画像的时效性。",
     "references": [
       {
-        "title": "Persona (user experience) - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Persona_(user_experience)"
+        "title": "中华人民共和国个人信息保护法 - 中国网信网",
+        "link": "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+      },
+      {
+        "title": "GB/T 35273-2020 信息安全技术 个人信息安全规范",
+        "link": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E"
       }
     ],
     "updated": "2026-07-05",
@@ -123,8 +127,12 @@
     "limitation": "黑产可借助住宅代理池、拨号ADSL频繁切换出口IP绕过IP画像封禁，IPV6普及后地址海量稀释也使画像基线难以维持；同时正常用户共享NAT出口IP容易误判误封，移动运营商出口IP难以直接拉黑。",
     "references": [
       {
-        "title": "Spamhaus DROP（Don't Route Or Peer）IP威胁列表",
-        "link": "https://www.spamhaus.org/blocklists/do-not-route-or-peer/"
+        "title": "IP风险画像技术原理介绍",
+        "link": "https://bd.ipdatacloud.com/news/353.html"
+      },
+      {
+        "title": "使用Python实现自动化查询IP威胁情报 - FreeBuf",
+        "link": "https://www.freebuf.com/articles/network/370394.html"
       }
     ],
     "updated": "2026-07-05",
@@ -179,8 +187,12 @@
     "limitation": "设备画像是设备指纹（A0021）的延伸，如果设备指纹不准确，设备画像也会受到影响。此外，设备画像的准确性还受到设备画像算法的影响。",
     "references": [
       {
-        "title": "Device fingerprint - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
+        "title": "对风险用户从不信任，设备指纹的防篡改指南 - 搜狐",
+        "link": "https://m.sohu.com/a/570000331_100119612/"
+      },
+      {
+        "title": "浅谈设备指纹技术和应用 - 安全脉搏",
+        "link": "https://www.secpulse.com/archives/180489.html"
       }
     ],
     "updated": "2026-07-05",

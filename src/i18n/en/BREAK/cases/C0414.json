@@ -14,8 +14,12 @@
     "summary": "Google's Threat Analysis Group disclosed that a group of Russian-speaking hackers has been sending phishing emails to distribute malware and steal browser session cookies since late 2019. Even with multi-factor authentication enabled, attackers can hijack accounts using the stolen session cookies, bypassing MFA protection.",
     "references": [
       {
-        "title": "US Treasury Secretary Says Ransomware Threatens Economy, Google Warns 2 Billion Chrome Users |...",
-        "link": "https://new.qq.com/omn/20211022/20211022A06FN600.html"
+        "title": "Google TAG: Phishing campaign targets YouTube creators with cookie theft malware",
+        "link": "https://blog.google/threat-analysis-group/phishing-campaign-targets-youtube-creators-cookie-theft-malware/"
+      },
+      {
+        "title": "US Treasury Secretary says ransomware poses a threat to the economy; Google warns 2 billion Chrome users | FreeBuf",
+        "link": "https://www.freebuf.com/news/292551.html"
       }
     ]
   }

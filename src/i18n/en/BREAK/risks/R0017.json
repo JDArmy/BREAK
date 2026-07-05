@@ -105,8 +105,12 @@
     ],
     "references": [
       {
-        "title": "PCI Data Security Standard",
-        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+        "title": "Interpretation of the SPC and SPP on Several Issues Concerning the Application of Law in Handling Criminal Cases of Obstructing Credit Card Management (cash-out conviction) - Supreme People's Court",
+        "link": "https://www.court.gov.cn/fabu/xiangqing/132701.html"
+      },
+      {
+        "title": "Interpretation of the SPC and SPP on Several Issues Concerning the Application of Law in Handling Criminal Cases of Illegally Engaging in Fund Payment and Settlement Business and Illegal Foreign Exchange Trading - Supreme Court Gazette",
+        "link": "http://gongbao.court.gov.cn/Details/42c76a3ebd3f30981d4a0dc5e34891.html"
       }
     ],
     "description": "Merchant cash-out and fake transaction fraud uses fake orders, circular transactions, linked accounts, or abnormal refunds to convert payment rails and platform subsidies into cash. Attackers may coordinate as merchants and buyers.\n\nThe fraud pollutes transaction data, increases payment channel risk, and may trigger anti-money-laundering obligations. Risk control needs to link merchants, buyers, devices, funds, and fulfillment evidence.",

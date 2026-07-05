@@ -41,8 +41,12 @@
     "description": "As a dynamic dial-up implementation of AT0034-001 proxy IPs, a 'second-dial IP' exploits the fact that home broadband connections obtain a new IP address each time they reconnect. Criminals rent large numbers of home broadband lines and rapidly generate millions of IP addresses to form an 'IP pool', which is then provided to cybercrime groups. The resulting massive volume of IP addresses circumvents normal IP-based restrictions, making it extremely difficult for law enforcement to trace criminal activity.",
     "references": [
       {
-        "title": "China's First Case: Yunnan Cracks Down on Second-Dial IP Pool Resources Aiding Cybercrime",
+        "title": "China's First Case: Yunnan Busts Second-dial IP Pool Aiding Cybercrime - Chinanews",
         "link": "https://www.chinanews.com.cn/m/sh/2021/01-27/9398171.shtml"
+      },
+      {
+        "title": "Decoding the High-frequency IP Switching Black Market Exposed by 3.15 Gala - NetEase",
+        "link": "https://www.163.com/dy/article/ITSR0C9P0518STKV.html"
       }
     ],
     "keywords": [

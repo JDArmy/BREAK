@@ -27,8 +27,12 @@
     "limitation": "Data quality issues: user profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: user profiling requires collecting large amounts of user data; if not handled properly, it will involve user privacy concerns. Timeliness issues: user profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
     "references": [
       {
-        "title": "Persona (user experience) - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Persona_(user_experience)"
+        "title": "Personal Information Protection Law of the People’s Republic of China - Cyberspace Administration of China",
+        "link": "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+      },
+      {
+        "title": "GB/T 35273-2020 Information Security Technology - Personal Information Security Specification",
+        "link": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E"
       }
     ],
     "keywords": [
@@ -44,8 +48,12 @@
     "limitation": "Malicious actors can bypass IP profiling blocks by leveraging residential proxy pools and frequent ADSL dial-up IP rotation. The massive dilution of addresses after IPv6 adoption also makes profiling baselines difficult to maintain. Meanwhile, legitimate users sharing NAT egress IPs are prone to false positives and false blocks, and mobile carrier egress IPs are difficult to directly blacklist.",
     "references": [
       {
-        "title": "Spamhaus DROP (Don't Route Or Peer) IP Threat List",
-        "link": "https://www.spamhaus.org/blocklists/do-not-route-or-peer/"
+        "title": "IP Risk Profiling Technical Principles",
+        "link": "https://bd.ipdatacloud.com/news/353.html"
+      },
+      {
+        "title": "Automated IP Threat Intelligence Query with Python - FreeBuf",
+        "link": "https://www.freebuf.com/articles/network/370394.html"
       }
     ],
     "keywords": [
@@ -61,8 +69,12 @@
     "limitation": "Device profiling is an extension of device fingerprinting (A0021). If the device fingerprint is inaccurate, the device profile will also be affected. Additionally, the accuracy of device profiling is influenced by the device profiling algorithm.",
     "references": [
       {
-        "title": "Device fingerprint - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
+        "title": "Never Trust Risky Users: Device Fingerprint Anti-Tampering Guide - Sohu",
+        "link": "https://m.sohu.com/a/570000331_100119612/"
+      },
+      {
+        "title": "Overview of Device Fingerprint Technology and Applications - SecPulse",
+        "link": "https://www.secpulse.com/archives/180489.html"
       }
     ],
     "keywords": [

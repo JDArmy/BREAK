@@ -4,8 +4,12 @@
     "description": "在黑灰产领域，手机卡商是指那些专门从事非法或欺诈性手机卡交易的个体或组织。他们可能涉及销售未经注册的SIM卡、窃取他人身份信息以办理手机卡，或者提供虚假身份信息以规避法规限制。这些卡商主要在黑市或暗网上提供这些服务，通常吸引寻求隐匿身份、逃避监管或从事违法活动的个人或组织作为客户。这种行为对通信网络安全和用户隐私构成威胁，也可能违反法规规定。",
     "references": [
       {
-        "link": "https://www.reddit.com/r/chinalife/comments/l377bn/is_china_telecom_trying_to_scam_me/",
-        "title": "Is China telecom trying to scam me? : r/chinalife - Reddit"
+        "title": "一文读懂两卡犯罪：仅出售自己手机卡一般不作为犯罪处理 - 澎湃新闻",
+        "link": "https://www.thepaper.cn/newsDetail_forward_13503170"
+      },
+      {
+        "title": "一文读懂两卡犯罪：仅出售自己手机卡一般不作为犯罪处理 - 新浪财经",
+        "link": "http://finance.sina.com.cn/jjxw/2021-07-08/doc-ikqcfnca5735136.shtml"
       }
     ],
     "buildAttackTools": [
@@ -56,7 +60,7 @@
       "R0072-001",
       "R0071-009"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "卡商（手机号）",
       "手机卡商",

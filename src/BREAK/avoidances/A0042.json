@@ -63,8 +63,12 @@
     "limitation": "DOM随机化对于采用OCR方式识别和操纵页面元素的攻击方式无效",
     "references": [
       {
-        "title": "OWASP Automated Threats to Web Applications",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+        "title": "一种针对WEB前端混淆防护的通用对抗方法 - 腾讯云开发者社区",
+        "link": "https://cloud.tencent.com/developer/article/1628572"
+      },
+      {
+        "title": "前端JS攻防对抗 - 先知社区",
+        "link": "https://xz.aliyun.com/news/10792"
       }
     ],
     "updated": "2026-07-05",

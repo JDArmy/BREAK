@@ -231,8 +231,12 @@
     "limitation": "客户端内置的协议解析逻辑可被攻击者通过反编译、HOOK远程请求函数、Frida等动态注入工具还原，一旦算法或密钥被提取即可批量伪造合法报文，所有基于自定义协议的防护随之失效；同时该手段不适用于浏览器网页访问场景，且客户端与服务端协议版本不一致会引起通信失败，维护和灰度成本较高。",
     "references": [
       {
-        "title": "OWASP Cryptographic Storage Cheat Sheet",
-        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html"
+        "title": "Android APP 抓包学习笔记 - 看雪论坛",
+        "link": "https://bbs.kanxue.com/thread-290332.htm"
+      },
+      {
+        "title": "Android https 过反抓包的一些总结 - 安全客",
+        "link": "https://www.anquanke.com/post/id/201219"
       }
     ],
     "updated": "2026-07-05",

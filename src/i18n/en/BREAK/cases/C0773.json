@@ -15,8 +15,16 @@
     "summary": "To comply with China's Cryptography Law, critical infrastructure operators must adopt commercial cryptographic algorithms approved by the State Cryptography Administration, such as SM2, SM3, and SM4. The requirement aims to safeguard national security and reduce reliance on foreign technology, with non-compliance potentially exposing organizations to regulatory risk.",
     "references": [
       {
-        "title": "On the Design and Performance of Chinese OSCCA-Approved Cryptographic Algorithms",
-        "link": "https://dl.acm.org/doi/10.1109/COMM48946.2020.9142035"
+        "title": "Cryptography Law of the People's Republic of China (State Cryptography Administration)",
+        "link": "https://www.sca.gov.cn/sca/xxgk/2023-06/04/content_1057225.shtml"
+      },
+      {
+        "title": "Provisions on the Administration of Commercial Cryptography Use in Critical Information Infrastructure (State Cryptography Administration, Cyberspace Administration of China, Ministry of Public Security Order No. 5)",
+        "link": "http://sca.gov.cn/sca/xxgk/2025-06/27/content_1061270.shtml"
+      },
+      {
+        "title": "Provisions on the Administration of Commercial Cryptography Use in Critical Information Infrastructure (Office of the Central Cyberspace Affairs Commission)",
+        "link": "https://www.cac.gov.cn/2025-07/01/c_1753083518894995.htm"
       }
     ]
   }

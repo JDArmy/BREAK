@@ -10,8 +10,12 @@
     ],
     "references": [
       {
-        "title": "Smart Contract Permission Separation",
-        "link": "https://www.guardrail.ai/common-attack-vectors/governance-takeover-attacks"
+        "title": "How to set up on-chain governance - OpenZeppelin Docs",
+        "link": "https://docs.openzeppelin.com/contracts/5.x/governance"
+      },
+      {
+        "title": "DAO Moves Toward Capture-Resistant Governance Framework - NetEase",
+        "link": "https://dy.163.com/article/GVQAJ4E0055262WG.html"
       }
     ]
   }

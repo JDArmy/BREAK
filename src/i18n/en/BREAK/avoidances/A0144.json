@@ -10,8 +10,12 @@
     ],
     "references": [
       {
-        "title": "Oracle Source Validation",
-        "link": "https://www.embedded.com/"
+        "title": "CWE-208: Observable Timing Discrepancy - MITRE",
+        "link": "https://cwe.mitre.org/data/definitions/208.html"
+      },
+      {
+        "title": "IP Defending Against Voltage Side-Channel Hacking - Anquanke",
+        "link": "https://www.anquanke.com/post/id/285863"
       }
     ]
   }

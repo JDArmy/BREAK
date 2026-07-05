@@ -45,15 +45,15 @@
     ],
     "references": [
       {
-        "title": "探索DeFi协议预言机实施的设计空间和挑战_腾讯新闻",
-        "link": "https://new.qq.com/rain/a/20240202A07N0A00"
+        "title": "Decentralized finance - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Decentralized_finance"
       },
       {
-        "title": "教程丨三分钟教你制作专属NFT智能合约|区块链|应用程序|源代码|元数 ...",
-        "link": "https://dy.163.com/article/GJANNOBQ0514832I.html"
+        "title": "DeFi安全：常见的闪电贷、价格操纵与重入攻击 - 腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20230213A03H3500"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-05",
     "usageExample": "用户通过DeFi协议将USDC存入Aave借贷池赚取利息，然后以存款作为抵押借出ETH进行杠杆交易。当ETH价格暴跌时触发清算，用户损失了全部抵押品。"
   }
 }

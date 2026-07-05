@@ -8,7 +8,11 @@
     "limitation": "安全性取决于用户密码强度，弱密码易被暴力破解；内存中的明文私钥仍可能被内存转储攻击获取；无法防护恶意软件或rootkit；用户忘记密码将永久丢失私钥",
     "references": [
       {
-        "title": "BIP38: Passphrase-protected private key（私钥加密存储标准）",
+        "title": "BIP39: Mnemonic code for generating deterministic keys",
+        "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+      },
+      {
+        "title": "BIP38: Passphrase-protected private key",
         "link": "https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki"
       }
     ],

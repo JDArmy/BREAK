@@ -4,8 +4,12 @@
     "description": "包括不限于恶意推广插件、比价插件、去广告插件、获取会员权益插件等。",
     "references": [
       {
-        "title": "关于浏览器插件不正当竞争的案例报告",
-        "link": "https://www.163.com/dy/article/HB8OBS1L051187VR.html"
+        "title": "你的网页可能被劫持了 - 网易",
+        "link": "https://m.163.com/dy/article/JHN3VUM20514D3UH.html"
+      },
+      {
+        "title": "强制跳转、流量劫持，市场监管总局向手机行业三宗罪亮剑 - 新浪新闻",
+        "link": "https://news.sina.com.cn/c/2025-11-27/doc-infywkct9838405.shtml"
       }
     ],
     "avoidances": [
@@ -38,7 +42,7 @@
       "R0016",
       "R0018"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "浏览器插件",
       "Chrome插件",

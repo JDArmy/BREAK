@@ -86,8 +86,12 @@
     "limitation": "The client-embedded parsing logic can be recovered by attackers via reverse compilation, hooking remote request functions, or dynamic injection tools like Frida; once the algorithm or key is extracted, legitimate packets can be forged at scale and all custom-protocol protection collapses. It is also inapplicable to browser web access, and inconsistent client-server protocol versions cause communication failures, raising maintenance and gray-release cost.",
     "references": [
       {
-        "title": "OWASP Cryptographic Storage Cheat Sheet",
-        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html"
+        "title": "Android APP Packet Capture Learning Notes - Kanxue Forum",
+        "link": "https://bbs.kanxue.com/thread-290332.htm"
+      },
+      {
+        "title": "Summary of Anti-Capture Bypass Techniques for Android HTTPS - Anquanke",
+        "link": "https://www.anquanke.com/post/id/201219"
       }
     ],
     "keywords": [

@@ -23,8 +23,12 @@
     "limitation": "DOM randomization is ineffective against attack methods that use OCR to identify and manipulate page elements.",
     "references": [
       {
-        "title": "OWASP Automated Threats to Web Applications",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+        "title": "A General Adversarial Method Against Web Front-end Obfuscation Protection - Tencent Cloud",
+        "link": "https://cloud.tencent.com/developer/article/1628572"
+      },
+      {
+        "title": "Front-end JS Offense and Defense - Xianzhi Community",
+        "link": "https://xz.aliyun.com/news/10792"
       }
     ],
     "keywords": [
