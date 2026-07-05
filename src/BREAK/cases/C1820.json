@@ -5,12 +5,9 @@
     "incidentTime": "2012-06",
     "summary": "2012年6月，UT Austin航空航天工程系Todd Humphreys团队受DHS邀请，在新墨西哥州白沙导弹靶场成功完成首次对UAV的GPS欺骗劫持演示。团队用约1000美元自制的GPS欺骗设备，从约1公里外接管了一架悬停中的小型民用无人机，使其航向偏移而自动驾驶仪毫无察觉。该演示揭示民用GPS信号未加密未认证的根本性弱点，促使FAA、国会重新评估无人机融入国家空域的安全风险。",
     "relatedRisks": [
-      "R0268",
-      "R0141"
+      "R0268"
     ],
-    "relatedAttackTools": [
-      "AT0024"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0065"
     ],
@@ -32,6 +29,6 @@
       "白沙导弹靶场",
       "GNSS欺骗"
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-05"
   }
 }

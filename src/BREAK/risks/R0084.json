@@ -180,7 +180,6 @@
       "priority": "P2"
     },
     "avoidances": [
-      "A0007",
       "A0168"
     ],
     "references": [
@@ -247,9 +246,7 @@
       "A0051",
       "A0006",
       "A0016",
-      "A0048",
-      "A0013",
-      "A0013-001"
+      "A0048"
     ],
     "references": [
       {
@@ -261,7 +258,7 @@
         "link": "https://www.cert.org.cn/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -327,8 +324,7 @@
     "avoidances": [
       "A0078",
       "A0082",
-      "A0044",
-      "A0010"
+      "A0044"
     ],
     "references": [
       {
@@ -340,7 +336,7 @@
         "link": "https://www.antiphishing.org/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

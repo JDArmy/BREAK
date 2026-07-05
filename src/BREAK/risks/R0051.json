@@ -8,6 +8,7 @@
     "avoidances": [
       "A0002",
       "A0013",
+      "A0013-001",
       "A0013-002",
       "A0013-003",
       "A0013-004",
@@ -37,7 +38,7 @@
         "link": "https://github.com/eastmountyxz/Reverse-Analysis-Case"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "keywords": [
       "应用被逆向",
       "逆向分析",

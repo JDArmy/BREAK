@@ -19,16 +19,6 @@
     "limitation": "评估依赖人工填报与一次性文档，业务上线后频繁迭代可绕过留痕、使评估与实际处理偏离；规则清单滞后于新法规易漏报合规风险，复杂AI模型数据处理边界模糊导致评估噪声大。",
     "relatedAvoidances": [
       {
-        "key": "A0016",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0044",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
         "key": "A0054",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"

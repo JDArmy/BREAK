@@ -8,7 +8,6 @@
     "avoidances": [
       "A0201",
       "A0202",
-      "A0016",
       "A0044",
       "A0055"
     ],
@@ -26,7 +25,7 @@
       "包名抢注",
       "开源包投毒"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

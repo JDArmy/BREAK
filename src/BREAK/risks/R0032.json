@@ -102,8 +102,7 @@
       "A0016",
       "A0019",
       "A0021",
-      "A0023",
-      "A0063"
+      "A0023"
     ],
     "references": [
       {
@@ -111,7 +110,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-008_Credential_Stuffing.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "撞库(凭证填充)",
       "撞库",

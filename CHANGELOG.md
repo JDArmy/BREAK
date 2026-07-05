@@ -1,5 +1,20 @@
 # Change log
 
+## 2.42.14
+
+修复 risk-avoidance 关联错配（移除 Risk.avoidances 中不匹配的规避手段）+ case-relation 6 个工具错配。
+
+- **risk-avoidance 关联错配修复（17 个 Risk）**：review-risk-avoidance 评审 fail，Risk.avoidances 关联了与攻击向量不匹配的规避手段。移除明显不匹配项：
+  - R0032 撞库移除 A0063（密码复杂度对撞库无直接缓解）
+  - R0084-002 EIP协议钓鱼移除 A0007（身份认证对协议钓鱼缓解弱）
+  - R0084-003 二维码钓鱼移除 A0013/A0013-001（移动加固是攻击者工具非防御）
+  - R0084-004 域名仿冒移除 A0010（设备指纹对域名仿冒缓解弱）
+  - R0117/R0127/R0132/R0136/R0146/R0150 等移除 A0018/A0013/A0026/A0016 等不匹配项
+- **A0013-001/A0157 引用恢复**：subagent 误移除导致两个 Avoidance 孤立。A0013-001（Android应用加固）改归 R0051（应用被逆向，更贴切）；A0157（零知识KYC）恢复到 R0185（虚拟世界资产盗窃，Web3 身份验证防盗）。
+- **case-relation 6 工具错配修复**：C0512 移除反编译/LLM攻击工具、C0803 移除提示注入工具、C1120 移除 LLM攻击工具、C1313 移除 Agent劫持工具、C1527 移除信息窃取器、C1820 移除地理位置欺诈/手机虚拟定位（无人机GPS欺骗非手机定位）。
+- **回滚 avoidances relatedAvoidances 误改**：subagent 误改横向关系字段（自动维护），git checkout 回滚后跑 sync:lateral-relations 重算。
+- **case-relation 全量完成**：1776/1778 评完，pass 885/review 637/fail 254。fail 254 多是 LLM 对"风险与 summary 匹配度"的主观判断（如营销作弊对退货欺诈），保留为边界判断。
+
 ## 2.42.13
 
 修复 granularity/risk-scene/should-extract 评审检出的 6 个真实数据问题。

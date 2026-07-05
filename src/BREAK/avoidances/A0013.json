@@ -36,7 +36,7 @@
       {
         "key": "A0016",
         "relation": "complement",
-        "note": "共同覆盖 15 个风险。"
+        "note": "共同覆盖 14 个风险。"
       },
       {
         "key": "A0002",
@@ -49,9 +49,9 @@
         "note": "共同覆盖 10 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0014",
+        "key": "A0020",
         "relation": "complement",
-        "note": "共同覆盖 6 个风险，共同限制 5 个攻击工具。"
+        "note": "共同覆盖 10 个风险。"
       }
     ]
   },
@@ -80,7 +80,7 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0006",
+        "key": "A0002",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
@@ -90,17 +90,22 @@
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0016",
+        "key": "A0013-002",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0048",
+        "key": "A0013-003",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0051",
+        "key": "A0013-004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0014-001",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -141,6 +146,11 @@
         "note": "共同覆盖 1 个风险。"
       },
       {
+        "key": "A0013-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0013-003",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
@@ -152,11 +162,6 @@
       },
       {
         "key": "A0014-001",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -197,6 +202,11 @@
         "note": "共同覆盖 1 个风险。"
       },
       {
+        "key": "A0013-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0013-002",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
@@ -208,11 +218,6 @@
       },
       {
         "key": "A0014-001",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -253,6 +258,11 @@
         "note": "共同覆盖 1 个风险。"
       },
       {
+        "key": "A0013-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0013-002",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
@@ -264,11 +274,6 @@
       },
       {
         "key": "A0014-001",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
