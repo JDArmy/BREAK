@@ -12,7 +12,7 @@
       "bound account"
     ],
     "aliases": [],
-    "category": "Data Leakage",
+    "category": "Black Market Resource",
     "definition": "Refers to Weibo, WeChat, or QQ accounts whose core functions have been restricted by the platform but can still be used to authorize logins on other platforms, sold cheaply by black-market actors for secondary exploitation.",
     "description": "These accounts have typically been flagged for bulk activity, bonus abuse, or malicious registration, resulting in restrictions on posting, payments, and other core functions. However, their authorization login interfaces remain functional, allowing black-market actors to package them as “redirect accounts” and sell them to bypass registration barriers on other platforms. Buyers use these accounts for operations such as astroturfing, traffic diversion scams, or cross-platform bonus harvesting, benefiting from low costs and delayed bans.",
     "references": [

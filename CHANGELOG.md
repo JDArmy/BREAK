@@ -1,5 +1,19 @@
 # Change log
 
+## 2.42.10
+
+跑 `review:classification` 全量重评验证 v2.42.9 的 Case category 修复效果，并修复 Term/Avoidance 的 category 错配。
+
+- **Term category 错配修复（15 个，中英文同步）**：LLM 评审检出 Term.category 与 definition 语义不符，逐条甄别后修复：
+  - 跑分洗钱误判 5 个：T0288 铯聊/T0289 资金盘/T0300 键盘手 → 电信诈骗（诈骗前端非洗钱）；T0292 盗刷 → 金融犯罪；T0430 砖头 → 跑分洗钱（洗钱结算特征）。
+  - 业务欺诈误判 3 个：T0244 仓播/T0259 高粉号 → 营销欺诈（直播带货/虚假营销刷量）；T0279 水上 → 平台治理（合规推广渠道非欺诈）。
+  - 业务安全误判 3 个：T0551 PIA → 合规管理（隐私合规）；T0587 固件签名/T0610 安全停机 → 安全防护（底层/物理安全机制）。
+  - 其他：T0031 一机多单 → 金融犯罪（POS 套现）；T0084 跳转号 → 黑产资源（账号交易）；T0487 改机工具 → 黑产服务；T0601 OWASP 自动化威胁 → 攻击手段。
+  - 保留 10 个边界情况（T0044 进件/T0063 网花/T0075-001 二手料/T0099 扫号/T0161 担保双压/T0180 神父/T0303 无卡人头/T0327 电子卡/T0533 制品库/T0542 临时凭证）——与父/同类一致性或无更贴切类，LLM 过严。
+- **Avoidance category 错配修复（6 个）**：A0151 AC04→AC01（灰度发布是预防非处置）、A0169 AC02→AC03（白名单匹配判定）、A0184/A0206/A0234 AC02/AC03→AC01（主动阻断/防泄漏是预防）、A0236 AC03→AC04（审计追溯是处置）。顺带修 A0151 complexity "中级"→"intermediate"（schema 要求英文枚举）。
+- **classification prompt 修复验证**：v2.42.9 修的 review-classification prompt（明确 Risk 无 category 不评）生效，risks fail 42→1（41 个 category 误判消失，剩 1 个 R0107 complexity 边界判断保留）。
+- **avoidances fail 6→0**，**terms fail 25→12**（12 个保留是边界情况）。
+
 ## 2.42.9
 
 跑 `review:classification` 全量检出 246 个 category 错配 fail，起 subagent 分 4 批甄别修复 166 个 Case 的 category 字段。

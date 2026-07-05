@@ -7,7 +7,7 @@
       "Emergency Stop",
       "急停"
     ],
-    "category": "业务安全",
+    "category": "安全防护",
     "definition": "通过独立于软件控制链路的硬件回路，在紧急情况下快速切断机器人动力电源使其停止的功能安全机制。",
     "description": "安全停机(E-stop)是机器人物理安全的最后一道防线，必须独立于软件控制链路——按下急停按钮直接切断动力电源，软件故障或被攻击者篡改的软件无法绕过。软急停（通过软件指令停止）可被软件故障绕过，必须有硬急停兜底。安全停机与功能安全设计遵循ISO 10218（工业机器人安全）、ISO 13482（个人护理机器人）等标准。IOActive证明Universal Robots UR系列可被远程禁用急停，凸显急停回路本身也需防篡改。安全停机失效是Knightscope K5撞人、大众Baunatal致死等事故的关键因素。",
     "usageExample": "工厂协作机器人在检测到人员进入作业区时若安全停机失效，可能继续运动造成碰撞伤害。",
@@ -35,6 +35,6 @@
         "link": "https://www.gt-engineering.it/en/technical-standards/en-iso-standards/en-iso-10218-1-safety-requirements-for-industrial-robots/5-5-robot-stopping-functions/"
       }
     ],
-    "updated": "2026-07-04"
+    "updated": "2026-07-05"
   }
 }

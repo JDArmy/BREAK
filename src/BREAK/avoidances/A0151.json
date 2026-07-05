@@ -1,10 +1,10 @@
 {
   "A0151": {
     "title": "分阶段OTA部署与灰度发布",
-    "category": "AC04",
+    "category": "AC01",
     "definition": "采用小范围试点、逐步推广的策略，降低批量更新失败或恶意更新的影响",
     "description": "谨慎部署策略：小比例灰度测试；监控更新设备状态；异常时紧急暂停；A/B测试；自动回滚机制；用户可选更新时间。",
-    "complexity": "中级",
+    "complexity": "intermediate",
     "limitation": "灰度发布延长全量部署周期，紧急安全补丁难以及时覆盖所有设备，灰度期间未更新设备仍暴露于已知漏洞；同时多版本并存导致设备碎片化，增加后续运维与漏洞修复的复杂度。",
     "references": [
       {
@@ -12,7 +12,7 @@
         "link": "https://aws.amazon.com/iot/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-05",
     "keywords": [
       "分阶段OTA部署与灰度发布",
       "灰度发布",
