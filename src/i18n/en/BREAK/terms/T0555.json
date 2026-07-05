@@ -11,7 +11,7 @@
     ],
     "definition": "A payment protection technique that replaces sensitive card or account data with a tokenized substitute.",
     "description": "Payment tokenization replaces sensitive card or account data with tokens so merchants and business systems do not hold clear payment data. Reviews should cover token scope, mapping-vault protection, masked display, transaction binding, and abnormal revocation so tokens do not become long-lived reusable credentials.",
-    "usageExample": "Assess Payment Tokenization related exposure and define the corresponding controls.",
+    "usageExample": "The checkout page uses payment tokenization to replace the card number with a one-time token issued to the merchant; even if intercepted by a man-in-the-middle, the token cannot be reused in other transactions, reducing card-number exposure risk.",
     "references": [
       {
         "title": "Tokenization (data security) - Wikipedia",

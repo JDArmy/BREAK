@@ -8,7 +8,7 @@
     ],
     "definition": "一种通过向缓存中注入恶意或错误内容，使其存储并提供攻击者控制的数据的攻击方式。",
     "description": "缓存投毒通过构造请求让缓存存储攻击者控制或错误的响应，并向后续用户提供。它常利用缓存键不完整、Header 解析差异或代理链路不一致。防护需要明确可缓存范围、规范化请求、隔离用户态内容和监控异常缓存命中。",
-    "usageExample": "评估与缓存投毒相关的暴露面，并制定相应的控制措施。",
+    "usageExample": "攻击者构造携带恶意XSS响应的请求让CDN缓存命中并存储，后续正常用户访问同一路径时被缓存投毒返回恶意脚本。",
     "relatedRisks": [
       "R0249"
     ],
@@ -24,7 +24,7 @@
         "link": "https://portswigger.net/web-security/web-cache-poisoning"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "version": 2
   }
 }

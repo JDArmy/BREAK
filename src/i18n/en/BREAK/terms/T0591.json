@@ -11,7 +11,7 @@
     ],
     "definition": "A decentralized identifier that enables verifiable, self-managed digital identity without a central registry dependency.",
     "description": "DIDs let subjects manage verifiable identifiers without depending on a centralized registry. They are useful for verifiable credentials, cross-platform identity, and decentralized trust, but require governance for key recovery, identifier resolution, privacy correlation, and ecosystem interoperability.",
-    "usageExample": "Assess DID related exposure and define the corresponding controls.",
+    "usageExample": "A user holds a DID as a cross-platform verifiable credential and presents a degree certificate to a merchant without needing centralized endorsement, but must safeguard the private key — loss makes the identity unrecoverable.",
     "references": [
       {
         "title": "Decentralized identifier - Wikipedia",

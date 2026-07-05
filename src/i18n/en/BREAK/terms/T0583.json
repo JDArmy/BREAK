@@ -11,7 +11,7 @@
     ],
     "definition": "An attack that causes a cache to store and serve attacker-controlled or incorrect content.",
     "description": "Cache poisoning causes a cache to store attacker-controlled or incorrect responses and serve them to later users. It often exploits incomplete cache keys, header parsing differences, or proxy-chain inconsistencies. Defenses require clear cacheable scope, request normalization, isolation of user-specific content, and monitoring of abnormal cache hits.",
-    "usageExample": "Assess Cache Poisoning related exposure and define the corresponding controls.",
+    "usageExample": "An attacker crafts a request carrying a malicious XSS response, makes the CDN cache hit and store it, and subsequent normal users visiting the same path are served the cache-poisoned malicious script.",
     "references": [
       {
         "title": "Web cache poisoning - PortSwigger Web Security Academy",

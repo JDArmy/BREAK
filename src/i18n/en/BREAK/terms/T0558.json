@@ -11,7 +11,7 @@
     ],
     "definition": "A fraud pattern in which merchants use fake or circular transactions to convert payment channels into cash.",
     "description": "Merchant cash-out converts payment channels into cash through fake, circular, or related-party transactions. It may bypass payment risk controls, credit limits, or fund-use restrictions. Detection should examine merchant-buyer relationships, abnormal transaction structures, refund loops, fund return paths, and short-term high-frequency small transactions.",
-    "usageExample": "Assess Merchant Cash-Out related exposure and define the corresponding controls.",
+    "usageExample": "A credit-card holder colludes with a fake merchant to swipe the card at POS for no real transaction, converting the credit limit into cash for a fee; risk control identifies the merchant cash-out via the closed loop of merchant-cardholder affiliated transactions.",
     "references": [
       {
         "title": "Money laundering - Wikipedia",

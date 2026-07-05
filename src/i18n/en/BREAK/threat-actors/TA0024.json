@@ -1,7 +1,7 @@
 {
   "TA0024": {
     "title": "Malicious Insiders",
-    "description": "Malicious insiders are employees within an organization who intentionally engage in destructive, unethical, or illegal activities. These activities may be for personal gain, revenge, dissatisfaction with the company, or other motivations. Malicious insider behavior can pose serious threats to an organization's operations, reputation, and security.",
+    "description": "Malicious insiders are enterprise personnel who use legitimate job privileges and internal system access to actively exfiltrate data, abuse privileges, sabotage systems, or collude with outsiders. Unlike external attackers, they inherently hold intranet credentials and business-system authorization, bypassing perimeter defenses to reach core data and production directly; common motives include financial gain, revenge, recruitment by external gangs, or asset hoarding before resignation.\n\nTypical methods include using DBA or ops privileges to bulk-export customer data (R0059), abusing approval rights to improperly open accounts or enable withdrawals (R0072), implanting backdoors or logic bombs (R0112), leaking internal data to competitors or illicit markets (R0087), and colluding with external fraud or ransomware gangs to provide intranet entry. They are the main source of insider-threat and data-leak risks, and must be identified and constrained via least-privilege, behavior auditing (A0019), data leakage protection (A0050), and privileged account management (A0044); permissions and devices must be promptly revoked at offboarding.",
     "references": [
       {
         "title": "Insider Threat - Wikipedia",

@@ -13,9 +13,9 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "A black-market debt relief service in which illicit agencies negotiate adjusted repayment plans with lenders on behalf of overdue borrowers.",
-    "description": "Illicit debt-relief agencies exploit borrowers' financial distress by filing proxy complaints or conducting sham negotiations with banks and online lending platforms to restructure installment repayment plans. These operations often involve forging supporting documents and exerting pressure through malicious complaints. Borrowers risk having their personal data resold and may face legal liability due to falsified materials.",
-    "usageExample": "Debt optimization, credit report dispute appeals, capital services, credit card personalized installment plans up to 60 months.",
+    "definition": "A restructured installment repayment plan negotiated between a bank or online lender and an overdue borrower; originally a compliant debt-restructuring arrangement, it is exploited by proxy rights-protection illicit actors as an anti-collection monetization vehicle.",
+    "description": "A personalized installment plan is a repayment arrangement negotiated after credit-card or online-loan default, in which the debtor and the issuer or platform restructure the outstanding balance into new installments, waive penalties, or suspend interest accrual, originally intended to help genuinely distressed borrowers resume repayment and avoid non-performing loans. The mechanism is repackaged by proxy rights-protection illicit actors (TA0029) as a paid “debt optimization” or “anti-collection” service.\n\nThese agencies exploit borrowers' reluctance to face collection, using proxy complaints, forged proof of serious illness or unemployment, and malicious petitioning to pressure platforms into concessions, while charging high service fees. The process often involves forged documents and malicious-complaint pressure; borrowers risk personal-data resale and legal liability from falsified materials, and the practice fuels anti-collection risk (R0096-001) and online lending fraud (R0096).",
+    "usageExample": "Proxy rights-protection illicit actors pitch on social platforms: “credit card personalized installments up to 60 months, interest suspension, penalty waiver,” inducing overdue borrowers to pay for delegation to pressure banks into renegotiating repayment plans.",
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report",

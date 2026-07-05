@@ -11,7 +11,7 @@
     ],
     "definition": "A data protection impact assessment used to evaluate high-risk personal-data processing and mitigation measures.",
     "description": "A DPIA evaluates high-risk personal-data processing, including purpose, lawfulness, necessity, severity of risk, and mitigation. Compared with a general PIA, it emphasizes regulatory expectations and residual-risk explanation, often for large-scale sensitive processing, automated decisions, cross-border transfer, or high-risk monitoring.",
-    "usageExample": "Assess DPIA related exposure and define the corresponding controls.",
+    "usageExample": "Before launching a face-recognition access control system, a DPIA must be completed to assess the legality, retention period, and cross-border transfer risks of biometric data collection, and to document residual-risk mitigations for regulatory review.",
     "references": [
       {
         "title": "Art. 35 GDPR - Data protection impact assessment",

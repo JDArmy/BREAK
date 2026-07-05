@@ -11,7 +11,7 @@
     ],
     "definition": "A policy that limits total resource consumption such as calls, transactions, inventory, credits, or compute usage.",
     "description": "Quota control limits total resource consumption over a period, such as daily API calls, inventory claims, account limits, coupon use, or compute usage. It is useful for low-frequency but persistent abuse and for capping maximum loss per identity or tenant. Designs should define metering scope, reset period, and shared-quota boundaries.",
-    "usageExample": "Assess Quota Control related exposure and define the corresponding controls.",
+    "usageExample": "Risk control sets a daily coupon-claim quota control of three per account, after which manual review is triggered, preventing illicit actors from bulk-claiming coupons and reselling them for cash.",
     "references": [
       {
         "title": "API Gateway throttling and quotas - AWS",

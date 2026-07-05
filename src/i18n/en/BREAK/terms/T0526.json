@@ -11,7 +11,7 @@
     ],
     "definition": "An attack that reuses a valid request, event, token, or signature to trigger an operation again.",
     "description": "Replay attacks reuse a still-valid request, signature, token, or event to trigger a business action again. They often affect payment callbacks, webhooks, login tickets, and signed APIs. Effective controls combine nonces, timestamps, signed request scope, one-time tokens, and idempotent processing so old messages cannot be reused.",
-    "usageExample": "Assess Replay Attack related exposure and define the corresponding controls.",
+    "usageExample": "An attacker captures a payment callback request and replays it, causing the same order to be notified for deduction multiple times; defenders add a one-time nonce and timestamp check in the callback to detect replay attacks.",
     "references": [
       {
         "title": "Replay attack - Wikipedia",

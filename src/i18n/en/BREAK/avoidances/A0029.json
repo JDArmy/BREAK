@@ -1,9 +1,9 @@
 {
   "A0029": {
     "title": "Data Profiling",
-    "definition": "Collecting and analyzing various data to form labeled profiles of that data.",
+    "definition": "Abstracting multi-source data such as users, devices, and IPs into a tagged model, using clustering, classification, and statistical baseline comparison to identify entity risk and anomalous deviations.",
     "description": "Data profiling collects multi-dimensional data such as user attributes, device information, and behavioral traces, abstracting them into a tagged data model. It combines clustering and classification, rule matching, and statistical baseline comparison to perform risk determination and identify anomalous deviations for entities.",
-    "limitation": "Data quality issues: Data profiling techniques require substantial data support; if data quality is poor, the accuracy of the profile will be affected. Data privacy issues: Data profiling techniques require collecting large amounts of data; if handled improperly, data privacy concerns will arise. Timeliness issues: Data profiling techniques analyze and predict based on historical data; if the data is outdated or inaccurate, the timeliness of the profile will be impacted.",
+    "limitation": "Profiling relies on historical behavior baselines; cold-start users or low-activity entities lack enough samples and are prone to misjudgment. Illicit actors can pollute the baseline via account farming that mimics normal behavior, sharing device pools to spread risk, or randomizing operation time windows to dilute anomalies. Once the tag system leaks, attackers can craft disguised features that fit the profile to evade detection. Cross-platform data stitching is constrained by data silos and privacy compliance, making a global view hard, and the large-scale personal dataset accumulated by profiling itself poses data-leak and privacy-compliance risks.",
     "references": [
       {
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",

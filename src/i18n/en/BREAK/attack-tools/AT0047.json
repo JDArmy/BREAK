@@ -1,7 +1,7 @@
 {
   "AT0047": {
     "title": "Task Completion Tools",
-    "description": "Task completion tools are automated or semi-automated tools used to execute repetitive or tedious tasks to improve work efficiency and quality. These tools can automatically or semi-automatically complete various tasks such as data entry, information scraping, web crawling, and process automation according to user needs and custom settings.",
+    "description": "Task-completion tools are scripts or external programs used by illicit actors to automate repetitive operations such as marketing campaigns, check-ins, coupon claims, new-user tasks, and idle grinding for traffic inflation. By simulating client protocols or controlling device clusters, they replace manual work in check-in, browse-task, referral-reward, and game-idling scenarios, and are commonly paired with SMS-receiving platforms (AT0001), proxy IP pools (AT0034-001), and device farms to monetize task automation across bulk accounts.\n\nUnlike general RPA tools, illicit task-completion tools focus on bypassing platform rate limits, human verification, and device risk control: they embed modules for protocol-signature recovery, CAPTCHA recognition, device-fingerprint forgery, and random delay and trajectory simulation, enabling dozens of concurrent accounts on a single device or synchronized task execution across hundreds of devices. They are the core tool behind coupon-abuse-style fraud (R0001), marketing-traffic inflation (R0005), and game-cheat automation (R0016), and platforms counter them via behavior auditing (A0010), device fingerprinting (A0021), and human verification (A0001).",
     "references": [
       {
         "title": "Game Automation Script Tools and Black Market Activity Analysis",

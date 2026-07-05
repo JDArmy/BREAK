@@ -1,7 +1,7 @@
 {
   "AT0034": {
     "title": "Risk IP Addresses",
-    "description": "Risk IP addresses are IP addresses considered unsafe in the network security domain. They may be malicious IPs, IPs being maliciously exploited, or IPs that have been misjudged. Risk IP addresses are classified into three risk levels: high, medium, and low. High-risk IPs are considered malicious, medium-risk IPs are being maliciously exploited, and low-risk IPs are misjudged.",
+    "description": "Risk IPs are addresses judged to have malicious behavioral tendency based on threat intelligence, behavior analysis, or historical attack records. Common sources include botnet C2 nodes, scan-and-brute-force sources, high-frequency credential-stuffing and crawler sources, proxy-pool and second-dial IP exits, phishing sites, and malware callback addresses. When illicit teams rent such IPs to launch automated attacks, credential stuffing, traffic inflation, or risk-control evasion, the addresses enter threat-intelligence risk-IP lists and are tagged as high, medium, or low risk.\n\nRisk-control and security products typically perform real-time blocking or challenge based on risk-IP reputation databases (e.g., Microsoft Defender TI, AbuseIPDB, internal black-IP pools), so illicit actors rely on proxy IPs (AT0034-001) and second-dial IPs (AT0034-002) to rotate exits and evade reputation matching. Risk IPs are commonly used in interface automation attacks (R0001), credential stuffing (R0003), crawler scraping (R0005), and registration risk-control bypass, and are the primary target of IP profiling (A0029-002) and IP reputation blocking (A0016-001).",
     "references": [
       {
         "title": "Microsoft Defender TI Reputation Scoring",

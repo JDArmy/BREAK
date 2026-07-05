@@ -8,7 +8,7 @@
     ],
     "definition": "数据保护影响评估，用于评价高风险个人数据处理活动及其缓解措施。",
     "description": "DPIA 面向高风险个人数据处理活动，要求系统评估处理目的、合法性、必要性、风险严重性和缓解措施。它比一般 PIA 更强调监管要求和残余风险说明，常用于大规模敏感数据处理、自动化决策、跨境传输和高风险监控场景。",
-    "usageExample": "评估与 DPIA 相关的暴露面，并定义相应的控制措施。",
+    "usageExample": "上线人脸识别门禁前需完成DPIA，评估生物特征数据采集的合法性、存储期限与跨境传输风险，并记录残余风险缓解措施以备监管核查。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],
@@ -22,7 +22,7 @@
         "link": "https://gdpr-info.eu/art-35-gdpr/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "version": 2
   }
 }

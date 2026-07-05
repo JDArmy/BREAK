@@ -1,7 +1,7 @@
 {
   "TA0012": {
     "title": "Malware Developers",
-    "description": "In the gray/black market, malware developers are individuals or organizations specializing in writing, publishing, and distributing malicious software. Their goals typically include stealing personal information, conducting cyberattacks, extortion, and other illegal activities. They create malicious software such as viruses, trojans, and ransomware using vulnerability exploitation, social engineering, and other technical means.",
+    "description": "Malware developers are the technical role in the illicit chain responsible for writing, customizing, and maintaining trojans, ransomware, cryptominers, RATs, and keyloggers. Upstream they take orders from illicit teams (e.g., a trojan targeting a specific payment app, or a cheat for a specific game); downstream they distribute via dark-web forums, Telegram groups, or street-promotion channels.\n\nTheir outputs typically feature AV evasion, packing, anti-debugging, dynamic loading, and C2 communication to bypass antivirus and sandbox detection, and are disguised as system updates, cracked software, or cheat plugins to trick users into installation. They directly cause data theft (R0051), ransomware (R0012-002), and remote-control hijacking (R0080), and routinely collaborate with black-market organizations (TA0017) and ransomware groups (TA0018), forming a specialized outsourcing market for attack-tool development.",
     "references": [
       {
         "title": "Qianxin 2024 AI Security Report",

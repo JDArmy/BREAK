@@ -1,7 +1,7 @@
 {
   "TA0014": {
     "title": "Money Laundering Gangs",
-    "description": "Money laundering gangs are criminal organizations or individuals specializing in laundering activities. Their primary purpose is to transfer, hide, or conceal funds from illegal sources to make them appear to come from legitimate channels. This involves complex financial transactions and investments designed to make criminal proceeds appear legitimate and difficult to trace within the economic system.",
+    "description": "Money laundering gangs are teams in the fraud, gambling, and cybercrime chains responsible for cleaning and transferring illicit funds. After receiving upstream proceeds, they wash funds white and return them via multi-tier account splitting, score-running laundering platforms (AT0039), virtual-currency exchange (AT0040), and four-party payment (AT0026). Their operations typically divide labor into ATM cash-out runners (TA0014-001), card farmers (providing bank-card sets), and score-running collectors (collecting and paying via personal QR codes).\n\nThey use personal codes, merchant codes (T0317-002), and aggregated payment channels to split funds in high-frequency small amounts, then sever the money trail via virtual-currency mixing, cross-border exchange, and sham trade to evade AML monitoring and police investigation. Their laundering directly drives virtual-currency money laundering (R0060), score-running laundering (R0093), and payment-channel abuse (R0094), and is the cash-out key of telecom-fraud and cross-border gambling chains, routinely collaborating with black-market organizations (TA0017) and fraud gangs (TA0015).",
     "references": [
       {
         "title": "How Much Do You Know About 'Money Laundering Rooms'?",

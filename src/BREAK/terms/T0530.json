@@ -8,7 +8,7 @@
     ],
     "definition": "一种限制总资源消耗（如调用次数、交易量、库存、信用额度或计算用量）的策略。",
     "description": "配额控制关注一段周期内的资源总消耗，例如每日调用次数、库存领取量、账户额度、优惠券使用量或计算资源。它适合限制低频但持续的滥用，也能作为减损手段控制单个身份或租户的最大损失。设计时要明确计量口径、重置周期和共享额度边界。",
-    "usageExample": "评估与配额控制相关的暴露面，并定义相应的控制措施。",
+    "usageExample": "风控为每个账号设置每日优惠券领取配额控制，超过3次即触发人工审核，防止黑产批量领券后转卖套现。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],
@@ -22,7 +22,7 @@
         "link": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "version": 2
   }
 }

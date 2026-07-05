@@ -8,7 +8,7 @@
     ],
     "definition": "一种供应链攻击，恶意公共包因名称匹配而被优先选择，替代了预期的内部依赖。",
     "description": "依赖混淆利用内部包名与公开仓库包名冲突，让构建系统错误下载攻击者发布的公共包。防护需要明确私有源优先级、包命名空间、锁文件、允许列表和构建网络策略。安全评估应检查不同语言生态的解析规则和镜像代理配置。",
-    "usageExample": "评估与依赖混淆相关的暴露面，并定义相应的控制措施。",
+    "usageExample": "攻击者在公共npm仓库注册了与公司内部包同名的包，CI构建时被依赖混淆优先拉取公共恶意包，导致后门代码被植入生产环境。",
     "relatedRisks": [
       "R0228"
     ],
@@ -24,7 +24,7 @@
         "link": "https://snyk.io/blog/detect-prevent-dependency-confusion-attacks-npm-supply-chain-security/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "version": 2
   }
 }
