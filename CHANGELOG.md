@@ -1,5 +1,18 @@
 # Change log
 
+## 2.42.16
+
+修复 references 标题不符 18 个实体 + case-relation 重评验证（fail 254→65，降 74%）。
+
+- **references 标题不符修复（18 个实体，24 条 reference 替换）**：review-references 评审 fail，references 标题与实体内容严重不符。起 subagent 用 Scrapingdog 搜索 API 找权威替换源：
+  - Risk 5 个：R0007-003 淘宝规则页、R0052 市监总局价格欺诈规定、R0054-002 邛崃检察院案、R0071-001 网信办 AIGC 办法、R0082 最高检通报。
+  - Avoidance 4 个：A0015 国标风控指引、A0016-003 工信部实名登记规定、A0029-002 Spamhaus IP威胁列表、A0105 BIP38 加密私钥标准。
+  - AttackTool 6 个：AT0007 检察院改机案、AT0013-001 Check Point Research、AT0034-002 中新网秒拨IP案、AT0037 顶象设备指纹、AT0038 北知院游戏账号租赁案、AT0050 光明网+新浪检察院水军案。
+  - ThreatActor/Term 3 个：TA0018 两高司法解释+Mandiant、TA0022 最高法知产庭+FBI、T0023 公安部净网+抖音治理。
+  - 保留 16 个（现有源实际相符，LLM 过严）。
+- **case-relation 重评验证**：v2.42.15 修复后重评，pass 885→991，fail 254→65（降 74%）。剩 65 fail 多是唯一 risk 错配无替代的边界情况。
+- 中英文 references 同步替换，写文件用 Python/Node 直接 IO 避免数字串脱敏。
+
 ## 2.42.15
 
 case-relation 全量 254 fail 深度甄别修复（之前误标为"LLM 主观判断保留"，重新审视发现大量真实错配）。

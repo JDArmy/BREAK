@@ -4,8 +4,12 @@
     "description": "竞争对手是指在同一行业中，拥有相同或相似的产品或服务，面对相同或相似的顾客，因此会产生竞争关系的企业。竞争对手的攻击行为主要是为了获取对手的商业机密，以便在竞争中占据优势。",
     "references": [
       {
-        "title": "Industrial Espionage - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Industrial_espionage"
+        "title": "“两高”发布知识产权刑事保护典型案例（含侵犯商业秘密罪）",
+        "link": "https://ipc.court.gov.cn/zh-cn/news/view-4224.html"
+      },
+      {
+        "title": "Economic Espionage: 'Company Man' Campaign — FBI",
+        "link": "https://www.fbi.gov/news/stories/economic-espionage"
       }
     ],
     "buildAttackTools": [
@@ -51,7 +55,7 @@
       "R0082",
       "R0090"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-05",
     "keywords": [
       "竞争对手",
       "商业对手",

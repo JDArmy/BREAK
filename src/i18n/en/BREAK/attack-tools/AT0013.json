@@ -24,8 +24,8 @@
     "description": "Attackers pre-install trojans primarily through two methods: first, through 'flashing' or APP (re-Root) methods, installing malware on phones before they reach users, such as RottenSys malware disguised as 'System WiFi Service'; second, some niche phone brand manufacturers collect user traffic through various means and even pre-install malware like StealthBot to compensate for their market share.",
     "references": [
       {
-        "title": "Nearly 5 Million Android Phones Infected with Malicious Adware - RottenSys",
-        "link": "https://news.mydrivers.com/1/570/570188.htm"
+        "title": "RottenSys: Not a Secure Wi-Fi Service At All - Check Point Research",
+        "link": "https://research.checkpoint.com/2018/rottensys-not-secure-wi-fi-service/"
       }
     ],
     "keywords": [

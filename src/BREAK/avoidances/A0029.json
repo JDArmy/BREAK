@@ -123,8 +123,8 @@
     "limitation": "黑产可借助住宅代理池、拨号ADSL频繁切换出口IP绕过IP画像封禁，IPV6普及后地址海量稀释也使画像基线难以维持；同时正常用户共享NAT出口IP容易误判误封，移动运营商出口IP难以直接拉黑。",
     "references": [
       {
-        "title": "Internet geolocation - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Internet_geolocation"
+        "title": "Spamhaus DROP（Don't Route Or Peer）IP威胁列表",
+        "link": "https://www.spamhaus.org/blocklists/do-not-route-or-peer/"
       }
     ],
     "updated": "2026-07-05",

@@ -44,8 +44,8 @@
     "limitation": "Malicious actors can bypass IP profiling blocks by leveraging residential proxy pools and frequent ADSL dial-up IP rotation. The massive dilution of addresses after IPv6 adoption also makes profiling baselines difficult to maintain. Meanwhile, legitimate users sharing NAT egress IPs are prone to false positives and false blocks, and mobile carrier egress IPs are difficult to directly blacklist.",
     "references": [
       {
-        "title": "Internet geolocation - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Internet_geolocation"
+        "title": "Spamhaus DROP (Don't Route Or Peer) IP Threat List",
+        "link": "https://www.spamhaus.org/blocklists/do-not-route-or-peer/"
       }
     ],
     "keywords": [
