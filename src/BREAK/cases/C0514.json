@@ -14,7 +14,7 @@
     "summary": "CISA发布警报指出，HTTPS检查产品通过拦截HTTPS流量并执行中间人（MiTM）攻击来工作。在此过程中，敏感的客户端数据可能被传输到伪装成目标服务器的恶意方。许多HTTPS检查产品未能正确验证服务器证书链，且不将错误信息传达给用户，从而削弱了TLS提供的端到端加密保护。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
-      "R0051-002"
+      "R0142"
     ],
     "references": [
       {
@@ -24,9 +24,7 @@
     ],
     "updated": "2026-07-05",
     "incidentTime": "2017-03",
-    "relatedAttackTools": [
-      "AT0072"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": []
   }
 }

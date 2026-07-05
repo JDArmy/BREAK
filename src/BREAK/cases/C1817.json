@@ -5,7 +5,6 @@
     "incidentTime": "2016-09",
     "summary": "2016年9月，腾讯Keen Security Lab从远距离远程入侵Tesla Model S，通过诱导车主连接恶意WiFi热点并用车载浏览器访问恶意网站，成功获取CAN总线控制权，可远程触发制动、开关车门锁、调整座椅、控制灯光。Tesla随后通过OTA推送8.0版本修复并部署代码签名机制。这是全球首例被公开的Tesla远程控制攻击，Black Hat USA 2016披露。",
     "relatedRisks": [
-      "R0181",
       "R0180"
     ],
     "relatedAttackTools": [],
@@ -38,6 +37,6 @@
       "Keen Lab",
       "车联网漏洞"
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-05"
   }
 }

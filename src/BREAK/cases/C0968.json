@@ -16,7 +16,7 @@
     "summary": "2024年1月起，刘某等3人通过网络购买“闪电侠”“暴力兔”等外挂抢单程序，再倒卖给滴滴司机，用于挂机抢单牟利，按次抽成或按天收费。2024年9月被指控构成非法获取计算机信息系统数据罪，最终被判刑。该案揭示了利用挂机脚本破坏网约车平台正常运营秩序、非法牟利的犯罪链条。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0100"
+      "R0001"
     ],
     "references": [
       {
@@ -24,10 +24,9 @@
         "link": "https://www.zsfy.gov.cn/article/view/cateid/7363/id/49231.html"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-05",
     "incidentTime": "2024-09",
     "relatedAttackTools": [
-      "AT0049",
       "AT0023"
     ],
     "relatedThreatActors": [

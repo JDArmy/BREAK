@@ -16,7 +16,7 @@
     "summary": "央视《新闻直播间》报道，公安部网安局通报一起因支付密码设置过于简单导致账户被盗刷的案件。该案例警示用户使用弱密码（如简单数字组合）可能带来严重财产损失，强调提升密码安全意识的重要性。",
     "category": "news_report",
     "relatedRisks": [
-      "R0083"
+      "R0095"
     ],
     "references": [
       {
@@ -25,9 +25,7 @@
       }
     ],
     "updated": "2026-07-05",
-    "relatedAttackTools": [
-      "AT0068"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2025-08-21"
   }

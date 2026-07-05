@@ -27,12 +27,9 @@
         "link": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2026-04",
-    "relatedAttackTools": [
-      "AT0054-001",
-      "AT0093"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0052"
     ]

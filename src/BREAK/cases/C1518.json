@@ -16,7 +16,7 @@
     "summary": "Python软件包索引(PyPI)中下载量过百万的深度学习包“lightning”被植入恶意代码，用以窃取GitHub Token和云凭证，并进一步污染其他代码仓库。该事件严重威胁依赖开源库的整个加密开发生态。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0193"
+      "R0081-005"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://lightning.ai/blog/pytorch-lightning-supply-chain-attack"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2026-05",
     "relatedAttackTools": [
       "AT0064",

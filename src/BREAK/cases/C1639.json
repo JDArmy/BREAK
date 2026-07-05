@@ -13,7 +13,7 @@
     "summary": "一项关于AR/VR系统攻击调查的研究，通过两个AR/VR攻击案例研究展示了其方法的有效性。研究统一了AR/VR软件栈的日志，以分析和调查针对AR/VR系统的攻击行为。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0217"
+      "R0191"
     ],
     "references": [
       {
@@ -21,7 +21,7 @@
         "link": "https://www.usenix.org/conference/usenixsecurity25/presentation/shoaib"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0084"
     ],

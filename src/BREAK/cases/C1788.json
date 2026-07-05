@@ -15,7 +15,7 @@
     "summary": "国家税务总局新疆维吾尔自治区税务局披露，沈阳遇知科技服务有限公司实际控制人徐驰通过虚构研发服务、提供虚开发票等方式，帮助所代理企业虚假申报高新技术企业资格并骗享税收优惠。案件中，货运司机等人员被包装成“研发人员”，暴露出涉税中介利用身份和业务材料造假骗取税费优惠的风险。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0253"
+      "R0098"
     ],
     "references": [
       {
@@ -23,11 +23,9 @@
         "link": "https://xinjiang.chinatax.gov.cn/xwdt/ssyw/202601/t20260108_154457.htm"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-05",
     "incidentTime": "2026-01",
-    "relatedAttackTools": [
-      "AT0053-003"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0009"
     ]

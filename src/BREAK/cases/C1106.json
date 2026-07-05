@@ -14,7 +14,7 @@
     "summary": "2025年2月，北京警方抓获演员王某，其涉嫌为境外诈骗团伙拍摄虚假短视频，每条报酬100元。王某在视频中冒充退伍军人，宣称参与国家扶贫项目，以此骗取国内民众信任并诱导投资。相关视频被用于新型民族资产解冻类诈骗。",
     "category": "news_report",
     "relatedRisks": [
-      "R0071-011"
+      "R0095"
     ],
     "references": [
       {
@@ -28,12 +28,7 @@
     ],
     "updated": "2026-07-05",
     "incidentTime": "2025-02",
-    "relatedAttackTools": [
-      "AT0053-003",
-      "AT0053-005",
-      "AT0053-006",
-      "AT0066"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0015",
       "TA0031",

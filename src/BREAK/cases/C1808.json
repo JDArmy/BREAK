@@ -6,7 +6,6 @@
     "summary": "2022年12月，MIT Technology Review报道iRobot Roomba J7开发测试机在2020年采集的用户家庭私密照片(含女性如厕、儿童画面)被发送至Scale AI进行数据标注，随后被委内瑞拉标注员违规分享到Facebook私密群组和Discord。iRobot确认15张泄露照片属于共享给Scale AI的约200万张图像之一。事件暴露具身智能设备数据采集与第三方标注链的隐私管控缺陷，引发AI训练数据合规争议。",
     "relatedRisks": [
       "R0278",
-      "R0211",
       "R0078"
     ],
     "relatedAttackTools": [],
@@ -30,6 +29,6 @@
       "扫地机器人拍照",
       "AI训练数据隐私"
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-05"
   }
 }

@@ -14,7 +14,7 @@
     "summary": "乌兰浩特市人民法院披露，2024年9月初，杨某因金融惩戒在办理贷款时无法按规定办理银行卡，需填写审查表并前往反诈中心审核盖章。杨某未通过合法途径解决问题，而是通过宫某、朱某联系某贷款信用社分社主任张某寻求“捷径”。张某安排他人传送带有公安局公章的照片，杨某又持公安局出具的撤案决定书作为样本，要求付某经营的打印社制作伪造公章并打印在审查表上。金融机构在业务核实中发现异常后，该多方参与的伪造国家机关印章事件曝光。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0096-001"
+      "R0096"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://m.thepaper.cn/newsDetail_forward_30782061"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-05",
     "incidentTime": "2024-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [

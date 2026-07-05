@@ -14,7 +14,7 @@
     "summary": "北京通州区检察院披露，北京首例利用AI侵犯著作权刑案宣判。犯罪团伙盗用6位创作者的10幅美术作品，经AI改图后制成拼图销售，销售侵权拼图3000余件，违法所得27万余元。法院以侵犯著作权罪判处涉案公司及罗某等人相应刑罚。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0145"
+      "R0023"
     ],
     "references": [
       {
@@ -22,11 +22,10 @@
         "link": "https://www.spp.gov.cn/spp/dfjcdt/202506/t20250618_698645.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-05",
     "relatedAttackTools": [
-      "AT0053",
-      "AT0053-003"
+      "AT0053"
     ],
     "relatedThreatActors": [
       "TA0036"

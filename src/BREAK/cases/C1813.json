@@ -6,8 +6,7 @@
     "summary": "2024年10月，宾夕法尼亚大学George Pappas团队提出RoboPAIR算法，首次系统越狱LLM控制的机器人。在白盒NVIDIA Dolphins自动驾驶LLM、灰盒Clearpath Jackal UGV、黑盒Unitree Go2+GPT-3.5三平台演示，常达100%攻击成功率，可诱导机器人执行寻找武器、撞击行人、忽略停止标志等有害物理动作。这是首个对商用部署机器人系统成功越狱的研究，发表于ICRA 2025。",
     "relatedRisks": [
       "R0271",
-      "R0272",
-      "R0267"
+      "R0272"
     ],
     "relatedAttackTools": [
       "AT0100"
@@ -32,6 +31,6 @@
       "Unitree Go2越狱",
       "具身智能越狱"
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-05"
   }
 }

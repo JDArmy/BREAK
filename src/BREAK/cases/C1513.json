@@ -15,9 +15,6 @@
     "summary": "美国加州大学伯克利分校的研究分析了超过50000名VR游戏《Beat Saber》玩家的250万条匿名VR数据记录，发现仅需100秒的运动数据就能以超过94%的准确率对个人用户进行唯一识别，甚至2秒的运动数据即可识别一半用户。这表明用户在元宇宙中互动时留下的数字指纹可被用于反向追踪其真实身份。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0192",
-      "R0215",
-      "R0219",
       "R0221"
     ],
     "references": [
@@ -30,7 +27,7 @@
         "link": "https://new.qq.com/rain/a/20230328A07JTL00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []

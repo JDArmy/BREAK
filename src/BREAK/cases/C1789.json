@@ -16,7 +16,7 @@
     "summary": "攻击者Jia Tan在两年半内潜伏为xz压缩库的贡献者，最终获得维护权限，并在核心组件liblzma中植入后门。该后门可使攻击者通过SSH发送隐藏命令，在未授权的情况下远程执行任意代码，完全控制目标系统。该漏洞被发现时，已接近流入多个Linux发行版，可能造成全球性影响。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0254"
+      "R0127"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://nvd.nist.gov/vuln/detail/cve-2024-3094"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-03",
     "relatedAttackTools": [],
     "relatedThreatActors": [

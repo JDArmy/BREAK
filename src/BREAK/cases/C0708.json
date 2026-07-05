@@ -16,7 +16,7 @@
     "summary": "国家网络安全通报中心通报，开源大模型工具Ollama默认配置存在未授权访问与模型窃取等安全隐患。鉴于DeepSeek等大模型广泛部署，多数用户使用Ollama私有化部署且未修改默认配置，存在数据泄露、算力盗取、服务中断等安全风险，极易引发网络和数据安全事件。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0071-001"
+      "R0071"
     ],
     "references": [
       {

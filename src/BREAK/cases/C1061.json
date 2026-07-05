@@ -15,7 +15,7 @@
     "summary": "2024年7月，陈某甲等人在酒店房间内，将酒店座机电话线未经授权接入VIOP语音网关设备，为上游诈骗团伙提供通讯线路。通过远程维护保持设备运转，三名被害人被诈骗共计94758元。五名被告人因帮助信息网络犯罪活动罪被判刑。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0112-003"
+      "R0095"
     ],
     "references": [
       {
@@ -23,11 +23,9 @@
         "link": "https://www.chinacourt.org/article/detail/2024/07/id/8007898.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-07",
-    "relatedAttackTools": [
-      "AT0033"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0015"
     ]

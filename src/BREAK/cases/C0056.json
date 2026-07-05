@@ -15,7 +15,7 @@
     "summary": "2023年12月至2024年3月，吕某租借多个账号在抖音韩束旗舰店下单后，使用刷单物流单号虚假退货1万多单，骗取退款后将未退回的化妆品转卖获利400余万元。法院以诈骗罪判处其有期徒刑6年。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0005"
+      "R0054-002"
     ],
     "references": [
       {
@@ -30,12 +30,10 @@
     "updated": "2026-07-05",
     "incidentTime": "2023-12",
     "relatedAttackTools": [
-      "AT0038",
-      "AT0023"
+      "AT0038"
     ],
     "relatedThreatActors": [
-      "TA0001",
-      "TA0055"
+      "TA0001"
     ]
   }
 }

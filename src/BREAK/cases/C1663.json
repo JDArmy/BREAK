@@ -14,7 +14,7 @@
     "summary": "2024年10月，字节跳动官方账号澄清网传“大模型训练被实习生攻击”事件：一名商业化技术团队实习生因对团队资源分配不满，恶意干扰模型训练任务，已被辞退。官方称受影响的是商业化技术团队研究项目，未影响线上业务、正式项目和商业化大模型，网传“涉及8000多卡、损失千万美元”等说法严重夸大。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0224"
+      "R0111"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://www.toutiao.com/w/1813324433807370/"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-05",
     "incidentTime": "2024-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []

@@ -14,7 +14,7 @@
     "summary": "研究人员发现名为PhantomRaven的恶意软件活动，通过126个恶意npm包利用远程依赖项窃取GitHub令牌，对依赖这些开源包的开发者和项目构成严重威胁。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0193"
+      "R0081-005"
     ],
     "references": [
       {
@@ -26,7 +26,7 @@
         "link": "https://www.koi.ai/blog/phantomraven-npm-malware-hidden-in-invisible-dependencies"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2025-10",
     "relatedAttackTools": [
       "AT0064"

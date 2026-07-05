@@ -14,7 +14,7 @@
     "summary": "研究人员探索了针对VR头显的勒索软件攻击可行性。研究以Oculus Quest 2为测试环境，验证了Android勒索软件可被移植并攻击该设备，表明独立式VR头显可能成为恶意软件的攻击目标，其攻击面可被利用。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0217"
+      "R0191"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://ieeexplore.ieee.org/document/10667339"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0084",
       "AT0013"

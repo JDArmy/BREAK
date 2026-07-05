@@ -16,7 +16,7 @@
     "summary": "美国证券交易委员会（SEC）对三家自称做市商的公司及九名个人提起欺诈指控，指控他们通过虚假交易和市场操纵行为，人为影响加密资产市场供需和价格。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0220"
+      "R0017"
     ],
     "references": [
       {
@@ -24,7 +24,7 @@
         "link": "https://www.sec.gov/newsroom/press-releases/2024-166"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []

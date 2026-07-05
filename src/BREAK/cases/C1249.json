@@ -14,7 +14,7 @@
     "summary": "2024年3月，央视3·15晚会在“网络借贷中的礼品卡猫儿腻”节目中曝光同程金融礼品卡套路。央视页面视频简介指出，同程金融礼品卡套路多，消费者投诉其存在变相现金贷问题。该案例反映出网络借贷产品借助礼品卡等商品交易形式包装资金发放，可能弱化用户对真实融资成本和交易风险的识别。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0138"
+      "R0096"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://tv.cctv.com/2024/03/15/VIDEaISGnSjSjVaDWrZDsLbf240315.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

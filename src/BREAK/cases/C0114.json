@@ -16,7 +16,7 @@
     "summary": "2026年3月，市场监管总局通报“3·15”晚会曝光问题处置进展，针对直播带货食品、保健食品等突出问题开展网络食品安全合规提质行动，严厉打击虚假营销、伪造冒用检测报告等违法行为。其中涉及对虚假宣传、伪造证书等欺诈行为的查处。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0008-004"
+      "R0006"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://www.samr.gov.cn/hd/zxft/art/2026/art_613d2f2754e340dd96a79feed5ac6e16.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2026-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

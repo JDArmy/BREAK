@@ -14,7 +14,7 @@
     "summary": "Cloudflare观察到攻击者在Log4j CVE-2021-44228漏洞公开后，迅速从使用简单攻击字符串转向利用Log4j Lookups语言功能（如${lower}、${env}）进行WAF规避，以绕过基于简单字符串匹配的防护规则，并尝试通过${env}等查找功能从目标进程环境变量中外泄包括密码在内的敏感数据。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
-      "R0250"
+      "R0081-001"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://blog.cloudflare.com/exploitation-of-cve-2021-44228-before-public-disclosure-and-evolution-of-waf-evasion-patterns/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2021-12",
     "relatedAttackTools": [
       "AT0054"

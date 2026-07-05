@@ -16,7 +16,7 @@
     "summary": "2025年12月，上海浦东警方捣毁一个以“短视频带货兼职”为幌子的诈骗团伙，抓获62名犯罪嫌疑人，涉案金额500余万元。该团伙通过社交平台发布“居家带货日入千元”信息，使用P图合成的高额佣金到账记录和虚假学员成功案例，诱导“宝妈”群体缴纳会员费，并虚构“专属推流”服务骗取高额升级费。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0071-011"
+      "R0095"
     ],
     "references": [
       {
@@ -24,11 +24,9 @@
         "link": "http://www.chinapeace.gov.cn/chinapeace/c100045/2025-12/16/content_12815785.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2025-12",
-    "relatedAttackTools": [
-      "AT0053-003"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0015"
     ]

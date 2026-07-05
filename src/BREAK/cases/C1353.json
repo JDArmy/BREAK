@@ -14,7 +14,7 @@
     "summary": "2025年7月31日，因英伟达算力芯片被曝存在严重安全问题，国家互联网信息办公室约谈英伟达公司，要求其对华销售的H20算力芯片漏洞后门安全风险问题进行说明并提交证明材料。此前美方专家透露英伟达芯片的“追踪定位”和“远程关闭”技术已成熟，引发算力资源被远程控制的担忧。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0086-001"
+      "R0164"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://www.cac.gov.cn/2025-07/31/c_1755675743897163.htm"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-05",
     "incidentTime": "2025-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

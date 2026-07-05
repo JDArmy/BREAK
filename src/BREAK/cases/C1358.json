@@ -14,7 +14,7 @@
     "summary": "2021年12月，DeFi协议Badger DAO遭受攻击，损失约1.2亿美元。攻击者通过在用户界面植入恶意钱包请求，诱骗用户为恶意地址批准代币使用权限，从而控制用户金库资金并转移。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0159"
+      "R0203"
     ],
     "references": [
       {
@@ -26,7 +26,7 @@
         "link": "https://www.halborn.com/blog/post/explained-the-badgerdao-hack-december-2021"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2021-12",
     "relatedAttackTools": [
       "AT0079"

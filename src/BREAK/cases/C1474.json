@@ -13,7 +13,7 @@
     "summary": "2023年5月，安全报告披露网络犯罪组织Lemon Group通过第三方供应商在固件组件中植入Guerilla恶意软件，预先感染全球890万部安卓手机，用于窃取数据、广告欺诈等恶意活动。",
     "category": "news_report",
     "relatedRisks": [
-      "R0181"
+      "R0127"
     ],
     "references": [
       {
@@ -21,7 +21,7 @@
         "link": "https://www.163.com/dy/article/I5BVUU0L05476C4F.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023-05",
     "relatedAttackTools": [
       "AT0013-001"

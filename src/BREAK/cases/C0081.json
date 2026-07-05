@@ -14,7 +14,7 @@
     "summary": "江苏公安网安部门侦查查明，犯罪嫌疑人陈某伙同李某共同设计开发黑客程序，串通网吧运维人员在全国20个省市5000余家网吧近20万台电脑中非法植入该程序，直接篡改热门网络游戏配置文件，非法获取各网吧管理系统推广游戏产生的流量，以此获取游戏推广商收益。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0007-003"
+      "R0008-001"
     ],
     "references": [
       {
@@ -26,7 +26,7 @@
         "link": "http://m.mps.gov.cn/n6935718/n6936554/c9717552/content.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-09",
     "relatedAttackTools": [
       "AT0013"

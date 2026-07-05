@@ -14,7 +14,7 @@
     "summary": "报告显示，在500万至3亿用户规模的平台中，账户接管（ATO）的中位暴露率为1.4%。特别值得关注的是会话劫持技术的兴起，攻击者通过信息窃取恶意软件窃取会话cookie，从而绕过MFA，接管用户账户。",
     "category": "news_report",
     "relatedRisks": [
-      "R0011-002"
+      "R0032"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://flare.io/learn/resources/the-account-and-session-takeover-economy"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0064",
       "AT0054-004"

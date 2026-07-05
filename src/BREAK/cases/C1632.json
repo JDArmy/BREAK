@@ -16,7 +16,8 @@
     "summary": "2022年2月，NFT收藏者 larrylawliet.eth 在社交平台称，Moshi Mochi 项目 Discord 被黑后，攻击者在官方频道发布假 mint 链接，其点击链接后发生 NFT 被盗，并向 OpenSea、LooksRare 等平台公开求助。该事件反映出 Web3 项目官方社区渠道被劫持后，假 mint 链接可诱导用户连接钱包或授权签名，进而造成 BAYC、MAYC 等高价值 NFT 资产被转移。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0216"
+      "R0084",
+      "R0122"
     ],
     "references": [
       {
@@ -28,7 +29,7 @@
         "link": "https://etherscan.io/address/0x6d0267156f1c6CE44Caa4BF129B76009d3d41830"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []

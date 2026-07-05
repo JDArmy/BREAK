@@ -14,7 +14,7 @@
     "summary": "分析某国外站点时发现核心API返回加密字符串。通过浏览器断点调试，拦截到API请求，跟踪到解密方法。分析JS代码确认使用了AES加密，最终利用大模型辅助分析并还原加解密算法，成功解密获取数据。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0051-002"
+      "R0051"
     ],
     "references": [
       {

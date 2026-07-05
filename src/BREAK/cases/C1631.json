@@ -15,7 +15,8 @@
     "summary": "2022年6月，BAYC官方Discord服务器遭短暂攻击，黑客发布钓鱼链接，导致价值约200 ETH的NFT被盗。黑客将资产转移至多个地址，部分资金转入Tornado Cash。此事件暴露了跨平台（Discord到区块链钱包）交互中的安全漏洞，导致用户资产在不知情下被转移。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0216"
+      "R0084",
+      "R0122"
     ],
     "references": [
       {
@@ -27,7 +28,7 @@
         "link": "https://www.certik.com/skynet-report/bored-ape-yacht-club-discord-hit-with-phishing-attack"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-06",
     "relatedAttackTools": [
       "AT0063",

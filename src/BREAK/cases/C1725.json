@@ -16,7 +16,7 @@
     "summary": "最高检披露，全国首例“抡博”案中，“星援”App 通过截取数据包、反编译获取服务器接口，将伪造的点赞、评论和转发数据注入微博平台，实现批量刷量。该 App 控制端账号达19万余个，绑定微博账号5000余万个，非法获利625万余元。法院以提供侵入计算机信息系统程序罪判处蔡某有期徒刑五年，并处罚金。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0237"
+      "R0016"
     ],
     "references": [
       {
@@ -24,7 +24,7 @@
         "link": "https://www.spp.gov.cn/spp/zdgz/202105/t20210524_519006.shtml"
       }
     ],
-    "updated": "2026-06-26",
+    "updated": "2026-07-05",
     "incidentTime": "2021-05",
     "relatedAttackTools": [
       "AT0014",

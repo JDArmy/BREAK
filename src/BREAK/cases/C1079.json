@@ -14,7 +14,7 @@
     "summary": "不法分子利用监控摄像头的弱口令漏洞进行全网扫描，并使用带有手机木马的软件，对存在弱口令的设备进行入侵，从而非法获取摄像头权限，导致大量隐私视频被偷窥和贩卖，形成触目惊心的黑色产业链。",
     "category": "news_report",
     "relatedRisks": [
-      "R0112-006"
+      "R0109"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://www.news.cn/tech/20210810/66631f7c4d69411facbdd174f1fee2d1/c.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2021-12",
     "relatedAttackTools": [
       "AT0013",

@@ -14,8 +14,7 @@
     "summary": "据PANews统计，跨链桥安全事件频发，历史上涉及资金超过20亿美元。2022年是跨链桥被盗最频繁的年份，近期Poly Network和Multichain等知名跨链桥再次发生被盗或资金异常转移事件，且资金找回或赔付的概率下降。",
     "category": "news_report",
     "relatedRisks": [
-      "R0161",
-      "R0200"
+      "R0161"
     ],
     "references": [
       {
@@ -23,13 +22,11 @@
         "link": "https://new.qq.com/rain/a/20230707A03ZJS00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023-07",
     "relatedAttackTools": [
       "AT0076",
-      "AT0077",
-      "AT0078",
-      "AT0079"
+      "AT0077"
     ],
     "relatedThreatActors": [
       "TA0045",

@@ -15,7 +15,7 @@
     "summary": "Tommy Blizard和Nikola Livic在2012年发表的论文对利用恶意软件进行广告流量欺诈的现象进行了调查。研究指出，此类攻击通过恶意软件生成看似自然的虚假广告流量，在规模巨大的同时保持隐蔽，从而非法获取广告收入。论文还提出了对抗此类恶意软件变现的新方法。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0237"
+      "R0008-002"
     ],
     "references": [
       {
@@ -23,7 +23,7 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/6461010/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2012-10",
     "relatedAttackTools": [
       "AT0013",

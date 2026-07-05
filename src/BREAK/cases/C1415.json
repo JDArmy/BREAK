@@ -14,7 +14,7 @@
     "summary": "2022年10月20日，攻击者在BSC链上通过闪电贷借入40个WBNB，在PancakeSwap上兑换HEALTH代币后，利用合约价格计算逻辑缺陷执行999次零余额转账，操纵代币价格并反向兑换获利约16个BNB。该事件暴露了代币合约价格更新和转账逻辑被组合利用的风险。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0169"
+      "R0160"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://blog.solidityscan.com/health-token-hack-analysis-dad822fbf0/"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-05",
     "incidentTime": "2022-10",
     "relatedAttackTools": [
       "AT0076",

@@ -13,7 +13,7 @@
     "summary": "2022年6月，Harmony区块链的Horizon跨链桥遭黑客攻击，价值约1亿美元的多种加密资产被盗。攻击者利用私钥漏洞控制跨链桥，转移大量代币。事后Harmony发布补偿提案，计划增发代币进行赔偿。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0185"
+      "R0161"
     ],
     "references": [
       {
@@ -25,12 +25,9 @@
         "link": "https://www.fbi.gov/news/press-releases/fbi-confirms-lazarus-group-cyber-actors-responsible-for-harmonys-horizon-bridge-currency-theft"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-06",
-    "relatedAttackTools": [
-      "AT0076",
-      "AT0077"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0045"
     ]
