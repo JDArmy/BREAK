@@ -15,8 +15,7 @@
     "summary": "2024年10月，上海徐汇警方接到某电商平台报案，发现多家同一品牌连锁超市通过虚假交易骗取平台补贴。犯罪团伙以低价鸡蛋为诱饵，诱导顾客在App内下空单，制造虚假交易记录，骗取平台差价补贴。涉案金额达120余万元，21名犯罪嫌疑人被依法采取刑事强制措施。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0017-002",
-      "R0055"
+      "R0017-002"
     ],
     "references": [
       {
@@ -28,7 +27,7 @@
         "link": "https://3g.china.com/act/news/10000169/20250422/48239925.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2025-04",
     "relatedAttackTools": [],
     "relatedThreatActors": [

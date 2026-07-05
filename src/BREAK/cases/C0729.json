@@ -15,9 +15,7 @@
     "summary": "2026年央视3·15晚会曝光“AI大模型被投毒”已成产业链，点名“力擎GEO优化系统”。攻击者通过向AI大模型注入恶意数据或篡改内容，影响模型输出结果，可能诱导用户访问恶意前端或执行错误交易指令，与DApp前端劫持中通过篡改代码影响用户行为的攻击模式高度相似。",
     "category": "news_report",
     "relatedRisks": [
-      "R0071-005",
-      "R0203",
-      "R0205"
+      "R0071-005"
     ],
     "references": [
       {
@@ -25,7 +23,7 @@
         "link": "https://new.qq.com/rain/a/20260316A02HNL00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2026-03",
     "relatedAttackTools": [
       "AT0093"

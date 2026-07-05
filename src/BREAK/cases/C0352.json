@@ -14,8 +14,7 @@
     "summary": "2021年4月，江苏盐城警方发现犯罪团伙利用“撞库”手段，通过收集互联网已泄露的用户账号密码，生成数据库后批量尝试登录某大型网购平台，每日异常登录达百万次。成功登录后，团伙成员冒用他人账号内的优惠券低价购买商品转售获利，或转卖账号密码。警方赴多地抓获10名嫌疑人，累计盗取账号1.29万余条，涉案资金近千万元。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0032-001",
-      "R0037"
+      "R0032-001"
     ],
     "references": [
       {
@@ -23,12 +22,11 @@
         "link": "https://www.chinapeace.gov.cn/chinapeace/c100046/2021-11/18/content_12561584.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2021-04",
     "relatedAttackTools": [
       "AT0042",
-      "AT0012",
-      "AT0068"
+      "AT0012"
     ],
     "relatedThreatActors": [
       "TA0059",

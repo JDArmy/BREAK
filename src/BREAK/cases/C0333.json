@@ -14,7 +14,7 @@
     "summary": "2023年12月，被告人黄某明知他人利用信息网络实施犯罪，为牟取非法利益，仍按他人要求办理营业执照、开设对公账户，为他人犯罪提供帮助。贵溪市人民法院一审以帮助信息网络犯罪活动罪判处黄某有期徒刑七个月，并处罚金一万元。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0030-005"
+      "R0030"
     ],
     "references": [
       {
@@ -22,11 +22,9 @@
         "link": "https://www.jxzfw.gov.cn/2024/1028/2024102860561.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2023-12",
-    "relatedAttackTools": [
-      "AT0039"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0014",
       "TA0015"

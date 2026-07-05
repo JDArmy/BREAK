@@ -14,7 +14,7 @@
     "summary": "Cloudflare 宣布推出账户滥用防护套件，旨在阻止虚假账户创建和促销滥用。新功能包括一次性邮箱检测和邮箱风险评估，可识别使用临时邮箱注册的欺诈行为，并引入哈希用户 ID 以洞察可疑账户活动，防止批量虚假账号攻击。",
     "category": "news_report",
     "relatedRisks": [
-      "R0031"
+      "R0030"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://blog.cloudflare.com/account-abuse-protection/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2026-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

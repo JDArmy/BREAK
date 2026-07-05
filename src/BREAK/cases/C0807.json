@@ -26,11 +26,10 @@
         "link": "https://socket.dev/blog/175-malicious-npm-packages-host-phishing-infrastructure"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2025-11",
     "relatedAttackTools": [
-      "AT0063",
-      "AT0054-005"
+      "AT0063"
     ],
     "relatedThreatActors": [
       "TA0052"

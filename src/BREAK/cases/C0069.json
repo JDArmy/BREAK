@@ -15,8 +15,7 @@
     "summary": "根据对27件浏览器插件不正当竞争纠纷案件的报告，网购比价插件是三大类涉不正当竞争插件之一。此类插件通过技术手段抓取其他平台商品信息进行价格比较，被法院认定为利用网络技术手段实施的不正当竞争行为，受到法律规制。",
     "category": "news_report",
     "relatedRisks": [
-      "R0007-001",
-      "R0007-004"
+      "R0007-001"
     ],
     "references": [
       {
@@ -24,7 +23,7 @@
         "link": "https://m.163.com/dy/article/HB8OBS1L051187VR.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-07",
     "relatedAttackTools": [
       "AT0032"

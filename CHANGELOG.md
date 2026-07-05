@@ -1,5 +1,16 @@
 # Change log
 
+## 2.42.11
+
+跑 `review:case-relation` 全量（870/1778 已评）修复 Case 关联错配，重评 classification 验证 Case category 修复效果。
+
+- **Case 关联错配修复（~80 个）**：review-case-relation 评审 fail，Case 的 relatedRisks/relatedAttackTools/relatedThreatActors 与 summary 不符。起 subagent 分 4 批甄别修复：
+  - 移除与 summary 明显不符的工具关联（如 C0034 summary 是 AI 换脸却关联批量注册器→移除；C0698 关联 92 个工具精简至 5 个相关工具）。
+  - 子风险错配替换为父级或更匹配风险（如 C0197 R0016-002 批量关注→R0001 流程自动化；C0294 R0029-002→R0159 智能合约漏洞）。
+  - 保留 ~90 个边界情况（relatedRisks 仅剩 1 个且无更贴合替代，受非空约束保留；或 LLM 过严）。
+- **classification 全量重评验证**：cases fail 173→10（163 个修复），risks fail 42→1（prompt 修复生效），avoidances fail 6→0，terms fail 25→12。总 fail 246→23，降 90%。
+- **cases 剩 10 fail 边界核实**：C1206/C1763 改为 academic_research（攻击手法技术分析非具体事件）；C0003 建议删除（虚构科普类比，待用户确认）；其余 7 个保留（C0021 OWASP 标准文档/academic_research、C0097 司法原则分析/news_report、C0295/C1400/C1444/C1556 学术论文或技术方案/academic_research、C0343 警方通报/news_report——LLM 与 subagent 判断分歧的边界）。
+
 ## 2.42.10
 
 跑 `review:classification` 全量重评验证 v2.42.9 的 Case category 修复效果，并修复 Term/Avoidance 的 category 错配。

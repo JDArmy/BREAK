@@ -16,8 +16,7 @@
     "summary": "公安机关破获一起网络水军刷单案，犯罪团伙开发刷单软件，批量登录电商平台小号，为5000余家商家进行虚假下单、收货并发布虚假好评。累计刷单2000余万条，虚假评论点赞4000余万条，涉案资金流水3000余万元。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0005-001",
-      "R0071-006"
+      "R0005-001"
     ],
     "references": [
       {
@@ -29,7 +28,7 @@
         "link": "https://daan.cpd.com.cn/n157188/425/t_1180795.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-04",
     "relatedAttackTools": [
       "AT0003",

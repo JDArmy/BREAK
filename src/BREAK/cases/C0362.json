@@ -14,7 +14,7 @@
     "summary": "被告人李某搭建网站提供破解程序，被他人使用218万余次。卓某在此基础上自写脚本实现批量破解提取，非法获取1.5万余组分享链接及对应的提取密码，李某因提供侵入计算机信息系统程序被判刑。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0032-002"
+      "R0032-003"
     ],
     "references": [
       {
@@ -22,11 +22,10 @@
         "link": "https://www.chinacourt.org/article/detail/2022/11/id/7016488.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-11",
     "relatedAttackTools": [
-      "AT0023",
-      "AT0042"
+      "AT0023"
     ],
     "relatedThreatActors": [
       "TA0010"

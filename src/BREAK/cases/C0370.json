@@ -15,7 +15,7 @@
     "summary": "2018年，国内多地发生利用“GSM劫持+短信嗅探”技术窃取短信验证码的案件。攻击者通过伪基站和嗅探设备，在受害者熟睡时截获银行、支付类APP的短信验证码，结合社工获取的身份证、银行卡号，实施盗刷和网络贷款诈骗。该手法利用2G网络漏洞，可实时获取用户短信内容，导致严重经济损失。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0032-004"
+      "R0036"
     ],
     "references": [
       {
@@ -23,11 +23,9 @@
         "link": "https://www.hncourt.gov.cn/public/detail.php?id=174811"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2018-08",
-    "relatedAttackTools": [
-      "AT0062"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0015",
       "TA0017"

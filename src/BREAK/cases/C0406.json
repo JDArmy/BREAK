@@ -16,7 +16,7 @@
     "summary": "2023年3月至2024年5月，被告人邹某非法购买公民QQ邮箱、淘宝、微博等账号密码，使用“撞库”软件筛选出可登录某网络平台的凭据出售给王某。王某购得后直接登录他人账户提现，盗窃金额达51.8万元。邹某被判有期徒刑三年六个月。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0035"
+      "R0032-001"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://view.inews.qq.com/a/20260529A00IWZ00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2024-05",
     "relatedAttackTools": [
       "AT0042"

@@ -14,8 +14,7 @@
     "summary": "Cosmos生态去中心化交易所Osmosis被发现存在严重漏洞，允许任何人向任何池添加流动性，并在移除时获得额外50%的回报，可能导致所有流动资金池被耗尽。官方随后确认漏洞存在，并估算损失规模约500万美元，链上活动被紧急暂停以修复错误。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0029-002",
-      "R0198"
+      "R0159"
     ],
     "references": [
       {
@@ -27,7 +26,7 @@
         "link": "https://medium.com/osmosis-community-updates/osmosis-updates-from-the-lab-recap-osmocon-and-exploit-fix-june-15-2022-fc22355e4b0d"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-06",
     "relatedAttackTools": [
       "AT0076",

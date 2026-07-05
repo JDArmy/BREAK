@@ -14,8 +14,7 @@
     "summary": "2021年，深圳南山警方破获系列冒充熟人诈骗案。涉案人员林某、梁某夫妇制作木马病毒链接，盗取他人聊天软件账号密码，向号主亲友实施诈骗。林某从诈骗团伙学习技术并购买大量账号进行‘撒网’，得手后通过特定赌博平台或洗钱方式转移资金。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0032",
-      "R0091"
+      "R0032"
     ],
     "references": [
       {
@@ -23,7 +22,7 @@
         "link": "https://www.sznews.com/news/content/2021-12/08/content_24799309.htm"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2021-12",
     "relatedAttackTools": [
       "AT0013"

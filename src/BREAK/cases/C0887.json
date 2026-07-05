@@ -15,8 +15,7 @@
     "summary": "广州警方在2022年检查中发现，一家技术公司开发的“驾培平台”App存储了1070余万条学员个人信息（姓名、身份证号、手机号等），但该公司未建立数据安全管理制度，未对信息采取去标识化和加密措施，系统存在未授权访问漏洞。该漏洞一旦被利用，将导致大量学员个人信息泄露。该公司因此被警方依法处以警告并罚款。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0078-003",
-      "R0230"
+      "R0078-003"
     ],
     "references": [
       {
@@ -24,7 +23,7 @@
         "link": "https://www.gz.gov.cn/zwfw/zxfw/ggfw/content/post_9129540.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-05",
     "incidentTime": "2022-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

@@ -15,7 +15,6 @@
     "summary": "在AI企业出海合规讨论中，律师援引典型案例：纽约时报起诉OpenAI，指控其在训练GPT模型时爬取了《纽约时报》上百万篇文章，侵犯了著作权。此案揭示了生成式AI训练数据主要源于互联网数据库，其中不乏原创作品，存在侵犯知识产权的高危风险。",
     "category": "news_report",
     "relatedRisks": [
-      "R0071-002",
       "R0071",
       "R0242"
     ],
@@ -29,7 +28,7 @@
         "link": "https://news.qq.com/rain/a/20260106A06NY600"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-05",
     "relatedAttackTools": [
       "AT0005"
     ],
