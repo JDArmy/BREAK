@@ -1,7 +1,7 @@
 {
   "AT0083": {
-    "title": "Industrial and Vehicle Protocol Exploitation Tools",
-    "description": "Scanning and exploitation tools for industrial control, connected-vehicle V2X, medical IoT, and edge-device protocols. Attackers may exploit protocol flaws or misconfigurations in Modbus, OPC-UA, Profinet, CAN, V2X, BLE, MQTT, and similar systems to perform unauthorized access, command injection, sensor-data forgery, medical-device control, or connected-vehicle message spoofing.",
+    "title": "OT and IoT Protocol Exploitation Tools",
+    "description": "A collection of scanning and exploitation tools targeting operational technology (OT) and IoT device protocols, covering industrial control, connected vehicles, medical IoT, and edge-device scenarios. Attackers exploit flaws or misconfigurations in ICS protocols such as Modbus, OPC-UA, Profinet, DNP3, and IEC 61850, in-vehicle bus protocols such as CAN and V2X, and IoT protocols such as MQTT, CoAP, and BLE to perform unauthorized access, command injection, sensor-data forgery, PLC/RTU control tampering, medical-device control, and connected-vehicle message spoofing. These tools focus on the protocol-layer attack surface of OT and IoT environments, and are distinct from vulnerability exploitation tools for IT networks and general applications (AT0054). In-vehicle protocol attacks form an upstream/downstream division of labor with connected-vehicle OTA and interface testing tools (AT0097).",
     "references": [
       {
         "title": "Nmap NSE modbus-discover Script",
@@ -17,8 +17,11 @@
       }
     ],
     "keywords": [
-      "Industrial and Vehicle Protocol Exploitation Tools",
-      "ICS and V2X exploitation tools"
+      "OT and IoT Protocol Exploitation Tools",
+      "CAN bus attack",
+      "V2X spoofing",
+      "ICS exploitation",
+      "OT protocol abuse"
     ]
   }
 }

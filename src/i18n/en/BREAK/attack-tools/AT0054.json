@@ -1,7 +1,7 @@
 {
   "AT0054": {
     "title": "System/Application Vulnerability Exploitation Tools",
-    "description": "Vulnerability exploitation tools are software or hardware tools used to discover and exploit security vulnerabilities in computer systems or network systems. These tools can be used for vulnerability scanning, vulnerability mining, and vulnerability attacks to assess system security or conduct penetration testing.",
+    "description": "Vulnerability exploitation tools are software or hardware tools that deliver attack payloads against known security vulnerabilities in computer systems or network services. Their core capability is exploiting vulnerabilities to gain unauthorized access, execute arbitrary code, or take control of a system. These tools focus on exploitation: building EXPs for memory-corruption vulnerabilities (buffer overflow, UAF, heap overflow), delivering payloads for web application vulnerabilities (RCE, SQLi, deserialization), local privilege-escalation exploits, and orchestrating modular exploit frameworks. They are commonly used for initial foothold, lateral movement, and privilege escalation in real attack chains. Vulnerability discovery (scanning, mining) is an upstream activity handled by dedicated vulnerability scanners and fuzzing/mining tools, and is out of scope for this tool.",
     "references": [
       {
         "title": "MITRE ATT&CK - Software",

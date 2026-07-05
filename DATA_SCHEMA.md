@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.42.12`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.42.13`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -13,7 +13,7 @@ This document describes the committed JSON data model used by the BREAK knowledg
 | Avoidance | `src/BREAK/avoidances` | `A0001.json` | `A0001 or A0001-001` | 318 total (213 main, 105 sub) |
 | AttackTool | `src/BREAK/attack-tools` | `AT0001.json` | `AT0001 or AT0001-001` | 118 total (81 main, 37 sub) |
 | ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 75 total (61 main, 14 sub) |
-| Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 593 total (529 main, 64 sub) |
+| Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 592 total (528 main, 64 sub) |
 | BusinessScene | `src/BREAK/business-scenes` | `BS00.json` | `BS00` | 20 total (20 main, 0 sub) |
 | Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1777 total (1777 main, 0 sub) |
 

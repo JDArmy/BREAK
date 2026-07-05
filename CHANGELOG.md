@@ -1,5 +1,17 @@
 # Change log
 
+## 2.42.13
+
+修复 granularity/risk-scene/should-extract 评审检出的 6 个真实数据问题。
+
+- **AT0054 漏洞利用工具聚焦**：description 从"扫描/挖掘/利用混合"改为聚焦漏洞利用核心（EXP 构建/载荷投递/提权/利用框架），排除上游扫描挖掘。granularity fail→review。
+- **AT0083 OT与物联网协议工具重写**：title "工业与车联网协议利用工具"→"OT与物联网协议利用工具"（原 title 漏医疗/边缘），description 重写为统一的 OT/IoT 协议层攻击面叙事，与 directCauseRisks 对齐。granularity fail→pass。
+- **T0412 合并入 T0307**：T0412（一手操作）与 T0307（一手直盘）实质重复，删 T0412，内容（aliases/keywords/related*）并入 T0307。terms 593→592。顺带移除 T0307 损坏的脱敏 zhihu 链接。
+- **R0091 加入游戏账号接管场景**：R0091 游戏洗号加入 BS06/RS07（账号接管与身份盗用）。risk-scene fail→pass。
+- **AT0053 AI滥用工具集上位类定位**：description 重写为"AI 黑产工具集上位分类"，按生成模态枚举 7 个子工具，明确与单点工具边界。granularity fail→pass，should-extract fail→review。
+- **T0386 野路子 category 信贷欺诈→非法经营**（无牌照非法放贷平台属非法经营金融业务，非借款人信贷欺诈）。
+- R0239 漏归电商营销场景（已处理，旧 report 缓存）；R0174/R0202 重复（R0202 已删，旧 report 残留）。
+
 ## 2.42.12
 
 删除虚构案例 C0003（classification 评审检出）。

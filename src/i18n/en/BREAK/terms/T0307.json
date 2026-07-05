@@ -10,13 +10,17 @@
       "Core Settlement Layer",
       "Primary Fund Source",
       "Panel Operator",
-      "Source Channel"
+      "Source Channel",
+      "First-Hand Operator",
+      "Operator"
     ],
-    "aliases": [],
+    "aliases": [
+      "First-Hand Operator"
+    ],
     "category": "Money Laundering",
-    "definition": "A first-hand direct source is an upstream operator who directly controls the origin of illicit funds and core collection channels, maintaining a stable pool of dirty money.",
-    "description": "Sitting at the top of the money-laundering chain, a first-hand direct source holds the most upstream illegal funds, such as proceeds from gambling or fraud. They directly control a large number of bank accounts, payment accounts, or crypto addresses used for collection, offering a direct laundering channel. Downstream running crews or money brokers must connect with them to obtain a stable supply of material for washing.",
-    "usageExample": "First-hand direct source looking for partners, gambling material, regular clean mix and blended material all available, channels are stable.",
+    "definition": "A first-hand direct source is an upstream black-market operator who directly controls the origin of illicit funds and core collection/channel resources (colloquially called a 'first-hand operator' or 'operator'), maintaining a stable pool of dirty money and distribution channels—sitting at the head of the money-laundering and fund-flow chain.",
+    "description": "Sitting at the top of the money-laundering chain, a first-hand direct source holds the most upstream illegal funds, such as proceeds from gambling or fraud. They directly control a large number of bank accounts, payment accounts, or crypto addresses used for collection, offering a 'first-hand' laundering channel. They are also commonly called a 'first-hand operator' or 'operator'—an operator who directly controls core funding and channel resources at the top of the fraud and laundering chain. Downstream running crews, laundering intermediaries, or layered agents must connect with them to obtain a stable supply of 'material' for washing. True operators rarely interact with clients directly and keep a highly concealed identity, working only with specific channels; most intermediaries claiming to be 'first-hand' are in fact middlemen.",
+    "usageExample": "First-hand direct source looking for partners, gambling material, regular clean mix and blended material all available, channels stable; local first-hand operator, big-data score 65+, flexible communication.",
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
@@ -25,6 +29,10 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
         "link": "https://www.secrss.com/articles/56050"
+      },
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
       }
     ]
   }
