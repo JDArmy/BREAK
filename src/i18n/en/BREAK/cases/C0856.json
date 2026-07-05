@@ -14,8 +14,12 @@
     "summary": "In February 2024, a Chainalysis report noted that ransomware variants like Phobos have adopted a Ransomware-as-a-Service (RaaS) model. External parties known as affiliates can access the malware to carry out attacks, in exchange for paying a portion of the ransom proceeds to the variant's core operators, reflecting a typical profit-sharing business model.",
     "references": [
       {
-        "title": "Chainalysis: Ransomware Payments Surpassed $1 Billion in 2023",
-        "link": "https://www.528btc.com/news/116174213.html"
+        "title": "#StopRansomware: Phobos Ransomware - CISA Joint Cybersecurity Advisory AA24-060A",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060a"
+      },
+      {
+        "title": "2024 Crypto Crime Report - Chainalysis",
+        "link": "https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/"
       }
     ]
   }

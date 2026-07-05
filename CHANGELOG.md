@@ -1,5 +1,17 @@
 # Change log
 
+## 2.42.18
+
+修复 references 剩余 18 fail 实体（高价值 Case 缺 primary 源 + 标题不符）。
+
+- **18 个实体全部修复**（补充权威 primary 源）：
+  - 中国刑事案例 5 个：C0221 南方+央媒、C0838 桐乡法院+央视、C0888 人民网四川、C0896 河南省高院+管城法院、C0904 中国江苏网。
+  - 中国通报案例 5 个：C0911 广西公安厅、C0913 人民网江苏、C0920 新浪财经、C0927 央视新闻、C0891 浙江省检察院（匹配本案细节）。
+  - 国际案例 7 个：C0097 ICJ 法律原文、C0820 Verizon 官方 DBIR、C0828 Keepnet+FBI IC3、C0840 新华网+中国互联网协会、C0856 CISA+Chainalysis、C0863 360+奇安信、C0883 IBM 官方+PR Newswire。
+  - 攻击工具 1 个：AT0037 补《风控要略》书籍章节。
+- 3 个保留现状（C0097/C0840/C0920 为 news_report 非高价值，无官方 primary 但 2 源含 1 primary 达标）。
+- case-fact 试点 100 个：pass 44/review 39/fail 9（fail 率 10%）。
+
 ## 2.42.17
 
 修复 references 评审 112 个 fail 实体（标题不符 + 缺权威源），起 4 批 subagent 用 Scrapingdog 搜索权威替换/补充源。
