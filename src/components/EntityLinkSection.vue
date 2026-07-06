@@ -104,9 +104,7 @@ const rows = computed(() =>
         <tbody>
           <tr v-for="row in rows" :key="row.key">
             <td class="entity-reference-id">
-              <router-link :to="row.to" class="entity-reference-link">
-                {{ row.key }}
-              </router-link>
+              <span class="entity-reference-id-text">{{ row.key }}</span>
             </td>
             <td class="entity-reference-title">
               <router-link :to="row.to" class="entity-reference-link">

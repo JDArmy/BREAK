@@ -1,5 +1,12 @@
 # Change log
 
+## 2.42.28
+
+关系实体表格 ID 列去链接
+
+- EntityLinkSection / DrawerEntityLinkSection 的 ID 列由链接(router-link/button)改为纯文本,仅保留标题列可点击跳转
+- 降低视觉噪声:ID 列等宽静默展示,标题列蓝色加粗突出可点击
+
 ## 2.42.27
 
 修复 case-fact 23 个 Case 事实错误（summary 与 references 网页事实矛盾），3 批 subagent 并行用 Scrapingdog 抓取核验。

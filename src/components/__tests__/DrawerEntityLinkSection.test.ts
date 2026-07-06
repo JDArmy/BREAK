@@ -59,11 +59,10 @@ describe("DrawerEntityLinkSection", () => {
     });
 
     const buttons = wrapper.findAll("button.entity-reference-link--button");
-    expect(buttons.length).toBe(2); // ID 列 + 标题列
+    expect(buttons.length).toBe(1); // 仅标题列可点击（ID 列为纯文本）
     await buttons[0].trigger("click");
     expect(onNavigate).toHaveBeenCalledWith("R0001");
-    await buttons[1].trigger("click");
-    expect(onNavigate).toHaveBeenCalledTimes(2);
+    expect(onNavigate).toHaveBeenCalledTimes(1);
   });
 
   it("懒加载实体传入 entityRecords 时优先用记录数据", () => {

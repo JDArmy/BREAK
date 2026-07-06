@@ -74,13 +74,7 @@ const rows = computed(() => props.keys.map((key) => ({ key })));
         <tbody>
           <tr v-for="row in rows" :key="row.key">
             <td class="entity-reference-id">
-              <button
-                type="button"
-                class="entity-reference-link entity-reference-link--button"
-                @click="onNavigate(row.key)"
-              >
-                {{ row.key }}
-              </button>
+              <span class="entity-reference-id-text">{{ row.key }}</span>
             </td>
             <td class="entity-reference-title">
               <button
