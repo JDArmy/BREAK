@@ -283,6 +283,52 @@ describe("useEntityResolver", () => {
     expect(ensureMock).toHaveBeenCalled();
   });
 
+  it("Case 已加载后从懒加载记录读取标题和摘要", async () => {
+    const vue = await vi.importActual<typeof import("vue")>("vue");
+
+    vi.doMock("vue-i18n", () => ({
+      useI18n: () => ({
+        t: (key: string) => {
+          if (key === "relationType.case") return "案例";
+          return key;
+        },
+        te: (key: string) => key === "relationType.case",
+      }),
+    }));
+
+    vi.doMock("vue-router", () => ({
+      useRouter: () => ({
+        resolve: (route: { name: string; params: Record<string, string> }) => ({
+          href: `#/knowledges/case/detail/${route.params.cKey}`,
+        }),
+      }),
+    }));
+
+    vi.doMock("@/composables/useCases", () => ({
+      useCases: () => ({
+        cases: vue.ref({
+          C0001: {
+            title: "测试案例标题",
+            summary: "测试案例摘要",
+          },
+        }),
+        loaded: vue.ref(true),
+        ensureCases: vi.fn(),
+      }),
+    }));
+
+    const { useEntityResolver } = await import("@/composables/useEntityResolver");
+    const { resolve } = useEntityResolver();
+
+    const result = resolve("C0001");
+    expect(result).not.toBeNull();
+    expect(result!.exists).toBe(true);
+    expect(result!.typeLabel).toBe("案例");
+    expect(result!.title).toBe("测试案例标题");
+    expect(result!.definition).toBe("测试案例摘要");
+    expect(result!.href).toContain("C0001");
+  });
+
   it("entityExists 正确判断各类型实体", async () => {
     const vue = await vi.importActual<typeof import("vue")>("vue");
 

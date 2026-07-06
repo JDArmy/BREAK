@@ -7,9 +7,8 @@
  * 路径 A — 纯文本场景（description / definition 等）：
  *   MutationObserver → TreeWalker → 拆分文本节点 → <span data-entity-id>
  *
- * 路径 B — 交互元素场景（按钮 / 链接 / 表格行 / 卡片 等）：
- *   事件委托 mouseenter → 从元素文本中正则提取第一个实体 ID → 显示 Popover
- *   不修改 DOM，不影响已有点击行为
+ * 按钮 / 链接 / 表格行 / 卡片等交互元素里的实体 ID：
+ *   扫描时只包裹具体 ID 文本，hover 具体 ID 时显示 Popover。
  *
  * 在 App.vue 中引入即可，零模板修改。
  *
@@ -21,9 +20,7 @@ import EntityPopoverContent from "./EntityPopoverContent.vue";
 import {
   ATTR,
   CLS,
-  INTERACTIVE_SELECTOR,
   EXCLUDE_ZONE,
-  extractEntityId,
   processTextNode,
   scanSubtree,
 } from "./autoLinkerCore";
@@ -127,7 +124,7 @@ function handleMutations(mutations: MutationRecord[]) {
   scanTimer = setTimeout(processBatch, 100);
 }
 
-// ─── 事件委托（路径 A + B 统一入口） ──────────────────
+// ─── 事件委托（只响应具体实体 ID 文本） ──────────────────
 function handleMouseEnter(e: Event) {
   const target = e.target as HTMLElement;
   if (!target?.tagName) return;
@@ -139,17 +136,6 @@ function handleMouseEnter(e: Event) {
   if (target.classList.contains(CLS)) {
     const id = target.getAttribute(ATTR);
     if (id) showPopover(target, id);
-    return;
-  }
-
-  // 路径 B：交互元素（按钮 / 链接 / 表格 / 卡片）
-  // 若内部已有路径 A 包裹的 span，则跳过（由路径 A 逐个处理）
-  const interactive = target.closest(INTERACTIVE_SELECTOR) as HTMLElement | null;
-  if (interactive) {
-    if (interactive.querySelector(`.${CLS}`)) return;
-    const text = interactive.textContent || "";
-    const id = extractEntityId(text);
-    if (id) showPopover(interactive, id);
   }
 }
 
@@ -159,12 +145,6 @@ function handleMouseLeave(e: Event) {
 
   // 路径 A
   if (target.classList.contains(CLS)) {
-    scheduleHide();
-    return;
-  }
-
-  // 路径 B
-  if (target.closest(INTERACTIVE_SELECTOR)) {
     scheduleHide();
   }
 }

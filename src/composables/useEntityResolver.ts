@@ -37,9 +37,16 @@ export interface EntitySummary {
 /** 描述文本截断长度 */
 const DESC_MAX_LEN = 120;
 
+type LazyEntityRecord = Record<string, unknown>;
+
 function truncate(s: string | undefined | null, max = DESC_MAX_LEN): string | null {
   if (!s) return null;
   return s.length > max ? s.slice(0, max) + "…" : s;
+}
+
+function getStringField(record: LazyEntityRecord | undefined, field: string): string | null {
+  const value = record?.[field];
+  return typeof value === "string" && value ? value : null;
 }
 
 export function useEntityResolver() {
@@ -78,32 +85,50 @@ export function useEntityResolver() {
       });
     }
 
-    const prefix = entityI18nPrefix(id, type);
     const exists = entityExists(id, type);
 
     // 类型标签
     const typeLabel = te(entry.typeLabelKey) ? t(entry.typeLabelKey) : type;
 
-    // 标题
-    const titleKey = `${prefix}.title`;
-    const title = exists && te(titleKey) ? t(titleKey) : id;
-
     // 按字段优先级提取 definition / description
+    let title = id;
     let definition: string | null = null;
     let description: string | null = null;
 
-    if (exists) {
-      for (const field of entry.fieldPriority) {
-        const key = `${prefix}.${field}`;
-        if (te(key)) {
-          const val = t(key);
-          if (val && val !== key) {
-            // 避免 vue-i18n 返回 key 本身（表示翻译缺失）
-            if (!definition) {
-              definition = truncate(val);
-            } else if (!description) {
-              description = truncate(val);
-              break;
+    if (entry.dataSource === "lazy") {
+      const record = cases.value[id] as LazyEntityRecord | undefined;
+      title = getStringField(record, "title") ?? id;
+
+      if (exists) {
+        for (const field of entry.fieldPriority) {
+          const val = getStringField(record, field);
+          if (!val) continue;
+          if (!definition) {
+            definition = truncate(val);
+          } else if (!description) {
+            description = truncate(val);
+            break;
+          }
+        }
+      }
+    } else {
+      const prefix = entityI18nPrefix(id, type);
+      const titleKey = `${prefix}.title`;
+      title = exists && te(titleKey) ? t(titleKey) : id;
+
+      if (exists) {
+        for (const field of entry.fieldPriority) {
+          const key = `${prefix}.${field}`;
+          if (te(key)) {
+            const val = t(key);
+            if (val && val !== key) {
+              // 避免 vue-i18n 返回 key 本身（表示翻译缺失）
+              if (!definition) {
+                definition = truncate(val);
+              } else if (!description) {
+                description = truncate(val);
+                break;
+              }
             }
           }
         }

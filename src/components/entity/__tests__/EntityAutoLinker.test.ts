@@ -313,12 +313,15 @@ describe("isInsideSkipZone", () => {
     expect(isInsideSkipZone(tn)).toBe(true);
   });
 
-  it(".knowledge-id 内文本被跳过", () => {
+  it(".knowledge-list-item 内的 .knowledge-id 允许具体 ID 被包裹", () => {
+    const button = document.createElement("button");
+    button.className = "knowledge-list-item";
+    container.appendChild(button);
     const el = document.createElement("span");
     el.className = "knowledge-id";
-    container.appendChild(el);
+    button.appendChild(el);
     const tn = appendText(el, "R0001");
-    expect(isInsideSkipZone(tn)).toBe(true);
+    expect(isInsideSkipZone(tn)).toBe(false);
   });
 
   it(".el-input 内文本被跳过", () => {
@@ -337,7 +340,7 @@ describe("isInsideSkipZone", () => {
     expect(isInsideSkipZone(tn)).toBe(true);
   });
 
-  it("普通 <a> 标签内文本被跳过（路径 B 统一处理）", () => {
+  it("普通 <a> 标签内文本被跳过，避免改写普通导航链接", () => {
     const a = document.createElement("a");
     a.href = "#/risks/R0001";
     container.appendChild(a);
@@ -352,7 +355,55 @@ describe("isInsideSkipZone", () => {
     const a = document.createElement("a");
     wrapper.appendChild(a);
     const tn = appendText(a, "R0001: 风险标题");
-    // entity-link 匹配 INTERACTIVE_SELECTOR，<a> 标签 closest 命中 → 放行
+    // entity-link 匹配 INTERACTIVE_SELECTOR，<a> 标签 closest 命中 → 允许具体 ID 被包裹
+    expect(isInsideSkipZone(tn)).toBe(false);
+  });
+
+  it("关联实体外层链接允许内部具体 ID 被包裹", () => {
+    const a = document.createElement("a");
+    a.className = "risk-relation-item";
+    container.appendChild(a);
+    const title = document.createElement("span");
+    title.className = "risk-relation-title";
+    a.appendChild(title);
+    const tn = appendText(title, "R0001: 风险标题");
+
+    expect(isInsideSkipZone(tn)).toBe(false);
+  });
+
+  it("关系图抽屉关系列表按钮允许内部具体 ID 被包裹", () => {
+    const button = document.createElement("button");
+    button.className = "node-relation-link";
+    container.appendChild(button);
+    const id = document.createElement("span");
+    id.className = "node-relation-link-id";
+    button.appendChild(id);
+    const tn = appendText(id, "A0001");
+
+    expect(isInsideSkipZone(tn)).toBe(false);
+  });
+
+  it("关系图抽屉节点标题按钮允许内部具体 ID 被包裹", () => {
+    const button = document.createElement("button");
+    button.className = "node-detail-title";
+    container.appendChild(button);
+    const id = document.createElement("span");
+    id.className = "node-detail-id";
+    button.appendChild(id);
+    const tn = appendText(id, "A0001");
+
+    expect(isInsideSkipZone(tn)).toBe(false);
+  });
+
+  it("关系图抽屉相关实体按钮允许内部具体 ID 被包裹", () => {
+    const button = document.createElement("button");
+    button.className = "node-related-entity-main";
+    container.appendChild(button);
+    const id = document.createElement("span");
+    id.className = "node-related-entity-id";
+    button.appendChild(id);
+    const tn = appendText(id, "A0004");
+
     expect(isInsideSkipZone(tn)).toBe(false);
   });
 

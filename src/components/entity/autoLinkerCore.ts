@@ -20,29 +20,36 @@ export const CLS = "entity-id-auto";
 
 /**
  * 交互元素选择器列表。
- * mouseenter 到这些元素上时，尝试从 textContent 中提取实体 ID 显示 Popover。
- * 不修改 DOM，不影响原有 click 行为。
+ * 这些容器里的实体 ID 允许被扫描包裹，hover 时只响应具体 ID 文本。
  */
 export const INTERACTIVE_SELECTORS = [
   // 抽屉 / 各 View 关联实体链接（button/a）
   ".entity-link",
   // EntityLinkSection 表格 ID 列
   ".entity-reference-link",
-  // 列表左侧的 ID span
+  // 知识库列表项与其中的 ID span
+  ".knowledge-list-item",
   ".knowledge-id",
   // 风险关联卡片标题
+  ".risk-relation-item",
   ".risk-relation-title",
   // 攻击工具关联卡片标题
+  ".attack-tool-relation-item",
   ".attack-tool-relation-title",
   // 规避手段关联卡片标题
+  ".avoidance-relation-item",
   ".avoidance-relation-title",
   // 威胁行为者关联卡片标题
+  ".threat-actor-relation-item",
   ".threat-actor-relation-title",
   // 关系图抽屉：节点头部 ID
+  ".node-detail-title",
   ".node-detail-id",
   // 关系图抽屉：关系列表中的关联节点 ID
+  ".node-relation-link",
   ".node-relation-link-id",
   // 关系图抽屉：相关实体块中的 ID
+  ".node-related-entity-main",
   ".node-related-entity-id",
   // 关系图抽屉：防御覆盖列表项（div[role=button]，含 ID span）
   ".node-coverage-item",
@@ -68,9 +75,9 @@ export const EXCLUDE_ZONE =
 /**
  * 判断文本节点是否在"不应拆分包裹"的祖先内。
  *
- * 对 <a> / <button>：若祖先匹配路径 B 的 INTERACTIVE_SELECTOR，
+ * 对 <a> / <button>：若祖先匹配 INTERACTIVE_SELECTOR，
  * 则允许路径 A 进入扫描（处理内含多个 ID 的场景）。
- * 否则跳过（普通导航链接 / 普通按钮由路径 B 统一处理）。
+ * 否则跳过，避免改写普通导航链接 / 普通按钮。
  */
 export function isInsideSkipZone(node: Node): boolean {
   let parent = node.parentElement;
@@ -80,7 +87,7 @@ export function isInsideSkipZone(node: Node): boolean {
     if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
       return true;
     }
-    // <a> / <button>：若匹配路径 B 选择器则放行（多 ID 场景），否则跳过
+    // <a> / <button>：若匹配允许扫描的交互容器则放行，否则跳过
     if (tag === "A" || tag === "BUTTON") {
       return !parent.closest(INTERACTIVE_SELECTOR);
     }
@@ -102,8 +109,7 @@ export function isInsideSkipZone(node: Node): boolean {
       parent.classList.contains("el-input") ||
       parent.classList.contains("network-chart") ||
       parent.classList.contains("sankey-chart") ||
-      parent.classList.contains("detail-id") ||
-      parent.classList.contains("knowledge-id")
+      parent.classList.contains("detail-id")
     ) {
       return true;
     }
