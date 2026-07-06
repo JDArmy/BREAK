@@ -1,18 +1,18 @@
 {
   "C1360": {
-    "title": "Value DeFi vSwap Flash Loan Attack",
+    "title": "Value DeFi vSwap Invariant Miscalculation Exploit",
     "keywords": [
       "Value DeFi",
       "vSwap",
+      "vSwap Invariant Miscalculation Exploit",
       "AMM",
-      "flash loan attack",
-      "DeFi exploit",
+      "Bancor formula",
+      "weighted constant product invariant",
       "non-proportional liquidity pools",
       "smart contract vulnerability",
-      "flash loan arbitrage",
       "$11 million loss"
     ],
-    "summary": "On May 8, 2021, Value DeFi's vSwap AMM non-50/50 liquidity pools were exploited in a flash loan attack, resulting in a loss of approximately $11 million. The attacker borrowed a large amount of assets using a flash loan and targeted a vulnerability in the non-proportional pools, completing the profit within a single transaction.",
+    "summary": "On May 8, 2021, Value DeFi's vSwap AMM non-50/50 pools were exploited via improper use of the Bancor formula power() function, causing miscalculation of the weighted constant product invariant. The attacker crafted input violating the baseN>=baseD assumption to bypass enforcement, draining 9 non-proportional pools for ~$11M.",
     "references": [
       {
         "title": "ValueDeFi Incident: Incorrect Weighted Constant Product Invariant Calculation - PeckShield (2021-05-08, ~$11M)",

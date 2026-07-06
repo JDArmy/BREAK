@@ -11,10 +11,11 @@
       "A0070"
     ],
     "directCauseRisks": [
-      "R0248"
+      "R0248",
+      "R0051"
     ],
     "indirectSupportRisks": [
-      "R0051"
+      "R0001"
     ],
     "references": [
       {
@@ -30,8 +31,23 @@
       "移动应用重打包工具链",
       "移动应用重打包"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
+      {
+        "key": "AT0025",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0049-001",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
       {
         "key": "AT0054-006",
         "relation": "co-used",
@@ -46,21 +62,6 @@
         "key": "AT0063",
         "relation": "co-used",
         "note": "共享 2 个规避手段，被 1 个相同行为者使用或建设。"
-      },
-      {
-        "key": "AT0015",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 1 个规避手段。"
-      },
-      {
-        "key": "AT0025",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 1 个规避手段。"
-      },
-      {
-        "key": "AT0028",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 1 个规避手段。"
       }
     ]
   }

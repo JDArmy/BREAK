@@ -1,5 +1,14 @@
 # Change log
 
+## 2.42.31
+
+重评确认 tool-risks/term-completeness/case-fact 修复效果，修真实 fail。
+
+- **tool-risks 重评**：92 fail → 33 fail。修 6 个真实 direct/indirect 错划：AT0049 移除 R0016-001（挂人气不匹配）、AT0050 R0005-001 indirect→direct、AT0054-004 R0036 indirect→direct、AT0061 R0001-001 indirect→direct、AT0061-005 R0008 indirect→direct、AT0095 R0051 indirect→direct。27 个 STALE/HALLUCINATED fail（数据已正确，LLM 引用不存在的 risk ID）。重评 6 个改动 key 全 pass。
+- **term-completeness 重评**：161 fail → 52 fail（降 68%）。剩 52 fail 多是 LLM 主观判断"风控策略过宽应换更具体关联"，保守不改。
+- **case-fact 重评**：67 fail → 1 fail → 0。C1360 Value DeFi 改正漏洞机制（闪电贷→Bancor 公式 power() 不变量计算漏洞），title/summary/keywords 同步。
+- sync:lateral-relations 重算，validate:data 28 门禁全绿。
+
 ## 2.42.30
 
 4 个 subagent 并行修复 4 维度 fail：case-fact 重评+4 真实 fail、term-completeness 161、risk-avoidance 真实不匹配、tool-risks 92。

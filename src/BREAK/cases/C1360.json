@@ -1,18 +1,18 @@
 {
   "C1360": {
-    "title": "Value DeFi vSwap 闪电贷攻击",
+    "title": "Value DeFi vSwap 不变量计算漏洞攻击",
     "keywords": [
       "Value DeFi",
       "vSwap",
+      "vSwap 不变量计算漏洞攻击",
       "AMM",
-      "闪电贷攻击",
-      "DeFi漏洞",
+      "Bancor公式",
+      "加权恒定乘积不变量",
       "非等比例资金池",
       "智能合约安全",
-      "闪电贷套利",
       "1100万美元损失"
     ],
-    "summary": "2021年5月8日，Value DeFi的vSwap AMM非50/50资金池遭闪电贷攻击，损失约1100万美元。攻击者利用闪电贷借入大量资产，针对非等比例资金池的漏洞进行攻击，在单笔交易内完成获利。",
+    "summary": "2021年5月8日，Value DeFi 的 vSwap AMM 非50/50资金池因 Bancor 公式 power() 函数使用不当，加权恒定乘积不变量计算错误，攻击者构造输入违反 baseN≥baseD 假设绕过校验，抽干9个非等比例池，损失约1100万美元。",
     "category": "security_incident",
     "relatedRisks": [
       "R0160"
