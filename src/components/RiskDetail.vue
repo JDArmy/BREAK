@@ -24,6 +24,8 @@ const AvoidanceDetail = createRecoverableAsyncComponent(() => import("@/componen
 const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "RiskAttackToolDetail");
 const ThreatActorDetail = createRecoverableAsyncComponent(() => import("@/components/ThreatActorDetail.vue"), undefined, "RiskThreatActorDetail");
 const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "RiskTermDetail");
+// 自引用：Risk→Related Risk 开嵌套抽屉（动态 import 惰性求值，不构成 module 循环依赖）
+const RiskDetail = createRecoverableAsyncComponent(() => import("@/components/RiskDetail.vue"), undefined, "RiskNestedRiskDetail");
 
 const props = defineProps<{
   drawer: boolean;
@@ -92,6 +94,9 @@ const threatActorDrawer = ref(false);
 const threatActorKey = ref("");
 const termDrawer = ref(false);
 const termKey = ref("");
+// 同类嵌套：Risk→Related Risk 开嵌套抽屉（不开新窗口）
+const nestedRiskDrawer = ref(false);
+const nestedRiskKey = ref("");
 
 const openRelationGraph = (rKey: string) => {
   const route = router.resolve({
@@ -122,6 +127,7 @@ const openDetail = (rKey: string) => {
     @closed="$emit('drawerClose')"
     direction="rtl"
     :size="getDrawerWidth()"
+    :append-to-body="true"
   >
     <template #header>
       <div class="drawer-header-with-back">
@@ -208,8 +214,7 @@ const openDetail = (rKey: string) => {
             :key="`${relation.key}-${relation.relation}`"
             class="risk-relation-item"
             :href="detailHref(relation.key)"
-            target="_blank"
-            rel="noopener"
+            @click.prevent="nestedRiskKey = relation.key; nestedRiskDrawer = true"
           >
             <span class="risk-relation-type">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
             <span class="risk-relation-title">
@@ -303,6 +308,14 @@ const openDetail = (rKey: string) => {
     v-on:drawer-close="termDrawer = false"
     :drawer="termDrawer"
     :tKey="termKey"
+  />
+
+  <!-- 同类嵌套：关联风险开嵌套抽屉 -->
+  <RiskDetail
+    v-if="nestedRiskDrawer"
+    v-on:drawer-close="nestedRiskDrawer = false"
+    :drawer="nestedRiskDrawer"
+    :rKey="nestedRiskKey"
   />
 </template>
 

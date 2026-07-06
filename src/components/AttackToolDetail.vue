@@ -21,6 +21,8 @@ import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 const AvoidanceDetail = createRecoverableAsyncComponent(() => import("@/components/AvoidanceDetail.vue"), undefined, "AttackToolAvoidanceDetail");
 const ThreatActorDetail = createRecoverableAsyncComponent(() => import("@/components/ThreatActorDetail.vue"), undefined, "AttackToolThreatActorDetail");
 const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "AttackToolTermDetail");
+// 自引用：AttackTool→Related AttackTool 开嵌套抽屉
+const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "AttackToolNestedAttackToolDetail");
 
 const props = defineProps<{
   drawer: boolean;
@@ -85,13 +87,16 @@ const openCaseInNewWindow = (cKey: string) => {
   if (href) window.open(href, "_blank", "noopener,noreferrer");
 };
 
-// 嵌套抽屉：avoidance/threatActor/term 开嵌套抽屉；risk/case 走新窗口
+// 嵌套抽屉：avoidance/threatActor/term/同类 attackTool 开嵌套抽屉；risk/case 走新窗口
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
 const threatActorDrawer = ref(false);
 const threatActorKey = ref("");
 const termDrawer = ref(false);
 const termKey = ref("");
+// 同类嵌套：AttackTool→Related AttackTool 开嵌套抽屉
+const nestedAttackToolDrawer = ref(false);
+const nestedAttackToolKey = ref("");
 </script>
 
 <template>
@@ -172,8 +177,7 @@ const termKey = ref("");
             :key="`${relation.key}-${relation.relation}`"
             class="attack-tool-relation-item"
             :href="detailHref(relation.key)"
-            target="_blank"
-            rel="noopener"
+            @click.prevent="nestedAttackToolKey = relation.key; nestedAttackToolDrawer = true"
           >
             <span class="attack-tool-relation-type">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
             <span class="attack-tool-relation-title">
@@ -245,6 +249,13 @@ const termKey = ref("");
     v-on:drawer-close="termDrawer = false"
     :drawer="termDrawer"
     :tKey="termKey"
+  />
+  <!-- 同类嵌套：关联攻击工具开嵌套抽屉 -->
+  <AttackToolDetail
+    v-if="nestedAttackToolDrawer"
+    v-on:drawer-close="nestedAttackToolDrawer = false"
+    :drawer="nestedAttackToolDrawer"
+    :atKey="nestedAttackToolKey"
   />
 </template>
 

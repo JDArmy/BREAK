@@ -19,6 +19,8 @@ import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
 const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "AvoidanceAttackToolDetail");
 const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "AvoidanceTermDetail");
+// 自引用：Avoidance→Related Avoidance 开嵌套抽屉
+const AvoidanceDetail = createRecoverableAsyncComponent(() => import("@/components/AvoidanceDetail.vue"), undefined, "AvoidanceNestedAvoidanceDetail");
 
 const props = defineProps<{
   drawer: boolean;
@@ -69,11 +71,14 @@ const openRiskInNewWindow = (rKey: string) => {
   if (href) window.open(href, "_blank", "noopener,noreferrer");
 };
 
-// 嵌套抽屉：attackTool/term 开嵌套抽屉；avoidance 不嵌套同类 avoidance，不嵌套 risk
+// 嵌套抽屉：attackTool/term/同类 avoidance 开嵌套抽屉；risk 走新窗口
 const attackToolDrawer = ref(false);
 const attackToolKey = ref("");
 const termDrawer = ref(false);
 const termKey = ref("");
+// 同类嵌套：Avoidance→Related Avoidance 开嵌套抽屉
+const nestedAvoidanceDrawer = ref(false);
+const nestedAvoidanceKey = ref("");
 </script>
 
 <template>
@@ -152,8 +157,7 @@ const termKey = ref("");
             :key="`${relation.key}-${relation.relation}`"
             class="avoidance-relation-item"
             :href="detailHref(relation.key)"
-            target="_blank"
-            rel="noopener"
+            @click.prevent="nestedAvoidanceKey = relation.key; nestedAvoidanceDrawer = true"
           >
             <span class="avoidance-relation-type">{{ $t(`avoidanceRelationType.${relation.relation}`) }}</span>
             <span class="avoidance-relation-title">
@@ -207,6 +211,13 @@ const termKey = ref("");
     v-on:drawer-close="termDrawer = false"
     :drawer="termDrawer"
     :tKey="termKey"
+  />
+  <!-- 同类嵌套：关联手段开嵌套抽屉 -->
+  <AvoidanceDetail
+    v-if="nestedAvoidanceDrawer"
+    v-on:drawer-close="nestedAvoidanceDrawer = false"
+    :drawer="nestedAvoidanceDrawer"
+    :aKey="nestedAvoidanceKey"
   />
 </template>
 

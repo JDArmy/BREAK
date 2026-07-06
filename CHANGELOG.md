@@ -1,5 +1,14 @@
 # Change log
 
+## 2.42.25
+
+抽屉同类关联跳转改嵌套抽屉
+
+- 首页抽屉的同类关联(Risk→Related Risk、Avoidance→Related Avoidance、AttackTool→Related AttackTool、ThreatActor→Related ThreatActor)由新窗口改为开嵌套抽屉,统一"抽屉内链接尽量开新抽屉"的交互
+- 4 个抽屉组件用 createRecoverableAsyncComponent 自引用(项目首个自引用先例),保留 relation type + note 渲染
+- RiskDetail 顶层补 append-to-body=true,与其它嵌套抽屉统一
+- 跨类嵌套、Case 新窗口、BusinessScene 路由跳转、知识库详情页 router-link 维持不变
+
 ## 2.42.24
 
 修复 references 3 个 Case + fingerprintOf 脚本缺陷（对象数组指纹不区分内容）。

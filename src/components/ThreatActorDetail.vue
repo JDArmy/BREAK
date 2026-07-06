@@ -20,6 +20,8 @@ import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
 const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "ThreatActorAttackToolDetail");
 const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "ThreatActorTermDetail");
+// 自引用：ThreatActor→Related ThreatActor 开嵌套抽屉
+const ThreatActorDetail = createRecoverableAsyncComponent(() => import("@/components/ThreatActorDetail.vue"), undefined, "ThreatActorNestedThreatActorDetail");
 
 const props = defineProps<{
   drawer: boolean;
@@ -79,11 +81,14 @@ const openCaseInNewWindow = (cKey: string) => {
   if (href) window.open(href, "_blank", "noopener,noreferrer");
 };
 
-// 嵌套抽屉：attackTool/term 开嵌套抽屉；risk/case 走新窗口
+// 嵌套抽屉：attackTool/term/同类 threatActor 开嵌套抽屉；risk/case 走新窗口
 const attackToolDrawer = ref(false);
 const attackToolKey = ref("");
 const termDrawer = ref(false);
 const termKey = ref("");
+// 同类嵌套：ThreatActor→Related ThreatActor 开嵌套抽屉
+const nestedThreatActorDrawer = ref(false);
+const nestedThreatActorKey = ref("");
 </script>
 
 <template>
@@ -171,8 +176,7 @@ const termKey = ref("");
             :key="`${relation.key}-${relation.relation}`"
             class="threat-actor-relation-item"
             :href="detailHref(relation.key)"
-            target="_blank"
-            rel="noopener"
+            @click.prevent="nestedThreatActorKey = relation.key; nestedThreatActorDrawer = true"
           >
             <span class="threat-actor-relation-type">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
             <span class="threat-actor-relation-title">
@@ -225,6 +229,13 @@ const termKey = ref("");
     v-on:drawer-close="termDrawer = false"
     :drawer="termDrawer"
     :tKey="termKey"
+  />
+  <!-- 同类嵌套：关联行为者开嵌套抽屉 -->
+  <ThreatActorDetail
+    v-if="nestedThreatActorDrawer"
+    v-on:drawer-close="nestedThreatActorDrawer = false"
+    :drawer="nestedThreatActorDrawer"
+    :taKey="nestedThreatActorKey"
   />
 </template>
 
