@@ -238,7 +238,7 @@ async function worker() {
     }
   }
 }
-await Promise.all(Array.from({ length: 2 }, () => worker())); // 抓取+LLM 较重，降并发到 2
+await Promise.all(Array.from({ length: 4 }, () => worker())); // 并发 4 提速（429 由 withRetry 处理）
 
 const all = [...resultById.values()];
 writeJson(REPORT_PATH, all);

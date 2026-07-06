@@ -7,11 +7,11 @@
       "mechanism vulnerability",
       "Hangzhou cyber police",
       "membership service",
-      "illegal data sale",
-      "personal information leak",
+      "payment credential tampering",
+      "C2C resale",
       "black-market gang"
     ],
-    "summary": "In October 2023, Hangzhou cyber police uncovered a black-market gang exploiting a vulnerability in Apple's in-app purchase mechanism to sell discounted membership services, offering subscriptions originally priced at nearly 300 yuan for half the cost. The gang illegally sold 59,339 pieces of personal information before being taken down.",
+    "summary": "In October 2023, Hangzhou cyber police uncovered a black-market gang exploiting a vulnerability in Apple's in-app purchase mechanism to tamper with payment credential data and disrupt authentication, enabling low-price membership purchases that were resold on C2C platforms, causing direct losses of over 1.8 million yuan to the company. On November 17, Hangzhou police carried out coordinated raids in Luoyang (Henan) and Bozhou (Anhui), arresting four suspects.",
     "references": [
       {
         "title": "Top Celebrity Identity Info Available for Monthly Subscription, Hacker Behind It Turns Out to Be a Post-00s Youth! Police Report...",

@@ -13,7 +13,7 @@
       "网络犯罪",
       "安全研究"
     ],
-    "summary": "2022年2月，安全研究人员发现多个网站使用中间人（MitM）钓鱼工具包，这些工具包能够拦截双因素认证（2FA）安全代码，允许网络犯罪分子绕过这一验证环节，从而接管用户账户。",
+    "summary": "2025年10月，波士顿一家医疗科技公司遭Tycoon 2FA钓鱼套件攻击，攻击者通过会议邀请邮件诱导财务总监点击伪造的Microsoft 365登录页，借助反向代理实时转发登录与多因素认证流程，并在认证成功后截获会话Cookie，最终冒充CEO发送邮件卷走140万美元。Tycoon 2FA自2023年8月首次亮相以来已关联超过6.4万起确认事件，是针对Microsoft 365和Gmail用户的主要AiTM（中间人）钓鱼工具。",
     "category": "security_incident",
     "relatedRisks": [
       "R0036"
@@ -28,8 +28,8 @@
         "link": "https://blog.sekoia.io/tycoon-2fa-an-in-depth-analysis-of-the-latest-version-of-the-aitm-phishing-kit/"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2022-02",
+    "updated": "2026-07-06",
+    "incidentTime": "2025-10",
     "relatedAttackTools": [
       "AT0072",
       "AT0063"

@@ -10,7 +10,7 @@
       "phishing toolkit",
       "man-in-the-middle attack"
     ],
-    "summary": "In February 2022, security researchers discovered multiple websites using man-in-the-middle (MitM) phishing kits capable of intercepting two-factor authentication (2FA) security codes, allowing cybercriminals to bypass this verification step and take over user accounts.",
+    "summary": "In October 2025, a Boston medical technology company was attacked by the Tycoon 2FA phishing kit. The attackers used a meeting-invitation email to lure the CFO into clicking a forged Microsoft 365 login page, using a reverse proxy to forward the login and multi-factor authentication flows in real time, then intercepting the session cookie after successful authentication and ultimately impersonating the CEO to wire away 1.4 million dollars. Since first appearing in August 2023, Tycoon 2FA has been linked to over 64,000 confirmed incidents and is a major AiTM (adversary-in-the-middle) phishing tool targeting Microsoft 365 and Gmail users.",
     "references": [
       {
         "title": "Tycoon 2FA Phishing Kit Sparks a Session Hijacking Storm",
