@@ -4,14 +4,8 @@ import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
-import FeedbackLink from "@/components/FeedbackLink.vue";
-import ReferenceList from "@/components/ReferenceList.vue";
-import EntityLinkSection from "@/components/EntityLinkSection.vue";
+import AttackToolDetailBody from "@/components/AttackToolDetailBody.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
-import { useRelatedCases } from "@/composables/useRelatedCases";
-import { useRelatedEntities } from "@/composables/useRelatedEntities";
-import { useRelationGraph } from "@/composables/useRelationGraph";
-import { formatAttackToolRelationNote } from "@/utils/relationNote";
 
 const route = useRoute();
 const { t, locale, messages } = useI18n();
@@ -62,34 +56,6 @@ const attackToolItems = computed(() =>
 );
 
 const selectedAttackTool = computed(() => BREAK.attackTools[selectedAttackToolKey.value]);
-const relatedAttackToolRelations = computed(() => selectedAttackTool.value?.relatedAttackTools ?? []);
-const getAttackToolRelationNote = (relation: NonNullable<typeof relatedAttackToolRelations.value>[number]) =>
-  formatAttackToolRelationNote(relation, locale.value, t);
-const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
-// 选中攻击工具的关键词（缓存 computed，避免模板 v-if + v-for 重复调用 getMessageStringArray）
-const selectedAttackToolKeywords = computed(() =>
-  getMessageStringArray(localeMessages.value, `BREAK.attackTools.${selectedAttackToolKey.value}.keywords`)
-);
-
-const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
-  "attackTool",
-  selectedAttackToolKey,
-);
-
-// 反查：自建/使用该工具的威胁行为者，以及关联该工具的术语
-const builderThreatActorKeys = useRelatedEntities(
-  BREAK.threatActors,
-  "buildAttackTools",
-  selectedAttackToolKey,
-);
-const userThreatActorKeys = useRelatedEntities(
-  BREAK.threatActors,
-  "useAttackTools",
-  selectedAttackToolKey,
-);
-const relatedTermKeys = useRelatedEntities(BREAK.terms, "relatedAttackTools", selectedAttackToolKey);
-
-const { openRelationGraph } = useRelationGraph("attack-tool");
 </script>
 
 <template>
@@ -103,115 +69,7 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
     :search-placeholder="$t('search.attackToolPlaceholder')"
     @select="selectedAttackToolKey = $event"
   >
-    <article v-if="selectedAttackTool" class="detail-panel">
-      <div class="detail-heading">
-        <div>
-          <div class="detail-id">{{ selectedAttackToolKey }}</div>
-          <h2>{{ $t(`BREAK.attackTools.${selectedAttackToolKey}.title`) }}</h2>
-        </div>
-        <div class="detail-heading-actions">
-          <FeedbackLink :entity-id="selectedAttackToolKey" :entity-title="$t(`BREAK.attackTools.${selectedAttackToolKey}.title`)" />
-          <el-button type="primary" size="small" @click="openRelationGraph(selectedAttackToolKey)">
-          {{ $t("openRelationGraph") }}
-          </el-button>
-        </div>
-      </div>
-
-      <section class="detail-section" data-detail-anchor="attack-tools">
-        <h3>{{ $t("description") }}</h3>
-        <p>{{ $t(`BREAK.attackTools.${selectedAttackToolKey}.description`) }}</p>
-      </section>
-      <section v-if="selectedAttackToolKeywords.length" class="detail-section">
-        <h3>{{ $t("keywords") }}</h3>
-        <div class="keywords">
-          <span v-for="keyword in selectedAttackToolKeywords" :key="keyword" class="keyword-tag">
-            {{ keyword }}
-          </span>
-        </div>
-      </section>
-      <EntityLinkSection
-        :keys="selectedAttackTool.directCauseRisks"
-        title="relationLine.directCauseRisk"
-        entity-type="risk"
-        anchor="risks"
-      />
-      <EntityLinkSection
-        :keys="selectedAttackTool.indirectSupportRisks"
-        title="relationLine.indirectSupportRisk"
-        entity-type="risk"
-        anchor="risks"
-      />
-      <EntityLinkSection
-        :keys="selectedAttackTool.avoidances"
-        title="avoidance"
-        entity-type="avoidance"
-        anchor="avoidances"
-      />
-      <section v-if="relatedAttackToolRelations.length" class="detail-section">
-        <h3>{{ $t("attackToolRelatedAttackTools") }}</h3>
-        <div class="attack-tool-relation-list">
-          <router-link
-            v-for="relation in relatedAttackToolRelations"
-            :key="`${relation.key}-${relation.relation}`"
-            class="attack-tool-relation-item"
-            :to="{ name: 'knowledgesAttackToolDetail', params: { atKey: relation.key } }"
-          >
-            <span class="attack-tool-relation-type">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
-            <span class="attack-tool-relation-title">
-              {{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}
-            </span>
-            <span v-if="relation.note" class="attack-tool-relation-note">{{ getAttackToolRelationNote(relation) }}</span>
-          </router-link>
-        </div>
-      </section>
-      <EntityLinkSection
-        :keys="builderThreatActorKeys"
-        title="buildAttackTools"
-        entity-type="threatActor"
-        anchor="threat-actors"
-      />
-      <EntityLinkSection
-        :keys="userThreatActorKeys"
-        title="useAttackTools"
-        entity-type="threatActor"
-        anchor="threat-actors"
-      />
-      <EntityLinkSection
-        :keys="relatedTermKeys"
-        title="terms"
-        entity-type="term"
-        anchor="terms"
-      />
-      <section
-        v-if="!loaded"
-        ref="casesSectionRef"
-        class="detail-section"
-        data-detail-anchor="cases"
-      >
-        <h3>{{ $t("relatedCases") }}</h3>
-        <div v-if="!loaded" class="entity-links">
-          <span class="text-muted">{{ $t("loadingRelatedCases") }}</span>
-          <!-- 兜底：自动加载意外未触发时，可手动加载 -->
-          <button class="entity-link" @click="ensureCases()">{{ $t("loadRelatedCases") }}</button>
-        </div>
-      </section>
-      <EntityLinkSection
-        v-else
-        :keys="relatedCases"
-        title="relatedCases"
-        entity-type="case"
-        anchor="cases"
-        :entity-records="cases"
-      />
-      <section v-if="selectedAttackTool.references?.length" class="detail-section" data-detail-anchor="references">
-        <h3>{{ $t("references") }}</h3>
-        <ReferenceList type="attackTools" :entity-key="selectedAttackToolKey" />
-      </section>
-      <section v-if="selectedAttackTool.updated" class="detail-section">
-        <h3>{{ $t("lastUpdated") }}</h3>
-        <p class="text-muted">{{ selectedAttackTool.updated }}</p>
-      </section>
-    </article>
+    <AttackToolDetailBody v-if="selectedAttackTool" :at-key="selectedAttackToolKey" mode="list" />
   </KnowledgeSplitView>
 </template>
 

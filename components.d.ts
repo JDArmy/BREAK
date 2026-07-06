@@ -11,7 +11,9 @@ declare module 'vue' {
     AsyncComponentError: typeof import('./src/components/AsyncComponentError.vue')['default']
     AsyncComponentLoading: typeof import('./src/components/AsyncComponentLoading.vue')['default']
     AttackToolDetail: typeof import('./src/components/AttackToolDetail.vue')['default']
+    AttackToolDetailBody: typeof import('./src/components/AttackToolDetailBody.vue')['default']
     AvoidanceDetail: typeof import('./src/components/AvoidanceDetail.vue')['default']
+    AvoidanceDetailBody: typeof import('./src/components/AvoidanceDetailBody.vue')['default']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
@@ -89,5 +91,6 @@ declare module 'vue' {
     TermDetail: typeof import('./src/components/TermDetail.vue')['default']
     ThemeToggle: typeof import('./src/components/ThemeToggle.vue')['default']
     ThreatActorDetail: typeof import('./src/components/ThreatActorDetail.vue')['default']
+    ThreatActorDetailBody: typeof import('./src/components/ThreatActorDetailBody.vue')['default']
   }
 }
