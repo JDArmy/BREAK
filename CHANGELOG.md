@@ -1,5 +1,15 @@
 # Change log
 
+## 2.42.23
+
+修复 references 4 个高价值 Case 缺 primary 源。
+
+- **C1610** 小度智能音箱偷拍：references 标题"升学宴"张冠李戴，替换为小度官方微博声明+中新网+搜狐。
+- **C1622** OpenAI 语音克隆冒充拜登：补 FCC 官方 Declaratory Ruling + OpenAI 官方博客。
+- **C1645** VR 社交游戏虚拟性侵：补 Wikipedia Virtual crime + BBC 原始报道。
+- **C1657** Optus 影子 API 泄露 PII：补 OAIC 官方调查公告 + Salt Security 技术分析。
+- references 评审 3106/3200 进行中。
+
 ## 2.42.22
 
 修复 C1600 Mirai references + subagent 扩展修复（attack-tools description 补充 + Risk 横向关系 note 派生增强）。

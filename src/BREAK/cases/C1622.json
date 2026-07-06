@@ -19,11 +19,19 @@
     ],
     "references": [
       {
+        "title": "FCC Makes AI-Generated Voices in Robocalls Illegal（美国联邦通信委员会官方裁定）",
+        "link": "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal"
+      },
+      {
         "title": "深伪可怕吗?OpenAI现在还想克隆你的声音_腾讯新闻",
         "link": "https://new.qq.com/rain/a/20240402A07FWB00"
+      },
+      {
+        "title": "Navigating the challenges and opportunities of synthetic voices（OpenAI官方博客：Voice Engine 发布与防滥用措施）",
+        "link": "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2024-01",
     "relatedAttackTools": [
       "AT0053-006",

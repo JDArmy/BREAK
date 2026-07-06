@@ -15,8 +15,16 @@
     "summary": "In January 2024, someone used deepfake technology to clone U.S. President Biden's voice and made fraudulent calls to New Hampshire residents in an attempt to disrupt normal voting. This prompted the U.S. Federal Communications Commission to take action, declaring such activities illegal. OpenAI also strengthened anti-abuse measures when releasing its Voice Engine.",
     "references": [
       {
+        "title": "FCC Makes AI-Generated Voices in Robocalls Illegal (Official FCC Declaratory Ruling)",
+        "link": "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal"
+      },
+      {
         "title": "Is Deepfake Scary? OpenAI Now Wants to Clone Your Voice",
         "link": "https://new.qq.com/rain/a/20240402A07FWB00"
+      },
+      {
+        "title": "Navigating the Challenges and Opportunities of Synthetic Voices (Official OpenAI Blog: Voice Engine Release and Anti-Abuse Measures)",
+        "link": "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices/"
       }
     ]
   }
