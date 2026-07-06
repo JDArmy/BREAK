@@ -14,6 +14,14 @@
     "summary": "In federated learning, attackers can reconstruct original training data or infer sensitive attributes of participants from shared gradient information through model inversion or attribute inference attacks. This exploits information leakage during privacy-preserving computation, undermining data privacy protection goals.",
     "references": [
       {
+        "title": "PPA: Preference Profiling Attack Against Federated Learning (NDSS 2023 Paper)",
+        "link": "https://www.ndss-symposium.org/ndss-paper/ppa-preference-profiling-attack-against-federated-learning/"
+      },
+      {
+        "title": "PPA Paper DOI (NDSS 2023, 10.14722/ndss.2023.23171)",
+        "link": "https://doi.org/10.14722/ndss.2023.23171"
+      },
+      {
         "title": "A Survey of Federated Learning Security",
         "link": "https://www.secrss.com/articles/52186"
       }

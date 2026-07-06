@@ -11,23 +11,23 @@
       "区块最终确定",
       "低价值交易"
     ],
-    "summary": "2024年9月，Solana网络遭受垃圾交易攻击，大量交易淹没了验证者的投票机制，导致区块无法最终确定，网络中断约4.5小时。攻击者通过发送海量低价值交易，制造网络拥堵，使普通用户交易延迟或失败，属于典型的Gas费操纵与网络拥堵攻击。",
+    "summary": "2021年9月14日，Solana 网络遭受垃圾交易攻击导致中断约17小时。Grape Protocol 在 Raydium 上 launch IDO 时，机器人生成大量交易洪泛网络，造成内存溢出，使众多验证者崩溃，网络无法就区块链当前状态达成共识，导致新区块无法确认。攻击者通过海量低价值交易制造分布式拒绝服务（DDoS），属于典型的垃圾交易与网络拥堵攻击。",
     "category": "security_incident",
     "relatedRisks": [
       "R0173"
     ],
     "references": [
       {
-        "title": "从AWS宕机到193亿美元清算风暴,加密基础设施的“隐形炸弹”_腾讯...",
-        "link": "https://new.qq.com/rain/a/20251021A04VXV00"
+        "title": "Solana Foundation 官方公告：9-14 Network Outage Initial Overview（2021-09-20 发布，17 小时中断根因分析）",
+        "link": "https://solana.com/news/9-14-network-outage-initial-overview"
       },
       {
-        "title": "9-14 Network Outage Initial Overview",
-        "link": "https://solana.com/news/9-14-network-outage-initial-overview"
+        "title": "Helius：A Complete History of Solana Outages — Causes and Fixes（Grape Protocol IDO 2021-09-14 17 小时中断）",
+        "link": "https://www.helius.dev/blog/solana-outages-complete-history"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2024-09",
+    "updated": "2026-07-06",
+    "incidentTime": "2021-09",
     "relatedAttackTools": [
       "AT0078"
     ],

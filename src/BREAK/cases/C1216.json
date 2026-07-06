@@ -18,11 +18,19 @@
     ],
     "references": [
       {
+        "title": "PPA：针对联邦学习的偏好画像攻击（NDSS 2023 论文）",
+        "link": "https://www.ndss-symposium.org/ndss-paper/ppa-preference-profiling-attack-against-federated-learning/"
+      },
+      {
+        "title": "PPA 论文 DOI（NDSS 2023，10.14722/ndss.2023.23171）",
+        "link": "https://doi.org/10.14722/ndss.2023.23171"
+      },
+      {
         "title": "联邦学习安全综述",
         "link": "https://www.secrss.com/articles/52186"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2023-02-23"

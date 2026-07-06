@@ -11,15 +11,15 @@
       "block finalization",
       "low-value transactions"
     ],
-    "summary": "In September 2024, the Solana network experienced a spam transaction attack that flooded validators' voting mechanism with excessive traffic, preventing block finalization and causing an outage of approximately 4.5 hours. Attackers sent massive volumes of low-value transactions to create network congestion, delaying or failing ordinary user transactions in a typical gas fee manipulation and conges",
+    "summary": "On September 14, 2021, the Solana network suffered a spam transaction attack that caused an outage of approximately 17 hours. When Grape Protocol launched its IDO on Raydium, bots generated massive volumes of transactions that flooded the network, causing a memory overflow that crashed many validators and prevented the network from reaching consensus on the current blockchain state, blocking new block finalization. Attackers used massive low-value transactions to mount a distributed denial-of-service (DDoS) attack, a typical spam transaction and network congestion attack.",
     "references": [
       {
-        "title": "From AWS Outage to $19.3 Billion Liquidation Storm, the 'Invisible Bombs' of Crypto Infrastructure",
-        "link": "https://new.qq.com/rain/a/20251021A04VXV00"
+        "title": "Solana Foundation official post: 9-14 Network Outage Initial Overview (published 2021-09-20, root cause analysis of the 17-hour outage)",
+        "link": "https://solana.com/news/9-14-network-outage-initial-overview"
       },
       {
-        "title": "9-14 Network Outage Initial Overview",
-        "link": "https://solana.com/news/9-14-network-outage-initial-overview"
+        "title": "Helius: A Complete History of Solana Outages — Causes and Fixes (Grape Protocol IDO 2021-09-14 17-hour outage)",
+        "link": "https://www.helius.dev/blog/solana-outages-complete-history"
       }
     ]
   }

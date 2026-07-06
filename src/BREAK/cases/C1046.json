@@ -18,11 +18,15 @@
     ],
     "references": [
       {
-        "title": "BYOD Leads to Workplace Data Breaches - Experian Insights",
+        "title": "BYOD Leads to Workplace Data Breaches - Experian Insights（2012-11-01原始事件报道）",
         "link": "https://www.experian.com/blogs/insights/bring-your-own-device-data-breaches/"
+      },
+      {
+        "title": "移动设备安全：自带设备(BYOD) - NIST 国家网络安全卓越中心官方实践指南",
+        "link": "https://www.nccoe.nist.gov/mobile-device-security/bring-your-own-device"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0021"

@@ -14,8 +14,12 @@
     "summary": "In 2019, a cloud infrastructure misconfiguration at Capital One, including improperly set storage bucket permissions, exposed the personal data of over 100 million customers. The incident became a landmark case of how cloud configuration flaws can lead to severe consequences, highlighting the critical importance of IAM permission management and storage security.",
     "references": [
       {
-        "title": "Survey on Kubernetes Misconfiguration Vulnerabilities and Best Practices",
-        "link": "https://ieeexplore.ieee.org/abstract/document/11344470/"
+        "title": "Seattle Tech Worker Arrested for Data Theft Involving Large Financial Services Company - U.S. Department of Justice",
+        "link": "https://www.justice.gov/usao-wdwa/pr/seattle-tech-worker-arrested-data-theft-involving-large-financial-services-company"
+      },
+      {
+        "title": "2019 Capital One Cyber Incident | What Happened - Capital One",
+        "link": "https://www.capitalone.com/digital/facts2019/"
       }
     ]
   }

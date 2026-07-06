@@ -13,15 +13,15 @@
       "dependency chain attack",
       "AI supply chain risk"
     ],
-    "summary": "In April 2026, the National Cybersecurity Notification Center of China detected multiple supply chain poisoning attacks targeting API development tool Apifox, Python library LiteLLM, and JavaScript HTTP library Axios. Attackers injected malicious code into widely used components such as Axios by compromising open-source software repositories and commercial tools, leading to credential theft, remot",
+    "summary": "In April 2026, the National Cybersecurity Notification Center of China detected multiple supply chain poisoning attacks targeting API development tool Apifox, Python library LiteLLM, and JavaScript HTTP library Axios. Attackers injected malicious code into widely used components such as Axios by compromising open-source software repositories and commercial tools, leading to credential theft, remote code execution, and sensitive data leakage, with risk propagating through the dependency chain to numerous AI applications and end users.",
     "references": [
       {
-        "title": "National Cybersecurity Notification Center: Recent Surge in Supply Chain Poisoning Attacks Involving...",
-        "link": "https://new.qq.com/rain/a/20260410A038DP00"
+        "title": "National Cybersecurity Notification Center: Recent Surge in Supply Chain Poisoning Attacks - Official WeChat",
+        "link": "https://mp.weixin.qq.com/s?__biz=MjM5Mjk2ODM2MA==&mid=2652737162&idx=5&sn=9b044f853f0bcacdd13c0f24218565de"
       },
       {
-        "title": "Trivy Compromised by TeamPCP",
-        "link": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack"
+        "title": "Tencent News: Recent Surge in Supply Chain Poisoning Attacks (Apifox, LiteLLM, Axios)",
+        "link": "https://new.qq.com/rain/a/20260410A038DP00"
       }
     ]
   }

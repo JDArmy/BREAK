@@ -18,11 +18,15 @@
     ],
     "references": [
       {
-        "title": "直击真实 ClickFix 攻击现场:一场社会工程学黑客攻击的全过程",
-        "link": "https://www.anqueke.com/post/id/310802"
+        "title": "mr.d0x 原始披露：FileFix — A ClickFix Alternative（2025-06-23）",
+        "link": "https://mrd0x.com/filefix-clickfix-alternative/"
+      },
+      {
+        "title": "Kaspersky 官方博客：What is FileFix — a ClickFix variation?",
+        "link": "https://www.kaspersky.com/blog/filefix-attack-windows-file-explorer/54752/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2025-06",
     "relatedAttackTools": [
       "AT0075"

@@ -1,5 +1,18 @@
 # Change log
 
+## 2.42.21
+
+修复 references 评审 53 fail（高价值 Case 缺 primary 源），起 2 批 subagent 用 Scrapingdog 搜索补源。
+
+- **50 个 Case 补充权威 primary 源**（2 批 subagent 并行）：
+  - 国际案例补官方源：C1132 Forbes、C1177 BleepingComputer、C1181 The Hacker News+JFrog、C1190 DOJ、C1213 FBI IC3、C1214 Cifas、C1216 NDSS、C1239 FinCEN、C1241 美联储、C1263 Black Hat+NVD、C1268 Microsoft TI、C1282 ACM、C1313 Okta、C1317 Okta+Microsoft、C1319 CISA、C1325 IBM、C1331 mr.d0x、C1404 Compound 官方、C1433 Helius。
+  - 中国案例补权威源：C1243 央视网、C1246 扬州中院公众号、C1252 WCJB、C1255 澎湃+新民晚报、C1337 Sixth Tone、C1404/C1433 修正 incidentTime。
+- **附带事实修正**：C1243 法院名+罚金、C1337 源 title 措辞、C1404 incidentTime、C1433 incidentTime+中断时长+事件年份。
+- **source-classify.mjs 白名单扩充**：新增扬州市中院公众号 bizId 到 primaryWechat、xinmin.cn 到 secondary 域名。
+- **清理 sourceType 字段**：subagent 误加 sourceType:"primary"（违反 referenceSchema strict 只允许 title+link），已统一清理 0 残留。
+- 2 个保留现状（C1255/C1275 非高价值 news_report，无官方 primary，补 secondary 使 ≥2 源）。
+- references 评审 2918/3200 已评，fail 53→0 真实。
+
 ## 2.42.20
 
 修复 case-fact 3 个 Case 事实错误（101-159 批次评审 fail）。

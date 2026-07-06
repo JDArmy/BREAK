@@ -22,9 +22,13 @@
       {
         "title": "VoidProxy攻击范式下的多因素认证绕过机制分析与防御策略研究",
         "link": "https://dy.163.com/article/KD91U3C40556CG2E.html"
+      },
+      {
+        "title": "Uncloaking VoidProxy: a Novel and Evasive Phishing-as-a-Service Framework - Okta Threat Intelligence",
+        "link": "https://sec.okta.com/articles/uncloakingvoidproxy/"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-11",
     "relatedAttackTools": [
       "AT0063-001",

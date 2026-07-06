@@ -19,11 +19,19 @@
     ],
     "references": [
       {
-        "title": "AiTM Attack Campaign Bypasses MFA and Targets Microsoft 365 and Okta Users",
+        "title": "AiTM Attack Campaign Bypasses MFA and Targets Microsoft 365 and Okta Users - CyberPress",
         "link": "https://cyberpress.org/aitm-attack-campaign/"
+      },
+      {
+        "title": "Phishing campaigns use 'Employee Benefits' lure to intercept Microsoft and Okta logins - Okta Threat Intelligence",
+        "link": "https://www.okta.com/blog/threat-intelligence/phishing-campaigns-use-employee-benefits-lure-logins/"
+      },
+      {
+        "title": "Defending against evolving identity attack techniques - Microsoft Security Blog",
+        "link": "https://www.microsoft.com/en-us/security/blog/2025/05/29/defending-against-evolving-identity-attack-techniques/"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-12",
     "relatedAttackTools": [
       "AT0072",

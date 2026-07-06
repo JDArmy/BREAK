@@ -18,11 +18,19 @@
     ],
     "references": [
       {
+        "title": "FinCEN 合成身份欺诈咨询通报（美国金融犯罪执法网络，PDF）",
+        "link": "https://www.fincen.gov/system/files/shared/267546_Synthetic%20ID%20Fraud_IA.pdf"
+      },
+      {
+        "title": "Criminals using 'Frankenstein identities' to steal from banks - CNBC",
+        "link": "https://www.cnbc.com/2020/01/16/criminals-using-frankenstein-identities-to-steal-from-banks.html"
+      },
+      {
         "title": "Detecting Synthetic Identity Fraud in Real-Time - FluxForce AI",
         "link": "https://www.fluxforce.ai/blog/detecting-synthetic-identity-fraud-real-time"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2025-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [

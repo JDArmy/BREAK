@@ -22,9 +22,17 @@
       {
         "title": "OAuth 设备码流滥用下Microsoft 365 钓鱼攻击机理与防御研究",
         "link": "https://developer.aliyun.com/article/1738867"
+      },
+      {
+        "title": "Storm-2372 conducts device code phishing campaign - Microsoft Threat Intelligence",
+        "link": "https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/"
+      },
+      {
+        "title": "Microsoft OAuth App Impersonation Campaign Leads to MFA Phishing - Proofpoint",
+        "link": "https://www.proofpoint.com/us/blog/threat-insight/microsoft-oauth-app-impersonation-campaign-leads-mfa-phishing"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2026-02",
     "relatedAttackTools": [
       "AT0061-003",

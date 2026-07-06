@@ -12,11 +12,19 @@
       "on-chain governance",
       "defense measures"
     ],
-    "summary": "This Gate Learn article uses Compound as a case study to analyze the methods behind its governance attack, the associated short-term and long-term risks, and the measures implemented to prevent such attacks through technical improvements and governance process optimization.",
+    "summary": "In July 2024, the Compound DAO suffered a governance attack: a group called the Golden Boys, led by whale Humpy, pushed through Proposal 289 to transfer about 5% of the COMP treasury (roughly 499,000 COMP, worth approximately USD 24 million) to a goldCOMP vault under their control for one year. The proposal narrowly passed 682,191 to 633,636, and the community accused it of being a coordinated governance attack. The incident exposed the inherent vulnerability of on-chain DAO governance where voting power is determined by token holdings.",
     "references": [
       {
-        "title": "Understanding Governance Attacks: A Case Study of Compound",
-        "link": "https://www.gate.com/learn/articles/understanding-governance-attacks-a-case-study-of-compound/4221"
+        "title": "Compound official governance forum: Governance Security Notice — goldCOMP Proposal 247/289 (Golden Boys governance attack)",
+        "link": "https://www.comp.xyz/t/governance-security-notice-goldcomp-proposal-247/5220"
+      },
+      {
+        "title": "CertiK security analysis: Navigating DAO Governance and the Compound DAO Incident",
+        "link": "https://skynet.certik.com/quest/navigating-dao-governance-and-the-compound-dao-incident"
+      },
+      {
+        "title": "The Block: $24 million Compound Finance proposal passed by whale over DAO objections (2024-07-28 Humpy/Golden Boys governance attack)",
+        "link": "https://www.theblock.co/post/307943/24-million-compound-finance-proposal-passed-by-whale-over-dao-objections"
       }
     ]
   }

@@ -18,11 +18,19 @@
     ],
     "references": [
       {
-        "title": "GitHub - Meirzv/TLS_MITM-Attack: SSL Strip attack · GitHub",
-        "link": "https://github.com/Meirzv/TLS_MITM-Attack"
+        "title": "New Tricks For Defeating SSL In Practice - Moxie Marlinspike (Black Hat DC 2009)",
+        "link": "https://blackhat.com/presentations/bh-dc-09/Marlinspike/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf"
+      },
+      {
+        "title": "CVE-2009-3507 - NVD (National Vulnerability Database)",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2009-3507"
+      },
+      {
+        "title": "moxie0/sslstrip - A tool for exploiting Moxie Marlinspike's SSL stripping attack (GitHub)",
+        "link": "https://github.com/moxie0/sslstrip"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       "AT0072"
     ],

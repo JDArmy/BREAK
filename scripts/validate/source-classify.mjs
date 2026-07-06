@@ -307,6 +307,7 @@ const secondaryDomainSuffixes = [
   'cloud.tencent.com',
   '51cto.com',
   'schneier.com',
+  'xinmin.cn', // 新民晚报/新民网（上海报业集团）权威媒体
 ];
 
 const mirrorDomainSuffixes = ['mp.weixin.qq.com', 'm.gmw.cn', 'toutiao.com', 'web.toutiao.com'];
@@ -538,6 +539,7 @@ const primaryReferenceLinks = new Set([
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [
   'MjM5MjMyNTA0MQ==', // 公安部网安局
+  'MzAxOTE3Nzc5MQ==', // 扬州市中级人民法院（C1246 花呗白条套现诈骗案官方发布）
 ];
 
 function matchesDomain(domain, suffixes) {

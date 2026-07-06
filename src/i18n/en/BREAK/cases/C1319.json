@@ -15,7 +15,15 @@
     "summary": "In May 2023, international cybersecurity agencies issued an advisory on Volt Typhoon, a China state-sponsored hacking group. The group targets U.S. critical infrastructure by employing Living off the Land techniques, disguising malicious commands as normal administrative activity to evade endpoint detection and response, and attempting to steal Active Directory database files.",
     "references": [
       {
-        "title": "⚠️Advisory: Volt Typhoon Uses 'Living off the Land' to Attack",
+        "title": "CISA/NSA/FBI Joint Cybersecurity Advisory AA23-144A: PRC State-Sponsored Cyber Actor Living off the Land to Evade Detection",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-144a"
+      },
+      {
+        "title": "Microsoft Threat Intelligence: Volt Typhoon targets US critical infrastructure with living-off-the-land techniques",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques/"
+      },
+      {
+        "title": "Advisory: Volt Typhoon Uses \"Living off the Land\" to Attack",
         "link": "https://www.innovativecomp.com/advisory-volt-typhoon-uses-living-off-the-land-to-attack/"
       }
     ]

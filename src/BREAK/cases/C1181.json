@@ -19,11 +19,15 @@
     ],
     "references": [
       {
-        "title": "软件供应链新威胁：AI幻觉催生\"Slopsquatting\"攻击 - 腾讯云",
-        "link": "https://cloud.tencent.com/developer/news/2478493"
+        "title": "Malicious PyPI Package Targets MEXC Trading API to Steal Credentials - The Hacker News",
+        "link": "https://thehackernews.com/2025/04/malicious-pypi-package-targets-mexc.html"
+      },
+      {
+        "title": "Malicious PyPI Package Hijacks MEXC Orders, Steals Crypto Tokens - JFrog",
+        "link": "https://jfrog.com/blog/malicious-pypi-package-hijacks-mexc-orders-steals-crypto-tokens/"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-04",
     "relatedAttackTools": [
       "AT0064"

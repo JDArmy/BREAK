@@ -19,11 +19,19 @@
     ],
     "references": [
       {
-        "title": "⚠️Advisory: Volt Typhoon Uses \"Living off the Land\" to Attack",
+        "title": "CISA联合NSA/FBI等发布安全公告 AA23-144A：Volt Typhoon 利用 Living off the Land 技术攻击美国关键基础设施",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-144a"
+      },
+      {
+        "title": "Microsoft Threat Intelligence：Volt Typhoon targets US critical infrastructure with living-off-the-land techniques",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques/"
+      },
+      {
+        "title": "Advisory: Volt Typhoon Uses \"Living off the Land\" to Attack",
         "link": "https://www.innovativecomp.com/advisory-volt-typhoon-uses-living-off-the-land-to-attack/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2023-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [
