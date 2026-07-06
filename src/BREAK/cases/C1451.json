@@ -22,13 +22,11 @@
         "link": "https://owasp.org/www-project-smart-contract-top-10/2023/en/src/SC03-timestamp-dependence.html"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       "AT0076"
     ],
-    "relatedThreatActors": [
-      "TA0045"
-    ],
+    "relatedThreatActors": [],
     "incidentTime": "2023"
   }
 }

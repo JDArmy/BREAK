@@ -25,11 +25,9 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/05/29/33-malicious-npm-packages-abuse-dependency-confusion-profile-developer-environments/"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2026-05",
     "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0052"
-    ]
+    "relatedThreatActors": []
   }
 }

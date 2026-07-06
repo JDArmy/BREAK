@@ -32,13 +32,13 @@ for (const type of TYPES) {
   }
   for (const [title, keys] of exactGroups) {
     if (keys.length > 1) {
-      // Case 同事件多源采集 title 相同是正常业务模式 → review
+      // Case 是“一事一条”；同事件多源应合并到同一 Case.references，不应拆成多个 Case。
       // 父子同名（如 R0001 与 R0001-001）也是合理继承 → review
       // 其他精确重复 → error
       const parents = new Set(keys.map((k) => k.split('-')[0]));
       const isFamily = parents.size === 1 && keys.length >= 1;
-      if (type === 'cases' || isFamily) {
-        addIssue('review', type, `[${type}] title 精确重复 "${title}"：${keys.join(', ')}${type === 'cases' ? '（Case 多源合理，review）' : '（父子同名合理，建议子实体 title 区分）'}`);
+      if (isFamily) {
+        addIssue('review', type, `[${type}] title 精确重复 "${title}"：${keys.join(', ')}（父子同名合理，建议子实体 title 区分）`);
       } else {
         addIssue('error', type, `[${type}] title 精确重复 "${title}"：${keys.join(', ')}`);
       }

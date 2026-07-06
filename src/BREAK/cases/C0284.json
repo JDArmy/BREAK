@@ -14,8 +14,7 @@
     "summary": "2017年，美国征信机构Equifax发生大规模数据泄露事件，大约1.43亿位消费者的社保号码和其他个人信息被泄露。2019年7月，Equifax同意支付约7亿美元与美国联邦贸易委员会达成和解。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0028",
-      "R0078"
+      "R0028"
     ],
     "references": [
       {
@@ -27,7 +26,7 @@
         "link": "https://www.ftc.gov/enforcement/refunds/equifax-data-breach-settlement"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2019-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

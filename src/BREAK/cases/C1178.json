@@ -13,7 +13,7 @@
     "summary": "Have I Been Pwned 将 SoundCloud 事件收录为影响约2980万账号的数据泄露事件，暴露数据包括电子邮件地址及公开资料。SoundCloud 官方说明称，事件源于一项辅助服务仪表盘的未授权访问，未涉及密码、财务数据或核心平台系统。该案体现了第三方辅助系统权限暴露对账号资料安全的影响。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0078"
+      "R0078-003"
     ],
     "references": [
       {
@@ -25,11 +25,9 @@
         "link": "https://soundcloud.com/playbook-articles/protecting-our-users-and-our-service"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0051"
-    ],
+    "relatedThreatActors": [],
     "incidentTime": "2026-02-20"
   }
 }

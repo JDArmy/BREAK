@@ -24,14 +24,9 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-05",
-    "relatedAttackTools": [
-      "AT0063",
-      "AT0072"
-    ],
-    "relatedThreatActors": [
-      "TA0017"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

@@ -14,7 +14,7 @@
     "summary": "EvilProxy是一个钓鱼即服务平台，利用反向代理与Cookie注入技术，在受害者完成双因子认证后代理其会话，从而绕过MFA。该平台已被用于攻击多家财富五百强公司员工，窃取账户访问权限。",
     "category": "news_report",
     "relatedRisks": [
-      "R0036"
+      "R0142"
     ],
     "references": [
       {
@@ -22,15 +22,11 @@
         "link": "https://cloud.tencent.com/developer/article/2161915"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2022-11",
     "relatedAttackTools": [
-      "AT0063-001",
-      "AT0072"
+      "AT0063-001"
     ],
-    "relatedThreatActors": [
-      "TA0018",
-      "TA0059"
-    ]
+    "relatedThreatActors": []
   }
 }

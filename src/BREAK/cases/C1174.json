@@ -23,17 +23,15 @@
         "link": "https://github.com/rickyma18/api-pentest-otp-business-logic"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       "AT0061",
       "AT0023",
       "AT0014",
-      "AT0061-001",
       "AT0061-004"
     ],
     "relatedThreatActors": [
       "TA0001",
-      "TA0051",
       "TA0055"
     ],
     "incidentTime": "2026-04"

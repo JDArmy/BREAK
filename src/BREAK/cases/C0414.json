@@ -14,7 +14,7 @@
     "summary": "谷歌威胁分析小组披露，自2019年底以来，一群俄语黑客通过发送钓鱼邮件传播恶意软件，窃取浏览器会话Cookie。即使用户启用了多因素认证（MFA），攻击者仍能利用被盗的会话Cookie劫持账户，绕过MFA保护。",
     "category": "news_report",
     "relatedRisks": [
-      "R0036"
+      "R0247"
     ],
     "references": [
       {
@@ -26,16 +26,11 @@
         "link": "https://www.freebuf.com/news/292551.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2021-10",
     "relatedAttackTools": [
-      "AT0063",
-      "AT0064",
       "AT0054-004"
     ],
-    "relatedThreatActors": [
-      "TA0018",
-      "TA0059"
-    ]
+    "relatedThreatActors": []
   }
 }

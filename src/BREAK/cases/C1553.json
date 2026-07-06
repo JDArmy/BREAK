@@ -15,7 +15,7 @@
     "summary": "Elliptic分析报告指出，RenBridge跨链桥被用于清洗至少5.4亿美元来自盗窃、欺诈、勒索软件等犯罪活动的加密资产。这暴露了跨链桥被恶意利用进行大规模洗钱的严重安全隐患。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0060"
+      "R0060-001"
     ],
     "references": [
       {
@@ -23,7 +23,7 @@
         "link": "https://www.elliptic.co/blog/analysis/cross-chain-crime-more-than-half-a-billion-dollars-has-been-laundered-through-a-cross-chain-bridge"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       "AT0060"
     ],

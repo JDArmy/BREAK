@@ -25,15 +25,13 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2023/12/12/threat-actors-misuse-oauth-applications-to-automate-financially-driven-attacks/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2023-12",
     "relatedAttackTools": [
-      "AT0061-003",
-      "AT0061"
+      "AT0061-003"
     ],
     "relatedThreatActors": [
-      "TA0054",
-      "TA0055"
+      "TA0054"
     ]
   }
 }

@@ -10,7 +10,13 @@
       "Truffle Security",
       "billing key",
       "non-human identity",
-      "cloud security"
+      "cloud security",
+      "Google Cloud API key leak",
+      "Gemini API abuse",
+      "client-side code embedding",
+      "privilege escalation",
+      "billing abuse",
+      "cloud credential exposure"
     ],
     "summary": "Truffle Security discovered nearly 3,000 Google API keys prefixed with \"AIza\" embedded in client-side JavaScript code. When Gemini API is enabled on a Google Cloud project, these billing-only keys automatically gain access to Gemini endpoints without warning, allowing attackers to harvest keys to access uploaded files, cached data, and incur massive charges.",
     "references": [
@@ -20,6 +26,14 @@
       },
       {
         "title": "Google API Keys Weren’t Secrets. But then Gemini Changed the Rules",
+        "link": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"
+      },
+      {
+        "title": "Thousands of Google Cloud API Keys Leaked, Can Be Abused to Access Gemini Services",
+        "link": "https://browser.qq.com/mobile/news?doc_id=98269a4f1e792252"
+      },
+      {
+        "title": "Truffle Security: Google API Keys Weren't Secrets, But Gemini Changed the Rules",
         "link": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"
       }
     ]

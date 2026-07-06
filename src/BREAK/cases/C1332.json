@@ -28,16 +28,13 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-03",
     "relatedAttackTools": [
-      "AT0013",
-      "AT0064",
       "AT0075"
     ],
     "relatedThreatActors": [
-      "TA0012",
-      "TA0018"
+      "TA0012"
     ]
   }
 }

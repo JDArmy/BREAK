@@ -14,7 +14,7 @@
     "summary": "公安部网安局通报称，成都警方侦破一起房产家装领域信息泄露案，何某超、叶某等行业“内鬼”利用职务便利窃取信息，经中间商倒卖给房产中介和家装从业者。案件涉及信息130万余条、资金160万元，56人落网。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0078"
+      "R0078-003"
     ],
     "references": [
       {
@@ -22,11 +22,10 @@
         "link": "https://sichuan.scol.com.cn/ggxw/202605/83260828.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [
-      "TA0024",
       "TA0040"
     ]
   }

@@ -28,17 +28,13 @@
         "link": "https://www.koi.ai/blog/clawhavoc-341-malicious-clawedbot-skills-found-by-the-bot-they-were-targeting"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2026-01",
     "relatedAttackTools": [
-      "AT0075",
-      "AT0013",
-      "AT0064"
+      "AT0075"
     ],
     "relatedThreatActors": [
-      "TA0052",
-      "TA0041",
-      "TA0058"
+      "TA0041"
     ]
   }
 }

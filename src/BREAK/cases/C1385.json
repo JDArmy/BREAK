@@ -24,13 +24,9 @@
         "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-7503"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2025-07",
-    "relatedAttackTools": [
-      "AT0081"
-    ],
-    "relatedThreatActors": [
-      "TA0048"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

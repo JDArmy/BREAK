@@ -15,7 +15,7 @@
     "summary": "2022年6月，大量QQ用户账号被盗，盗号者在用户不知情下向群聊和好友发送不良信息。腾讯回应称，系用户扫描了不法分子伪造的游戏登录二维码并授权登录，导致登录行为被黑产团伙劫持并记录，随后被用于发送不良图片广告。该事件揭示了通过伪造游戏登录二维码盗取账号并利用其进行恶意行为的黑产链条。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0095"
+      "R0035-001"
     ],
     "references": [
       {
@@ -27,7 +27,7 @@
         "link": "https://weibo.com/2508053484/LzDBhlSsp"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2022-06",
     "relatedAttackTools": [
       "AT0067"

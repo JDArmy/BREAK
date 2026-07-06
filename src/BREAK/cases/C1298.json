@@ -10,7 +10,11 @@
       "Truffle Security",
       "计费密钥",
       "非人类身份",
-      "云安全"
+      "云安全",
+      "Gemini API",
+      "客户端代码嵌入",
+      "权限提升",
+      "计费滥用"
     ],
     "summary": "Truffle Security公司发现近3000个以“AIza”前缀标识的Google API密钥被嵌入在客户端JavaScript代码中。当用户在Google云项目启用Gemini API时，这些原本仅用于计费的密钥会在无警告的情况下自动获得对Gemini端点的访问权限，攻击者可抓取这些密钥访问上传文件、缓存数据并产生巨额费用。",
     "category": "vulnerability_advisory",
@@ -25,15 +29,25 @@
       {
         "title": "Google API Keys Weren’t Secrets. But then Gemini Changed the Rules",
         "link": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"
+      },
+      {
+        "title": "数千个Google云API密钥泄露,可被滥用访问Gemini服务",
+        "link": "https://browser.qq.com/mobile/news?doc_id=98269a4f1e792252"
+      },
+      {
+        "title": "Truffle Security：Google API Key 因 Gemini 权限变化带来的泄露风险",
+        "link": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-03",
     "relatedAttackTools": [
-      "AT0054-002"
+      "AT0054-002",
+      "AT0061"
     ],
     "relatedThreatActors": [
-      "TA0051"
+      "TA0051",
+      "TA0053"
     ]
   }
 }

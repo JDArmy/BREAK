@@ -29,13 +29,9 @@
         "link": "https://checkmarx.com/blog/over-170k-users-affected-by-attack-using-fake-python-infrastructure/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2024-03",
-    "relatedAttackTools": [
-      "AT0054-001"
-    ],
-    "relatedThreatActors": [
-      "TA0052"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

@@ -23,14 +23,11 @@
         "link": "https://www.tenable.com/blog/openai-chatgpt-and-gpt-4-used-as-lure-in-phishing-scams-to-promote-fake-token-airdrop"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2023-03",
     "relatedAttackTools": [
-      "AT0063",
       "AT0079"
     ],
-    "relatedThreatActors": [
-      "TA0039"
-    ]
+    "relatedThreatActors": []
   }
 }

@@ -10,7 +10,13 @@
       "网站平台关闭",
       "账号处置",
       "违法违规信息清理",
-      "流量造假"
+      "流量造假",
+      "刷榜",
+      "网站平台",
+      "关闭下架",
+      "增粉",
+      "拉票",
+      "违法违规信息"
     ],
     "summary": "2024年以来，网信部门持续打击网络水军，查处刷分控评、刷量增粉、刷榜拉票等行为，协调关闭下架网站平台400余家，督促清理违法违规信息482万条，处置账号和商家店铺239万个、群组5.2万个。",
     "category": "administrative_enforcement",
@@ -23,11 +29,12 @@
         "link": "https://www.cac.gov.cn/2025-1/3/c_1737254417150320.htm"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2025-01",
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0019"
-    ]
+    "relatedAttackTools": [
+      "AT0046",
+      "AT0050"
+    ],
+    "relatedThreatActors": []
   }
 }

@@ -22,16 +22,13 @@
         "link": "https://github.com/mastodon/mastodon/security/advisories/GHSA-c2r5-cfqr-c553"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       "AT0014-001",
       "AT0061",
       "AT0068"
     ],
-    "relatedThreatActors": [
-      "TA0018",
-      "TA0051"
-    ],
+    "relatedThreatActors": [],
     "incidentTime": "2016-02"
   }
 }

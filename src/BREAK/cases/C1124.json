@@ -23,15 +23,12 @@
         "link": "https://cloud.tencent.com/developer/article/2688865"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       "AT0053-004",
       "AT0063-001"
     ],
-    "relatedThreatActors": [
-      "TA0031",
-      "TA0041"
-    ],
+    "relatedThreatActors": [],
     "incidentTime": "2024-11-01"
   }
 }

@@ -14,7 +14,6 @@
     "summary": "据微软安全报告，2023年共检测到147,000次令牌重放攻击，同比增长111%。攻击者通过窃取并重放用户会话令牌，绕过已满足的多因素认证要求，从而访问组织资源。此类攻击与基于密码的攻击在发生频率上已处于同一数量级。",
     "category": "news_report",
     "relatedRisks": [
-      "R0036",
       "R0247"
     ],
     "references": [
@@ -23,11 +22,9 @@
         "link": "https://thehackernews.com/2024/09/session-hijacking-20-latest-way-that.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2024-09",
-    "relatedAttackTools": [
-      "AT0054-004"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": []
   }
 }

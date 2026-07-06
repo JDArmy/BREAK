@@ -31,14 +31,11 @@
         "link": "https://usa.visa.com/content/dam/VCOM/global/support-legal/documents/visa-guidance-to-guard-against-enumeration-attacks.pdf"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2016-12",
     "relatedAttackTools": [
-      "AT0061-004",
-      "AT0061-001"
+      "AT0061-004"
     ],
-    "relatedThreatActors": [
-      "TA0055"
-    ]
+    "relatedThreatActors": []
   }
 }

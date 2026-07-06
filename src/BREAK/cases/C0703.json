@@ -23,16 +23,13 @@
         "link": "https://www.imperva.com/blog/how-scalping-bots-exploited-a-vulnerable-api-to-disrupt-online-retail-sales/"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-02",
     "relatedAttackTools": [
-      "AT0061",
-      "AT0023",
       "AT0005"
     ],
     "relatedThreatActors": [
-      "TA0002",
-      "TA0051"
+      "TA0002"
     ]
   }
 }

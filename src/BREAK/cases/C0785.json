@@ -24,13 +24,9 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-03",
-    "relatedAttackTools": [
-      "AT0054-001"
-    ],
-    "relatedThreatActors": [
-      "TA0052"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

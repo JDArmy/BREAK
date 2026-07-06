@@ -23,13 +23,11 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/05/28/typosquatted-npm-packages-used-steal-cloud-ci-cd-secrets/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-05",
     "relatedAttackTools": [
       "AT0054-001"
     ],
-    "relatedThreatActors": [
-      "TA0052"
-    ]
+    "relatedThreatActors": []
   }
 }

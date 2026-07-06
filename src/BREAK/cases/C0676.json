@@ -22,11 +22,9 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2025-10",
-    "relatedAttackTools": [
-      "AT0054-002"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": []
   }
 }

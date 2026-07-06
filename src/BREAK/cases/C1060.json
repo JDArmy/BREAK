@@ -14,7 +14,7 @@
     "summary": "2025年2月，长治市公安网侦支队联合长子县公安局，在长子县辖区端掉一个协助境外诈骗团伙架设GOIP设备的窝点。吴某宇等3人使用“两部手机一条线”模式私自搭建GOIP设备，为电信网络诈骗提供帮助，现场扣押19部手机和300余张电话卡，3人非法获利8万余元。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0095"
+      "R0132"
     ],
     "references": [
       {
@@ -22,13 +22,11 @@
         "link": "https://pingan.gov.cn/article/e9e12318409f4bb7a719789c66bde118"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-02",
     "relatedAttackTools": [
       "AT0004"
     ],
-    "relatedThreatActors": [
-      "TA0015"
-    ]
+    "relatedThreatActors": []
   }
 }

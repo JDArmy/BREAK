@@ -11,12 +11,21 @@
       "币安智能链",
       "Polygon",
       "加密资产盗窃",
-      "DeFi安全"
+      "DeFi安全",
+      "跨链桥",
+      "合约漏洞",
+      "DeFi",
+      "资产铸造",
+      "Layer2",
+      "桥接风险",
+      "6亿美元",
+      "链上攻击"
     ],
     "summary": "2021年8月，跨链互操作协议Poly Network遭黑客攻击，攻击者利用中继链验证者公钥可被替换的合约漏洞，通过哈希冲突调用修改公钥方法，控制验证者后签署恶意交易，在以太坊、币安智能链、Polygon三链上窃取约6.1亿美元加密资产。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0161"
+      "R0161",
+      "R0200"
     ],
     "references": [
       {
@@ -26,16 +35,15 @@
       {
         "title": "The Poly Network Hack Explained",
         "link": "https://kudelskisecurity.com/research/the-poly-network-hack-explained"
+      },
+      {
+        "title": "Xscope: Hunting for cross-chain bridge attacks",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3551349.3559520"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2021-08",
-    "relatedAttackTools": [
-      "AT0076",
-      "AT0077"
-    ],
-    "relatedThreatActors": [
-      "TA0045"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

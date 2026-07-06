@@ -16,12 +16,8 @@
     "relatedRisks": [
       "R0114"
     ],
-    "relatedAttackTools": [
-      "AT0013"
-    ],
-    "relatedThreatActors": [
-      "TA0007"
-    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
     "references": [
       {
         "title": "央视《新闻直播间》报道曲阜警方查处新型侵犯公民个人信息案（网信烟台转载）",
@@ -40,6 +36,6 @@
         "link": "https://3g.china.com/act/news/1007/20241222/47776291.html"
       }
     ],
-    "updated": "2026-07-04"
+    "updated": "2026-07-06"
   }
 }

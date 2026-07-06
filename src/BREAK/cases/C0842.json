@@ -27,15 +27,11 @@
         "link": "https://www.okta.com/blog/threat-intelligence/phishing-kits-adapt-to-the-script-of-callers/"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-07",
     "relatedAttackTools": [
-      "AT0053-004",
-      "AT0063"
+      "AT0053-004"
     ],
-    "relatedThreatActors": [
-      "TA0031",
-      "TA0041"
-    ]
+    "relatedThreatActors": []
   }
 }

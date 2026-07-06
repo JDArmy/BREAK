@@ -26,13 +26,11 @@
         "link": "https://www.koi.ai/blog/phantomraven-npm-malware-hidden-in-invisible-dependencies"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-10",
     "relatedAttackTools": [
       "AT0064"
     ],
-    "relatedThreatActors": [
-      "TA0052"
-    ]
+    "relatedThreatActors": []
   }
 }

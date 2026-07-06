@@ -14,7 +14,7 @@
     "summary": "IEEE安全与隐私研讨会发表的研究论文，分析了基于加密货币的技术支持诈骗。诈骗者通过Twitter作为起点，将受害者引导至Telegram等其他平台完成欺诈活动，包括诱骗受害者泄露私钥或向诈骗钱包转账。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0095"
+      "R0183"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/10646605/"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2024-05",
     "relatedAttackTools": [
       "AT0079"

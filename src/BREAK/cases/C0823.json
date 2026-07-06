@@ -15,7 +15,7 @@
     "summary": "FBI发布警告，指出网络犯罪分子通过冒充金融机构工作人员或伪造金融机构网站，诱骗受害者提供登录凭证，从而非法获取其在线银行、薪资或健康储蓄账户的访问权限。自2025年1月以来，IC3已收到超过5100起相关投诉，总损失超过2.62亿美元。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0095"
+      "R0083-001"
     ],
     "references": [
       {
@@ -23,19 +23,12 @@
         "link": "https://www.ic3.gov/PSA/2025/PSA251125"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-11",
-    "relatedAttackTools": [
-      "AT0063"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
-      "TA0059",
-      "TA0015",
-      "TA0031",
       "TA0042-001",
-      "TA0055",
-      "TA0033",
-      "TA0017"
+      "TA0033"
     ]
   }
 }

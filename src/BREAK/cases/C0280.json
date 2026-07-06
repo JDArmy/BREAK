@@ -15,8 +15,7 @@
     "summary": "2021年8月起，被告人黄某某等人通过租用手机号接收验证码、伪造身份证图片及动态验证视频等技术手段，绕过“学信网”实名认证系统，非法获取并下载《教育部学历证书电子注册备案表》出售牟利。该案形成“租用设备—注册账号—虚假验证—下载信息—贩卖获利”的犯罪链条，违法所得约为30万元至6000元不等。法院以侵犯公民个人信息罪判处各被告人有期徒刑，并处罚金。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0028",
-      "R0078"
+      "R0028"
     ],
     "references": [
       {
@@ -28,13 +27,9 @@
         "link": "https://view.inews.qq.com/a/20260508A05BQ600"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2021-08",
-    "relatedAttackTools": [
-      "AT0006",
-      "AT0053-003",
-      "AT0023"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0040"
     ]

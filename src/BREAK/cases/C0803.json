@@ -28,15 +28,9 @@
         "link": "https://www.endorlabs.com/learn/sandworm-mode-dissecting-a-multi-stage-npm-supply-chain-attack"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2026-02",
-    "relatedAttackTools": [
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0052",
-      "TA0012",
-      "TA0018"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

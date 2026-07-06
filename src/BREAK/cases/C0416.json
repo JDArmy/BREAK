@@ -15,7 +15,7 @@
     "summary": "某企业用户的 Microsoft 365 账号在启用了安全默认值的情况下，攻击者仅通过单因素认证就成功登录。尽管用户已设置手机 Microsoft Authenticator 应用进行 MFA，但登录日志显示攻击者绕过了多因素认证。该案例讨论了 MFA 疲劳攻击、令牌盗窃和中间人攻击等常见的 MFA 绕过方式。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0036"
+      "R0142"
     ],
     "references": [
       {
@@ -23,16 +23,11 @@
         "link": "https://learn.microsoft.com/en-us/answers/questions/5316432/how-did-a-hacker-bypass-our-multi-factor"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2024-05",
     "relatedAttackTools": [
-      "AT0072",
-      "AT0054-004",
-      "AT0063",
-      "AT0064"
+      "AT0054-004"
     ],
-    "relatedThreatActors": [
-      "TA0059"
-    ]
+    "relatedThreatActors": []
   }
 }

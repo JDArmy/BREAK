@@ -23,15 +23,11 @@
         "link": "https://www.darktrace.com/blog/mfa-under-attack-aitm-phishing-kits-abusing-legitimate-services"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2025-04",
     "relatedAttackTools": [
-      "AT0063-001",
-      "AT0072",
-      "AT0063"
+      "AT0063-001"
     ],
-    "relatedThreatActors": [
-      "TA0059"
-    ]
+    "relatedThreatActors": []
   }
 }

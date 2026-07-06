@@ -14,7 +14,7 @@
     "summary": "海淀区检察院《网络安全保护检察白皮书》披露，陈某某运营的科技公司作为“1069”号段三级代理商，向电信网络诈骗犯罪分子出租号码。犯罪分子冒充交管部门、金融机构等群发钓鱼短信，陈某某等人因帮助信息网络犯罪活动罪被追究。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0095"
+      "R0084"
     ],
     "references": [
       {
@@ -22,12 +22,9 @@
         "link": "https://xinwen.bjd.com.cn/content/s61ac6df9e4b04441fdd04169.html"
       }
     ],
-    "updated": "2026-07-05",
-    "relatedAttackTools": [
-      "AT0063"
-    ],
+    "updated": "2026-07-06",
+    "relatedAttackTools": [],
     "relatedThreatActors": [
-      "TA0015",
       "TA0023"
     ],
     "incidentTime": "2016-09"

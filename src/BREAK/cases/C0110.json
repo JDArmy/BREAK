@@ -15,7 +15,7 @@
     "summary": "2023年8月，安庆市公安局经开分局侦破一起提供虚假流量非法牟利案，抓获犯罪嫌疑人1名，捣毁作案窝点1处，扣押作案手机1052部。嫌疑人在出租房内利用上千台手机进行直播占榜、刷量控评等操作，通过制造虚假曝光和互动数据牟利。",
     "category": "news_report",
     "relatedRisks": [
-      "R0016"
+      "R0016-001"
     ],
     "references": [
       {
@@ -27,13 +27,9 @@
         "link": "https://gaj.anqing.gov.cn/jwzx/dazz/2003271341.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2023-08",
-    "relatedAttackTools": [
-      "AT0009"
-    ],
-    "relatedThreatActors": [
-      "TA0019"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

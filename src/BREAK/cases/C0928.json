@@ -16,7 +16,7 @@
     "summary": "2022年11月19日，媒体揭露了围绕世界杯的多种诈骗手段，包括赌球杀猪盘、赌球抽成骗局、仿冒达人诈骗、代买足彩诈骗、首单赔单即返、解说引导赌球等。这些骗局利用体育赛事平台和社交平台进行导流和诈骗，诱导用户参与非法赌博或造成财产损失。",
     "category": "news_report",
     "relatedRisks": [
-      "R0095"
+      "R0097"
     ],
     "references": [
       {
@@ -24,12 +24,9 @@
         "link": "https://new.qq.com/rain/a/20221119A01RAO00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2022-11",
     "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0016"
-    ]
+    "relatedThreatActors": []
   }
 }

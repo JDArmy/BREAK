@@ -16,7 +16,7 @@
     "summary": "Microsoft 警告称，攻击者越来越多地滥用 SharePoint、OneDrive 和 Dropbox 等合法的文件托管服务，将其作为防御规避手段，用于入侵身份和设备并实施商业电子邮件诈骗（BEC）攻击。这些服务在企业中被广泛用于协作，但被恶意利用后，其共享文件链接可能被用于钓鱼或数据窃取。",
     "category": "news_report",
     "relatedRisks": [
-      "R0095"
+      "R0083-002"
     ],
     "references": [
       {
@@ -24,7 +24,7 @@
         "link": "https://thehackernews.com/2024/10/microsoft-detects-growing-use-of-file.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2024-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []

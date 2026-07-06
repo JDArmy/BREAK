@@ -11,13 +11,17 @@
       "凭证填充",
       "盗刷",
       "邹某",
-      "南京雨花台区法院"
+      "南京雨花台区法院",
+      "侵犯公民个人信息",
+      "账号密码",
+      "登录凭据复用",
+      "刑事判决"
     ],
     "summary": "2023年3月至2024年5月，被告人邹某购买大量QQ邮箱、淘宝、微博等账号密码，使用“撞库”软件筛选出可登录某网络平台的账号密码并出售。王某购买后登录他人账户提现，盗窃51.8万元。邹某因侵犯公民个人信息罪被判处有期徒刑三年六个月，并处罚金15万元。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0032-001",
-      "R0001-003"
+      "R0001-003",
+      "R0032-001"
     ],
     "references": [
       {
@@ -27,16 +31,19 @@
       {
         "title": "别再偷懒设相同密码了,小心被黑客“撞库”盗刷_腾讯新闻",
         "link": "https://new.qq.com/rain/a/20260527A07NFT00"
+      },
+      {
+        "title": "人生无“小案”｜一套密码走天下，“撞库”风险有多大？",
+        "link": "http://www.njyhfy.gov.cn/njxxweb_publishing/www/yhfy/xwzx_2_mb_a2026052261613.html"
+      },
+      {
+        "title": "别再偷懒设相同密码了 小心被黑客“撞库”盗刷_腾讯新闻",
+        "link": "https://view.inews.qq.com/a/20260529A00IWZ00"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2024-05",
-    "relatedAttackTools": [
-      "AT0042"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0007"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

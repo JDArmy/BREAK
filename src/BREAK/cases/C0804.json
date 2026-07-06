@@ -28,13 +28,9 @@
         "link": "https://jfrog.com/blog/large-scale-npm-attack-targets-azure-developers-with-malicious-packages/"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2022-03",
-    "relatedAttackTools": [
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0052"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

@@ -16,7 +16,7 @@
     "summary": "2021年10月以来，周某组建USDT场外交易群，低价收购泰达币再高价出售，为信息网络犯罪人员在虚拟货币和人民币之间进行支付结算。2022年6月起，付某园、赵某帅等人招募转账、跑分人员，形成犯罪集团。该集团共帮助支付结算5480余万USDT，折合人民币约3.8亿余元，涉及广西、江西等多地。21名犯罪嫌疑人被抓获，现场查获现金20余万元及价值100余万元的USDT。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0060"
+      "R0060-001"
     ],
     "references": [
       {
@@ -28,13 +28,11 @@
         "link": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=16452910468894153646&track_id=06cab3b6-40f2-45f6-b2ee-15f8dc4ae04d"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2023-07",
     "relatedAttackTools": [
       "AT0026"
     ],
-    "relatedThreatActors": [
-      "TA0014"
-    ]
+    "relatedThreatActors": []
   }
 }

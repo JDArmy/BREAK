@@ -10,7 +10,10 @@
       "刷手",
       "虚假物流单号",
       "上海普陀区检察院",
-      "薅羊毛"
+      "薅羊毛",
+      "暗号下单",
+      "骗取补贴",
+      "上海市普陀区人民检察院"
     ],
     "summary": "2024年初，李某在某电商平台经营保健品店，与杨某合谋组织刷手使用平台消费券下单。李某店铺采取空包发货或购买虚假物流单号的方式完成虚假交易，骗取平台补贴。至案发，共骗取补贴40余万元。2025年9月，上海普陀区检察院对李某、杨某、王某等12名涉案人员以诈骗罪提起公诉。",
     "category": "criminal_verdict",
@@ -25,14 +28,21 @@
       {
         "title": "一条刷单骗补贴的灰产链",
         "link": "https://www.jsjc.gov.cn/shzs/fzzc/202512/t20251217_1149890.shtml"
+      },
+      {
+        "title": "暗号下单、空包发货,“薅羊毛”薅出40万,12人利用消费券虚假核销...",
+        "link": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=1026522&sid=200"
+      },
+      {
+        "title": "1460个账号用于刷单，12人合谋骗取知名电商平台补贴",
+        "link": "https://www.cdjcy.gov.cn/yasf/290203.jhtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2024-11",
     "relatedAttackTools": [],
     "relatedThreatActors": [
-      "TA0001",
-      "TA0009"
+      "TA0006"
     ]
   }
 }

@@ -23,14 +23,11 @@
         "link": "https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shirley"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
-      "AT0023",
       "AT0044"
     ],
-    "relatedThreatActors": [
-      "TA0041"
-    ],
+    "relatedThreatActors": [],
     "incidentTime": "2025"
   }
 }

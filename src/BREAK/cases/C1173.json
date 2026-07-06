@@ -26,15 +26,11 @@
         "link": "https://samcurry.net/web-hackers-vs-the-auto-industry"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "incidentTime": "2023-01",
     "relatedAttackTools": [
-      "AT0061",
-      "AT0061-001"
+      "AT0061"
     ],
-    "relatedThreatActors": [
-      "TA0051",
-      "TA0049-001"
-    ]
+    "relatedThreatActors": []
   }
 }

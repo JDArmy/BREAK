@@ -23,13 +23,9 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2020-12",
-    "relatedAttackTools": [
-      "AT0013"
-    ],
-    "relatedThreatActors": [
-      "TA0018"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

@@ -23,16 +23,11 @@
         "link": "https://cybersecuritynews.com/captchageddon-new-clickfix-attack/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
-      "AT0075",
-      "AT0013",
-      "AT0064"
+      "AT0075"
     ],
-    "relatedThreatActors": [
-      "TA0012",
-      "TA0018"
-    ],
+    "relatedThreatActors": [],
     "incidentTime": "2025-08-06"
   }
 }

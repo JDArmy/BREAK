@@ -9,7 +9,15 @@
       "search engine index manipulation",
       "government website redirect",
       "pornographic ad redirect",
-      "domain redirect exploit"
+      "domain redirect exploit",
+      "SEO poisoning",
+      ".gov domain",
+      "malicious PDF upload",
+      "Google indexing",
+      "Granicus",
+      "file upload vulnerability",
+      "government website attack",
+      "search engine manipulation"
     ],
     "summary": "In December 2025, a large-scale SEO poisoning attack targeted .gov domains across multiple US states and local governments. Attackers exploited public file upload functions on government websites to upload PDF files containing malicious links. Once these files were indexed by search engines, users clicking on official domain links were redirected to pages containing pornographic advertisements and",
     "references": [
@@ -20,6 +28,10 @@
       {
         "title": "U.S. government website hit by SEO poisoning attack: Official domain tampered to redirect to pornographic content entry",
         "link": "https://www.securitylab.ru/news/567187.php"
+      },
+      {
+        "title": "Satoshi Nakamoto disappears for 15 years: The mystery of a million dormant bitcoins; GPT-5.2 debuts: OpenAI confronts...",
+        "link": "https://www.163.com/dy/article/KGR8MPF90511ALHJ.html"
       }
     ]
   }

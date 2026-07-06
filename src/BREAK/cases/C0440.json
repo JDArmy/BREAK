@@ -22,15 +22,12 @@
         "link": "https://www.humansecurity.com/learn/blog/ai-agents-carding-attack-breakdown/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       "AT0053-004",
       "AT0061-004"
     ],
-    "relatedThreatActors": [
-      "TA0031",
-      "TA0055"
-    ],
+    "relatedThreatActors": [],
     "incidentTime": "2025-12-09"
   }
 }

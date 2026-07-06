@@ -22,13 +22,9 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-05",
-    "relatedAttackTools": [
-      "AT0013"
-    ],
-    "relatedThreatActors": [
-      "TA0018"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }
