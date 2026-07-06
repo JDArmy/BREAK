@@ -27,7 +27,9 @@ const REVIEWERS = [
 ];
 
 // 收集变更实体
-const changed = opts.full ? [] : await getChangedEntities({ baseRef: opts.baseRef });
+// 透传 stagedOnly：pre-commit hook 用 --staged-only 调用，仅评审已暂存实体，
+// 避免未暂存的工作区改动 fail 阻断无关提交。
+const changed = opts.full ? [] : await getChangedEntities({ baseRef: opts.baseRef, stagedOnly: opts.stagedOnly });
 const changedTypes = new Set(changed.map((c) => c.type));
 
 // 决定要跑哪些子评审
@@ -52,9 +54,10 @@ const summary = { generatedAt: new Date().toISOString(), reviewers: [], hasFail:
 
 for (const [name, script, types] of toRun) {
   console.log(`\n--- 跑 ${name} ---`);
-  // 构造 args：传 --base 和可选 --keys/--limit
+  // 构造 args：传 --base 和可选 --keys/--limit/--staged-only
   const args = ['scripts/validate/' + script];
   if (opts.baseRef && !opts.full) args.push('--base', opts.baseRef);
+  if (opts.stagedOnly) args.push('--staged-only');
   if (opts.full) args.push('--full');
   if (opts.keys) args.push('--keys=' + opts.keys.join(','));
   if (opts.limit > 0) args.push('--limit=' + opts.limit);

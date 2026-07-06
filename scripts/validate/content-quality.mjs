@@ -13,6 +13,9 @@ const genericEnInfluence =
   'May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation.';
 
 function loadEntityDir(dir) {
+  // 目录可能不存在（如新机器/CI 未生成英文翻译），返回 [] 而非抛 ENOENT，
+  // 与 admission.mjs/llm-review-helpers.mjs 的守卫一致。
+  if (!fs.existsSync(dir)) return [];
   const records = [];
   for (const file of fs
     .readdirSync(dir)

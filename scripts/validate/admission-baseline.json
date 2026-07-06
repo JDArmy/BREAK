@@ -1,25 +1,52 @@
 {
-  "generatedAt": "2026-07-04T05:34:13.412Z",
+  "generatedAt": "2026-07-06T04:22:25.611Z",
   "version": "2.39.0",
   "description": "新条目准入 baseline 快照：exemptIds 豁免初始下限（防误伤历史），placeholderExempt 豁免占位禁令（历史技术债），fieldSnapshots 用于退化保护。新增条目不在 exemptIds 内，严格执行所有下限。",
   "exemptIds": [
     "R0001",
+    "R0001-001",
+    "R0001-002",
+    "R0001-003",
     "R0002",
     "R0003",
+    "R0003-001",
+    "R0003-002",
+    "R0003-003",
+    "R0003-004",
     "R0004",
     "R0005",
+    "R0005-001",
+    "R0005-002",
     "R0006",
     "R0007",
+    "R0007-001",
+    "R0007-002",
+    "R0007-003",
+    "R0007-004",
     "R0008",
+    "R0008-001",
+    "R0008-002",
+    "R0008-003",
+    "R0008-004",
+    "R0008-005",
     "R0009",
     "R0010",
     "R0011",
+    "R0011-001",
+    "R0011-002",
     "R0012",
+    "R0012-001",
+    "R0012-002",
     "R0013",
     "R0014",
     "R0015",
     "R0016",
+    "R0016-001",
+    "R0016-002",
     "R0017",
+    "R0017-001",
+    "R0017-002",
+    "R0017-003",
     "R0018",
     "R0019",
     "R0020",
@@ -30,15 +57,37 @@
     "R0025",
     "R0026",
     "R0027",
+    "R0027-002",
+    "R0027-003",
+    "R0027-004",
+    "R0027-005",
     "R0028",
     "R0029",
+    "R0029-001",
+    "R0029-002",
+    "R0029-003",
+    "R0029-004",
     "R0030",
+    "R0030-001",
+    "R0030-002",
+    "R0030-003",
+    "R0030-004",
+    "R0030-005",
+    "R0030-006",
+    "R0030-007",
     "R0031",
     "R0032",
+    "R0032-001",
+    "R0032-002",
+    "R0032-003",
+    "R0032-004",
     "R0033",
+    "R0033-001",
     "R0034",
     "R0035",
+    "R0035-001",
     "R0036",
+    "R0036-001",
     "R0037",
     "R0038",
     "R0039",
@@ -46,49 +95,99 @@
     "R0041",
     "R0042",
     "R0043",
+    "R0043-001",
     "R0044",
     "R0045",
+    "R0045-001",
     "R0046",
     "R0047",
     "R0048",
     "R0049",
     "R0050",
+    "R0050-001",
     "R0051",
+    "R0051-001",
+    "R0051-002",
     "R0052",
     "R0053",
     "R0054",
+    "R0054-001",
+    "R0054-002",
+    "R0054-003",
+    "R0054-004",
     "R0055",
+    "R0055-001",
     "R0056",
     "R0057",
     "R0058",
     "R0059",
     "R0060",
+    "R0060-001",
     "R0061",
     "R0062",
+    "R0062-001",
+    "R0062-002",
     "R0063",
     "R0064",
     "R0065",
     "R0066",
     "R0067",
     "R0068",
+    "R0068-001",
+    "R0068-002",
     "R0069",
+    "R0069-001",
+    "R0069-002",
     "R0070",
+    "R0070-001",
+    "R0070-002",
+    "R0070-003",
     "R0071",
+    "R0071-001",
+    "R0071-002",
+    "R0071-003",
+    "R0071-004",
+    "R0071-005",
+    "R0071-006",
+    "R0071-007",
+    "R0071-008",
+    "R0071-009",
+    "R0071-010",
+    "R0071-011",
     "R0072",
+    "R0072-001",
     "R0073",
     "R0074",
     "R0075",
     "R0076",
     "R0077",
+    "R0077-001",
     "R0078",
+    "R0078-001",
+    "R0078-002",
+    "R0078-003",
     "R0079",
     "R0080",
     "R0081",
+    "R0081-001",
+    "R0081-002",
+    "R0081-003",
+    "R0081-004",
+    "R0081-005",
     "R0082",
     "R0083",
+    "R0083-001",
+    "R0083-002",
     "R0084",
+    "R0084-001",
+    "R0084-002",
+    "R0084-003",
+    "R0084-004",
     "R0085",
+    "R0085-001",
+    "R0085-002",
     "R0086",
+    "R0086-001",
     "R0087",
     "R0090",
     "R0091",
@@ -97,6 +196,7 @@
     "R0094",
     "R0095",
     "R0096",
+    "R0096-001",
     "R0097",
     "R0098",
     "R0099",
@@ -112,17 +212,30 @@
     "R0109",
     "R0110",
     "R0111",
+    "R0111-001",
+    "R0111-002",
     "R0112",
+    "R0112-001",
+    "R0112-002",
+    "R0112-003",
+    "R0112-004",
+    "R0112-005",
+    "R0112-006",
     "R0113",
     "R0114",
     "R0115",
     "R0117",
+    "R0117-001",
+    "R0117-002",
     "R0118",
     "R0122",
     "R0123",
     "R0124",
     "R0125",
     "R0126",
+    "R0126-001",
+    "R0126-002",
+    "R0126-003",
     "R0127",
     "R0128",
     "R0129",
@@ -164,6 +277,7 @@
     "R0171",
     "R0172",
     "R0173",
+    "R0173-001",
     "R0174",
     "R0175",
     "R0176",
@@ -172,6 +286,7 @@
     "R0179",
     "R0180",
     "R0181",
+    "R0181-001",
     "R0182",
     "R0183",
     "R0184",
@@ -191,12 +306,10 @@
     "R0199",
     "R0200",
     "R0201",
-    "R0202",
     "R0203",
     "R0205",
     "R0206",
     "R0207",
-    "R0208",
     "R0209",
     "R0210",
     "R0211",
@@ -251,6 +364,9 @@
     "R0262",
     "R0263",
     "R0264",
+    "R0264-001",
+    "R0264-002",
+    "R0264-003",
     "R0265",
     "R0266",
     "R0267",
@@ -266,59 +382,143 @@
     "R0277",
     "R0278",
     "A0001",
+    "A0001-001",
+    "A0001-002",
+    "A0001-003",
+    "A0001-004",
     "A0002",
     "A0003",
     "A0004",
+    "A0004-001",
+    "A0004-002",
     "A0005",
     "A0006",
+    "A0006-001",
+    "A0006-002",
+    "A0006-003",
+    "A0006-004",
+    "A0006-005",
+    "A0006-006",
+    "A0006-007",
+    "A0006-008",
     "A0007",
+    "A0007-001",
+    "A0007-002",
+    "A0007-003",
+    "A0007-004",
+    "A0007-005",
     "A0008",
+    "A0008-001",
+    "A0008-002",
+    "A0008-003",
+    "A0008-004",
+    "A0008-005",
     "A0009",
     "A0010",
+    "A0010-001",
+    "A0010-002",
+    "A0010-003",
+    "A0010-004",
+    "A0010-005",
+    "A0010-006",
+    "A0010-007",
+    "A0010-008",
+    "A0010-009",
     "A0011",
     "A0012",
     "A0013",
+    "A0013-001",
+    "A0013-002",
+    "A0013-003",
+    "A0013-004",
     "A0014",
+    "A0014-001",
+    "A0014-002",
     "A0015",
     "A0016",
+    "A0016-001",
+    "A0016-002",
+    "A0016-003",
+    "A0016-004",
+    "A0016-005",
     "A0017",
+    "A0017-001",
     "A0018",
+    "A0018-001",
     "A0019",
+    "A0019-002",
+    "A0019-003",
     "A0020",
+    "A0020-001",
+    "A0020-002",
+    "A0020-003",
     "A0021",
+    "A0021-001",
     "A0022",
+    "A0022-001",
+    "A0022-002",
+    "A0022-003",
+    "A0022-004",
     "A0023",
+    "A0023-001",
     "A0024",
     "A0025",
+    "A0025-001",
+    "A0025-002",
+    "A0025-003",
+    "A0025-004",
     "A0026",
     "A0027",
     "A0028",
+    "A0028-001",
     "A0029",
+    "A0029-001",
+    "A0029-002",
+    "A0029-003",
     "A0030",
+    "A0030-001",
     "A0031",
     "A0032",
     "A0033",
     "A0034",
+    "A0034-001",
+    "A0034-002",
+    "A0034-003",
     "A0035",
+    "A0035-001",
+    "A0035-002",
+    "A0035-003",
     "A0036",
     "A0037",
     "A0038",
+    "A0038-001",
+    "A0038-002",
+    "A0038-003",
     "A0039",
     "A0040",
     "A0041",
     "A0042",
+    "A0042-001",
+    "A0042-002",
     "A0043",
     "A0044",
     "A0045",
+    "A0045-001",
     "A0046",
     "A0047",
     "A0048",
     "A0049",
+    "A0049-001",
+    "A0049-002",
     "A0050",
+    "A0050-001",
+    "A0050-002",
+    "A0050-003",
     "A0051",
     "A0052",
     "A0053",
     "A0054",
+    "A0054-001",
     "A0055",
     "A0056",
     "A0057",
@@ -331,6 +531,8 @@
     "A0064",
     "A0065",
     "A0066",
+    "A0066-001",
+    "A0066-002",
     "A0067",
     "A0068",
     "A0069",
@@ -357,13 +559,18 @@
     "A0092",
     "A0094",
     "A0095",
+    "A0095-001",
     "A0096",
     "A0097",
     "A0098",
+    "A0098-001",
+    "A0098-002",
+    "A0098-003",
     "A0099",
     "A0100",
     "A0101",
     "A0102",
+    "A0102-001",
     "A0103",
     "A0104",
     "A0105",
@@ -371,10 +578,15 @@
     "A0107",
     "A0108",
     "A0109",
+    "A0109-001",
     "A0110",
+    "A0110-001",
     "A0111",
+    "A0111-001",
+    "A0111-002",
     "A0112",
     "A0113",
+    "A0113-001",
     "A0114",
     "A0117",
     "A0118",
@@ -386,13 +598,17 @@
     "A0129",
     "A0130",
     "A0131",
+    "A0131-001",
+    "A0131-002",
     "A0134",
+    "A0134-001",
     "A0135",
     "A0136",
     "A0137",
     "A0138",
     "A0139",
     "A0140",
+    "A0140-001",
     "A0141",
     "A0142",
     "A0143",
@@ -400,6 +616,7 @@
     "A0145",
     "A0146",
     "A0147",
+    "A0147-001",
     "A0148",
     "A0150",
     "A0151",
@@ -407,6 +624,7 @@
     "A0153",
     "A0154",
     "A0155",
+    "A0155-001",
     "A0156",
     "A0157",
     "A0160",
@@ -424,6 +642,7 @@
     "A0174",
     "A0176",
     "A0177",
+    "A0177-001",
     "A0178",
     "A0179",
     "A0180",
@@ -464,6 +683,8 @@
     "A0220",
     "A0221",
     "A0222",
+    "A0222-001",
+    "A0222-002",
     "A0223",
     "A0224",
     "A0225",
@@ -479,18 +700,23 @@
     "A0235",
     "A0236",
     "AT0001",
+    "AT0001-002",
+    "AT0001-003",
     "AT0002",
     "AT0003",
     "AT0004",
     "AT0005",
     "AT0006",
     "AT0007",
+    "AT0007-001",
     "AT0008",
     "AT0009",
     "AT0010",
     "AT0012",
     "AT0013",
+    "AT0013-001",
     "AT0014",
+    "AT0014-001",
     "AT0015",
     "AT0016",
     "AT0017",
@@ -507,13 +733,20 @@
     "AT0030",
     "AT0031",
     "AT0032",
+    "AT0032-001",
     "AT0033",
+    "AT0033-001",
     "AT0034",
+    "AT0034-001",
+    "AT0034-002",
     "AT0036",
     "AT0037",
     "AT0038",
     "AT0039",
+    "AT0039-001",
+    "AT0039-002",
     "AT0040",
+    "AT0040-001",
     "AT0041",
     "AT0042",
     "AT0043",
@@ -523,16 +756,41 @@
     "AT0047",
     "AT0048",
     "AT0049",
+    "AT0049-001",
     "AT0050",
     "AT0051",
     "AT0052",
+    "AT0052-001",
+    "AT0052-002",
+    "AT0052-003",
     "AT0053",
+    "AT0053-001",
+    "AT0053-002",
+    "AT0053-003",
+    "AT0053-004",
+    "AT0053-005",
+    "AT0053-006",
+    "AT0053-007",
     "AT0054",
+    "AT0054-001",
+    "AT0054-002",
+    "AT0054-003",
+    "AT0054-004",
+    "AT0054-005",
+    "AT0054-006",
+    "AT0054-007",
     "AT0060",
     "AT0061",
+    "AT0061-001",
+    "AT0061-002",
+    "AT0061-003",
+    "AT0061-004",
+    "AT0061-005",
     "AT0062",
     "AT0063",
+    "AT0063-001",
     "AT0064",
+    "AT0064-001",
     "AT0066",
     "AT0067",
     "AT0068",
@@ -560,11 +818,18 @@
     "AT0102",
     "AT0103",
     "TA0001",
+    "TA0001-001",
     "TA0002",
+    "TA0002-001",
     "TA0003",
     "TA0004",
     "TA0005",
+    "TA0005-001",
+    "TA0005-002",
     "TA0006",
+    "TA0006-001",
+    "TA0006-002",
+    "TA0006-003",
     "TA0007",
     "TA0008",
     "TA0009",
@@ -573,7 +838,9 @@
     "TA0012",
     "TA0013",
     "TA0014",
+    "TA0014-001",
     "TA0015",
+    "TA0015-001",
     "TA0016",
     "TA0017",
     "TA0018",
@@ -584,6 +851,9 @@
     "TA0023",
     "TA0024",
     "TA0025",
+    "TA0025-001",
+    "TA0025-002",
+    "TA0025-003",
     "TA0028",
     "TA0029",
     "TA0030",
@@ -599,11 +869,13 @@
     "TA0040",
     "TA0041",
     "TA0042",
+    "TA0042-001",
     "TA0045",
     "TA0046",
     "TA0047",
     "TA0048",
     "TA0049",
+    "TA0049-001",
     "TA0050",
     "TA0051",
     "TA0052",
@@ -686,6 +958,31 @@
     "T0064",
     "T0065",
     "T0075",
+    "T0075-001",
+    "T0075-002",
+    "T0075-003",
+    "T0075-004",
+    "T0075-005",
+    "T0075-006",
+    "T0075-007",
+    "T0075-008",
+    "T0075-009",
+    "T0075-010",
+    "T0075-011",
+    "T0075-012",
+    "T0075-013",
+    "T0075-014",
+    "T0075-015",
+    "T0075-016",
+    "T0075-017",
+    "T0075-018",
+    "T0075-019",
+    "T0075-020",
+    "T0075-021",
+    "T0075-022",
+    "T0075-024",
+    "T0075-025",
+    "T0075-026",
     "T0079",
     "T0081",
     "T0084",
@@ -708,17 +1005,34 @@
     "T0104",
     "T0105",
     "T0107",
+    "T0107-001",
+    "T0107-002",
+    "T0107-003",
     "T0108",
     "T0112",
     "T0113",
     "T0115",
     "T0116",
     "T0121",
+    "T0121-001",
+    "T0121-002",
+    "T0121-003",
+    "T0121-004",
+    "T0121-005",
+    "T0121-006",
     "T0123",
     "T0124",
     "T0126",
     "T0127",
+    "T0127-001",
+    "T0127-002",
+    "T0127-003",
+    "T0127-004",
+    "T0127-005",
     "T0131",
+    "T0131-001",
+    "T0131-002",
+    "T0131-003",
     "T0135",
     "T0136",
     "T0137",
@@ -879,6 +1193,20 @@
     "T0306",
     "T0307",
     "T0317",
+    "T0317-001",
+    "T0317-002",
+    "T0317-003",
+    "T0317-004",
+    "T0317-005",
+    "T0317-006",
+    "T0317-007",
+    "T0317-008",
+    "T0317-009",
+    "T0317-010",
+    "T0317-011",
+    "T0317-012",
+    "T0317-013",
+    "T0317-014",
     "T0322",
     "T0323",
     "T0325",
@@ -956,13 +1284,18 @@
     "T0397",
     "T0398",
     "T0400",
+    "T0400-001",
+    "T0400-002",
+    "T0400-003",
+    "T0400-004",
+    "T0400-005",
+    "T0400-006",
     "T0406",
     "T0407",
     "T0408",
     "T0409",
     "T0410",
     "T0411",
-    "T0412",
     "T0413",
     "T0414",
     "T0415",
@@ -1042,6 +1375,8 @@
     "T0502",
     "T0503",
     "T0505",
+    "T0505-001",
+    "T0505-002",
     "T0508",
     "T0509",
     "T0510",
@@ -1151,7 +1486,6 @@
     "T0614",
     "C0001",
     "C0002",
-    "C0003",
     "C0004",
     "C0005",
     "C0006",
@@ -2916,11 +3250,23 @@
     "C1817",
     "C1818",
     "C1819",
-    "C1820"
+    "C1820",
+    "C1821",
+    "C1822",
+    "C1823",
+    "C1824",
+    "C1825",
+    "C1826",
+    "C1827",
+    "C1828",
+    "C1829",
+    "C1830"
   ],
   "placeholderExempt": [
+    "R0078-002",
     "R0118",
     "R0153",
+    "R0181-001",
     "R0212",
     "R0221",
     "R0225",
@@ -2928,18 +3274,29 @@
     "R0236",
     "R0237",
     "R0249",
-    "R0260",
+    "A0004-001",
+    "A0006-002",
     "A0031",
     "A0083",
     "A0094",
+    "A0111-002",
+    "A0155-001",
     "A0178",
     "A0218",
     "A0221",
+    "AT0053-004",
+    "AT0054-001",
+    "AT0054-004",
+    "AT0054-005",
+    "AT0061-001",
+    "AT0061-002",
+    "AT0061-003",
+    "AT0061-004",
+    "AT0061-005",
     "AT0095",
     "AT0097",
+    "TA0049-001",
     "T0538",
-    "T0558",
-    "T0559",
     "T0569",
     "T0572",
     "T0574",
@@ -2959,6 +3316,30 @@
         "influence": 22
       }
     },
+    "R0001-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 15,
+        "description": 31,
+        "influence": 22
+      }
+    },
+    "R0001-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 26,
+        "description": 39,
+        "influence": 22
+      }
+    },
+    "R0001-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 23,
+        "description": 47,
+        "influence": 83
+      }
+    },
     "R0002": {
       "keywords": 7,
       "fields": {
@@ -2975,12 +3356,44 @@
         "influence": 33
       }
     },
+    "R0003-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 27,
+        "description": 103,
+        "influence": 20
+      }
+    },
+    "R0003-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 15,
+        "description": 170,
+        "influence": 26
+      }
+    },
+    "R0003-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 41,
+        "description": 73,
+        "influence": 9
+      }
+    },
+    "R0003-004": {
+      "keywords": 6,
+      "fields": {
+        "definition": 132,
+        "description": 213,
+        "influence": 131
+      }
+    },
     "R0004": {
       "keywords": 6,
       "fields": {
         "definition": 61,
         "description": 324,
-        "influence": 19
+        "influence": 81
       }
     },
     "R0005": {
@@ -2989,6 +3402,22 @@
         "definition": 17,
         "description": 136,
         "influence": 22
+      }
+    },
+    "R0005-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 32,
+        "description": 144,
+        "influence": 12
+      }
+    },
+    "R0005-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 18,
+        "description": 93,
+        "influence": 11
       }
     },
     "R0006": {
@@ -3007,12 +3436,84 @@
         "influence": 14
       }
     },
+    "R0007-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 29,
+        "description": 133,
+        "influence": 14
+      }
+    },
+    "R0007-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 28,
+        "description": 166,
+        "influence": 14
+      }
+    },
+    "R0007-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 30,
+        "description": 97,
+        "influence": 14
+      }
+    },
+    "R0007-004": {
+      "keywords": 6,
+      "fields": {
+        "definition": 30,
+        "description": 88,
+        "influence": 14
+      }
+    },
     "R0008": {
       "keywords": 7,
       "fields": {
         "definition": 33,
         "description": 125,
         "influence": 10
+      }
+    },
+    "R0008-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 22,
+        "description": 101,
+        "influence": 20
+      }
+    },
+    "R0008-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 36,
+        "description": 87,
+        "influence": 27
+      }
+    },
+    "R0008-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 107,
+        "description": 129,
+        "influence": 20
+      }
+    },
+    "R0008-004": {
+      "keywords": 6,
+      "fields": {
+        "definition": 27,
+        "description": 36,
+        "influence": 9
+      }
+    },
+    "R0008-005": {
+      "keywords": 6,
+      "fields": {
+        "definition": 42,
+        "description": 160,
+        "influence": 20
       }
     },
     "R0009": {
@@ -3039,12 +3540,44 @@
         "influence": 46
       }
     },
+    "R0011-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 19,
+        "description": 31,
+        "influence": 14
+      }
+    },
+    "R0011-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 57,
+        "description": 57,
+        "influence": 18
+      }
+    },
     "R0012": {
       "keywords": 7,
       "fields": {
         "definition": 49,
         "description": 112,
         "influence": 23
+      }
+    },
+    "R0012-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 20,
+        "description": 116,
+        "influence": 19
+      }
+    },
+    "R0012-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 49,
+        "description": 182,
+        "influence": 40
       }
     },
     "R0013": {
@@ -3079,12 +3612,52 @@
         "influence": 24
       }
     },
+    "R0016-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 47,
+        "description": 142,
+        "influence": 15
+      }
+    },
+    "R0016-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 29,
+        "description": 98,
+        "influence": 15
+      }
+    },
     "R0017": {
       "keywords": 7,
       "fields": {
         "definition": 11,
         "description": 64,
         "influence": 24
+      }
+    },
+    "R0017-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 29,
+        "description": 67,
+        "influence": 29
+      }
+    },
+    "R0017-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 36,
+        "description": 123,
+        "influence": 32
+      }
+    },
+    "R0017-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 28,
+        "description": 141,
+        "influence": 42
       }
     },
     "R0018": {
@@ -3167,6 +3740,38 @@
         "influence": 106
       }
     },
+    "R0027-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 54,
+        "description": 261,
+        "influence": 83
+      }
+    },
+    "R0027-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 42,
+        "description": 227,
+        "influence": 69
+      }
+    },
+    "R0027-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 46,
+        "description": 225,
+        "influence": 86
+      }
+    },
+    "R0027-005": {
+      "keywords": 7,
+      "fields": {
+        "definition": 44,
+        "description": 240,
+        "influence": 66
+      }
+    },
     "R0028": {
       "keywords": 7,
       "fields": {
@@ -3183,12 +3788,100 @@
         "influence": 15
       }
     },
+    "R0029-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 43,
+        "description": 76,
+        "influence": 49
+      }
+    },
+    "R0029-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 77,
+        "description": 375,
+        "influence": 36
+      }
+    },
+    "R0029-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 27,
+        "description": 49,
+        "influence": 15
+      }
+    },
+    "R0029-004": {
+      "keywords": 6,
+      "fields": {
+        "definition": 92,
+        "description": 331,
+        "influence": 34
+      }
+    },
     "R0030": {
       "keywords": 6,
       "fields": {
         "definition": 20,
         "description": 30,
         "influence": 62
+      }
+    },
+    "R0030-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 13,
+        "description": 33,
+        "influence": 62
+      }
+    },
+    "R0030-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 20,
+        "description": 127,
+        "influence": 19
+      }
+    },
+    "R0030-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 26,
+        "description": 118,
+        "influence": 19
+      }
+    },
+    "R0030-004": {
+      "keywords": 6,
+      "fields": {
+        "definition": 48,
+        "description": 104,
+        "influence": 60
+      }
+    },
+    "R0030-005": {
+      "keywords": 6,
+      "fields": {
+        "definition": 39,
+        "description": 280,
+        "influence": 45
+      }
+    },
+    "R0030-006": {
+      "keywords": 5,
+      "fields": {
+        "definition": 40,
+        "description": 58,
+        "influence": 46
+      }
+    },
+    "R0030-007": {
+      "keywords": 6,
+      "fields": {
+        "definition": 70,
+        "description": 130,
+        "influence": 42
       }
     },
     "R0031": {
@@ -3207,12 +3900,52 @@
         "influence": 28
       }
     },
+    "R0032-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 26,
+        "description": 154,
+        "influence": 65
+      }
+    },
+    "R0032-002": {
+      "keywords": 5,
+      "fields": {
+        "definition": 37,
+        "description": 108,
+        "influence": 58
+      }
+    },
+    "R0032-003": {
+      "keywords": 5,
+      "fields": {
+        "definition": 31,
+        "description": 67,
+        "influence": 114
+      }
+    },
+    "R0032-004": {
+      "keywords": 5,
+      "fields": {
+        "definition": 23,
+        "description": 286,
+        "influence": 36
+      }
+    },
     "R0033": {
       "keywords": 6,
       "fields": {
         "definition": 68,
         "description": 75,
         "influence": 42
+      }
+    },
+    "R0033-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 24,
+        "description": 58,
+        "influence": 29
       }
     },
     "R0034": {
@@ -3231,11 +3964,27 @@
         "influence": 35
       }
     },
-    "R0036": {
-      "keywords": 7,
+    "R0035-001": {
+      "keywords": 6,
       "fields": {
-        "definition": 21,
-        "description": 95,
+        "definition": 19,
+        "description": 82,
+        "influence": 66
+      }
+    },
+    "R0036": {
+      "keywords": 13,
+      "fields": {
+        "definition": 39,
+        "description": 388,
+        "influence": 68
+      }
+    },
+    "R0036-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 97,
+        "description": 285,
         "influence": 24
       }
     },
@@ -3268,7 +4017,7 @@
       "fields": {
         "definition": 22,
         "description": 96,
-        "influence": 14
+        "influence": 107
       }
     },
     "R0041": {
@@ -3295,6 +4044,14 @@
         "influence": 8
       }
     },
+    "R0043-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 27,
+        "description": 105,
+        "influence": 17
+      }
+    },
     "R0044": {
       "keywords": 6,
       "fields": {
@@ -3309,6 +4066,14 @@
         "definition": 23,
         "description": 78,
         "influence": 21
+      }
+    },
+    "R0045-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 25,
+        "description": 51,
+        "influence": 100
       }
     },
     "R0046": {
@@ -3351,11 +4116,35 @@
         "influence": 24
       }
     },
+    "R0050-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 18,
+        "description": 32,
+        "influence": 24
+      }
+    },
     "R0051": {
       "keywords": 7,
       "fields": {
         "definition": 17,
         "description": 113,
+        "influence": 24
+      }
+    },
+    "R0051-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 22,
+        "description": 102,
+        "influence": 24
+      }
+    },
+    "R0051-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 22,
+        "description": 71,
         "influence": 24
       }
     },
@@ -3372,7 +4161,7 @@
       "fields": {
         "definition": 22,
         "description": 104,
-        "influence": 15
+        "influence": 85
       }
     },
     "R0054": {
@@ -3383,12 +4172,52 @@
         "influence": 18
       }
     },
+    "R0054-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 27,
+        "description": 56,
+        "influence": 23
+      }
+    },
+    "R0054-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 27,
+        "description": 55,
+        "influence": 12
+      }
+    },
+    "R0054-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 25,
+        "description": 83,
+        "influence": 12
+      }
+    },
+    "R0054-004": {
+      "keywords": 6,
+      "fields": {
+        "definition": 39,
+        "description": 67,
+        "influence": 98
+      }
+    },
     "R0055": {
       "keywords": 7,
       "fields": {
         "definition": 32,
         "description": 118,
         "influence": 12
+      }
+    },
+    "R0055-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 16,
+        "description": 108,
+        "influence": 21
       }
     },
     "R0056": {
@@ -3431,6 +4260,14 @@
         "influence": 21
       }
     },
+    "R0060-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 40,
+        "description": 291,
+        "influence": 36
+      }
+    },
     "R0061": {
       "keywords": 7,
       "fields": {
@@ -3444,6 +4281,22 @@
       "fields": {
         "definition": 43,
         "description": 156,
+        "influence": 111
+      }
+    },
+    "R0062-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 21,
+        "description": 45,
+        "influence": 92
+      }
+    },
+    "R0062-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 27,
+        "description": 251,
         "influence": 15
       }
     },
@@ -3495,12 +4348,44 @@
         "influence": 12
       }
     },
+    "R0068-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 20,
+        "description": 58,
+        "influence": 15
+      }
+    },
+    "R0068-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 27,
+        "description": 80,
+        "influence": 12
+      }
+    },
     "R0069": {
       "keywords": 6,
       "fields": {
         "definition": 22,
         "description": 80,
         "influence": 23
+      }
+    },
+    "R0069-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 50,
+        "description": 278,
+        "influence": 29
+      }
+    },
+    "R0069-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 57,
+        "description": 87,
+        "influence": 29
       }
     },
     "R0070": {
@@ -3511,11 +4396,123 @@
         "influence": 94
       }
     },
+    "R0070-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 34,
+        "description": 53,
+        "influence": 28
+      }
+    },
+    "R0070-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 43,
+        "description": 216,
+        "influence": 45
+      }
+    },
+    "R0070-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 56,
+        "description": 95,
+        "influence": 44
+      }
+    },
     "R0071": {
       "keywords": 6,
       "fields": {
         "definition": 60,
         "description": 93,
+        "influence": 29
+      }
+    },
+    "R0071-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 24,
+        "description": 237,
+        "influence": 22
+      }
+    },
+    "R0071-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 29,
+        "description": 98,
+        "influence": 128
+      }
+    },
+    "R0071-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 35,
+        "description": 179,
+        "influence": 26
+      }
+    },
+    "R0071-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 55,
+        "description": 207,
+        "influence": 37
+      }
+    },
+    "R0071-005": {
+      "keywords": 7,
+      "fields": {
+        "definition": 38,
+        "description": 210,
+        "influence": 25
+      }
+    },
+    "R0071-006": {
+      "keywords": 6,
+      "fields": {
+        "definition": 50,
+        "description": 249,
+        "influence": 37
+      }
+    },
+    "R0071-007": {
+      "keywords": 6,
+      "fields": {
+        "definition": 43,
+        "description": 268,
+        "influence": 34
+      }
+    },
+    "R0071-008": {
+      "keywords": 6,
+      "fields": {
+        "definition": 39,
+        "description": 264,
+        "influence": 31
+      }
+    },
+    "R0071-009": {
+      "keywords": 6,
+      "fields": {
+        "definition": 59,
+        "description": 287,
+        "influence": 44
+      }
+    },
+    "R0071-010": {
+      "keywords": 6,
+      "fields": {
+        "definition": 36,
+        "description": 223,
+        "influence": 26
+      }
+    },
+    "R0071-011": {
+      "keywords": 6,
+      "fields": {
+        "definition": 33,
+        "description": 140,
         "influence": 29
       }
     },
@@ -3525,6 +4522,14 @@
         "definition": 47,
         "description": 38,
         "influence": 62
+      }
+    },
+    "R0072-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 56,
+        "description": 39,
+        "influence": 41
       }
     },
     "R0073": {
@@ -3564,7 +4569,15 @@
       "fields": {
         "definition": 60,
         "description": 234,
-        "influence": 31
+        "influence": 129
+      }
+    },
+    "R0077-001": {
+      "keywords": 8,
+      "fields": {
+        "definition": 34,
+        "description": 321,
+        "influence": 33
       }
     },
     "R0078": {
@@ -3573,6 +4586,30 @@
         "definition": 62,
         "description": 33,
         "influence": 40
+      }
+    },
+    "R0078-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 59,
+        "description": 42,
+        "influence": 54
+      }
+    },
+    "R0078-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 36,
+        "description": 130,
+        "influence": 44
+      }
+    },
+    "R0078-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 69,
+        "description": 70,
+        "influence": 67
       }
     },
     "R0079": {
@@ -3599,6 +4636,46 @@
         "influence": 44
       }
     },
+    "R0081-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 65,
+        "description": 60,
+        "influence": 44
+      }
+    },
+    "R0081-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 65,
+        "description": 60,
+        "influence": 44
+      }
+    },
+    "R0081-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 66,
+        "description": 61,
+        "influence": 44
+      }
+    },
+    "R0081-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 67,
+        "description": 67,
+        "influence": 44
+      }
+    },
+    "R0081-005": {
+      "keywords": 7,
+      "fields": {
+        "definition": 73,
+        "description": 238,
+        "influence": 36
+      }
+    },
     "R0082": {
       "keywords": 7,
       "fields": {
@@ -3615,12 +4692,60 @@
         "influence": 61
       }
     },
+    "R0083-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 35,
+        "description": 44,
+        "influence": 61
+      }
+    },
+    "R0083-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 139,
+        "description": 345,
+        "influence": 197
+      }
+    },
     "R0084": {
       "keywords": 7,
       "fields": {
         "definition": 53,
         "description": 53,
         "influence": 49
+      }
+    },
+    "R0084-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 42,
+        "description": 234,
+        "influence": 38
+      }
+    },
+    "R0084-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 47,
+        "description": 178,
+        "influence": 14
+      }
+    },
+    "R0084-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 57,
+        "description": 319,
+        "influence": 25
+      }
+    },
+    "R0084-004": {
+      "keywords": 6,
+      "fields": {
+        "definition": 52,
+        "description": 338,
+        "influence": 38
       }
     },
     "R0085": {
@@ -3631,12 +4756,36 @@
         "influence": 45
       }
     },
+    "R0085-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 79,
+        "description": 185,
+        "influence": 33
+      }
+    },
+    "R0085-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 55,
+        "description": 215,
+        "influence": 33
+      }
+    },
     "R0086": {
       "keywords": 7,
       "fields": {
         "definition": 41,
         "description": 40,
         "influence": 56
+      }
+    },
+    "R0086-001": {
+      "keywords": 8,
+      "fields": {
+        "definition": 49,
+        "description": 321,
+        "influence": 43
       }
     },
     "R0087": {
@@ -3676,7 +4825,7 @@
       "fields": {
         "definition": 99,
         "description": 144,
-        "influence": 18
+        "influence": 101
       }
     },
     "R0094": {
@@ -3684,7 +4833,7 @@
       "fields": {
         "definition": 51,
         "description": 304,
-        "influence": 37
+        "influence": 100
       }
     },
     "R0095": {
@@ -3700,6 +4849,14 @@
       "fields": {
         "definition": 114,
         "description": 250,
+        "influence": 92
+      }
+    },
+    "R0096-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 75,
+        "description": 100,
         "influence": 9
       }
     },
@@ -3823,12 +4980,76 @@
         "influence": 37
       }
     },
+    "R0111-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 34,
+        "description": 164,
+        "influence": 175
+      }
+    },
+    "R0111-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 51,
+        "description": 240,
+        "influence": 136
+      }
+    },
     "R0112": {
       "keywords": 6,
       "fields": {
         "definition": 59,
         "description": 261,
         "influence": 194
+      }
+    },
+    "R0112-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 75,
+        "description": 210,
+        "influence": 127
+      }
+    },
+    "R0112-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 59,
+        "description": 383,
+        "influence": 168
+      }
+    },
+    "R0112-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 129,
+        "description": 242,
+        "influence": 84
+      }
+    },
+    "R0112-004": {
+      "keywords": 6,
+      "fields": {
+        "definition": 87,
+        "description": 212,
+        "influence": 164
+      }
+    },
+    "R0112-005": {
+      "keywords": 6,
+      "fields": {
+        "definition": 96,
+        "description": 274,
+        "influence": 134
+      }
+    },
+    "R0112-006": {
+      "keywords": 6,
+      "fields": {
+        "definition": 76,
+        "description": 376,
+        "influence": 47
       }
     },
     "R0113": {
@@ -3861,6 +5082,22 @@
         "definition": 60,
         "description": 172,
         "influence": 40
+      }
+    },
+    "R0117-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 35,
+        "description": 148,
+        "influence": 32
+      }
+    },
+    "R0117-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 37,
+        "description": 201,
+        "influence": 35
       }
     },
     "R0118": {
@@ -3909,6 +5146,30 @@
         "definition": 49,
         "description": 137,
         "influence": 28
+      }
+    },
+    "R0126-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 37,
+        "description": 136,
+        "influence": 20
+      }
+    },
+    "R0126-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 42,
+        "description": 104,
+        "influence": 30
+      }
+    },
+    "R0126-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 36,
+        "description": 152,
+        "influence": 30
       }
     },
     "R0127": {
@@ -4239,11 +5500,19 @@
         "influence": 26
       }
     },
+    "R0173-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 46,
+        "description": 159,
+        "influence": 17
+      }
+    },
     "R0174": {
-      "keywords": 6,
+      "keywords": 12,
       "fields": {
         "definition": 37,
-        "description": 107,
+        "description": 218,
         "influence": 34
       }
     },
@@ -4301,6 +5570,14 @@
         "definition": 39,
         "description": 118,
         "influence": 29
+      }
+    },
+    "R0181-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 27,
+        "description": 120,
+        "influence": 44
       }
     },
     "R0182": {
@@ -4368,10 +5645,10 @@
       }
     },
     "R0190": {
-      "keywords": 7,
+      "keywords": 12,
       "fields": {
         "definition": 33,
-        "description": 146,
+        "description": 211,
         "influence": 37
       }
     },
@@ -4452,15 +5729,7 @@
       "fields": {
         "definition": 61,
         "description": 173,
-        "influence": 12
-      }
-    },
-    "R0202": {
-      "keywords": 6,
-      "fields": {
-        "definition": 51,
-        "description": 169,
-        "influence": 14
+        "influence": 132
       }
     },
     "R0203": {
@@ -4476,7 +5745,7 @@
       "fields": {
         "definition": 48,
         "description": 164,
-        "influence": 20
+        "influence": 118
       }
     },
     "R0206": {
@@ -4493,14 +5762,6 @@
         "definition": 54,
         "description": 173,
         "influence": 14
-      }
-    },
-    "R0208": {
-      "keywords": 7,
-      "fields": {
-        "definition": 41,
-        "description": 158,
-        "influence": 13
       }
     },
     "R0209": {
@@ -4563,8 +5824,8 @@
       "keywords": 6,
       "fields": {
         "definition": 38,
-        "description": 147,
-        "influence": 14
+        "description": 297,
+        "influence": 98
       }
     },
     "R0217": {
@@ -4888,7 +6149,7 @@
       }
     },
     "R0259": {
-      "keywords": 6,
+      "keywords": 10,
       "fields": {
         "definition": 33,
         "description": 163,
@@ -4933,6 +6194,30 @@
         "definition": 31,
         "description": 142,
         "influence": 45
+      }
+    },
+    "R0264-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 21,
+        "description": 125,
+        "influence": 38
+      }
+    },
+    "R0264-002": {
+      "keywords": 5,
+      "fields": {
+        "definition": 24,
+        "description": 153,
+        "influence": 45
+      }
+    },
+    "R0264-003": {
+      "keywords": 5,
+      "fields": {
+        "definition": 14,
+        "description": 116,
+        "influence": 30
       }
     },
     "R0265": {
@@ -5055,6 +6340,38 @@
         "limitation": 85
       }
     },
+    "A0001-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 33,
+        "description": 197,
+        "limitation": 127
+      }
+    },
+    "A0001-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 30,
+        "description": 115,
+        "limitation": 187
+      }
+    },
+    "A0001-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 109,
+        "description": 130,
+        "limitation": 58
+      }
+    },
+    "A0001-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 97,
+        "description": 205,
+        "limitation": 33
+      }
+    },
     "A0002": {
       "keywords": 8,
       "fields": {
@@ -5079,6 +6396,22 @@
         "limitation": 102
       }
     },
+    "A0004-001": {
+      "keywords": 2,
+      "fields": {
+        "definition": 33,
+        "description": 114,
+        "limitation": 174
+      }
+    },
+    "A0004-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 35,
+        "description": 221,
+        "limitation": 66
+      }
+    },
     "A0005": {
       "keywords": 8,
       "fields": {
@@ -5095,6 +6428,70 @@
         "limitation": 62
       }
     },
+    "A0006-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 22,
+        "description": 44,
+        "limitation": 85
+      }
+    },
+    "A0006-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 17,
+        "description": 94,
+        "limitation": 91
+      }
+    },
+    "A0006-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 17,
+        "description": 78,
+        "limitation": 94
+      }
+    },
+    "A0006-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 17,
+        "description": 119,
+        "limitation": 59
+      }
+    },
+    "A0006-005": {
+      "keywords": 7,
+      "fields": {
+        "definition": 15,
+        "description": 67,
+        "limitation": 80
+      }
+    },
+    "A0006-006": {
+      "keywords": 7,
+      "fields": {
+        "definition": 15,
+        "description": 98,
+        "limitation": 95
+      }
+    },
+    "A0006-007": {
+      "keywords": 7,
+      "fields": {
+        "definition": 17,
+        "description": 54,
+        "limitation": 142
+      }
+    },
+    "A0006-008": {
+      "keywords": 7,
+      "fields": {
+        "definition": 16,
+        "description": 204,
+        "limitation": 171
+      }
+    },
     "A0007": {
       "keywords": 7,
       "fields": {
@@ -5103,12 +6500,92 @@
         "limitation": 113
       }
     },
+    "A0007-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 29,
+        "description": 129,
+        "limitation": 157
+      }
+    },
+    "A0007-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 26,
+        "description": 119,
+        "limitation": 111
+      }
+    },
+    "A0007-003": {
+      "keywords": 8,
+      "fields": {
+        "definition": 40,
+        "description": 93,
+        "limitation": 94
+      }
+    },
+    "A0007-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 88,
+        "description": 148,
+        "limitation": 47
+      }
+    },
+    "A0007-005": {
+      "keywords": 8,
+      "fields": {
+        "definition": 63,
+        "description": 162,
+        "limitation": 101
+      }
+    },
     "A0008": {
       "keywords": 7,
       "fields": {
         "definition": 34,
         "description": 51,
         "limitation": 142
+      }
+    },
+    "A0008-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 29,
+        "description": 69,
+        "limitation": 102
+      }
+    },
+    "A0008-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 19,
+        "description": 63,
+        "limitation": 41
+      }
+    },
+    "A0008-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 27,
+        "description": 75,
+        "limitation": 85
+      }
+    },
+    "A0008-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 20,
+        "description": 57,
+        "limitation": 35
+      }
+    },
+    "A0008-005": {
+      "keywords": 7,
+      "fields": {
+        "definition": 26,
+        "description": 66,
+        "limitation": 84
       }
     },
     "A0009": {
@@ -5125,6 +6602,78 @@
         "definition": 26,
         "description": 219,
         "limitation": 86
+      }
+    },
+    "A0010-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 19,
+        "description": 243,
+        "limitation": 52
+      }
+    },
+    "A0010-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 17,
+        "description": 125,
+        "limitation": 75
+      }
+    },
+    "A0010-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 27,
+        "description": 170,
+        "limitation": 144
+      }
+    },
+    "A0010-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 22,
+        "description": 57,
+        "limitation": 150
+      }
+    },
+    "A0010-005": {
+      "keywords": 7,
+      "fields": {
+        "definition": 17,
+        "description": 137,
+        "limitation": 60
+      }
+    },
+    "A0010-006": {
+      "keywords": 7,
+      "fields": {
+        "definition": 14,
+        "description": 305,
+        "limitation": 61
+      }
+    },
+    "A0010-007": {
+      "keywords": 7,
+      "fields": {
+        "definition": 17,
+        "description": 110,
+        "limitation": 92
+      }
+    },
+    "A0010-008": {
+      "keywords": 7,
+      "fields": {
+        "definition": 19,
+        "description": 112,
+        "limitation": 96
+      }
+    },
+    "A0010-009": {
+      "keywords": 6,
+      "fields": {
+        "definition": 20,
+        "description": 113,
+        "limitation": 96
       }
     },
     "A0011": {
@@ -5151,12 +6700,60 @@
         "limitation": 241
       }
     },
+    "A0013-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 36,
+        "description": 286,
+        "limitation": 117
+      }
+    },
+    "A0013-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 32,
+        "description": 259,
+        "limitation": 112
+      }
+    },
+    "A0013-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 31,
+        "description": 175,
+        "limitation": 108
+      }
+    },
+    "A0013-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 31,
+        "description": 226,
+        "limitation": 122
+      }
+    },
     "A0014": {
       "keywords": 7,
       "fields": {
         "definition": 73,
         "description": 220,
         "limitation": 173
+      }
+    },
+    "A0014-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 18,
+        "description": 54,
+        "limitation": 68
+      }
+    },
+    "A0014-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 83,
+        "description": 338,
+        "limitation": 147
       }
     },
     "A0015": {
@@ -5175,12 +6772,60 @@
         "limitation": 81
       }
     },
+    "A0016-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 16,
+        "description": 105,
+        "limitation": 112
+      }
+    },
+    "A0016-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 12,
+        "description": 100,
+        "limitation": 74
+      }
+    },
+    "A0016-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 15,
+        "description": 75,
+        "limitation": 107
+      }
+    },
+    "A0016-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 104,
+        "description": 113,
+        "limitation": 80
+      }
+    },
+    "A0016-005": {
+      "keywords": 7,
+      "fields": {
+        "definition": 23,
+        "description": 385,
+        "limitation": 82
+      }
+    },
     "A0017": {
       "keywords": 7,
       "fields": {
         "definition": 32,
         "description": 81,
         "limitation": 123
+      }
+    },
+    "A0017-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 41,
+        "description": 366,
+        "limitation": 45
       }
     },
     "A0018": {
@@ -5191,12 +6836,36 @@
         "limitation": 116
       }
     },
+    "A0018-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 57,
+        "description": 220,
+        "limitation": 94
+      }
+    },
     "A0019": {
       "keywords": 7,
       "fields": {
         "definition": 26,
         "description": 193,
         "limitation": 87
+      }
+    },
+    "A0019-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 43,
+        "description": 235,
+        "limitation": 125
+      }
+    },
+    "A0019-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 29,
+        "description": 55,
+        "limitation": 95
       }
     },
     "A0020": {
@@ -5207,12 +6876,44 @@
         "limitation": 82
       }
     },
+    "A0020-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 29,
+        "description": 46,
+        "limitation": 93
+      }
+    },
+    "A0020-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 39,
+        "description": 82,
+        "limitation": 71
+      }
+    },
+    "A0020-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 33,
+        "description": 101,
+        "limitation": 92
+      }
+    },
     "A0021": {
       "keywords": 11,
       "fields": {
         "definition": 28,
         "description": 266,
         "limitation": 142
+      }
+    },
+    "A0021-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 26,
+        "description": 154,
+        "limitation": 53
       }
     },
     "A0022": {
@@ -5223,12 +6924,52 @@
         "limitation": 42
       }
     },
+    "A0022-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 33,
+        "description": 147,
+        "limitation": 87
+      }
+    },
+    "A0022-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 16,
+        "description": 127,
+        "limitation": 75
+      }
+    },
+    "A0022-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 13,
+        "description": 101,
+        "limitation": 75
+      }
+    },
+    "A0022-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 53,
+        "description": 306,
+        "limitation": 139
+      }
+    },
     "A0023": {
       "keywords": 7,
       "fields": {
         "definition": 25,
         "description": 157,
         "limitation": 163
+      }
+    },
+    "A0023-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 20,
+        "description": 105,
+        "limitation": 42
       }
     },
     "A0024": {
@@ -5245,6 +6986,38 @@
         "definition": 23,
         "description": 136,
         "limitation": 149
+      }
+    },
+    "A0025-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 31,
+        "description": 94,
+        "limitation": 236
+      }
+    },
+    "A0025-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 22,
+        "description": 66,
+        "limitation": 148
+      }
+    },
+    "A0025-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 58,
+        "description": 284,
+        "limitation": 142
+      }
+    },
+    "A0025-004": {
+      "keywords": 7,
+      "fields": {
+        "definition": 51,
+        "description": 283,
+        "limitation": 67
       }
     },
     "A0026": {
@@ -5271,12 +7044,44 @@
         "limitation": 67
       }
     },
+    "A0028-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 21,
+        "description": 62,
+        "limitation": 104
+      }
+    },
     "A0029": {
       "keywords": 7,
       "fields": {
-        "definition": 24,
+        "definition": 48,
         "description": 75,
-        "limitation": 136
+        "limitation": 172
+      }
+    },
+    "A0029-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 18,
+        "description": 134,
+        "limitation": 138
+      }
+    },
+    "A0029-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 56,
+        "description": 174,
+        "limitation": 96
+      }
+    },
+    "A0029-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 18,
+        "description": 91,
+        "limitation": 65
       }
     },
     "A0030": {
@@ -5285,6 +7090,14 @@
         "definition": 26,
         "description": 161,
         "limitation": 94
+      }
+    },
+    "A0030-001": {
+      "keywords": 11,
+      "fields": {
+        "definition": 77,
+        "description": 373,
+        "limitation": 118
       }
     },
     "A0031": {
@@ -5319,12 +7132,60 @@
         "limitation": 236
       }
     },
+    "A0034-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 30,
+        "description": 163,
+        "limitation": 136
+      }
+    },
+    "A0034-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 25,
+        "description": 119,
+        "limitation": 115
+      }
+    },
+    "A0034-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 27,
+        "description": 119,
+        "limitation": 32
+      }
+    },
     "A0035": {
       "keywords": 7,
       "fields": {
         "definition": 19,
         "description": 280,
         "limitation": 108
+      }
+    },
+    "A0035-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 11,
+        "description": 126,
+        "limitation": 111
+      }
+    },
+    "A0035-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 20,
+        "description": 89,
+        "limitation": 47
+      }
+    },
+    "A0035-003": {
+      "keywords": 7,
+      "fields": {
+        "definition": 24,
+        "description": 171,
+        "limitation": 160
       }
     },
     "A0036": {
@@ -5349,6 +7210,30 @@
         "definition": 18,
         "description": 59,
         "limitation": 93
+      }
+    },
+    "A0038-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 32,
+        "description": 131,
+        "limitation": 69
+      }
+    },
+    "A0038-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 21,
+        "description": 138,
+        "limitation": 105
+      }
+    },
+    "A0038-003": {
+      "keywords": 10,
+      "fields": {
+        "definition": 49,
+        "description": 455,
+        "limitation": 139
       }
     },
     "A0039": {
@@ -5383,6 +7268,22 @@
         "limitation": 51
       }
     },
+    "A0042-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 36,
+        "description": 72,
+        "limitation": 31
+      }
+    },
+    "A0042-002": {
+      "keywords": 7,
+      "fields": {
+        "definition": 40,
+        "description": 101,
+        "limitation": 38
+      }
+    },
     "A0043": {
       "keywords": 6,
       "fields": {
@@ -5405,6 +7306,14 @@
         "definition": 47,
         "description": 250,
         "limitation": 72
+      }
+    },
+    "A0045-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 24,
+        "description": 41,
+        "limitation": 97
       }
     },
     "A0046": {
@@ -5439,12 +7348,52 @@
         "limitation": 45
       }
     },
+    "A0049-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 47,
+        "description": 73,
+        "limitation": 76
+      }
+    },
+    "A0049-002": {
+      "keywords": 1,
+      "fields": {
+        "definition": 29,
+        "description": 108,
+        "limitation": 157
+      }
+    },
     "A0050": {
       "keywords": 7,
       "fields": {
         "definition": 63,
         "description": 157,
         "limitation": 74
+      }
+    },
+    "A0050-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 31,
+        "description": 122,
+        "limitation": 119
+      }
+    },
+    "A0050-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 53,
+        "description": 247,
+        "limitation": 136
+      }
+    },
+    "A0050-003": {
+      "keywords": 6,
+      "fields": {
+        "definition": 55,
+        "description": 280,
+        "limitation": 173
       }
     },
     "A0051": {
@@ -5466,9 +7415,9 @@
     "A0053": {
       "keywords": 6,
       "fields": {
-        "definition": 68,
-        "description": 57,
-        "limitation": 30
+        "definition": 78,
+        "description": 290,
+        "limitation": 158
       }
     },
     "A0054": {
@@ -5477,6 +7426,14 @@
         "definition": 68,
         "description": 241,
         "limitation": 197
+      }
+    },
+    "A0054-001": {
+      "keywords": 7,
+      "fields": {
+        "definition": 87,
+        "description": 289,
+        "limitation": 53
       }
     },
     "A0055": {
@@ -5573,6 +7530,22 @@
         "definition": 63,
         "description": 323,
         "limitation": 162
+      }
+    },
+    "A0066-001": {
+      "keywords": 6,
+      "fields": {
+        "definition": 53,
+        "description": 348,
+        "limitation": 95
+      }
+    },
+    "A0066-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 43,
+        "description": 357,
+        "limitation": 102
       }
     },
     "A0067": {
@@ -5783,6 +7756,14 @@
         "limitation": 67
       }
     },
+    "A0095-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 34,
+        "description": 235,
+        "limitation": 85
+      }
+    },
     "A0096": {
       "keywords": 6,
       "fields": {
@@ -5805,6 +7786,30 @@
         "definition": 40,
         "description": 187,
         "limitation": 56
+      }
+    },
+    "A0098-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 38,
+        "description": 211,
+        "limitation": 62
+      }
+    },
+    "A0098-002": {
+      "keywords": 5,
+      "fields": {
+        "definition": 29,
+        "description": 214,
+        "limitation": 64
+      }
+    },
+    "A0098-003": {
+      "keywords": 5,
+      "fields": {
+        "definition": 33,
+        "description": 197,
+        "limitation": 58
       }
     },
     "A0099": {
@@ -5837,6 +7842,14 @@
         "definition": 34,
         "description": 165,
         "limitation": 64
+      }
+    },
+    "A0102-001": {
+      "keywords": 1,
+      "fields": {
+        "definition": 27,
+        "description": 112,
+        "limitation": 139
       }
     },
     "A0103": {
@@ -5895,6 +7908,14 @@
         "limitation": 67
       }
     },
+    "A0109-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 34,
+        "description": 203,
+        "limitation": 68
+      }
+    },
     "A0110": {
       "keywords": 6,
       "fields": {
@@ -5903,12 +7924,36 @@
         "limitation": 74
       }
     },
+    "A0110-001": {
+      "keywords": 1,
+      "fields": {
+        "definition": 25,
+        "description": 105,
+        "limitation": 140
+      }
+    },
     "A0111": {
       "keywords": 5,
       "fields": {
         "definition": 29,
         "description": 171,
         "limitation": 59
+      }
+    },
+    "A0111-001": {
+      "keywords": 4,
+      "fields": {
+        "definition": 30,
+        "description": 69,
+        "limitation": 148
+      }
+    },
+    "A0111-002": {
+      "keywords": 1,
+      "fields": {
+        "definition": 34,
+        "description": 118,
+        "limitation": 145
       }
     },
     "A0112": {
@@ -5925,6 +7970,14 @@
         "definition": 44,
         "description": 202,
         "limitation": 72
+      }
+    },
+    "A0113-001": {
+      "keywords": 1,
+      "fields": {
+        "definition": 21,
+        "description": 91,
+        "limitation": 89
       }
     },
     "A0114": {
@@ -6015,12 +8068,36 @@
         "limitation": 55
       }
     },
+    "A0131-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 33,
+        "description": 159,
+        "limitation": 50
+      }
+    },
+    "A0131-002": {
+      "keywords": 5,
+      "fields": {
+        "definition": 31,
+        "description": 169,
+        "limitation": 52
+      }
+    },
     "A0134": {
       "keywords": 6,
       "fields": {
         "definition": 47,
         "description": 167,
         "limitation": 67
+      }
+    },
+    "A0134-001": {
+      "keywords": 1,
+      "fields": {
+        "definition": 23,
+        "description": 121,
+        "limitation": 150
       }
     },
     "A0135": {
@@ -6069,6 +8146,14 @@
         "definition": 43,
         "description": 233,
         "limitation": 56
+      }
+    },
+    "A0140-001": {
+      "keywords": 3,
+      "fields": {
+        "definition": 20,
+        "description": 75,
+        "limitation": 63
       }
     },
     "A0141": {
@@ -6127,6 +8212,14 @@
         "limitation": 90
       }
     },
+    "A0147-001": {
+      "keywords": 1,
+      "fields": {
+        "definition": 23,
+        "description": 73,
+        "limitation": 82
+      }
+    },
     "A0148": {
       "keywords": 5,
       "fields": {
@@ -6181,6 +8274,14 @@
         "definition": 29,
         "description": 45,
         "limitation": 182
+      }
+    },
+    "A0155-001": {
+      "keywords": 1,
+      "fields": {
+        "definition": 33,
+        "description": 110,
+        "limitation": 160
       }
     },
     "A0156": {
@@ -6317,6 +8418,14 @@
         "definition": 25,
         "description": 110,
         "limitation": 131
+      }
+    },
+    "A0177-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 33,
+        "description": 201,
+        "limitation": 64
       }
     },
     "A0178": {
@@ -6639,6 +8748,22 @@
         "limitation": 54
       }
     },
+    "A0222-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 32,
+        "description": 128,
+        "limitation": 49
+      }
+    },
+    "A0222-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 31,
+        "description": 131,
+        "limitation": 42
+      }
+    },
     "A0223": {
       "keywords": 11,
       "fields": {
@@ -6757,6 +8882,18 @@
         "description": 222
       }
     },
+    "AT0001-002": {
+      "keywords": 5,
+      "fields": {
+        "description": 41
+      }
+    },
+    "AT0001-003": {
+      "keywords": 6,
+      "fields": {
+        "description": 40
+      }
+    },
     "AT0002": {
       "keywords": 6,
       "fields": {
@@ -6793,6 +8930,12 @@
         "description": 274
       }
     },
+    "AT0007-001": {
+      "keywords": 7,
+      "fields": {
+        "description": 249
+      }
+    },
     "AT0008": {
       "keywords": 7,
       "fields": {
@@ -6823,10 +8966,22 @@
         "description": 301
       }
     },
+    "AT0013-001": {
+      "keywords": 7,
+      "fields": {
+        "description": 168
+      }
+    },
     "AT0014": {
       "keywords": 7,
       "fields": {
         "description": 279
+      }
+    },
+    "AT0014-001": {
+      "keywords": 8,
+      "fields": {
+        "description": 174
       }
     },
     "AT0015": {
@@ -6925,16 +9080,40 @@
         "description": 33
       }
     },
+    "AT0032-001": {
+      "keywords": 7,
+      "fields": {
+        "description": 165
+      }
+    },
     "AT0033": {
       "keywords": 7,
       "fields": {
         "description": 88
       }
     },
+    "AT0033-001": {
+      "keywords": 7,
+      "fields": {
+        "description": 138
+      }
+    },
     "AT0034": {
       "keywords": 7,
       "fields": {
-        "description": 146
+        "description": 389
+      }
+    },
+    "AT0034-001": {
+      "keywords": 7,
+      "fields": {
+        "description": 151
+      }
+    },
+    "AT0034-002": {
+      "keywords": 7,
+      "fields": {
+        "description": 171
       }
     },
     "AT0036": {
@@ -6961,10 +9140,28 @@
         "description": 137
       }
     },
+    "AT0039-001": {
+      "keywords": 6,
+      "fields": {
+        "description": 57
+      }
+    },
+    "AT0039-002": {
+      "keywords": 6,
+      "fields": {
+        "description": 59
+      }
+    },
     "AT0040": {
       "keywords": 6,
       "fields": {
         "description": 140
+      }
+    },
+    "AT0040-001": {
+      "keywords": 6,
+      "fields": {
+        "description": 66
       }
     },
     "AT0041": {
@@ -7006,7 +9203,7 @@
     "AT0047": {
       "keywords": 7,
       "fields": {
-        "description": 104
+        "description": 371
       }
     },
     "AT0048": {
@@ -7019,6 +9216,12 @@
       "keywords": 7,
       "fields": {
         "description": 371
+      }
+    },
+    "AT0049-001": {
+      "keywords": 6,
+      "fields": {
+        "description": 221
       }
     },
     "AT0050": {
@@ -7039,16 +9242,118 @@
         "description": 64
       }
     },
+    "AT0052-001": {
+      "keywords": 5,
+      "fields": {
+        "description": 60
+      }
+    },
+    "AT0052-002": {
+      "keywords": 5,
+      "fields": {
+        "description": 62
+      }
+    },
+    "AT0052-003": {
+      "keywords": 6,
+      "fields": {
+        "description": 84
+      }
+    },
     "AT0053": {
       "keywords": 6,
       "fields": {
-        "description": 424
+        "description": 551
+      }
+    },
+    "AT0053-001": {
+      "keywords": 6,
+      "fields": {
+        "description": 384
+      }
+    },
+    "AT0053-002": {
+      "keywords": 7,
+      "fields": {
+        "description": 200
+      }
+    },
+    "AT0053-003": {
+      "keywords": 7,
+      "fields": {
+        "description": 268
+      }
+    },
+    "AT0053-004": {
+      "keywords": 7,
+      "fields": {
+        "description": 287
+      }
+    },
+    "AT0053-005": {
+      "keywords": 7,
+      "fields": {
+        "description": 220
+      }
+    },
+    "AT0053-006": {
+      "keywords": 7,
+      "fields": {
+        "description": 259
+      }
+    },
+    "AT0053-007": {
+      "keywords": 7,
+      "fields": {
+        "description": 384
       }
     },
     "AT0054": {
       "keywords": 6,
       "fields": {
-        "description": 88
+        "description": 257
+      }
+    },
+    "AT0054-001": {
+      "keywords": 2,
+      "fields": {
+        "description": 32
+      }
+    },
+    "AT0054-002": {
+      "keywords": 2,
+      "fields": {
+        "description": 30
+      }
+    },
+    "AT0054-003": {
+      "keywords": 2,
+      "fields": {
+        "description": 29
+      }
+    },
+    "AT0054-004": {
+      "keywords": 2,
+      "fields": {
+        "description": 32
+      }
+    },
+    "AT0054-005": {
+      "keywords": 2,
+      "fields": {
+        "description": 29
+      }
+    },
+    "AT0054-006": {
+      "keywords": 9,
+      "fields": {
+        "description": 338
+      }
+    },
+    "AT0054-007": {
+      "keywords": 8,
+      "fields": {
+        "description": 362
       }
     },
     "AT0060": {
@@ -7063,6 +9368,36 @@
         "description": 261
       }
     },
+    "AT0061-001": {
+      "keywords": 2,
+      "fields": {
+        "description": 29
+      }
+    },
+    "AT0061-002": {
+      "keywords": 2,
+      "fields": {
+        "description": 34
+      }
+    },
+    "AT0061-003": {
+      "keywords": 2,
+      "fields": {
+        "description": 31
+      }
+    },
+    "AT0061-004": {
+      "keywords": 2,
+      "fields": {
+        "description": 30
+      }
+    },
+    "AT0061-005": {
+      "keywords": 2,
+      "fields": {
+        "description": 27
+      }
+    },
     "AT0062": {
       "keywords": 7,
       "fields": {
@@ -7075,10 +9410,22 @@
         "description": 468
       }
     },
+    "AT0063-001": {
+      "keywords": 7,
+      "fields": {
+        "description": 456
+      }
+    },
     "AT0064": {
       "keywords": 8,
       "fields": {
         "description": 530
+      }
+    },
+    "AT0064-001": {
+      "keywords": 7,
+      "fields": {
+        "description": 337
       }
     },
     "AT0066": {
@@ -7172,9 +9519,9 @@
       }
     },
     "AT0083": {
-      "keywords": 8,
+      "keywords": 13,
       "fields": {
-        "description": 128
+        "description": 285
       }
     },
     "AT0084": {
@@ -7243,10 +9590,22 @@
         "description": 209
       }
     },
+    "TA0001-001": {
+      "keywords": 5,
+      "fields": {
+        "description": 211
+      }
+    },
     "TA0002": {
       "keywords": 6,
       "fields": {
         "description": 237
+      }
+    },
+    "TA0002-001": {
+      "keywords": 8,
+      "fields": {
+        "description": 277
       }
     },
     "TA0003": {
@@ -7267,10 +9626,40 @@
         "description": 216
       }
     },
+    "TA0005-001": {
+      "keywords": 5,
+      "fields": {
+        "description": 48
+      }
+    },
+    "TA0005-002": {
+      "keywords": 5,
+      "fields": {
+        "description": 71
+      }
+    },
     "TA0006": {
       "keywords": 6,
       "fields": {
         "description": 266
+      }
+    },
+    "TA0006-001": {
+      "keywords": 6,
+      "fields": {
+        "description": 158
+      }
+    },
+    "TA0006-002": {
+      "keywords": 5,
+      "fields": {
+        "description": 114
+      }
+    },
+    "TA0006-003": {
+      "keywords": 6,
+      "fields": {
+        "description": 156
       }
     },
     "TA0007": {
@@ -7306,7 +9695,7 @@
     "TA0012": {
       "keywords": 6,
       "fields": {
-        "description": 170
+        "description": 286
       }
     },
     "TA0013": {
@@ -7318,13 +9707,25 @@
     "TA0014": {
       "keywords": 6,
       "fields": {
-        "description": 256
+        "description": 364
+      }
+    },
+    "TA0014-001": {
+      "keywords": 5,
+      "fields": {
+        "description": 47
       }
     },
     "TA0015": {
       "keywords": 6,
       "fields": {
         "description": 229
+      }
+    },
+    "TA0015-001": {
+      "keywords": 6,
+      "fields": {
+        "description": 101
       }
     },
     "TA0016": {
@@ -7336,7 +9737,7 @@
     "TA0017": {
       "keywords": 6,
       "fields": {
-        "description": 230
+        "description": 394
       }
     },
     "TA0018": {
@@ -7378,13 +9779,31 @@
     "TA0024": {
       "keywords": 6,
       "fields": {
-        "description": 163
+        "description": 341
       }
     },
     "TA0025": {
       "keywords": 7,
       "fields": {
         "description": 89
+      }
+    },
+    "TA0025-001": {
+      "keywords": 7,
+      "fields": {
+        "description": 143
+      }
+    },
+    "TA0025-002": {
+      "keywords": 8,
+      "fields": {
+        "description": 123
+      }
+    },
+    "TA0025-003": {
+      "keywords": 8,
+      "fields": {
+        "description": 68
       }
     },
     "TA0028": {
@@ -7477,6 +9896,12 @@
         "description": 357
       }
     },
+    "TA0042-001": {
+      "keywords": 8,
+      "fields": {
+        "description": 318
+      }
+    },
     "TA0045": {
       "keywords": 6,
       "fields": {
@@ -7505,6 +9930,12 @@
       "keywords": 6,
       "fields": {
         "description": 98
+      }
+    },
+    "TA0049-001": {
+      "keywords": 2,
+      "fields": {
+        "description": 31
       }
     },
     "TA0050": {
@@ -8065,6 +10496,181 @@
         "description": 83
       }
     },
+    "T0075-001": {
+      "keywords": 9,
+      "fields": {
+        "definition": 30,
+        "description": 102
+      }
+    },
+    "T0075-002": {
+      "keywords": 9,
+      "fields": {
+        "definition": 33,
+        "description": 107
+      }
+    },
+    "T0075-003": {
+      "keywords": 9,
+      "fields": {
+        "definition": 30,
+        "description": 103
+      }
+    },
+    "T0075-004": {
+      "keywords": 16,
+      "fields": {
+        "definition": 30,
+        "description": 161
+      }
+    },
+    "T0075-005": {
+      "keywords": 9,
+      "fields": {
+        "definition": 34,
+        "description": 115
+      }
+    },
+    "T0075-006": {
+      "keywords": 8,
+      "fields": {
+        "definition": 26,
+        "description": 100
+      }
+    },
+    "T0075-007": {
+      "keywords": 8,
+      "fields": {
+        "definition": 33,
+        "description": 99
+      }
+    },
+    "T0075-008": {
+      "keywords": 7,
+      "fields": {
+        "definition": 34,
+        "description": 99
+      }
+    },
+    "T0075-009": {
+      "keywords": 7,
+      "fields": {
+        "definition": 36,
+        "description": 106
+      }
+    },
+    "T0075-010": {
+      "keywords": 7,
+      "fields": {
+        "definition": 29,
+        "description": 88
+      }
+    },
+    "T0075-011": {
+      "keywords": 7,
+      "fields": {
+        "definition": 28,
+        "description": 85
+      }
+    },
+    "T0075-012": {
+      "keywords": 7,
+      "fields": {
+        "definition": 31,
+        "description": 90
+      }
+    },
+    "T0075-013": {
+      "keywords": 7,
+      "fields": {
+        "definition": 43,
+        "description": 88
+      }
+    },
+    "T0075-014": {
+      "keywords": 9,
+      "fields": {
+        "definition": 40,
+        "description": 117
+      }
+    },
+    "T0075-015": {
+      "keywords": 9,
+      "fields": {
+        "definition": 41,
+        "description": 129
+      }
+    },
+    "T0075-016": {
+      "keywords": 8,
+      "fields": {
+        "definition": 49,
+        "description": 143
+      }
+    },
+    "T0075-017": {
+      "keywords": 9,
+      "fields": {
+        "definition": 46,
+        "description": 140
+      }
+    },
+    "T0075-018": {
+      "keywords": 9,
+      "fields": {
+        "definition": 44,
+        "description": 127
+      }
+    },
+    "T0075-019": {
+      "keywords": 9,
+      "fields": {
+        "definition": 38,
+        "description": 91
+      }
+    },
+    "T0075-020": {
+      "keywords": 9,
+      "fields": {
+        "definition": 30,
+        "description": 97
+      }
+    },
+    "T0075-021": {
+      "keywords": 9,
+      "fields": {
+        "definition": 35,
+        "description": 104
+      }
+    },
+    "T0075-022": {
+      "keywords": 9,
+      "fields": {
+        "definition": 42,
+        "description": 100
+      }
+    },
+    "T0075-024": {
+      "keywords": 9,
+      "fields": {
+        "definition": 40,
+        "description": 94
+      }
+    },
+    "T0075-025": {
+      "keywords": 9,
+      "fields": {
+        "definition": 40,
+        "description": 91
+      }
+    },
+    "T0075-026": {
+      "keywords": 9,
+      "fields": {
+        "definition": 43,
+        "description": 85
+      }
+    },
     "T0079": {
       "keywords": 7,
       "fields": {
@@ -8219,6 +10825,27 @@
         "description": 93
       }
     },
+    "T0107-001": {
+      "keywords": 9,
+      "fields": {
+        "definition": 38,
+        "description": 104
+      }
+    },
+    "T0107-002": {
+      "keywords": 9,
+      "fields": {
+        "definition": 42,
+        "description": 97
+      }
+    },
+    "T0107-003": {
+      "keywords": 9,
+      "fields": {
+        "definition": 42,
+        "description": 102
+      }
+    },
     "T0108": {
       "keywords": 9,
       "fields": {
@@ -8248,7 +10875,7 @@
       }
     },
     "T0116": {
-      "keywords": 9,
+      "keywords": 10,
       "fields": {
         "definition": 33,
         "description": 126
@@ -8259,6 +10886,48 @@
       "fields": {
         "definition": 34,
         "description": 107
+      }
+    },
+    "T0121-001": {
+      "keywords": 8,
+      "fields": {
+        "definition": 36,
+        "description": 106
+      }
+    },
+    "T0121-002": {
+      "keywords": 8,
+      "fields": {
+        "definition": 27,
+        "description": 100
+      }
+    },
+    "T0121-003": {
+      "keywords": 8,
+      "fields": {
+        "definition": 28,
+        "description": 103
+      }
+    },
+    "T0121-004": {
+      "keywords": 8,
+      "fields": {
+        "definition": 24,
+        "description": 108
+      }
+    },
+    "T0121-005": {
+      "keywords": 8,
+      "fields": {
+        "definition": 26,
+        "description": 99
+      }
+    },
+    "T0121-006": {
+      "keywords": 8,
+      "fields": {
+        "definition": 22,
+        "description": 111
       }
     },
     "T0123": {
@@ -8289,11 +10958,67 @@
         "description": 101
       }
     },
+    "T0127-001": {
+      "keywords": 9,
+      "fields": {
+        "definition": 33,
+        "description": 126
+      }
+    },
+    "T0127-002": {
+      "keywords": 9,
+      "fields": {
+        "definition": 28,
+        "description": 113
+      }
+    },
+    "T0127-003": {
+      "keywords": 9,
+      "fields": {
+        "definition": 35,
+        "description": 112
+      }
+    },
+    "T0127-004": {
+      "keywords": 9,
+      "fields": {
+        "definition": 41,
+        "description": 157
+      }
+    },
+    "T0127-005": {
+      "keywords": 9,
+      "fields": {
+        "definition": 28,
+        "description": 155
+      }
+    },
     "T0131": {
       "keywords": 9,
       "fields": {
         "definition": 38,
         "description": 161
+      }
+    },
+    "T0131-001": {
+      "keywords": 9,
+      "fields": {
+        "definition": 35,
+        "description": 150
+      }
+    },
+    "T0131-002": {
+      "keywords": 9,
+      "fields": {
+        "definition": 41,
+        "description": 137
+      }
+    },
+    "T0131-003": {
+      "keywords": 9,
+      "fields": {
+        "definition": 39,
+        "description": 164
       }
     },
     "T0135": {
@@ -9403,10 +12128,10 @@
       }
     },
     "T0307": {
-      "keywords": 9,
+      "keywords": 11,
       "fields": {
-        "definition": 42,
-        "description": 112
+        "definition": 79,
+        "description": 218
       }
     },
     "T0317": {
@@ -9414,6 +12139,104 @@
       "fields": {
         "definition": 40,
         "description": 139
+      }
+    },
+    "T0317-001": {
+      "keywords": 9,
+      "fields": {
+        "definition": 40,
+        "description": 109
+      }
+    },
+    "T0317-002": {
+      "keywords": 9,
+      "fields": {
+        "definition": 44,
+        "description": 114
+      }
+    },
+    "T0317-003": {
+      "keywords": 9,
+      "fields": {
+        "definition": 39,
+        "description": 117
+      }
+    },
+    "T0317-004": {
+      "keywords": 9,
+      "fields": {
+        "definition": 38,
+        "description": 115
+      }
+    },
+    "T0317-005": {
+      "keywords": 9,
+      "fields": {
+        "definition": 43,
+        "description": 117
+      }
+    },
+    "T0317-006": {
+      "keywords": 9,
+      "fields": {
+        "definition": 43,
+        "description": 126
+      }
+    },
+    "T0317-007": {
+      "keywords": 9,
+      "fields": {
+        "definition": 42,
+        "description": 136
+      }
+    },
+    "T0317-008": {
+      "keywords": 9,
+      "fields": {
+        "definition": 46,
+        "description": 130
+      }
+    },
+    "T0317-009": {
+      "keywords": 9,
+      "fields": {
+        "definition": 38,
+        "description": 132
+      }
+    },
+    "T0317-010": {
+      "keywords": 9,
+      "fields": {
+        "definition": 41,
+        "description": 141
+      }
+    },
+    "T0317-011": {
+      "keywords": 9,
+      "fields": {
+        "definition": 43,
+        "description": 143
+      }
+    },
+    "T0317-012": {
+      "keywords": 9,
+      "fields": {
+        "definition": 42,
+        "description": 148
+      }
+    },
+    "T0317-013": {
+      "keywords": 9,
+      "fields": {
+        "definition": 43,
+        "description": 122
+      }
+    },
+    "T0317-014": {
+      "keywords": 9,
+      "fields": {
+        "definition": 41,
+        "description": 122
       }
     },
     "T0322": {
@@ -9955,6 +12778,48 @@
         "description": 134
       }
     },
+    "T0400-001": {
+      "keywords": 9,
+      "fields": {
+        "definition": 32,
+        "description": 130
+      }
+    },
+    "T0400-002": {
+      "keywords": 9,
+      "fields": {
+        "definition": 26,
+        "description": 87
+      }
+    },
+    "T0400-003": {
+      "keywords": 9,
+      "fields": {
+        "definition": 21,
+        "description": 94
+      }
+    },
+    "T0400-004": {
+      "keywords": 9,
+      "fields": {
+        "definition": 18,
+        "description": 85
+      }
+    },
+    "T0400-005": {
+      "keywords": 9,
+      "fields": {
+        "definition": 19,
+        "description": 80
+      }
+    },
+    "T0400-006": {
+      "keywords": 9,
+      "fields": {
+        "definition": 23,
+        "description": 88
+      }
+    },
     "T0406": {
       "keywords": 9,
       "fields": {
@@ -9995,13 +12860,6 @@
       "fields": {
         "definition": 22,
         "description": 104
-      }
-    },
-    "T0412": {
-      "keywords": 9,
-      "fields": {
-        "definition": 24,
-        "description": 113
       }
     },
     "T0413": {
@@ -10161,8 +13019,8 @@
     "T0435": {
       "keywords": 8,
       "fields": {
-        "definition": 27,
-        "description": 110
+        "definition": 58,
+        "description": 273
       }
     },
     "T0436": {
@@ -10555,6 +13413,20 @@
       "fields": {
         "definition": 39,
         "description": 110
+      }
+    },
+    "T0505-001": {
+      "keywords": 5,
+      "fields": {
+        "definition": 33,
+        "description": 121
+      }
+    },
+    "T0505-002": {
+      "keywords": 6,
+      "fields": {
+        "definition": 41,
+        "description": 114
       }
     },
     "T0508": {
@@ -11318,12 +14190,6 @@
         "summary": 109
       }
     },
-    "C0003": {
-      "keywords": 8,
-      "fields": {
-        "summary": 109
-      }
-    },
     "C0004": {
       "keywords": 8,
       "fields": {
@@ -11447,7 +14313,7 @@
     "C0024": {
       "keywords": 10,
       "fields": {
-        "summary": 163
+        "summary": 223
       }
     },
     "C0025": {
@@ -11501,7 +14367,7 @@
     "C0033": {
       "keywords": 9,
       "fields": {
-        "summary": 115
+        "summary": 134
       }
     },
     "C0034": {
@@ -11573,7 +14439,7 @@
     "C0045": {
       "keywords": 9,
       "fields": {
-        "summary": 97
+        "summary": 165
       }
     },
     "C0046": {
@@ -11681,7 +14547,7 @@
     "C0065": {
       "keywords": 9,
       "fields": {
-        "summary": 71
+        "summary": 78
       }
     },
     "C0066": {
@@ -11693,7 +14559,7 @@
     "C0067": {
       "keywords": 10,
       "fields": {
-        "summary": 60
+        "summary": 98
       }
     },
     "C0068": {
@@ -11855,7 +14721,7 @@
     "C0095": {
       "keywords": 9,
       "fields": {
-        "summary": 124
+        "summary": 125
       }
     },
     "C0096": {
@@ -11987,7 +14853,7 @@
     "C0118": {
       "keywords": 10,
       "fields": {
-        "summary": 119
+        "summary": 188
       }
     },
     "C0119": {
@@ -12083,7 +14949,7 @@
     "C0134": {
       "keywords": 10,
       "fields": {
-        "summary": 119
+        "summary": 166
       }
     },
     "C0135": {
@@ -12185,7 +15051,7 @@
     "C0151": {
       "keywords": 10,
       "fields": {
-        "summary": 92
+        "summary": 165
       }
     },
     "C0152": {
@@ -21912,6 +24778,66 @@
       "keywords": 6,
       "fields": {
         "summary": 191
+      }
+    },
+    "C1821": {
+      "keywords": 7,
+      "fields": {
+        "summary": 217
+      }
+    },
+    "C1822": {
+      "keywords": 8,
+      "fields": {
+        "summary": 197
+      }
+    },
+    "C1823": {
+      "keywords": 9,
+      "fields": {
+        "summary": 220
+      }
+    },
+    "C1824": {
+      "keywords": 8,
+      "fields": {
+        "summary": 252
+      }
+    },
+    "C1825": {
+      "keywords": 7,
+      "fields": {
+        "summary": 205
+      }
+    },
+    "C1826": {
+      "keywords": 7,
+      "fields": {
+        "summary": 158
+      }
+    },
+    "C1827": {
+      "keywords": 7,
+      "fields": {
+        "summary": 169
+      }
+    },
+    "C1828": {
+      "keywords": 7,
+      "fields": {
+        "summary": 188
+      }
+    },
+    "C1829": {
+      "keywords": 7,
+      "fields": {
+        "summary": 210
+      }
+    },
+    "C1830": {
+      "keywords": 7,
+      "fields": {
+        "summary": 252
       }
     }
   }

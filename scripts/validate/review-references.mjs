@@ -15,7 +15,7 @@ let items;
 if (opts.full) {
   items = ALL_TYPES.flatMap((t) => loadAllEntities(t).map((r) => ({ key: r.key, type: t, entity: r.entity })));
 } else {
-  const changed = await getChangedEntities({ baseRef: opts.baseRef });
+  const changed = await getChangedEntities({ baseRef: opts.baseRef, stagedOnly: opts.stagedOnly });
   items = changed
     .filter((c) => ALL_TYPES.includes(c.type) && (c.isNew || c.hasContentChange))
     .map((c) => ({ key: c.key, type: c.type, entity: c.entity }));

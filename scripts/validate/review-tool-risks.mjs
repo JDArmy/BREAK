@@ -13,7 +13,7 @@ let items;
 if (opts.full) {
   items = loadAllEntities('attack-tools').map((r) => ({ key: r.key, type: 'attack-tools', entity: r.entity }));
 } else {
-  const changed = await getChangedEntities({ baseRef: opts.baseRef });
+  const changed = await getChangedEntities({ baseRef: opts.baseRef, stagedOnly: opts.stagedOnly });
   items = changed
     .filter((c) => c.type === 'attack-tools' && (c.isNew || c.hasContentChange))
     .map((c) => ({ key: c.key, type: 'attack-tools', entity: c.entity }));

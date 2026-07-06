@@ -58,8 +58,9 @@ function isValidCalendar(dateStr) {
 
 // 校验年份/日期不未来
 function isNotFuture(dateStr) {
-  // 取 YYYY-MM-01 与当前比较（YYYY-MM 形式按月初比；YYYY 按年比）
+  // YYYY 按年比；YYYY-MM 按月初比；YYYY-MM-DD 整体比（避免放行当月未来日）
   if (/^\d{4}$/.test(dateStr)) return Number(dateStr) <= CURRENT_YEAR;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return dateStr <= CURRENT_YMD;
   const ym = dateStr.slice(0, 7);
   return ym <= CURRENT_YMD.slice(0, 7);
 }

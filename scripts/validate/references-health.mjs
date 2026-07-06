@@ -8,6 +8,9 @@ const timeoutMs = Number(process.env.REFERENCE_HEALTH_TIMEOUT_MS || 10000);
 const concurrency = Number(process.env.REFERENCE_HEALTH_CONCURRENCY || 8);
 const strict = process.argv.includes('--strict');
 const fromCache = process.argv.includes('--from-cache');
+// --force：强制全量复测（不读取缓存的 domainGroups 收窄检查范围）。
+// 默认即全量；--force 仅作显式语义占位，便于在脚本/CI 中表达意图。
+const forceFull = process.argv.includes('--force');
 const maxDomainExamples = 5;
 
 function readArgValue(name) {
@@ -216,23 +219,28 @@ function buildDomainGroups(results) {
     });
 }
 
-function filterResultsByOptions(results, domainGroups) {
-  let allowedDomains = new Set(domainGroups.map((group) => group.domain));
+function filterResultsByOptions(results, allowedDomainSet) {
+  // 无任何 filter 参数时，不收窄检查范围（全量复测），
+  // 避免缓存的"问题域名"列表导致曾 ok 的链接永远不再被检查（失效永久漏报）。
+  if (filterDomains.size === 0 && !filterPriority && !filterAction && limit === 0) {
+    return results;
+  }
 
+  let allowedDomains = new Set(allowedDomainSet);
   if (filterDomains.size > 0) {
     allowedDomains = new Set([...allowedDomains].filter((domain) => filterDomains.has(domain)));
   }
   if (filterPriority) {
     allowedDomains = new Set(
       [...allowedDomains].filter((domain) =>
-        domainGroups.find((group) => group.domain === domain)?.strategy.priority === filterPriority,
+        domainPriorityByDomain.get(domain) === filterPriority,
       ),
     );
   }
   if (filterAction) {
     allowedDomains = new Set(
       [...allowedDomains].filter((domain) =>
-        domainGroups.find((group) => group.domain === domain)?.strategy.action === filterAction,
+        domainActionByDomain.get(domain) === filterAction,
       ),
     );
   }
@@ -250,7 +258,9 @@ async function fetchWithTimeout(url, method) {
       redirect: 'follow',
       signal: controller.signal,
       headers: {
-        'user-agent': 'BREAK-reference-health/1.0',
+        // 用真实浏览器 UA，避免自定义机器人 UA 触发 WAF/Cloudflare 反爬误报；
+        // 与 check-403-with-browser.mjs 的浏览器复核策略保持一致。
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
         accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       },
     });
@@ -268,7 +278,9 @@ async function fetchWithTimeout(url, method) {
 async function checkLink(item) {
   try {
     let result = await fetchWithTimeout(item.link, 'HEAD');
-    if (result.issue === 'broken' || result.status === 405) {
+    // HEAD 被拒（broken/405）或反爬类状态码（403/401）都回退 GET：
+    // 很多站点对 HEAD 返回 403/405 但 GET 200，不回退会误判为 review/broken。
+    if (result.issue === 'broken' || [405, 403, 401].includes(result.status)) {
       result = await fetchWithTimeout(item.link, 'GET');
     }
     return {
@@ -376,16 +388,36 @@ if (fromCache) {
   }
   cachedReport = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
   results = cachedReport.results || [];
-  results = filterResultsByOptions(results, cachedReport.domainGroups || buildDomainGroups(results));
+  const cachedGroups = cachedReport.domainGroups || buildDomainGroups(results);
+  // fromCache：在缓存的"问题域名"范围内按 filter 收窄（复测已知问题）
+  const domainPriorityByDomain = new Map(cachedGroups.map((g) => [g.domain, g.strategy?.priority]));
+  const domainActionByDomain = new Map(cachedGroups.map((g) => [g.domain, g.strategy?.action]));
+  results = filterResultsByOptions(results, new Set(cachedGroups.map((g) => g.domain)), domainPriorityByDomain, domainActionByDomain);
   console.log(`使用缓存引用健康报告重新生成域名分组: ${cachePath}`);
 } else {
   const references = collectReferences();
+  // 非缓存路径：全量复测。绝不读取缓存的 domainGroups 收窄检查范围——
+  // 否则曾返回 ok 的链接永远不再被检查，后来失效会永久漏报。
+  // 仅当用户显式传 --domains/--priority/--action/--limit 时才收窄，
+  // 且基底是"全量 references 的所有域名"，而非缓存的问题域名。
+  // priority/action filter 需要域名的 strategy，从上次缓存的 domainGroups 读取（仅用于查询，不影响检查范围）；
+  // 无缓存时 priority/action filter 不生效（提示用户）。
+  let cachedGroupsForStrategy = [];
   const cachedGroupsPath = path.join(reportDir, 'reference-health.json');
-  const cachedGroups = fs.existsSync(cachedGroupsPath)
-    ? JSON.parse(fs.readFileSync(cachedGroupsPath, 'utf8')).domainGroups || []
-    : buildDomainGroups(references.map((item) => ({ ...item, issue: 'unknown', status: 0 })));
-  const filteredReferences = filterResultsByOptions(references, cachedGroups);
-  console.log(`准备检查 ${filteredReferences.length}/${references.length} 个唯一引用链接，并发 ${concurrency}，超时 ${timeoutMs}ms`);
+  if (fs.existsSync(cachedGroupsPath)) {
+    try {
+      cachedGroupsForStrategy = JSON.parse(fs.readFileSync(cachedGroupsPath, 'utf8')).domainGroups || [];
+    } catch {
+      cachedGroupsForStrategy = [];
+    }
+  }
+  const domainPriorityByDomain = new Map(cachedGroupsForStrategy.map((g) => [g.domain, g.strategy?.priority]));
+  const domainActionByDomain = new Map(cachedGroupsForStrategy.map((g) => [g.domain, g.strategy?.action]));
+  if ((filterPriority || filterAction) && cachedGroupsForStrategy.length === 0) {
+    console.log('⚠️ --priority/--action filter 需要上次的缓存报告来查询域名 strategy，但未找到缓存；将全量检查。');
+  }
+  const filteredReferences = filterResultsByOptions(references, new Set(references.map((r) => r.domain).filter(Boolean)), domainPriorityByDomain, domainActionByDomain);
+  console.log(`准备检查 ${filteredReferences.length}/${references.length} 个唯一引用链接，并发 ${concurrency}，超时 ${timeoutMs}ms${forceFull ? '（--force 全量）' : ''}`);
   results = await runPool(filteredReferences, checkLink);
 }
 const stats = {
@@ -423,6 +455,8 @@ for (const [key, value] of Object.entries(stats)) {
 }
 console.log(`\n报告已保存到: ${path.join(reportDir, `${outputBaseName}.md`)}`);
 
-if (strict && (stats.broken > 0 || stats.timeout > 0 || stats.connectionError > 0)) {
+// strict：仅真 broken 阻断。timeout/connection_error 多为反爬误报（实测约 83%），
+// 走 review/issue 通知，不阻断；避免 link-check CI 几乎必然误报。
+if (strict && stats.broken > 0) {
   process.exitCode = 1;
 }

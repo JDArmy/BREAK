@@ -39,16 +39,24 @@ function loadProgressFile(reviewName) {
 }
 
 function exportBaseline() {
+  // 合并式导出：以现有基线为底，用当前本地 progress 覆盖（本地是最新评的）。
+  // 避免本地某评审未跑过时导出清空基线已入库的同名指纹（多机器/多人协作场景）。
+  const existingBaseline = fs.existsSync(BASELINE_PATH)
+    ? (() => { try { return readJson(BASELINE_PATH); } catch { return {}; } })()
+    : {};
   const baseline = {};
   let totalDone = 0;
   for (const reviewName of REVIEW_NAMES) {
     const p = loadProgressFile(reviewName);
-    baseline[reviewName] = { done: p.done || {}, failed: p.failed || {} };
-    totalDone += Object.keys(p.done || {}).length;
+    const existingDone = (existingBaseline[reviewName] && existingBaseline[reviewName].done) || {};
+    // 本地 progress 的 done 覆盖基线同 key 指纹（本地是最新）；基线有而本地无的保留。
+    const mergedDone = { ...existingDone, ...(p.done || {}) };
+    baseline[reviewName] = { done: mergedDone, failed: p.failed || {} };
+    totalDone += Object.keys(mergedDone).length;
   }
   writeJson(BASELINE_PATH, baseline);
-  console.log('✅ 已导出基线到 ' + path.relative(projectRoot, BASELINE_PATH));
-  console.log('   ' + REVIEW_NAMES.length + ' 个评审，共 ' + totalDone + ' 条已评指纹');
+  console.log('✅ 已合并导出基线到 ' + path.relative(projectRoot, BASELINE_PATH));
+  console.log('   ' + REVIEW_NAMES.length + ' 个评审，共 ' + totalDone + ' 条已评指纹（合并式：本地覆盖基线）');
   for (const reviewName of REVIEW_NAMES) {
     const n = Object.keys(baseline[reviewName].done).length;
     if (n) console.log('   - ' + reviewName + ': ' + n);

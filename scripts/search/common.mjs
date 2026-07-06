@@ -155,6 +155,23 @@ export function domainOf(link) {
   return url ? url.hostname.replace(/^www\./, '').toLowerCase() : '';
 }
 
+/**
+ * 判断 domain 是否匹配给定的后缀集合（带前导点保护，避免子串误匹配）。
+ * suffix 可为 'example.com'（精确或其子域）或 '.example.com'（仅子域）。
+ * 统一替换各脚本里 domain.endsWith(item) 的写法，避免 notbaidu.com 误匹配 baidu.com。
+ * @param {string} domain - 已小写、去 www 的域名
+ * @param {string[]} suffixes - 后缀集合
+ * @returns {boolean}
+ */
+export function matchesDomain(domain, suffixes) {
+  const d = String(domain || '').toLowerCase();
+  return suffixes.some((suffix) => {
+    const s = String(suffix || '').toLowerCase();
+    if (s.startsWith('.')) return d.endsWith(s);
+    return d === s || d.endsWith(`.${s}`);
+  });
+}
+
 export function existingReferenceLinks() {
   const links = new Set();
   for (const type of ['risks', 'avoidances', 'attack-tools', 'threat-actors']) {

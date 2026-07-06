@@ -28,28 +28,39 @@ export function fingerprintOf(entity, fields) {
 }
 
 function loadProgress(progressPath, name) {
-  if (fs.existsSync(progressPath)) {
-    try {
-      return JSON.parse(fs.readFileSync(progressPath, 'utf8'));
-    } catch {
-      // 损坏则重来
-    }
-  }
-  // 本地 progress 不存在时，从入库基线加载已评指纹（换机器/CI 跳过已评存量）
+  // 从入库基线加载已评指纹（换机器/CI 跳过已评存量）。
+  // 关键：基线为底、本地覆盖——即便本地 progress 已存在（哪怕只评了 1 条），
+  // 也要把基线 done 中本地缺失的 key 补入，避免本地过时 progress 屏蔽基线导致 CI 重评全库。
+  let baselineDone = {};
+  let baselineFailed = {};
   if (name) {
     const baselinePath = path.join(projectRoot, 'scripts/validate/review-progress-baseline.json');
     if (fs.existsSync(baselinePath)) {
       try {
         const baseline = JSON.parse(fs.readFileSync(baselinePath, 'utf8'));
         if (baseline[name]) {
-          return { done: baseline[name].done || {}, failed: baseline[name].failed || {} };
+          baselineDone = baseline[name].done || {};
+          baselineFailed = baseline[name].failed || {};
         }
       } catch {
         // baseline 损坏忽略
       }
     }
   }
-  return { done: {}, failed: {} };
+
+  if (fs.existsSync(progressPath)) {
+    try {
+      const local = JSON.parse(fs.readFileSync(progressPath, 'utf8'));
+      // 合并：基线为底，本地 done 覆盖（本地是最新评的）；本地没有的 key 用基线补。
+      const mergedDone = { ...baselineDone, ...(local.done || {}) };
+      const mergedFailed = { ...baselineFailed, ...(local.failed || {}) };
+      return { done: mergedDone, failed: mergedFailed };
+    } catch {
+      // 损坏则用基线
+      return { done: baselineDone, failed: baselineFailed };
+    }
+  }
+  return { done: baselineDone, failed: baselineFailed };
 }
 
 function saveProgress(progressPath, p) {
@@ -101,6 +112,11 @@ export async function runReview(opts) {
     }
   }
   const resultById = new Map(results.map((r) => [r.key, r]));
+
+  // 本次评审的 scope：items 传入的 key 集合。
+  // report 与退出码都只看 scope 内的 key，避免历史累积结果（如全库跑留下的其他实体 fail）
+  // 永久阻断后续 changed-mode 提交。scope 外的历史结果不写入本次 report。
+  const scopeKeys = new Set(items.map((it) => it.key));
 
   // 增量：指纹与 progress.done 不一致才重评
   let todo = items.filter((it) => {
@@ -155,7 +171,12 @@ export async function runReview(opts) {
   }
   await Promise.all(Array.from({ length: concurrency }, () => worker()));
 
-  const all = [...resultById.values()];
+  // report 裁剪到本次 scope：只保留 items 范围内的结果。
+  // scope 内 todo 已重评的用新结果；todo 外（指纹未变）的取 resultById 历史结果（仍有效）。
+  // scope 外的历史结果（如全库跑留下的其他实体）不写入，避免累积报告导致 changed-mode 永久 fail。
+  const all = items
+    .map((it) => resultById.get(it.key))
+    .filter(Boolean);
   writeJson(reportPath, all);
   saveProgress(progressPath, progress);
 

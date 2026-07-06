@@ -120,6 +120,8 @@ function validateStructure(bundle, label) {
       }
       if (!obj.published) {
         addIssue('L1', `${prefix} (${obj.id}): report 缺少 published`);
+      } else if (Number.isNaN(new Date(obj.published).getTime())) {
+        addIssue('L1', `${prefix} (${obj.id}): report.published 非合法 ISO 8601 时间戳: ${obj.published}`);
       }
       if (!Array.isArray(obj.report_types) || obj.report_types.length === 0) {
         addIssue('L1', `${prefix} (${obj.id}): report 缺少 report_types`);

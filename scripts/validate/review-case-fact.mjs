@@ -29,7 +29,7 @@ let items;
 if (opts.full) {
   items = loadAllEntities('cases').map((r) => ({ key: r.key, type: 'cases', entity: r.entity }));
 } else {
-  const changed = await getChangedEntities({ baseRef: opts.baseRef });
+  const changed = await getChangedEntities({ baseRef: opts.baseRef, stagedOnly: opts.stagedOnly });
   items = changed
     .filter((c) => c.type === 'cases' && (c.isNew || c.hasContentChange))
     .map((c) => ({ key: c.key, type: 'cases', entity: c.entity }));
@@ -77,8 +77,9 @@ function cachePath(caseKey, refIndex) {
   return path.join(SCRAPED_DIR, `${caseKey}-${refIndex}.txt`);
 }
 
-async function getScrapedContent(caseKey, ref) {
-  const refIndex = 0; // 简化：只抓第一条 reference（主源）
+async function getScrapedContent(caseKey, ref, refIndex) {
+  // 用调用方传入的真实 refIndex 作缓存 key，避免第二条 reference 复用第一条的缓存
+  // （此前 refIndex 硬编码 0 导致多源核验退化为单源）。
   const cp = cachePath(caseKey, refIndex);
   if (fs.existsSync(cp)) {
     return { content: fs.readFileSync(cp, 'utf8'), fromCache: true };
@@ -182,7 +183,7 @@ async function reviewOne(item) {
   // 抓取前 2 条 reference（控制成本）
   const scrapedContents = [];
   for (let i = 0; i < Math.min(2, refs.length); i++) {
-    const s = await getScrapedContent(item.key, refs[i]);
+    const s = await getScrapedContent(item.key, refs[i], i);
     scrapedContents.push({ ...s, ok: s.ok || !!s.content });
   }
   const allFailed = scrapedContents.every((s) => !s.ok && !s.content);

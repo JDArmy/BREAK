@@ -11,7 +11,7 @@ let items;
 if (opts.full) {
   items = loadAllEntities('cases').map((r) => ({ key: r.key, type: 'cases', entity: r.entity }));
 } else {
-  const changed = await getChangedEntities({ baseRef: opts.baseRef });
+  const changed = await getChangedEntities({ baseRef: opts.baseRef, stagedOnly: opts.stagedOnly });
   items = changed
     .filter((c) => c.type === 'cases' && (c.isNew || c.hasContentChange))
     .map((c) => ({ key: c.key, type: 'cases', entity: c.entity }));

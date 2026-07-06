@@ -278,15 +278,28 @@ export function getExtensionId(breakEntityType) {
 // ────────────────────────────────────────
 
 /**
- * 将 BREAK updated 日期转为 STIX 兼容的 ISO 8601 时间戳
- * @param {string|undefined} updated - BREAK 日期字符串（YYYY-MM-DD）
- * @param {string} fallback - 无 updated 时使用的回退时间
+ * 将 BREAK 日期/时间字符串转为 STIX 兼容的 ISO 8601 时间戳。
+ * 支持三种格式（与 breakSchema.ts 的 incidentTime 一致）：
+ *   - YYYY       → 当年 1 月 1 日
+ *   - YYYY-MM    → 当月 1 日
+ *   - YYYY-MM-DD → 当日
+ * @param {string|undefined} dateStr - BREAK 日期字符串
+ * @param {string} fallback - 无 dateStr 或非法时使用的回退时间
  * @returns {string} ISO 8601 时间戳
  */
-export function toStixTimestamp(updated, fallback) {
-  if (updated) {
-    // BREAK 的 updated 是 YYYY-MM-DD，转为 ISO 8601 午夜 UTC
-    const date = new Date(`${updated}T00:00:00.000Z`);
+export function toStixTimestamp(dateStr, fallback) {
+  if (dateStr) {
+    let normalized;
+    if (/^\d{4}$/.test(dateStr)) {
+      normalized = `${dateStr}-01-01`;
+    } else if (/^\d{4}-\d{2}$/.test(dateStr)) {
+      normalized = `${dateStr}-01`;
+    } else if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+      normalized = dateStr;
+    } else {
+      return fallback;
+    }
+    const date = new Date(`${normalized}T00:00:00.000Z`);
     if (!Number.isNaN(date.getTime())) {
       return date.toISOString();
     }

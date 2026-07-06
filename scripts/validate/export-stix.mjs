@@ -213,7 +213,7 @@ function convertCase(breakId, entity, identityRef, created, allObjects) {
     created_by_ref: identityRef,
     name: entity.title,
     description: entity.description || entity.summary,
-    published: entity.incidentTime ? `${entity.incidentTime}-01T00:00:00.000Z` : created,
+    published: toStixTimestamp(entity.incidentTime, created),
     report_types: [mapCaseCategoryToReportType(entity.category)],
     object_refs: objectRefs.length > 0 ? objectRefs : [identityRef], // report 至少需要一个 object_ref
     external_references: convertReferences(entity.references, breakId),

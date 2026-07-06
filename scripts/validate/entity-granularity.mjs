@@ -15,7 +15,7 @@ const SPLIT_SEPARATORS = ['此外', '另外', '同时', '另一方面', '除此�
 const MIN_SEGMENT_LEN = 15;
 
 const issues = [];
-const TYPES_WITH_DESC = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms'];
+const TYPES_WITH_DESC = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms', 'businessScenes'];
 
 for (const type of TYPES_WITH_DESC) {
   const records = loadAllEntities(type);

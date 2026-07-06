@@ -18,7 +18,7 @@ if (opts.full) {
   const types = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms'];
   items = types.flatMap((t) => loadAllEntities(t).map((r) => ({ key: r.key, type: t, entity: r.entity })));
 } else {
-  const changed = await getChangedEntities({ baseRef: opts.baseRef });
+  const changed = await getChangedEntities({ baseRef: opts.baseRef, stagedOnly: opts.stagedOnly });
   items = changed
     .filter((c) => ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms'].includes(c.type) && (c.isNew || c.hasContentChange))
     .map((c) => ({ key: c.key, type: c.type, entity: c.entity }));

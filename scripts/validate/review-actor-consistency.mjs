@@ -11,7 +11,7 @@ let items;
 if (opts.full) {
   items = loadAllEntities('threat-actors').map((r) => ({ key: r.key, type: 'threat-actors', entity: r.entity }));
 } else {
-  const changed = await getChangedEntities({ baseRef: opts.baseRef });
+  const changed = await getChangedEntities({ baseRef: opts.baseRef, stagedOnly: opts.stagedOnly });
   items = changed
     .filter((c) => c.type === 'threat-actors' && (c.isNew || c.hasContentChange))
     .map((c) => ({ key: c.key, type: 'threat-actors', entity: c.entity }));

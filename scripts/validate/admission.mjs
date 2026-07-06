@@ -126,6 +126,8 @@ function loadBaseline() {
 }
 
 // 遍历某类目录，返回 [{ id, entity, filePath }]
+// 一个实体文件可能内嵌多个子实体（如 R0001.json 含 R0001 + R0001-001），
+// 必须遍历文件内所有 key，否则子实体的准入下限/占位禁令/退化保护会全部漏检。
 function loadDir(config) {
   const dir = path.join(breakDir, config.dir);
   if (!fs.existsSync(dir)) return [];
@@ -133,8 +135,9 @@ function loadDir(config) {
   for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".json"))) {
     const filePath = path.join(dir, file);
     const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    const id = Object.keys(data)[0];
-    out.push({ id, entity: data[id], filePath });
+    for (const [id, entity] of Object.entries(data)) {
+      out.push({ id, entity, filePath });
+    }
   }
   return out;
 }

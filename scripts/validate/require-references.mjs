@@ -15,6 +15,7 @@ const entityTypes = [
   { dir: 'avoidances', name: 'Avoidance' },
   { dir: 'attack-tools', name: 'AttackTool' },
   { dir: 'threat-actors', name: 'ThreatActor' },
+  { dir: 'terms', name: 'Term' },
   { dir: 'cases', name: 'Case' }
 ];
 
@@ -29,18 +30,19 @@ for (const entityType of entityTypes) {
   for (const file of files) {
     const filePath = path.join(dir, file);
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    const entityId = Object.keys(data)[0];
-    const entity = data[entityId];
+    // 一个实体文件可能内嵌多个子实体（如 R0001.json 含 R0001 + R0001-001），
+    // 必须遍历文件内所有 key，否则子实体的 references 缺失会漏检。
+    for (const [entityId, entity] of Object.entries(data)) {
+      totalCount++;
 
-    totalCount++;
-
-    if (!entity.references || entity.references.length === 0) {
-      missingCount++;
-      missingEntities.push({
-        type: entityType.name,
-        id: entityId,
-        file: path.relative(breakDir, filePath)
-      });
+      if (!entity.references || entity.references.length === 0) {
+        missingCount++;
+        missingEntities.push({
+          type: entityType.name,
+          id: entityId,
+          file: path.relative(breakDir, filePath)
+        });
+      }
     }
   }
 }

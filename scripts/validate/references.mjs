@@ -9,6 +9,7 @@ import {
   readJson,
   safeUrl,
   writeJson,
+  matchesDomain,
 } from '../search/common.mjs';
 import { weakDomains as sourceWeakDomains, classifySource } from './source-classify.mjs';
 
@@ -27,10 +28,6 @@ const TITLE_DOMAIN_SIGNALS = [
 const ROOT_DOMAIN_HOMEPAGES = new Set([
   'miit.gov.cn', 'owasp.org', 'cisa.gov', 'nist.gov', 'iso.org', 'w3.org', 'owasp.org',
 ]);
-
-function matchesDomain(domain, suffixes) {
-  return suffixes.some((s) => domain === s || domain.endsWith(`.${s}`));
-}
 
 function containsCjk(text) {
   return /[\u3400-\u9fff\uf900-\ufaff]/u.test(String(text || ''));
@@ -108,7 +105,7 @@ function checkEntityReferences(entityType, records, issues) {
       }
 
       const domain = domainOf(link);
-      const matchedLowQualityDomain = lowQualityDomains.find((item) => domain.endsWith(item));
+      const matchedLowQualityDomain = lowQualityDomains.find((item) => matchesDomain(domain, [item]));
       if (matchedLowQualityDomain) {
         addIssue(issues, {
           type: 'low_quality_domain',
@@ -251,7 +248,7 @@ function buildStats(entityType, records) {
   const withReferences = records.filter(({ entity }) => entity.references?.length > 0).length;
   const references = records.flatMap(({ entity }) => entity.references || []);
   const lowQuality = references.filter((ref) =>
-    lowQualityDomains.some((domain) => domainOf(ref.link).endsWith(domain)),
+    matchesDomain(domainOf(ref.link), lowQualityDomains),
   ).length;
 
   return {

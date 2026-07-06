@@ -14,7 +14,7 @@ const actionCommands = {
   manual_review_preserve:
     'npm run audit:references-health:cached -- --domains={domain} && npm run audit:references-browser -- --issue=review',
   replace_or_add_primary:
-    'npm run audit:quality-report',
+    'npm run audit:references-health:cached -- --domains={domain} && npm run audit:references-browser -- --issue=connection_error --ignore-https-errors',
   browser_review_preserve:
     'npm run audit:references-health:cached -- --domains={domain} && npm run audit:references-browser -- --issue=connection_error --ignore-https-errors',
   manual_review_or_replace:

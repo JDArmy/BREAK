@@ -90,7 +90,7 @@ export function readGitFile(relativePath, baseRef = 'HEAD') {
  * 获取 git diff 中变更的实体文件列表（相对 projectRoot）
  * @param {{baseRef?:string, stagedOnly?:boolean}} opts
  */
-function getChangedEntityFiles({ baseRef = 'HEAD', stagedOnly = false } = {}) {
+export function getChangedEntityFiles({ baseRef = 'HEAD', stagedOnly = false } = {}) {
   const changed = new Set();
 
   const run = (args) => {

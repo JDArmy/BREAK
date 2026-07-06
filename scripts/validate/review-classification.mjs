@@ -13,7 +13,7 @@ if (opts.full) {
   items = ['risks', 'avoidances', 'cases', 'terms']
     .flatMap((t) => loadAllEntities(t).map((r) => ({ key: r.key, type: t, entity: r.entity })));
 } else {
-  const changed = await getChangedEntities({ baseRef: opts.baseRef });
+  const changed = await getChangedEntities({ baseRef: opts.baseRef, stagedOnly: opts.stagedOnly });
   items = changed
     .filter((c) => ['risks', 'avoidances', 'cases', 'terms'].includes(c.type) && (c.isNew || c.hasContentChange))
     .map((c) => ({ key: c.key, type: c.type, entity: c.entity }));
