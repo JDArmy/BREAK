@@ -23,7 +23,15 @@ import { chatJson, withRetry, sleep } from './llm-client.mjs';
 const REPORTS_DIR = path.join(projectRoot, 'research/search-reports');
 
 export function fingerprintOf(entity, fields) {
-  const content = fields.map((f) => String(entity?.[f] ?? '')).join('||');
+  // 对对象/数组字段（如 references）做 JSON 序列化，避免 String([obj]) 得到 "[object Object]" 不区分内容。
+  const content = fields
+    .map((f) => {
+      const v = entity?.[f];
+      if (v == null) return '';
+      if (typeof v === 'object') return JSON.stringify(v);
+      return String(v);
+    })
+    .join('||');
   return createHash('sha256').update(content).digest('hex').slice(0, 16);
 }
 

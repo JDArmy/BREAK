@@ -13,8 +13,12 @@
     "summary": "In April 2026, security analysis revealed that attackers are using MFA fatigue attacks as an auxiliary method, bombarding users with frequent MFA verification requests to pressure them into approving fraudulent requests, while simultaneously tricking them into disclosing MFA bypass codes, thereby completely circumventing MFA protection and gaining system access.",
     "references": [
       {
-        "title": "Multi-Factor Authentication (MFA) FAQ - Access Control (RAM) - Alibaba Cloud Help Documentation",
-        "link": "https://help.aliyun.com/zh/ram/support/faq-about-mfa"
+        "title": "Scattered Spider - CISA Cybersecurity Advisory (MFA Fatigue)",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a"
+      },
+      {
+        "title": "Preventing MFA Fatigue Attacks, Bombing & Exhaustion - Proofpoint",
+        "link": "https://www.proofpoint.com/us/blog/information-protection/preventing-mfa-fatigue-attacks"
       }
     ]
   }

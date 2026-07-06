@@ -18,11 +18,15 @@
     ],
     "references": [
       {
-        "title": "多因素认证（MFA）常见问题-访问控制(RAM) - 阿里云帮助文档",
-        "link": "https://help.aliyun.com/zh/ram/support/faq-about-mfa"
+        "title": "Scattered Spider - CISA Cybersecurity Advisory (MFA Fatigue)",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a"
+      },
+      {
+        "title": "Preventing MFA Fatigue Attacks, Bombing & Exhaustion - Proofpoint",
+        "link": "https://www.proofpoint.com/us/blog/information-protection/preventing-mfa-fatigue-attacks"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-04",
     "relatedAttackTools": [
       "AT0054-004"

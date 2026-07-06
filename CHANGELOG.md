@@ -1,5 +1,16 @@
 # Change log
 
+## 2.42.24
+
+修复 references 3 个 Case + fingerprintOf 脚本缺陷（对象数组指纹不区分内容）。
+
+- **3 个 Case references 修复**：
+  - C1684 恶意 Py 包 perfviewer：替换不符源为 OpenSSF 官方恶意包数据库 + O3 Security 分析。
+  - C1719 亚马逊退款不退货限制：替换 Temu 不符源为亚马逊官方卖家后台 + Supply Chain Dive。
+  - C1759 MFA 疲劳攻击：替换弱源为 CISA 官方通告 + Proofpoint 权威分析。
+- **fingerprintOf 脚本缺陷修复**（scripts/llm/llm-review-runner.mjs）：原 `String(entity[f])` 对 references 等对象数组得到 `[object Object]` 不区分内容，改 references 后指纹不变导致评审误判"待评审 0"复用旧结果。改为对对象/数组字段 JSON 序列化后再哈希。此修复使 references 字段变化能正确触发重评。
+- references 评审 3160/3200（fingerprintOf 修复后需重评 references 相关实体）。
+
 ## 2.42.23
 
 修复 references 4 个高价值 Case 缺 primary 源。

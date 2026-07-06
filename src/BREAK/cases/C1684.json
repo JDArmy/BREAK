@@ -18,11 +18,15 @@
     ],
     "references": [
       {
-        "title": "关于“黑猫”团伙利用搜索引擎传播捆绑远控木马的知名应用程序安装包的风险提示",
-        "link": "https://www.cert.org.cn/publish/main/10/2025/20250730102455770581298/20250730102455770581298_.html"
+        "title": "MAL-2025-191814: Malicious code in perfviewer (PyPI) - ossf/malicious-packages GitHub",
+        "link": "https://github.com/ossf/malicious-packages/blob/main/osv/malicious/pypi/perfviewer/MAL-2025-191814.json"
+      },
+      {
+        "title": "perfviewer (PyPI) malicious package — MAL-2025-191814 - O3 Security",
+        "link": "https://o3.security/malware/pypi/perfviewer"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2025-11",
     "relatedAttackTools": [
       "AT0013"
