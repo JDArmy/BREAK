@@ -21,11 +21,11 @@
       "R0184",
       "R0185",
       "R0191",
-      "R0192"
+      "R0192",
+      "R0215",
+      "R0217"
     ],
     "indirectSupportRisks": [
-      "R0215",
-      "R0217",
       "R0219"
     ],
     "references": [
@@ -52,7 +52,7 @@
       "XR固件漏洞",
       "虚拟骚扰自动化"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       {
         "key": "AT0079",

@@ -18,17 +18,21 @@
     "description": "黑产组织招募缺乏判断能力的弱势群体，以其名义购车贷款，事后将车辆转卖获利，风险全部转嫁给金融机构。这类操作门槛极低，黑产通过简单包装即可骗过风控，导致坏账高发。",
     "usageExample": "傻子车，全国户籍，有信用记录，三到五天结束，保三期风控，一手操作。",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0146",
+      "R0092"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
+      "A0024",
       "A0057",
       "A0054",
       "A0044"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -43,6 +47,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

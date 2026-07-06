@@ -22,10 +22,11 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0044",
-      "A0061"
+      "A0061",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -49,7 +50,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "usageExample": "一名大学生被高薪兼职诱惑，将自己的收款码借给平台用于跑分，结果因涉嫌帮助信息网络犯罪活动罪被警方刑事拘留。"
   }
 }

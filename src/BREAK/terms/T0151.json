@@ -19,22 +19,19 @@
     "usageExample": "光有密码不够，还得找人做破脸，不然那笔大额转账过不去。",
     "relatedRisks": [
       "R0048",
-      "R0071-010",
-      "R0044",
-      "R0032",
-      "R0084-003"
+      "R0071-010"
     ],
     "relatedAvoidances": [
       "A0023-001",
       "A0016",
       "A0051",
-      "A0024"
+      "A0024",
+      "A0066"
     ],
     "relatedAttackTools": [
-      "AT0064",
       "AT0066",
-      "AT0067",
-      "AT0053-002"
+      "AT0053-002",
+      "AT0053-003"
     ],
     "relatedThreatActors": [
       "TA0015",
@@ -50,6 +47,6 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

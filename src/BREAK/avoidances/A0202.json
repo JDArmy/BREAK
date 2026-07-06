@@ -19,17 +19,17 @@
     "limitation": "SBOM易遗漏传递依赖、嵌套组件，攻击者可借助混淆包名或私有补丁绕过清单匹配；情报滞后导致漏报，正常多版本并行、动态链接库加载易产生误报噪声，影响资产定位准确率。",
     "relatedAvoidances": [
       {
-        "key": "A0055",
-        "relation": "complement",
-        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
-      },
-      {
         "key": "A0201",
         "relation": "complement",
         "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0055",
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },

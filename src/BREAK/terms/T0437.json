@@ -18,20 +18,21 @@
     "description": "在信贷欺诈和债务催收语境中，债务人用此词指代那些采取威胁、恐吓、骚扰等高压手段的催收公司或个人。这些催收方不顾及债务人实际情况，通过频繁电话轰炸、辱骂、爆通讯录等方式施压，迫使债务人尽快还款，常引发激烈对抗。",
     "usageExample": "催狗相关吐槽：打电话一上来就问欠款什么时候处理，后面他才说他不是狗催，是专门负责协商的。",
     "relatedRisks": [
-      "R0096"
+      "R0096-001",
+      "R0053",
+      "R0066"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
+      "A0048",
       "A0054",
       "A0044"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [
       {
@@ -43,6 +44,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

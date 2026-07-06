@@ -21,15 +21,15 @@
     ],
     "directCauseRisks": [
       "R0060",
-      "R0062",
       "R0093",
       "R0097"
     ],
     "indirectSupportRisks": [
       "R0043",
-      "R0110"
+      "R0110",
+      "R0062"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "keywords": [
       "跑分平台",
       "跑分",

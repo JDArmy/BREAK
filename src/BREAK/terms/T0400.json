@@ -207,20 +207,19 @@
     "description": "中介通过“免审核、低门槛”话术吸引学生或资金紧张者签订租赁合同，实际年利率远超法定上限。借款人一旦违约，不仅面临高额罚金，还可能被暴力催收或起诉，模糊了租赁与借贷的界限。",
     "usageExample": "信用分650+，租机贷，套现的机构来聊，量大质优",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0096-001"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
       "A0054",
       "A0044",
-      "A0051",
-      "A0006-005",
-      "A0016"
+      "A0051"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -255,17 +254,21 @@
     "definition": "借款周期极短（通常5天左右）、利息极高（可达50%以上）的非法超短期网贷产品。",
     "description": "例如借1000元5天后需还1500元，利息高达50%，由非法网贷平台运作。这类贷款专门收割无路可借的群体，逾期后迅速叠加罚息和催收压力，极易导致借款人债务失控。",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0096-001"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
       "A0054",
-      "A0044"
+      "A0044",
+      "A0051"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedAttackTools": [
+      "AT0066"
+    ],
+    "relatedThreatActors": [
+      "TA0029",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -301,17 +304,20 @@
     "definition": "通过虚假借款合同非法侵占借款人房产的欺诈行为。",
     "description": "黑产团伙诱骗房产持有者签订含房产买卖条款的借款协议，利用借款人急需资金或法律意识薄弱的特点，最终通过诉讼或暴力手段夺取房产。老年人是主要受害群体，整个过程设计精密，追索难度大。",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0095"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
+      "A0043",
       "A0054",
-      "A0044"
+      "A0044",
+      "A0051"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -326,7 +332,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "老人被诱导签下一份看似普通的借款协议，数月后陌生人上门要求腾房，他这才发现那是份搂贷合同，借款金额已被篡改成与房产等值的数目。"
   }
 }

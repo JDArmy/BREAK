@@ -16,12 +16,24 @@
     "definition": "未经授权私自架设的游戏服务器。",
     "description": "个人或团队通过逆向工程破解游戏客户端和服务端代码，私自搭建游戏服务器并对外运营。私服通常修改游戏参数、增加道具掉落或开放充值返利以吸引玩家，严重侵犯游戏版权方的知识产权和经济利益。部分私服还捆绑木马、窃取用户账号，或成为洗钱渠道，危害网络安全和玩家权益。",
     "relatedRisks": [
-      "R0101"
+      "R0022",
+      "R0091",
+      "R0060"
     ],
-    "relatedAvoidances": [],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAvoidances": [
+      "A0044",
+      "A0054"
+    ],
+    "relatedAttackTools": [
+      "AT0095"
+    ],
+    "relatedThreatActors": [
+      "TA0036",
+      "TA0012"
+    ],
+    "relatedBusinessScenes": [
+      "BS06"
+    ],
     "references": [
       {
         "title": "架设游戏“私服”涉嫌侵犯著作权 27人涉两罪名被公诉",
@@ -36,7 +48,7 @@
         "link": "https://www.163.com/dy/article/JRM9J9G70514JACF.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "usageExample": "某热门网游的私服吸引了5万玩家，通过修改掉率和开放付费道具免费获取来引流，造成官方服务器大量玩家流失和收入下降。"
   }
 }

@@ -1,5 +1,15 @@
 # Change log
 
+## 2.42.30
+
+4 个 subagent 并行修复 4 维度 fail：case-fact 重评+4 真实 fail、term-completeness 161、risk-avoidance 真实不匹配、tool-risks 92。
+
+- **case-fact 重评**：67 fail → 4 fail（63 个已修复确认 pass）。剩 4 个真实 references 不匹配再修：C1305 换葛某案正确源（spp.gov.cn 专稿+凤凰网）、C1359 换 rekt.news Venus 攻击页、C1510 删错误缓存重抓、C1695 换 Tenable 原始报告+summary 重写。case-fact fail 清零。
+- **term-completeness 161 fail 全改**：移除数据安全类错挂（A0050/A0035/A0049 等）、移除过宽 A0015 风控策略、补场景特异防御（电商补 A0077/A0208、信贷补 A0075/A0024、POS 补 A0207）。修正风险/工具/行为者错挂（T0238 炸码改挂 DDoS、T0437 狗催改挂反催收）。
+- **risk-avoidance 4 个真实不匹配移除**：R0029-003/R0032-002 移除 A0009（时间限制对 CC/密码喷射无缓解）、R0051 移除 A0021（设备指纹对防逆向不匹配）、R0228 移除 A0055（漏洞识别对恶意包投毒不匹配）。50 个历史已修，90 缺少保守不补。
+- **tool-risks 61 个 AT 修改**：移除 94 项完全不匹配风险关联（AT0024 GPS 伪造移除 R0050/R0002 等、AT0033-001 偷拍移除 R0082/R0112 等、AT0050 发贴机移除 R0002/R0003 等）、纠正 105 项 direct↔indirect 划分（indirect→direct 42、direct→indirect 63）。
+- sync:lateral-relations 重算横向关系，validate:data 28 门禁全绿，68 测试通过。
+
 ## 2.42.29
 
 case-fact 全量评审完成 + 44 个新 fail 事实错误修复，4 批 subagent 并行用 Scrapingdog 抓取核验。

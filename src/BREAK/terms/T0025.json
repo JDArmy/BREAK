@@ -20,10 +20,11 @@
       "R0005"
     ],
     "relatedAvoidances": [
-      "A0153",
-      "A0015",
+      "A0001",
+      "A0002",
       "A0059",
       "A0061",
+      "A0077",
       "A0044"
     ],
     "relatedAttackTools": [],
@@ -38,7 +39,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "黑产团伙在踩点时发现该新上线的社交裂变活动页面完全没有做任何风控策略，属于典型的\"无盾\"状态，随即展开了大规模的机器注册攻击。"
   }
 }

@@ -19,15 +19,25 @@
     "description": "四件套是黑产中最完整的实名资源组合，包括银行卡、对应手机卡、身份证复印件/照片和网银U盾。这套资料可直接用于开设完全受控的金融账户，常用于洗钱、资金中转、虚假交易等高风险操作。四件套通常来自身份信息泄露受害者或专业“卡农”，在地下市场价格较高。",
     "relatedRisks": [
       "R0030",
-      "R0030-005",
-      "R0071"
+      "R0060",
+      "R0062"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024",
+      "A0077"
+    ],
     "relatedAttackTools": [
-      "AT0039"
+      "AT0039",
+      "AT0039-001"
     ],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0004",
+      "TA0005-001",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
     "references": [
       {
         "title": "银行卡贩卖黑产链条调查:农村青年、大学生被盯上",
@@ -42,7 +52,7 @@
         "link": "https://www.jfdaily.com/wx/detail.do?id=429129"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "usageExample": "某洗钱团伙购买了20套四件套用于搭建资金通道，将电信诈骗所得分散转入这些账户后通过多层转账和提现完成资金清洗。"
   }
 }

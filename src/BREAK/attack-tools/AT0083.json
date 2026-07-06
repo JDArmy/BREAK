@@ -20,10 +20,10 @@
       "R0180",
       "R0190",
       "R0189",
-      "R0210"
+      "R0210",
+      "R0182"
     ],
     "indirectSupportRisks": [
-      "R0182",
       "R0205"
     ],
     "references": [
@@ -55,7 +55,7 @@
       "V2X伪造",
       "车联网协议攻击"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       {
         "key": "AT0081",

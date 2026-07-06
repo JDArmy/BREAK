@@ -20,16 +20,15 @@
       "R0096"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0046",
       "A0057",
       "A0054",
       "A0044",
-      "A0050",
-      "A0035",
       "A0016",
       "A0052",
-      "A0049"
+      "A0024",
+      "A0075",
+      "A0029"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
@@ -47,7 +46,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "小张被朋友以帮忙走个流水为由带到贷款公司，直到签完合同才发现自己成了AB贷中的B角背债人，而那个所谓的A角朋友早已消失无踪。"
   }
 }

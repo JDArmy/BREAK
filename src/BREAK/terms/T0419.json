@@ -18,22 +18,21 @@
     "description": "在企业背债操作中，黑产团伙会提前注册公司并持续养护，制造出经营数据良好的假象。当找到合适的背债人后，直接将公司过户，背债人无需从零开始“养”执照。这能大幅缩短骗贷周期，快速套取企业经营贷等高额度资金。",
     "usageExample": "快企现照，押金入场，马上过户变更，有客户的抓紧安排。",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0146"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
+      "A0024",
       "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
       "A0052",
-      "A0049"
+      "A0054",
+      "A0044"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -48,6 +47,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

@@ -17,22 +17,20 @@
     "description": "在汽车贷款欺诈场景中，中介利用客户资质办理分期购车，放款后不办理抵押登记，使车辆处于“免抵”状态。客户拿到绿本和发票后，车辆可自由处置，中介则按天结算佣金。这种模式绕开了金融机构的风控闭环，极易被用于一车多贷或快速转卖套现。",
     "usageExample": "大花小花 根据客户资质 抵押 免抵车 远程过系统 三天结算",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0146"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0046",
       "A0057",
       "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
+      "A0044"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -51,6 +49,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

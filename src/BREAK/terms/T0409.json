@@ -18,20 +18,22 @@
     "description": "黑产中介为无贷款资质的背债人垫资，虚构房产、企业等资产，经过一段时间的信用养护后，以其名义向金融机构申请大额贷款。贷款到手后，中介与背债人按比例分赃，背债人承担全部债务，最终沦为信用黑户。这种模式常导致银行坏账，破坏金融秩序。",
     "usageExample": "全省接单，执照满两年，过户半年以上！真实经营，有实体，0票0税均可，猪仔可做，额度200到500。",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0146",
+      "R0136"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
+      "A0024",
       "A0057",
       "A0054",
       "A0044",
-      "A0051",
-      "A0006-005",
-      "A0016"
+      "A0051"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -46,6 +48,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

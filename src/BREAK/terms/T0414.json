@@ -18,22 +18,20 @@
     "description": "这类人因严重逾期、失信等行为，已无法通过正规渠道获得贷款。黑产中介利用部分网贷平台风控漏洞，或通过伪造资料、包装身份等手段，专门为这类“老黑”申请贷款。此类操作往往涉及高额手续费，且极易引发暴力催收等衍生问题。",
     "usageExample": "老黑专属，矩阵产品，黑户可做。",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0146"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0046",
       "A0057",
       "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
+      "A0044"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -48,6 +46,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

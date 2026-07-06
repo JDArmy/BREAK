@@ -12,10 +12,10 @@
     ],
     "directCauseRisks": [
       "R0165",
-      "R0182"
+      "R0182",
+      "R0163"
     ],
     "indirectSupportRisks": [
-      "R0163",
       "R0166",
       "R0189"
     ],
@@ -39,7 +39,7 @@
       "DDoS僵尸网络",
       "IoT数据篡改"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       {
         "key": "AT0081",

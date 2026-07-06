@@ -15,10 +15,10 @@
     "directCauseRisks": [
       "R0028",
       "R0087",
-      "R0109"
+      "R0109",
+      "R0078-003"
     ],
     "indirectSupportRisks": [
-      "R0032-004",
       "R0075",
       "R0076",
       "R0081",
@@ -28,10 +28,9 @@
       "R0081-004",
       "R0085",
       "R0085-001",
-      "R0086",
-      "R0078-003"
+      "R0086"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "keywords": [
       "系统/应用漏洞利用工具",
       "漏洞利用工具",
@@ -414,17 +413,17 @@
         "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0064",
-        "relation": "co-used",
-        "note": "共同关联 2 个风险，被 1 个相同行为者使用或建设。"
-      },
-      {
         "key": "AT0095",
         "relation": "co-used",
         "note": "共享 3 个规避手段。"
       },
       {
         "key": "AT0010",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0043",
         "relation": "co-used",
         "note": "共同关联 1 个风险，共享 1 个规避手段。"
       }
@@ -458,7 +457,6 @@
       "R0078"
     ],
     "indirectSupportRisks": [
-      "R0034",
       "R0083"
     ],
     "avoidances": [
@@ -483,12 +481,7 @@
       {
         "key": "AT0064",
         "relation": "co-used",
-        "note": "共同关联 2 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
-      },
-      {
-        "key": "AT0013",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
         "key": "AT0063-001",
@@ -497,6 +490,11 @@
       },
       {
         "key": "AT0081",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0083",
         "relation": "co-used",
         "note": "共享 3 个规避手段。"
       }
@@ -511,6 +509,6 @@
         "link": "https://www.cisa.gov/news-events/alerts/2022/03/15/updated-kubernetes-hardening-guide"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

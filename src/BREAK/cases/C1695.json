@@ -6,21 +6,26 @@
       "存储桶",
       "配置错误",
       "公开暴露",
-      "S3",
-      "数据泄露",
-      "Booz Allen Hamilton",
+      "Tenable",
       "云存储桶",
-      "遥测数据"
+      "遥测数据",
+      "toxic cloud triad",
+      "勒索软件",
+      "云风险报告"
     ],
-    "summary": "2024年10月，一份基于云安全客户遥测数据的安全报告发现，74%的企业存在公开暴露的存储或其他配置错误，为网络攻击者提供了可乘之机。报告指出存储桶错误配置是云安全漏洞的主要来源之一，占比约16%，并引用了2017年美国国防部承包商因S3存储桶配置错误导致敏感数据泄露的历史案例。",
+    "summary": "2024年10月8日，Tenable发布《2024 Tenable Cloud Risk Report》，基于其云安全客户遥测数据指出74%的企业存在公开暴露的存储资产（含存放敏感数据者），多由不必要或过度的权限所致，并已被关联到勒索攻击的增加。报告还揭示38%的企业存在“toxic cloud triad”——即云工作负载同时具备公开暴露、关键漏洞和高权限三重高风险特征，构成高威胁攻击路径。",
     "category": "news_report",
     "relatedRisks": [
       "R0230"
     ],
     "references": [
       {
-        "title": "74%的企业云端存在公开暴露的存储或配置错误",
-        "link": "https://www.51cto.com/article/799172.html"
+        "title": "Tenable Cloud Risk Report Sounds the Alarm on Toxic Cloud Exposures Threatening Global Organizations",
+        "link": "https://investors.tenable.com/news-releases/news-release-details/tenable-cloud-risk-report-sounds-alarm-toxic-cloud-exposures"
+      },
+      {
+        "title": "More than one-third of cloud environments are critically exposed, says Tenable - Network World",
+        "link": "https://www.networkworld.com/article/3559179/more-than-one-third-of-cloud-environments-are-critically-exposed-says-tenable.html"
       }
     ],
     "updated": "2026-07-06",

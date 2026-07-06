@@ -17,22 +17,20 @@
     "description": "资不抵债的客户在贷款到期无力偿还时，由中介协助包装资质再申请一笔大额贷款，用新到账资金填上旧贷窟窿。这种“借新还旧”的操作能暂时保住征信不逾期，但债务雪球越滚越大。中介常借此吹嘘“无责任倒贷”，实则将风险全部转嫁给借款人和后续接盘的金融机构，最终极易引发连环违约。",
     "usageExample": "有个大姨想背z,他可以办一笔100w的银行业务,办完了倒贷几年可以没有助贷的责任? 资料j的。54周岁了",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0146"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0046",
       "A0057",
       "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
+      "A0044"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -47,6 +45,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

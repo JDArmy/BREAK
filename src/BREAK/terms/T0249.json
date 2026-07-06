@@ -19,35 +19,28 @@
     "relatedRisks": [
       "R0005",
       "R0009",
-      "R0034",
-      "R0094",
-      "R0138",
-      "R0060-001"
+      "R0034"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0021",
       "A0059",
       "A0060",
-      "A0061"
+      "A0061",
+      "A0075"
     ],
     "relatedAttackTools": [
       "AT0016",
       "AT0009",
-      "AT0067",
-      "AT0039"
+      "AT0044"
     ],
     "relatedThreatActors": [
       "TA0001",
-      "TA0006",
-      "TA0039",
-      "TA0014"
+      "TA0006"
     ],
     "relatedBusinessScenes": [
       "BS02",
       "BS05",
-      "BS06",
-      "BS15"
+      "BS06"
     ],
     "references": [
       {
@@ -55,7 +48,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "有人专门写脚本监控直播间抽奖，利用数千个小号薅礼物，把抽中的虚拟礼物通过公会转赠给大号集中变现，一天套利数万元，导致活动预算瞬间耗尽。"
   }
 }

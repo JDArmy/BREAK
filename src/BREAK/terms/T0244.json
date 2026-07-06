@@ -19,29 +19,22 @@
     "usageExample": "昨晚看那个仓播，主播站在一堆鞋盒中间喊全网最低价，结果发货全是假货。",
     "relatedRisks": [
       "R0024",
-      "R0007-003"
+      "R0007-003",
+      "R0004",
+      "R0006"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0021",
       "A0059",
       "A0060",
       "A0061",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049",
-      "A0051",
-      "A0006-005",
+      "A0006-004",
       "A0044"
     ],
     "relatedAttackTools": [
-      "AT0005",
-      "AT0050"
+      "AT0009"
     ],
     "relatedThreatActors": [
-      "TA0013",
       "TA0009"
     ],
     "relatedBusinessScenes": [
@@ -55,6 +48,6 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

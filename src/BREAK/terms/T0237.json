@@ -19,6 +19,7 @@
     "usageExample": "送你XX平台wwg教程要不要",
     "relatedRisks": [
       "R0068",
+      "R0068-001",
       "R0068-002"
     ],
     "relatedAvoidances": [
@@ -27,9 +28,6 @@
       "A0059",
       "A0060",
       "A0061",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
       "A0037"
     ],
     "relatedAttackTools": [],
@@ -48,6 +46,6 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

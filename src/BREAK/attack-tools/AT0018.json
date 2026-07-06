@@ -14,15 +14,15 @@
       "A0021"
     ],
     "directCauseRisks": [
-      "R0012",
-      "R0034",
       "R0050"
     ],
     "indirectSupportRisks": [
       "R0001",
-      "R0027"
+      "R0027",
+      "R0012",
+      "R0034"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "keywords": [
       "Root/越狱工具",
       "Root工具",

@@ -8,7 +8,6 @@
     ],
     "indirectSupportRisks": [
       "R0163",
-      "R0209",
       "R0277"
     ],
     "avoidances": [
@@ -48,11 +47,6 @@
         "note": "共同关联 1 个风险，共享 1 个规避手段。"
       },
       {
-        "key": "AT0064",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 1 个规避手段。"
-      },
-      {
         "key": "AT0067",
         "relation": "co-used",
         "note": "共同关联 1 个风险，共享 1 个规避手段。"
@@ -61,8 +55,13 @@
         "key": "AT0069",
         "relation": "co-used",
         "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0072",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

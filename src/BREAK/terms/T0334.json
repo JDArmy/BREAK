@@ -23,11 +23,12 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0054",
       "A0044",
-      "A0061"
+      "A0061",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -52,7 +53,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "该团伙摒弃了第三方支付，直接采用卡接方式接收诈骗所得，将赃款快速分散转入多个二级账户，以此逃避银行风控。"
   }
 }

@@ -20,21 +20,17 @@
     "relatedRisks": [
       "R0060",
       "R0044",
-      "R0032",
-      "R0084-003"
+      "R0032"
     ],
     "relatedAvoidances": [
       "A0016",
       "A0051",
       "A0024",
-      "A0054"
+      "A0054",
+      "A0207"
     ],
     "relatedAttackTools": [
-      "AT0026",
-      "AT0064",
-      "AT0066",
-      "AT0067",
-      "AT0053-002"
+      "AT0026"
     ],
     "relatedThreatActors": [
       "TA0006-003",
@@ -51,6 +47,6 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

@@ -20,36 +20,29 @@
     "relatedRisks": [
       "R0017",
       "R0017-001",
-      "R0005",
-      "R0094",
-      "R0138",
-      "R0060-001"
+      "R0017-002",
+      "R0005"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0021",
       "A0059",
       "A0060",
-      "A0061"
+      "A0061",
+      "A0075"
     ],
     "relatedAttackTools": [
       "AT0044",
       "AT0009",
-      "AT0016",
-      "AT0067",
-      "AT0039"
+      "AT0016"
     ],
     "relatedThreatActors": [
       "TA0009",
       "TA0006",
-      "TA0007",
-      "TA0039",
-      "TA0014"
+      "TA0007"
     ],
     "relatedBusinessScenes": [
       "BS02",
-      "BS04",
-      "BS15"
+      "BS04"
     ],
     "references": [
       {
@@ -57,6 +50,6 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

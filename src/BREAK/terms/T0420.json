@@ -19,22 +19,21 @@
     "usageExample": "全国贸易带量增量资金服务，企业孵化，上下游合同包票，四流合一，年中美化财务数据。",
     "relatedRisks": [
       "R0017",
-      "R0096"
+      "R0017-003",
+      "R0096",
+      "R0146"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
       "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
       "A0052",
-      "A0049"
+      "A0054",
+      "A0044"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -49,6 +48,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

@@ -18,12 +18,9 @@
     "relatedRisks": [
       "R0162",
       "R0060-001",
-      "R0060",
-      "R0094",
-      "R0138"
+      "R0060"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0021",
       "A0059",
       "A0060",
@@ -35,16 +32,19 @@
       "A0024",
       "A0016",
       "A0054",
-      "A0044"
+      "A0044",
+      "A0165"
     ],
     "relatedAttackTools": [
       "AT0060",
       "AT0039",
-      "AT0067"
+      "AT0067",
+      "AT0079"
     ],
     "relatedThreatActors": [
       "TA0014",
-      "TA0039"
+      "TA0039",
+      "TA0047"
     ],
     "relatedBusinessScenes": [
       "BS02",
@@ -57,7 +57,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "用户点了一个伪造的空投链接授权钱包，瞬间被盗U，钱包里价值几十万的USDT被自动转走，连二次验证都没触发，追查后发现私钥早已泄露。"
   }
 }

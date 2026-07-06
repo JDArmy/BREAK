@@ -16,22 +16,23 @@
     "definition": "黑产圈对一万元现金的俗称。",
     "description": "在现金密集型的地下交易、跑分或背债结算中，黑产从业者常用“砖头”代指一万元现金，因银行封捆的百元钞形似砖块。这种黑话便于在通讯中隐蔽地谈论资金量，避免直接提及具体金额。大量“砖头”的流转通常涉及线下现金交割、赌资转移或非法资金拆分，是洗钱和非法结算的典型特征。",
     "relatedRisks": [
-      "R0096"
+      "R0060",
+      "R0062"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
+      "A0077",
       "A0054",
-      "A0044",
-      "A0024",
-      "A0016"
+      "A0044"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedAttackTools": [
+      "AT0039-001"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0038"
+    ],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [
       {
@@ -43,7 +44,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "usageExample": "接头人将五块砖头整齐码进黑色塑料袋，在茶餐厅角落推给银行卡卖家，低声说这是买断你名下四件套的尾款，从此这张卡的流水与你再无瓜葛。"
   }
 }

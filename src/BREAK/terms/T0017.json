@@ -26,12 +26,20 @@
       "R0005"
     ],
     "relatedAvoidances": [
-      "A0015",
+      "A0001",
+      "A0004",
+      "A0010-004",
       "A0059",
       "A0061"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedAttackTools": [
+      "AT0045",
+      "AT0023"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0002"
+    ],
     "relatedBusinessScenes": [
       "BS02"
     ],
@@ -41,6 +49,6 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

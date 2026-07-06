@@ -22,10 +22,10 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0054",
-      "A0044"
+      "A0044",
+      "A0077"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -46,6 +46,6 @@
         "link": "https://www.spp.gov.cn/xwfbh/dxal/202506/t20250610_697881.shtml"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

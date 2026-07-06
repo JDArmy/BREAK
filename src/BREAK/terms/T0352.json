@@ -21,10 +21,10 @@
       "R0060"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0016",
       "A0044",
-      "A0061"
+      "A0061",
+      "A0077"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -45,7 +45,7 @@
         "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "为了躲避线下抓捕，该团伙将摄像头架设在境外实体赌场，再通过加密通讯软件向国内赌客提供电投服务，实现远程遥控押注。"
   }
 }

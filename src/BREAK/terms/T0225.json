@@ -22,7 +22,8 @@
       "R0068-002"
     ],
     "relatedAvoidances": [
-      "A0015"
+      "A0048",
+      "A0208"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -38,7 +39,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "usageExample": "营销公司遭遇端外直举攻击，竞争对手不通过平台内置举报按钮，而是直接整理话术模板组织大量用户在12315小程序集中投诉，导致其支付接口被冻结。"
   }
 }

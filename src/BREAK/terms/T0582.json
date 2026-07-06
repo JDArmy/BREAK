@@ -10,12 +10,16 @@
     "description": "CDN 缓存键决定请求如何命中同一个缓存对象。若 Host、路径、查询参数、Header 或认证上下文未正确纳入缓存键，可能导致跨用户内容混淆、缓存投毒或敏感页面被缓存。治理重点是缓存策略审计和动态内容隔离。",
     "usageExample": "攻击者构造特殊的CDN缓存键参数，使缓存服务器存储含恶意脚本的响应页面，后续用户请求时被投毒内容命中。",
     "relatedRisks": [
-      "R0226",
-      "R0249"
+      "R0249",
+      "R0109"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0221"
+    ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0018"
+    ],
     "relatedBusinessScenes": [
       "BS00"
     ],
@@ -25,7 +29,7 @@
         "link": "https://developers.cloudflare.com/cache/how-to/cache-keys/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "version": 2
   }
 }

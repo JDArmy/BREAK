@@ -24,15 +24,18 @@
     "relatedRisks": [
       "R0068-002",
       "R0068",
+      "R0054",
+      "R0054-001",
+      "R0054-002",
       "R0005"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0059",
       "A0061",
       "A0044",
-      "A0043",
-      "A0027"
+      "A0027",
+      "A0077",
+      "A0208"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -47,6 +50,6 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

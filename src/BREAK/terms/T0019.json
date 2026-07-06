@@ -18,16 +18,21 @@
     "description": "此类账号因注册时间达标且行为干净，能绕过平台针对新号的初级风控策略。黑产购买后常用于批量刷销量、刷评价或参与邀请拉新活动，以低成本获取平台营销奖励，是营销欺诈的基础资源之一。",
     "usageExample": "最近平台风控严，新号不好使，得找一批满月白号来做任务才稳。",
     "relatedRisks": [
-      "R0005"
+      "R0005",
+      "R0005-001",
+      "R0030-001",
+      "R0017-001"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0059",
       "A0061",
-      "A0021"
+      "A0021",
+      "A0075"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0007"
+    ],
     "relatedBusinessScenes": [
       "BS02"
     ],
@@ -37,6 +42,6 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

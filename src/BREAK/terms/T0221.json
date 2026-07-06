@@ -30,7 +30,6 @@
       "R0034"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0021",
       "A0059",
       "A0060",
@@ -40,7 +39,8 @@
       "A0038",
       "A0016-001",
       "A0004",
-      "A0016"
+      "A0016",
+      "A0001"
     ],
     "relatedAttackTools": [
       "AT0044",
@@ -65,6 +65,6 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

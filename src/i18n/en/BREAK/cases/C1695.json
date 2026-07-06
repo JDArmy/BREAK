@@ -2,20 +2,26 @@
   "C1695": {
     "title": "74% of Enterprises Have Publicly Exposed Storage or Misconfigurations in the Cloud",
     "keywords": [
-      "cloud misconfiguration",
+      "cloud security",
       "storage bucket",
+      "misconfiguration",
       "publicly exposed storage",
-      "S3 bucket",
+      "Tenable",
+      "cloud storage bucket",
       "telemetry data",
-      "Booz Allen Hamilton",
-      "data breach",
-      "cloud storage bucket"
+      "toxic cloud triad",
+      "ransomware",
+      "cloud risk report"
     ],
-    "summary": "In October 2024, a security report based on telemetry data from cloud security customers found that 74% of enterprises had publicly exposed storage or other misconfigurations, creating opportunities for attackers. The report identified storage bucket misconfigurations as a leading source of cloud vulnerabilities, accounting for about 16%, and referenced the 2017 historical data breach involving a U.S. Department of Defense contractor caused by an S3 bucket misconfiguration exposing sensitive data.",
+    "summary": "On October 8, 2024, Tenable released its 2024 Tenable Cloud Risk Report, which based on telemetry from its cloud security customers noted that 74% of organizations have publicly exposed storage assets (including those holding sensitive data), often due to unnecessary or excessive permissions, and linked this exposure to increased ransomware attacks. The report also revealed that 38% of organizations exhibit a 'toxic cloud triad' — cloud workloads that are simultaneously publicly exposed, critically vulnerable, and highly privileged, forming a high-risk attack path.",
     "references": [
       {
-        "title": "74% of Enterprises Have Publicly Exposed Storage or Misconfigurations in the Cloud",
-        "link": "https://www.51cto.com/article/799172.html"
+        "title": "Tenable Cloud Risk Report Sounds the Alarm on Toxic Cloud Exposures Threatening Global Organizations",
+        "link": "https://investors.tenable.com/news-releases/news-release-details/tenable-cloud-risk-report-sounds-alarm-toxic-cloud-exposures"
+      },
+      {
+        "title": "More than one-third of cloud environments are critically exposed, says Tenable - Network World",
+        "link": "https://www.networkworld.com/article/3559179/more-than-one-third-of-cloud-environments-are-critically-exposed-says-tenable.html"
       }
     ]
   }

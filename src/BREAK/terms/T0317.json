@@ -81,10 +81,11 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0054",
-      "A0044"
+      "A0044",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -108,7 +109,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   },
   "T0317-002": {
     "title": "商家码",
@@ -136,10 +137,11 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0054",
-      "A0044"
+      "A0044",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -166,7 +168,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   },
   "T0317-003": {
     "title": "聚合码",
@@ -193,18 +195,11 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0054",
       "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -228,7 +223,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   },
   "T0317-004": {
     "title": "聚合直扫",
@@ -369,11 +364,12 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0054",
       "A0044",
-      "A0061"
+      "A0061",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026"
@@ -395,7 +391,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   },
   "T0317-007": {
     "title": "破额码",
@@ -422,9 +418,11 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
-      "A0044"
+      "A0044",
+      "A0004",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -448,7 +446,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   },
   "T0317-008": {
     "title": "丝滑码",
@@ -474,10 +472,11 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0044",
-      "A0061"
+      "A0061",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026"
@@ -499,7 +498,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   },
   "T0317-009": {
     "title": "设置码",
@@ -584,9 +583,10 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
-      "A0044"
+      "A0044",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -610,7 +610,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   },
   "T0317-011": {
     "title": "反扫",
@@ -691,9 +691,10 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
-      "A0044"
+      "A0044",
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -719,7 +720,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   },
   "T0317-013": {
     "title": "银联码",
@@ -802,18 +803,11 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
       "A0054",
       "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
+      "A0077",
+      "A0207"
     ],
     "relatedAttackTools": [
       "AT0026",
@@ -837,6 +831,6 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   }
 }

@@ -27,11 +27,10 @@
       "R0068-002"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0059",
       "A0061",
-      "A0043",
-      "A0027"
+      "A0027",
+      "A0077"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -49,6 +48,6 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

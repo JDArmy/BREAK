@@ -13,7 +13,6 @@
       "R0117"
     ],
     "indirectSupportRisks": [
-      "R0032",
       "R0036",
       "R0084",
       "R0118",
@@ -33,7 +32,7 @@
         "link": "https://www.straiker.ai/blog/agent-hijacking-how-prompt-injection-leads-to-full-ai-system-compromise"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "keywords": [
       "AI Agent劫持工具",
       "Agent Hijacking",
@@ -52,27 +51,27 @@
       {
         "key": "AT0064",
         "relation": "co-used",
-        "note": "共同关联 3 个风险，共享 1 个规避手段。"
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
       },
       {
         "key": "AT0063",
         "relation": "co-used",
-        "note": "共同关联 3 个风险。"
+        "note": "共同关联 2 个风险。"
       },
       {
         "key": "AT0063-001",
         "relation": "co-used",
-        "note": "共同关联 3 个风险。"
+        "note": "共同关联 2 个风险。"
       },
       {
         "key": "AT0067",
         "relation": "co-used",
-        "note": "共同关联 3 个风险。"
+        "note": "共同关联 2 个风险。"
       },
       {
         "key": "AT0069",
         "relation": "co-used",
-        "note": "共同关联 3 个风险。"
+        "note": "共同关联 2 个风险。"
       }
     ]
   }

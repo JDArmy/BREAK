@@ -18,20 +18,20 @@
     "relatedRisks": [
       "R0068",
       "R0068-002",
+      "R0068-001",
+      "R0054",
+      "R0015",
+      "R0056",
       "R0005"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0059",
       "A0061",
       "A0044",
-      "A0050",
-      "A0035",
       "A0016",
-      "A0052",
-      "A0049",
-      "A0043",
-      "A0027"
+      "A0027",
+      "A0077",
+      "A0208"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -46,7 +46,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "职业索赔人通过\"打假\"手段，专门寻找商品标题中的极限词或成分标注漏洞，下单后以举报相威胁向商家索要高额赔偿金。"
   }
 }

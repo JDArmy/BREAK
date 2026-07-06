@@ -19,25 +19,30 @@
     "usageExample": "这个活动新加了设备指纹校验，不先破盾的话，我们写的脚本根本登录不上去。",
     "relatedRisks": [
       "R0032-001",
+      "R0030-001",
       "R0003",
       "R0005",
       "R0070"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0059",
-      "A0061",
+      "A0002",
       "A0010",
+      "A0010-001",
       "A0010-002",
+      "A0010-009",
       "A0021",
-      "A0016"
+      "A0016",
+      "A0059",
+      "A0061"
     ],
     "relatedAttackTools": [
       "AT0007",
+      "AT0002",
       "AT0042"
     ],
     "relatedThreatActors": [
-      "TA0002"
+      "TA0002",
+      "TA0018"
     ],
     "relatedBusinessScenes": [
       "BS02"
@@ -48,6 +53,6 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

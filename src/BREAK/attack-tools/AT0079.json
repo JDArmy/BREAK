@@ -15,15 +15,14 @@
     ],
     "directCauseRisks": [
       "R0162",
-      "R0175",
       "R0084-002",
       "R0195",
       "R0197",
-      "R0201",
       "R0185"
     ],
     "indirectSupportRisks": [
-      "R0203"
+      "R0203",
+      "R0201"
     ],
     "references": [
       {
@@ -49,7 +48,7 @@
       "Telegram Bot钓鱼",
       "EIP授权钓鱼"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "relatedAttackTools": [
       {
         "key": "AT0063",
@@ -77,9 +76,9 @@
         "note": "共享 2 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0076",
+        "key": "AT0039-001",
         "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+        "note": "共享 2 个规避手段。"
       }
     ]
   }

@@ -19,16 +19,20 @@
     "usageExample": "这次活动有漏洞，领了券找指定渠道无损套，100块券到手95。",
     "relatedRisks": [
       "R0017",
+      "R0017-001",
       "R0017-002",
+      "R0017-003",
       "R0055",
       "R0003",
       "R0005",
       "R0070"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0059",
-      "A0061"
+      "A0061",
+      "A0077",
+      "A0208",
+      "A0052"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -44,6 +48,6 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }
