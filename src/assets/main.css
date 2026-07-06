@@ -219,6 +219,23 @@
   background: var(--break-tooltip-bg) !important;
 }
 
+/* 优先级/复杂度 badge 解释 tooltip */
+.risk-badge-tooltip.el-popper.is-break-theme {
+  max-width: min(360px, 80vw);
+  border: 1px solid var(--break-tooltip-border) !important;
+  background: var(--break-tooltip-bg) !important;
+  color: var(--break-tooltip-text) !important;
+  line-height: 1.6;
+  font-size: 0.82rem;
+  padding: 8px 12px;
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--break-bg-primary) 48%, transparent);
+}
+
+.risk-badge-tooltip.el-popper.is-break-theme .el-popper__arrow::before {
+  border-color: var(--break-tooltip-border) !important;
+  background: var(--break-tooltip-bg) !important;
+}
+
 /* ===== 知识库详情通用：关键词 / 弱化文本 ===== */
 .keywords {
   display: flex;
@@ -286,7 +303,17 @@
 .risk-meta-card--compact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+/* 优先级/复杂度卡片：title 左上角，badge 水平+垂直居中（占满卡片剩余高度） */
+.risk-meta-card--compact > h3 {
+  align-self: flex-start;
+}
+
+/* margin:auto 在 flex 容器中让 badge 在剩余空间内水平+垂直双向居中，badge 自身保持 fit-content 宽度 */
+.risk-meta-card--compact > .risk-priority-badge,
+.risk-meta-card--compact > .risk-complexity-badge {
+  margin: auto;
 }
 
 .risk-meta-card--impact {
@@ -301,8 +328,8 @@
 /* ===== 风险雷达图（RisksView）===== */
 .risk-radar-chart {
   width: 100%;
-  max-width: 420px;
-  height: 300px;
+  max-width: 630px;
+  height: 450px;
   margin: 0 auto;
 }
 
@@ -330,11 +357,10 @@
 .avoidance-relation-item,
 .attack-tool-relation-item {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    "type title"
-    "type note";
-  column-gap: 8px;
+    "title"
+    "note";
   row-gap: 2px;
   align-items: center;
   min-width: 0;
@@ -356,17 +382,86 @@
 
 .risk-relation-type,
 .avoidance-relation-type,
-.attack-tool-relation-type {
-  grid-area: type;
+.attack-tool-relation-type,
+.threat-actor-relation-type {
   flex: 0 0 auto;
-  min-width: 44px;
-  padding: 1px 6px;
-  font-size: 0.78rem;
-  line-height: 1.5;
-  text-align: center;
-  color: var(--break-primary);
-  border: 1px solid var(--break-primary);
-  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  border: none;
+  border-radius: 999px;
+  /* 默认 badge：中性灰 */
+  background: color-mix(in srgb, var(--slate-500) 18%, transparent);
+  color: var(--slate-700);
+}
+
+/* 语义分色：前置（信息蓝） */
+[data-relation="prerequisite"] {
+  background: color-mix(in srgb, var(--blue-500) 18%, transparent);
+  color: var(--blue-700);
+}
+
+/* 共现 / 组合 / 共同关联（关联紫） */
+[data-relation="co-occurrence"],
+[data-relation="co-used"],
+[data-relation="co-involved"] {
+  background: color-mix(in srgb, var(--purple-500) 20%, transparent);
+  color: var(--purple-800);
+}
+
+/* 升级 / 能力升级（警示琥珀） */
+[data-relation="escalation"],
+[data-relation="capability-upgrade"] {
+  background: color-mix(in srgb, var(--amber-500) 22%, transparent);
+  color: var(--amber-700);
+}
+
+/* 变体（青） */
+[data-relation="variant"] {
+  background: color-mix(in srgb, var(--teal-500) 18%, transparent);
+  color: var(--teal-500);
+}
+
+/* 互补 / 补短板（绿） */
+[data-relation="complement"],
+[data-relation="mitigates-gap"] {
+  background: color-mix(in srgb, var(--green-500) 18%, transparent);
+  color: var(--green-800);
+}
+
+/* 替代（橙红） */
+[data-relation="alternative"] {
+  background: color-mix(in srgb, var(--orange-200) 50%, transparent);
+  color: var(--orange-800);
+}
+
+/* 暗黑模式：badge 文字改用浅色变体，保证对比度 */
+html.dark [data-relation] {
+  color: var(--slate-200);
+}
+html.dark [data-relation="prerequisite"] {
+  color: var(--blue-300);
+}
+html.dark [data-relation="co-occurrence"],
+html.dark [data-relation="co-used"],
+html.dark [data-relation="co-involved"] {
+  color: var(--purple-200);
+}
+html.dark [data-relation="escalation"],
+html.dark [data-relation="capability-upgrade"] {
+  color: var(--amber-300);
+}
+html.dark [data-relation="variant"] {
+  color: var(--teal-400);
+}
+html.dark [data-relation="complement"],
+html.dark [data-relation="mitigates-gap"] {
+  color: var(--green-200);
+}
+html.dark [data-relation="alternative"] {
+  color: var(--orange-200);
 }
 
 .risk-relation-title,
@@ -377,7 +472,6 @@
   overflow: hidden;
   font-weight: 600;
   line-height: 1.35;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -385,11 +479,20 @@
 .avoidance-relation-note,
 .attack-tool-relation-note {
   grid-area: note;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   min-width: 0;
-  overflow: hidden;
   color: var(--break-text-muted);
   font-size: 0.84em;
   line-height: 1.35;
+}
+
+.risk-relation-note-text,
+.avoidance-relation-note-text,
+.attack-tool-relation-note-text {
+  min-width: 0;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -435,8 +538,8 @@
   padding: 10px 12px;
   display: grid;
   grid-template:
-    "type title" auto
-    "note note" 1fr / auto minmax(0, 1fr);
+    "title" auto
+    "note" 1fr / minmax(0, 1fr);
   align-items: start;
   gap: 6px 8px;
   border: 1px solid var(--break-border);
@@ -451,17 +554,6 @@
   background: var(--break-bg-hover);
 }
 
-.threat-actor-relation-type {
-  grid-area: type;
-  padding: 2px 6px;
-  border-radius: 4px;
-  background: var(--break-primary-color);
-  color: #fff;
-  font-size: 0.72rem;
-  line-height: 1.35;
-  white-space: nowrap;
-}
-
 .threat-actor-relation-title {
   grid-area: title;
   min-width: 0;
@@ -473,9 +565,17 @@
 
 .threat-actor-relation-note {
   grid-area: note;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
   color: var(--break-text-muted);
   font-size: 0.82rem;
   line-height: 1.45;
+}
+
+.threat-actor-relation-note-text {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 

@@ -12,6 +12,7 @@ const { t, locale, messages } = useI18n();
 
 const risks = Object.keys(BREAK.risks);
 const selectedRiskKey = ref((route.params.rKey as string) || risks[0] || "");
+const selectedRisk = computed(() => BREAK.risks[selectedRiskKey.value as keyof typeof BREAK.risks]);
 const selectedComplexity = ref("");
 
 const COMPLEXITY_LEVELS = ["basic", "intermediate", "advanced"] as const;

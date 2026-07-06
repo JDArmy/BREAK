@@ -28,6 +28,7 @@ const getInitialKey = () => {
 };
 
 const selectedTermKey = ref(getInitialKey());
+const selectedTerm = computed(() => BREAK.terms[selectedTermKey.value as keyof typeof BREAK.terms]);
 
 watch(
   () => route.params.tKey,

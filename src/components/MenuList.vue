@@ -4,7 +4,7 @@ import "element-plus/theme-chalk/display.css";
 import GithubPane from "@/components/GithubPane.vue";
 import ThemeToggle from "@/components/ThemeToggle.vue";
 import iconTranslate from "@/components/icons/iconTranslate.vue";
-import { ArrowDown, Search, Menu as MenuIcon } from "@element-plus/icons-vue";
+import { ArrowDown, Search, Menu as MenuIcon, Loading } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
 import { onMounted, onUnmounted, ref } from "vue";
@@ -335,7 +335,8 @@ const getActiveIndex = (fullPath: string) => {
         <ThemeToggle />
         <el-dropdown trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
           <span class="mobile-locale-toggle">
-            <icon-translate />
+            <el-icon v-if="localeChanging" class="locale-loading-icon"><Loading /></el-icon>
+            <icon-translate v-else />
             <span>{{ languages[locale as keyof typeof languages] }}</span>
             <el-icon><arrow-down /></el-icon>
           </span>
@@ -485,7 +486,8 @@ const getActiveIndex = (fullPath: string) => {
 
     <el-dropdown class="translate" trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
       <span class="el-dropdown-link" :aria-label="languages[locale as keyof typeof languages]" role="button" tabindex="0">
-        <icon-translate />
+        <el-icon v-if="localeChanging" class="locale-loading-icon"><Loading /></el-icon>
+        <icon-translate v-else />
         <span class="locale-label">{{ languages[locale as keyof typeof languages] }}</span>
         <el-icon><arrow-down /></el-icon>
       </span>
@@ -708,6 +710,17 @@ const getActiveIndex = (fullPath: string) => {
 
 .locale-label {
   user-select: none;
+}
+
+/* 语言切换中：loading icon 替换 translate icon，旋转动画 */
+.locale-loading-icon {
+  animation: locale-loading-spin 1s linear infinite;
+}
+
+@keyframes locale-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .outside-link {

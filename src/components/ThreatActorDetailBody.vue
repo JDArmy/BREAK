@@ -96,12 +96,7 @@ const onNavigate = (event: "navigate-threatActor" | "navigate-risk" | "navigate-
   <article :class="['detail-panel', { 'drawer-detail-panel': isDrawer }]">
     <div class="detail-heading">
       <div>
-        <!-- list: 纯文本 / drawer: a 新窗口 + icon -->
-        <div v-if="!isDrawer" class="detail-id">{{ taKey }}</div>
-        <a v-else :href="detailHref(taKey)" target="_blank" rel="noopener" class="detail-id">
-          {{ taKey }}
-          <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-        </a>
+        <div class="detail-id">{{ taKey }}</div>
         <h2>{{ $t(`BREAK.threatActors.${taKey}.title`) }}</h2>
       </div>
       <div class="detail-heading-actions">
@@ -116,6 +111,7 @@ const onNavigate = (event: "navigate-threatActor" | "navigate-risk" | "navigate-
         <template v-else>
           <el-button type="default" size="small" :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(taKey)">
             <el-icon><icon-relation width="14px" height="14px" /></el-icon>
+            {{ $t("relationMap") }}
           </el-button>
           <el-button type="primary" plain size="small" @click="openDetail(taKey)">
             {{ $t("viewDetail") }}
@@ -147,9 +143,11 @@ const onNavigate = (event: "navigate-threatActor" | "navigate-risk" | "navigate-
             class="threat-actor-relation-item"
             :to="{ name: 'knowledgesThreatActorDetail', params: { taKey: relation.key } }"
           >
-            <span class="threat-actor-relation-type">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
             <span class="threat-actor-relation-title">{{ relation.key }}: {{ $t(`BREAK.threatActors.${relation.key}.title`) }}</span>
-            <span v-if="relation.note" class="threat-actor-relation-note">{{ getThreatActorRelationNote(relation) }}</span>
+            <span class="threat-actor-relation-note">
+              <span class="threat-actor-relation-type" :data-relation="relation.relation">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
+              <span v-if="relation.note" class="threat-actor-relation-note-text">{{ getThreatActorRelationNote(relation) }}</span>
+            </span>
           </router-link>
           <a
             v-else
@@ -157,9 +155,11 @@ const onNavigate = (event: "navigate-threatActor" | "navigate-risk" | "navigate-
             :href="detailHref(relation.key)"
             @click.prevent="$emit('navigate-threatActor', relation.key)"
           >
-            <span class="threat-actor-relation-type">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
             <span class="threat-actor-relation-title">{{ relation.key }}: {{ $t(`BREAK.threatActors.${relation.key}.title`) }}</span>
-            <span v-if="relation.note" class="threat-actor-relation-note">{{ getThreatActorRelationNote(relation) }}</span>
+            <span class="threat-actor-relation-note">
+              <span class="threat-actor-relation-type" :data-relation="relation.relation">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
+              <span v-if="relation.note" class="threat-actor-relation-note-text">{{ getThreatActorRelationNote(relation) }}</span>
+            </span>
           </a>
         </template>
       </div>

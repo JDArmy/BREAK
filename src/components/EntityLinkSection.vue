@@ -157,7 +157,7 @@ const rows = computed(() => props.keys.map((key) => ({ key })));
   border: 0;
   padding: 0;
   font: inherit;
-  color: inherit;
+  color: var(--break-link);
   cursor: pointer;
   text-align: inherit;
   display: inline;

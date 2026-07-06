@@ -89,12 +89,7 @@ const onNavigate = (event: "navigate-avoidance" | "navigate-risk" | "navigate-at
   <article :class="['detail-panel', { 'drawer-detail-panel': isDrawer }]">
     <div class="detail-heading">
       <div>
-        <!-- list: 纯文本 / drawer: a 新窗口 + icon -->
-        <div v-if="!isDrawer" class="detail-id">{{ aKey }}</div>
-        <a v-else :href="detailHref(aKey)" target="_blank" rel="noopener" class="detail-id">
-          {{ aKey }}
-          <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-        </a>
+        <div class="detail-id">{{ aKey }}</div>
         <h2>{{ $t(`BREAK.avoidances.${aKey}.title`) }}</h2>
       </div>
       <div class="detail-heading-actions">
@@ -109,6 +104,7 @@ const onNavigate = (event: "navigate-avoidance" | "navigate-risk" | "navigate-at
         <template v-else>
           <el-button type="default" size="small" :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(aKey)">
             <el-icon><icon-relation width="14px" height="14px" /></el-icon>
+            {{ $t("relationMap") }}
           </el-button>
           <el-button type="primary" plain size="small" @click="openDetail(aKey)">
             {{ $t("viewDetail") }}
@@ -159,9 +155,11 @@ const onNavigate = (event: "navigate-avoidance" | "navigate-risk" | "navigate-at
             class="avoidance-relation-item"
             :to="{ name: 'knowledgesAvoidanceDetail', params: { aKey: relation.key } }"
           >
-            <span class="avoidance-relation-type">{{ $t(`avoidanceRelationType.${relation.relation}`) }}</span>
             <span class="avoidance-relation-title">{{ relation.key }}: {{ $t(`BREAK.avoidances.${relation.key}.title`) }}</span>
-            <span v-if="relation.note" class="avoidance-relation-note">{{ getAvoidanceRelationNote(relation) }}</span>
+            <span class="avoidance-relation-note">
+              <span class="avoidance-relation-type" :data-relation="relation.relation">{{ $t(`avoidanceRelationType.${relation.relation}`) }}</span>
+              <span v-if="relation.note" class="avoidance-relation-note-text">{{ getAvoidanceRelationNote(relation) }}</span>
+            </span>
           </router-link>
           <a
             v-else
@@ -169,9 +167,11 @@ const onNavigate = (event: "navigate-avoidance" | "navigate-risk" | "navigate-at
             :href="detailHref(relation.key)"
             @click.prevent="$emit('navigate-avoidance', relation.key)"
           >
-            <span class="avoidance-relation-type">{{ $t(`avoidanceRelationType.${relation.relation}`) }}</span>
             <span class="avoidance-relation-title">{{ relation.key }}: {{ $t(`BREAK.avoidances.${relation.key}.title`) }}</span>
-            <span v-if="relation.note" class="avoidance-relation-note">{{ getAvoidanceRelationNote(relation) }}</span>
+            <span class="avoidance-relation-note">
+              <span class="avoidance-relation-type" :data-relation="relation.relation">{{ $t(`avoidanceRelationType.${relation.relation}`) }}</span>
+              <span v-if="relation.note" class="avoidance-relation-note-text">{{ getAvoidanceRelationNote(relation) }}</span>
+            </span>
           </a>
         </template>
       </div>

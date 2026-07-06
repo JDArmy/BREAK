@@ -95,4 +95,4 @@ const onNavigateRisk = (rKey: string) => {
   />
 </template>
 
-<style src="./drawer-detail-shared.css" scoped></style>
+<style src="./drawer-detail-shared.css"></style>

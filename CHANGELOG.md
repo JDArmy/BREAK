@@ -1,5 +1,16 @@
 # Change log
 
+## 2.42.32
+
+详情页 UI 优化：风险卡片布局/语言切换 loading/雷达图放大/badge popover/TermsView 警告修复
+
+- **风险卡片布局**：处置优先级/复杂度卡片中，标题改为左上角，P0/中级等级 badge 在卡片剩余空间水平+垂直居中（原为整体垂直居中导致标题不在顶角）。
+- **语言切换 loading**：中英文切换加载对应语言文件期间，语言切换 icon 临时替换为旋转的 loading icon，加载完成后恢复，避免切换时无反馈。
+- **雷达图放大**：风险详情页雷达图尺寸增大 50%（max-width 420→630px，height 300→450px）。
+- **badge popover**：鼠标悬停处置优先级（P0-P3）/复杂度（初级/中级/高级）badge 时，显示 tooltip 解释当前等级含义；新增 `riskPriorityLevelDesc`/`riskComplexityLevelDesc` 中英文 i18n 文案与 `.risk-badge-tooltip` 主题样式。
+- **TermsView 警告修复**：补上缺失的 `selectedTerm` computed，消除 Vue 渲染警告「Property 'selectedTerm' was accessed during render but is not defined」。
+- **前序改动一并入库**：relation-type 改为实体 ID 前 badge（4 个实体统一）、badge 语义配色与暗黑模式可见性、抽屉表格标题链接蓝色、移除抽屉顶部实体 ID 链接、关联图谱按钮文字、RisksView selectedRisk 警告修复、抽屉 relation-list 2 列布局。
+
 ## 2.42.31
 
 重评确认 tool-risks/term-completeness/case-fact 修复效果，修真实 fail。

@@ -22,6 +22,11 @@
     "intermediate": "Intermediate",
     "advanced": "Advanced"
   },
+  "riskComplexityLevelDesc": {
+    "basic": "Basic: Low attack barrier, simple exploitation, no special resources or skills required.",
+    "intermediate": "Intermediate: Requires some technical capability or specific tools; attack path is relatively complex.",
+    "advanced": "Advanced: High attack complexity, requires expertise, custom tools, or multi-party coordination."
+  },
   "riskInfluence": "Influence",
   "riskPriority": "Remediation Priority",
   "riskPriorityOverridden": "Expert overridden",
@@ -29,6 +34,12 @@
   "riskObservables": "Observables",
   "riskObservablesCount": "signals",
   "riskPriorityNote": "Priority Rationale",
+  "riskPriorityLevelDesc": {
+    "P0": "P0 (Critical): Highest priority, requires immediate remediation. High likelihood and business loss; mitigate within the shortest timeframe.",
+    "P1": "P1 (High): High priority, should be remediated with priority scheduling. Significant risk; develop a mitigation plan as soon as possible.",
+    "P2": "P2 (Medium): Medium priority, include in regular remediation scheduling. Risk is manageable; mitigate progressively per plan.",
+    "P3": "P3 (Low): Low priority, can be deferred. Low risk; address when resources permit."
+  },
   "riskDim": {
     "likelihood": "Likelihood",
     "businessLoss": "Business Loss",

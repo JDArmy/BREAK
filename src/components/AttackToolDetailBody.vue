@@ -100,12 +100,7 @@ const onNavigate = (event: "navigate-attackTool" | "navigate-risk" | "navigate-a
   <article :class="['detail-panel', { 'drawer-detail-panel': isDrawer }]">
     <div class="detail-heading">
       <div>
-        <!-- list: 纯文本 / drawer: a 新窗口 + icon -->
-        <div v-if="!isDrawer" class="detail-id">{{ atKey }}</div>
-        <a v-else :href="detailHref(atKey)" target="_blank" rel="noopener" class="detail-id">
-          {{ atKey }}
-          <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-        </a>
+        <div class="detail-id">{{ atKey }}</div>
         <h2>{{ $t(`BREAK.attackTools.${atKey}.title`) }}</h2>
       </div>
       <div class="detail-heading-actions">
@@ -120,6 +115,7 @@ const onNavigate = (event: "navigate-attackTool" | "navigate-risk" | "navigate-a
         <template v-else>
           <el-button type="default" size="small" :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(atKey)">
             <el-icon><icon-relation width="14px" height="14px" /></el-icon>
+            {{ $t("relationMap") }}
           </el-button>
           <el-button type="primary" plain size="small" @click="openDetail(atKey)">
             {{ $t("viewDetail") }}
@@ -174,11 +170,11 @@ const onNavigate = (event: "navigate-attackTool" | "navigate-risk" | "navigate-a
             class="attack-tool-relation-item"
             :to="{ name: 'knowledgesAttackToolDetail', params: { atKey: relation.key } }"
           >
-            <span class="attack-tool-relation-type">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
-            <span class="attack-tool-relation-title">
-              {{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}
+            <span class="attack-tool-relation-title">{{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}</span>
+            <span class="attack-tool-relation-note">
+              <span class="attack-tool-relation-type" :data-relation="relation.relation">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
+              <span v-if="relation.note" class="attack-tool-relation-note-text">{{ getAttackToolRelationNote(relation) }}</span>
             </span>
-            <span v-if="relation.note" class="attack-tool-relation-note">{{ getAttackToolRelationNote(relation) }}</span>
           </router-link>
           <a
             v-else
@@ -186,11 +182,11 @@ const onNavigate = (event: "navigate-attackTool" | "navigate-risk" | "navigate-a
             :href="detailHref(relation.key)"
             @click.prevent="$emit('navigate-attackTool', relation.key)"
           >
-            <span class="attack-tool-relation-type">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
-            <span class="attack-tool-relation-title">
-              {{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}
+            <span class="attack-tool-relation-title">{{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}</span>
+            <span class="attack-tool-relation-note">
+              <span class="attack-tool-relation-type" :data-relation="relation.relation">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
+              <span v-if="relation.note" class="attack-tool-relation-note-text">{{ getAttackToolRelationNote(relation) }}</span>
             </span>
-            <span v-if="relation.note" class="attack-tool-relation-note">{{ getAttackToolRelationNote(relation) }}</span>
           </a>
         </template>
       </div>

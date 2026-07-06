@@ -22,6 +22,11 @@
     "intermediate": "中级",
     "advanced": "高级"
   },
+  "riskComplexityLevelDesc": {
+    "basic": "初级：攻击门槛低，利用简单，无需特殊资源或技能即可实施。",
+    "intermediate": "中级：需要一定技术能力或特定工具，攻击路径相对复杂。",
+    "advanced": "高级：攻击复杂度高，需要专业知识、定制工具或多方协同。"
+  },
   "riskInfluence": "风险影响",
   "riskPriority": "处置优先级",
   "riskPriorityOverridden": "已专家覆盖",
@@ -29,6 +34,12 @@
   "riskObservables": "可观测信号",
   "riskObservablesCount": "条信号",
   "riskPriorityNote": "优先级说明",
+  "riskPriorityLevelDesc": {
+    "P0": "P0（紧急）：最高优先级，需立即处置。发生概率高、业务损失大，应在最短时间内缓解。",
+    "P1": "P1（高）：高优先级，需优先排期处置。风险显著，建议尽快制定缓解计划。",
+    "P2": "P2（中）：中优先级，需纳入常规处置排期。风险可控，按计划逐步缓解。",
+    "P3": "P3（低）：低优先级，可延后处置。风险较低，资源允许时再行处理。"
+  },
   "riskDim": {
     "likelihood": "发生概率",
     "businessLoss": "业务损失",

@@ -106,12 +106,7 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
   <article :class="['detail-panel', { 'drawer-detail-panel': isDrawer, 'risk-detail-panel': !isDrawer }]">
     <div class="detail-heading">
       <div>
-        <!-- list: 纯文本 / drawer: a 新窗口 + icon -->
-        <div v-if="!isDrawer" class="detail-id">{{ rKey }}</div>
-        <a v-else :href="detailHref(rKey)" target="_blank" rel="noopener" class="detail-id">
-          {{ rKey }}
-          <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-        </a>
+        <div class="detail-id">{{ rKey }}</div>
         <h2>{{ $t(`BREAK.risks.${rKey}.title`) }}</h2>
       </div>
       <div class="detail-heading-actions">
@@ -126,6 +121,7 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
         <template v-else>
           <el-button type="default" size="small" :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(rKey)">
             <el-icon><icon-relation width="14px" height="14px" /></el-icon>
+            {{ $t("relationMap") }}
           </el-button>
           <el-button type="primary" plain size="small" @click="openDetail(rKey)">
             {{ $t("viewDetail") }}
@@ -146,16 +142,32 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
     <section class="detail-grid risk-meta-grid">
       <div v-if="selectedAssessment" class="risk-meta-card risk-meta-card--compact risk-meta-card--priority">
         <h3>{{ $t("riskPriority") }}</h3>
-        <span class="knowledge-badge risk-priority-badge" :class="`risk-priority-${selectedAssessment.priority?.toLowerCase()}`">
-          {{ selectedAssessment.priority }}
-        </span>
+        <el-tooltip
+          :content="$t(`riskPriorityLevelDesc.${selectedAssessment.priority}`)"
+          effect="break-theme"
+          placement="top"
+          :show-after="300"
+          popper-class="risk-badge-tooltip"
+        >
+          <span class="knowledge-badge risk-priority-badge" :class="`risk-priority-${selectedAssessment.priority?.toLowerCase()}`">
+            {{ selectedAssessment.priority }}
+          </span>
+        </el-tooltip>
         <p v-if="selectedAssessment.priorityOverride" class="priority-override-hint">{{ $t("riskPriorityOverridden") }}</p>
       </div>
       <div class="risk-meta-card risk-meta-card--compact">
         <h3>{{ $t("riskComplexity") }}</h3>
-        <span class="knowledge-badge risk-complexity-badge" :class="`risk-${selectedRisk?.complexity}`">
-          {{ $t(`riskComplexityLevel.${selectedRisk?.complexity}`) }}
-        </span>
+        <el-tooltip
+          :content="$t(`riskComplexityLevelDesc.${selectedRisk?.complexity}`)"
+          effect="break-theme"
+          placement="top"
+          :show-after="300"
+          popper-class="risk-badge-tooltip"
+        >
+          <span class="knowledge-badge risk-complexity-badge" :class="`risk-${selectedRisk?.complexity}`">
+            {{ $t(`riskComplexityLevel.${selectedRisk?.complexity}`) }}
+          </span>
+        </el-tooltip>
       </div>
       <div class="risk-meta-card risk-meta-card--impact">
         <h3>{{ $t("riskInfluence") }}</h3>
@@ -194,9 +206,11 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
             class="risk-relation-item"
             :to="{ name: 'knowledgesRiskDetail', params: { rKey: relation.key } }"
           >
-            <span class="risk-relation-type">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
             <span class="risk-relation-title">{{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}</span>
-            <span v-if="relation.note" class="risk-relation-note">{{ getRiskRelationNote(relation) }}</span>
+            <span class="risk-relation-note">
+              <span class="risk-relation-type" :data-relation="relation.relation">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
+              <span v-if="relation.note" class="risk-relation-note-text">{{ getRiskRelationNote(relation) }}</span>
+            </span>
           </router-link>
           <a
             v-else
@@ -204,9 +218,11 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
             :href="detailHref(relation.key)"
             @click.prevent="$emit('navigate-risk', relation.key)"
           >
-            <span class="risk-relation-type">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
             <span class="risk-relation-title">{{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}</span>
-            <span v-if="relation.note" class="risk-relation-note">{{ getRiskRelationNote(relation) }}</span>
+            <span class="risk-relation-note">
+              <span class="risk-relation-type" :data-relation="relation.relation">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
+              <span v-if="relation.note" class="risk-relation-note-text">{{ getRiskRelationNote(relation) }}</span>
+            </span>
           </a>
         </template>
       </div>
