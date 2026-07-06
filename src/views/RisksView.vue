@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { computed, ref, watch, onMounted, onBeforeUnmount, nextTick } from "vue";
+import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
-import type { ECharts } from "echarts/core";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
@@ -13,7 +12,7 @@ import { formatRiskRelationNote } from "@/utils/relationNote";
 import { useRelatedCases } from "@/composables/useRelatedCases";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { useRelationGraph } from "@/composables/useRelationGraph";
-import { loadRiskRadarECharts } from "@/views/relation/relationECharts";
+import { useRiskRadarChart } from "@/composables/useRiskRadarChart";
 
 const route = useRoute();
 const { t, locale, messages } = useI18n();
@@ -94,18 +93,6 @@ const relatedTerms = useRelatedEntities(BREAK.terms, "relatedRisks", selectedRis
 const { openRelationGraph } = useRelationGraph("risk");
 
 // ── 风险分级雷达图 ──
-const radarChartRef = ref<HTMLElement | null>(null);
-let radarChart: ECharts | null = null;
-
-const RISK_DIMENSIONS = [
-  "likelihood",
-  "businessLoss",
-  "attackCost",
-  "detectionDifficulty",
-  "defenseMaturity",
-] as const;
-const SEVERITY_VALUE: Record<string, number> = { low: 1, medium: 2, high: 3, critical: 4 };
-
 const selectedAssessment = computed(() => selectedRisk.value?.riskAssessment);
 // 可观测信号：英文 locale 下走 i18n 合并后的数组，中文走源数据
 const observables = computed(() =>
@@ -121,79 +108,7 @@ const priorityNote = computed(() =>
     : ""
 );
 
-async function renderRadar() {
-  const a = selectedAssessment.value;
-  if (!a || !radarChartRef.value) return;
-  const initFn = await loadRiskRadarECharts();
-  if (!radarChartRef.value) return; // 切换期间可能已卸载
-  if (!radarChart) {
-    radarChart = initFn(radarChartRef.value);
-  }
-  // echarts canvas 不支持 CSS 变量，从根元素读取实际颜色值
-  const styles = getComputedStyle(document.documentElement);
-  const textColor = styles.getPropertyValue("--break-text-secondary").trim() || "#666";
-  const primaryColor = styles.getPropertyValue("--break-primary").trim() || "#409eff";
-  radarChart.setOption({
-    radar: {
-      indicator: RISK_DIMENSIONS.map((dim) => ({ name: t(`riskDim.${dim}`), max: 4 })),
-      radius: "60%",
-      center: ["50%", "52%"],
-      axisName: {
-        color: textColor,
-        fontSize: 12,
-        fontWeight: 600,
-        padding: [3, 5],
-      },
-      splitArea: { areaStyle: { color: ["var(--break-bg-secondary)", "transparent"] } },
-    },
-    series: [
-      {
-        type: "radar",
-        data: [
-          {
-            value: RISK_DIMENSIONS.map((dim) => SEVERITY_VALUE[a[dim]] ?? 0),
-            name: t("riskAssessmentDimensions"),
-            areaStyle: { opacity: 0.2 },
-            lineStyle: { width: 2 },
-            label: {
-              show: true,
-              color: primaryColor,
-              fontSize: 11,
-              fontWeight: 700,
-              formatter: (params: { value: number }) => params.value,
-            },
-          },
-        ],
-      },
-    ],
-  });
-}
-
-function disposeRadar() {
-  if (radarChart) {
-    radarChart.dispose();
-    radarChart = null;
-  }
-}
-
-watch(
-  [selectedRiskKey, () => locale.value],
-  () => {
-    nextTick(() => {
-      if (selectedAssessment.value) {
-        renderRadar();
-      } else {
-        disposeRadar();
-      }
-    });
-  },
-  { immediate: true }
-);
-
-onMounted(() => {
-  nextTick(() => selectedAssessment.value && renderRadar());
-});
-onBeforeUnmount(disposeRadar);
+const { radarChartRef } = useRiskRadarChart(selectedAssessment, locale, t);
 </script>
 
 <template>
@@ -375,229 +290,7 @@ onBeforeUnmount(disposeRadar);
   flex: 0 0 96px;
 }
 
-.risk-priority-badge {
-  display: inline-block;
-  width: fit-content;
-  padding: 2px 12px;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  border: 1px solid var(--break-border);
-}
-
-.risk-priority-badge.risk-priority-p0 {
-  background: var(--break-badge-risk-priority-p0-bg);
-  border-color: var(--break-badge-risk-priority-p0-border);
-  color: var(--break-badge-risk-priority-p0-text);
-}
-.risk-priority-badge.risk-priority-p1 {
-  background: var(--break-badge-risk-priority-p1-bg);
-  border-color: var(--break-badge-risk-priority-p1-border);
-  color: var(--break-badge-risk-priority-p1-text);
-}
-.risk-priority-badge.risk-priority-p2 {
-  background: var(--break-badge-risk-priority-p2-bg);
-  border-color: var(--break-badge-risk-priority-p2-border);
-  color: var(--break-badge-risk-priority-p2-text);
-}
-.risk-priority-badge.risk-priority-p3 {
-  background: var(--break-badge-risk-priority-p3-bg);
-  border-color: var(--break-badge-risk-priority-p3-border);
-  color: var(--break-badge-risk-priority-p3-text);
-}
-
-.risk-complexity-badge {
-  display: inline-block;
-  width: fit-content;
-  padding: 2px 12px;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  border: 1px solid var(--break-border);
-}
-
-.risk-complexity-badge.risk-basic {
-  background: var(--break-badge-risk-basic-bg);
-  border-color: var(--break-badge-risk-basic-border);
-  color: var(--break-badge-risk-basic-text);
-}
-.risk-complexity-badge.risk-intermediate {
-  background: var(--break-badge-risk-intermediate-bg);
-  border-color: var(--break-badge-risk-intermediate-border);
-  color: var(--break-badge-risk-intermediate-text);
-}
-.risk-complexity-badge.risk-advanced {
-  background: var(--break-badge-risk-advanced-bg);
-  border-color: var(--break-badge-risk-advanced-border);
-  color: var(--break-badge-risk-advanced-text);
-}
-
-.priority-override-hint {
-  margin-top: 6px;
-  font-size: 0.78rem;
-  color: var(--break-text-secondary);
-}
-
-.risk-radar-chart {
-  width: 100%;
-  max-width: 420px;
-  height: 300px;
-  margin: 0 auto;
-}
-
-.observables-list {
-  margin: 0;
-  padding-left: 20px;
-  line-height: 1.7;
-}
-
-.observables-list li {
-  margin-bottom: 4px;
-}
-
-.keywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.keyword-tag {
-  display: inline-block;
-  padding: 4px 12px;
-  background: var(--break-bg-secondary);
-  border: 1px solid var(--break-border);
-  border-radius: 4px;
-  font-size: 0.9em;
-  color: var(--break-text-secondary);
-}
-
-.text-muted {
-  color: var(--break-text-muted);
-  font-size: 0.9em;
-}
-
 .risk-detail-panel {
   max-width: 1380px;
-}
-
-.risk-meta-grid {
-  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(0, 2fr);
-  gap: 10px;
-  align-items: stretch;
-}
-
-.risk-meta-grid > .risk-meta-card {
-  padding: 10px 12px;
-  border-radius: 6px;
-  background: transparent;
-}
-
-.risk-meta-card h3 {
-  margin-bottom: 6px;
-}
-
-.risk-meta-card p {
-  line-height: 1.65;
-}
-
-.risk-meta-card--compact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.risk-meta-card--impact {
-  border-left: 3px solid var(--break-border);
-}
-
-/* 无优先级卡片时（未回填 assessment），影响卡片跨剩余列占满 */
-.risk-meta-grid:not(:has(.risk-meta-card--priority)) > .risk-meta-card--impact {
-  grid-column: 2 / -1;
-}
-
-.risk-relation-list {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.risk-relation-item {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  grid-template-areas:
-    "type title"
-    "type note";
-  column-gap: 8px;
-  row-gap: 2px;
-  align-items: center;
-  min-width: 0;
-  min-height: 62px;
-  padding: 8px 10px;
-  color: inherit;
-  text-decoration: none;
-  background: var(--break-bg-secondary);
-  border: 1px solid var(--break-border);
-  border-radius: 6px;
-}
-
-.risk-relation-item:hover {
-  color: var(--break-primary);
-  border-color: var(--break-primary);
-}
-
-.risk-relation-type {
-  grid-area: type;
-  flex: 0 0 auto;
-  min-width: 44px;
-  padding: 1px 6px;
-  font-size: 0.78rem;
-  line-height: 1.5;
-  text-align: center;
-  color: var(--break-primary);
-  border: 1px solid var(--break-primary);
-  border-radius: 4px;
-}
-
-.risk-relation-title {
-  grid-area: title;
-  min-width: 0;
-  overflow: hidden;
-  font-weight: 600;
-  line-height: 1.35;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.risk-relation-note {
-  grid-area: note;
-  min-width: 0;
-  overflow: hidden;
-  color: var(--break-text-muted);
-  font-size: 0.84em;
-  line-height: 1.35;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-@media (max-width: 720px) {
-  .risk-meta-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .risk-relation-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 721px) and (max-width: 1180px) {
-  .risk-relation-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1181px) and (max-width: 1599px) {
-  .risk-relation-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 </style>

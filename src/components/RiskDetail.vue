@@ -1,17 +1,23 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
+import DrawerEntityLinkSection from "@/components/DrawerEntityLinkSection.vue";
 
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
+import { useRelatedCases } from "@/composables/useRelatedCases";
+import { useRiskRadarChart } from "@/composables/useRiskRadarChart";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { getEntityEntry } from "@/BREAK/entityRegistry";
+import { getMessageStringArray } from "@/utils/i18nMessage";
+import { formatRiskRelationNote } from "@/utils/relationNote";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
 const AvoidanceDetail = createRecoverableAsyncComponent(() => import("@/components/AvoidanceDetail.vue"), undefined, "RiskAvoidanceDetail");
@@ -26,15 +32,30 @@ const props = defineProps<{
 defineEmits(["drawerClose"]);
 
 const router = useRouter();
+const { locale, messages, t } = useI18n();
 const risks = BREAK.risks;
-const avoidanceDrawer = ref(false);
-const avoidanceKey = ref("");
-const attackToolDrawer = ref(false);
-const attackToolKey = ref("");
-const threatActorDrawer = ref(false);
-const threatActorKey = ref("");
-
 const { getDrawerWidth } = useDrawerWidth();
+
+const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
+
+const selectedRisk = computed(() => risks[props.rKey as keyof typeof risks]);
+const selectedAssessment = computed(() => selectedRisk.value?.riskAssessment);
+// 可观测信号：英文 locale 下走 i18n 合并后的数组，中文走源数据
+const observables = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.risks.${props.rKey}.riskAssessment.observables`),
+);
+// 关键词（缓存 computed，避免模板 v-if + v-for 重复调用 getMessageStringArray）
+const keywords = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.risks.${props.rKey}.keywords`),
+);
+const priorityNote = computed(() =>
+  selectedAssessment.value?.priorityNote
+    ? t(`BREAK.risks.${props.rKey}.riskAssessment.priorityNote`)
+    : "",
+);
+const relatedRiskRelations = computed(() => selectedRisk.value?.relatedRisks ?? []);
+const getRiskRelationNote = (relation: NonNullable<typeof relatedRiskRelations.value>[number]) =>
+  formatRiskRelationNote(relation, props.rKey, locale.value, t);
 
 // 反查：用 useRelatedEntities 统一工厂（与 RisksView 一致），避免手写全表 filter
 const descriptionTools = useRelatedEntities(
@@ -53,8 +74,22 @@ const relatedTerms = useRelatedEntities(
   () => props.rKey,
 );
 
-const relatedRiskRelations = computed(() => risks[props.rKey as keyof typeof risks]?.relatedRisks ?? []);
+// 相关案例（懒加载）：挂载时触发，不靠 observer（抽屉内无 .knowledge-detail 滚动容器）
+const { relatedCases, ensureCases, cases, loaded } = useRelatedCases("risk", () => props.rKey);
+onMounted(() => {
+  ensureCases();
+});
 
+// 风险分级雷达图（与 RisksView 共用 composable）
+const { radarChartRef } = useRiskRadarChart(selectedAssessment, locale, t);
+
+// 嵌套抽屉：avoidance/attackTool/threatActor/term 开嵌套抽屉
+const avoidanceDrawer = ref(false);
+const avoidanceKey = ref("");
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
+const threatActorDrawer = ref(false);
+const threatActorKey = ref("");
 const termDrawer = ref(false);
 const termKey = ref("");
 
@@ -68,7 +103,11 @@ const openRelationGraph = (rKey: string) => {
 
 // 跳知识库详情页（新窗口）的 href
 const detailHref = (rKey: string) => entityDetailHref(router, rKey, "risk") ?? "";
-
+// case 走新窗口（无 case 嵌套抽屉）
+const openCaseInNewWindow = (cKey: string) => {
+  const href = entityDetailHref(router, cKey, "case");
+  if (href) window.open(href, "_blank", "noopener,noreferrer");
+};
 // 新窗口打开知识库详情页
 const openDetail = (rKey: string) => {
   window.open(detailHref(rKey), "_blank", "noopener,noreferrer");
@@ -94,143 +133,146 @@ const openDetail = (rKey: string) => {
         <FeedbackLink :entity-id="rKey" :entity-title="$t(`BREAK.risks.${rKey}.title`)" style="margin-left: auto" />
       </div>
     </template>
-    <div class="desc">
-      <strong>{{ $t("riskKey") }}:&nbsp;</strong>
-      <a :href="detailHref(rKey)" target="_blank" rel="noopener" class="id-link">
-        {{ rKey }}
-        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-      </a>
-      <button
-        :title="$t('relationMap')"
-        :aria-label="$t('relationMap')"
-        class="relation-map-icon"
-        @click="openRelationGraph(rKey)"
-      >
-        <icon-relation width="14px" height="14px" />
-      </button>
-    </div>
-    <div class="desc">
-      <strong>{{ $t("riskTitle") }}:&nbsp;</strong>
-      {{ $t(`BREAK.risks.${rKey}.title`) }}
-    </div>
-    <div class="desc">
-      <strong>{{ $t("riskDefinition") }}:&nbsp;</strong>
-      {{ $t(`BREAK.risks.${rKey}.definition`) }}
-    </div>
-    <div class="desc">
-      <strong>{{ $t("riskDescription") }}:&nbsp;</strong>
-      {{ $t(`BREAK.risks.${rKey}.description`) }}
-    </div>
-    <div class="desc">
-      <strong>{{ $t("riskComplexity") }}:&nbsp;</strong>
-      {{ $t(`riskComplexityLevel.${risks[rKey as keyof typeof risks].complexity}`) }}
-    </div>
-    <div v-if="risks[rKey as keyof typeof risks].riskAssessment" class="desc">
-      <strong>{{ $t("riskPriority") }}:&nbsp;</strong>
-      <span class="knowledge-badge risk-priority-badge" :class="`risk-priority-${risks[rKey as keyof typeof risks].riskAssessment?.priority?.toLowerCase()}`">
-        {{ risks[rKey as keyof typeof risks].riskAssessment?.priority }}
-      </span>
-      <span v-if="risks[rKey as keyof typeof risks].riskAssessment?.observables?.length" class="risk-observables-count">
-        &nbsp;· {{ risks[rKey as keyof typeof risks].riskAssessment?.observables?.length }} {{ $t("riskObservablesCount") }}
-      </span>
-    </div>
-    <div class="desc">
-      <strong>{{ $t("riskInfluence") }}:&nbsp;</strong>
-      {{ $t(`BREAK.risks.${rKey}.influence`) }}
-    </div>
-    <div class="desc">
-      <strong>{{ $t("riskAvoidances") }}:&nbsp;</strong>
-      <div class="entity-links">
-        <button
-          v-for="aKey in risks[rKey as keyof typeof risks].avoidances"
-          :key="aKey"
-          class="entity-link"
-          @click="avoidanceKey = aKey; avoidanceDrawer = true"
-        >
-          {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
-        </button>
+    <article class="detail-panel drawer-detail-panel">
+      <div class="detail-heading">
+        <div>
+          <a :href="detailHref(rKey)" target="_blank" rel="noopener" class="detail-id">
+            {{ rKey }}
+            <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+          </a>
+          <h2>{{ $t(`BREAK.risks.${rKey}.title`) }}</h2>
+        </div>
+        <div class="detail-heading-actions">
+          <button :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(rKey)">
+            <icon-relation width="14px" height="14px" />
+          </button>
+          <el-button type="primary" plain size="small" @click="openDetail(rKey)">
+            {{ $t("viewDetail") }}
+            <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+          </el-button>
+        </div>
       </div>
-    </div>
-    <div class="desc" v-if="relatedRiskRelations.length > 0">
-      <strong>{{ $t("riskRelatedRisks") }}:&nbsp;</strong>
-      <div class="entity-links">
-        <a
-          v-for="relation in relatedRiskRelations"
-          :key="`${relation.key}-${relation.relation}`"
-          class="entity-link"
-          :href="detailHref(relation.key)"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t(`riskRelationType.${relation.relation}`) }} ·
-          {{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}
-          <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-        </a>
-      </div>
-    </div>
-    <div class="desc" v-if="relatedTerms.length > 0">
-      <strong>{{ $t("terms") }}:&nbsp;</strong>
-      <div class="entity-links">
-        <button
-          v-for="tKey in relatedTerms"
-          :key="tKey"
-          class="entity-link"
-          @click="termKey = tKey; termDrawer = true"
-        >
-          {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
-        </button>
-      </div>
-    </div>
-    <div class="desc" v-if="risks[rKey as keyof typeof risks].references?.length > 0">
-      <strong>{{ $t("riskReference") }}:&nbsp;</strong>
-      <ReferenceList type="risks" :entityKey="rKey" />
-    </div>
-    <div class="desc" v-if="descriptionTools.length > 0">
-      <strong>{{ $t("attackTools") }}:&nbsp;</strong>
-      <div class="entity-links">
-        <button
-          v-for="atKey in descriptionTools"
-          :key="atKey"
-          class="entity-link"
-          @click="attackToolKey = atKey; attackToolDrawer = true"
-        >
-          {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
-        </button>
-      </div>
-    </div>
-    <div class="desc" v-if="riskThreatActors.length > 0">
-      <strong>{{ $t("threatActors") }}:&nbsp;</strong>
-      <div class="entity-links">
-        <button
-          v-for="taKey in riskThreatActors"
-          :key="taKey"
-          class="entity-link"
-          @click="threatActorKey = taKey; threatActorDrawer = true"
-        >
-          {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
-        </button>
-      </div>
-    </div>
-    <!-- 关系图 -->
-    <div class="desc">
-      <strong>{{ $t("riskRelations") }}</strong>
-      &nbsp;&nbsp;
-      <el-button
-        size="small"
-        type="primary"
-        plain
-        @click="openRelationGraph(rKey)"
-      >
-        {{ $t("openRelationGraph") }}
-      </el-button>
-    </div>
-    <div class="desc">
-      <el-button type="primary" plain size="small" @click="openDetail(rKey)">
-        {{ $t("viewDetail") }}
-        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-      </el-button>
-    </div>
+
+      <section class="detail-section" data-detail-anchor="risks">
+        <h3>{{ $t("riskDefinition") }}</h3>
+        <p>{{ $t(`BREAK.risks.${rKey}.definition`) }}</p>
+      </section>
+      <section class="detail-section">
+        <h3>{{ $t("riskDescription") }}</h3>
+        <p>{{ $t(`BREAK.risks.${rKey}.description`) }}</p>
+      </section>
+      <section class="detail-grid risk-meta-grid">
+        <div v-if="selectedAssessment" class="risk-meta-card risk-meta-card--compact risk-meta-card--priority">
+          <h3>{{ $t("riskPriority") }}</h3>
+          <span class="knowledge-badge risk-priority-badge" :class="`risk-priority-${selectedAssessment.priority?.toLowerCase()}`">
+            {{ selectedAssessment.priority }}
+          </span>
+          <p v-if="selectedAssessment.priorityOverride" class="priority-override-hint">{{ $t("riskPriorityOverridden") }}</p>
+        </div>
+        <div class="risk-meta-card risk-meta-card--compact">
+          <h3>{{ $t("riskComplexity") }}</h3>
+          <span class="knowledge-badge risk-complexity-badge" :class="`risk-${selectedRisk?.complexity}`">
+            {{ $t(`riskComplexityLevel.${selectedRisk?.complexity}`) }}
+          </span>
+        </div>
+        <div class="risk-meta-card risk-meta-card--impact">
+          <h3>{{ $t("riskInfluence") }}</h3>
+          <p>{{ $t(`BREAK.risks.${rKey}.influence`) }}</p>
+        </div>
+      </section>
+      <section v-if="selectedAssessment" class="detail-section">
+        <h3>{{ $t("riskAssessmentDimensions") }}</h3>
+        <div ref="radarChartRef" class="risk-radar-chart"></div>
+      </section>
+      <section v-if="observables.length" class="detail-section">
+        <h3>{{ $t("riskObservables") }}</h3>
+        <ul class="observables-list">
+          <li v-for="(obs, i) in observables" :key="i">{{ obs }}</li>
+        </ul>
+      </section>
+      <section v-if="priorityNote" class="detail-section">
+        <h3>{{ $t("riskPriorityNote") }}</h3>
+        <p>{{ priorityNote }}</p>
+      </section>
+      <section v-if="keywords.length" class="detail-section">
+        <h3>{{ $t("keywords") }}</h3>
+        <div class="keywords">
+          <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
+        </div>
+      </section>
+      <section v-if="relatedRiskRelations.length" class="detail-section">
+        <h3>{{ $t("riskRelatedRisks") }}</h3>
+        <div class="risk-relation-list">
+          <a
+            v-for="relation in relatedRiskRelations"
+            :key="`${relation.key}-${relation.relation}`"
+            class="risk-relation-item"
+            :href="detailHref(relation.key)"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="risk-relation-type">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
+            <span class="risk-relation-title">
+              {{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}
+            </span>
+            <span v-if="relation.note" class="risk-relation-note">{{ getRiskRelationNote(relation) }}</span>
+          </a>
+        </div>
+      </section>
+
+      <DrawerEntityLinkSection
+        v-if="descriptionTools.length"
+        :keys="descriptionTools"
+        title="attackTools"
+        entity-type="attackTool"
+        :on-navigate="(k) => { attackToolKey = k; attackToolDrawer = true; }"
+      />
+      <DrawerEntityLinkSection
+        v-if="riskThreatActors.length"
+        :keys="riskThreatActors"
+        title="threatActors"
+        entity-type="threatActor"
+        :on-navigate="(k) => { threatActorKey = k; threatActorDrawer = true; }"
+      />
+      <DrawerEntityLinkSection
+        v-if="selectedRisk?.avoidances?.length"
+        :keys="selectedRisk.avoidances"
+        title="riskAvoidances"
+        entity-type="avoidance"
+        :on-navigate="(k) => { avoidanceKey = k; avoidanceDrawer = true; }"
+      />
+      <DrawerEntityLinkSection
+        v-if="relatedTerms.length"
+        :keys="relatedTerms"
+        title="terms"
+        entity-type="term"
+        :on-navigate="(k) => { termKey = k; termDrawer = true; }"
+      />
+
+      <section v-if="!loaded" class="detail-section" data-detail-anchor="cases">
+        <h3>{{ $t("relatedCases") }}</h3>
+        <span class="text-muted">{{ $t("loadingRelatedCases") }}</span>
+      </section>
+      <DrawerEntityLinkSection
+        v-else
+        :keys="relatedCases"
+        title="relatedCases"
+        entity-type="case"
+        :entity-records="cases"
+        :on-navigate="openCaseInNewWindow"
+      />
+
+      <section v-if="selectedRisk?.references?.length > 0" class="detail-section" data-detail-anchor="references">
+        <h3>{{ $t("riskReference") }}</h3>
+        <ReferenceList type="risks" :entityKey="rKey" />
+      </section>
+      <section v-if="selectedRisk?.updated" class="detail-section">
+        <h3>{{ $t("lastUpdated") }}</h3>
+        <p class="text-muted">{{ selectedRisk.updated }}</p>
+      </section>
+    </article>
   </el-drawer>
+
   <!-- 手段详情页 -->
   <AvoidanceDetail
     v-if="avoidanceDrawer"
@@ -265,38 +307,3 @@ const openDetail = (rKey: string) => {
 </template>
 
 <style src="./drawer-detail-shared.css" scoped></style>
-
-<style scoped>
-.risk-priority-badge {
-  display: inline-block;
-  padding: 1px 10px;
-  border-radius: 999px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  border: 1px solid var(--break-border);
-}
-.risk-priority-badge.risk-priority-p0 {
-  background: var(--break-badge-risk-priority-p0-bg);
-  border-color: var(--break-badge-risk-priority-p0-border);
-  color: var(--break-badge-risk-priority-p0-text);
-}
-.risk-priority-badge.risk-priority-p1 {
-  background: var(--break-badge-risk-priority-p1-bg);
-  border-color: var(--break-badge-risk-priority-p1-border);
-  color: var(--break-badge-risk-priority-p1-text);
-}
-.risk-priority-badge.risk-priority-p2 {
-  background: var(--break-badge-risk-priority-p2-bg);
-  border-color: var(--break-badge-risk-priority-p2-border);
-  color: var(--break-badge-risk-priority-p2-text);
-}
-.risk-priority-badge.risk-priority-p3 {
-  background: var(--break-badge-risk-priority-p3-bg);
-  border-color: var(--break-badge-risk-priority-p3-border);
-  color: var(--break-badge-risk-priority-p3-text);
-}
-.risk-observables-count {
-  color: var(--break-text-secondary);
-  font-size: 0.85rem;
-}
-</style>

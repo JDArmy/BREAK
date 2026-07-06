@@ -256,27 +256,6 @@ function escapeHtml(str: string): string {
   flex: 0 0 120px;
 }
 
-.keywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.keyword-tag {
-  display: inline-block;
-  padding: 4px 12px;
-  background: var(--break-bg-secondary);
-  border: 1px solid var(--break-border);
-  border-radius: 4px;
-  font-size: 0.9em;
-  color: var(--break-text-secondary);
-}
-
-.text-muted {
-  color: var(--break-text-muted);
-  font-size: 0.9em;
-}
-
 :deep(.usage-highlight) {
   background: color-mix(in srgb, var(--break-link) 18%, transparent);
   color: var(--break-link);

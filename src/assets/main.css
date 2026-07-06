@@ -219,6 +219,327 @@
   background: var(--break-tooltip-bg) !important;
 }
 
+/* ===== 知识库详情通用：关键词 / 弱化文本 ===== */
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keyword-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--break-text-secondary);
+}
+
+.text-muted {
+  color: var(--break-text-muted);
+  font-size: 0.9em;
+}
+
+/* ===== 风险元信息网格（RisksView）===== */
+.risk-meta-grid {
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(0, 2fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+.risk-meta-grid > .risk-meta-card {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.risk-meta-card h3 {
+  margin-bottom: 6px;
+}
+
+.risk-meta-card p {
+  line-height: 1.65;
+}
+
+.risk-meta-card--compact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.risk-meta-card--impact {
+  border-left: 3px solid var(--break-border);
+}
+
+/* 无优先级卡片时（未回填 assessment），影响卡片跨剩余列占满 */
+.risk-meta-grid:not(:has(.risk-meta-card--priority)) > .risk-meta-card--impact {
+  grid-column: 2 / -1;
+}
+
+/* ===== 风险雷达图（RisksView）===== */
+.risk-radar-chart {
+  width: 100%;
+  max-width: 420px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* ===== 可观测项列表（RisksView）===== */
+.observables-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.observables-list li {
+  margin-bottom: 4px;
+}
+
+/* ===== 关联关系卡片网格（风险/规避手段/攻击工具 三套同构）===== */
+.risk-relation-list,
+.avoidance-relation-list,
+.attack-tool-relation-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.risk-relation-item,
+.avoidance-relation-item,
+.attack-tool-relation-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "type title"
+    "type note";
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: center;
+  min-width: 0;
+  min-height: 62px;
+  padding: 8px 10px;
+  color: inherit;
+  text-decoration: none;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+}
+
+.risk-relation-item:hover,
+.avoidance-relation-item:hover,
+.attack-tool-relation-item:hover {
+  color: var(--break-primary);
+  border-color: var(--break-primary);
+}
+
+.risk-relation-type,
+.avoidance-relation-type,
+.attack-tool-relation-type {
+  grid-area: type;
+  flex: 0 0 auto;
+  min-width: 44px;
+  padding: 1px 6px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--break-primary);
+  border: 1px solid var(--break-primary);
+  border-radius: 4px;
+}
+
+.risk-relation-title,
+.avoidance-relation-title,
+.attack-tool-relation-title {
+  grid-area: title;
+  min-width: 0;
+  overflow: hidden;
+  font-weight: 600;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.risk-relation-note,
+.avoidance-relation-note,
+.attack-tool-relation-note {
+  grid-area: note;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--break-text-muted);
+  font-size: 0.84em;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .risk-relation-list,
+  .avoidance-relation-list,
+  .attack-tool-relation-list {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  .risk-relation-list,
+  .avoidance-relation-list,
+  .attack-tool-relation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1599px) {
+  .risk-relation-list,
+  .avoidance-relation-list,
+  .attack-tool-relation-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ===== 威胁行为者关联关系（变体：grid-template/hover 不同，独立保留）===== */
+.threat-actor-relation-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.threat-actor-relation-item {
+  min-width: 0;
+  min-height: 78px;
+  padding: 10px 12px;
+  display: grid;
+  grid-template:
+    "type title" auto
+    "note note" 1fr / auto minmax(0, 1fr);
+  align-items: start;
+  gap: 6px 8px;
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+  background: var(--break-bg-secondary);
+  color: inherit;
+  text-decoration: none;
+}
+
+.threat-actor-relation-item:hover {
+  border-color: var(--break-primary-color);
+  background: var(--break-bg-hover);
+}
+
+.threat-actor-relation-type {
+  grid-area: type;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--break-primary-color);
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.threat-actor-relation-title {
+  grid-area: title;
+  min-width: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.threat-actor-relation-note {
+  grid-area: note;
+  color: var(--break-text-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+@media (width <= 1280px) {
+  .threat-actor-relation-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 900px) {
+  .threat-actor-relation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 560px) {
+  .threat-actor-relation-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== 风险优先级 / 复杂度 徽章（RisksView + RiskDetail 共用）===== */
+.risk-priority-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1px solid var(--break-border);
+}
+
+.risk-priority-badge.risk-priority-p0 {
+  background: var(--break-badge-risk-priority-p0-bg);
+  border-color: var(--break-badge-risk-priority-p0-border);
+  color: var(--break-badge-risk-priority-p0-text);
+}
+.risk-priority-badge.risk-priority-p1 {
+  background: var(--break-badge-risk-priority-p1-bg);
+  border-color: var(--break-badge-risk-priority-p1-border);
+  color: var(--break-badge-risk-priority-p1-text);
+}
+.risk-priority-badge.risk-priority-p2 {
+  background: var(--break-badge-risk-priority-p2-bg);
+  border-color: var(--break-badge-risk-priority-p2-border);
+  color: var(--break-badge-risk-priority-p2-text);
+}
+.risk-priority-badge.risk-priority-p3 {
+  background: var(--break-badge-risk-priority-p3-bg);
+  border-color: var(--break-badge-risk-priority-p3-border);
+  color: var(--break-badge-risk-priority-p3-text);
+}
+
+.risk-complexity-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1px solid var(--break-border);
+}
+
+.risk-complexity-badge.risk-basic {
+  background: var(--break-badge-risk-basic-bg);
+  border-color: var(--break-badge-risk-basic-border);
+  color: var(--break-badge-risk-basic-text);
+}
+.risk-complexity-badge.risk-intermediate {
+  background: var(--break-badge-risk-intermediate-bg);
+  border-color: var(--break-badge-risk-intermediate-border);
+  color: var(--break-badge-risk-intermediate-text);
+}
+.risk-complexity-badge.risk-advanced {
+  background: var(--break-badge-risk-advanced-bg);
+  border-color: var(--break-badge-risk-advanced-border);
+  color: var(--break-badge-risk-advanced-text);
+}
+
+.priority-override-hint {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--break-text-secondary);
+}
+
 /* ===== 移动端全局响应式 ===== */
 @media (max-width: 767px) {
   .detail-heading {

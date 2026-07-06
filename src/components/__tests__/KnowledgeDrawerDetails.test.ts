@@ -1,5 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it, vi } from "vitest";
+import { ref } from "vue";
 import RiskDetail from "@/components/RiskDetail.vue";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 
@@ -12,10 +13,29 @@ vi.mock("vue-router", () => ({
   }),
 }));
 
+vi.mock("vue-i18n", () => ({
+  useI18n: () => ({
+    t: (key: string) => key,
+    locale: ref("cn"),
+    messages: ref({ cn: {} }),
+  }),
+}));
+
 vi.mock("@/composables/useDrawerWidth", () => ({
   useDrawerWidth: () => ({
     getDrawerWidth: () => "720px",
     getInnerDrawerWidth: () => "640px",
+  }),
+}));
+
+// RiskDetail 经 useRelatedCases 拉起 useCases→@/i18n→createI18n 重链，抽屉单测里隔离掉
+vi.mock("@/composables/useRelatedCases", () => ({
+  useRelatedCases: () => ({
+    relatedCases: ref<string[]>([]),
+    ensureCases: vi.fn(() => Promise.resolve()),
+    cases: ref({}),
+    loaded: ref(true),
+    sectionRef: ref<HTMLElement | undefined>(undefined),
   }),
 }));
 

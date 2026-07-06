@@ -43,3 +43,52 @@ a.entity-link:hover .external-link-icon,
 button:hover .external-link-icon {
   opacity: 1;
 }
+
+/* ── 抽屉 body 容器：基于抽屉实际宽度降级（container query）──
+ * 抽屉宽度固定（主抽屉 600px / 内嵌 450px），视口仍宽不会触发 main.css 的 mobile media query，
+ * 故用 container query 基于抽屉 inline-size 降级网格列数。
+ */
+.drawer-detail-panel {
+  container-type: inline-size;
+}
+
+/* 内嵌窄抽屉（≤500px，如 450px）：网格全部降为单列，表格缩小 */
+@container (max-width: 500px) {
+  .drawer-detail-panel .detail-grid,
+  .drawer-detail-panel .risk-meta-grid,
+  .drawer-detail-panel .risk-relation-list,
+  .drawer-detail-panel .avoidance-relation-list,
+  .drawer-detail-panel .attack-tool-relation-list,
+  .drawer-detail-panel .threat-actor-relation-list {
+    grid-template-columns: 1fr;
+  }
+  .drawer-detail-panel .entity-reference-table {
+    min-width: 420px;
+    font-size: 0.78rem;
+  }
+}
+
+/* 主抽屉（501-650px，如 600px）：relation-list 降 2 列，meta-grid 保持 3 列 */
+@container (min-width: 501px) and (max-width: 650px) {
+  .drawer-detail-panel .risk-relation-list,
+  .drawer-detail-panel .avoidance-relation-list,
+  .drawer-detail-panel .attack-tool-relation-list,
+  .drawer-detail-panel .threat-actor-relation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .drawer-detail-panel .risk-meta-grid {
+    grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(0, 2fr);
+  }
+}
+
+/* 兜底：不支持 container query 的浏览器回退到窄宽单列（保守） */
+@supports not (container-type: inline-size) {
+  .drawer-detail-panel .detail-grid,
+  .drawer-detail-panel .risk-meta-grid,
+  .drawer-detail-panel .risk-relation-list,
+  .drawer-detail-panel .avoidance-relation-list,
+  .drawer-detail-panel .attack-tool-relation-list,
+  .drawer-detail-panel .threat-actor-relation-list {
+    grid-template-columns: 1fr;
+  }
+}

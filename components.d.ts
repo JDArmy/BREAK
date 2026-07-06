@@ -12,6 +12,7 @@ declare module 'vue' {
     AsyncComponentLoading: typeof import('./src/components/AsyncComponentLoading.vue')['default']
     AttackToolDetail: typeof import('./src/components/AttackToolDetail.vue')['default']
     AvoidanceDetail: typeof import('./src/components/AvoidanceDetail.vue')['default']
+    DrawerEntityLinkSection: typeof import('./src/components/DrawerEntityLinkSection.vue')['default']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']

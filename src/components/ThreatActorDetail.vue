@@ -1,18 +1,24 @@
 <script setup lang="ts">
-import BREAK from "@/BREAK";
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
+import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
+import DrawerEntityLinkSection from "@/components/DrawerEntityLinkSection.vue";
 
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
+import { useRelatedCases } from "@/composables/useRelatedCases";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { getEntityEntry } from "@/BREAK/entityRegistry";
+import { getMessageStringArray } from "@/utils/i18nMessage";
+import { formatThreatActorRelationNote } from "@/utils/relationNote";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
+const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "ThreatActorAttackToolDetail");
 const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "ThreatActorTermDetail");
 
 const props = defineProps<{
@@ -22,19 +28,29 @@ const props = defineProps<{
 defineEmits(["drawerClose"]);
 
 const router = useRouter();
+const { locale, messages, t } = useI18n();
 const { getInnerDrawerWidth } = useDrawerWidth();
+
+const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
+
 const selectedThreatActor = computed(() => BREAK.threatActors[props.taKey as keyof typeof BREAK.threatActors]);
 const relatedThreatActors = computed(() => selectedThreatActor.value?.relatedThreatActors ?? []);
+const getThreatActorRelationNote = (relation: NonNullable<typeof relatedThreatActors.value>[number]) =>
+  formatThreatActorRelationNote(relation, locale.value, t);
 
-// 反查：用 useRelatedEntities 统一工厂，避免手写全表 filter
-const relatedTerms = useRelatedEntities(
-  BREAK.terms,
-  "relatedThreatActors",
-  () => props.taKey,
+// 关键词（缓存 computed，避免模板 v-if + v-for 重复调用 getMessageStringArray）
+const keywords = computed(() =>
+  getMessageStringArray(localeMessages.value, `BREAK.threatActors.${props.taKey}.keywords`),
 );
 
-const termDrawer = ref(false);
-const termKey = ref("");
+// 反查：关联该威胁行为者的术语
+const relatedTerms = useRelatedEntities(BREAK.terms, "relatedThreatActors", () => props.taKey);
+
+// 相关案例（懒加载）：挂载时触发，不靠 observer（抽屉内无 .knowledge-detail 滚动容器）
+const { relatedCases, ensureCases, cases, loaded } = useRelatedCases("threatActor", () => props.taKey);
+onMounted(() => {
+  ensureCases();
+});
 
 const openRelationGraph = (taKey: string) => {
   const route = router.resolve({
@@ -45,12 +61,29 @@ const openRelationGraph = (taKey: string) => {
 };
 
 // 跳知识库详情页（新窗口）的 href
-const detailHref = (taKey: string) => entityDetailHref(router, taKey, "threatActor");
+const detailHref = (taKey: string) => entityDetailHref(router, taKey, "threatActor") ?? "";
 
 // 新窗口打开知识库详情页
 const openDetail = (taKey: string) => {
-  window.open(detailHref(taKey)!, "_blank", "noopener,noreferrer");
+  window.open(detailHref(taKey), "_blank", "noopener,noreferrer");
 };
+
+// risk 走新窗口（避免从 ThreatActor 嵌套回 Risk 主抽屉）
+const openRiskInNewWindow = (rKey: string) => {
+  const href = entityDetailHref(router, rKey, "risk");
+  if (href) window.open(href, "_blank", "noopener,noreferrer");
+};
+// case 走新窗口（无 case 嵌套抽屉）
+const openCaseInNewWindow = (cKey: string) => {
+  const href = entityDetailHref(router, cKey, "case");
+  if (href) window.open(href, "_blank", "noopener,noreferrer");
+};
+
+// 嵌套抽屉：attackTool/term 开嵌套抽屉；risk/case 走新窗口
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
+const termDrawer = ref(false);
+const termKey = ref("");
 </script>
 
 <template>
@@ -59,7 +92,6 @@ const openDetail = (taKey: string) => {
     v-if="taKey && BREAK.threatActors[taKey as keyof typeof BREAK.threatActors]"
     :model-value="drawer"
     @closed="$emit('drawerClose')"
-    :title="$t('threatActors')"
     :append-to-body="true"
     :size="getInnerDrawerWidth()"
   >
@@ -73,71 +105,120 @@ const openDetail = (taKey: string) => {
         <FeedbackLink :entity-id="taKey" :entity-title="$t(`BREAK.threatActors.${taKey}.title`)" style="margin-left: auto" />
       </div>
     </template>
-    <div class="desc">
-      <strong>{{ $t("ID") }}:&nbsp;</strong>
-      <a :href="detailHref(taKey)" target="_blank" rel="noopener" class="id-link">
-        {{ taKey }}
-        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-      </a>
-      <button
-        :title="$t('relationMap')"
-        :aria-label="$t('relationMap')"
-        class="relation-map-icon"
-        @click="openRelationGraph(taKey)"
-      >
-        <icon-relation width="14px" height="14px" />
-      </button>
-    </div>
-    <div class="desc">
-      <strong>{{ $t("title") }}:&nbsp;</strong>
-      {{ $t(`BREAK.threatActors.${taKey}.title`) }}
-    </div>
-    <div class="desc">
-      <strong>{{ $t("description") }}:&nbsp;</strong>
-      {{ $t(`BREAK.threatActors.${taKey}.description`) }}
-    </div>
-    <div class="desc" v-if="relatedThreatActors.length > 0">
-      <strong>{{ $t("threatActorRelatedThreatActors") }}:&nbsp;</strong>
-      <div class="entity-links">
-        <a
-          v-for="relation in relatedThreatActors"
-          :key="`${relation.key}-${relation.relation}`"
-          class="entity-link"
-          :href="detailHref(relation.key)"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t(`threatActorRelationType.${relation.relation}`) }} ·
-          {{ relation.key }}: {{ $t(`BREAK.threatActors.${relation.key}.title`) }}
-          <el-icon class="external-link-icon"><TopRight /></el-icon>
-        </a>
+    <article class="detail-panel drawer-detail-panel">
+      <div class="detail-heading">
+        <div>
+          <a :href="detailHref(taKey)" target="_blank" rel="noopener" class="detail-id">
+            {{ taKey }}
+            <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+          </a>
+          <h2>{{ $t(`BREAK.threatActors.${taKey}.title`) }}</h2>
+        </div>
+        <div class="detail-heading-actions">
+          <button :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(taKey)">
+            <icon-relation width="14px" height="14px" />
+          </button>
+          <el-button type="primary" plain size="small" @click="openDetail(taKey)">
+            {{ $t("viewDetail") }}
+            <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+          </el-button>
+        </div>
       </div>
-    </div>
-    <div class="desc" v-if="relatedTerms.length > 0">
-      <strong>{{ $t("terms") }}:&nbsp;</strong>
-      <div class="entity-links">
-        <button
-          v-for="tKey in relatedTerms"
-          :key="tKey"
-          class="entity-link"
-          @click="termKey = tKey; termDrawer = true"
-        >
-          {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
-        </button>
-      </div>
-    </div>
-    <div class="desc" v-if="BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].references?.length > 0">
-      <strong>{{ $t("references") }}:&nbsp;</strong>
-      <ReferenceList type="threatActors" :entityKey="taKey" />
-    </div>
-    <div class="desc">
-      <el-button type="primary" plain size="small" @click="openDetail(taKey)">
-        {{ $t("viewDetail") }}
-        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
-      </el-button>
-    </div>
+
+      <section class="detail-section" data-detail-anchor="threat-actors">
+        <h3>{{ $t("description") }}</h3>
+        <p>{{ $t(`BREAK.threatActors.${taKey}.description`) }}</p>
+      </section>
+      <section v-if="keywords.length" class="detail-section">
+        <h3>{{ $t("keywords") }}</h3>
+        <div class="keywords">
+          <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
+        </div>
+      </section>
+      <DrawerEntityLinkSection
+        v-if="selectedThreatActor?.directCauseRisks?.length"
+        :keys="selectedThreatActor.directCauseRisks"
+        title="relationLine.directCauseRisk"
+        entity-type="risk"
+        :on-navigate="openRiskInNewWindow"
+      />
+      <DrawerEntityLinkSection
+        v-if="selectedThreatActor?.indirectSupportRisks?.length"
+        :keys="selectedThreatActor.indirectSupportRisks"
+        title="relationLine.indirectSupportRisk"
+        entity-type="risk"
+        :on-navigate="openRiskInNewWindow"
+      />
+      <DrawerEntityLinkSection
+        v-if="selectedThreatActor?.buildAttackTools?.length"
+        :keys="selectedThreatActor.buildAttackTools"
+        title="buildAttackTools"
+        entity-type="attackTool"
+        :on-navigate="(k) => { attackToolKey = k; attackToolDrawer = true; }"
+      />
+      <DrawerEntityLinkSection
+        v-if="selectedThreatActor?.useAttackTools?.length"
+        :keys="selectedThreatActor.useAttackTools"
+        title="useAttackTools"
+        entity-type="attackTool"
+        :on-navigate="(k) => { attackToolKey = k; attackToolDrawer = true; }"
+      />
+      <section v-if="relatedThreatActors.length" class="detail-section">
+        <h3>{{ $t("threatActorRelatedThreatActors") }}</h3>
+        <div class="threat-actor-relation-list">
+          <a
+            v-for="relation in relatedThreatActors"
+            :key="`${relation.key}-${relation.relation}`"
+            class="threat-actor-relation-item"
+            :href="detailHref(relation.key)"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="threat-actor-relation-type">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
+            <span class="threat-actor-relation-title">
+              {{ relation.key }}: {{ $t(`BREAK.threatActors.${relation.key}.title`) }}
+            </span>
+            <span v-if="relation.note" class="threat-actor-relation-note">{{ getThreatActorRelationNote(relation) }}</span>
+          </a>
+        </div>
+      </section>
+      <DrawerEntityLinkSection
+        :keys="relatedTerms"
+        title="terms"
+        entity-type="term"
+        :on-navigate="(k) => { termKey = k; termDrawer = true; }"
+      />
+      <section v-if="!loaded" class="detail-section" data-detail-anchor="cases">
+        <h3>{{ $t("relatedCases") }}</h3>
+        <span class="text-muted">{{ $t("loadingRelatedCases") }}</span>
+      </section>
+      <DrawerEntityLinkSection
+        v-else
+        :keys="relatedCases"
+        title="relatedCases"
+        entity-type="case"
+        :entity-records="cases"
+        :on-navigate="openCaseInNewWindow"
+      />
+
+      <section v-if="BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].references?.length > 0" class="detail-section" data-detail-anchor="references">
+        <h3>{{ $t("references") }}</h3>
+        <ReferenceList type="threatActors" :entityKey="taKey" />
+      </section>
+      <section v-if="selectedThreatActor?.updated" class="detail-section">
+        <h3>{{ $t("lastUpdated") }}</h3>
+        <p class="text-muted">{{ selectedThreatActor.updated }}</p>
+      </section>
+    </article>
   </el-drawer>
 
+  <!-- 攻击工具详情页 -->
+  <AttackToolDetail
+    v-if="attackToolDrawer"
+    v-on:drawer-close="attackToolDrawer = false"
+    :drawer="attackToolDrawer"
+    :atKey="attackToolKey"
+  />
   <!-- 术语详情页 -->
   <TermDetail
     v-if="termDrawer"
