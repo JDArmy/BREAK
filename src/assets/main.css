@@ -241,6 +241,27 @@
   font-size: 0.9em;
 }
 
+/* ===== 术语 usageExample 高亮（列表页蓝色 + 抽屉琥珀色两种变体）===== */
+.usage-highlight {
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* 列表页模式：蓝色高亮（链接色） */
+.usage-highlight--link {
+  background: color-mix(in srgb, var(--break-link) 18%, transparent);
+  color: var(--break-link);
+}
+
+/* 抽屉模式：琥珀色高亮（强调背景色） */
+.usage-highlight--amber {
+  background: var(--break-bg-highlight, rgba(255, 213, 79, 0.4));
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
 /* ===== 风险元信息网格（RisksView）===== */
 .risk-meta-grid {
   grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(0, 2fr);

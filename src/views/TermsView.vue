@@ -4,9 +4,7 @@ import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
-import FeedbackLink from "@/components/FeedbackLink.vue";
-import ReferenceList from "@/components/ReferenceList.vue";
-import EntityLinkSection from "@/components/EntityLinkSection.vue";
+import TermDetailBody from "@/components/TermDetailBody.vue";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
 
 const route = useRoute();
@@ -96,37 +94,6 @@ const termItems = computed(() =>
     };
   })
 );
-
-const selectedTerm = computed(() => BREAK.terms[selectedTermKey.value]);
-const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.value, "aliases"));
-
-/**
- * 对 usageExample 文本中出现的术语名（title + aliases）进行高亮标记
- */
-const highlightedUsageExample = computed(() => {
-  const text = getTermString(selectedTermKey.value, "usageExample");
-  if (!text) return "";
-
-  const title = getTermString(selectedTermKey.value, "title");
-  const aliases = getTermStringArray(selectedTermKey.value, "aliases");
-  const keywords = [title, ...aliases].filter(Boolean);
-  if (!keywords.length) return escapeHtml(text);
-
-  // 按长度降序排列，优先匹配更长的词
-  keywords.sort((a, b) => b.length - a.length);
-  const escaped = keywords.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
-  const regex = new RegExp(`(${escaped.join("|")})`, "g");
-
-  return escapeHtml(text).replace(regex, '<mark class="usage-highlight">$1</mark>');
-});
-
-function escapeHtml(str: string): string {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
 </script>
 
 <template>
@@ -157,101 +124,12 @@ function escapeHtml(str: string): string {
         />
       </el-select>
     </template>
-    <article v-if="selectedTerm" class="detail-panel">
-      <div class="detail-heading">
-        <div>
-          <div class="detail-id">{{ selectedTermKey }}</div>
-          <h2>{{ $t(`BREAK.terms.${selectedTermKey}.title`) }}</h2>
-        </div>
-        <FeedbackLink :entity-id="selectedTermKey" :entity-title="$t(`BREAK.terms.${selectedTermKey}.title`)" />
-      </div>
-
-      <section class="detail-section" data-detail-anchor="terms">
-        <h3>{{ $t("definition") }}</h3>
-        <p>{{ $t(`BREAK.terms.${selectedTermKey}.definition`) }}</p>
-      </section>
-      <section class="detail-section">
-        <h3>{{ $t("description") }}</h3>
-        <p>{{ $t(`BREAK.terms.${selectedTermKey}.description`) }}</p>
-      </section>
-      <section v-if="selectedTerm.category" class="detail-section">
-        <h3>{{ $t("termCategory") }}</h3>
-        <p>{{ $t(`BREAK.terms.${selectedTermKey}.category`) }}</p>
-      </section>
-      <section v-if="selectedTermAliases.length" class="detail-section">
-        <h3>{{ $t("aliases") }}</h3>
-        <div class="keywords">
-          <span v-for="alias in selectedTermAliases" :key="alias" class="keyword-tag">
-            {{ alias }}
-          </span>
-        </div>
-      </section>
-      <section v-if="getTermStringArray(selectedTermKey, 'keywords').length" class="detail-section">
-        <h3>{{ $t("keywords") }}</h3>
-        <div class="keywords">
-          <span v-for="keyword in getTermStringArray(selectedTermKey, 'keywords')" :key="keyword" class="keyword-tag">
-            {{ keyword }}
-          </span>
-        </div>
-      </section>
-      <section v-if="selectedTerm.usageExample" class="detail-section">
-        <h3>{{ $t("usageExample") }}</h3>
-        <p v-html="highlightedUsageExample" />
-      </section>
-      <EntityLinkSection
-        :keys="selectedTerm.relatedThreatActors"
-        title="threatActors"
-        entity-type="threatActor"
-        anchor="threat-actors"
-      />
-      <EntityLinkSection
-        :keys="selectedTerm.relatedAttackTools"
-        title="attackTools"
-        entity-type="attackTool"
-        anchor="attack-tools"
-      />
-      <EntityLinkSection
-        :keys="selectedTerm.relatedRisks"
-        title="risks"
-        entity-type="risk"
-        anchor="risks"
-      />
-      <EntityLinkSection
-        :keys="selectedTerm.relatedAvoidances"
-        title="riskAvoidances"
-        entity-type="avoidance"
-        anchor="avoidances"
-      />
-      <EntityLinkSection
-        :keys="selectedTerm.relatedBusinessScenes"
-        title="businessScenes"
-        route-name="businessScene"
-        param-key="bsKey"
-        anchor="business-scenes"
-        i18n-entity-type="businessScenes"
-      />
-      <section v-if="selectedTerm.references?.length" class="detail-section" data-detail-anchor="references">
-        <h3>{{ $t("references") }}</h3>
-        <ReferenceList type="terms" :entity-key="selectedTermKey" />
-      </section>
-      <section v-if="selectedTerm.updated" class="detail-section">
-        <h3>{{ $t("lastUpdated") }}</h3>
-        <p class="text-muted">{{ selectedTerm.updated }}</p>
-      </section>
-    </article>
+    <TermDetailBody v-if="selectedTerm" :t-key="selectedTermKey" mode="list" />
   </KnowledgeSplitView>
 </template>
 
 <style scoped>
 .term-category-filter {
   flex: 0 0 120px;
-}
-
-:deep(.usage-highlight) {
-  background: color-mix(in srgb, var(--break-link) 18%, transparent);
-  color: var(--break-link);
-  padding: 1px 3px;
-  border-radius: 3px;
-  font-weight: 600;
 }
 </style>

@@ -65,16 +65,6 @@ const entry = computed(() => {
 
 const summaryField = computed(() => entry.value?.fieldPriority[0] ?? "description");
 
-// router-link 模式：从 registry 推导路由（entityType 场景），或用 routeName/paramKey（businessScene 场景）
-const useDetailRoute = computed(() => {
-  if (props.entityType) {
-    const e = getEntityEntry(props.entityType);
-    return !!e && e.detailRouteName !== e.listRouteName;
-  }
-  // businessScene：routeName === detailRouteName → hash 模式
-  return false;
-});
-
 const to = (k: string) => {
   if (props.entityType) {
     const e = getEntityEntry(props.entityType);
