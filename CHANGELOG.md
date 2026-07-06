@@ -1,5 +1,12 @@
 # Change log
 
+## 2.42.26
+
+关系图按钮改用 el-button type=default
+
+- 4 个抽屉(RiskDetail/AvoidanceDetail/AttackToolDetail/ThreatActorDetail)detail-heading 的关系图按钮由原生 `<button>` 改为 `<el-button type="default" size="small">`,与旁边查看详情按钮风格统一
+- 保留 relation-map-icon class 用于 margin 定位
+
 ## 2.42.25
 
 抽屉同类关联跳转改嵌套抽屉

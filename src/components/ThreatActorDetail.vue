@@ -120,9 +120,9 @@ const nestedThreatActorKey = ref("");
           <h2>{{ $t(`BREAK.threatActors.${taKey}.title`) }}</h2>
         </div>
         <div class="detail-heading-actions">
-          <button :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(taKey)">
-            <icon-relation width="14px" height="14px" />
-          </button>
+          <el-button type="default" size="small" :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(taKey)">
+            <el-icon><icon-relation width="14px" height="14px" /></el-icon>
+          </el-button>
           <el-button type="primary" plain size="small" @click="openDetail(taKey)">
             {{ $t("viewDetail") }}
             <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
