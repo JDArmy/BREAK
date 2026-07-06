@@ -180,25 +180,19 @@ watch(selectedCategory, () => {
       <EntityLinkSection
         :keys="selectedCase.relatedRisks"
         title="risks"
-        route-name="knowledgesRiskList"
-        detail-route-name="knowledgesRiskDetail"
-        param-key="rKey"
+        entity-type="risk"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedCase.relatedAttackTools"
         title="attackTools"
-        route-name="knowledgesAttackToolList"
-        detail-route-name="knowledgesAttackToolDetail"
-        param-key="atKey"
+        entity-type="attackTool"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="selectedCase.relatedThreatActors"
         title="threatActors"
-        route-name="knowledgesThreatActorList"
-        detail-route-name="knowledgesThreatActorDetail"
-        param-key="taKey"
+        entity-type="threatActor"
         anchor="threat-actors"
       />
       <section v-if="selectedCase.references?.length" class="detail-section" data-detail-anchor="references">

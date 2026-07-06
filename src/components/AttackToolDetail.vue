@@ -5,7 +5,7 @@ import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
-import DrawerEntityLinkSection from "@/components/DrawerEntityLinkSection.vue";
+import EntityLinkSection from "@/components/EntityLinkSection.vue";
 
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
@@ -148,21 +148,21 @@ const nestedAttackToolKey = ref("");
           <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
         </div>
       </section>
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         v-if="selectedAttackTool?.directCauseRisks?.length"
         :keys="selectedAttackTool.directCauseRisks"
         title="relationLine.directCauseRisk"
         entity-type="risk"
         :on-navigate="openRiskInNewWindow"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         v-if="selectedAttackTool?.indirectSupportRisks?.length"
         :keys="selectedAttackTool.indirectSupportRisks"
         title="relationLine.indirectSupportRisk"
         entity-type="risk"
         :on-navigate="openRiskInNewWindow"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         v-if="selectedAttackTool?.avoidances?.length"
         :keys="selectedAttackTool.avoidances"
         title="avoidance"
@@ -187,19 +187,19 @@ const nestedAttackToolKey = ref("");
           </a>
         </div>
       </section>
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         :keys="builderThreatActorKeys"
         title="buildAttackTools"
         entity-type="threatActor"
         :on-navigate="(k) => { threatActorKey = k; threatActorDrawer = true; }"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         :keys="userThreatActorKeys"
         title="useAttackTools"
         entity-type="threatActor"
         :on-navigate="(k) => { threatActorKey = k; threatActorDrawer = true; }"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         :keys="relatedTerms"
         title="terms"
         entity-type="term"
@@ -209,7 +209,7 @@ const nestedAttackToolKey = ref("");
         <h3>{{ $t("relatedCases") }}</h3>
         <span class="text-muted">{{ $t("loadingRelatedCases") }}</span>
       </section>
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         v-else
         :keys="relatedCases"
         title="relatedCases"

@@ -5,7 +5,7 @@ import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
-import DrawerEntityLinkSection from "@/components/DrawerEntityLinkSection.vue";
+import EntityLinkSection from "@/components/EntityLinkSection.vue";
 
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
@@ -168,19 +168,19 @@ const nestedAvoidanceKey = ref("");
         </div>
       </section>
 
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         :keys="relatedRiskKeys"
         title="risks"
         entity-type="risk"
         :on-navigate="openRiskInNewWindow"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         :keys="relatedAttackToolKeys"
         title="attackTools"
         entity-type="attackTool"
         :on-navigate="(k) => { attackToolKey = k; attackToolDrawer = true; }"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         :keys="relatedTerms"
         title="terms"
         entity-type="term"

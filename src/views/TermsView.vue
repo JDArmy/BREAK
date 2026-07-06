@@ -201,40 +201,31 @@ function escapeHtml(str: string): string {
       <EntityLinkSection
         :keys="selectedTerm.relatedThreatActors"
         title="threatActors"
-        route-name="knowledgesThreatActorList"
-        detail-route-name="knowledgesThreatActorDetail"
-        param-key="taKey"
+        entity-type="threatActor"
         anchor="threat-actors"
       />
       <EntityLinkSection
         :keys="selectedTerm.relatedAttackTools"
         title="attackTools"
-        route-name="knowledgesAttackToolList"
-        detail-route-name="knowledgesAttackToolDetail"
-        param-key="atKey"
+        entity-type="attackTool"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="selectedTerm.relatedRisks"
         title="risks"
-        route-name="knowledgesRiskList"
-        detail-route-name="knowledgesRiskDetail"
-        param-key="rKey"
+        entity-type="risk"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedTerm.relatedAvoidances"
         title="riskAvoidances"
-        route-name="knowledgesAvoidanceList"
-        detail-route-name="knowledgesAvoidanceDetail"
-        param-key="aKey"
+        entity-type="avoidance"
         anchor="avoidances"
       />
       <EntityLinkSection
         :keys="selectedTerm.relatedBusinessScenes"
         title="businessScenes"
         route-name="businessScene"
-        detail-route-name="businessScene"
         param-key="bsKey"
         anchor="business-scenes"
         i18n-entity-type="businessScenes"

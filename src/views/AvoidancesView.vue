@@ -194,25 +194,19 @@ const { openRelationGraph } = useRelationGraph("avoidance");
       <EntityLinkSection
         :keys="relatedRiskKeys"
         title="risks"
-        route-name="knowledgesRiskList"
-        detail-route-name="knowledgesRiskDetail"
-        param-key="rKey"
+        entity-type="risk"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="relatedAttackToolKeys"
         title="attackTools"
-        route-name="knowledgesAttackToolList"
-        detail-route-name="knowledgesAttackToolDetail"
-        param-key="atKey"
+        entity-type="attackTool"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="relatedTermKeys"
         title="terms"
-        route-name="knowledgesTermList"
-        detail-route-name="knowledgesTermDetail"
-        param-key="tKey"
+        entity-type="term"
         anchor="terms"
       />
       <section v-if="selectedAvoidance.references?.length" class="detail-section" data-detail-anchor="references">

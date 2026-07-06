@@ -127,33 +127,25 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
       <EntityLinkSection
         :keys="selectedThreatActor.directCauseRisks"
         title="relationLine.directCauseRisk"
-        route-name="knowledgesRiskList"
-        detail-route-name="knowledgesRiskDetail"
-        param-key="rKey"
+        entity-type="risk"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedThreatActor.indirectSupportRisks"
         title="relationLine.indirectSupportRisk"
-        route-name="knowledgesRiskList"
-        detail-route-name="knowledgesRiskDetail"
-        param-key="rKey"
+        entity-type="risk"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedThreatActor.buildAttackTools"
         title="buildAttackTools"
-        route-name="knowledgesAttackToolList"
-        detail-route-name="knowledgesAttackToolDetail"
-        param-key="atKey"
+        entity-type="attackTool"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="selectedThreatActor.useAttackTools"
         title="useAttackTools"
-        route-name="knowledgesAttackToolList"
-        detail-route-name="knowledgesAttackToolDetail"
-        param-key="atKey"
+        entity-type="attackTool"
         anchor="attack-tools"
       />
       <section v-if="relatedThreatActorRelations.length" class="detail-section">
@@ -176,9 +168,7 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
       <EntityLinkSection
         :keys="relatedTermKeys"
         title="terms"
-        route-name="knowledgesTermList"
-        detail-route-name="knowledgesTermDetail"
-        param-key="tKey"
+        entity-type="term"
         anchor="terms"
       />
       <section
@@ -198,9 +188,7 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
         v-else
         :keys="relatedCases"
         title="relatedCases"
-        route-name="knowledgesCaseList"
-        detail-route-name="knowledgesCaseDetail"
-        param-key="cKey"
+        entity-type="case"
         anchor="cases"
         :entity-records="cases"
       />

@@ -5,7 +5,7 @@ import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
-import DrawerEntityLinkSection from "@/components/DrawerEntityLinkSection.vue";
+import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
@@ -150,28 +150,28 @@ const openRiskInNewWindow = (rKey: string) => {
         <p v-html="highlightedUsageExample" />
       </section>
 
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         v-if="selectedTerm?.relatedThreatActors?.length"
         :keys="selectedTerm.relatedThreatActors"
         title="threatActors"
         entity-type="threatActor"
         :on-navigate="(k) => { threatActorKey = k; threatActorDrawer = true; }"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         v-if="selectedTerm?.relatedAttackTools?.length"
         :keys="selectedTerm.relatedAttackTools"
         title="attackTools"
         entity-type="attackTool"
         :on-navigate="(k) => { attackToolKey = k; attackToolDrawer = true; }"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         v-if="selectedTerm?.relatedRisks?.length"
         :keys="selectedTerm.relatedRisks"
         title="risks"
         entity-type="risk"
         :on-navigate="openRiskInNewWindow"
       />
-      <DrawerEntityLinkSection
+      <EntityLinkSection
         v-if="selectedTerm?.relatedAvoidances?.length"
         :keys="selectedTerm.relatedAvoidances"
         title="avoidances"
