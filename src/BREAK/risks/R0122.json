@@ -46,32 +46,32 @@
       {
         "key": "R0006",
         "relation": "co-occurrence",
-        "note": "NFT欺诈风险与虚假宣传在定义或描述中互相指向。"
+        "note": "NFT欺诈风险与虚假宣传共享规避手段“风控策略”。"
       },
       {
         "key": "R0017",
         "relation": "co-occurrence",
-        "note": "NFT欺诈风险与虚假交易在定义或描述中互相指向。"
+        "note": "NFT欺诈风险与虚假交易共享规避手段“威胁情报”。"
       },
       {
         "key": "R0084",
         "relation": "co-occurrence",
-        "note": "NFT欺诈风险与钓鱼攻击在定义或描述中互相指向。"
+        "note": "NFT欺诈风险与钓鱼攻击共享规避手段“威胁情报”。"
       },
       {
         "key": "R0150",
         "relation": "co-occurrence",
-        "note": "NFT欺诈风险与杀猪盘/投资诈骗风险均可由威胁行为者“加密货币诈骗团伙”直接造成。"
+        "note": "NFT欺诈风险与杀猪盘/投资诈骗风险共享规避手段“身份实名认证”。"
       },
       {
         "key": "R0168",
         "relation": "co-occurrence",
-        "note": "NFT欺诈风险与Rug Pull（项目方跑路）均可由威胁行为者“加密货币诈骗团伙”直接造成。"
+        "note": "NFT欺诈风险与Rug Pull（项目方跑路）均可被威胁行为者“加密货币诈骗团伙”实施。"
       },
       {
         "key": "R0044",
         "relation": "co-occurrence",
-        "note": "NFT欺诈风险与转账欺诈均可由威胁行为者“加密货币诈骗团伙”直接造成。"
+        "note": "NFT欺诈风险与转账欺诈共享规避手段“威胁情报”。"
       }
     ]
   }

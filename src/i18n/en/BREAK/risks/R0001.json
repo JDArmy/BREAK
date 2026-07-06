@@ -30,8 +30,8 @@
   },
   "R0001-001": {
     "title": "Protocol-Level Automation",
-    "definition": "Refers to programs that automatically send network protocol requests.",
-    "description": "By reverse-engineering the business workflow and data transmission protocol, automated scripts are written to send requests.",
+    "definition": "Refers to programs that bypass the front-end interface and directly send network protocol requests to execute business workflows.",
+    "description": "Attackers reverse-engineer the business workflow and data transmission protocol, then write automated scripts that send requests directly to backend APIs, completing registration, login, coupon-claim, ordering, and other flows without front-end interaction. This approach is highly efficient and scales to large concurrent volumes, and is commonly used for promo abuse, flash-sale grabbing, and metric inflation. Because requests lack browser event chains and human-interaction traces, they are hard to block with conventional front-end checks.",
     "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
     "references": [
       {
@@ -60,7 +60,7 @@
   "R0001-002": {
     "title": "Automated Simulator",
     "definition": "Refers to simulator programs that mimic normal user behavior to automatically send network protocol requests.",
-    "description": "By manipulating the business access terminal (e.g., browser, mobile app), pre-recorded workflow actions are replayed repeatedly.",
+    "description": "By manipulating the business access terminal (e.g., browser, mobile app), pre-recorded workflow actions are replayed repeatedly. Using simulators, device-control systems, or UI automation tools, attackers mimic genuine clicks, swipes, and inputs to bypass protocol-level detection, suiting scenarios with human-verification challenges. The approach preserves front-end event chains but exhibits mechanical timing and regular trajectories, and is commonly used for bulk account farming, promotional activity cheating, and flash-sale grabbing.",
     "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
     "references": [
       {
@@ -89,7 +89,7 @@
   "R0001-003": {
     "title": "Automated Login Risk",
     "definition": "The identity authentication login process can be automated, creating security risks.",
-    "description": "Automated login risk refers to the use of automated scripts, bots, or software to execute the login process, potentially involving a range of security threats and issues.",
+    "description": "Automated login risk refers to the use of automated scripts, bots, or software to execute the login process. Attackers use automation to fire login requests in bulk, often combined with credential stuffing, password brute-forcing, and CAPTCHA recognition to break authentication, which then provides an identity foundation for downstream abuse such as account farming, promo abuse, and account aggregation. It also amplifies the threat surface of credential cracking and credential stuffing, and is a typical manifestation of process automation in the login stage.",
     "influence": "Can lead to credential cracking (R0032), credential stuffing (R0032-001), and other cyberattacks; can also be used for automated account seasoning (R0034) and third-party account aggregation (R0037), making it a priority defense target.",
     "references": [
       {

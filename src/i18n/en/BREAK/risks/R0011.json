@@ -30,9 +30,9 @@
   },
   "R0011-001": {
     "title": "Game Account Reselling",
-    "definition": "Reselling stolen accounts or game accounts containing special resources.",
-    "description": "Reselling stolen game accounts or game accounts containing special resources to convert virtual assets into cash.",
-    "influence": "Affects the normal operations and profitability of game operators.",
+    "definition": "Reselling stolen accounts or game accounts containing special resources or gear for profit.",
+    "description": "Black-market actors obtain game accounts through account theft, credential stuffing, or stolen login credentials, and resell them together with the in-account virtual assets, gear, and level resources for cash. Buyers are often players seeking high levels or rare gear; after turnover, accounts are commonly used to liquidate virtual assets in bulk or for grey-market activities such as power-leveling and cheats, causing asset losses for original players and disrupting the in-game economy.",
+    "influence": "Disrupts the game economy and account security; operators face player churn, complaints, and compliance pressure, while legitimate players suffer virtual-asset losses.",
     "references": [
       {
         "title": "Shanghai's First Batch Game Account Registration Case: Is Mass Account Creation Illegal?",
@@ -59,7 +59,7 @@
   "R0011-002": {
     "title": "Account Privilege Reselling",
     "definition": "Paid privilege reselling refers to individuals or organizations obtaining paid services, privileges, or entitlements through illegal means and then reselling them to others.",
-    "description": "This may include obtaining paid software, membership accounts, subscription services, or special permissions through malicious means, then selling them to others at a lower price or through illegally obtained channels.",
+    "description": "This may include obtaining paid software, membership accounts, subscription services, or special permissions through malicious means, then selling them to others at a lower price or through illegally obtained channels. Resale channels typically include the dark web, carding platforms, or social groups; buyers use them to bypass official subscription fees, while the platform and original rights holders bear subscription churn, account-sharing, and compliance risks, and may face credential leakage and secondary resale issues.",
     "influence": "Causes economic losses to legitimate users and service providers.",
     "references": [
       {

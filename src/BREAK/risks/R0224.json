@@ -46,7 +46,7 @@
       {
         "key": "R0247",
         "relation": "co-occurrence",
-        "note": "API批量调用资源耗尽与会话令牌重放均可由攻击工具“API枚举与越权测试工具”直接造成。"
+        "note": "API批量调用资源耗尽与会话令牌重放均可被威胁行为者“API滥用者”实施。"
       },
       {
         "key": "R0222",
@@ -61,7 +61,7 @@
       {
         "key": "R0225",
         "relation": "co-occurrence",
-        "note": "API批量调用资源耗尽与Webhook伪造与事件重放均可由威胁行为者“API滥用者”直接造成。"
+        "note": "API批量调用资源耗尽与Webhook伪造与事件重放共享规避手段“频率限制”。"
       },
       {
         "key": "R0230",

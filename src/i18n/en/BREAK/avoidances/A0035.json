@@ -22,7 +22,7 @@
   },
   "A0035-001": {
     "title": "Sensitive Data Removal",
-    "definition": "Removing sensitive information from data.",
+    "definition": "Directly removing sensitive information from data, rather than replacing it with special symbols.",
     "description": "Unlike data desensitization (A0035), sensitive data removal refers to removing sensitive information from data rather than replacing it with special symbols. The basic principle is to use removal algorithms to obscure or transform sensitive data, reducing its sensitivity level before releasing it externally or making it available for access. Methods include static data removal and dynamic data removal.",
     "limitation": "Sensitive data removal depends on the execution of data classification and grading, as well as the ability to identify sensitive data. If data classification is inaccurate or the ability to identify sensitive data is insufficient, the effectiveness of sensitive data removal will be poor. Additionally, static sensitive data removal may affect data completeness, availability, and accuracy.",
     "references": [

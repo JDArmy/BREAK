@@ -22,7 +22,7 @@
   },
   "A0029-001": {
     "title": "User Profiling",
-    "definition": "Labeling users and describing them through various tags.",
+    "definition": "Labeling users and describing their characteristics and behavior through various tags.",
     "description": "User profiling refers to labeled user models abstracted from user attributes, preferences, lifestyle habits, and behavior. In plain terms, it means assigning tags to users — tags are highly refined characteristic identifiers derived from analyzing user information. Through labeling, users can be described using highly summarized, easy-to-understand characteristics, making it easier for people to understand users and for computers to process them.",
     "limitation": "Data quality issues: user profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: user profiling requires collecting large amounts of user data; if not handled properly, it will involve user privacy concerns. Timeliness issues: user profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
     "references": [
@@ -64,7 +64,7 @@
   },
   "A0029-003": {
     "title": "Device Profiling",
-    "definition": "Labeling devices and describing them through various tags.",
+    "definition": "Labeling devices and describing their characteristics and operating environment through various tags.",
     "description": "Device profiling labels devices by abstracting device attributes, device fingerprints, operating environments, and behavioral characteristics into a tag-based device model. It performs risk assessment and anomaly deviation identification through rule matching, cluster classification, and statistical baseline comparison, serving as an extension of device fingerprinting (A0021).",
     "limitation": "Device profiling is an extension of device fingerprinting (A0021). If the device fingerprint is inaccurate, the device profile will also be affected. Additionally, the accuracy of device profiling is influenced by the device profiling algorithm.",
     "references": [

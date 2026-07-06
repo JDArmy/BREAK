@@ -42,7 +42,7 @@
   "A0019-003": {
     "title": "Friend-Assisted Authentication",
     "definition": "A mechanism that uses the user's friends to assist in authenticating the user's identity.",
-    "description": "During user registration or verification, the user must select their friends. The system sends verification messages to these friends, and the user can only complete registration after passing verification through these friends.",
+    "description": "During user registration or verification, the user must select their friends. The system sends verification messages to these friends, and the user can only complete registration after passing auxiliary verification through these friends. This mechanism leverages social relationship endorsement to raise the cost of bulk registration for illicit actors, and is commonly used in the registration flow of products under strict risk control.",
     "limitation": "If the user has no friends or the friends are unwilling to assist with verification, the user cannot complete registration, causing significant collateral damage to new users and those with weak social connections. Additionally, illicit actors can accumulate auxiliary accounts through account farming or mutual friend-adding, fabricating social relationships to bypass friend-assisted verification, rendering this mechanism ineffective.",
     "references": [
       {

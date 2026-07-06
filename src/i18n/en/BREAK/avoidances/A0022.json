@@ -41,7 +41,7 @@
   },
   "A0022-002": {
     "title": "Request Data Encryption",
-    "definition": "Encrypting request data sent to the server.",
+    "definition": "Encrypting request data sent to the server to prevent interception or tampering during transmission.",
     "description": "Request data encryption refers to encrypting the request body on top of an existing protocol (such as HTTPS) before sending it to the server, to ensure data is not stolen or tampered with during transmission. Request data encryption can be applied in any business scenario, but requires decryption logic to be added on the server side.",
     "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted.",
     "references": [
@@ -61,7 +61,7 @@
   },
   "A0022-003": {
     "title": "Response Data Encryption",
-    "definition": "Encrypting response data from the server.",
+    "definition": "Encrypting response data from the server to prevent interception or tampering during transmission.",
     "description": "Response data encryption refers to encrypting the response body on the server side to ensure data is not stolen or tampered with during transmission. Response data encryption can be applied in any business scenario, but requires decryption logic to be added on the client side.",
     "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted.",
     "references": [

@@ -21,7 +21,7 @@
   },
   "A0010-001": {
     "title": "Emulator Detection",
-    "definition": "Identifying whether an APP is running on a mobile phone emulator.",
+    "definition": "Identifying whether an APP is running on a mobile phone emulator and collecting features for determination.",
     "description": "Emulators are often used for fraudulent order manipulation. Accurately identifying emulators has become an important module in app development, and there are now specialized companies providing SDKs for developers to detect emulators. Currently popular Android emulators fall into roughly two categories: those based on QEMU and those based on Genymotion (VirtualBox-type). Common detection methods include: checking whether the IMEI is all zeros (0000000000 format); checking for emulator-specific values in the Build properties; matching QEMU-specific feature files and properties; obtaining CPU information and filtering out x86 (real devices are generally ARM-based), etc.",
     "limitation": "There are two countermeasure points for mobile emulator detection: one is to pre-forge the information collected by the APP; the other is to forge the information after the APP has collected and uploaded it.",
     "references": [
@@ -41,7 +41,7 @@
   },
   "A0010-002": {
     "title": "Cloud Phone Detection",
-    "definition": "Identifying whether an APP is running on a cloud phone.",
+    "definition": "Identifying whether an APP is running on a cloud phone and collecting features for determination.",
     "description": "Cloud phone detection can be performed using the same methods as mobile emulator detection (A0010-001). Additionally, device fingerprinting, abnormal environment monitoring, and outbound IP can also be used for cloud phone detection. Since cloud phones typically cannot modify the ROM and most cannot even obtain root access, the countermeasure effectiveness is generally better than mobile emulator detection (A0010-001).",
     "limitation": "As cloud phones and cloud gaming continue to develop and become more widespread, APP vendors will not be able to adopt a blanket 'cloud equals blacklisted' policy, otherwise they will face a large number of user complaints. This leaves room for the black-gray industry to exploit cloud phones in the future.",
     "references": [
@@ -81,7 +81,7 @@
   "A0010-004": {
     "title": "Cheat/Plugin Detection",
     "definition": "Identifying whether a program has had runtime instructions injected or cheat programs attached.",
-    "description": "Detection is performed by checking program runtime integrity, keyword or DLL list detection, process lists, window title keywords, etc. to determine whether cheat programs are present.",
+    "description": "Detection is performed by collecting runtime integrity, keyword, and DLL list data, then applying rule matching and baseline monitoring to features such as process lists and window title keywords to identify whether cheat programs have been injected.",
     "limitation": "Similar to the limitations of mobile ROOT/jailbreak detection (A0010-003), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass cheat detection. However, since cheats are typically used in games, and game data packets are much less readable than HTTP-based APP traffic, hiding cheat detection logic and data reporting within normal game operation and communication will increase the difficulty of anti-cheat countermeasures.",
     "references": [
       {
@@ -101,7 +101,7 @@
   },
   "A0010-005": {
     "title": "Multi-Instance Detection",
-    "definition": "Identifying whether an APP is running in multiple instances on a terminal.",
+    "definition": "Identifying whether an APP is running in multiple instances on a terminal and collecting features for determination.",
     "description": "Identifies whether an application is running in multiple instances on a terminal by collecting and monitoring runtime characteristics such as terminal processes, mutex objects, semaphores, window titles, and shared memory. It applies rule matching and baseline comparison to detect if the app has been cloned or multi-opened. Pre-event detection prevents multi-instance launching, while in-event and post-event detections serve as evidence for account bans. Methods include multi-instance detection via process enumeration, mutex objects, semaphores, window detection, and shared memory detection.",
     "limitation": "Similar to the limitations of cheat detection (A0010-004), the detection strategy can be bypassed by analyzing and reversing the detection process, then blocking or providing hooked false values.",
     "references": [
@@ -121,7 +121,7 @@
   },
   "A0010-006": {
     "title": "Debugger Detection",
-    "definition": "Identifying whether a program is being debugged.",
+    "definition": "Identifying whether a program is attached by a dynamic debugger and collecting features for determination.",
     "description": "The most basic debugger detection technique is to check the BeingDebugged flag in the Process Environment Block (PEB). Another PEB member called NtGlobalFlag (offset 0x68) is also used by packers to detect whether the program was loaded with a debugger. Kernel32!CheckRemoteDebuggerPresent() is another API that can be used to determine whether a debugger is attached to a process. When stepping over INT3 and INT1 instructions in a debugger, since the debugger typically handles these debug interrupts, the exception handler will not be called by default. Debugger Interrupts exploits this fact — a packer can set a flag in the exception handler, and if the flag is not set after the INT instruction, it means the process is being debugged. See references for more methods.",
     "limitation": "Similar to the limitations of cheat detection (A0010-004), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass debugger detection.",
     "references": [
@@ -141,7 +141,7 @@
   },
   "A0010-007": {
     "title": "Virtual Machine Detection",
-    "definition": "Identifying whether an APP is running inside a virtual machine.",
+    "definition": "Identifying whether an APP is running inside a virtual machine and collecting features for determination.",
     "description": "Virtual machine environment detection refers to software's ability to determine whether it is currently running in a virtual machine and to take corresponding action based on the result. From a malware perspective, it can change its behavior inside a virtual machine to increase analysis difficulty. From a software security perspective, it is used to prevent reverse engineering and abnormal use in certain scenarios.",
     "limitation": "Similar to the limitations of emulator detection (A0010-001), virtual machine detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the virtual machine's environment properties and files to evade detection.",
     "references": [
@@ -161,7 +161,7 @@
   },
   "A0010-008": {
     "title": "Headless Browser Detection",
-    "definition": "Identifying whether an APP is running inside a headless browser.",
+    "definition": "Identifying whether an APP is running inside a headless browser and collecting features for determination.",
     "description": "Headless browser detection refers to software's ability to determine whether it is currently running in a headless browser and to take corresponding action based on the result. From a malware perspective, it can change its behavior inside a headless browser to increase analysis difficulty. From a software security perspective, it is used to prevent reverse engineering and abnormal use in certain scenarios.",
     "limitation": "Similar to the limitations of emulator detection (A0010-001), headless browser detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the headless browser's environment properties and files to evade detection.",
     "references": [

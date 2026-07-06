@@ -32,7 +32,7 @@
   },
   "R0035-001": {
     "title": "Login Credential Theft",
-    "definition": "Stealing user identity credentials to impersonate the user's identity for access.",
+    "definition": "Stealing user identity credentials to impersonate the user's identity for unauthorized access.",
     "description": "Credential theft is a form of credential reuse (R0035). Credential reuse more often refers to a voluntary process of copying and reusing credentials; credential theft refers to a user's identity credentials being stolen by a hacker for use elsewhere to impersonate the user's login.",
     "influence": "Many account systems do not invalidate existing login sessions after a password change, meaning that with stolen or reused cookies, a hacker can maintain persistent login access to the target user's account.",
     "references": [

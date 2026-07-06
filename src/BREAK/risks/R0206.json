@@ -56,7 +56,7 @@
       {
         "key": "R0164",
         "relation": "co-occurrence",
-        "note": "IoT硬件供应链攻击与固件篡改与后门共享规避手段“固件安全启动（Secure Boot）机制”。"
+        "note": "IoT硬件供应链攻击与固件篡改与后门均受攻击工具“机器人硬件调试接口利用工具”间接支持。"
       },
       {
         "key": "R0193",
@@ -66,17 +66,17 @@
       {
         "key": "R0165",
         "relation": "co-occurrence",
-        "note": "IoT硬件供应链攻击与IoT僵尸网络均受攻击工具“IoT固件与设备利用工具”间接支持。"
+        "note": "IoT硬件供应链攻击与IoT僵尸网络均可被威胁行为者“IoT僵尸网络运营者”实施。"
       },
       {
         "key": "R0178",
         "relation": "co-occurrence",
-        "note": "IoT硬件供应链攻击与IoT侧信道攻击均受威胁行为者“IoT僵尸网络运营者”间接支持。"
+        "note": "IoT硬件供应链攻击与IoT侧信道攻击均可被威胁行为者“IoT僵尸网络运营者”实施。"
       },
       {
         "key": "R0205",
         "relation": "co-occurrence",
-        "note": "IoT硬件供应链攻击与AIoT融合攻击均受威胁行为者“IoT僵尸网络运营者”间接支持。"
+        "note": "IoT硬件供应链攻击与AIoT融合攻击均可被威胁行为者“IoT僵尸网络运营者”实施。"
       }
     ]
   }

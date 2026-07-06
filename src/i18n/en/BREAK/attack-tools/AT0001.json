@@ -21,7 +21,7 @@
   },
   "AT0001-002": {
     "title": "Modem Pool SIM Cards",
-    "description": "Black SIM cards used with a 'modem pool' — a network communication hardware device that enables simultaneous multi-number calling and bulk SMS sending.",
+    "description": "Black SIM cards used with a 'modem pool' — a network communication hardware device that enables simultaneous multi-number calling and bulk SMS sending. A modem pool can hold dozens of SIM cards operating in parallel and is widely used by black-market actors for GOIP voice relay, bulk scam SMS, and batch OTP reception, serving as the core communications infrastructure for telecom fraud and OTP-receiving platforms.",
     "references": [
       {
         "title": "Jiangsu Mobile Cracks Down on Modem Pools, Providing 6,363 GOIP Clues to Police",
@@ -41,7 +41,7 @@
   },
   "AT0001-003": {
     "title": "Intercept SIM Cards",
-    "description": "SIM cards that, via malware or trojans, grant unauthorized control over a real user's SMS and verification code reception, typically sourced from intercept card platforms.",
+    "description": "SIM cards that, via malware or trojans, grant unauthorized control over a real user's SMS and verification code reception, typically sourced from intercept card platforms. Attackers use trojans implanted on the victim's phone to capture OTPs in real time and then impersonate the victim to register accounts, log in, and move funds, making this a key tool for bypassing SMS two-factor authentication and conducting account takeover and card fraud.",
     "references": [
       {
         "title": "Black Market Big Data: 2025 Annual Summary of Internet Black-Grey Market Trends",

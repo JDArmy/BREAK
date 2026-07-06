@@ -118,8 +118,8 @@
   "R0008-004": {
     "title": "Impression Fraud",
     "definition": "Charging impression fees for ad materials that have not generated exposure or have not completed valid exposure.",
-    "description": "For example, a media outlet places multiple display ads in the same ad slot and charges the advertiser for multiple ad impressions.",
-    "influence": "Financial losses to advertisers.",
+    "description": "Media outlets stack multiple display ads in the same slot, refresh non-viewable areas, or fabricate impression events to charge advertisers impression fees for materials that never generated actual exposure or completed valid exposure, inflating impression counts and diluting campaign effectiveness.",
+    "influence": "Advertisers pay for fake impressions; ad budgets are maliciously consumed and campaign-effectiveness data is distorted.",
     "references": [
       {
         "title": "OWASP Automated Threat: OAT-003 Ad Fraud",

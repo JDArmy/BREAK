@@ -70,7 +70,7 @@
       {
         "key": "R0175",
         "relation": "co-occurrence",
-        "note": "Gas费操纵与区块链重放攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+        "note": "Gas费操纵与区块链重放攻击均可被威胁行为者“DeFi协议攻击者”实施。"
       }
     ]
   },
@@ -124,12 +124,12 @@
       {
         "key": "R0170",
         "relation": "co-occurrence",
-        "note": "Gas费操纵与抢跑与MEV攻击（矿工可提取价值）共享规避手段“私有交易池与MEV保护服务”。"
+        "note": "Gas费操纵与抢跑与MEV攻击（矿工可提取价值）均可由攻击工具“DeFi攻击脚本”直接造成。"
       },
       {
         "key": "R0173",
         "relation": "co-occurrence",
-        "note": "Gas费操纵与抢跑与Gas费操纵共享规避手段“私有交易池与MEV保护服务”。"
+        "note": "Gas费操纵与抢跑与Gas费操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
       },
       {
         "key": "R0159",
@@ -139,12 +139,12 @@
       {
         "key": "R0160",
         "relation": "co-occurrence",
-        "note": "Gas费操纵与抢跑与闪电贷攻击同属“智能合约与DeFi安全”风险场景。"
+        "note": "Gas费操纵与抢跑与闪电贷攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
       },
       {
         "key": "R0169",
         "relation": "co-occurrence",
-        "note": "Gas费操纵与抢跑与预言机操纵同属“智能合约与DeFi安全”风险场景。"
+        "note": "Gas费操纵与抢跑与预言机操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
       },
       {
         "key": "R0176",

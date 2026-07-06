@@ -53,7 +53,7 @@
       {
         "key": "R0084",
         "relation": "co-occurrence",
-        "note": "ClickFix欺骗风险与钓鱼攻击在定义或描述中互相指向。"
+        "note": "ClickFix欺骗风险与钓鱼攻击均可由攻击工具“ClickFix欺骗工具”直接造成。"
       },
       {
         "key": "R0028",
@@ -63,12 +63,12 @@
       {
         "key": "R0084-001",
         "relation": "co-occurrence",
-        "note": "ClickFix欺骗风险与AI增强钓鱼攻击均可由威胁行为者“电诈技术员”直接造成。"
+        "note": "ClickFix欺骗风险与AI增强钓鱼攻击共享规避手段“安全意识培训”。"
       },
       {
         "key": "R0150",
         "relation": "co-occurrence",
-        "note": "ClickFix欺骗风险与杀猪盘/投资诈骗风险均可由威胁行为者“电诈技术员”直接造成。"
+        "note": "ClickFix欺骗风险与杀猪盘/投资诈骗风险均可被威胁行为者“电诈技术员”实施。"
       },
       {
         "key": "R0086-001",

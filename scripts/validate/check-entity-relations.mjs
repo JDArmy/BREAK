@@ -295,7 +295,8 @@ for (const { id, entity, file } of risks) {
 }
 
 for (const issue of validateDerivedRelationNotes({ risks, avoidances, attackTools, threatActors })) {
-  const records = issue.entity === "Avoidance" ? avoidances : attackTools;
+  const recordMap = { Risk: risks, Avoidance: avoidances, AttackTool: attackTools, ThreatActor: threatActors };
+  const records = recordMap[issue.entity] || [];
   const record = records.find((item) => item.id === issue.sourceKey);
   addIssue(
     issues,

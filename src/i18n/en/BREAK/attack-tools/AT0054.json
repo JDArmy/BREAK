@@ -21,7 +21,7 @@
   },
   "AT0054-001": {
     "title": "CI/CD Credential Scanning and Poisoning Tool",
-    "description": "Toolsets for finding pipeline credentials, modifying build scripts, or injecting malicious code into artifacts.",
+    "description": "Toolsets for finding pipeline credentials, modifying build scripts, or injecting malicious code into artifacts. Attackers scan code repositories and configurations for leaked tokens, AK/SK pairs, and key files, then use the obtained CI/CD pipeline permissions to tamper with build scripts, plant backdoors, or bundle malicious code into artifacts, so that all downstream services deploying those artifacts are infected at deployment time, achieving supply-chain-level lateral spread and persistence.",
     "references": [
       {
         "title": "OWASP Top 10 CI/CD Security Risks",
@@ -39,7 +39,7 @@
   },
   "AT0054-002": {
     "title": "Cloud Configuration Scanning and Key Abuse Tool",
-    "description": "Tools for enumerating cloud resources, detecting public storage, exploiting leaked keys, and moving laterally.",
+    "description": "Tools for enumerating cloud resources, detecting public storage, exploiting leaked keys, and moving laterally. Attackers scan object storage, API gateways, and IAM policies to find misconfigurations and public buckets, then use AK/SK pairs leaked from code repositories, logs, or environment variables to log into cloud consoles, call cloud service APIs to exfiltrate data, escalate privileges, and move laterally across accounts and regions.",
     "references": [
       {
         "title": "Pacu: The Open Source AWS Exploitation Framework",
@@ -61,7 +61,7 @@
   },
   "AT0054-003": {
     "title": "Data Export and DLP Bypass Tool",
-    "description": "Tools for bulk-exporting collaboration documents, splitting archives, bypassing watermarking, and evading outbound audits.",
+    "description": "Tools for bulk-exporting collaboration documents, splitting archives, bypassing watermarking, and evading outbound audits. Attackers use automation scripts to bulk-pull sensitive data from mailboxes, drives, and databases, then split and compress it, strip watermarks and metadata, and exfiltrate it through multiple channels to evade DLP content inspection and traffic auditing, enabling large-scale data theft and exfiltration.",
     "references": [
       {
         "title": "MITRE ATT&CK: Exfiltration Over Alternative Protocol (T1048)",
@@ -83,7 +83,7 @@
   },
   "AT0054-004": {
     "title": "MFA Bombing and Session Hijacking Tool",
-    "description": "Tools for MFA fatigue attacks, cookie theft, token replay, and session takeover.",
+    "description": "Tools for MFA fatigue attacks, cookie theft, token replay, and session takeover. Attackers continuously push large volumes of second-factor verification requests to create fatigue and trick users into approving them, or steal browser cookies and session tokens for replay, bypassing MFA to take over accounts, often combined with phishing and man-in-the-middle proxies for long-term account persistence.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -101,7 +101,7 @@
   },
   "AT0054-005": {
     "title": "CDN and Edge Configuration Attack Tool",
-    "description": "Tools for testing cache keys, header pollution, edge functions, and WAF rule defects.",
+    "description": "Tools for testing cache keys, header pollution, edge functions, and WAF rule defects. Attackers craft differentiated request paths and HTTP headers, exploiting cache key confusion, web cache poisoning, edge function injection, and WAF rule bypasses to make edge nodes return malicious content or bypass access control, enabling credential theft, business-logic bypass, and large-scale client-side attacks.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",

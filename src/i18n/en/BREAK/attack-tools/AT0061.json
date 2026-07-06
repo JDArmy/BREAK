@@ -24,7 +24,7 @@
   },
   "AT0061-001": {
     "title": "API Enumeration and Authorization Testing Tool",
-    "description": "Automation for enumerating API paths, parameters, object IDs, and authorization boundaries.",
+    "description": "Automation for enumerating API paths, parameters, object IDs, and authorization boundaries. Attackers discover hidden interfaces through path brute-forcing, Swagger/OpenAPI document parsing, and object-ID traversal, then call privileged endpoints with a low-privilege identity to access other users' data or perform administrative actions, corresponding to API authorization risks such as BOLA and IDOR, and serving as a key step in API security testing and attacks.",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -42,7 +42,7 @@
   },
   "AT0061-002": {
     "title": "Webhook Replay Tool",
-    "description": "Tooling that captures, modifies, and replays webhook events to test signature verification and idempotency defects.",
+    "description": "Tooling that captures, modifies, and replays webhook events to test signature verification and idempotency defects. Attackers intercept legitimate callback requests, tamper with key fields such as amount and order ID, and resend them; if the server fails to strictly verify signatures or lacks idempotency controls, this can trigger duplicate crediting and false status changes, resulting in business fraud.",
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
@@ -60,7 +60,7 @@
   },
   "AT0061-003": {
     "title": "SaaS OAuth Abuse Tool",
-    "description": "Tools for inducing authorization, enumerating SaaS permissions, and exporting mail or drive data at scale.",
+    "description": "Tools for inducing authorization, enumerating SaaS permissions, and exporting mail or drive data at scale. Attackers craft phishing authorization links to trick users into granting OAuth tokens with excessive permissions, then use the token to enumerate the accessible resource scope within the tenant and bulk-pull mail, contacts, and drive files, achieving long-term account hijacking and enterprise data exfiltration.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
@@ -78,7 +78,7 @@
   },
   "AT0061-004": {
     "title": "Payment Fraud Automation Tool",
-    "description": "Automation for bulk ordering, fake transactions, refund abuse, and forged chargeback evidence.",
+    "description": "Automation for bulk ordering, fake transactions, refund abuse, and forged chargeback evidence. Using scripts and captcha-solving platforms to bypass risk-control rules, attackers bulk-create fake orders to harvest discounts or rebates, maliciously initiate refunds and chargebacks, and forge logistics evidence, causing merchants financial losses and driving up chargeback rates.",
     "references": [
       {
         "title": "PCI Data Security Standard",
@@ -96,7 +96,7 @@
   },
   "AT0061-005": {
     "title": "Ad Attribution Fraud Tool",
-    "description": "Tooling for click injection, install farms, fake conversions, and affiliate commission fraud.",
+    "description": "Tooling for click injection, install farms, fake conversions, and affiliate commission fraud. Attackers simulate clicks and install attributions, organize device farms to bulk-generate traffic, and forge conversion events to defraud ad platforms and affiliate networks of commissions, causing advertisers' budgets to be wasted and attribution data to be distorted, seriously undermining the fairness of the mobile advertising ecosystem.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",

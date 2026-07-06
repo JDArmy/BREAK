@@ -67,7 +67,7 @@
   },
   "AT0052-001": {
     "title": "KON-Boot",
-    "description": "KON-Boot是一款可以绕过Windows和Mac OS X的登录密码的工具，它可以通过USB设备启动，从而绕过登录密码。",
+    "description": "KON-Boot是一款可以绕过Windows和Mac OS X登录密码的工具，它通过USB设备启动系统并修改内核中处理登录认证的流程，从而绕过登录密码直接进入系统。攻击者借此可在物理接触目标设备的情况下读取或拷贝磁盘文件、植入后门，无需破解或修改原密码即可获取系统访问权限，常用于内网渗透的本地提权与凭据窃取。",
     "references": [
       {
         "title": "Kon-Boot FAQ / Troubleshooting",
@@ -90,7 +90,7 @@
       "R0112-002",
       "R0112-005"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "keywords": [
       "KON-Boot",
       "Kon Boot",
@@ -133,7 +133,7 @@
   },
   "AT0052-002": {
     "title": "USB Killer",
-    "description": "USB Killer是一款可以通过USB接口将高压电流注入计算机的工具，它可以瞬间将计算机的主板、CPU、内存等硬件设备烧毁。",
+    "description": "USB Killer是一款可以通过USB接口将高压电流注入计算机的工具，它在插入后反复向数据线放电，瞬间将计算机的主板、CPU、内存等硬件设备烧毁。该工具主要用于物理销毁设备以湮灭电子证据、破坏取证链路，或针对关键基础设施实施破坏性攻击，造成不可逆的硬件损坏与数据丢失。",
     "references": [
       {
         "title": "USB killer - Wikipedia",
@@ -157,7 +157,7 @@
     "indirectSupportRisks": [
       "R0112-002"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "keywords": [
       "USB Killer",
       "USB杀手",

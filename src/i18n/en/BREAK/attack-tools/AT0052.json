@@ -19,7 +19,7 @@
   },
   "AT0052-001": {
     "title": "KON-Boot",
-    "description": "KON-Boot is a tool that bypasses Windows and macOS login passwords. It boots from a USB device to circumvent the login authentication process.",
+    "description": "KON-Boot is a tool that bypasses Windows and macOS login passwords. It boots the system from a USB device and modifies the kernel's login-authentication flow, allowing direct access without entering a password. With physical access to a target device, an attacker can read or copy disk files and plant backdoors without cracking or changing the original password, making it a common choice for local privilege escalation and credential theft during internal network penetration.",
     "references": [
       {
         "title": "Kon-Boot FAQ / Troubleshooting",
@@ -36,7 +36,7 @@
   },
   "AT0052-002": {
     "title": "USB Killer",
-    "description": "USB Killer is a device that injects high-voltage electrical current into a computer via the USB port, instantly burning out hardware components such as the motherboard, CPU, and RAM.",
+    "description": "USB Killer is a device that injects high-voltage electrical current into a computer via the USB port. Once plugged in, it repeatedly discharges high voltage onto the data lines, instantly burning out hardware components such as the motherboard, CPU, and RAM. It is primarily used to physically destroy devices to destroy digital evidence and break forensic chains, or to launch destructive attacks against critical infrastructure, causing irreversible hardware damage and data loss.",
     "references": [
       {
         "title": "USB killer - Wikipedia",

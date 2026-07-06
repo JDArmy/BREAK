@@ -57,7 +57,7 @@
   },
   "R0003-002": {
     "title": "Auction Sniping",
-    "definition": "Placing a bid on goods or services at the last minute.",
+    "definition": "Placing a bid on goods or services in the final minute of an auction to win at a low price.",
     "description": "Using automated means to place a bid at the last minute, often completing a transaction at minimal cost. The principle is the same as instant bid sniping (R0003) but the goal differs: auction sniping aims to be the last valid bid before the deadline to obtain goods at the lowest possible price, while instant bid sniping aims to be the first bid after the sale starts to secure limited discounted items. Auction sniping typically requires process automation (R0001).",
     "influence": "Transaction prices are too low, resulting in insufficient profit margins. Disrupts legitimate user ordering.",
     "references": [
@@ -87,7 +87,7 @@
     "title": "Bot Scalping Risk",
     "definition": "Bots refer to the practice of seizing, misappropriating, or manipulating scarce resources through illegitimate means, especially using automated crawler techniques.",
     "description": "Using automated scripts or crawler tools to register large numbers of fake accounts, simulating transaction activity and fictitious purchases to seize scarce resources on the platform — such as limited-edition goods or purchase eligibility — preventing legitimate users from having a fair chance.",
-    "influence": "Disrupts legitimate user ordering.",
+    "influence": "Scarce resources are seized by fake accounts, preventing legitimate users from obtaining purchase opportunities; platform marketing inventory and activity eligibility are consumed, while fake transaction data distorts ranking and reputation.",
     "references": [
       {
         "title": "Measures for the Supervision and Administration of Online Transactions",

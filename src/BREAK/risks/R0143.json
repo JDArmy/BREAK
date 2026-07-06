@@ -51,7 +51,7 @@
       {
         "key": "R0078",
         "relation": "co-occurrence",
-        "note": "OAuth/SSO授权滥用与数据泄露在定义或描述中互相指向。"
+        "note": "OAuth/SSO授权滥用与数据泄露均可由攻击工具“信息窃取器”直接造成。"
       },
       {
         "key": "R0149",
@@ -61,7 +61,7 @@
       {
         "key": "R0032",
         "relation": "co-occurrence",
-        "note": "OAuth/SSO授权滥用与账号盗取均可由攻击工具“信息窃取器”直接造成。"
+        "note": "OAuth/SSO授权滥用与账号盗取均可由攻击工具“钓鱼即服务(PhaaS)平台”直接造成。"
       },
       {
         "key": "R0036",

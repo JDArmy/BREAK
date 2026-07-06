@@ -29,8 +29,8 @@
   },
   "R0030-001": {
     "title": "Bulk Account Registration",
-    "definition": "Bulk registering accounts for subsequent abuse.",
-    "description": "Using an application's account registration process to create accounts in bulk, sometimes also filling in profile information.",
+    "definition": "Using automated tools to create accounts in bulk for subsequent abuse.",
+    "description": "Black-market actors exploit the application's account registration process, using automated scripts, registration bots, or device-control systems to create accounts in bulk, often filling in templated profiles to evade risk control. Account sources typically pair with CAPTCHA-solving and SMS-receiving platforms to bypass verification codes and SMS checks, and the bulk-produced accounts are subsequently used for promotional activity cheating, metric inflation, promo abuse, traffic diversion, and other grey/black-market businesses.",
     "influence": "These accounts are subsequently abused for generating spam, money laundering, spreading malware, reputation manipulation, pranks, and distorting SEO, reviews, and surveys.",
     "references": [
       {
@@ -171,7 +171,7 @@
   "R0030-006": {
     "title": "IoT SIM Card Registration",
     "definition": "IoT SIM card registration refers to using IoT SIM cards to falsely register internet platform accounts or conduct other online activities.",
-    "description": "IoT SIM cards are phone cards specifically designed for IoT terminal devices to provide connectivity. By default they do not have SMS sending/receiving capability, which must be applied for at the time of purchase.",
+    "description": "IoT SIM cards are phone cards specifically designed for IoT terminal devices to provide connectivity. By default they do not have SMS sending/receiving capability, which must be applied for at the time of purchase. Black-market actors exploit the low cost, lax real-name requirements, and bulk SMS-enablement of IoT SIM cards to bypass the real-name and one-ID-five-number limits on consumer SIM cards, bulk-registering internet platform accounts for metric inflation, promo abuse, and false information spreading.",
     "influence": "Bulk registration with IoT SIM cards may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
     "references": [
       {

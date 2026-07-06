@@ -51,22 +51,22 @@
       {
         "key": "R0247",
         "relation": "co-occurrence",
-        "note": "Webhook伪造与事件重放与会话令牌重放均可由威胁行为者“API滥用者”直接造成。"
+        "note": "Webhook伪造与事件重放与会话令牌重放均可被威胁行为者“API滥用者”实施。"
       },
       {
         "key": "R0222",
         "relation": "co-occurrence",
-        "note": "Webhook伪造与事件重放与影子API暴露风险均可由威胁行为者“API滥用者”直接造成。"
+        "note": "Webhook伪造与事件重放与影子API暴露风险均可被威胁行为者“API滥用者”实施。"
       },
       {
         "key": "R0223",
         "relation": "co-occurrence",
-        "note": "Webhook伪造与事件重放与API对象级越权风险均可由威胁行为者“API滥用者”直接造成。"
+        "note": "Webhook伪造与事件重放与API对象级越权风险共享规避手段“风控策略”。"
       },
       {
         "key": "R0224",
         "relation": "co-occurrence",
-        "note": "Webhook伪造与事件重放与API批量调用资源耗尽均可由威胁行为者“API滥用者”直接造成。"
+        "note": "Webhook伪造与事件重放与API批量调用资源耗尽共享规避手段“频率限制”。"
       },
       {
         "key": "R0249",

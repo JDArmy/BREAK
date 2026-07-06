@@ -77,7 +77,7 @@
       {
         "key": "R0153",
         "relation": "co-occurrence",
-        "note": "生成式AI风险与影子AI风险在定义或描述中互相指向。"
+        "note": "生成式AI风险与影子AI风险共享规避手段“数据脱敏（脱密）”。"
       }
     ]
   },
@@ -136,22 +136,22 @@
       {
         "key": "R0071-002",
         "relation": "variant",
-        "note": "AIGC隐私泄露与AIGC合规风险同属生成式AI风险下的细分变体。"
+        "note": "AIGC隐私泄露与AIGC合规风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-003",
         "relation": "variant",
-        "note": "AIGC隐私泄露与AI生成劣质内容同属生成式AI风险下的细分变体。"
+        "note": "AIGC隐私泄露与AI生成劣质内容同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-004",
         "relation": "variant",
-        "note": "AIGC隐私泄露与AI幻觉风险同属生成式AI风险下的细分变体。"
+        "note": "AIGC隐私泄露与AI幻觉风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-005",
         "relation": "variant",
-        "note": "AIGC隐私泄露与AI模型投毒风险同属生成式AI风险下的细分变体。"
+        "note": "AIGC隐私泄露与AI模型投毒风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0074",
@@ -217,27 +217,27 @@
       {
         "key": "R0071-003",
         "relation": "variant",
-        "note": "AIGC合规风险与AI生成劣质内容同属生成式AI风险下的细分变体。"
+        "note": "AIGC合规风险与AI生成劣质内容同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-004",
         "relation": "variant",
-        "note": "AIGC合规风险与AI幻觉风险同属生成式AI风险下的细分变体。"
+        "note": "AIGC合规风险与AI幻觉风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-005",
         "relation": "variant",
-        "note": "AIGC合规风险与AI模型投毒风险同属生成式AI风险下的细分变体。"
+        "note": "AIGC合规风险与AI模型投毒风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-001",
         "relation": "variant",
-        "note": "AIGC合规风险与AIGC隐私泄露同属生成式AI风险下的细分变体。"
+        "note": "AIGC合规风险与AIGC隐私泄露同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0020",
         "relation": "co-occurrence",
-        "note": "AIGC合规风险与内容合规风险在定义或描述中互相指向。"
+        "note": "AIGC合规风险与内容合规风险共享规避手段“恶意内容识别”。"
       }
     ]
   },
@@ -296,22 +296,22 @@
       {
         "key": "R0071-004",
         "relation": "variant",
-        "note": "AI生成劣质内容与AI幻觉风险同属生成式AI风险下的细分变体。"
+        "note": "AI生成劣质内容与AI幻觉风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-005",
         "relation": "variant",
-        "note": "AI生成劣质内容与AI模型投毒风险同属生成式AI风险下的细分变体。"
+        "note": "AI生成劣质内容与AI模型投毒风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-001",
         "relation": "variant",
-        "note": "AI生成劣质内容与AIGC隐私泄露同属生成式AI风险下的细分变体。"
+        "note": "AI生成劣质内容与AIGC隐私泄露同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-002",
         "relation": "variant",
-        "note": "AI生成劣质内容与AIGC合规风险同属生成式AI风险下的细分变体。"
+        "note": "AI生成劣质内容与AIGC合规风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-009",
@@ -372,22 +372,22 @@
       {
         "key": "R0071-005",
         "relation": "variant",
-        "note": "AI幻觉风险与AI模型投毒风险同属生成式AI风险下的细分变体。"
+        "note": "AI幻觉风险与AI模型投毒风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-001",
         "relation": "variant",
-        "note": "AI幻觉风险与AIGC隐私泄露同属生成式AI风险下的细分变体。"
+        "note": "AI幻觉风险与AIGC隐私泄露同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-002",
         "relation": "variant",
-        "note": "AI幻觉风险与AIGC合规风险同属生成式AI风险下的细分变体。"
+        "note": "AI幻觉风险与AIGC合规风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-003",
         "relation": "variant",
-        "note": "AI幻觉风险与AI生成劣质内容同属生成式AI风险下的细分变体。"
+        "note": "AI幻觉风险与AI生成劣质内容同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0084",
@@ -448,22 +448,22 @@
       {
         "key": "R0071-001",
         "relation": "variant",
-        "note": "AI模型投毒风险与AIGC隐私泄露同属生成式AI风险下的细分变体。"
+        "note": "AI模型投毒风险与AIGC隐私泄露同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-002",
         "relation": "variant",
-        "note": "AI模型投毒风险与AIGC合规风险同属生成式AI风险下的细分变体。"
+        "note": "AI模型投毒风险与AIGC合规风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-003",
         "relation": "variant",
-        "note": "AI模型投毒风险与AI生成劣质内容同属生成式AI风险下的细分变体。"
+        "note": "AI模型投毒风险与AI生成劣质内容同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-004",
         "relation": "variant",
-        "note": "AI模型投毒风险与AI幻觉风险同属生成式AI风险下的细分变体。"
+        "note": "AI模型投毒风险与AI幻觉风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0081",
@@ -542,12 +542,12 @@
       {
         "key": "R0071-007",
         "relation": "co-occurrence",
-        "note": "AI生成虚假评论与AI语音克隆欺诈均可由威胁行为者“AI欺诈团伙”直接造成。"
+        "note": "AI生成虚假评论与AI语音克隆欺诈均受攻击工具“AI视频伪造”间接支持。"
       },
       {
         "key": "R0148",
         "relation": "co-occurrence",
-        "note": "AI生成虚假评论与AI智能体工具滥用/过度自主风险均可由威胁行为者“AI欺诈团伙”直接造成。"
+        "note": "AI生成虚假评论与AI智能体工具滥用/过度自主风险均可被威胁行为者“AI欺诈团伙”实施。"
       }
     ]
   },
@@ -684,7 +684,7 @@
       {
         "key": "R0006",
         "relation": "co-occurrence",
-        "note": "数字人直播欺诈与虚假宣传在定义或描述中互相指向。"
+        "note": "数字人直播欺诈与虚假宣传均可由攻击工具“数字人生成工具”直接造成。"
       },
       {
         "key": "R0071-003",
@@ -704,12 +704,12 @@
       {
         "key": "R0148",
         "relation": "co-occurrence",
-        "note": "数字人直播欺诈与AI智能体工具滥用/过度自主风险均可由威胁行为者“AI欺诈团伙”直接造成。"
+        "note": "数字人直播欺诈与AI智能体工具滥用/过度自主风险均可被威胁行为者“AI欺诈团伙”实施。"
       },
       {
         "key": "R0001",
         "relation": "co-occurrence",
-        "note": "数字人直播欺诈与流程自动化均可由威胁行为者“网络水军”直接造成。"
+        "note": "数字人直播欺诈与流程自动化共享规避手段“账号处罚”。"
       }
     ]
   },
@@ -768,17 +768,17 @@
       {
         "key": "R0071-010",
         "relation": "variant",
-        "note": "AI换脸欺诈是AI深度伪造风险的细分变体。"
+        "note": "AI深度伪造风险与AI换脸欺诈同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-011",
         "relation": "variant",
-        "note": "AI合成视频欺诈是AI深度伪造风险的细分变体。"
+        "note": "AI深度伪造风险与AI合成视频欺诈同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0032",
         "relation": "co-occurrence",
-        "note": "AI深度伪造风险与账号盗取在定义或描述中互相指向。"
+        "note": "AI深度伪造风险与账号盗取共享规避手段“身份实名认证”。"
       },
       {
         "key": "R0071-006",
@@ -844,12 +844,12 @@
       {
         "key": "R0071-009",
         "relation": "variant",
-        "note": "AI深度伪造风险是AI换脸欺诈的上层风险。"
+        "note": "AI换脸欺诈与AI深度伪造风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-011",
         "relation": "variant",
-        "note": "AI换脸欺诈与AI合成视频欺诈同属AI深度伪造风险下的细分变体。"
+        "note": "AI换脸欺诈与AI合成视频欺诈同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-007",
@@ -921,17 +921,17 @@
       {
         "key": "R0071-009",
         "relation": "variant",
-        "note": "AI深度伪造风险是AI合成视频欺诈的上层风险。"
+        "note": "AI合成视频欺诈与AI深度伪造风险同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0071-010",
         "relation": "variant",
-        "note": "AI合成视频欺诈与AI换脸欺诈同属AI深度伪造风险下的细分变体。"
+        "note": "AI合成视频欺诈与AI换脸欺诈同属父生成式AI风险下的细分变体。"
       },
       {
         "key": "R0006",
         "relation": "co-occurrence",
-        "note": "AI合成视频欺诈与虚假宣传在定义或描述中互相指向。"
+        "note": "AI合成视频欺诈与虚假宣传均可由攻击工具“数字人生成工具”直接造成。"
       },
       {
         "key": "R0071-007",

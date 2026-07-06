@@ -55,12 +55,12 @@
       {
         "key": "R0247",
         "relation": "co-occurrence",
-        "note": "影子API暴露风险与会话令牌重放均可由攻击工具“API枚举与越权测试工具”直接造成。"
+        "note": "影子API暴露风险与会话令牌重放均可被威胁行为者“API滥用者”实施。"
       },
       {
         "key": "R0225",
         "relation": "co-occurrence",
-        "note": "影子API暴露风险与Webhook伪造与事件重放均可由威胁行为者“API滥用者”直接造成。"
+        "note": "影子API暴露风险与Webhook伪造与事件重放均可被威胁行为者“API滥用者”实施。"
       },
       {
         "key": "R0236",

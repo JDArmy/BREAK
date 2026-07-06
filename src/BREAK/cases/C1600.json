@@ -18,11 +18,23 @@
     ],
     "references": [
       {
-        "title": "Identification domain fronting traffic for revealing obfuscated C2 communications",
-        "link": "https://ieeexplore.ieee.org/abstract/document/9750455/"
+        "title": "Heightened DDoS Threat Posed by Mirai and Other Botnets — CISA",
+        "link": "https://www.cisa.gov/news-events/alerts/2016/10/14/heightened-ddos-threat-posed-mirai-and-other-botnets"
+      },
+      {
+        "title": "Source Code for IoT Botnet 'Mirai' Released — Krebs on Security",
+        "link": "https://krebsonsecurity.com/2016/10/source-code-for-iot-botnet-mirai-released/"
+      },
+      {
+        "title": "DDoS attacks on Dyn — Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/DDoS_attacks_on_Dyn"
+      },
+      {
+        "title": "Inside the Infamous Mirai IoT Botnet: A Retrospective Analysis — Cloudflare",
+        "link": "https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2016",
     "relatedAttackTools": [
       "AT0082"

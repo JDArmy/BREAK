@@ -32,7 +32,7 @@
     "title": "Bulk Fake Account Manipulation",
     "definition": "Using large numbers of accounts to perform likes, favorites, shares, comments, etc. to influence platform ranking metrics and profit.",
     "description": "After obtaining a large number of platform accounts, automatically performing likes, favorites, shares, comments, and other functions to influence platform ranking metrics, enabling unfair competition and profit. Account sources typically include bulk registration (R0030), credential stuffing (R0032-001), credential cracking (R0032), or purchasing from black markets. Requires process automation capabilities (R0001).",
-    "influence": "Enables unfair competition through inflated positive ratings.",
+    "influence": "Manipulates platform ranking and recommendations through fake positive ratings and engagement volume, enabling unfair competition and crowding out legitimate seller exposure.",
     "references": [
       {
         "title": "What Is the Purpose of Fake Followers? How to Remove Fake Followers?",
@@ -59,9 +59,9 @@
   },
   "R0005-002": {
     "title": "Fake Viral Referral",
-    "definition": "Using large numbers of accounts to complete referral/viral growth activities for profit.",
+    "definition": "Using large numbers of accounts to complete referral, recommendation, and viral growth activities to fraudulently claim rewards for profit.",
     "description": "Also called 'new user acquisition cheating'. After obtaining a large number of platform accounts, automatically completing referral and recommendation tasks for profit. Account sources typically include bulk registration (R0030). Requires process automation capabilities (R0001).",
-    "influence": "Exploits platform promotional benefits.",
+    "influence": "Siphons referral and viral-growth reward funds, inflates marketing costs, pollutes invitation-relationship data, and squeezes the rights of genuine users.",
     "references": [
       {
         "title": "Governance Path for Advertising-Promotion Cyber Black-Grey Crime",

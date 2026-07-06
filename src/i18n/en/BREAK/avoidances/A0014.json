@@ -21,8 +21,8 @@
   },
   "A0014-001": {
     "title": "Client-Side Anti-Tampering",
-    "definition": "Ensuring the integrity of client-side programs and preventing malicious tampering.",
-    "description": "Signing and integrity-checking the client application and its associated files ensures that the program cannot run normally if content injection, repackaging, or feature blocking occurs at runtime.",
+    "definition": "Ensuring the integrity of client-side programs and preventing malicious tampering or repackaging.",
+    "description": "Signing and integrity-checking the client application and its associated files ensures that the program cannot run normally if content injection, repackaging, or feature blocking occurs at runtime. Hash verification and signature validation are used to continuously monitor the program's runtime state; once verification fails, blocking or alerting is triggered, preventing the tampered client from continuing to access business services.",
     "limitation": "Attackers can use decompilation tools to analyze the program and find the implementation of the anti-tampering algorithm. Additionally, attackers can use debugging tools to trace the program's execution and find vulnerabilities in the anti-tampering algorithm.",
     "references": [
       {

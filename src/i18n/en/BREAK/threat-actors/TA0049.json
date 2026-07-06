@@ -22,7 +22,7 @@
   },
   "TA0049-001": {
     "title": "Connected-Vehicle Attackers",
-    "description": "Actors targeting connected-vehicle APIs, OTA updates, diagnostic interfaces, and in-vehicle data.",
+    "description": "Actors who intrude on connected-vehicle attack surfaces such as connected-car APIs, OTA updates, on-board diagnostic interfaces (OBD), in-vehicle data, and V2X communication, typically mastering in-vehicle bus protocols, remote-control interfaces, and diagnostic-protocol reversing. Their attacks can lead to leakage of sensitive vehicle data, hijacking of remote-control commands, and tampering with OTA firmware, further causing vehicle misjudgment and even physical safety incidents, making them the core executor of connected-vehicle security threats.",
     "references": [
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity",

@@ -114,7 +114,7 @@
   "A0022-002": {
     "title": "请求数据加密",
     "category": "AC01",
-    "definition": "对发送到服务端的请求数据进行加密",
+    "definition": "对发送到服务端的请求数据进行加密，防止传输中被窃取或篡改",
     "description": "请求数据加密是指在请求数据发送到服务端之前，基于现有协议（譬如HTTPS）基础上对请求体（Request body）进行加密，以保证数据在传输过程中不被窃取或篡改。请求数据加密可以应用在任何业务场景，但是需要在服务端进行解密，因此需要在服务端增加解密逻辑。",
     "limitation": "一般通过HOOK远程请求函数来实现对数据的加密，但这可能会导致一定的兼容性问题，且如果有业务未采用统一的远程请求函数，那么这部分业务的数据就无法加密。",
     "references": [
@@ -123,7 +123,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-06",
     "keywords": [
       "请求数据加密",
       "请求体加密",
@@ -170,7 +170,7 @@
   "A0022-003": {
     "title": "响应数据加密",
     "category": "AC01",
-    "definition": "对服务端的响应数据进行加密",
+    "definition": "对服务端的响应数据进行加密，防止传输中被窃取或篡改",
     "description": "响应数据加密是指在服务端对响应数据（Response body）进行加密，以保证数据在传输过程中不被窃取或篡改。响应数据加密可以应用在任何业务场景，但是需要在客户端进行解密，因此需要在客户端增加解密逻辑。",
     "limitation": "一般通过HOOK远程请求函数来实现对数据的加密，但这可能会导致一定的兼容性问题，且如果有业务未采用统一的远程请求函数，那么这部分业务的数据就无法加密。",
     "references": [
@@ -179,7 +179,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-06",
     "keywords": [
       "响应数据加密",
       "响应体加密",

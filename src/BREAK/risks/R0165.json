@@ -49,27 +49,27 @@
       {
         "key": "R0166",
         "relation": "co-occurrence",
-        "note": "IoT僵尸网络与IoT设备默认凭据风险均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+        "note": "IoT僵尸网络与IoT设备默认凭据风险均可由攻击工具“IoT固件与设备利用工具”直接造成。"
       },
       {
         "key": "R0181",
         "relation": "co-occurrence",
-        "note": "IoT僵尸网络与OTA更新劫持均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+        "note": "IoT僵尸网络与OTA更新劫持均可由攻击工具“IoT固件与设备利用工具”直接造成。"
       },
       {
         "key": "R0189",
         "relation": "co-occurrence",
-        "note": "IoT僵尸网络与传感器欺骗攻击均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+        "note": "IoT僵尸网络与传感器欺骗攻击均可被威胁行为者“IoT僵尸网络运营者”实施。"
       },
       {
         "key": "R0163",
         "relation": "co-occurrence",
-        "note": "IoT僵尸网络与智能设备劫持均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+        "note": "IoT僵尸网络与智能设备劫持均可由攻击工具“IoT固件与设备利用工具”直接造成。"
       },
       {
         "key": "R0164",
         "relation": "co-occurrence",
-        "note": "IoT僵尸网络与固件篡改与后门均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+        "note": "IoT僵尸网络与固件篡改与后门均可由攻击工具“IoT固件与设备利用工具”直接造成。"
       }
     ]
   }

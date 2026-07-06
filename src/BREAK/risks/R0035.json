@@ -84,7 +84,7 @@
   },
   "R0035-001": {
     "title": "登录凭据盗用",
-    "definition": "盗用用户身份凭据来实现仿冒用户身份访问",
+    "definition": "盗用用户身份凭据来实现仿冒用户身份进行未授权访问",
     "description": "凭据盗用属于凭据复用（R0035）的一种呈现形式。不过凭据复用更多指一种自发的凭据拷贝和复用过程；而凭据盗用指用户的身份凭证被黑客盗取到他处以实现仿冒用户身份登录。",
     "complexity": "intermediate",
     "influence": "很多账户系统在账户改密码之后并不能清除已有的登录状态，导致在盗用或使用Cookies的情况之下，黑客可以一直维持对目标用户的登录权限",
@@ -112,7 +112,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-06",
     "keywords": [
       "登录凭据盗用",
       "Cookie盗用",

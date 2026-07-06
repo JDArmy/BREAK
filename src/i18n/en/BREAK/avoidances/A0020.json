@@ -22,7 +22,7 @@
   "A0020-001": {
     "title": "Store Penalty",
     "definition": "Penalizing a store when it violates related rules, and prohibiting related behaviors or actions.",
-    "description": "Store penalty strategies include: lowering credit ratings, reducing store levels, delisting products, decreasing search weight, suspending stores, banning stores, imposing fines, etc.",
+    "description": "Store penalty strategies include: lowering credit ratings, reducing store levels, delisting products, decreasing search weight, suspending stores, banning stores, imposing fines, etc. Penalty severity is tiered according to the gravity of the violation and can be linked with rules such as store credit scores and violation points to apply stepped sanctions against stores engaged in fake orders, fraudulent transactions, or counterfeit sales.",
     "limitation": "Store penalties are post-event loss prevention measures. Profits from violations such as fake orders and fraudulent transactions are often already realized before the store is demoted or banned, making losses difficult to recover. Malicious merchants can bypass penalties by re-registering stores under new identities or using other entities. Improper calibration of demotion and banning severity can also easily harm normal small and medium-sized merchants.",
     "references": [
       {

@@ -114,7 +114,7 @@
   "A0008-002": {
     "title": "DDoS防护",
     "category": "AC01",
-    "definition": "通过DDoS防护系统识别和过滤攻击流量",
+    "definition": "通过DDoS防护系统识别和过滤攻击流量，保障正常业务请求。",
     "description": "通过DDoS防护系统过滤攻击流量可以使得更少的更真实的用户流量被服务器响应，是在系统遭受大规模攻击情况下的一种行之有效的办法。",
     "limitation": "现有的DDoS防护系统对CC攻击的防御效果不佳，需结合云端反爬（A0003）等手段",
     "references": [
@@ -123,7 +123,7 @@
         "link": "https://en.wikipedia.org/wiki/Denial-of-service_attack"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-06",
     "keywords": [
       "DDoS防护",
       "抗DDoS",
@@ -227,7 +227,7 @@
     "title": "业务系统优化",
     "category": "AC01",
     "definition": "优化业务系统，提升响应效率，降低资源消耗",
-    "description": "通过精简流程、设置缓存、优化算法、增加并发、调整架构等方式降低业务请求对系统的消耗，减少响应时间，增加请求承载量。",
+    "description": "通过精简流程、设置缓存、优化算法、增加并发、调整架构等方式降低业务请求对系统的消耗，减少响应时间，增加请求承载量。优化后系统可在相同资源下承载更高并发，缓解突发流量冲击与资源耗尽型攻击，是提升服务可用性的长期治本手段。",
     "limitation": "实施周期较长，适用于长期规划，远水解不了近渴。需要投入较大的研发成本。",
     "references": [
       {
@@ -235,7 +235,7 @@
         "link": "https://en.wikipedia.org/wiki/Business_continuity"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-06",
     "keywords": [
       "业务系统优化",
       "系统优化",

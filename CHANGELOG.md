@@ -1,5 +1,14 @@
 # Change log
 
+## 2.42.22
+
+修复 C1600 Mirai references + subagent 扩展修复（attack-tools description 补充 + Risk 横向关系 note 派生增强）。
+
+- **C1600 Mirai 僵尸网络 DDoS**：references 从 1 个不符的 IEEE domain fronting 论文替换为 4 个权威源（CISA 官方通告 + KrebsOnSecurity 原始报道 + Wikipedia Dyn 攻击 + Cloudflare 技术分析）。
+- **subagent 扩展修复**：AT0001-002 猫池卡 description 补实质内容（GOIP 语音中转/诈骗短信群发/验证码接收）、其他 attack-tools 字段完善。
+- **校验脚本增强**：relation-note-utils.mjs 新增 `isDerivedRiskNote` + `expectedRiskRelationNote`（支持 Risk 横向关系 note 派生，variant/co-occurrence/prerequisite/escalation 四类）；check-entity-relations.mjs 修复 recordMap 对 Risk/ThreatActor 的支持；sync-lateral-relations.mjs 接入 Risk note 派生。
+- references 评审 2996/3200 进行中。
+
 ## 2.42.21
 
 修复 references 评审 53 fail（高价值 Case 缺 primary 源），起 2 批 subagent 用 Scrapingdog 搜索补源。

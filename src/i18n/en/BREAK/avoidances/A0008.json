@@ -41,7 +41,7 @@
   },
   "A0008-002": {
     "title": "DDoS Protection",
-    "definition": "Identifying and filtering attack traffic through a DDoS protection system.",
+    "definition": "Identifying and filtering attack traffic through a DDoS protection system to safeguard legitimate business requests.",
     "description": "Filtering attack traffic through a DDoS protection system allows fewer, more legitimate user requests to be served by the server. This is an effective approach when the system is under large-scale attack.",
     "limitation": "Existing DDoS protection systems have limited effectiveness against CC attacks and need to be combined with cloud-side anti-crawling (A0003) and other measures.",
     "references": [
@@ -82,7 +82,7 @@
   "A0008-004": {
     "title": "Business System Optimization",
     "definition": "Optimizing the business system to improve response efficiency and reduce resource consumption.",
-    "description": "Reducing the system load of business requests by streamlining processes, setting up caches, optimizing algorithms, increasing concurrency, and adjusting architecture — thereby reducing response time and increasing request throughput.",
+    "description": "Reducing the system load of business requests by streamlining processes, setting up caches, optimizing algorithms, increasing concurrency, and adjusting architecture — thereby reducing response time and increasing request throughput. After optimization, the system can sustain higher concurrency on the same resources, mitigating sudden traffic spikes and resource-exhaustion attacks, serving as a long-term root-cause solution for improving service availability.",
     "limitation": "Has a long implementation cycle; suitable for long-term planning but not a quick fix. Requires significant R&D investment.",
     "references": [
       {

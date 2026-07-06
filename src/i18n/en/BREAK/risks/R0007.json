@@ -32,7 +32,7 @@
     "title": "Third-Party Price Comparison",
     "definition": "While a user is browsing a normal product detail page, providing price comparisons for the same product from competing websites.",
     "description": "Typical unauthorized promotional plugins exist as browser extensions, as well as app add-on plugins. While reasonable price comparison benefits market activity and saves consumer spending, incomplete or intentionally biased comparisons can cause economic losses or customer attrition — for example, comparing different brands, different models, or different service tiers.",
-    "influence": "Causes economic losses to the platform and customer attrition.",
+    "influence": "Abuse of price transparency hijacks platform traffic to competitors; platform commissions and subsidies are siphoned off, accelerating customer attrition.",
     "references": [
       {
         "title": "Chrome Extensions Documentation",
@@ -60,7 +60,7 @@
     "title": "Access Link Hijacking",
     "definition": "Hijacking users' normal access requests and illegally redirecting them to other sites, cashback pages, or promotional pages.",
     "description": "Using viruses, trojans, malicious plugins, unauthorized bundled software, forced homepage setting, browser hijacking, page hijacking, search engine manipulation, or user information tampering to hijack normal traffic. Or during normal browsing, hijacking website traffic by modifying URL parameters or using pop-ups/floating windows.",
-    "influence": "Causes economic losses to the platform and customer attrition.",
+    "influence": "User access traffic is illegally hijacked and diverted; platform commissions and promotional resources are intercepted, normal promotion attribution is distorted, and customers are lost.",
     "references": [
       {
         "title": "Software Extensions, Technique T1176 - MITRE ATT&CK",
@@ -89,7 +89,7 @@
     "title": "Unauthorized Promotional Redirection",
     "definition": "While a user is browsing a normal product detail page, providing information that induces the user to purchase from another page.",
     "description": "Typical unauthorized promotional plugins exist as browser extensions, as well as app add-on plugins. The main tactic is to present more attractive or better-value product information when a user views a product, or to guide users to download a client through cashback or commission-sharing schemes.",
-    "influence": "Causes economic losses to the platform and customer attrition.",
+    "influence": "Users are induced to transact off-site; platform orders and commissions are lost, and legitimate promotion channels are squeezed by unauthorized diversion.",
     "references": [
       {
         "title": "Taobao Rules on Inducing Third-Party Transactions Implementation Rules - Alimama Headlines",
@@ -122,7 +122,7 @@
     "title": "Unauthorized Plugin Cashback",
     "definition": "While a user is browsing a normal product detail page, the plugin label displays cashback information for that product.",
     "description": "Typical cashback plugins exist as browser extensions, as well as app add-on plugins and third-party apps or websites. The main tactic is to obtain the affiliate commission for a product when a user views it, then share a portion of that commission back to the user as cashback.",
-    "influence": "Causes economic losses to the platform and customer attrition.",
+    "influence": "Cashback plugins hijack order attribution to siphon affiliate commissions; platform commissions are unlawfully shared out and legitimate affiliate channels suffer.",
     "references": [
       {
         "title": "Chrome Extensions Documentation",

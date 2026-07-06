@@ -278,7 +278,7 @@ function collectRelationAudit() {
 
   const summaries = [
     { name: 'Risk.avoidances', ...coverage(risks, 'avoidances') },
-    { name: 'Risk.relatedRisks', observationOnly: true, ...coverage(risks, 'relatedRisks') },
+    { name: 'Risk.relatedRisks', observationOnly: false, ...coverage(risks, 'relatedRisks') },
     { name: 'Avoidance.relatedAvoidances', observationOnly: true, ...coverage(avoidances, 'relatedAvoidances') },
     { name: 'AttackTool.directCauseRisks', ...coverage(attackTools, 'directCauseRisks') },
     { name: 'AttackTool.indirectSupportRisks', ...coverage(attackTools, 'indirectSupportRisks') },
