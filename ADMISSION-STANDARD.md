@@ -43,6 +43,7 @@
 
 - **禁止框架首页占位链接**（见 §3 黑名单 10 种）。新条目 references 不得仅用框架首页当引用。
 - references 至少 1 条合法 URL（`require-references.mjs` 已管全库）。
+- **references 元素只允许 `title` + `link` 两个字段**（`referenceSchema.strict()` 强制）。`sourceType`（primary/secondary/mirror/weak/unknown）是 `source-classify.mjs` 的**运行时分级返回值，不得持久化到实体数据**——它每次从 link/title 动态计算，写入 references 会被 schema 以 `Unrecognized key: "sourceType"` 拒绝。case-fact/references 评审脚本若在内存中用 sourceType 标注，落盘前必须丢弃该字段。
 - 来源分级（primary/secondary/mirror/weak/unknown）由 `source-classify.mjs` 判定，高价值 Case 需 ≥1 primary（见 §4）。
 
 ### 1.5 关系要求（复用现有门禁）

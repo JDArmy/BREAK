@@ -152,6 +152,12 @@ for (const category of categories) {
       if (!result.success) {
         for (const issue of formatZodIssues(result.error)) {
           addIssue(`${filePath}.${key}.${issue}`);
+          // 防御性提示：references 误写运行时字段（sourceType 等）时给出明确指引。
+          // sourceType 是 classifySource() 的运行时分级返回值，设计上不持久化到实体数据；
+          // 若被写入 references 元素，schema.strict 会以 "Unrecognized key" 拒绝。
+          if (/references\.\d+: Unrecognized key: "sourceType"/.test(issue)) {
+            addIssue(`${filePath}.${key}.references: sourceType 是运行时分级字段（由 classifySource 计算），不得写入实体数据；请从 references 元素移除 sourceType，仅保留 title + link`);
+          }
         }
       } else if (category.requireKeywords) {
         const keywords = Array.isArray(entity.keywords) ? entity.keywords : [];
