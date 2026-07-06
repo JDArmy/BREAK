@@ -2,6 +2,7 @@
   "C1526": {
     "title": "钓鱼团伙用Telegram机器人“接单”：欧洲凭证窃取进入“实时客服”模式",
     "keywords": [
+      "钓鱼团伙用Telegram机器人“接单”：欧洲凭证窃取进入“实时客服”模式",
       "Telegram Bot",
       "钓鱼攻击",
       "凭证窃取",
@@ -9,6 +10,7 @@
       "SaaS平台",
       "Bot API",
       "会话接管",
+      "自动化攻击",
       "欧洲",
       "网络犯罪"
     ],
@@ -23,13 +25,16 @@
         "link": "https://news.sohu.com/a/976968778_120780361"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2025-12",
     "relatedAttackTools": [
+      "AT0063",
       "AT0063-001"
     ],
     "relatedThreatActors": [
-      "TA0017"
+      "TA0015",
+      "TA0017",
+      "TA0033"
     ]
   }
 }
