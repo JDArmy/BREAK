@@ -12,7 +12,7 @@
       "security parameters",
       "attack breakthrough"
     ],
-    "summary": "In January 2026, researchers have pushed attack capabilities against the Shortest Vector Problem (SVP) to nearly 400 dimensions, potentially threatening mainstream post-quantum cryptographic schemes, according to a Science and Technology Daily report. Previous milestones at 200 and 210 dimensions already signaled major advances in lattice cryptanalysis, providing critical reference for the dynamic",
+    "summary": "On January 1, 2026, a team led by Ding Jintai at Xi'an Jiaotong-Liverpool University solved the 210-dimensional Shortest Vector Problem in the SVP Challenge hosted by TU Darmstadt, setting a new record (after solving 200 dimensions in March 2025). Around 400 dimensions is the threshold at which mainstream post-quantum cryptographic schemes could face breakage; the successive 200- and 210-dimensional breakthroughs signal major advances in lattice cryptanalysis, providing critical reference for dynamic tuning and autonomous design of post-quantum algorithm parameters.",
     "references": [
       {
         "title": "Quantum-Resistant Cryptography: Building the \"Moat\" for Future Digital Security",

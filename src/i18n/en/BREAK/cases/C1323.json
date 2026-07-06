@@ -12,7 +12,7 @@
       "confidential information",
       "AI safety"
     ],
-    "summary": "Multiple Samsung engineers used ChatGPT for debugging and development, pasting confidential source code into the public AI tool. OpenAI retains user prompts as training data, exposing Samsung's proprietary information to potential third-party access or unintended reuse, making this a classic case of shadow AI data leakage.",
+    "summary": "In March 2023, after Samsung's DS division authorized internal use of ChatGPT, multiple engineers pasted confidential source code along with equipment measurement and yield data into the public AI tool. OpenAI retains user inputs as training data, exposing Samsung's proprietary information to potential third-party access or unintended reuse, making this a classic case of shadow AI data leakage.",
     "references": [
       {
         "title": "[Exclusive] Fears Come True: Samsung Electronics' ChatGPT Lock Lifted, Misuse Surges (Economist Korea, 2023-03-30) — Three Confidential Data Leaks Within 20 Days of ChatGPT Adoption in DS Division",

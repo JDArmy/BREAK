@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.42.28",
+  "version": "2.42.29",
   "private": true,
   "type": "module",
   "engines": {
@@ -18,7 +18,7 @@
     "type-check": "vue-tsc --noEmit && tsc --noEmit -p tsconfig.typecheck.json",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/english-i18n-quality.mjs && node scripts/validate/keywords.mjs && node scripts/validate/check-entity-relations.mjs && node scripts/validate/relations.mjs --strict && node scripts/validate/business-scenes.mjs && node scripts/validate/business-scene-sub-risks.mjs && node scripts/validate/business-scene-dimensions.mjs && node scripts/validate/business-scene-coverage.mjs && node scripts/validate/require-references.mjs && node scripts/validate/docs-consistency.mjs && node scripts/validate/audit-text-id-refs.mjs && node scripts/validate/check-risk-assessment.mjs && node scripts/validate/avoidance-content.mjs --strict && node scripts/validate/case-incident-time.mjs --strict && node scripts/validate/entity-content-dedup.mjs --strict && node scripts/validate/admission.mjs && node scripts/validate/ui-i18n-keys.mjs && node scripts/validate/title-dedup.mjs --strict && node scripts/validate/title-format.mjs --strict && node scripts/validate/updated-sync-gate.mjs --strict && node scripts/validate/id-continuity.mjs && node scripts/validate/content-quality.mjs --strict && node scripts/validate/references.mjs --strict && node scripts/validate/generic-phrase-blocklist.mjs && node scripts/validate/case-category-domain-consistency.mjs && node scripts/validate/risk-complexity-coverage.mjs && node scripts/validate/case-summary-relation-consistency.mjs && node scripts/validate/term-category-enum.mjs && node scripts/validate/entity-granularity.mjs",
+    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/english-i18n-quality.mjs && node scripts/validate/keywords.mjs && node scripts/validate/check-entity-relations.mjs && node scripts/validate/relations.mjs --strict && node scripts/validate/business-scenes.mjs && node scripts/validate/business-scene-sub-risks.mjs && node scripts/validate/business-scene-dimensions.mjs && node scripts/validate/business-scene-coverage.mjs && node scripts/validate/require-references.mjs && node scripts/validate/docs-consistency.mjs && node scripts/validate/audit-text-id-refs.mjs && node scripts/validate/check-risk-assessment.mjs && node scripts/validate/avoidance-content.mjs --strict && node scripts/validate/case-incident-time.mjs --strict && node scripts/validate/entity-content-dedup.mjs --strict && node scripts/validate/admission.mjs && node scripts/validate/ui-i18n-keys.mjs && node scripts/validate/title-dedup.mjs --strict && node scripts/validate/title-format.mjs --strict && node scripts/validate/updated-sync-gate.mjs --strict && node scripts/validate/id-continuity.mjs && node scripts/validate/content-quality.mjs --strict && node scripts/validate/references.mjs --strict && node scripts/validate/generic-phrase-blocklist.mjs && node scripts/validate/case-category-domain-consistency.mjs && node scripts/validate/risk-complexity-coverage.mjs && node scripts/validate/case-summary-relation-consistency.mjs && node scripts/validate/case-entity-coverage.mjs --strict && node scripts/validate/term-category-enum.mjs && node scripts/validate/entity-granularity.mjs",
     "validate:data-export": "node scripts/validate/static-data-export.mjs",
     "prevalidate:data-package": "npm run export:data-package",
     "validate:data-package": "node scripts/validate/data-package.mjs",
@@ -81,6 +81,7 @@
     "audit:content-quality": "node scripts/validate/content-quality.mjs",
     "audit:entity-content-dedup": "node scripts/validate/entity-content-dedup.mjs",
     "audit:case-source-quality": "node scripts/validate/case-source-quality.mjs",
+    "audit:case-entity-coverage": "node scripts/validate/case-entity-coverage.mjs",
     "audit:admission": "node scripts/validate/admission.mjs --audit",
     "audit:quality-report": "node scripts/validate/quality-report.mjs",
     "audit:metrics": "node scripts/validate/metrics.mjs",

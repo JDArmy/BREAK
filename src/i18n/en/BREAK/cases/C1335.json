@@ -13,7 +13,7 @@
       "email security bypass",
       "hotel booking fraud"
     ],
-    "summary": "In November 2025, a phishing campaign leveraging the ClickFix technique targeted hospitality professionals worldwide by sending spoofed emails impersonating Booking.com. The emails used an interactive ClickFix lure to trick recipients into copying and executing malicious commands, bypassing traditional email security detection. The attack aimed to steal account credentials and session tokens in or",
+    "summary": "Between November 2024 and March 2025, a phishing campaign leveraging the ClickFix technique targeted hospitality professionals worldwide by sending spoofed emails impersonating Booking.com, peaking in March 2025. The emails used an interactive ClickFix lure to trick recipients into copying and executing malicious commands, bypassing traditional email security detection. The attack aimed to steal account credentials and session tokens in order to hijack hotel booking systems for subsequent fraud.",
     "references": [
       {
         "title": "Analysis and Defense of Booking.com Phishing Attacks Based on ClickFix Mechanism | Trojan | Clipboard |...",

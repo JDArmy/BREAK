@@ -11,7 +11,7 @@
       "data leak",
       "social engineering"
     ],
-    "summary": "In September 2022, a 17-year-old hacker launched an MFA fatigue attack against Uber. The attacker repeatedly logged in, sending a flood of MFA push requests to an employee's phone, inducing the victim to mistakenly tap \"approve.\" Eventually, the overwhelmed employee confirmed the request, bypassing MFA protection and allowing the hacker to breach Uber's internal systems and steal personal informat",
+    "summary": "In September 2022, a 17-year-old hacker launched an MFA fatigue attack against Uber. The attacker repeatedly tried to log in to a contractor's account, sending a flood of MFA push requests to the victim's phone and inducing them to tap 'approve,' ultimately bypassing MFA protection. The hacker then breached Uber's internal systems, accessing internal tools such as Slack and G-Suite and the HackerOne bug-report dashboard, and reconfigured OpenDNS to display an image on internal sites. Uber stated that no production systems, user accounts, or sensitive user databases were accessed.",
     "references": [
       {
         "title": "Cloud Phishing: New Tricks and the 'Crown Jewels' - Tencent Cloud Developer Community",

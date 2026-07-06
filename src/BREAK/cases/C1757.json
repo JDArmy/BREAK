@@ -11,7 +11,7 @@
       "数据泄露",
       "社会工程学"
     ],
-    "summary": "2022年9月，一名17岁的黑客对Uber发动了MFA疲劳攻击。攻击者反复登录，向员工手机发送大量MFA推送请求，诱导受害者误点“批准”。最终员工不堪其扰，点击了确认，导致MFA防护失效，黑客成功入侵Uber内部系统，窃取了约5700万客户和司机的个人信息。",
+    "summary": "2022年9月，一名17岁的黑客对Uber发动了MFA疲劳攻击。攻击者反复尝试登录某承包商账号，向其手机发送大量MFA推送请求，诱导其点击“批准”，最终MFA防护失效，黑客成功入侵Uber内部系统，访问了Slack、G-Suite等内部工具及HackerOne漏洞报告仪表盘，并重配置OpenDNS在内网展示图片。Uber称未发现生产系统、用户账号或敏感用户数据库被访问。",
     "category": "security_incident",
     "relatedRisks": [
       "R0246"
@@ -26,7 +26,7 @@
         "link": "https://www.uber.com/newsroom/security-update/?id=5674865%3Futm_source%3Dtestdevjobs"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2022-09",
     "relatedAttackTools": [
       "AT0054-004"

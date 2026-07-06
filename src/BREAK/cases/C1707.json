@@ -1,7 +1,8 @@
 {
   "C1707": {
-    "title": "文件共享至未授权域导致数据泄露风险",
+    "title": "Defender for Cloud Apps域白名单误报问题讨论",
     "keywords": [
+      "Defender for Cloud Apps域白名单误报问题讨论",
       "Azure AD",
       "Microsoft Defender for Cloud Apps",
       "域白名单",
@@ -11,7 +12,7 @@
       "协作平台",
       "权限配置缺陷"
     ],
-    "summary": "某组织配置了Azure AD域白名单，旨在确保仅授权域可访问共享文件。然而，安全团队发现部分文件被共享给了未授权的域，导致敏感数据可能暴露给外部人员。此问题涉及Microsoft Defender for Cloud Apps与域白名单功能的集成缺陷，凸显了协作平台共享权限配置不当引发的泄露风险。",
+    "summary": "2023年8月，某组织在社区论坛反馈Azure AD域白名单与Microsoft Defender for Cloud Apps集成中的误报问题：配置白名单限定仅授权域访问共享文件后，部分文件共享仍触发“未授权域”策略告警，造成不必要的告警与处置工作量。社区讨论指出这可能源于Defender对直接访问与链接共享的判定差异，属告警识别问题而非确认的敏感数据泄露。",
     "category": "security_incident",
     "relatedRisks": [
       "R0233"
@@ -22,7 +23,7 @@
         "link": "https://techcommunity.microsoft.com/discussions/microsoftdefendercloudapps/file-shared-with-unauthorized-domain/3901560"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2023-08-16"

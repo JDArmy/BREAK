@@ -12,7 +12,7 @@
       "恶意矿工",
       "延时函数防御"
     ],
-    "summary": "2018年初，隐私数字货币Horizen（原ZenCash）遭遇51%攻击，一名恶意矿工控制了超过51%的区块链网络计算能力，向系统注入错误交易，导致损失超过50万美元。该事件促使Horizen团队研发了通过延时函数处罚恶意矿工的防御方案。",
+    "summary": "2018年6月2日，隐私数字货币Horizen（原ZenCash）遭遇51%攻击。攻击者通过租用算力控制网络多数算力，对ZEN实施双花攻击，约2.3万枚ZEN被双花，损失约55万美元。事后ZenCash团队要求交易所提高确认数并研发延时函数处罚恶意矿工的防御方案。",
     "category": "security_incident",
     "relatedRisks": [
       "R0171"
@@ -27,7 +27,7 @@
         "link": "https://www.horizen.io/academy/zencash-to-horizen/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2018-06",
     "relatedAttackTools": [
       "AT0078"

@@ -12,7 +12,7 @@
       "破产",
       "员工安全意识"
     ],
-    "summary": "2023年6月，英国百年运输企业KNP因一名员工使用弱密码，被黑客组织Akira暴力破解并入侵内部系统。黑客加密所有业务数据并索要500万英镑赎金，公司无力支付，最终导致系统瘫痪、数据无法恢复，公司宣布破产，700多名员工失业。",
+    "summary": "2023年，英国百年运输企业KNP因一名员工使用弱密码，被黑客组织Akira猜中密码并入侵内部系统，加密所有业务数据。黑客未明确开价，勒索谈判公司估计赎金可能高达500万英镑。KNP无力支付，最终数据全部丢失，公司倒闭，700多名员工失业。",
     "category": "security_incident",
     "relatedRisks": [
       "R0083"
@@ -27,8 +27,8 @@
         "link": "https://h5.ifeng.com/c/vivo/v002KH7i2cQdo3dUoXQUgjRCOOrYxeTxhRntl5zJGbpsc1I__"
       }
     ],
-    "updated": "2026-07-03",
-    "incidentTime": "2023-06",
+    "updated": "2026-07-06",
+    "incidentTime": "2023",
     "relatedAttackTools": [
       "AT0068"
     ],

@@ -12,7 +12,7 @@
       "机密信息",
       "AI安全"
     ],
-    "summary": "多名三星工程师使用ChatGPT辅助调试和开发，将机密源代码粘贴至该公共AI工具。OpenAI系统将用户提示保留为训练数据，导致三星专有信息面临被第三方获取或意外复用的风险，构成典型的影子AI数据泄露案例。",
+    "summary": "2023年3月，多名三星电子DS部门工程师在企业内部获准使用ChatGPT后，将机密源代码、设备测量与良率数据粘贴至该公共AI工具。OpenAI将用户输入保留为训练数据，使三星专有信息面临被第三方获取或意外复用的风险，构成典型的影子AI数据泄露案例。",
     "category": "security_incident",
     "relatedRisks": [
       "R0153"
@@ -27,11 +27,11 @@
         "link": "https://www.strategicaiguidance.com/wp-content/uploads/2025/10/Shadow-AI-and-the-Samsung-Data-Leak.pdf"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0021"
     ],
-    "incidentTime": "2025-10"
+    "incidentTime": "2023-03"
   }
 }

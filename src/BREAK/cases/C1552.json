@@ -12,7 +12,7 @@
       "DefiLlama",
       "系统性风险"
     ],
-    "summary": "据DefiLlama报道，跨链桥累计被盗资金超过28亿美元，几乎占整个Web3行业被盗资金总量的大部分。文章详细剖析了跨链桥存在的七大关键漏洞，揭示了桥接环节的系统性安全风险。",
+    "summary": "据DefiLlama统计，跨链桥累计被盗资金超过28亿美元，约占整个Web3行业被盗资金总量（76.8亿美元）的40%，是受攻击最严重的赛道之一。文章详细剖析了跨链桥存在的私钥管理、智能合约审计、升级流程等七大关键漏洞，揭示了桥接环节的系统性安全风险。",
     "category": "news_report",
     "relatedRisks": [
       "R0200"
@@ -23,7 +23,7 @@
         "link": "https://cloud.tencent.com/developer/news/1311943"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2024-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []

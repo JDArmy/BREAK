@@ -10,11 +10,11 @@
       "spatial anchor data leak",
       "multimodal data privacy"
     ],
-    "summary": "In April 2025, a technical article analyzed the privacy risks of multimodal data collection on AR/VR devices, including the leakage of sensitive information such as IMU motion data, eye-tracking biometrics, and spatial anchors. It pointed out that unprotected SLAM data could be subject to replay attacks causing virtual object misplacement, and proposed encryption and differential privacy protectio",
+    "summary": "On April 18, 2025, a HarmonyOS AR/VR development technical article analyzed the privacy risks of multimodal data collection on AR/VR devices, including the leakage of sensitive information such as 9-axis IMU motion data, eye-tracking biometrics, and spatial anchors. It pointed out that unprotected SLAM data could be subject to replay attacks causing virtual object misplacement, and proposed AES-GCM encryption and Geo-Indistinguishability differential privacy protection schemes based on HarmonyOS.",
     "references": [
       {
-        "title": "Security Escort Re-Launches: Huawei HarmonyOS 3 Further Enhances User Privacy Protection - Xinhua News",
-        "link": "https://www.xinhuanet.com/tech/20220729/9ee794fa1c654f7d99854d10d8669eb0/c.html"
+        "title": "HarmonyOS AR/VR Development: 05 - AR/VR Data Security and Privacy Protection Practices",
+        "link": "https://www.jianshu.com/p/f1213b6cb304"
       }
     ]
   }

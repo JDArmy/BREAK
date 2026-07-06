@@ -11,7 +11,7 @@
       "account takeover",
       "2022 report"
     ],
-    "summary": "The 2022 Threat Hunter report indicates that a large number of credential stuffing and account enumeration attacks targeting social platforms were monitored, with involvement from professional underground gangs. Some large social platforms suffered repeated attacks due to API vulnerabilities, leading to frequent account security incidents.",
+    "summary": "Threat Hunter's 2022 API Security Research Report states that the average number of attacked APIs per month exceeded 210,000, with attacks concentrated in four scenarios: marketing abuse, account risk, data theft, and traffic fraud. The gaming industry's APIs mainly faced account-risk attacks such as credential stuffing, account enumeration, and brute force to steal player accounts and virtual assets, while social platform APIs mainly faced traffic fraud, where black-market gangs fabricated fake views, likes, and comments to serve water armies and traffic-diversion rings.",
     "references": [
       {
         "title": "Threat Hunter's '2022 API Security Research Report' Released, Average Monthly Attacked APIs Exceed...",

@@ -10,7 +10,7 @@
       "DeFi攻击",
       "USDC"
     ],
-    "summary": "攻击者利用Resolv协议USR铸币函数中的关键漏洞，仅用约10万美元USDC操控预言机，实现未经授权的代币增发，破坏了协议的经济平衡。",
+    "summary": "2026年3月，Resolv DeFi协议遭攻击，攻击者仅用约10万美元USDC，利用USR铸币函数中的关键漏洞（官方未最终定因，可能为预言机操控、链下签名者密钥泄露或铸币金额校验缺失）凭空铸造约8000万枚USR，并通过Curve等流动性池套现约2300万美元，导致USR脱锚。",
     "category": "security_incident",
     "relatedRisks": [
       "R0198"
@@ -25,7 +25,7 @@
         "link": "https://www.chainalysis.com/blog/lessons-from-the-resolv-hack/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-03",
     "relatedAttackTools": [
       "AT0076",

@@ -13,7 +13,7 @@
       "CDN",
       "拒绝服务"
     ],
-    "summary": "2022年2月，安全研究员Youstin利用缓存键混淆、头部污染等技术，在多个漏洞赏金项目中发现了70多个缓存投毒漏洞。攻击涉及Apache Traffic Server对URL片段的错误处理（CVE-2021-27577）、利用X-Forwarded-Scheme头导致的重定向循环，以及利用Cloudflare和Fastly的配置缺陷进行缓存投毒，导致拒绝服务或XSS。",
+    "summary": "2021年12月23日，安全研究员Youstin发布研究，利用缓存键混淆、头部污染等技术，在多个漏洞赏金项目中发现了70多个缓存投毒漏洞。攻击涉及Apache Traffic Server对URL片段的错误处理（CVE-2021-27577）、利用X-Forwarded-Scheme头导致的重定向循环，以及利用Cloudflare和Fastly的配置缺陷进行缓存投毒，导致拒绝服务或XSS。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0249"
@@ -28,8 +28,8 @@
         "link": "https://youst.in/posts/cache-poisoning-at-scale/"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2022-02",
+    "updated": "2026-07-06",
+    "incidentTime": "2021-12",
     "relatedAttackTools": [
       "AT0054-005"
     ],

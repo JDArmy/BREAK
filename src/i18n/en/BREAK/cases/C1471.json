@@ -13,7 +13,7 @@
       "emergency braking",
       "vehicle-to-everything"
     ],
-    "summary": "VicOne researchers describe how attackers can create fake nodes in a V2X network by using software-defined radio or by relaying V2X messages through road or telecom infrastructure. Such ghost vehicles can mimic plausible mobility patterns and use messages such as Basic Safety Messages (BSMs) to influence nearby vehicle decisions, creating a high-risk connected-vehicle and autonomous-driving attack scenario.",
+    "summary": "On April 25, 2023, VicOne's cyber threat research team published an article citing the V2X Application Spoofing Platform (VASP) proposed by researchers, describing how attackers can create fake nodes in a V2X network by using software-defined radio or by relaying V2X messages through road or telecom infrastructure. Such ghost vehicles can mimic plausible mobility patterns and use Basic Safety Messages (BSMs) to influence nearby vehicle decisions, creating high-risk connected-vehicle and autonomous-driving attack scenarios.",
     "references": [
       {
         "title": "Vehicle Networking Technology: Enhancing Mobility and Safety, but Also Attracting Cyberattacks?",

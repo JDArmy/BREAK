@@ -11,7 +11,7 @@
       "员工数据",
       "隐私合规"
     ],
-    "summary": "Uber 因在超过 27 个月的时间里，未能对从欧洲经济区司机传输至美国的个人数据实施适当的安全保障措施，违反了 GDPR 关于数据跨境传输的规定，被荷兰数据保护机构处以 2.9 亿欧元罚款。此案为涉及员工数据跨境传输的合规风险敲响了警钟。",
+    "summary": "2024年8月26日，荷兰数据保护机构（DPA）对Uber处以2.9亿欧元罚款，理由是Uber在超过27个月的时间里，未能对从欧洲经济区司机传输至美国的个人数据实施适当的安全保障措施，违反GDPR关于数据跨境传输的规定。Uber在2021年8月移除与美国母公司间的标准合同条款，相关传输违反GDPR第44条。此案为涉及员工数据跨境传输的合规风险敲响了警钟。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0125"
@@ -26,9 +26,9 @@
         "link": "https://www.autoriteitpersoonsgegevens.nl/en/current/dutch-dpa-imposes-a-fine-of-290-million-euro-on-uber-because-of-transfers-of-drivers-data-to-the-us"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2024-12-19"
+    "incidentTime": "2024-08-26"
   }
 }

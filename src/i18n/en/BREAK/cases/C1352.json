@@ -10,7 +10,7 @@
       "GPU-based attack",
       "arXiv"
     ],
-    "summary": "This academic research provides a comprehensive analysis of remote code execution attacks targeting GPUs, demonstrating methods that exploit GPU firmware or driver vulnerabilities to execute malicious code on a target system. Attackers can leverage these vulnerabilities to illicitly gain control of a victim's GPU computing resources for cryptocurrency mining or other computationally intensive task",
+    "summary": "This academic research provides a comprehensive analysis of remote code execution attacks targeting GPUs, demonstrating methods that exploit deserialization vulnerabilities and custom layers such as TensorFlow Lambda layers to execute arbitrary code on a target system. Attackers can leverage these vulnerabilities to illicitly gain control of a victim's GPU computing resources for cryptocurrency mining or other computationally intensive tasks, while the parallel processing and high resource utilization of GPUs make runtime detection exceptionally challenging.",
     "references": [
       {
         "title": "Crypto Miner Attack: GPU Remote Code Execution Attacks - arXiv",

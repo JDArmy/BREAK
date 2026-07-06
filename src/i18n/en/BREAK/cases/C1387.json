@@ -11,7 +11,7 @@
       "Dyn attack 2016",
       "IoT device compromise"
     ],
-    "summary": "In October 2016, the Mirai botnet launched a massive DDoS attack against DNS provider Dyn, causing widespread internet outages across the US East Coast. Major websites including Twitter, Netflix, and Reddit became inaccessible. The attack leveraged hundreds of thousands of compromised IoT devices, resulting in significant internet infrastructure disruption.",
+    "summary": "The Mirai botnet became active in August 2016, peaked in September with massive DDoS attacks against Krebs on Security and OVH, and on October 21, 2016 launched an attack against DNS provider Dyn that left major US East Coast websites including Twitter, Netflix, and Reddit largely inaccessible. The attack leveraged hundreds of thousands of compromised IoT devices such as home routers and cameras, causing significant internet infrastructure disruption.",
     "references": [
       {
         "title": "Inside the Infamous Mirai IoT Botnet: A Retrospective Analysis",

@@ -1,17 +1,21 @@
 {
   "C1276": {
-    "title": "White House Email Spoofing Incident",
+    "title": "Podesta Phishing Email Incident (U.S. Election Emailgate)",
     "keywords": [
-      "White House email spoofing",
+      "Podesta phishing email",
+      "Emailgate",
+      "Hillary Clinton",
       "phishing attack",
-      "domain impersonation",
-      "accounts-google.com",
-      "Google account credential theft",
-      "malicious links",
       "spear phishing",
-      "typosquatting"
+      "Google security alert email",
+      "Bitly short URL",
+      "Fancy Bear",
+      "WikiLeaks",
+      "credential theft",
+      "2016 U.S. election",
+      "Russian hackers"
     ],
-    "summary": "In 2015, attackers sent emails appearing to originate from the White House, containing malicious links that directed victims to a fake Google login page to steal Google account credentials. The phishing scheme used the domain 'accounts-google.com' to mimic Google's legitimate site.",
+    "summary": "On March 19, 2016, Hillary campaign chair John Podesta received an email disguised as a Google security warning claiming someone was trying to access his account and urging a password change. His aide forwarded it to an IT staffer, who misjudged it as a 'legitimate email' due to a typo; Podesta clicked the phishing link, causing roughly 6,000 emails over nearly a decade to be stolen and later leaked via WikiLeaks. Attackers used Bitly short URLs resembling Google and were attributed to the Russian hacking group Fancy Bear.",
     "references": [
       {
         "title": "A Review of the 'Email Gate' Incident During the U.S. Election Year - National Information Center",

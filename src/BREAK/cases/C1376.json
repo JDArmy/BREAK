@@ -11,7 +11,7 @@
       "黑客攻击",
       "Roman Shtylman"
     ],
-    "summary": "2012年5月，黑客攻击BitFloor交易所并盗取24000枚比特币。攻击根源在于钱包密钥备份未加密，使攻击者能够轻易获取钱包密钥，进而盗取巨额加密资产，最终导致交易所关闭。",
+    "summary": "2012年9月，黑客攻击BitFloor交易所并盗取24000枚比特币。攻击根源在于钱包密钥的未加密备份被攻击者获取，使其能够轻易取得钱包密钥进而盗取巨额加密资产，交易所创建者Roman Shtylman随后暂停交易并最终关闭交易所。",
     "category": "security_incident",
     "relatedRisks": [
       "R0162"
@@ -26,7 +26,7 @@
         "link": "https://bitcointalk.org/index.php?topic=105818.0"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-06",
     "incidentTime": "2012-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [

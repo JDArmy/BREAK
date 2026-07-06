@@ -13,7 +13,7 @@
       "credential dumping",
       "fileless attack"
     ],
-    "summary": "The 2017 global Petya/NotPetya outbreak heavily exploited Living off the Land techniques. Attackers used Mimikatz to dump credentials from memory, then utilized stolen account credentials to remotely execute the malware across networks via PsExec and WMI command-line tools, achieving lateral movement. The entire process avoided traditional malicious files by abusing built-in system utilities and l",
+    "summary": "The 2017 global Petya/NotPetya outbreak heavily exploited Living off the Land techniques. Attackers used Mimikatz to dump credentials from memory, then leveraged stolen account credentials to remotely execute themselves via PsExec and WMI command-line tools for lateral movement. Built-in system utilities and legitimate admin software were abused as propagation vectors, but the malware still dropped malicious components such as a DLL file for initial infection and payload execution.",
     "references": [
       {
         "title": "What is Living off the Land? - Hardworking Youth - Blog Garden",

@@ -13,22 +13,22 @@
       "CAKE",
       "BNB"
     ],
-    "summary": "2026年3月15日，Venus Protocol在BNB Chain上遭受第7次攻击，损失约370万美元。攻击者利用闪电贷借入大量资金，操纵低流动性代币THE的价格，在抵押不足的头寸被清算前借走BTC、CAKE、BNB等蓝筹资产。核心问题在于协议接受了低流动性代币作为抵押品，使其价格容易被单笔交易操纵。",
+    "summary": "2026年3月，Venus Protocol在BNB Chain上托管的Thena(THE)市场遭遇攻击。攻击者提前9个月囤积THE代币控制约84%供给上限，并部署恶意合约利用Venus智能合约的捐赠漏洞与getCashPrior读取余额的设计，将THE兑换率膨胀3.81倍、价格从0.263美元拉升至0.51美元以上，反复借贷并捐回THE放大借币能力。最终清算潮使协议产生约218万美元坏账。",
     "category": "security_incident",
     "relatedRisks": [
       "R0160"
     ],
     "references": [
       {
-        "title": "复盘Venus攻击事件：当DeFi的“紧急制动”碾碎去中心化信仰 - PANews",
-        "link": "https://www.panewslab.com/zh/articles/472763c2-156c-4b58-b162-a857da0792a5"
+        "title": "Explained: The Venus Protocol Hack (March 2026) - Halborn",
+        "link": "https://www.halborn.com/blog/post/explained-the-venus-protocol-hack-march-2026"
       },
       {
-        "title": "Venus Protocol statement on THE market exploit",
-        "link": "https://x.com/VenusProtocol/status/2033471885259034989"
+        "title": "How Chainalysis and Hexagate Stopped the Venus Protocol Hacker",
+        "link": "https://www.chainalysis.com/blog/hexagate-and-community-stops-a-hack-on-venus-protocol/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2026-03",
     "relatedAttackTools": [
       "AT0076",

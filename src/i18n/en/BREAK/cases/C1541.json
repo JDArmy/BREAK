@@ -10,7 +10,7 @@
       "USDC",
       "protocol economic balance"
     ],
-    "summary": "An attacker exploited a critical flaw in the USR minting function of the Resolv protocol, manipulating the oracle with only about $100,000 USDC to mint unauthorized tokens and disrupt the protocol's economic balance.",
+    "summary": "In March 2026, the Resolv DeFi protocol was attacked. Using only about $100,000 USDC, the attacker exploited a critical flaw in the USR minting function (the root cause was not finalized by the official team; possible explanations include oracle manipulation, off-chain signer key compromise, or missing minting amount validation) to mint approximately 80 million USR out of thin air, then cashed out about $23 million via liquidity pools such as Curve, causing USR to de-peg.",
     "references": [
       {
         "title": "In-Depth Research Report on the Resolv Protocol Hacking Incident: Who Pays the Final Bill? - Tencent News",

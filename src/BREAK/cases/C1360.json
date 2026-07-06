@@ -19,15 +19,15 @@
     ],
     "references": [
       {
-        "title": "Belt闪电贷攻击后续:总损失金额5000万美元,48小时内发布补偿计划|贷 ...",
-        "link": "https://www.163.com/dy/article/GBBOAOT30514832I.html"
+        "title": "ValueDeFi Incident: Incorrect Weighted Constant Product Invariant Calculation - PeckShield (2021-05-08, ~$11M)",
+        "link": "https://peckshield.medium.com/valuedefi-incident-incorrect-weighted-constant-product-invariant-calculation-1bbaa220a02b"
       },
       {
-        "title": "Value DeFi Incident: Root Cause Analysis",
-        "link": "https://peckshield.medium.com/value-defi-incident-root-cause-analysis-fbab71faf373"
+        "title": "Value DeFi - REKT 3 (2021-05-08: vSwap AMM exploited for ~$11M via Bancor formula)",
+        "link": "https://rekt.news/value-rekt3"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-06",
     "incidentTime": "2021-05",
     "relatedAttackTools": [
       "AT0076",
