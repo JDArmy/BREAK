@@ -25,11 +25,9 @@
       "R0070"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0059",
-      "A0061",
       "A0044",
-      "A0021"
+      "A0020-001",
+      "A0077"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -44,7 +42,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "为了制造虚假的交易流水以骗取平台补贴，刷单商家与物流内鬼合作，向全国各地发出了数万个内装废纸的\"空包\"。"
   }
 }

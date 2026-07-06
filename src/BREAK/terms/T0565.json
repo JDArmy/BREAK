@@ -10,10 +10,12 @@
     "description": "Cookie Stuffing 在用户无真实点击或购买意图时写入跟踪 Cookie，让攻击者在后续真实转化中冒领佣金。防护需要校验有效点击、限制 Cookie 生命周期、分析触点质量和追踪异常高转化的联盟渠道。",
     "usageExample": "评估与 Cookie Stuffing 相关的风险敞口，并定义相应的控制措施。",
     "relatedRisks": [
-      "R0239",
-      "R0247"
+      "R0239"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0209",
+      "A0210"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
@@ -25,7 +27,7 @@
         "link": "https://en.wikipedia.org/wiki/Cookie_stuffing"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-06",
     "version": 2
   }
 }

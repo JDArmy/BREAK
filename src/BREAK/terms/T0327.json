@@ -23,14 +23,12 @@
     ],
     "relatedAvoidances": [
       "A0024",
-      "A0015",
       "A0016",
-      "A0054",
-      "A0044",
       "A0038",
       "A0060",
       "A0016-001",
-      "A0004"
+      "A0004",
+      "A0077"
     ],
     "relatedAttackTools": [
       "AT0039",
@@ -53,6 +51,6 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-06"
   }
 }

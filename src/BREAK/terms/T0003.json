@@ -22,10 +22,11 @@
       "R0064"
     ],
     "relatedAvoidances": [
-      "A0015",
       "A0059",
       "A0061",
-      "A0044"
+      "A0044",
+      "A0005",
+      "A0077"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
@@ -41,7 +42,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-06",
     "usageExample": "某\"大撸笔\"在双十一期间利用平台满减叠加的漏洞，以极低价格囤积了数百台高端扫地机器人，随后在二手平台加价转卖套利。"
   }
 }

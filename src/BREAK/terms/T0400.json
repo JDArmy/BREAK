@@ -66,9 +66,6 @@
       "R0096"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
       "A0054",
       "A0044"
     ],
@@ -88,7 +85,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   },
   "T0400-002": {
     "title": "黑户贷",
@@ -158,16 +155,11 @@
       "R0096"
     ],
     "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
       "A0054",
       "A0044",
       "A0050",
-      "A0035",
       "A0016",
-      "A0052",
-      "A0049"
+      "A0052"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
@@ -186,7 +178,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-06"
   },
   "T0400-004": {
     "title": "租机贷",
