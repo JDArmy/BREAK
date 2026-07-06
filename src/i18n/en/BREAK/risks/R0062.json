@@ -30,7 +30,7 @@
   "R0062-001": {
     "title": "Credit Card / Loan Cash-Out",
     "definition": "Exploiting platform mechanisms to cash out credit card limits or shopping loans.",
-    "description": "Exploiting platform business process vulnerabilities to withdraw shopping loans to a bank card, or colluding between buyers and sellers to fake shipments and extract shopping loan funds.",
+    "description": "Black-market actors exploit platform business-process vulnerabilities to withdraw shopping-loan funds to a bank card, or collude between buyers and sellers to fabricate transactions and fake shipments to siphon shopping-loan and credit-card limits. Common tactics include refunding immediately after credit-card payment to cash out, self-buying and self-selling to create a closed fake-transaction loop, and abusing return rules to convert limits into cash. The funds ultimately leave genuine consumption channels and flow into grey/black-market chains, causing fund losses and compliance risks for card issuers and the platform.",
     "influence": "Credit card limits or shopping-loan funds are fraudulently withdrawn and diverted from consumption purposes, leaving card issuers and the platform with fund losses and non-performing-loan risk; fraudulent refund transactions create platform advance-payment and channel-chargeback costs, and large-scale cash-outs trigger regulatory interviews, payment-channel downgrades, and credit-card compliance penalties.",
     "references": [
       {

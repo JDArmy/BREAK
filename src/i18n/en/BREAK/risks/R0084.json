@@ -84,7 +84,7 @@
       }
     ],
     "description": "EIP and protocol phishing abuses user confusion around new protocol features, signature formats, or wallet prompts. Attackers craft apparently legitimate approvals, permits, delegations, or contract interactions that grant token transfer or execution rights after the user signs.\n\nThe core risk is semantic opacity: structured signing data can hide real consequences from ordinary users. Wallets, DApps, and risk engines need to translate protocol actions into understandable warnings.\n\nLimitation: Depends on cognitive blind spots around new protocol features",
-    "influence": "Opaque protocol signing can trick users into granting transfer or execution rights, causing direct asset loss while appearing as a normal wallet action.",
+    "influence": "Exploiting users' cognitive blind spots around new protocol signing semantics to bypass their vigilance, causing direct asset losses such as stolen tokens or hijacked authorizations.",
     "riskAssessment": {
       "observables": [
         "Wallet signature-authorization requests present abstract structured data such as Permit or EIP-712, the consequences of which ordinary users cannot judge",

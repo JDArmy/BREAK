@@ -30,7 +30,7 @@
   "R0068-001": {
     "title": "Malicious Complaints",
     "definition": "Filing malicious complaints against a trading platform or against merchants on a trading platform.",
-    "description": "With the goal of gaining improper benefits or forcing the target to be penalized, attackers file malicious complaints against a trading platform through regulatory bodies, or against merchants through the trading platform.",
+    "description": "Black-market actors aim to gain improper benefits or force the target to be penalized, filing malicious complaints against trading platforms through regulators, or against merchants through the trading platform. Common tactics include bulk-complaining about boilerplate clauses such as advertising-law prohibited terms or labeling defects, and demanding payment in exchange for withdrawing the complaint, forming a professional complaint-extortion chain that inflicts financial and reputational losses on both platforms and merchants.",
     "influence": "Causes financial or reputational losses to the platform or sellers.",
     "references": [
       {
@@ -59,7 +59,7 @@
     "title": "Malicious Claims",
     "definition": "Bulk-purchasing expired, unlisted, or counterfeit goods and filing tenfold compensation claims.",
     "description": "Using bulk searches, data scraping, and similar methods to find expired, counterfeit, substandard, or non-compliant products (e.g., containing advertising law prohibited terms). After placing orders, the buyer complains about the seller's violations and demands large sums of money in exchange for withdrawing the complaint.",
-    "influence": "Causes financial losses to the platform or sellers.",
+    "influence": "Sellers are extorted into paying large sums or bear penalties; platform complaint workloads and compliance costs rise, and normal business order is disrupted.",
     "references": [
       {
         "title": "Meituan Reports Jan-Aug Black-Grey Market Crackdown Results: Over 50 Million Yuan Involved",

@@ -29,7 +29,7 @@
   },
   "R0055-001": {
     "title": "Coupon Restriction Bypass",
-    "definition": "Restricted coupons are claimed or used outside of their intended restrictions.",
+    "definition": "Restricted coupons are claimed or used outside their claim or usage restrictions for arbitrage.",
     "description": "Two scenarios: first, non-public coupons, coupons claimable under specific conditions, or coupons issued to specific groups are claimed without meeting the restrictions; second, coupons restricted to specific usage scenarios or conditions are used outside those restrictions. Restrictions include: specific time windows, specific user groups, specific product pairings, specific price thresholds, coupon stacking limits, and more.",
     "influence": "Exploits platform marketing activity benefits, causing financial losses to the platform.",
     "references": [

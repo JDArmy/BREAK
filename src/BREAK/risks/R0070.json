@@ -93,7 +93,7 @@
   "R0070-001": {
     "title": "低买高卖",
     "definition": "将其他平台或其他店铺的低价商品，在本平台本店铺高价售卖，以赚取差价。",
-    "description": "一种典型的低买高卖方式是：将商品的价格大幅提高，再通过搜索竞价排名机制将商品排在前列，以获取更多的曝光量。",
+    "description": "一种典型的低买高卖方式是：将商品的价格大幅提高，再通过搜索竞价排名机制将商品排在前列，以获取更多的曝光量。黑产通过自动化手段监控跨平台价差并批量搬运低价货源到本平台高价售卖，赚取差价同时制造平台价格虚高假象，挤压正常商家曝光并导致用户流失。",
     "complexity": "intermediate",
     "influence": "这样的行为会给用户造成平台价格虚高的假象，导致用户流失。",
     "avoidances": [
@@ -120,7 +120,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-06",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "medium",

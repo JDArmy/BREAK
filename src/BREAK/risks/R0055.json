@@ -77,7 +77,7 @@
   },
   "R0055-001": {
     "title": "卡券限制突破",
-    "definition": "限制性卡券被脱离限制非预期领用。",
+    "definition": "限制性卡券被脱离领取或使用限制而被非预期的领用套利。",
     "description": "分两种场景：一种是非公开的卡券、特定条件可领取或面向特定群体发放的卡券被脱离限制领取；另一种场景是限定使用场景或条件的卡券被脱离限制条件使用。限制包括：特定时间、特定人群、特定商品配券、特定价格配券、卡券叠加限制等等",
     "complexity": "basic",
     "influence": "套取平台营销活动利益，给平台带来经济损失。",
@@ -97,7 +97,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-06",
     "keywords": [
       "卡券限制突破",
       "优惠券限制绕过",

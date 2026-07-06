@@ -30,7 +30,7 @@
   "R0054-001": {
     "title": "Bulk Refunds",
     "definition": "Placing bulk orders through the same or different accounts and initiating illegitimate bulk returns or refunds.",
-    "description": "Using automated or manual means to place large numbers of orders or high-value orders, then bulk-canceling and requesting refunds, maliciously consuming supply chain costs or causing the seller's return rate to rise.",
+    "description": "Black-market actors use automated scripts or manual means to place large numbers of orders or high-value orders, then initiate bulk cancellation and refund requests, maliciously consuming warehousing, logistics, and after-sales costs in the supply chain, or artificially driving up the seller's return rate to depress its ratings and rankings. This tactic is often combined with coupon arbitrage and flash-return arbitrage, concentrated on a single account or a cluster of linked accounts, and exerts sustained pressure on seller operations and the platform's after-sales system.",
     "influence": "Disrupts the seller's normal operations, causing supply chain losses or a drop in ratings and rankings.",
     "references": [
       {
@@ -58,8 +58,8 @@
   "R0054-002": {
     "title": "Return Fraud",
     "definition": "A buyer returns a counterfeit, used, empty, incomplete, or substitute item instead of the original purchased product.",
-    "description": "The returned item is not the actual item that was shipped — such as returning a counterfeit or a different product (buy A, return B). The quantity of returned items differs from what was actually shipped, including empty packages.",
-    "influence": "Causes financial loss to the platform or seller.",
+    "description": "During the return process, buyers commit frauds such as returning counterfeits, used goods, empty packages, short-shipped items, or substitute items (buy A, return B) — i.e., the returned item is not the actual shipped product, including high-quality counterfeits and bait-and-switch; or the returned quantity does not match the shipped quantity, including empty packages and missing parts. This tactic is often combined with 7-day no-questions-asked return rules and flash-refund channels, exploiting logistics sign-off verification gaps to obtain genuine goods or refunds, leaving the seller out of pocket on both the goods and the refund and driving up after-sales dispute rates.",
+    "influence": "Sellers lose both goods and refunds and bear the asset loss of genuine goods being swapped out; platform after-sales disputes and advance-payment costs rise, and return-verification pressure intensifies.",
     "references": [
       {
         "title": "Receiving Genuine Goods but Returning Counterfeits: Does It Constitute Fraud - Qionglai People's Procuratorate",
@@ -95,7 +95,7 @@
     "title": "Flash Return Arbitrage",
     "definition": "Placing an order to receive gifts, vouchers, or discounts, then immediately canceling the order to extract the benefits.",
     "description": "A targeted fraudster may stockpile large numbers of accounts and monitor platform or merchant promotions in real time. Upon finding a profitable opportunity, they place bulk orders via automation, extract coupons, gifts, or other benefits, and then immediately cancel the orders for profit.",
-    "influence": "Causes financial loss to the platform and sellers.",
+    "influence": "Platform marketing funds and gift costs are siphoned off; seller return rates and after-sales costs are maliciously inflated, and legitimate promotion rules are abused.",
     "references": [
       {
         "title": "Exploiting Platform Flash Refund Rules to Fleece E-commerce: Student Sentenced for Refund Without Return - The Paper",

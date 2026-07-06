@@ -30,7 +30,7 @@
   "R0083-001": {
     "title": "Employee Account Compromise",
     "definition": "The potential threat that accounts of internal employees may be obtained and misused by unauthorized individuals or malicious parties.",
-    "description": "Scenarios may include employees falling victim to phishing attacks, using weak passwords, sharing account information, or being manipulated through social engineering, resulting in account compromise.",
+    "description": "Common scenarios for employee account compromise include employees falling victim to phishing attacks, using weak passwords, sharing account information, or being manipulated through social engineering, resulting in account compromise. After obtaining the account, attackers commonly use it for unauthorized access to sensitive data, lateral movement, or as a pivot for further attacks; because the account itself carries legitimate permissions, traditional perimeter defenses struggle to detect it, posing a persistent threat to the organization's confidentiality, integrity, and availability.",
     "influence": "Harms include theft of sensitive information, unauthorized access to company systems, data tampering, and malicious operations performed under stolen identities, posing potential threats to the company's confidentiality, integrity, and availability.",
     "references": [
       {

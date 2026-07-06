@@ -29,7 +29,7 @@
   },
   "R0030-001": {
     "title": "Bulk Account Registration",
-    "definition": "Using automated tools to create accounts in bulk for subsequent abuse.",
+    "definition": "Using automated tools or scripts to create accounts in bulk for subsequent abuse and profit.",
     "description": "Black-market actors exploit the application's account registration process, using automated scripts, registration bots, or device-control systems to create accounts in bulk, often filling in templated profiles to evade risk control. Account sources typically pair with CAPTCHA-solving and SMS-receiving platforms to bypass verification codes and SMS checks, and the bulk-produced accounts are subsequently used for promotional activity cheating, metric inflation, promo abuse, traffic diversion, and other grey/black-market businesses.",
     "influence": "These accounts are subsequently abused for generating spam, money laundering, spreading malware, reputation manipulation, pranks, and distorting SEO, reviews, and surveys.",
     "references": [

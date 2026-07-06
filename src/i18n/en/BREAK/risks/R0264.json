@@ -91,7 +91,7 @@
   },
   "R0264-003": {
     "title": "Fake Trip Fee Fraud",
-    "definition": "Forging trip records to fraudulently claim freight and subsidies.",
+    "definition": "Fabricating or duplicate-entering trip records to fraudulently claim freight and subsidies as a fee-fraud scheme.",
     "description": "Fake trip fee fraud fabricates or duplicate-enters trip records, inflating trip counts and mileage to claim freight and subsidies, a trip variant of FTL capacity falsification.\n\nThe risk causes inflated trip freight and subsidy expenditure. Detection must combine trip-vehicle-trajectory linkage verification, trip tamper-proofing, and abnormal trip monitoring.",
     "influence": "The risk causes inflated freight and subsidy expenditure, distorting trip and capacity data.",
     "references": [

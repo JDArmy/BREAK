@@ -30,7 +30,7 @@
   "R0078-001": {
     "title": "Partner Data Breach",
     "definition": "Sensitive information leakage caused by external entities or service providers that partner with the organization, due to insufficient security measures, technical vulnerabilities, or improper operations when handling, storing, or transmitting data.",
-    "description": "Scenarios may include third-party service providers being attacked, unauthorized access, and insecure environments during data transmission.",
+    "description": "Common scenarios for partner data breaches include third-party service providers being attacked, partner APIs being called beyond authorization, data-transmission links lacking encryption or access control, and partner personnel accounts being compromised. Because organizations lack direct control over the security posture of external entities, partners often become a springboard for attackers to reach the organization's data assets; breach incidents often involve customer privacy, trade secrets, and compliance data, triggering trust crises and regulatory penalties.",
     "influence": "Harms include loss of trust from customers and business partners, legal liability, reputational damage, and potential financial losses, posing potential threats to both the organization and its partners.",
     "references": [
       {
