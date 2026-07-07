@@ -265,10 +265,15 @@
   font-weight: 600;
 }
 
-/* 列表页模式：蓝色高亮（链接色） */
+/* 列表页模式：中性灰高亮（避免与链接蓝色混淆） */
 .usage-highlight--link {
-  background: color-mix(in srgb, var(--break-link) 18%, transparent);
-  color: var(--break-link);
+  background: color-mix(in srgb, var(--slate-500) 16%, transparent);
+  color: var(--slate-700);
+}
+
+/* 暗黑模式：高亮文字改用浅色变体，保证对比度 */
+html.dark .usage-highlight--link {
+  color: var(--slate-200);
 }
 
 /* 抽屉模式：琥珀色高亮（强调背景色） */

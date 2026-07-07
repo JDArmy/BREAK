@@ -1,5 +1,11 @@
 # Change log
 
+## 2.42.34
+
+usage-highlight--link 文字色由蓝色改为中性灰，避免被误认为链接
+
+- 术语 usageExample 列表页高亮（`.usage-highlight--link`）原用链接色（蓝色），易被误认为可点击链接；改为中性 slate 灰（slate-700 浅灰背景），并补充暗黑模式 slate-200 文字色保证对比度。
+
 ## 2.42.33
 
 修复 term-completeness 52 个 fail（relatedAvoidances 过宽/错挂），2 批 subagent 并行。
