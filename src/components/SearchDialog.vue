@@ -469,10 +469,11 @@ function handleTouchStart(index: number) {
 }
 
 :deep(.search-highlight) {
-  background-color: var(--el-color-primary-light-8);
-  color: var(--el-color-primary);
+  background-color: color-mix(in srgb, var(--amber-300) 54%, transparent);
+  color: var(--amber-700);
   padding: 0 2px;
   border-radius: 2px;
+  font-weight: 650;
 }
 
 @media (max-width: 767px) {
@@ -494,5 +495,11 @@ function handleTouchStart(index: number) {
 
 .search-dialog .el-dialog {
   border-radius: 12px;
+}
+
+html.dark .search-dialog .search-highlight {
+  background-color: #fbbf24;
+  color: #111827;
+  box-shadow: inset 0 0 0 1px #fde68a;
 }
 </style>
