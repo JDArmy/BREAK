@@ -4,8 +4,8 @@
     "description": "通过OAuth授权、管理员账号或外链分享窃取SaaS与协作数据。",
     "references": [
       {
-        "title": "SaaS史上最严重供应链攻击：Salesloft Drift数据泄露事件深度剖析 - 腾讯新闻",
-        "link": "https://news.qq.com/rain/a/20250912A060OP00"
+        "title": "Widespread Data Theft Targets Salesforce Instances via Salesloft Drift - Google Cloud Mandiant Threat Intelligence",
+        "link": "https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift"
       },
       {
         "title": "OAuth令牌成为隐形钥匙：SaaS生态连环攻击 - CSDN",
@@ -29,7 +29,7 @@
       "SaaS数据窃取者",
       "SaaS数据窃取"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-07",
     "relatedThreatActors": [
       {
         "key": "TA0057",

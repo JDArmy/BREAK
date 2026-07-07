@@ -4,8 +4,8 @@
     "description": "围绕商户套现、拒付、退款和支付令牌滥用牟利的黑灰产团伙。",
     "references": [
       {
-        "title": "入库参考案例：武某信用卡诈骗案 - 中华人民共和国最高人民法院",
-        "link": "https://www.court.gov.cn/zixun/xiangqing/469031.html"
+        "title": "上海市人民检察院、上海市公安局、上海金融监管局联合发布非法金融中介治理典型案例",
+        "link": "https://jrj.sh.gov.cn/ZXYW178/20260515/0d32720b80cb4065be911a8bbf1ed8d1.html"
       }
     ],
     "buildAttackTools": [
@@ -27,7 +27,7 @@
       "支付欺诈团伙",
       "支付欺诈"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-07",
     "relatedThreatActors": [
       {
         "key": "TA0002-001",

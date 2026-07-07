@@ -4,11 +4,11 @@
     "description": "Actors who steal SaaS and collaboration data through OAuth grants, administrator accounts, or external sharing links.",
     "references": [
       {
-        "title": "SaaS's Worst Supply Chain Attack: In-depth Analysis of Salesloft Drift Data Breach - Tencent News",
-        "link": "https://news.qq.com/rain/a/20250912A060OP00"
+        "title": "Widespread Data Theft Targets Salesforce Instances via Salesloft Drift - Google Cloud Mandiant Threat Intelligence",
+        "link": "https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift"
       },
       {
-        "title": "OAuth Tokens as Invisible Keys: Chain Attacks in SaaS Ecosystem - CSDN",
+        "title": "OAuth Tokens as Invisible Keys: Chain Attacks in the SaaS Ecosystem - CSDN",
         "link": "https://blog.csdn.net/weixin_42376192/article/details/155299946"
       }
     ],

@@ -6,14 +6,19 @@
     "complexity": "intermediate",
     "influence": "拒付和退款滥用会直接造成货款、商品和补贴损失，并增加商户纠纷、支付通道罚金和客诉成本。",
     "avoidances": [
+      "A0021",
       "A0208",
       "A0015",
-      "A0077"
+      "A0077",
+      "A0004",
+      "A0005",
+      "A0046",
+      "A0020"
     ],
     "references": [
       {
-        "title": "买真退假诈骗案：购真品退假货骗退款获刑",
-        "link": "https://k.sina.cn/article_1617264814_606580ae020022mus.html"
+        "title": "Fraud Detection Data Analytics - PayPal",
+        "link": "https://www.paypal.com/us/brc/article/data-analytics-fraud-management"
       }
     ],
     "keywords": [
@@ -24,7 +29,7 @@
       "虚假售后证据",
       "Chargeback fraud"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-07",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

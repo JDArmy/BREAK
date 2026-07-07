@@ -6,18 +6,17 @@
     "complexity": "intermediate",
     "influence": "众包三同拆单套利会造成配送费与补贴的多倍流失，扭曲运力调度数据，并挤占正常骑手的接单权益。",
     "avoidances": [
+      "A0021",
       "A0075",
       "A0029",
-      "A0077"
+      "A0077",
+      "A0005",
+      "A0020"
     ],
     "references": [
       {
         "title": "骗取外卖平台补贴近百万元案（法治周末，众包拆单套利）",
         "link": "http://m.legalweekly.cn/zfdt/2025-09/04/content_9250293.html"
-      },
-      {
-        "title": "注册110个账号点外卖骗保逾2.5万元，安徽一男子获刑（新浪，外卖补贴诈骗判决）",
-        "link": "https://news.sina.cn/2021-12-22/detail-ikyamrmz0555924.d.html"
       },
       {
         "title": "喜茶门店经理伙同外卖骑手套取13万运费（网易，众包拆单套利案）",
@@ -33,7 +32,7 @@
       "同寄件同收件",
       "crowdsourced order splitting"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-07",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -54,12 +53,12 @@
       {
         "key": "R0003",
         "relation": "co-occurrence",
-        "note": "众包三同拆单套利与抢购/库存滥用同属运力与资源滥用类风险。"
+        "note": "众包三同拆单套利与恶意抢购共享规避手段“设备指纹”。"
       },
       {
         "key": "R0017-002",
         "relation": "co-occurrence",
-        "note": "众包三同拆单套利与骗取补贴同属套取平台配送费与补贴类风险。"
+        "note": "众包三同拆单套利与骗取补贴共享规避手段“账号处罚”。"
       },
       {
         "key": "R0260",

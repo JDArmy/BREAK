@@ -1,5 +1,16 @@
 # Change log
 
+## 2.42.39
+
+抽取实体事件型 references 为 Case + 补全 Risk avoidances 覆盖
+
+- 从 Risk/AttackTool/ThreatActor 的 references 中识别 14 个具备 Case 要素的事件型链接，抽取为 Case（C1831-C1841、C1843、C1844），通过 relatedRisks/relatedAttackTools/relatedThreatActors 关联回实体；删除 C1842（与既存 C0934 重复）。
+- 删除原实体 references 中被抽取的事件型链接；对删完为空的 7 个实体（R0010/R0038/R0054/R0235/R0264/AT0004/TA0055）及 TA0029 补入规范/定义性替代来源（.gov/权威厂商技术文档等 primary）。
+- C1836（外卖骗保）与 C1842（反催收）恢复 criminal_verdict 分类并加入 admission exemptIds 技术债公示（裁判文书网 primary 直链不可得）。
+- 补全 R0031/R0235/R0256/R0260/R0261 的 avoidances 覆盖（补 AC02 感知/AC04 处置环节），消除 review-risk-avoidance fail。
+- 修正 R0261/TA0054 的 references 质量（补 primary 来源）；AT0099 中英文同步补 GSMA 规范来源。
+- README 案例计数同步 1783→1782。
+
 ## 2.42.38
 
 规避手段定义/分类/有效性改为 3 列同行，分类标题改为手段分类

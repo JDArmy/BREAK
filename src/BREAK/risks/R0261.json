@@ -6,9 +6,12 @@
     "complexity": "intermediate",
     "influence": "跨考勤月取消套利会造成结算与绩效的错配支出，扭曲考勤与结算数据，并影响运力绩效公平性。",
     "avoidances": [
+      "A0021",
       "A0077",
       "A0075",
-      "A0004"
+      "A0015",
+      "A0004",
+      "A0020-002"
     ],
     "references": [
       {
@@ -16,12 +19,8 @@
         "link": "http://news.cjn.cn/shxw/202510/t5219154.htm"
       },
       {
-        "title": "保证金43万“蒸发”！武汉一快递员钻规则漏洞被判职务侵占罪（湖北日报，套取保证金判决）",
-        "link": "https://news.hubeidaily.net/pc/c_4682453.html"
-      },
-      {
-        "title": "快递员钻营平台规则“空套”43万元，判了！（极目新闻，跨月取消套利判决）",
-        "link": "https://www.ctdsb.net/c1734_202510/2574607.html"
+        "title": "《网络货运承运平台经营管理办法》解读 - 中华人民共和国交通运输部",
+        "link": "https://www.mot.gov.cn/gongkai/zcjd/202601/t20260129_4199258.html"
       }
     ],
     "keywords": [
@@ -33,7 +32,7 @@
       "考勤结算套利",
       "attendance-month arbitrage"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-07",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "medium",
@@ -54,12 +53,12 @@
       {
         "key": "R0017-002",
         "relation": "co-occurrence",
-        "note": "跨考勤月取消套利与骗取补贴同属套取平台结算与奖励类风险。"
+        "note": "跨考勤月取消套利与骗取补贴共享规避手段“风控策略”。"
       },
       {
         "key": "R0054-003",
         "relation": "co-occurrence",
-        "note": "跨考勤月取消套利与闪退套利共享「下单后取消套取差额」手法。"
+        "note": "跨考勤月取消套利与闪退套利共享规避手段“设备指纹”。"
       }
     ]
   }
