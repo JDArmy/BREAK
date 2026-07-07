@@ -1,0 +1,21 @@
+{
+  "C1846": {
+    "title": "CHAI Study Demonstrates Physical-Environment Text Hijacking of Embodied AI Commands",
+    "keywords": [
+      "CHAI Study Demonstrates Physical-Environment Text Hijacking of Embodied AI Commands",
+      "CHAI",
+      "Command Hijacking",
+      "embodied AI",
+      "physical-world prompt injection",
+      "vision-language model",
+      "robotics security"
+    ],
+    "summary": "In September 2025, researchers from UC Santa Cruz and collaborators submitted the CHAI paper on indirect prompt injection against embodied AI. The study embedded misleading natural-language instructions into visual inputs such as signs and markers, then induced LVLM agents to produce wrong commands in drone emergency landing, autonomous driving, aerial target tracking, and real robot car scenarios. It shows that physical-world text can hijack robot decision-making.",
+    "references": [
+      {
+        "title": "CHAI: Command Hijacking against Embodied AI",
+        "link": "https://arxiv.org/abs/2510.00181"
+      }
+    ]
+  }
+}

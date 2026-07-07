@@ -1,0 +1,40 @@
+{
+  "C1843": {
+    "title": "Salesloft Drift数据泄露事件：SaaS供应链攻击波及700余家企业",
+    "keywords": [
+      "Salesloft Drift",
+      "SaaS供应链攻击",
+      "数据泄露",
+      "OAuth令牌",
+      "UNC6395",
+      "GitHub账户失陷",
+      "第三方集成风险"
+    ],
+    "summary": "2025年8月，SaaS平台Salesloft旗下Drift发生数据泄露，威胁组织UNC6395通过利用OAuth令牌漏洞获取了Cloudflare、Palo Alto Networks、Zscaler等700多家企业的敏感数据。据Mandiant调查，攻击者于2025年3月首次获取Salesloft的GitHub账户访问权限并持续控制至6月。该事件是SaaS史上最严重的供应链攻击之一，揭示单一受损集成与OAuth令牌滥用引发的大规模数据暴露风险。",
+    "category": "security_incident",
+    "incidentTime": "2025-08",
+    "relatedRisks": [
+      "R0081-005",
+      "R0059"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0054"
+    ],
+    "references": [
+      {
+        "title": "SaaS史上最严重供应链攻击：Salesloft Drift数据泄露事件深度剖析",
+        "link": "https://news.qq.com/rain/a/20250912A060OP00"
+      },
+      {
+        "title": "Widespread Data Theft Targets Salesforce Instances via Salesloft Drift - Google Cloud Mandiant Threat Intelligence",
+        "link": "https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift"
+      },
+      {
+        "title": "The Ongoing Fallout from a Breach at AI Chatbot Maker Salesloft - Krebs on Security",
+        "link": "https://krebsonsecurity.com/2025/09/the-ongoing-fallout-from-a-breach-at-ai-chatbot-maker-salesloft/"
+      }
+    ],
+    "updated": "2026-07-07"
+  }
+}

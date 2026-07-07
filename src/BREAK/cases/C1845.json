@@ -1,0 +1,33 @@
+{
+  "C1845": {
+    "title": "Fast DDS漏洞CVE-2024-30259可通过畸形RTPS包触发远程崩溃",
+    "keywords": [
+      "Fast DDS漏洞CVE-2024-30259可通过畸形RTPS包触发远程崩溃",
+      "Fast DDS",
+      "CVE-2024-30259",
+      "ROS2",
+      "DDS中间件",
+      "RTPS数据包",
+      "机器人中间件漏洞"
+    ],
+    "summary": "2024年5月，NVD收录eProsima Fast DDS漏洞CVE-2024-30259。GitHub供应商通报显示，攻击者作为发布者发送畸形RTPS数据包，可触发订阅端堆缓冲区溢出并远程崩溃Fast DDS进程。Fast DDS是ROS2常用DDS实现，该漏洞体现机器人中间件通信面暴露时的可用性风险。",
+    "category": "vulnerability_advisory",
+    "incidentTime": "2024-05",
+    "relatedRisks": [
+      "R0275"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "NVD: CVE-2024-30259 Detail",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2024-30259"
+      },
+      {
+        "title": "GitHub Advisory Database: CVE-2024-30259",
+        "link": "https://github.com/advisories/GHSA-3p59-9qg6-4j5f"
+      }
+    ],
+    "updated": "2026-07-07"
+  }
+}

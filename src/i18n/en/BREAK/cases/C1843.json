@@ -1,0 +1,29 @@
+{
+  "C1843": {
+    "title": "Salesloft Drift Data Breach: SaaS Supply-Chain Attack Hits Over 700 Enterprises",
+    "keywords": [
+      "Salesloft Drift",
+      "SaaS supply-chain attack",
+      "data breach",
+      "OAuth token",
+      "UNC6395",
+      "GitHub account compromise",
+      "third-party integration risk"
+    ],
+    "summary": "In August 2025, SaaS platform Salesloft's Drift product suffered a data breach. Threat actor UNC6395 exploited an OAuth token vulnerability to access sensitive data of over 700 enterprises including Cloudflare, Palo Alto Networks, and Zscaler. Per Mandiant's investigation, the attacker first gained access to Salesloft's GitHub account in March 2025 and maintained control through June. The incident is among the most severe SaaS supply-chain attacks, exposing the risk of mass data exposure from a single compromised integration and OAuth token abuse.",
+    "references": [
+      {
+        "title": "Worst SaaS supply-chain attack in history: Salesloft Drift data breach analysis - QQ News",
+        "link": "https://news.qq.com/rain/a/20250912A060OP00"
+      },
+      {
+        "title": "Widespread Data Theft Targets Salesforce Instances via Salesloft Drift - Google Cloud Mandiant Threat Intelligence",
+        "link": "https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift"
+      },
+      {
+        "title": "The Ongoing Fallout from a Breach at AI Chatbot Maker Salesloft - Krebs on Security",
+        "link": "https://krebsonsecurity.com/2025/09/the-ongoing-fallout-from-a-breach-at-ai-chatbot-maker-salesloft/"
+      }
+    ]
+  }
+}

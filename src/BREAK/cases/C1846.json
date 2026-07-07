@@ -1,0 +1,29 @@
+{
+  "C1846": {
+    "title": "CHAI研究演示物理环境文本劫持具身AI指令",
+    "keywords": [
+      "CHAI研究演示物理环境文本劫持具身AI指令",
+      "CHAI",
+      "Command Hijacking",
+      "具身AI",
+      "物理世界提示注入",
+      "视觉语言模型",
+      "机器人安全"
+    ],
+    "summary": "2025年9月，UC Santa Cruz等研究者提交CHAI论文，提出针对具身AI的物理环境间接提示注入攻击。研究把误导性自然语言指令嵌入路牌、标识等视觉输入，在无人机紧急降落、自动驾驶、空中目标跟踪和真实机器人车场景中诱导LVLM代理输出错误指令，说明物理世界文本可劫持机器人决策。",
+    "category": "academic_research",
+    "incidentTime": "2025-09",
+    "relatedRisks": [
+      "R0267"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "CHAI: Command Hijacking against Embodied AI",
+        "link": "https://arxiv.org/abs/2510.00181"
+      }
+    ],
+    "updated": "2026-07-07"
+  }
+}

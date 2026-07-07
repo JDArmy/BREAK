@@ -1,0 +1,25 @@
+{
+  "C1845": {
+    "title": "Fast DDS Vulnerability CVE-2024-30259 Allows Remote Crash via Malformed RTPS Packets",
+    "keywords": [
+      "Fast DDS Vulnerability CVE-2024-30259 Allows Remote Crash via Malformed RTPS Packets",
+      "Fast DDS",
+      "CVE-2024-30259",
+      "ROS 2",
+      "DDS middleware",
+      "RTPS packet",
+      "robotics middleware vulnerability"
+    ],
+    "summary": "In May 2024, NVD published CVE-2024-30259 for eProsima Fast DDS. The GitHub vendor advisory states that an attacker acting as a publisher could send malformed RTPS packets, trigger a heap buffer overflow on subscribers, and remotely crash Fast DDS processes. Because Fast DDS is commonly used with ROS 2, the advisory illustrates availability risk in exposed robotics middleware communication surfaces.",
+    "references": [
+      {
+        "title": "NVD: CVE-2024-30259 Detail",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2024-30259"
+      },
+      {
+        "title": "GitHub Advisory Database: CVE-2024-30259",
+        "link": "https://github.com/advisories/GHSA-3p59-9qg6-4j5f"
+      }
+    ]
+  }
+}

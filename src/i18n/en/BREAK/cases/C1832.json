@@ -1,0 +1,25 @@
+{
+  "C1832": {
+    "title": "Alipay Real-Name Authentication Flagged for Vulnerability: Main Accounts Found Linked to Unknown Sub-Accounts",
+    "keywords": [
+      "Alipay vulnerability",
+      "real-name authentication flaw",
+      "sub-account linking",
+      "account linkage fraud",
+      "shared identity info",
+      "payment security",
+      "account takeover risk"
+    ],
+    "summary": "In October 2015, an Alipay user reported that five unknown sub-accounts had been linked to their real-name-authenticated account without any confirmation or notification. Since one real-name account could link up to five sub-accounts that shared identity information and could not be unlinked, the issue raised concerns over account takeover and online loan risks. Alipay later responded that real-name authentication required multi-factor verification and processed the unknown accounts. The incident exposed weaknesses in identity verification within account-linking mechanisms.",
+    "references": [
+      {
+        "title": "Alipay vulnerability? Multiple sub-accounts linked without user's knowledge",
+        "link": "https://www.thepaper.cn/newsDetail_forward_1383678"
+      },
+      {
+        "title": "Alipay real-name authentication alleged flaw: response cites user's own information leakage - CNR.cn",
+        "link": "http://m.cnr.cn/news/20151011/t20151011_520110294_tt.html"
+      }
+    ]
+  }
+}

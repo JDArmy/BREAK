@@ -10,7 +10,7 @@ describe("案例懒加载", () => {
     const [cases, concurrentCases] = await Promise.all([loadCases(), loadCases()]);
     expect(concurrentCases).toBe(cases);
 
-    expect(Object.keys(cases).length).toBe(1760);
+    expect(Object.keys(cases).length).toBe(1774);
     expect(cases.C0001).toBeDefined();
     expect(getCases()).toBe(cases);
     await expect(loadCases()).resolves.toBe(cases);

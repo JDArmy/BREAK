@@ -39,10 +39,15 @@ function buildPrompt(item) {
 严格规则：
 1. 只输出 JSON 对象。
 2. currentRelationsReasonable：当前 related* 是否合理（有无错挂）。
-   - relatedAvoidances 错挂：挂了与该术语毫无防御关系的通用风控类（如"风控策略"对具体黑产术语过宽）。
-   - 但与该术语有具体检测/处置关系的 Avoidance 不算错挂（如"代发"挂"定向抽检"合理）。
+   - relatedAvoidances 错挂：挂了与该术语**毫无防御关系**的实体（如把攻击工具/数据泄露事件挂到 relatedAvoidances，或挂了与术语业务领域完全不相关的 Avoidance）。
+   - **通用但相关的 Avoidance 不算错挂**：A0054 合规治理、A0044 依法打击、A0016 威胁情报、A0077 交易风险监控等通用风控手段，只要与该术语的业务领域有间接防御关系，就视为合理（review 级可优化，不构成 fail）。例如"房信企"（骗贷）挂"合规治理/依法打击"虽不具体但相关，不算 fail。
+   - 与该术语有具体检测/处置关系的 Avoidance 不算错挂（如"代发"挂"定向抽检"合理）。
+   - relatedRisks 错挂：挂了与术语语义**完全不匹配**的风险（如"盒饭"冒充采购骗局挂"杀猪盘投资诈骗"——业务模式不同）。
 3. missingRelations：根据术语定义，应关联但未关联的实体类型（给类型描述，不给具体 ID）。
-4. verdict：pass/review/fail。fail=明显错挂（如把攻击工具挂到 relatedAvoidances）；review=可补强；pass=合理。
+4. verdict：pass/review/fail。
+   - **fail=明显错挂**：relatedRisks 挂了语义完全不匹配的风险，或 relatedAvoidances 挂了毫无关系的实体（如攻击工具/数据事件）。通用风控手段过宽只算 review，不算 fail。
+   - review=可补强（通用项可换更具体，或漏挂可补）。
+   - pass=合理。
 5. reason: 一句话。suggestions: 数组。`;
   const fmt = (list) => (list || []).map((r) => `- ${r.key} ${r.title}`).join('\n');
   const user = `【术语】${item.key} ${entity.title}

@@ -1,0 +1,25 @@
+{
+  "C1847": {
+    "title": "Ronin Bridge Theft Caused More Than $600 Million in Virtual Asset Losses",
+    "keywords": [
+      "Ronin Bridge Theft Caused More Than $600 Million in Virtual Asset Losses",
+      "Ronin Bridge",
+      "cross-chain bridge attack",
+      "cross-platform virtual asset transfer",
+      "validator private keys",
+      "Lazarus Group",
+      "Web3 security incident"
+    ],
+    "summary": "In March 2022, Ronin Bridge was attacked after adversaries controlled multiple Sky Mavis and Axie DAO validator private keys and forged withdrawal transactions. Two transactions moved 173,600 ETH and 25.5 million USDC. The FBI later attributed the theft to Lazarus Group/APT38, and the U.S. Treasury described it as one of the largest virtual asset thefts at the time, exposing cross-chain bridge validation and asset transfer risk.",
+    "references": [
+      {
+        "title": "FBI: North Korea Cyber Actors Responsible for Theft of $620 Million in Ethereum",
+        "link": "https://www.fbi.gov/news/press-releases/north-korean-cyber-actors-responsible-for-theft-of-620-million-in-ethereum"
+      },
+      {
+        "title": "U.S. Treasury: Treasury Sanctions Mixer Blender.io",
+        "link": "https://home.treasury.gov/news/press-releases/jy0768"
+      }
+    ]
+  }
+}

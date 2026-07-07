@@ -1,5 +1,16 @@
 # Change log
 
+## 2.42.35
+
+term-completeness 重评确认 52→0 + prompt 收紧（通用但相关不算 fail）+ 新增 Case 补 primary。
+
+- **term-completeness 重评**：52 fail → 0（50 修复确认 pass，2 真实 fail）。重评后 prompt 调整：区分"通用但相关的 Avoidance"（A0054 合规治理/A0044 依法打击等，算 review 不算 fail）vs"完全不相关错挂"（真 fail）。调整后 T0146/T0423 重评 fail 0。
+- **T0146 真过宽修复**：移除 R0150 杀猪盘（盒饭是冒充采购骗局，非杀猪盘投资诈骗）。
+- **新增 Case 补 primary 源**（其他 session 新增的 C1831-C1844，admission 20 error 阻断）：起 subagent 用 Scrapingdog 搜源，9 个补 primary（C1831 普陀检察院/C1834 无锡中院/C1835 最高检/C1837 寿县法院/C1839 青羊检察院/C1843 Mandiant 等），3 个降级 news_report（C1832/C1836/C1842 无官方 primary）。source-classify 白名单扩充（cloud.google.com/普陀检察院公众号）。
+- **C1840-C1844 补 relatedRisks**（其他 session 新增 Case 空 relatedRisks 阻断 schema）：C1840 R0016/R0034、C1841 R0012、C1842 R0096-001/R0053、C1843 R0081-005/R0059、C1844 R0094。
+- README/home.ts/cases-loader 断言同步 cases 1760→1774→1777。
+- validate:data 28 门禁全绿，build 通过。
+
 ## 2.42.34
 
 usage-highlight--link 文字色由蓝色改为中性灰，避免被误认为链接

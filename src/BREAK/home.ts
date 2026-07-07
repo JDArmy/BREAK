@@ -12,7 +12,7 @@ const entityCounts = {
   threatActors: 75,
   subThreatActors: 14,
   terms: 592,
-  cases: 1774,
+  cases: 1777,
 } as const;
 
 const homeBREAK = {

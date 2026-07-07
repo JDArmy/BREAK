@@ -131,6 +131,7 @@ const primaryDomainSuffixes = [
   'fraudlogix.com',
   'adguard.com',
   'blog.google',
+  'cloud.google.com', // Mandiant/Google Cloud 官方威胁情报博客（Google 收购 Mandiant 后的官方披露渠道）
   'chromewebstore.google.com',
   'peerj.com',
   'att.com',
@@ -540,6 +541,7 @@ const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((
 const primaryWechatBizIds = [
   'MjM5MjMyNTA0MQ==', // 公安部网安局
   'MzAxOTE3Nzc5MQ==', // 扬州市中级人民法院（C1246 花呗白条套现诈骗案官方发布）
+  'MzIyNTE5NTM5MA==', // 上海市普陀区人民检察院官方公众号（C1831 网络检察新闻发布会官方发布）
 ];
 
 function matchesDomain(domain, suffixes) {

@@ -1,0 +1,33 @@
+{
+  "C1847": {
+    "title": "Ronin Bridge跨链桥被盗事件造成超6亿美元虚拟资产损失",
+    "keywords": [
+      "Ronin Bridge跨链桥被盗事件造成超6亿美元虚拟资产损失",
+      "Ronin Bridge",
+      "跨链桥攻击",
+      "虚拟资产跨平台转移",
+      "验证节点私钥",
+      "Lazarus Group",
+      "Web3安全事件"
+    ],
+    "summary": "2022年3月，Ronin Bridge遭攻击，攻击者控制Sky Mavis与Axie DAO多个验证节点私钥并伪造提款交易，两笔交易转出173600枚ETH和2550万枚USDC。FBI后确认Lazarus Group/APT38负责该盗窃，财政部亦将其列为当时最大虚拟资产盗窃之一，暴露跨链桥验证风险。",
+    "category": "security_incident",
+    "incidentTime": "2022-03",
+    "relatedRisks": [
+      "R0216"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "FBI: North Korea Cyber Actors Responsible for Theft of $620 Million in Ethereum",
+        "link": "https://www.fbi.gov/news/press-releases/north-korean-cyber-actors-responsible-for-theft-of-620-million-in-ethereum"
+      },
+      {
+        "title": "U.S. Treasury: Treasury Sanctions Mixer Blender.io",
+        "link": "https://home.treasury.gov/news/press-releases/jy0768"
+      }
+    ],
+    "updated": "2026-07-07"
+  }
+}
