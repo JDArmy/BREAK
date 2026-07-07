@@ -118,20 +118,6 @@ const onNavigate = (event: "navigate-avoidance" | "navigate-risk" | "navigate-at
       <h3>{{ $t("definition") }}</h3>
       <p>{{ $t(`BREAK.avoidances.${aKey}.definition`) }}</p>
     </section>
-    <section class="detail-section">
-      <h3>{{ $t("description") }}</h3>
-      <p>{{ $t(`BREAK.avoidances.${aKey}.description`) }}</p>
-    </section>
-    <section v-if="$t(`BREAK.avoidances.${aKey}.limitation`)" class="detail-section">
-      <h3>{{ $t("limitation") }}</h3>
-      <p>{{ $t(`BREAK.avoidances.${aKey}.limitation`) }}</p>
-    </section>
-    <section v-if="keywords.length" class="detail-section">
-      <h3>{{ $t("keywords") }}</h3>
-      <div class="keywords">
-        <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
-      </div>
-    </section>
     <section class="detail-grid avoidance-meta-grid">
       <div v-if="selectedAvoidance?.category" class="risk-meta-card risk-meta-card--compact avoidance-meta-card--category">
         <h3>{{ $t("menu.avoidances") }}</h3>
@@ -144,6 +130,20 @@ const onNavigate = (event: "navigate-avoidance" | "navigate-risk" | "navigate-at
         <span class="knowledge-badge avoidance-effectiveness-badge" :class="`effectiveness-${selectedEffectiveness}`">
           {{ $t(`relationView.avoidanceEffectiveness.${selectedEffectiveness}`) }}
         </span>
+      </div>
+    </section>
+    <section class="detail-section">
+      <h3>{{ $t("description") }}</h3>
+      <p>{{ $t(`BREAK.avoidances.${aKey}.description`) }}</p>
+    </section>
+    <section v-if="$t(`BREAK.avoidances.${aKey}.limitation`)" class="detail-section">
+      <h3>{{ $t("limitation") }}</h3>
+      <p>{{ $t(`BREAK.avoidances.${aKey}.limitation`) }}</p>
+    </section>
+    <section v-if="keywords.length" class="detail-section">
+      <h3>{{ $t("keywords") }}</h3>
+      <div class="keywords">
+        <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
       </div>
     </section>
 

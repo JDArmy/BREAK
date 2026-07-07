@@ -334,7 +334,7 @@ html.dark .usage-highlight--link {
 
 /* ===== 规避手段元信息网格（AvoidancesView，复用 risk-meta-card 结构）===== */
 .avoidance-meta-grid {
-  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr);
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
   gap: 10px;
   align-items: stretch;
 }
