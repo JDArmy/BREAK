@@ -334,9 +334,15 @@ html.dark .usage-highlight--link {
 
 /* ===== 规避手段元信息网格（AvoidancesView，复用 risk-meta-card 结构）===== */
 .avoidance-meta-grid {
-  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  grid-template-columns: minmax(0, 2fr) minmax(120px, 1fr) minmax(120px, 1fr);
   gap: 10px;
   align-items: stretch;
+}
+
+/* 定义卡片：文本段落，左上对齐，文字换行 */
+.avoidance-meta-card--definition p {
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* 规避手段分类 badge：AC01 防止 / AC02 感知 / AC03 识别 / AC04 处置 */

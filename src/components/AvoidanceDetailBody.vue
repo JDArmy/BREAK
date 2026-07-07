@@ -114,13 +114,13 @@ const onNavigate = (event: "navigate-avoidance" | "navigate-risk" | "navigate-at
       </div>
     </div>
 
-    <section class="detail-section" data-detail-anchor="avoidances">
-      <h3>{{ $t("definition") }}</h3>
-      <p>{{ $t(`BREAK.avoidances.${aKey}.definition`) }}</p>
-    </section>
-    <section class="detail-grid avoidance-meta-grid">
+    <section class="detail-grid avoidance-meta-grid" data-detail-anchor="avoidances">
+      <div class="risk-meta-card avoidance-meta-card--definition">
+        <h3>{{ $t("definition") }}</h3>
+        <p>{{ $t(`BREAK.avoidances.${aKey}.definition`) }}</p>
+      </div>
       <div v-if="selectedAvoidance?.category" class="risk-meta-card risk-meta-card--compact avoidance-meta-card--category">
-        <h3>{{ $t("menu.avoidances") }}</h3>
+        <h3>{{ $t("avoidanceCategory") }}</h3>
         <span class="knowledge-badge avoidance-category-badge" :class="`avoidance-category-${selectedAvoidance.category}`">
           {{ $t(`BREAK.avoidanceCategories.${selectedAvoidance.category}.title`) }}
         </span>
