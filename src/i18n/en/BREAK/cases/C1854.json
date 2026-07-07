@@ -1,0 +1,25 @@
+{
+  "C1854": {
+    "title": "FTC Settled with Plaid over Financial Account Aggregation Data-Collection Dispute",
+    "keywords": [
+      "FTC Settled with Plaid over Financial Account Aggregation Data-Collection Dispute",
+      "Plaid",
+      "account aggregation",
+      "financial data aggregation",
+      "bank account connection",
+      "consumer data",
+      "FTC"
+    ],
+    "summary": "In January 2021, the U.S. Federal Trade Commission announced a settlement with financial technology company Plaid. The FTC alleged that when Plaid connected consumer bank accounts through third-party apps, it used misleading interfaces and collected financial data beyond what some consumers expected. The settlement required Plaid to disclose the scope of data collection, limit data retention, and delete unnecessary data, illustrating credential and data-control risks from third-party account aggregation.",
+    "references": [
+      {
+        "title": "FTC reaches settlement with fintech company Plaid over allegations that it deceived consumers about how it uses and shares their personal financial data",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2021/01/ftc-reaches-settlement-fintech-company-plaid-over-allegations-it-deceived-consumers-about-how-it-uses"
+      },
+      {
+        "title": "FTC Finalizes Settlement with Plaid Over Allegations that the Company Used Deceptive Tactics to Collect Personal Financial Data",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2021/05/ftc-finalizes-settlement-plaid-over-allegations-company-used-deceptive-tactics-collect-personal"
+      }
+    ]
+  }
+}

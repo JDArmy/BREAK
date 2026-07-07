@@ -1,0 +1,33 @@
+{
+  "C1853": {
+    "title": "联合国利比亚专家组报告披露KARGU-2自主无人机作战事件",
+    "keywords": [
+      "联合国利比亚专家组报告披露KARGU-2自主无人机作战事件",
+      "KARGU-2",
+      "自主无人机",
+      "利比亚",
+      "蜂群协同",
+      "自主武器",
+      "联合国专家组"
+    ],
+    "summary": "2021年3月，联合国安理会利比亚问题专家组报告披露，2020年3月利比亚冲突中，撤退的哈夫塔尔武装后勤车队遭到KARGU-2等可自主运行的游荡弹药系统追击。相关系统被描述为具备目标追踪和无需操作员持续链路的能力，引发自主无人机集群协同与控制边界争议。",
+    "category": "security_incident",
+    "incidentTime": "2020-03",
+    "relatedRisks": [
+      "R0277"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "UN Security Council: Final report of the Panel of Experts on Libya established pursuant to resolution 1973 (2011) - S/2021/229",
+        "link": "https://undocs.org/S/2021/229"
+      },
+      {
+        "title": "The Kargu-2 Autonomous Attack Drone: Legal & Ethical Dimensions - Lieber Institute",
+        "link": "https://lieber.westpoint.edu/kargu-2-autonomous-attack-drone-legal-ethical/"
+      }
+    ],
+    "updated": "2026-07-07"
+  }
+}

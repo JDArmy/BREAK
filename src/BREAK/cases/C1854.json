@@ -1,0 +1,33 @@
+{
+  "C1854": {
+    "title": "FTC与Plaid就金融账号聚合数据收集争议达成和解",
+    "keywords": [
+      "FTC与Plaid就金融账号聚合数据收集争议达成和解",
+      "Plaid",
+      "账号聚合",
+      "金融数据聚合",
+      "银行账号连接",
+      "消费者数据",
+      "FTC"
+    ],
+    "summary": "2021年1月，美国联邦贸易委员会宣布与金融技术公司Plaid达成和解。FTC称Plaid通过第三方应用连接消费者银行账户时，使用误导性界面并收集超出部分消费者预期的金融数据。和解要求Plaid披露数据收集范围、限制数据保留并删除不必要数据，体现第三方账号聚合带来的凭据与数据控制风险。",
+    "category": "administrative_enforcement",
+    "incidentTime": "2021-01",
+    "relatedRisks": [
+      "R0037"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "FTC reaches settlement with fintech company Plaid over allegations that it deceived consumers about how it uses and shares their personal financial data",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2021/01/ftc-reaches-settlement-fintech-company-plaid-over-allegations-it-deceived-consumers-about-how-it-uses"
+      },
+      {
+        "title": "FTC Finalizes Settlement with Plaid Over Allegations that the Company Used Deceptive Tactics to Collect Personal Financial Data",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2021/05/ftc-finalizes-settlement-plaid-over-allegations-company-used-deceptive-tactics-collect-personal"
+      }
+    ],
+    "updated": "2026-07-07"
+  }
+}

@@ -87,6 +87,7 @@ const primaryDomainSuffixes = [
   'justice.gov',
   'judiciary.uk',
   'cps.gov.uk',
+  'ico.org.uk',
   'europol.europa.eu',
   'fbi.gov',
   'peelpolice.ca',

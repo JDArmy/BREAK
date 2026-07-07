@@ -1,0 +1,33 @@
+{
+  "C1851": {
+    "title": "FTC指控Rytr生成虚假消费者评论案",
+    "keywords": [
+      "FTC指控Rytr生成虚假消费者评论案",
+      "Rytr",
+      "AI生成评论",
+      "虚假评论",
+      "消费者评价",
+      "生成式AI",
+      "FTC"
+    ],
+    "summary": "2024年9月，美国联邦贸易委员会对AI写作助手Rytr采取执法行动。FTC称Rytr提供可生成消费者评论和推荐语的工具，用户可批量生成看似真实的商品或服务评价，可能误导消费者。该案将AI生成虚假评论作为平台内容与消费者保护风险的具体执法样本。",
+    "category": "administrative_enforcement",
+    "incidentTime": "2024-09",
+    "relatedRisks": [
+      "R0071-006"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "FTC Takes Action Against AI Writing Assistant Rytr for Generating Fake Reviews",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-takes-action-against-ai-writing-assistant-rytr-generating-fake-reviews"
+      },
+      {
+        "title": "FTC Complaint: Rytr LLC",
+        "link": "https://www.ftc.gov/system/files/ftc_gov/pdf/2323052rytrcomplaint.pdf"
+      }
+    ],
+    "updated": "2026-07-07"
+  }
+}
