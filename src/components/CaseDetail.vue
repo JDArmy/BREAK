@@ -1,42 +1,38 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import BREAK from "@/BREAK";
-import FeedbackLink from "@/components/FeedbackLink.vue";
-import RiskDetailBody from "@/components/RiskDetailBody.vue";
-
 import { ArrowLeft } from "@element-plus/icons-vue";
-
+import FeedbackLink from "@/components/FeedbackLink.vue";
+import CaseDetailBody from "@/components/CaseDetailBody.vue";
+import { useCases } from "@/composables/useCases";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 import { useEntityDrawerNavigation } from "@/composables/useEntityDrawerNavigation";
 
 const props = defineProps<{
   drawer: boolean;
-  rKey: string;
+  cKey: string;
 }>();
 defineEmits(["drawerClose"]);
 
-const { getDrawerWidth } = useDrawerWidth();
+const { cases } = useCases();
+const { getInnerDrawerWidth } = useDrawerWidth();
 const { openEntityDrawer } = useEntityDrawerNavigation();
 
-const risks = BREAK.risks;
-const isRiskValid = computed(() => props.rKey && risks[props.rKey as keyof typeof risks]);
+const selectedCase = computed(() => cases.value[props.cKey]);
+const isCaseValid = computed(() => Boolean(props.cKey && selectedCase.value));
 
 const onNavigateRisk = (key: string) => openEntityDrawer("risk", key);
-const onNavigateAvoidance = (key: string) => openEntityDrawer("avoidance", key);
 const onNavigateAttackTool = (key: string) => openEntityDrawer("attackTool", key);
 const onNavigateThreatActor = (key: string) => openEntityDrawer("threatActor", key);
-const onNavigateTerm = (key: string) => openEntityDrawer("term", key);
-const onNavigateCase = (key: string) => openEntityDrawer("case", key);
 </script>
 
 <template>
   <el-drawer
-    v-if="isRiskValid"
+    v-if="isCaseValid"
     :model-value="drawer"
     @closed="$emit('drawerClose')"
     direction="rtl"
-    :size="getDrawerWidth()"
     :append-to-body="true"
+    :size="getInnerDrawerWidth()"
   >
     <template #header>
       <div class="drawer-header-with-back">
@@ -44,20 +40,21 @@ const onNavigateCase = (key: string) => openEntityDrawer("case", key);
           <el-icon><ArrowLeft /></el-icon>
           {{ $t("back") }}
         </el-button>
-        <span class="drawer-header-title">{{ $t('riskDetail') }}</span>
-        <FeedbackLink :entity-id="rKey" :entity-title="$t(`BREAK.risks.${rKey}.title`)" style="margin-left: auto" />
+        <span class="drawer-header-title">{{ $t("case") }}</span>
+        <FeedbackLink
+          :entity-id="cKey"
+          :entity-title="selectedCase?.title ?? cKey"
+          style="margin-left: auto"
+        />
       </div>
     </template>
 
-    <RiskDetailBody
-      :r-key="rKey"
+    <CaseDetailBody
+      :c-key="cKey"
       mode="drawer"
       @navigate-risk="onNavigateRisk"
-      @navigate-avoidance="onNavigateAvoidance"
       @navigate-attack-tool="onNavigateAttackTool"
       @navigate-threat-actor="onNavigateThreatActor"
-      @navigate-term="onNavigateTerm"
-      @navigate-case="onNavigateCase"
     />
   </el-drawer>
 

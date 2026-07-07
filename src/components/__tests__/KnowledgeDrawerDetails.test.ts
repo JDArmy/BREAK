@@ -9,7 +9,11 @@ vi.mock("element-plus/es/components/button/style/css", () => ({}));
 
 vi.mock("vue-router", () => ({
   useRouter: () => ({
+    push: vi.fn(),
     resolve: vi.fn(() => ({ href: "/#/relation/risk/R0001" })),
+  }),
+  useRoute: () => ({
+    params: {},
   }),
 }));
 
