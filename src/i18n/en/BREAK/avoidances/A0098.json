@@ -3,7 +3,6 @@
     "title": "Oracle Price Verification Mechanism",
     "definition": "A mechanism that uses multi-source price oracles and implements mechanisms such as Time-Weighted Average Price (TWAP) to prevent single-transaction price manipulation.",
     "description": "Flash loan attacks often manipulate decentralized exchange prices through single large transactions, causing DeFi protocols that rely on such prices to make erroneous judgments. Defensive measures include: using decentralized oracles like Chainlink instead of a single DEX price source; implementing TWAP (Time-Weighted Average Price) algorithms that calculate prices based on multiple blocks; setting price deviation thresholds, where execution is rejected if a single transaction causes a price change exceeding the threshold; and using multiple independent price sources for cross-validation. This mechanism makes it difficult for attackers to influence system judgment through a single flash loan transaction.",
-    "complexity": "Intermediate",
     "limitation": "The TWAP mechanism may lag behind the actual price during periods of extreme market volatility; multi-source oracles increase system complexity and gas costs; the oracle itself must still be protected from attacks.",
     "keywords": [
       "Oracle Price Verification Mechanism"
@@ -19,7 +18,6 @@
     "title": "Multi-Source Oracle Aggregation and Anomaly Detection",
     "definition": "Simultaneously using multiple independent oracle data sources with aggregation algorithms and anomaly detection mechanisms to prevent single data source manipulation.",
     "description": "Relying on a single oracle is susceptible to manipulation, while multi-source aggregation raises the cost of attack. Implementation methods: Integrate multiple decentralized oracles such as Chainlink, Band Protocol, and API3; use median or weighted average algorithms to aggregate prices rather than directly using a single value; set anomaly detection thresholds to exclude or downgrade individual data sources when deviations are excessive; require consensus from at least N (e.g., 3) data sources before accepting a price update; monitor price deviations between data sources and trigger alerts when thresholds are exceeded. The OWASP Smart Contract Top 10 classifies oracle manipulation as an SC02-level vulnerability, emphasizing the importance of multi-source verification.",
-    "complexity": "Intermediate",
     "limitation": "Multiple oracles increase gas costs and latency; all oracles may be affected by the same underlying data sources; aggregation algorithms may be studied and exploited by attackers; scenarios involving data source failures must be handled.",
     "keywords": [
       "Multi-Source Oracle Aggregation and Anomaly Detection",
@@ -40,7 +38,6 @@
     "title": "Time-Weighted Average Price (TWAP) Mechanism",
     "definition": "A method that uses the weighted average price across multiple time points instead of the instantaneous price to prevent short-term manipulation.",
     "description": "Instantaneous prices are easily manipulated by single large transactions, whereas TWAP smooths out price fluctuations. Implementation details: record the cumulative price value from on-chain DEXs for each block; calculate the average price over a specified time window (e.g., 30 minutes); utilize the built-in TWAP oracle from Uniswap V2/V3 or implement a custom solution; set a reasonable time window—too short makes it susceptible to manipulation, while too long introduces significant lag; combine the instantaneous price with TWAP and set a maximum deviation threshold. Attackers would need to sustain price manipulation over a period of time to affect TWAP, significantly increasing the cost. Research by Cube Exchange indicates that TWAP is an effective defense against flash loan price manipulation.",
-    "complexity": "Intermediate",
     "limitation": "Price updates exhibit lag, making them untimely during severe market volatility; attackers may bypass the mechanism through sustained manipulation; storing historical prices on-chain increases gas costs; sufficient trading volume is required to support price discovery.",
     "keywords": [
       "Time-Weighted Average Price (TWAP) Mechanism"
@@ -56,7 +53,6 @@
     "title": "Automated Detection and Circuit Breaker for Oracle Manipulation",
     "definition": "Using machine learning and rule engines to detect oracle data anomalies in real time and trigger circuit breaker mechanisms to protect the protocol.",
     "description": "Proactively monitor oracle behavior and automatically defend against attacks upon detection. Detection dimensions: price spike detection — price changes exceeding a threshold within a short time window; volume anomalies — price changes without matching trading volume; cross-market arbitrage discrepancies — a single market's price deviating excessively from others; oracle update frequency anomalies. Circuit breaker measures: suspending contract functions dependent on the oracle (e.g., lending, liquidation); switching to backup oracles or manual intervention; capping single-operation amounts; delaying sensitive operations until price stabilization. LLM-driven detection tools can identify novel manipulation patterns. A balance must be struck between false positive rate and response speed.",
-    "complexity": "Advanced",
     "limitation": "Circuit breaker mechanisms may be abused or become attack targets themselves; false positives can disrupt normal transactions; machine learning models require continuous training and updates; the detection system itself may become a single point of failure.",
     "keywords": [
       "Automated Detection and Circuit Breaker for Oracle Manipulation"

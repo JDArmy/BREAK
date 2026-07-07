@@ -3,7 +3,6 @@
     "title": "Proxy Contract Upgrade Pattern",
     "definition": "A pattern that uses a proxy contract to enable upgradeable contract logic while keeping data storage unchanged, allowing bug fixes without state loss.",
     "description": "Contracts are immutable once deployed, but the proxy pattern enables upgradeability. Common patterns include: Transparent Proxy, where user calls are forwarded to an implementation contract; UUPS (Universal Upgradeable Proxy Standard), where upgrade logic resides in the implementation contract; Beacon Proxy, where multiple proxies share a single implementation; and the Diamond Pattern, which enables modular upgrades. Key considerations: the proxy contract holds the data while the implementation contract contains only logic; upgrades require strict access controls (multi-signature or timelocks); and storage slot collisions must be carefully avoided. The Ethereum.org documentation provides detailed best practices for upgrades.",
-    "complexity": "Advanced",
     "limitation": "Increases system complexity and gas costs; storage layout management is difficult and error-prone; centralized upgrade authority may be abused; the proxy contract itself is non-upgradeable, creating a single point of failure.",
     "keywords": [
       "Proxy Contract Upgrade Pattern"
@@ -19,7 +18,6 @@
     "title": "Contract Upgrade and Emergency Pause",
     "definition": "Implementing upgradeable contract designs and emergency pause mechanisms to address vulnerabilities",
     "description": "Reserve controlled upgrade capability for smart contracts and configure emergency pause, tiered permissions, multisig approval, and timelock mechanisms so teams can contain losses and deploy fixes when severe vulnerabilities, cross-chain bridge anomalies, or abnormal asset flows are detected.",
-    "complexity": "Advanced",
     "limitation": "Upgrade and pause mechanisms introduce governance centralization, privilege abuse, and key-custody risks. If permission boundaries, approval workflows, or timelocks are poorly designed, the protection mechanism itself can become an attack entry point.",
     "keywords": [
       "Contract Upgrade and Emergency Pause"

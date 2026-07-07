@@ -3,7 +3,6 @@
     "title": "Strong Authentication and Default Credential Changes for IoT Devices",
     "definition": "Mandatory modification of factory default passwords, implementation of strong password policies or multi-factor authentication to prevent attackers from hijacking devices through weak credentials.",
     "description": "Weak credentials represent the most common entry point for large-scale hijacking of IoT devices. Protective measures include: forcing users to change default passwords during device initialization and prohibiting the use of factory passwords; enforcing password complexity requirements (length, character types); enabling multi-factor authentication or certificate-based authentication on supported devices; regularly rotating device credentials, especially for administrator accounts; disabling unnecessary management interfaces (Telnet, SSH, etc.) or restricting their listening addresses; scanning the network for devices using default credentials and enforcing changes. The Mirai botnet demonstrated rapid propagation precisely by scanning for devices using default usernames and passwords.",
-    "complexity": "Basic",
     "limitation": "Users may employ weak passwords or reuse passwords across multiple devices; some low-end devices do not support password modification or multi-factor authentication; forgotten passwords may lead to device lockout; mandatory password policies may negatively impact user experience.",
     "keywords": [
       "Strong Authentication and Default Credential Changes for IoT Devices"
@@ -19,7 +18,6 @@
     "title": "Mandatory Initial Password Configuration",
     "definition": "Devices are shipped without a default password, or users are forced to create a unique password upon first startup before the device can be used.",
     "description": "This approach fundamentally eliminates the risk associated with universal default passwords. Implementation methods include: shipping devices without any default password, requiring password creation during initial configuration; using a device-unique random initial password (e.g., derived from the MAC address) printed on a label; enforcing a mandatory password change upon first login and restricting device functionality until the change is completed; requiring passwords to meet complexity requirements (length, character types); providing real-time feedback on password strength; and maintaining a password change history to prevent reuse. The Cybersecurity Tech Accord advocates for the elimination of universal default passwords, and certification bodies such as TÜV SÜD have adopted this as an IoT security standard.",
-    "complexity": "Basic",
     "limitation": "Users may set weak passwords or forget their passwords; increases the complexity of initial device configuration, impacting user experience; some users may skip security setup or use weak passwords; the password reset mechanism may become a new attack surface.",
     "keywords": [
       "Mandatory Initial Password Configuration"

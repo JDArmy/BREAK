@@ -1,5 +1,12 @@
 # Change log
 
+## 2.42.40
+
+清理英文翻译文件冗余 complexity 字段
+
+- 移除 73 个英文翻译文件（61 个 Avoidance + 12 个 Risk）中冗余的 `complexity` 字段。
+- `complexity` 是结构字段（中文源已是英文枚举值 basic/intermediate/advanced），运行时由 `mergeWithStructure` 从中文源自动合并，英文翻译文件不应维护。本次清理消除中英字段不对称。
+
 ## 2.42.39
 
 抽取实体事件型 references 为 Case + 补全 Risk avoidances 覆盖

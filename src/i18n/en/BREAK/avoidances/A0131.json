@@ -3,7 +3,6 @@
     "title": "Increasing Consensus Algorithm Attack Costs",
     "definition": "Raising the economic and technical barriers to 51% attacks by increasing computational power/staking requirements and improving consensus mechanisms.",
     "description": "The feasibility of a 51% attack depends on the cost-to-benefit ratio. Defensive measures include: PoW chains increasing total hash power to make it difficult for attackers to acquire 51% of the computational power; PoS chains requiring high staking thresholds, forcing attackers to control a large number of tokens while facing slashing risks; adopting hybrid consensus (PoW+PoS) or Delegated Proof of Stake (DPoS) to decentralize control; implementing checkpoint mechanisms to periodically finalize blocks and prevent deep rollbacks; deploying slashing mechanisms that confiscate staked assets upon detecting malicious behavior. Bitcoin is largely immune to 51% attacks due to its immense hash power, but smaller PoW coins remain vulnerable.",
-    "complexity": "Advanced",
     "limitation": "Raising the barrier also increases network participation costs; it cannot completely eliminate the possibility of attacks; large mining pools or exchanges may accumulate sufficient control; centralization risks in PoS staking.",
     "keywords": [
       "Increasing Consensus Algorithm Attack Costs"
@@ -19,7 +18,6 @@
     "title": "Consecutive Block Limit and Reorganization Detection",
     "definition": "Restrict the number of consecutive blocks produced by a single miner and monitor chain reorganization behavior to promptly detect signs of a 51% attack.",
     "description": "Detect and limit an attacker's ability to control the chain. Technical implementation: restrict the number of consecutive blocks produced by the same miner/validator (e.g., no more than 3 consecutive blocks); monitor the depth and frequency of chain reorganizations, triggering alerts when thresholds are exceeded; track the number of confirmations for large transactions to detect double-spend attempts; exchanges and payment processors increase confirmation requirements (e.g., from 6 to 50+); deploy real-time monitoring systems to detect sudden concentration of hash power. Research by MIT DCI indicates that consecutive block limits can significantly increase the difficulty of attacks.",
-    "complexity": "Intermediate",
     "limitation": "Limiting consecutive blocks may affect network efficiency; increasing confirmation requirements degrades user experience; monitoring systems may generate false positives; cannot prevent attacks, only delay detection.",
     "keywords": [
       "Consecutive Block Limit and Reorganization Detection",
@@ -40,7 +38,6 @@
     "title": "Hashrate Rental Market Monitoring and Incident Response",
     "definition": "Monitoring anomalous activities on hashrate rental platforms and activating incident response plans when suspected 51% attack preparations are detected",
     "description": "Attackers often rent hashrate through platforms such as NiceHash to launch attacks. Defense strategies include: monitoring hashrate rental markets to detect large-scale hashrate rentals targeting the local blockchain; tracking the hashrate sources and patterns of historical 51% attacks; cooperating with rental platforms to suspend services upon detecting suspicious rental behavior; establishing community alert mechanisms for rapid response by miners and node operators; and preparing contingency plans, including temporarily increasing confirmation requirements, suspending large withdrawals, and contacting exchanges to halt deposits and withdrawals. Platforms such as Bitpanda emphasize the importance of incident response.",
-    "complexity": "Intermediate",
     "limitation": "Reliance on external data and third-party cooperation; attackers may use their own hashrate to bypass monitoring; emergency measures may impact legitimate users; not all attack vectors can be prevented",
     "keywords": [
       "Hashrate Rental Market Monitoring and Incident Response"

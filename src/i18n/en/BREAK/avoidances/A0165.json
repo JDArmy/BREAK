@@ -3,7 +3,6 @@
     "title": "Blockchain Analysis Tool Application",
     "definition": "Using professional tools such as Chainalysis to analyze suspicious transactions and addresses",
     "description": "Analysis tools: address label database; transaction graph; fund flow tracking; association analysis; risk scoring; compliance checks; AML screening.",
-    "complexity": "Intermediate",
     "limitation": "Tools are costly and rely on skilled personnel. Privacy technologies (mixers, privacy coins) can resist tracing, leading to false negatives. Delayed updates to address label databases may cause false positives, and normal users sharing exchange hot wallet addresses are prone to misjudgment and collateral damage.",
     "keywords": [
       "Blockchain Analysis Tool Application"

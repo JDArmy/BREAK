@@ -3,7 +3,6 @@
     "title": "Hardware Side-Channel Protection Design",
     "definition": "Implementing protective measures at the hardware level to reduce the risk of leaking sensitive information through side channels such as power consumption and electromagnetic emissions.",
     "description": "Side-channel attacks infer sensitive data such as cryptographic keys by analyzing physical characteristics (power consumption, timing, electromagnetic radiation) of a device. Protections include: using constant-time algorithms to avoid data-dependent operation timing; adding random delays and noise to disrupt measurements; implementing power masking techniques; using hardware security modules to protect key operations; applying physical shielding to reduce electromagnetic leakage; and conducting regular audits of cryptographic implementations.",
-    "complexity": "Advanced",
     "limitation": "Hardware protections increase cost and introduce significant performance overhead, making complete protection difficult and requiring specialized expertise. Constant-time algorithms and power masking can still be compromised by high-precision power and timing side-channel analysis. Attackers may bypass noise interference using simulators or dedicated acquisition equipment to extract key information.",
     "keywords": [
       "Hardware Side-Channel Protection Design"

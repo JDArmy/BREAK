@@ -3,7 +3,6 @@
     "title": "Smart Contract Security Audit",
     "definition": "A systematic manual review and professional analysis of smart contract code to identify potential security vulnerabilities and logical flaws.",
     "description": "Smart contract security audit involves systematic manual review and rule matching of contract code by a professional team, applying judgment logic such as permission verification, reentrancy detection, integer overflow comparison, and sequence validation to identify security vulnerabilities and logical flaws. The audit report classifies findings by severity—critical, high, medium, and low—and provides remediation recommendations.",
-    "complexity": "Intermediate",
     "limitation": "Manual auditing depends on the experience and expertise of auditors, which may result in missing complex logical vulnerabilities. It incurs high cost and long cycle times. Audits are scoped to a specific version of the code, and subsequent modifications require re-auditing.",
     "keywords": [
       "Smart Contract Security Audit"
@@ -19,7 +18,6 @@
     "title": "Smart Contract Code Auditing and Public Verification",
     "definition": "Conduct third-party code audits before project launch and publicly verify the contract source code on blockchain explorers.",
     "description": "Reduce rug pull risks through transparency and professional review. Implementation points: Engage reputable auditing firms (e.g., CertiK, Quantstamp) to perform comprehensive code audits and publicly release audit reports; verify and publish contract source code on blockchain explorers such as Etherscan, allowing investors to inspect it; focus on checking for hidden mint functions, transaction pause functions, owner privileges, liquidity withdrawal backdoors, and other common rug pull techniques; examine upgrade permissions of proxy contracts to ensure they cannot be maliciously replaced; audited code should not be modified thereafter, and if modifications are required, a re-audit is necessary. Platforms like Coinbase recommend that investors prioritize projects that have undergone auditing.",
-    "complexity": "Intermediate",
     "limitation": "Audits cannot guarantee the discovery of all vulnerabilities and are costly (ranging from tens of thousands to hundreds of thousands of dollars); audit reports may be falsified or taken out of context; even audited projects may still conduct rug pulls through other means (e.g., social engineering); open-source code does not equate to security.",
     "keywords": [
       "Smart Contract Code Auditing and Public Verification"

@@ -24,7 +24,6 @@
     "title": "Privacy-Preserving Computation Technology Applications",
     "definition": "Using privacy-preserving computation techniques such as MPC and TEE to protect data processing procedures",
     "description": "Privacy-preserving computation technology applications cover secure multi-party computation (MPC), trusted execution environment (TEE), federated learning, homomorphic encryption, differential privacy, and other techniques. They enable cross-party joint modeling and computation under the 'usable but invisible' premise, preventing raw data from leaving its domain, and are applicable to scenarios such as cross-institution risk control and joint anti-fraud.",
-    "complexity": "Advanced",
     "limitation": "Low technology maturity, significant performance impact, and complex implementation. Schemes such as MPC and homomorphic encryption incur substantial computational and communication overhead. Moreover, if key distribution or the trusted execution environment supply chain is compromised, or if side-channel leakage occurs, attackers can still bypass the privacy-preserving computation framework to reverse-engineer original data, presenting a potential for circumvention.",
     "keywords": [
       "Privacy-Preserving Computation Technology Applications"

@@ -3,7 +3,6 @@
     "title": "Software-Level Side-Channel Mitigation",
     "definition": "Reducing side-channel information leakage through software implementation techniques",
     "description": "Software-layer protection: constant-time cryptographic libraries; avoiding key-dependent branches; memory access pattern obfuscation; using bit masks instead of conditionals; periodic key rotation; minimizing the scope of privileged code.",
-    "complexity": "Intermediate",
     "limitation": "Software-based methods have limited effectiveness, may impact performance, and are difficult to completely eliminate leakage; constant-time implementations can still be bypassed by advanced side-channel attacks such as cache timing and branch prediction, and attackers can amplify timing differences through simulators or controlled environments to circumvent obfuscation and masking defenses.",
     "keywords": [
       "Software-Level Side-Channel Mitigation"

@@ -3,7 +3,6 @@
     "title": "Phased OTA Deployment and Canary Release",
     "definition": "A strategy of deploying updates through small-scale pilots and gradual rollout to minimize the impact of batch update failures or malicious updates.",
     "description": "Cautious deployment strategy: small-scale canary testing; monitoring device status during updates; emergency suspension on anomalies; A/B testing; automatic rollback mechanism; user-selectable update time.",
-    "complexity": "Intermediate",
     "limitation": "Canary release extends the full deployment cycle, making it difficult for emergency security patches to cover all devices in time; during the canary period, unupdated devices remain exposed to known vulnerabilities. Meanwhile, multiple versions coexisting lead to device fragmentation, increasing the complexity of subsequent operations and vulnerability remediation.",
     "keywords": [
       "Phased OTA Deployment and Canary Release"

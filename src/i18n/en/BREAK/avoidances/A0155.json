@@ -3,7 +3,6 @@
     "title": "Decentralized On-Chain Identity Verification",
     "definition": "The use of decentralized identity technologies such as DID to achieve identity verification without relying on centralized authorities.",
     "description": "DID scheme: W3C DID standard; on-chain identity anchor; verifiable credentials; selective disclosure; self-sovereign identity; cross-platform mutual recognition.",
-    "complexity": "Advanced",
     "limitation": "Once the private keys of DID documents and verifiable credentials are phished or stolen by endpoint malware, an attacker can impersonate the identity using legitimate credentials, and the verification mechanism cannot distinguish the true operator from the impostor; resolution and trust anchor implementations across DID methods (did:web, did:ethr, etc.) are not unified, and differences in verifier implementations may cause false positives or false negatives; selective disclosure under zero-knowledge proof implementations incurs high computational overhead, making mobile deployment difficult; the ecosystem is immature and regulatory acceptance is low, and delays in revocation registry updates can cause revoked credentials to be mistakenly treated as valid within the window period.",
     "keywords": [
       "Decentralized On-Chain Identity Verification"

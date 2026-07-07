@@ -3,7 +3,6 @@
     "title": "Firmware Update Signature Verification and Rollback Protection",
     "definition": "Cryptographic signature verification of firmware update packages and prevention of downgrading to vulnerable older versions",
     "description": "Ensures firmware update sources are trusted and protected against downgrade attacks. Measures include: update packages signed with manufacturer's private key, with signature verification performed by the device before installation; monotonically increasing version number mechanism to reject firmware versions lower than the current installed version; recording the minimum installed security version number in tamper-proof storage; using encrypted channels (TLS) during the update process to prevent man-in-the-middle attacks; and automatic fallback to the last known working version upon failure rather than entering an unusable state. NHTSA guidance on vehicle firmware over-the-air updates emphasizes the importance of these measures.",
-    "complexity": "Intermediate",
     "limitation": "Monotonically increasing version numbers limit flexibility, making emergency rollback to previous versions difficult; improper implementation of rollback protection may render the device unrecoverable; a reliable time source is required to prevent time-based rollback attacks",
     "keywords": [
       "Firmware Update Signature Verification and Rollback Protection"
@@ -19,7 +18,6 @@
     "title": "Firmware OTA Update Signature Verification",
     "definition": "Digital signature verification of firmware packages delivered via OTA to ensure trusted origin and integrity against tampering.",
     "description": "Prevent malicious firmware from being implanted via OTA. Measures: firmware packages signed with manufacturer private key; device-side public key verification; use of secure hash algorithms; certificate chain validation; version rollback prevention; automatic fallback on update failure.",
-    "complexity": "Intermediate",
     "limitation": "If the manufacturer's signing private key is leaked or stolen by an insider, attackers can sign malicious firmware that appears legitimate, bypassing signature verification. Unlocked bootloader development modes or bootrom vulnerabilities can break the chain of trust, rendering verification ineffective. Certificate expiration or clock anomalies may cause legitimate firmware to be misidentified as illegal, disrupting normal user updates. Version rollback prevention can hinder rapid downgrades during emergency fixes for historical vulnerabilities, creating tension between operational needs and security.",
     "keywords": [
       "Firmware OTA Update Signature Verification"
