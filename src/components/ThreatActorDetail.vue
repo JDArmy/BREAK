@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { ref, computed, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import ThreatActorDetailBody from "@/components/ThreatActorDetailBody.vue";
@@ -8,6 +8,13 @@ import { ArrowLeft } from "@element-plus/icons-vue";
 
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 import { useEntityDrawerNavigation } from "@/composables/useEntityDrawerNavigation";
+import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
+
+const RiskDetail = createRecoverableAsyncComponent(() => import("@/components/RiskDetail.vue"), undefined, "ThreatActorRiskDetail");
+const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "ThreatActorAttackToolDetail");
+const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "ThreatActorTermDetail");
+const CaseDetail = createRecoverableAsyncComponent(() => import("@/components/CaseDetail.vue"), undefined, "ThreatActorCaseDetail");
+const ThreatActorDetail = createRecoverableAsyncComponent(() => import("@/components/ThreatActorDetail.vue"), undefined, "ThreatActorNestedThreatActorDetail");
 
 const props = defineProps<{
   drawer: boolean;
@@ -16,21 +23,44 @@ const props = defineProps<{
 defineEmits(["drawerClose"]);
 
 const { getInnerDrawerWidth } = useDrawerWidth();
-const { openEntityDrawer } = useEntityDrawerNavigation();
+const { syncEntityDrawerUrl, restorePreviousUrl } = useEntityDrawerNavigation();
 
 const isThreatActorValid = computed(() => props.taKey && BREAK.threatActors[props.taKey as keyof typeof BREAK.threatActors]);
 
-const onNavigateThreatActor = (key: string) => openEntityDrawer("threatActor", key);
-const onNavigateAttackTool = (key: string) => openEntityDrawer("attackTool", key);
-const onNavigateTerm = (key: string) => openEntityDrawer("term", key);
-const onNavigateRisk = (key: string) => openEntityDrawer("risk", key);
-const onNavigateCase = (key: string) => openEntityDrawer("case", key);
+const riskDrawer = ref(false);
+const riskKey = ref("");
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
+const termDrawer = ref(false);
+const termKey = ref("");
+const caseDrawer = ref(false);
+const caseKey = ref("");
+const nestedThreatActorDrawer = ref(false);
+const nestedThreatActorKey = ref("");
+
+const openNestedDrawer = (type: Parameters<typeof syncEntityDrawerUrl>[0], key: string, keyRef: Ref<string>, drawerRef: Ref<boolean>) => {
+  keyRef.value = key;
+  drawerRef.value = true;
+  syncEntityDrawerUrl(type, key);
+};
+
+const closeNestedDrawer = (drawerRef: Ref<boolean>) => {
+  drawerRef.value = false;
+  restorePreviousUrl();
+};
+
+const onNavigateThreatActor = (key: string) => openNestedDrawer("threatActor", key, nestedThreatActorKey, nestedThreatActorDrawer);
+const onNavigateAttackTool = (key: string) => openNestedDrawer("attackTool", key, attackToolKey, attackToolDrawer);
+const onNavigateTerm = (key: string) => openNestedDrawer("term", key, termKey, termDrawer);
+const onNavigateRisk = (key: string) => openNestedDrawer("risk", key, riskKey, riskDrawer);
+const onNavigateCase = (key: string) => openNestedDrawer("case", key, caseKey, caseDrawer);
 </script>
 
 <template>
   <!-- 威胁行为者详情页 -->
   <el-drawer
     v-if="isThreatActorValid"
+    class="home-entity-detail-drawer"
     :model-value="drawer"
     @closed="$emit('drawerClose')"
     :append-to-body="true"
@@ -58,6 +88,36 @@ const onNavigateCase = (key: string) => openEntityDrawer("case", key);
     />
   </el-drawer>
 
+  <RiskDetail
+    v-if="riskDrawer"
+    v-on:drawer-close="closeNestedDrawer(riskDrawer)"
+    :drawer="riskDrawer"
+    :rKey="riskKey"
+  />
+  <AttackToolDetail
+    v-if="attackToolDrawer"
+    v-on:drawer-close="closeNestedDrawer(attackToolDrawer)"
+    :drawer="attackToolDrawer"
+    :atKey="attackToolKey"
+  />
+  <TermDetail
+    v-if="termDrawer"
+    v-on:drawer-close="closeNestedDrawer(termDrawer)"
+    :drawer="termDrawer"
+    :tKey="termKey"
+  />
+  <CaseDetail
+    v-if="caseDrawer"
+    v-on:drawer-close="closeNestedDrawer(caseDrawer)"
+    :drawer="caseDrawer"
+    :cKey="caseKey"
+  />
+  <ThreatActorDetail
+    v-if="nestedThreatActorDrawer"
+    v-on:drawer-close="closeNestedDrawer(nestedThreatActorDrawer)"
+    :drawer="nestedThreatActorDrawer"
+    :taKey="nestedThreatActorKey"
+  />
 </template>
 
 <style src="./drawer-detail-shared.css"></style>

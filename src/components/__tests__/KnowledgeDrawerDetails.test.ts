@@ -10,7 +10,18 @@ vi.mock("element-plus/es/components/button/style/css", () => ({}));
 vi.mock("vue-router", () => ({
   useRouter: () => ({
     push: vi.fn(),
-    resolve: vi.fn(() => ({ href: "/#/relation/risk/R0001" })),
+    resolve: vi.fn((to: { name?: string; params?: Record<string, string> }) => {
+      const key = Object.values(to.params ?? {})[0] ?? "";
+      const routeMap: Record<string, string> = {
+        homeRiskDetail: `/home/risk/${key}`,
+        homeAvoidanceDetail: `/home/avoidance/${key}`,
+        homeAttackToolDetail: `/home/attack-tool/${key}`,
+        homeThreatActorDetail: `/home/threat-actor/${key}`,
+        homeTermDetail: `/home/term/${key}`,
+        homeCaseDetail: `/home/case/${key}`,
+      };
+      return { href: `/#${routeMap[to.name ?? ""] ?? `/relation/risk/${key}`}` };
+    }),
   }),
   useRoute: () => ({
     params: {},
@@ -115,5 +126,37 @@ describe("知识抽屉详情组件", () => {
     await wrapper.find(".drawer-closed").trigger("click");
 
     expect(wrapper.emitted("drawerClose")).toHaveLength(1);
+  });
+
+  it("从抽屉内打开新实体时保留父抽屉并同步 URL", async () => {
+    const pushState = vi.spyOn(window.history, "pushState").mockImplementation(() => undefined);
+    const wrapper = mount(RiskDetail, {
+      props: {
+        drawer: true,
+        rKey: "R0001",
+      },
+      global: {
+        ...globalConfig,
+        stubs: {
+          ...globalConfig.stubs,
+          RiskDetailBody: {
+            props: ["rKey"],
+            emits: ["navigate-avoidance"],
+            template:
+              '<div class="risk-body-stub">父抽屉 {{ rKey }}<button class="open-avoidance" @click="$emit(\'navigate-avoidance\', \'A0001\')">打开手段</button></div>',
+          },
+          AvoidanceDetail: {
+            props: ["drawer", "aKey"],
+            template: '<section class="nested-avoidance-stub">子抽屉 {{ aKey }}</section>',
+          },
+        },
+      },
+    });
+
+    await wrapper.find(".open-avoidance").trigger("click");
+
+    expect(wrapper.text()).toContain("父抽屉 R0001");
+    expect(wrapper.text()).toContain("子抽屉 A0001");
+    expect(pushState).toHaveBeenCalledWith(null, "", "/#/home/avoidance/A0001");
   });
 });

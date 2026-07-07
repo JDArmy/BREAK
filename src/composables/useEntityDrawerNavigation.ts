@@ -5,7 +5,7 @@ export function useEntityDrawerNavigation() {
   const router = useRouter();
   const route = useRoute();
 
-  const openEntityDrawer = (type: EntityType, key: string) => {
+  const syncEntityDrawerUrl = (type: EntityType, key: string) => {
     const entry = getEntityEntry(type);
     const bsKey = typeof route.params.bsKey === "string" ? route.params.bsKey : "";
     const routeName = bsKey && entry.businessSceneDetailRouteName
@@ -15,8 +15,13 @@ export function useEntityDrawerNavigation() {
       ? { bsKey, [entry.paramKey]: key }
       : { [entry.paramKey]: key };
 
-    router.push({ name: routeName, params });
+    const href = router.resolve({ name: routeName, params }).href;
+    window.history.pushState(window.history.state, "", href);
   };
 
-  return { openEntityDrawer };
+  const restorePreviousUrl = () => {
+    window.history.back();
+  };
+
+  return { syncEntityDrawerUrl, restorePreviousUrl };
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { ref, computed, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import AvoidanceDetailBody from "@/components/AvoidanceDetailBody.vue";
@@ -8,6 +8,12 @@ import { ArrowLeft } from "@element-plus/icons-vue";
 
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 import { useEntityDrawerNavigation } from "@/composables/useEntityDrawerNavigation";
+import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
+
+const RiskDetail = createRecoverableAsyncComponent(() => import("@/components/RiskDetail.vue"), undefined, "AvoidanceRiskDetail");
+const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "AvoidanceAttackToolDetail");
+const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "AvoidanceTermDetail");
+const AvoidanceDetail = createRecoverableAsyncComponent(() => import("@/components/AvoidanceDetail.vue"), undefined, "AvoidanceNestedAvoidanceDetail");
 
 const props = defineProps<{
   drawer: boolean;
@@ -16,20 +22,41 @@ const props = defineProps<{
 defineEmits(["drawerClose"]);
 
 const { getInnerDrawerWidth } = useDrawerWidth();
-const { openEntityDrawer } = useEntityDrawerNavigation();
+const { syncEntityDrawerUrl, restorePreviousUrl } = useEntityDrawerNavigation();
 
 const isAvoidanceValid = computed(() => props.aKey && BREAK.avoidances[props.aKey as keyof typeof BREAK.avoidances]);
 
-const onNavigateAvoidance = (key: string) => openEntityDrawer("avoidance", key);
-const onNavigateAttackTool = (key: string) => openEntityDrawer("attackTool", key);
-const onNavigateTerm = (key: string) => openEntityDrawer("term", key);
-const onNavigateRisk = (key: string) => openEntityDrawer("risk", key);
+const riskDrawer = ref(false);
+const riskKey = ref("");
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
+const termDrawer = ref(false);
+const termKey = ref("");
+const nestedAvoidanceDrawer = ref(false);
+const nestedAvoidanceKey = ref("");
+
+const openNestedDrawer = (type: Parameters<typeof syncEntityDrawerUrl>[0], key: string, keyRef: Ref<string>, drawerRef: Ref<boolean>) => {
+  keyRef.value = key;
+  drawerRef.value = true;
+  syncEntityDrawerUrl(type, key);
+};
+
+const closeNestedDrawer = (drawerRef: Ref<boolean>) => {
+  drawerRef.value = false;
+  restorePreviousUrl();
+};
+
+const onNavigateAvoidance = (key: string) => openNestedDrawer("avoidance", key, nestedAvoidanceKey, nestedAvoidanceDrawer);
+const onNavigateAttackTool = (key: string) => openNestedDrawer("attackTool", key, attackToolKey, attackToolDrawer);
+const onNavigateTerm = (key: string) => openNestedDrawer("term", key, termKey, termDrawer);
+const onNavigateRisk = (key: string) => openNestedDrawer("risk", key, riskKey, riskDrawer);
 </script>
 
 <template>
   <!-- 手段详情页 -->
   <el-drawer
     v-if="isAvoidanceValid"
+    class="home-entity-detail-drawer"
     :model-value="drawer"
     @closed="$emit('drawerClose')"
     :append-to-body="true"
@@ -56,6 +83,30 @@ const onNavigateRisk = (key: string) => openEntityDrawer("risk", key);
     />
   </el-drawer>
 
+  <RiskDetail
+    v-if="riskDrawer"
+    v-on:drawer-close="closeNestedDrawer(riskDrawer)"
+    :drawer="riskDrawer"
+    :rKey="riskKey"
+  />
+  <AttackToolDetail
+    v-if="attackToolDrawer"
+    v-on:drawer-close="closeNestedDrawer(attackToolDrawer)"
+    :drawer="attackToolDrawer"
+    :atKey="attackToolKey"
+  />
+  <TermDetail
+    v-if="termDrawer"
+    v-on:drawer-close="closeNestedDrawer(termDrawer)"
+    :drawer="termDrawer"
+    :tKey="termKey"
+  />
+  <AvoidanceDetail
+    v-if="nestedAvoidanceDrawer"
+    v-on:drawer-close="closeNestedDrawer(nestedAvoidanceDrawer)"
+    :drawer="nestedAvoidanceDrawer"
+    :aKey="nestedAvoidanceKey"
+  />
 </template>
 
 <style src="./drawer-detail-shared.css"></style>

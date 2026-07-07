@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref, type Ref } from "vue";
 import { ArrowLeft } from "@element-plus/icons-vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import CaseDetailBody from "@/components/CaseDetailBody.vue";
 import { useCases } from "@/composables/useCases";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 import { useEntityDrawerNavigation } from "@/composables/useEntityDrawerNavigation";
+import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
+
+const RiskDetail = createRecoverableAsyncComponent(() => import("@/components/RiskDetail.vue"), undefined, "CaseRiskDetail");
+const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "CaseAttackToolDetail");
+const ThreatActorDetail = createRecoverableAsyncComponent(() => import("@/components/ThreatActorDetail.vue"), undefined, "CaseThreatActorDetail");
 
 const props = defineProps<{
   drawer: boolean;
@@ -15,19 +20,38 @@ defineEmits(["drawerClose"]);
 
 const { cases } = useCases();
 const { getInnerDrawerWidth } = useDrawerWidth();
-const { openEntityDrawer } = useEntityDrawerNavigation();
+const { syncEntityDrawerUrl, restorePreviousUrl } = useEntityDrawerNavigation();
 
 const selectedCase = computed(() => cases.value[props.cKey]);
 const isCaseValid = computed(() => Boolean(props.cKey && selectedCase.value));
 
-const onNavigateRisk = (key: string) => openEntityDrawer("risk", key);
-const onNavigateAttackTool = (key: string) => openEntityDrawer("attackTool", key);
-const onNavigateThreatActor = (key: string) => openEntityDrawer("threatActor", key);
+const riskDrawer = ref(false);
+const riskKey = ref("");
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
+const threatActorDrawer = ref(false);
+const threatActorKey = ref("");
+
+const openNestedDrawer = (type: Parameters<typeof syncEntityDrawerUrl>[0], key: string, keyRef: Ref<string>, drawerRef: Ref<boolean>) => {
+  keyRef.value = key;
+  drawerRef.value = true;
+  syncEntityDrawerUrl(type, key);
+};
+
+const closeNestedDrawer = (drawerRef: Ref<boolean>) => {
+  drawerRef.value = false;
+  restorePreviousUrl();
+};
+
+const onNavigateRisk = (key: string) => openNestedDrawer("risk", key, riskKey, riskDrawer);
+const onNavigateAttackTool = (key: string) => openNestedDrawer("attackTool", key, attackToolKey, attackToolDrawer);
+const onNavigateThreatActor = (key: string) => openNestedDrawer("threatActor", key, threatActorKey, threatActorDrawer);
 </script>
 
 <template>
   <el-drawer
     v-if="isCaseValid"
+    class="home-entity-detail-drawer"
     :model-value="drawer"
     @closed="$emit('drawerClose')"
     direction="rtl"
@@ -58,6 +82,24 @@ const onNavigateThreatActor = (key: string) => openEntityDrawer("threatActor", k
     />
   </el-drawer>
 
+  <RiskDetail
+    v-if="riskDrawer"
+    v-on:drawer-close="closeNestedDrawer(riskDrawer)"
+    :drawer="riskDrawer"
+    :rKey="riskKey"
+  />
+  <AttackToolDetail
+    v-if="attackToolDrawer"
+    v-on:drawer-close="closeNestedDrawer(attackToolDrawer)"
+    :drawer="attackToolDrawer"
+    :atKey="attackToolKey"
+  />
+  <ThreatActorDetail
+    v-if="threatActorDrawer"
+    v-on:drawer-close="closeNestedDrawer(threatActorDrawer)"
+    :drawer="threatActorDrawer"
+    :taKey="threatActorKey"
+  />
 </template>
 
 <style src="./drawer-detail-shared.css"></style>

@@ -25,6 +25,12 @@
   color: var(--break-text-primary);
 }
 
+.home-entity-detail-drawer .el-drawer__header {
+  padding-top: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--break-border);
+}
+
 button.entity-link {
   cursor: pointer;
   font-family: inherit;
@@ -91,4 +97,13 @@ button:hover .external-link-icon {
   .drawer-detail-panel .threat-actor-relation-list {
     grid-template-columns: 1fr;
   }
+}
+
+/* 规避手段抽屉：定义独占一行，手段分类和有效性同排展示 */
+.drawer-detail-panel .avoidance-meta-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.drawer-detail-panel .avoidance-meta-card--definition {
+  grid-column: 1 / -1;
 }
