@@ -1,26 +1,29 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
-import { Link } from "@element-plus/icons-vue";
+import { Link, TopRight } from "@element-plus/icons-vue";
 import { useCases } from "@/composables/useCases";
+import { entityDetailHref } from "@/utils/entityRoute";
 
 /**
- * 案例详情 body（仅列表页，Case 无抽屉）。
+ * 案例详情 body（统一列表页 + 抽屉）。
  *
  * Case 特殊：references 手写 inline（case 数据不进 BREAK 索引，无法用 ReferenceList）。
- * 无 relation-list、无关系图、无 viewDetail。
  * cases 数据来自 useCases（异步懒加载），body 自包含取数。
  */
 const props = defineProps<{
   cKey: string;
-  mode: "list"; // Case 无抽屉，只有 list
+  mode: "list" | "drawer";
 }>();
 
 const { t } = useI18n();
+const router = useRouter();
 const { cases } = useCases();
 
+const isDrawer = computed(() => props.mode === "drawer");
 const selectedCase = computed(() => cases.value[props.cKey]);
 
 const selectedKeywords = computed(() => selectedCase.value?.keywords || []);
@@ -38,6 +41,7 @@ const categoryLabel = (category: string) => {
   const key = CATEGORY_ZH_TO_KEY[category] || category;
   return t(`caseCategory_${key}`);
 };
+const detailHref = (cKey: string) => entityDetailHref(router, cKey, "case") ?? "";
 </script>
 
 <template>
@@ -45,7 +49,13 @@ const categoryLabel = (category: string) => {
     <div class="detail-heading">
       <div>
         <div class="detail-id">{{ cKey }}</div>
-        <h2>{{ selectedCase.title }}</h2>
+        <h2>
+          <template v-if="!isDrawer">{{ selectedCase.title }}</template>
+          <a v-else :href="detailHref(cKey)" target="_blank" rel="noopener noreferrer" class="drawer-title-link">
+            {{ selectedCase.title }}
+            <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+          </a>
+        </h2>
       </div>
       <FeedbackLink :entity-id="cKey" :entity-title="selectedCase.title" />
     </div>

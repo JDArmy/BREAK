@@ -53,6 +53,13 @@ const closeNestedDrawer = (drawerRef: Ref<boolean>) => {
   restorePreviousUrl();
 };
 
+const closeAvoidanceDrawer = () => closeNestedDrawer(avoidanceDrawer);
+const closeAttackToolDrawer = () => closeNestedDrawer(attackToolDrawer);
+const closeThreatActorDrawer = () => closeNestedDrawer(threatActorDrawer);
+const closeTermDrawer = () => closeNestedDrawer(termDrawer);
+const closeCaseDrawer = () => closeNestedDrawer(caseDrawer);
+const closeRiskDrawer = () => closeNestedDrawer(nestedRiskDrawer);
+
 const onNavigateRisk = (key: string) => openNestedDrawer("risk", key, nestedRiskKey, nestedRiskDrawer);
 const onNavigateAvoidance = (key: string) => openNestedDrawer("avoidance", key, avoidanceKey, avoidanceDrawer);
 const onNavigateAttackTool = (key: string) => openNestedDrawer("attackTool", key, attackToolKey, attackToolDrawer);
@@ -96,37 +103,37 @@ const onNavigateCase = (key: string) => openNestedDrawer("case", key, caseKey, c
 
   <AvoidanceDetail
     v-if="avoidanceDrawer"
-    v-on:drawer-close="closeNestedDrawer(avoidanceDrawer)"
+    v-on:drawer-close="closeAvoidanceDrawer"
     :drawer="avoidanceDrawer"
     :aKey="avoidanceKey"
   />
   <AttackToolDetail
     v-if="attackToolDrawer"
-    v-on:drawer-close="closeNestedDrawer(attackToolDrawer)"
+    v-on:drawer-close="closeAttackToolDrawer"
     :drawer="attackToolDrawer"
     :atKey="attackToolKey"
   />
   <ThreatActorDetail
     v-if="threatActorDrawer"
-    v-on:drawer-close="closeNestedDrawer(threatActorDrawer)"
+    v-on:drawer-close="closeThreatActorDrawer"
     :drawer="threatActorDrawer"
     :taKey="threatActorKey"
   />
   <TermDetail
     v-if="termDrawer"
-    v-on:drawer-close="closeNestedDrawer(termDrawer)"
+    v-on:drawer-close="closeTermDrawer"
     :drawer="termDrawer"
     :tKey="termKey"
   />
   <CaseDetail
     v-if="caseDrawer"
-    v-on:drawer-close="closeNestedDrawer(caseDrawer)"
+    v-on:drawer-close="closeCaseDrawer"
     :drawer="caseDrawer"
     :cKey="caseKey"
   />
   <RiskDetail
     v-if="nestedRiskDrawer"
-    v-on:drawer-close="closeNestedDrawer(nestedRiskDrawer)"
+    v-on:drawer-close="closeRiskDrawer"
     :drawer="nestedRiskDrawer"
     :rKey="nestedRiskKey"
   />

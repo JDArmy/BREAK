@@ -112,7 +112,13 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
           {{ tKey }}
           <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
         </a>
-        <h2>{{ $t(`BREAK.terms.${tKey}.title`) }}</h2>
+        <h2>
+          <template v-if="!isDrawer">{{ $t(`BREAK.terms.${tKey}.title`) }}</template>
+          <a v-else :href="detailHref(tKey)" target="_blank" rel="noopener noreferrer" class="drawer-title-link">
+            {{ $t(`BREAK.terms.${tKey}.title`) }}
+            <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+          </a>
+        </h2>
       </div>
       <div class="detail-heading-actions">
         <!-- list: 仅 FeedbackLink（Term 无关系图按钮） -->

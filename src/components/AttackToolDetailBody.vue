@@ -101,7 +101,13 @@ const onNavigate = (event: "navigate-attackTool" | "navigate-risk" | "navigate-a
     <div class="detail-heading">
       <div>
         <div class="detail-id">{{ atKey }}</div>
-        <h2>{{ $t(`BREAK.attackTools.${atKey}.title`) }}</h2>
+        <h2>
+          <template v-if="!isDrawer">{{ $t(`BREAK.attackTools.${atKey}.title`) }}</template>
+          <a v-else :href="detailHref(atKey)" target="_blank" rel="noopener noreferrer" class="drawer-title-link">
+            {{ $t(`BREAK.attackTools.${atKey}.title`) }}
+            <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+          </a>
+        </h2>
       </div>
       <div class="detail-heading-actions">
         <!-- list: FeedbackLink + 文本关系图按钮 -->
@@ -113,7 +119,7 @@ const onNavigate = (event: "navigate-attackTool" | "navigate-risk" | "navigate-a
         </template>
         <!-- drawer: icon 关系图按钮 + viewDetail 按钮 -->
         <template v-else>
-          <el-button type="default" size="small" :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(atKey)">
+          <el-button type="success" plain size="small" :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(atKey)">
             <el-icon><icon-relation width="14px" height="14px" /></el-icon>
             {{ $t("relationMap") }}
           </el-button>

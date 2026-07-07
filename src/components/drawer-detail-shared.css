@@ -44,7 +44,21 @@ button.entity-link {
   opacity: 0.7;
 }
 
+.drawer-title-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.drawer-title-link:hover {
+  color: var(--break-link-hover);
+  text-decoration: underline;
+}
+
 .id-link:hover .external-link-icon,
+.drawer-title-link:hover .external-link-icon,
 a.entity-link:hover .external-link-icon,
 button:hover .external-link-icon {
   opacity: 1;
@@ -97,6 +111,15 @@ button:hover .external-link-icon {
   .drawer-detail-panel .threat-actor-relation-list {
     grid-template-columns: 1fr;
   }
+}
+
+/* 风险抽屉：处置优先级和风险复杂度同排，风险影响单独一行 */
+.drawer-detail-panel .risk-meta-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.drawer-detail-panel .risk-meta-card--impact {
+  grid-column: 1 / -1;
 }
 
 /* 规避手段抽屉：定义独占一行，手段分类和有效性同排展示 */
