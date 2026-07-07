@@ -33,6 +33,13 @@ vi.mock("@/composables/useBreakpoints", () => ({
   }),
 }));
 
+vi.mock("@/composables/useCases", () => ({
+  useCases: () => ({
+    cases: ref({ C0001: { title: "案例" } }),
+    ensureCases: vi.fn(() => Promise.resolve()),
+  }),
+}));
+
 vi.mock("@/BREAK/home", () => ({
   default: {
     version: "2.23.62",
@@ -145,6 +152,7 @@ const mountHomeView = async () => {
         AttackToolDetail: drawerStub("attack-tool-detail-stub", "atKey"),
         ThreatActorDetail: drawerStub("threat-actor-detail-stub", "taKey"),
         TermDetail: drawerStub("term-detail-stub", "tKey"),
+        CaseDetail: drawerStub("case-detail-stub", "cKey"),
       },
     },
   });
@@ -253,5 +261,16 @@ describe("HomeView", () => {
     );
 
     expect(replace).toHaveBeenCalledWith({ name: "home" });
+  });
+
+  it("案例详情路由打开首页案例抽屉", async () => {
+    route.name = "homeCaseDetail";
+    route.params = { cKey: "C0001" };
+    const wrapper = await mountHomeView();
+    await waitForAsyncRoute(() =>
+      wrapper.find(".case-detail-stub").exists()
+    );
+
+    expect(wrapper.find(".case-detail-stub").text()).toContain("C0001");
   });
 });

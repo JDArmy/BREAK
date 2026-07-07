@@ -7,6 +7,7 @@ import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useDrawerRoute } from "@/composables/useDrawerRoute";
 import { useHomeSceneLayout, useSubRiskToggle } from "@/composables/useHomeSceneLayout";
 import { entityRegistry } from "@/BREAK/entityRegistry";
+import { useCases } from "@/composables/useCases";
 import { useI18n } from "vue-i18n";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
@@ -15,10 +16,12 @@ const AvoidanceDetail = createRecoverableAsyncComponent(() => import("@/componen
 const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "HomeAttackToolDetail");
 const ThreatActorDetail = createRecoverableAsyncComponent(() => import("@/components/ThreatActorDetail.vue"), undefined, "HomeThreatActorDetail");
 const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "HomeTermDetail");
+const CaseDetail = createRecoverableAsyncComponent(() => import("@/components/CaseDetail.vue"), undefined, "HomeCaseDetail");
 
 const router = useRouter();
 const route = useRoute();
 const { locale, t, te } = useI18n();
+const { cases, ensureCases } = useCases();
 const defaultBusinessSceneKey = "BS00";
 
 const { isMobile } = useBreakpoints();
@@ -237,6 +240,17 @@ const termDrawer = useDrawerRoute({
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
     return hasOwn(fullBREAK.terms, key);
+  },
+  onClose: closeDrawerToHome,
+});
+
+// 典型案例抽屉（案例数据懒加载，仅首页路由）
+const caseDrawer = useDrawerRoute({
+  routeNames: ["homeCaseDetail"],
+  routeParam: "cKey",
+  validateKey: async (key) => {
+    await ensureCases();
+    return hasOwn(cases.value, key);
   },
   onClose: closeDrawerToHome,
 });
@@ -477,6 +491,12 @@ const termDrawer = useDrawerRoute({
     v-on:drawer-close="termDrawer.close"
     :drawer="termDrawer.drawerVisible.value"
     :tKey="termDrawer.entityKey.value"
+  />
+  <CaseDetail
+    v-if="caseDrawer.drawerVisible.value"
+    v-on:drawer-close="caseDrawer.close"
+    :drawer="caseDrawer.drawerVisible.value"
+    :cKey="caseDrawer.entityKey.value"
   />
 </template>
 

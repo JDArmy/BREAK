@@ -194,7 +194,7 @@ describe("SearchDialog", () => {
     vi.useRealTimers();
   });
 
-  it("知识库页搜索结果路由到 knowledgesXxxDetail", async () => {
+  it("知识库页搜索结果也路由到首页抽屉", async () => {
     vi.useFakeTimers();
     mocks.route.name = "knowledgesRiskList";
     mocks.searchResults.avoidance = [
@@ -212,8 +212,59 @@ describe("SearchDialog", () => {
     await item.trigger("click");
 
     expect(mocks.router.push).toHaveBeenCalledWith({
-      name: "knowledgesAvoidanceDetail",
+      name: "homeAvoidanceDetail",
       params: { aKey: "A0001" },
+    });
+    wrapper.unmount();
+    vi.useRealTimers();
+  });
+
+  it("首页案例搜索结果路由到 homeCaseDetail 抽屉", async () => {
+    vi.useFakeTimers();
+    mocks.route.name = "home";
+    mocks.searchResults.case = [
+      { id: "C0001", type: "case", title: "案例" },
+    ];
+
+    const wrapper = createWrapper();
+    const input = wrapper.find(".el-input");
+    await input.setValue("案例");
+    vi.advanceTimersByTime(250);
+    await nextTick();
+    await nextTick();
+
+    const item = wrapper.find(".search-result-item");
+    await item.trigger("click");
+
+    expect(mocks.router.push).toHaveBeenCalledWith({
+      name: "homeCaseDetail",
+      params: { cKey: "C0001" },
+    });
+    wrapper.unmount();
+    vi.useRealTimers();
+  });
+
+  it("业务场景页案例搜索结果路由到首页案例抽屉且不携带 bsKey", async () => {
+    vi.useFakeTimers();
+    mocks.route.name = "businessSceneRiskDetail";
+    mocks.route.params = { bsKey: "BS01", rKey: "R0001" };
+    mocks.searchResults.case = [
+      { id: "C0001", type: "case", title: "案例" },
+    ];
+
+    const wrapper = createWrapper();
+    const input = wrapper.find(".el-input");
+    await input.setValue("案例");
+    vi.advanceTimersByTime(250);
+    await nextTick();
+    await nextTick();
+
+    const item = wrapper.find(".search-result-item");
+    await item.trigger("click");
+
+    expect(mocks.router.push).toHaveBeenCalledWith({
+      name: "homeCaseDetail",
+      params: { cKey: "C0001" },
     });
     wrapper.unmount();
     vi.useRealTimers();

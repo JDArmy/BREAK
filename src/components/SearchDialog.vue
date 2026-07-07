@@ -71,16 +71,15 @@ const groupLabels: Record<EntityType, string> = {
 // 各类型对应的详情路由（从 entityRegistry 派生）
 const getHomeDetailRoute = (type: EntityType) => {
   const e = getEntityEntry(type);
-  // case 无首页抽屉，跳知识库 detail
-  return { name: e.homeDetailRouteName || e.detailRouteName, paramKey: e.paramKey };
+  return { name: e.homeDetailRouteName, paramKey: e.paramKey };
 };
 const getBusinessSceneDetailRoute = (type: EntityType) => {
   const e = getEntityEntry(type);
-  return { name: e.businessSceneDetailRouteName || e.detailRouteName, paramKey: e.paramKey };
-};
-const getKnowledgeDetailRoute = (type: EntityType) => {
-  const e = getEntityEntry(type);
-  return { name: e.detailRouteName, paramKey: e.paramKey };
+  return {
+    name: e.businessSceneDetailRouteName || e.homeDetailRouteName,
+    paramKey: e.paramKey,
+    keepsBusinessScene: Boolean(e.businessSceneDetailRouteName),
+  };
 };
 
 // 搜索命中字段 → 显示标签（不用 i18n 因为字段名是内部标识，用简短中英混合标签更直观）
@@ -163,16 +162,18 @@ function selectResult(result: SearchResult) {
       params: { [detailRoute.paramKey]: result.id },
     });
   } else if (isBusinessScene) {
-    // 业务场景页：跳 businessSceneXxxDetail 抽屉路由，带 bsKey 保持上下文
+    // 业务场景页：支持业务场景抽屉的实体保留 bsKey；case 等无业务场景抽屉的实体回首页抽屉
     const bsKey = router.currentRoute.value.params.bsKey;
     const detailRoute = getBusinessSceneDetailRoute(result.type);
     router.push({
       name: detailRoute.name,
-      params: { bsKey, [detailRoute.paramKey]: result.id },
+      params: detailRoute.keepsBusinessScene
+        ? { bsKey, [detailRoute.paramKey]: result.id }
+        : { [detailRoute.paramKey]: result.id },
     });
   } else {
-    // 非首页（知识库页等）：跳知识库 detail 路由
-    const detailRoute = getKnowledgeDetailRoute(result.type);
+    // 非首页（知识库页等）：也回到首页抽屉，保持全站搜索结果打开方式一致
+    const detailRoute = getHomeDetailRoute(result.type);
     router.push({
       name: detailRoute.name,
       params: { [detailRoute.paramKey]: result.id },

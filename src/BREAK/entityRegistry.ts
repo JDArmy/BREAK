@@ -146,7 +146,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     typeLabelKey: "relationType.case",
     listRouteName: "knowledgesCaseList",
     detailRouteName: "knowledgesCaseDetail",
-    homeDetailRouteName: "",
+    homeDetailRouteName: "homeCaseDetail",
     businessSceneDetailRouteName: "",
     relationPerspectiveRouteName: "",
     fieldPriority: ["summary", "description"],

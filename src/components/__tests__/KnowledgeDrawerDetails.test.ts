@@ -129,7 +129,10 @@ describe("知识抽屉详情组件", () => {
   });
 
   it("从抽屉内打开新实体时保留父抽屉并同步 URL", async () => {
+    window.history.replaceState(null, "", "/#/home/risk/R0001");
     const pushState = vi.spyOn(window.history, "pushState").mockImplementation(() => undefined);
+    const replaceState = vi.spyOn(window.history, "replaceState").mockImplementation(() => undefined);
+    const back = vi.spyOn(window.history, "back").mockImplementation(() => undefined);
     const wrapper = mount(RiskDetail, {
       props: {
         drawer: true,
@@ -147,7 +150,8 @@ describe("知识抽屉详情组件", () => {
           },
           AvoidanceDetail: {
             props: ["drawer", "aKey"],
-            template: '<section class="nested-avoidance-stub">子抽屉 {{ aKey }}</section>',
+            emits: ["drawerClose"],
+            template: '<section class="nested-avoidance-stub">子抽屉 {{ aKey }}<button class="close-nested" @click="$emit(\'drawerClose\')">关闭子抽屉</button></section>',
           },
         },
       },
@@ -158,5 +162,12 @@ describe("知识抽屉详情组件", () => {
     expect(wrapper.text()).toContain("父抽屉 R0001");
     expect(wrapper.text()).toContain("子抽屉 A0001");
     expect(pushState).toHaveBeenCalledWith(null, "", "/#/home/avoidance/A0001");
+
+    await wrapper.find(".close-nested").trigger("click");
+
+    expect(back).not.toHaveBeenCalled();
+    expect(replaceState).toHaveBeenCalledWith(null, "", "/#/home/risk/R0001");
+    expect(wrapper.text()).toContain("父抽屉 R0001");
+    expect(wrapper.find(".nested-avoidance-stub").exists()).toBe(false);
   });
 });

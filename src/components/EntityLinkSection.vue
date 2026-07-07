@@ -97,7 +97,13 @@ const rows = computed(() => props.keys.map((key) => ({ key })));
   <section v-if="keys.length" class="detail-section" :data-detail-anchor="anchor">
     <h3>{{ $t(title) }}</h3>
     <div class="entity-reference-table-wrap">
-      <table class="entity-reference-table">
+      <table
+        class="entity-reference-table"
+        :class="{
+          'entity-reference-table--case': entityType === 'case',
+          'entity-reference-table--drawer': Boolean(onNavigate),
+        }"
+      >
         <colgroup>
           <col class="entity-reference-id-col" />
           <col class="entity-reference-title-col" />
@@ -161,5 +167,25 @@ const rows = computed(() => props.keys.map((key) => ({ key })));
   cursor: pointer;
   text-align: inherit;
   display: inline;
+}
+
+.entity-reference-table--case .entity-reference-id-col {
+  width: 84px;
+}
+
+.entity-reference-table--case .entity-reference-title-col {
+  width: 42%;
+}
+
+.entity-reference-table--case .entity-reference-intro-col {
+  width: auto;
+}
+
+.entity-reference-table--case.entity-reference-table--drawer .entity-reference-intro-text {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 </style>

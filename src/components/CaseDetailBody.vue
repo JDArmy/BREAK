@@ -19,6 +19,15 @@ const props = defineProps<{
   mode: "list" | "drawer";
 }>();
 
+const emit = defineEmits<{
+  /** 抽屉模式：点击关联风险 */
+  (e: "navigate-risk", key: string): void;
+  /** 抽屉模式：点击关联攻击工具 */
+  (e: "navigate-attackTool", key: string): void;
+  /** 抽屉模式：点击关联威胁行为者 */
+  (e: "navigate-threatActor", key: string): void;
+}>();
+
 const { t } = useI18n();
 const router = useRouter();
 const { cases } = useCases();
@@ -42,36 +51,69 @@ const categoryLabel = (category: string) => {
   return t(`caseCategory_${key}`);
 };
 const detailHref = (cKey: string) => entityDetailHref(router, cKey, "case") ?? "";
+const openDetail = (cKey: string) => {
+  window.open(detailHref(cKey), "_blank", "noopener,noreferrer");
+};
+const onNavigate = (event: "navigate-risk" | "navigate-attackTool" | "navigate-threatActor") => (key: string) => {
+  emit(event, key);
+};
 </script>
 
 <template>
   <article v-if="selectedCase" class="detail-panel">
-    <div class="detail-heading">
-      <div>
-        <div class="detail-id">{{ cKey }}</div>
-        <h2>
-          <template v-if="!isDrawer">{{ selectedCase.title }}</template>
-          <a v-else :href="detailHref(cKey)" target="_blank" rel="noopener noreferrer" class="drawer-title-link">
+    <div class="detail-heading" :class="{ 'case-drawer-heading': isDrawer }">
+      <template v-if="isDrawer">
+        <div class="case-drawer-meta-row">
+          <div class="detail-id">{{ cKey }}</div>
+          <div class="detail-heading-actions">
+            <el-button type="primary" plain size="small" @click="openDetail(cKey)">
+              {{ $t("viewDetail") }}
+              <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+            </el-button>
+          </div>
+        </div>
+        <h2 class="case-drawer-title">
+          <a :href="detailHref(cKey)" target="_blank" rel="noopener noreferrer" class="drawer-title-link">
             {{ selectedCase.title }}
             <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
           </a>
         </h2>
-      </div>
-      <FeedbackLink :entity-id="cKey" :entity-title="selectedCase.title" />
+      </template>
+      <template v-else>
+        <div>
+          <div class="detail-id">{{ cKey }}</div>
+          <h2>{{ selectedCase.title }}</h2>
+        </div>
+        <div class="detail-heading-actions">
+          <FeedbackLink :entity-id="cKey" :entity-title="selectedCase.title" />
+        </div>
+      </template>
     </div>
 
     <section class="detail-section">
       <h3>{{ $t("caseSummary") }}</h3>
       <p>{{ selectedCase.summary }}</p>
     </section>
-    <section v-if="selectedCase.category" class="detail-section">
-      <h3>{{ $t("caseCategory") }}</h3>
-      <p>{{ categoryLabel(selectedCase.category) }}</p>
-    </section>
-    <section v-if="selectedCase.incidentTime" class="detail-section">
-      <h3>{{ $t("incidentTime") }}</h3>
-      <p class="text-muted">{{ selectedCase.incidentTime }}</p>
-    </section>
+    <div v-if="isDrawer && (selectedCase.category || selectedCase.incidentTime)" class="case-drawer-info-row">
+      <section v-if="selectedCase.category" class="detail-section case-drawer-category">
+        <h3>{{ $t("caseCategory") }}</h3>
+        <p>{{ categoryLabel(selectedCase.category) }}</p>
+      </section>
+      <section v-if="selectedCase.incidentTime" class="detail-section case-drawer-time">
+        <h3>{{ $t("incidentTime") }}</h3>
+        <p class="text-muted">{{ selectedCase.incidentTime }}</p>
+      </section>
+    </div>
+    <template v-else>
+      <section v-if="selectedCase.category" class="detail-section">
+        <h3>{{ $t("caseCategory") }}</h3>
+        <p>{{ categoryLabel(selectedCase.category) }}</p>
+      </section>
+      <section v-if="selectedCase.incidentTime" class="detail-section">
+        <h3>{{ $t("incidentTime") }}</h3>
+        <p class="text-muted">{{ selectedCase.incidentTime }}</p>
+      </section>
+    </template>
     <section v-if="selectedKeywords.length" class="detail-section">
       <h3>{{ $t("keywords") }}</h3>
       <div class="keywords">
@@ -83,18 +125,21 @@ const detailHref = (cKey: string) => entityDetailHref(router, cKey, "case") ?? "
       title="risks"
       entity-type="risk"
       anchor="risks"
+      :on-navigate="isDrawer ? onNavigate('navigate-risk') : undefined"
     />
     <EntityLinkSection
       :keys="selectedCase.relatedAttackTools ?? []"
       title="attackTools"
       entity-type="attackTool"
       anchor="attack-tools"
+      :on-navigate="isDrawer ? onNavigate('navigate-attackTool') : undefined"
     />
     <EntityLinkSection
       :keys="selectedCase.relatedThreatActors ?? []"
       title="threatActors"
       entity-type="threatActor"
       anchor="threat-actors"
+      :on-navigate="isDrawer ? onNavigate('navigate-threatActor') : undefined"
     />
     <!-- Case references 手写 inline（case 数据不进 BREAK 索引，无法用 ReferenceList） -->
     <section v-if="selectedCase.references?.length" class="detail-section" data-detail-anchor="references">
@@ -124,6 +169,41 @@ const detailHref = (cKey: string) => entityDetailHref(router, cKey, "case") ?? "
 </template>
 
 <style scoped>
+.case-drawer-heading {
+  display: block;
+}
+
+.case-drawer-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.detail-heading .case-drawer-title {
+  margin-top: 14px;
+}
+
+.case-drawer-meta-row .detail-heading-actions {
+  flex-shrink: 0;
+}
+
+.case-drawer-info-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(120px, 0.8fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.case-drawer-info-row .detail-section {
+  min-width: 0;
+  margin-bottom: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--break-border);
+  border-radius: 8px;
+  background: var(--break-bg-secondary);
+}
+
 .reference-list {
   margin-top: 8px;
 }
@@ -175,5 +255,15 @@ const detailHref = (cKey: string) => entityDetailHref(router, cKey, "case") ?? "
   color: var(--break-text-primary);
   font-size: 14px;
   flex: 1;
+}
+
+@media (max-width: 520px) {
+  .case-drawer-meta-row {
+    align-items: flex-start;
+  }
+
+  .case-drawer-info-row {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
