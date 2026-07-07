@@ -1,5 +1,14 @@
 # Change log
 
+## 2.42.36
+
+规避手段详情页分类/有效性改为卡片+badge 布局，参考风险详情页样式
+
+- 规避手段详情页的「分类」（AC01 防止/AC02 感知/AC03 识别/AC04 处置）与「有效性」（high/medium/low）由原来的纯文本 section 改为 `avoidance-meta-grid` 双卡片网格 + badge 布局，与风险详情页的处置优先级/风险复杂度卡片视觉一致：标题左上角，badge 水平+垂直居中。
+- 分类 badge 按环节语义配色：AC01 绿（防止）、AC02 天蓝（感知）、AC03 紫（识别）、AC04 琥珀（处置）。
+- 有效性 badge 按强度配色：high 绿、medium 琥珀、low 灰。
+- 补充暗黑模式浅色文字变体保证对比度。
+
 ## 2.42.35
 
 term-completeness 重评确认 52→0 + prompt 收紧（通用但相关不算 fail）+ 新增 Case 补 primary。

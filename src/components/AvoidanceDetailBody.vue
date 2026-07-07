@@ -132,16 +132,19 @@ const onNavigate = (event: "navigate-avoidance" | "navigate-risk" | "navigate-at
         <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
       </div>
     </section>
-    <section v-if="selectedAvoidance?.category" class="detail-section">
-      <h3>{{ $t("menu.avoidances") }}</h3>
-      <p>
-        {{ selectedAvoidance.category }}:
-        {{ $t(`BREAK.avoidanceCategories.${selectedAvoidance.category}.title`) }}
-      </p>
-    </section>
-    <section v-if="selectedEffectiveness" class="detail-section">
-      <h3>{{ $t("avoidanceEffectiveness") }}</h3>
-      <p>{{ $t(`relationView.avoidanceEffectiveness.${selectedEffectiveness}`) }}</p>
+    <section class="detail-grid avoidance-meta-grid">
+      <div v-if="selectedAvoidance?.category" class="risk-meta-card risk-meta-card--compact avoidance-meta-card--category">
+        <h3>{{ $t("menu.avoidances") }}</h3>
+        <span class="knowledge-badge avoidance-category-badge" :class="`avoidance-category-${selectedAvoidance.category}`">
+          {{ $t(`BREAK.avoidanceCategories.${selectedAvoidance.category}.title`) }}
+        </span>
+      </div>
+      <div v-if="selectedEffectiveness" class="risk-meta-card risk-meta-card--compact avoidance-meta-card--effectiveness">
+        <h3>{{ $t("avoidanceEffectiveness") }}</h3>
+        <span class="knowledge-badge avoidance-effectiveness-badge" :class="`effectiveness-${selectedEffectiveness}`">
+          {{ $t(`relationView.avoidanceEffectiveness.${selectedEffectiveness}`) }}
+        </span>
+      </div>
     </section>
 
     <!-- 关联规避手段 relation-list -->

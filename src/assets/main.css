@@ -317,7 +317,9 @@ html.dark .usage-highlight--link {
 
 /* margin:auto 在 flex 容器中让 badge 在剩余空间内水平+垂直双向居中，badge 自身保持 fit-content 宽度 */
 .risk-meta-card--compact > .risk-priority-badge,
-.risk-meta-card--compact > .risk-complexity-badge {
+.risk-meta-card--compact > .risk-complexity-badge,
+.risk-meta-card--compact > .avoidance-category-badge,
+.risk-meta-card--compact > .avoidance-effectiveness-badge {
   margin: auto;
 }
 
@@ -329,6 +331,79 @@ html.dark .usage-highlight--link {
 .risk-meta-grid:not(:has(.risk-meta-card--priority)) > .risk-meta-card--impact {
   grid-column: 2 / -1;
 }
+
+/* ===== 规避手段元信息网格（AvoidancesView，复用 risk-meta-card 结构）===== */
+.avoidance-meta-grid {
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+/* 规避手段分类 badge：AC01 防止 / AC02 感知 / AC03 识别 / AC04 处置 */
+.avoidance-category-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1px solid var(--break-border);
+}
+.avoidance-category-badge.avoidance-category-AC01 {
+  background: color-mix(in srgb, var(--green-500) 18%, transparent);
+  border-color: var(--green-500);
+  color: var(--green-800);
+}
+.avoidance-category-badge.avoidance-category-AC02 {
+  background: color-mix(in srgb, var(--sky-500) 18%, transparent);
+  border-color: var(--sky-500);
+  color: var(--sky-800);
+}
+.avoidance-category-badge.avoidance-category-AC03 {
+  background: color-mix(in srgb, var(--purple-500) 18%, transparent);
+  border-color: var(--purple-500);
+  color: var(--purple-800);
+}
+.avoidance-category-badge.avoidance-category-AC04 {
+  background: color-mix(in srgb, var(--amber-500) 18%, transparent);
+  border-color: var(--amber-500);
+  color: var(--amber-700);
+}
+
+/* 有效性 badge：high / medium / low */
+.avoidance-effectiveness-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1px solid var(--break-border);
+}
+.avoidance-effectiveness-badge.effectiveness-high {
+  background: color-mix(in srgb, var(--green-500) 18%, transparent);
+  border-color: var(--green-500);
+  color: var(--green-800);
+}
+.avoidance-effectiveness-badge.effectiveness-medium {
+  background: color-mix(in srgb, var(--amber-500) 18%, transparent);
+  border-color: var(--amber-500);
+  color: var(--amber-700);
+}
+.avoidance-effectiveness-badge.effectiveness-low {
+  background: color-mix(in srgb, var(--slate-500) 18%, transparent);
+  border-color: var(--slate-500);
+  color: var(--slate-700);
+}
+
+/* 暗黑模式：badge 文字改用浅色变体，保证对比度 */
+html.dark .avoidance-category-badge.avoidance-category-AC01 { color: var(--green-400); }
+html.dark .avoidance-category-badge.avoidance-category-AC02 { color: var(--sky-400); }
+html.dark .avoidance-category-badge.avoidance-category-AC03 { color: var(--purple-400); }
+html.dark .avoidance-category-badge.avoidance-category-AC04 { color: var(--amber-300); }
+html.dark .avoidance-effectiveness-badge.effectiveness-high { color: var(--green-400); }
+html.dark .avoidance-effectiveness-badge.effectiveness-medium { color: var(--amber-300); }
+html.dark .avoidance-effectiveness-badge.effectiveness-low { color: var(--slate-300); }
 
 /* ===== 风险雷达图（RisksView）===== */
 .risk-radar-chart {
