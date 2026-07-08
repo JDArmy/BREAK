@@ -107,6 +107,9 @@ const getRiskTitle = (riskKey: string) =>
 const getRiskDefinition = (riskKey: string) =>
   getLocalizedText(`BREAK.risks.${riskKey}.definition`, BREAK.risks[riskKey]?.definition ?? "");
 
+const getRiskTooltipTitle = (riskKey: string) =>
+  `${riskKey}: ${getRiskTitle(riskKey)}`;
+
 const shouldEnableMatrixScroll = computed(() => shouldEnableScroll.value && !isMobile.value);
 
 
@@ -389,7 +392,6 @@ const caseDrawer = useDrawerRoute({
               :class="subRisks[rKey] ? 's-risk' : 'risk'"
               v-for="rKey in getRisks(sceneBREAK.riskScenes, scene.key)"
               :key="rKey"
-              :title="rKey + ': ' + getRiskDefinition(rKey)"
               :style="hideSubRisks[rKey] ? '' : 'padding:0 0 3px 0;'"
             >
               <!-- 有子风险时，显示子风险列表 -->
@@ -410,20 +412,25 @@ const caseDrawer = useDrawerRoute({
                     <span class="sidebar-arrow">{{ hideSubRisks[rKey] ? '▶' : '▼' }}</span>
                   </td>
                   <td class="parent-risk-link">
-                    <router-link
-                      class="link"
-                      :to="bsKeySelected === defaultBusinessSceneKey
-                        ? { name: 'homeRiskDetail', params: { rKey } }
-                        : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
-	                      getRiskTitle(rKey)
-                    }}</router-link>
+                    <el-tooltip effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
+                      <template #content>
+                        <div class="home-risk-tooltip-title">{{ getRiskTooltipTitle(rKey) }}</div>
+                        <div class="home-risk-tooltip-definition">{{ getRiskDefinition(rKey) }}</div>
+                      </template>
+                      <router-link
+                        class="link"
+                        :to="bsKeySelected === defaultBusinessSceneKey
+                          ? { name: 'homeRiskDetail', params: { rKey } }
+                          : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
+	                        getRiskTitle(rKey)
+                      }}</router-link>
+                    </el-tooltip>
                   </td>
                   <td style="width: 1px"></td>
                 </tr>
                 <tr
                   class="sub-risk"
                   :key="srKey"
-	                  :title="srKey + ': ' + getRiskDefinition(srKey)"
                   v-for="(srKey, index) in subRisks[rKey]"
                   v-show="!hideSubRisks[rKey]"
                 >
@@ -433,27 +440,38 @@ const caseDrawer = useDrawerRoute({
                     </svg>
                   </td>
                   <td class="sub-risk-link">
-                    <router-link
-                      class="link"
-                      :to="bsKeySelected === defaultBusinessSceneKey
-                        ? { name: 'homeRiskDetail', params: { rKey: srKey } }
-                        : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey: srKey } }">{{
-	                      getRiskTitle(srKey)
-                    }}</router-link>
+                    <el-tooltip effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
+                      <template #content>
+                        <div class="home-risk-tooltip-title">{{ getRiskTooltipTitle(srKey) }}</div>
+                        <div class="home-risk-tooltip-definition">{{ getRiskDefinition(srKey) }}</div>
+                      </template>
+                      <router-link
+                        class="link"
+                        :to="bsKeySelected === defaultBusinessSceneKey
+                          ? { name: 'homeRiskDetail', params: { rKey: srKey } }
+                          : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey: srKey } }">{{
+	                        getRiskTitle(srKey)
+                      }}</router-link>
+                    </el-tooltip>
                   </td>
                   <td style="width: 1px"></td>
                 </tr>
                 </tbody>
               </table>
               <!-- 无子风险时 -->
-              <router-link
-                class="link"
-                v-else
-                :to="bsKeySelected === defaultBusinessSceneKey
-                  ? { name: 'homeRiskDetail', params: { rKey } }
-                  : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
-	                getRiskTitle(rKey)
-              }}</router-link>
+              <el-tooltip v-else effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
+                <template #content>
+                  <div class="home-risk-tooltip-title">{{ getRiskTooltipTitle(rKey) }}</div>
+                  <div class="home-risk-tooltip-definition">{{ getRiskDefinition(rKey) }}</div>
+                </template>
+                <router-link
+                  class="link"
+                  :to="bsKeySelected === defaultBusinessSceneKey
+                    ? { name: 'homeRiskDetail', params: { rKey } }
+                    : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
+	                  getRiskTitle(rKey)
+                }}</router-link>
+              </el-tooltip>
             </li>
           </ul>
         </el-col>
@@ -678,6 +696,35 @@ const caseDrawer = useDrawerRoute({
   font-weight: 500;
   border-left: 1px solid var(--break-border);
   min-width: 0;
+}
+
+:global(.home-risk-tooltip) {
+  width: min(320px, calc(100vw - 32px));
+  max-width: min(320px, calc(100vw - 32px));
+}
+
+:global(.home-risk-tooltip.el-popper.is-break-theme) {
+  border: 1px solid var(--break-tooltip-border) !important;
+  background: var(--break-tooltip-bg) !important;
+  color: var(--break-tooltip-text) !important;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+}
+
+:global(.home-risk-tooltip.el-popper.is-break-theme .el-popper__arrow::before) {
+  border-color: var(--break-tooltip-border) !important;
+  background: var(--break-tooltip-bg) !important;
+}
+
+:global(.home-risk-tooltip-title) {
+  margin-bottom: 4px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+:global(.home-risk-tooltip-definition) {
+  line-height: 1.55;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .stats {
