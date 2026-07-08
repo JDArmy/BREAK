@@ -18,7 +18,7 @@ JDArmy BREAK 是英文 "Business Risk Enumeration & Avoidance Knowledge" 的缩�
 
 ## 方法
 
-框架整体按照：风险维度、风险场景、风险点的划分原则，框架包含若干风险维度，每个风险维度包含若干风险场景，每个风险场景包含若干风险点。
+框架整体按照：业务场景、风险维度、风险场景、风险点的划分原则组织。业务场景对应行业或业务域；风险维度是业务风险域，用于把风险场景归入交易与权益、内容与生态治理、账号与身份、平台接口与自动化对抗、数据算法与模型、虚拟资产与新兴技术、设备物理与基础设施、内部供应链与合规等稳定分组；每个风险场景包含若干风险点。
 
 目前框架共收集和整理风险点 378 个、规避手段 318 个、攻击工具 118 个、威胁行为者 75 个、行业术语 592 个、业务场景 20 个、规避手段分类 4 个、案例 1782 个，后续会根据情况和反馈进行动态添加、升级或调整。每个风险点由风险编号、风险标题、风险定义、风险描述、风险复杂度、风险影响、规避手段、参考资料和攻击工具等组成。风险编号通过 R00xx 的方式来进行唯一编号（效仿Mitre ATT&CK），以便后期交流和情报传递。而攻击描述可以指引企业蓝军更好地进行安全能力评估，规避手段可以帮助企业红军或业务风控来加强安全能力建设，以降低业务风险。
 
@@ -61,8 +61,8 @@ scripts/skill/package_skill.sh
 - `avoidances` 文件夹中存放规避手段
 - `avoidance-categories` 文件夹中存放规避手段分类
 - `business-scenes` 文件夹中存放业务场景
-  - `riskDimensions` 字段为该业务场景所涉及的风险维度
-  - `riskScenes` 字段为该业务场景所涉及的风险场景及相关风险
+  - `riskDimensions` 字段为该业务场景所涉及的业务风险域，并维护其包含的风险场景 ID
+  - `riskScenes` 字段为该业务场景所涉及的风险场景及相关风险；同一风险场景中不要同时列出父风险和子风险，父风险会在前端展开其子风险
 - `attack-tools` 文件夹中存放攻击工具列表
 - `threat-actors` 文件夹中存放威胁行为者列表
 - `terms` 文件夹中存放行业术语与黑话词汇表
@@ -120,7 +120,7 @@ npm run lint
 npm run type-check
 ```
 
-`npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计和生成式 Schema 文档同步检查。
+`npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计、业务场景校验、引用覆盖、内容质量与生成式 Schema 文档同步检查；BusinessScene 子风险校验只阻断同一 riskScene 同时列出父风险和子风险的重复展示问题。
 `npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:home-counts`、`export:data`、`export:data-en`、`export:stix`、`export:jsonld`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export`、`validate:data-package` 和 `validate:stix`。
 `npm run test:coverage` 会对关系分析、Sankey 攻击路径、根节点路径洞察、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
 `npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。

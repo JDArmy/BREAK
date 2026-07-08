@@ -18,7 +18,7 @@ Drawing on years of experience and accumulated understanding of business securit
 
 ## Methodology
 
-The framework is organized around three levels: **risk dimensions**, **risk scenarios**, and **risk items**. The framework contains multiple risk dimensions; each dimension contains multiple risk scenarios; and each scenario contains multiple risk items.
+The framework is organized around **business scenes**, **risk dimensions**, **risk scenarios**, and **risk items**. A business scene represents an industry or business domain. A risk dimension is a business risk domain that groups risk scenarios into stable areas such as transaction and entitlement, content and ecosystem governance, account and identity, platform/interface automation abuse, data/algorithm/model, virtual assets and emerging technology, device/physical infrastructure, and internal supply-chain compliance. Each risk scenario contains multiple risk items.
 
 The current framework catalogues 378 risk items, 318 avoidance measures, 118 attack tools, 75 threat actors, 592 industry terms, 20 business scenes, 4 avoidance categories, and 1782 cases, with ongoing additions, upgrades, and adjustments based on developments and feedback. Each risk item consists of: a risk ID, risk title, risk definition, risk description, risk complexity, risk influence, avoidance measures, references, and associated attack tools. Risk IDs follow the format `R00xx` for unique identification (modeled after MITRE ATT&CK) to facilitate communication and intelligence sharing. Attack descriptions guide blue teams in security capability assessments, while avoidance measures help red teams and business risk control to strengthen security capabilities and reduce business risk.
 
@@ -61,8 +61,8 @@ The framework is described in JSON format under the `/src/BREAK` directory:
 - `avoidances` — avoidance measures catalogue
 - `avoidance-categories` — avoidance measure categories
 - `business-scenes` — business scenes
-  - `riskDimensions` field: risk dimensions covered by the scene
-  - `riskScenes` field: risk scenarios and associated risk items for the scene
+  - `riskDimensions` field: business risk domains covered by the scene, with the risk scene IDs under each domain
+  - `riskScenes` field: risk scenarios and associated risk items for the scene; do not list a parent risk and its sub-risk in the same risk scene because the frontend expands parent risks into sub-risks
 - `attack-tools` — attack tool catalogue
 - `threat-actors` — threat actor catalogue
 - `terms` — industry terms and slang glossary
@@ -120,7 +120,7 @@ npm run lint
 npm run type-check
 ```
 
-`npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
+`npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, business scene checks, reference coverage, content quality checks, and generated schema documentation checks. The BusinessScene sub-risk check only blocks duplicate display cases where a parent risk and its sub-risk are listed in the same `riskScene`.
 `npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:home-counts`, `export:data`, `export:data-en`, `export:stix`, `export:jsonld`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, `validate:data-package`, and `validate:stix`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, Sankey attack paths, root/path insights, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.

@@ -12,12 +12,12 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务
 
 | 类型 | 数量 | ID 格式 | 说明 |
 |------|------|---------|------|
-| Risk（风险） | 382 | R0001, R0001-001 | 业务安全风险定义和影响 |
+| Risk（风险） | 378 | R0001, R0001-001 | 业务安全风险定义和影响 |
 | Avoidance（规避手段） | 318 | A0001, A0001-001 | 应对风险的防御措施 |
 | AttackTool（攻击工具） | 118 | AT0001, AT0001-001 | 黑灰产使用的工具 |
 | ThreatActor（威胁行为者） | 75 | TA0001, TA0001-001 | 实施攻击的人群 |
-| Term（术语） | 593 | T0001 | 业务安全领域术语 |
-| Case（案例） | 1778 | C0001 | 真实的安全事件案例 |
+| Term（术语） | 592 | T0001 | 业务安全领域术语 |
+| Case（案例） | 1782 | C0001 | 真实的安全事件案例 |
 | BusinessScene（业务场景） | 20 | BS00 | 行业/业务域分类 |
 
 ## 调用方式
@@ -179,5 +179,6 @@ Term（术语）
     └── related* → 所有其他实体类型
 
 BusinessScene（业务场景）
-    └── riskScenes → Risk（场景下的风险列表）
+    ├── riskDimensions → RiskScene（按业务风险域组织风险场景）
+    └── riskScenes → Risk（场景下的风险列表；父风险可代表其子风险）
 ```
