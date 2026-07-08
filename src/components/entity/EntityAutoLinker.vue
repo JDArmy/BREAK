@@ -51,7 +51,7 @@ function showPopover(el: HTMLElement, id: string) {
     popoverEntity.value = entity;
     triggerRef.value = el;
     popoverVisible.value = true;
-  }, 150);
+  }, 400);
 }
 
 function cancelShow() {

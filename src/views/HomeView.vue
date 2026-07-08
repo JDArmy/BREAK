@@ -356,7 +356,7 @@ const caseDrawer = useDrawerRoute({
         :style="shouldEnableMatrixScroll ? { flex: `0 0 ${dimension.width}px`, maxWidth: `${dimension.width}px` } : {}"
       >
         <div class="risk-card">
-        <h3 class="risk-dimension-title" :title="dimension.key">
+        <h3 class="risk-dimension-title" :title="t('riskDimensionIdTitle', { id: dimension.key })">
           {{
             getRiskDimensionTitle(dimension.key)
           }}
@@ -409,7 +409,7 @@ const caseDrawer = useDrawerRoute({
                     <span class="sidebar-arrow">{{ hideSubRisks[rKey] ? '▶' : '▼' }}</span>
                   </td>
                   <td class="parent-risk-link">
-                    <el-tooltip effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
+                    <el-tooltip effect="break-theme" placement="top" :show-after="400" popper-class="home-risk-tooltip">
                       <template #content>
                         <EntityPopoverContent v-if="resolveEntity(rKey)" :entity="resolveEntity(rKey)!" />
                       </template>
@@ -436,7 +436,7 @@ const caseDrawer = useDrawerRoute({
                     </svg>
                   </td>
                   <td class="sub-risk-link">
-                    <el-tooltip effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
+                    <el-tooltip effect="break-theme" placement="top" :show-after="400" popper-class="home-risk-tooltip">
                       <template #content>
                         <EntityPopoverContent v-if="resolveEntity(srKey)" :entity="resolveEntity(srKey)!" />
                       </template>
@@ -454,7 +454,7 @@ const caseDrawer = useDrawerRoute({
                 </tbody>
               </table>
               <!-- 无子风险时 -->
-              <el-tooltip v-else effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
+              <el-tooltip v-else effect="break-theme" placement="top" :show-after="400" popper-class="home-risk-tooltip">
                 <template #content>
                   <EntityPopoverContent v-if="resolveEntity(rKey)" :entity="resolveEntity(rKey)!" />
                 </template>
@@ -677,12 +677,15 @@ const caseDrawer = useDrawerRoute({
 }
 
 .link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(2px);
   height: 100%;
   width: 100%;
   font-size: 90%;
-  line-height: 1.45;
-  padding: 2px 4px;
+  line-height: 1.3;
+  padding: 3px 4px;
   box-sizing: border-box;
 }
 
