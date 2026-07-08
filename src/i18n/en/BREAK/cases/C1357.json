@@ -11,7 +11,7 @@
       "contract state update",
       "reentrancy bug"
     ],
-    "summary": "On August 9, 2023, the DeFi project Earning Farm suffered a reentrancy attack. The attacker exploited a reentrancy vulnerability in the smart contract, repeatedly calling a function before the contract state was updated, resulting in approximately $530,000 in asset losses.",
+    "summary": "On August 9, 2023, DeFi project Earning Farm suffered a reentrancy attack, with different sources reporting losses from about 286,000 to 530,000 US dollars. Attackers exploited reentrancy and abnormal handling of shares/LP token ENF_ETHLEV, causing shares to be overwritten in the fallback flow and extracting assets, exposing risks in state updates and share accounting in yield aggregation contracts.",
     "references": [
       {
         "title": "Losses Drop 90% Month-on-Month: A Quick Look at Web3 Ecosystem Attacks in August - Tencent News",

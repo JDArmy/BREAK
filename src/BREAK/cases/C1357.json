@@ -11,7 +11,7 @@
       "重入漏洞",
       "合约状态更新"
     ],
-    "summary": "2023年8月9日，DeFi项目Earning Farm遭到重入攻击，攻击者利用智能合约中的重入漏洞，在合约状态更新前重复调用函数，导致约53万美元的资产损失。",
+    "summary": "2023年8月9日，DeFi项目Earning Farm遭到重入攻击，不同来源对损失金额口径不一，约为28.6万至53万美元。攻击者利用重入及 shares/LP token ENF_ETHLEV 处理异常，在 fallback 流程中使 shares 被覆盖并套取资产，暴露出收益聚合类合约在状态更新和份额核算上的风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0159"
@@ -26,7 +26,7 @@
         "link": "https://blog.solidityscan.com/earningfarm-hack-analysis-f5eba2a1e080/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2023-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []

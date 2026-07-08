@@ -12,7 +12,7 @@
       "payment security",
       "fraud detection"
     ],
-    "summary": "FraudBlocker documented a coordinated carding attack targeting its platform. Attackers attempted to use multiple stolen credit card credentials to complete transactions, aiming to verify which cards were still active. The attack primarily targeted small e-commerce platforms with high transaction volumes and fewer security measures, screening for valid cards through batch testing.",
+    "summary": "FraudBlocker disclosed that its platform identified and blocked a coordinated carding attack. The attackers used payment forms and transaction flows to test card validity at scale, attempting to identify usable cards and complete abnormal transactions. The case illustrates how carding attacks can use automated requests, repeated small transactions, and traffic from multiple sources to evade single-point blocking.",
     "references": [
       {
         "title": "How We Identified and Blocked a Coordinated Carding Attack",

@@ -11,7 +11,7 @@
       "软件包注册表",
       "恶意软件包"
     ],
-    "summary": "2025年11月，攻击者在npm官方注册表中发布了至少175个恶意软件包，累计被下载超过2.6万次。这些包利用CDN隐藏恶意行为，实施精心设计的钓鱼攻击，对下游用户构成严重安全威胁。",
+    "summary": "2025年10月，Socket披露攻击者曾在npm官方注册表发布至少175个恶意软件包；2025年11月，中文媒体跟进报道。相关包累计被下载超过2.6万次，利用CDN隐藏恶意行为并实施钓鱼攻击，对下游用户构成安全威胁。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-005"
@@ -26,8 +26,8 @@
         "link": "https://socket.dev/blog/175-malicious-npm-packages-host-phishing-infrastructure"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-11",
+    "updated": "2026-07-08",
+    "incidentTime": "2025-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

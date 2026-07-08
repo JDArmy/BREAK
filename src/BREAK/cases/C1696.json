@@ -12,7 +12,7 @@
       "2.4TB",
       "全球客户"
     ],
-    "summary": "2022年9月，安全公司SOCRadar发现微软维护的Azure Blob存储桶因配置错误被公开访问，暴露了2.4TB敏感数据，涉及111个国家/地区的6.5万个实体，包含邮件、合同、发票等文件。微软承认该配置错误并已修复端点。",
+    "summary": "2022年9月，安全公司SOCRadar称微软维护的Azure Blob存储桶因配置错误被公开访问，暴露2.4TB数据、涉及111个国家/地区的6.5万多个实体，包含邮件、合同、发票等文件。微软承认配置错误并修复端点，但称SOCRadar对影响范围的描述被夸大。",
     "category": "security_incident",
     "relatedRisks": [
       "R0230"
@@ -27,7 +27,7 @@
         "link": "https://www.microsoft.com/en-us/msrc/blog/2022/10/investigation-regarding-misconfigured-microsoft-storage-location-2"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2022-09",
     "relatedAttackTools": [],
     "relatedThreatActors": []

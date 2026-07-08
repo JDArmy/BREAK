@@ -12,7 +12,7 @@
       "西门子",
       "工控协议"
     ],
-    "summary": "该漏洞为2024年公开的Profinet相关安全缺陷，可能允许攻击者利用协议弱点对工业控制系统实施未授权操作。",
+    "summary": "NVD存在CVE-2024-48989记录，但当前来源未提供足够漏洞描述，无法确认其是否确为Profinet相关漏洞、影响范围、攻击条件和后果。该条目暂只能作为漏洞记录存在性案例；如需写入工业控制系统未授权操作风险，应补充CVE官方描述、厂商通告或漏洞数据库来源。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0210"
@@ -23,7 +23,7 @@
         "link": "https://nvd.nist.gov/vuln/detail/CVE-2024-48989"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2024",
     "relatedAttackTools": [
       "AT0083"

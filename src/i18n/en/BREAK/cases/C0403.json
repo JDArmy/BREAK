@@ -11,7 +11,7 @@
       "BlueLotus_XSSReceiver",
       "attack chain reproduction"
     ],
-    "summary": "On March 14, 2026, a security researcher set up an XSS attack environment by injecting a malicious script into a message board. When an administrator reviewed the message, the payload was triggered, stealing their cookie containing the PHPSESSID. Using BurpSuite to replace the cookie, the researcher gained direct access to the admin panel without a username or password, fully reproducing the attac",
+    "summary": "A security researcher built an XSS attack environment and injected malicious script into a page. When a user visited the page containing the malicious script, the payload was triggered and leaked cookies including PHPSESSID. The researcher then used tools such as Cookie Editor to replace the cookie and access the backend without a username or password, reproducing an attack chain from stored XSS to session hijacking.",
     "references": [
       {
         "title": "[XSS] Stealing User Cookies via XSS - Tencent Cloud Developer Community",

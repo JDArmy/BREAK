@@ -12,7 +12,7 @@
       "3 million devices",
       "IoT security"
     ],
-    "summary": "The U.S. Department of Justice dismantled a botnet comprising 3 million IoT devices, which was used to launch record-breaking 31.4 Tbps DDoS attacks. Attackers hijacked a massive number of smart devices to form the botnet and conduct extortion-driven assaults.",
+    "summary": "The U.S. Department of Justice disrupted multiple botnets involving about 3 million IoT devices, which were used to launch record 31.4 Tbps DDoS attacks. Attackers hijacked large numbers of IoT devices to form botnets and launch large-scale distributed denial-of-service attacks against target services. The incident reflects internet infrastructure risks from weak passwords, exposed management interfaces, and delayed device patching.",
     "references": [
       {
         "title": "DoJ Disrupts 3 Million-Device IoT Botnets Behind Record 31.4 Tbps DDoS Attack",

@@ -22,6 +22,14 @@ import { chatJson, withRetry, sleep } from './llm-client.mjs';
 
 const REPORTS_DIR = path.join(projectRoot, 'research/search-reports');
 
+function nowForLog() {
+  return new Date().toISOString().replace('T', ' ').replace(/\.\d+Z$/, 'Z');
+}
+
+function secondsSince(ms) {
+  return ((Date.now() - ms) / 1000).toFixed(1);
+}
+
 export function fingerprintOf(entity, fields) {
   // 对对象/数组字段（如 references）做 JSON 序列化，避免 String([obj]) 得到 "[object Object]" 不区分内容。
   const content = fields
@@ -133,11 +141,12 @@ export async function runReview(opts) {
   });
   if (limit > 0) todo = todo.slice(0, limit);
 
-  console.log(`[${name}] 共 ${items.length} 项，待评审 ${todo.length}（已完成 ${Object.keys(progress.done).length}）`);
+  console.log(`[${nowForLog()}] [${name}] 共 ${items.length} 项，待评审 ${todo.length}（已完成 ${Object.keys(progress.done).length}），并发 ${concurrency}，模型 ${model}`);
 
   let done = 0;
   let failed = 0;
   const startMs = Date.now();
+  const totalTodo = todo.length;
 
   async function reviewOne(item) {
     return withRetry(async () => {
@@ -151,6 +160,9 @@ export async function runReview(opts) {
   async function worker() {
     while (idx < todo.length) {
       const item = todo[idx++];
+      const current = idx;
+      const itemStartMs = Date.now();
+      console.log(`[${nowForLog()}] [${name}] ▶ ${current}/${totalTodo} ${item.key} ${item.entity?.title || ''}`);
       try {
         const data = await reviewOne(item);
         const r = {
@@ -165,15 +177,16 @@ export async function runReview(opts) {
         progress.done[item.key] = r.fingerprint;
         delete progress.failed[item.key];
         done++;
+        console.log(`[${nowForLog()}] [${name}] ✓ ${current}/${totalTodo} ${item.key} verdict=${r.verdict} ${secondsSince(itemStartMs)}s`);
         if (done % 20 === 0) {
           writeJson(reportPath, [...resultById.values()]);
           saveProgress(progressPath, progress);
-          console.log(`  [${name}] 进度 ${done}/${todo.length}，${((Date.now() - startMs) / 1000).toFixed(0)}s`);
+          console.log(`[${nowForLog()}] [${name}] 进度 done=${done}/${todo.length} failed=${failed} elapsed=${secondsSince(startMs)}s`);
         }
       } catch (e) {
         failed++;
         progress.failed[item.key] = String(e.message || e).slice(0, 500);
-        console.warn(`  [${name}] ✗ ${item.key}: ${e.message}`);
+        console.warn(`[${nowForLog()}] [${name}] ✗ ${current}/${totalTodo} ${item.key} ${secondsSince(itemStartMs)}s: ${e.message}`);
       }
     }
   }
@@ -207,7 +220,7 @@ export async function runReview(opts) {
   const pass = all.filter((r) => r.verdict === 'pass').length;
   const review = all.filter((r) => r.verdict === 'review').length;
   const fail = all.filter((r) => r.verdict === 'fail').length;
-  console.log(`[${name}] ✅ pass: ${pass}　🔍 review: ${review}　❌ fail: ${fail}（失败 ${failed}）`);
+  console.log(`[${nowForLog()}] [${name}] 完成 elapsed=${secondsSince(startMs)}s pass=${pass} review=${review} fail=${fail}（调用失败 ${failed}）`);
 
   return all;
 }

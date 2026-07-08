@@ -13,7 +13,7 @@
       "物联网安全",
       "认罪协议"
     ],
-    "summary": "2017年12月，Mirai僵尸网络的三名创作者Paras Jha、Josiah White和Dalton Norman认罪，承认制造和劫持数十万台物联网设备用于发起大规模DDoS攻击。三人随后协助FBI调查其他网络犯罪案件，包括Kelihos僵尸网络和Memcached DDoS攻击。",
+    "summary": "2018年量刑材料显示，Mirai僵尸网络三名创作者Paras Jha、Josiah White和Dalton Norman因开发和运营Mirai、劫持大量物联网设备发起DDoS攻击而获刑时避免入狱，原因之一是他们向执法部门提供了“extraordinary cooperation”。若需写入2017年12月认罪、协助Kelihos或Memcached DDoS调查等细节，应补充司法部或法院原始公告。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0165"
@@ -28,7 +28,7 @@
         "link": "https://krebsonsecurity.com/2018/09/mirai-botnet-authors-avoid-jail-time/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2017-12",
     "relatedAttackTools": [],
     "relatedThreatActors": []

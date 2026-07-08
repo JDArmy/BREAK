@@ -12,7 +12,7 @@
       "on-chain asset transfer",
       "white-hat phishing"
     ],
-    "summary": "A hacker who previously targeted the UXLINK project fell victim to a phishing site posing as a white-hat negotiation platform. The attacker signed a malicious smart contract granting unlimited token approval, resulting in the transfer of approximately $48 million in digital assets from their wallet. The exploit leveraged the ERC-20 approve function to trick the user into granting infinite allowanc",
+    "summary": "Public on-chain security analysis shows that a hacker previously involved in the UXLINK incident later fell victim to phishing and signed a malicious smart-contract approval transaction, leading to the transfer of roughly USD 48 million in digital assets from the wallet. The incident illustrates the risk of ERC-20 approval abuse: once a user grants a malicious contract a high or unlimited allowance, the attacker can later move assets through transfer functions.",
     "references": [
       {
         "title": "Hackers get 'phished' instead? The security behind the 'evaporation' of $48 million in digital assets on-chain...",

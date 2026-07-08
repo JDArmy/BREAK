@@ -13,7 +13,7 @@
       "AI智能体安全",
       "供应链污染"
     ],
-    "summary": "安全机构Koi Security于2026年1月披露针对OpenClaw生态的供应链投毒攻击“ClawHavoc”。攻击者利用“ClickFix 2.0”社会工程学手段，在技能说明文档中伪装前置安装要求，诱导开发者下载恶意二进制文件，建立反向Shell远程控制通道，窃取API密钥、加密货币钱包私钥及SSH密钥。该事件涉及335个组织级投毒源头，暴露了AI智能体在工具调用中因供应链污染导致的越权与失控风险。",
+    "summary": "安全机构 Koi Security 于2026年2月1日发布并在2月16日更新针对 OpenClaw 生态的供应链投毒攻击“ClawHavoc”。攻击者利用“ClickFix 2.0”社会工程学手段，在技能说明文档中伪装前置安装要求，诱导开发者下载恶意二进制文件，建立反向 Shell 远程控制通道并窃取敏感信息。Koi 原文披露初始发现341个恶意 Skills，后续更新增至824个，暴露了 AI 智能体工具调用中的供应链污染风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0148"
@@ -28,8 +28,8 @@
         "link": "https://www.koi.ai/blog/clawhavoc-341-malicious-clawedbot-skills-found-by-the-bot-they-were-targeting"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-01",
+    "updated": "2026-07-08",
+    "incidentTime": "2026-02",
     "relatedAttackTools": [
       "AT0075"
     ],

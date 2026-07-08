@@ -11,7 +11,7 @@
       "front-end library backdoor",
       "obfuscation anti-debugging"
     ],
-    "summary": "In April 2026, the National Cybersecurity Notification Center issued an alert regarding a supply chain poisoning attack targeting the JavaScript HTTP library Axios. Malicious code was concealed using obfuscation, self-deletion, and anti-debugging techniques, executing upon developer installation or update to steal credentials and achieve remote code execution. As Axios is a direct dependency for n",
+    "summary": "In April 2026, China National Cybersecurity Bulletin Center warned that JavaScript HTTP library Axios had suffered a supply-chain poisoning attack. Related malicious code commonly uses obfuscation, self-deletion, anti-debugging, and similar techniques, can trigger risk in the supply-chain process, and may cause credential theft, remote code execution, and other harms. Because Axios is directly depended on by many AI applications and plugin ecosystems, malicious code spreading through the dependency chain can create broad sensitive data leakage risk and amplify trust problems in frontend builds, plugin installation, and automated deployment pipelines.",
     "references": [
       {
         "title": "Security Risk Analysis of Multiple Recent Supply Chain Poisoning Incidents - Jiangsu Cyberspace Administration",

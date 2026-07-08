@@ -10,7 +10,7 @@
       "arbitrage attack",
       "BSC"
     ],
-    "summary": "In December 2022, the aBNBc token contract of the DeFi protocol Ankr was attacked. The attacker obtained the developer private key, uploaded a new contract with an unauthorized minting method, and minted 60 trillion aBNBc out of thin air, swapping it for USDC and other tokens. Ankr officially estimated the loss at about $5 million in BNB, with the token price nearly zero; the team subsequently compensated affected liquidity providers.",
+    "summary": "In December 2022, DeFi protocol Ankr published its aBNBc incident report, stating that an attacker obtained a developer private key and uploaded a malicious contract, causing abnormal minting of aBNBc tokens and an estimated loss of about USD 5 million in BNB. Ankr later described its response and compensation arrangements for affected liquidity providers. The case illustrates the impact of private-key compromise and uncontrolled contract-upgrade privileges on DeFi asset security.",
     "references": [
       {
         "title": "Ankr: The aBNBc Token Report",

@@ -12,7 +12,7 @@
       "恶意软件变种",
       "规避检测"
     ],
-    "summary": "安全研究人员发现Gafgyt恶意软件新变种正在攻击D-Link路由器及其他物联网设备，利用Tor网络混淆C2通信，以规避检测。该僵尸网络通过感染物联网设备，使其成为受控肉鸡，执行DDoS攻击等恶意指令。",
+    "summary": "安全研究人员发现Gafgyt恶意软件新变种正在攻击D-Link路由器及其他物联网设备，利用Tor网络混淆C2通信，以规避检测。该僵尸网络通过感染物联网设备，使其成为受控节点，隐藏恶意活动并接受C2控制；若保留DDoS攻击能力，应补充包含该能力说明的来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0209"
@@ -23,7 +23,7 @@
         "link": "https://www.bitdefender.com/en-us/blog/hotforsecurity/new-iot-botnet-uses-tor-obfuscate-c2-communications-researchers-find"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-08",
     "relatedAttackTools": [
       "AT0081",
       "AT0082"

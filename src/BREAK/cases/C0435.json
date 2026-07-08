@@ -12,7 +12,7 @@
       "payment security",
       "fraud detection"
     ],
-    "summary": "FraudBlocker记录了一次针对其平台的协同式撞卡攻击。攻击者试图使用多个被盗信用卡凭证完成交易，以验证哪些卡仍处于活跃状态。该攻击主要针对高交易量、安全措施较少的小型电商平台，通过批量测试筛选出可用的有效卡片。",
+    "summary": "FraudBlocker披露其平台曾识别并阻断一次协同式撞卡攻击。攻击者围绕支付表单和交易流程批量测试卡片有效性，试图验证可用卡并完成异常交易。该案例说明撞卡攻击会借助自动化请求、重复小额交易和多源流量来规避单点拦截。",
     "category": "security_incident",
     "relatedRisks": [
       "R0040"
@@ -23,7 +23,7 @@
         "link": "https://fraudblocker.com/articles/carding-attacks-%F0%9F%92%B3-we-were-targeted-and-heres-how-we-beat-them"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2024-12-17"

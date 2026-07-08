@@ -11,7 +11,7 @@
       "大规模断网",
       "IoT僵尸网络"
     ],
-    "summary": "Mirai僵尸网络于2016年8月开始活动，9月达到感染高峰并对Krebs on Security、OVH等发起大规模DDoS攻击，10月21日对DNS服务商Dyn发起攻击，导致美国东海岸Twitter、Netflix、Reddit等主要网站大面积无法访问。攻击利用数十万台受感染的物联网设备（如家用路由器、摄像头），造成重大互联网基础设施中断。",
+    "summary": "Mirai僵尸网络于2016年8月开始活动，9月达到感染高峰并影响Krebs on Security、OVH、Dyn等服务。攻击利用大量受感染的物联网设备（如家用路由器、摄像头）发动大规模DDoS，造成重要互联网服务中断。若需写入2016年10月21日Dyn攻击及Twitter、Netflix、Reddit等网站大面积无法访问，应补充明确记录该事件的来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0165"
@@ -22,7 +22,7 @@
         "link": "https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2016-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []

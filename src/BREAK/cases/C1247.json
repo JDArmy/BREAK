@@ -13,8 +13,8 @@
       "Zhipeng Li",
       "充值卡欺诈"
     ],
-    "summary": "2025年8月，美国加州圣塔罗莎市警方逮捕 Yongsheng Zhao 和 Zhipeng Li，称二人涉嫌跨加州实施“礼品卡耗尽”诈骗。嫌疑人从零售货架取走礼品卡，记录或篡改激活信息后重新封装放回货架，消费者充值后资金会被迅速转走。警方在车辆和酒店房间中共查获约2.5万张疑似被篡改礼品卡、账本和现金，并以入室盗窃、重大盗窃、访问卡信息盗窃与伪造等罪名立案。",
-    "category": "criminal_verdict",
+    "summary": "2025年8月，美国加州圣塔罗莎市警方逮捕 Yongsheng Zhao 和 Zhipeng Li，称二人涉嫌跨加州实施“礼品卡耗尽”诈骗。嫌疑人从零售货架取走礼品卡，记录或篡改激活信息后重新封装放回货架，消费者充值后资金会被迅速转走。警方称查获约2.5万张疑似被篡改礼品卡及其他证据，并以多项罪名调查或立案。该案体现实体礼品卡在激活前后缺乏校验、包装可被复原和余额监测滞后时的盗刷风险。",
+    "category": "news_report",
     "relatedRisks": [
       "R0138"
     ],
@@ -24,7 +24,7 @@
         "link": "https://page.alertsense.com/content/2006/105368"
       }
     ],
-    "updated": "2026-06-26",
+    "updated": "2026-07-08",
     "incidentTime": "2025-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [

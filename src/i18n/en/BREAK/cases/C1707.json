@@ -11,7 +11,7 @@
       "collaboration platform",
       "permission misconfiguration"
     ],
-    "summary": "In August 2023, an organization reported in a community forum a false-positive issue in the integration of the Azure AD domain allowlist with Microsoft Defender for Cloud Apps: after configuring an allowlist to restrict file sharing to authorized domains, some file shares still triggered 'unauthorized domain' policy alerts, causing unnecessary alert and handling workload. The community discussion noted this may stem from Defender's differing handling of direct access versus link sharing, and is an alert-identification issue rather than a confirmed sensitive data breach.",
+    "summary": "In August 2023, an organization posted in a community forum about a false positive issue involving Azure AD domain allowlists and Microsoft Defender for Cloud Apps integration: after configuring an allowlist so only authorized domains could access shared files, some file sharing still triggered unauthorized domain policy alerts, creating unnecessary alert and response workload. The poster sought possible causes and solutions in the community; the current references do not show sensitive data leakage.",
     "references": [
       {
         "title": "File Shared with unauthorized domain | Microsoft Community Hub",

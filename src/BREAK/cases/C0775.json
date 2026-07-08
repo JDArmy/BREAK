@@ -13,7 +13,7 @@
       "国产浏览器",
       "信息安全"
     ],
-    "summary": "天威诚信建设的支持国密SM2算法的vTrus SSL证书已通过国际WebTrust审计认证，并在多个国产浏览器中预埋根证书。网站部署“国际+国密”双算法证书后，浏览器可提供合规的HTTPS加密，满足金融行业网站信息安全要求。",
+    "summary": "2023年相关论坛报道中，天威诚信围绕金融行业SSL/TLS应用、HTTPS合规加密和证书管理实践进行分享，强调金融机构在网站、移动端和业务系统中应使用合规证书与加密能力，保障传输链路安全。该案例更适合作为金融行业证书管理和国密改造实践的合规报道，而非单一证书产品能力证明。",
     "category": "news_report",
     "relatedRisks": [
       "R0079"
@@ -24,7 +24,7 @@
         "link": "https://www.163.com/dy/article/IE22N29F0538EUPB.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2023-09",
     "relatedAttackTools": [],
     "relatedThreatActors": []

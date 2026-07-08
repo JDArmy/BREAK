@@ -10,9 +10,9 @@
       "机器学习检测",
       "Tor网络"
     ],
-    "summary": "2020年ICISSP会议，David、Delong与Filiol发表《Detection of Crawler Traps》，首次对爬虫陷阱形式化分类并提出通用检测方法。网站通过动态生成相似页面或随机内容向爬虫投喂假信息浪费其资源。研究者指出当时无爬虫能检测陷阱，提出用机器学习对实时抓取页面与正常网页做信息距离比对，飞行中识别无限深度、无限循环等陷阱并逃离，覆盖表层网与Tor。",
+    "summary": "David、Delong与Filiol关于爬虫陷阱检测的研究发表于 Journal of Computer Virology and Hacking Techniques，论文关注网站通过动态生成相似页面、随机内容、无限深度或循环结构消耗爬虫资源的问题，并提出基于机器学习和页面信息距离的检测思路。若需写入ICISSP 2020会议、2020年2月或“首次形式化分类”，应补充会议论文集或正文引用。",
     "category": "academic_research",
-    "incidentTime": "2020-02",
+    "incidentTime": "2021",
     "relatedRisks": [
       "R0027-005"
     ],
@@ -32,6 +32,6 @@
         "link": "https://www.ericfiliol.site/journals.html"
       }
     ],
-    "updated": "2026-07-04"
+    "updated": "2026-07-08"
   }
 }

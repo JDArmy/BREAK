@@ -11,7 +11,7 @@
       "Fingerprint",
       "欺诈损失"
     ],
-    "summary": "信用卡破解（card cracking）欺诈导致全球损失从2014年的约180亿美元上升至2022年的超过320亿美元。欺诈者通过购买暗网泄露的卡号列表，利用自动化工具对有效期和CVV安全码进行枚举测试，以获取有效支付卡信息。",
+    "summary": "相关资料显示，全球信用卡欺诈损失从2014年的约180亿美元上升至2022年的超过320亿美元，信用卡破解（card cracking）是其中一种形式。该类攻击通常会测试有效期和CVV安全码，欺诈者可能借助自动化工具对泄露或非法获取的卡号进行枚举，以筛选可用支付卡信息。",
     "category": "academic_research",
     "relatedRisks": [
       "R0041"
@@ -26,7 +26,7 @@
         "link": "https://fingerprint.com/blog/card-cracking-explained-tutorial/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2022",
     "relatedAttackTools": [
       "AT0010",

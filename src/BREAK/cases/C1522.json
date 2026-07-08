@@ -11,7 +11,7 @@
       "区块链安全",
       "EIP协议钓鱼"
     ],
-    "summary": "2023年3月22日，Euler Finance攻击者在攻击完成后，为混淆视听向Ronin黑客发送100枚ETH。Ronin黑客随即回礼2枚ETH并发送链上消息，要求解密一条加密信息。安全专家指出该消息实为网络钓鱼骗局，试图窃取Euler攻击者钱包私钥。",
+    "summary": "Euler Finance在2023年3月遭到攻击后，攻击者曾通过链上消息与项目方沟通。慢雾等安全材料将该事件用于说明链上留言在黑客事件应急沟通中的作用和风险：攻击者、项目方及第三方都可能利用链上消息传递信息，受害方需要核验消息来源并防范借留言实施的二次钓鱼。",
     "category": "security_incident",
     "relatedRisks": [
       "R0084",
@@ -27,7 +27,7 @@
         "link": "https://slowmist.medium.com/navigating-on-chain-communication-after-a-crypto-hack-74a4fd8b1791"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-08",
     "incidentTime": "2023-03",
     "relatedAttackTools": [
       "AT0079"

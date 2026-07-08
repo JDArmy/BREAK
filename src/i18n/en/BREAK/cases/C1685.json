@@ -12,7 +12,7 @@
       "PowerShell Gallery",
       "malicious package injection"
     ],
-    "summary": "The Karneades/PackAttack project documents package manager attacks occurring between 2017 and 2023 on platforms including PyPI, npm, RubyGems, and PowerShell Gallery, covering typosquatting and dependency confusion incidents.",
+    "summary": "The ecosyste-ms/typosquatting-dataset organizes known typosquatting malicious packages and their target mappings from public security research, and can be used to analyze typosquatting attacks in package manager ecosystems. Claims about the Karneades/PackAttack project, a 2017 to 2023 time range, and coverage of PyPI, npm, RubyGems, PowerShell Gallery, and other platforms should be supported with the PackAttack project page or dataset documentation.",
     "references": [
       {
         "title": "ecosyste-ms/typosquatting-dataset - GitHub",

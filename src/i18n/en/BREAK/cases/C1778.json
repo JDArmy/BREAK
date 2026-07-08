@@ -12,7 +12,7 @@
       "GitHub security project",
       "connected vehicle security"
     ],
-    "summary": "A GitHub security project highlights that automotive OTA update processes are susceptible to multiple cybersecurity threats, including man-in-the-middle attacks that can hijack communications, firmware spoofing that can forge update packages, and unauthorized access. Attackers can use these methods to tamper with or replay OTA packages and implant malicious firmware.",
+    "summary": "SEA-ME's Secure OTA project builds a security design and self-assessment checklist for automotive OTA update workflows, covering OTA servers, networks, in-vehicle central gateways, and target ECUs. The README lists man-in-the-middle attacks, impersonated OTA servers, rollback attacks, malicious firmware updates, and unauthorized access as risk scenarios, and recommends TLS/SSL, PKI, digital signatures, hash protection, version checks, and anomaly detection.",
     "references": [
       {
         "title": "MCS Project 1 - Secure OTA - GitHub",

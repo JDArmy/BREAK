@@ -12,8 +12,8 @@
       "GitHub安全项目",
       "车联网安全"
     ],
-    "summary": "GitHub安全项目指出，汽车OTA更新过程易受多种网络安全威胁，包括中间人攻击（可劫持通信）、固件欺骗（可伪造升级包）以及未授权访问。攻击者通过这些手段可篡改或重放OTA包，植入恶意固件。",
-    "category": "vulnerability_advisory",
+    "summary": "SEA-ME 的 Secure OTA 项目围绕汽车 OTA 更新流程建立安全设计与自评清单，覆盖 OTA 服务器、网络、车内中央网关和目标 ECU 等环节。README 将中间人攻击、伪装官方 OTA 服务器、回滚攻击、恶意固件更新和未授权访问列为风险场景，并提出 TLS/SSL、PKI、数字签名、哈希保护、版本校验和异常检测等防护要求。",
+    "category": "academic_research",
     "relatedRisks": [
       "R0181-001"
     ],
@@ -23,9 +23,8 @@
         "link": "https://github.com/SEA-ME/MCS_Secure-OTA"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-08",
     "relatedAttackTools": [
-      "AT0072",
       "AT0097"
     ],
     "relatedThreatActors": [

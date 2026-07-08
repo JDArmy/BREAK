@@ -11,7 +11,7 @@
       "login token theft",
       "polling attack"
     ],
-    "summary": "This report describes an attack technique where fake login QR codes are used to steal user accounts. Attackers display a counterfeit QQ login QR code on a website, tricking victims into scanning and confirming the login. The attacker then polls the QQ server login interface to obtain the victim's login token, thereby hijacking the account. This method exploits the fact that QR code content is invi",
+    "summary": "The referenced material explains that QR-code login commonly relies on temporary tokens, scan confirmation, and server-side polling. If attackers forge a login scenario and induce users to scan a malicious QR code, they can exploit the fact that users cannot visually inspect the QR content, enabling phishing that may steal login sessions or hijack accounts. QR-code login itself is a common authentication method; the risk comes from attackers replacing the login context, impersonating a trusted entry point, and inducing users to authorize a session. Platforms need to verify device, source, and session state together.",
     "references": [
       {
         "title": "Discussing the Principle of QR Code Scan Login - Tencent Cloud",

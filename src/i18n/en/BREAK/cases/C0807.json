@@ -11,7 +11,7 @@
       "package registry",
       "malware"
     ],
-    "summary": "In November 2025, attackers published at least 175 malicious packages on the npm public registry, accumulating over 26,000 downloads. These packages used CDN infrastructure to hide malicious behavior and carried out targeted phishing campaigns, posing a serious threat to downstream users.",
+    "summary": "In October 2025, Socket disclosed that attackers had published at least 175 malicious packages to the official npm registry, and Chinese media followed up in November 2025. The packages accumulated more than 26,000 downloads, used CDNs to hide malicious behavior, and conducted phishing attacks, posing security threats to downstream users.",
     "references": [
       {
         "title": "175 Malicious npm Packages Hide Behind CDN: 26,000 Downloads Conceal an Elaborate Phishing Attack...",

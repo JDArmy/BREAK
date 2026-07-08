@@ -11,7 +11,7 @@
       "网警溯源",
       "恶意程序"
     ],
-    "summary": "2026年5月，兰州某高校发现其服务器被远程植入挖矿木马恶意程序，该木马横向传播至其他办公设备。属地网警对黑客攻击开展溯源调查，公安机关对该校不履行网络安全保护义务的违法行为作出行政处罚。",
+    "summary": "2026年5月，甘肃兰州网警在对当地某高校系统服务器开展日常检查时发现异常，调查发现其服务器被远程植入挖矿木马恶意程序，并横向传播至其他办公设备。公安机关对该校不履行网络安全保护义务的违法行为作出行政处罚，责令限期整改，相关木马程序已被清除。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0080"
@@ -26,7 +26,7 @@
         "link": "http://finance.sina.com.cn/wm/2026-05-08/doc-inhxewcz2120558.shtml"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2026-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

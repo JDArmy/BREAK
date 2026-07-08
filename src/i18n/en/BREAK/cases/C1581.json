@@ -11,7 +11,7 @@
       "malicious firmware",
       "communication device tampering"
     ],
-    "summary": "In September 2024, thousands of pagers used by Hezbollah members in Lebanon detonated simultaneously, causing numerous casualties. The incident is widely regarded as a classic hardware supply chain attack, where adversaries allegedly embedded explosive devices or malicious firmware during the production or transportation of communication equipment, enabling physical destruction and remote triggeri",
+    "summary": "From September 17 to 18, 2024, large numbers of communication devices used by Hezbollah members in Lebanon, including pagers and walkie-talkies, exploded and caused many casualties. The incident is widely viewed as a hardware supply-chain attack case, with attackers suspected of implanting explosive devices in the communication equipment supply chain and potentially using software or hardware weaknesses for remote triggering, highlighting hardware supply-chain security fragility. It also shows that if procurement, distribution, repair, or firmware update chains for communication terminals are compromised, consequences can escalate from information leakage to personal injury and physical destruction.",
     "references": [
       {
         "title": "Opening Pandora's Box, Revealing New Attack Forms: 'Supply Chain Attacks' Worry the World",

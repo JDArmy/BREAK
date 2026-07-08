@@ -11,7 +11,7 @@
       "区块链安全",
       "欧科云链研究院"
     ],
-    "summary": "针对Poly Network跨链桥被盗事件，欧科云链研究院专家指出跨链桥技术尚处早期，存在安全隐患。该事件是跨链桥安全漏洞的典型代表，引发了对跨链桥技术安全性的广泛讨论。",
+    "summary": "2021年8月10日，Poly Network跨链桥遭攻击，超6.1亿美元资产被盗，后续攻击者退还全部代币并恢复用户资产。业内分析认为，该事件是跨链桥安全漏洞的典型代表，引发了对跨链桥技术安全性的广泛讨论。若需保留“欧科云链研究院专家”归因，应补充对应来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0200"
@@ -26,7 +26,7 @@
         "link": "https://slowmist.medium.com/the-root-cause-of-poly-network-being-hacked-ec2ee1b0c68f"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2021-08",
     "relatedAttackTools": [
       "AT0076",

@@ -11,7 +11,7 @@
       "税务欺诈",
       "内部人员调查"
     ],
-    "summary": "澳大利亚税务局（ATO）在“Protego行动”调查后，对150名内部员工展开调查，怀疑他们参与了一起大规模的消费税（GST）诈骗案。该案件揭示了内部员工可能利用其合法账号权限或被盗账号进行欺诈活动，严重影响了国家税收系统的完整性。",
+    "summary": "2024年2月，澳大利亚税务局（ATO）被曝正调查150名内部员工涉嫌参与消费税（GST）诈骗。相关GST诈骗与Operation Protego有关，引发ATO对内部人员是否参与或协助欺诈的审查。该事件反映出大型税务和公共服务系统中内部人员合规、权限使用和反欺诈监测的重要性。",
     "category": "security_incident",
     "relatedRisks": [
       "R0083-001"
@@ -22,9 +22,9 @@
         "link": "https://www.counterfraud.gov.au/case-studies/ato-investigated-150-staff-members-involvement-gst-scam-sparked-operation-protego"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2024-06-03"
+    "incidentTime": "2024-02"
   }
 }

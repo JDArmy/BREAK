@@ -11,7 +11,7 @@
       "多因素验证规避",
       "自动化攻击"
     ],
-    "summary": "根据IBM《2025年X-Force威胁情报指数报告》，2024年包含信息窃取程序的网络钓鱼邮件增加84%，攻击者利用AI实现大规模推送，导致凭证失窃事件占所有安全事件近三分之一。信息窃取程序可快速盗取登录信息，缩短攻击时间，并规避多因素验证。",
+    "summary": "IBM《2025年X-Force威胁情报指数报告》显示，用户身份滥用和凭证相关攻击在约30%的案例中作为入口点出现。信息窃取程序可快速盗取登录信息，缩短攻击者进入企业环境的时间，并与钓鱼邮件、恶意附件和会话凭证滥用等手法结合，持续放大账号接管风险。",
     "category": "news_report",
     "relatedRisks": [
       "R0001-003"
@@ -26,7 +26,7 @@
         "link": "https://www.prnewswire.com/news-releases/2025-ibm-x-force-threat-index-large-scale-credential-theft-escalates-threat-actors-pivot-to-stealthier-tactics-302430850.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2025-04",
     "relatedAttackTools": [],
     "relatedThreatActors": []

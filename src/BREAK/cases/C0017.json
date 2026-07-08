@@ -12,8 +12,8 @@
       "买断",
       "竞拍自动化"
     ],
-    "summary": "这是一个为《极限竞速：地平线6》设计的自动化拍卖行狙击工具。它能监控拍卖行中用户设定的车辆，一旦出现立即买断，收集车辆后循环操作。该工具声称能在5分钟内成功狙击一辆车，成功率约10%。",
-    "category": "security_incident",
+    "summary": "GitHub公开仓库展示了面向《极限竞速：地平线6》拍卖行的自动化狙击工具。项目描述其通过屏幕读取和买断自动化，监控用户设定车辆并在目标上架时快速购买，反映游戏拍卖场景中的自动化抢拍风险。",
+    "category": "news_report",
     "relatedRisks": [
       "R0003-001"
     ],
@@ -23,7 +23,7 @@
         "link": "https://github.com/FrostyIsBored/FH6-Auction-House-Sniper"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0025"

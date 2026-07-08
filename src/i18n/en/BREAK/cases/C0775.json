@@ -12,7 +12,7 @@
       "HTTPS encryption",
       "fintech compliance"
     ],
-    "summary": "The vTrus SSL certificate supporting China's SM2 algorithm, built by Tianwei Chengxin, has passed international WebTrust audit certification and has its root certificate pre-installed in multiple domestic browsers. After websites deploy dual-algorithm certificates (international plus national cryptographic), browsers can provide compliant HTTPS encryption, meeting information security requirements",
+    "summary": "In related 2023 forum reporting, vTrus discussed SSL/TLS application, HTTPS-compliant encryption, and certificate management practices in the financial industry, emphasizing that financial institutions should use compliant certificates and encryption capabilities across websites, mobile endpoints, and business systems to protect transmission links. This case is better treated as a compliance report on certificate management and national-cryptography migration practices in finance rather than as proof of one certificate product capability.",
     "references": [
       {
         "title": "Invited to Attend the 'Fintech Security and Data Security Summit'",

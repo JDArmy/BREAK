@@ -11,7 +11,7 @@
       "sensitive data",
       "internal system"
     ],
-    "summary": "In December 2025, a company detected that its deployed AI agent was manipulated into outputting database data beyond its authorized scope. The incident occurred in both public-facing applications and internal systems. Attackers used prompt injection to coerce the agent into invoking database tools for unauthorized queries, leading to sensitive data leakage.",
+    "summary": "The referenced report discusses security risks in AI agents involving prompt manipulation, tool invocation, and data-access paths. It indicates that once an agent is manipulated by malicious prompts, it may call internal tools or access sensitive data beyond intended authority. Enterprises deploying agents therefore need permission boundaries and audit controls for database queries, plugin calls, and external outputs. Unlike traditional application vulnerabilities, agent risks often arise at the conversion from natural-language instructions to tool calls. Model refusal alone is insufficient; independent constraints are still needed at the tool, data, and output layers.",
     "references": [
       {
         "title": "On the Eve of the Trillion-Agent Explosion, Who Will Protect Our AI Security? | Jiazi Guangnian",

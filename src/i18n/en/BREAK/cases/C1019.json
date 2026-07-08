@@ -10,7 +10,7 @@
       "customer data",
       "2021"
     ],
-    "summary": "Fujitsu reported that attackers successfully gained unauthorized access to its ProjectWEB platform and exfiltrated some customer data. The incident is a typical data breach caused by access control failure.",
+    "summary": "Fujitsu disclosed that its ProjectWEB information sharing platform experienced unauthorized access, and some customer data may have been externally accessed or leaked. The current references support the core fact of unauthorized access affecting an information sharing tool, but the specific cause should not be directly attributed to access control failure. The incident reflects security risks in permission management, external exposure, and customer data protection for enterprise collaboration platforms.",
     "references": [
       {
         "title": "2021 Global Multi-Industry Major Data Breach Incident Roundup|Hacker|Cyberattack",

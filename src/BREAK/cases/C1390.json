@@ -11,7 +11,7 @@
       "IP摄像头",
       "Mirai僵尸网络"
     ],
-    "summary": "2016年10月，Mirai僵尸网络利用大量被感染的物联网设备（如IP摄像头和家用路由器）对DNS服务商Dyn发起大规模DDoS攻击，导致美国东海岸大面积互联网瘫痪，影响了Twitter、Netflix等主要网站。该事件展示了IoT僵尸网络的巨大破坏力。",
+    "summary": "2016年末，Mirai利用大量被感染的物联网设备发动大规模DDoS攻击，影响多个高知名度目标。当前 references 可支撑Mirai通过IP摄像头、家用路由器等设备形成僵尸网络并造成大规模攻击影响，但若需精确写入2016年10月21日Dyn事件、Twitter和Netflix等网站受影响及美国东海岸范围，应补充Dyn事件权威来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0165"
@@ -26,7 +26,7 @@
         "link": "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/antonakakis"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2016-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []

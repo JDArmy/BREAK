@@ -11,7 +11,7 @@
       "malicious QR codes",
       "consumer fraud"
     ],
-    "summary": "CNBC报道揭示，黑客正利用公众对扫描二维码的意愿发起“quishing”攻击，已影响数千万美国人。攻击者通过在公共场所或通过数字渠道投放恶意二维码，诱骗用户扫描后访问钓鱼网站或泄露个人信息，凸显了二维码作为攻击载体的广泛威胁。",
+    "summary": "CNBC报道揭示，黑客正利用公众对扫描二维码的意愿发起“quishing”攻击，已导致数百万美国人受骗。攻击者通过在公共场所或通过数字渠道投放恶意二维码，诱骗用户扫描后访问钓鱼网站或泄露个人信息，凸显了二维码作为攻击载体的广泛威胁。",
     "category": "news_report",
     "relatedRisks": [
       "R0084-003"
@@ -22,7 +22,7 @@
         "link": "https://www.cnbc.com/2025/07/27/cybersecurity-scams-quishing-qr-code-consumer-risks-hackers.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2025-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

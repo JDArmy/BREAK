@@ -12,7 +12,7 @@
       "嵌入式设备",
       "鲁汶大学"
     ],
-    "summary": "2018年，比利时鲁汶大学研究人员对特斯拉Model S钥匙扣实施真实侧信道攻击。攻击者结合射频捕获与计算技术，利用钥匙扣的物理信号泄露，成功破解车辆进入系统。该案例展示了针对嵌入式物联网设备的侧信道攻击在现实中的可行性。",
+    "summary": "2018年，比利时鲁汶大学研究人员对特斯拉Model S无钥匙进入系统实施密码学攻击，也可描述为钥匙扣克隆攻击。攻击者结合射频捕获与计算技术，利用钥匙扣认证机制弱点复制车辆钥匙并进入车辆。若需称为“侧信道攻击”，应补充明确将该Tesla案例归类为侧信道攻击的论文或技术报告。",
     "category": "academic_research",
     "relatedRisks": [
       "R0178"
@@ -27,7 +27,7 @@
         "link": "https://www.namecheap.com/blog/hidden-threats-of-iot-devices-and-side-channel-attacks/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2018",
     "relatedAttackTools": [],
     "relatedThreatActors": []

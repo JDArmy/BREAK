@@ -11,7 +11,7 @@
       "以太坊漏洞",
       "2018"
     ],
-    "summary": "2018年4月22日，黑客利用BEC智能合约中batchTransfer函数的整数溢出漏洞，通过传入极大数值导致乘法运算溢出，amount变量变为0，绕过了余额检查。攻击者凭空生成巨额BEC代币并在市场上抛售，导致BEC代币价值归零。",
+    "summary": "2018年4月22日，黑客利用BEC智能合约中的整数溢出漏洞，通过传入极大数值造成异常计算结果，凭空生成巨额BEC代币并在市场上抛售，导致BEC代币价值几乎归零。若需保留batchTransfer函数、amount变量变为0、绕过余额检查等代码级细节，应补充合约代码分析来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0159"
@@ -26,7 +26,7 @@
         "link": "https://peckshield.medium.com/alert-new-batchoverflow-bug-in-multiple-erc20-smart-contracts-cve-2018-10299-511067db6536"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2018-04",
     "relatedAttackTools": [],
     "relatedThreatActors": []

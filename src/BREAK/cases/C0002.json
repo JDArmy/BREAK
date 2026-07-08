@@ -11,8 +11,8 @@
       "Web安全",
       "会话劫持"
     ],
-    "summary": "在常规Web登录流程中，用户密码经MD5加密后提交。攻击者通过监听截获登录URL（如包含MD5密码和账号的请求），无需解密明文，直接将该请求重放发送至服务器，即可冒充用户身份成功登录系统，暴露了协议级自动化重放的风险。",
-    "category": "security_incident",
+    "summary": "亚马逊云科技资料说明，重放攻击中攻击者可通过窃听或中间人方式截获密码、密码哈希、会话ID或HTTP认证请求，并在稍后重复发送给服务器，使系统误认为请求来自合法用户。此类攻击可绕过身份验证和授权，造成未授权访问、数据泄露或交易被重复执行。",
+    "category": "academic_research",
     "relatedRisks": [
       "R0001-001"
     ],
@@ -22,8 +22,7 @@
         "link": "https://www.amazonaws.cn/knowledge/replay-attack/"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2022-11",
+    "updated": "2026-07-08",
     "relatedAttackTools": [
       "AT0014",
       "AT0014-001"

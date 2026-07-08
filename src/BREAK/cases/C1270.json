@@ -12,7 +12,7 @@
       "身份绑定",
       "认证漏洞"
     ],
-    "summary": "研究发现SSO系统高度依赖电子邮件地址绑定身份，但忽略邮箱可被重复使用的缺陷。攻击者通过获取已回收的电子邮件地址，利用SSO认证流程，无需密码即可接管原用户关联的在线账户，影响80%的受测热门网站。",
+    "summary": "研究发现SSO系统高度依赖电子邮件地址绑定身份，但忽略邮箱可被重复使用的缺陷。攻击者通过获取已回收的电子邮件地址，利用SSO认证流程，无需密码即可接管原用户关联的在线账户，影响多数受测热门网站。该问题提示平台应校验邮箱所有权变更和第三方登录绑定状态。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0143"
@@ -27,7 +27,7 @@
         "link": "https://pushsecurity.com/blog/cross-idp-impersonation/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2023-06",
     "relatedAttackTools": [
       "AT0051"

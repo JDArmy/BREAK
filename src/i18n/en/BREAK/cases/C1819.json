@@ -9,7 +9,7 @@
       "camera hijacking",
       "cross-tenant privilege"
     ],
-    "summary": "In February 2026, Spanish software engineer Sammy Azdoufal, aiming to remote-control his own DJI Romo with a PS5 controller, AI-reversed the DJI protocol and accidentally gained remote control of ~7000 Romo devices worldwide: viewing live cameras, listening to microphones, generating floor plans, locating devices. He cataloged 6700 devices across 24 countries and collected 100,000 MQTT messages in 9 minutes. A DJI backend authentication flaw treated a single-user token as valid for multiple devices. DJI fixed it and paid a $30,000 bounty; The Verge reported.",
+    "summary": "The DJI Romo robot vacuum backend authorization issue was reportedly discovered in late January 2026 and publicly explained in March 2026. DJI said an internal review first found the issue, after which a researcher reported it through the bug bounty program, and the fix was completed. The issue involves risks in smart home backend authorization checks, device binding relationships, and remote control paths such as MQTT; if the control plane has authorization bypasses, attackers may view device state, operate devices, or access home environment information. Details such as Sammy Azdoufal, 7,000/6,700 devices, 24 countries, 100,000 MQTT messages, a 30,000 dollar bounty, and The Verge reporting should be supported with verifiable sources if included.",
     "references": [
       {
         "title": "DJI ViewPoints: Security and Continuous Improvement - ROMO's Path Forward",

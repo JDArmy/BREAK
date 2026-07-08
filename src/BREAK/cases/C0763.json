@@ -11,7 +11,7 @@
       "合作方数据泄露",
       "知识产权侵权"
     ],
-    "summary": "游戏《代号：GT》开发商虹吸工作室指控，外部组织利用合作方泄露的早期业内交流BP素材，在KickStarter发起虚假众筹，冒充官方进行诈骗。泄露内容包含角色设计、实机截图等未公开研发资料，导致开发商需紧急澄清并申诉维权。",
+    "summary": "2026年6月，游戏《代号：GT》开发商虹吸工作室指控，外部组织利用合作方泄露的项目早期业内交流BP中的相关素材，在KickStarter发起虚假众筹并冒充官方进行诈骗。事件导致开发商紧急澄清、申诉维权，也暴露出合作材料流转、商业计划书保密和对外授权管理中的供应链泄密风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0078-001"
@@ -22,7 +22,7 @@
         "link": "https://www.bilibili.com/opus/1213283855504506887"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-08",
     "incidentTime": "2026-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [

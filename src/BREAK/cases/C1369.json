@@ -10,7 +10,7 @@
       "Web3安全",
       "2023年7月"
     ],
-    "summary": "2023年7月，跨链桥Multichain发生异常资金流出，涉及金额高达2.1亿美元。事件起因与项目方控制权及多签密钥安全相关，导致大量锁定资产被转移。",
+    "summary": "2023年7月，跨链桥Multichain发生异常资金流出，涉及金额高达2.1亿美元。据官方推特，流出资金系团队CEO的家人转移，CEO Zhao Jun被中国警方带走。该事件导致大量锁定资产被转移，反映出跨链桥项目在核心控制权、运营透明度和资产托管安排上的集中化风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0161"
@@ -25,7 +25,7 @@
         "link": "https://x.com/MultichainOrg/status/1679768407628185600"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2023-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

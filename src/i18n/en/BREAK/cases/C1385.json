@@ -13,7 +13,7 @@
       "hardcoded credentials",
       "network service configuration"
     ],
-    "summary": "A security researcher discovered a hardcoded network service configuration in the firmware of a V380 IP camera, which acts as a hidden backdoor. This allows attackers to gain unauthorized access, steal surveillance footage, or take control of the device. The vulnerability stems from hardcoded credentials embedded during firmware development, representing a classic firmware backdoor.",
+    "summary": "NVD records CVE-2025-7503 as a vulnerability entry, but the current NVD page does not provide full analytical details. This case is retained as a disclosure record related to V380 IP cameras, indicating that firmware backdoors, hardcoded configurations, or default-credential issues may lead to unauthorized device access. The exact root cause and impact scope still require verification from a vendor advisory or research report.",
     "references": [
       {
         "title": "CVE-2025-7503 Detail",

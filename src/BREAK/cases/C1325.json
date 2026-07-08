@@ -11,7 +11,7 @@
       "财务损失",
       "AI治理"
     ],
-    "summary": "IBM报告指出，与AI相关的数据泄露事件平均给企业造成超过65万美元损失。涉及影子AI的单一泄露事件比标准数据泄露多花费67万美元，且检测周期长达247天，凸显未授权AI使用对企业财务和安全的严重冲击。",
+    "summary": "IBM 2025年数据泄露成本报告显示，高水平影子AI使全球平均数据泄露成本额外增加67万美元。涉及影子AI的泄露事件更难发现和处置，平均识别并遏制泄露时间为241天，凸显未授权AI使用、数据输入缺乏审计和业务部门私自接入外部AI工具对企业财务和安全的影响。",
     "category": "news_report",
     "relatedRisks": [
       "R0153"
@@ -30,7 +30,7 @@
         "link": "https://www.163.com/dy/article/KBEL3T0F0539AXRU.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2025-10-09"

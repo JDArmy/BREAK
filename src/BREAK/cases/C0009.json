@@ -11,7 +11,7 @@
       "刑事判刑",
       "游戏安全"
     ],
-    "summary": "公安机关侦查查明，犯罪嫌疑人温某某编写了针对某游戏的专用辅助脚本，并将该脚本嵌入游戏环境中使用。该脚本通过自动化方式干预游戏正常流程，破坏了游戏的公平性，最终温某某因相关犯罪行为被依法判刑。",
+    "summary": "公安机关侦查查明，温某某编写游戏辅助脚本并嵌入远程控制软件，在网上推广后远程控制玩家终端，盗取游戏金币并出售牟利，非法获利4万余元。法院认定其构成非法获取计算机信息系统数据罪，判处有期徒刑三年、缓刑四年，并处罚金1万元。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0001"
@@ -26,7 +26,7 @@
         "link": "https://mp.weixin.qq.com/s?__biz=MzIyNDE3OTA2Nw==&mid=2655601128&idx=1&sn=97e598b54d0c4ee00db3c422cadeb18b&chksm=f2f6a54e89ede5702fd10ad116d1b7e220d781be208b2ff3f716fc6cfc5bb9c4c8bd2b489a36&scene=27"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2024-09",
     "relatedAttackTools": [],
     "relatedThreatActors": []

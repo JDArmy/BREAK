@@ -11,7 +11,7 @@
       "insider threat",
       "server hijacking program"
     ],
-    "summary": "In November 2021, the Cyber Police Branch of the Daqing Public Security Bureau solved the nation's first DNS hijacking case involving a telecom operator. The core members of the criminal gang bribed an insider at the operator to install a hijacking program on the core switch server in the operator's server room. This program mirrored and tampered with user internet traffic, forcibly redirecting us",
+    "summary": "In November 2021, the cyber police branch of Daqing Public Security solved a DNS hijacking case involving a telecommunications operator. Public reports state that core members of the criminal group bribed an insider at the operator and installed hijacking software on core switching equipment in the server room, mirroring and tampering with user traffic so that users clicking normal webpages were forcibly redirected to gambling sites for traffic diversion. Because DNS hijacking abuses a trusted position in the access-network path, its impact is not limited to a single website and users often cannot identify the source of forced redirects, making internal controls, traffic monitoring, and abnormal-resolution audits important.",
     "references": [
       {
         "title": "Daqing police crack nation's first case involving telecom operator DNS hijacking; 21 arrested in 'traffic hijacking' case _ The Paper",

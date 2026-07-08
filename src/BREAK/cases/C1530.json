@@ -11,7 +11,7 @@
       "Telegram",
       "敏感信息收集"
     ],
-    "summary": "该项目旨在监控和删除恶意Telegram Bot收集的钓鱼数据。项目说明指出，这些恶意Bot是钓鱼工具包的一部分，用于接收受害者提交的敏感信息。通过监听并删除这些数据，可以阻止欺诈和数据泄露。",
+    "summary": "GitHub项目 avechuch0/telegram-bigbang 用于监控恶意Telegram bots，这些bots被用于钓鱼和凭证盗窃。项目目标是识别相关机器人活动，以防止欺诈和数据泄露。若需保留“删除数据”或精确incidentTime，应补充README、代码证据或项目提交时间来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0195"
@@ -22,7 +22,7 @@
         "link": "https://github.com/avechuch0/telegram-bigbang"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-08",
     "relatedAttackTools": [
       "AT0063"
     ],

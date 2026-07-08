@@ -12,7 +12,7 @@
       "client pollution",
       "cross-server attack"
     ],
-    "summary": "A security threat disclosed in May 2025 reveals that malicious MCP servers can tamper with tool descriptions to launch attacks. When multiple servers connect to the same client, a rogue server can poison tool descriptions, steal data from other trusted servers, and hijack authentication by transferring credentials from one server to another. Because the agent system exposes tool description permis",
+    "summary": "In an MCP tool poisoning attack first disclosed on April 1, 2025 and introduced in Chinese articles on May 13, 2025, a malicious MCP server attacked by altering tool descriptions. When multiple servers connected to the same client, the malicious server could poison tool descriptions, induce sensitive data leakage and unauthorized operations, hijack agent behavior, and override trusted server instructions, forming a stealthy cross-tool attack chain. The issue shows that tool descriptions are part of the security boundary, and clients need to isolate server contexts and limit the influence scope of tool prompts.",
     "references": [
       {
         "title": "How Should We Respond to MCP 'Tool Poisoning'?",

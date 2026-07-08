@@ -10,7 +10,7 @@
       "malicious code injection",
       "Web3 security"
     ],
-    "summary": "An academic paper on Web3 software supply chain security identifies DNS hijacking as a critical attack vector for DApps. Attackers can redirect users to malicious frontends via DNS hijacking, replacing transaction addresses or injecting malicious code without user awareness, directly threatening asset security. The study validates DApp frontend hijacking risks from an academic perspective.",
+    "summary": "An academic paper on Web3 software supply chain security discusses security risks in DApp frontends and related dependency chains. Based only on the current page abstract, it should be treated as a Web3 software supply chain risk research case rather than directly asserting that the paper verified DNS hijacking replacing transaction addresses or injecting malicious code. DNS hijacking details should be supported by paper text excerpts if retained.",
     "references": [
       {
         "title": "Software Supply Chain Security of Web3",

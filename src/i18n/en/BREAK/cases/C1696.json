@@ -10,7 +10,7 @@
       "Azure endpoint misconfiguration",
       "cloud storage exposure"
     ],
-    "summary": "In September 2022, security firm SOCRadar discovered a misconfigured Azure Blob Storage bucket maintained by Microsoft, which was publicly accessible and exposed 2.4TB of sensitive data. The leak affected 65,000 entities across 111 countries and included files such as emails, contracts, and invoices. Microsoft acknowledged the misconfiguration and has since secured the endpoint.",
+    "summary": "In September 2022, security company SOCRadar said a Microsoft-maintained Azure Blob storage bucket was publicly accessible due to misconfiguration, exposing 2.4TB of data involving more than 65,000 entities across 111 countries and regions, including emails, contracts, invoices, and other files. Microsoft acknowledged the misconfiguration and fixed the endpoint, but said SOCRadar description of impact scope was exaggerated.",
     "references": [
       {
         "title": "Possibly One of the Worst Cloud Storage Data Leak Incidents: Microsoft Admits Server Misconfiguration...",

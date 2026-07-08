@@ -11,7 +11,7 @@
       "internet outage",
       "command and control"
     ],
-    "summary": "In 2016, the Mirai attack used compromised IoT devices to build a botnet, launching distributed denial-of-service attacks against DNS infrastructure via C2 servers, causing widespread internet outages across Europe and North America with estimated economic losses of $110 million.",
+    "summary": "In 2016, Mirai used infected IoT devices to form a botnet and launched large-scale DDoS attacks through central command servers, causing severe attacks against sites such as KrebsOnSecurity. Claims about attacks on DNS infrastructure, widespread network paralysis in Europe and North America, or 110 million US dollars in economic losses should be supported by authoritative Dyn DNS attack and loss-estimate sources.",
     "references": [
       {
         "title": "Heightened DDoS Threat Posed by Mirai and Other Botnets — CISA",

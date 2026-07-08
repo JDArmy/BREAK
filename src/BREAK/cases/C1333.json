@@ -11,7 +11,7 @@
       "恶意命令执行",
       "远程访问木马"
     ],
-    "summary": "2025年11月，Push Security披露了一起大规模ClickFix钓鱼攻击活动，攻击者针对酒店系统发起攻击。该活动在伪造的验证页面中嵌入视频、倒计时和'最近一小时验证用户数'计数器等元素，增强欺骗真实性。攻击者诱导用户复制并执行恶意命令，最终传播PureRAT远程访问木马，实现对酒店系统的远程控制和数据窃取。",
+    "summary": "2025年11月，Sekoia披露了一起针对酒店系统的大规模ClickFix钓鱼攻击活动。攻击者冒充Booking.com并使用被攻陷邮箱发送鱼叉邮件，在伪造验证页面中嵌入视频、倒计时和“最近一小时验证用户数”等元素，诱导酒店经理复制并执行恶意命令，最终传播PureRAT远控木马。该活动利用酒店行业对预订平台通知的高信任度，将人工执行命令包装成验证步骤，提升了远控木马落地成功率。",
     "category": "news_report",
     "relatedRisks": [
       "R0154"
@@ -22,7 +22,7 @@
         "link": "https://thehackernews.com/2025/11/large-scale-clickfix-phishing-attacks.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2025-11",
     "relatedAttackTools": [
       "AT0075"

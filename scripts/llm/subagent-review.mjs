@@ -17,6 +17,10 @@
 
 import { runReview, exitCodeFor } from './llm-review-runner.mjs';
 
+function nowForLog() {
+  return new Date().toISOString().replace('T', ' ').replace(/\.\d+Z$/, 'Z');
+}
+
 /**
  * 运行 subagent 交叉判断评审
  * @param {{
@@ -35,16 +39,21 @@ import { runReview, exitCodeFor } from './llm-review-runner.mjs';
 export async function runSubagentReview(opts) {
   const { prepareContext, ...rest } = opts;
   const enrichedItems = [];
+  console.log(`[${nowForLog()}] [${rest.name}] 准备上下文 ${rest.items.length} 项`);
+  let index = 0;
   for (const item of rest.items) {
+    index++;
     try {
+      console.log(`[${nowForLog()}] [${rest.name}] 上下文 ${index}/${rest.items.length} ${item.key}`);
       const enriched = await (prepareContext ? prepareContext(item) : item);
       enrichedItems.push(enriched);
     } catch (e) {
-      console.warn(`  [${rest.name}] 上下文加载失败 ${item.key}: ${e.message}`);
+      console.warn(`[${nowForLog()}] [${rest.name}] 上下文加载失败 ${item.key}: ${e.message}`);
       // 上下文加载失败的仍放入，buildPrompt 需容错处理无 related 的情况
       enrichedItems.push({ ...item, _contextError: String(e.message).slice(0, 200) });
     }
   }
+  console.log(`[${nowForLog()}] [${rest.name}] 上下文准备完成 ${enrichedItems.length}/${rest.items.length}`);
   rest.items = enrichedItems;
   rest.model = rest.model || 'multi';
   return runReview(rest);

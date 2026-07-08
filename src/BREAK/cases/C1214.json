@@ -12,7 +12,7 @@
       "Keepnet",
       "2024"
     ],
-    "summary": "Keepnet 报告指出，2024 年 SIM 卡交换欺诈案件数量较前一年激增 1055%。攻击者利用社会工程手段获取个人信息后，冒充受害者联系运营商转移号码，进而拦截短信验证码，接管银行、加密货币等账户。",
+    "summary": "Cifas报告/网页指出，2024年SIM卡交换欺诈案件数量较前一年激增1055%。攻击者通常利用社会工程手段获取个人信息后，冒充受害者联系运营商转移号码，进而拦截短信验证码，接管银行、加密货币等账户；如需归因于Keepnet，应补充其原始报告来源。",
     "category": "news_report",
     "relatedRisks": [
       "R0132"
@@ -31,7 +31,7 @@
         "link": "https://keepnetlabs.com/blog/what-is-sim-swap-fraud"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2024",
     "relatedAttackTools": [
       "AT0062"

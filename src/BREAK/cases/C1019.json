@@ -10,7 +10,7 @@
       "客户数据",
       "2021"
     ],
-    "summary": "富士通公司表示，攻击者成功对其ProjectWEB平台展开未授权访问，并借此窃取到部分客户数据。该事件是一起典型的因访问控制失效导致的数据泄露安全事件。",
+    "summary": "富士通公司披露，其 ProjectWEB 信息共享平台发生未授权访问事件，部分客户数据可能被外部访问或泄露。当前 references 可支撑未授权访问和信息共享工具受影响这一核心事实，但具体成因不宜直接归结为访问控制失效；该事件体现企业协作平台在权限管理、外部访问面和客户数据保护上的安全风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0109"
@@ -25,7 +25,7 @@
         "link": "https://www.fujitsu.com/global/about/resources/news/notices/2021/0811-01.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2021-12",
     "relatedAttackTools": [],
     "relatedThreatActors": []

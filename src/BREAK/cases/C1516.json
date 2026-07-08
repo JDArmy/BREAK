@@ -11,7 +11,7 @@
       "psychological manipulation",
       "PSA"
     ],
-    "summary": "美国联邦调查局发布公告，警示一个名为764的暴力在线团体，该团体成员通过网络胁迫和操纵未成年人，诱导其进行自残等极端行为。这体现了虚拟空间中针对未成年人的严重暴力与心理操控，造成实质心理创伤。",
+    "summary": "美国联邦调查局发布公告，警示一个名为764的暴力在线团体，该团体成员通过网络胁迫和操纵未成年人，诱导其进行自残等极端行为。该类行为可能造成严重伤害和心理影响，体现虚拟空间中针对未成年人的暴力操控风险；incidentTime需补充或核对FBI页面发布日期后再精确确认。",
     "category": "security_incident",
     "relatedRisks": [
       "R0192"
@@ -22,7 +22,7 @@
         "link": "https://www.fbi.gov/video-repository/asac-maxwell-764-psa-final-with-audio-and-captions.mp4/view"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2025-12-12"

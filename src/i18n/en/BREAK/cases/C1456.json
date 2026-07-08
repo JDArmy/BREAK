@@ -11,7 +11,7 @@
       "embedded IoT devices",
       "KU Leuven"
     ],
-    "summary": "In 2018, researchers at KU Leuven conducted a real-world side-channel attack on the Tesla Model S key fob. By combining RF capture with computational techniques, they exploited physical signal leakage from the fob to compromise the vehicle entry system. This case demonstrates the practical feasibility of side-channel attacks against embedded IoT devices.",
+    "summary": "In 2018, researchers at KU Leuven performed a cryptographic attack against the Tesla Model S keyless entry system, also describable as a key fob cloning attack. Attackers combined radio-frequency capture and computation to exploit weaknesses in the key fob authentication mechanism, clone the vehicle key, and enter the car. If this is called a side-channel attack, a paper or technical report explicitly classifying the Tesla case as such should be added.",
     "references": [
       {
         "title": "Security Flaws Leave Keyless Tesla Cars Vulnerable to Theft",

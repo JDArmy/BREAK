@@ -13,7 +13,7 @@
       "攻击链复现",
       "BlueLotus_XSSReceiver"
     ],
-    "summary": "2026年3月14日，安全研究者通过搭建XSS攻击环境，在留言板注入恶意脚本，当管理员审核留言时触发Payload，窃取其Cookie（含PHPSESSID）。随后利用BurpSuite替换Cookie，无需账号密码即直接进入管理员后台，完整复现了从XSS漏洞到会话劫持的攻击链。",
+    "summary": "安全研究者通过搭建XSS攻击环境，在页面中注入恶意脚本，用户访问含恶意脚本的页面时触发Payload并泄露Cookie（含PHPSESSID）。随后研究者使用Cookie Editor等工具替换Cookie，在无需账号密码的情况下进入后台，复现了从存储型XSS漏洞到会话劫持的攻击链。",
     "category": "academic_research",
     "relatedRisks": [
       "R0035-001"
@@ -24,7 +24,7 @@
         "link": "https://cloud.tencent.com/developer/article/1517798"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2026-03",
     "relatedAttackTools": [
       "AT0014",

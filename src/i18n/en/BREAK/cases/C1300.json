@@ -12,7 +12,7 @@
       "AWS token compromise",
       "Red Hat repository access"
     ],
-    "summary": "In August 2024, attackers exploited GitHub Actions in CI/CD workflows to steal open-source project tokens from major tech companies including Google, Microsoft, AWS, and Red Hat. These tokens were used to access code repositories and cloud resources, significantly escalating supply chain security risks.",
+    "summary": "In August 2024, Palo Alto Networks Unit 42 disclosed the ArtiPACKED GitHub Actions attack vector, involving token exposure risks in open-source projects from companies such as Google, Microsoft, AWS, and Red Hat. These tokens could be used to access code repositories, inject malicious code, or further access cloud resources, increasing supply-chain security risk.",
     "references": [
       {
         "title": "GitHub Actions Exploited, Token Leak Risk Surges in 14 Popular Open Source Projects_Tencent News",

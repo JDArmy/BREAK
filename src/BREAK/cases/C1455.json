@@ -11,7 +11,7 @@
       "合约设计缺陷",
       "以太坊Layer2"
     ],
-    "summary": "Aztec Connect的旧版合约因设计为完全不可变且无升级能力，当漏洞被利用时，部分代币滞留在不可升级合约中无法取出。系统本为去中心化而放弃升级权限，却因不可升级设计缺陷导致资产损失，凸显了不可变性的双刃剑效应。",
+    "summary": "2026年6月中旬，Aztec Connect旧合约被利用，旧合约中的verification mismatch导致超过210万美元被抽走或损失。由于旧代码不可升级且缺乏有效阻止手段，事件暴露了隐私协议和不可变合约在退役、迁移和治理响应上的风险；不宜表述为“代币滞留无法取出”，除非补充对应来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0177"
@@ -26,7 +26,7 @@
         "link": "https://x.com/AztecLabs_/status/2066175430252700035"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2026-06",
     "relatedAttackTools": [
       "AT0076",

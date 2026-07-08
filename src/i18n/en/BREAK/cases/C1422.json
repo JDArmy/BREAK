@@ -12,7 +12,7 @@
       "Sergey Ivancheglo",
       "orphaned blocks"
     ],
-    "summary": "In August 2025, the Qubic project, led by a former IOTA co-founder, gained control of over 50% of Monero's hash rate and executed a block reorganization attack. The incident caused a 6-block-deep chain reorganization, leaving approximately 60 blocks orphaned. Qubic acquired the ability to reorganize blocks, censor transactions, and perform double-spends, sparking widespread debate across the crypt",
+    "summary": "In August 2025, the Qubic project led by a former IOTA co-founder controlled more than 50% of Monero hashrate and successfully caused a blockchain reorganization, triggering industry discussion about privacy coin security, proof-of-work hashrate centralization, and 51% attack feasibility. The incident shows that even mature privacy coins can face reorganization, transaction censorship, or double-spend risks when external hashrate organization and economic incentives change. Specific quantities such as a six-block-deep reorganization and about 60 orphaned blocks should be supported by on-chain analysis or source pages if included.",
     "references": [
       {
         "title": "Monero Suffers 51% Attack: Who Is the Mysterious Attacker Qubic?",

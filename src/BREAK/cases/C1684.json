@@ -11,7 +11,7 @@
       "供应链攻击",
       "Python恶意包"
     ],
-    "summary": "2025年11月24日，攻击者连续发布5个版本的恶意PyPI组件包perfviewer，利用依赖混淆攻击手法，诱导开发者下载。该包在安装时执行远程木马植入，对Windows系统构成威胁。",
+    "summary": "2025年11月，攻击者连续发布多个版本的恶意PyPI组件包perfviewer，克隆或复制合法rich包并发布恶意PyPI包，诱导开发者下载。该包在安装时执行远程木马植入，对Windows系统构成威胁；如需精确到2025年11月24日，应补充可证明日期的来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0228"
@@ -26,7 +26,7 @@
         "link": "https://o3.security/malware/pypi/perfviewer"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2025-11",
     "relatedAttackTools": [
       "AT0013"

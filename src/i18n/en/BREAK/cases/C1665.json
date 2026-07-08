@@ -10,7 +10,7 @@
       "payment bypass",
       "QuantumNous"
     ],
-    "summary": "A critical vulnerability in the Stripe webhook handler of the QuantumNous/new-api project allows attackers to bypass signature verification by exploiting a default empty webhook secret. By forging webhook events, attackers can top up arbitrary quotas without actual payment. The flaw also enables cross-payment-gateway order completion, where orders created through other payment methods can be fulfi",
+    "summary": "A QuantumNous/new-api security advisory disclosed an empty-secret bypass in Stripe webhook signature verification. When the webhook secret is empty or misconfigured, attackers can forge events so that the system misjudges payment status and grants quota or completes orders. The vulnerability shows that payment callbacks must require a signing secret and verify event origin, order ownership, and amount consistency. Webhooks are high-trust payment-system entry points. If signing secrets can be empty or test settings reach production, attackers can create trusted callbacks without real payment and bypass business-side balance or quota controls.",
     "references": [
       {
         "title": "Stripe Webhook Signature Bypass via Empty Secret Enables",

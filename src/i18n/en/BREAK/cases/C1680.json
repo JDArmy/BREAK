@@ -11,7 +11,7 @@
       "backdoored artifacts",
       "self-propagating worm"
     ],
-    "summary": "In June 2026, the npm ecosystem faced multiple supply chain attacks where threat actors distributed malicious and poisoned versions of over 50 legitimate npm packages. These packages delivered Rust-based infostealers and self-propagating worms, causing projects using them to produce backdoored build artifacts.",
+    "summary": "In June 2026, the npm ecosystem suffered multiple supply-chain attacks, including the Miasma attack involving 57 npm packages and more than 286 malicious versions, using binding.gyp to trigger execution. Attackers executed malicious code during npm install and distributed Rust stealers and self-propagating worms. It should not be described as generating backdoored build artifacts unless a supporting source is added.",
     "references": [
       {
         "title": "IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks",

@@ -11,7 +11,7 @@
       "交易地址替换",
       "恶意代码注入"
     ],
-    "summary": "一篇关于Web3软件供应链安全的学术论文指出，DNS劫持是DApp面临的关键攻击向量。攻击者可通过DNS劫持将用户引导至恶意前端，在用户不知情的情况下替换交易地址或注入恶意代码，直接威胁用户资产安全。该研究从学术角度验证了DApp前端劫持风险。",
+    "summary": "一篇关于Web3软件供应链安全的学术论文讨论DApp前端和相关依赖链的安全风险。若仅依据当前网页摘要，应将其作为Web3软件供应链风险研究案例，而不直接断言论文已验证DNS劫持会替换交易地址或注入恶意代码；如需保留DNS劫持细节，应补充论文正文段落作为引用。",
     "category": "academic_research",
     "relatedRisks": [
       "R0203"
@@ -22,7 +22,7 @@
         "link": "https://arxiv.org/abs/2511.12274"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2025-11"

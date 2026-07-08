@@ -11,7 +11,7 @@
       "security defaults bypass",
       "cloud account takeover"
     ],
-    "summary": "An attacker successfully logged into a corporate Microsoft 365 account using only single-factor authentication, despite security defaults being enabled. The user had set up the Microsoft Authenticator app for MFA, but sign-in logs showed the attacker bypassed multi-factor authentication. This case discusses common MFA bypass methods such as MFA fatigue attacks, token theft, and adversary-in-the-mi",
+    "summary": "An attacker successfully logged into a corporate Microsoft 365 account using only single-factor authentication despite security defaults being enabled. The user had set up the Microsoft Authenticator app for MFA, but sign-in logs showed that multi-factor authentication had been bypassed. The poster asked about possible MFA bypass causes and sought directions for investigation. The case highlights the need to examine sign-in logs, conditional access policies, and authentication method configuration to confirm whether protection is actually effective.",
     "references": [
       {
         "title": "How Did a Hacker Bypass Our Multi-Factor? - Microsoft Q&A",

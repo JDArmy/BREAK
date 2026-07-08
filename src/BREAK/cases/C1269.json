@@ -12,7 +12,7 @@
       "会话劫持",
       "OAuth滥用"
     ],
-    "summary": "Uber的SSO系统基于子域名cookie共享实现认证。攻击者通过接管未注册的Amazon CloudFront子域名saostatic.uber.com，结合CSRF防护绕过，窃取共享会话cookie，最终绕过auth.uber.com的单点登录认证，控制任意Uber子域名账户。",
+    "summary": "Uber的SSO系统基于子域名cookie共享实现认证。攻击者通过接管相关Amazon CloudFront子域名，窃取共享会话cookie，最终绕过auth.uber.com的单点登录认证，实现对所有Uber子域名网站的访问控制或认证绕过。若保留CSRF防护绕过和未注册子域名等细节，应补充完整HackerOne报告证据。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0143"
@@ -27,7 +27,7 @@
         "link": "https://hackerone.com/reports/219205"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2018-02",
     "relatedAttackTools": [
       "AT0061-003",

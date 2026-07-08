@@ -13,7 +13,7 @@
       "构建投毒",
       "后门"
     ],
-    "summary": "2026年6月，npm生态系统遭受多起供应链攻击，威胁行为者利用50多个合法npm包的恶意版本和投毒版本，分发Rust编写的窃密程序和自传播蠕虫。攻击者通过篡改这些包的代码，使得使用它们的项目在构建时生成带有后门的产物。",
+    "summary": "2026年6月，npm生态系统遭受多起供应链攻击，其中Miasma攻击涉及57个npm包、286个以上恶意版本，并利用binding.gyp触发执行。攻击者在npm install阶段执行恶意代码，分发Rust窃密程序和自传播蠕虫；不宜表述为“在构建时生成带有后门的产物”，除非补充对应来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0227"
@@ -28,7 +28,7 @@
         "link": "https://www.stepsecurity.io/blog/binding-gyp-npm-supply-chain-attack-spreads-like-worm"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2026-06",
     "relatedAttackTools": [
       "AT0013",

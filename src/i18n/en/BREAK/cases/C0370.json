@@ -11,7 +11,7 @@
       "payment fraud",
       "social engineering attack"
     ],
-    "summary": "In 2018, attackers across multiple regions in China used GSM hijacking and SMS sniffing techniques to intercept SMS verification codes while victims slept. By combining these codes with personally identifiable information obtained through social engineering, they conducted unauthorized transactions and fraudulent online loans. The attack exploited vulnerabilities in the 2G network to capture SMS m",
+    "summary": "Around 2018, users reported unauthorized transaction incidents involving GSM hijacking and SMS sniffing to steal SMS verification codes. Attackers used rogue base stations and sniffing devices to intercept bank and payment app verification codes while victims slept, then combined those codes with other account information or payment platform registration processes to conduct unauthorized transactions and online loan fraud. The method exploited weaknesses in 2G networks to capture SMS content in real time and could cause serious financial losses.",
     "references": [
       {
         "title": "Henan High Court: How to Prevent Overnight SMS-Sniffing Account Theft",

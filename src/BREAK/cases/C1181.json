@@ -12,7 +12,7 @@
       "数字货币盗窃",
       "代码依赖"
     ],
-    "summary": "安全研究员发现，攻击者利用AI生成代码时产生的幻觉包名（如data-validator-pro），在PyPI、npm等仓库抢注并植入恶意代码。2025年4月，PyPI恶意包ccxt-mexc-futures窃取用户数字货币资产，损失超百万美元。此类攻击无需开发者操作失误，仅利用AI缺陷即可渗透，隐蔽性强且规模化。",
+    "summary": "2025年4月，PyPI恶意包 ccxt-mexc-futures 被披露用于窃取MEXC交易相关凭证并重定向订单。AI幻觉依赖和slopsquatting攻击原理应与该具体恶意包事件分开表述：前者指攻击者抢注AI生成代码中虚构的包名并植入恶意代码，后者当前 references 更能支持的是凭证窃取和订单操纵风险，而非已证实的百万美元损失。",
     "category": "news_report",
     "relatedRisks": [
       "R0127"
@@ -27,7 +27,7 @@
         "link": "https://jfrog.com/blog/malicious-pypi-package-hijacks-mexc-orders-steals-crypto-tokens/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2025-04",
     "relatedAttackTools": [],
     "relatedThreatActors": [

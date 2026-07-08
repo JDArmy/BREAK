@@ -11,7 +11,7 @@
       "LLM-assisted analysis",
       "encryption algorithm reconstruction"
     ],
-    "summary": "During analysis of a foreign website, the core API was found to return encrypted strings. By setting browser breakpoints, the API request was intercepted and the decryption method was traced. Analysis of the JavaScript code confirmed the use of AES encryption. A large language model was then used to assist in analyzing and reconstructing the encryption and decryption algorithms, successfully decry",
+    "summary": "An API encryption reverse-engineering example focused on an iOS app and Springboot backend interfaces, analyzing sign signatures and AES encryption mechanisms. The researcher used traffic capture, client-side reverse engineering, and interface parameter reconstruction to identify request signing and data encryption and decryption logic, illustrating that mobile app API encryption does not make interfaces impossible to analyze and still needs server-side risk control and authorization checks.",
     "references": [
       {
         "title": "iOSSignatureAnalysis: iOS App Signature and Interface Analysis Example - GitHub",

@@ -13,7 +13,7 @@
       "Python",
       "package manager"
     ],
-    "summary": "In June 2026, a malicious campaign dubbed Hades uploaded 19 poisoned packages to PyPI. These packages contained a credential stealer and could abuse developers' OIDC trust configurations to push trojanized versions of PyPI packages onto compromised systems, enabling lateral spread. The attacker tampered with package contents to implant backdoors into the build artifacts of Python projects using th",
+    "summary": "In June 2026, the Hades malicious campaign placed 19 packages and 37 malicious wheels on PyPI, using *-setup.pth for automatic execution, downloading Bun, and running an obfuscated JavaScript credential stealer. Propagation mechanisms should distinguish stolen tokens from OIDC trusted publishing according to source wording; claims about lateral spread through OIDC trust configuration or implanting build artifacts require full original support.",
     "references": [
       {
         "title": "Hades PyPI Attack: 19 Packages Poisoned to Auto-Run Bun Credential Stealer",

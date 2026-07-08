@@ -11,7 +11,7 @@
       "代币价格归零",
       "智能合约漏洞"
     ],
-    "summary": "2022年12月，DeFi协议Ankr的aBNBc代币合约遭攻击。攻击者获取了开发者私钥，上传包含无授权铸币方法的新合约，无限铸造60万亿枚aBNBc并兑换为USDC等代币，Ankr官方估算损失约500万美元BNB，代币价格近乎归零，团队随后补偿受影响的流动性提供者。",
+    "summary": "2022年12月，DeFi协议Ankr发布aBNBc事件报告称，攻击者获取开发者私钥后上传恶意合约，导致aBNBc代币被异常铸造并造成约500万美元BNB损失。Ankr随后说明了事件处置和对受影响流动性提供者的补偿安排。该案体现了私钥泄露和合约升级权限失控对DeFi资产安全的影响。",
     "category": "security_incident",
     "relatedRisks": [
       "R0198"
@@ -22,7 +22,7 @@
         "link": "https://www.ankr.com/blog/the-abnbc-token-report/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2022-12",
     "relatedAttackTools": [
       "AT0076",

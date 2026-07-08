@@ -13,7 +13,7 @@
       "恶意安装脚本",
       "Arch Linux"
     ],
-    "summary": "2026年6月，Arch用户仓库(AUR)遭遇atomic-lockfile供应链攻击，攻击者向PKGBUILD文件注入恶意安装脚本，1600余个包被投毒，分发窃密器和eBPF rootkit。",
+    "summary": "2026年6月，Arch用户仓库AUR被报道出现atomic-lockfile供应链攻击相关风险。当前 references 不足以核实投毒方式、影响包数量和恶意载荷类型，因此不应直接写入1600余个包、窃密器或eBPF rootkit等具体细节；需补充技术分析或公告后再完善。",
     "category": "security_incident",
     "relatedRisks": [
       "R0227"
@@ -24,7 +24,7 @@
         "link": "https://github.com/lenucksi/aur-malware-check"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-08",
     "incidentTime": "2026-06",
     "relatedAttackTools": [
       "AT0064"

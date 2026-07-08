@@ -12,7 +12,7 @@
       "webhook签名验证",
       "QuantumNous"
     ],
-    "summary": "在QuantumNous/new-api项目中，Stripe Webhook处理器存在严重漏洞。攻击者利用默认空Webhook密钥绕过签名验证，伪造Webhook事件，从而在未实际支付的情况下为自己的账户充值任意配额。漏洞还涉及跨支付网关的订单完成，攻击者可通过伪造的Stripe Webhook完成通过其他支付方式创建的订单。",
+    "summary": "QuantumNous/new-api安全公告披露，项目中的Stripe Webhook签名校验存在空密钥绕过问题。攻击者可在Webhook密钥为空或配置不当时伪造事件，使系统误判支付状态并发放配额或完成订单。该漏洞说明支付回调必须强制配置签名密钥并校验事件来源、订单归属和金额一致性。Webhook属于支付系统的高信任入口，一旦签名密钥允许为空或测试配置进入生产环境，攻击者无需真实完成支付即可制造可信回调，进而绕过业务侧的余额和配额控制。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0225"
@@ -23,7 +23,7 @@
         "link": "https://github.com/QuantumNous/new-api/security/advisories/GHSA-xff3-5c9p-2mr4"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-08",
     "relatedAttackTools": [
       "AT0061-002",
       "AT0061-004"

@@ -11,7 +11,7 @@
       "Siemens",
       "industrial control protocol"
     ],
-    "summary": "A publicly disclosed Profinet-related security flaw from 2024 that could allow attackers to exploit protocol weaknesses and perform unauthorized operations on industrial control systems.",
+    "summary": "NVD contains a CVE-2024-48989 record, but the current source does not provide enough vulnerability description to confirm whether it is a Profinet-related vulnerability, its impact scope, attack conditions, or consequences. The entry can currently only serve as a case of the vulnerability record existing; claims about unauthorized operation risks in industrial control systems require CVE official descriptions, vendor advisories, or vulnerability database sources.",
     "references": [
       {
         "title": "CVE-2024-48989 Detail",

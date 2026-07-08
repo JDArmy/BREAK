@@ -10,7 +10,7 @@
       "EIP protocol phishing",
       "blockchain attack confusion"
     ],
-    "summary": "On March 22, 2023, the Euler Finance attacker sent 100 ETH to the Ronin hacker to create confusion after the exploit. The Ronin hacker responded with 2 ETH and an on-chain message requesting decryption of an encrypted message. Security experts identified the message as a phishing scam attempting to steal the Euler attacker's wallet private key.",
+    "summary": "After Euler Finance was attacked in March 2023, the attacker used on-chain messages to communicate with the project. SlowMist and related security material use the incident to explain both the role and the risk of on-chain messaging during incident response: attackers, projects, and third parties may all use on-chain messages to transmit information, and victims need to verify message sources and guard against secondary phishing through such messages.",
     "references": [
       {
         "title": "SlowMist: Guide to Theft Emergency - On-chain Messaging - FreeBuf Cybersecurity Industry Portal",

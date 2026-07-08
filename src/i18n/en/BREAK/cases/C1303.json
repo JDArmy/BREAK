@@ -13,7 +13,7 @@
       "API key abuse",
       "non-human identities"
     ],
-    "summary": "After March 19, 2026, the TeamPCP group used stolen CI/CD credentials to compromise two GitHub Actions workflows, leading to credential theft and a potential supply chain attack. The attacker achieved lateral movement and persistent access through automated pipeline tokens.",
+    "summary": "Around March 19, 2026, TeamPCP used stolen CI credentials to compromise Checkmarx-related GitHub Actions workflows and implant credential-stealing malware into two workflows, potentially enabling supply-chain attacks. The source supports TeamPCP, stolen CI credentials, two workflows, and credential theft; lateral movement and persistence consequences should only be included after adding supporting sources.",
     "references": [
       {
         "title": "TeamPCP Hacks Checkmarx GitHub Actions Using Stolen CI Credentials",

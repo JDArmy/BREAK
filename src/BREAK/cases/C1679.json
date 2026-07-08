@@ -13,7 +13,7 @@
       "Python",
       "包管理器"
     ],
-    "summary": "2026年6月，名为Hades的恶意活动在PyPI上投放了19个被投毒的软件包。这些包内置了凭据窃取器，并可利用开发者的OIDC信任配置，将木马化版本的PyPI包推送到被入侵系统，实现横向传播。攻击者通过篡改包内容，将后门植入使用这些包的Python项目构建产物中。",
+    "summary": "2026年6月，Hades恶意活动在PyPI上投放19个软件包、37个恶意wheel，利用*-setup.pth自动执行，下载Bun并运行混淆JS凭据窃取器。若需描述传播机制，应根据来源明确区分被盗token与OIDC trusted publishing；“利用OIDC信任配置横向传播”和“植入构建产物”等表述需完整原文支持。",
     "category": "security_incident",
     "relatedRisks": [
       "R0227"
@@ -28,7 +28,7 @@
         "link": "https://www.endorlabs.com/learn/shai-hulud-hades-wave-hits-six-pypi-bioinformatics-packages"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2026-06",
     "relatedAttackTools": [
       "AT0064",

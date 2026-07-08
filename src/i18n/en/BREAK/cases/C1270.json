@@ -10,7 +10,7 @@
       "single sign-on authentication bypass",
       "account takeover via recycled email"
     ],
-    "summary": "Research reveals that SSO systems heavily rely on email address binding for identity, but overlook the flaw that email addresses can be recycled. Attackers can obtain recycled email addresses and exploit the SSO authentication flow to take over previously associated online accounts without needing passwords, affecting 80% of tested popular websites.",
+    "summary": "Research found that SSO systems heavily depend on email addresses to bind identity while overlooking that email addresses can be reused. Attackers can obtain recycled email addresses and use SSO authentication flows to take over original users associated online accounts without passwords, affecting many tested popular websites. The issue shows platforms should verify email ownership changes and third-party login binding status.",
     "references": [
       {
         "title": "Identity Account Inconsistency Vulnerability in Single Sign-On (SSO) - Tencent Cloud Developer Community",

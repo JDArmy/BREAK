@@ -13,7 +13,7 @@
       "投资者损失",
       "DeFi"
     ],
-    "summary": "韩国首尔南部地方检察厅以韩国首例针对去中心化交易所Rug Pull的刑事案件起诉5名嫌疑人（2人羁押起诉、3人非羁押起诉）。嫌疑人被控在Solana链DEX操纵CATFI代币市场并实施Rug Pull，导致256名投资者损失合计9亿韩元，嫌疑人非法获利约4亿韩元。",
+    "summary": "韩国首尔南部地方检察厅以韩国首例针对去中心化交易所Rug Pull的刑事案件起诉5名嫌疑人（2人羁押起诉、3人非羁押起诉）。其中3名市场操纵嫌疑人被控在Solana链DEX操纵CATFI代币市场并实施Rug Pull，另2人被控帮助主犯逃避。若保留256名投资者损失9亿韩元等数字，应补充可直接支持该数据的来源。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0168"
@@ -28,7 +28,7 @@
         "link": "https://cryptonews.com/news/south-korea-first-dex-rug-pull-criminal-case/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2026-05-27"

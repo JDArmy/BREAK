@@ -10,7 +10,7 @@
       "image host abuse technique",
       "upload restriction removal"
     ],
-    "summary": "A technical guide detailing how to modify the source code of Lsky Pro image hosting service to support all-format file uploads instead of images only, and to enable front-end video playback. The guide demonstrates how a normal image hosting service can be repurposed for video storage and playback, representing a typical technical implementation of image host abuse risks.",
+    "summary": "Lsky Pro is an open-source image hosting and cloud album system whose official documentation provides image upload, management, and external-link capabilities. If an operator bypasses format, size, or content limits and expands a normal image hosting service into arbitrary file storage or video distribution, it may create risks of copyright-content distribution, malicious file hosting, and resource abuse. The current references only support the system functionality background.",
     "references": [
       {
         "title": "Lsky Pro (Lan Kong) source code repository — open-source project users fork to remove upload limits",

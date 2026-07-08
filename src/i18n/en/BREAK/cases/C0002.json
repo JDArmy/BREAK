@@ -12,7 +12,7 @@
       "web authentication flaw",
       "automated replay attack"
     ],
-    "summary": "In a typical web login flow, user passwords are submitted after MD5 hashing. An attacker intercepts the login URL containing the MD5-hashed password and account, then replays the captured request directly to the server without decrypting the plaintext. This successfully impersonates the user and gains system access, exposing the risk of protocol-level automated replay.",
+    "summary": "Amazon Web Services material explains that in a replay attack, an attacker can capture a password, password hash, session ID, or HTTP authentication request through eavesdropping or a man-in-the-middle position and resend it later. The server may treat the replayed request as legitimate, enabling authentication or authorization bypass, unauthorized access, data exposure, or repeated transactions.",
     "references": [
       {
         "title": "What Is a Replay Attack? - Amazon Web Services",

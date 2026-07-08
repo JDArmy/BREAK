@@ -11,7 +11,7 @@
       "supply chain attack",
       "Python malware"
     ],
-    "summary": "On November 24, 2025, an attacker published five consecutive versions of a malicious PyPI package named 'perfviewer', leveraging dependency confusion techniques to trick developers into downloading it. Upon installation, the package executed a remote trojan implantation targeting Windows systems.",
+    "summary": "In November 2025, attackers repeatedly released malicious versions of the PyPI package perfviewer, cloning or copying the legitimate rich package and publishing a malicious PyPI package to induce developer downloads. The package planted a remote trojan during installation and threatened Windows systems. If the exact date of November 24, 2025 is needed, a source proving that date should be added.",
     "references": [
       {
         "title": "MAL-2025-191814: Malicious code in perfviewer (PyPI) - ossf/malicious-packages GitHub",

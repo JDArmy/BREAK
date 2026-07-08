@@ -11,7 +11,7 @@
       "大模型辅助分析",
       "加密算法还原"
     ],
-    "summary": "分析某国外站点时发现核心API返回加密字符串。通过浏览器断点调试，拦截到API请求，跟踪到解密方法。分析JS代码确认使用了AES加密，最终利用大模型辅助分析并还原加解密算法，成功解密获取数据。",
+    "summary": "一篇API加密逆向分析示例围绕 iOS App 与 Springboot 后端接口展开，重点分析 sign 签名和 AES 加密机制。研究者通过抓包、客户端逆向和接口参数还原，定位请求签名与数据加解密逻辑，用于说明移动应用接口加密并不等同于不可分析，仍需服务端风控和权限校验配合。",
     "category": "academic_research",
     "relatedRisks": [
       "R0051"
@@ -22,7 +22,7 @@
         "link": "https://github.com/SmileZXLee/iOSSignatureAnalysis"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-08",
     "incidentTime": "2024-10",
     "relatedAttackTools": [
       "AT0015",

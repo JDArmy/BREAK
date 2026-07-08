@@ -13,7 +13,7 @@
       "Campus-Free-WiFi",
       "高校"
     ],
-    "summary": "2025年2月，多地高校曝出学生因连接不明Wi-Fi导致信息泄露案例。某高校学生小李在咖啡馆连接名为“Campus-Free-WiFi”的网络后，教务系统账号被盗，课程信息被篡改，黑客还通过邮件勒索赎金。此类伪Wi-Fi可导致学籍系统、校园卡账号被盗用，甚至隐私文件被窃取或加密勒索。",
+    "summary": "央视新闻客户端安全提示称，校园周边“免费Wi-Fi”可能被攻击者伪装成钓鱼热点，用于窃取学生账号、校园卡信息或其他隐私数据。此类伪Wi-Fi通过诱导用户连接并提交认证信息，可能造成教务系统账号被盗、个人资料泄露或后续勒索等风险。校园场景中学生常需要频繁接入公共网络，若缺乏热点真伪校验和安全连接意识，攻击者可借机收集账号密码、会话信息或设备指纹，形成后续撞库和社工攻击入口。",
     "category": "news_report",
     "relatedRisks": [
       "R0112-006"
@@ -24,7 +24,7 @@
         "link": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=12671030232652029131&channelId=1119&track_id=30ae5d7f-4d76-4bab-ae90-f1b05fd7d726"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2025-02",
     "relatedAttackTools": [
       "AT0069"

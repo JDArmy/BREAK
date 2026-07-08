@@ -11,7 +11,7 @@
       "合规风险",
       "SaaS安全"
     ],
-    "summary": "Prompt Security CEO Itamar Golan披露，一家纽约金融公司的安全主管原以为内部使用的AI工具不足10个，但经过10天审计后实际发现65个未经授权的解决方案，其中多数缺乏正式许可，暴露了影子AI在受监管行业的严重蔓延。",
+    "summary": "VentureBeat关于影子AI的报道引用Prompt Security CEO Itamar Golan的观点，指出未经批准的AI应用正在企业环境中扩散，并可能削弱安全、合规和数据治理。该材料可作为金融等受监管行业内部使用未授权AI工具时，面临审计盲区和敏感数据外流风险的案例背景。",
     "category": "security_incident",
     "relatedRisks": [
       "R0153"
@@ -26,7 +26,7 @@
         "link": "https://www.163.com/dy/article/JOS4BMJ60511ALHJ.html"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0041"

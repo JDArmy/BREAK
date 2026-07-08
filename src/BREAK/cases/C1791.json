@@ -12,7 +12,7 @@
       "供应商远程访问",
       "数据窃取"
     ],
-    "summary": "据 The Hacker News 报道，网络犯罪分子正利用远程监控与管理工具渗透物流和货运公司网络，实施供应链攻击。攻击者通过滥用合法的远程访问软件，绕过安全控制，进入企业系统窃取数据或部署勒索软件。",
+    "summary": "据The Hacker News报道，至少自2025年6月起，网络犯罪分子利用远程监控与管理工具渗透物流和货运公司网络，目标是窃取货运实物，尤其是食品和饮料产品。攻击者滥用合法远程访问软件绕过安全控制并进入企业系统；若需写入窃取数据或部署勒索软件，应补充对应来源。",
     "category": "news_report",
     "relatedRisks": [
       "R0254"
@@ -23,8 +23,8 @@
         "link": "https://thehackernews.com/2025/11/cybercriminals-exploit-remote.html"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-11",
+    "updated": "2026-07-08",
+    "incidentTime": "2025-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

@@ -11,7 +11,7 @@
       "网络瘫痪",
       "非法外联"
     ],
-    "summary": "2016 年 Mirai 攻击利用受感染的物联网设备组建僵尸网络，通过 C2 服务器发动针对域名解析基础设施的分布式拒绝服务攻击，导致欧洲和北美大面积网络瘫痪，估计造成 1.1 亿美元经济损失。",
+    "summary": "2016年，Mirai利用受感染物联网设备组成僵尸网络，通过中央控制服务器发动大规模DDoS攻击，曾导致KrebsOnSecurity等网站遭受严重攻击。若需写入针对域名解析基础设施、欧洲和北美大面积网络瘫痪或1.1亿美元经济损失，应补充Dyn DNS攻击和损失估算的权威来源。",
     "category": "security_incident",
     "relatedRisks": [
       "R0209"
@@ -34,7 +34,7 @@
         "link": "https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2016",
     "relatedAttackTools": [
       "AT0082"

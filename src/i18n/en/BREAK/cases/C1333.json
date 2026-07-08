@@ -10,7 +10,7 @@
       "malicious command execution",
       "ClickFix campaign 2025"
     ],
-    "summary": "In November 2025, Push Security disclosed a large-scale ClickFix phishing campaign targeting hotel systems. The operation embedded videos, countdown timers, and a counter showing 'users verified in the last hour' on fake verification pages to enhance deception. Attackers tricked users into copying and executing malicious commands, ultimately delivering the PureRAT remote access trojan to achieve r",
+    "summary": "In November 2025, Sekoia disclosed a large-scale ClickFix phishing campaign targeting hotel systems. Attackers impersonated Booking.com and used compromised email accounts to send spear-phishing messages, embedding videos, countdowns, and recent verification user counters in fake verification pages. They induced hotel managers to copy and run malicious commands, ultimately distributing the PureRAT remote access trojan. The campaign exploited the hotel sector high trust in booking-platform notifications and disguised manual command execution as a verification step, improving remote-access trojan delivery success.",
     "references": [
       {
         "title": "Large-Scale ClickFix Phishing Attacks Target Hotel Systems with PureRAT ...",

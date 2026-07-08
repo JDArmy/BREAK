@@ -12,7 +12,7 @@
       "协作平台",
       "权限配置缺陷"
     ],
-    "summary": "2023年8月，某组织在社区论坛反馈Azure AD域白名单与Microsoft Defender for Cloud Apps集成中的误报问题：配置白名单限定仅授权域访问共享文件后，部分文件共享仍触发“未授权域”策略告警，造成不必要的告警与处置工作量。社区讨论指出这可能源于Defender对直接访问与链接共享的判定差异，属告警识别问题而非确认的敏感数据泄露。",
+    "summary": "2023年8月，某组织在社区论坛反馈Azure AD域白名单与Microsoft Defender for Cloud Apps集成中的误报问题：配置白名单限定仅授权域访问共享文件后，部分文件共享仍触发“未授权域”策略告警，造成不必要的告警与处置工作量。发帖者在社区寻求可能原因与解决方案；当前引用未显示敏感数据泄露事实。",
     "category": "security_incident",
     "relatedRisks": [
       "R0233"
@@ -23,7 +23,7 @@
         "link": "https://techcommunity.microsoft.com/discussions/microsoftdefendercloudapps/file-shared-with-unauthorized-domain/3901560"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2023-08-16"

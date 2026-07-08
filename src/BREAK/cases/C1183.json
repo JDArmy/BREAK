@@ -13,7 +13,7 @@
       "凭证窃取",
       "恶意代码库"
     ],
-    "summary": "微软关闭GitHub上73个自家代码库，包括Azure Functions、Durable Task及AI示例应用。黑客组织TeamPCP入侵Durable Task代码库并植入恶意配置，当用户在Claude Code、Gemini CLI等AI编码工具中打开时，窃取用户凭证。此前TeamPCP已发布3个恶意版本，影响数百家组织。",
+    "summary": "微软关闭GitHub上73个自家代码库，包括Azure Functions、Durable Task及AI示例应用。攻击可能与TeamPCP投毒行动有关；研究称攻击者通过被攻陷的贡献者账户向 Azure/durabletask 推送恶意提交，当用户在Claude Code、Gemini CLI等AI编码工具中打开时，可能窃取用户凭证。TeamPCP此前发布3个恶意版本、影响数百家组织。",
     "category": "security_incident",
     "relatedRisks": [
       "R0127"
@@ -28,7 +28,7 @@
         "link": "https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2026-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []

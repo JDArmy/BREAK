@@ -11,7 +11,7 @@
       "第三方授权",
       "网络安全"
     ],
-    "summary": "网络安全公司Barracuda发布紧急预警，一种利用OAuth协议漏洞的高级钓鱼攻击正在全球激增。攻击者通过构造恶意链接，诱导用户点击并完成OAuth授权流程，从而获取访问权限，悄然接管用户账户。该攻击方式绕过了传统的身份验证体系，直接利用第三方授权机制进行渗透。",
+    "summary": "Barracuda月度威胁报告称观察到多种值得关注的OAuth钓鱼威胁。攻击者滥用Microsoft OAuth授权机制，通过构造恶意链接诱导用户完成授权流程，从而获取账户访问权限，并可能在绕过传统密码防护的情况下接管用户账户。该类攻击通常依赖用户授权而非直接窃取密码，因此企业需要关注第三方应用授权和令牌权限治理。",
     "category": "news_report",
     "relatedRisks": [
       "R0030-002"
@@ -22,8 +22,8 @@
         "link": "https://blog.barracuda.com/2025/09/23/email-threat-radar-september-2025"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-11",
+    "updated": "2026-07-08",
+    "incidentTime": "2025-09",
     "relatedAttackTools": [
       "AT0061-003"
     ],

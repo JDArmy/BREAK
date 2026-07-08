@@ -12,7 +12,7 @@
       "non-human identity",
       "API key abuse"
     ],
-    "summary": "An attacker force-pushed 75 tags via GitHub Actions, exposing the Trivy project's CI/CD secrets. The leaked tokens could be exploited to steal data and establish persistent access in developer systems, constituting a typical supply chain attack.",
+    "summary": "Attackers force-pushed 75 version tags in the aquasecurity/trivy-action repository to deliver malware capable of stealing CI/CD sensitive secrets, putting those secrets at risk of theft. The incident shows that if GitHub Actions tags, release processes, and CI/CD credentials are controlled by attackers, they can quickly become supply-chain attack entry points in downstream build pipelines.",
     "references": [
       {
         "title": "Trivy Security Scanner GitHub Actions Breached, 75 Tags Hijacked to ...",

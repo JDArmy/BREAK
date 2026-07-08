@@ -13,7 +13,7 @@
       "Sergey Ivancheglo",
       "孤块"
     ],
-    "summary": "2025年8月，前IOTA联合创始人领导的Qubic项目控制了门罗币超过50%的算力，实施了区块重组攻击。攻击导致链上出现6个区块深的重组，约60个区块被弃置为孤块。Qubic具备了重组区块、审查交易及实施双重支付的能力，引发加密行业对隐私币安全性的广泛讨论。",
+    "summary": "2025年8月，前IOTA联合创始人领导的Qubic项目控制了门罗币超过50%的算力，并成功发生区块链重组，引发加密行业对隐私币安全性、工作量证明网络算力集中和51%攻击可行性的讨论。该事件说明，即便是成熟隐私币，也可能在外部算力组织和经济激励变化下暴露出重组、交易审查或双花风险。若需写入“6个区块深重组”和“约60个孤块”等具体数量，应补充链上分析或来源页面。",
     "category": "security_incident",
     "relatedRisks": [
       "R0171"
@@ -28,7 +28,7 @@
         "link": "https://qubic.org/blog-detail/historic-takeover-complete-qubic-miners-now-secure-monero-network"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2025-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []

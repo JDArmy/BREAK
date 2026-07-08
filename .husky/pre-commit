@@ -21,12 +21,11 @@ if [ "$BREAK_REVIEW_ON_COMMIT" != "0" ]; then
   # 仅当有实体文件变更时才跑（避免纯脚本/文档提交被拖慢）
   if git diff --cached --name-only -- src/BREAK/ | grep -q '\.json$'; then
     echo "🔍 运行 review:changed（变更实体 LLM 评审，fail 阻断）..."
-    output=$(node scripts/validate/review-changed.mjs --staged-only 2>&1)
+    node scripts/validate/review-changed.mjs --staged-only
     status=$?
     if [ $status -ne 0 ]; then
       echo "❌ review:changed 检出 fail，提交中止"
       echo "设 BREAK_REVIEW_ON_COMMIT=0 可跳过（但建议先修），review 级问题不阻断"
-      echo "$output" | tail -40
       exit $status
     fi
   fi

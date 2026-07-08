@@ -12,7 +12,7 @@
       "私募股权",
       "数据安全"
     ],
-    "summary": "2022年6月，Zendesk被以102亿美元收购。Zendesk作为全球领先的客服SaaS平台，其工单系统、客服系统整合了大量企业的客户隐私、业务数据。该收购涉及多方数据整合与迁移，庞大的客户数据在系统融合过程中面临越权访问和泄露风险，凸显了客服工单系统数据安全的脆弱性。",
+    "summary": "2022年6月，Zendesk宣布与投资者集团达成102亿美元收购最终协议。Zendesk作为客服SaaS平台，其工单和客服系统处理大量客户沟通与业务数据。若需把该并购作为客服数据整合风险案例，应补充Zendesk业务性质、客户数据处理范围或并购数据迁移风险资料，避免仅凭收购事件推导泄露风险。",
     "category": "news_report",
     "relatedRisks": [
       "R0078-002"
@@ -23,7 +23,7 @@
         "link": "https://new.qq.com/rain/a/20220708A02TLJ00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-08",
     "incidentTime": "2022-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []

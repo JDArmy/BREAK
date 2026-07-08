@@ -13,7 +13,7 @@
       "Red Hat",
       "API密钥滥用"
     ],
-    "summary": "2024年8月，攻击者通过CI/CD工作流中的GitHub Actions工具窃取了谷歌、微软、AWS和Red Hat等多家科技巨头的开源项目令牌。这些令牌被用于访问代码仓库和云资源，导致供应链安全风险激增。",
+    "summary": "2024年8月，Palo Alto Networks Unit 42披露被称为“ArtiPACKED”的GitHub Actions攻击向量，涉及谷歌、微软、AWS和Red Hat等多家科技公司开源项目令牌泄露风险。这些令牌可能被用于访问代码仓库、注入恶意代码或进一步访问云资源，从而增加供应链安全风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0149"
@@ -28,7 +28,7 @@
         "link": "https://unit42.paloaltonetworks.com/github-repo-artifacts-leak-tokens/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2024-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []

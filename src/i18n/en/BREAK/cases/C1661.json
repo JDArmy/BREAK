@@ -10,7 +10,7 @@
       "permission bypass",
       "financial API"
     ],
-    "summary": "A security review of domestic banking APIs found security flaws across 38 banks, with 20 banks exhibiting high-risk unauthorized access vulnerabilities in their credit card APIs. Attackers could exploit these interfaces to bypass authorization checks and access sensitive cardholder information or perform unauthorized operations.",
+    "summary": "A security research article reported that API security reviews found flaws in multiple bank APIs, with financial APIs facing unauthorized-access risks in open interfaces, authorization checks, and data-access controls. The case illustrates that open-banking and credit-card business APIs may expose sensitive account or transaction data if they lack fine-grained authentication, object-level access control, and abnormal-call monitoring.",
     "references": [
       {
         "title": "API Security Flaws Found in 38 Banks: Open Banking Information Security Still Has a Long Way to Go",

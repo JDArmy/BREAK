@@ -13,7 +13,7 @@
       "移动应用安全",
       "行政责令整改"
     ],
-    "summary": "2020年11月，广东省通信管理局通报88款问题App，存在“反编译”“明文存储密码”等安全隐患。被通报App包括向日葵保险、夸克等，其Java代码反编译风险被明确指出，运营企业被责令整改或行政处罚。",
+    "summary": "2020年11月，广东省通信管理局通报88款问题App，指出部分App存在“反编译”“明文存储密码”等安全隐患，并要求相关运营企业整改或依法接受行政处罚。公开报道中列举的典型问题App包括“捷停车”“驾考家园”“凯立德导航”等。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0051"
@@ -28,7 +28,7 @@
         "link": "https://www.thepaper.cn/newsDetail_forward_10140661"
       }
     ],
-    "updated": "2026-06-24",
+    "updated": "2026-07-08",
     "incidentTime": "2020-11",
     "relatedAttackTools": [
       "AT0028"

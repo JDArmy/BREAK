@@ -12,7 +12,7 @@
       "PowerShell Gallery",
       "恶意包投毒"
     ],
-    "summary": "Karneades/PackAttack项目记录了2017年至2023年间发生在PyPI、npm、RubyGems和PowerShell Gallery等平台的包管理器攻击事件，包括typosquatting和依赖混淆攻击。",
+    "summary": "ecosyste-ms/typosquatting-dataset整理了公开安全研究中的已知包名仿冒恶意包及其目标映射，可用于分析包管理器生态中的typosquatting攻击。若需写入Karneades/PackAttack项目、2017年至2023年时间范围、PyPI/npm/RubyGems/PowerShell Gallery等覆盖平台，应补充PackAttack项目主页或数据集说明。",
     "category": "security_incident",
     "relatedRisks": [
       "R0228"
@@ -23,7 +23,7 @@
         "link": "https://github.com/ecosyste-ms/typosquatting-dataset"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0052"

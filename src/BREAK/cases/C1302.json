@@ -12,7 +12,7 @@
       "非人类身份",
       "API密钥滥用"
     ],
-    "summary": "攻击者通过GitHub Actions强制推送75个标签，导致Trivy项目的CI/CD机密暴露，攻击者可利用这些泄露的令牌窃取数据并在开发者系统中建立持久化访问，构成典型的供应链攻击。",
+    "summary": "攻击者强制推送了 aquasecurity/trivy-action 仓库中的75个版本标签，用于交付可窃取CI/CD敏感机密的恶意软件，相关机密存在被窃取风险。该事件说明GitHub Actions标签、发布流程和CI/CD凭证若被攻击者控制，会迅速转化为下游构建链路中的供应链攻击入口。",
     "category": "security_incident",
     "relatedRisks": [
       "R0149"
@@ -27,7 +27,7 @@
         "link": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2026-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

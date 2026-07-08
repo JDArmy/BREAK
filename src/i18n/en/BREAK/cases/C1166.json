@@ -10,7 +10,7 @@
       "virtual currency theft",
       "network packet interception"
     ],
-    "summary": "A network engineer named Li Dong exploited vulnerabilities such as SQL injection and unauthorized access on a gambling website's server, database, or agent backend to steal commission funds. He exfiltrated databases and intercepted network packets to identify and filter high-commission agent accounts, ultimately replacing their bank account information to divert funds.",
+    "summary": "Network engineer Li Dong exploited a server program vulnerability in an overseas gambling website to steal personal information, identify high-rebate agent accounts, and replace their rebate bank accounts. The report did not disclose the specific vulnerability type or data acquisition method, so it should not be stated as SQL injection, unauthorized access, database export, or packet interception as confirmed technical paths. Police in two locations seized 183 bitcoins in the case.",
     "references": [
       {
         "title": "Network Engineer Charged with Stealing Gambling Site Funds; Two Police Forces Seize 183 Bitcoins - The Paper",

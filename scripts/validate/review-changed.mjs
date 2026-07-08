@@ -10,6 +10,14 @@ import { getChangedEntities, parseArgs } from './changed-entities.mjs';
 const opts = parseArgs(process.argv.slice(2));
 const skip = new Set(opts.skip);
 
+function nowForLog() {
+  return new Date().toISOString().replace('T', ' ').replace(/\.\d+Z$/, 'Z');
+}
+
+function secondsSince(ms) {
+  return ((Date.now() - ms) / 1000).toFixed(1);
+}
+
 // 子评审配置：[name, script, appliesToTypes]
 const REVIEWERS = [
   ['risk-avoidance', 'review-risk-avoidance.mjs', ['risks']],
@@ -42,6 +50,7 @@ const toRun = REVIEWERS.filter(([name, , types]) => {
 
 console.log(`\n========== review:changed 编排 ==========`);
 console.log(`变更实体类型：${opts.full ? '(全库模式)' : [...changedTypes].join(', ') || '(无变更)'}`);
+console.log(`变更实体数量：${changed.length}`);
 console.log(`待跑子评审：${toRun.map((r) => r[0]).join(', ') || '(无)'}\n`);
 
 if (!toRun.length) {
@@ -53,7 +62,8 @@ if (!toRun.length) {
 const summary = { generatedAt: new Date().toISOString(), reviewers: [], hasFail: false };
 
 for (const [name, script, types] of toRun) {
-  console.log(`\n--- 跑 ${name} ---`);
+  const reviewerStartMs = Date.now();
+  console.log(`\n[${nowForLog()}] --- 跑 ${name}（${script}）---`);
   // 构造 args：传 --base 和可选 --keys/--limit/--staged-only
   const args = ['scripts/validate/' + script];
   if (opts.baseRef && !opts.full) args.push('--base', opts.baseRef);
@@ -72,12 +82,14 @@ for (const [name, script, types] of toRun) {
   let subprocessExit1 = false;
   try {
     const { execFileSync } = await import('node:child_process');
+    console.log(`[${nowForLog()}] review:changed 启动 ${name}: node ${args.join(' ')}`);
     execFileSync('node', args, { cwd: projectRoot, stdio: 'inherit', encoding: 'utf8' });
   } catch (e) {
     // 子脚本 exit 1：可能是 fail（门禁阻断，报告已落盘）或崩溃（报告可能未落盘）
     error = String(e.message || e).slice(0, 300);
     subprocessExit1 = true;
   }
+  console.log(`[${nowForLog()}] review:changed 完成 ${name}: ${secondsSince(reviewerStartMs)}s`);
   // 读取报告（无论子脚本是否 exit 1，报告可能已落盘）
   if (fs.existsSync(reportPath)) {
     try {

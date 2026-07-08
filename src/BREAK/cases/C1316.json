@@ -13,7 +13,7 @@
       "新加坡",
       "凭证窃取"
     ],
-    "summary": "Blackpanda应急响应团队处理了一起针对新加坡某IT服务公司的AiTM钓鱼攻击事件。攻击者通过实时中间人钓鱼页面，成功窃取了用户凭证和一次性密码（OTP），导致MFA保护被绕过。攻击者利用窃取的会话令牌接管了账户。",
+    "summary": "2025年10月，Blackpanda应急响应团队处理了一起针对新加坡某IT服务公司的AiTM钓鱼攻击事件。攻击者通过中间人钓鱼方式窃取凭证并绕过MFA，导致企业邮箱账户被攻陷。后续攻击者访问企业邮箱、注册恶意Azure AD应用，并向500多名收件人发起钓鱼活动。",
     "category": "security_incident",
     "relatedRisks": [
       "R0036"
@@ -24,8 +24,8 @@
         "link": "https://www.blackpanda.com/case-studies/singapore-it-services-firm-bec-aitm-2025"
       }
     ],
-    "updated": "2026-07-05",
-    "incidentTime": "2025",
+    "updated": "2026-07-08",
+    "incidentTime": "2025-10",
     "relatedAttackTools": [
       "AT0072",
       "AT0063"

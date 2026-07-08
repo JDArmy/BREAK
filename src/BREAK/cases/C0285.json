@@ -11,7 +11,7 @@
       "160GB",
       "内部数据"
     ],
-    "summary": "2023年2月中旬，总部位于中国台湾的科技企业宏碁公司遭黑客攻击，化名“Kernelware”的黑客声称窃取了总计160GB的大量敏感信息，包括655个目录和2869个文件。被盗数据涉及公司内部及用户敏感资料，通过非法途径从内部系统外流至外部。",
+    "summary": "2023年2月中旬，总部位于中国台湾的科技企业宏碁公司遭黑客攻击，化名“Kernelware”的黑客声称窃取了总计160GB的大量敏感信息，包括655个目录和2869个文件。后续报道显示，宏碁确认其一台服务器遭到入侵，外泄内容主要涉及公司敏感信息。",
     "category": "security_incident",
     "relatedRisks": [
       "R0028"
@@ -34,8 +34,8 @@
         "link": "https://www.bitdefender.com/en-us/blog/hotfor-security/acer-confirms-data-breach-intellectual-property-info-at-risk"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2024-06",
+    "updated": "2026-07-08",
+    "incidentTime": "2023-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

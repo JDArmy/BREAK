@@ -13,7 +13,7 @@
       "API密钥滥用",
       "非人类身份"
     ],
-    "summary": "TeamPCP组织在2026年3月19日后利用被盗的CI/CD凭证入侵了2个GitHub Actions工作流，导致凭证失窃并可能发起供应链攻击，攻击者通过自动化管道令牌实现横向移动和持久化访问。",
+    "summary": "TeamPCP组织在2026年3月19日前后利用被盗CI凭证入侵Checkmarx相关GitHub Actions工作流，向两个工作流植入凭证窃取恶意软件，可能发起供应链攻击。网页支持TeamPCP、被盗CI凭证、两个工作流和凭证窃取事实；横向移动和持久化访问后果需补充来源后再写入。",
     "category": "security_incident",
     "relatedRisks": [
       "R0149"
@@ -28,7 +28,7 @@
         "link": "https://checkmarx.com/blog/ongoing-security-updates/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-08",
     "incidentTime": "2026-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

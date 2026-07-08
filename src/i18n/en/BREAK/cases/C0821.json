@@ -13,7 +13,7 @@
       "employee credential leak",
       "payroll redirection"
     ],
-    "summary": "The U.S. Internet Crime Complaint Center (IC3) issued a warning detailing how cybercriminals use brute force, phishing emails, and social engineering to obtain employee login credentials, then take over corporate bank, payroll, or health savings accounts. By altering direct deposit information, they redirect employee wages or company funds to accounts they control, causing direct financial loss.",
+    "summary": "The FBI Internet Crime Complaint Center issued an account takeover fraud warning explaining that cybercriminals can obtain employee login credentials through brute forcing, phishing emails, and similar methods, then take over corporate bank, payroll, or health savings accounts. Such attacks can result in wages or corporate funds being redirected to attacker-controlled accounts and cause direct financial losses, highlighting the need for abnormal login monitoring, credential protection, and payment-change review.",
     "references": [
       {
         "title": "Account Takeover Fraud (ATO) - Internet Crime Complaint Center",

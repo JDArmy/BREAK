@@ -12,7 +12,7 @@
       "敏感信息",
       "员工泄密"
     ],
-    "summary": "三星电子引入ChatGPT不到20天即爆出芯片机密泄露事件。员工在使用过程中将敏感数据输入模型，导致公司核心商业秘密被生成式AI系统吸收并可能外泄，凸显了生成式AI在自动收集用户信息作为训练数据时带来的严重数据泄露风险。",
+    "summary": "三星电子开放使用ChatGPT后不久即被曝出现不当使用风险。报道称员工将敏感数据输入外部生成式AI服务，相关内容可能被外部AI服务保存或用于训练，存在外泄风险。该事件凸显企业在引入生成式AI工具时需要限制敏感数据输入、配置审计和制定员工使用规范。",
     "category": "security_incident",
     "relatedRisks": [
       "R0071"
@@ -23,7 +23,7 @@
         "link": "https://economist.co.kr/article/view/ecn202303300057"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-08",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0021"
