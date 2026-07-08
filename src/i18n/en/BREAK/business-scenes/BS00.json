@@ -3,28 +3,28 @@
     "title": "All Scenes",
     "riskDimensions": {
       "RD01": {
-        "title": "Transaction Dimension"
+        "title": "Transaction and Entitlement Risk"
       },
       "RD02": {
-        "title": "Operations Dimension"
+        "title": "Content and Ecosystem Governance Risk"
       },
       "RD03": {
-        "title": "Identity Dimension"
+        "title": "Account and Identity Risk"
       },
       "RD04": {
-        "title": "Adversarial Dimension"
+        "title": "Platform, Interface, and Automation Abuse Risk"
       },
       "RD05": {
-        "title": "AI and Data Dimension"
+        "title": "Data, Algorithm, and Model Risk"
       },
       "RD06": {
-        "title": "Blockchain and Virtual Asset Dimension"
+        "title": "Virtual Asset and Emerging Technology Risk"
       },
       "RD07": {
-        "title": "IoT and Device Dimension"
+        "title": "Device, Physical, and Infrastructure Risk"
       },
       "RD08": {
-        "title": "Metaverse and Spatial Computing Dimension"
+        "title": "Internal, Supply-Chain, and Compliance Risk"
       }
     },
     "riskScenes": {
@@ -113,6 +113,6 @@
         "title": "Location, Trajectory, and Spatial Data Fraud"
       }
     },
-    "description": "Cross-domain business security risk scenarios covering all industries, spanning transaction, operations, identity, adversarial, AI & data, and other dimensions."
+    "description": "Cross-domain business security risk scenarios covering all industries, organized by business risk domains such as transaction and entitlement, content and ecosystem governance, account and identity, platform/interface automation abuse, data/algorithm/model, virtual assets and emerging technology, device/physical infrastructure, and internal supply-chain compliance."
   }
 }

@@ -2,42 +2,48 @@
   "BS01": {
     "title": "数字金融",
     "description": "数字金融行业涵盖银行、支付、信贷、理财、证券等业务场景，面临营销欺诈、交易风控、身份盗用、反洗钱合规等安全风险。",
-    "updated": "2026-07-05",
+    "updated": "2026-07-08",
     "riskDimensions": {
       "RD01": {
-        "title": "交易维度",
+        "title": "交易与权益风险",
         "riskScenes": [
-          "RS01",
           "RS08",
           "RS25"
         ],
-        "updated": "2024-01-15"
+        "updated": "2026-07-08"
       },
       "RD02": {
-        "title": "运营维度",
+        "title": "内容与生态治理风险",
+        "riskScenes": [
+          "RS01"
+        ],
+        "updated": "2026-07-08"
+      },
+      "RD03": {
+        "title": "账号与身份风险",
+        "riskScenes": [
+          "RS07",
+          "RS09"
+        ],
+        "updated": "2026-07-08"
+      },
+      "RD04": {
+        "title": "平台、接口与自动化对抗风险",
+        "riskScenes": [
+          "RS04",
+          "RS14"
+        ],
+        "updated": "2026-07-08"
+      },
+      "RD08": {
+        "title": "内部、供应链与合规风险",
         "riskScenes": [
           "RS02",
           "RS06",
           "RS28",
           "RS26"
         ],
-        "updated": "2024-01-15"
-      },
-      "RD03": {
-        "title": "身份维度",
-        "riskScenes": [
-          "RS07",
-          "RS09"
-        ],
-        "updated": "2024-01-15"
-      },
-      "RD04": {
-        "title": "对抗维度",
-        "riskScenes": [
-          "RS04",
-          "RS14"
-        ],
-        "updated": "2024-01-15"
+        "updated": "2026-07-08"
       }
     },
     "riskScenes": {

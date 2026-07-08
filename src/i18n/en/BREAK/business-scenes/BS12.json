@@ -3,16 +3,19 @@
     "title": "Insurance",
     "riskDimensions": {
       "RD01": {
-        "title": "Transaction Dimension"
-      },
-      "RD02": {
-        "title": "Operations Dimension"
+        "title": "Transaction and Entitlement Risk"
       },
       "RD03": {
-        "title": "Identity Dimension"
+        "title": "Account and Identity Risk"
       },
       "RD04": {
-        "title": "Adversarial Dimension"
+        "title": "Platform, Interface, and Automation Abuse Risk"
+      },
+      "RD05": {
+        "title": "Data, Algorithm, and Model Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
       }
     },
     "riskScenes": {

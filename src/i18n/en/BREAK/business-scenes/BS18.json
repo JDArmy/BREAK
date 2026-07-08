@@ -4,16 +4,10 @@
     "description": "Logistics scenarios cover express delivery, full-truckload and capacity dispatching, warehouse handover, and merchant/account governance, facing after-sales abuse, crowdsourced order-splitting arbitrage, fake route billing, capacity falsification, weight shaving, and professional-market account hijacking.",
     "riskDimensions": {
       "RD01": {
-        "title": "Transaction Dimension"
-      },
-      "RD02": {
-        "title": "Operations Dimension"
+        "title": "Transaction and Entitlement Risk"
       },
       "RD03": {
-        "title": "Identity Dimension"
-      },
-      "RD04": {
-        "title": "Adversarial Dimension"
+        "title": "Account and Identity Risk"
       }
     },
     "riskScenes": {

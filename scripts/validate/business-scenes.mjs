@@ -23,6 +23,7 @@ const defaultCrossSceneReason = {
   R0097: '借助平台赌博既是合规问题，也是内容/生态治理问题。',
   R0110: '平台色情风险同时影响内容治理与行业合规。',
   R0115: '恶意广告投放同时影响内容生态与合规治理。',
+  'R0012-001': '抢红包外挂既属于直播互动权益滥用，也依赖客户端和自动化对抗链路。',
   R0124: '未成年人保护合规风险在多个行业作为专题复用。',
   R0133: '隐私计算滥用风险在人工智能和行业合规中均需单列。',
   R0222: '影子 API 同时属于接口自动化攻击面和 API/云原生资产治理问题。',
@@ -37,6 +38,7 @@ const defaultCrossSceneReason = {
   R0249: 'CDN 缓存投毒同时属于接口自动化输入污染和边缘云原生配置安全问题。',
   R0250: '边缘函数配置滥用同时涉及接口链路对抗和边缘云原生配置治理。',
   R0259: 'C2C盲销诈骗同时属于快递快运售后滥用与商家账号治理两个风险问题域。',
+  'R0085-002': '双重/三重勒索同时影响账号身份安全和合规治理处置。',
 };
 
 function loadBusinessScenes() {
@@ -69,6 +71,15 @@ function normalizeSceneRef(sceneKey, sceneTitle, dimensionTitle) {
 
 function parentRiskId(riskId) {
   return riskId.includes('-') ? riskId.split('-')[0] : '';
+}
+
+function sceneRefsForRisk(riskId, referencedInRiskScenes) {
+  const directRefs = referencedInRiskScenes.get(riskId) || [];
+  if (directRefs.length > 0) return directRefs;
+
+  const parentId = parentRiskId(riskId);
+  if (!parentId) return directRefs;
+  return referencedInRiskScenes.get(parentId) || [];
 }
 
 function uniqueBy(values, keyFn) {
@@ -170,7 +181,7 @@ function collectAudit() {
   }
 
   for (const riskId of riskIds) {
-    const sceneRefs = referencedInRiskScenes.get(riskId) || [];
+    const sceneRefs = sceneRefsForRisk(riskId, referencedInRiskScenes);
     const topRefs = referencedAtTopLevel.get(riskId) || [];
 
     if (sceneRefs.length === 0 && topRefs.length === 0) {
@@ -276,11 +287,11 @@ function collectAudit() {
     summary: {
       risks: risks.length,
       coveredByPrimaryScene: [...riskIds].filter(
-        (riskId) => (referencedInRiskScenes.get(riskId) || []).length > 0,
+        (riskId) => sceneRefsForRisk(riskId, referencedInRiskScenes).length > 0,
       ).length,
       topLevelOnly: [...riskIds].filter(
         (riskId) =>
-          (referencedInRiskScenes.get(riskId) || []).length === 0 &&
+          sceneRefsForRisk(riskId, referencedInRiskScenes).length === 0 &&
           (referencedAtTopLevel.get(riskId) || []).length > 0,
       ).length,
       crossSceneWithoutReason: issues.filter((item) => item.type === 'cross_scene_without_reason').length,

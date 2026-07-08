@@ -2,42 +2,42 @@
   "BS15": {
     "title": "Web3与区块链",
     "description": "去中心化Web、区块链技术、加密货币、DeFi、NFT等Web3应用场景的安全风险",
-    "updated": "2026-07-05",
+    "updated": "2026-07-08",
     "riskDimensions": {
-      "RD02": {
-        "title": "运营维度",
-        "riskScenes": [
-          "RS02",
-          "RS06",
-          "RS28"
-        ],
-        "updated": "2026-06-16"
-      },
       "RD03": {
-        "title": "身份维度",
+        "title": "账号与身份风险",
         "riskScenes": [
           "RS07",
           "RS09"
         ],
-        "updated": "2026-06-16"
+        "updated": "2026-07-08"
       },
       "RD04": {
-        "title": "对抗维度",
+        "title": "平台、接口与自动化对抗风险",
         "riskScenes": [
           "RS04",
           "RS14"
         ],
-        "updated": "2026-06-16"
+        "updated": "2026-07-08"
       },
       "RD06": {
-        "title": "区块链与虚拟资产维度",
+        "title": "虚拟资产与新兴技术风险",
         "riskScenes": [
           "RS15",
           "RS16",
           "RS17",
           "RS18"
         ],
-        "updated": "2026-06-16"
+        "updated": "2026-07-08"
+      },
+      "RD08": {
+        "title": "内部、供应链与合规风险",
+        "riskScenes": [
+          "RS02",
+          "RS06",
+          "RS28"
+        ],
+        "updated": "2026-07-08"
       }
     },
     "riskScenes": {

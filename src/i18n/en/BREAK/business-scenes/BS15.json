@@ -3,20 +3,17 @@
     "title": "Web3 & Blockchain",
     "description": "Security risks in decentralized Web, blockchain technology, cryptocurrency, DeFi, NFT and other Web3 application scenarios",
     "riskDimensions": {
-      "RD05": {
-        "title": "Blockchain Security"
-      },
-      "RD02": {
-        "title": "Operations Dimension"
-      },
       "RD03": {
-        "title": "Identity Dimension"
+        "title": "Account and Identity Risk"
       },
       "RD04": {
-        "title": "Adversarial Dimension"
+        "title": "Platform, Interface, and Automation Abuse Risk"
       },
       "RD06": {
-        "title": "Blockchain and Virtual Asset Dimension"
+        "title": "Virtual Asset and Emerging Technology Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
       }
     },
     "riskScenes": {

@@ -3,20 +3,11 @@
     "title": "Embodied Intelligence",
     "description": "Embodied intelligence scenarios cover humanoid robots, service robots, industrial collaborative robots, medical/surgical robots, autonomous-driving embodied systems, and robot swarms — intelligent agents with physical bodies and perception-decision capabilities, facing VLA model adversarial attacks, teleoperation channel hijacking, robot middleware vulnerabilities, physical harm and functional safety, swarm coordination loss-of-control, and physical-world prompt injection.",
     "riskDimensions": {
-      "RD01": {
-        "title": "Perception & Physical Adversarial Dimension"
-      },
-      "RD02": {
-        "title": "Model & Agent Dimension"
-      },
-      "RD03": {
-        "title": "Device & Middleware Dimension"
-      },
-      "RD04": {
-        "title": "Operations & Compliance Dimension"
-      },
       "RD05": {
-        "title": "Identity & Coordination Dimension"
+        "title": "Data, Algorithm, and Model Risk"
+      },
+      "RD07": {
+        "title": "Device, Physical, and Infrastructure Risk"
       }
     },
     "riskScenes": {

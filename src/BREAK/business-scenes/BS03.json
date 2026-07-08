@@ -2,46 +2,58 @@
   "BS03": {
     "title": "航旅",
     "description": "航旅行业涵盖机票预订、酒店住宿、旅游产品、行程管理等业务场景，面临黄牛抢票、虚假预订、退改签欺诈等安全风险。",
-    "updated": "2026-07-05",
+    "updated": "2026-07-08",
     "riskDimensions": {
       "RD01": {
-        "title": "交易维度",
+        "title": "交易与权益风险",
         "riskScenes": [
           "RS08",
           "RS11",
           "RS24",
           "RS25"
         ],
-        "updated": "2024-01-15"
+        "updated": "2026-07-08"
       },
       "RD02": {
-        "title": "运营维度",
+        "title": "内容与生态治理风险",
         "riskScenes": [
           "RS01",
-          "RS02",
-          "RS05",
-          "RS06",
-          "RS28",
-          "RS26"
+          "RS05"
         ],
-        "updated": "2024-01-15"
+        "updated": "2026-07-08"
       },
       "RD03": {
-        "title": "身份维度",
+        "title": "账号与身份风险",
         "riskScenes": [
           "RS07",
           "RS09"
         ],
-        "updated": "2024-01-15"
+        "updated": "2026-07-08"
       },
       "RD04": {
-        "title": "对抗维度",
+        "title": "平台、接口与自动化对抗风险",
         "riskScenes": [
           "RS04",
           "RS10",
           "RS14"
         ],
-        "updated": "2024-01-15"
+        "updated": "2026-07-08"
+      },
+      "RD05": {
+        "title": "数据、算法与模型风险",
+        "riskScenes": [
+          "RS26"
+        ],
+        "updated": "2026-07-08"
+      },
+      "RD08": {
+        "title": "内部、供应链与合规风险",
+        "riskScenes": [
+          "RS02",
+          "RS06",
+          "RS28"
+        ],
+        "updated": "2026-07-08"
       }
     },
     "riskScenes": {

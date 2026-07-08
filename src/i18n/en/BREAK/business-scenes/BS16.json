@@ -3,20 +3,17 @@
     "title": "Internet of Things",
     "description": "Security risks in IoT devices, Industrial IoT (IIoT), Connected Vehicles (V2X), smart home, medical IoT and other scenarios",
     "riskDimensions": {
-      "RD06": {
-        "title": "IoT Security"
-      },
-      "RD02": {
-        "title": "Operations Dimension"
-      },
       "RD03": {
-        "title": "Identity Dimension"
+        "title": "Account and Identity Risk"
       },
       "RD04": {
-        "title": "Adversarial Dimension"
+        "title": "Platform, Interface, and Automation Abuse Risk"
       },
       "RD07": {
-        "title": "IoT and Device Dimension"
+        "title": "Device, Physical, and Infrastructure Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
       }
     },
     "riskScenes": {
