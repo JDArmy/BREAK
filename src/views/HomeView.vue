@@ -8,6 +8,8 @@ import { useDrawerRoute } from "@/composables/useDrawerRoute";
 import { useHomeSceneLayout, useSubRiskToggle } from "@/composables/useHomeSceneLayout";
 import { entityRegistry } from "@/BREAK/entityRegistry";
 import { useCases } from "@/composables/useCases";
+import { useEntityResolver } from "@/composables/useEntityResolver";
+import EntityPopoverContent from "@/components/entity/EntityPopoverContent.vue";
 import { useI18n } from "vue-i18n";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
@@ -22,6 +24,7 @@ const router = useRouter();
 const route = useRoute();
 const { locale, t, te } = useI18n();
 const { cases, ensureCases } = useCases();
+const { resolve: resolveEntity } = useEntityResolver();
 const defaultBusinessSceneKey = "BS00";
 
 const { isMobile } = useBreakpoints();
@@ -103,12 +106,6 @@ const getRiskSceneTitle = (sceneKey: string) =>
 
 const getRiskTitle = (riskKey: string) =>
   getLocalizedText(`BREAK.risks.${riskKey}.title`, BREAK.risks[riskKey]?.title ?? riskKey);
-
-const getRiskDefinition = (riskKey: string) =>
-  getLocalizedText(`BREAK.risks.${riskKey}.definition`, BREAK.risks[riskKey]?.definition ?? "");
-
-const getRiskTooltipTitle = (riskKey: string) =>
-  `${riskKey}: ${getRiskTitle(riskKey)}`;
 
 const shouldEnableMatrixScroll = computed(() => shouldEnableScroll.value && !isMobile.value);
 
@@ -414,8 +411,7 @@ const caseDrawer = useDrawerRoute({
                   <td class="parent-risk-link">
                     <el-tooltip effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
                       <template #content>
-                        <div class="home-risk-tooltip-title">{{ getRiskTooltipTitle(rKey) }}</div>
-                        <div class="home-risk-tooltip-definition">{{ getRiskDefinition(rKey) }}</div>
+                        <EntityPopoverContent v-if="resolveEntity(rKey)" :entity="resolveEntity(rKey)!" />
                       </template>
                       <router-link
                         class="link"
@@ -442,8 +438,7 @@ const caseDrawer = useDrawerRoute({
                   <td class="sub-risk-link">
                     <el-tooltip effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
                       <template #content>
-                        <div class="home-risk-tooltip-title">{{ getRiskTooltipTitle(srKey) }}</div>
-                        <div class="home-risk-tooltip-definition">{{ getRiskDefinition(srKey) }}</div>
+                        <EntityPopoverContent v-if="resolveEntity(srKey)" :entity="resolveEntity(srKey)!" />
                       </template>
                       <router-link
                         class="link"
@@ -461,8 +456,7 @@ const caseDrawer = useDrawerRoute({
               <!-- 无子风险时 -->
               <el-tooltip v-else effect="break-theme" placement="top" :show-after="300" popper-class="home-risk-tooltip">
                 <template #content>
-                  <div class="home-risk-tooltip-title">{{ getRiskTooltipTitle(rKey) }}</div>
-                  <div class="home-risk-tooltip-definition">{{ getRiskDefinition(rKey) }}</div>
+                  <EntityPopoverContent v-if="resolveEntity(rKey)" :entity="resolveEntity(rKey)!" />
                 </template>
                 <router-link
                   class="link"
@@ -713,18 +707,6 @@ const caseDrawer = useDrawerRoute({
 :global(.home-risk-tooltip.el-popper.is-break-theme .el-popper__arrow::before) {
   border-color: var(--break-tooltip-border) !important;
   background: var(--break-tooltip-bg) !important;
-}
-
-:global(.home-risk-tooltip-title) {
-  margin-bottom: 4px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-:global(.home-risk-tooltip-definition) {
-  line-height: 1.55;
-  white-space: normal;
-  overflow-wrap: anywhere;
 }
 
 .stats {
