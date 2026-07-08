@@ -1,5 +1,16 @@
 # Change log
 
+## 2.43.0
+
+新增文档系统（docs 目录 + 文档页）与桌面菜单响应式收起
+
+- 在项目根新增 `docs/zh/` 与 `docs/en/` 双语文档源（各 5 篇：快速上手、防御者使用指南、红队使用指南、数据模型与字段说明、贡献与维护），用 frontmatter 声明 title/category/order/slug。
+- 新增构建脚本 `scripts/validate/build-docs.mjs`：build 期用 marked 渲染 markdown + DOMPurify 清洗防 XSS，注入 heading 锚点，产出 `public/data/docs-{zh,en}.json`。新增 `npm run generate:docs`，并插入 `dev`/`build`/`build:fast`/`deploy:build` 四个构建链（与 `generate:changelog` 并列，在 `build-only` 之前）。
+- 前端新增「文档」页：`src/views/DocsView.vue` 复用 `KnowledgeSplitView` 左右分栏，`fetch` docs json + `v-html` 渲染；`src/router/index.ts` 加 `/docs` 与 `/docs/:slug` 路由及标题映射；`MenuList.vue`「更多」下拉/移动端分组新增「文档」入口并扩展高亮逻辑；i18n 补 `menu.docs` 与 `search.docsPlaceholder`（中英）。
+- 文档页支持中英双语随站点语言切换、URL 直链定位（`/docs/<slug>`）、首篇兜底跳转、表格/代码块/锚点样式。
+- 桌面端菜单响应式收起：屏幕变窄时从右往左依次将菜单项（GitHub→语言→主题→JDArmy→更多→知识库→关系图谱→首页）收进一个 `<Menu />` 图标的汉堡菜单，避免溢出或折行。用 ResizeObserver 实时测宽自动收起/放回，随语言切换的文案宽度变化自适应；汉堡内平铺被收起项的入口（含知识库/更多/主题/语言的子项展开）。
+- 顺带修复基线既有数据漂移：`cases-loader.test.ts` Case 计数 1774→1782、`DATA_SCHEMA.md` 同步至 2.43.0 与 1782 条 Case。
+
 ## 2.42.40+
 
 近期未发布变更汇总（基于最近两周提交）

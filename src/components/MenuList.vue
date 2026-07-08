@@ -7,7 +7,8 @@ import iconTranslate from "@/components/icons/iconTranslate.vue";
 import { ArrowDown, Search, Menu as MenuIcon, Loading } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
-import { onMounted, onUnmounted, ref } from "vue";
+import { useTheme } from "@/composables/useTheme";
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { preloadRelationView } from "@/router";
 import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
@@ -126,6 +127,11 @@ const handleMoreCommand = (command: string) => {
     mobileMenuOpen.value = false;
     return;
   }
+  if (command === "docs") {
+    void router.push("/docs");
+    mobileMenuOpen.value = false;
+    return;
+  }
   if (command === "feedback") {
     openProjectFeedback();
   }
@@ -172,6 +178,13 @@ const handleGlobalKeydown = (event: KeyboardEvent) => {
 
 onMounted(() => {
   document.addEventListener("keydown", handleGlobalKeydown);
+  // 桌面端菜单响应式收起：监听菜单容器尺寸变化，溢出时从右往左收进汉堡
+  if (window.innerWidth >= 768 && desktopMenuRef.value && typeof ResizeObserver !== "undefined") {
+    resizeObserver = new ResizeObserver(() => scheduleRecalc());
+    resizeObserver.observe(desktopMenuRef.value);
+    // 首次测量（nextTick 确保 DOM 渲染完成）
+    void nextTick(() => scheduleRecalc());
+  }
   if (window.innerWidth >= 768) {
     preloadSearchDialog();
     prefetchAllKnowledgeViews();
@@ -186,10 +199,20 @@ onMounted(() => {
 
 onUnmounted(() => {
   document.removeEventListener("keydown", handleGlobalKeydown);
+  if (recalcFrame) cancelAnimationFrame(recalcFrame);
+  if (resizeObserver) {
+    resizeObserver.disconnect();
+    resizeObserver = null;
+  }
   while (pendingCleanups.length > 0) {
     const cleanup = pendingCleanups.pop();
     cleanup?.();
   }
+});
+
+// 语言切换会改变菜单文案宽度，切换完成后重算收起数
+watch(locale, () => {
+  void nextTick(() => scheduleRecalc());
 });
 
 const isKnowledgeActive = (fullPath: string) => {
@@ -204,7 +227,10 @@ const isKnowledgeActive = (fullPath: string) => {
   ].includes(active);
 };
 
-const isMoreActive = (fullPath: string) => getActiveIndex(fullPath) === "/changelog";
+const isMoreActive = (fullPath: string) => {
+  const active = getActiveIndex(fullPath);
+  return active === "/changelog" || active === "/docs";
+};
 
 const getActiveKnowledge = (fullPath: string) => {
   const path = getActiveIndex(fullPath);
@@ -225,11 +251,102 @@ const getActiveIndex = (fullPath: string) => {
   );
   if (knowledgesMatch) return `/knowledges/${knowledgesMatch[1]}/list`;
   if (fullPath.startsWith("/changelog")) return "/changelog";
+  if (fullPath.startsWith("/docs")) return "/docs";
   if (fullPath.match(/^\/business-scene\//)) return "/";
   if (fullPath.match(/^\/home\//)) return "/";
   if (fullPath.match(/^\/relations\//)) return "/relations/risk-relation/risk/R0001";
 
   return fullPath.split("#")[0];
+};
+
+// ============ 桌面端菜单响应式收起（从右往左收进汉堡） ============
+// 可收起项按从左到右顺序排列；hiddenCount 表示从右往左收起几项。
+// 屏幕变窄溢出时 hiddenCount++，变宽有余量时 hiddenCount--。
+const { setTheme } = useTheme();
+
+// 可收起项配置：key 唯一标识，kind 决定汉堡内渲染方式
+type CollapsibleKind = "link" | "knowledge" | "more" | "jdarmy" | "theme" | "locale" | "github";
+const COLLAPSIBLE_ITEMS: { key: string; kind: CollapsibleKind }[] = [
+  { key: "home", kind: "link" },
+  { key: "relations", kind: "link" },
+  { key: "knowledge", kind: "knowledge" },
+  { key: "more", kind: "more" },
+  { key: "jdarmy", kind: "jdarmy" },
+  { key: "theme", kind: "theme" },
+  { key: "locale", kind: "locale" },
+  { key: "github", kind: "github" },
+];
+const COLLAPSIBLE_TOTAL = COLLAPSIBLE_ITEMS.length;
+
+const desktopMenuRef = ref<HTMLElement | null>(null);
+const hiddenCount = ref(0);
+let resizeObserver: ResizeObserver | null = null;
+let recalcFrame: number | undefined;
+let isRecalculating = false;
+
+/** 第 index（从左 0 起）项是否被收进汉堡：从右往左收，收起右侧 hiddenCount 项 */
+const isItemHidden = (index: number) => index >= COLLAPSIBLE_TOTAL - hiddenCount.value;
+
+/** 当前被收进汉堡的项配置（保持从左到右顺序，便于汉堡内分组展示） */
+const hiddenItems = computed(() =>
+  COLLAPSIBLE_ITEMS.filter((_, i) => isItemHidden(i)),
+);
+
+/** 汉堡按钮是否高亮：任一被收起项的 active 态命中当前路由 */
+const isOverflowActive = computed(() => {
+  const active = getActiveIndex(route.fullPath);
+  return hiddenItems.value.some((item) => {
+    if (item.key === "home") return active === "/";
+    if (item.key === "relations") return active.startsWith("/relations/");
+    if (item.key === "knowledge") return isKnowledgeActive(route.fullPath);
+    if (item.key === "more") return isMoreActive(route.fullPath);
+    return false; // theme/locale/github/jdarmy 无路由 active 态
+  });
+});
+
+/**
+ * 测量菜单是否溢出，调整 hiddenCount（单次调用内完整收敛，async 等待 DOM 更新）。
+ * - 溢出：逐项收起最右未收起项，每收一项 await nextTick 再测，直到不溢出或全部收起
+ * - 未溢出：逐项试探放回最左已收起项，放回后 await nextTick 再测，溢出则回退并停止
+ * isRecalculating 标志 + 单次完整收敛，避免 ResizeObserver 重入与放回/收起抖动。
+ */
+const recalculateOverflow = async () => {
+  // 测量 el-menu（ul.el-menu--horizontal）的溢出：它是 flex nowrap 容器，
+  // 子项总宽超过自身宽度时 scrollWidth > clientWidth。nav 仅作为 ResizeObserver 触发器。
+  const el = desktopMenuRef.value?.querySelector<HTMLElement>(".el-menu");
+  if (!el) return;
+  const overflowing = () => el.scrollWidth > el.clientWidth + 1;
+  let guard = COLLAPSIBLE_TOTAL + 1;
+
+  // 收起循环
+  while (overflowing() && hiddenCount.value < COLLAPSIBLE_TOTAL && guard-- > 0) {
+    hiddenCount.value++;
+    await nextTick();
+  }
+
+  // 放回循环：试探性放回，放回后仍不溢出才保留
+  while (hiddenCount.value > 0 && guard-- > 0) {
+    const prev = hiddenCount.value;
+    hiddenCount.value--;
+    await nextTick();
+    if (overflowing()) {
+      hiddenCount.value = prev;
+      break;
+    }
+  }
+};
+
+const scheduleRecalc = () => {
+  if (isRecalculating) return;
+  isRecalculating = true;
+  if (recalcFrame) cancelAnimationFrame(recalcFrame);
+  recalcFrame = requestAnimationFrame(async () => {
+    try {
+      await recalculateOverflow();
+    } finally {
+      isRecalculating = false;
+    }
+  });
 };
 </script>
 
@@ -328,6 +445,9 @@ const getActiveIndex = (fullPath: string) => {
         <div class="mobile-nav-item" :class="{ active: route.fullPath.startsWith('/changelog') }" @click="handleMobileNav('/changelog')">
           <span>{{ $t("menu.changelog") }}</span>
         </div>
+        <div class="mobile-nav-item" :class="{ active: route.fullPath.startsWith('/docs') }" @click="handleMobileNav('/docs')">
+          <span>{{ $t("menu.docs") }}</span>
+        </div>
         <div class="mobile-nav-item" @click="openProjectFeedback">
           <span>{{ $t("menu.feedback") }}</span>
         </div>
@@ -390,7 +510,7 @@ const getActiveIndex = (fullPath: string) => {
   </el-drawer>
 
   <!-- 桌面端导航栏 -->
-  <nav class="hidden-sm-and-down desktop-nav" aria-label="Main navigation">
+  <nav ref="desktopMenuRef" class="hidden-sm-and-down desktop-nav" aria-label="Main navigation">
     <el-menu
       :default-active="getActiveIndex($route.fullPath)"
       mode="horizontal"
@@ -423,11 +543,12 @@ const getActiveIndex = (fullPath: string) => {
         <span class="search-shortcut">{{ shortcutHint }}</span>
       </button>
     </div>
-    <el-menu-item class="" index="/">{{ $t("menu.home") }}</el-menu-item>
-    <el-menu-item index="/relations/risk-relation/risk/R0001">{{
+    <el-menu-item v-if="!isItemHidden(0)" class="" index="/">{{ $t("menu.home") }}</el-menu-item>
+    <el-menu-item v-if="!isItemHidden(1)" index="/relations/risk-relation/risk/R0001">{{
       $t("relationMap")
     }}</el-menu-item>
     <el-dropdown
+      v-if="!isItemHidden(2)"
       class="knowledge-menu"
       :class="{ 'is-active': isKnowledgeActive($route.fullPath) }"
       @command="handleKnowledgeCommand"
@@ -456,6 +577,7 @@ const getActiveIndex = (fullPath: string) => {
     </el-dropdown>
 
     <el-dropdown
+      v-if="!isItemHidden(3)"
       class="more-menu"
       :class="{ 'is-active': isMoreActive($route.fullPath) }"
       @command="handleMoreCommand"
@@ -471,12 +593,13 @@ const getActiveIndex = (fullPath: string) => {
       <template #dropdown>
         <el-dropdown-menu>
           <el-dropdown-item command="changelog" :class="{ 'is-active': getActiveIndex($route.fullPath) === '/changelog' }">{{ $t("menu.changelog") }}</el-dropdown-item>
+          <el-dropdown-item command="docs" :class="{ 'is-active': getActiveIndex($route.fullPath) === '/docs' }">{{ $t("menu.docs") }}</el-dropdown-item>
           <el-dropdown-item command="feedback">{{ $t("menu.feedback") }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
 
-    <el-dropdown class="outside-link">
+    <el-dropdown v-if="!isItemHidden(4)" class="outside-link">
       <span class="el-dropdown-link" aria-label="JDArmy" role="button" tabindex="0"
         >JDArmy<el-icon>
           <arrow-down />
@@ -530,9 +653,9 @@ const getActiveIndex = (fullPath: string) => {
       </template>
     </el-dropdown>
 
-    <ThemeToggle />
+    <ThemeToggle v-if="!isItemHidden(5)" />
 
-    <el-dropdown class="translate" trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
+    <el-dropdown v-if="!isItemHidden(6)" class="translate" trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
       <span class="el-dropdown-link" :aria-label="languages[locale as keyof typeof languages]" role="button" tabindex="0">
         <el-icon v-if="localeChanging" class="locale-loading-icon"><Loading /></el-icon>
         <icon-translate v-else />
@@ -551,9 +674,88 @@ const getActiveIndex = (fullPath: string) => {
       </template>
     </el-dropdown>
 
-    <div class="github" role="none">
+    <div v-if="!isItemHidden(7)" class="github" role="none">
       <github-pane />
     </div>
+
+    <!-- 收起溢出项的汉堡菜单：仅当有项被收起时显示 -->
+    <el-dropdown
+      v-if="hiddenCount > 0"
+      class="overflow-menu"
+      :class="{ 'is-active': isOverflowActive }"
+      trigger="click"
+      placement="bottom-end"
+    >
+      <span class="el-dropdown-link" :aria-label="$t('menu.more')" role="button" tabindex="0">
+        <el-icon><MenuIcon /></el-icon>
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu class="overflow-menu-list">
+          <template v-for="item in hiddenItems" :key="item.key">
+            <!-- 首页 / 关系图谱 -->
+            <el-dropdown-item
+              v-if="item.kind === 'link'"
+              :class="{ 'is-active': item.key === 'home' ? getActiveIndex($route.fullPath) === '/' : getActiveIndex($route.fullPath).startsWith('/relations/') }"
+              @click="item.key === 'home' ? $router.push('/') : $router.push('/relations/risk-relation/risk/R0001')"
+            >{{ item.key === 'home' ? $t('menu.home') : $t('relationMap') }}</el-dropdown-item>
+
+            <!-- 知识库：平铺 6 个子项 -->
+            <template v-else-if="item.kind === 'knowledge'">
+              <el-dropdown-item divided :disabled="true" class="overflow-group-title">{{ $t('menu.knowledge') }}</el-dropdown-item>
+              <el-dropdown-item command="risks" @click="handleKnowledgeCommand('risks')">{{ $t('menu.risks') }}</el-dropdown-item>
+              <el-dropdown-item command="avoidances" @click="handleKnowledgeCommand('avoidances')">{{ $t('menu.avoidances') }}</el-dropdown-item>
+              <el-dropdown-item command="attackTools" @click="handleKnowledgeCommand('attackTools')">{{ $t('attackTools') }}</el-dropdown-item>
+              <el-dropdown-item command="threatActors" @click="handleKnowledgeCommand('threatActors')">{{ $t('threatActors') }}</el-dropdown-item>
+              <el-dropdown-item command="terms" @click="handleKnowledgeCommand('terms')">{{ $t('terms') }}</el-dropdown-item>
+              <el-dropdown-item command="cases" @click="handleKnowledgeCommand('cases')">{{ $t('cases') }}</el-dropdown-item>
+            </template>
+
+            <!-- 更多：平铺 3 个子项 -->
+            <template v-else-if="item.kind === 'more'">
+              <el-dropdown-item divided :disabled="true" class="overflow-group-title">{{ $t('menu.more') }}</el-dropdown-item>
+              <el-dropdown-item @click="handleMoreCommand('changelog')">{{ $t('menu.changelog') }}</el-dropdown-item>
+              <el-dropdown-item @click="handleMoreCommand('docs')">{{ $t('menu.docs') }}</el-dropdown-item>
+              <el-dropdown-item @click="handleMoreCommand('feedback')">{{ $t('menu.feedback') }}</el-dropdown-item>
+            </template>
+
+            <!-- JDArmy：平铺外链子项 -->
+            <template v-else-if="item.kind === 'jdarmy'">
+              <el-dropdown-item divided :disabled="true" class="overflow-group-title">JDArmy</el-dropdown-item>
+              <el-dropdown-item><a target="_blank" rel="noopener noreferrer" href="https://jd.army">Webpage</a></el-dropdown-item>
+              <el-dropdown-item><a target="_blank" rel="noopener noreferrer" href="https://blog.jd.army">Blog</a></el-dropdown-item>
+              <el-dropdown-item divided><a target="_blank" rel="noopener noreferrer" href="https://rtass.jd.army" title="Red Team Assessment Scoring System Open Source Framework">RTASS</a></el-dropdown-item>
+              <el-dropdown-item><a target="_blank" rel="noopener noreferrer" href="https://break.jd.army" title="Business Risk Enumeration & Avoidance Kownledge Open Source Framework">BREAK</a></el-dropdown-item>
+              <el-dropdown-item><a target="_blank" rel="noopener noreferrer" href="https://dsre.jd.army" title="Data Security Risk Enumeration Open Source Framkework">DSRE</a></el-dropdown-item>
+              <el-dropdown-item divided><a target="_blank" rel="noopener noreferrer" href="https://textwatermark.jd.army" title="A Open Source Library for Text Watermarking in python">Text Watermark</a></el-dropdown-item>
+            </template>
+
+            <!-- 主题：平铺 3 个模式 -->
+            <template v-else-if="item.kind === 'theme'">
+              <el-dropdown-item divided :disabled="true" class="overflow-group-title">{{ $t('theme.current') }}</el-dropdown-item>
+              <el-dropdown-item @click="setTheme('light')">{{ $t('theme.light') }}</el-dropdown-item>
+              <el-dropdown-item @click="setTheme('dark')">{{ $t('theme.dark') }}</el-dropdown-item>
+              <el-dropdown-item @click="setTheme('system')">{{ $t('theme.system') }}</el-dropdown-item>
+            </template>
+
+            <!-- 语言：平铺语言选项 -->
+            <template v-else-if="item.kind === 'locale'">
+              <el-dropdown-item divided :disabled="true" class="overflow-group-title">{{ languages[locale as keyof typeof languages] }}</el-dropdown-item>
+              <el-dropdown-item
+                v-for="(label, lang) in languages"
+                :key="lang"
+                :class="{ 'is-active': locale === lang }"
+                @click="handleLocaleChange(lang as string)"
+              >{{ label }}</el-dropdown-item>
+            </template>
+
+            <!-- GitHub -->
+            <el-dropdown-item v-else-if="item.kind === 'github'" divided>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/JDArmy/BREAK">GitHub</a>
+            </el-dropdown-item>
+          </template>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
 
     </el-menu>
     <div
@@ -815,6 +1017,44 @@ const getActiveIndex = (fullPath: string) => {
   height: 100%;
   text-align: center;
   color: var(--break-text-primary);
+  text-decoration: none;
+}
+
+/* 桌面端溢出汉堡菜单 */
+.overflow-menu {
+  height: var(--el-menu-item-height);
+  line-height: var(--el-menu-item-height);
+  color: var(--el-menu-text-color);
+  padding: 0 var(--el-menu-base-level-padding);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.overflow-menu .el-dropdown-link {
+  display: flex;
+  align-items: center;
+  color: var(--el-menu-text-color);
+  cursor: pointer;
+}
+
+.overflow-menu.is-active .el-dropdown-link {
+  color: var(--el-menu-active-color);
+}
+
+/* 汉堡内分组标题（不可点击的 disabled 项） */
+.overflow-menu-list .overflow-group-title {
+  font-size: 0.8em;
+  color: var(--break-text-muted);
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+.overflow-menu-list a {
+  display: inline-block;
+  width: 100%;
+  color: inherit;
   text-decoration: none;
 }
 

@@ -126,6 +126,18 @@ const router = createRouter({
       component: () => import("@/views/ChangelogView.vue"),
     },
 
+    // 文档
+    {
+      path: "/docs",
+      name: "docs",
+      component: () => import("@/views/DocsView.vue"),
+    },
+    {
+      path: "/docs/:slug",
+      name: "docs-detail",
+      component: () => import("@/views/DocsView.vue"),
+    },
+
     {
       path: "/:pathMatch(.*)*",
       redirect: "/",
@@ -225,6 +237,8 @@ router.afterEach((to) => {
     title = `Business Scenes | ${SITE_TITLE}`;
   } else if (to.name === "changelog") {
     title = `Changelog | ${SITE_TITLE}`;
+  } else if (to.name === "docs" || to.name === "docs-detail") {
+    title = `Docs | ${SITE_TITLE}`;
   }
   document.title = title;
 });
