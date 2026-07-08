@@ -773,8 +773,8 @@ const caseDrawer = useDrawerRoute({
 }
 
 .stat-card:nth-child(3) {
-  --stat-accent: #0284c7;
-  --stat-accent-soft: #f0f9ff;
+  --stat-accent: #ca8a04;
+  --stat-accent-soft: #fefce8;
 }
 
 .stat-card:nth-child(4) {
@@ -783,8 +783,8 @@ const caseDrawer = useDrawerRoute({
 }
 
 .stat-card:nth-child(5) {
-  --stat-accent: #ca8a04;
-  --stat-accent-soft: #fefce8;
+  --stat-accent: #0284c7;
+  --stat-accent-soft: #f0f9ff;
 }
 
 .stat-card:nth-child(6) {

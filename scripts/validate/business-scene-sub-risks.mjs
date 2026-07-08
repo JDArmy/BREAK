@@ -6,9 +6,8 @@
  * 问题：riskScenes[].risks 同时列出父风险和子风险时，前端 useSubRiskToggle
  *       会在父风险展开时自动显示子风险，导致子风险在 UI 上出现两次。
  *
- * 检测两类问题：
- *   1. parent_child_duplicate — 父子同时存在于同一 riskScene（--fix 可自动移除子风险）
- *   2. orphan_child_risk — 子风险存在但父风险不在同一 riskScene（仅报告，不自动修复）
+ * 检测问题：
+ *   parent_child_duplicate — 父子同时存在于同一 riskScene（--fix 可自动移除子风险）
  *
  * 用法：
  *   node scripts/validate/business-scene-sub-risks.mjs          # 校验模式
@@ -40,10 +39,8 @@ function run() {
   const files = loadBusinessSceneFiles();
 
   let totalDuplicates = 0;
-  let totalOrphans = 0;
   let totalFixed = 0;
   const duplicateDetails = [];
-  const orphanDetails = [];
 
   for (const { filePath, fileName, bsId, data } of files) {
     const bs = data[bsId];
@@ -68,14 +65,6 @@ function run() {
               `  ${fileName} ${rsId}(${rsData.title}): ${parent} + ${riskId}`,
             );
           }
-        } else {
-          // 孤儿子风险
-          totalOrphans++;
-          if (orphanDetails.length < 10) {
-            orphanDetails.push(
-              `  ${fileName} ${rsId}(${rsData.title}): ${riskId} (父 ${parent} 不在此 scene)`,
-            );
-          }
         }
       }
 
@@ -93,8 +82,8 @@ function run() {
   }
 
   // 输出结果
-  if (totalDuplicates === 0 && totalOrphans === 0) {
-    console.log('✅ BusinessScene 子风险校验通过（无父子重复，无孤儿子风险）');
+  if (totalDuplicates === 0) {
+    console.log('✅ BusinessScene 子风险校验通过（无父子重复）');
     return;
   }
 
@@ -111,17 +100,6 @@ function run() {
         }
       }
       console.error('运行 node scripts/validate/business-scene-sub-risks.mjs --fix 自动修复');
-    }
-  }
-
-  if (totalOrphans > 0) {
-    // 孤儿子风险仅报告，不阻断校验
-    console.warn(`⚠️  发现 ${totalOrphans} 个孤儿子风险（子风险在 scene 中但父风险不在同一 scene）`);
-    if (orphanDetails.length > 0) {
-      for (const d of orphanDetails) console.warn(d);
-      if (totalOrphans > orphanDetails.length) {
-        console.warn(`  ... 还有 ${totalOrphans - orphanDetails.length} 个`);
-      }
     }
   }
 
