@@ -604,9 +604,9 @@ const caseDrawer = useDrawerRoute({
   text-decoration: none;
   display: inline-block;
   max-width: 100%;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .risk a:hover,

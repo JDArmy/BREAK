@@ -94,7 +94,8 @@
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "import:cases": "node scripts/research/import-cases.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:interaction": "node scripts/validate/site-interaction-gate.mjs"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",

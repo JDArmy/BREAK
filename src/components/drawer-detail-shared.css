@@ -69,6 +69,14 @@ button:hover .external-link-icon {
  * 故用 container query 基于抽屉 inline-size 降级网格列数。
  */
 .drawer-detail-panel {
+  --detail-title-size: 1.375rem;
+  --detail-section-title-size: 0.875rem;
+  --detail-body-size: 0.92rem;
+  --detail-table-size: 0.8125rem;
+  --detail-chip-size: 0.8rem;
+  --detail-caption-size: 0.76rem;
+  --detail-id-size: 0.75rem;
+
   container-type: inline-size;
 }
 
@@ -84,7 +92,7 @@ button:hover .external-link-icon {
   }
   .drawer-detail-panel .entity-reference-table {
     min-width: 420px;
-    font-size: 0.78rem;
+    font-size: var(--detail-table-size);
   }
 }
 

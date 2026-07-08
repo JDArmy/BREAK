@@ -15,6 +15,7 @@ const commands = [
   ['npm', ['run', 'export:data-en']],
   ['npm', ['run', 'build-only']],
   ['npm', ['run', 'test:smoke']],
+  ['npm', ['run', 'test:interaction']],
   ['npm', ['run', 'test:performance']],
   ['npm', ['run', 'test:visual-review']],
   ['npm', ['run', 'test:relation-stability']],

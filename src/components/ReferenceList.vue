@@ -70,13 +70,13 @@ function getRefTitle(index: number): string {
   gap: 4px;
   color: var(--break-link);
   text-decoration: none;
-  font-size: 14px;
+  font-size: var(--detail-body-size);
   transition: color 0.2s;
   flex: 1;
 }
 
 .reference-link-icon {
-  font-size: 12px;
+  font-size: var(--detail-caption-size);
   flex-shrink: 0;
   opacity: 0.7;
 }
@@ -94,7 +94,7 @@ function getRefTitle(index: number): string {
 
 .reference-text {
   color: var(--break-text-primary);
-  font-size: 14px;
+  font-size: var(--detail-body-size);
   flex: 1;
 }
 </style>

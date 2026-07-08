@@ -222,19 +222,23 @@ function scrollToSelected() {
 }
 
 // Dialog 打开时聚焦输入框
-watch(() => props.modelValue, (open) => {
-  if (open) {
-    query.value = "";
-    debouncedQuery.value = "";
-    selectedIndex.value = -1;
-    Promise.resolve(ensureCases()).catch(() => {
-      // 加载失败由 useCases.loadError 维护，搜索索引在加载成功后自动重建
-    }); // 确保案例数据已加载，加载完成后搜索索引自动重建
-    nextTick(() => {
-      inputRef.value?.focus();
-    });
-  }
-});
+watch(
+  () => props.modelValue,
+  (open) => {
+    if (open) {
+      query.value = "";
+      debouncedQuery.value = "";
+      selectedIndex.value = -1;
+      Promise.resolve(ensureCases()).catch(() => {
+        // 加载失败由 useCases.loadError 维护，搜索索引在加载成功后自动重建
+      }); // 确保案例数据已加载，加载完成后搜索索引自动重建
+      nextTick(() => {
+        inputRef.value?.focus();
+      });
+    }
+  },
+  { immediate: true },
+);
 
 onMounted(() => {
   document.addEventListener("keydown", handleKeydown);
