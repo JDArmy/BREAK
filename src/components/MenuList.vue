@@ -15,6 +15,7 @@ import { useBreakpoints } from "@/composables/useBreakpoints";
 import { scrollActiveContainerToTop } from "@/utils/dom";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 import { topLoadingState } from "@/utils/topLoading";
+import { buildProjectFeedbackIssueUrl } from "@/utils/feedback";
 
 const { isMobile } = useBreakpoints();
 const topLoadingActive = topLoadingState.active;
@@ -99,7 +100,6 @@ const knowledgeRoutes: Record<string, string> = {
   threatActors: "/knowledges/threat-actor/list",
   terms: "/knowledges/term/list",
   cases: "/knowledges/case/list",
-  changelog: "/changelog",
 };
 
 const handleKnowledgeCommand = (command: string) => {
@@ -108,6 +108,26 @@ const handleKnowledgeCommand = (command: string) => {
   if (path) {
     router.push(path);
     mobileMenuOpen.value = false;
+  }
+};
+
+const openProjectFeedback = () => {
+  window.open(
+    buildProjectFeedbackIssueUrl(window.location.href, locale.value),
+    "_blank",
+    "noopener,noreferrer",
+  );
+  mobileMenuOpen.value = false;
+};
+
+const handleMoreCommand = (command: string) => {
+  if (command === "changelog") {
+    void router.push("/changelog");
+    mobileMenuOpen.value = false;
+    return;
+  }
+  if (command === "feedback") {
+    openProjectFeedback();
   }
 };
 
@@ -181,9 +201,10 @@ const isKnowledgeActive = (fullPath: string) => {
     "/knowledges/threat-actor/list",
     "/knowledges/term/list",
     "/knowledges/case/list",
-    "/changelog",
   ].includes(active);
 };
+
+const isMoreActive = (fullPath: string) => getActiveIndex(fullPath) === "/changelog";
 
 const getActiveKnowledge = (fullPath: string) => {
   const path = getActiveIndex(fullPath);
@@ -300,8 +321,15 @@ const getActiveIndex = (fullPath: string) => {
         <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/knowledges/case/list' }" @click="handleMobileNav('/knowledges/case/list')">
           <span>{{ $t("cases") }}</span>
         </div>
+      </div>
+
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">{{ $t("menu.more") }}</div>
         <div class="mobile-nav-item" :class="{ active: route.fullPath.startsWith('/changelog') }" @click="handleMobileNav('/changelog')">
           <span>{{ $t("menu.changelog") }}</span>
+        </div>
+        <div class="mobile-nav-item" @click="openProjectFeedback">
+          <span>{{ $t("menu.feedback") }}</span>
         </div>
       </div>
 
@@ -423,7 +451,27 @@ const getActiveIndex = (fullPath: string) => {
           <el-dropdown-item command="threatActors" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'threatActors' }">{{ $t("threatActors") }}</el-dropdown-item>
           <el-dropdown-item command="terms" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'terms' }">{{ $t("terms") }}</el-dropdown-item>
           <el-dropdown-item command="cases" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'cases' }">{{ $t("cases") }}</el-dropdown-item>
-          <el-dropdown-item divided command="changelog" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'changelog' }">{{ $t("menu.changelog") }}</el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
+
+    <el-dropdown
+      class="more-menu"
+      :class="{ 'is-active': isMoreActive($route.fullPath) }"
+      @command="handleMoreCommand"
+    >
+      <span
+        class="el-dropdown-link"
+        :aria-label="$t('menu.more')"
+        role="button"
+        tabindex="0"
+      >
+        {{ $t("menu.more") }}<el-icon><arrow-down /></el-icon>
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item command="changelog" :class="{ 'is-active': getActiveIndex($route.fullPath) === '/changelog' }">{{ $t("menu.changelog") }}</el-dropdown-item>
+          <el-dropdown-item command="feedback">{{ $t("menu.feedback") }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
@@ -687,6 +735,7 @@ const getActiveIndex = (fullPath: string) => {
 
 .translate,
 .knowledge-menu,
+.more-menu,
 .github {
   color: var(--el-menu-text-color);
   height: var(--el-menu-item-height);
@@ -700,7 +749,8 @@ const getActiveIndex = (fullPath: string) => {
 }
 
 .translate .el-dropdown-link,
-.knowledge-menu .el-dropdown-link {
+.knowledge-menu .el-dropdown-link,
+.more-menu .el-dropdown-link {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -739,11 +789,13 @@ const getActiveIndex = (fullPath: string) => {
   cursor: pointer;
 }
 
-.knowledge-menu.is-active .el-dropdown-link {
+.knowledge-menu.is-active .el-dropdown-link,
+.more-menu.is-active .el-dropdown-link {
   color: var(--el-menu-active-color);
 }
 
-.knowledge-menu.is-active::after {
+.knowledge-menu.is-active::after,
+.more-menu.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;

@@ -625,7 +625,7 @@ html.dark [data-relation="alternative"] {
 /* ===== 威胁行为者关联关系（变体：grid-template/hover 不同，独立保留）===== */
 .threat-actor-relation-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 

@@ -57,6 +57,40 @@ button.entity-link {
   text-decoration: underline;
 }
 
+.drawer-detail-panel .detail-heading:not(.case-drawer-heading) {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+}
+
+.drawer-detail-panel .detail-heading:not(.case-drawer-heading) > div:first-child {
+  display: contents;
+}
+
+.drawer-detail-panel .detail-heading:not(.case-drawer-heading) .detail-id {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+}
+
+.drawer-detail-panel .detail-heading:not(.case-drawer-heading) .detail-heading-actions {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.drawer-detail-panel .detail-heading:not(.case-drawer-heading) h2 {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  max-width: 100%;
+}
+
+.drawer-detail-panel .drawer-title-link {
+  max-width: 100%;
+}
+
 .id-link:hover .external-link-icon,
 .drawer-title-link:hover .external-link-icon,
 a.entity-link:hover .external-link-icon,

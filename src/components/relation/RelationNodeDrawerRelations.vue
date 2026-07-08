@@ -181,7 +181,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
         </span>
       </div>
       <div class="node-relation-filter-grid">
-        <label class="node-relation-filter-select" @click="openRelationSelect">
+        <label class="node-relation-filter-select" for="relation-filter-direction" @click="openRelationSelect">
           <span>{{ t("relationView.filterDirection") }}</span>
           <select
             id="relation-filter-direction"
@@ -200,7 +200,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
             </option>
           </select>
         </label>
-        <label class="node-relation-filter-select" @click="openRelationSelect">
+        <label class="node-relation-filter-select" for="relation-filter-type" @click="openRelationSelect">
           <span>{{ t("relationView.filterRelationType") }}</span>
           <select
             id="relation-filter-type"
@@ -219,7 +219,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
             </option>
           </select>
         </label>
-        <label class="node-relation-filter-select" @click="openRelationSelect">
+        <label class="node-relation-filter-select" for="relation-filter-directness" @click="openRelationSelect">
           <span>{{ t("relationView.filterDirectness") }}</span>
           <select
             id="relation-filter-directness"

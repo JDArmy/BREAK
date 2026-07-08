@@ -690,18 +690,77 @@ const caseDrawer = useDrawerRoute({
 }
 
 .stat-card {
+  --stat-accent: var(--break-link);
+  --stat-accent-soft: var(--break-highlight-bg);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
-  background: linear-gradient(135deg, var(--break-stat-bg-start) 0%, var(--break-stat-bg-end) 100%);
-  border-radius: 12px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.96) 100%),
+    linear-gradient(135deg, var(--stat-accent-soft) 0%, var(--break-bg-card) 100%);
+  border: 1px solid color-mix(in srgb, var(--stat-accent) 28%, var(--break-border));
+  border-top: 3px solid var(--stat-accent);
+  border-radius: 10px;
   text-decoration: none;
-  color: var(--break-stat-text);
+  color: var(--break-text-primary);
   min-width: 120px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card:nth-child(1) {
+  --stat-accent: #dc2626;
+  --stat-accent-soft: #fef2f2;
+}
+
+.stat-card:nth-child(2) {
+  --stat-accent: #16a34a;
+  --stat-accent-soft: #f0fdf4;
+}
+
+.stat-card:nth-child(3) {
+  --stat-accent: #0284c7;
+  --stat-accent-soft: #f0f9ff;
+}
+
+.stat-card:nth-child(4) {
+  --stat-accent: #9333ea;
+  --stat-accent-soft: #faf5ff;
+}
+
+.stat-card:nth-child(5) {
+  --stat-accent: #ca8a04;
+  --stat-accent-soft: #fefce8;
+}
+
+.stat-card:nth-child(6) {
+  --stat-accent: #0891b2;
+  --stat-accent-soft: #ecfeff;
+}
+
+html.dark .stat-card {
+  background:
+    linear-gradient(180deg, rgba(30, 41, 59, 0.94) 0%, rgba(15, 23, 42, 0.98) 100%),
+    linear-gradient(135deg, color-mix(in srgb, var(--stat-accent) 22%, transparent) 0%, var(--break-bg-card) 100%);
+  border-color: color-mix(in srgb, var(--stat-accent) 38%, var(--break-border));
+  color: var(--break-text-primary);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+html.dark .stat-card:hover,
+html.dark .stat-card:active {
+  border-color: color-mix(in srgb, var(--stat-accent) 62%, var(--break-border));
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.36);
+  background:
+    linear-gradient(180deg, rgba(51, 65, 85, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%),
+    linear-gradient(135deg, color-mix(in srgb, var(--stat-accent) 28%, transparent) 0%, var(--break-bg-card) 100%);
 }
 
 .home-title {
@@ -717,9 +776,12 @@ const caseDrawer = useDrawerRoute({
 
 .stat-card:hover,
 .stat-card:active {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, var(--break-stat-hover-start) 0%, var(--break-stat-hover-end) 100%);
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--stat-accent) 58%, var(--break-border));
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.13);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.98) 100%),
+    linear-gradient(135deg, var(--stat-accent-soft) 0%, var(--break-bg-card) 100%);
 }
 
 .stat-number {
@@ -728,18 +790,19 @@ const caseDrawer = useDrawerRoute({
   line-height: 1;
   margin-top: 4px;
   margin-bottom: 4px;
+  color: var(--stat-accent);
 }
 
 .stat-label {
   font-size: 0.9em;
-  opacity: 0.95;
   white-space: nowrap;
+  color: var(--break-text-secondary);
 }
 
 .stat-sub {
   font-size: 0.75em;
-  opacity: 0.8;
   margin-top: 4px;
+  color: var(--break-text-muted);
 }
 
 .stat-item {

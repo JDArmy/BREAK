@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { computed, ref } from "vue";
+import { computed, inject, ref } from "vue";
 import RelationNodeDetailDrawer from "@/components/relation/RelationNodeDetailDrawer.vue";
 import { RelationType } from "@/views/relation/relationTypes";
 import { RELATION_VIEW_MODEL_KEY } from "@/views/relation/relationViewModelKey";
@@ -97,9 +97,6 @@ const drawerStub = {
 
 const contentStub = {
   props: [
-    "selectedNetworkNode",
-    "selectedNetworkNodeTitle",
-    "attackPathFilters",
     "showOpenAsRootAction",
     "showRootRelationBlock",
     "showCoverageBlock",
@@ -112,15 +109,19 @@ const contentStub = {
     "open-as-root",
     "open-node-as-root",
   ],
+  setup() {
+    const vm = inject(RELATION_VIEW_MODEL_KEY)!;
+    return { vm };
+  },
   template: `
     <div class="content-stub">
-      <span>{{ selectedNetworkNode.id }} {{ selectedNetworkNodeTitle }}</span>
+      <span>{{ vm.selectedNetworkNode.value?.id }} {{ vm.selectedNetworkNodeTitle.value }}</span>
       <span class="flags">{{ showOpenAsRootAction }} {{ showRootRelationBlock }} {{ showCoverageBlock }} {{ showAttackPathBlock }}</span>
       <button class="open-as-root" @click="$emit('open-as-root')">root</button>
       <button class="update-filters" @click="$emit('update:attack-path-filters', { risk: ['R0001'] })">filter</button>
       <button class="reset-filters" @click="$emit('reset-attack-path-filters')">reset</button>
-      <button class="focus-node" @click="$emit('focus-node', selectedNetworkNode.id)">focus</button>
-      <button class="open-node-root" @click="$emit('open-node-as-root', selectedNetworkNode.id)">node-root</button>
+      <button class="focus-node" @click="$emit('focus-node', vm.selectedNetworkNode.value?.id)">focus</button>
+      <button class="open-node-root" @click="$emit('open-node-as-root', vm.selectedNetworkNode.value?.id)">node-root</button>
     </div>
   `,
 };

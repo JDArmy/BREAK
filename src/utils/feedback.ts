@@ -38,3 +38,33 @@ export function buildIssueUrl(prefill: IssuePrefill): string {
   const params = new URLSearchParams({ title, body, labels: "feedback" });
   return `${GITHUB_ISSUES_NEW}?${params.toString()}`;
 }
+
+export function buildProjectFeedbackIssueUrl(pageUrl?: string, locale = "zh-CN"): string {
+  const isEnglish = locale.toLowerCase().startsWith("en");
+  const title = isEnglish
+    ? "[Feedback] JDArmy BREAK feedback"
+    : "[问题反馈] JDArmy BREAK 问题反馈";
+  const body = isEnglish
+    ? [
+        "## Issue description",
+        "<!-- Briefly describe the issue, suggestion, or correction you want to report -->",
+        "",
+        "## Location",
+        pageUrl ? `- Page: ${pageUrl}` : "- Page:",
+        "",
+        "## Additional context",
+        "<!-- Add screenshots, error messages, or references here if available -->",
+      ].join("\n")
+    : [
+        "## 问题描述",
+        "<!-- 请简要描述你遇到的问题、建议或希望修正的内容 -->",
+        "",
+        "## 复现位置",
+        pageUrl ? `- 页面：${pageUrl}` : "- 页面：",
+        "",
+        "## 补充信息",
+        "<!-- 如有截图、错误信息或参考资料，请补充在这里 -->",
+      ].join("\n");
+  const params = new URLSearchParams({ title, body, labels: "feedback" });
+  return `${GITHUB_ISSUES_NEW}?${params.toString()}`;
+}

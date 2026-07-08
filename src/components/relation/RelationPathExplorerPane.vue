@@ -149,7 +149,7 @@ const setRef = (el: unknown) => {
       <div class="control-row">
         <!-- 起点选择 -->
         <div class="control-group control-group--type">
-          <label class="control-label">{{ t("relationView.pathExplorerPanel.sourceType") }}</label>
+          <span class="control-label">{{ t("relationView.pathExplorerPanel.sourceType") }}</span>
           <el-select v-model="startTypeModel" size="small" class="type-select">
             <el-option
               v-for="opt in selectableTypes"
@@ -160,7 +160,7 @@ const setRef = (el: unknown) => {
           </el-select>
         </div>
         <div class="control-group control-group--entity">
-          <label class="control-label">{{ t("relationView.pathExplorerPanel.sourceEntity") }}</label>
+          <span class="control-label">{{ t("relationView.pathExplorerPanel.sourceEntity") }}</span>
           <el-select-v2
             v-model="pathExplorerStartKey"
             :options="startEntityOptions"
@@ -178,7 +178,7 @@ const setRef = (el: unknown) => {
 
         <!-- 终点选择 -->
         <div class="control-group control-group--type">
-          <label class="control-label">{{ t("relationView.pathExplorerPanel.targetType") }}</label>
+          <span class="control-label">{{ t("relationView.pathExplorerPanel.targetType") }}</span>
           <el-select v-model="pathExplorerEndType" size="small" class="type-select">
             <el-option
               v-for="opt in selectableTypes"
@@ -189,7 +189,7 @@ const setRef = (el: unknown) => {
           </el-select>
         </div>
         <div class="control-group control-group--entity">
-          <label class="control-label">{{ t("relationView.pathExplorerPanel.targetEntity") }}</label>
+          <span class="control-label">{{ t("relationView.pathExplorerPanel.targetEntity") }}</span>
           <el-select-v2
             v-model="pathExplorerEndKey"
             :options="endEntityOptions"
@@ -205,7 +205,7 @@ const setRef = (el: unknown) => {
 
       <div class="control-row control-row--params">
         <div class="control-group control-group--slider">
-          <label class="control-label">{{ t("relationView.pathExplorerPanel.maxHops") }}: {{ draftMaxDepth }}</label>
+          <span class="control-label">{{ t("relationView.pathExplorerPanel.maxHops") }}: {{ draftMaxDepth }}</span>
           <el-slider
             v-model="draftMaxDepth"
             :min="1"
@@ -217,7 +217,7 @@ const setRef = (el: unknown) => {
           />
         </div>
         <div class="control-group control-group--slider">
-          <label class="control-label">{{ t("relationView.pathExplorerPanel.maxPaths") }}: {{ draftMaxPaths }}</label>
+          <span class="control-label">{{ t("relationView.pathExplorerPanel.maxPaths") }}: {{ draftMaxPaths }}</span>
           <el-slider
             v-model="draftMaxPaths"
             :min="1"

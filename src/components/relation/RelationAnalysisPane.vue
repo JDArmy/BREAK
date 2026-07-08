@@ -204,7 +204,7 @@ watch(
       <div class="relation-analysis-toolbar">
         <div class="relation-analysis-filter-bar">
           <div class="relation-analysis-filter-grid">
-            <label
+            <div
               v-for="type in filterTypes"
               :key="type"
               class="relation-analysis-filter"
@@ -228,7 +228,7 @@ watch(
                   :value="option.key"
                 />
               </el-select>
-            </label>
+            </div>
           </div>
           <div class="relation-analysis-filter-summary">
             <span>

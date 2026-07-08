@@ -11,28 +11,7 @@ const vm = inject(RELATION_VIEW_MODEL_KEY)!;
 const {
   nodeDetailDrawerVisible,
   selectedNetworkNode,
-  selectedNetworkNodeTitle,
-  selectedNetworkRelationCounts,
-  rootNodeRelations,
-  selectedNodeRootPath,
-  selectedNodeAnalysisSummary,
-  selectedNodeRelatedEntitySummary,
-  selectedNodeAttackPathSummary,
-  selectedNodeAttackPathDescription,
-  selectedNodeAttackPathExplanations,
-  attackPathFilterOptions,
   attackPathFilters,
-  hasActiveAttackPathFilters,
-  selectedNodeBusinessSceneImpactSummary,
-  selectedNodeCoverageSummary,
-  isCurrentNodeRoot,
-  selectedNetworkRelations,
-  relKey,
-  getNodeTypeTitle,
-  isPathNodeCurrentSelection,
-  isRelationOnSelectedPath,
-  drawerCopyFeedbackMessage,
-  drawerCopyFeedbackType,
   openSelectedNodeAsRoot,
   resetAttackPathFilters,
   focusNodeInDrawer,
@@ -57,35 +36,6 @@ const { isMobile } = useBreakpoints();
   >
     <div v-if="selectedNetworkNode" class="drawer-section">
       <RelationNodeDetailContent
-        :selected-network-node="selectedNetworkNode"
-        :selected-network-node-title="selectedNetworkNodeTitle"
-        :selected-network-relation-counts="selectedNetworkRelationCounts"
-        :root-node-relations="rootNodeRelations"
-        :selected-node-root-path="selectedNodeRootPath"
-        :selected-node-analysis-summary="selectedNodeAnalysisSummary"
-        :selected-node-related-entity-summary="selectedNodeRelatedEntitySummary"
-        :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
-        :selected-node-attack-path-description="
-          selectedNodeAttackPathDescription
-        "
-        :selected-node-attack-path-explanations="
-          selectedNodeAttackPathExplanations
-        "
-        :attack-path-filter-options="attackPathFilterOptions"
-        :attack-path-filters="attackPathFilters"
-        :has-active-attack-path-filters="hasActiveAttackPathFilters"
-        :selected-node-business-scene-impact-summary="
-          selectedNodeBusinessSceneImpactSummary
-        "
-        :selected-node-coverage-summary="selectedNodeCoverageSummary"
-        :selected-network-relations="selectedNetworkRelations"
-        :rel-key="relKey"
-        :get-node-type-title="getNodeTypeTitle"
-        :is-path-node-current-selection="isPathNodeCurrentSelection"
-        :is-relation-on-selected-path="isRelationOnSelectedPath"
-        :is-current-node-root="isCurrentNodeRoot"
-        :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
-        :drawer-copy-feedback-type="drawerCopyFeedbackType"
         :show-open-as-root-action="true"
         :show-root-relation-block="true"
         :show-coverage-block="true"

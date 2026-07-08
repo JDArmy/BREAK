@@ -184,6 +184,7 @@ const updateAttackPathFilter = (
         <div class="node-attack-filter-grid">
           <label
             class="node-attack-filter-select"
+            for="attack-path-filter-threat-actor"
             @click="openAttackPathSelect"
           >
             <span>{{ t("relationView.filterThreatActor") }}</span>
@@ -220,6 +221,7 @@ const updateAttackPathFilter = (
           </label>
           <label
             class="node-attack-filter-select"
+            for="attack-path-filter-attack-tool"
             @click="openAttackPathSelect"
           >
             <span>{{ t("relationView.filterAttackTool") }}</span>
@@ -256,6 +258,7 @@ const updateAttackPathFilter = (
           </label>
           <label
             class="node-attack-filter-select"
+            for="attack-path-filter-risk"
             @click="openAttackPathSelect"
           >
             <span>{{ t("relationView.filterRisk") }}</span>
@@ -290,6 +293,7 @@ const updateAttackPathFilter = (
           </label>
           <label
             class="node-attack-filter-select"
+            for="attack-path-filter-avoidance"
             @click="openAttackPathSelect"
           >
             <span>{{ t("relationView.filterAvoidance") }}</span>
