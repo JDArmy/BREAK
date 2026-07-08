@@ -254,16 +254,18 @@ const setRef = (el: unknown) => {
             {{ t("relationView.pathExplorerPanel.hopRange", { min: pathExplorerStats.minHops, max: pathExplorerStats.maxHops }) }}
           </span>
         </div>
-        <div
-          class="path-explorer-chart"
-          :ref="setRef"
-          :style="{
-            height: pathExplorerChartHeight + 'px',
-            minWidth: pathExplorerChartMinWidth
-              ? `${pathExplorerChartMinWidth}px`
-              : undefined,
-          }"
-        ></div>
+        <div class="path-explorer-chart-scroll">
+          <div
+            class="path-explorer-chart"
+            :ref="setRef"
+            :style="{
+              height: pathExplorerChartHeight + 'px',
+              minWidth: pathExplorerChartMinWidth
+                ? `${pathExplorerChartMinWidth}px`
+                : undefined,
+            }"
+          ></div>
+        </div>
       </div>
     </div>
   </div>
@@ -387,6 +389,12 @@ const setRef = (el: unknown) => {
   box-sizing: border-box;
 }
 
+.path-explorer-chart-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
 @media (max-width: 767px) {
   .control-row {
     display: grid;
@@ -422,12 +430,6 @@ const setRef = (el: unknown) => {
 
   .control-row--params {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .path-explorer-result--has-chart {
-    overflow-x: auto;
-    overflow-y: visible;
-    -webkit-overflow-scrolling: touch;
   }
 
   .path-explorer-chart {
