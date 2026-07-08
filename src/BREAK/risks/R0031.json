@@ -14,15 +14,26 @@
       "A0029-001",
       "A0005",
       "A0028",
-      "A0020"
+      "A0020",
+      "A0007",
+      "A0001",
+      "A0004-001",
+      "A0015",
+      "A0004",
+      "A0009",
+      "A0016-001"
     ],
     "references": [
       {
         "title": "淘宝开店子账号有什么弊端？有没有风险",
         "link": "https://bk.taobao.com/k/taobaojingyan_19109/610a5d77d04119871b6f9dc5dc030162.html"
+      },
+      {
+        "title": "阿里云：避免使用主账号，为不同职责子账号成员授予不同权限",
+        "link": "https://help.aliyun.com/zh/ecs/user-guide/avoid-using-the-main-account-to-grant-different-permissions-to-members-of-the-sub-account-with-different-responsibilities"
       }
     ],
-    "updated": "2026-07-07",
+    "updated": "2026-07-08",
     "keywords": [
       "子账号滥用",
       "子账户滥用",

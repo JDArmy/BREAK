@@ -16,16 +16,15 @@
       "AT0034-001"
     ],
     "directCauseRisks": [
-      "R0096-001",
-      "R0078",
-      "R0083"
+      "R0096-001"
     ],
     "indirectSupportRisks": [
       "R0096",
       "R0051",
-      "R0032"
+      "R0032",
+      "R0078"
     ],
-    "updated": "2026-07-07",
+    "updated": "2026-07-08",
     "keywords": [
       "反催收团伙",
       "反催收",
@@ -38,11 +37,6 @@
     ],
     "relatedThreatActors": [
       {
-        "key": "TA0064",
-        "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
-      },
-      {
         "key": "TA0013",
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险，共同建设 1 个攻击工具，共同使用 1 个攻击工具。"
@@ -53,19 +47,24 @@
         "note": "共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
       },
       {
-        "key": "TA0060",
+        "key": "TA0064",
         "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险。"
+        "note": "共同间接支持 2 个风险。"
       },
       {
-        "key": "TA0062",
+        "key": "TA0025-001",
         "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险。"
+        "note": "共同间接支持 1 个风险，共同建设 1 个攻击工具。"
       },
       {
-        "key": "TA0063",
+        "key": "TA0028",
         "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险。"
+        "note": "共同间接支持 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同使用 2 个攻击工具。"
       }
     ]
   }

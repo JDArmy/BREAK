@@ -12,22 +12,21 @@
       "AT0061-004"
     ],
     "useAttackTools": [
-      "AT0061-004",
       "AT0026"
     ],
     "directCauseRisks": [
       "R0017-003",
-      "R0235",
-      "R0236"
+      "R0235"
     ],
     "indirectSupportRisks": [
-      "R0060"
+      "R0060",
+      "R0236"
     ],
     "keywords": [
       "支付欺诈团伙",
       "支付欺诈"
     ],
-    "updated": "2026-07-07",
+    "updated": "2026-07-08",
     "relatedThreatActors": [
       {
         "key": "TA0002-001",

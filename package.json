@@ -83,6 +83,8 @@
     "audit:case-source-quality": "node scripts/validate/case-source-quality.mjs",
     "audit:case-entity-coverage": "node scripts/validate/case-entity-coverage.mjs",
     "audit:risk-case-coverage": "node scripts/validate/risk-case-coverage.mjs",
+    "audit:pending-quality": "node scripts/validate/pending-quality.mjs",
+    "audit:case-fact-priority": "node scripts/validate/case-fact-priority.mjs",
     "audit:admission": "node scripts/validate/admission.mjs --audit",
     "audit:quality-report": "node scripts/validate/quality-report.mjs",
     "audit:metrics": "node scripts/validate/metrics.mjs",

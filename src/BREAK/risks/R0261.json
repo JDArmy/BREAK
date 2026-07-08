@@ -11,7 +11,11 @@
       "A0075",
       "A0015",
       "A0004",
-      "A0020-002"
+      "A0020-002",
+      "A0009",
+      "A0005",
+      "A0037",
+      "A0046"
     ],
     "references": [
       {
@@ -32,7 +36,7 @@
       "考勤结算套利",
       "attendance-month arbitrage"
     ],
-    "updated": "2026-07-07",
+    "updated": "2026-07-08",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "medium",

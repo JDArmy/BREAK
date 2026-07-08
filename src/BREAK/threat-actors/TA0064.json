@@ -30,11 +30,6 @@
     ],
     "relatedThreatActors": [
       {
-        "key": "TA0029",
-        "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
-      },
-      {
         "key": "TA0060",
         "relation": "co-involved",
         "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
@@ -53,6 +48,11 @@
         "key": "TA0017",
         "relation": "co-involved",
         "note": "共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0029",
+        "relation": "co-involved",
+        "note": "共同间接支持 2 个风险。"
       },
       {
         "key": "TA0033",

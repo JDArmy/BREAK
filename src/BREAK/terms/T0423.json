@@ -17,15 +17,23 @@
     "description": "这是一种针对同一背债人进行多轮贷款诈骗的固定操作流程。团伙会先利用背债人申请房贷，再以房产为依托申请消费信贷或装修贷，最后将背债人包装成企业主申请企业贷。这种层层递进的组合方式，能在短时间内将背债人的信用价值榨取到极限。",
     "usageExample": "房信企车，要求纯白户，负债不超过5万，前期费用垫付。",
     "relatedRisks": [
-      "R0096"
+      "R0096",
+      "R0146"
     ],
     "relatedAvoidances": [
       "A0054",
       "A0044",
-      "A0077"
+      "A0077",
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0024",
+      "A0075"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0017"
+    ],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
@@ -40,6 +48,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-08"
   }
 }

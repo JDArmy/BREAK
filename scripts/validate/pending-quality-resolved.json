@@ -1,0 +1,26 @@
+{
+  "research/search-reports/risk-avoidance-review/pending-fix.json": [
+    "R0031",
+    "R0235",
+    "R0260",
+    "R0261"
+  ],
+  "research/search-reports/actor-consistency-review/pending-fix.json": [
+    "TA0028",
+    "TA0029",
+    "TA0055"
+  ],
+  "research/search-reports/term-completeness-review/pending-fix.json": [
+    "T0146",
+    "T0423"
+  ],
+  "research/search-reports/should-extract-review/pending-fix.json": [
+    "AT0099"
+  ],
+  "research/search-reports/references-review/pending-fix.json": [
+    "AT0004",
+    "AT0007",
+    "AT0099",
+    "R0031"
+  ]
+}
