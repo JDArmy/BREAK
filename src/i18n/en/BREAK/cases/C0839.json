@@ -7,24 +7,25 @@
       "classified document theft",
       "troop deployment",
       "CCTV Focus Report",
+      "Baomiguan",
       "employee security awareness",
       "insider threat",
       "password management",
       "national security breach"
     ],
-    "summary": "In November 2025, several media outlets, citing Baomiguan and related public material, reported a weak-password espionage case: a municipal bureau used overly simple credentials for a work email account, with the password reportedly set to the office telephone number. A foreign intelligence service guessed the credentials and stole nearly 2,000 documents, including sensitive information such as local troop deployments. The case shows that weak passwords on government or key-position accounts can let attackers enter email systems at low cost and steal sensitive material at scale.",
+    "summary": "In November 2018, CCTV's Focus Report anti-espionage education program disclosed a weak-password espionage case: a municipal bureau used overly simple credentials for a work email account, with the password reportedly set to the office telephone number. A foreign intelligence service guessed the credentials and stole nearly 2,000 documents, including sensitive information such as local troop deployments. The case shows that weak passwords on government or key-position accounts can let attackers enter email systems at low cost and steal sensitive material at scale.",
     "references": [
       {
         "title": "Common Password-Setting Mistakes: CCTV Case of Nearly 2,000 Documents Stolen Due to Weak Email Password",
         "link": "https://www.bssbmj.gov.cn/info/1086/8872.htm"
       },
       {
-        "title": "An Organization Used Its Office Phone Number as a Password; Nearly 2,000 Documents Including Troop Deployment Information Were Stolen - Guancha",
-        "link": "https://www.guancha.cn/internation/2025_11_12_796678.shtml"
+        "title": "Focus Report Reveals Online Espionage: How Spies Stole Chinese Secrets - Secrss",
+        "link": "https://www.secrss.com/articles/6607"
       },
       {
-        "title": "A Bureau’s Work Email Password Was Too Simple and Was Guessed by a Foreign Intelligence Service - Jimu News",
-        "link": "https://www.ctdsb.net/c1476_202511/2590999.html"
+        "title": "What the Ministry of State Security's 2021 No. 1 Order Says About Counter-Espionage - The Paper",
+        "link": "https://www.thepaper.cn/newsDetail_forward_12746008"
       },
       {
         "title": "Guard Against Password-Spraying Attacks by Fixing Weak Passwords - Guangzhou State Secrets Protection Bureau",
