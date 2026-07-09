@@ -16,8 +16,10 @@
       "A0010",
       "A0021",
       "A0025-002",
-      "A0026",
-      "A0040",
+    "A0026",
+    "A0011",
+    "A0016-002",
+    "A0040",
       "A0073",
       "A0078"
     ],
@@ -31,11 +33,11 @@
         "link": "https://www.crowdstrike.com/global-threat-report/"
       },
       {
-        "title": "CISA MFA Implementation Guidance",
-        "link": "https://www.cisa.gov/"
+        "title": "Implementing Phishing-Resistant MFA - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "keywords": [
       "多因素(MFA)绕过",
       "MFA绕过",

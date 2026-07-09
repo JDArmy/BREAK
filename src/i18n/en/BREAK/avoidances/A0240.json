@@ -1,0 +1,26 @@
+{
+  "A0240": {
+    "title": "Discount Stacking Rule Audit",
+    "definition": "Auditing and enforcing server-side constraints on applicability, mutual exclusions, priority, and amount boundaries before coupons, red packets, tiered discounts, member prices, and other benefits are used or stacked.",
+    "description": "Discount stacking rule audit centrally validates eligible products, eligible audiences, time windows, usage thresholds, mutual exclusions, stacking order, and maximum discount amounts across coupons, red packets, tiered discounts, member prices, point redemption, shipping vouchers, gifts, and rebates during campaign configuration, order pricing simulation, coupon redemption, and payment confirmation. The server should use a unified rule engine and price snapshot to produce the final discount result, avoiding repeated deductions, unauthorized coupon use, or discounts exceeding the payable amount due to separate calculations across business systems.\n\nThis control applies to coupon stacking arbitrage, coupon usage restriction bypass, unauthorized discount purchases, order-splitting arbitrage, and promotional activity cheating. It should be combined with rule-change approval, gray-release simulation, abnormal discount-ratio monitoring, and payment amount consistency checks so that marketing benefits remain constrained consistently across claiming, redemption, payment, and refund workflows.",
+    "limitation": "Discount stacking rule audit depends on the quality of campaign-rule modeling and cross-system synchronization. If business teams add temporary allowlists, configure rules incorrectly, omit the refund workflow from the same rules, or run old and new campaigns with inconsistent rule caches, attackers may still bypass controls through timing gaps, split-order combinations, or complex benefit combinations. Overly strict rules can also mistakenly block legitimate coupon-stacking orders.",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "Examples of business logic vulnerabilities - PortSwigger Web Security Academy",
+        "link": "https://portswigger.net/web-security/logic-flaws/examples"
+      }
+    ],
+    "keywords": [
+      "Discount Stacking Rule Audit",
+      "coupon stacking audit",
+      "discount mutual exclusion check",
+      "promotion rule validation",
+      "discount amount boundary check",
+      "marketing benefit stacking validation"
+    ]
+  }
+}

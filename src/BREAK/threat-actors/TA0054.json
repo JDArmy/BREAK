@@ -8,8 +8,8 @@
         "link": "https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift"
       },
       {
-        "title": "OAuth令牌成为隐形钥匙：SaaS生态连环攻击 - CSDN",
-        "link": "https://blog.csdn.net/weixin_42376192/article/details/155299946"
+        "title": "Create policies to control OAuth apps - Microsoft Defender for Cloud Apps",
+        "link": "https://learn.microsoft.com/en-us/defender-cloud-apps/app-permission-policy"
       }
     ],
     "buildAttackTools": [],
@@ -29,7 +29,7 @@
       "SaaS数据窃取者",
       "SaaS数据窃取"
     ],
-    "updated": "2026-07-07",
+    "updated": "2026-07-09",
     "relatedThreatActors": [
       {
         "key": "TA0057",

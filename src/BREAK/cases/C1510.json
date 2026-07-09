@@ -1,8 +1,8 @@
 {
   "C1510": {
-    "title": "鸿蒙AR/VR数据安全与隐私保护实践",
+    "title": "XR/VR沉浸式环境隐私与安全研究",
     "keywords": [
-      "鸿蒙",
+      "XR",
       "AR/VR",
       "数据安全",
       "隐私保护",
@@ -10,22 +10,22 @@
       "眼动追踪",
       "SLAM",
       "重放攻击",
-      "差分隐私",
+      "沉浸式环境隐私",
       "空间锚点"
     ],
-    "summary": "2025年4月18日，一篇鸿蒙AR/VR开发技术文章分析了AR/VR设备面临的多模态数据采集隐私风险，包括9轴IMU运动数据、眼动追踪生物特征、空间锚点等敏感信息泄露。文章指出未受保护的SLAM数据可能遭受重放攻击导致虚拟物体错位，并提出了基于鸿蒙系统的AES-GCM加密和Geo-Indistinguishability差分隐私保护方案。",
+    "summary": "2024年发布的XR隐私与安全研究综述指出，AR/VR设备会持续采集头手运动、眼动追踪、空间地图、音视频和环境上下文等敏感数据，可能泄露身份、生物特征、位置与行为模式。研究强调沉浸式环境中的传感器融合、空间锚点和第三方应用权限会放大隐私暴露与数据滥用风险。",
     "category": "academic_research",
     "relatedRisks": [
       "R0191"
     ],
     "references": [
       {
-        "title": "鸿蒙AR/VR开发：05-AR/VR数据安全与隐私保护实践",
-        "link": "https://www.jianshu.com/p/f1213b6cb304"
+        "title": "SoK: Privacy and Security in the Age of the Metaverse",
+        "link": "https://arxiv.org/abs/2403.06890"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-04",
+    "updated": "2026-07-09",
+    "incidentTime": "2024-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

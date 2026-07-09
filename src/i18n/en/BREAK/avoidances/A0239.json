@@ -1,0 +1,27 @@
+{
+  "A0239": {
+    "title": "Payment Result Consistency Validation",
+    "definition": "Update an order as paid only after the payment-channel receipt, local order, payment order, amount, currency, status, and signature are consistent.",
+    "description": "Payment result consistency validation compares the local order number, payment order number, payment-provider transaction ID, paid amount, currency, fees, transaction status, payment time, callback signature, and idempotency records at payment callback, active order query, order completion, fulfillment, and settlement points. The server only marks an order as paid, ships goods, grants entitlements, or enters settlement when the trusted payment-channel result fully matches the local payable amount and order state.\n\nThis control directly prevents attackers from faking successful payment status, replaying old callbacks, tampering with callback amounts, exploiting asynchronous state gaps, or abusing local order state-machine defects to complete underpaid transactions. It should be combined with server-side repricing validation, API signature validation, payment-provider order queries, idempotency controls, and financial reconciliation to reduce losses from forged callbacks and amount mismatches.",
+    "limitation": "Payment result consistency validation depends on correct implementation of payment-channel receipt signature checks, order-query APIs, and the local order state machine. Attackers may still create bypass windows through repeated callbacks, race submissions, callback reordering, or channel delay anomalies. Without independent reconciliation or abnormal-order freezing, merchants may still experience short-term mistaken shipment, entitlement issuance, or after-sales disputes.",
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "Web Parameter Tampering - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/Web_Parameter_Tampering"
+      }
+    ],
+    "keywords": [
+      "Payment Result Consistency Validation",
+      "payment callback validation",
+      "payment amount consistency",
+      "payment status validation",
+      "payment order query validation",
+      "order payment consistency",
+      "payment receipt signature validation"
+    ]
+  }
+}

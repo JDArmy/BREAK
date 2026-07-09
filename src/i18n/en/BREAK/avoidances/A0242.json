@@ -1,0 +1,30 @@
+{
+  "A0242": {
+    "title": "Arbitrage Goods Flow Monitoring",
+    "definition": "Collecting discounted-order, shipping-address, logistics, refund, and secondary-resale signals to identify centralized recovery and resale after bulk coupon farming.",
+    "description": "Arbitrage goods flow monitoring collects discounted orders, recipients, shipping addresses, device fingerprints, payment accounts, logistics routes, delivery times, refund records, after-sales reasons, and secondary-market signals to build an association graph across accounts, addresses, products, orders, and resale channels. The system can use thresholds, rules, clustering models, and anomaly baselines to identify batches of goods purchased with heavy discounts that later flow to a small set of addresses, pickup points, recovery buyers, or abnormal resale channels.\n\nThis control identifies the monetization chain after coupon farming, malicious sniping, unauthorized discount purchases, and order-splitting arbitrage. It focuses less on blocking a single order and more on detecting aggregation, transshipment, and fencing patterns for arbitraged goods. It should be combined with order risk control, address blocklists, after-sales review, legal evidence preservation, and merchant-side coordination to reduce losses after subsidies and physical goods are extracted at scale.",
+    "limitation": "Arbitrage goods flow monitoring is often delayed. Attackers can evade association detection by spreading delivery addresses, using pickup points, courier transshipment, proxy buyers, or cross-platform resale, and incomplete secondary-market signals can cause false negatives. Normal centralized delivery scenarios such as dormitories, companies, or community group buying may also be misclassified, requiring review with discount ratios, account relationships, and after-sales behavior.",
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      },
+      {
+        "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      }
+    ],
+    "keywords": [
+      "Arbitrage Goods Flow Monitoring",
+      "coupon-farmed goods flow monitoring",
+      "resale recovery monitoring",
+      "discounted goods resale detection",
+      "arbitrage address clustering",
+      "fencing-chain monitoring"
+    ]
+  }
+}

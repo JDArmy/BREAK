@@ -9,20 +9,20 @@
       "用户脚本",
       "自动化脚本",
       "关注列表清理",
-      "知乎"
+      "Greasy Fork"
     ],
-    "summary": "该知乎文章介绍了一款基于篡改猴（Tampermonkey）的微博批量取关脚本。因微博虽有批量取关功能但需挨个勾选，作者开发此脚本以实现自动化批量取消关注，用于清理关注列表。",
+    "summary": "公开用户脚本索引站收录了基于篡改猴（Tampermonkey）的微博批量取关脚本。此类脚本将原本需要逐个勾选账号的关注列表清理操作转化为浏览器自动化动作，可用于批量取消关注，体现了用户脚本对平台交互流程的自动化改造。",
     "category": "news_report",
     "relatedRisks": [
       "R0001"
     ],
     "references": [
       {
-        "title": "篡改猴Tampermonkey微博批量取关脚本 - 知乎",
-        "link": "https://zhuanlan.zhihu.com/p/666664182"
+        "title": "微博批量取关用户脚本检索 - Greasy Fork",
+        "link": "https://greasyfork.org/zh-CN/scripts?q=%E5%BE%AE%E5%8D%9A%20%E5%8F%96%E5%85%B3"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2023-11",
     "relatedAttackTools": [],
     "relatedThreatActors": []

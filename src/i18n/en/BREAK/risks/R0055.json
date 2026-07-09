@@ -28,29 +28,34 @@
     }
   },
   "R0055-001": {
-    "title": "Coupon Restriction Bypass",
-    "definition": "Restricted coupons are claimed or used outside their claim or usage restrictions for arbitrage.",
-    "description": "Two scenarios: first, non-public coupons, coupons claimable under specific conditions, or coupons issued to specific groups are claimed without meeting the restrictions; second, coupons restricted to specific usage scenarios or conditions are used outside those restrictions. Restrictions include: specific time windows, specific user groups, specific product pairings, specific price thresholds, coupon stacking limits, and more.",
-    "influence": "Exploits platform marketing activity benefits, causing financial losses to the platform.",
+    "title": "Coupon Usage Restriction Bypass",
+    "definition": "Attackers bypass coupon restrictions on eligible products, usage thresholds, stacking rules, time windows, or target audiences to apply restricted coupons to orders that should not receive the discount.",
+    "description": "Coupon usage restriction bypass occurs when coupon redemption, discount simulation, or order confirmation does not fully validate coupon applicability on the server side. Attackers modify product IDs, campaign IDs, user identity, order amount, usage time window, or coupon-stacking parameters to apply coupons limited to specific products, price thresholds, users, or scenarios to non-target orders.\n\nUnlike unlimited coupon claiming, the core question is not whether a coupon can be claimed repeatedly, but whether an already claimed or otherwise obtained coupon can be used outside its allowed scope. At scale, this drains promotion budgets through non-target orders, distorts product pricing, and can combine with order-splitting arbitrage, payment amount tampering, and unauthorized discount purchases to create direct financial loss.",
+    "influence": "Promotion budgets are consumed by non-target orders, discounts limited by product, time window, audience, or threshold are applied outside their intended scope, product pricing is undermined, and the abuse may trigger chained losses through order-splitting arbitrage, unauthorized discount purchases, and payment amount tampering.",
     "references": [
       {
         "title": "OWASP Automated Threat: OAT002 Token Cracking",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+      },
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
       }
     ],
     "keywords": [
+      "Coupon Usage Restriction Bypass",
       "Coupon Restriction Bypass",
       "coupon abuse",
       "promo code abuse",
-      "coupon eligibility bypass",
+      "coupon usage scope bypass",
       "voucher restriction bypass",
       "coupon stacking bypass"
     ],
     "riskAssessment": {
       "observables": [
-        "Non-public or targeted coupons are claimed in bulk by non-target users, with anomalous claim sources",
+        "Coupons limited to specific products, time windows, or target audiences are used on non-target orders",
         "Coupon stacking breaches the rule ceiling, with a single order showing an abnormally high discount ratio",
-        "The coupon-claim endpoint shows high-frequency requests with enumeration or token-cracking characteristics and a spike in failure rate",
+        "Coupon-pricing requests still redeem successfully after product, campaign, identity, or order-amount fields are modified",
         "Scenario-restricted coupons are used on non-designated products or time windows, with usage distribution crossing boundaries"
       ]
     }
@@ -123,8 +128,8 @@
   },
   "R0055-004": {
     "title": "Payment Amount Tampering",
-    "definition": "Attackers tamper with order amounts, item quantities, discount amounts, or payment parameters so the actual payment is lower than the amount due.",
-    "description": "Payment amount tampering often occurs when server-side consistency checks are missing across order creation, discount calculation, payment confirmation, or callback processing. Attackers use traffic interception, API replay, request-parameter modification, negative quantities, or forged discount fields to submit orders at a low, zero, or even negative amount.\n\nThe core issue is that price and payment status depend on client-provided parameters or unsigned fields, while the server does not recalculate product prices, inventory quantities, discount rules, and the amount returned by the payment provider. At scale, this directly causes revenue loss and contaminates transaction, inventory, and finance reconciliation data.",
+    "definition": "Attackers tamper with order amounts, item quantities, discount amounts, or payment parameters, bypassing trusted server-side amount validation so the actual payment is lower than the amount due.",
+    "description": "Payment amount tampering often occurs when order creation, discount calculation, or payment confirmation over-trusts client-supplied transaction fields such as amount, quantity, and discount. Attackers use traffic interception, API replay, request-parameter modification, negative quantities, or forged discount fields to submit orders at an abnormally low or negative amount.\n\nThe core issue is that price calculation depends on client-provided parameters or unsigned fields, while the server does not use trusted prices, inventory, discounts, and payment-channel amounts as the basis for transaction decisions, or verify signature integrity for key fields such as order ID, product ID, quantity, discount, payable amount, timestamp, and nonce. At scale, this directly causes revenue loss and contaminates transaction, inventory, and finance reconciliation data.",
     "influence": "Goods or services are completed below the payable amount, causing direct revenue loss for the platform and merchants while polluting payment, inventory, finance reconciliation, and after-sales workflows.",
     "references": [
       {
@@ -145,7 +150,6 @@
       "order amount tampering",
       "price parameter tampering",
       "payment parameter tampering",
-      "zero-dollar purchase",
       "negative payment",
       "payment logic flaw"
     ],
@@ -155,6 +159,43 @@
         "Amount, quantity, discount, or payment-status fields in checkout requests are modified and the transaction still completes",
         "The same account or device repeatedly submits zero-price, negative, or clearly below-cost orders",
         "The payment callback amount differs from the local order amount, but the order status is still marked as paid"
+      ]
+    }
+  },
+  "R0055-005": {
+    "title": "Discount Stacking Arbitrage",
+    "definition": "Attackers exploit flaws in mutual-exclusion rules and priorities among coupons, tiered discounts, red packets, points, membership prices, shipping coupons, or gifts to create abnormally underpriced orders beyond campaign intent.",
+    "description": "Discount stacking arbitrage occurs when multiple promotional benefits are calculated by separate systems, or campaign rules do not uniformly validate mutual exclusions, stacking order, maximum discount amounts, and refund rollback boundaries. Attackers adjust product combinations, split orders, modify campaign IDs, stack coupons and red packets, or exploit cache differences between old and new rules so discounts that should be mutually exclusive or capped take effect together.\n\nUnlike coupon usage restriction bypass, the focus is not whether a single coupon can be used outside its scope, but whether multiple promotional benefits are repeatedly deducted or over-stacked across discount simulation, payment confirmation, and refund workflows. At scale, this rapidly drains promotion budgets, undermines product pricing, and can combine with order-splitting arbitrage, unauthorized discount purchases, and after-sales entitlement abuse into chained financial loss.",
+    "influence": "Promotion budgets are over-consumed, transaction prices fall below campaign expectations or even below cost, and refund, rebate, and gift workflows may also be exploited.",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "Examples of business logic vulnerabilities - PortSwigger Web Security Academy",
+        "link": "https://portswigger.net/web-security/logic-flaws/examples"
+      },
+      {
+        "title": "CCTV: Will Instant Refunds After Order Padding Have Consequences?",
+        "link": "https://news.cctv.com/2023/11/01/ARTIFdG9SyKSX4GTBdarMgDG231101.shtml"
+      }
+    ],
+    "keywords": [
+      "Discount Stacking Arbitrage",
+      "coupon stacking arbitrage",
+      "promotion stacking abuse",
+      "tiered discount abuse",
+      "benefit stacking abuse",
+      "excessive discount stacking",
+      "campaign stacking arbitrage"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A single order's discount ratio is significantly above campaign rule limits or the normal distribution for similar products",
+        "Mutually exclusive coupons, red packets, membership prices, tiered discounts, or gifts take effect in the same order",
+        "Discount amounts differ between order simulation, payment confirmation, and refund rollback results",
+        "The same account or device cluster repeatedly submits specific product combinations to trigger abnormal low prices"
       ]
     }
   }

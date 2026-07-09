@@ -1,0 +1,61 @@
+{
+  "A0243": {
+    "title": "活动沙箱",
+    "category": "AC01",
+    "definition": "在营销活动上线前，用隔离环境和仿真数据验证活动资格、奖励、库存、优惠叠加和退款回滚规则。",
+    "description": "活动沙箱是在营销活动正式上线前，将活动配置、优惠试算、奖励发放、库存扣减、邀请关系、支付确认和退款回滚规则放入隔离环境，用仿真账号、边界订单、并发请求、异常退款和跨渠道入口进行自动化试跑。沙箱应覆盖新老用户、黑白名单、首单资格、叠券组合、活动库存、支付失败、部分退款和奖励撤销等路径，确保服务端规则与运营配置、前端展示和财务预算一致。\n\n该手段用于在活动发布前发现首单奖励重复领取、优惠券无限领取、优惠叠加套利和虚假裂变等规则缺陷，重点是把高风险营销逻辑提前暴露在可回放、可审计、可灰度验证的环境中。落地时应与活动规则安全审计、测试用例库、规则变更审批和上线后异常优惠比例监控结合。",
+    "limitation": "活动沙箱依赖测试用例和仿真数据覆盖度；若生产环境存在临时开白、渠道专属规则、异步结算延迟或第三方入口未接入沙箱，攻击者仍可能利用真实流量、缓存差异或新旧规则窗口绕过。沙箱结果也可能误判真实用户的复杂优惠组合，需要上线后监测校正。",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "BLA1:2025 - Action Limit Overrun - OWASP Top 10 for Business Logic Abuse",
+        "link": "https://owasp.org/www-project-top-10-for-business-logic-abuse/docs/the-top-10/action-limit-overrun"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "活动沙箱",
+      "营销活动沙箱",
+      "活动仿真测试",
+      "营销规则沙箱",
+      "活动灰度试算",
+      "优惠规则仿真"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      }
+    ]
+  }
+}

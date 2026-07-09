@@ -2,9 +2,9 @@
   "R0041": {
     "title": "支付卡破解",
     "definition": "通过枚举不同缺失的开始/过期日期和安全码，得到有效支付信息。",
-    "description": "暴力破解支付卡的开始/过期日期和安全码（CSC），也被称作CVN2，CVC，CV2，或CID。撞卡攻击（R0040）的成果可用作支付卡或账号价值判断，而支付卡破解（R0041）的成果可用于实际支付。",
+    "description": "暴力破解支付卡的开始/过期日期和安全码（CSC），也被称作CVN2，CVC，CV2，或CID。撞卡攻击（R0040）的成果可用作支付卡或账号价值判断，而支付卡安全码与有效期破解的成果可用于实际支付。",
     "complexity": "intermediate",
-    "influence": "支付卡或账号支付信息被盗取。",
+  "influence": "支付卡安全码、有效期等关键支付信息被枚举命中后，攻击者可用于盗刷、黑卡支付、账号价值筛选和后续资金欺诈，导致持卡人资金损失、商户拒付损失、支付通道风控升级以及平台交易信誉受损。",
     "avoidances": [
       "A0002",
       "A0004",
@@ -36,7 +36,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-010_Card_Cracking.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "keywords": [
       "支付卡破解",
       "CVV爆破",

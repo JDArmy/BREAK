@@ -1,0 +1,29 @@
+{
+  "T0615": {
+    "title": "Credential Reuse",
+    "aliases": [
+      "Credential Reuse",
+      "login credential reuse",
+      "credential sharing"
+    ],
+    "category": "Security Controls",
+    "keywords": [
+      "Credential Reuse",
+      "login credential reuse",
+      "credential sharing",
+      "account sharing",
+      "cookie reuse",
+      "token reuse",
+      "session credential reuse"
+    ],
+    "definition": "The repeated use of the same login credential, session token, or access credential across multiple devices, network environments, or account usage contexts.",
+    "description": "Credential reuse may come from normal multi-device login, but it can also indicate account sharing, cookie resale, bulk login after credential stuffing, or session-token theft. After attackers obtain account passwords, cookies, tokens, or one-time login states, they can reuse those credentials on their own devices to access business systems, bypass normal login flows, or scale account abuse.\n\nIn risk-control contexts, credential reuse focuses on whether the relationships among credentials, devices, IPs, User-Agents, geolocation, and behavior chains are abnormal. For example, the same cookie appearing in multiple regions within a short period, frequent device-fingerprint changes for a token, or one account concurrently performing high-value actions on multiple terminals may indicate that credentials are being shared, resold, or stolen.",
+    "usageExample": "The platform found the same account cookie being used concurrently on multiple unfamiliar devices, and combined the device-fingerprint changes to determine credential reuse risk.",
+    "references": [
+      {
+        "title": "Credential Stuffing Prevention Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
+      }
+    ]
+  }
+}

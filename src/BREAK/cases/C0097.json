@@ -1,6 +1,6 @@
 {
   "C0097": {
-    "title": "泰国联盟佣金回调劫持司法裁判原则",
+    "title": "泰国联盟佣金回调劫持法律分析",
     "keywords": [
       "泰国最高法院",
       "联盟佣金劫持",
@@ -11,7 +11,7 @@
       "佣金转移",
       "IT欺诈"
     ],
-    "summary": "泰国最高法院在IT欺诈、电子操纵及佣金转移案件中确立裁判原则：第三方通过覆盖跟踪Cookie、拦截重定向链、向回调URL注入联盟ID或使用恶意软件/浏览器扩展替换联盟ID等方式劫持佣金，导致错误联盟方获得佣金，合法联盟方损失佣金。此类行为在泰国法下可构成计算机犯罪、民事违约及刑事欺诈。",
+    "summary": "2026年5月，Law Gratis 发布泰国联盟佣金回调劫持的技术法律分析，说明第三方可通过覆盖 Cookie、拦截重定向链、向回调 URL 注入联盟 ID、操纵像素或 API 回调、使用恶意软件或浏览器扩展替换联盟 ID 等方式转移佣金归属，导致广告主误付佣金、合法联盟方损失收益；此类行为可按合同违约、侵权、不当得利、计算机犯罪或刑事欺诈等规则追责。",
     "category": "news_report",
     "relatedRisks": [
       "R0008-001"
@@ -26,7 +26,7 @@
         "link": "https://www.icj.org/wp-content/uploads/2012/12/Thailand-Computer-Crime-Act-2007-eng.pdf"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2026-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

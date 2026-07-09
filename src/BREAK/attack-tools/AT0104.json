@@ -1,0 +1,98 @@
+{
+  "AT0104": {
+    "title": "UI自动化工具",
+    "description": "UI自动化工具是用于程序化控制浏览器、移动App或桌面客户端界面的自动化框架，典型工具包括Selenium、Appium、Auto.js、Airtest等。它们原本用于自动化测试、兼容性验证和流程回归，但在黑灰产场景中可被用于录制并重放点击、滑动、输入、截图识别等操作，让攻击脚本以接近真人交互的方式完成注册、登录、领券、抢购、刷任务等流程。\n\n与直接发包脚本不同，UI自动化工具会经过真实客户端或浏览器界面，通常保留前端事件链和部分页面状态，因此更容易绕过只检查接口协议特征的防护。其攻击效果依赖脚本质量、设备环境和验证码/人机校验强度，常与模拟器、群控设备、无头浏览器、打码平台配合使用。",
+    "references": [
+      {
+        "title": "Selenium WebDriver Documentation",
+        "link": "https://www.selenium.dev/documentation/webdriver/"
+      },
+      {
+        "title": "Appium Introduction",
+        "link": "https://appium.io/docs/en/latest/intro/"
+      }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0001-001",
+      "A0001-002",
+      "A0001-004",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0007-001",
+      "A0007-002",
+      "A0010",
+      "A0010-001",
+      "A0010-002",
+      "A0010-003",
+      "A0010-004",
+      "A0010-005",
+      "A0010-008",
+      "A0011",
+      "A0021",
+      "A0020",
+      "A0020-003",
+      "A0029",
+      "A0038-001",
+      "A0042",
+      "A0009",
+      "A0059",
+      "A0060"
+    ],
+    "directCauseRisks": [
+      "R0001",
+      "R0003",
+      "R0030-001"
+    ],
+    "indirectSupportRisks": [
+      "R0001-002",
+      "R0002",
+      "R0034"
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "UI自动化工具",
+      "UI自动化",
+      "Selenium",
+      "Appium",
+      "Auto.js",
+      "Airtest",
+      "自动点击工具",
+      "录制回放脚本"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0042",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 12 个规避手段。"
+      },
+      {
+        "key": "AT0023",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 11 个规避手段。"
+      },
+      {
+        "key": "AT0045",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 11 个规避手段。"
+      },
+      {
+        "key": "AT0047",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 11 个规避手段。"
+      },
+      {
+        "key": "AT0050",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 10 个规避手段。"
+      },
+      {
+        "key": "AT0005",
+        "relation": "co-used",
+        "note": "共享 12 个规避手段。"
+      }
+    ]
+  }
+}

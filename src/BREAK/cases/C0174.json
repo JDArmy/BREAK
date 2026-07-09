@@ -11,7 +11,7 @@
       "third-party domains",
       "circumvention"
     ],
-    "summary": "该研究回顾性测量和分析了反广告屏蔽过滤列表，发现第三方域名通过绕过过滤规则来投放广告。研究探讨了广告屏蔽器与反广告屏蔽器之间的对抗，以及反广告屏蔽器如何检测广告屏蔽器并提示用户。",
+    "summary": "该论文回顾性测量和分析反广告屏蔽过滤列表，研究出版商部署脚本检测广告屏蔽用户、要求禁用屏蔽器后才能访问内容。作者比较两个流行过滤列表，并用 Internet Archive 对 Alexa Top-5K 网站五年回溯，发现覆盖率自2014年以来明显提升，约9%的 Top-5K 网站存在反屏蔽器。",
     "category": "academic_research",
     "relatedRisks": [
       "R0013"
@@ -22,7 +22,7 @@
         "link": "https://dl.acm.org/doi/abs/10.1145/3131365.3131387"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-09",
     "incidentTime": "2017-01",
     "relatedAttackTools": [],
     "relatedThreatActors": []

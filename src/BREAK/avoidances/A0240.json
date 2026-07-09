@@ -1,0 +1,61 @@
+{
+  "A0240": {
+    "title": "优惠叠加规则审计",
+    "category": "AC01",
+    "definition": "在优惠券、红包、满减、会员价等权益使用或叠加前，对适用范围、互斥关系、优先级和金额边界进行服务端审计与约束。",
+    "description": "优惠叠加规则审计是在活动配置、下单试算、用券核销和支付确认等节点，集中校验优惠券、红包、满减、会员价、积分抵扣、运费券、赠品和返利之间的适用商品、适用人群、使用时段、门槛金额、互斥关系、叠加顺序和最大优惠金额。服务端应以统一规则引擎和价格快照输出最终优惠结果，避免不同业务系统各自计算导致重复减免、越权用券或优惠金额超过订单应付金额。\n\n该手段适用于优惠券叠加套利、卡券使用限制突破、低价购、拆单套利和营销活动作弊等场景。落地时应配合规则变更审批、灰度试算、异常优惠比例监控和支付金额一致性校验，使营销权益在领取、核销、支付和退款链路中保持同一套约束。",
+    "limitation": "优惠叠加规则审计依赖活动规则建模质量和跨系统同步能力；若业务临时开白、人工配置错误、退款链路未复用同一规则或新旧活动并行期间规则缓存不同步，攻击者仍可能利用时间差、拆单组合或复杂权益组合绕过。规则收紧过度也可能误伤真实用户的合法叠券订单。",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "Examples of business logic vulnerabilities - PortSwigger Web Security Academy",
+        "link": "https://portswigger.net/web-security/logic-flaws/examples"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "优惠叠加规则审计",
+      "叠券规则审计",
+      "优惠互斥校验",
+      "优惠规则校验",
+      "优惠金额边界校验",
+      "营销权益叠加校验"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      }
+    ]
+  }
+}

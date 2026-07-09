@@ -18,7 +18,7 @@ Adding any entity entry (Risk / Avoidance / AttackTool / ThreatActor / Term / Ca
 3. **Sync the English translation**: create the matching translation file in `src/i18n/en/BREAK/{entity}/{ID}.json`, containing only translatable text fields.
 4. **Maintain relations**: e.g. a new Avoidance must be referenced by at least one Risk or AttackTool's `avoidances` (otherwise validation blocks).
 5. **Update the `updated` field**: today's date in YYYY-MM-DD.
-6. **Update business domains** (Risk only): add the new Risk ID to `riskScenes[*].risks` in `src/BREAK/business-domains/*.json`.
+6. **Update business domains** (Risk only): add the new Risk ID to `riskScenes[*].risks` in `src/BREAK/business-domains/*.json`. If the same Risk must be reused across multiple business domains / risk scenes, add an explicit reason to the cross-scene reason table in `scripts/validate/business-domains.mjs`.
 7. **Run validation**: `npm run validate:data` must pass.
 8. **Run review**: `npm run review:changed` confirms no fail.
 
@@ -55,6 +55,8 @@ Rules that cannot be machine-automated: `review:case-fact` (Scrapingdog scraping
 `npm run validate:docs-freshness` checks the current working tree against `HEAD` so feature, data-model, or toolchain changes cannot land while the user manual, README, or Skill docs remain stale. This gate is wired into `npm run validate:data`.
 
 Typical changes that require updating both `docs/zh-CN/` and `docs/en/` include: routes / menus / view components, `KnowledgeSplitView`, search and entity-resolution composables, `src/validation/` schemas, the Entity Registry, `DATA_SCHEMA.md`, `scripts/validate/*.mjs`, and `package.json` build or validation scripts.
+
+When changing business-domain classification validation, also document the maintenance rule for cross-domain / cross-risk-scene reuse: cross-linking is not a multi-select tag. Add it only when a risk is genuinely reused across multiple industries or problem domains, and record an auditable cross-scene reason.
 
 Typical changes that require updating `README.md` and `README_CN.md` include: public commands, build / release gates, CI workflows, data exports, STIX / JSON-LD / npm data package outputs, schema documentation, entity types, or basic project information.
 

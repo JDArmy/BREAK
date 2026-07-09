@@ -1,0 +1,26 @@
+{
+  "AT0104": {
+    "title": "UI Automation Tools",
+    "description": "UI automation tools are automation frameworks used to programmatically control browser, mobile app, or desktop client interfaces. Typical tools include Selenium, Appium, Auto.js, and Airtest. They were originally designed for automated testing, compatibility validation, and regression workflows, but in black-gray market scenarios they can be used to record and replay clicks, swipes, input, screenshot recognition, and other operations, allowing attack scripts to complete registration, login, coupon claiming, flash-sale grabbing, and task farming in a way that resembles human interaction.\n\nUnlike direct request scripts, UI automation tools go through real client or browser interfaces and usually preserve front-end event chains and partial page state, making them more likely to bypass defenses that only inspect API protocol characteristics. Their attack effectiveness depends on script quality, device environment, and CAPTCHA or human-verification strength, and they are often combined with emulators, device-control systems, headless browsers, and CAPTCHA-solving platforms.",
+    "references": [
+      {
+        "title": "Selenium WebDriver Documentation",
+        "link": "https://www.selenium.dev/documentation/webdriver/"
+      },
+      {
+        "title": "Appium Introduction",
+        "link": "https://appium.io/docs/en/latest/intro/"
+      }
+    ],
+    "keywords": [
+      "UI Automation Tools",
+      "UI automation",
+      "Selenium",
+      "Appium",
+      "Auto.js",
+      "Airtest",
+      "auto clicker",
+      "record-and-replay script"
+    ]
+  }
+}

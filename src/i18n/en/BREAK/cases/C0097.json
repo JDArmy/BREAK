@@ -1,6 +1,6 @@
 {
   "C0097": {
-    "title": "Thai Supreme Court Establishes Judicial Principles on Affiliate Commission Callback Hijacking",
+    "title": "Legal Analysis of Affiliate Commission Callback Hijacking in Thailand",
     "keywords": [
       "Thailand Supreme Court",
       "affiliate commission hijacking",
@@ -11,7 +11,7 @@
       "commission diversion",
       "IT fraud"
     ],
-    "summary": "Thailand's Supreme Court has set judicial principles in cases involving IT fraud, electronic manipulation, and commission diversion. The court ruled that third parties who hijack commissions by overwriting tracking cookies, intercepting redirect chains, injecting affiliate IDs into callback URLs, or using malware and browser extensions to replace affiliate IDs—thereby causing the wrong affiliate t",
+    "summary": "In May 2026, Law Gratis published a technical and legal analysis of affiliate commission callback hijacking in Thailand. It explained that third parties can divert attribution by overwriting tracking cookies, intercepting redirect chains, injecting affiliate IDs into callback URLs, manipulating pixels or API callbacks, or using malware and browser extensions to replace affiliate IDs. These tactics can cause advertisers to mispay commissions and legitimate affiliates to lose revenue. The article states that such conduct may be addressed under contract, tort, unjust-enrichment, computer-crime, or criminal-fraud rules in Thailand.",
     "references": [
       {
         "title": "Affiliate Commission Callback Hijack Claims in THAILAND",

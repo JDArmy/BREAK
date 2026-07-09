@@ -9,11 +9,11 @@
       "民事罚款",
       "消费者保护",
       "垃圾邮件",
-      "未经授权",
+      "退订机制",
       "电子邮件营销",
       "美国联邦贸易委员会"
     ],
-    "summary": "美国联邦贸易委员会（FTC）对Experian Consumer Services提起诉讼，指控其违反CAN-SPAM法案，发送未经用户同意的商业广告邮件。Experian最终同意支付65万美元民事罚款，并承诺遵守CAN-SPAM法案规定，停止向用户发送未经授权的广告邮件。该案明确了企业不得滥用电子邮件渠道进行垃圾营销的法律底线。",
+    "summary": "美国联邦贸易委员会（FTC）对Experian Consumer Services提起诉讼，指控其商业营销邮件未遵守CAN-SPAM法案关于退订机制、商业邮件标识和退订请求处理等要求，消费者无法有效拒收账户相关营销邮件。该案体现企业邮件营销在缺少有效退订和合规标识时会被认定为垃圾邮件内容治理问题。Experian同意支付65万美元民事罚款，并承诺完善后续商业邮件退订和合规处理机制。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0021"
@@ -22,9 +22,17 @@
       {
         "title": "FTC lawsuit reminds businesses: CAN-SPAM means CAN'T spam",
         "link": "https://consumer.ftc.gov/consumer-alerts/2023/08/ftc-lawsuit-reminds-businesses-can-spam-means-cant-spam"
+      },
+      {
+        "title": "FTC Charges Experian with Spamming Consumers Who Signed Up for Company Accounts with Marketing Emails They Couldn't Opt Out Of",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2023/08/ftc-charges-experian-spamming-consumers-who-signed-company-accounts-marketing-emails-they-couldnt"
+      },
+      {
+        "title": "Permanent Injunction and $650,000 Civil Penalty Imposed on Experian Consumer Services for Alleged CAN-SPAM Violations",
+        "link": "https://www.justice.gov/archives/opa/pr/permanent-injunction-and-650000-civil-penalty-imposed-experian-consumer-services-allegedly"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-09",
     "incidentTime": "2023-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []

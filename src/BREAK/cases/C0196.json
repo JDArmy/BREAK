@@ -6,12 +6,12 @@
       "Python",
       "自动批量关注",
       "粉丝",
-      "CSDN",
+      "阿里云开发者社区",
       "自动化脚本",
       "涨粉",
-      "Follow按钮"
+      "Instagram机器人"
     ],
-    "summary": "该CSDN博客文章介绍了一个Python脚本，用于自动批量关注Instagram上的粉丝。脚本逐个点进目标用户主页，查找并点击蓝色的“Follow”按钮，实现自动化批量关注操作，以完成涨粉任务。",
+    "summary": "阿里云开发者社区转载文章介绍了作者使用Python开源机器人和少量付费推广获取Instagram真实粉丝的过程。文章围绕自动化关注、内容互动和涨粉策略展开，反映社交平台中批量关注与自动化运营被用于人为提升账号影响力的风险。",
     "category": "news_report",
     "relatedRisks": [
       "R0016-002"
@@ -20,10 +20,14 @@
       {
         "title": "用Python开源机器人和5美元，我在Instagram上搞到了2500个真粉儿",
         "link": "https://developer.aliyun.com/article/82703"
+      },
+      {
+        "title": "How I setup an Instagram Bot after 6 months of studying Python",
+        "link": "https://blog.chatbotslife.com/how-i-setup-an-instagram-bot-with-6-months-of-studying-python-1aebef2fb653"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-07",
+  "updated": "2026-07-09",
+  "incidentTime": "2017-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

@@ -9,7 +9,7 @@
       "anti-adblock circumvention",
       "website detection"
     ],
-    "summary": "This study develops CV-INSPECTOR, a machine learning method that automatically detects whether websites use adblock circumvention services through differential execution analysis, achieving 93% accuracy. It identifies circumvention sites among the top 20,000 websites, helping the adblock community automate and scale filter rule maintenance.",
+    "summary": "The CV-INSPECTOR study proposes an automated method for detecting adblock circumvention services. It analyzes differences in page execution when an adblocker is enabled or disabled to identify whether a site deploys anti-adblock logic. The paper reports about 93% accuracy on labeled data and applies the method to measure the top 20,000 websites, aiming to help the adblock community find circumvention sites and maintain filter rules at scale.",
     "references": [
       {
         "title": "Cv-Inspector: Towards Automating Detection of Adblock Circumvention",

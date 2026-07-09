@@ -35,11 +35,11 @@
         "link": "https://browser.qq.com/mobile/news?doc_id=98269a4f1e792252"
       },
       {
-        "title": "Truffle Security：Google API Key 因 Gemini 权限变化带来的泄露风险",
-        "link": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"
+        "title": "Best practices for securely using API keys - Google Cloud",
+        "link": "https://cloud.google.com/docs/authentication/api-keys-best-practices"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2026-03",
     "relatedAttackTools": [
       "AT0054-002",

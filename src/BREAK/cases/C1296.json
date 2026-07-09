@@ -12,7 +12,7 @@
       "内部系统"
     ],
     "summary": "相关报道讨论了AI智能体在提示诱导、工具调用和数据访问链路中的安全风险。材料显示，智能体一旦被恶意提示操控，可能越权调用内部工具或访问敏感数据；因此企业在部署智能体时需要对数据库查询、插件调用和外部输出建立权限边界与审计机制。与传统应用漏洞不同，智能体风险往往发生在自然语言指令到工具调用的转换环节，单纯依赖模型拒答不足以防护，仍需在工具层、数据层和输出层设置独立约束。",
-    "category": "security_incident",
+    "category": "news_report",
     "relatedRisks": [
       "R0148"
     ],
@@ -22,7 +22,7 @@
         "link": "https://new.qq.com/rain/a/20251223A030TR00"
       }
     ],
-    "updated": "2026-07-08",
+    "updated": "2026-07-09",
     "incidentTime": "2025-12",
     "relatedAttackTools": [],
     "relatedThreatActors": []

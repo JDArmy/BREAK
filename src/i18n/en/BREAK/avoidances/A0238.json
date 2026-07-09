@@ -1,0 +1,26 @@
+{
+  "A0238": {
+    "title": "Server-Side Price Recalculation",
+    "definition": "Recalculate the payable order amount on the server from trusted price snapshots, item quantities, promotion rules, and entitlement state.",
+    "description": "Server-side repricing validation means that at key points such as order creation, promotion calculation, payment initiation, and order confirmation, the system does not trust client-supplied price, quantity, discount, shipping, tax, or payable-amount fields. Instead, it recalculates the payable amount from product price snapshots, inventory quantity, campaign rules, membership benefits, coupon redemption state, delivery rules, and tax configuration. The server-side result should be the only basis for creating a payment order and advancing order state, while client-side amounts are used only for display or interaction.\n\nThis control directly prevents attackers from changing prices in intercepted requests, submitting negative quantities, tampering with discount fields, forging shipping parameters, or faking client-side amount fields to achieve low-price purchases, zero-yuan purchases, or negative payments. It should be combined with API signature validation, API input validation, payment result consistency validation, transaction risk monitoring, and financial reconciliation to form an end-to-end validation chain from order placement through settlement.",
+    "limitation": "Server-side repricing depends on the integrity of product price snapshots, promotion rules, and entitlement state. If campaign rules are misconfigured, price snapshots are missing, promotion stacking order is wrong, or the order state machine has race windows, attackers may still bypass validation through rule defects, repeated submissions, or concurrent order placement. Complex stacked promotions may also cause false positives on legitimate discounted orders, requiring reconciliation and manual review to reduce user impact.",
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "Web Parameter Tampering - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/Web_Parameter_Tampering"
+      }
+    ],
+    "keywords": [
+      "Server-Side Repricing Validation",
+      "Server-Side Price Recalculation",
+      "server-side repricing",
+      "order amount validation",
+      "price snapshot validation",
+      "payment amount tamper prevention"
+    ]
+  }
+}

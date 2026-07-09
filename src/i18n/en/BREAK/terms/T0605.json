@@ -17,12 +17,16 @@
     "usageExample": "An embodied-intelligence robot in a warehouse perceives goods and performs grasping via a VLA model; once the model is adversarially attacked, it may grab the wrong item or even strike people.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "A Comprehensive Survey on Embodied AI",
+        "link": "https://arxiv.org/html/2407.06886v8"
       },
       {
         "title": "A Comprehensive Survey on Embodied Intelligence - SciOpen",
         "link": "https://www.sciopen.com/article/10.26599/AIR.2024.9150042"
+      },
+      {
+        "title": "What Is Embodied AI? - NVIDIA Glossary",
+        "link": "https://www.nvidia.com/en-us/glossary/embodied-ai/"
       }
     ]
   }

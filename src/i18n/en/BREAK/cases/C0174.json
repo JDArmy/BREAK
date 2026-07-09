@@ -11,7 +11,7 @@
       "third-party domains",
       "circumvention"
     ],
-    "summary": "This study retrospectively measures and analyzes anti-adblock filter lists, finding that third-party domains deliver ads by circumventing filtering rules. It explores the arms race between adblockers and anti-adblockers, and how anti-adblockers detect adblockers and prompt users.",
+    "summary": "This paper retrospectively measures and analyzes anti-adblock filter lists. It studies the arms race in which online publishers deploy anti-adblock scripts to detect adblock users and require them to disable adblockers before accessing content. The authors compare the evolution of two popular filter lists and use the Internet Archive to perform a five-year retrospective coverage analysis on Alexa Top-5K websites, finding that coverage improved substantially since 2014 and that anti-adblockers were detected on about 9% of those sites.",
     "references": [
       {
         "title": "The Ad Wars: Retrospective Measurement and Analysis of Anti-Adblock Filter Lists",

@@ -18,7 +18,7 @@ slug: contribution
 3. **同步英文翻译**：在 `src/i18n/en/BREAK/{entity}/{ID}.json` 创建对应翻译文件，只含可翻译文本字段。
 4. **维护关系**：如新增 Avoidance，必须被至少一个 Risk 或 AttackTool 的 `avoidances` 引用（否则校验阻断）。
 5. **更新 `updated` 字段**：YYYY-MM-DD 当日日期。
-6. **更新业务域**（仅 Risk）：在 `src/BREAK/business-domains/*.json` 的 `riskScenes[*].risks` 中加上新 Risk ID。
+6. **更新业务域**（仅 Risk）：在 `src/BREAK/business-domains/*.json` 的 `riskScenes[*].risks` 中加上新 Risk ID。若同一 Risk 需要跨多个业务域 / 风险场景复用，必须在 `scripts/validate/business-domains.mjs` 的跨挂理由表中补充明确原因。
 7. **跑校验**：`npm run validate:data` 必须通过。
 8. **跑评审**：`npm run review:changed` 确认无 fail。
 
@@ -55,6 +55,8 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 `npm run validate:docs-freshness` 会检查当前工作区相对 `HEAD` 的变更，避免功能、数据模型或工具链已经变化而使用手册、README、Skill 文档没有同步更新。该门禁已接入 `npm run validate:data`。
 
 需要推动 `docs/zh-CN/` 与 `docs/en/` 使用手册更新的典型变更包括：路由 / 菜单 / 页面组件、`KnowledgeSplitView`、搜索与实体解析 composable、`src/validation/` schema、Entity Registry、`DATA_SCHEMA.md`、`scripts/validate/*.mjs`、`package.json` 构建或校验脚本。
+
+修改业务域归类校验时，尤其要同步说明跨业务域 / 跨风险场景复用的维护规则：跨挂不是多选标签，只有风险确实在多个行业或问题域复用时才添加，并给出可审计的跨挂理由。
 
 需要推动 `README.md` 与 `README_CN.md` 更新的典型变更包括：公共命令、构建 / 发布门禁、CI 工作流、数据导出、STIX / JSON-LD / npm 数据包、Schema 文档、实体类型或基础信息。
 

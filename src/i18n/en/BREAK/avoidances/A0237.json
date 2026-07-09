@@ -1,0 +1,27 @@
+{
+  "A0237": {
+    "title": "High-Entropy Random Voucher Code Generation",
+    "definition": "Using cryptographically secure randomness to generate coupon codes, redemption codes, discount codes, and other voucher credentials, reducing the chance of enumeration or algorithmic guessing.",
+    "description": "High-entropy random voucher code generation uses a cryptographically secure random number generator at issuance time to create a sufficiently large and sparse code space, avoiding direct concatenation of predictable fields such as sequential numbers, timestamps, user IDs, or campaign IDs. In practice, it is usually combined with batch issuance, hashed voucher storage, redemption-prefix isolation, one-time redemption, and server-side rate limiting, making it difficult for attackers to infer unused codes even after obtaining samples.\n\nThis control directly addresses coupon enumeration, redemption-code brute force, and algorithm cracking scenarios across marketing coupons, gift cards, invitation codes, discount codes, and other redeemable credentials. It is an issuance-side preventive measure and should be used together with redemption API throttling, human verification, and abnormal failure-rate monitoring to form an end-to-end anti-guessing control loop.",
+    "limitation": "High-entropy random voucher codes only reduce the probability of guessing a valid code and cannot prevent leaked codes from being resold or redeemed in bulk. If the random source is implemented incorrectly, the code length is too short, the character set is too small, or the generation batch uses predictable seeds, attackers may still bypass it through sample analysis and brute-force enumeration. Longer codes also hurt manual input experience, and customer service, offline printing, and channel distribution can still introduce leakage risk.",
+    "references": [
+      {
+        "title": "Recommendation for Random Number Generation Using Deterministic Random Bit Generators - NIST SP 800-90A",
+        "link": "https://csrc.nist.gov/pubs/sp/800/90/a/r1/final"
+      },
+      {
+        "title": "OWASP Cryptographic Storage Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html"
+      }
+    ],
+    "keywords": [
+      "High-Entropy Random Voucher Code Generation",
+      "redemption code anti-guessing",
+      "random voucher code",
+      "coupon code randomization",
+      "promo code brute-force prevention",
+      "voucher credential generation",
+      "cryptographically secure randomness"
+    ]
+  }
+}

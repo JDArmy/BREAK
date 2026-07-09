@@ -12,7 +12,7 @@
       "人机交互",
       "网络安全感知"
     ],
-    "summary": "一项研究调查了用户在沉浸式XR环境中对头显内安全警告的感知和响应。研究发现，在拒绝服务（DoS）攻击期间触发的警报对用户的有效性至关重要，旨在防止网络攻击损害用户表现和健康。",
+    "summary": "一项研究调查了用户在沉浸式XR环境中对头显内安全警告的感知和响应。研究发现，在拒绝服务（DoS）攻击期间触发的警报会影响用户能否及时理解风险、退出受干扰场景并减少网络攻击对表现和健康的损害。",
     "category": "academic_research",
     "relatedRisks": [
       "R0191"
@@ -23,7 +23,7 @@
         "link": "https://ieeexplore.ieee.org/document/11339289"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2025-10-24"

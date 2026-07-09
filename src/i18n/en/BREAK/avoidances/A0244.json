@@ -1,0 +1,26 @@
+{
+  "A0244": {
+    "title": "Abnormal Discount Ratio Monitoring",
+    "definition": "Collecting order discounts, payable amounts, product costs, campaign rules, and refund states to identify transactions where discount ratios spike abnormally or exceed rule limits.",
+    "description": "Abnormal discount ratio monitoring collects order list price, payable amount, paid amount, product cost, coupons, red packets, tiered discounts, points deductions, membership prices, shipping coupons, gifts, campaign IDs, payment status, and refund records to calculate discount ratios by order, account, product, campaign, and channel. The system can use thresholds, rules, historical baselines, and clustering models to identify orders where discount amounts exceed rule limits, transaction prices fall below cost, the same combination repeatedly triggers abnormal low prices, or retained discounts after refunds are abnormal.\n\nThis control is used to detect marketing-loss risks such as discount stacking arbitrage, coupon usage restriction bypass, unlimited coupon claiming, repeated first-order reward claiming, and order-splitting arbitrage. It should be paired with server-side price recalculation, payment result consistency checks, campaign sandboxes, and discount stacking rule audits to form a closed loop from pre-launch validation to post-launch monitoring.",
+    "limitation": "Abnormal discount ratio monitoring depends on timely synchronization of cost prices, campaign rules, and refund states. Attackers may evade thresholds by splitting orders, dispersing accounts, delaying refunds, choosing low-margin products, or combining cross-channel benefits. During major promotions, clearance sales, subsidy campaigns, and merchant-defined campaigns, high-discount orders may be legitimate, so missing campaign context can create false positives for normal users.",
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      },
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      }
+    ],
+    "keywords": [
+      "Abnormal Discount Ratio Monitoring",
+      "discount ratio anomaly monitoring",
+      "abnormal low-price monitoring",
+      "discount amount anomaly detection",
+      "marketing loss monitoring",
+      "campaign discount anomaly detection"
+    ]
+  }
+}

@@ -29,14 +29,14 @@
         "note": "共同覆盖 18 个风险，共同限制 7 个攻击工具。"
       },
       {
-        "key": "A0015",
+        "key": "A0004",
         "relation": "complement",
         "note": "共同覆盖 17 个风险，共同限制 7 个攻击工具。"
       },
       {
-        "key": "A0004",
+        "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 16 个风险，共同限制 7 个攻击工具。"
+        "note": "共同覆盖 17 个风险，共同限制 7 个攻击工具。"
       },
       {
         "key": "A0016",
@@ -82,17 +82,22 @@
       {
         "key": "A0001",
         "relation": "complement",
-        "note": "共同覆盖 7 个风险。"
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0001-004",
         "relation": "complement",
-        "note": "共同覆盖 7 个风险。"
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 7 个风险。"
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0015",
@@ -101,11 +106,6 @@
       },
       {
         "key": "A0016-001",
-        "relation": "complement",
-        "note": "共同覆盖 7 个风险。"
-      },
-      {
-        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 7 个风险。"
       }
@@ -171,7 +171,7 @@
     "title": "TLS/HTTP 指纹识别",
     "category": "AC03",
     "definition": "通过 TLS 握手、HTTP/2 协议层指纹识别客户端的真实类型，区分真实浏览器与协议爬虫、自动化脚本。",
-    "description": "TLS/HTTP 指纹识别是基于协议层特征识别客户端类型的技术。典型指纹包括：JA3/JA4 指纹（基于 TLS ClientHello 的版本、密码套件、扩展、椭圆曲线等字段计算出的哈希，可标识客户端 TLS 实现库如 OpenSSL、BoringSSL、浏览器 TLS 栈等）、HTTP/2 指纹（基于 SETTINGS 帧参数、窗口更新、头部压缩动态表等特征，区分浏览器与 curl/Python requests 等库）、TCP/IP 指纹（基于 MSS、窗口大小、TLS 选项等区分操作系统）。真实浏览器与协议爬虫、自动化库在协议层实现上存在固有差异，即使攻击者伪造了 User-Agent，其 TLS/HTTP2 指纹仍会暴露真实客户端类型。该手段是对网页访问代理识别（A0038-001）中 UA、JS 环境判断的协议层补充，比 UA 更难伪造，是识别协议爬虫、自动化脚本的重要技术。需注意与 A0038-001 的区分：A0038-001 侧重浏览器代理类型识别（无头浏览器、curl、wget 等），A0038-003 侧重底层协议指纹这一具体技术手段。",
+    "description": "TLS/HTTP 指纹识别是基于协议层特征识别客户端类型的技术。典型指纹包括：JA3/JA4 指纹（基于 TLS ClientHello 的版本、密码套件、扩展、椭圆曲线等字段计算出的哈希，可标识客户端 TLS 实现库如 OpenSSL、BoringSSL、浏览器 TLS 栈等）、HTTP/2 指纹（基于 SETTINGS 帧参数、窗口更新、头部压缩动态表等特征，区分浏览器与 curl/Python requests 等库）、TCP/IP 指纹（基于 MSS、窗口大小、TLS 选项等区分操作系统）。真实浏览器与协议爬虫、自动化库在协议层实现上存在固有差异，即使攻击者伪造了 User-Agent，其 TLS/HTTP2 指纹仍会暴露真实客户端类型。该手段是对网页访问代理识别中 UA、JS 环境判断的协议层补充，比 UA 更难伪造，是识别协议爬虫、自动化脚本的重要技术，也可用于接口风控中的客户端一致性校验。需注意与网页访问代理识别的区分：后者侧重浏览器代理类型识别（无头浏览器、curl、wget 等），本手段侧重底层协议指纹、TLS 栈实现和 HTTP/2 行为序列这一具体技术手段。",
     "limitation": "主流浏览器与自动化工具的 TLS 指纹可被刻意对齐（如使用 curl-impersonate、修改 TLS 库参数模拟浏览器指纹）；JA3/JA4 指纹库需持续维护以覆盖新版本客户端；部分客户端因系统/库升级指纹会变化，存在误判风险；CDN、安全网关等中间层可能改写 TLS 指纹导致识别失真。",
     "references": [
       {
@@ -187,7 +187,7 @@
         "link": "https://www.akamai.com/blog/security/HTTP2-fingerprinting"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "TLS/HTTP 指纹识别",
       "TLS指纹识别",

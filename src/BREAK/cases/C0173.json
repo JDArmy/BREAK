@@ -11,7 +11,7 @@
       "广告屏蔽规避",
       "网站检测"
     ],
-    "summary": "该研究开发了CV-INSPECTOR机器学习方法，通过差分执行分析自动检测网站是否使用广告屏蔽规避服务，准确率达93%。在排名前2万网站中发现了规避广告屏蔽的站点，帮助广告屏蔽社区自动化和规模化维护过滤规则。",
+    "summary": "CV-INSPECTOR 研究提出一种自动检测广告屏蔽规避服务的方法，通过对开启和关闭广告屏蔽器时的页面执行差异进行分析，识别网站是否部署反广告屏蔽逻辑。论文报告该方法在标注数据上取得约93%的准确率，并将其用于排名前2万网站的测量，旨在帮助广告屏蔽社区更规模化地发现规避站点并维护过滤规则。",
     "category": "academic_research",
     "relatedRisks": [
       "R0013"
@@ -22,7 +22,7 @@
         "link": "https://par.nsf.gov/servlets/purl/10288360"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-09",
     "incidentTime": "2021-01",
     "relatedAttackTools": [],
     "relatedThreatActors": []

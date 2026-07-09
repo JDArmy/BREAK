@@ -42,8 +42,8 @@
   "A0022-002": {
     "title": "Request Data Encryption",
     "definition": "Encrypting request data sent to the server to prevent interception or tampering during transmission.",
-    "description": "Request data encryption refers to encrypting the request body on top of an existing protocol (such as HTTPS) before sending it to the server, to ensure data is not stolen or tampered with during transmission. Request data encryption can be applied in any business scenario, but requires decryption logic to be added on the server side.",
-    "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted.",
+    "description": "Request data encryption refers to encrypting the request body on top of an existing protocol (such as HTTPS) before sending it to the server, to ensure data is not stolen or tampered with during transmission. It is commonly used on coupon-claiming, ordering, payment, and authentication APIs to prevent attackers from reading parameters through packet capture, changing amounts, tampering with redemption codes, and replaying requests. It can be applied in any business scenario, but requires server-side decryption logic and should be combined with API signatures, replay protection, and server-side business validation.",
+    "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted. Client-side encryption algorithms and key-derivation logic can still be recovered through decompilation, dynamic debugging, or Frida hooks; after plaintext parameters are recovered, attackers may still forge encrypted requests, so this cannot replace server-side permission, amount, and inventory checks.",
     "references": [
       {
         "title": "OWASP REST Security Cheat Sheet",
@@ -56,14 +56,16 @@
       "encrypted request body",
       "client-side encryption",
       "body encryption",
-      "end-to-end request encryption"
+      "end-to-end request encryption",
+      "packet tampering protection",
+      "request parameter anti-tampering"
     ]
   },
   "A0022-003": {
     "title": "Response Data Encryption",
     "definition": "Encrypting response data from the server to prevent interception or tampering during transmission.",
-    "description": "Response data encryption refers to encrypting the response body on the server side to ensure data is not stolen or tampered with during transmission. Response data encryption can be applied in any business scenario, but requires decryption logic to be added on the client side.",
-    "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted.",
+    "description": "Response data encryption refers to encrypting the response body on the server side to ensure data is not stolen or tampered with during transmission. It is commonly used to protect activity inventory, prices, risk-control decisions, entitlement status, and other returned content, reducing the efficiency of packet-capture analysis, client-side display tampering, and automation-script development. It can be applied in any business scenario, but requires client-side decryption logic and should be paired with code obfuscation, key protection, and integrity checks.",
+    "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted. Because response decryption logic must run on the client, attackers can recover plaintext and keys through decompilation, dynamic debugging, or hooking the decryption function; once reversed, response encryption raises analysis cost but cannot stop direct server-side API calls.",
     "references": [
       {
         "title": "OWASP REST Security Cheat Sheet",
@@ -76,7 +78,9 @@
       "encrypted response body",
       "server-side encryption",
       "body encryption",
-      "end-to-end response encryption"
+      "end-to-end response encryption",
+      "client-side decryption logic",
+      "response plaintext protection"
     ]
   },
   "A0022-004": {

@@ -1,0 +1,65 @@
+{
+  "A0242": {
+    "title": "套利商品流向监控",
+    "category": "AC03",
+    "definition": "采集优惠订单、收货地址、物流、退款和二级转卖线索，识别批量撸货后的集中回收转卖行为。",
+    "description": "套利商品流向监控通过采集优惠订单、收货人、收货地址、设备指纹、支付账号、物流轨迹、签收时间、退款记录、售后原因和二级市场线索，建立账号、地址、商品、订单和转卖渠道之间的关联图谱。系统可用阈值、规则、聚类模型和异常基线识别同一批次商品被大量优惠购入后流向少数地址、代收点、回收商或异常转卖渠道的行为。\n\n该手段用于识别撸毛、恶意抢购、低价购和拆单套利之后的变现链路，重点不是拦截单次下单，而是发现规模化套利商品的聚集、转运和销赃模式。落地时应与订单风控、地址黑名单、售后审核、法律取证和商家协同处置结合，降低营销补贴和实物商品被批量套走后的损失。",
+    "limitation": "套利商品流向监控通常具有滞后性，攻击者可通过分散收货地址、代收点、跑腿转运、正常用户代下单或跨平台转卖来规避关联识别；二级市场线索不完整时会出现漏报。对同宿舍、公司团购、社区团购等正常集中收货场景也可能误判，需要结合优惠比例、账号关系和售后行为复核。",
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      },
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "套利商品流向监控",
+      "撸货流向监控",
+      "回收转卖监控",
+      "优惠商品转卖识别",
+      "套利地址聚类",
+      "销赃链路监控"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
+  }
+}

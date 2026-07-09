@@ -9,15 +9,23 @@
       "civil penalty",
       "consumer protection",
       "spam emails",
-      "unauthorized emails",
+      "unsubscribe mechanism",
       "email marketing",
       "Federal Trade Commission"
     ],
-    "summary": "The U.S. Federal Trade Commission (FTC) filed a lawsuit against Experian Consumer Services for violating the CAN-SPAM Act by sending commercial advertising emails without user consent. Experian ultimately agreed to pay a $650,000 civil penalty and committed to complying with the CAN-SPAM Act, ceasing the sending of unauthorized advertising emails. This case clarifies the legal boundary that compan",
+    "summary": "The U.S. Federal Trade Commission sued Experian Consumer Services, alleging that its commercial marketing emails failed to comply with CAN-SPAM Act requirements for unsubscribe mechanisms, commercial-message identification, and honoring opt-out requests, leaving consumers unable to effectively opt out of account-related marketing emails. The case shows that enterprise email marketing without effective opt-out handling and compliant labeling can become a spam-content governance issue. Experian agreed to pay a $650,000 civil penalty and improve future commercial-email unsubscribe and compliance handling.",
     "references": [
       {
         "title": "FTC lawsuit reminds businesses: CAN-SPAM means CAN'T spam",
         "link": "https://consumer.ftc.gov/consumer-alerts/2023/08/ftc-lawsuit-reminds-businesses-can-spam-means-cant-spam"
+      },
+      {
+        "title": "FTC Charges Experian with Spamming Consumers Who Signed Up for Company Accounts with Marketing Emails They Couldn't Opt Out Of",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2023/08/ftc-charges-experian-spamming-consumers-who-signed-company-accounts-marketing-emails-they-couldnt"
+      },
+      {
+        "title": "Permanent Injunction and $650,000 Civil Penalty Imposed on Experian Consumer Services for Alleged CAN-SPAM Violations",
+        "link": "https://www.justice.gov/archives/opa/pr/permanent-injunction-and-650000-civil-penalty-imposed-experian-consumer-services-allegedly"
       }
     ]
   }

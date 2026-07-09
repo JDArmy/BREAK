@@ -1,0 +1,26 @@
+{
+  "A0241": {
+    "title": "Promotion Rule Security Audit",
+    "definition": "Auditing campaign eligibility, limits, inventory, reward issuance, and state-transition rules before a marketing campaign goes live to detect exploitable business logic flaws.",
+    "description": "Promotion rule security audit reviews and validates participation eligibility, claim limits, reward inventory, referral relationships, task completion conditions, refund rollback, reward settlement, and allowlist or blocklist rules during campaign design, configuration release, gray launch, and post-campaign review. The audit should cover boundary values, concurrent claims, duplicate submissions, cross-account linkage, abnormal refunds, reward rollback, and campaign-stacking cases to ensure that server-side rules match front-end display, operations configuration, and finance budgets.\n\nThis control targets promotional activity cheating, repeated first-order reward claiming, unlimited coupon claiming, and fake viral referral abuse, with the goal of finding rule flaws before black-market operators exploit them at scale. It can be implemented through campaign sandboxes, automated test cases, risk-control acceptance checklists, and post-launch anomaly monitoring across the campaign lifecycle.",
+    "limitation": "Promotion rule security audit cannot exhaust every temporary operations configuration or cross-campaign combination. If campaign rules are hot-fixed frequently after launch, third-party channels fail to synchronize rules, reward settlement is delayed asynchronously, or gray environments differ materially from production data, attackers may still exploit old-new rule windows, concurrent submissions, or channel differences. Heavy audit processes can also slow campaign launches.",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "BLA1:2025 - Action Limit Overrun - OWASP Top 10 for Business Logic Abuse",
+        "link": "https://owasp.org/www-project-top-10-for-business-logic-abuse/docs/the-top-10/action-limit-overrun"
+      }
+    ],
+    "keywords": [
+      "Promotion Rule Security Audit",
+      "campaign rule audit",
+      "marketing rule review",
+      "campaign launch security review",
+      "reward rule audit",
+      "promotion logic pre-audit"
+    ]
+  }
+}

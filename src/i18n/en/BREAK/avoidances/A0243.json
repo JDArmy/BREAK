@@ -1,0 +1,26 @@
+{
+  "A0243": {
+    "title": "Campaign Sandbox",
+    "definition": "Validating campaign eligibility, rewards, inventory, discount stacking, and refund rollback rules in an isolated environment with simulated data before a marketing campaign goes live.",
+    "description": "A campaign sandbox runs campaign configuration, discount simulation, reward issuance, inventory deduction, referral relationships, payment confirmation, and refund rollback rules in an isolated environment before the campaign is formally launched. It uses simulated accounts, boundary orders, concurrent requests, abnormal refunds, and cross-channel entry points for automated trial runs. The sandbox should cover new and existing users, allowlists and blocklists, first-order eligibility, coupon-stacking combinations, campaign inventory, payment failures, partial refunds, and reward revocation paths so server-side rules remain consistent with operations configuration, front-end presentation, and finance budgets.\n\nThis control is used to find rule flaws before launch in repeated first-order reward claiming, unlimited coupon claiming, discount stacking arbitrage, and fake viral referral scenarios. Its focus is exposing high-risk promotional logic in a replayable, auditable, and gray-release validation environment. It should be combined with marketing campaign rule security audits, test case libraries, rule-change approval, and post-launch abnormal discount-ratio monitoring.",
+    "limitation": "A campaign sandbox depends on test-case and simulation-data coverage. If production has temporary allowlists, channel-specific rules, asynchronous settlement delays, or third-party entry points not connected to the sandbox, attackers may still exploit real traffic, cache differences, or old-new rule windows. Sandbox results may also misjudge complex legitimate discount combinations and need post-launch monitoring correction.",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "BLA1:2025 - Action Limit Overrun - OWASP Top 10 for Business Logic Abuse",
+        "link": "https://owasp.org/www-project-top-10-for-business-logic-abuse/docs/the-top-10/action-limit-overrun"
+      }
+    ],
+    "keywords": [
+      "Campaign Sandbox",
+      "marketing campaign sandbox",
+      "campaign simulation testing",
+      "promotion rule sandbox",
+      "campaign gray simulation",
+      "discount rule simulation"
+    ]
+  }
+}

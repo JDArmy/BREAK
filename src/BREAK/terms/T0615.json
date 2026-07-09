@@ -1,0 +1,51 @@
+{
+  "T0615": {
+    "title": "凭据复用",
+    "aliases": [
+      "凭证复用",
+      "登录凭据复用",
+      "Credential Reuse"
+    ],
+    "category": "安全防护",
+    "keywords": [
+      "凭据复用",
+      "凭证复用",
+      "登录凭据复用",
+      "Credential Reuse",
+      "账号共用",
+      "Cookie复用",
+      "Token复用"
+    ],
+    "definition": "同一登录凭据、会话令牌或访问凭证在多个设备、网络环境或账号使用场景中被重复使用的现象。",
+    "description": "凭据复用既可能来自正常用户的多端登录，也可能来自账号共享、Cookie转卖、撞库后批量登录、会话令牌盗用等黑灰产行为。攻击者获得账号密码、Cookie、Token或一次性登录态后，可在自己的设备上复用这些凭据访问业务系统，从而绕过正常登录流程或扩大账号滥用规模。\n\n在风控语境中，凭据复用关注凭据与设备、IP、UA、地理位置、行为链路之间的关系是否异常。例如同一Cookie短时间内出现在多个地区、同一Token绑定的设备指纹频繁变化，或一个账号在多个终端并发执行高价值操作，都可能说明凭据被共享、转卖或盗用。",
+    "usageExample": "平台发现同一账号的Cookie在多台陌生设备上并发访问，结合设备指纹突变判断存在凭据复用风险。",
+    "relatedRisks": [
+      "R0011-002",
+      "R0032",
+      "R0032-001",
+      "R0035",
+      "R0035-001",
+      "R0035-002"
+    ],
+    "relatedAvoidances": [
+      "A0007",
+      "A0011",
+      "A0021",
+      "A0026",
+      "A0033",
+      "A0218"
+    ],
+    "relatedAttackTools": [
+      "AT0030"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Credential Stuffing Prevention Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

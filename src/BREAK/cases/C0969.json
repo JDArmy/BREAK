@@ -1,30 +1,36 @@
 {
   "C0969": {
-    "title": "自动挂机脚本违法性法律咨询",
+    "title": "自动挂机脚本破坏网络游戏公平性案例",
     "keywords": [
       "自动挂机脚本",
       "游戏外挂",
-      "法律咨询",
+      "司法案例",
       "虚拟货币",
       "游戏公平性",
-      "华律网",
+      "游戏外挂治理",
       "游戏服务协议",
       "恶意刷取"
     ],
-    "summary": "华律网律师解答指出，自动挂机脚本若被用于恶意刷取游戏资源、破坏游戏平衡、干扰其他玩家正常游戏体验，或违反游戏服务协议，则可能涉嫌违法。例如通过脚本大量刷取游戏金币等虚拟货币，扰乱游戏内经济秩序，或利用脚本在竞技游戏中自动躲避对手攻击，严重影响游戏公平性，侵犯游戏公司权益。",
-    "category": "academic_research",
+    "summary": "2015年9月，吕某等人与张某约定使用外挂软件刷取某网络游戏币出售获利，张某在吕某等人购买的270台电脑中安装外挂并远程控制，自动登录大量游戏账号完成任务、领取游戏币和道具后交易变现，非法获利74.4万余元。该案体现自动挂机脚本对游戏公平性、虚拟经济秩序和平台正常运营的持续破坏。",
+    "category": "criminal_verdict",
     "relatedRisks": [
       "R0100"
     ],
     "references": [
       {
-        "title": "自动挂机脚本违法吗_精选律师解答—华律网",
-        "link": "https://www.66law.cn/question/answer/77798226.html"
+        "title": "游戏外挂犯罪行为的司法治理 - 中国法院网",
+        "link": "https://www.chinacourt.org/article/detail/2020/12/id/5677399.shtml"
+      },
+      {
+        "title": "利用外挂软件刷游戏币出售如何定性 - 最高人民检察院",
+        "link": "https://www.spp.gov.cn/llyj/201711/t20171105_204125.shtml"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-12",
-    "relatedAttackTools": [],
+    "updated": "2026-07-09",
+    "incidentTime": "2020-12",
+    "relatedAttackTools": [
+      "AT0047"
+    ],
     "relatedThreatActors": []
   }
 }

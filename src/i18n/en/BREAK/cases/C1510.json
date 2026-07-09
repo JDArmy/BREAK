@@ -1,20 +1,20 @@
 {
   "C1510": {
-    "title": "HarmonyOS AR/VR Data Security and Privacy Protection Practices",
+    "title": "XR/VR Privacy and Security Research in Immersive Environments",
     "keywords": [
-      "HarmonyOS AR/VR security",
+      "XR privacy and security",
       "IMU data privacy",
       "eye-tracking biometrics protection",
       "SLAM replay attack",
-      "differential privacy AR/VR",
+      "immersive environment privacy",
       "spatial anchor data leak",
       "multimodal data privacy"
     ],
-    "summary": "On April 18, 2025, a HarmonyOS AR/VR development technical article analyzed the privacy risks of multimodal data collection on AR/VR devices, including the leakage of sensitive information such as 9-axis IMU motion data, eye-tracking biometrics, and spatial anchors. It pointed out that unprotected SLAM data could be subject to replay attacks causing virtual object misplacement, and proposed AES-GCM encryption and Geo-Indistinguishability differential privacy protection schemes based on HarmonyOS.",
+    "summary": "A 2024 XR privacy and security survey explains that AR/VR devices continuously collect sensitive head and hand motion, eye-tracking, spatial-map, audio-video, and environmental-context data. These signals can reveal identity, biometrics, location, and behavioral patterns, while sensor fusion, spatial anchors, and third-party app permissions amplify privacy exposure and data-abuse risks in immersive environments.",
     "references": [
       {
-        "title": "HarmonyOS AR/VR Development: 05 - AR/VR Data Security and Privacy Protection Practices",
-        "link": "https://www.jianshu.com/p/f1213b6cb304"
+        "title": "SoK: Privacy and Security in the Age of the Metaverse",
+        "link": "https://arxiv.org/abs/2403.06890"
       }
     ]
   }

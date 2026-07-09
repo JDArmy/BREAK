@@ -1,0 +1,62 @@
+{
+  "A0239": {
+    "title": "支付结果一致性校验",
+    "category": "AC01",
+    "definition": "校验支付渠道回执、本地订单、支付单、金额、币种、状态和签名一致后，才更新订单为已支付。",
+    "description": "支付结果一致性校验是在支付回调、主动查单、订单完结、发货和清结算等节点，比对本地订单号、支付单号、支付机构交易号、实付金额、币种、手续费、交易状态、支付时间、回调签名和幂等处理记录。服务端只有在支付渠道返回的可信结果与本地订单应付金额和状态完全一致时，才允许把订单置为已支付、发货、发放权益或进入结算。\n\n该手段直接防止攻击者伪造支付成功状态、重放旧回调、篡改回调金额、利用异步状态差或本地订单状态机缺陷完成未足额支付交易。它应与服务端重新计价校验、接口签名校验、支付渠道查单、幂等控制和财务对账共同使用，降低支付回调伪造和金额不一致导致的资金损失。",
+    "limitation": "支付结果一致性校验依赖支付渠道回执验签、查单接口和本地订单状态机的正确实现；攻击者可通过重复回调、竞态提交、回调顺序扰乱或利用渠道异常延迟制造绕过窗口。若商户没有独立对账或异常订单冻结机制，短时间内仍可能出现误发货、误发权益或售后争议。",
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "Web Parameter Tampering - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/Web_Parameter_Tampering"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "支付结果一致性校验",
+      "支付回调校验",
+      "支付金额一致性",
+      "支付状态校验",
+      "支付查单校验",
+      "订单支付一致性",
+      "支付回执验签"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0009",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0010-006",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0010-009",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}
