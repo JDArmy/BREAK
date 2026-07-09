@@ -1,0 +1,61 @@
+{
+  "A0265": {
+    "title": "票务转售管控",
+    "category": "AC01",
+    "keywords": [
+      "票务转售管控",
+      "转售管控",
+      "票务转让限制",
+      "实名转让校验",
+      "转让次数限制",
+      "二级转售限制"
+    ],
+    "definition": "通过实名绑定、转让资格校验、转让次数限制和官方转让通道，压缩票务资源被黄牛二次倒卖的空间。",
+    "description": "票务转售管控面向演唱会、体育赛事、景区预约、挂号、交通席位和活动名额等稀缺资源分配场景，在购票、出票、转让、退票、入场或核销环节设置实名绑定、转让方与受让方身份校验、转让次数限制、加价限制、官方转让通道和异常转让冻结机制。\n\n该手段的核心是把资源所有权转移纳入平台内闭环管理，减少黄牛通过转让码、账号交付、线下交易或二手平台加价转售牟利。落地时应结合票种、活动风险等级、监管要求、消费者退改需求和入场核验能力，区分正常亲友转让、退票流转和职业黄牛倒卖。",
+    "limitation": "过强的转让限制可能误伤正常用户的退改签和亲友代购需求，带来投诉和合规争议；黄牛仍可能通过整号交付、陪同入场、伪造实名材料、场外现金交易或诱导用户共享账号绕过平台内转让管控，需要与实名核验、设备风控、二手平台巡查和投诉处置联动。",
+    "references": [
+      {
+        "title": "文化和旅游部 公安部关于进一步加强大型营业性演出活动规范管理促进演出市场健康有序发展的通知",
+        "link": "https://zwgk.mct.gov.cn/zfxxgkml/scgl/202309/t20230913_947020.html"
+      },
+      {
+        "title": "FTC: Better Online Ticket Sales Act",
+        "link": "https://www.ftc.gov/business-guidance/resources/better-online-ticket-sales-act"
+      }
+    ],
+    "updated": "2026-07-09",
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0001-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0001-002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0001-003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

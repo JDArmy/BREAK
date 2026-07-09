@@ -1,0 +1,58 @@
+{
+  "T0648": {
+    "title": "转让码",
+    "aliases": [
+      "票务转让码",
+      "转赠码",
+      "核销码",
+      "入场码"
+    ],
+    "category": "黑产资源",
+    "keywords": [
+      "转让码",
+      "票务转让码",
+      "转赠码",
+      "核销码",
+      "入场码",
+      "电子票转让凭证",
+      "票务权益转移"
+    ],
+    "definition": "转让码是在票务或预约名额转让场景中用于完成权益转移、核验或入场的电子凭证。",
+    "description": "转让码常见于电子票、预约名额、会员权益、景区入园、活动报名和平台权益转赠场景。正常业务中，它用于把票务或名额从原持有人转移给受让人，并在核销或入场时证明权益归属。\n\n在黑灰产场景中，黄牛可能把转让码作为交付物，通过截图、链接、短信、账号内转赠或二手平台交易完成加价转售。若转让码缺少实名绑定、次数限制、有效期控制和异常转让监测，就会放大票务黄牛倒卖、平台诈骗风险和入场核验争议。",
+    "usageExample": "平台发现同一卖家反复出售多个场次的转让码，且受让人手机号与购票账号设备指纹高度关联。",
+    "relatedRisks": [
+      "R0003-004",
+      "R0095",
+      "R0288"
+    ],
+    "relatedAvoidances": [
+      "A0024",
+      "A0016",
+      "A0021",
+      "A0028",
+      "A0059",
+      "A0077",
+      "A0265"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD09",
+      "BD10"
+    ],
+    "references": [
+      {
+        "title": "文化和旅游部 公安部关于进一步加强大型营业性演出活动规范管理促进演出市场健康有序发展的通知",
+        "link": "https://zwgk.mct.gov.cn/zfxxgkml/scgl/202309/t20230913_947020.html"
+      },
+      {
+        "title": "FTC: Better Online Ticket Sales Act",
+        "link": "https://www.ftc.gov/business-guidance/resources/better-online-ticket-sales-act"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

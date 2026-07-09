@@ -1,0 +1,26 @@
+{
+  "A0265": {
+    "title": "Ticket Resale Control",
+    "keywords": [
+      "Ticket Resale Control",
+      "resale control",
+      "ticket transfer restriction",
+      "real-name transfer verification",
+      "transfer count limit",
+      "secondary resale restriction"
+    ],
+    "definition": "Reduce ticket scalping by binding tickets to verified identities, checking transfer eligibility, limiting transfer frequency, and keeping transfers inside official channels.",
+    "description": "Ticket resale control applies to scarce-resource allocation scenarios such as concerts, sports events, attraction reservations, medical appointments, transport seats, and activity slots. It places real-name binding, transferor and transferee identity checks, transfer-count limits, markup limits, official transfer channels, and abnormal-transfer freezes around purchase, issuance, transfer, refund, entry, and redemption workflows.\n\nThe core of this control is to keep ownership transfer inside a platform-managed loop, reducing scalper profit through transfer codes, account delivery, offline deals, or marked-up secondary-platform resale. Implementation should distinguish legitimate friend or family transfers, refund circulation, and professional scalping based on ticket type, event risk level, regulatory requirements, consumer refund needs, and entry-verification capability.",
+    "limitation": "Overly strict transfer limits can harm legitimate refund, exchange, and friend-or-family purchase needs, creating complaints and compliance disputes. Scalpers may still bypass in-platform controls through whole-account delivery, accompanied entry, forged identity materials, off-site cash transactions, or inducing users to share accounts. This control should be combined with real-name verification, device risk control, secondary-platform monitoring, and complaint handling.",
+    "references": [
+      {
+        "title": "Ministry of Culture and Tourism and Ministry of Public Security notice on strengthening management of large commercial performances",
+        "link": "https://zwgk.mct.gov.cn/zfxxgkml/scgl/202309/t20230913_947020.html"
+      },
+      {
+        "title": "FTC: Better Online Ticket Sales Act",
+        "link": "https://www.ftc.gov/business-guidance/resources/better-online-ticket-sales-act"
+      }
+    ]
+  }
+}

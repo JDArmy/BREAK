@@ -1,0 +1,34 @@
+{
+  "T0648": {
+    "title": "Transfer Code",
+    "aliases": [
+      "ticket transfer code",
+      "gift transfer code",
+      "redemption code",
+      "entry code"
+    ],
+    "category": "Black-Market Resource",
+    "keywords": [
+      "Transfer Code",
+      "ticket transfer code",
+      "gift transfer code",
+      "redemption code",
+      "entry code",
+      "electronic ticket transfer credential",
+      "ticket entitlement transfer"
+    ],
+    "definition": "A transfer code is an electronic credential used to transfer, verify, or redeem ticketed or reserved entitlements.",
+    "description": "Transfer codes appear in electronic tickets, appointment slots, membership benefits, attraction entry, event registration, and platform benefit gifting. In legitimate workflows, they move a ticket or slot from the original holder to a transferee and prove entitlement during redemption or entry.\n\nIn black-market scenarios, scalpers may use transfer codes as deliverables and resell them through screenshots, links, SMS messages, in-account gifts, or secondary-platform transactions. Without real-name binding, transfer-count limits, validity controls, and abnormal-transfer monitoring, transfer codes can amplify ticket scalping, platform-fraud risk, and entry-verification disputes.",
+    "usageExample": "The platform found one seller repeatedly listing transfer codes for multiple events, while transferee phone numbers were strongly associated with the buyer accounts' device fingerprints.",
+    "references": [
+      {
+        "title": "Ministry of Culture and Tourism and Ministry of Public Security notice on strengthening management of large commercial performances",
+        "link": "https://zwgk.mct.gov.cn/zfxxgkml/scgl/202309/t20230913_947020.html"
+      },
+      {
+        "title": "FTC: Better Online Ticket Sales Act",
+        "link": "https://www.ftc.gov/business-guidance/resources/better-online-ticket-sales-act"
+      }
+    ]
+  }
+}

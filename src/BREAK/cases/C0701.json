@@ -15,7 +15,8 @@
     "summary": "2023年10月起，郑某等人购买抢票软件自动抢购三星堆博物馆门票，以100至150元高价倒卖。团伙共抢购门票2300余张，非法获利数万元。法院以非法获取计算机信息系统数据罪判处六名被告人有期徒刑并处罚金。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0070"
+      "R0070",
+      "R0288"
     ],
     "references": [
       {
@@ -23,7 +24,7 @@
         "link": "http://ghfy.scssfw.gov.cn/article/detail/2025/06/id/8873160.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-09",
     "incidentTime": "2025-06",
     "relatedAttackTools": [
       "AT0045"
