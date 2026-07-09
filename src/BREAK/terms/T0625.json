@@ -22,15 +22,23 @@
       "R0284",
       "R0285",
       "R0286",
-      "R0287"
+      "R0287",
+      "R0029"
     ],
     "relatedAvoidances": [
-      "A0077"
+      "A0077",
+      "A0253",
+      "A0254",
+      "A0004",
+      "A0028",
+      "A0054",
+      "A0044"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessDomains": [
-      "BD01"
+      "BD01",
+      "BD15"
     ],
     "references": [
       {

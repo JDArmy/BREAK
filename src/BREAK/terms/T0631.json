@@ -25,12 +25,17 @@
       "R0287"
     ],
     "relatedAvoidances": [
-      "A0077"
+      "A0077",
+      "A0253",
+      "A0257",
+      "A0261"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessDomains": [
-      "BD01"
+      "BD01",
+      "BD04",
+      "BD05"
     ],
     "references": [
       {

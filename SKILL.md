@@ -20,6 +20,8 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务
 | Case（案例） | 1782 | C0001 | 真实的安全事件案例 |
 | BusinessDomain（业务域） | 20 | BD00 | 行业/业务域分类 |
 
+维护说明：本 Skill 的调用方式保持不变，实体统计与知识库数据关系补强同步更新。
+
 ## 调用方式
 
 使用 Bash 执行搜索脚本。脚本路径位于 skill 目录下的 `break_search.mjs`。

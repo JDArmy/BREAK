@@ -20,6 +20,8 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge fra
 | Case | 1782 | C0001 | Real-world security incident cases |
 | BusinessDomain | 20 | BD00 | Industry/business domain categories |
 
+Maintenance note: the Skill invocation workflow is unchanged; entity counts stay synchronized with knowledge-base relationship updates.
+
 ## How to Invoke
 
 Execute the search script via Bash. The script is located at `break_search.mjs` in the same directory as this SKILL file.
