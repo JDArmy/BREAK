@@ -27,29 +27,34 @@
     "effectiveness": "medium",
     "relatedAvoidances": [
       {
+        "key": "A0004-001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
         "key": "A0016",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       },
       {
-        "key": "A0075",
+        "key": "A0020",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       },
       {
-        "key": "A0077",
+        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
-      },
-      {
-        "key": "A0255",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0257",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
       }
     ]
   }

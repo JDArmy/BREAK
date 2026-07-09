@@ -1,0 +1,61 @@
+{
+  "A0262": {
+    "title": "模型输出最小化与反抽取控制",
+    "category": "AC01",
+    "keywords": [
+      "模型输出最小化与反抽取控制",
+      "模型抽取防护",
+      "模型逆向防护",
+      "推理接口限额",
+      "置信度脱敏",
+      "模型水印"
+    ],
+    "definition": "通过限制推理接口暴露、输出粒度和查询预算，降低模型被批量探测、抽取或逆向还原的风险。",
+    "description": "模型输出最小化与反抽取控制面向模型逆向、模型提取和成员推断等攻击路径。常见做法包括限制单主体推理频次和查询预算、隐藏或分桶化置信度分数、减少中间推理链和特征解释暴露、对高价值模型输出添加水印或金丝雀样本、监测相似查询批量探测行为，并对异常调用自动降级或转入人工审批。\n\n在金融交易和 AI 智能体场景中，该手段用于防止攻击者通过大量查询反推投资模型边界、策略逻辑、训练样本或敏感特征，降低模型被克隆后用于对抗交易、合成市场信号和规避风控的可能性。",
+    "limitation": "输出最小化会降低模型解释性和调试效率，过度限制置信度或推理链可能影响研究员复盘；攻击者仍可通过分布式账号、低频长期查询或替代模型训练规避预算控制；水印和金丝雀样本可能被重采样、蒸馏或后处理削弱，仍需结合访问控制、异常行为监测和审计处置。",
+    "references": [
+      {
+        "title": "NIST AI 100-2 E2025: Adversarial Machine Learning - A Taxonomy and Terminology of Attacks and Mitigations",
+        "link": "https://csrc.nist.gov/pubs/ai/100/2/e2025/final"
+      },
+      {
+        "title": "Stealing Machine Learning Models via Prediction APIs",
+        "link": "https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer"
+      }
+    ],
+    "updated": "2026-07-09",
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0004-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0006-007",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0006-008",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0028",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

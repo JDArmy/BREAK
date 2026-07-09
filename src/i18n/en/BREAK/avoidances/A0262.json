@@ -1,0 +1,26 @@
+{
+  "A0262": {
+    "title": "Model Output Minimization and Anti-Extraction Control",
+    "keywords": [
+      "Model Output Minimization and Anti-Extraction Control",
+      "model extraction defense",
+      "model inversion defense",
+      "inference API quota",
+      "confidence redaction",
+      "model watermarking"
+    ],
+    "definition": "A control that reduces model extraction and inversion risk by limiting exposed inference interfaces, output granularity, and query budgets.",
+    "description": "Model output minimization and anti-extraction control addresses model inversion, model extraction, and membership inference attack paths. Common measures include limiting inference frequency and query budgets per subject, hiding or bucketing confidence scores, reducing exposure of intermediate reasoning chains and feature explanations, adding watermarks or canary samples to high-value model outputs, monitoring batches of similar probing queries, and automatically degrading or routing anomalous calls for manual approval.\n\nIn financial trading and AI-agent scenarios, this control helps prevent attackers from using large numbers of queries to infer investment model boundaries, strategy logic, training samples, or sensitive features, reducing the chance that cloned models are used for adversarial trading, synthetic market signals, or evasion of risk controls.",
+    "limitation": "Output minimization can reduce explainability and debugging efficiency, while excessive restriction of confidence scores or reasoning traces may hinder analyst review. Attackers may still bypass query budgets through distributed accounts, long-running low-frequency probing, or substitute-model training. Watermarks and canary samples may be weakened by resampling, distillation, or post-processing, so this control must be combined with access control, anomaly monitoring, and audit-based response.",
+    "references": [
+      {
+        "title": "NIST AI 100-2 E2025: Adversarial Machine Learning - A Taxonomy and Terminology of Attacks and Mitigations",
+        "link": "https://csrc.nist.gov/pubs/ai/100/2/e2025/final"
+      },
+      {
+        "title": "Stealing Machine Learning Models via Prediction APIs",
+        "link": "https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer"
+      }
+    ]
+  }
+}
