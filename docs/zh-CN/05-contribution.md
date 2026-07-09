@@ -41,6 +41,8 @@ slug: contribution
 
 需要读实体实际内容做语义交叉的规则，用 subagent 加载已有实体交叉判断。命令包括 `review:risk-avoidance`、`review:case-relation`、`review:tool-risks`、`review:actor-consistency` 等。**fail 阻断、review 提示**。
 
+`review:should-extract` 会把全库已有实体的 title、keywords、aliases 和当前实体已引用关系一起纳入上下文；如果建议抽取的概念已由现有实体覆盖，会自动降噪为已覆盖项，避免重复新增实体。
+
 ```bash
 npm run review:changed                # 变更实体跑全套 B+C 类
 npm run review:changed -- --base HEAD~1  # 对比上一次提交
@@ -59,6 +61,8 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 修改业务域归类校验时，尤其要同步说明跨业务域 / 跨风险场景复用的维护规则：跨挂不是多选标签，只有风险确实在多个行业或问题域复用时才添加，并给出可审计的跨挂理由。
 
 需要推动 `README.md` 与 `README_CN.md` 更新的典型变更包括：公共命令、构建 / 发布门禁、CI 工作流、数据导出、STIX / JSON-LD / npm 数据包、Schema 文档、实体类型或基础信息。
+
+修改 `review:*` 评审脚本时，需要在使用手册中说明评审口径变化；若影响公共命令、提交门禁或维护流程，也要同步 README。
 
 需要推动 `SKILL.md` 与 `SKILL_en.md` 更新的典型变更包括：`scripts/skill/` 搜索或打包脚本、Skill 可消费的数据结构、实体字段 / 关系、导出的中英文数据包。
 

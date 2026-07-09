@@ -41,6 +41,8 @@ All enumerable / regex / lookup-table rules are wired into `npm run validate:dat
 
 Rules that need to read actual entity content for semantic cross-checking use a subagent that loads existing entities to cross-judge. Commands include `review:risk-avoidance`, `review:case-relation`, `review:tool-risks`, `review:actor-consistency`, etc. **fail blocks, review warns**.
 
+`review:should-extract` includes existing entity titles, keywords, aliases, and the current entity's referenced relations in the review context. If a proposed extraction is already covered by an existing entity, the script suppresses that duplicate suggestion as covered instead of asking contributors to add another entity.
+
 ```bash
 npm run review:changed                # run full B+C on changed entities
 npm run review:changed -- --base HEAD~1  # compare against the previous commit
@@ -59,6 +61,8 @@ Typical changes that require updating both `docs/zh-CN/` and `docs/en/` include:
 When changing business-domain classification validation, also document the maintenance rule for cross-domain / cross-risk-scene reuse: cross-linking is not a multi-select tag. Add it only when a risk is genuinely reused across multiple industries or problem domains, and record an auditable cross-scene reason.
 
 Typical changes that require updating `README.md` and `README_CN.md` include: public commands, build / release gates, CI workflows, data exports, STIX / JSON-LD / npm data package outputs, schema documentation, entity types, or basic project information.
+
+When changing a `review:*` script, document the changed review policy in the user manual. If the change affects public commands, commit gates, or maintenance workflow, update the README files as well.
 
 Typical changes that require updating `SKILL.md` and `SKILL_en.md` include: `scripts/skill/` search or packaging scripts, Skill-consumable data shape, entity fields / relationships, and exported Chinese / English data bundles.
 
