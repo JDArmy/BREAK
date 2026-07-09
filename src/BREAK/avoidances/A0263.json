@@ -1,0 +1,61 @@
+{
+  "A0263": {
+    "title": "舆情叙事操纵监测",
+    "category": "AC03",
+    "keywords": [
+      "舆情叙事操纵监测",
+      "舆情操纵监测",
+      "叙事炒作检测",
+      "社交媒体操纵检测",
+      "热点劫持检测",
+      "传播节奏异常检测"
+    ],
+    "definition": "采集社交媒体、投资社区、直播短视频、研报转载和新闻传播链路，识别协同叙事炒作、热点劫持和异常传播节奏。",
+    "description": "舆情叙事操纵监测面向社交媒体、投资社区、直播间、短视频、新闻聚合、研报转载和站外群聊等信息传播入口，采集文本话术、账号图谱、传播路径、转发时间序列、互动质量、跨平台同步关系和交易热度变化等信号。系统可通过文本相似度、账号关联、突发阈值、传播基线、来源可信度和交易窗口匹配识别协同叙事炒作、热点劫持、注意力引流和异常放大。\n\n该手段适用于投资者认知操纵、市场信息操纵和故事 Alpha 炒作等场景。落地时应把舆情异常与行情波动、下单转化、投诉反馈和权威披露联动分析，对疑似操纵叙事进行降权、标记、人工复核或触发后续处置。",
+    "limitation": "真实突发新闻、政策变化或市场重大事件也会造成类似的舆情爆发，容易出现误报或误伤正常讨论；攻击者可混入真实账号、拉长传播周期、改写话术、分散平台或利用私域群聊规避公开监测。该手段需要结合交易行为、来源核验和人工复盘降低误判。",
+    "references": [
+      {
+        "title": "Stanford Report: What to know about disinformation and how to address it",
+        "link": "https://news.stanford.edu/stories/2022/04/know-disinformation-address"
+      },
+      {
+        "title": "SEC Investor Alerts and Bulletins",
+        "link": "https://www.sec.gov/investor/alerts"
+      }
+    ],
+    "updated": "2026-07-09",
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0006",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0006-006",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
+  }
+}

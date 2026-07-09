@@ -13,7 +13,7 @@
       "AI coding assistant attack",
       "GitHub identity abuse"
     ],
-    "summary": "In February 2026, security researchers disclosed a supply chain worm attack campaign dubbed SANDWORM_MODE, which used at least 19 malicious npm packages to harvest credentials and steal cryptocurrency keys. The packages were distributed via typosquatting and possessed capabilities to exfiltrate system information, access tokens, and API keys, while self-propagating by abusing stolen npm and GitHub",
+    "summary": "In February 2026, researchers disclosed the SANDWORM_MODE supply chain worm campaign, identifying at least 19 malicious npm packages used to collect system information, credentials, cryptocurrency keys, access tokens, and API keys. The packages were distributed through the npm ecosystem by malicious publishers, were described as capable of spreading through stolen npm and GitHub identities, and included an McpInject module for MCP server injection and prompt injection against AI coding assistants, increasing credential exposure and supply chain propagation risk in developer environments; known malicious packages were later removed from npm.",
     "references": [
       {
         "title": "Malicious npm Packages Steal Cryptocurrency Keys and API Tokens - Tencent News",

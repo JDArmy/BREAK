@@ -1,0 +1,26 @@
+{
+  "A0264": {
+    "title": "Investor Risk Warning and Suitability Intervention",
+    "keywords": [
+      "Investor Risk Warning and Suitability Intervention",
+      "investor risk warning",
+      "suitability intervention",
+      "trading cooling-off period",
+      "hot-topic trade reconfirmation",
+      "investor protection"
+    ],
+    "definition": "Provide risk warnings, suitability checks, and cooling-off periods before trades triggered by high volatility, high attention, or suspected manipulation narratives, reducing the chance that investors are induced by those narratives.",
+    "description": "Investor risk warning and suitability intervention applies to momentum chasing, hot concepts, abnormally volatile instruments, livestream or community-to-trade flows, copy trading, and high-risk product subscriptions. Before a user places an order, adds leverage, changes positions, or opens permissions, the platform can show risk warnings, require reconfirmation, trigger a cooling-off period, verify suitability level, and restrict or route obviously mismatched users for manual confirmation.\n\nThe core of this control is to place investor protection inside the trading decision chain, reducing the immediate influence of story alpha, attention hijacking, false trends, and market information manipulation on user judgment. Implementation should dynamically adjust warning strength based on instrument volatility, public-opinion heat, user experience, risk tolerance, and historical trading behavior.",
+    "limitation": "Excessive warnings can create alert fatigue, affect legitimate trading, or degrade the trading experience. Attackers may push users to off-platform accounts, use proxy operation to bypass the warning process, or rely on long-term persuasion to weaken warning effectiveness. This control should be combined with public-opinion monitoring, abnormal trading surveillance, and complaint handling.",
+    "references": [
+      {
+        "title": "SEC Investor Alerts and Bulletins",
+        "link": "https://www.sec.gov/investor/alerts"
+      },
+      {
+        "title": "FINRA Investor Insights",
+        "link": "https://www.finra.org/investors/insights"
+      }
+    ]
+  }
+}

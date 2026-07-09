@@ -11,7 +11,7 @@
       "信息保护合规",
       "美国网络安全"
     ],
-    "summary": "美国CISA发布了对违反受保护的关键基础设施信息（PCII）法规的处罚说明。根据《2002年关键基础设施信息法》，未经授权披露或滥用PCII将面临民事和刑事处罚，这体现了关键信息基础设施合规中信息保护的重要性。",
+    "summary": "CISA在2020年12月17日修订的资料页中说明，违反受保护的关键基础设施信息（PCII）相关法律会面临处罚。该页面作为PCII合规资料，强调提交给政府的关键基础设施敏感信息需按PCII制度保护，未经授权披露或滥用会产生法律后果。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0075"
@@ -22,7 +22,7 @@
         "link": "https://www.cisa.gov/resources-tools/resources/penalties-pcii-violations"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2020-12-17"

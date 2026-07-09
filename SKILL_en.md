@@ -8,12 +8,12 @@ allowed-tools: Bash
 
 # BREAK Knowledge Base Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,363 entries across the following entity types:
+BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,365 entries across the following entity types:
 
 | Type | Count | ID Format | Description |
 |------|-------|-----------|-------------|
 | Risk | 393 | R0001, R0001-001 | Business security risk definitions and impact |
-| Avoidance | 344 | A0001, A0001-001 | Defensive measures against risks |
+| Avoidance | 346 | A0001, A0001-001 | Defensive measures against risks |
 | AttackTool | 120 | AT0001, AT0001-001 | Tools used by threat actors |
 | ThreatActor | 76 | TA0001, TA0001-001 | Groups that carry out attacks |
 | Term | 624 | T0001 | Business security terminology |
@@ -165,6 +165,8 @@ The 2026-07-09 Case P1 reference-quality maintenance only strengthens the refere
 Case fact review sends scraped article text to the LLM. When maintaining `review-case-fact.mjs`, keep the submitted snippet long enough to cover key article sections; when clearing P2 items in bulk, create checkpoints after roughly 100 changes and run `validate:data` / `review:changed` before committing, so large batches do not accumulate unverified changes.
 
 The 2026-07-09 Case P2 fact-review maintenance only strengthens or narrows Case `summary` / `references` / English translations; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
+The second 2026-07-09 Case P2 fact-review checkpoint continues narrowing C0249, C0310, C0401, C0588, C0595, C0635, C0687, C0697, C0705, C0715, C0753, C0755, C0766, C0796, C0797, C0803, C0805, C0819, C0821, C0833, and C0948 `summary`, `incidentTime`, `references`, and English translations; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 

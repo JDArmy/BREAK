@@ -13,7 +13,7 @@
       "开源组件投毒",
       "包管理器"
     ],
-    "summary": "2026年5月，Microsoft披露了一起依赖混淆攻击活动，攻击者利用33个恶意npm包收集开发者环境和构建环境的侦察数据。这些包利用包管理器优先从公共仓库拉取依赖的特性，发布与企业内部包同名的恶意公共包，从而实现对下游用户的供应链攻击。",
+    "summary": "微软威胁情报团队2026年5月29日披露一起npm依赖混淆攻击，称攻击者在5月28日至29日通过多个维护者别名发布恶意包，伪装成企业内部命名空间包并覆盖多个组织命名空间。安装后，这些包会执行混淆侦察载荷，收集系统信息、主机名、环境变量和开发者上下文，相关包和用户随后被下架。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-005",
@@ -25,7 +25,7 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/05/29/33-malicious-npm-packages-abuse-dependency-confusion-profile-developer-environments/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2026-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

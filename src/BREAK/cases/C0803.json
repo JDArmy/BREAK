@@ -13,7 +13,7 @@
       "AI编程助手攻击",
       "GitHub身份滥用"
     ],
-    "summary": "2026年2月，安全研究人员披露了名为SANDWORM_MODE的供应链蠕虫攻击活动，利用至少19个恶意npm包实施凭据收集和加密货币密钥窃取。这些包通过typosquatting方式发布，具备窃取系统信息、访问令牌、API密钥的能力，并能通过滥用被盗的npm和GitHub身份自动传播。恶意包还包含针对AI编程助手的MCP服务器注入模块，收集大语言模型API密钥。",
+    "summary": "2026年2月，研究人员披露SANDWORM_MODE供应链蠕虫活动，发现至少19个恶意npm包用于收集系统信息、凭据、加密货币密钥、访问令牌和API密钥。相关包由恶意发布者通过npm生态投放，被称可滥用被盗npm与GitHub身份自动传播，并包含McpInject模块，面向AI编程助手实施MCP服务器注入和提示注入，扩大开发者环境中的凭证外泄和供应链扩散风险；已知恶意包随后从npm平台下线。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-005"
@@ -28,7 +28,7 @@
         "link": "https://www.endorlabs.com/learn/sandworm-mode-dissecting-a-multi-stage-npm-supply-chain-attack"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2026-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []

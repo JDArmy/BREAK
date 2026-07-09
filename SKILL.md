@@ -8,12 +8,12 @@ allowed-tools: Bash
 
 # BREAK 知识库 Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3363 条业务安全风险知识条目，涵盖以下实体类型：
+BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3365 条业务安全风险知识条目，涵盖以下实体类型：
 
 | 类型 | 数量 | ID 格式 | 说明 |
 |------|------|---------|------|
 | Risk（风险） | 393 | R0001, R0001-001 | 业务安全风险定义和影响 |
-| Avoidance（规避手段） | 344 | A0001, A0001-001 | 应对风险的防御措施 |
+| Avoidance（规避手段） | 346 | A0001, A0001-001 | 应对风险的防御措施 |
 | AttackTool（攻击工具） | 120 | AT0001, AT0001-001 | 黑灰产使用的工具 |
 | ThreatActor（威胁行为者） | 76 | TA0001, TA0001-001 | 实施攻击的人群 |
 | Term（术语） | 624 | T0001 | 业务安全领域术语 |
@@ -168,6 +168,8 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 Case 事实核验使用抓取正文送入 LLM。维护 `review-case-fact.mjs` 时需保证送审片段足够覆盖正文关键段落；大批量清理 P2 待办时按约 100 个改动设置 checkpoint，先跑 `validate:data` / `review:changed` 再提交，避免长时间积累未验证变更。
 
 2026-07-09 的 Case P2 事实核验维护仅补强或收敛案例 `summary` / `references` / 英文翻译，不改变 Skill 调用参数、搜索字段、返回格式或实体结构。
+
+2026-07-09 的第二批 Case P2 事实核验 checkpoint 继续收敛 C0249、C0310、C0401、C0588、C0595、C0635、C0687、C0697、C0705、C0715、C0753、C0755、C0766、C0796、C0797、C0803、C0805、C0819、C0821、C0833、C0948 的 `summary`、`incidentTime`、`references` 与英文翻译；不改变 Skill 调用参数、搜索字段、返回格式或实体结构。
 
 `review:should-extract` 会用全库实体 title、keywords、aliases 以及当前实体已引用关系识别已覆盖的候选实体；维护该脚本时，应保持重复抽取建议被降噪，避免 Skill 检索结果中出现语义重复的新增实体。
 

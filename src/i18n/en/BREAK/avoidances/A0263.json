@@ -1,0 +1,26 @@
+{
+  "A0263": {
+    "title": "Public Opinion Narrative Manipulation Monitoring",
+    "keywords": [
+      "Public Opinion Narrative Manipulation Monitoring",
+      "public opinion manipulation monitoring",
+      "narrative hype detection",
+      "social media manipulation detection",
+      "trend hijacking detection",
+      "abnormal propagation rhythm detection"
+    ],
+    "definition": "Collect signals from social media, investor communities, livestreams, short videos, research reposts, and news propagation paths to detect coordinated narrative hype, trend hijacking, and abnormal propagation rhythms.",
+    "description": "Public opinion narrative manipulation monitoring covers social media, investor communities, livestream rooms, short-video platforms, news aggregators, research reposts, and off-platform group chats. It collects text talking points, account graphs, propagation paths, repost time series, interaction quality, cross-platform synchronization, and trading heat signals. Text similarity, account linkage, burst thresholds, propagation baselines, source credibility, and trading-window matching help detect coordinated narrative hype, trend hijacking, attention diversion, and abnormal amplification.\n\nThis control applies to investor cognition manipulation, market information manipulation, and story-alpha hype. It should correlate public-opinion anomalies with price movement, order conversion, complaints, and authoritative disclosures, then down-rank, label, manually review, or trigger follow-up response for suspected manipulation narratives.",
+    "limitation": "Real breaking news, policy changes, or major market events can create similar public-opinion bursts, causing false positives or impact on legitimate discussion. Attackers may mix in real accounts, extend the propagation cycle, rewrite talking points, spread activity across platforms, or use private groups to evade public monitoring. Trading behavior, source verification, and human review are still needed.",
+    "references": [
+      {
+        "title": "Stanford Report: What to know about disinformation and how to address it",
+        "link": "https://news.stanford.edu/stories/2022/04/know-disinformation-address"
+      },
+      {
+        "title": "SEC Investor Alerts and Bulletins",
+        "link": "https://www.sec.gov/investor/alerts"
+      }
+    ]
+  }
+}

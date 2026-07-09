@@ -11,7 +11,7 @@
       "Microsoft Defender",
       "threat investigation"
     ],
-    "summary": "Microsoft's security team discovered and analyzed the Shai-Hulud 2.0 supply chain attack, one of the most significant intrusions observed in the cloud-native ecosystem in recent years. Attackers compromised supply chain links, posing a serious threat to cloud environments. Microsoft has released detailed guidance on detection, investigation, and defense.",
+    "summary": "On December 9, 2025, the Microsoft Defender Security Research Team published analysis of the Shai-Hulud 2.0 supply chain attack. Microsoft said the campaign maliciously modified hundreds of public packages affecting developer environments, CI/CD pipelines, and cloud-connected workloads to harvest credentials and configuration secrets, and it provided detection, investigation, and mitigation guidance.",
     "references": [
       {
         "title": "Shai-Hulud 2.0: Guidance for detecting, investigating, and defending ...",

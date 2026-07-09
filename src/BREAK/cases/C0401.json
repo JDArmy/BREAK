@@ -13,7 +13,7 @@
       "反向代理",
       "Any.run"
     ],
-    "summary": "2026年3月，Microsoft披露Tycoon2FA中间人钓鱼套件的运行方式。该套件以钓鱼即服务形态提供，可通过反向代理仿冒登录流程，诱导受害者输入凭证和完成多因素认证，并窃取会话Cookie用于绕过MFA。",
+    "summary": "Microsoft在3月4日披露，Tycoon2FA自2023年8月出现后迅速成为广泛传播的钓鱼即服务平台，由其跟踪为Storm-1747的威胁行为者开发、支持和推广。该平台提供中间人能力，可仿冒Microsoft 365、OneDrive、Outlook、SharePoint、Gmail等登录页面，帮助低技能攻击者绕过多因素认证并实施账号入侵；相关活动每月触达全球超过50万个组织，并产生数千万封钓鱼邮件。",
     "category": "security_incident",
     "relatedRisks": [
       "R0035-001"
@@ -24,7 +24,7 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2026-03",
     "relatedAttackTools": [
       "AT0063-001"

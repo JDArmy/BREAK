@@ -1,0 +1,61 @@
+{
+  "A0264": {
+    "title": "投资者风险提示与适当性干预",
+    "category": "AC01",
+    "keywords": [
+      "投资者风险提示与适当性干预",
+      "投资者风险提示",
+      "适当性干预",
+      "交易冷静期",
+      "热点交易二次确认",
+      "投资者保护"
+    ],
+    "definition": "在高波动、高热度或疑似操纵叙事触发交易前提供风险提示、适当性校验和冷静期，降低投资者被叙事诱导的概率。",
+    "description": "投资者风险提示与适当性干预面向追涨杀跌、热点概念、异常波动标的、直播或社区跳转交易、跟单交易和高风险产品申购等场景，在用户下单、加杠杆、换仓或开通权限前展示风险提示、要求二次确认、触发冷静期、校验适当性等级，并对明显不匹配的用户限制参与或转入人工确认。\n\n该手段的核心是把投资者保护机制前置到交易决策链路中，减少故事 Alpha、注意力劫持、虚假热点和市场信息操纵对用户判断的即时影响。落地时应结合标的波动、舆情热度、用户经验、风险承受能力和历史交易行为动态调整提示强度。",
+    "limitation": "过度提示会造成提示疲劳，可能误伤正常交易或降低交易体验；攻击者可引导用户转到站外平台开户、通过代操作绕过提示流程，或用长期洗脑降低风险提示效果。该手段需要与舆情监测、异常交易监控和投诉处置联动。",
+    "references": [
+      {
+        "title": "SEC Investor Alerts and Bulletins",
+        "link": "https://www.sec.gov/investor/alerts"
+      },
+      {
+        "title": "FINRA Investor Insights",
+        "link": "https://www.finra.org/investors/insights"
+      }
+    ],
+    "updated": "2026-07-09",
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0006",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0006-002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

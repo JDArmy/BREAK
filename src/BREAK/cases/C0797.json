@@ -13,7 +13,7 @@
       "Microsoft",
       "云服务"
     ],
-    "summary": "微软安全团队发布案例研究，披露一起利用第三方供应商管理关系、身份基础设施和运维工具实施的隐蔽入侵。攻击者通过受信任的第三方系统横向移动，长期维持对企业环境的访问权限，难以被常规检测手段发现。",
+    "summary": "微软事件响应团队2026年5月12日发布案例研究，披露一起攻击者通过受损第三方IT服务商和合法IT管理工具实施的隐蔽入侵。原文称攻击链涉及受信任关系、身份基础设施和运维工具滥用，并以长期访问、凭据窃取和持久化为目标。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-003",
@@ -25,7 +25,7 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-09",
     "incidentTime": "2026-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [

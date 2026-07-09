@@ -12,7 +12,7 @@
       "产品开发政策",
       "民事诉讼"
     ],
-    "summary": "2024年3月，苹果在加州圣克拉拉县高等法院起诉前 iOS 软件工程师 Andrew Aude，指控其违反保密义务，向记者和其他科技公司员工披露监管合规策略、未发布产品、产品开发政策、硬件特征、员工人数等机密信息。苹果称其在公司调查期间删除 Signal 等通信证据，并已于2023年12月将其解雇。",
+    "summary": "2024年3月，苹果在加州州法院起诉前 iOS 软件工程师 Andrew Aude，指控其违反保密协议并向媒体记者和其他科技公司员工披露苹果机密信息。公开报道和诉状镜像显示，苹果称泄露内容涉及未发布应用和产品、产品开发政策、监管合规策略、部分已发布产品的硬件特征、员工人数等；苹果还称 Aude 在公司调查期间删除通信记录，并已于2023年12月被解雇。",
     "category": "security_incident",
     "relatedRisks": [
       "R0059"
@@ -29,9 +29,13 @@
       {
         "title": "Apple Inc. v. Andrew Aude Stipulation of Dismissal",
         "link": "https://www.scribd.com/document/825250528/Apple-Inc-v-Andrew-Aude-Stipulation-of-Dismissal"
+      },
+      {
+        "title": "Apple Sues Former Employee for Leaking iPhone's Journal App and More",
+        "link": "https://www.macrumors.com/2024/03/28/apple-sues-former-employee-for-alleged-leaking/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2024-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

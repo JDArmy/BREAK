@@ -13,7 +13,7 @@
       "reverse proxy",
       "Any.run"
     ],
-    "summary": "In March 2026, Microsoft disclosed how the Tycoon2FA adversary-in-the-middle phishing kit operated at scale. The phishing-as-a-service kit can proxy a fake login flow, induce victims to enter credentials and complete MFA, and steal session cookies to bypass MFA protections.",
+    "summary": "On March 4, Microsoft disclosed that Tycoon2FA had rapidly become a widespread phishing-as-a-service platform after emerging in August 2023, and that it was developed, supported, and advertised by the threat actor Microsoft tracks as Storm-1747. The platform provided adversary-in-the-middle capabilities, mimicked sign-in pages for Microsoft 365, OneDrive, Outlook, SharePoint, Gmail, and other services, and helped lower-skilled attackers bypass MFA and compromise accounts. Related campaigns reached more than 500,000 organizations worldwide each month and generated tens of millions of phishing messages.",
     "references": [
       {
         "title": "Inside Tycoon2FA: How a leading AiTM phishing kit operated at scale",

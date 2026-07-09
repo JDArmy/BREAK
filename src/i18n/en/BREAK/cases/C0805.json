@@ -13,7 +13,7 @@
       "private package impersonation",
       "build environment"
     ],
-    "summary": "In May 2026, Microsoft disclosed a dependency confusion campaign in which attackers used 33 malicious npm packages to collect reconnaissance data from developer and build environments. The packages exploited the package manager's default behavior of pulling dependencies from public registries by publishing malicious public packages with names matching internal private packages, enabling a supply c",
+    "summary": "On May 29, 2026, Microsoft Threat Intelligence disclosed an npm dependency confusion campaign in which a threat actor published malicious packages under several maintainer aliases on May 28 and May 29, impersonating internal corporate namespaces across multiple organization scopes. Once installed, the packages executed an obfuscated reconnaissance payload that collected system information, hostnames, environment variables, and developer context, and the related packages and users were later removed.",
     "references": [
       {
         "title": "Malicious npm packages abuse dependency confusion to profile developer ...",

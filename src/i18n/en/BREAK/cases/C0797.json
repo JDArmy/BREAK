@@ -13,7 +13,7 @@
       "cloud services",
       "vendor management"
     ],
-    "summary": "Microsoft's security team released a case study detailing a stealthy intrusion that exploited third-party vendor management relationships, identity infrastructure, and operational tools. Attackers moved laterally through trusted third-party systems and maintained long-term access to the enterprise environment, evading conventional detection methods.",
+    "summary": "On May 12, 2026, Microsoft Incident Response published a case study on a stealthy intrusion in which a threat actor used a compromised third-party IT services provider and legitimate IT management tools. Microsoft said the attack abused trusted relationships, identity infrastructure, and operational tooling, with objectives including long-term access, credential theft, and persistence.",
     "references": [
       {
         "title": "Undermining the trust boundary: Investigating a stealthy intrusion ...",

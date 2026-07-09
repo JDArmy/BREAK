@@ -13,7 +13,7 @@
       "employee credential leak",
       "payroll redirection"
     ],
-    "summary": "The FBI Internet Crime Complaint Center issued an account takeover fraud warning explaining that cybercriminals can obtain employee login credentials through brute forcing, phishing emails, and similar methods, then take over corporate bank, payroll, or health savings accounts. Such attacks can result in wages or corporate funds being redirected to attacker-controlled accounts and cause direct financial losses, highlighting the need for abnormal login monitoring, credential protection, and payment-change review.",
+    "summary": "The FBI Internet Crime Complaint Center issued an account takeover fraud warning explaining that cybercriminals can take over victims' online accounts by brute forcing usernames and passwords, exploiting weak passwords and lack of multi-factor authentication, and sending phishing emails. Affected accounts may include online banking, payroll, health savings, or social media accounts, which attackers can use to steal money or information for personal gain.",
     "references": [
       {
         "title": "Account Takeover Fraud (ATO) - Internet Crime Complaint Center",
