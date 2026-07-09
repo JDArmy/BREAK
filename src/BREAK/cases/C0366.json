@@ -12,7 +12,7 @@
       "登录检测",
       "攻击缓解"
     ],
-    "summary": "USENIX NSDI '19会议上发表的论文提出CAUDIT系统，用于持续审计SSH服务器以缓解暴力破解攻击。研究指出，凭证猜测攻击流量占攻击尝试的大部分，系统通过检测异常登录行为来防御凭证爆破，实验表明攻击尝试减少约100倍。",
+    "summary": "USENIX NSDI '19论文提出CAUDIT系统，用于在NCSA生产网络中持续审计SSH服务器并缓解暴力破解攻击。系统通过/16蜜罐收集攻击元数据、回放攻击尝试识别易受攻击主机，并结合黑洞路由阻断恶意来源；463天部署经验显示其日均阻断5700万次SSH攻击尝试，较日均水平减少约66倍。",
     "category": "academic_research",
     "relatedRisks": [
       "R0032-003"
@@ -23,7 +23,7 @@
         "link": "https://www.usenix.org/conference/nsdi19/presentation/cao"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2019"

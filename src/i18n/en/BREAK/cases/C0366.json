@@ -11,7 +11,7 @@
       "login anomaly detection",
       "credential stuffing defense"
     ],
-    "summary": "A paper presented at USENIX NSDI '19 introduces CAUDIT, a system for continuously auditing SSH servers to mitigate brute-force attacks. The research highlights that credential guessing traffic constitutes the majority of attack attempts. By detecting anomalous login behavior to defend against credential stuffing, the system achieves an approximate 100-fold reduction in attack attempts.",
+    "summary": "A USENIX NSDI '19 paper introduced CAUDIT, a system deployed on NCSA's production network to continuously audit SSH servers and mitigate brute-force attacks. It uses a /16 honeypot to collect attack metadata, replays attack attempts to identify vulnerable hosts, and combines this with black-hole routing to block malicious sources; over 463 days, it blocked an average of 57 million SSH attempts per day, a roughly 66-fold reduction from the daily average.",
     "references": [
       {
         "title": "{CAUDIT}: Continuous auditing of {SSH} servers to mitigate {Brute-Force} attacks",

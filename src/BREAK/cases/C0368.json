@@ -12,22 +12,22 @@
       "HTB Perfection",
       "凭证恢复"
     ],
-    "summary": "在HTB Perfection靶机渗透中，攻击者通过SSTI注入获得susan用户Shell后，在用户目录发现SQLite数据库文件。经分析，密码哈希为SHA256类型。根据邮件中泄露的密码格式规则（名字_名字反写_随机数字），使用Hashcat工具结合字典和掩码进行本地爆破，成功恢复明文密码。",
-    "category": "security_incident",
+    "summary": "2024年3月的HTB Perfection靶机复盘显示，渗透者通过SSTI注入获得susan用户Shell后，在用户目录发现SQLite数据库文件。经分析，密码哈希为SHA256类型；根据邮件中泄露的密码格式规则（名字_名字反写_随机数字），可使用Hashcat结合字典和掩码进行本地爆破以恢复凭证。",
+    "category": "academic_research",
     "relatedRisks": [
       "R0032-003"
     ],
     "references": [
       {
-        "title": "Perfection",
-        "link": "https://www.hackthebox.com/machines/perfection"
-      },
-      {
         "title": "HTB Perfection-wp 基于ruby的SSTI注入、密码爆破工具hashcat的使用...",
         "link": "https://www.cnblogs.com/kw13t/p/18105900"
+      },
+      {
+        "title": "Perfection",
+        "link": "https://www.hackthebox.com/machines/perfection"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2024-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

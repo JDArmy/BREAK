@@ -11,7 +11,7 @@
       "SaaS security",
       "authentication bypass"
     ],
-    "summary": "Microsoft observed phishing attacks exploiting OAuth redirect abuse. Attackers send phishing links to victims, which trigger an OAuth authorization flow upon clicking, tricking users into granting permissions to malicious applications. This method can be used for data theft or malware distribution, exploiting user trust in third-party logins to bypass existing security verifications.",
+    "summary": "In March 2026, Microsoft disclosed phishing and malware campaigns abusing OAuth's standard redirection behavior. Attackers created applications with malicious redirect URIs and embedded OAuth URLs using parameters such as prompt=none and invalid scopes in emails, using trusted identity-provider error redirects to send victims to attacker-controlled pages; some campaigns then downloaded ZIP/LNK payloads and executed PowerShell and DLL side-loading.",
     "references": [
       {
         "title": "OAuth redirection abuse enables phishing and malware delivery",

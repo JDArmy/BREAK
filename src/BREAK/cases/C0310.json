@@ -11,8 +11,8 @@
       "网站安全",
       "网络犯罪"
     ],
-    "summary": "2022年12月，万安县公安局网监大队根据上级线索，发现居民宋某在网上对某网站发起DDoS攻击，涉嫌危害网络安全。民警通过分析研判锁定嫌疑人位置后将其传唤。经查，宋某在为他人搭建网站过程中获取了DDoS攻击脚本，实施了拒绝服务攻击。",
-    "category": "criminal_verdict",
+    "summary": "2022年12月，万安县公安局网监大队根据上级线索，发现居民宋某在网上对某网站发起DDoS攻击，涉嫌危害网络安全。民警通过分析研判锁定嫌疑人位置后将其传唤。经查，宋某在为他人搭建网站过程中获取DDoS攻击脚本，并使用虚拟器搭建攻击程序致目标网站瘫痪；其被依法行政拘留并处罚款。",
+    "category": "administrative_enforcement",
     "relatedRisks": [
       "R0029"
     ],
@@ -20,9 +20,13 @@
       {
         "title": "万安公安:破获一起DDoS黑客攻击案件 - 公安 - 江西政法网",
         "link": "https://www.jxzfw.gov.cn/2022/1208/2022120845474.html"
+      },
+      {
+        "title": "吉安网警破获一起DDoS黑客攻击案件 - 安全客",
+        "link": "https://www.anquanke.com/post/id/284018"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2022-12",
     "relatedAttackTools": [],
     "relatedThreatActors": []

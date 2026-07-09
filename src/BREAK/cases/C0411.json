@@ -1,6 +1,6 @@
 {
   "C0411": {
-    "title": "黑客渗透测试之2FA绕过钓鱼神器:Evilginx2",
+    "title": "Evilginx2 2.0发布：反向代理钓鱼框架可绕过2FA",
     "keywords": [
       "Evilginx2",
       "2FA绕过",
@@ -12,20 +12,26 @@
       "Cookie窃取",
       "反向代理"
     ],
-    "summary": "Evilginx2是一款能代理真实登录页面的工具，可捕获用户名、密码及会话Cookie，从而直接绕过双因素认证（2FA）。它通过中间人攻击方式，在用户完成MFA验证后窃取会话令牌，实现账户劫持。",
-    "category": "academic_research",
+    "summary": "2018年7月，Kuba Gretzky在GitHub发布Evilginx2 2.0。该开源工具以反向代理方式位于受害者与真实登录服务之间，可捕获登录凭证、认证令牌和会话Cookie，从而在非抗钓鱼MFA场景下绕过2FA保护；MITRE ATT&CK随后将evilginx2收录为AiTM攻击框架工具。",
+    "category": "news_report",
     "relatedRisks": [
       "R0142"
     ],
     "references": [
       {
-        "title": "研究员发布工具，可绕过双因子验证实施钓鱼攻击",
-        "link": "https://www.secrss.com/articles/7724"
+        "title": "Release 2.0.0 · kgretzky/evilginx2",
+        "link": "https://github.com/kgretzky/evilginx2/releases/tag/2.0.0"
+      },
+      {
+        "title": "evilginx2, Software S9003 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/software/S9003/"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-03",
-    "relatedAttackTools": [],
+    "updated": "2026-07-09",
+    "incidentTime": "2018-07-26",
+    "relatedAttackTools": [
+      "AT0072"
+    ],
     "relatedThreatActors": []
   }
 }

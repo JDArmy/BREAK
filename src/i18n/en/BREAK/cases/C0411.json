@@ -1,6 +1,6 @@
 {
   "C0411": {
-    "title": "Penetration Testing with the 2FA Bypass Phishing Toolkit: Evilginx2",
+    "title": "Evilginx2 2.0 Released: Reverse-Proxy Phishing Framework Can Bypass 2FA",
     "keywords": [
       "Evilginx2",
       "2FA bypass",
@@ -13,11 +13,15 @@
       "adversary-in-the-middle",
       "AiTM"
     ],
-    "summary": "Evilginx2 is a tool that proxies real login pages to capture usernames, passwords, and session cookies, thereby directly bypassing two-factor authentication (2FA). It employs a man-in-the-middle attack to steal session tokens after users complete MFA verification, enabling account takeover.",
+    "summary": "In July 2018, Kuba Gretzky released Evilginx2 2.0 on GitHub. The open-source tool operates as a reverse proxy between victims and legitimate login services, capturing credentials, authentication tokens, and session cookies to bypass 2FA in non-phishing-resistant MFA scenarios; MITRE ATT&CK later cataloged evilginx2 as an AiTM attack framework tool.",
     "references": [
       {
-        "title": "Researcher Releases Tool That Can Bypass Two-Factor Authentication for Phishing Attacks",
-        "link": "https://www.secrss.com/articles/7724"
+        "title": "Release 2.0.0 · kgretzky/evilginx2",
+        "link": "https://github.com/kgretzky/evilginx2/releases/tag/2.0.0"
+      },
+      {
+        "title": "evilginx2, Software S9003 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/software/S9003/"
       }
     ]
   }

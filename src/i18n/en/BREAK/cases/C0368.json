@@ -12,15 +12,15 @@
       "htb perfection",
       "credential recovery"
     ],
-    "summary": "During the penetration test of the HTB Perfection machine, after gaining shell access as user susan via SSTI injection, an SQLite database file was discovered in the user's home directory. The password hash was identified as SHA256. Based on the password format rules leaked in emails (firstname_firstnameReversed_randomDigits), Hashcat was used with a dictionary and mask attack to successfully reco",
+    "summary": "A March 2024 write-up of the HTB Perfection machine shows that after gaining a shell as user susan through SSTI injection, the tester found an SQLite database file in the user's home directory. The password hash was identified as SHA256; using the password-format rule leaked in email (first name, reversed first name, and random digits), Hashcat can combine a dictionary and mask attack to recover the credential.",
     "references": [
-      {
-        "title": "Perfection",
-        "link": "https://www.hackthebox.com/machines/perfection"
-      },
       {
         "title": "HTB Perfection write-up: Ruby-based SSTI injection, use of password cracking tool hashcat",
         "link": "https://www.cnblogs.com/kw13t/p/18105900"
+      },
+      {
+        "title": "Perfection",
+        "link": "https://www.hackthebox.com/machines/perfection"
       }
     ]
   }

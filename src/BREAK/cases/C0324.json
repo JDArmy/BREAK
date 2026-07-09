@@ -12,11 +12,12 @@
       "SaaS安全",
       "身份验证绕过"
     ],
-    "summary": "微软观察到利用OAuth重定向滥用进行的钓鱼攻击。攻击者向受害者发送钓鱼链接，点击后会触发OAuth授权流程，诱导用户授予恶意应用权限。该方式可被用于窃取数据或传播恶意软件，其核心在于利用用户对第三方登录的信任，绕过原有的安全验证。",
+    "summary": "2026年3月，微软披露多个钓鱼和恶意软件活动滥用OAuth标准重定向机制。攻击者创建带恶意redirect URI的应用，将含prompt=none、无效scope等参数的OAuth URL嵌入邮件，借可信身份提供商的错误重定向把受害者导向攻击者页面；部分活动随后下载ZIP/LNK等载荷并执行PowerShell、DLL侧载。",
     "category": "security_incident",
     "relatedRisks": [
       "R0030-002",
-      "R0232"
+      "R0084",
+      "R0080"
     ],
     "references": [
       {
@@ -24,13 +25,9 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/03/02/oauth-redirection-abuse-enables-phishing-malware-delivery/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-09",
     "incidentTime": "2026-03",
-    "relatedAttackTools": [
-      "AT0061-003"
-    ],
-    "relatedThreatActors": [
-      "TA0054"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }
