@@ -14,7 +14,8 @@
     "summary": "攻击者通过在购物流程中篡改商品价格、数量或支付关键字段，实现非预期的交易结果。例如将商品价格从100改为50或-100，将数量改为负数以对冲金额，或通过乘以0.5改变价格，导致系统错误计算订单金额，造成资产损失。",
     "category": "news_report",
     "relatedRisks": [
-      "R0087"
+      "R0087",
+      "R0055-004"
     ],
     "references": [
       {
@@ -22,7 +23,7 @@
         "link": "https://developer.volcengine.com/articles/7381538072443715594"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2025-04",
     "relatedAttackTools": [
       "AT0014",

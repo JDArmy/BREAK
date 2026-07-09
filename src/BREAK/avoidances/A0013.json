@@ -11,7 +11,7 @@
         "link": "https://en.wikipedia.org/wiki/Code_obfuscation"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-09",
     "keywords": [
       "终端应用加固",
       "应用加固",
@@ -26,22 +26,22 @@
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 21 个风险，共同限制 4 个攻击工具。"
+        "note": "共同覆盖 22 个风险，共同限制 4 个攻击工具。"
       },
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 19 个风险。"
+        "note": "共同覆盖 20 个风险。"
       },
       {
         "key": "A0016",
         "relation": "complement",
-        "note": "共同覆盖 14 个风险。"
+        "note": "共同覆盖 15 个风险。"
       },
       {
         "key": "A0002",
         "relation": "complement",
-        "note": "共同覆盖 10 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 11 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0020",
@@ -67,7 +67,7 @@
         "link": "https://mas.owasp.org/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "Android应用加固",
       "APK加固",
@@ -123,7 +123,7 @@
         "link": "https://mas.owasp.org/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "iOS应用加固",
       "iOS加固",
@@ -179,7 +179,7 @@
         "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "H5小程序加固",
       "小程序加固",
@@ -235,7 +235,7 @@
         "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "桌面应用加固",
       "桌面端加固",

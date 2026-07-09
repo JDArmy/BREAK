@@ -15,7 +15,8 @@
     "summary": "2021年8月，广州海珠区公安分局接到某电商平台报案，称有人恶意利用虚拟手机号注册多个账号，重复领取平台优惠券并下单购买商品赚取差价，造成平台损失约70万元。警方抓获以王某为首的10名犯罪嫌疑人，全链条打掉该团伙。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0017"
+      "R0017",
+      "R0055-002"
     ],
     "references": [
       {
@@ -31,7 +32,7 @@
         "link": "https://www.163.com/dy/article/GIU4UAQT0550AXYG.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2021-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []

@@ -54,5 +54,108 @@
         "Scenario-restricted coupons are used on non-designated products or time windows, with usage distribution crossing boundaries"
       ]
     }
+  },
+  "R0055-002": {
+    "title": "Unlimited Coupon Claiming",
+    "definition": "Attackers bypass coupon claim-count, eligibility, or campaign inventory limits to repeatedly claim coupons that should be restricted.",
+    "description": "Unlimited coupon claiming usually occurs when the coupon-claim endpoint relies only on client-side state, a single account identifier, or front-end campaign rules. Attackers use multiple accounts, virtual mobile numbers, forged device fingerprints, API replay, or parameter tampering to repeatedly claim new-user coupons, discount coupons, consumption vouchers, and other promotional benefits.\n\nUnlike coupon code enumeration, the core issue is not guessing coupon codes, but bypassing checks for who may claim, how many times they may claim, and whether campaign inventory remains available. At scale, this drains marketing budgets and turns the abuse into direct financial loss through underpriced orders, coupon resale, or fake transactions.",
+    "influence": "Marketing coupon inventory and subsidy budgets are consumed in bulk, legitimate users cannot claim benefits, and the platform's order pricing is abnormally depressed while subsidy losses increase.",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "BLA1:2025 - Action Limit Overrun - OWASP Top 10 for Business Logic Abuse",
+        "link": "https://owasp.org/www-project-top-10-for-business-logic-abuse/docs/the-top-10/action-limit-overrun"
+      },
+      {
+        "title": "Examples of business logic vulnerabilities - PortSwigger Web Security Academy",
+        "link": "https://portswigger.net/web-security/logic-flaws/examples"
+      }
+    ],
+    "keywords": [
+      "Unlimited Coupon Claiming",
+      "repeat coupon claiming",
+      "unlimited coupon abuse",
+      "coupon claim limit bypass",
+      "coupon arbitrage",
+      "voucher inventory abuse",
+      "coupon farming"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same device cluster, phone-number segment, or shipping address repeatedly claims the same campaign coupon in a short window",
+        "The coupon-claim endpoint receives replayed or slightly modified requests, with successful claims exceeding campaign limits",
+        "Coupon inventory is depleted quickly while redeemed users show very low retention, repurchase, and authentic browsing behavior",
+        "Claiming accounts share device fingerprints, proxy IPs, payment accounts, shipping addresses, or other linkage signals"
+      ]
+    }
+  },
+  "R0055-003": {
+    "title": "Repeated First-Order Reward Claiming",
+    "definition": "Attackers forge or repeatedly construct new-user, first-order, or first-purchase eligibility to claim first-order discounts, red packets, or referral rewards multiple times.",
+    "description": "Repeated first-order reward claiming abuses eligibility for first-order discounts, first-purchase subsidies, new-user coupons, and referral rewards. Attackers use bulk registration, virtual mobile numbers, identity misuse, forged device environments, or replayed referral flows so that the same group is repeatedly recognized as new users or first-order users.\n\nThis turns subsidies intended for real acquisition into underpriced orders or cashable rewards. Compared with general marketing campaign cheating, it focuses on failures in transaction-side checks for first-order eligibility, first-order pricing, and first-order reward settlement, and often appears together with fake transactions, proxy ordering, and resale cash-out.",
+    "influence": "First-order subsidies, acquisition rewards, and new-user benefits are repeatedly extracted, customer acquisition cost is distorted, legitimate new-user benefits are crowded out, and abnormal low-price orders and fake growth data are produced.",
+    "references": [
+      {
+        "title": "Targeting Telecom and Online Fraud: Criminals Exploit Loopholes in the E-Commerce Economy",
+        "link": "https://www.spp.gov.cn/spp/zdgz/202106/t20210607_520557.shtml"
+      }
+    ],
+    "keywords": [
+      "Repeated First-Order Reward Claiming",
+      "first-order reward abuse",
+      "new-user coupon repeat claiming",
+      "first-order discount abuse",
+      "first-purchase eligibility bypass",
+      "new-user promotion arbitrage",
+      "referral reward repeat claiming"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Newly registered accounts complete a first order and then immediately become inactive, with no authentic repurchase or browsing path",
+        "First-order transactions are highly clustered by device fingerprint, shipping address, payment account, or referral relationship",
+        "The same inviter or account cluster repeatedly triggers new-user coupons, first-order discounts, and referral rewards",
+        "After first-order rewards are redeemed, goods are quickly resold, refunded, or routed to a small set of linked shipping addresses"
+      ]
+    }
+  },
+  "R0055-004": {
+    "title": "Payment Amount Tampering",
+    "definition": "Attackers tamper with order amounts, item quantities, discount amounts, or payment parameters so the actual payment is lower than the amount due.",
+    "description": "Payment amount tampering often occurs when server-side consistency checks are missing across order creation, discount calculation, payment confirmation, or callback processing. Attackers use traffic interception, API replay, request-parameter modification, negative quantities, or forged discount fields to submit orders at a low, zero, or even negative amount.\n\nThe core issue is that price and payment status depend on client-provided parameters or unsigned fields, while the server does not recalculate product prices, inventory quantities, discount rules, and the amount returned by the payment provider. At scale, this directly causes revenue loss and contaminates transaction, inventory, and finance reconciliation data.",
+    "influence": "Goods or services are completed below the payable amount, causing direct revenue loss for the platform and merchants while polluting payment, inventory, finance reconciliation, and after-sales workflows.",
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "Web Parameter Tampering - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/Web_Parameter_Tampering"
+      },
+      {
+        "title": "Business logic vulnerability - OWASP Foundation",
+        "link": "https://owasp.org/www-community/vulnerabilities/Business_logic_vulnerability"
+      }
+    ],
+    "keywords": [
+      "Payment Amount Tampering",
+      "order amount tampering",
+      "price parameter tampering",
+      "payment parameter tampering",
+      "zero-dollar purchase",
+      "negative payment",
+      "payment logic flaw"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The order payable amount, payment-provider paid amount, and product price snapshot are inconsistent",
+        "Amount, quantity, discount, or payment-status fields in checkout requests are modified and the transaction still completes",
+        "The same account or device repeatedly submits zero-price, negative, or clearly below-cost orders",
+        "The payment callback amount differs from the local order amount, but the order status is still marked as paid"
+      ]
+    }
   }
 }

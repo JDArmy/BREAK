@@ -12,7 +12,7 @@
       "automated attack",
       "Code4rena"
     ],
-    "summary": "An attacker exploits a sniping attack during the auction process by calling cancelBid() after each bid to cancel the previous bid, enabling them to acquire any token at an extremely low cost. This vulnerability allows attackers to front-run bids and manipulate auction outcomes through unfair automated means.",
+    "summary": "A Code4rena NextGen audit finding recorded a sniping-attack issue during the auction process, stating that attackers could affect auction outcomes through bid and bid-cancellation logic. The issue illustrates risks in on-chain auctions involving automated front-running behavior, cancellation mechanisms, and manipulation of bidding results.",
     "references": [
       {
         "title": "Sniping Attack During the Auction Process Allows Attackers to ... - GitHub",

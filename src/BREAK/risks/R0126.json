@@ -23,7 +23,7 @@
         "link": "https://www.163.com/dy/article/H5Q1LC3R0518STKV.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "API滥用风险",
       "API abuse",
@@ -87,9 +87,16 @@
     "influence": "暴露系统内部接口信息，为后续攻击提供入口",
     "avoidances": [
       "A0067",
+      "A0002",
+      "A0004-001",
       "A0004",
-      "A0032",
-      "A0017"
+      "A0017",
+      "A0030",
+      "A0030-001",
+      "A0037",
+      "A0015",
+      "A0016-001",
+      "A0028"
     ],
     "references": [
       {
@@ -97,14 +104,16 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "API枚举攻击",
       "接口枚举",
       "端点枚举",
       "API探测",
       "路径爆破",
-      "Swagger泄露"
+      "Swagger泄露",
+      "强制浏览",
+      "Forced browsing"
     ],
     "riskAssessment": {
       "likelihood": "high",
@@ -172,7 +181,7 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0xa4-unrestricted-resource-consumption/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "API速率限制绕过",
       "接口限流绕过",
@@ -238,7 +247,16 @@
       "A0067",
       "A0015",
       "A0002",
-      "A0014"
+      "A0014",
+      "A0004-001",
+      "A0004",
+      "A0005",
+      "A0009",
+      "A0028",
+      "A0021",
+      "A0037",
+      "A0020",
+      "A0046"
     ],
     "references": [
       {
@@ -246,14 +264,18 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0xa6-unrestricted-access-to-sensitive-business-flows/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "API业务逻辑滥用",
       "接口逻辑漏洞",
       "业务流滥用",
       "业务接口绕过",
       "敏感业务流滥用",
-      "参数篡改下单"
+      "参数篡改下单",
+      "流程绕过",
+      "多步骤滥用",
+      "条件竞争",
+      "参数注入"
     ],
     "riskAssessment": {
       "likelihood": "medium",

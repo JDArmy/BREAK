@@ -11,7 +11,7 @@
         "title": "[PDF] Guide to Cyber Threat Information Sharing"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "威胁情报",
       "TI",
@@ -26,32 +26,32 @@
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 69 个风险，共同限制 10 个攻击工具。"
+        "note": "共同覆盖 73 个风险，共同限制 10 个攻击工具。"
       },
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 50 个风险，共同限制 9 个攻击工具。"
+        "note": "共同覆盖 53 个风险，共同限制 9 个攻击工具。"
       },
       {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 43 个风险，共同限制 7 个攻击工具。"
+        "note": "共同覆盖 46 个风险，共同限制 7 个攻击工具。"
       },
       {
         "key": "A0004",
         "relation": "complement",
-        "note": "共同覆盖 35 个风险，共同限制 6 个攻击工具。"
+        "note": "共同覆盖 38 个风险，共同限制 6 个攻击工具。"
       },
       {
         "key": "A0005",
         "relation": "complement",
-        "note": "共同覆盖 30 个风险，共同限制 6 个攻击工具。"
+        "note": "共同覆盖 33 个风险，共同限制 6 个攻击工具。"
       },
       {
-        "key": "A0001",
+        "key": "A0044",
         "relation": "complement",
-        "note": "共同覆盖 27 个风险，共同限制 7 个攻击工具。"
+        "note": "共同覆盖 24 个风险，共同限制 13 个攻击工具。"
       }
     ]
   },
@@ -67,7 +67,7 @@
         "link": "https://en.wikipedia.org/wiki/Threat_intelligence"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "IP情报",
       "IP黑名单",
@@ -80,9 +80,19 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 14 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 14 个风险，共同限制 1 个攻击工具。"
+      },
+      {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 12 个风险，共同限制 2 个攻击工具。"
+        "note": "共同覆盖 13 个风险，共同限制 2 个攻击工具。"
       },
       {
         "key": "A0038",
@@ -90,24 +100,14 @@
         "note": "共同覆盖 10 个风险，共同限制 4 个攻击工具。"
       },
       {
-        "key": "A0004",
-        "relation": "complement",
-        "note": "共同覆盖 12 个风险，共同限制 1 个攻击工具。"
-      },
-      {
-        "key": "A0015",
-        "relation": "complement",
-        "note": "共同覆盖 12 个风险，共同限制 1 个攻击工具。"
-      },
-      {
         "key": "A0001",
         "relation": "complement",
-        "note": "共同覆盖 12 个风险。"
+        "note": "共同覆盖 13 个风险。"
       },
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 11 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 12 个风险，共同限制 1 个攻击工具。"
       }
     ]
   },
@@ -123,7 +123,7 @@
         "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "域名&链接威胁情报",
       "URL情报",
@@ -183,7 +183,7 @@
         "link": "https://std.samr.gov.cn/hb/search/stdHBDetailed?id=29962E7E05C2A432E06397BE0A0A0BF0"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "手机号情报",
       "手机号风险情报",
@@ -201,29 +201,29 @@
         "note": "共同覆盖 11 个风险，共同限制 5 个攻击工具。"
       },
       {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 3 个攻击工具。"
+      },
+      {
         "key": "A0023-001",
         "relation": "complement",
         "note": "共同覆盖 8 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0044",
-        "relation": "complement",
-        "note": "共同覆盖 6 个风险，共同限制 3 个攻击工具。"
-      },
-      {
         "key": "A0004",
         "relation": "complement",
-        "note": "共同覆盖 7 个风险。"
+        "note": "共同覆盖 8 个风险。"
       },
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 7 个风险。"
+        "note": "共同覆盖 8 个风险。"
       },
       {
         "key": "A0016",
         "relation": "complement",
-        "note": "共同覆盖 7 个风险。"
+        "note": "共同覆盖 8 个风险。"
       }
     ]
   },
@@ -239,7 +239,7 @@
         "link": "https://oasis-open.github.io/cti-documentation/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "IOC妥协指标情报",
       "IOC情报",
@@ -295,7 +295,7 @@
         "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "风险地址情报",
       "收货地址情报",

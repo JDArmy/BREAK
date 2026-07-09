@@ -12,22 +12,22 @@
       "外挂代理",
       "自研外挂"
     ],
-    "summary": "2024年上半年，盖某某代理销售《天龙八部》外挂后，又自学编程自研“无名外挂”，采用内存注入技术实现自动刷图、采集等自动化功能。2024年7月至12月，盖某某通过销售自研外挂非法获利超20万元，被判处有期徒刑三年，缓刑三年六个月。",
+    "summary": "腾讯新闻转载文章标题显示，“自研外挂获利20万判三年”。该报道将游戏外挂制售作为一周游戏法律案例之一，提示外挂开发、销售和牟利行为可能触发刑事责任，也反映游戏平台需要持续识别自动化作弊工具、外挂交易和付费分发链条。风控侧还应关注外挂代理、授权码销售和玩家异常行为聚集。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0012"
     ],
     "references": [
       {
-        "title": "【以案释法】从“代理外挂”到“自研销售”，非法获利20万的他终落网",
-        "link": "https://mp.weixin.qq.com/s/Z3r0RY2S3AiTpxCMWYufzQ"
+        "title": "蹭IP翻车，有授权仍被判赔500万；自研外挂获利20万判三年 | 一周说...",
+        "link": "https://view.inews.qq.com/a/20251102A03O1R00"
       },
       {
-        "title": "蹭IP翻车,有授权仍被判赔500万;自研外挂获利20万判三年 | 一周说...",
-        "link": "https://view.inews.qq.com/a/20251102A03O1R00"
+        "title": "【以案释法】从“代理外挂”到“自研销售”，非法获利20万的他终落网",
+        "link": "https://mp.weixin.qq.com/s/Z3r0RY2S3AiTpxCMWYufzQ"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2025-11",
     "relatedAttackTools": [],
     "relatedThreatActors": []

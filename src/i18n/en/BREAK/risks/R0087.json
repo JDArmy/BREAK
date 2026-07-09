@@ -17,7 +17,9 @@
       "workflow bypass",
       "transaction tampering",
       "race condition",
-      "logic flaw exploitation"
+      "logic flaw exploitation",
+      "manipulating workflow",
+      "parameter injection"
     ],
     "riskAssessment": {
       "observables": [

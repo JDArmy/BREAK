@@ -12,7 +12,7 @@
       "自动化攻击",
       "Code4rena"
     ],
-    "summary": "攻击者利用拍卖过程中的狙击攻击，在每次出价后调用cancelBid()取消之前的出价，从而以极低的成本获取任何代币。该漏洞允许攻击者通过不公平的自动化手段在拍卖中抢先出价并操纵结果。",
+    "summary": "Code4rena 的 NextGen 审计发现记录了“拍卖过程中的狙击攻击”问题，指出攻击者可在拍卖流程中利用出价与取消出价逻辑影响竞拍结果。该漏洞主题体现了链上拍卖场景中自动化抢先操作、取消出价机制和竞拍结果操纵的风险。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0003-001"
@@ -23,7 +23,7 @@
         "link": "https://github.com/code-423n4/2023-10-nextgen-findings/issues/1254"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2023-10"

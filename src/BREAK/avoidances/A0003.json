@@ -11,7 +11,7 @@
         "link": "https://mp.weixin.qq.com/s/dJhCQmpejY-GTE_a1ZpPsg"
       }
     ],
-    "updated": "2026-02-27",
+    "updated": "2026-07-09",
     "keywords": [
       "云端反爬",
       "反爬",
@@ -28,30 +28,30 @@
       {
         "key": "A0004",
         "relation": "complement",
-        "note": "共同覆盖 24 个风险，共同限制 3 个攻击工具。"
+        "note": "共同覆盖 25 个风险，共同限制 3 个攻击工具。"
       },
       {
         "key": "A0002",
         "relation": "complement",
-        "note": "共同覆盖 22 个风险，共同限制 2 个攻击工具。"
+        "note": "共同覆盖 23 个风险，共同限制 2 个攻击工具。"
       },
       {
         "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 22 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 21 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0016",
         "relation": "complement",
         "note": "共同覆盖 21 个风险，共同限制 3 个攻击工具。"
       },
       {
         "key": "A0001",
-        "relation": "complement",
-        "note": "共同覆盖 20 个风险，共同限制 3 个攻击工具。"
-      },
-      {
-        "key": "A0005",
-        "relation": "complement",
-        "note": "共同覆盖 20 个风险，共同限制 3 个攻击工具。"
-      },
-      {
-        "key": "A0010",
         "relation": "complement",
         "note": "共同覆盖 20 个风险，共同限制 3 个攻击工具。"
       }

@@ -37,7 +37,7 @@
         "link": "https://github.com/eastmountyxz/Reverse-Analysis-Case"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "应用被逆向",
       "逆向分析",
@@ -116,7 +116,7 @@
         "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "应用被抓包",
       "抓包分析",
@@ -193,7 +193,7 @@
         "link": "https://www.cnblogs.com/wzfwaf/p/10515507.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "HTTP请求分析",
       "HTTP分析",
@@ -227,7 +227,7 @@
       {
         "key": "R0002",
         "relation": "co-occurrence",
-        "note": "HTTP请求分析与优惠劵枚举共享规避手段“接口签名校验”。"
+        "note": "HTTP请求分析与优惠券枚举共享规避手段“接口签名校验”。"
       },
       {
         "key": "R0003-001",

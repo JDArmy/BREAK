@@ -154,6 +154,8 @@ When `scripts/skill/` search / packaging scripts, exported Chinese / English dat
 
 Data-quality fixes also affect Skill search results. When fixing Case `references` / `summary` fact-check issues or adjusting Risk `avoidances` relationships, keep the English translation files in sync and make the first two Case references point to stable pages with crawlable article text whenever possible, so Skill-returned case facts remain reviewable.
 
+Case fact review sends scraped article text to the LLM. When maintaining `review-case-fact.mjs`, keep the submitted snippet long enough to cover key article sections; when clearing P2 items in bulk, create checkpoints after roughly 100 changes and run `validate:data` / `review:changed` before committing, so large batches do not accumulate unverified changes.
+
 ## Entity Relationship Graph
 
 Understanding entity relationships helps provide more complete answers:

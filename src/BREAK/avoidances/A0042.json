@@ -11,7 +11,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "功能随机化",
       "随机化防护",
@@ -71,7 +71,7 @@
         "link": "https://xz.aliyun.com/news/10792"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "keywords": [
       "随机化DOM",
       "DOM随机化",
@@ -119,7 +119,7 @@
     "title": "随机事件流程",
     "category": "AC01",
     "definition": "在正常的业务流程中插入一些随机事件，使得攻击者无法通过固定的流程来完成自动化操作",
-    "description": "一般随机事件流程针对有一定的前后固定步骤的业务场景，譬如在正常的步骤中间插入随机的验证码、随机的问题、随机的广告弹窗、随机的红包弹窗等等方式，来阻断和干扰正常的业务流程，使得攻击者提前录制好的自动化时效",
+    "description": "一般随机事件流程针对有一定的前后固定步骤的具体业务域，譬如在正常的步骤中间插入随机的验证码、随机的问题、随机的广告弹窗、随机的红包弹窗等等方式，来阻断和干扰正常的业务流程，使得攻击者提前录制好的自动化时效",
     "limitation": "攻击者可以通过不断枚举随机事件、对自动化流程异常进行告警等方式来绕过此类防御",
     "references": [
       {
@@ -127,7 +127,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "随机事件流程",
       "随机验证流程",

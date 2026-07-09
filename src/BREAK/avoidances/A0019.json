@@ -11,7 +11,7 @@
         "link": "https://en.wikipedia.org/wiki/Information_technology_security_audit"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-09",
     "keywords": [
       "身份安全审计",
       "身份审计",
@@ -26,17 +26,17 @@
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 20 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 21 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 19 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 20 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 17 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 18 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0007",
@@ -44,14 +44,14 @@
         "note": "共同覆盖 15 个风险。"
       },
       {
-        "key": "A0017",
+        "key": "A0011",
         "relation": "complement",
         "note": "共同覆盖 13 个风险。"
       },
       {
-        "key": "A0011",
+        "key": "A0017",
         "relation": "complement",
-        "note": "共同覆盖 12 个风险。"
+        "note": "共同覆盖 13 个风险。"
       }
     ]
   },
@@ -67,7 +67,7 @@
         "link": "https://new.qq.com/rain/a/20250828A02YSL00"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "keywords": [
       "邀请码机制",
       "邀请码注册",
@@ -123,7 +123,7 @@
         "link": "https://kf.qq.com/faq/120322fu63YV130422nqIrqu.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "好友辅助认证",
       "好友辅助验证",

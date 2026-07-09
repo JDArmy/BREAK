@@ -12,8 +12,8 @@
       "转卖获利",
       "侵犯公民个人信息"
     ],
-    "summary": "2025年12月，中国法院网发布案例：黄牛为抢购茅台酒，购买3400余条公民个人信息，并借助AI换脸等方式破解人脸识别和实名预约限制，抢购60余瓶茅台酒后转卖牟利。法院认定相关行为涉及售卖公民个人信息和非法破解人脸识别系统，依法追究刑事责任。",
-    "category": "criminal_verdict",
+    "summary": "2025年12月媒体报道一起黄牛抢购茅台案：涉案人员为绕过实名预约和人脸识别限制，购买3400余条公民个人信息，并借助AI换脸等方式破解核验流程，抢购60余瓶茅台酒后转卖牟利。该案说明黄牛可将个人信息黑市资源与AI换脸服务结合，扩大恶意抢购能力。",
+    "category": "news_report",
     "relatedRisks": [
       "R0003"
     ],
@@ -21,10 +21,14 @@
       {
         "title": "售卖公民个人信息 非法破解人脸识别系统",
         "link": "https://www.chinacourt.org/article/detail/2025/12/id/9113732.shtml"
+      },
+      {
+        "title": "黄牛购买3400多条个人信息,通过AI换脸抢购60余瓶茅台,违法吗?这是...",
+        "link": "https://news.qq.com/rain/a/20251213A03QBV00"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-12",
+    "updated": "2026-07-09",
+    "incidentTime": "2024-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

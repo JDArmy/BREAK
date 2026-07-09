@@ -18,7 +18,7 @@
         "link": "https://attack.mitre.org/techniques/T1078/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "账号倒卖",
       "账号买卖",
@@ -94,7 +94,7 @@
         "link": "https://new.qq.com/rain/a/20260228A06D4S00"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "游戏账号倒卖",
       "游戏账号交易",
@@ -176,7 +176,7 @@
         "link": "https://attack.mitre.org/techniques/T1078/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "账号权益倒卖",
       "付费权益倒卖",
@@ -224,7 +224,7 @@
       {
         "key": "R0002",
         "relation": "co-occurrence",
-        "note": "账号权益倒卖与优惠劵枚举均受攻击工具“四件套”间接支持。"
+        "note": "账号权益倒卖与优惠券枚举均受攻击工具“四件套”间接支持。"
       },
       {
         "key": "R0005-001",

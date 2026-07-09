@@ -11,7 +11,7 @@
       "账户接管",
       "GitHub"
     ],
-    "summary": "2024年，开源身份管理软件Keycloak发现安全缺陷，攻击者在获取用户密码后，可对OTP验证码进行暴力猜测攻击，从而绕过双因素认证。为此，Keycloak在issue #46164中提出了将密码和OTP暴力破解防护策略分离的增强方案，以防止OTP被暴力破解导致账户被接管。",
+    "summary": "2026年2月，Keycloak项目在GitHub issue #46164中讨论OTP暴力破解防护增强。议题指出，攻击者一旦已获取用户密码，可能持续提交错误OTP尝试猜测验证码；而密码登录与OTP共用同一暴力破解策略，会在严格锁定与账户拒绝服务风险之间产生冲突。Keycloak因此提出将密码和OTP暴力破解防护分离，并针对大量无效OTP尝试执行永久锁定等措施。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0032-004"
@@ -22,8 +22,8 @@
         "link": "https://github.com/keycloak/keycloak/issues/46164"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2024",
+    "updated": "2026-07-09",
+    "incidentTime": "2026-02-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

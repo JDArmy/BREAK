@@ -17,7 +17,7 @@
         "link": "https://view.inews.qq.com/a/20250316A06WUY00"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "低价购风险",
       "零元购",
@@ -47,6 +47,21 @@
         "key": "R0055-001",
         "relation": "variant",
         "note": "卡券限制突破是低价购风险的细分变体。"
+      },
+      {
+        "key": "R0055-002",
+        "relation": "variant",
+        "note": "优惠券无限领取是低价购风险的细分变体。"
+      },
+      {
+        "key": "R0055-003",
+        "relation": "variant",
+        "note": "首单奖励重复领取是低价购风险的细分变体。"
+      },
+      {
+        "key": "R0055-004",
+        "relation": "variant",
+        "note": "支付金额篡改是低价购风险的细分变体。"
       },
       {
         "key": "R0064",
@@ -97,7 +112,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "卡券限制突破",
       "优惠券限制绕过",
@@ -129,6 +144,11 @@
         "note": "低价购风险是卡券限制突破的上层风险。"
       },
       {
+        "key": "R0055-002",
+        "relation": "variant",
+        "note": "卡券限制突破与优惠券无限领取同属父低价购风险下的细分变体。"
+      },
+      {
         "key": "R0064",
         "relation": "co-occurrence",
         "note": "卡券限制突破与拆单套利共享规避手段“风控策略”。"
@@ -152,6 +172,224 @@
         "key": "R0139",
         "relation": "co-occurrence",
         "note": "卡券限制突破与友好欺诈同属“客户与资源滥用”风险场景。"
+      }
+    ]
+  },
+  "R0055-002": {
+    "title": "优惠券无限领取",
+    "definition": "攻击者绕过优惠券领取次数、领取资格或活动库存限制，重复领取本应受限的优惠券。",
+    "description": "优惠券无限领取通常发生在领券接口只依赖客户端状态、单一账号标识或前端活动规则判断时。攻击者通过多账号、虚拟手机号、设备指纹伪造、接口重放或参数篡改，反复领取新人券、满减券、消费券等活动权益。\n\n该风险与券码枚举不同，核心不是猜测券码，而是绕过“谁能领、能领几次、活动库存是否充足”的业务校验。规模化利用会让平台营销预算被异常消耗，并通过低价下单、转卖券码或虚假交易转化为直接资损。",
+    "complexity": "basic",
+    "influence": "营销券库存和补贴预算被批量消耗，真实用户无法领取权益，平台订单价格体系被异常拉低并承担补贴损失。",
+    "avoidances": [
+      "A0002",
+      "A0003",
+      "A0004",
+      "A0010",
+      "A0013",
+      "A0015",
+      "A0016",
+      "A0018"
+    ],
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "BLA1:2025 - Action Limit Overrun - OWASP Top 10 for Business Logic Abuse",
+        "link": "https://owasp.org/www-project-top-10-for-business-logic-abuse/docs/the-top-10/action-limit-overrun"
+      },
+      {
+        "title": "Examples of business logic vulnerabilities - PortSwigger Web Security Academy",
+        "link": "https://portswigger.net/web-security/logic-flaws/examples"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "优惠券无限领取",
+      "优惠券重复领取",
+      "重复领券",
+      "无限领券",
+      "领券次数绕过",
+      "优惠券套利",
+      "券库存滥用"
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "同一设备簇、手机号段或收货地址在短时间内重复领取同一活动优惠券",
+        "领券接口出现重放请求或参数微调请求，领取成功次数超过活动规则上限",
+        "优惠券领取量快速消耗但核销用户留存、复购和真实浏览行为显著偏低",
+        "领取账号之间共享设备指纹、IP代理、支付账户或收货地址等关联特征"
+      ],
+      "assessedAt": "2026-07-09",
+      "priority": "P1"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0055",
+        "relation": "variant",
+        "note": "低价购风险是优惠券无限领取的上层风险。"
+      },
+      {
+        "key": "R0055-001",
+        "relation": "variant",
+        "note": "优惠券无限领取与卡券限制突破同属父低价购风险下的细分变体。"
+      },
+      {
+        "key": "R0009",
+        "relation": "co-occurrence",
+        "note": "优惠券无限领取与恶意薅羊毛共享规避手段“接口签名校验”。"
+      }
+    ]
+  },
+  "R0055-003": {
+    "title": "首单奖励重复领取",
+    "definition": "攻击者伪造或重复构造新用户、首单或首购资格，反复领取首单立减、首单红包或推荐奖励。",
+    "description": "首单奖励重复领取是针对首单优惠、首购补贴、新人券和推荐奖励的资格滥用。攻击者通过批量注册、虚拟手机号、身份信息冒用、设备环境伪造或邀请链路重放，让同一团伙反复被识别为新用户或首单用户。\n\n该风险会把本应用于真实拉新的补贴转化为异常低价订单或可提现奖励。与普通营销活动作弊相比，它更聚焦交易链路中的首单资格、首单价格和首单奖励结算校验失效，常与虚假交易、代下单和转卖套现结合出现。",
+    "complexity": "basic",
+    "influence": "首单补贴、拉新奖励和新人优惠被重复套取，平台获客成本失真，真实新客权益被挤占，并形成异常低价订单和虚假增长数据。",
+    "avoidances": [
+      "A0001",
+      "A0004-001",
+      "A0010",
+      "A0015",
+      "A0016",
+      "A0016-001",
+      "A0016-003",
+      "A0021",
+      "A0021-001",
+      "A0037",
+      "A0004",
+      "A0005",
+      "A0046",
+      "A0044",
+      "A0020-003"
+    ],
+    "references": [
+      {
+        "title": "剑指电信网络诈骗|不法分子盯上了电商经济的漏洞",
+        "link": "https://www.spp.gov.cn/spp/zdgz/202106/t20210607_520557.shtml"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "首单奖励重复领取",
+      "首单奖励套利",
+      "新人券重复领取",
+      "首单立减滥用",
+      "首购资格绕过",
+      "新用户优惠套利",
+      "推荐奖励重复领取"
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "新注册账号集中完成首单后立即停止活跃，缺少真实复购和浏览路径",
+        "首单订单在设备指纹、收货地址、支付账户或邀请关系上高度聚类",
+        "同一邀请人或团伙关联账号反复触发新人券、首单立减和推荐奖励",
+        "首单奖励核销后商品被快速转卖、退款或流向少数关联收货地址"
+      ],
+      "assessedAt": "2026-07-09",
+      "priority": "P1"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0055",
+        "relation": "variant",
+        "note": "低价购风险是首单奖励重复领取的上层风险。"
+      },
+      {
+        "key": "R0005-002",
+        "relation": "co-occurrence",
+        "note": "首单奖励重复领取与虚假裂变共享规避手段“人机验证技术”。"
+      },
+      {
+        "key": "R0017-002",
+        "relation": "co-occurrence",
+        "note": "首单奖励重复领取与骗取补贴共享规避手段“风控策略”。"
+      }
+    ]
+  },
+  "R0055-004": {
+    "title": "支付金额篡改",
+    "definition": "攻击者篡改订单金额、商品数量、优惠金额或支付参数，使实际支付金额低于应付金额。",
+    "description": "支付金额篡改常发生在订单创建、优惠计算、支付确认或回调处理链路缺少服务端一致性校验时。攻击者通过抓包、接口重放、修改请求参数、构造负数数量或篡改优惠字段，将订单金额改为低价、零元甚至负数后提交支付。\n\n该风险的本质是价格和支付状态以客户端参数或未签名字段为准，服务端没有重新计算商品价格、库存数量、优惠规则和支付机构返回金额。规模化利用会直接造成货款损失，并污染交易、库存和财务结算数据。",
+    "complexity": "intermediate",
+    "influence": "商品或服务被以低于应付金额成交，平台和商户承担直接货款损失，支付、库存、财务对账和售后处置链路同时被污染。",
+    "avoidances": [
+      "A0002",
+      "A0015",
+      "A0005",
+      "A0021",
+      "A0037",
+      "A0016",
+      "A0044",
+      "A0020-003"
+    ],
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "Web Parameter Tampering - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/Web_Parameter_Tampering"
+      },
+      {
+        "title": "Business logic vulnerability - OWASP Foundation",
+        "link": "https://owasp.org/www-community/vulnerabilities/Business_logic_vulnerability"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "支付金额篡改",
+      "订单金额篡改",
+      "价格参数篡改",
+      "支付参数篡改",
+      "0元购",
+      "负数支付",
+      "支付漏洞"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "订单应付金额、支付机构实付金额和商品价格快照之间出现不一致",
+        "下单请求中金额、数量、优惠或支付状态字段被修改后仍能完成交易",
+        "同一账号或设备反复提交零元、负数或明显低于成本价的订单",
+        "支付回调金额与本地订单金额不匹配，但订单状态仍被置为已支付"
+      ],
+      "assessedAt": "2026-07-09",
+      "priority": "P1"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0055",
+        "relation": "variant",
+        "note": "低价购风险是支付金额篡改的上层风险。"
+      },
+      {
+        "key": "R0126",
+        "relation": "co-occurrence",
+        "note": "支付金额篡改与API滥用风险共享规避手段“接口签名校验”。"
+      },
+      {
+        "key": "R0087",
+        "relation": "co-occurrence",
+        "note": "支付金额篡改与业务篡改风险共享规避手段“依法打击”。"
       }
     ]
   }

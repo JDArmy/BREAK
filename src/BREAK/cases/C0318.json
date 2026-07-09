@@ -13,24 +13,28 @@
       "刑事判决",
       "汤某某"
     ],
-    "summary": "被告人汤某某在网上购买注册机及源代码，改写为“畅游注册机.exe”。该软件可自动生成注册信息，并通过第三方接码平台获取手机号和验证码，完成批量注册游戏账号。法院对此进行了审理。",
+    "summary": "2018年10月，兰溪法院判决首例恶意注册账号案。被告人制作并出售“畅游注册机.exe”，该软件可自动生成注册信息，通过第三方平台获取手机号和验证码，以数据包方式向畅游注册平台服务器提交并完成批量注册。法院认定其干扰平台正常流程，属于破坏性程序，并以提供侵入、非法控制计算机信息系统程序、工具罪判处刑罚。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0030-001"
     ],
     "references": [
       {
-        "title": "批量注册账号产业链中接码平台的刑事责任评析-理论调研---绍兴市...",
-        "link": "http://www.sxlawyers.cn/default.aspx?pageid=36&id=1034"
-      },
-      {
         "title": "写入浙江高院工作报告的案件一起来“盘”！",
         "link": "https://www.thepaper.cn/newsDetail_forward_2921336"
+      },
+      {
+        "title": "2018年互联网法律大案盘点！撞库打码、区块链存证……",
+        "link": "https://m.21jingji.com/article/20181125/herald/fdeac9067f34d9d71d3c84236ea9af91_zaker.html"
+      },
+      {
+        "title": "批量注册账号产业链中接码平台的刑事责任评析-理论调研---绍兴市...",
+        "link": "http://www.sxlawyers.cn/default.aspx?pageid=36&id=1034"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2021-01-22"
+    "incidentTime": "2018-10"
   }
 }

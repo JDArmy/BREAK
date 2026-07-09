@@ -30,6 +30,43 @@
       ]
     }
   },
+  "R0035-002": {
+    "title": "Session Fixation Attack",
+    "definition": "An attacker makes a user use a session identifier known to or controlled by the attacker before login, then reuses that session after the user authenticates to take over the account.",
+    "description": "Session fixation occurs when an application keeps the same Session ID before and after login, accepts session identifiers injected through URLs, forms, or cross-subdomain cookies, or fails to regenerate sessions after authentication and privilege changes. The attacker first causes the victim to visit a link or page carrying a fixed session identifier, waits for the victim to log in, and then uses the same session identifier in the authenticated state.\n\nUnlike session token theft, the attacker does not necessarily need to steal the user's cookie afterward; the controlled session is fixed into the user's browser in advance. If the platform lacks post-login session rotation, cookie domain isolation, SameSite/HttpOnly/Secure settings, and anomalous-session detection, attackers can bypass protections after password and MFA login and perform sensitive actions such as transactions, password changes, card binding, or data export.",
+    "influence": "Attackers can reuse the fixed session after the user authenticates to take over the account, bypassing login and MFA flows and causing account control, transaction tampering, sensitive data access, and financial loss.",
+    "references": [
+      {
+        "title": "Session fixation - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Session_fixation"
+      },
+      {
+        "title": "CWE-384: Session Fixation",
+        "link": "https://cwe.mitre.org/data/definitions/384.html"
+      },
+      {
+        "title": "Session Management Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
+      }
+    ],
+    "keywords": [
+      "Session Fixation Attack",
+      "session fixation",
+      "fixed session",
+      "Session ID fixation",
+      "session identifier injection",
+      "login session fixation",
+      "CWE-384"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The Session ID does not change between the pre-login and post-login states",
+        "A user enters from an external link containing SID, session, token, or similar session parameters and then completes login",
+        "The same session identifier is immediately reused by another device or IP after the victim logs in",
+        "A cross-subdomain cookie or controllable response header sets a session cookie accepted by the business domain"
+      ]
+    }
+  },
   "R0035-001": {
     "title": "Login Credential Theft",
     "definition": "Stealing user identity credentials to impersonate the user's identity for unauthorized access.",

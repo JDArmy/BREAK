@@ -11,22 +11,26 @@
       "公安部典型案例",
       "人脸视频合成"
     ],
-    "summary": "2023年5月，汕头公安机关发现犯罪嫌疑人陈某财等人购买公民个人信息，利用境外AI人脸技术软件将人脸头像制作成视频，绕过抖音人脸认证系统，非法大量注册实名认证的网络账号。该案被列入公安部2023年打击黑客犯罪十大典型案例。",
+    "summary": "2023年5月，汕头公安机关侦查发现，犯罪嫌疑人陈某财等人购买公民个人信息，利用境外AI人脸技术软件将人脸头像制作成视频，绕过抖音平台真人核验环节，非法注册实名认证网络账号。2023年7月5日，广东汕头网安在深圳、揭阳、汕头等地统一收网，抓获犯罪嫌疑人7名，查获涉案抖音账号1万余个、涉案金额60余万元。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0047"
     ],
     "references": [
       {
-        "title": "[人民公安报]公安部公布打击黑客犯罪十大典型案例",
-        "link": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n9309244/n9309283/c9312129/content.html"
+        "title": "黑客犯罪团伙用AI通过人脸验证，非法注册上万抖音账号获利",
+        "link": "https://static.nfnews.com/content/202311/30/c8354498.html"
       },
       {
-        "title": "公安部公布打击黑客犯罪十大典型案例",
-        "link": "https://cn.chinadaily.com.cn/a/202409/02/WS66d55af1a310a792b3ab9d8e.html"
+        "title": "黑客犯罪团伙用AI通过人脸验证，非法注册上万抖音账号获利",
+        "link": "https://static.nfnews.com/content/202311/30/c8354498.html?from=timeline"
+      },
+      {
+        "title": "[人民公安报]公安部公布打击黑客犯罪十大典型案例",
+        "link": "https://m.mps.gov.cn/n6935718/n6937837/n9309251/n9309278/c9312129/content.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2023-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [],

@@ -49,7 +49,8 @@
       "Swagger leak",
       "OpenAPI leak",
       "API scanning",
-      "endpoint enumeration"
+      "endpoint enumeration",
+      "forced browsing"
     ],
     "riskAssessment": {
       "observables": [
@@ -105,7 +106,10 @@
       "workflow bypass",
       "race condition",
       "payment bypass",
-      "sensitive business flows"
+      "sensitive business flows",
+      "manipulating workflow",
+      "multi-step abuse",
+      "parameter injection"
     ],
     "riskAssessment": {
       "observables": [

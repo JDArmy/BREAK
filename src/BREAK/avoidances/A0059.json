@@ -15,7 +15,7 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "异常访问行为识别",
       "访问行为分析",
@@ -30,17 +30,17 @@
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 27 个风险，共同限制 14 个攻击工具。"
+        "note": "共同覆盖 28 个风险，共同限制 14 个攻击工具。"
       },
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 27 个风险，共同限制 12 个攻击工具。"
+        "note": "共同覆盖 28 个风险，共同限制 12 个攻击工具。"
       },
       {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 21 个风险，共同限制 13 个攻击工具。"
+        "note": "共同覆盖 22 个风险，共同限制 13 个攻击工具。"
       },
       {
         "key": "A0001",

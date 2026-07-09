@@ -3,7 +3,7 @@
     "title": "终端异常环境检测",
     "category": "AC02",
     "definition": "对应用运行环境及用户请求环境进行识别，发现异常环境。",
-    "description": "异常环境识别通过获取包括不限于终端静默人机挑战、应用合法性、进程合法性、是否越狱（ROOT）、陀螺仪状态、是否外挂插件等数十种数据的获取、分析和判断。业务场景下的异常环境识别一般是通过业务终端访问系统实现的。根据业务访问模式的不同，终端访问系统可能是浏览器、APP移动应用、桌面级程序等形式。异常环境识别能力严重依赖业务终端访问系统的权限，由于用户授权限制以及法律法规限制，异常环境识别具有一定的局限性，且也受到对抗和终端数据完整性制约。",
+    "description": "异常环境识别通过获取包括不限于终端静默人机挑战、应用合法性、进程合法性、是否越狱（ROOT）、陀螺仪状态、是否外挂插件等数十种数据的获取、分析和判断。具体业务域下的异常环境识别一般是通过业务终端访问系统实现的。根据业务访问模式的不同，终端访问系统可能是浏览器、APP移动应用、桌面级程序等形式。异常环境识别能力严重依赖业务终端访问系统的权限，由于用户授权限制以及法律法规限制，异常环境识别具有一定的局限性，且也受到对抗和终端数据完整性制约。",
     "limitation": "因为异常环境检测都是在用户可控的终端上展开的，所以最终效果取决于对抗性。从理论上讲，因为终端可控，那么就总是能够绕过各种异常环境检测策略，最终就是个时间成本与能力高低问题。",
     "references": [
       {
@@ -11,7 +11,7 @@
         "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "终端异常环境检测",
       "设备环境检测",
@@ -26,32 +26,32 @@
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 69 个风险，共同限制 13 个攻击工具。"
+        "note": "共同覆盖 73 个风险，共同限制 13 个攻击工具。"
       },
       {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 51 个风险，共同限制 22 个攻击工具。"
+        "note": "共同覆盖 54 个风险，共同限制 22 个攻击工具。"
       },
       {
         "key": "A0016",
         "relation": "complement",
-        "note": "共同覆盖 50 个风险，共同限制 9 个攻击工具。"
-      },
-      {
-        "key": "A0001",
-        "relation": "complement",
-        "note": "共同覆盖 33 个风险，共同限制 15 个攻击工具。"
+        "note": "共同覆盖 53 个风险，共同限制 9 个攻击工具。"
       },
       {
         "key": "A0004",
         "relation": "complement",
-        "note": "共同覆盖 37 个风险，共同限制 9 个攻击工具。"
+        "note": "共同覆盖 40 个风险，共同限制 9 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 34 个风险，共同限制 15 个攻击工具。"
       },
       {
         "key": "A0002",
         "relation": "complement",
-        "note": "共同覆盖 37 个风险，共同限制 4 个攻击工具。"
+        "note": "共同覆盖 39 个风险，共同限制 4 个攻击工具。"
       }
     ]
   },
@@ -67,7 +67,7 @@
         "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "模拟器检测",
       "安卓模拟器检测",
@@ -123,7 +123,7 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/124/r2/final"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "云手机检测",
       "云机检测",
@@ -179,7 +179,7 @@
         "link": "https://www.lmlphp.com/user/58076/article/item/637693/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "ROOT/越狱检测",
       "Root检测",
@@ -235,7 +235,7 @@
         "link": "https://www.163.com/dy/article/KOVL1LB80556IVC7.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "外挂检测",
       "作弊器检测",
@@ -291,7 +291,7 @@
         "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "多开检测",
       "分身检测",
@@ -347,7 +347,7 @@
         "link": "https://mas.owasp.org/MASTG-KNOW-0085/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "调试器检测",
       "反调试",
@@ -403,7 +403,7 @@
         "link": "https://www.cnblogs.com/cherishui/p/14366072.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "虚拟机检测",
       "VM检测",
@@ -463,7 +463,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "无头浏览器检测",
       "Headless检测",
@@ -519,7 +519,7 @@
         "link": "https://tech.meituan.com/2018/02/02/android-anti-hooking.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "HOOK检测",
       "Xposed检测",

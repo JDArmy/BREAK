@@ -13,11 +13,15 @@
       "平台账号"
     ],
     "summary": "重庆公安网安部门查明，以康某为首的犯罪团伙为赚取涉黄、赌、诈平台广告推广费，接收含有赌博、色情等链接的二维码，插入到短视频中，利用平台账号发布数十万条已“插码”短视频。网民观看后扫描二维码，即被引流至网络色情、赌博、诈骗网页，造成巨大财产损失。",
-    "category": "criminal_verdict",
+    "category": "news_report",
     "relatedRisks": [
       "R0007-003"
     ],
     "references": [
+      {
+        "title": "“我的账号咋自动发布擦边视频？”警方介入调查，抓获12人！ - 环球网",
+        "link": "https://w.huanqiu.com/article/4JQ2mjxpFEv"
+      },
       {
         "title": "整治广告推广引流犯罪 公安部公布8起典型案例",
         "link": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=6992995239179912681&source=50001&sub_source=50001_011"
@@ -27,7 +31,7 @@
         "link": "http://m.mps.gov.cn/n6935718/n6936554/c9717552/content.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2024-09",
     "relatedAttackTools": [
       "AT0067"

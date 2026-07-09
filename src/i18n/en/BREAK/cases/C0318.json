@@ -13,15 +13,19 @@
       "Criminal Verdict",
       "Tang XX"
     ],
-    "summary": "Defendant Tang XX purchased a registration bot and its source code online, then modified it into 'Changyou Registration Bot.exe'. The software automatically generated registration details and obtained phone numbers and verification codes via third-party code-receiving platforms to mass-register game accounts. The court adjudicated the case accordingly.",
+    "summary": "In October 2018, Lanxi Court ruled on the first malicious account-registration case. The defendant created and sold 'Changyou Registration Bot.exe', which could automatically generate registration information, obtain phone numbers and verification codes through a third-party platform, and submit data packets to Changyou's registration servers to complete bulk account creation. The court found that the tool interfered with the platform's normal process, treated it as a destructive program, and imposed criminal punishment for providing programs or tools for intrusion or illegal control of computer information systems.",
     "references": [
-      {
-        "title": "Analysis of criminal liability of code-receiving platforms in the bulk account registration industry chain - Theoretical Research---Shaoxing...",
-        "link": "http://www.sxlawyers.cn/default.aspx?pageid=36&id=1034"
-      },
       {
         "title": "Cases Included in the Zhejiang High Court Work Report: The First Malicious Account-Registration Case",
         "link": "https://www.thepaper.cn/newsDetail_forward_2921336"
+      },
+      {
+        "title": "2018 Internet Law Case Roundup: Credential Stuffing Captcha Solving, Blockchain Evidence, and More",
+        "link": "https://m.21jingji.com/article/20181125/herald/fdeac9067f34d9d71d3c84236ea9af91_zaker.html"
+      },
+      {
+        "title": "Analysis of criminal liability of code-receiving platforms in the bulk account registration industry chain - Theoretical Research---Shaoxing...",
+        "link": "http://www.sxlawyers.cn/default.aspx?pageid=36&id=1034"
       }
     ]
   }

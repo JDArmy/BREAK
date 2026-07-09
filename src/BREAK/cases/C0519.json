@@ -11,10 +11,11 @@
       "版权侵权",
       "反编译"
     ],
-    "summary": "文章提及社区通过逆向工程技术对Anthropic的Claude Code产品进行反编译，还原出模块化清晰的源码结构。尽管是反编译产物，但代码展现出良好的模块化，各功能模块边界清晰、类型定义与实现分离。文章同时指出，多数司法管辖区将Source Map逆向视为版权侵权，Anthropic可随时发起DMCA下架。",
+    "summary": "2026年3月31日前后，Anthropic发布Claude Code v2.1.88时未在发布配置中排除cli.js.map等source map文件。相关文章指出，source map的sourcesContent字段直接包含源码内容，无需反编译或逆向工程即可用脚本还原约51.2万行TypeScript源码。随后GitHub出现镜像仓库和大量fork，Anthropic移除source map并向GitHub提交DMCA下架通知。",
     "category": "news_report",
     "relatedRisks": [
-      "R0051"
+      "R0051",
+      "R0067"
     ],
     "references": [
       {
@@ -26,11 +27,9 @@
         "link": "https://developer.aliyun.com/article/1722081"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-04",
-    "relatedAttackTools": [
-      "AT0028"
-    ],
+    "updated": "2026-07-09",
+    "incidentTime": "2026-03-31",
+    "relatedAttackTools": [],
     "relatedThreatActors": []
   }
 }

@@ -1,21 +1,61 @@
 // 统一 LLM client（OpenAI 兼容）
 // 从 .env 的 LLM_* 变量读取凭据与模型，支持双模型分工：
-//   - MODEL_TEXT (LLM_TEXT_MODEL，默认 GLM-5.2)：轻量文本判断（字段密度、分类、title 一致性）
-//   - MODEL_MULTI (LLM_MULTI_MODEL，默认 GPT-5.5)：重型推理（subagent 交叉判断、Case 事实核验）
+//   - MODEL_TEXT (LLM_TEXT_MODEL，默认 jd/glm-5.2)：轻量文本判断（字段密度、分类、title 一致性）
+//   - MODEL_MULTI (LLM_MULTI_MODEL，默认 jd/glm-5.2)：重型推理（subagent 交叉判断、Case 事实核验）
 //
 // 环境变量（.env，gitignored）：
 //   LLM_API_URL=http://ai-api.jdcloud.com/v1/chat/completions
 //   LLM_API_KEY=pk-...
-//   LLM_TEXT_MODEL=GLM-5.2
-//   LLM_MULTI_MODEL=GPT-5.5
+//   LLM_TEXT_MODEL=jd/glm-5.2
+//   LLM_MULTI_MODEL=jd/glm-5.2
 //
 // 导出：chatText / chatJson / withRetry / sleep / MODEL_TEXT / MODEL_MULTI
 // 兼容：scripts/research/llm.mjs re-export 本模块的 chatText as chat / chatJson
 
-const LLM_URL = process.env.LLM_API_URL || 'http://ai-api.jdcloud.com/v1/chat/completions';
-const LLM_KEY = process.env.LLM_API_KEY || process.env.DIGITALSANG_LLM_API_KEY;
-export const MODEL_TEXT = process.env.LLM_TEXT_MODEL || 'GLM-5.2';
-export const MODEL_MULTI = process.env.LLM_MULTI_MODEL || 'GPT-5.5';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const DEFAULT_LLM_URL = 'http://ai-api.jdcloud.com/v1/chat/completions';
+const DEFAULT_MODEL = 'jd/glm-5.2';
+
+function parseEnvValue(raw) {
+  let value = String(raw ?? '').trim();
+  if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+    value = value.slice(1, -1);
+  }
+  return value;
+}
+
+function loadLocalEnv() {
+  const envPath = path.resolve(process.cwd(), '.env');
+  if (!fs.existsSync(envPath)) return {};
+  const env = {};
+  for (const line of fs.readFileSync(envPath, 'utf8').split(/\r?\n/)) {
+    const match = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/);
+    if (!match) continue;
+    env[match[1]] = parseEnvValue(match[2]);
+  }
+  return env;
+}
+
+function resolveUrl(rawUrl) {
+  const value = rawUrl || DEFAULT_LLM_URL;
+  // 当前京东云 HTTPS endpoint 返回 503，HTTP endpoint 可正常进入业务层。
+  if (value === 'https://ai-api.jdcloud.com/v1/chat/completions') return DEFAULT_LLM_URL;
+  return value;
+}
+
+function resolveConfiguredModel(rawModel) {
+  const value = rawModel || DEFAULT_MODEL;
+  if (value === 'GLM-5.2' || value === 'GPT-5.5') return DEFAULT_MODEL;
+  return value;
+}
+
+const localEnv = loadLocalEnv();
+const LLM_URL = resolveUrl(process.env.LLM_API_URL || localEnv.LLM_API_URL);
+const LLM_KEY = localEnv.LLM_API_KEY || process.env.LLM_API_KEY || process.env.DIGITALSANG_LLM_API_KEY;
+export const MODEL_TEXT = resolveConfiguredModel(process.env.LLM_TEXT_MODEL || localEnv.LLM_TEXT_MODEL);
+export const MODEL_MULTI = resolveConfiguredModel(process.env.LLM_MULTI_MODEL || localEnv.LLM_MULTI_MODEL);
 
 const LLM_RATE_MS = 1500; // 限流，保守
 const DEFAULT_TIMEOUT_MS = 60000;
@@ -42,7 +82,7 @@ function ensureKey() {
  * 调用 LLM。messages 为 OpenAI 兼容的 [{role, content}]。
  * @param {Array<{role:string,content:string}>} messages
  * @param {{model?:string, timeoutMs?:number, temperature?:number}} opts
- *   注意：multi 模型（GPT-5.5）不支持自定义 temperature，强制用默认值（不传该字段）。
+ *   注意：multi 模型不支持自定义 temperature 时，应使用服务默认值（不传该字段）。
  *   text 模型默认 0.2。
  * @returns {Promise<string>} assistant 文本内容；失败抛错
  */

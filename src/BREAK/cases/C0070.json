@@ -10,7 +10,7 @@
       "第三方网站嵌入",
       "购物平台比价"
     ],
-    "summary": "2021年11月，有分析指出，比价插件将第三方网站上原本的用户流量引导到其他平台的行为，破坏了竞争对手的用户粘性，属于不正当竞争。此类插件通过嵌入第三方网站，诱导用户跳转至其他购物平台进行比价和购买。",
+    "summary": "北京知识产权法院发布的涉数据反不正当竞争典型案例显示，魔方网聘公司通过“省钱招”浏览器插件篡改“智联招聘”网站页面设置，插入比价窗口链接并诱导用户跳转，还读取并存储简历信息。一审认定构成不正当竞争并判赔，二审驳回上诉、维持原判。",
     "category": "news_report",
     "relatedRisks": [
       "R0007-001",
@@ -18,11 +18,15 @@
     ],
     "references": [
       {
+        "title": "北京知产法院发布涉数据反不正当竞争典型案例",
+        "link": "https://www.ipeconomy.cn/index.php/index/news/magazine_details/id/6915.html"
+      },
+      {
         "title": "北京知识产权法院涉数据反不正当竞争十大典型案例",
         "link": "https://bjzcfy.bjcourt.gov.cn/article/detail/2023/07/id/7382298.shtml"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-09",
     "incidentTime": "2021-11",
     "relatedAttackTools": [
       "AT0032"

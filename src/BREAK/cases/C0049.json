@@ -12,7 +12,7 @@
       "封禁",
       "平台新规"
     ],
-    "summary": "抖音平台发现黑灰产组织利用多个“小号”重复低质投稿、刷粉刷赞、高频互动，将流量引流至“大号”使其不当获利。平台新规生效后，对涉及不当获利的矩阵号（大小号）统一严格处置，封禁多个百万粉丝账号并清退相关MCN机构。",
+    "summary": "抖音平台治理公告显示，黑灰产组织会利用多个“小号”重复低质投稿、刷粉刷赞、高频互动，将流量引流至“大号”使其不当获利。平台发布矩阵号不当行为治理规则后，对涉及不当获利的矩阵号（大小号）采取统一处置，重点打击批量小号作弊、刷粉刷赞和不当引流。",
     "category": "security_incident",
     "relatedRisks": [
       "R0005-001"
@@ -27,7 +27,7 @@
         "link": "https://api.amemv.com/magic/eco/runtime/release/6567f3b3e3ad2705a621c63f?title_color=ffffff&nav_bar_color=000000&status_bar_color=000000&hide_more=0&nav_btn_type=2&auto_play_bgm=1&container_bg_color=%23fffeff&loading_bg_color=%23fffeff&loading_duration=1000&awe_falcon=sh&_pia_=1&appType=douyin&magic_page_no=1"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2023-12",
     "relatedAttackTools": [
       "AT0017",

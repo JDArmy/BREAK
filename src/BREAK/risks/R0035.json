@@ -25,7 +25,7 @@
         "link": "https://attack.mitre.org/techniques/T1539/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "登录凭据复用",
       "Cookie复用",
@@ -40,6 +40,11 @@
         "key": "R0035-001",
         "relation": "variant",
         "note": "登录凭据盗用是登录凭据复用的细分变体。"
+      },
+      {
+        "key": "R0035-002",
+        "relation": "variant",
+        "note": "会话固定攻击是登录凭据复用的细分变体。"
       },
       {
         "key": "R0105",
@@ -82,6 +87,79 @@
       "priority": "P0"
     }
   },
+  "R0035-002": {
+    "title": "会话固定攻击",
+    "definition": "攻击者让用户在登录前使用攻击者已知或可控的会话标识，并在用户认证后复用该会话接管账号。",
+    "description": "会话固定攻击发生在应用登录前后沿用同一个 Session ID、接受 URL/表单/跨子域 Cookie 注入的会话标识，或没有在认证和权限提升后重新生成会话。攻击者先让受害者访问带有固定会话标识的链接或页面，等受害者完成登录后，再使用同一会话标识进入已认证状态。\n\n该风险与会话令牌盗用不同，攻击者不一定需要事后窃取用户 Cookie，而是提前把可控会话“固定”到用户浏览器中。若平台缺少登录后会话轮换、Cookie 域隔离、SameSite/HttpOnly/Secure 配置和异常会话检测，攻击者可绕过密码和多因素认证后的保护，执行交易、改密、绑卡或数据导出等敏感操作。",
+    "complexity": "intermediate",
+    "influence": "攻击者可在用户完成认证后复用固定会话接管账号，绕过登录和 MFA 过程，造成账号控制、交易篡改、敏感数据访问和资金损失。",
+    "avoidances": [
+      "A0010",
+      "A0011",
+      "A0015",
+      "A0019",
+      "A0021",
+      "A0023",
+      "A0059",
+      "A0041"
+    ],
+    "references": [
+      {
+        "title": "Session fixation - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Session_fixation"
+      },
+      {
+        "title": "CWE-384: Session Fixation",
+        "link": "https://cwe.mitre.org/data/definitions/384.html"
+      },
+      {
+        "title": "Session Management Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "会话固定攻击",
+      "Session Fixation",
+      "会话固定",
+      "固定会话",
+      "Session ID固定",
+      "登录会话固定",
+      "会话标识注入"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0035",
+        "relation": "variant",
+        "note": "登录凭据复用是会话固定攻击的上层风险。"
+      },
+      {
+        "key": "R0035-001",
+        "relation": "variant",
+        "note": "会话固定攻击与登录凭据盗用同属父登录凭据复用下的细分变体。"
+      },
+      {
+        "key": "R0247",
+        "relation": "co-occurrence",
+        "note": "会话固定攻击与会话令牌重放共享规避手段“身份安全审计”。"
+      }
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "登录前后的 Session ID 未变化，认证后仍沿用登录前会话标识",
+        "用户从带有 SID、session、token 等会话参数的外部链接进入并完成登录",
+        "同一会话标识在受害者登录后被另一设备或 IP 立即复用",
+        "跨子域 Cookie 或可控响应头设置了业务主域可接受的会话 Cookie"
+      ],
+      "assessedAt": "2026-07-09",
+      "priority": "P2"
+    }
+  },
   "R0035-001": {
     "title": "登录凭据盗用",
     "definition": "盗用用户身份凭据来实现仿冒用户身份进行未授权的访问。",
@@ -112,7 +190,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "登录凭据盗用",
       "Cookie盗用",

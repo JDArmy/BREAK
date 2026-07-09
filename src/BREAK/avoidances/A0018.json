@@ -11,7 +11,7 @@
         "link": "https://en.wikipedia.org/wiki/Authentication"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "身份认证（登录）",
       "登录认证",
@@ -28,17 +28,17 @@
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 25 个风险，共同限制 2 个攻击工具。"
+        "note": "共同覆盖 26 个风险，共同限制 2 个攻击工具。"
       },
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 21 个风险，共同限制 2 个攻击工具。"
+        "note": "共同覆盖 22 个风险，共同限制 2 个攻击工具。"
       },
       {
         "key": "A0004",
         "relation": "complement",
-        "note": "共同覆盖 19 个风险，共同限制 2 个攻击工具。"
+        "note": "共同覆盖 20 个风险，共同限制 2 个攻击工具。"
       },
       {
         "key": "A0001",
@@ -69,7 +69,7 @@
         "link": "https://www.w3.org/TR/vc-data-model-2.0/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "零知识证明",
       "ZKP",

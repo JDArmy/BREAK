@@ -11,7 +11,7 @@
         "link": "https://owasp.org/API-Security/editions/2019/en/0xa4-lack-of-resources-and-rate-limiting/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-09",
     "keywords": [
       "频率限制",
       "限流",
@@ -26,32 +26,32 @@
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 44 个风险，共同限制 12 个攻击工具。"
+        "note": "共同覆盖 50 个风险，共同限制 12 个攻击工具。"
       },
       {
         "key": "A0005",
         "relation": "complement",
-        "note": "共同覆盖 43 个风险，共同限制 8 个攻击工具。"
+        "note": "共同覆盖 46 个风险，共同限制 8 个攻击工具。"
       },
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 37 个风险，共同限制 9 个攻击工具。"
-      },
-      {
-        "key": "A0001",
-        "relation": "complement",
-        "note": "共同覆盖 33 个风险，共同限制 10 个攻击工具。"
+        "note": "共同覆盖 40 个风险，共同限制 9 个攻击工具。"
       },
       {
         "key": "A0002",
         "relation": "complement",
-        "note": "共同覆盖 36 个风险，共同限制 5 个攻击工具。"
+        "note": "共同覆盖 41 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 36 个风险，共同限制 9 个攻击工具。"
       },
       {
         "key": "A0016",
         "relation": "complement",
-        "note": "共同覆盖 35 个风险，共同限制 6 个攻击工具。"
+        "note": "共同覆盖 38 个风险，共同限制 6 个攻击工具。"
       }
     ]
   },
@@ -69,7 +69,7 @@
       "API速率限制与配额控制",
       "API速率限制配额控制"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "definition": "按用户、设备、IP、租户、接口和业务动作实施动态限流、配额和熔断。",
     "effectiveness": "high",
     "limitation": "黑产通过代理池（AT0098）和代理IP（AT0034-001）轮换海量出口IP，将单IP请求分散到分布式节点，规避基于IP的速率限制；账号池配合养号策略绕过按用户/设备的配额控制；阈值设置存在两难——过低会误拦正常用户的高频合法请求（如抢购、对账），过高则放行低频慢速爬虫；熔断机制可能被恶意触发，通过制造异常请求导致服务自我熔断，形成拒绝服务。",
@@ -77,32 +77,32 @@
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 7 个风险。"
-      },
-      {
-        "key": "A0020",
-        "relation": "complement",
-        "note": "共同覆盖 6 个风险。"
+        "note": "共同覆盖 10 个风险。"
       },
       {
         "key": "A0004",
         "relation": "complement",
-        "note": "共同覆盖 5 个风险。"
+        "note": "共同覆盖 8 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
       },
       {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 4 个风险。"
+        "note": "共同覆盖 6 个风险。"
+      },
+      {
+        "key": "A0028",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险。"
       },
       {
         "key": "A0044",
         "relation": "complement",
-        "note": "共同覆盖 4 个风险。"
-      },
-      {
-        "key": "A0001",
-        "relation": "complement",
-        "note": "共同覆盖 3 个风险。"
+        "note": "共同覆盖 5 个风险。"
       }
     ]
   },
@@ -119,7 +119,7 @@
         "link": "https://www.sumologic.com/blog/iot-botnet"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "keywords": [
       "IoT僵尸网络流量过滤与限速",
       "流量过滤",

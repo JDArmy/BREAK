@@ -11,7 +11,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-09",
     "keywords": [
       "访问来源跟踪",
       "来源追踪",
@@ -24,34 +24,34 @@
     "effectiveness": "medium",
     "relatedAvoidances": [
       {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 21 个风险，共同限制 3 个攻击工具。"
+      },
+      {
         "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 21 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0004",
         "relation": "complement",
         "note": "共同覆盖 16 个风险，共同限制 2 个攻击工具。"
       },
       {
-        "key": "A0015",
+        "key": "A0010",
         "relation": "complement",
         "note": "共同覆盖 15 个风险，共同限制 3 个攻击工具。"
       },
       {
-        "key": "A0010",
+        "key": "A0005",
         "relation": "complement",
-        "note": "共同覆盖 13 个风险，共同限制 3 个攻击工具。"
-      },
-      {
-        "key": "A0001-004",
-        "relation": "complement",
-        "note": "共同覆盖 12 个风险，共同限制 2 个攻击工具。"
+        "note": "共同覆盖 15 个风险，共同限制 2 个攻击工具。"
       },
       {
         "key": "A0016",
         "relation": "complement",
-        "note": "共同覆盖 11 个风险，共同限制 3 个攻击工具。"
-      },
-      {
-        "key": "A0001",
-        "relation": "complement",
-        "note": "共同覆盖 11 个风险，共同限制 2 个攻击工具。"
+        "note": "共同覆盖 14 个风险，共同限制 3 个攻击工具。"
       }
     ]
   }

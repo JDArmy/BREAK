@@ -9,7 +9,7 @@
       "支付验证",
       "电商平台安全"
     ],
-    "summary": "一家使用BigCommerce平台的商户遭遇了持续性的撞卡攻击，攻击者利用盗取的信用卡信息在其店铺进行批量验证。该商户及平台方均表示难以有效阻止此次攻击，导致大量虚假订单尝试和支付验证请求，严重影响了正常业务运营。",
+    "summary": "2025年11月，一名BigCommerce商户在社区和Reddit发帖称，其店铺遭遇持续约一个月的撞卡攻击，恶意请求集中打到BigCommerce控制的payments.bigcommerce.com支付域。商户称自己无法控制该域名，BigCommerce则表示缓解责任在商户。攻击造成约7000美元费用，商户被迫禁用信用卡、改用PayPal，并考虑更换支付处理商或迁移平台。",
     "category": "security_incident",
     "relatedRisks": [
       "R0040"
@@ -24,11 +24,11 @@
         "link": "https://www.reddit.com/r/bigcommerce/comments/1oqalfa/carding_attack_on_bigcommerce_unable_to_stop_due/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0005"
     ],
-    "incidentTime": "2024-05-02"
+    "incidentTime": "2025-11-06"
   }
 }

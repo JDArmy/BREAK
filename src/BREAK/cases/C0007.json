@@ -11,26 +11,26 @@
       "按键序列",
       "外挂犯罪"
     ],
-    "summary": "该资料探讨了游戏外挂的定罪量刑标准，其中特别提到一类“模拟人工操作类脚本”。这类脚本通过直接录制一段固定的按键序列，并进行重复播放来实现自动化操作。文章指出，对于此类仅模拟人工操作、未侵入游戏数据或逻辑的脚本，是否应被作为犯罪处理存在争议。",
+    "summary": "相关法律与安全资料讨论了游戏外挂的类型化认定，其中模拟玩家操作型外挂主要通过按键精灵、固定按键序列回放、图像识别触发按键等方式实现自动化。资料指出，这类工具通常不直接修改游戏数据或协议，刑法规制时需要区分其是否具有侵入、非法控制或破坏计算机信息系统的功能。",
     "category": "academic_research",
     "relatedRisks": [
       "R0001-002"
     ],
     "references": [
       {
+        "title": "浅析“按键精灵”类网络游戏外挂的法律责任 - 观若律师事务所",
+        "link": "https://www.guanruolawfirm.com/plus/view.php?aid=208"
+      },
+      {
+        "title": "网络游戏外挂，有罪？无罪？什么罪？ - 互联网法律评论",
+        "link": "https://www.sohu.com/a/523035505_120287836"
+      },
+      {
         "title": "网络游戏外挂产业链的刑法规制",
         "link": "https://www.hanspub.org/journal/paperinformation?paperID=69751"
-      },
-      {
-        "title": "【举案明法】模拟玩家操作型游戏外挂的刑法性质",
-        "link": "https://mp.weixin.qq.com/s?__biz=MzA5NTE0Nzk4NA==&mid=2655735580&idx=4&sn=4bfb140a677d1a04a80d4a99923ee841"
-      },
-      {
-        "title": "人工智能时代网络游戏外挂的刑法规制",
-        "link": "http://www.cqlsw.net/apply/criminal/2023120542452.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "incidentTime": "2024-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

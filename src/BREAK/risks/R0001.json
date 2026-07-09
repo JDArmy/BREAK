@@ -56,7 +56,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-006_Expediting.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "流程自动化",
       "自动化脚本",
@@ -105,7 +105,7 @@
       {
         "key": "R0002",
         "relation": "co-occurrence",
-        "note": "流程自动化与优惠劵枚举均可由攻击工具“无头浏览器”直接造成。"
+        "note": "流程自动化与优惠券枚举均可由攻击工具“无头浏览器”直接造成。"
       },
       {
         "key": "R0003",
@@ -148,7 +148,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "协议级自动化",
       "接口自动化",
@@ -186,7 +186,7 @@
       {
         "key": "R0002",
         "relation": "co-occurrence",
-        "note": "协议级自动化与优惠劵枚举均可由攻击工具“自动化脚本”直接造成。"
+        "note": "协议级自动化与优惠券枚举均可由攻击工具“自动化脚本”直接造成。"
       },
       {
         "key": "R0003-001",
@@ -208,7 +208,7 @@
   "R0001-002": {
     "title": "自动化模拟器",
     "definition": "指通过模拟器程序模拟正常用户行为自动发送网络协议请求",
-    "description": "通过操纵业务访问终端（譬如浏览器、应用APP等），重复播放提前录制的流程动作。攻击者借助模拟器、群控系统或UI自动化工具模拟真人点击、滑动、输入等操作，绕过基于协议特征的检测，适用于含人机交互校验的业务场景。该方式保留了前端事件链但行为时序机械、轨迹规整，常被用于批量养号、营销活动作弊与抢购。",
+    "description": "通过操纵业务访问终端（譬如浏览器、应用APP等），重复播放提前录制的流程动作。攻击者借助模拟器、群控系统或UI自动化工具模拟真人点击、滑动、输入等操作，绕过基于协议特征的检测，适用于含人机交互校验的业务域。该方式保留了前端事件链但行为时序机械、轨迹规整，常被用于批量养号、营销活动作弊与抢购。",
     "complexity": "advanced",
     "influence": "套取平台营销活动利益，占用正常用户活动资源。",
     "avoidances": [
@@ -255,7 +255,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "自动化模拟器",
       "模拟器脚本",
@@ -293,7 +293,7 @@
       {
         "key": "R0002",
         "relation": "co-occurrence",
-        "note": "自动化模拟器与优惠劵枚举均受攻击工具“定制浏览器”间接支持。"
+        "note": "自动化模拟器与优惠券枚举均受攻击工具“定制浏览器”间接支持。"
       },
       {
         "key": "R0003",
@@ -347,7 +347,7 @@
         "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "自动化登录风险",
       "撞库登录",

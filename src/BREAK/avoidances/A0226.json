@@ -23,31 +23,36 @@
     ],
     "relatedAvoidances": [
       {
+        "key": "A0014",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
         "key": "A0178",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       },
       {
-        "key": "A0014",
+        "key": "A0002",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0072",
+        "key": "A0004",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0225",
+        "key": "A0015",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0229",
+        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
     ],
-    "updated": "2026-07-04"
+    "updated": "2026-07-09"
   }
 }

@@ -13,23 +13,23 @@
       "黄牛",
       "公益损害赔偿"
     ],
-    "summary": "2023年起，谢运购买3400余条个人信息，通过张质提供的AI换脸服务破解人脸识别，在微信小程序上抢购60余瓶茅台酒并转卖获利。三人分别因非法控制计算机信息系统罪、侵犯公民个人信息罪被判刑，并承担公益损害赔偿。",
-    "category": "criminal_verdict",
+    "summary": "2025年12月媒体报道一起浙江绍兴AI换脸抢购茅台案：谢运等人为抢购茅台酒购买3400余条个人信息，并通过张质提供的AI换脸服务破解人脸识别，在微信小程序上抢购60余瓶茅台酒后转卖牟利。该案反映黄牛可将个人信息买卖、AI换脸和自动化抢购结合，用于绕过实名预约和人脸核验。",
+    "category": "news_report",
     "relatedRisks": [
       "R0003"
     ],
     "references": [
       {
-        "title": "黄牛购买3400多条个人信息,通过AI换脸抢购60余瓶茅台,违法吗?这是...",
-        "link": "https://news.qq.com/rain/a/20251213A03QBV00"
-      },
-      {
         "title": "售卖公民个人信息 非法破解人脸识别系统",
         "link": "https://www.chinacourt.cn/article/detail/2025/12/id/9113732.shtml"
+      },
+      {
+        "title": "黄牛购买3400多条个人信息,通过AI换脸抢购60余瓶茅台,违法吗?这是...",
+        "link": "https://news.qq.com/rain/a/20251213A03QBV00"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-08",
+    "updated": "2026-07-09",
+    "incidentTime": "2024-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

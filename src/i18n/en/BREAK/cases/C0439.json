@@ -9,7 +9,7 @@
       "payment verification",
       "ecommerce platform"
     ],
-    "summary": "A merchant on the BigCommerce platform faced a sustained carding attack where attackers used stolen credit card details to perform bulk validation on their store. Both the merchant and the platform reported difficulty in effectively stopping the attack, resulting in a high volume of fraudulent order attempts and payment verification requests that severely disrupted normal business operations.",
+    "summary": "In November 2025, a BigCommerce merchant posted in the support community and on Reddit that their store had been hit by a carding attack for about a month, with malicious requests targeting the BigCommerce-controlled payments.bigcommerce.com payment domain. The merchant said they could not control that domain, while BigCommerce said mitigation was the merchant's responsibility. The attack generated about $7,000 in costs, forced the merchant to disable credit cards and use PayPal, and led them to consider changing payment processors or migrating platforms.",
     "references": [
       {
         "title": "We are getting hit with a bot attack using fraudulent credit cards (carding) on our website — BigCommerce Official Support Community",

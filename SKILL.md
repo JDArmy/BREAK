@@ -157,6 +157,8 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 
 数据治理改动也会影响 Skill 检索结果。修复 Case 的 `references` / `summary` 事实核验问题或调整 Risk 的 `avoidances` 关系时，应同步维护英文翻译文件，并确保前两条 Case references 尽量指向可抓取正文的稳定页面，避免 Skill 返回的案例事实无法被复核。
 
+Case 事实核验使用抓取正文送入 LLM。维护 `review-case-fact.mjs` 时需保证送审片段足够覆盖正文关键段落；大批量清理 P2 待办时按约 100 个改动设置 checkpoint，先跑 `validate:data` / `review:changed` 再提交，避免长时间积累未验证变更。
+
 ## 实体关系图谱
 
 理解实体间的关联关系有助于给出更完整的回答：

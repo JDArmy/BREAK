@@ -11,7 +11,7 @@
         "link": "https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "账号处罚",
       "账号惩戒",
@@ -26,32 +26,32 @@
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 56 个风险，共同限制 5 个攻击工具。"
+        "note": "共同覆盖 58 个风险，共同限制 5 个攻击工具。"
       },
       {
         "key": "A0016",
         "relation": "complement",
-        "note": "共同覆盖 27 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 28 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 24 个风险，共同限制 4 个攻击工具。"
+        "note": "共同覆盖 25 个风险，共同限制 4 个攻击工具。"
       },
       {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 22 个风险，共同限制 3 个攻击工具。"
-      },
-      {
-        "key": "A0059",
-        "relation": "complement",
-        "note": "共同覆盖 15 个风险，共同限制 5 个攻击工具。"
+        "note": "共同覆盖 24 个风险，共同限制 3 个攻击工具。"
       },
       {
         "key": "A0044",
         "relation": "complement",
-        "note": "共同覆盖 18 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 19 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 17 个风险，共同限制 3 个攻击工具。"
       }
     ]
   },
@@ -67,7 +67,7 @@
         "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/xwxcs/art/2023/art_36461cc80e004ad0afa7daef05ee1f9e.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "keywords": [
       "店铺处罚",
       "店铺惩戒",
@@ -127,7 +127,7 @@
         "link": "https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fl/202011/t20201102_394622.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "keywords": [
       "员工处罚",
       "员工惩戒",
@@ -183,7 +183,7 @@
         "link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "keywords": [
       "账号封禁",
       "封号",
@@ -198,32 +198,32 @@
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 9 个风险，共同限制 8 个攻击工具。"
+        "note": "共同覆盖 11 个风险，共同限制 8 个攻击工具。"
       },
       {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 5 个风险，共同限制 10 个攻击工具。"
+        "note": "共同覆盖 7 个风险，共同限制 10 个攻击工具。"
       },
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 4 个风险，共同限制 10 个攻击工具。"
+        "note": "共同覆盖 5 个风险，共同限制 10 个攻击工具。"
       },
       {
         "key": "A0001",
         "relation": "complement",
-        "note": "共同覆盖 3 个风险，共同限制 10 个攻击工具。"
+        "note": "共同覆盖 4 个风险，共同限制 10 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 7 个攻击工具。"
       },
       {
         "key": "A0059",
         "relation": "complement",
         "note": "共同覆盖 3 个风险，共同限制 9 个攻击工具。"
-      },
-      {
-        "key": "A0001-004",
-        "relation": "complement",
-        "note": "共同覆盖 3 个风险，共同限制 8 个攻击工具。"
       }
     ]
   }

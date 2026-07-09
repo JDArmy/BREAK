@@ -12,7 +12,7 @@
         "link": "https://ieeexplore.ieee.org/document/10895253/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "keywords": [
       "IoT流量异常检测与C&C通信阻断",
       "异常检测",
@@ -63,7 +63,7 @@
     "keywords": [
       "IoT流量监控与异常检测"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-09",
     "definition": "监控IoT设备网络流量，检测异常外联行为。",
     "effectiveness": "high",
     "limitation": "新型僵尸网络可使用加密通信、协议层伪造或快速变种DGA域名绕过检测，加密流量下DPI效果有限；正常固件升级、OTA轮询易与C&C外联混淆导致误报，IoT设备基数大也使基线难稳定。",
@@ -94,7 +94,7 @@
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0022",
+        "key": "A0002",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }

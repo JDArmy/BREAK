@@ -11,7 +11,7 @@
         "link": "https://en.wikipedia.org/wiki/Biometric_authentication"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-09",
     "keywords": [
       "生物特征识别",
       "生物识别",
@@ -26,17 +26,17 @@
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同覆盖 24 个风险，共同限制 9 个攻击工具。"
+        "note": "共同覆盖 25 个风险，共同限制 9 个攻击工具。"
       },
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 22 个风险，共同限制 8 个攻击工具。"
+        "note": "共同覆盖 23 个风险，共同限制 8 个攻击工具。"
       },
       {
         "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 21 个风险，共同限制 7 个攻击工具。"
+        "note": "共同覆盖 22 个风险，共同限制 7 个攻击工具。"
       },
       {
         "key": "A0016",
@@ -67,7 +67,7 @@
         "link": "https://en.wikipedia.org/wiki/Facial_recognition"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-09",
     "keywords": [
       "人脸识别",
       "面部识别",
@@ -102,12 +102,12 @@
       {
         "key": "A0020",
         "relation": "complement",
-        "note": "共同覆盖 9 个风险。"
+        "note": "共同覆盖 10 个风险。"
       },
       {
-        "key": "A0016-003",
+        "key": "A0021",
         "relation": "complement",
-        "note": "共同覆盖 8 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 9 个风险。"
       }
     ]
   }

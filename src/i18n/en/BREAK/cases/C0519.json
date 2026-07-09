@@ -11,7 +11,7 @@
       "copyright infringement",
       "decompilation"
     ],
-    "summary": "The article discusses how the community reverse-engineered Anthropic's Claude Code product through decompilation, reconstructing a clearly modular source code structure. Although it is a decompilation artifact, the code exhibits good modularity with distinct boundaries between functional modules and a clear separation of type definitions and implementations. The article also notes that most jurisd",
+    "summary": "Around March 31, 2026, Anthropic released Claude Code v2.1.88 without excluding cli.js.map and related source map files from the package. The referenced article states that the source map's sourcesContent field directly contained source code, so roughly 512,000 lines of TypeScript could be restored with a script without decompilation or reverse engineering. Mirror repositories and many forks then appeared on GitHub, after which Anthropic removed the source maps and submitted a DMCA takedown notice to GitHub.",
     "references": [
       {
         "title": "GitHub DMCA: Anthropic Notice",
