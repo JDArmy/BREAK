@@ -1,0 +1,45 @@
+{
+  "R0288": {
+    "title": "Ticket Scalping and Resale Risk",
+    "definition": "Attackers profit by capturing, hoarding, transferring, or reselling tickets, appointment slots, transport seats, and similar scarce ticketed resources at inflated prices.",
+    "description": "Ticket scalping and resale risk occurs in scarce-resource allocation scenarios such as concerts, sports events, attractions, flights, rail tickets, medical appointments, activity reservations, and platform benefit claims. Attackers may use human proxy buying, bulk accounts, automation scripts, proxy IPs, SMS receiving platforms, or secondary-market channels to capture ticketed resources and then profit through markups, proxy orders, transfer codes, account delivery, or fake-ticket transactions.\n\nThis risk does not require automated purchasing. It applies whenever attackers exploit scarcity, weak identity verification, poor resale controls, or off-platform trading chains, causing legitimate users to lose fair access, platform order to be disrupted, or consumers to suffer inflated prices and failed entry.",
+    "influence": "It concentrates scarce ticketed resources, makes legitimate purchasing difficult, inflates secondary-market prices, increases complaints and regulatory pressure, and can lead to fake-ticket fraud, account-transfer disputes, and failed-entry losses.",
+    "references": [
+      {
+        "title": "Criminal Law of the People's Republic of China: Article 227 on forged valuable tickets and railway or vessel ticket scalping",
+        "link": "https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml"
+      },
+      {
+        "title": "FTC: Better Online Ticket Sales Act",
+        "link": "https://www.ftc.gov/business-guidance/resources/better-online-ticket-sales-act"
+      },
+      {
+        "title": "Korea Ministry of Culture, Sports and Tourism: BTS concert ticket scalping cases referred to police",
+        "link": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=22288"
+      },
+      {
+        "title": "Criminal Law of the People's Republic of China",
+        "link": "https://www.gov.cn/guoqing/2021-10/29/content_5647633.htm"
+      }
+    ],
+    "keywords": [
+      "Ticket Scalping and Resale Risk",
+      "ticket scalping",
+      "scalped tickets",
+      "ticket resale",
+      "inflated resale",
+      "ticket hoarding",
+      "ticketed resource capture",
+      "appointment slot resale",
+      "secondary ticket market"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Large numbers of high-price resale posts appear on secondary platforms shortly after ticket release",
+        "The same device, account cluster, or payment instrument purchases many tickets for popular sessions",
+        "Successful buyer accounts frequently mismatch entry identity, phone numbers, or device fingerprints",
+        "Complaints concentrate on scalper markups, invalid transfer codes, fake tickets, or failed entry"
+      ]
+    }
+  }
+}
