@@ -156,6 +156,10 @@ Data-quality fixes also affect Skill search results. When fixing Case `reference
 
 When clearing Case fact-review items, keep each `summary` limited to the subject, time, conduct, enforcement outcome, and impact directly supported by the referenced article text. Details such as amounts, counts, judgments, or regulatory measures that are only title-supported, fail to crawl, or are not covered by the source should be backed by a stable source before being retained, or rewritten as a more conservative factual statement.
 
+When strengthening references for high-value Cases, first look for primary sources such as enforcement agencies, courts, prosecutors, regulators, or vendor advisories. If the original public page is unavailable, use crawlable authoritative media, local justice / police channels, or stable reposts for cross-checking, and avoid retaining details in `summary` that only the unavailable original source would support. Items whose original source is confirmed unavailable but are backed by multiple stable sources can be recorded in the resolved pending list instead of inventing a source to satisfy the gate.
+
+The 2026-07-09 Case P1 reference-quality maintenance only strengthens the references / summary and English translations for C0066, C0130, and C0248; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 Case fact review sends scraped article text to the LLM. When maintaining `review-case-fact.mjs`, keep the submitted snippet long enough to cover key article sections; when clearing P2 items in bulk, create checkpoints after roughly 100 changes and run `validate:data` / `review:changed` before committing, so large batches do not accumulate unverified changes.
 
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
