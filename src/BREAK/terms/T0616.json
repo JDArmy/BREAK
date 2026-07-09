@@ -1,0 +1,47 @@
+{
+  "T0616": {
+    "title": "优惠试算",
+    "aliases": [
+      "优惠预计算",
+      "促销试算",
+      "用券试算"
+    ],
+    "category": "营销欺诈",
+    "keywords": [
+      "优惠试算",
+      "优惠预计算",
+      "促销试算",
+      "用券试算",
+      "订单试算",
+      "优惠金额试算"
+    ],
+    "definition": "优惠试算是在订单确认或支付前，根据商品、用户、活动、卡券和库存等条件预先计算订单可享优惠和应付金额的过程。",
+    "description": "优惠试算通常位于购物车、订单确认和支付前链路，用于把商品价格、会员权益、优惠券、红包、满减、积分、运费和活动规则合并成一组候选优惠结果。正常情况下，试算结果只用于展示和引导用户确认，最终成交金额仍应由服务端在下单和支付确认阶段重新计算。\n\n在业务安全场景中，优惠试算是卡券使用限制突破、优惠叠加套利和支付金额篡改的高风险节点。若系统直接信任客户端提交的试算结果，或没有在服务端复核适用范围、互斥关系和金额边界，攻击者就可能篡改活动 ID、卡券参数或订单金额获得异常低价。",
+    "usageExample": "风控在优惠试算阶段发现同一设备反复调整活动 ID 并触发异常低价订单。",
+    "relatedRisks": [
+      "R0055-001",
+      "R0055-005",
+      "R0055-004"
+    ],
+    "relatedAvoidances": [
+      "A0238",
+      "A0240",
+      "A0243",
+      "A0244"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001"
+    ],
+    "relatedBusinessDomains": [
+      "BD02"
+    ],
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

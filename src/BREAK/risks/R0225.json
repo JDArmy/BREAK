@@ -10,7 +10,9 @@
       "A0198",
       "A0004",
       "A0015",
-      "A0022"
+      "A0022",
+      "A0246",
+      "A0248"
     ],
     "references": [
       {
@@ -30,7 +32,7 @@
       "支付回调伪造",
       "异步事件安全"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "critical",

@@ -1,0 +1,26 @@
+{
+  "A0247": {
+    "title": "Rule Change Approval",
+    "definition": "Set approval, canary, rollback, and audit workflows for marketing, pricing, payment, and risk-control rule changes to prevent temporary configuration from introducing business-logic flaws.",
+    "description": "Rule change approval requires business, engineering, risk-control, finance, or legal reviewers to assess the impact before campaign rules, discount mutual-exclusion rules, pricing configuration, payment states, refund rollback, allow/deny lists, or risk-control policies are released. The workflow should record the change reason, affected campaigns, budget cap, test results, canary scope, rollback plan, owner, and auditable configuration version after release.\n\nThis control reduces risks such as marketing campaign abuse, coupon usage restriction bypass, discount stacking arbitrage, and low-price purchase caused by temporary configuration, manual allowlisting, or cross-system rule inconsistency. It is not just procedural sign-off; it puts rule changes into a traceable, canaryable, and rollbackable control chain.",
+    "limitation": "Rule change approval depends on execution discipline and automation. If urgent campaigns rely on verbal approval, third-party channels bypass approval, approvers lack security context, or production hotfixes leave no automatic audit trail, attackers may still exploit configuration windows and old/new rule differences. Heavy processes can also push business teams toward private configuration changes, so system-enforced controls are needed.",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "NIST SP 800-128 Guide for Security-Focused Configuration Management",
+        "link": "https://csrc.nist.gov/pubs/sp/800/128/upd1/final"
+      }
+    ],
+    "keywords": [
+      "Rule Change Approval",
+      "marketing rule change approval",
+      "configuration change approval",
+      "campaign rule approval",
+      "rule release approval",
+      "configuration change control"
+    ]
+  }
+}

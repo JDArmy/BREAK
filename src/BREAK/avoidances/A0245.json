@@ -1,0 +1,61 @@
+{
+  "A0245": {
+    "title": "财务对账",
+    "category": "AC03",
+    "definition": "采集订单、支付、退款、发货和清结算记录，按交易维度核对金额、状态和资金流是否一致。",
+    "description": "财务对账通过采集订单应付金额、支付机构实付金额、退款金额、手续费、优惠补贴、发货状态、结算批次和渠道回单，按订单号、支付单号、渠道交易号和结算日期建立核对规则。系统可用规则、阈值和差异清单识别订单金额与支付金额不一致、退款未回滚优惠、重复结算、漏结算或异常低价成交等问题。\n\n该手段用于发现支付金额篡改、低价购、优惠叠加套利和支付回调异常造成的资金差异，是交易闭环中的事后检测和追偿依据。落地时应把异常差异单自动流转到冻结发货、人工复核、渠道查单和赔付追偿流程，避免只生成报表而没有处置闭环。",
+    "limitation": "财务对账通常存在日终或批次延迟，攻击者可能在差异被发现前完成发货、提现或转卖；若订单、支付、退款和渠道回单字段口径不一致，也会产生误报或漏报。对账只能发现已经发生的差异，仍需配合服务端重算、支付查单和幂等控制减少事前绕过。",
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "财务对账",
+      "交易对账",
+      "支付对账",
+      "清结算对账",
+      "订单资金核对",
+      "账务差异监控"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0238",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 {
   "C0283": {
-    "title": "Frequent Data Breach Incidents: Entities Involved Span Daily Life and Production, Maximum Fine of 1 Million Yuan",
+    "title": "Wenzhou Technology Company Fined RMB 1 Million for Failing Data Security Obligations",
     "keywords": [
       "data security protection obligations",
-      "data breach",
+      "Wenzhou data breach case",
       "administrative penalty",
       "technology company",
       "government agency data",
@@ -12,7 +12,7 @@
       "sensitive business data",
       "failure to fulfill security obligations"
     ],
-    "summary": "In August 2023, multiple enterprises were administratively penalized for failing to fulfill data security protection obligations, leading to data breaches across sectors such as technology, education, and healthcare. A technology company was fined 1 million yuan for leaking sensitive business data collected by government agencies, and its project supervisor was fined 80,000 yuan.",
+    "summary": "In March 2023, Wenzhou cyber police in Zhejiang investigated a data security violation. A technology company developing and operating an information management system for a county-level government department uploaded sensitive business data to a public cloud without authorization or safeguards, causing a serious data breach. The company, project supervisor, and directly responsible person were fined RMB 1 million, RMB 80,000, and RMB 60,000 respectively.",
     "references": [
       {
         "title": "Zhejiang Cyber Police Fine an Entity RMB 1 Million Under the Data Security Law",
@@ -21,6 +21,10 @@
       {
         "title": "Frequent Data Breach Cases: Entities Involved Often Related to Daily Production and Life, Maximum Fine of 1 Million Yuan - Oriental Fortune...",
         "link": "https://finance.eastmoney.com/news/1355,202308232821725137.html"
+      },
+      {
+        "title": "Zhejiang Cyber Police Fine an Entity RMB 1 Million Under the Data Security Law",
+        "link": "http://sf.sz.gov.cn/ztzl/hg/yjxx/zdly/sjhysbh/content/post_12795720.html"
       }
     ]
   }

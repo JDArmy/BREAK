@@ -1,0 +1,26 @@
+{
+  "A0246": {
+    "title": "Transaction Idempotency Control",
+    "definition": "Use idempotency keys, unique transaction IDs, state-machine constraints, and request deduplication so repeated submissions or replayed requests do not trigger duplicate side effects.",
+    "description": "Transaction idempotency control assigns idempotency keys, unique transaction IDs, event IDs, state-transition constraints, and processing records to order creation, payment callbacks, coupon issuance, fulfillment, refunds, points issuance, and webhook handling. When the server receives duplicate requests, replayed callbacks, or network retries, it should return the same processing result or reject duplicate execution to prevent duplicate charging, coupon issuance, fulfillment, or refunds.\n\nThis control applies to payment amount tampering, webhook forgery and event replay, unlimited coupon claiming, and repeated first-order rewards. Implementation must define idempotency scope, expiry time, concurrency locks, exception rollback, and audit logs, and should work with signature verification, timestamp windows, and payment inquiry.",
+    "limitation": "Transaction idempotency control depends on idempotency-key generation, retention period, and state-machine design. Attackers may evade deduplication by changing business keys, combining multiple interfaces, racing concurrent requests, or exploiting the expiry window of idempotency records. Overly broad scopes can block legitimate retries, while overly narrow scopes can miss cross-channel duplicate fulfillment, so business semantics must be calibrated continuously.",
+    "references": [
+      {
+        "title": "Idempotent requests - Stripe API",
+        "link": "https://docs.stripe.com/api/idempotent_requests"
+      },
+      {
+        "title": "Stripe Webhook Security: Signature Verification and Replay Protection",
+        "link": "https://docs.stripe.com/webhooks"
+      }
+    ],
+    "keywords": [
+      "Transaction Idempotency Control",
+      "idempotency control",
+      "idempotent deduplication",
+      "request deduplication",
+      "event deduplication",
+      "unique transaction ID"
+    ]
+  }
+}

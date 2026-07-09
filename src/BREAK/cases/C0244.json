@@ -1,28 +1,28 @@
 {
   "C0244": {
-    "title": "机器学习在主流邮件服务商垃圾邮件过滤中的应用综述",
+    "title": "机器学习用于电子邮件垃圾邮件过滤的综述研究",
     "keywords": [
       "机器学习",
       "垃圾邮件过滤",
-      "Gmail",
-      "Yahoo",
-      "Outlook",
+      "监督学习",
+      "文本分类",
+      "开放研究问题",
       "内容分析",
       "恶意链接",
       "欺诈信息"
     ],
-    "summary": "该研究综述了机器学习技术在Gmail、Yahoo和Outlook等主流互联网服务提供商（ISP）的垃圾邮件过滤系统中的应用。研究分析了这些邮件服务商如何利用内容分析和机器学习算法识别并过滤垃圾邮件，包括恶意链接、虚假广告和欺诈信息等，以保护用户免受垃圾内容的侵扰。",
+    "summary": "2019年Heliyon发表《Machine learning for email spam filtering: review, approaches and open research problems》。论文综述电子邮件垃圾过滤中的机器学习方法、特征提取和分类评估，讨论垃圾邮件识别的数据集、对抗变化与开放研究问题。",
     "category": "academic_research",
     "relatedRisks": [
       "R0021"
     ],
     "references": [
       {
-        "title": "Machine learning for email spam filtering: review ... - ScienceDirect",
-        "link": "https://www.sciencedirect.com/science/article/pii/S2405844018353404"
+        "title": "Machine learning for email spam filtering: review, approaches and open research problems",
+        "link": "https://doi.org/10.1016/j.heliyon.2019.e01802"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2019-06-10"

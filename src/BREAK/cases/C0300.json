@@ -11,7 +11,7 @@
       "僵尸网络",
       "流量中继"
     ],
-    "summary": "SecurityScorecard分析发现，黑客组织KillNet利用名为CC-Attack的脚本发起分布式拒绝服务攻击。该脚本自动化利用开放代理服务器中继攻击流量，向目标服务器发送大量伪造HTTP请求，耗尽服务器资源，属于典型的CC攻击行为。",
+    "summary": "SecurityScorecard于2022年5月25日发布分析称，KillNet近期DDoS活动利用公开攻击脚本CC-Attack。该脚本可自动使用开放代理服务器中继攻击流量，并生成GET、HEAD、POST三类七层洪泛请求，通过随机化请求字段增加基于签名的缓解难度。",
     "category": "security_incident",
     "relatedRisks": [
       "R0029-003"
@@ -22,7 +22,7 @@
         "link": "https://securityscorecard.com/blog/killnet-utilizes-cc-attack-a-quick-dirty-ddos-method/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2022-05-25"

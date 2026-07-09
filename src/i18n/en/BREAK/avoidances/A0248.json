@@ -1,0 +1,26 @@
+{
+  "A0248": {
+    "title": "Payment Channel Inquiry",
+    "definition": "Before fulfillment, coupon issuance, booking, or order completion, actively query the payment processor transaction state and validate local order state against the trusted channel result.",
+    "description": "Payment channel inquiry calls the processor query API before payment callbacks, order completion, fulfillment, coupon issuance, top-up booking, and settlement to retrieve transaction status, paid amount, currency, fee, payment time, and channel transaction ID. The system should compare query results against local orders, payment orders, price snapshots, and callback records, allowing fulfillment or settlement only when they are consistent.\n\nThis control reduces false fulfillment or underpaid transactions caused by missing callbacks, forged callbacks, callback replay, asynchronous status gaps, and local order state-machine defects. It should be paired with callback signature verification, transaction idempotency control, payment result consistency checks, and financial reconciliation to provide multi-source confirmation of payment state.",
+    "limitation": "Payment channel inquiry depends on processor API availability, rate limits, and status synchronization timeliness. Attackers may exploit processor delays, races between order cancellation and payment success, or merchant fallback logic. If the system allows orders when inquiry fails, or mishandles intermediate states such as partial payment, refunding, or revocation, it can still issue benefits incorrectly or misclassify normal users.",
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "Payment Intents API - Stripe Docs",
+        "link": "https://docs.stripe.com/api/payment_intents"
+      }
+    ],
+    "keywords": [
+      "Payment Channel Inquiry",
+      "active payment inquiry",
+      "payment inquiry",
+      "channel transaction query",
+      "payment state review",
+      "payment channel validation"
+    ]
+  }
+}

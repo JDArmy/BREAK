@@ -1,0 +1,28 @@
+{
+  "T0616": {
+    "title": "Discount Simulation",
+    "aliases": [
+      "discount pre-calculation",
+      "promotion simulation",
+      "coupon simulation"
+    ],
+    "category": "Marketing Fraud",
+    "keywords": [
+      "Discount Simulation",
+      "discount pre-calculation",
+      "promotion simulation",
+      "coupon simulation",
+      "order simulation",
+      "discount amount simulation"
+    ],
+    "definition": "Discount simulation is the pre-payment calculation of eligible discounts and payable amounts from products, users, campaigns, coupons, and inventory conditions.",
+    "description": "Discount simulation usually sits in the cart, order confirmation, and pre-payment flow, combining product prices, membership benefits, coupons, red packets, tiered discounts, points, shipping fees, and campaign rules into candidate discount results. In a correct design, the result is used for display and user confirmation, while the final transaction amount is recalculated by the server during order creation and payment confirmation.\n\nIn business-security scenarios, discount simulation is a high-risk point for coupon usage restriction bypass, discount stacking arbitrage, and payment amount tampering. If the system trusts client-submitted simulation results or fails to recheck applicability, mutual exclusion, and amount boundaries on the server, attackers can tamper with campaign IDs, coupon parameters, or order amounts to obtain abnormal low prices.",
+    "usageExample": "Risk control found one device repeatedly changing campaign IDs during discount simulation and triggering abnormal low-price orders.",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      }
+    ]
+  }
+}

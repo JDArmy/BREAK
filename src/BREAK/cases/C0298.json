@@ -11,18 +11,18 @@
       "低速率攻击",
       "服务器安全"
     ],
-    "summary": "研究者提出针对应用层CPU耗尽型拒绝服务攻击的检测机制。此类攻击利用算法或实现漏洞，通过少量精心构造的请求消耗大量服务器CPU资源，与传统大流量攻击有本质区别，且缺乏可识别模式。",
+    "summary": "2022年，IEEE Transactions on Services Computing 论文提出 Coda 框架，用于检测容器中的应用层CPU耗尽型DoS攻击。该类攻击通过少量精心构造请求触发算法或实现缺陷，消耗大量服务器CPU资源，与传统大流量拒绝服务攻击不同。",
     "category": "academic_research",
     "relatedRisks": [
       "R0029-002"
     ],
     "references": [
       {
-        "title": "Coda: Runtime Detection of Application-Layer CPU-Exhaustion DoS Attacks ...",
+        "title": "Coda: Runtime Detection of Application-Layer CPU-Exhaustion DoS Attacks in Containers",
         "link": "https://ieeexplore.ieee.org/document/9842371"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2022-07-27"

@@ -1,0 +1,61 @@
+{
+  "A0249": {
+    "title": "售后审核",
+    "category": "AC04",
+    "definition": "在退款、退货、补偿、赠品回收和权益撤销环节复核订单、物流、优惠和用户行为，阻断异常售后套利。",
+    "description": "售后审核是在用户发起退款、退货、拒收、补偿、赠品保留、优惠回滚或权益撤销时，复核订单金额、优惠明细、支付状态、物流轨迹、签收证据、历史售后率、账号关联和商品流向。系统可对高风险订单设置人工复核、延迟退款、先退货后退款、赠品回收、优惠券撤销或异常账户冻结等处置。\n\n该手段用于处理闪退套利、恶意退货、售后权益滥用和优惠叠加套利造成的后置资损。它的重点不是阻止所有退款，而是在售后阶段识别“先获益后退款”“退款不退奖励”“虚假退货”和集中回收转卖等异常模式，并把处置结果反馈给前置风控。",
+    "limitation": "售后审核容易受到证据不足、物流信息滞后、平台服务承诺和用户体验约束影响；攻击者可通过分散账号、真实物流、代下单或正常用户协助来规避审核。审核过严会误伤真实售后用户，过松又会被批量套利，需要结合风险评分和人工复核分层处置。",
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      },
+      {
+        "title": "用“闪电退款”薅电商平台羊毛，在校学生退款不退货获刑 - 澎湃新闻",
+        "link": "https://www.thepaper.cn/newsDetail_forward_4934335"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "售后审核",
+      "退款审核",
+      "退货审核",
+      "售后风控",
+      "异常售后处置",
+      "退款套利审核"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0004-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

@@ -13,10 +13,10 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务
 | 类型 | 数量 | ID 格式 | 说明 |
 |------|------|---------|------|
 | Risk（风险） | 378 | R0001, R0001-001 | 业务安全风险定义和影响 |
-| Avoidance（规避手段） | 326 | A0001, A0001-001 | 应对风险的防御措施 |
+| Avoidance（规避手段） | 331 | A0001, A0001-001 | 应对风险的防御措施 |
 | AttackTool（攻击工具） | 119 | AT0001, AT0001-001 | 黑灰产使用的工具 |
-| ThreatActor（威胁行为者） | 75 | TA0001, TA0001-001 | 实施攻击的人群 |
-| Term（术语） | 593 | T0001 | 业务安全领域术语 |
+| ThreatActor（威胁行为者） | 76 | TA0001, TA0001-001 | 实施攻击的人群 |
+| Term（术语） | 597 | T0001 | 业务安全领域术语 |
 | Case（案例） | 1782 | C0001 | 真实的安全事件案例 |
 | BusinessDomain（业务域） | 20 | BD00 | 行业/业务域分类 |
 
@@ -158,6 +158,8 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 数据治理改动也会影响 Skill 检索结果。修复 Case 的 `references` / `summary` 事实核验问题或调整 Risk 的 `avoidances` 关系时，应同步维护英文翻译文件，并确保前两条 Case references 尽量指向可抓取正文的稳定页面，避免 Skill 返回的案例事实无法被复核。
 
 Case 事实核验使用抓取正文送入 LLM。维护 `review-case-fact.mjs` 时需保证送审片段足够覆盖正文关键段落；大批量清理 P2 待办时按约 100 个改动设置 checkpoint，先跑 `validate:data` / `review:changed` 再提交，避免长时间积累未验证变更。
+
+`review:should-extract` 会用全库实体 title、keywords、aliases 以及当前实体已引用关系识别已覆盖的候选实体；维护该脚本时，应保持重复抽取建议被降噪，避免 Skill 检索结果中出现语义重复的新增实体。
 
 ## 实体关系图谱
 

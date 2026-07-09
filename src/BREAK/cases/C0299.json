@@ -11,20 +11,24 @@
       "拒绝服务攻击",
       "流量清洗"
     ],
-    "summary": "该研究探讨了基于对抗方法的带宽耗尽型DDoS攻击防御。带宽耗尽攻击通过向受害者网络洪泛大量非期望流量，耗尽网络带宽资源，阻止合法流量到达目标系统。",
+    "summary": "2007年第三届自然计算国际会议收录论文《Research on Counter Bandwidth Depletion DDoS Attacks Based on Genetic Algorithm》。论文提出利用遗传算法支持路由器过滤带宽耗尽型DDoS攻击流量，该类攻击通过大量非期望流量消耗受害网络带宽。",
     "category": "academic_research",
     "relatedRisks": [
       "R0029-002"
     ],
     "references": [
       {
-        "title": "Research on counter bandwidth depletion DDoS attacks based on ...",
-        "link": "https://ieeexplore.ieee.org/iel5/4344133/4344625/04344661.pdf"
+        "title": "Research on Counter Bandwidth Depletion DDoS Attacks Based on Genetic Algorithm",
+        "link": "https://ieeexplore.ieee.org/document/4344661/"
+      },
+      {
+        "title": "Research on Counter Bandwidth Depletion DDoS Attacks Based on Genetic Algorithm",
+        "link": "https://www.computer.org/csdl/proceedings-article/icnc/2007/28750155/12OmNvnwVnZ"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2007-08"
+    "incidentTime": "2007-08-24"
   }
 }

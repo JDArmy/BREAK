@@ -1,0 +1,46 @@
+{
+  "T0617": {
+    "title": "价格快照",
+    "aliases": [
+      "商品价格快照",
+      "订单价格快照",
+      "可信价格快照"
+    ],
+    "category": "业务安全",
+    "keywords": [
+      "价格快照",
+      "商品价格快照",
+      "订单价格快照",
+      "可信价格快照",
+      "价格基准",
+      "成交价格基准"
+    ],
+    "definition": "价格快照是在交易关键节点固化的商品价格、优惠规则、库存和权益状态，用作后续重算、支付和对账的可信基准。",
+    "description": "价格快照用于记录用户下单或支付前后某一时点的商品原价、活动价、会员价、优惠券适用状态、库存、运费、税费和权益限制。它能避免后续价格变更、缓存差异或客户端参数污染影响订单成交金额，是服务端重新计价和支付结果一致性校验的重要依据。\n\n在低价购、支付金额篡改和优惠叠加套利场景中，价格快照帮助系统区分合法促销和被篡改的异常订单。若快照缺失、字段不完整或未覆盖优惠叠加顺序，攻击者可能利用新旧价格、缓存时间差或篡改参数制造低价成交。",
+    "usageExample": "订单支付前系统重新读取价格快照，发现客户端提交的应付金额低于可信基准后拦截交易。",
+    "relatedRisks": [
+      "R0055",
+      "R0055-004",
+      "R0055-005"
+    ],
+    "relatedAvoidances": [
+      "A0238",
+      "A0240",
+      "A0244"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001"
+    ],
+    "relatedBusinessDomains": [
+      "BD02"
+    ],
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

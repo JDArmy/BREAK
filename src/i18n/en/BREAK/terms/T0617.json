@@ -1,0 +1,28 @@
+{
+  "T0617": {
+    "title": "Price Snapshot",
+    "aliases": [
+      "product price snapshot",
+      "order price snapshot",
+      "trusted price snapshot"
+    ],
+    "category": "Business Security",
+    "keywords": [
+      "Price Snapshot",
+      "product price snapshot",
+      "order price snapshot",
+      "trusted price snapshot",
+      "price baseline",
+      "transaction price baseline"
+    ],
+    "definition": "A price snapshot is a trusted baseline of product price, discount rules, inventory, and entitlement state fixed at a transaction checkpoint for later recalculation, payment, and reconciliation.",
+    "description": "A price snapshot records product list price, campaign price, membership price, coupon applicability, inventory, shipping, taxes, and entitlement restrictions at a point before or during order payment. It prevents later price changes, cache differences, or client-side parameter pollution from affecting the transaction amount, and is an important basis for server-side price recalculation and payment-result consistency checks.\n\nIn low-price purchase, payment amount tampering, and discount stacking arbitrage scenarios, price snapshots help distinguish legitimate promotions from tampered abnormal orders. If snapshots are missing, incomplete, or do not cover discount stacking order, attackers may exploit old/new prices, cache timing gaps, or tampered parameters to create low-price transactions.",
+    "usageExample": "Before payment, the system reloaded the price snapshot and blocked the transaction after finding the client-submitted payable amount below the trusted baseline.",
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "T0618": {
+    "title": "Marketing Loss",
+    "aliases": [
+      "marketing fund loss",
+      "subsidy loss",
+      "campaign loss"
+    ],
+    "category": "Marketing Fraud",
+    "keywords": [
+      "Marketing Loss",
+      "marketing fund loss",
+      "subsidy loss",
+      "campaign loss",
+      "discount loss",
+      "subsidy leakage"
+    ],
+    "definition": "Marketing loss is the direct monetary or resource loss caused when coupons, subsidies, rebates, red packets, points, or gifts are used outside their intended marketing rules.",
+    "description": "Marketing loss commonly appears in unlimited coupon claiming, discount stacking arbitrage, coupon usage restriction bypass, repeated first-order rewards, fake referral growth, and order-splitting arbitrage. The loss is not limited to cash subsidies; it can also include gifts, points, inventory, ad budgets, acquisition rewards, and merchant-funded discounts.\n\nUnlike normal marketing cost, marketing loss emphasizes that marketing resources are exploited unexpectedly through rule flaws or gray-market behavior. Governance needs to combine campaign budgets, discount ratios, refund rollback, product flow, and account linkage in one monitoring loop, rather than looking only at individual orders.",
+    "usageExample": "After a major campaign, the review found an abnormal increase in discount ratios and attributed it to marketing loss caused by a discount stacking flaw.",
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ]
+  }
+}

@@ -6,7 +6,7 @@ import { loadAllEntities, normalizeTitle } from './llm-review-helpers.mjs';
 import { runSubagentReview, exitCodeFor } from '../llm/subagent-review.mjs';
 
 const opts = parseArgs(process.argv.slice(2));
-const REVIEW_POLICY_VERSION = 'entity-index-v3';
+const REVIEW_POLICY_VERSION = 'entity-index-v4';
 const ENTITY_TYPES = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms'];
 const STRUCTURED_SUGGESTION_FIELDS = {
   newRisks: 'risks',
@@ -26,23 +26,33 @@ const SUGGESTION_TYPE_ALIASES = {
   risk: 'risks',
   risks: 'risks',
   Risk: 'risks',
+  newRisk: 'risks',
+  newRisks: 'risks',
   avoid: 'avoidances',
   avoidance: 'avoidances',
   avoidances: 'avoidances',
   Avoidance: 'avoidances',
+  newAvoidance: 'avoidances',
+  newAvoidances: 'avoidances',
   AttackTool: 'attack-tools',
   attackTool: 'attack-tools',
   attackTools: 'attack-tools',
   'attack-tool': 'attack-tools',
   'attack-tools': 'attack-tools',
+  newAttackTool: 'attack-tools',
+  newAttackTools: 'attack-tools',
   ThreatActor: 'threat-actors',
   threatActor: 'threat-actors',
   threatActors: 'threat-actors',
   'threat-actor': 'threat-actors',
   'threat-actors': 'threat-actors',
+  newThreatActor: 'threat-actors',
+  newThreatActors: 'threat-actors',
   term: 'terms',
   terms: 'terms',
   Term: 'terms',
+  newTerm: 'terms',
+  newTerms: 'terms',
   风险: 'risks',
   规避手段: 'avoidances',
   攻击工具: 'attack-tools',
@@ -121,6 +131,7 @@ function validateResult(data, item) {
   if (typeof data.reason !== 'string' || !data.reason.trim()) throw new Error('reason 必须非空');
   if (!Array.isArray(data.suggestions)) data.suggestions = data.suggestions ? [data.suggestions] : [];
   if (!data.shouldExtractNew || typeof data.shouldExtractNew !== 'object') data.shouldExtractNew = {};
+  absorbNestedSuggestionObjects(data);
   suppressCoveredSuggestions(data, item);
 }
 
@@ -294,9 +305,32 @@ function suppressCoveredSuggestions(data, item) {
     data.reason = `${data.reason}（已自动过滤 ${coveredByExistingEntities.length} 个已有实体覆盖的重复建议。）`;
   }
 
+  if (data.verdict !== 'pass' && data.suggestions.length === 0 && actionableStructured > 0) {
+    data.suggestions = structuredSuggestionsToText(data);
+  }
+
   if (item && data.verdict !== 'pass' && !data.suggestions.length && actionableStructured === 0) {
     throw new Error(`${item.key} verdict=${data.verdict} 但没有明确的未覆盖 suggestions`);
   }
+}
+
+function absorbNestedSuggestionObjects(data) {
+  const kept = [];
+  for (const suggestion of data.suggestions) {
+    if (!suggestion || typeof suggestion !== 'object') {
+      kept.push(suggestion);
+      continue;
+    }
+    let absorbed = false;
+    for (const field of [...Object.keys(STRUCTURED_SUGGESTION_FIELDS), 'newCases']) {
+      if (!Array.isArray(suggestion[field])) continue;
+      if (!Array.isArray(data.shouldExtractNew[field])) data.shouldExtractNew[field] = [];
+      data.shouldExtractNew[field].push(...suggestion[field]);
+      absorbed = true;
+    }
+    if (!absorbed) kept.push(suggestion);
+  }
+  data.suggestions = kept;
 }
 
 function collectStructuredCoveredMatches(data) {
@@ -331,6 +365,20 @@ function titleFromStructuredSuggestion(entry) {
   if (!entry) return '';
   if (typeof entry === 'string') return entry;
   return entry.suggestedTitle || entry.title || entry.name || entry.termTitle || entry.candidateTitle || '';
+}
+
+function structuredSuggestionsToText(data) {
+  const out = [];
+  for (const [field, type] of Object.entries(STRUCTURED_SUGGESTION_FIELDS)) {
+    const list = data.shouldExtractNew?.[field];
+    if (!Array.isArray(list)) continue;
+    for (const entry of list) {
+      const title = titleFromStructuredSuggestion(entry);
+      if (!title) continue;
+      out.push(`建议提炼${TYPE_LABELS[type] || type}：${title}`);
+    }
+  }
+  return out;
 }
 
 function extractCandidateTitles(suggestion) {

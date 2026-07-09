@@ -41,7 +41,7 @@ All enumerable / regex / lookup-table rules are wired into `npm run validate:dat
 
 Rules that need to read actual entity content for semantic cross-checking use a subagent that loads existing entities to cross-judge. Commands include `review:risk-avoidance`, `review:case-relation`, `review:tool-risks`, `review:actor-consistency`, etc. **fail blocks, review warns**.
 
-`review:should-extract` includes existing entity titles, keywords, aliases, and the current entity's referenced relations in the review context. If a proposed extraction is already covered by an existing entity, the script suppresses that duplicate suggestion as covered instead of asking contributors to add another entity.
+`review:should-extract` includes existing entity titles, keywords, aliases, and the current entity's referenced relations in the review context. If a proposed extraction is already covered by an existing entity, the script suppresses that duplicate suggestion as covered instead of asking contributors to add another entity. Structured `new*` suggestion objects are normalized into the same actionable suggestion pipeline, so object-shaped LLM output does not create empty-review noise.
 
 ```bash
 npm run review:changed                # run full B+C on changed entities

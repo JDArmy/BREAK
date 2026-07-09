@@ -5,13 +5,13 @@ import businessDomains from "./business-domains";
 // 由 scripts/validate/generate-home-counts.mjs 生成，勿手动编辑。
 // 数据变化后运行 npm run generate:home-counts 刷新（build 链已包含）。
 const entityCounts = {
-  avoidances: 326,
+  avoidances: 331,
   subAvoidances: 105,
   attackTools: 119,
   subAttackTools: 37,
-  threatActors: 75,
+  threatActors: 76,
   subThreatActors: 14,
-  terms: 593,
+  terms: 597,
   cases: 1782,
 } as const;
 

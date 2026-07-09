@@ -1,0 +1,50 @@
+{
+  "T0618": {
+    "title": "营销资损",
+    "aliases": [
+      "营销资金损失",
+      "营销补贴损失",
+      "活动资损"
+    ],
+    "category": "营销欺诈",
+    "keywords": [
+      "营销资损",
+      "营销资金损失",
+      "营销补贴损失",
+      "活动资损",
+      "优惠资损",
+      "补贴资损"
+    ],
+    "definition": "营销资损是平台在优惠、补贴、返利、红包、积分或赠品等营销资源被非预期使用时产生的直接资金或资源损失。",
+    "description": "营销资损常见于优惠券无限领取、优惠叠加套利、卡券限制突破、首单奖励重复领取、虚假裂变和拆单套利等场景。损失不只表现为现金补贴被套取，也包括赠品、积分、库存、广告预算、拉新奖励和商家补贴被异常消耗。\n\n与普通营销成本不同，营销资损强调“营销资源被规则漏洞或黑灰产行为非预期利用”。治理时需要把活动预算、优惠比例、退款回滚、商品流向和账号关联纳入同一套监控，避免只看单笔订单而漏掉批量套利链路。",
+    "usageExample": "大促后复盘发现某活动优惠比例异常升高，最终被归因为优惠叠加漏洞造成的营销资损。",
+    "relatedRisks": [
+      "R0005",
+      "R0055",
+      "R0055-001",
+      "R0055-005",
+      "R0064"
+    ],
+    "relatedAvoidances": [
+      "A0240",
+      "A0241",
+      "A0242",
+      "A0244"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0067"
+    ],
+    "relatedBusinessDomains": [
+      "BD02"
+    ],
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

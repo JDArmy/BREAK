@@ -11,11 +11,15 @@
       "denial-of-service attack",
       "traffic scrubbing"
     ],
-    "summary": "This study investigates defense mechanisms against bandwidth depletion DDoS attacks using adversarial methods. Bandwidth depletion attacks flood the victim's network with massive unwanted traffic, exhausting network bandwidth resources and preventing legitimate traffic from reaching the target system.",
+    "summary": "The 2007 Third International Conference on Natural Computation included the paper Research on Counter Bandwidth Depletion DDoS Attacks Based on Genetic Algorithm. It proposed using a genetic algorithm to help routers filter bandwidth-depletion DDoS traffic, a class of attacks that consumes victim network bandwidth with large volumes of unwanted traffic.",
     "references": [
       {
-        "title": "Research on Counter Bandwidth Depletion DDoS Attacks Based on ...",
-        "link": "https://ieeexplore.ieee.org/iel5/4344133/4344625/04344661.pdf"
+        "title": "Research on Counter Bandwidth Depletion DDoS Attacks Based on Genetic Algorithm",
+        "link": "https://ieeexplore.ieee.org/document/4344661/"
+      },
+      {
+        "title": "Research on Counter Bandwidth Depletion DDoS Attacks Based on Genetic Algorithm",
+        "link": "https://www.computer.org/csdl/proceedings-article/icnc/2007/28750155/12OmNvnwVnZ"
       }
     ]
   }

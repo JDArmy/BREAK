@@ -1,22 +1,22 @@
 {
   "C0244": {
-    "title": "A Survey of Machine Learning Applications in Spam Filtering by Major Email Providers",
+    "title": "Review Study on Machine Learning for Email Spam Filtering",
     "keywords": [
       "machine learning",
       "spam filtering",
-      "Gmail",
-      "Yahoo",
-      "Outlook",
+      "supervised learning",
+      "text classification",
+      "open research problems",
       "content analysis",
       "malicious links",
       "deceptive advertising",
-      "ISP email security"
+      "email security"
     ],
-    "summary": "This study surveys how machine learning techniques are applied in the spam filtering systems of major Internet Service Providers (ISPs) such as Gmail, Yahoo, and Outlook. It examines how these providers leverage content analysis and machine learning algorithms to identify and filter spam, including malicious links, deceptive advertisements, and fraudulent messages, in order to protect users from u",
+    "summary": "In 2019, Heliyon published \"Machine learning for email spam filtering: review, approaches and open research problems.\" The paper reviews machine learning approaches, feature extraction, and classification evaluation for email spam filtering, and discusses dataset issues, adversarial changes, and open research problems in spam detection.",
     "references": [
       {
-        "title": "Machine learning for email spam filtering: review ... - ScienceDirect",
-        "link": "https://www.sciencedirect.com/science/article/pii/S2405844018353404"
+        "title": "Machine learning for email spam filtering: review, approaches and open research problems",
+        "link": "https://doi.org/10.1016/j.heliyon.2019.e01802"
       }
     ]
   }

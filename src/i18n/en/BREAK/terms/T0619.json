@@ -1,0 +1,28 @@
+{
+  "T0619": {
+    "title": "Disposal of Stolen Goods",
+    "aliases": [
+      "stolen-goods monetization",
+      "black-market resale",
+      "secondary resale"
+    ],
+    "category": "Underground Services",
+    "keywords": [
+      "Disposal of Stolen Goods",
+      "stolen-goods monetization",
+      "black-market resale",
+      "secondary resale",
+      "resale monetization",
+      "recycling and resale"
+    ],
+    "definition": "Disposal of stolen goods is the transfer and monetization of physical goods, virtual assets, accounts, or data obtained through fraud, theft, arbitrage, or other abusive behavior.",
+    "description": "Disposal of stolen goods sits at the monetization end of gray-market chains, often through second-hand platforms, offline dealers, recyclers, account brokers, virtual-gift recycling channels, or cross-platform trades. It converts assets obtained from low-price purchases, account theft, virtual-asset theft, malicious purchasing, and subsidy arbitrage into cash or reusable resources.\n\nFor risk governance, disposal clues can reveal upstream attack scale. For example, the same product batch flowing to a few addresses, similar accounts being resold by one broker, or virtual assets being sold at fixed discount channels usually indicates upstream bulk arbitrage or theft.",
+    "usageExample": "Risk control traced second-hand resale clues backward and found that a batch of discounted goods came from bulk orders by one device cluster.",
+    "references": [
+      {
+        "title": "Underground Big Data: E-commerce Scalper Industry Chain Analysis",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      }
+    ]
+  }
+}

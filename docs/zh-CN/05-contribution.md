@@ -41,7 +41,7 @@ slug: contribution
 
 需要读实体实际内容做语义交叉的规则，用 subagent 加载已有实体交叉判断。命令包括 `review:risk-avoidance`、`review:case-relation`、`review:tool-risks`、`review:actor-consistency` 等。**fail 阻断、review 提示**。
 
-`review:should-extract` 会把全库已有实体的 title、keywords、aliases 和当前实体已引用关系一起纳入上下文；如果建议抽取的概念已由现有实体覆盖，会自动降噪为已覆盖项，避免重复新增实体。
+`review:should-extract` 会把全库已有实体的 title、keywords、aliases 和当前实体已引用关系一起纳入上下文；如果建议抽取的概念已由现有实体覆盖，会自动降噪为已覆盖项，避免重复新增实体。脚本会把结构化 `new*` 建议对象归一到同一条可执行建议链路，避免 LLM 返回对象形态时出现空 review 噪声。
 
 ```bash
 npm run review:changed                # 变更实体跑全套 B+C 类

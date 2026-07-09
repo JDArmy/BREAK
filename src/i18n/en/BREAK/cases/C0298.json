@@ -10,10 +10,10 @@
       "low-rate attack",
       "server protection"
     ],
-    "summary": "This research proposes a detection mechanism for application-layer CPU-exhaustion denial-of-service attacks. Unlike traditional high-volume attacks, these attacks exploit algorithmic or implementation vulnerabilities to consume significant server CPU resources with a small number of carefully crafted requests, and they lack identifiable patterns.",
+    "summary": "A 2022 IEEE Transactions on Services Computing paper proposed Coda, a framework for detecting application-layer CPU-exhaustion DoS attacks in containers. These attacks use a small number of carefully crafted requests to trigger algorithmic or implementation weaknesses and consume substantial server CPU resources, differing from traditional high-volume denial-of-service attacks.",
     "references": [
       {
-        "title": "Coda: Runtime Detection of Application-Layer CPU-Exhaustion DoS Attacks ...",
+        "title": "Coda: Runtime Detection of Application-Layer CPU-Exhaustion DoS Attacks in Containers",
         "link": "https://ieeexplore.ieee.org/document/9842371"
       }
     ]

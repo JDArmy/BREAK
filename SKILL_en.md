@@ -13,10 +13,10 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge fra
 | Type | Count | ID Format | Description |
 |------|-------|-----------|-------------|
 | Risk | 378 | R0001, R0001-001 | Business security risk definitions and impact |
-| Avoidance | 326 | A0001, A0001-001 | Defensive measures against risks |
+| Avoidance | 331 | A0001, A0001-001 | Defensive measures against risks |
 | AttackTool | 119 | AT0001, AT0001-001 | Tools used by threat actors |
-| ThreatActor | 75 | TA0001, TA0001-001 | Groups that carry out attacks |
-| Term | 593 | T0001 | Business security terminology |
+| ThreatActor | 76 | TA0001, TA0001-001 | Groups that carry out attacks |
+| Term | 597 | T0001 | Business security terminology |
 | Case | 1782 | C0001 | Real-world security incident cases |
 | BusinessDomain | 20 | BD00 | Industry/business domain categories |
 
@@ -155,6 +155,8 @@ When `scripts/skill/` search / packaging scripts, exported Chinese / English dat
 Data-quality fixes also affect Skill search results. When fixing Case `references` / `summary` fact-check issues or adjusting Risk `avoidances` relationships, keep the English translation files in sync and make the first two Case references point to stable pages with crawlable article text whenever possible, so Skill-returned case facts remain reviewable.
 
 Case fact review sends scraped article text to the LLM. When maintaining `review-case-fact.mjs`, keep the submitted snippet long enough to cover key article sections; when clearing P2 items in bulk, create checkpoints after roughly 100 changes and run `validate:data` / `review:changed` before committing, so large batches do not accumulate unverified changes.
+
+`review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph
 

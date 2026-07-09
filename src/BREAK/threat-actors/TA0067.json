@@ -1,0 +1,67 @@
+{
+  "TA0067": {
+    "title": "回收商",
+    "keywords": [
+      "回收商",
+      "商品回收商",
+      "二手回收商",
+      "销赃回收商",
+      "套利商品回收",
+      "黑货回收"
+    ],
+    "description": "回收商是黑灰产变现链路中负责收购、转卖或分销套利商品、虚拟资产、账号和权益的中间角色。他们通常不直接实施领券、下单、盗号或攻击动作，而是为上游羊毛党、黄牛、号商或盗号团伙提供稳定出货渠道，把低价购、恶意抢购、撸毛或账号盗取获得的资源折价回收后再加价出售。\n\n在电商和虚拟资产场景中，回收商会利用二手平台、线下档口、社群、直播礼物回收渠道或跨平台交易完成销赃。其直接造成的是账号权益倒卖、账号交易和黑货流通秩序风险，同时会间接放大上游优惠套利、虚拟资产盗窃和批量抢购的可变现性。",
+    "buildAttackTools": [],
+    "useAttackTools": [],
+    "directCauseRisks": [
+      "R0011",
+      "R0011-002"
+    ],
+    "indirectSupportRisks": [
+      "R0005",
+      "R0009",
+      "R0054-003",
+      "R0055",
+      "R0064",
+      "R0032"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      }
+    ],
+    "updated": "2026-07-09",
+    "relatedThreatActors": [
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0003",
+        "relation": "co-involved",
+        "note": "共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0006",
+        "relation": "co-involved",
+        "note": "共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0006-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0006-002",
+        "relation": "co-involved",
+        "note": "共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0007",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险。"
+      }
+    ]
+  }
+}
