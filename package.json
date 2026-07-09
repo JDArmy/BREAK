@@ -30,6 +30,7 @@
     "generate:en-full": "node scripts/validate/generate-en-full.mjs",
     "generate:changelog": "node scripts/validate/generate-changelog-json.mjs",
     "generate:docs": "node scripts/validate/build-docs.mjs",
+    "validate:docs": "node scripts/validate/build-docs.mjs --check",
     "inject:sw-version": "node scripts/validate/inject-sw-version.mjs",
     "export:data": "node scripts/validate/export-static-data.mjs",
     "export:data-en": "node scripts/skill/export_en_data.mjs",

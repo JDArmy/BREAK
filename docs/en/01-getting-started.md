@@ -2,7 +2,7 @@
 title: Getting Started
 category: Getting Started
 order: 1
-slug: getting-started
+slug: index
 ---
 
 # Getting Started
@@ -55,7 +55,7 @@ The site is bilingual. The language switcher in the top-right toggles the entire
 
 ## Where to Read Next
 
-- **Defenders**: read the [Defender Guide](#defender-guide)
-- **Red team / attackers**: read the [Red Team Guide](#redteam-guide)
-- **To understand the data model**: read the [Data Model & Field Reference](#data-model)
-- **To contribute**: read the [Contribution & Maintenance](#contribution)
+- **Defenders**: read the [Defender Guide](/docs/defender-guide)
+- **Red team / attackers**: read the [Red Team Guide](/docs/redteam-guide)
+- **To understand the data model**: read the [Data Model & Field Reference](/docs/data-model)
+- **To contribute**: read the [Contribution & Maintenance](/docs/contribution)

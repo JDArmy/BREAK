@@ -148,6 +148,10 @@ BREAK recommends the following avoidances for these risks:
 4. **Follow relationships**: After finding a risk, check its `avoidances` field for defenses; after finding an attack tool, check its `directCauseRisks` for related risks
 5. **Language adaptation**: Match the user's language — use `--lang zh` for Chinese queries and `--lang en` for English
 
+## Documentation Freshness Gate
+
+When `scripts/skill/` search / packaging scripts, exported Chinese / English data bundles, entity fields / relationship structure, Skill invocation parameters, or search-result format change, update both `SKILL.md` and `SKILL_en.md` in the same change. `npm run validate:docs-freshness` is wired into `npm run validate:data` and blocks relevant changes when Skill documentation is stale.
+
 ## Entity Relationship Graph
 
 Understanding entity relationships helps provide more complete answers:

@@ -50,6 +50,16 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 
 不可机器化的规则：`review:case-fact`（Scrapingdog 抓取核验）、`review:field-density`（信息密度）、`review:classification`（category 语义贴切）。
 
+## 文档新鲜度门禁
+
+`npm run validate:docs-freshness` 会检查当前工作区相对 `HEAD` 的变更，避免功能、数据模型或工具链已经变化而使用手册、README、Skill 文档没有同步更新。该门禁已接入 `npm run validate:data`。
+
+需要推动 `docs/zh-CN/` 与 `docs/en/` 使用手册更新的典型变更包括：路由 / 菜单 / 页面组件、`KnowledgeSplitView`、搜索与实体解析 composable、`src/validation/` schema、Entity Registry、`DATA_SCHEMA.md`、`scripts/validate/*.mjs`、`package.json` 构建或校验脚本。
+
+需要推动 `README.md` 与 `README_CN.md` 更新的典型变更包括：公共命令、构建 / 发布门禁、CI 工作流、数据导出、STIX / JSON-LD / npm 数据包、Schema 文档、实体类型或基础信息。
+
+需要推动 `SKILL.md` 与 `SKILL_en.md` 更新的典型变更包括：`scripts/skill/` 搜索或打包脚本、Skill 可消费的数据结构、实体字段 / 关系、导出的中英文数据包。
+
 ## 关键内容规范
 
 ### Avoidance 内容规范（由 `avoidance-content.mjs` 校验）
@@ -78,6 +88,7 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 
 ```bash
 npm run validate:data              # 全量数据校验（A 类机器强约束）
+npm run validate:docs-freshness    # 检查使用手册 / README / Skill 是否随相关变更同步
 npm run review:changed             # 变更实体跑 B+C 类评审
 npm run sync:lateral-relations     # 重算 Avoidance/AttackTool/ThreatActor 横向关系
 npm run sync:risk-assessment       # 重算 Risk 风险分级 priority

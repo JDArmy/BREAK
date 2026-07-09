@@ -2,7 +2,7 @@
 title: 快速上手
 category: 入门
 order: 1
-slug: getting-started
+slug: index
 ---
 
 # 快速上手
@@ -55,7 +55,7 @@ BREAK 不是漏洞库，也不是 CVE 列表。它关注的是**业务逻辑被�
 
 ## 接下来读什么
 
-- **防守方**：读 [防御者使用指南](#defender-guide)
-- **攻击方 / 红队**：读 [红队使用指南](#redteam-guide)
-- **想理解数据结构**：读 [数据模型与字段说明](#data-model)
-- **想参与贡献**：读 [贡献与维护](#contribution)
+- **防守方**：读 [防御者使用指南](/docs/defender-guide)
+- **攻击方 / 红队**：读 [红队使用指南](/docs/redteam-guide)
+- **想理解数据结构**：读 [数据模型与字段说明](/docs/data-model)
+- **想参与贡献**：读 [贡献与维护](/docs/contribution)

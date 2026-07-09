@@ -375,14 +375,18 @@ async function recordState(page, collection, scenario, step, issues = [], warnin
 
 async function clickFirstVisible(page, selectors, issues, actionLabel) {
   for (const selector of selectors) {
-    const locator = page.locator(selector).first();
-    if ((await locator.count()) === 0) continue;
-    try {
-      await locator.waitFor({ state: 'visible', timeout: 2500 });
-      await locator.click({ timeout: 5000 });
-      return true;
-    } catch {
-      // Try next selector.
+    const locators = page.locator(selector);
+    const count = await locators.count();
+    for (let i = 0; i < count; i += 1) {
+      const locator = locators.nth(i);
+      try {
+        await locator.waitFor({ state: 'visible', timeout: 1000 });
+        await locator.scrollIntoViewIfNeeded({ timeout: 2000 });
+        await locator.click({ timeout: 5000 });
+        return true;
+      } catch {
+        // Try next matching element.
+      }
     }
   }
   issues.push(`无法执行交互：${actionLabel}`);
@@ -407,15 +411,33 @@ async function waitForVisibleDrawerText(page, textPattern, timeoutMs = 10000) {
 }
 
 async function clickDropdownItemByText(page, textPattern, issues, actionLabel) {
-  const locator = page.locator('.el-dropdown-menu__item', { hasText: textPattern }).first();
-  try {
-    await locator.waitFor({ state: 'visible', timeout: 5000 });
-    await locator.click({ timeout: 5000 });
-    return true;
-  } catch {
-    issues.push(`无法选择下拉项：${actionLabel}`);
-    return false;
+  const locators = page.locator('.el-dropdown-menu__item', { hasText: textPattern });
+  const count = await locators.count();
+  for (let i = 0; i < count; i += 1) {
+    const locator = locators.nth(i);
+    try {
+      await locator.waitFor({ state: 'visible', timeout: 1000 });
+      await locator.scrollIntoViewIfNeeded({ timeout: 2000 });
+      await locator.click({ timeout: 5000 });
+      return true;
+    } catch {
+      // Try next matching dropdown item.
+    }
   }
+  issues.push(`无法选择下拉项：${actionLabel}`);
+  return false;
+}
+
+async function clickMoreDocsEntry(page, issues) {
+  const before = issues.length;
+  await clickFirstVisible(page, ['.more-menu .el-dropdown-link'], issues, '打开更多菜单');
+  if (await clickDropdownItemByText(page, /Docs|User Manual|文档|使用手册/i, issues, '文档')) {
+    return true;
+  }
+  issues.splice(before);
+
+  await clickFirstVisible(page, ['.overflow-menu .el-dropdown-link'], issues, '打开溢出菜单');
+  return clickDropdownItemByText(page, /Docs|User Manual|文档|使用手册/i, issues, '文档');
 }
 
 async function clickSelectOptionByText(page, triggerSelector, textPattern, issues, actionLabel) {
@@ -538,6 +560,16 @@ async function runDesktopNavigationScenario(page, scenario, interactions) {
   await clickDropdownItemByText(page, /Terms|术语/i, knowledgeIssues, '术语');
   await waitForUrlIncludes(page, '/term', knowledgeIssues, '点击知识库术语菜单');
   await recordState(page, interactions, scenario, 'after-knowledge-menu-click', knowledgeIssues);
+
+  const docsIssues = [];
+  await clickMoreDocsEntry(page, docsIssues);
+  await waitForUrlIncludes(page, '/docs', docsIssues, '点击更多文档菜单');
+  try {
+    await waitForExpectedText(page, /快速上手|Getting Started|文档|Docs|使用手册|User Manual/i, 8000);
+  } catch {
+    docsIssues.push('进入文档页后未出现文档内容');
+  }
+  await recordState(page, interactions, scenario, 'after-more-docs-click', docsIssues);
 
   const themeIssues = [];
   await clickFirstVisible(page, ['.theme-toggle .el-dropdown-link'], themeIssues, '打开主题菜单');
@@ -830,6 +862,17 @@ async function runMobileNavSearchScenario(page, scenario, interactions) {
   await clickFirstVisible(page, ['.mobile-nav-item:has-text("Terms")', '.mobile-nav-item:has-text("术语")'], navIssues, '移动端菜单跳转术语');
   await waitForUrlIncludes(page, '/term', navIssues, '移动端菜单跳转术语');
   await recordState(page, interactions, scenario, 'after-mobile-menu-terms-click', navIssues);
+
+  const docsIssues = [];
+  await clickFirstVisible(page, ['.mobile-hamburger'], docsIssues, '重新打开移动端菜单');
+  await clickFirstVisible(page, ['.mobile-nav-item:has-text("Docs")', '.mobile-nav-item:has-text("User Manual")', '.mobile-nav-item:has-text("文档")', '.mobile-nav-item:has-text("使用手册")'], docsIssues, '移动端菜单跳转文档');
+  await waitForUrlIncludes(page, '/docs', docsIssues, '移动端菜单跳转文档');
+  try {
+    await waitForExpectedText(page, /快速上手|Getting Started|文档|Docs|使用手册|User Manual/i, 8000);
+  } catch {
+    docsIssues.push('移动端进入文档页后未出现文档内容');
+  }
+  await recordState(page, interactions, scenario, 'after-mobile-menu-docs-click', docsIssues);
 
   const searchIssues = [];
   await clickFirstVisible(page, ['.mobile-search'], searchIssues, '打开移动端搜索');

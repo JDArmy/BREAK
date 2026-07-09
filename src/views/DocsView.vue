@@ -10,7 +10,7 @@ interface DocEntry {
   category: string;
   order: number;
   summary?: string;
-  bodyHtml: string;
+  htmlPath: string;
 }
 
 const { t } = useI18n();
@@ -18,18 +18,24 @@ const { locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
 
+const manifest = ref<Record<string, DocEntry[]>>({});
 const docs = ref<DocEntry[]>([]);
 const loading = ref(true);
-const error = ref(false);
+const detailLoading = ref(false);
+const manifestError = ref(false);
+const detailError = ref(false);
+const bodyHtml = ref("");
 const selectedSlug = ref("");
 const SITE_TITLE = "JDArmy BREAK";
+let manifestRequestSeq = 0;
+let htmlRequestSeq = 0;
 
 const docsLocale = computed(() => (locale.value === "en" ? "en" : "zh-CN"));
 
 const routeSlug = computed(() => route.params.slug as string | undefined);
 
 const selectFirstDoc = (data: DocEntry[], replace = true) => {
-  const first = data[0];
+  const first = data.find((entry) => entry.slug === "index") || data[0];
   if (!first) return;
   selectedSlug.value = first.slug;
   const location = { name: "docs-detail", params: { slug: first.slug } };
@@ -55,38 +61,78 @@ const normalizeSelectedDoc = (data: DocEntry[]) => {
   selectFirstDoc(data);
 };
 
-const loadDocs = async (lang: string) => {
-  // 重试时重置状态，确保列表区重新展示加载中而非残留失败态
+const applyDocsForLocale = (lang: string) => {
+  const data = manifest.value[lang] || [];
+  docs.value = data;
+  normalizeSelectedDoc(data);
+};
+
+const loadManifest = async () => {
   loading.value = true;
-  error.value = false;
+  manifestError.value = false;
+  detailError.value = false;
+  const requestId = ++manifestRequestSeq;
   try {
-    const resp = await fetch(`${import.meta.env.BASE_URL}data/docs-${lang}.json`);
+    const resp = await fetch(`${import.meta.env.BASE_URL}data/docs-manifest.json`);
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const data: DocEntry[] = await resp.json();
-    docs.value = data;
-    normalizeSelectedDoc(data);
+    const data: Record<string, DocEntry[]> = await resp.json();
+    if (requestId !== manifestRequestSeq) return;
+    manifest.value = data;
+    applyDocsForLocale(docsLocale.value);
   } catch {
-    error.value = true;
+    if (requestId === manifestRequestSeq) {
+      manifestError.value = true;
+    }
   } finally {
-    loading.value = false;
+    if (requestId === manifestRequestSeq) {
+      loading.value = false;
+    }
   }
 };
 
-onMounted(() => loadDocs(docsLocale.value));
+const loadSelectedHtml = async (entry?: DocEntry) => {
+  bodyHtml.value = "";
+  detailError.value = false;
+  if (!entry) return;
+  detailLoading.value = true;
+  const requestId = ++htmlRequestSeq;
+  try {
+    const resp = await fetch(`${import.meta.env.BASE_URL}${entry.htmlPath}`);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const html = await resp.text();
+    if (requestId === htmlRequestSeq) {
+      bodyHtml.value = html;
+    }
+  } catch {
+    if (requestId === htmlRequestSeq) {
+      detailError.value = true;
+    }
+  } finally {
+    if (requestId === htmlRequestSeq) {
+      detailLoading.value = false;
+    }
+  }
+};
+
+onMounted(() => loadManifest());
 
 // 切换语言时重新加载对应语言的文档，并校正当前 slug。
 watch(docsLocale, (lang) => {
-  void loadDocs(lang);
+  applyDocsForLocale(lang);
 });
 
 watch(routeSlug, () => {
-  if (!loading.value && !error.value) {
+  if (!loading.value && !manifestError.value) {
     normalizeSelectedDoc(docs.value);
   }
 });
 
 const retryLoad = () => {
-  void loadDocs(docsLocale.value);
+  if (manifestError.value || Object.keys(manifest.value).length === 0) {
+    void loadManifest();
+    return;
+  }
+  void loadSelectedHtml(selectedEntry.value);
 };
 
 const items = computed(() =>
@@ -118,6 +164,14 @@ const selectedEntry = computed(() => {
 });
 
 watch(
+  selectedEntry,
+  (entry) => {
+    void loadSelectedHtml(entry);
+  },
+  { immediate: true },
+);
+
+watch(
   [selectedEntry, () => t("menu.docs")],
   ([entry, docsTitle]) => {
     document.title = `${entry?.title || docsTitle} | ${SITE_TITLE}`;
@@ -129,6 +183,27 @@ watch(
 // docs-detail 路由，这里只更新本地选中态供 list 态兜底。
 const handleSelect = (key: string) => {
   selectedSlug.value = key;
+};
+
+const handleDocsBodyClick = (event: MouseEvent) => {
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+  const anchor = target.closest("a");
+  if (!(anchor instanceof HTMLAnchorElement)) return;
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0) return;
+
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const docsPrefix = `${basePath}/docs/`;
+  const rawHref = anchor.getAttribute("href") || "";
+  const url = new URL(rawHref, window.location.href);
+  if (!rawHref.startsWith(docsPrefix) && url.origin !== window.location.origin) return;
+  if (!url.pathname.startsWith(docsPrefix)) return;
+
+  const slug = url.pathname.slice(docsPrefix.length).replace(/\/$/, "");
+  if (!slug) return;
+
+  event.preventDefault();
+  void router.push({ name: "docs-detail", params: { slug }, hash: url.hash });
 };
 </script>
 
@@ -142,13 +217,18 @@ const handleSelect = (key: string) => {
     :selected-key="effectiveSelectedKey"
     :search-placeholder="t('search.docsPlaceholder')"
     :loading="loading"
-    :load-error="error"
+    :load-error="manifestError"
     @select="handleSelect"
     @retry="retryLoad"
   >
     <article v-if="selectedEntry" class="detail-panel docs-detail">
       <section class="detail-section">
-        <div class="docs-body" v-html="selectedEntry.bodyHtml" />
+        <div v-if="detailLoading" class="docs-loading">{{ t("loading") }}</div>
+        <div v-else-if="detailError" class="docs-detail-error">
+          <p>{{ t("error.dataLoadFailed") }}</p>
+          <button type="button" class="docs-detail-retry" @click="retryLoad">{{ t("error.retry") }}</button>
+        </div>
+        <div v-else class="docs-body" @click="handleDocsBodyClick" v-html="bodyHtml" />
       </section>
     </article>
   </KnowledgeSplitView>
@@ -157,6 +237,29 @@ const handleSelect = (key: string) => {
 <style scoped>
 .docs-detail {
   max-width: 960px;
+}
+
+.docs-loading,
+.docs-detail-error {
+  padding: 24px 0;
+  color: var(--break-text-secondary);
+}
+
+.docs-detail-error p {
+  margin: 0 0 12px;
+}
+
+.docs-detail-retry {
+  padding: 6px 12px;
+  border: 1px solid var(--break-border);
+  border-radius: 4px;
+  background: var(--break-bg-primary);
+  color: var(--break-link);
+  cursor: pointer;
+}
+
+.docs-detail-retry:hover {
+  border-color: var(--break-link);
 }
 
 .docs-body :deep(h1) {

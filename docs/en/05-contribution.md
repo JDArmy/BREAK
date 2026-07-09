@@ -50,6 +50,16 @@ npm run review:changed -- --base HEAD~1  # compare against the previous commit
 
 Rules that cannot be machine-automated: `review:case-fact` (Scrapingdog scraping verification), `review:field-density` (information density), `review:classification` (category semantic fit).
 
+## Documentation Freshness Gate
+
+`npm run validate:docs-freshness` checks the current working tree against `HEAD` so feature, data-model, or toolchain changes cannot land while the user manual, README, or Skill docs remain stale. This gate is wired into `npm run validate:data`.
+
+Typical changes that require updating both `docs/zh-CN/` and `docs/en/` include: routes / menus / view components, `KnowledgeSplitView`, search and entity-resolution composables, `src/validation/` schemas, the Entity Registry, `DATA_SCHEMA.md`, `scripts/validate/*.mjs`, and `package.json` build or validation scripts.
+
+Typical changes that require updating `README.md` and `README_CN.md` include: public commands, build / release gates, CI workflows, data exports, STIX / JSON-LD / npm data package outputs, schema documentation, entity types, or basic project information.
+
+Typical changes that require updating `SKILL.md` and `SKILL_en.md` include: `scripts/skill/` search or packaging scripts, Skill-consumable data shape, entity fields / relationships, and exported Chinese / English data bundles.
+
 ## Key Content Conventions
 
 ### Avoidance content (validated by `avoidance-content.mjs`)
@@ -78,6 +88,7 @@ New entries must meet `ADMISSION-STANDARD.md`:
 
 ```bash
 npm run validate:data              # full data validation (Class A machine constraints)
+npm run validate:docs-freshness    # check user manual / README / Skill docs against relevant changes
 npm run review:changed             # run B+C review on changed entities
 npm run sync:lateral-relations     # recompute Avoidance/AttackTool/ThreatActor lateral relations
 npm run sync:risk-assessment       # recompute Risk assessment priority

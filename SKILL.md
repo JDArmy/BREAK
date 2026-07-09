@@ -151,6 +151,10 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 4. **关系展开**：找到相关风险后，查看其 avoidances 字段获取防御手段；找到攻击工具后，查看其 directCauseRisks 字段了解关联风险
 5. **中英文适配**：如果用户使用中文提问，用 `--lang zh` 检索并用中文回答；反之亦然
 
+## 文档新鲜度门禁
+
+当 `scripts/skill/` 搜索 / 打包脚本、导出的中英文数据包、实体字段 / 关系结构、Skill 调用参数或搜索结果格式发生变化时，必须同步更新 `SKILL.md` 与 `SKILL_en.md`。`npm run validate:docs-freshness` 已接入 `npm run validate:data`，会在相关变更缺少 Skill 文档更新时阻断。
+
 ## 实体关系图谱
 
 理解实体间的关联关系有助于给出更完整的回答：
