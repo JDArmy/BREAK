@@ -42,8 +42,8 @@
       "TA0018",
       "TA0012"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -55,6 +55,6 @@
         "title": "Groups - MITRE ATT&CK"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

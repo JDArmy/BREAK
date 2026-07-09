@@ -36,9 +36,9 @@
       "TA0039",
       "TA0045"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD15"
     ],
     "references": [
       {
@@ -50,6 +50,6 @@
         "title": "Crypto Bridge Protocols - TVL, Volume, & Fees - DefiLlama"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

@@ -8,7 +8,7 @@ export type DetailNodeAnchor =
   | "attack-tools"
   | "threat-actors"
   | "terms"
-  | "business-scenes"
+  | "business-domains"
   | "references";
 
 const withDetailAnchor = (

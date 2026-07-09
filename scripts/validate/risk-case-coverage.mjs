@@ -25,19 +25,19 @@ const unique = (values) => [...new Set(values.filter(Boolean))].sort();
 
 function collectRiskScenes() {
   const sceneMap = new Map();
-  const businessScenesDir = path.join(projectRoot, 'src/BREAK/business-scenes');
+  const businessDomainsDir = path.join(projectRoot, 'src/BREAK/business-domains');
 
-  for (const file of fs.readdirSync(businessScenesDir).filter((item) => item.endsWith('.json')).sort()) {
-    const data = readJson(path.join(businessScenesDir, file));
-    for (const [businessSceneKey, businessScene] of Object.entries(data)) {
-      const businessSceneTitle = businessScene.title || businessSceneKey;
-      for (const [riskSceneKey, riskScene] of Object.entries(businessScene.riskScenes || {})) {
+  for (const file of fs.readdirSync(businessDomainsDir).filter((item) => item.endsWith('.json')).sort()) {
+    const data = readJson(path.join(businessDomainsDir, file));
+    for (const [businessDomainKey, businessDomain] of Object.entries(data)) {
+      const businessDomainTitle = businessDomain.title || businessDomainKey;
+      for (const [riskSceneKey, riskScene] of Object.entries(businessDomain.riskScenes || {})) {
         const risks = Array.isArray(riskScene.risks) ? riskScene.risks : [];
         for (const riskKey of risks) {
           const current = sceneMap.get(riskKey) || [];
           current.push({
-            businessSceneKey,
-            businessSceneTitle,
+            businessDomainKey,
+            businessDomainTitle,
             riskSceneKey,
             riskSceneTitle: riskScene.title || riskSceneKey,
           });
@@ -101,12 +101,12 @@ function buildReport() {
         filePath: path.relative(projectRoot, filePath),
         caseCount: cases.length,
         cases: cases.sort((a, b) => a.key.localeCompare(b.key)),
-        businessScenes: unique(scenes.map((scene) => scene.businessSceneKey)),
+        businessDomains: unique(scenes.map((scene) => scene.businessDomainKey)),
         riskScenes: scenes.map((scene) => ({
           key: scene.riskSceneKey,
           title: scene.riskSceneTitle,
-          businessSceneKey: scene.businessSceneKey,
-          businessSceneTitle: scene.businessSceneTitle,
+          businessDomainKey: scene.businessDomainKey,
+          businessDomainTitle: scene.businessDomainTitle,
         })),
       };
     })
@@ -181,11 +181,11 @@ function renderMarkdown(report) {
     '',
     `## 暂无 Case 的 Risk（前 ${Math.min(maxRows, report.uncoveredRisks.length)} 条）`,
     '',
-    '| Risk | 标题 | complexity | updated | 业务场景 |',
+    '| Risk | 标题 | complexity | updated | 业务域 |',
     '| --- | --- | --- | --- | --- |',
     ...report.uncoveredRisks.slice(0, maxRows).map((risk) => {
       const scenes = risk.riskScenes
-        .map((scene) => `${scene.businessSceneKey}/${scene.key}`)
+        .map((scene) => `${scene.businessDomainKey}/${scene.key}`)
         .join(', ');
       return `| ${risk.key} | ${risk.title} | ${risk.complexity} | ${risk.updated || '-'} | ${scenes || '-'} |`;
     }),

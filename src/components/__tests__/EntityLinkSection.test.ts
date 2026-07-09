@@ -36,24 +36,24 @@ describe("EntityLinkSection", () => {
       expect(wrapper.text()).toContain("BREAK.risks.R0001.definition");
     });
 
-    it("businessScene 走 route + hash 模式", () => {
+    it("businessDomain 走 route + hash 模式", () => {
       const wrapper = mount(EntityLinkSection, {
         props: {
-          keys: ["BS01"],
-          title: "businessScenes",
-          routeName: "businessScene",
-          paramKey: "bsKey",
-          i18nEntityType: "businessScenes",
+          keys: ["BD01"],
+          title: "businessDomains",
+          routeName: "businessDomain",
+          paramKey: "bdKey",
+          i18nEntityType: "businessDomains",
         },
         global: globalConfig,
       });
 
       expect(wrapper.findComponent(RouterLinkStub).props("to")).toEqual({
-        name: "businessScene",
-        params: { bsKey: "BS01" },
-        hash: "#BS01",
+        name: "businessDomain",
+        params: { bdKey: "BD01" },
+        hash: "#BD01",
       });
-      expect(wrapper.text()).toContain("BREAK.businessScenes.BS01.description");
+      expect(wrapper.text()).toContain("BREAK.businessDomains.BD01.description");
     });
 
     it("懒加载实体传入 entityRecords 优先用记录数据", () => {

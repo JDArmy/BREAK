@@ -34,8 +34,8 @@ const DEFAULT_TYPE_ORDER: EntityType[] = [...ALL_ENTITY_TYPES];
 const sortedTypes = computed(() => {
   const q = debouncedQuery.value.trim();
   if (!q) return DEFAULT_TYPE_ORDER;
-  // BS 前缀无独立类型，保持默认 risk
-  const matchedType = q.match(/^BS\d/i) ? ("risk" as EntityType) : inferEntityType(q);
+  // BD 前缀无独立类型，保持默认 risk
+  const matchedType = q.match(/^BD\d/i) ? ("risk" as EntityType) : inferEntityType(q);
   if (matchedType) {
     return [matchedType, ...DEFAULT_TYPE_ORDER.filter(t => t !== matchedType)];
   }
@@ -73,12 +73,12 @@ const getHomeDetailRoute = (type: EntityType) => {
   const e = getEntityEntry(type);
   return { name: e.homeDetailRouteName, paramKey: e.paramKey };
 };
-const getBusinessSceneDetailRoute = (type: EntityType) => {
+const getBusinessDomainDetailRoute = (type: EntityType) => {
   const e = getEntityEntry(type);
   return {
-    name: e.businessSceneDetailRouteName || e.homeDetailRouteName,
+    name: e.businessDomainDetailRouteName || e.homeDetailRouteName,
     paramKey: e.paramKey,
-    keepsBusinessScene: Boolean(e.businessSceneDetailRouteName),
+    keepsBusinessDomain: Boolean(e.businessDomainDetailRouteName),
   };
 };
 
@@ -103,10 +103,10 @@ const homePageRoutes = new Set([
   ...entityRegistry.map(e => e.homeDetailRouteName).filter(Boolean),
 ]);
 
-// 业务场景相关路由名（从 entityRegistry 派生），搜索结果应在业务场景抽屉中打开
-const businessSceneRoutes = new Set([
-  "businessScene",
-  ...entityRegistry.map(e => e.businessSceneDetailRouteName).filter(Boolean),
+// 业务域相关路由名（从 entityRegistry 派生），搜索结果应在业务域抽屉中打开
+const businessDomainRoutes = new Set([
+  "businessDomain",
+  ...entityRegistry.map(e => e.businessDomainDetailRouteName).filter(Boolean),
 ]);
 
 // 防抖搜索
@@ -152,7 +152,7 @@ function selectResult(result: SearchResult) {
 
   const currentName = router.currentRoute.value.name as string;
   const isHomePage = homePageRoutes.has(currentName);
-  const isBusinessScene = businessSceneRoutes.has(currentName);
+  const isBusinessDomain = businessDomainRoutes.has(currentName);
 
   if (isHomePage) {
     // 首页：使用 homeXxxDetail 抽屉路由
@@ -161,14 +161,14 @@ function selectResult(result: SearchResult) {
       name: detailRoute.name,
       params: { [detailRoute.paramKey]: result.id },
     });
-  } else if (isBusinessScene) {
-    // 业务场景页：支持业务场景抽屉的实体保留 bsKey；case 等无业务场景抽屉的实体回首页抽屉
-    const bsKey = router.currentRoute.value.params.bsKey;
-    const detailRoute = getBusinessSceneDetailRoute(result.type);
+  } else if (isBusinessDomain) {
+    // 业务域页：支持业务域抽屉的实体保留 bdKey；case 等无业务域抽屉的实体回首页抽屉
+    const bdKey = router.currentRoute.value.params.bdKey;
+    const detailRoute = getBusinessDomainDetailRoute(result.type);
     router.push({
       name: detailRoute.name,
-      params: detailRoute.keepsBusinessScene
-        ? { bsKey, [detailRoute.paramKey]: result.id }
+      params: detailRoute.keepsBusinessDomain
+        ? { bdKey, [detailRoute.paramKey]: result.id }
         : { [detailRoute.paramKey]: result.id },
     });
   } else {

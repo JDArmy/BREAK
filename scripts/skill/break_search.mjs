@@ -34,7 +34,7 @@ const ID_PATTERNS = {
   threatActors:         /^TA\d{4}(?:-\d{3})?$/i,
   terms:                /^T\d{4}$/i,
   cases:                /^C\d{4}$/i,
-  businessScenes:       /^BS\d{2}$/i,
+  businessDomains:       /^BD\d{2}$/i,
   avoidanceCategories:  /^AC\d{2}$/i,
 };
 
@@ -46,7 +46,7 @@ const TYPE_DISPLAY = {
   threatActors:        ['👤', '威胁行为者', 'Threat Actors'],
   terms:               ['📖', '术语', 'Terms'],
   cases:               ['📋', '案例', 'Cases'],
-  businessScenes:      ['🏢', '业务场景', 'Business Scenes'],
+  businessDomains:      ['🏢', '业务域', 'Business Domains'],
   avoidanceCategories: ['📂', '规避分类', 'Avoidance Categories'],
 };
 
@@ -379,7 +379,7 @@ function formatEntityDetail(engine, entityType, entityId, entity) {
     ['relatedAvoidances', '相关规避手段', 'avoidances'],
     ['relatedAttackTools', '相关攻击工具', 'attackTools'],
     ['relatedThreatActors', '相关威胁行为者', 'threatActors'],
-    ['relatedBusinessScenes', '相关业务场景', 'businessScenes'],
+    ['relatedBusinessDomains', '相关业务域', 'businessDomains'],
   ];
   for (const [field, label, refType] of relationFields) {
     const value = entity[field];
@@ -413,10 +413,10 @@ function formatEntityDetail(engine, entityType, entityId, entity) {
   return lines.join('\n');
 }
 
-function formatBusinessSceneDetail(engine, entityId, entity) {
+function formatBusinessDomainDetail(engine, entityId, entity) {
   const lines = [];
   lines.push(`=== [${entityId}] ${entity.title || ''} ===`);
-  lines.push('类型: 业务场景');
+  lines.push('类型: 业务域');
   lines.push('');
 
   if (entity.description) { lines.push(`描述: ${entity.description}`); lines.push(''); }
@@ -505,8 +505,8 @@ function main() {
     const { entityType, entityId } = idResult;
     const entity = engine.lookupId(entityType, entityId);
     if (entity) {
-      console.log(entityType === 'businessScenes'
-        ? formatBusinessSceneDetail(engine, entityId, entity)
+      console.log(entityType === 'businessDomains'
+        ? formatBusinessDomainDetail(engine, entityId, entity)
         : formatEntityDetail(engine, entityType, entityId, entity));
     } else {
       console.log(`❌ 未找到实体: [${entityId}]`);

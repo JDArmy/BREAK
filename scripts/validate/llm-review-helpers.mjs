@@ -1,5 +1,5 @@
 // LLM 评审辅助模块：全库加载 + title 索引 + 相关实体加载
-// 补 common.mjs 的 loadEntities 对 terms/businessScenes 的缺口（不改 common.mjs）
+// 补 common.mjs 的 loadEntities 对 terms/businessDomains 的缺口（不改 common.mjs）
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,24 +12,24 @@ const DIR_MAP = {
   'attack-tools': 'src/BREAK/attack-tools',
   'threat-actors': 'src/BREAK/threat-actors',
   terms: 'src/BREAK/terms',
-  'business-scenes': 'src/BREAK/business-scenes',
+  'business-domains': 'src/BREAK/business-domains',
   cases: 'src/BREAK/cases',
 };
 
 /**
- * 全库加载实体（支持 7 类，含 terms/businessScenes）
- * @param {string} type — risks/avoidances/attack-tools/threat-actors/terms/businessScenes/cases
- *                        （businessScenes / business-scenes 均可）
+ * 全库加载实体（支持 7 类，含 terms/businessDomains）
+ * @param {string} type — risks/avoidances/attack-tools/threat-actors/terms/businessDomains/cases
+ *                        （businessDomains / business-domains 均可）
  * @returns {Array<{key,entityType,filePath,entity}>}
  */
 export function loadAllEntities(type) {
-  // 驼峰归一化：businessScenes → business-scenes
-  const normType = type === 'businessScenes' ? 'business-scenes' : type;
+  // 驼峰归一化：businessDomains → business-domains
+  const normType = type === 'businessDomains' ? 'business-domains' : type;
   // common.mjs 支持的 5 类直接走它
   if (['risks', 'avoidances', 'attack-tools', 'threat-actors', 'cases'].includes(normType)) {
     return loadEntities(normType);
   }
-  // terms / business-scenes 自实现
+  // terms / business-domains 自实现
   const dir = path.join(projectRoot, DIR_MAP[normType]);
   if (!fs.existsSync(dir)) return [];
   const out = [];
@@ -166,14 +166,14 @@ export function loadAvoidancesByCategory() {
 }
 
 /**
- * 加载全部 BusinessScene 的 RS 语义（供 risk-other-business-scene 评审）
- * 返回 [{bsId, bsTitle, riskScenes: [{rsId, rsTitle, riskCount}]}]
+ * 加载全部 BusinessDomain 的 RS 语义（供 risk-other-business-domain 评审）
+ * 返回 [{bdId, bdTitle, riskScenes: [{rsId, rsTitle, riskCount}]}]
  */
-export function loadBusinessScenes() {
-  const records = loadAllEntities('businessScenes');
+export function loadBusinessDomains() {
+  const records = loadAllEntities('businessDomains');
   return records.map(({ key, entity }) => ({
-    bsId: key,
-    bsTitle: entity.title,
+    bdId: key,
+    bdTitle: entity.title,
     bsDescription: entity.description || '',
     riskScenes: Object.entries(entity.riskScenes || {}).map(([rsId, rs]) => ({
       rsId,

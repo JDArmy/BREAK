@@ -24,7 +24,7 @@
       "AT0007"
     ],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessDomains": [],
     "references": [
       {
         "title": "设备风控攻防新挑战：定制ROM改机_FreeBuf网络安全行业门户",
@@ -35,7 +35,7 @@
         "link": "https://m.sohu.com/a/231151191_100109628"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "usageExample": "黄牛使用改机工具重置设备指纹，使同一台手机可以反复伪装为新设备，绕过'每台设备限购一件'的风控规则。"
   }
 }

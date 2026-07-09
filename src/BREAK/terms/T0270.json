@@ -50,10 +50,10 @@
       "TA0007",
       "TA0013"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD05",
+      "BD04"
     ],
     "references": [
       {
@@ -61,7 +61,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "某刷单工作室为测试新话术的转化率，连夜对一批虚假帖子进行跑量，结果因数据异常被平台风控系统识别并封禁了全部账号。"
   }
 }

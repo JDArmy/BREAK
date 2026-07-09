@@ -15,8 +15,8 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -24,7 +24,7 @@
         "link": "https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "version": 2
   }
 }

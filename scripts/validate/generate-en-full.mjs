@@ -28,7 +28,7 @@ const entityConfigs = [
   { key: 'attackTools', cnDir: 'src/BREAK/attack-tools', enDir: 'src/i18n/en/BREAK/attack-tools', outDir: 'attack-tools' },
   { key: 'threatActors', cnDir: 'src/BREAK/threat-actors', enDir: 'src/i18n/en/BREAK/threat-actors', outDir: 'threat-actors' },
   { key: 'terms', cnDir: 'src/BREAK/terms', enDir: 'src/i18n/en/BREAK/terms', outDir: 'terms' },
-  { key: 'businessScenes', cnDir: 'src/BREAK/business-scenes', enDir: 'src/i18n/en/BREAK/business-scenes', outDir: 'business-scenes' },
+  { key: 'businessDomains', cnDir: 'src/BREAK/business-domains', enDir: 'src/i18n/en/BREAK/business-domains', outDir: 'business-domains' },
   { key: 'avoidanceCategories', cnDir: 'src/BREAK/avoidance-categories', enDir: 'src/i18n/en/BREAK/avoidance-categories', outDir: 'avoidance-categories' },
   { key: 'cases', cnDir: 'src/BREAK/cases', enDir: 'src/i18n/en/BREAK/cases', outDir: 'cases' },
 ];

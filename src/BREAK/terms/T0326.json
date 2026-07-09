@@ -37,8 +37,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -50,6 +50,6 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

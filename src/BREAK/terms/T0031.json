@@ -36,8 +36,8 @@
       "TA0001",
       "TA0001-001"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -45,7 +45,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "夜市大排档老板从背包里掏出同一台POS机，熟练地切换了三个不同商户名称给熟客刷卡养卡，还笑着说这叫“一鸡多蛋”，能帮人快速提额。"
   }
 }

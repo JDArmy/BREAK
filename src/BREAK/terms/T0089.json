@@ -55,9 +55,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -69,7 +69,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-09",
     "usageExample": "只要提供一个手机号，黑产就能通过“查档”服务调取出目标的户籍、婚姻状况甚至开房记录，这种深度隐私侵犯服务通常按次收费。",
     "version": 2
   }

@@ -33,11 +33,11 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -49,7 +49,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "一个专业洗客团伙从上游购入海量银行流水记录后，按资产余额进行分档筛选，并补充了受害者的社交账号，使数据精准度大幅提升，便于实施投资理财诈骗。"
   }
 }

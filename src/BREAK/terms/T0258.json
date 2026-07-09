@@ -36,9 +36,9 @@
       "TA0034",
       "TA0022"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -46,7 +46,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "同行竞争时，卖家使用端内直举手段，雇佣大量账号在竞品直播间里恶意点击举报按钮，用“虚假宣传”等理由反复触发审核，导致对方直播间被短暂封停。"
   }
 }

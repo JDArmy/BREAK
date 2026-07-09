@@ -18,7 +18,7 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务
 | ThreatActor（威胁行为者） | 75 | TA0001, TA0001-001 | 实施攻击的人群 |
 | Term（术语） | 592 | T0001 | 业务安全领域术语 |
 | Case（案例） | 1782 | C0001 | 真实的安全事件案例 |
-| BusinessScene（业务场景） | 20 | BS00 | 行业/业务域分类 |
+| BusinessDomain（业务域） | 20 | BD00 | 行业/业务域分类 |
 
 ## 调用方式
 
@@ -155,6 +155,8 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 
 当 `scripts/skill/` 搜索 / 打包脚本、导出的中英文数据包、实体字段 / 关系结构、Skill 调用参数或搜索结果格式发生变化时，必须同步更新 `SKILL.md` 与 `SKILL_en.md`。`npm run validate:docs-freshness` 已接入 `npm run validate:data`，会在相关变更缺少 Skill 文档更新时阻断。
 
+数据治理改动也会影响 Skill 检索结果。修复 Case 的 `references` / `summary` 事实核验问题或调整 Risk 的 `avoidances` 关系时，应同步维护英文翻译文件，并确保前两条 Case references 尽量指向可抓取正文的稳定页面，避免 Skill 返回的案例事实无法被复核。
+
 ## 实体关系图谱
 
 理解实体间的关联关系有助于给出更完整的回答：
@@ -182,7 +184,7 @@ Case（案例）
 Term（术语）
     └── related* → 所有其他实体类型
 
-BusinessScene（业务场景）
+BusinessDomain（业务域）
     ├── riskDimensions → RiskScene（按业务风险域组织风险场景）
     └── riskScenes → Risk（场景下的风险列表；父风险可代表其子风险）
 ```

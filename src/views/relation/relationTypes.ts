@@ -270,34 +270,34 @@ export interface NodeSpecialInsightSummary {
   recommendation?: string;
 }
 
-export interface NodeBusinessSceneImpactRisk {
+export interface NodeBusinessDomainImpactRisk {
   id: string;
   title: string;
   sourceFields: string[];
 }
 
-export interface NodeBusinessSceneImpactRiskScene {
+export interface NodeBusinessDomainImpactRiskScene {
   id: string;
   title: string;
   riskCount: number;
-  risks: NodeBusinessSceneImpactRisk[];
+  risks: NodeBusinessDomainImpactRisk[];
 }
 
-export interface NodeBusinessSceneImpactItem {
+export interface NodeBusinessDomainImpactItem {
   id: string;
   title: string;
   dimensionTitles: string[];
   riskCount: number;
   riskSceneCount: number;
-  riskScenes: NodeBusinessSceneImpactRiskScene[];
+  riskScenes: NodeBusinessDomainImpactRiskScene[];
 }
 
-export interface NodeBusinessSceneImpactSummary {
+export interface NodeBusinessDomainImpactSummary {
   title: string;
   summary: string;
   metrics: NodeCoverageMetric[];
-  items: NodeBusinessSceneImpactItem[];
-  risks: NodeBusinessSceneImpactRisk[];
+  items: NodeBusinessDomainImpactItem[];
+  risks: NodeBusinessDomainImpactRisk[];
   notice?: string;
 }
 

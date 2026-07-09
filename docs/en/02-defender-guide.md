@@ -13,15 +13,15 @@ This page is for defenders — security / risk-control / anti-fraud teams. It ex
 
 The defender's typical BREAK workflow is reverse inference: first locate the risk scenes relevant to your business, scope the related risks, then follow Risk → Avoidance to find measures, arrange defense-in-depth across the AC01–AC04 phases, and finally validate with real Cases.
 
-## Step 1: Locate Relevant Risks via Business Scenes
+## Step 1: Locate Relevant Risks via Business Domains
 
-Don't start by browsing 600+ risks. First identify your business category — finance, e-commerce, transportation, Web3, IoT, metaverse, etc. BREAK organizes scenes in three layers:
+Don't start by browsing 600+ risks. First identify your business category — finance, e-commerce, transportation, Web3, IoT, metaverse, etc. BREAK organizes business domains and risk scenarios in three layers:
 
-- **BusinessScene**: an industry / business-domain container, e.g. "Finance", "E-commerce"
+- **BusinessDomain**: an industry / business-domain container, e.g. "Finance", "E-commerce"
 - **RiskDimension**: an upper grouping within a scene, e.g. "Transaction dimension", "Identity dimension", "Adversarial dimension"
 - **RiskScene**: a risk problem domain under a dimension, e.g. "Payment & financial fraud", "Interface & automation attacks"
 
-The home page expands BusinessScene → RiskDimension → RiskScene layer by layer; each RiskScene covers a set of Risks. Once you locate your business's RiskScene, its Risk list is your to-do list.
+The home page expands BusinessDomain → RiskDimension → RiskScene layer by layer; each RiskScene covers a set of Risks. Once you locate your business's RiskScene, its Risk list is your to-do list.
 
 > Note: A RiskScene belongs exclusively to one dimension (it is never reused across dimensions), but the same Risk can appear in multiple RiskScenes (cross-scene classification — this is normal). Seeing a Risk in multiple scenes means it needs attention across several business touchpoints.
 
@@ -82,7 +82,7 @@ These lateral relations are auto-derived — no manual maintenance needed. When 
 
 When a defender runs a risk inventory for a new business:
 
-1. [ ] Locate the business's BusinessScene, expand to specific RiskScenes
+1. [ ] Locate the business's Business Domain (BusinessDomain), expand to specific RiskScenes
 2. [ ] Export the Risk list covered by the RiskScene, sort by complexity
 3. [ ] For each basic risk, confirm AC01 prevent measures are in place
 4. [ ] For each intermediate/advanced risk, confirm AC02/AC03 sense/identify coverage

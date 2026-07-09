@@ -40,9 +40,9 @@
       "TA0006",
       "TA0007"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -50,7 +50,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "刷单群里通知今天任务到了收菜环节，买手们要逐个去快递柜取件，拆包摆拍后上传五星好评和精美买家秀，这一步完成后才能找财务结算佣金。"
   }
 }

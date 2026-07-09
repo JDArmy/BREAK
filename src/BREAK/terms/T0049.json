@@ -31,9 +31,9 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -45,7 +45,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "几个无业青年专门研究各平台风控漏洞，用一套假资料批量“撸贷”，他们管这叫工资，根本没打算还一分钱，手机一关机就是纯利润。"
   }
 }

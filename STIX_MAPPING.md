@@ -9,7 +9,7 @@
 ## 1. 总体原则
 
 - **标准优先**：能用 STIX 2.1 标准 SDO 表达的用标准类型（如 `course-of-action`、`tool`、`threat-actor`、`report`）
-- **自定义补充**：无标准匹配的用 `x-break-*` 自定义 SDO（如 `x-break-risk`、`x-break-term`、`x-break-business-scene`）
+- **自定义补充**：无标准匹配的用 `x-break-*` 自定义 SDO（如 `x-break-risk`、`x-break-term`、`x-break-business-domain`）
 - **扩展字段**：BREAK 特有字段通过 STIX Extension Definition 保留全部语义
 - **确定性 ID**：所有 STIX UUID 使用 UUID v5 确定性生成，中英文 Bundle 共享相同 ID
 
@@ -34,7 +34,7 @@ STIX_ID = "{stix-type}--" + UUIDv5("{stix-type}:{break-id}", BREAK_NAMESPACE)
 | ThreatActor | TA0001 | `threat-actor` | 标准 SDO — 语义匹配 |
 | Term | T0001 | `x-break-term` | 自定义 SDO — 术语/知识条目无标准匹配 |
 | Case | C0001 | `report` | 标准 SDO — 可表达安全事件报告/案例 |
-| BusinessScene | BS01 | `x-break-business-scene` | 自定义 SDO — 业务场景分类无标准匹配 |
+| BusinessDomain | BD01 | `x-break-business-domain` | 自定义 SDO — 业务域分类无标准匹配 |
 
 ## 4. Extension Definitions
 
@@ -48,7 +48,7 @@ Bundle 中包含 7 个 Extension Definition，承载 BREAK 特有字段：
 | `x-break-threat-actor-ext` | `property-extension` | `x_break_keywords`, `x_break_version` |
 | `x-break-term-ext` | `new-sdo` | `x_break_definition`, `x_break_aliases`, `x_break_category`, `x_break_keywords`, `x_break_usage_example`, `x_break_version` |
 | `x-break-case-ext` | `property-extension` | `x_break_summary`, `x_break_case_category`, `x_break_incident_time`, `x_break_keywords`, `x_break_version` |
-| `x-break-business-scene-ext` | `new-sdo` | `x_break_risk_dimensions`, `x_break_risk_scenes`, `x_break_version` |
+| `x-break-business-domain-ext` | `new-sdo` | `x_break_risk_dimensions`, `x_break_risk_scenes`, `x_break_version` |
 
 ## 5. 关系映射
 
@@ -68,7 +68,7 @@ Bundle 中包含 7 个 Extension Definition，承载 BREAK 特有字段：
 | Case.relatedAttackTools | `related-to` (标准) | Case → AttackTool |
 | Case.relatedThreatActors | `related-to` (标准) | Case → ThreatActor |
 | Term.related* | `related-to` (标准) | Term → 对应实体 |
-| BusinessScene → Risk (via riskScenes) | `related-to` (标准) | BusinessScene → Risk |
+| BusinessDomain → Risk (via riskScenes) | `related-to` (标准) | BusinessDomain → Risk |
 
 ### 5.2 同类型内部关系
 
@@ -106,7 +106,7 @@ Bundle 中包含 7 个 Extension Definition，承载 BREAK 特有字段：
     { "type": "threat-actor", ... },
     { "type": "x-break-term", ... },
     { "type": "report", ... },
-    { "type": "x-break-business-scene", ... },
+    { "type": "x-break-business-domain", ... },
     // 4. Relationship SRO
     { "type": "relationship", ... }
   ]

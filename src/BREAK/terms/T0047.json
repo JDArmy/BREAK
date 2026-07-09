@@ -31,9 +31,9 @@
     "relatedThreatActors": [
       "TA0038"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -45,6 +45,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

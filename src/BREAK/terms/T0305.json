@@ -42,10 +42,10 @@
       "TA0015",
       "TA0006-003"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -57,6 +57,6 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

@@ -18,9 +18,9 @@ Drawing on years of experience and accumulated understanding of business securit
 
 ## Methodology
 
-The framework is organized around **business scenes**, **risk dimensions**, **risk scenarios**, and **risk items**. A business scene represents an industry or business domain. A risk dimension is a business risk domain that groups risk scenarios into stable areas such as transaction and entitlement, content and ecosystem governance, account and identity, platform/interface automation abuse, data/algorithm/model, virtual assets and emerging technology, device/physical infrastructure, and internal supply-chain compliance. Each risk scenario contains multiple risk items.
+The framework is organized around **business domains**, **risk dimensions**, **risk scenarios**, and **risk items**. A business domain represents an industry or business area. A risk dimension is a business risk domain that groups risk scenarios into stable areas such as transaction and entitlement, content and ecosystem governance, account and identity, platform/interface automation abuse, data/algorithm/model, virtual assets and emerging technology, device/physical infrastructure, and internal supply-chain compliance. Each risk scenario contains multiple risk items.
 
-The current framework catalogues 378 risk items, 318 avoidance measures, 118 attack tools, 75 threat actors, 592 industry terms, 20 business scenes, 4 avoidance categories, and 1782 cases, with ongoing additions, upgrades, and adjustments based on developments and feedback. Each risk item consists of: a risk ID, risk title, risk definition, risk description, risk complexity, risk influence, avoidance measures, references, and associated attack tools. Risk IDs follow the format `R00xx` for unique identification (modeled after MITRE ATT&CK) to facilitate communication and intelligence sharing. Attack descriptions guide blue teams in security capability assessments, while avoidance measures help red teams and business risk control to strengthen security capabilities and reduce business risk.
+The current framework catalogues 382 risk items, 318 avoidance measures, 118 attack tools, 75 threat actors, 592 industry terms, 20 business domains, 4 avoidance categories, and 1782 cases, with ongoing additions, upgrades, and adjustments based on developments and feedback. Each risk item consists of: a risk ID, risk title, risk definition, risk description, risk complexity, risk influence, avoidance measures, references, and associated attack tools. Risk IDs follow the format `R00xx` for unique identification (modeled after MITRE ATT&CK) to facilitate communication and intelligence sharing. Attack descriptions guide blue teams in security capability assessments, while avoidance measures help red teams and business risk control to strengthen security capabilities and reduce business risk.
 
 **Important note:** Business risks and vulnerabilities are not the same thing. Vulnerabilities are generally caused by coding defects and can be fixed by modifying code to remove the defect. Business risks, however, are largely not caused by coding defects — they are unintended exploitations of normal business logic by attackers. As a result, it is usually impossible to completely eliminate business risks; they can only be reduced to an acceptable level. Instead of direct code fixes, business risks typically require added security capabilities and risk control models to slow attacks, reduce attack ROI, and shrink the attack surface.
 
@@ -60,9 +60,9 @@ The framework is described in JSON format under the `/src/BREAK` directory:
 - `risks` — risk item catalogue
 - `avoidances` — avoidance measures catalogue
 - `avoidance-categories` — avoidance measure categories
-- `business-scenes` — business scenes
-  - `riskDimensions` field: business risk domains covered by the scene, with the risk scene IDs under each domain
-  - `riskScenes` field: risk scenarios and associated risk items for the scene; do not list a parent risk and its sub-risk in the same risk scene because the frontend expands parent risks into sub-risks
+- `business-domains` — business domains
+  - `riskDimensions` field: business risk domains covered by the domain, with the risk scene IDs under each domain
+  - `riskScenes` field: risk scenarios and associated risk items for the domain; do not list a parent risk and its sub-risk in the same risk scene because the frontend expands parent risks into sub-risks
 - `attack-tools` — attack tool catalogue
 - `threat-actors` — threat actor catalogue
 - `terms` — industry terms and slang glossary
@@ -121,7 +121,7 @@ npm run lint
 npm run type-check
 ```
 
-`npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, business scene checks, reference coverage, content quality checks, and generated schema documentation checks. The BusinessScene sub-risk check only blocks duplicate display cases where a parent risk and its sub-risk are listed in the same `riskScene`.
+`npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, business domain checks, reference coverage, content quality checks, and generated schema documentation checks. The BusinessDomain sub-risk check only blocks duplicate display cases where a parent risk and its sub-risk are listed in the same `riskScene`.
 `npm run validate:docs-freshness` blocks documentation drift: when routes, UI components, schemas, validation scripts, public commands, export pipelines, or Skill data/search behavior change, the matching user manual, README, and Skill docs must be updated in the same change.
 `npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:home-counts`, `export:data`, `export:data-en`, `export:stix`, `export:jsonld`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, `validate:data-package`, and `validate:stix`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, Sankey attack paths, root/path insights, search, safe i18n, and BREAK data utilities.
@@ -139,7 +139,7 @@ npm run type-check
 `npm run validate:data-package` checks the npm package boundary, runtime entry, type declarations, README, manifest hash, and version alignment.
 `npm run test:smoke`, `npm run test:performance`, `npm run test:visual-review`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium. PR CI runs `test:smoke` as a hard-fail browser gate on every pull request. Slower browser regression, visual review, relation stability, and Lighthouse checks run in PR CI only for major/minor version changes, and remain available locally via the same npm scripts. Deploy does not rerun Playwright/Lighthouse.
 `npm run audit:quality-report` regenerates the frontend-consumable quality report JSON.
-`npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
+`npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business domain coverage baseline.
 `npm run audit:bundle` checks the generated `dist/assets` bundle against the current performance budget.
 `npm run audit:maintenance` refreshes the audit reports and writes a unified maintenance summary.
 
@@ -160,7 +160,7 @@ The static bundle exposes the current BREAK data with version, generation metada
 
 BREAK provides standardized export formats for integration with external CTI/SIEM platforms and semantic web tools:
 
-**STIX 2.1** — All 7 entity types (Risk, Avoidance, AttackTool, ThreatActor, Term, Case, BusinessScene) are mapped to STIX SDOs with deterministic UUID v5 identifiers. Cross-entity and intra-entity relationships are mapped to STIX Relationship SROs. BREAK-specific fields are preserved through 7 Extension Definitions. Chinese and English Bundles share the same UUIDs, differing only in text content. See [STIX_MAPPING.md](./STIX_MAPPING.md) for the full mapping specification.
+**STIX 2.1** — All 7 entity types (Risk, Avoidance, AttackTool, ThreatActor, Term, Case, BusinessDomain) are mapped to STIX SDOs with deterministic UUID v5 identifiers. Cross-entity and intra-entity relationships are mapped to STIX Relationship SROs. BREAK-specific fields are preserved through 7 Extension Definitions. Chinese and English Bundles share the same UUIDs, differing only in text content. See [STIX_MAPPING.md](./STIX_MAPPING.md) for the full mapping specification.
 
 **JSON-LD** — Entities are exported as a `@graph` of linked data nodes using `schema.org` vocabulary and BREAK-specific terms. Each entity carries a `stixId` field for bidirectional cross-referencing with the STIX Bundle. Entity URIs follow the pattern `https://break.jd.army/entity/{ID}`.
 

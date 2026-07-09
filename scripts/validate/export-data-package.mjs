@@ -59,7 +59,7 @@ export interface BreakRisk extends BreakBaseEntity {
   avoidances: string[];
   relatedRisks: BreakRiskRelation[];
   riskAssessment?: BreakRiskAssessment;
-  businessScenes: string[];
+  businessDomains: string[];
 }
 
 export type BreakAvoidanceCategoryId = 'AC01' | 'AC02' | 'AC03' | 'AC04';
@@ -119,7 +119,7 @@ export interface BreakTerm extends BreakBaseEntity {
   relatedThreatActors: string[];
 }
 
-export interface BreakBusinessScene {
+export interface BreakBusinessDomain {
   title: string;
   description: string;
 }
@@ -148,7 +148,7 @@ export interface BreakDataCollections {
   attackTools: Record<string, BreakAttackTool>;
   threatActors: Record<string, BreakThreatActor>;
   terms: Record<string, BreakTerm>;
-  businessScenes: Record<string, BreakBusinessScene>;
+  businessDomains: Record<string, BreakBusinessDomain>;
   avoidanceCategories: Record<string, BreakAvoidanceCategory>;
   cases: Record<string, BreakCase>;
 }

@@ -25,7 +25,7 @@ const route = useRoute();
 const { locale, t, te } = useI18n();
 const { cases, ensureCases } = useCases();
 const { resolve: resolveEntity } = useEntityResolver();
-const defaultBusinessSceneKey = "BS00";
+const defaultBusinessDomainKey = "BD00";
 
 const { isMobile } = useBreakpoints();
 const componentSize = computed(() => isMobile.value ? 'default' : 'small');
@@ -68,7 +68,7 @@ const subThreatActorsCount = computed(() => BREAK.entityCounts.subThreatActors);
 const totalTerms = computed(() => BREAK.entityCounts.terms);
 const totalCases = computed(() => BREAK.entityCounts.cases);
 
-//分业务场景查看风险
+//分业务域查看风险
 
 const isChineseLocale = computed(() => locale.value === "cn");
 
@@ -80,28 +80,28 @@ const getLocalizedText = (path: string, cnText: string) => {
   return te(path) ? String(t(path)) : cnText;
 };
 
-const getBusinessSceneTitle = (bsKey: string) =>
+const getBusinessDomainTitle = (bdKey: string) =>
   getLocalizedText(
-    `BREAK.businessScenes.${bsKey}.title`,
-    BREAK.businessScenes[bsKey]?.title ?? bsKey
+    `BREAK.businessDomains.${bdKey}.title`,
+    BREAK.businessDomains[bdKey]?.title ?? bdKey
   );
 
-const getBusinessSceneDescription = (bsKey: string) =>
+const getBusinessDomainDescription = (bdKey: string) =>
   getLocalizedText(
-    `BREAK.businessScenes.${bsKey}.description`,
-    BREAK.businessScenes[bsKey]?.description ?? ""
+    `BREAK.businessDomains.${bdKey}.description`,
+    BREAK.businessDomains[bdKey]?.description ?? ""
   );
 
 const getRiskDimensionTitle = (dimensionKey: string) =>
   getLocalizedText(
-    `BREAK.businessScenes.${bsKeySelected.value}.riskDimensions.${dimensionKey}.title`,
-    BREAK.businessScenes[bsKeySelected.value].riskDimensions[dimensionKey]?.title ?? dimensionKey
+    `BREAK.businessDomains.${bdKeySelected.value}.riskDimensions.${dimensionKey}.title`,
+    BREAK.businessDomains[bdKeySelected.value].riskDimensions[dimensionKey]?.title ?? dimensionKey
   );
 
 const getRiskSceneTitle = (sceneKey: string) =>
   getLocalizedText(
-    `BREAK.businessScenes.${bsKeySelected.value}.riskScenes.${sceneKey}.title`,
-    BREAK.businessScenes[bsKeySelected.value].riskScenes[sceneKey]?.title ?? sceneKey
+    `BREAK.businessDomains.${bdKeySelected.value}.riskScenes.${sceneKey}.title`,
+    BREAK.businessDomains[bdKeySelected.value].riskScenes[sceneKey]?.title ?? sceneKey
   );
 
 const getRiskTitle = (riskKey: string) =>
@@ -110,19 +110,19 @@ const getRiskTitle = (riskKey: string) =>
 const shouldEnableMatrixScroll = computed(() => shouldEnableScroll.value && !isMobile.value);
 
 
-const normalizeBusinessSceneKey = (key?: string) =>
-  key && hasOwn(BREAK.businessScenes, key) ? key : defaultBusinessSceneKey;
+const normalizeBusinessDomainKey = (key?: string) =>
+  key && hasOwn(BREAK.businessDomains, key) ? key : defaultBusinessDomainKey;
 
 //url params init
-const bsKeySelected = ref(normalizeBusinessSceneKey(getSingleRouteParam(route.params.bsKey)));
+const bdKeySelected = ref(normalizeBusinessDomainKey(getSingleRouteParam(route.params.bdKey)));
 watch(
-  () => route.params.bsKey,
-  (rawBsKey) => {
-    const nextBsKey = getSingleRouteParam(rawBsKey);
-    const normalizedBsKey = normalizeBusinessSceneKey(nextBsKey);
-    bsKeySelected.value = normalizedBsKey;
+  () => route.params.bdKey,
+  (rawBdKey) => {
+    const nextBdKey = getSingleRouteParam(rawBdKey);
+    const normalizedBdKey = normalizeBusinessDomainKey(nextBdKey);
+    bdKeySelected.value = normalizedBdKey;
 
-    if (route.name === "businessScene" && nextBsKey !== normalizedBsKey) {
+    if (route.name === "businessDomain" && nextBdKey !== normalizedBdKey) {
       router.replace({ name: "home" });
     }
   },
@@ -131,31 +131,31 @@ watch(
 
 // 场景布局计算委托给 composable（布局常量、列宽计算、滚动阈值均在 composable 内部管理）
 const { sceneBREAK, sceneLayout, shouldEnableScroll } = useHomeSceneLayout(
-  bsKeySelected,
+  bdKeySelected,
   locale,
   { riskScene: getRiskSceneTitle, risk: getRiskTitle },
 );
 
-//bsKeySelected event
-watch(bsKeySelected, (rawBsKey) => {
-  const normalizedBsKey = normalizeBusinessSceneKey(rawBsKey);
-  if (normalizedBsKey !== rawBsKey) {
-    bsKeySelected.value = normalizedBsKey;
+//bdKeySelected event
+watch(bdKeySelected, (rawBdKey) => {
+  const normalizedBdKey = normalizeBusinessDomainKey(rawBdKey);
+  if (normalizedBdKey !== rawBdKey) {
+    bdKeySelected.value = normalizedBdKey;
     return;
   }
 
-  if (normalizedBsKey === defaultBusinessSceneKey) {
+  if (normalizedBdKey === defaultBusinessDomainKey) {
     if (route.name !== "home") {
       router.push({ name: "home" });
     }
     return;
   }
 
-  if (route.name !== "businessScene" || route.params.bsKey !== normalizedBsKey) {
+  if (route.name !== "businessDomain" || route.params.bdKey !== normalizedBdKey) {
     router.push({
-      name: "businessScene",
+      name: "businessDomain",
       params: {
-        bsKey: normalizedBsKey,
+        bdKey: normalizedBdKey,
       },
     });
   }
@@ -176,25 +176,25 @@ const { subRisks, hideSubRisks, hideAllSubRisks } = useSubRiskToggle();
 /////////////////////////////////////////////////////////////////////
 // 抽屉路由管理——统一使用 useDrawerRoute composable
 
-// 业务场景下的实体抽屉路由名集合（从 entityRegistry 派生）
-const businessSceneDrawerRouteNames = entityRegistry
-  .map(e => e.businessSceneDetailRouteName)
+// 业务域下的实体抽屉路由名集合（从 entityRegistry 派生）
+const businessDomainDrawerRouteNames = entityRegistry
+  .map(e => e.businessDomainDetailRouteName)
   .filter(Boolean);
-const isBusinessSceneDrawerRoute = (name: unknown) =>
-  typeof name === "string" && businessSceneDrawerRouteNames.includes(name);
+const isBusinessDomainDrawerRoute = (name: unknown) =>
+  typeof name === "string" && businessDomainDrawerRouteNames.includes(name);
 
-// 关闭抽屉：来自业务场景则回 businessScene（保留 bsKey），否则回 home
+// 关闭抽屉：来自业务域则回 businessDomain（保留 bdKey），否则回 home
 const closeDrawerToHome = () => {
-  if (isBusinessSceneDrawerRoute(route.name) && route.params.bsKey) {
-    router.push({ name: "businessScene", params: { bsKey: route.params.bsKey } });
+  if (isBusinessDomainDrawerRoute(route.name) && route.params.bdKey) {
+    router.push({ name: "businessDomain", params: { bdKey: route.params.bdKey } });
   } else {
     router.push({ name: "home" });
   }
 };
 
-// 风险详情抽屉（支持首页与业务场景两类路由名）
+// 风险详情抽屉（支持首页与业务域两类路由名）
 const riskDrawer = useDrawerRoute({
-  routeNames: ["homeRiskDetail", "businessSceneRiskDetail"],
+  routeNames: ["homeRiskDetail", "businessDomainRiskDetail"],
   routeParam: "rKey",
   validateKey: (key) => hasOwn(BREAK.risks, key),
   onClose: closeDrawerToHome,
@@ -202,7 +202,7 @@ const riskDrawer = useDrawerRoute({
 
 // 规避手段抽屉
 const avoidanceDrawer = useDrawerRoute({
-  routeNames: ["homeAvoidanceDetail", "businessSceneAvoidanceDetail"],
+  routeNames: ["homeAvoidanceDetail", "businessDomainAvoidanceDetail"],
   routeParam: "aKey",
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
@@ -213,7 +213,7 @@ const avoidanceDrawer = useDrawerRoute({
 
 // 攻击工具抽屉
 const attackToolDrawer = useDrawerRoute({
-  routeNames: ["homeAttackToolDetail", "businessSceneAttackToolDetail"],
+  routeNames: ["homeAttackToolDetail", "businessDomainAttackToolDetail"],
   routeParam: "atKey",
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
@@ -224,7 +224,7 @@ const attackToolDrawer = useDrawerRoute({
 
 // 威胁行为者抽屉
 const threatActorDrawer = useDrawerRoute({
-  routeNames: ["homeThreatActorDetail", "businessSceneThreatActorDetail"],
+  routeNames: ["homeThreatActorDetail", "businessDomainThreatActorDetail"],
   routeParam: "taKey",
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
@@ -235,7 +235,7 @@ const threatActorDrawer = useDrawerRoute({
 
 // 行业术语抽屉
 const termDrawer = useDrawerRoute({
-  routeNames: ["homeTermDetail", "businessSceneTermDetail"],
+  routeNames: ["homeTermDetail", "businessDomainTermDetail"],
   routeParam: "tKey",
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
@@ -302,21 +302,21 @@ const caseDrawer = useDrawerRoute({
 
     <el-col :md="24" :sm="24" class="scene-controls">
       <div class="scene-selector-wrapper">
-        <span class="control-label">{{ $t("businessScene") }}:</span>
+        <span class="control-label">{{ $t("businessDomain") }}:</span>
         <el-select
-          id="business-scene-selector"
-          v-model="bsKeySelected"
-          name="business-scene-selector"
+          id="business-domain-selector"
+          v-model="bdKeySelected"
+          name="business-domain-selector"
           :size="componentSize"
-          :placeholder="$t('allScenes')"
+          :placeholder="$t('allDomains')"
           class="scene-selector"
-          :aria-label="$t('businessScene')"
+          :aria-label="$t('businessDomain')"
         >
           <el-option
-            v-for="(bsVal, bsKey) in BREAK.businessScenes"
-            :key="bsKey"
-            :label="bsKey + ': ' + getBusinessSceneTitle(String(bsKey))"
-            :value="bsKey"
+            v-for="(bdVal, bdKey) in BREAK.businessDomains"
+            :key="bdKey"
+            :label="bdKey + ': ' + getBusinessDomainTitle(String(bdKey))"
+            :value="bdKey"
           />
         </el-select>
       </div>
@@ -337,8 +337,8 @@ const caseDrawer = useDrawerRoute({
           }}</el-radio-button>
         </el-radio-group>
       </div>
-      <p v-if="getBusinessSceneDescription(bsKeySelected)" class="scene-description">
-        {{ getBusinessSceneDescription(bsKeySelected) }}
+      <p v-if="getBusinessDomainDescription(bdKeySelected)" class="scene-description">
+        {{ getBusinessDomainDescription(bdKeySelected) }}
       </p>
     </el-col>
   </el-row>
@@ -415,9 +415,9 @@ const caseDrawer = useDrawerRoute({
                       </template>
                       <router-link
                         class="link"
-                        :to="bsKeySelected === defaultBusinessSceneKey
+                        :to="bdKeySelected === defaultBusinessDomainKey
                           ? { name: 'homeRiskDetail', params: { rKey } }
-                          : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
+                          : { name: 'businessDomainRiskDetail', params: { bdKey: bdKeySelected, rKey } }">{{
 	                        getRiskTitle(rKey)
                       }}</router-link>
                     </el-tooltip>
@@ -442,9 +442,9 @@ const caseDrawer = useDrawerRoute({
                       </template>
                       <router-link
                         class="link"
-                        :to="bsKeySelected === defaultBusinessSceneKey
+                        :to="bdKeySelected === defaultBusinessDomainKey
                           ? { name: 'homeRiskDetail', params: { rKey: srKey } }
-                          : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey: srKey } }">{{
+                          : { name: 'businessDomainRiskDetail', params: { bdKey: bdKeySelected, rKey: srKey } }">{{
 	                        getRiskTitle(srKey)
                       }}</router-link>
                     </el-tooltip>
@@ -460,9 +460,9 @@ const caseDrawer = useDrawerRoute({
                 </template>
                 <router-link
                   class="link"
-                  :to="bsKeySelected === defaultBusinessSceneKey
+                  :to="bdKeySelected === defaultBusinessDomainKey
                     ? { name: 'homeRiskDetail', params: { rKey } }
-                    : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
+                    : { name: 'businessDomainRiskDetail', params: { bdKey: bdKeySelected, rKey } }">{{
 	                  getRiskTitle(rKey)
                 }}</router-link>
               </el-tooltip>

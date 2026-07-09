@@ -41,8 +41,8 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -54,7 +54,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "催收员在群里炫耀，他只用了一个电百接口，输入欠款人手机号就直接返回了真实姓名，虽然没其他字段，但结合快递地址交叉验证，足够把失联半年的老赖从新住处挖出来。"
   }
 }

@@ -43,10 +43,10 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -58,7 +58,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "二手车贩子为了精准获客，从暗网购入了一批车大档，里面全是刚过户的车主姓名和身份证号，他按名单打电话推销保险和贷款，转化率极高。"
   }
 }

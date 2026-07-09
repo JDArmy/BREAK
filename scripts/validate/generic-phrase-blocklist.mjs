@@ -40,7 +40,7 @@ const TYPE_FIELDS = {
   'threat-actors': ['description'],
   terms: ['definition', 'description', 'usageExample'],
   cases: ['summary'],
-  businessScenes: ['description'],
+  businessDomains: ['description'],
 };
 
 const TYPES = Object.keys(TYPE_FIELDS);

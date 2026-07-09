@@ -24,19 +24,19 @@ const ENTITY_DIRS = [
   "threat-actors",
   "terms",
   "cases",
-  "business-scenes",
+  "business-domains",
   "avoidance-categories",
 ];
 
 // ── 正则 ──
-// 标准格式：前缀 + 4位数字 + 可选 -NNN。BS 是 2 位，单列正则。
+// 标准格式：前缀 + 4位数字 + 可选 -NNN。BD 是 2 位，单列正则。
 // 前缀按长度降序排列，确保 AT 先于 A、TA 先于 T。
 const STANDARD_RE = /\b(?:AT|TA|R|A|T|C)\d{4}(?:-\d{3})?\b/g;
-const BS_STANDARD_RE = /\bBS\d{2}\b/g;
+const BD_STANDARD_RE = /\bBD\d{2}\b/g;
 // 笔误正则：前缀 + 3位数字 + -NNN（标准是 4位+NNN，3位+NNN 极可能是少写一位）。
-// BS 不纳入笔误正则（2 位是合法）。
+// BD 不纳入笔误正则（2 位是合法）。
 // 笔误正则1：前缀 + 3位数字 + -NNN（标准是 4位+NNN，3位+NNN 极可能是少写一位）。
-// BS 不纳入笔误正则（2 位是合法）。
+// BD 不纳入笔误正则（2 位是合法）。
 const TYPO_RE = /\b(?:AT|TA|R|A|T|C)\d{3}-\d{3}\b/g;
 // 笔误正则2：前缀 + 3位数字（无子编号）。比带子编号的更易误报（版本号、年份尾、缩写等），
 // 因此扫描时记录，但仅在「补零成4位后恰好是合法ID」时才作为强信号报出，其余降级为弱信号单独列出。
@@ -196,7 +196,7 @@ function main() {
           }
 
           // B类：标准格式但 ID 不存在；自引用（文本里引用自己 ID，几乎必是笔误）
-          // 先用标准正则（4位）扫，再用 BS 正则扫
+          // 先用标准正则（4位）扫，再用 BD 正则扫
           const stdRe = new RegExp(STANDARD_RE.source, "g");
           while ((m = stdRe.exec(value)) !== null) {
             const matched = m[0];
@@ -222,8 +222,8 @@ function main() {
               });
             }
           }
-          const bsRe = new RegExp(BS_STANDARD_RE.source, "g");
-          while ((m = bsRe.exec(value)) !== null) {
+          const bdRe = new RegExp(BD_STANDARD_RE.source, "g");
+          while ((m = bdRe.exec(value)) !== null) {
             const matched = m[0];
             if (!legal.has(matched)) {
               findings.dangling.push({

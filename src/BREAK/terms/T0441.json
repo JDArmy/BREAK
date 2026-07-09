@@ -35,10 +35,10 @@
       "TA0002",
       "TA0003"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS03",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD03",
+      "BD04"
     ],
     "references": [
       {
@@ -46,6 +46,6 @@
         "link": "https://owasp.org/www-community/attacks/Credential_stuffing"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

@@ -36,9 +36,9 @@
       "TA0009",
       "TA0019"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -46,7 +46,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "诈骗团伙在短视频平台玩种B收，先用一个讲情感故事的A号吸引离异女性关注，在评论区引导她们私信添加所谓心理咨询师B号的微信，最终在私域实施杀猪盘。"
   }
 }

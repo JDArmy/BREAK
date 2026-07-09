@@ -23,8 +23,8 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS19"
+    "relatedBusinessDomains": [
+      "BD19"
     ],
     "references": [
       {
@@ -36,6 +36,6 @@
         "link": "https://docs.ros.org/"
       }
     ],
-    "updated": "2026-07-04"
+    "updated": "2026-07-09"
   }
 }

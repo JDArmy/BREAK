@@ -13,8 +13,8 @@ const reportDir = path.join(projectRoot, 'research/search-reports');
 const reportJsonPath = path.join(reportDir, 'relationship-coverage.json');
 const reportMdPath = path.join(reportDir, 'relationship-coverage.md');
 
-function loadBusinessScenes() {
-  const dir = path.join(projectRoot, 'src/BREAK/business-scenes');
+function loadBusinessDomains() {
+  const dir = path.join(projectRoot, 'src/BREAK/business-domains');
   const records = [];
   for (const file of fs.readdirSync(dir).filter((item) => item.endsWith('.json')).sort()) {
     const data = readJson(path.join(dir, file));
@@ -69,7 +69,7 @@ function collectRelationAudit() {
   const attackTools = loadEntities('attack-tools');
   const threatActors = loadEntities('threat-actors');
   const cases = loadEntities('cases');
-  const businessScenes = loadBusinessScenes();
+  const businessDomains = loadBusinessDomains();
 
   const riskIds = ids(risks);
   const avoidanceIds = ids(avoidances);
@@ -110,7 +110,7 @@ function collectRelationAudit() {
     ]),
   );
   const sceneRiskRefs = unique(
-    businessScenes.flatMap(({ entity }) => [
+    businessDomains.flatMap(({ entity }) => [
       ...(entity.risks || []),
       ...Object.values(entity.riskScenes || {}).flatMap((scene) => scene.risks || []),
     ]),
@@ -241,7 +241,7 @@ function collectRelationAudit() {
   }
   for (const ref of sceneRiskRefs) {
     if (!riskIds.has(ref)) {
-      addIssue(issues, 'error', 'invalid_business_scene_risk_ref', `BusinessScene 引用了不存在的 Risk: ${ref}`, { ref });
+      addIssue(issues, 'error', 'invalid_business_scene_risk_ref', `BusinessDomain 引用了不存在的 Risk: ${ref}`, { ref });
     }
   }
 
@@ -300,7 +300,7 @@ function collectRelationAudit() {
       avoidances: avoidances.length,
       attackTools: attackTools.length,
       threatActors: threatActors.length,
-      businessScenes: businessScenes.length,
+      businessDomains: businessDomains.length,
       cases: cases.length,
     },
     summaries,

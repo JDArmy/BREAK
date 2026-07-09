@@ -61,7 +61,7 @@ const createMockViewModel = (options: MockViewModelOptions = {}) => {
       [RelationType.avoidance]: [],
     }),
     attackPathFilters: ref<Record<string, unknown>>({}),
-    selectedNodeBusinessSceneImpactSummary: ref(null),
+    selectedNodeBusinessDomainImpactSummary: ref(null),
     selectedNodeCoverageSummary: ref(null),
     selectedNetworkRelations: ref([]),
     relKey: ref("R0001"),

@@ -32,7 +32,7 @@
 | 命令 | 规则 | 模型 |
 | --- | --- | --- |
 | `review:risk-avoidance` | 规避手段是否真能缓解风险 + 漏加规避 | multi |
-| `review:risk-scene` | 风险是否应加其他业务场景 | multi |
+| `review:risk-scene` | 风险是否应加其他业务域 | multi |
 | `review:case-relation` | Case 与关联风险是否匹配 | multi |
 | `review:tool-risks` | directCause/indirectSupport 划分 + 漏加规避 | multi |
 | `review:actor-consistency` | 自建/使用工具划分 | multi |

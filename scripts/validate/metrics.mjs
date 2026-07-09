@@ -19,7 +19,7 @@ const issueLabels = {
   risk_low_avoidance_coverage: '风险规避覆盖偏弱',
   attack_tool_without_avoidances: '攻击工具缺少规避手段',
   threat_actor_without_tools: '威胁行为者缺少工具关系',
-  business_scene_without_risks: '业务场景未覆盖风险',
+  business_scene_without_risks: '业务域未覆盖风险',
 };
 
 function loadJsonRecords(relativeDir) {
@@ -91,7 +91,7 @@ function summarizeThreatActorToolCoverage(threatActors) {
   };
 }
 
-function collectBusinessSceneRisks(scene) {
+function collectBusinessDomainRisks(scene) {
   return [
     ...(Array.isArray(scene.risks) ? scene.risks : []),
     ...Object.values(scene.riskScenes || {}).flatMap((riskScene) =>
@@ -194,9 +194,9 @@ function collectWeakRelations({ risks, attackTools, threatActors }) {
   );
 }
 
-function collectSceneIssues(businessScenes) {
-  return businessScenes.flatMap(({ key, entity }) => {
-    const sceneRisks = collectBusinessSceneRisks(entity);
+function collectSceneIssues(businessDomains) {
+  return businessDomains.flatMap(({ key, entity }) => {
+    const sceneRisks = collectBusinessDomainRisks(entity);
     const uniqueRisks = unique(sceneRisks);
     const issues = [];
 
@@ -205,7 +205,7 @@ function collectSceneIssues(businessScenes) {
         type: 'business_scene_without_risks',
         key,
         title: entity.title || '',
-        message: `BusinessScene 未覆盖风险: ${key}`,
+        message: `BusinessDomain 未覆盖风险: ${key}`,
       });
     }
 
@@ -253,7 +253,7 @@ function buildReport() {
   const attackTools = loadEntities('attack-tools');
   const threatActors = loadEntities('threat-actors');
   const cases = loadEntities('cases');
-  const businessScenes = loadJsonRecords('src/BREAK/business-scenes');
+  const businessDomains = loadJsonRecords('src/BREAK/business-domains');
   const avoidanceCategories = loadJsonRecords('src/BREAK/avoidance-categories');
 
   const entities = {
@@ -262,10 +262,10 @@ function buildReport() {
     attackTools: summarizeEntity('attackTools', attackTools),
     threatActors: summarizeEntity('threatActors', threatActors),
     cases: summarizeEntity('cases', cases),
-    businessScenes: {
-      key: 'businessScenes',
-      total: businessScenes.length,
-      main: businessScenes.length,
+    businessDomains: {
+      key: 'businessDomains',
+      total: businessDomains.length,
+      main: businessDomains.length,
       sub: 0,
       withReferences: 0,
       references: 0,
@@ -311,9 +311,9 @@ function buildReport() {
     summarizeCoverage('ThreatActor.indirectSupportRisks', threatActors, 'indirectSupportRisks'),
   ];
 
-  const businessSceneCoverage = businessScenes
+  const businessDomainCoverage = businessDomains
     .map(({ key, entity }) => {
-      const sceneRisks = collectBusinessSceneRisks(entity);
+      const sceneRisks = collectBusinessDomainRisks(entity);
       const uniqueRisks = unique(sceneRisks);
       return {
         key,
@@ -329,7 +329,7 @@ function buildReport() {
 
   const highDegreeNodes = collectRelationDegrees({ risks, avoidances, attackTools, threatActors }).slice(0, 20);
   const weakRelations = collectWeakRelations({ risks, attackTools, threatActors });
-  const sceneIssues = collectSceneIssues(businessScenes);
+  const sceneIssues = collectSceneIssues(businessDomains);
   const maintenanceTasks = buildMaintenanceTasks({ relationCoverage, weakRelations, sceneIssues });
 
   return {
@@ -344,7 +344,7 @@ function buildReport() {
     riskComplexity,
     avoidanceCategories: avoidanceCategoriesSummary,
     relationCoverage,
-    businessSceneCoverage,
+    businessDomainCoverage,
     highDegreeNodes,
     weakRelations,
     sceneIssues,
@@ -437,30 +437,30 @@ function renderMarkdown(report) {
     lines.push(`| ${item.type} | ${item.key} ${item.title} | ${item.degree} | ${item.inbound} | ${item.outbound} |`);
   }
 
-  lines.push('', '## 业务场景覆盖 Top 10', '');
+  lines.push('', '## 业务域覆盖 Top 10', '');
   lines.push('| 场景 | 唯一风险 | 重复引用 | 维度 | 子场景 |');
   lines.push('| --- | ---: | ---: | ---: | ---: |');
-  for (const item of report.businessSceneCoverage.slice(0, 10)) {
+  for (const item of report.businessDomainCoverage.slice(0, 10)) {
     lines.push(
       `| ${item.key} ${item.title} | ${item.uniqueRiskCount} | ${item.duplicateRiskCount} | ${item.dimensionCount} | ${item.sceneCount} |`,
     );
   }
 
-  lines.push('', '## 业务场景异常', '');
+  lines.push('', '## 业务域异常', '');
   if (report.sceneIssues.length === 0) {
-    lines.push('未发现业务场景覆盖异常。');
+    lines.push('未发现业务域覆盖异常。');
   } else {
     for (const item of report.sceneIssues) {
       lines.push(`- [${item.type}] ${item.message}`);
     }
   }
 
-  lines.push('', '## 业务场景重复引用观察', '');
-  const duplicateScenes = report.businessSceneCoverage.filter((item) => item.duplicateRiskCount > 0);
+  lines.push('', '## 业务域重复引用观察', '');
+  const duplicateScenes = report.businessDomainCoverage.filter((item) => item.duplicateRiskCount > 0);
   if (duplicateScenes.length === 0) {
-    lines.push('未发现业务场景内重复引用。');
+    lines.push('未发现业务域内重复引用。');
   } else {
-    lines.push('重复引用用于提示同一风险在同一业务场景内跨子场景复用，不直接生成维护任务。');
+    lines.push('重复引用用于提示同一风险在同一业务域内跨子场景复用，不直接生成维护任务。');
     lines.push('');
     lines.push('| 场景 | 总引用 | 唯一风险 | 重复引用 | 重复率 |');
     lines.push('| --- | ---: | ---: | ---: | ---: |');

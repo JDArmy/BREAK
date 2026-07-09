@@ -13,15 +13,15 @@ slug: defender-guide
 
 防守方用 BREAK 的典型链路是反推：先定位自己业务所在的风险场景，圈出相关风险，再沿 Risk → Avoidance 找到对应规避手段，按 AC01–AC04 四环节排布纵深防御，最后用真实 Case 验证手段是否对路。
 
-## 第一步：从业务场景定位相关风险
+## 第一步：从业务域定位相关风险
 
-不要一上来就翻 600+ 条风险列表。先想清楚你的业务属于哪一类——金融、电商、交通出行、Web3、IoT、元宇宙等。BREAK 用三层结构组织场景：
+不要一上来就翻 600+ 条风险列表。先想清楚你的业务属于哪一类——金融、电商、交通出行、Web3、IoT、元宇宙等。BREAK 用三层结构组织业务域和风险场景：
 
-- **BusinessScene（业务场景）**：行业 / 业务域容器，如「金融」「电商」
+- **BusinessDomain（业务域）**：行业 / 业务域容器，如「金融」「电商」
 - **RiskDimension（风险维度）**：场景内的上层分组，如「交易维度」「身份维度」「对抗维度」
 - **RiskScene（风险场景）**：维度下的风险问题域，如「支付资金金融欺诈」「接口与自动化攻击」
 
-首页按 BusinessScene → RiskDimension → RiskScene 逐层展开，每个 RiskScene 覆盖一组 Risk。定位到你业务的 RiskScene 后，里面的 Risk 列表就是你的「待办清单」。
+首页按 BusinessDomain → RiskDimension → RiskScene 逐层展开，每个 RiskScene 覆盖一组 Risk。定位到你业务的 RiskScene 后，里面的 Risk 列表就是你的「待办清单」。
 
 > 注意：RiskScene 互斥归属到一个维度（不会跨维度复用），但同一条 Risk 可以出现在多个 RiskScene（跨场景归类，正常）。看到某条 Risk 出现在多个场景，说明它在多个业务环节都需关注。
 
@@ -82,7 +82,7 @@ Case 的 `category` 标明事件性质：
 
 防守方落地一个新业务的风险盘点时，建议按此清单走：
 
-1. [ ] 定位业务所属 BusinessScene，展开到具体 RiskScene
+1. [ ] 定位业务所属业务域（BusinessDomain），展开到具体 RiskScene
 2. [ ] 导出 RiskScene 覆盖的 Risk 列表，按 complexity 排序
 3. [ ] 对每条 basic 风险，确认 AC01 防止手段是否就位
 4. [ ] 对每条 intermediate/advanced 风险，确认 AC02/AC03 感知识别覆盖

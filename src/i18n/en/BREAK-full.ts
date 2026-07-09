@@ -14,7 +14,7 @@ import basicInfo from "./.generated/basic-info.json";
 const riskFiles = import.meta.glob("./.generated/risks/*.json", { eager: true });
 const avoidanceFiles = import.meta.glob("./.generated/avoidances/*.json", { eager: true });
 const avoidanceCategoryFiles = import.meta.glob("./.generated/avoidance-categories/*.json", { eager: true });
-const businessSceneFiles = import.meta.glob("./.generated/business-scenes/*.json", { eager: true });
+const businessDomainFiles = import.meta.glob("./.generated/business-domains/*.json", { eager: true });
 const attackToolFiles = import.meta.glob("./.generated/attack-tools/*.json", { eager: true });
 const threatActorFiles = import.meta.glob("./.generated/threat-actors/*.json", { eager: true });
 const termFiles = import.meta.glob("./.generated/terms/*.json", { eager: true });
@@ -24,7 +24,7 @@ const BREAK = {
   risks: loadJsonModules(riskFiles),
   avoidances: loadJsonModules(avoidanceFiles),
   avoidanceCategories: loadJsonModules(avoidanceCategoryFiles),
-  businessScenes: loadJsonModules(businessSceneFiles),
+  businessDomains: loadJsonModules(businessDomainFiles),
   attackTools: loadJsonModules(attackToolFiles),
   threatActors: loadJsonModules(threatActorFiles),
   terms: loadJsonModules(termFiles),

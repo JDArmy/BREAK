@@ -90,17 +90,17 @@ const router = createRouter({
         component: loadHomeView,
       })),
 
-    // 业务场景：bsKey 不变；/business-scene/:bsKey/{entity}/{id}（从 entityRegistry 派生）
+    // 业务域：bdKey 不变；/business-domain/:bdKey/{entity}/{id}（从 entityRegistry 派生）
     {
-      path: "/business-scene/:bsKey",
-      name: "businessScene",
+      path: "/business-domain/:bdKey",
+      name: "businessDomain",
       component: loadHomeView,
     },
     ...entityRegistry
-      .filter((e) => e.businessSceneDetailRouteName)
+      .filter((e) => e.businessDomainDetailRouteName)
       .map((e) => ({
-        path: `/business-scene/:bsKey/${e.relationKey}/:${e.paramKey}`,
-        name: e.businessSceneDetailRouteName,
+        path: `/business-domain/:bdKey/${e.relationKey}/:${e.paramKey}`,
+        name: e.businessDomainDetailRouteName,
         meta: { needsBreakData: true },
         component: loadHomeView,
       })),
@@ -187,9 +187,9 @@ const router = createRouter({
     // 首页路由之间切换时保持滚动位置（路由名从 entityRegistry 派生，与 SearchDialog 的 homePageRoutes 一致）
     const homeRouteNames = new Set<string>([
       "home",
-      "businessScene",
+      "businessDomain",
       ...entityRegistry.map((e) => e.homeDetailRouteName).filter(Boolean),
-      ...entityRegistry.map((e) => e.businessSceneDetailRouteName).filter(Boolean),
+      ...entityRegistry.map((e) => e.businessDomainDetailRouteName).filter(Boolean),
     ]);
     if (homeRouteNames.has(to.name as string) && homeRouteNames.has(from.name as string)) {
       return false;
@@ -252,8 +252,8 @@ router.afterEach((to) => {
     title = `${PAGE_TITLES[to.meta.knowledgeEntity] || to.meta.knowledgeEntity} | ${SITE_TITLE}`;
   } else if (to.meta.relationPerspective) {
     title = `${PERSPECTIVE_TITLES[to.meta.relationPerspective] || "Relations"} | ${SITE_TITLE}`;
-  } else if (to.name === "businessScene") {
-    title = `Business Scenes | ${SITE_TITLE}`;
+  } else if (to.name === "businessDomain") {
+    title = `Business Domains | ${SITE_TITLE}`;
   } else if (to.name === "changelog") {
     title = `Changelog | ${SITE_TITLE}`;
   } else if (to.name === "docs" || to.name === "docs-detail") {

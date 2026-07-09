@@ -33,8 +33,8 @@
       "TA0001",
       "TA0001-001"
     ],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -42,7 +42,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "羊毛党在参与云闪付的立减活动时，发现自己的账号被强制提示\"活动太火爆了\"，意识到该账号已被标记为\"云黑\"，无法再参与任何营销活动。"
   }
 }

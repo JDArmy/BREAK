@@ -35,8 +35,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -48,7 +48,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "地下钱庄在清洗诈骗资金时，发现某支付账户的当日限鹅已触发，便指示“车手”更换多个小额二维码分流收款，以此规避风控拦截。"
   }
 }

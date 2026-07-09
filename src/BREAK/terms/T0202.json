@@ -39,9 +39,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD11"
     ],
     "references": [
       {
@@ -53,7 +53,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "诈骗团伙先低价买了一批车小档，只有车牌和车型信息，虽然不能直接联系车主，但用来伪造违章停车罚单贴在挡风玻璃上骗扫码付款，成本极低。"
   }
 }

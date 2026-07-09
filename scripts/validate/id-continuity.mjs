@@ -15,7 +15,7 @@ const TYPE_CONFIG = [
   { type: 'threat-actors', prefix: 'TA', digits: 4 },
   { type: 'terms', prefix: 'T', digits: 4 },
   { type: 'cases', prefix: 'C', digits: 4 },
-  { type: 'business-scenes', prefix: 'BS', digits: 2 },
+  { type: 'business-domains', prefix: 'BD', digits: 2 },
 ];
 
 const issues = [];

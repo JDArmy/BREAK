@@ -25,7 +25,7 @@ const {
   attackPathFilterOptions,
   attackPathFilters,
   hasActiveAttackPathFilters,
-  selectedNodeBusinessSceneImpactSummary,
+  selectedNodeBusinessDomainImpactSummary,
   selectedNodeCoverageSummary,
   selectedNetworkRelations,
   relKey,
@@ -111,8 +111,8 @@ const updateAttackPathFilters = (value: AttackPathFilters) => {
     :attack-path-filter-options="attackPathFilterOptions"
     :attack-path-filters="attackPathFilters"
     :has-active-attack-path-filters="hasActiveAttackPathFilters"
-    :selected-node-business-scene-impact-summary="
-      selectedNodeBusinessSceneImpactSummary
+    :selected-node-business-domain-impact-summary="
+      selectedNodeBusinessDomainImpactSummary
     "
     :selected-node-coverage-summary="selectedNodeCoverageSummary"
     :show-root-relation-block="showRootRelationBlock"

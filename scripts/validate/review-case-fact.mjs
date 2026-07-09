@@ -20,6 +20,8 @@ const REPORT_PATH = path.join(OUT_DIR, 'review-report.json');
 const PROGRESS_PATH = path.join(OUT_DIR, 'review-progress.json');
 const MD_PATH = path.join(OUT_DIR, 'review-report.md');
 const PENDING_PATH = path.join(OUT_DIR, 'pending-fix.json');
+const REVIEW_PROMPT_VERSION = 'case-fact-v2-snippet-4000';
+const FACT_SNIPPET_CHARS = 4000;
 ensureDir(SCRAPED_DIR);
 
 const SCRAPINGDOG_KEY = process.env.SCRAPINGDOG_API_KEY;
@@ -107,7 +109,7 @@ function buildPrompt(item, scrapedContents) {
 5. verdict：pass(accurate)/review(partial)/fail(contradicted/fabricated)。
 6. reason: 一句话。suggestions: 数组。`;
   const factsText = scrapedContents
-    .map((s, i) => `【源${i}】${s.ok ? s.content.slice(0, 1500) : `(抓取失败: ${s.reason})`}`)
+    .map((s, i) => `【源${i}】${s.ok ? s.content.slice(0, FACT_SNIPPET_CHARS) : `(抓取失败: ${s.reason})`}`)
     .join('\n\n');
   const user = `【案例】${item.key} ${entity.title}
 【category】${entity.category}
@@ -217,7 +219,7 @@ let idx = 0;
 async function worker() {
   while (idx < items.length) {
     const item = items[idx++];
-    const fp = fingerprintOf(item.entity, ['summary', 'references', 'incidentTime']);
+    const fp = `${REVIEW_PROMPT_VERSION}:${fingerprintOf(item.entity, ['summary', 'references', 'incidentTime'])}`;
     if (progress.done[item.key] === fp) {
       continue;
     }

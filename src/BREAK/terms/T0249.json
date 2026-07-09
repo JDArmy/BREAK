@@ -37,10 +37,10 @@
       "TA0001",
       "TA0006"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS06"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD05",
+      "BD06"
     ],
     "references": [
       {
@@ -48,7 +48,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "有人专门写脚本监控直播间抽奖，利用数千个小号薅礼物，把抽中的虚拟礼物通过公会转赠给大号集中变现，一天套利数万元，导致活动预算瞬间耗尽。"
   }
 }

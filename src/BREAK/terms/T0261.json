@@ -39,9 +39,9 @@
       "TA0013",
       "TA0009"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -49,7 +49,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "直播间里主播反复强调不要拍链接，而是引导用户加粉丝团后私信发暗号，所有成交都沉淀在后端的微信私域里，以此完全绕开平台的交易抽佣和风控监管。"
   }
 }

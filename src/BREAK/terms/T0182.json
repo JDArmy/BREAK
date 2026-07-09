@@ -39,8 +39,8 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -52,7 +52,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "债主花高价买了全头全户的查档服务，拿到的文件里不光有欠款人的身份证正反面，连其配偶、子女和父母的证件照及户籍信息都一应俱全，他准备据此挨个联系施压。"
   }
 }

@@ -35,13 +35,13 @@
     "relatedThreatActors": [
       "TA0011"
     ],
-    "relatedBusinessScenes": [],
+    "relatedBusinessDomains": [],
     "references": [
       {
         "title": "Proxy, Technique T1090 - MITRE ATT&CK",
         "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-09"
   }
 }

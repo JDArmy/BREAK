@@ -289,10 +289,10 @@ async function selectFirstVisibleOption(page, selectSelector, label) {
   await expectVisible(page, '.risk-card', `${label} 后风险矩阵未显示`);
 }
 
-async function assertBusinessSceneAndSubRiskSwitch(page, baseUrl) {
+async function assertBusinessDomainAndSubRiskSwitch(page, baseUrl) {
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle', timeout: 30000 });
-  await selectFirstVisibleOption(page, '#business-scene-selector', '切换业务场景');
-  assert(page.url().includes('/business-scene/'), `切换业务场景后 URL 未同步：${page.url()}`);
+  await selectFirstVisibleOption(page, '#business-domain-selector', '切换业务域');
+  assert(page.url().includes('/business-domain/'), `切换业务域后 URL 未同步：${page.url()}`);
 
   await expectVisible(page, '.subrisk-toggle', '子风险切换控件缺失');
   const before = await page.locator('.sub-risk:visible').count();
@@ -526,8 +526,8 @@ try {
       }
     });
 
-    await runScenario(browser, baseUrl, viewport, 'business-scene-and-subrisks', async (page) => {
-      await assertBusinessSceneAndSubRiskSwitch(page, baseUrl);
+    await runScenario(browser, baseUrl, viewport, 'business-domain-and-subrisks', async (page) => {
+      await assertBusinessDomainAndSubRiskSwitch(page, baseUrl);
     });
 
     await runScenario(browser, baseUrl, viewport, 'knowledge-navigation-and-details', async (page) => {

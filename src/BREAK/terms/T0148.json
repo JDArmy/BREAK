@@ -33,9 +33,9 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD04",
+      "BD01"
     ],
     "references": [
       {
@@ -43,6 +43,6 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

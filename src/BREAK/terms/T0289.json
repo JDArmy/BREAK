@@ -32,9 +32,9 @@
       "TA0014",
       "TA0015"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD04"
     ],
     "references": [
       {
@@ -46,6 +46,6 @@
         "link": "https://www.spp.gov.cn/xwfbh/dxal/202506/t20250610_697881.shtml"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   }
 }

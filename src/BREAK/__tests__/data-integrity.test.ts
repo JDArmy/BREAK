@@ -37,7 +37,7 @@ const avoidances = loadAllJson(join(ROOT, "avoidances"));
 const attackTools = loadAllJson(join(ROOT, "attack-tools"));
 const threatActors = loadAllJson(join(ROOT, "threat-actors"));
 const terms = loadAllJson(join(ROOT, "terms"));
-const businessScenes = loadAllJson(join(ROOT, "business-scenes"));
+const businessDomains = loadAllJson(join(ROOT, "business-domains"));
 const cases = loadAllJson(join(ROOT, "cases"));
 
 const enRisks = loadAllJson(join(I18N_EN_ROOT, "risks"));
@@ -45,14 +45,14 @@ const enAvoidances = loadAllJson(join(I18N_EN_ROOT, "avoidances"));
 const enAttackTools = loadAllJson(join(I18N_EN_ROOT, "attack-tools"));
 const enThreatActors = loadAllJson(join(I18N_EN_ROOT, "threat-actors"));
 const enTerms = loadAllJson(join(I18N_EN_ROOT, "terms"));
-const enBusinessScenes = loadAllJson(join(I18N_EN_ROOT, "business-scenes"));
+const enBusinessDomains = loadAllJson(join(I18N_EN_ROOT, "business-domains"));
 
 const riskIds = Object.keys(risks);
 const avoidanceIds = Object.keys(avoidances);
 const attackToolIds = Object.keys(attackTools);
 const threatActorIds = Object.keys(threatActors);
 const termIds = Object.keys(terms);
-const businessSceneIds = Object.keys(businessScenes);
+const businessDomainIds = Object.keys(businessDomains);
 const caseIds = Object.keys(cases);
 
 const countSubEntities = (ids: string[]) => ids.filter((id) => id.includes("-")).length;
@@ -414,11 +414,11 @@ describe("数据完整性", () => {
       expect(invalid, `无效引用: ${invalid.slice(0, 10).join(", ")}`).toEqual([]);
     });
 
-    it("所有 Term.relatedBusinessScenes 引用的 ID 在 BusinessScene 中存在", () => {
+    it("所有 Term.relatedBusinessDomains 引用的 ID 在 BusinessDomain 中存在", () => {
       const invalid: string[] = [];
       for (const [id, entity] of Object.entries(terms)) {
-        for (const ref of (entity.relatedBusinessScenes as string[] | undefined) || []) {
-          if (!businessSceneIds.includes(ref)) invalid.push(`${id}.relatedBusinessScenes: ${ref}`);
+        for (const ref of (entity.relatedBusinessDomains as string[] | undefined) || []) {
+          if (!businessDomainIds.includes(ref)) invalid.push(`${id}.relatedBusinessDomains: ${ref}`);
         }
       }
       expect(invalid, `无效引用: ${invalid.slice(0, 10).join(", ")}`).toEqual([]);
@@ -446,8 +446,8 @@ describe("数据完整性", () => {
       expect(Object.keys(enTerms).length).toBe(termIds.length);
     });
 
-    it("中英文 BusinessScene 条目数一致", () => {
-      expect(Object.keys(enBusinessScenes).length).toBe(Object.keys(businessScenes).length);
+    it("中英文 BusinessDomain 条目数一致", () => {
+      expect(Object.keys(enBusinessDomains).length).toBe(Object.keys(businessDomains).length);
     });
 
     it("中文每个实体 key 在英文翻译中均存在", () => {

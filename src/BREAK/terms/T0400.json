@@ -28,9 +28,9 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -42,7 +42,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-09"
   },
   "T0400-001": {
     "title": "高炮 / gp",
@@ -71,9 +71,9 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -85,7 +85,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0400-002": {
     "title": "黑户贷",
@@ -117,9 +117,9 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -131,7 +131,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0400-003": {
     "title": "账号 / id贷",
@@ -163,10 +163,10 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD04",
+      "BD11"
     ],
     "references": [
       {
@@ -178,7 +178,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0400-004": {
     "title": "租机贷",
@@ -212,9 +212,9 @@
       "TA0009",
       "TA0017"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -226,7 +226,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0400-005": {
     "title": "55高炮",
@@ -261,9 +261,9 @@
       "TA0029",
       "TA0017"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -275,7 +275,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "借款人只借了3000元周转三天，到账却被直接砍去1500元利息，这种55高炮一旦逾期，催收便会按小时计息并爆通讯录施压。"
   },
   "T0400-006": {
@@ -310,9 +310,9 @@
       "TA0015",
       "TA0017"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -324,7 +324,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "老人被诱导签下一份看似普通的借款协议，数月后陌生人上门要求腾房，他这才发现那是份搂贷合同，借款金额已被篡改成与房产等值的数目。"
   }
 }

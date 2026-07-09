@@ -83,7 +83,7 @@ export const ENTITY_TYPE_MAP = {
   threatActors: 'threat-actor',
   terms: 'x-break-term',
   cases: 'report',
-  businessScenes: 'x-break-business-scene',
+  businessDomains: 'x-break-business-domain',
 };
 
 // ────────────────────────────────────────
@@ -107,7 +107,7 @@ export const CROSS_TYPE_RELATIONS = {
   'term.relatedAvoidances': 'related-to',
   'term.relatedAttackTools': 'related-to',
   'term.relatedThreatActors': 'related-to',
-  'term.relatedBusinessScenes': 'related-to',
+  'term.relatedBusinessDomains': 'related-to',
 };
 
 /** 同类型内部关系 → STIX relationship_type（BREAK relation 枚举值 → STIX 值） */
@@ -151,7 +151,7 @@ export const RELATION_TARGET_TYPE = {
   'term.relatedAvoidances': 'avoidances',
   'term.relatedAttackTools': 'attackTools',
   'term.relatedThreatActors': 'threatActors',
-  'term.relatedBusinessScenes': 'businessScenes',
+  'term.relatedBusinessDomains': 'businessDomains',
 };
 
 // ────────────────────────────────────────
@@ -205,10 +205,10 @@ const EXTENSION_CONFIGS = [
     extensionTypes: ['property-extension'],
   },
   {
-    key: 'x-break-business-scene-ext',
-    name: 'BREAK Business Scene Extension',
-    description: 'BREAK 框架商业场景的自定义 SDO 扩展',
-    schema: `${EXTENSION_BASE_URL}/x-break-business-scene-ext/v1/schema.json`,
+    key: 'x-break-business-domain-ext',
+    name: 'BREAK Business Domain Extension',
+    description: 'BREAK 框架业务域的自定义 SDO 扩展',
+    schema: `${EXTENSION_BASE_URL}/x-break-business-domain-ext/v1/schema.json`,
     extensionTypes: ['new-sdo'],
   },
 ];
@@ -268,7 +268,7 @@ export function getExtensionId(breakEntityType) {
     threatActors: 'x-break-threat-actor-ext',
     terms: 'x-break-term-ext',
     cases: 'x-break-case-ext',
-    businessScenes: 'x-break-business-scene-ext',
+    businessDomains: 'x-break-business-domain-ext',
   };
   return makeStixId('extension-definition', keyMap[breakEntityType]);
 }

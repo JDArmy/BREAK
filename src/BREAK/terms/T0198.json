@@ -43,9 +43,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -57,7 +57,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "怀疑另一半出轨，有人通过黑产渠道下单查同住，输入身份证号后，拿到了其近半年所有酒店开房记录里出现的同住人信息，直接导致家庭破裂。"
   }
 }

@@ -39,9 +39,9 @@
       "TA0013",
       "TA0009"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -49,7 +49,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "某诈骗团伙在短视频平台大量投放“免费领资料”广告，通过表单收集手机号完成进线，随后将这些号码分发给下游用于精准诈骗。"
   }
 }

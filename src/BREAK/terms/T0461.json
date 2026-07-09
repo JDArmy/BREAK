@@ -28,7 +28,7 @@
       "AT0029"
     ],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessDomains": [],
     "references": [
       {
         "title": "黑产揭秘:“打码平台”那点事儿",
@@ -43,7 +43,7 @@
         "link": "https://m.163.com/dy/article/FNPCCVHR05129QAF.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "usageExample": "某抢票团伙接入打码平台API自动识别验证码，使脚本在0.3秒内完成人机验证，在官方开售后30秒内抢光了5000张演唱会门票。"
   }
 }

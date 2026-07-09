@@ -11,14 +11,14 @@ import {
 
 const {
   createRelationAttackPathData,
-  createRelationBusinessSceneImpact,
+  createRelationBusinessDomainImpact,
   createRelationCoverageAnalysis,
   createRelationExplanationHelpers,
   createRelationGraphBuilder,
   createRelationGraphInsights,
 } = vi.hoisted(() => ({
   createRelationAttackPathData: vi.fn(),
-  createRelationBusinessSceneImpact: vi.fn(),
+  createRelationBusinessDomainImpact: vi.fn(),
   createRelationCoverageAnalysis: vi.fn(),
   createRelationExplanationHelpers: vi.fn(),
   createRelationGraphBuilder: vi.fn(),
@@ -29,8 +29,8 @@ vi.mock("@/views/relation/relationAttackPath", () => ({
   createRelationAttackPathData,
 }));
 
-vi.mock("@/views/relation/relationBusinessSceneImpact", () => ({
-  createRelationBusinessSceneImpact,
+vi.mock("@/views/relation/relationBusinessDomainImpact", () => ({
+  createRelationBusinessDomainImpact,
 }));
 
 vi.mock("@/views/relation/relationCoverageAnalysis", () => ({
@@ -159,8 +159,8 @@ describe("useRelationGraphData", () => {
       selectedNodeCoverageSummary: computed(() => null),
       selectedNodeSpecialInsightSummary: computed(() => null),
     });
-    createRelationBusinessSceneImpact.mockReturnValue({
-      selectedNodeBusinessSceneImpactSummary: computed(() => null),
+    createRelationBusinessDomainImpact.mockReturnValue({
+      selectedNodeBusinessDomainImpactSummary: computed(() => null),
     });
   });
 

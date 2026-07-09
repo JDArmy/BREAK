@@ -232,14 +232,14 @@ function convertCase(breakId, entity, identityRef, created, allObjects) {
 }
 
 /**
- * 将 BusinessScene 转换为 x-break-business-scene SDO
+ * 将 BusinessDomain 转换为 x-break-business-domain SDO
  */
-function convertBusinessScene(breakId, entity, identityRef, created) {
+function convertBusinessDomain(breakId, entity, identityRef, created) {
   const modified = toStixTimestamp(entity.updated, created);
   return {
-    type: 'x-break-business-scene',
+    type: 'x-break-business-domain',
     spec_version: '2.1',
-    id: makeStixId('x-break-business-scene', breakId),
+    id: makeStixId('x-break-business-domain', breakId),
     created,
     modified,
     created_by_ref: identityRef,
@@ -247,7 +247,7 @@ function convertBusinessScene(breakId, entity, identityRef, created) {
     description: entity.description || '',
     external_references: [],
     extensions: {
-      [getExtensionId('businessScenes')]: {
+      [getExtensionId('businessDomains')]: {
         extension_type: 'new-sdo',
       },
     },
@@ -335,7 +335,7 @@ function extractCrossTypeRelations(data, identityRef, created) {
   extractArrayRelations(data.terms, 'terms', 'relatedAvoidances', 'term.relatedAvoidances', identityRef, created, relationships, seen);
   extractArrayRelations(data.terms, 'terms', 'relatedAttackTools', 'term.relatedAttackTools', identityRef, created, relationships, seen);
   extractArrayRelations(data.terms, 'terms', 'relatedThreatActors', 'term.relatedThreatActors', identityRef, created, relationships, seen);
-  extractArrayRelations(data.terms, 'terms', 'relatedBusinessScenes', 'term.relatedBusinessScenes', identityRef, created, relationships, seen);
+  extractArrayRelations(data.terms, 'terms', 'relatedBusinessDomains', 'term.relatedBusinessDomains', identityRef, created, relationships, seen);
 
   return relationships;
 }
@@ -438,19 +438,19 @@ function extractObjectRelations(entities, entityType, fieldName, relationPrefix,
 }
 
 // ────────────────────────────────────────
-// 4. BusinessScene 内部关系
+// 4. BusinessDomain 内部关系
 // ────────────────────────────────────────
 
 /**
- * 从 BusinessScene 的 riskScenes[].risks 提取 场景 → Risk 关系
+ * 从 BusinessDomain 的 riskScenes[].risks 提取 场景 → Risk 关系
  */
-function extractBusinessSceneRelations(businessScenes, identityRef, created) {
+function extractBusinessDomainRelations(businessDomains, identityRef, created) {
   const relationships = [];
   const seen = new Set();
 
-  for (const [bsId, bs] of Object.entries(businessScenes || {})) {
-    const sourceRef = makeStixId('x-break-business-scene', bsId);
-    for (const rs of Object.values(bs.riskScenes || {})) {
+  for (const [bdId, domain] of Object.entries(businessDomains || {})) {
+    const sourceRef = makeStixId('x-break-business-domain', bdId);
+    for (const rs of Object.values(domain.riskScenes || {})) {
       for (const riskId of rs.risks || []) {
         const targetRef = makeStixId('x-break-risk', riskId);
         const relType = 'related-to';
@@ -518,17 +518,17 @@ function convertToStixBundle(breakBundle) {
   for (const [breakId, entity] of Object.entries(data.cases || {})) {
     sdos.push(convertCase(breakId, entity, identityRef, created));
   }
-  for (const [breakId, entity] of Object.entries(data.businessScenes || {})) {
-    sdos.push(convertBusinessScene(breakId, entity, identityRef, created));
+  for (const [breakId, entity] of Object.entries(data.businessDomains || {})) {
+    sdos.push(convertBusinessDomain(breakId, entity, identityRef, created));
   }
 
   // 4. 提取全部关系
   const crossRels = extractCrossTypeRelations(data, identityRef, created);
   const intraRels = extractIntraTypeRelations(data, identityRef, created);
-  const bsRels = extractBusinessSceneRelations(data.businessScenes, identityRef, created);
+  const bdRels = extractBusinessDomainRelations(data.businessDomains, identityRef, created);
 
   // 5. 组装 Bundle
-  const allObjects = [identity, ...extensions, ...sdos, ...crossRels, ...intraRels, ...bsRels];
+  const allObjects = [identity, ...extensions, ...sdos, ...crossRels, ...intraRels, ...bdRels];
   return createStixBundle(allObjects, locale);
 }
 

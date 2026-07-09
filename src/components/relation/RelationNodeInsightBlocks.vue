@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import RelationNodeAnalysisBlock from "@/components/relation/RelationNodeAnalysisBlock.vue";
 import RelationNodeAttackPathBlock from "@/components/relation/RelationNodeAttackPathBlock.vue";
-import RelationNodeBusinessSceneImpactBlock from "@/components/relation/RelationNodeBusinessSceneImpactBlock.vue";
+import RelationNodeBusinessDomainImpactBlock from "@/components/relation/RelationNodeBusinessDomainImpactBlock.vue";
 import RelationNodeCoverageBlock from "@/components/relation/RelationNodeCoverageBlock.vue";
 import RelationNodeRelatedEntityBlock from "@/components/relation/RelationNodeRelatedEntityBlock.vue";
 import RelationNodeRootRelationBlock from "@/components/relation/RelationNodeRootRelationBlock.vue";
 import type {
   AttackPathExplanation,
   NodeAnalysisSummary,
-  NodeBusinessSceneImpactSummary,
+  NodeBusinessDomainImpactSummary,
   NodeCoverageSummary,
   NodeRelatedEntitySummary,
   RootPathSummary,
@@ -34,7 +34,7 @@ defineProps<{
   attackPathFilterOptions: Record<AttackPathFilterType, AttackPathFilterOption[]>;
   attackPathFilters: AttackPathFilters;
   hasActiveAttackPathFilters: boolean;
-  selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
+  selectedNodeBusinessDomainImpactSummary: NodeBusinessDomainImpactSummary | null;
   selectedNodeCoverageSummary: NodeCoverageSummary | null;
   showRootRelationBlock?: boolean;
   showCoverageBlock?: boolean;
@@ -77,8 +77,8 @@ const emit = defineEmits<{
     @open-node-as-root="emit('open-node-as-root', $event)"
     @open-node-detail="emit('open-node-detail', $event)"
   />
-  <RelationNodeBusinessSceneImpactBlock
-    :summary="selectedNodeBusinessSceneImpactSummary"
+  <RelationNodeBusinessDomainImpactBlock
+    :summary="selectedNodeBusinessDomainImpactSummary"
   />
   <RelationNodeCoverageBlock
     v-if="showCoverageBlock !== false"

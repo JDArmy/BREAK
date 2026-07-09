@@ -34,7 +34,7 @@
       "AT0022"
     ],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessDomains": [],
     "references": [
       {
         "title": "Gartner: Bot Management Tools",
@@ -45,6 +45,6 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-09"
   }
 }

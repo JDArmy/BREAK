@@ -37,9 +37,9 @@
       "TA0014",
       "TA0015"
     ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD04",
+      "BD01"
     ],
     "references": [
       {
@@ -47,7 +47,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0131-001": {
     "title": "马料",
@@ -93,9 +93,9 @@
       "TA0042",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD04",
+      "BD01"
     ],
     "references": [
       {
@@ -103,7 +103,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0131-002": {
     "title": "马绳",
@@ -151,9 +151,9 @@
       "TA0042",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD04",
+      "BD01"
     ],
     "references": [
       {
@@ -161,7 +161,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0131-003": {
     "title": "训马",
@@ -201,9 +201,9 @@
       "TA0014",
       "TA0015"
     ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD04",
+      "BD01"
     ],
     "references": [
       {
@@ -211,6 +211,6 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

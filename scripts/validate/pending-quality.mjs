@@ -50,7 +50,7 @@ const pendingSources = [
     priority: 'P2',
     file: 'research/search-reports/term-completeness-review/pending-fix.json',
     category: 'term_quality',
-    description: '术语关联风险、规避手段、行为者或业务场景覆盖不足。',
+    description: '术语关联风险、规避手段、行为者或业务域覆盖不足。',
   },
   {
     name: '应抽取实体',

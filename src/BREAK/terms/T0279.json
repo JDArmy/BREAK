@@ -22,9 +22,9 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -32,7 +32,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "某美妆品牌在新品上市期，选择与头部主播合作进行水上推广，通过官方平台投放合规的开屏广告和直播间挂链，实现品效合一。"
   }
 }

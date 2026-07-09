@@ -1,0 +1,64 @@
+{
+  "BD06": {
+    "title": "Gaming",
+    "riskDimensions": {
+      "RD01": {
+        "title": "Transaction and Entitlement Risk"
+      },
+      "RD02": {
+        "title": "Content and Ecosystem Governance Risk"
+      },
+      "RD03": {
+        "title": "Account and Identity Risk"
+      },
+      "RD04": {
+        "title": "Platform, Interface, and Automation Abuse Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
+      }
+    },
+    "riskScenes": {
+      "RS01": {
+        "title": "Marketing and Growth Fraud"
+      },
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS06": {
+        "title": "Internal Security"
+      },
+      "RS28": {
+        "title": "Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS08": {
+        "title": "Payment, Funding, and Financial Fraud"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS10": {
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
+      },
+      "RS12": {
+        "title": "Game and Virtual Entitlement Risk"
+      },
+      "RS05": {
+        "title": "Content and Community Governance"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS25": {
+        "title": "After-Sales, Refund, and Claims Abuse"
+      }
+    },
+    "description": "Gaming scenarios covering game accounts, virtual items, in-game transactions, and competitive rankings, facing cheating, boosting services, and virtual asset theft risks."
+  }
+}

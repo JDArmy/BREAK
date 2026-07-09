@@ -41,8 +41,8 @@
       "TA0008",
       "TA0042-001"
     ],
-    "relatedBusinessScenes": [
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD04"
     ],
     "references": [
       {
@@ -50,7 +50,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "黑产团伙精心仿冒了某银行官网，通过群发“积分兑换现金”的短信进行钓鱼，受害者在钓鱼页面输入银行卡号和密码后，账户资金瞬间被转走。"
   }
 }

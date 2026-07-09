@@ -17,7 +17,7 @@ const SCHEMA_KEY_BY_CATEGORY = {
   AttackTools: "attackTools",
   ThreatActors: "threatActors",
   Terms: "terms",
-  BusinessScenes: "businessScenes",
+  BusinessDomains: "businessDomains",
   Cases: "cases",
 };
 
@@ -77,11 +77,11 @@ const categories = [
     ],
   },
   {
-    name: "BusinessScenes",
-    zhDir: "src/BREAK/business-scenes",
-    enDir: "src/i18n/en/BREAK/business-scenes",
+    name: "BusinessDomains",
+    zhDir: "src/BREAK/business-domains",
+    enDir: "src/i18n/en/BREAK/business-domains",
     fields: ["title", "description", "riskDimensions", "riskScenes"],
-    businessScene: true,
+    businessDomain: true,
   },
   {
     name: "Cases",
@@ -126,7 +126,7 @@ function checkReferenceTranslations(issues, category, key, entity, zhEntity) {
   });
 }
 
-function checkBusinessSceneTranslations(issues, category, key, entity) {
+function checkBusinessDomainTranslations(issues, category, key, entity) {
   for (const field of ["riskDimensions", "riskScenes"]) {
     if (!Object.prototype.hasOwnProperty.call(entity, field)) continue;
     const records = entity[field];
@@ -166,8 +166,8 @@ function checkTranslationFields(category, enRecords, zhRecords) {
     const zhRecord = zhRecords.get(key);
     const zhEntity = zhRecord?.entity;
     checkReferenceTranslations(issues, category, key, entity, zhEntity);
-    if (category.businessScene) {
-      checkBusinessSceneTranslations(issues, category, key, entity);
+    if (category.businessDomain) {
+      checkBusinessDomainTranslations(issues, category, key, entity);
     }
   }
 

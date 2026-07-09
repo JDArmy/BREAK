@@ -10,7 +10,7 @@ const entityDirs = {
   attackTools: "attack-tools",
   threatActors: "threat-actors",
   terms: "terms",
-  businessScenes: "business-scenes",
+  businessDomains: "business-domains",
   cases: "cases",
 };
 
@@ -49,7 +49,7 @@ function checkRefs(issues, record, field, validIds, label) {
   }
 }
 
-function collectBusinessSceneIdsAndRisks(records) {
+function collectBusinessDomainIdsAndRisks(records) {
   const sceneIds = new Set();
   const riskRefs = new Set();
 
@@ -69,14 +69,14 @@ const avoidances = loadEntities(entityDirs.avoidances);
 const attackTools = loadEntities(entityDirs.attackTools);
 const threatActors = loadEntities(entityDirs.threatActors);
 const terms = loadEntities(entityDirs.terms);
-const businessScenes = loadEntities(entityDirs.businessScenes);
+const businessDomains = loadEntities(entityDirs.businessDomains);
 const cases = loadEntities(entityDirs.cases);
 
 const riskIds = ids(risks);
 const avoidanceIds = ids(avoidances);
 const attackToolIds = ids(attackTools);
 const threatActorIds = ids(threatActors);
-const { sceneIds, riskRefs: businessSceneRiskRefs } = collectBusinessSceneIdsAndRisks(businessScenes);
+const { sceneIds, riskRefs: businessDomainRiskRefs } = collectBusinessDomainIdsAndRisks(businessDomains);
 
 const avoidanceCategories = readJson(join(root, "avoidance-categories", "avoidanceCategories.json"));
 const avoidanceCategoryIds = new Set(Object.keys(avoidanceCategories));
@@ -236,7 +236,7 @@ for (const record of terms) {
   checkRefs(issues, record, "relatedAvoidances", avoidanceIds, "Avoidance");
   checkRefs(issues, record, "relatedAttackTools", attackToolIds, "AttackTool");
   checkRefs(issues, record, "relatedThreatActors", threatActorIds, "ThreatActor");
-  checkRefs(issues, record, "relatedBusinessScenes", sceneIds, "BusinessScene");
+  checkRefs(issues, record, "relatedBusinessDomains", sceneIds, "BusinessDomain");
 
   for (const field of [
     "aliases",
@@ -244,7 +244,7 @@ for (const record of terms) {
     "relatedAvoidances",
     "relatedAttackTools",
     "relatedThreatActors",
-    "relatedBusinessScenes",
+    "relatedBusinessDomains",
   ]) {
     if (!Array.isArray(record.entity[field])) {
       addIssue(issues, record.file, record.id, `${field} 必须显式声明为数组`);
@@ -261,9 +261,9 @@ for (const record of cases) {
   checkRefs(issues, record, "relatedThreatActors", threatActorIds, "ThreatActor");
 }
 
-for (const ref of businessSceneRiskRefs) {
+for (const ref of businessDomainRiskRefs) {
   if (!riskIds.has(ref)) {
-    issues.push(`src/BREAK/business-scenes: riskScenes 引用了不存在的 Risk: ${ref}`);
+    issues.push(`src/BREAK/business-domains: riskScenes 引用了不存在的 Risk: ${ref}`);
   }
 }
 
@@ -278,7 +278,7 @@ for (const { id, entity, file } of avoidances) {
 }
 
 const referencedMainRisks = new Set([
-  ...businessSceneRiskRefs,
+  ...businessDomainRiskRefs,
   ...attackTools.flatMap(({ entity }) => [
     ...(entity.directCauseRisks || []),
     ...(entity.indirectSupportRisks || []),
@@ -331,5 +331,5 @@ if (issues.length > 0) {
 console.log("\n✅ 实体关系质量检查通过");
 console.log(`avoidanceCategories=${avoidanceCategoryIds.size}`);
 console.log(`risks=${risks.length}, avoidances=${avoidances.length}, attackTools=${attackTools.length}`);
-console.log(`threatActors=${threatActors.length}, terms=${terms.length}, businessScenes=${businessScenes.length}`);
+console.log(`threatActors=${threatActors.length}, terms=${terms.length}, businessDomains=${businessDomains.length}`);
 console.log(`cases=${cases.length}`);

@@ -40,8 +40,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -53,7 +53,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "在跑分平台接单后，他只需将自己的支付码发到指定群组，就能自动接收赌客充值的资金，每笔抽成1%，日流水高达数万元。"
   },
   "T0317-001": {
@@ -96,8 +96,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -109,7 +109,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-002": {
     "title": "商家码",
@@ -153,10 +153,10 @@
       "TA0015",
       "TA0006-003"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -168,7 +168,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-003": {
     "title": "聚合码",
@@ -210,8 +210,8 @@
       "TA0014",
       "TA0006-003"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -223,7 +223,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-004": {
     "title": "聚合直扫",
@@ -267,8 +267,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -280,7 +280,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0317-005": {
     "title": "小额码",
@@ -321,9 +321,9 @@
       "TA0014",
       "TA0015"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD04"
     ],
     "references": [
       {
@@ -335,7 +335,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-006": {
     "title": "大额码",
@@ -375,8 +375,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -388,7 +388,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-007": {
     "title": "破额码",
@@ -430,8 +430,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -443,7 +443,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-008": {
     "title": "丝滑码",
@@ -482,8 +482,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -495,7 +495,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-009": {
     "title": "设置码",
@@ -539,8 +539,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -552,7 +552,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-010": {
     "title": "直扫",
@@ -592,8 +592,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -605,7 +605,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-011": {
     "title": "反扫",
@@ -646,8 +646,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -659,7 +659,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0317-012": {
     "title": "银行直扫",
@@ -701,9 +701,9 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD15"
     ],
     "references": [
       {
@@ -715,7 +715,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-013": {
     "title": "银联码",
@@ -756,8 +756,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -769,7 +769,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0317-014": {
     "title": "卡码",
@@ -810,8 +810,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -823,6 +823,6 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   }
 }

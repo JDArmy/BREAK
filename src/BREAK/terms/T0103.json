@@ -39,11 +39,11 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -55,7 +55,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "黑客利用Web应用漏洞入侵某招聘网站后台，执行拖库操作后窃取了包含学历、工作经历和薪资的300万份简历，导致大量用户遭遇精准猎头诈骗。"
   }
 }

@@ -244,10 +244,10 @@ describe("SearchDialog", () => {
     vi.useRealTimers();
   });
 
-  it("业务场景页案例搜索结果路由到首页案例抽屉且不携带 bsKey", async () => {
+  it("业务域页案例搜索结果路由到首页案例抽屉且不携带 bdKey", async () => {
     vi.useFakeTimers();
-    mocks.route.name = "businessSceneRiskDetail";
-    mocks.route.params = { bsKey: "BS01", rKey: "R0001" };
+    mocks.route.name = "businessDomainRiskDetail";
+    mocks.route.params = { bdKey: "BD01", rKey: "R0001" };
     mocks.searchResults.case = [
       { id: "C0001", type: "case", title: "案例" },
     ];

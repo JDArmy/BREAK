@@ -17,8 +17,8 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -30,7 +30,7 @@
         "link": "https://www.cyberark.com/resources/blog/securing-remote-access-best-practices-for-third-party-risk-management"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "version": 2
   }
 }

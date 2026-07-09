@@ -34,8 +34,8 @@
     "relatedThreatActors": [
       "TA0002"
     ],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -43,7 +43,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "刷单任务发布者在核实兼职宝妈完成了指定的虚假代付订单后，立即通过支付宝向其进行了\"返款\"，包含垫付的本金和佣金。"
   }
 }

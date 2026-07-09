@@ -47,8 +47,8 @@
       "TA0001-001",
       "TA0003"
     ],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -56,7 +56,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "在校大学生群体利用外卖平台的漏洞，通过\"撸毛\"技巧叠加使用多个过期优惠券，最终实现了以一分钱吃到豪华午餐。"
   }
 }

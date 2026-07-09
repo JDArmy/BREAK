@@ -54,10 +54,10 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -69,7 +69,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-09",
     "usageExample": "黑产团伙利用撞库获取的密码对一批高价值企业邮箱进行强登，成功登录后立即搜索“合同”“报价”等关键词并转发邮件，窃取了大量商业机密。",
     "version": 2
   }

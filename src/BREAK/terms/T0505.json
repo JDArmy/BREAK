@@ -40,12 +40,12 @@
       "TA0039",
       "TA0042-001"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD02",
+      "BD04",
+      "BD15"
     ],
     "references": [
       {
@@ -57,7 +57,7 @@
         "title": "Recognize and Report Phishing - CISA"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0505-001": {
     "title": "鱼叉式钓鱼",
@@ -96,8 +96,8 @@
       "TA0018",
       "TA0042-001"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -109,7 +109,7 @@
         "title": "Spear Phishing - Proofpoint"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0505-002": {
     "title": "捕鲸攻击",
@@ -150,9 +150,9 @@
       "TA0018",
       "TA0042-001"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -164,6 +164,6 @@
         "title": "What is a Whaling Attack? - Fortinet"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

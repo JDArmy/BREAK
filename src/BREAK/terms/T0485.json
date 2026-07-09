@@ -24,7 +24,7 @@
       "AT0002"
     ],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessDomains": [],
     "references": [
       {
         "title": "复旦发布「新闻推荐生态系统模拟器」SimuLine:单机支持万名读者、千...",
@@ -39,7 +39,7 @@
         "link": "https://www.jianshu.com/p/0713849954de/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "诈骗团伙在云服务器上运行500个模拟器实例，每个实例伪装为不同型号的手机，批量注册账号领取新用户优惠券。"
   }
 }

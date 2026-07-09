@@ -15,8 +15,8 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -24,7 +24,7 @@
         "link": "https://portswigger.net/web-security/web-cache-poisoning"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "version": 2
   }
 }

@@ -28,8 +28,8 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -37,7 +37,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "为了拦截黄牛的自动化脚本，平台在抢茅台活动的关键节点上线了\"小盾\"，要求用户在提交订单前必须完成滑块拼图验证。"
   }
 }

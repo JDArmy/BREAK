@@ -1,7 +1,7 @@
 import { computed, reactive, ref, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import { createRelationAttackPathData } from "@/views/relation/relationAttackPath";
-import { createRelationBusinessSceneImpact } from "@/views/relation/relationBusinessSceneImpact";
+import { createRelationBusinessDomainImpact } from "@/views/relation/relationBusinessDomainImpact";
 import { createRelationCoverageAnalysis } from "@/views/relation/relationCoverageAnalysis";
 import { createRelationExplanationHelpers } from "@/views/relation/relationExplanation";
 import { createRelationGraphBuilder } from "@/views/relation/relationGraphBuilder";
@@ -452,8 +452,8 @@ export const useRelationGraphData = ({
       getNodeTitle,
     });
 
-  const { selectedNodeBusinessSceneImpactSummary } =
-    createRelationBusinessSceneImpact({
+  const { selectedNodeBusinessDomainImpactSummary } =
+    createRelationBusinessDomainImpact({
       t,
       selectedNetworkNode,
       getNodeTitle,
@@ -538,7 +538,7 @@ export const useRelationGraphData = ({
     selectedNodeAttackPathDescription,
     selectedNodeAttackPathExplanations,
     selectedNodeAttackPathSummary,
-    selectedNodeBusinessSceneImpactSummary,
+    selectedNodeBusinessDomainImpactSummary,
     selectedNodeCoverageSummary,
     selectedNodeDiscoveredPaths,
     selectedNodePathRelationKeys,

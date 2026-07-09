@@ -34,9 +34,9 @@
       "TA0015",
       "TA0008"
     ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD04",
+      "BD02"
     ],
     "references": [
       {
@@ -44,6 +44,6 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-07-08"
+    "updated": "2026-07-09"
   }
 }

@@ -33,8 +33,8 @@
       "TA0015",
       "TA0008"
     ],
-    "relatedBusinessScenes": [
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD04"
     ],
     "references": [
       {
@@ -42,7 +42,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "当诈骗分子在群控后台看到受害者正在输入转账验证码的瞬间，立即在群里发出“出水了”的信号，所有人屏息以待，准备进入分赃和善后阶段。"
   }
 }

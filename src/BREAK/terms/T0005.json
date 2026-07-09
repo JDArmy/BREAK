@@ -32,8 +32,8 @@
       "TA0001",
       "TA0001-001"
     ],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -41,7 +41,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "黑产团伙通过撞库获取了一批高额度且未设消费限额的电商会员账号，内部称之为\"大肉\"，随即组织人员连夜下单变现。"
   }
 }

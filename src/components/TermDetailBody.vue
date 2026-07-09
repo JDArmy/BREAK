@@ -23,9 +23,9 @@ import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessag
  * - Term 无 cases section（useRelatedCases 不支持 term）
  * - Term 无关系图按钮（entityRegistry 中 term.relationPerspectiveRouteName 为空）
  * - Term 有 category（在 definition 之后）、aliases、usageExample（title+aliases 高亮）
- * - Term 关联实体均由正向字段维护（relatedThreatActors/relatedAttackTools/relatedRisks/relatedAvoidances/relatedBusinessScenes），无需反查
+ * - Term 关联实体均由正向字段维护（relatedThreatActors/relatedAttackTools/relatedRisks/relatedAvoidances/relatedBusinessDomains），无需反查
  * - Term→Risk 走新窗口（emit navigate-risk 由调用方开新窗口，不嵌套回主抽屉）
- * - businessScenes 无 EntityType，两端都用 router-link 模式（跳页，不传 onNavigate）
+ * - businessDomains 无 EntityType，两端都用 router-link 模式（跳页，不传 onNavigate）
  */
 const props = defineProps<{
   tKey: string;
@@ -190,14 +190,14 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
       anchor="avoidances"
       :on-navigate="isDrawer ? onNavigate('navigate-avoidance') : undefined"
     />
-    <!-- businessScenes 无 EntityType，两端都用 router-link 模式（跳页，不传 onNavigate） -->
+    <!-- businessDomains 无 EntityType，两端都用 router-link 模式（跳页，不传 onNavigate） -->
     <EntityLinkSection
-      :keys="selectedTerm?.relatedBusinessScenes ?? []"
-      title="businessScenes"
-      route-name="businessScene"
-      param-key="bsKey"
-      anchor="business-scenes"
-      i18n-entity-type="businessScenes"
+      :keys="selectedTerm?.relatedBusinessDomains ?? []"
+      title="businessDomains"
+      route-name="businessDomain"
+      param-key="bdKey"
+      anchor="business-domains"
+      i18n-entity-type="businessDomains"
     />
 
     <section v-if="selectedTerm?.references?.length" class="detail-section" data-detail-anchor="references">

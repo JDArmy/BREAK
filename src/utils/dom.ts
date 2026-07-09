@@ -11,7 +11,7 @@
  * 适配各页面滚动容器：
  * - 知识库列表态 → `.knowledge-list`
  * - 知识库详情态 → `.knowledge-detail`
- * - 首页 / 关系图谱 / 业务场景 → `.el-main`
+ * - 首页 / 关系图谱 / 业务域 → `.el-main`
  */
 export function scrollActiveContainerToTop(): void {
   const SCROLL_RE = /^(auto|scroll)$/;

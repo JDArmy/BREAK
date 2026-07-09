@@ -37,8 +37,8 @@
       "TA0006-003",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -50,7 +50,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "一名大学生被高薪兼职诱惑，将自己的收款码借给平台用于跑分，结果因涉嫌帮助信息网络犯罪活动罪被警方刑事拘留。"
   }
 }

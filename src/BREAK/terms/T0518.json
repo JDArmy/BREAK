@@ -35,8 +35,8 @@
     "relatedThreatActors": [
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -48,6 +48,6 @@
         "title": "What is SSL? | Learning Center - Cloudflare"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

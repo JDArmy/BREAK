@@ -23,7 +23,7 @@ vi.mock("vue-i18n", () => ({
   useI18n: () => ({
     locale,
     t: (key: string) => key,
-    te: (key: string) => key.includes("BS00") || key.includes("R0001"),
+    te: (key: string) => key.includes("BD00") || key.includes("R0001"),
   }),
 }));
 
@@ -64,9 +64,9 @@ vi.mock("@/BREAK/home", () => ({
         definition: "子风险定义",
       },
     },
-    businessScenes: {
-      BS00: {
-        title: "全场景",
+    businessDomains: {
+      BD00: {
+        title: "全域",
         riskDimensions: {
           RD01: {
             title: "交易维度",
@@ -80,7 +80,7 @@ vi.mock("@/BREAK/home", () => ({
           },
         },
       },
-      BS01: {
+      BD01: {
         title: "金融",
         riskDimensions: {
           RD02: {
@@ -191,7 +191,7 @@ describe("HomeView", () => {
     await waitForPendingUpdates();
   });
 
-  it("渲染首页统计与默认业务场景风险入口", async () => {
+  it("渲染首页统计与默认业务域风险入口", async () => {
     const wrapper = await mountHomeView();
 
     expect(wrapper.text()).toContain("BREAK.title");
@@ -212,9 +212,9 @@ describe("HomeView", () => {
     expect(push).toHaveBeenCalledWith({ name: "home" });
   });
 
-  it("业务场景风险详情关闭后回到对应业务场景", async () => {
-    route.name = "businessSceneRiskDetail";
-    route.params = { bsKey: "BS01", rKey: "R0001" };
+  it("业务域风险详情关闭后回到对应业务域", async () => {
+    route.name = "businessDomainRiskDetail";
+    route.params = { bdKey: "BD01", rKey: "R0001" };
     const wrapper = await mountHomeView();
 
     expect(wrapper.find(".risk-detail-stub").text()).toContain("R0001");
@@ -222,14 +222,14 @@ describe("HomeView", () => {
     await wrapper.find(".risk-detail-stub .close-drawer").trigger("click");
 
     expect(push).toHaveBeenCalledWith({
-      name: "businessScene",
-      params: { bsKey: "BS01" },
+      name: "businessDomain",
+      params: { bdKey: "BD01" },
     });
   });
 
-  it("非法业务场景和非法风险详情路由会替换回首页", async () => {
-    route.name = "businessScene";
-    route.params = { bsKey: "UNKNOWN" };
+  it("非法业务域和非法风险详情路由会替换回首页", async () => {
+    route.name = "businessDomain";
+    route.params = { bdKey: "UNKNOWN" };
     await mountHomeView();
 
     expect(replace).toHaveBeenCalledWith({ name: "home" });

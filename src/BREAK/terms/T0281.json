@@ -41,9 +41,9 @@
       "TA0013",
       "TA0009"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -51,7 +51,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "诈骗团伙搭建了由数十个公众号和数百个个人号组成的引流池，先在短视频平台吸粉，再将粉丝导入池中持续进行诈骗信息轰炸。"
   }
 }

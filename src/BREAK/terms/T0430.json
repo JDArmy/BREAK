@@ -31,8 +31,8 @@
       "TA0014",
       "TA0038"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -44,7 +44,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "接头人将五块砖头整齐码进黑色塑料袋，在茶餐厅角落推给银行卡卖家，低声说这是买断你名下四件套的尾款，从此这张卡的流水与你再无瓜葛。"
   }
 }

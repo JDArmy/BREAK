@@ -39,8 +39,8 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -52,7 +52,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "在获取到老年人保健品购买记录后，下游黑产采用手剥方式逐个致电，冒充健康顾问嘘寒问暖，诱导他们购买数万元的虚假“特效药”。"
   }
 }

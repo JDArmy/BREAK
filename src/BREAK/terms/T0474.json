@@ -26,7 +26,7 @@
       "AT0005"
     ],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessDomains": [],
     "references": [
       {
         "title": "厘定边界合理规制网络爬虫行为",
@@ -41,7 +41,7 @@
         "link": "https://www.163.com/dy/article/H8P5T5C00538RIAP.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "usageExample": "竞争对手部署爬虫实时抓取某电商平台的商品价格、库存和促销信息，用于动态调整自身定价策略，导致被爬平台流量和转化率显著下降。"
   }
 }

@@ -9,12 +9,12 @@ export function useEntityDrawerNavigation() {
 
   const syncEntityDrawerUrl = (type: EntityType, key: string) => {
     const entry = getEntityEntry(type);
-    const bsKey = typeof route.params.bsKey === "string" ? route.params.bsKey : "";
-    const routeName = bsKey && entry.businessSceneDetailRouteName
-      ? entry.businessSceneDetailRouteName
+    const bdKey = typeof route.params.bdKey === "string" ? route.params.bdKey : "";
+    const routeName = bdKey && entry.businessDomainDetailRouteName
+      ? entry.businessDomainDetailRouteName
       : entry.homeDetailRouteName;
-    const params = bsKey && entry.businessSceneDetailRouteName
-      ? { bsKey, [entry.paramKey]: key }
+    const params = bdKey && entry.businessDomainDetailRouteName
+      ? { bdKey, [entry.paramKey]: key }
       : { [entry.paramKey]: key };
 
     const href = router.resolve({ name: routeName, params }).href;

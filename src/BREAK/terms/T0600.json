@@ -15,8 +15,8 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -24,6 +24,6 @@
         "link": "https://www.threatlocker.com/blog/discord-zendesk-breach-highlights-growing-risk-of-third-party-vendor-access"
       }
     ],
-    "updated": "2026-07-04"
+    "updated": "2026-07-09"
   }
 }

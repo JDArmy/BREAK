@@ -27,7 +27,7 @@ assignees: ""
 - Avoidance：
 - AttackTool：
 - ThreatActor：
-- BusinessScene：
+- BusinessDomain：
 
 ## 对外影响
 

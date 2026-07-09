@@ -35,9 +35,9 @@
     "relatedThreatActors": [
       "TA0009"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD05"
     ],
     "references": [
       {
@@ -45,6 +45,6 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   }
 }

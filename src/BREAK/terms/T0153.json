@@ -37,9 +37,9 @@
       "TA0015",
       "TA0042"
     ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS05"
+    "relatedBusinessDomains": [
+      "BD04",
+      "BD05"
     ],
     "references": [
       {
@@ -47,7 +47,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "运营人员在后台发现一批异常注册的女号，头像和动态全是网图擦边，她们在评论区批量回复“哥哥加Q有惊喜”，把色粉从公域引到私域群，为后续杀猪盘储备精准猎物。"
   }
 }

@@ -32,9 +32,9 @@
       "TA0009",
       "TA0017"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -46,7 +46,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "他们只做轻包装，给无业的借款人挂靠一家空壳公司并伪造三个月流水，刚好够摸到那家消费金融公司风控模型的及格线。"
   }
 }

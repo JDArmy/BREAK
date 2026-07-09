@@ -36,8 +36,8 @@
       "TA0001",
       "TA0001-001"
     ],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -45,7 +45,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "羊毛党投入数万元本金囤积某限量球鞋准备溢价抛售，不料厂商突然宣布补货导致价格崩盘，这次\"反撸\"让本金折损过半。"
   }
 }

@@ -26,7 +26,7 @@ const codeSplittingGroups = [
   { name: "BREAK-ThreatActors", test: toChunkTest("/src/BREAK/threat-actors"), maxSize: 300 * 1024 },
   { name: "BREAK-Terms", test: toChunkTest("/src/BREAK/terms"), maxSize: 300 * 1024 },
   { name: "BREAK-Cases", test: toChunkTest("/src/BREAK/cases"), maxSize: 300 * 1024 },
-  { name: "BREAK-BusinessScenes", test: toChunkTest("/src/BREAK/business-scenes") },
+  { name: "BREAK-BusinessDomains", test: toChunkTest("/src/BREAK/business-domains") },
   { name: "BREAK", test: toChunkTest("/src/BREAK") },
   // 构建时预合并的完整英文数据（src/i18n/en/.generated/）
   { name: "en-full-Risks", test: toChunkTest("/src/i18n/en/.generated/risks"), maxSize: 300 * 1024 },
@@ -35,7 +35,7 @@ const codeSplittingGroups = [
   { name: "en-full-ThreatActors", test: toChunkTest("/src/i18n/en/.generated/threat-actors"), maxSize: 300 * 1024 },
   { name: "en-full-Terms", test: toChunkTest("/src/i18n/en/.generated/terms"), maxSize: 300 * 1024 },
   { name: "en-full-Cases", test: toChunkTest("/src/i18n/en/.generated/cases"), maxSize: 300 * 1024 },
-  { name: "en-full-BusinessScenes", test: toChunkTest("/src/i18n/en/.generated/business-scenes") },
+  { name: "en-full-BusinessDomains", test: toChunkTest("/src/i18n/en/.generated/business-domains") },
   { name: "en-full-BREAK", test: toChunkTest("/src/i18n/en/.generated") },
   // 英文翻译源文件（改造后运行时不再直接 import，保留用于其他引用）
   { name: "i18n-en-Risks", test: toChunkTest("/src/i18n/en/BREAK/risks") },
@@ -44,7 +44,7 @@ const codeSplittingGroups = [
   { name: "i18n-en-ThreatActors", test: toChunkTest("/src/i18n/en/BREAK/threat-actors") },
   { name: "i18n-en-Terms", test: toChunkTest("/src/i18n/en/BREAK/terms"), maxSize: 300 * 1024 },
   { name: "i18n-en-Cases", test: toChunkTest("/src/i18n/en/BREAK/cases"), maxSize: 300 * 1024 },
-  { name: "i18n-en-BusinessScenes", test: toChunkTest("/src/i18n/en/BREAK/business-scenes") },
+  { name: "i18n-en-BusinessDomains", test: toChunkTest("/src/i18n/en/BREAK/business-domains") },
   { name: "i18n-en-BREAK", test: toChunkTest("/src/i18n/en/BREAK") },
   { name: "i18n", test: toChunkTest("/src/i18n") },
   { name: "fuse.js", test: toChunkTest("node_modules/fuse.js") },

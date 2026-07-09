@@ -32,10 +32,10 @@
       "TA0006-003",
       "TA0039"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD15"
     ],
     "references": [
       {
@@ -47,7 +47,7 @@
         "link": "http://www.npc.gov.cn/zgrdw/npc/flsyywd/flwd/2002-04/19/content_293387.htm"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "某犯罪集团通过地下钱庄、虚拟货币交易和跨境贸易虚假结算等洗钱手段，将5000万美元毒品收入洗白为合法商业利润。"
   }
 }

@@ -39,9 +39,9 @@
       "AT0027"
     ],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -53,7 +53,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "新手羊毛党通过某\"发卡\"平台自动化购买了批量的首单立减券和虚拟身份账号，准备用于下一轮针对生鲜电商的集中薅羊毛活动。"
   }
 }

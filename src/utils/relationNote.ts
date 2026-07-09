@@ -41,9 +41,9 @@ function translatedEntityTitle(
 }
 
 function translatedRiskSceneTitle(title: string, t: Translate) {
-  for (const [sceneKey, scene] of Object.entries(BREAK.businessScenes.BS00.riskScenes)) {
+  for (const [sceneKey, scene] of Object.entries(BREAK.businessDomains.BD00.riskScenes)) {
     if (scene.title === title) {
-      return t(`BREAK.businessScenes.BS00.riskScenes.${sceneKey}.title`);
+      return t(`BREAK.businessDomains.BD00.riskScenes.${sceneKey}.title`);
     }
   }
   return title;

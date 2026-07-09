@@ -18,7 +18,7 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge fra
 | ThreatActor | 75 | TA0001, TA0001-001 | Groups that carry out attacks |
 | Term | 592 | T0001 | Business security terminology |
 | Case | 1782 | C0001 | Real-world security incident cases |
-| BusinessScene | 20 | BS00 | Industry/business domain categories |
+| BusinessDomain | 20 | BD00 | Industry/business domain categories |
 
 ## How to Invoke
 
@@ -152,6 +152,8 @@ BREAK recommends the following avoidances for these risks:
 
 When `scripts/skill/` search / packaging scripts, exported Chinese / English data bundles, entity fields / relationship structure, Skill invocation parameters, or search-result format change, update both `SKILL.md` and `SKILL_en.md` in the same change. `npm run validate:docs-freshness` is wired into `npm run validate:data` and blocks relevant changes when Skill documentation is stale.
 
+Data-quality fixes also affect Skill search results. When fixing Case `references` / `summary` fact-check issues or adjusting Risk `avoidances` relationships, keep the English translation files in sync and make the first two Case references point to stable pages with crawlable article text whenever possible, so Skill-returned case facts remain reviewable.
+
 ## Entity Relationship Graph
 
 Understanding entity relationships helps provide more complete answers:
@@ -179,7 +181,7 @@ Case (Real-world incidents)
 Term (Terminology)
     └── related* → all other entity types
 
-BusinessScene (Business domains)
+BusinessDomain (Business domains)
     ├── riskDimensions → RiskScene (risk scenes organized by business risk domains)
     └── riskScenes → Risk (risks within each scene; parent risks cover their sub-risks)
 ```

@@ -34,11 +34,11 @@
       "TA0020",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -50,7 +50,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "黑产在暗网论坛发帖叫卖刚脱裤的一手料，包含姓名、手机号和银行卡四要素，声称这批数据新鲜度极高，可直接用于精准诈骗。"
   },
   "T0075-001": {
@@ -87,8 +87,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -100,7 +100,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "买家贪便宜买了一批低价二手料，结果打电话过去不是空号就是已标记诈骗，才知道这批数据已经被转卖多次，早被同行洗烂了。"
   },
   "T0075-002": {
@@ -145,8 +145,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -158,7 +158,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "新手骗子图省事买了批泛料，打开一看全是某省全体居民的身份证号，连个手机号都没带，根本没法直接使用，还得自己二次加工。"
   },
   "T0075-003": {
@@ -196,8 +196,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -209,7 +209,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "卖家把去年积压的旧数据重新打包，混入一些虚假的近期交易记录，伪装成翻新料在暗网出售，声称是刚出炉的银行内部数据。"
   },
   "T0075-004": {
@@ -253,8 +253,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -266,7 +266,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-09",
     "usageExample": "黑产专门整理了一批扶贫对象数据，精准标注刚领到补助款的农户信息，然后冒充扶贫办工作人员实施精准诈骗。",
     "version": 2
   },
@@ -304,8 +304,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -317,7 +317,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "攻击者入侵某电商平台后没有立刻抛售数据，而是故意囤了一批隔夜料，等平台修复漏洞后才慢慢放货，既规避追踪又能卖高价。"
   },
   "T0075-006": {
@@ -353,11 +353,11 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -369,7 +369,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "券商营业部刚泄露了一批Gm料，包含股民的持仓金额和风险偏好，骗子拿着这些信息精准推销虚假配资和杀猪盘荐股，一骗一个准。"
   },
   "T0075-007": {
@@ -404,9 +404,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -418,7 +418,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "便利店收银员趁顾客不注意，在POS机上多刷了一次卡，侧录下轨道料后转卖给伪卡团伙，后者连夜复制出多张克隆卡在ATM疯狂取现。"
   },
   "T0075-008": {
@@ -453,8 +453,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -466,7 +466,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "暗网卖家强调自己手里这批是活料，每一个手机号都能打通，接听者最近还刚办理过贷款，用于冒充客服诈骗成功率极高，所以价格翻了三倍。"
   },
   "T0075-009": {
@@ -505,8 +505,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -518,7 +518,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "地下数据市场里，中间商极力推销这批“精准料”，声称其中包含某高端楼盘业主的身份证、手机号和精确购房金额，每条都能直接用于定制化诈骗。"
   },
   "T0075-010": {
@@ -553,8 +553,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -566,7 +566,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "黑客论坛上有人低价抛售一批企业工商数据，但买家寥寥，因为这种“冷门料”既不能直接盗刷又难以用于精准营销，转手极慢。"
   },
   "T0075-011": {
@@ -601,8 +601,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -614,7 +614,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "刚拖库出来的“毛料”杂乱无章，混着大量空号和格式错误的信息，需要经过洗库和筛选才能变成可用的精准料，但胜在价格便宜。"
   },
   "T0075-012": {
@@ -649,9 +649,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD02"
     ],
     "references": [
       {
@@ -663,7 +663,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "诈骗团伙购入“母婴料”后，冒充医院产科医生给新手妈妈打电话，准确报出婴儿出生日期和家庭住址，推销高价的产后修复套餐。"
   },
   "T0075-013": {
@@ -709,9 +709,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -723,7 +723,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "黑产交易群里有人兜售“内料”，号称是四大件齐全的境内银行卡信息，卡号、密码、身份证号和绑定手机号全部对得上，可直接用来洗钱。"
   },
   "T0075-014": {
@@ -766,8 +766,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -779,7 +779,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "刚出炉的“实时料”在黑市上最为抢手，因为受害者还没来得及修改密码或挂失，黑产分子拿到后能立刻登录网银进行转账操作。"
   },
   "T0075-015": {
@@ -821,9 +821,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -835,7 +835,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "这批“死料”里的信用卡早已被冻结，手机号也成了空号，在黑产内部只能当作垃圾库存清理，连打包转卖的价值都没有。"
   },
   "T0075-016": {
@@ -887,9 +887,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -901,7 +901,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "暗网卖家展示了一批“外料”，包含境外Visa和Mastercard卡号、有效期和CVV码，声称能绕过风控系统在海外奢侈品网站直接刷卡消费。"
   },
   "T0075-017": {
@@ -942,8 +942,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -955,7 +955,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "线人直接提供从某快递公司内部系统泄露的“一手料”，收件人电话和地址都未经任何转手，完整度极高，因此叫价是普通面单的好几倍。"
   },
   "T0075-018": {
@@ -992,8 +992,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -1005,7 +1005,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "投顾公司的内鬼把客户名单打包卖给黑产，这批“诊股料”详细记录了用户的持仓金额和风险偏好，成了推荐虚假投资平台的绝佳诱饵。"
   },
   "T0075-019": {
@@ -1044,9 +1044,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -1058,7 +1058,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   },
   "T0075-020": {
     "title": "风控料",
@@ -1100,9 +1100,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -1114,7 +1114,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0075-021": {
     "title": "助贷料",
@@ -1156,9 +1156,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -1170,7 +1170,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0075-022": {
     "title": "黄金料",
@@ -1206,9 +1206,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -1220,7 +1220,7 @@
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "黑产盯上了那些小额度黄金套现平台的用户数据，把这些“黄金料”卖给催收团伙，因为用户多为深陷债务、急需变现的年轻人，催收价值极高。"
   },
   "T0075-024": {
@@ -1258,8 +1258,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -1271,7 +1271,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0075-025": {
     "title": "租机料",
@@ -1312,9 +1312,9 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -1326,7 +1326,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0075-026": {
     "title": "卡券料/E卡料",
@@ -1362,11 +1362,11 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -1378,7 +1378,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "诈骗分子利用“卡券料”里的用户信息，伪装成平台客服，以卡券回收变现为诱饵，诱导用户提供短信验证码，从而盗刷其绑定的银行卡。"
   }
 }

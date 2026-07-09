@@ -35,9 +35,9 @@
     "relatedThreatActors": [
       "TA0007"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -45,7 +45,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "职业掉包师在电商平台下单最新款手机，收货后把真机取出换成高仿模型，再申请七天无理由退货退款，一套操作行云流水，原装手机则被转卖变现。"
   }
 }

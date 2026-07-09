@@ -33,7 +33,7 @@ Risk is the core entity. Beyond the common fields:
 - **`relatedRisks`**: semantic links between risks (**manually maintained**, see relation types below)
 - **`updated`**: YYYY-MM-DD; must be updated when modifying substantive content
 
-Risk does **not** maintain `relatedBusinessScenes` — a risk's scene membership is authoritative in BusinessScene; the relation lives in `src/BREAK/business-scenes/*.json` under `riskScenes[*].risks`.
+Risk does **not** maintain `relatedBusinessDomains` — a risk's business-domain membership is authoritative in BusinessDomain; the relation lives in `src/BREAK/business-domains/*.json` under `riskScenes[*].risks`.
 
 ## Avoidance
 
@@ -65,7 +65,7 @@ Relation fields (all required, non-empty):
 - **`category`**: free string (e.g. "Data collection", "Business fraud", "Underground services"), reuse existing values
 - **`aliases`**: alias array
 - **`usageExample`**: usage scenario example (required), must contain at least one of title or aliases (front-end highlights it)
-- May maintain `relatedRisks` / `relatedAvoidances` / `relatedAttackTools` / `relatedThreatActors` / `relatedBusinessScenes`
+- May maintain `relatedRisks` / `relatedAvoidances` / `relatedAttackTools` / `relatedThreatActors` / `relatedBusinessDomains`
 
 ## Case
 

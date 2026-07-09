@@ -7,7 +7,7 @@ import path from 'path';
 import { projectRoot, writeJson } from '../search/common.mjs';
 import { loadAllEntities, normalizeTitle, levenshtein } from './llm-review-helpers.mjs';
 
-const TYPES = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms', 'cases', 'businessScenes'];
+const TYPES = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms', 'cases', 'businessDomains'];
 const STRICT = process.argv.includes('--strict');
 
 const issues = [];

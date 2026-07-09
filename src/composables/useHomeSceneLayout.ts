@@ -1,7 +1,7 @@
 /**
  * 首页风险矩阵布局计算 composable。
  *
- * 从 HomeView 提取的布局逻辑：业务场景选择、风险维度/场景列宽计算、
+ * 从 HomeView 提取的布局逻辑：业务域选择、风险维度/场景列宽计算、
  * 滚动阈值判断、子风险折叠管理。
  */
 
@@ -48,7 +48,7 @@ export interface SceneLayoutItem {
 }
 
 export function useHomeSceneLayout(
-  bsKeySelected: Ref<string>,
+  bdKeySelected: Ref<string>,
   locale: Ref<string>,
   getTitle: {
     riskScene: (key: string) => string;
@@ -61,8 +61,8 @@ export function useHomeSceneLayout(
     () =>
       ({
         riskDimensions:
-          BREAK.businessScenes[bsKeySelected.value].riskDimensions,
-        riskScenes: BREAK.businessScenes[bsKeySelected.value].riskScenes,
+          BREAK.businessDomains[bdKeySelected.value].riskDimensions,
+        riskScenes: BREAK.businessDomains[bdKeySelected.value].riskScenes,
       }) as SceneBREAK,
   );
 

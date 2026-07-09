@@ -30,8 +30,8 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -39,7 +39,7 @@
         "title": "2022互联网反舞弊:供应链腐败埋雷零售、科技、游戏行业_腾讯新闻"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "usageExample": "为了应对电商平台的物流真实性校验，刷单团队会将订单信息推送给\"代发\"服务商，由其生成带有真实物流轨迹的空包裹完成签收。"
   }
 }

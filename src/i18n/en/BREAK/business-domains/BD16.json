@@ -1,0 +1,55 @@
+{
+  "BD16": {
+    "title": "Internet of Things",
+    "description": "Security risks in IoT devices, Industrial IoT (IIoT), Connected Vehicles (V2X), smart home, medical IoT and other scenarios",
+    "riskDimensions": {
+      "RD03": {
+        "title": "Account and Identity Risk"
+      },
+      "RD04": {
+        "title": "Platform, Interface, and Automation Abuse Risk"
+      },
+      "RD07": {
+        "title": "Device, Physical, and Infrastructure Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
+      }
+    },
+    "riskScenes": {
+      "RS19": {
+        "title": "IoT Device Firmware, Identity, and Connectivity Security"
+      },
+      "RS20": {
+        "title": "Industrial, Connected-Vehicle, and Medical IoT Security"
+      },
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS06": {
+        "title": "Internal Security"
+      },
+      "RS28": {
+        "title": "Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS10": {
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS21": {
+        "title": "IoT Data, Sensor, and Edge Security"
+      }
+    }
+  }
+}

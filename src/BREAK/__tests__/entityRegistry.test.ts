@@ -38,7 +38,7 @@ describe("entityRegistry", () => {
 
     it("无法识别的 ID 返回 null", () => {
       expect(inferEntityType("X0001")).toBeNull();
-      expect(inferEntityType("BS01")).toBeNull();
+      expect(inferEntityType("BD01")).toBeNull();
       expect(inferEntityType("")).toBeNull();
     });
   });
@@ -111,7 +111,7 @@ describe("entityRegistry", () => {
     });
 
     it("不匹配非实体前缀", () => {
-      const text = "BS01 不是实体 ID，X1234 也不是";
+      const text = "BD01 不是实体 ID，X1234 也不是";
       const matches = text.match(new RegExp(ENTITY_ID_PATTERN.source, "g"));
       expect(matches).toBeNull();
     });

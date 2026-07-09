@@ -21,7 +21,7 @@ export const ENTITY_DIRS = [
   'src/BREAK/attack-tools',
   'src/BREAK/threat-actors',
   'src/BREAK/terms',
-  'src/BREAK/business-scenes',
+  'src/BREAK/business-domains',
   'src/BREAK/cases',
 ];
 
@@ -32,7 +32,7 @@ export const ENTITY_TYPE_BY_DIR = {
   'attack-tools': 'attack-tools',
   'threat-actors': 'threat-actors',
   terms: 'terms',
-  'business-scenes': 'businessScenes',
+  'business-domains': 'businessDomains',
   cases: 'cases',
 };
 

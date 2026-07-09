@@ -39,10 +39,10 @@
       "TA0015",
       "TA0042-001"
     ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD04",
+      "BD01",
+      "BD15"
     ],
     "references": [
       {
@@ -50,7 +50,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "受害者被诱导下载屏幕共享软件后，骗子引导其打开云闪付并输入支付密码，利用实时窥屏截获验证码，一笔云扣直接划走卡内所有余额，资金瞬间转入多个下级账户。"
   }
 }

@@ -31,10 +31,10 @@
       "TA0039",
       "TA0050"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS15",
-      "BS17"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD15",
+      "BD17"
     ],
     "references": [
       {
@@ -46,7 +46,7 @@
         "link": "https://dy.163.com/article/GFFFG6CP0552D26Z.html"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "一位数字艺术家在以太坊上将作品铸造为NFT，通过OpenSea出售。买家后来发现该艺术品是从他人处剽窃的，导致NFT价值归零且无法退款。"
   }
 }

@@ -1,0 +1,76 @@
+{
+  "BD02": {
+    "title": "E-Commerce",
+    "riskDimensions": {
+      "RD01": {
+        "title": "Transaction and Entitlement Risk"
+      },
+      "RD02": {
+        "title": "Content and Ecosystem Governance Risk"
+      },
+      "RD03": {
+        "title": "Account and Identity Risk"
+      },
+      "RD04": {
+        "title": "Platform, Interface, and Automation Abuse Risk"
+      },
+      "RD05": {
+        "title": "Data, Algorithm, and Model Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
+      }
+    },
+    "riskScenes": {
+      "RS01": {
+        "title": "Marketing and Growth Fraud"
+      },
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS03": {
+        "title": "Customer and Resource Abuse"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS05": {
+        "title": "Content and Community Governance"
+      },
+      "RS06": {
+        "title": "Internal Security"
+      },
+      "RS28": {
+        "title": "Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS08": {
+        "title": "Payment, Funding, and Financial Fraud"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS10": {
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
+      },
+      "RS11": {
+        "title": "Merchant, Supplier, and Fulfillment-Party Risk"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS24": {
+        "title": "Booking, Ticketing, and Inventory Resource Abuse"
+      },
+      "RS25": {
+        "title": "After-Sales, Refund, and Claims Abuse"
+      },
+      "RS26": {
+        "title": "Algorithm, Pricing, and Platform Governance"
+      }
+    },
+    "description": "E-commerce scenarios covering merchant onboarding, product management, marketing campaigns, transaction payments, and after-sales services, facing fake orders, malicious purchases, and coupon abuse risks."
+  }
+}

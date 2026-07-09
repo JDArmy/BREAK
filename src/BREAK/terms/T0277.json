@@ -49,10 +49,10 @@
       "TA0006",
       "TA0007"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD05",
+      "BD04"
     ],
     "references": [
       {
@@ -60,7 +60,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "某直播公会为了虚抬主播身价，使用脚本操控上千台云手机同时刷量，将直播间人气瞬间推高至百万，以此骗取品牌方的坑位费。"
   }
 }

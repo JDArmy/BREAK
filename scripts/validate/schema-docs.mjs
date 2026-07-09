@@ -53,13 +53,13 @@ const entityDocs = [
     purpose: '行业术语条目，解释黑灰产、业务风控和安全运营中的关键概念。',
   },
   {
-    key: 'businessScenes',
-    title: 'BusinessScene',
-    dir: 'src/BREAK/business-scenes',
-    filePattern: 'BS00.json',
-    idPattern: 'BS00',
-    schemaName: 'businessScene',
-    purpose: '业务场景条目，组织风险维度、风险场景和场景下的风险引用。',
+    key: 'businessDomains',
+    title: 'BusinessDomain',
+    dir: 'src/BREAK/business-domains',
+    filePattern: 'BD00.json',
+    idPattern: 'BD00',
+    schemaName: 'businessDomain',
+    purpose: '业务域条目，组织风险维度、风险场景和场景下的风险引用。',
   },
   {
     key: 'cases',
@@ -98,8 +98,8 @@ const fieldDescriptions = {
   relatedAvoidances: '相关规避手段列表；Avoidance 中为规避手段间关联对象列表。',
   relatedAttackTools: '相关攻击工具列表；AttackTool 中为攻击工具间关联对象列表。',
   relatedThreatActors: '相关威胁行为者列表；ThreatActor 中为威胁行为者间关联对象列表，Term 中为威胁行为者 ID 列表。',
-  relatedBusinessScenes: '相关业务场景 ID 列表。',
-  risks: '业务场景直接引用的风险 ID 列表。',
+  relatedBusinessDomains: '相关业务域 ID 列表。',
+  risks: '业务域直接引用的风险 ID 列表。',
   riskDimensions: '风险维度映射；key 为风险维度 ID，value 包含标题和风险场景 ID 列表。',
   riskScenes: '风险场景映射；key 为风险场景 ID，value 包含标题和风险 ID 列表。',
 };
@@ -114,7 +114,7 @@ const relationTargets = {
   relatedAvoidances: 'Avoidance',
   relatedAttackTools: 'AttackTool',
   relatedThreatActors: 'ThreatActor',
-  relatedBusinessScenes: 'BusinessScene',
+  relatedBusinessDomains: 'BusinessDomain',
   risks: 'Risk',
 };
 
@@ -279,9 +279,9 @@ function generateMarkdown() {
     '| `ThreatActor.indirectSupportRisks` | ThreatActor -> Risk | Risks indirectly supported by the actor. |',
     '| `ThreatActor.relatedThreatActors` | ThreatActor -> ThreatActor | Derived top related actors by shared risks and shared attack tools. |',
     '| `Term.related*` | Term -> Entity | Conceptual references used for navigation and search. |',
-    '| `BusinessScene.riskScenes.*.risks` | BusinessScene -> Risk | Risks grouped under a scene-specific risk scene. |',
+    '| `BusinessDomain.riskScenes.*.risks` | BusinessDomain -> Risk | Risks grouped under a scene-specific risk scene. |',
     '',
-    'Relationship integrity is enforced by `npm run validate:data` through schema validation, i18n synchronization, keyword audit, entity relation checks, relationship coverage audit, business scene audit, reference coverage, and documentation consistency checks.',
+    'Relationship integrity is enforced by `npm run validate:data` through schema validation, i18n synchronization, keyword audit, entity relation checks, relationship coverage audit, business domain audit, reference coverage, and documentation consistency checks.',
     '',
     '## English i18n Boundary',
     '',
@@ -296,10 +296,10 @@ function generateMarkdown() {
     '| AttackTool | `title`, `keywords`, `description`, `references[].title`, `references[].link` |',
     '| ThreatActor | `title`, `keywords`, `description`, `references[].title`, `references[].link` |',
     '| Term | `title`, `keywords`, `aliases`, `category`, `definition`, `description`, `usageExample`, `references[].title`, `references[].link` |',
-    '| BusinessScene | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |',
+    '| BusinessDomain | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |',
     '| Case | `title`, `keywords`, `summary`, `references[].title`, `references[].link` |',
     '',
-    'English files must not contain relationship fields, ID arrays, `updated`, or BusinessScene structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.',
+    'English files must not contain relationship fields, ID arrays, `updated`, or BusinessDomain structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.',
     ''
   );
 

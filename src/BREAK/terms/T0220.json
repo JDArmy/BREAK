@@ -42,9 +42,9 @@
       "TA0006",
       "TA0007"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -52,7 +52,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "品牌方发现某地经销商大量窜货，把专供北方的高寒版机油私自卖到了华南，导致低价冲击当地市场，最终通过包装上的暗码溯源锁定了违规经销商。"
   }
 }

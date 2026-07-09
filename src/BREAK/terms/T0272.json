@@ -42,10 +42,10 @@
       "TA0009",
       "TA0015"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD05",
+      "BD04"
     ],
     "references": [
       {
@@ -53,7 +53,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "在一条色播引流链条中，前端通常被伪装成一段擦边短视频挂载在社交平台，用户点击后才会被引导下载付费直播App。"
   }
 }

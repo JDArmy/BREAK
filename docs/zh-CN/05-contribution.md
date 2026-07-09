@@ -18,7 +18,7 @@ slug: contribution
 3. **同步英文翻译**：在 `src/i18n/en/BREAK/{entity}/{ID}.json` 创建对应翻译文件，只含可翻译文本字段。
 4. **维护关系**：如新增 Avoidance，必须被至少一个 Risk 或 AttackTool 的 `avoidances` 引用（否则校验阻断）。
 5. **更新 `updated` 字段**：YYYY-MM-DD 当日日期。
-6. **更新业务场景**（仅 Risk）：在 `src/BREAK/business-scenes/*.json` 的 `riskScenes[*].risks` 中加上新 Risk ID。
+6. **更新业务域**（仅 Risk）：在 `src/BREAK/business-domains/*.json` 的 `riskScenes[*].risks` 中加上新 Risk ID。
 7. **跑校验**：`npm run validate:data` 必须通过。
 8. **跑评审**：`npm run review:changed` 确认无 fail。
 
@@ -34,7 +34,7 @@ slug: contribution
 
 所有可枚举 / 可正则 / 可查表的规则，接入 `npm run validate:data`。阻断行为分两档：
 
-- **error 阻断 build**：schema、i18n-sync、english-i18n-quality、keywords、check-entity-relations、relations、business-scenes、require-references、avoidance-content、case-incident-time、admission、ui-i18n-keys、title-dedup、updated-sync-gate、content-quality、references 等。
+- **error 阻断 build**：schema、i18n-sync、english-i18n-quality、keywords、check-entity-relations、relations、business-domains、require-references、avoidance-content、case-incident-time、admission、ui-i18n-keys、title-dedup、updated-sync-gate、content-quality、references 等。
 - **review 不阻断**：id-continuity（跳号需人工确认）、entity-granularity（拆分信号需语义终判）、generic-phrase-blocklist（套话需人工判断）等，只产报告。
 
 ### 第二层：B 类·subagent 交叉判断（`review:*` 命令）

@@ -9,12 +9,12 @@ This document describes the committed JSON data model used by the BREAK knowledg
 
 | Entity | Directory | File pattern | ID pattern | Current records |
 |--------|-----------|--------------|------------|-----------------|
-| Risk | `src/BREAK/risks` | `R0001.json` | `R0001 or R0001-001` | 378 total (260 main, 118 sub) |
+| Risk | `src/BREAK/risks` | `R0001.json` | `R0001 or R0001-001` | 382 total (260 main, 122 sub) |
 | Avoidance | `src/BREAK/avoidances` | `A0001.json` | `A0001 or A0001-001` | 318 total (213 main, 105 sub) |
 | AttackTool | `src/BREAK/attack-tools` | `AT0001.json` | `AT0001 or AT0001-001` | 118 total (81 main, 37 sub) |
 | ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 75 total (61 main, 14 sub) |
 | Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 592 total (528 main, 64 sub) |
-| BusinessScene | `src/BREAK/business-scenes` | `BS00.json` | `BS00` | 20 total (20 main, 0 sub) |
+| BusinessDomain | `src/BREAK/business-domains` | `BD00.json` | `BD00` | 20 total (20 main, 0 sub) |
 | Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1782 total (1782 main, 0 sub) |
 
 Parent and child records live in the parent JSON file. For example, `R0001-001` belongs in `src/BREAK/risks/R0001.json`.
@@ -126,20 +126,20 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `relatedAvoidances` | string | required | 相关规避手段列表；Avoidance 中为规避手段间关联对象列表。 Target: Avoidance. |
 | `relatedAttackTools` | string | required | 相关攻击工具列表；AttackTool 中为攻击工具间关联对象列表。 Target: AttackTool. |
 | `relatedThreatActors` | string | required | 相关威胁行为者列表；ThreatActor 中为威胁行为者间关联对象列表，Term 中为威胁行为者 ID 列表。 Target: ThreatActor. |
-| `relatedBusinessScenes` | string | required | 相关业务场景 ID 列表。 Target: BusinessScene. |
+| `relatedBusinessDomains` | string | required | 相关业务域 ID 列表。 Target: BusinessDomain. |
 | `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
 | `version` | string | required | Schema field. |
 
-### BusinessScene
+### BusinessDomain
 
-业务场景条目，组织风险维度、风险场景和场景下的风险引用。
+业务域条目，组织风险维度、风险场景和场景下的风险引用。
 
 | Field | Type | Requirement | Description |
 |-------|------|-------------|-------------|
 | `title` | string | required | 展示标题。 |
 | `description` | string | optional | 详细说明。 |
-| `risks` | string | optional | 业务场景直接引用的风险 ID 列表。 Target: Risk. |
+| `risks` | string | optional | 业务域直接引用的风险 ID 列表。 Target: Risk. |
 | `riskDimensions` | Record<RiskDimensionId, RiskDimension> | required | 风险维度映射；key 为风险维度 ID，value 包含标题和风险场景 ID 列表。 |
 | `riskScenes` | Record<RiskSceneId, RiskScene> | required | 风险场景映射；key 为风险场景 ID，value 包含标题和风险 ID 列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
@@ -180,9 +180,9 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `ThreatActor.indirectSupportRisks` | ThreatActor -> Risk | Risks indirectly supported by the actor. |
 | `ThreatActor.relatedThreatActors` | ThreatActor -> ThreatActor | Derived top related actors by shared risks and shared attack tools. |
 | `Term.related*` | Term -> Entity | Conceptual references used for navigation and search. |
-| `BusinessScene.riskScenes.*.risks` | BusinessScene -> Risk | Risks grouped under a scene-specific risk scene. |
+| `BusinessDomain.riskScenes.*.risks` | BusinessDomain -> Risk | Risks grouped under a scene-specific risk scene. |
 
-Relationship integrity is enforced by `npm run validate:data` through schema validation, i18n synchronization, keyword audit, entity relation checks, relationship coverage audit, business scene audit, reference coverage, and documentation consistency checks.
+Relationship integrity is enforced by `npm run validate:data` through schema validation, i18n synchronization, keyword audit, entity relation checks, relationship coverage audit, business domain audit, reference coverage, and documentation consistency checks.
 
 ## English i18n Boundary
 
@@ -197,8 +197,8 @@ Allowed English translation fields are:
 | AttackTool | `title`, `keywords`, `description`, `references[].title`, `references[].link` |
 | ThreatActor | `title`, `keywords`, `description`, `references[].title`, `references[].link` |
 | Term | `title`, `keywords`, `aliases`, `category`, `definition`, `description`, `usageExample`, `references[].title`, `references[].link` |
-| BusinessScene | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |
+| BusinessDomain | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |
 | Case | `title`, `keywords`, `summary`, `references[].title`, `references[].link` |
 
-English files must not contain relationship fields, ID arrays, `updated`, or BusinessScene structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.
+English files must not contain relationship fields, ID arrays, `updated`, or BusinessDomain structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.
 

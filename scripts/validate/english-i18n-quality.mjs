@@ -33,11 +33,11 @@ const categories = [
     fields: ["title", "definition", "description", "usageExample", "keywords", "aliases", "category"],
   },
   {
-    name: "BusinessScenes",
-    zhDir: "src/BREAK/business-scenes",
-    enDir: "src/i18n/en/BREAK/business-scenes",
+    name: "BusinessDomains",
+    zhDir: "src/BREAK/business-domains",
+    enDir: "src/i18n/en/BREAK/business-domains",
     fields: ["title", "description"],
-    checkBusinessSceneNestedTitles: true,
+    checkBusinessDomainNestedTitles: true,
   },
   {
     name: "Cases",
@@ -154,7 +154,7 @@ for (const category of categories) {
         }
       }
 
-      if (category.checkBusinessSceneNestedTitles) {
+      if (category.checkBusinessDomainNestedTitles) {
         for (const [key, value] of Object.entries(zhEntity.riskDimensions ?? {})) {
           const enValue = enEntity.riskDimensions?.[key];
           if (isMissingEnglishValue(value.title, enValue?.title)) {

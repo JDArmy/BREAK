@@ -42,9 +42,9 @@
       "TA0018",
       "TA0048"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS16"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD16"
     ],
     "references": [
       {
@@ -56,6 +56,6 @@
         "title": "Understanding Denial-of-Service Attacks - CISA"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

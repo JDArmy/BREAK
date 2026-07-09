@@ -42,12 +42,12 @@
       "TA0031",
       "TA0042-001"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD02",
+      "BD04",
+      "BD15"
     ],
     "references": [
       {
@@ -63,7 +63,7 @@
         "title": "IP 地址是什么,有什么用,求通俗易懂答案。? - 知乎"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "一次社会工程攻击中，攻击者冒充IT技术支持致电公司员工，以'紧急安全更新'为由诱导其安装远程控制软件，从而获取了企业内网访问权限。"
   }
 }

@@ -15,8 +15,8 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://owasp.org/www-community/attacks/Session_hijacking_attack"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "version": 2
   }
 }

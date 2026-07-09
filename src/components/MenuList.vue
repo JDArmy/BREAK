@@ -270,7 +270,7 @@ const getActiveIndex = (fullPath: string) => {
   if (knowledgesMatch) return `/knowledges/${knowledgesMatch[1]}/list`;
   if (fullPath.startsWith("/changelog")) return "/changelog";
   if (fullPath.startsWith("/docs")) return "/docs";
-  if (fullPath.match(/^\/business-scene\//)) return "/";
+  if (fullPath.match(/^\/business-domain\//)) return "/";
   if (fullPath.match(/^\/home\//)) return "/";
   if (fullPath.match(/^\/relations\//)) return "/relations/risk-relation/risk/R0001";
 

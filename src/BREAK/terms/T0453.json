@@ -33,9 +33,9 @@
       "TA0039",
       "TA0045"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD15"
     ],
     "references": [
       {
@@ -47,7 +47,7 @@
         "title": "金色观察丨一文带你读懂什么是闪电贷 - 知乎"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "攻击者通过闪电贷借入1亿美元，操纵某DEX价格预言机后在另一协议中以虚高价格借出资产，在同一笔交易内完成获利并归还贷款，净赚1200万美元。"
   }
 }

@@ -18,7 +18,7 @@ Adding any entity entry (Risk / Avoidance / AttackTool / ThreatActor / Term / Ca
 3. **Sync the English translation**: create the matching translation file in `src/i18n/en/BREAK/{entity}/{ID}.json`, containing only translatable text fields.
 4. **Maintain relations**: e.g. a new Avoidance must be referenced by at least one Risk or AttackTool's `avoidances` (otherwise validation blocks).
 5. **Update the `updated` field**: today's date in YYYY-MM-DD.
-6. **Update business scenes** (Risk only): add the new Risk ID to `riskScenes[*].risks` in `src/BREAK/business-scenes/*.json`.
+6. **Update business domains** (Risk only): add the new Risk ID to `riskScenes[*].risks` in `src/BREAK/business-domains/*.json`.
 7. **Run validation**: `npm run validate:data` must pass.
 8. **Run review**: `npm run review:changed` confirms no fail.
 
@@ -34,7 +34,7 @@ Entity quality gates have three tiers; see `scripts/llm/README.md` for details.
 
 All enumerable / regex / lookup-table rules are wired into `npm run validate:data`. Blocking behavior has two levels:
 
-- **error blocks the build**: schema, i18n-sync, english-i18n-quality, keywords, check-entity-relations, relations, business-scenes, require-references, avoidance-content, case-incident-time, admission, ui-i18n-keys, title-dedup, updated-sync-gate, content-quality, references, etc.
+- **error blocks the build**: schema, i18n-sync, english-i18n-quality, keywords, check-entity-relations, relations, business-domains, require-references, avoidance-content, case-incident-time, admission, ui-i18n-keys, title-dedup, updated-sync-gate, content-quality, references, etc.
 - **review non-blocking**: id-continuity (gaps need human confirmation), entity-granularity (split signals need semantic judgment), generic-phrase-blocklist (clichés need human judgment), etc. — report only.
 
 ### Tier 2: Class B · Subagent cross-judgment (`review:*` commands)

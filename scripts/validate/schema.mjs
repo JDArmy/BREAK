@@ -46,11 +46,11 @@ const categories = [
     requireKeywords: true,
   },
   {
-    name: "business-scenes",
-    dir: "src/BREAK/business-scenes",
-    schemaKey: "businessScenes",
-    filePattern: /^BS\d{2}\.json$/,
-    keyPattern: /^BS\d{2}$/,
+    name: "business-domains",
+    dir: "src/BREAK/business-domains",
+    schemaKey: "businessDomains",
+    filePattern: /^BD\d{2}\.json$/,
+    keyPattern: /^BD\d{2}$/,
   },
   {
     name: "cases",

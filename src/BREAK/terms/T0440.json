@@ -50,10 +50,10 @@
       "TA0003",
       "TA0007"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS03",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD03",
+      "BD04"
     ],
     "references": [
       {
@@ -61,6 +61,6 @@
         "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

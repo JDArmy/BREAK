@@ -36,8 +36,8 @@ export interface EntityRegistryEntry {
   detailRouteName: string;
   /** 首页抽屉路由名 */
   homeDetailRouteName: string;
-  /** 业务场景抽屉路由名 */
-  businessSceneDetailRouteName: string;
+  /** 业务域抽屉路由名 */
+  businessDomainDetailRouteName: string;
   /** 关系图视角路由名（如 "relationRiskEntity"），term/case 无视角留空 */
   relationPerspectiveRouteName: string;
   /** Popover 展示的字段优先级（第一个命中作 definition，第二个作 description） */
@@ -63,7 +63,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     listRouteName: "knowledgesRiskList",
     detailRouteName: "knowledgesRiskDetail",
     homeDetailRouteName: "homeRiskDetail",
-    businessSceneDetailRouteName: "businessSceneRiskDetail",
+    businessDomainDetailRouteName: "businessDomainRiskDetail",
     relationPerspectiveRouteName: "relationRiskEntity",
     fieldPriority: ["definition", "description"],
     dataSource: "i18n",
@@ -80,7 +80,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     listRouteName: "knowledgesAvoidanceList",
     detailRouteName: "knowledgesAvoidanceDetail",
     homeDetailRouteName: "homeAvoidanceDetail",
-    businessSceneDetailRouteName: "businessSceneAvoidanceDetail",
+    businessDomainDetailRouteName: "businessDomainAvoidanceDetail",
     relationPerspectiveRouteName: "relationDefenseCoverageEntity",
     fieldPriority: ["definition", "description"],
     dataSource: "i18n",
@@ -97,7 +97,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     listRouteName: "knowledgesAttackToolList",
     detailRouteName: "knowledgesAttackToolDetail",
     homeDetailRouteName: "homeAttackToolDetail",
-    businessSceneDetailRouteName: "businessSceneAttackToolDetail",
+    businessDomainDetailRouteName: "businessDomainAttackToolDetail",
     relationPerspectiveRouteName: "relationAttackPathEntity",
     fieldPriority: ["description"],
     dataSource: "i18n",
@@ -114,7 +114,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     listRouteName: "knowledgesThreatActorList",
     detailRouteName: "knowledgesThreatActorDetail",
     homeDetailRouteName: "homeThreatActorDetail",
-    businessSceneDetailRouteName: "businessSceneThreatActorDetail",
+    businessDomainDetailRouteName: "businessDomainThreatActorDetail",
     relationPerspectiveRouteName: "relationAttackPathEntity",
     fieldPriority: ["description"],
     dataSource: "i18n",
@@ -131,7 +131,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     listRouteName: "knowledgesTermList",
     detailRouteName: "knowledgesTermDetail",
     homeDetailRouteName: "homeTermDetail",
-    businessSceneDetailRouteName: "businessSceneTermDetail",
+    businessDomainDetailRouteName: "businessDomainTermDetail",
     relationPerspectiveRouteName: "",
     fieldPriority: ["definition", "description"],
     dataSource: "i18n",
@@ -147,7 +147,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     listRouteName: "knowledgesCaseList",
     detailRouteName: "knowledgesCaseDetail",
     homeDetailRouteName: "homeCaseDetail",
-    businessSceneDetailRouteName: "",
+    businessDomainDetailRouteName: "",
     relationPerspectiveRouteName: "",
     fieldPriority: ["summary", "description"],
     dataSource: "lazy",

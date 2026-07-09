@@ -319,7 +319,7 @@ const backToList = () => {
   if (isMobile.value && props.detailRouteName) {
     router.push({ name: props.routeName });
   } else {
-    // 无独立详情路由（如业务场景）时仅切换移动端视图态
+    // 无独立详情路由（如业务域）时仅切换移动端视图态
     mobileView.value = "list";
   }
   nextTick(() => {

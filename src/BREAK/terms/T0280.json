@@ -40,10 +40,10 @@
       "TA0009",
       "TA0019"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD05",
+      "BD04"
     ],
     "references": [
       {
@@ -51,7 +51,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "黑产在社交群组里大量散布带有隐晦黑话的水下广告，引导用户下载一款未在应用商店上架的涉赌App，以规避平台审核。"
   }
 }

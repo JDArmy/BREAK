@@ -139,13 +139,13 @@ export const termSchema = z.object({
   relatedAvoidances: idArray,
   relatedAttackTools: idArray,
   relatedThreatActors: idArray,
-  relatedBusinessScenes: idArray,
+  relatedBusinessDomains: idArray,
   references: z.array(referenceSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
 }).strict();
 
-export const businessSceneSchema = z.object({
+export const businessDomainSchema = z.object({
   title: nonEmptyString,
   description: z.string().optional(),
   risks: idArray.optional(),
@@ -187,7 +187,7 @@ export const entitySchemas = {
   attackTools: attackToolSchema,
   threatActors: threatActorSchema,
   terms: termSchema,
-  businessScenes: businessSceneSchema,
+  businessDomains: businessDomainSchema,
   cases: caseSchema,
 } as const;
 

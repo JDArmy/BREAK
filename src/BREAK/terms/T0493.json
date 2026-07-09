@@ -36,9 +36,9 @@
       "TA0045",
       "TA0046"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD15"
     ],
     "references": [
       {
@@ -50,6 +50,6 @@
         "title": "L2BEAT - Layer 2 Analytics"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

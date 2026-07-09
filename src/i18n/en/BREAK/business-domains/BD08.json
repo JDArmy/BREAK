@@ -1,0 +1,70 @@
+{
+  "BD08": {
+    "title": "Online Education",
+    "riskDimensions": {
+      "RD01": {
+        "title": "Transaction and Entitlement Risk"
+      },
+      "RD02": {
+        "title": "Content and Ecosystem Governance Risk"
+      },
+      "RD03": {
+        "title": "Account and Identity Risk"
+      },
+      "RD04": {
+        "title": "Platform, Interface, and Automation Abuse Risk"
+      },
+      "RD05": {
+        "title": "Data, Algorithm, and Model Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
+      }
+    },
+    "riskScenes": {
+      "RS01": {
+        "title": "Marketing and Growth Fraud"
+      },
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS05": {
+        "title": "Content and Community Governance"
+      },
+      "RS06": {
+        "title": "Internal Security"
+      },
+      "RS28": {
+        "title": "Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS10": {
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
+      },
+      "RS08": {
+        "title": "Payment, Funding, and Financial Fraud"
+      },
+      "RS13": {
+        "title": "AI Model, Agent, and Data Security"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS25": {
+        "title": "After-Sales, Refund, and Claims Abuse"
+      },
+      "RS26": {
+        "title": "Algorithm, Pricing, and Platform Governance"
+      }
+    },
+    "description": "Online education scenarios covering course sales, online teaching, exam certification, and learning communities, facing piracy, course-credit fraud, and refund abuse risks."
+  }
+}

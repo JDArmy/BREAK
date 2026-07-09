@@ -46,11 +46,11 @@
       "TA0014",
       "TA0015"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS15",
-      "BS04",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD15",
+      "BD04",
+      "BD11"
     ],
     "references": [
       {
@@ -66,6 +66,6 @@
         "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   }
 }

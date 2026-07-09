@@ -45,7 +45,7 @@ function buildContext() {
     ThreatActor: 'break:ThreatActor',
     Term: 'break:Term',
     Case: 'break:Case',
-    BusinessScene: 'break:BusinessScene',
+    BusinessDomain: 'break:BusinessDomain',
     // 属性映射 → schema.org
     title: 'schema:name',
     description: 'schema:description',
@@ -60,7 +60,7 @@ function buildContext() {
     relatedAvoidances: { '@id': 'break:relatedAvoidances', '@type': '@id', '@container': '@set' },
     relatedAttackTools: { '@id': 'break:relatedAttackTools', '@type': '@id', '@container': '@set' },
     relatedThreatActors: { '@id': 'break:relatedThreatActors', '@type': '@id', '@container': '@set' },
-    relatedBusinessScenes: { '@id': 'break:relatedBusinessScenes', '@type': '@id', '@container': '@set' },
+    relatedBusinessDomains: { '@id': 'break:relatedBusinessDomains', '@type': '@id', '@container': '@set' },
     relatedCases: { '@id': 'break:relatedCases', '@type': '@id', '@container': '@set' },
     // 引用列表
     references: { '@id': 'schema:citation', '@container': '@set' },
@@ -185,7 +185,7 @@ function convertTermNode(breakId, entity) {
     relatedAvoidances: (entity.relatedAvoidances || []).map(entityUri),
     relatedAttackTools: (entity.relatedAttackTools || []).map(entityUri),
     relatedThreatActors: (entity.relatedThreatActors || []).map(entityUri),
-    relatedBusinessScenes: (entity.relatedBusinessScenes || []).map(entityUri),
+    relatedBusinessDomains: (entity.relatedBusinessDomains || []).map(entityUri),
     references: convertReferences(entity.references),
     updated: entity.updated,
     version: entity.version ?? 1,
@@ -214,7 +214,7 @@ function convertCaseNode(breakId, entity) {
   };
 }
 
-function convertBusinessSceneNode(breakId, entity) {
+function convertBusinessDomainNode(breakId, entity) {
   // 展开 riskScenes 中的 risks 为扁平引用
   const sceneRisks = [];
   for (const rs of Object.values(entity.riskScenes || {})) {
@@ -224,10 +224,10 @@ function convertBusinessSceneNode(breakId, entity) {
   }
   return {
     '@id': entityUri(breakId),
-    '@type': 'BusinessScene',
+    '@type': 'BusinessDomain',
     breakId,
-    stixId: makeStixId('x-break-business-scene', breakId),
-    stixType: 'x-break-business-scene',
+    stixId: makeStixId('x-break-business-domain', breakId),
+    stixType: 'x-break-business-domain',
     title: entity.title,
     description: entity.description || '',
     relatedRisks: [...new Set(sceneRisks)],
@@ -283,8 +283,8 @@ function convertToJsonLd(breakBundle) {
   for (const [id, entity] of Object.entries(data.cases || {})) {
     graph.push(convertCaseNode(id, entity));
   }
-  for (const [id, entity] of Object.entries(data.businessScenes || {})) {
-    graph.push(convertBusinessSceneNode(id, entity));
+  for (const [id, entity] of Object.entries(data.businessDomains || {})) {
+    graph.push(convertBusinessDomainNode(id, entity));
   }
 
   return {

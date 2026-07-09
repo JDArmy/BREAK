@@ -33,8 +33,8 @@
     "relatedThreatActors": [
       "TA0002"
     ],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -42,7 +42,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "由于该平台的风控系统对优惠券使用审核极严，黑产团伙为了不触发警报，直接采用\"裸下\"的方式以原价完成刷单任务。"
   }
 }

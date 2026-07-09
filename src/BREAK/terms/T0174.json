@@ -38,9 +38,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD04"
     ],
     "references": [
       {
@@ -52,7 +52,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "买家急着要目标的全户信息，但对接的渠道明确告知只能走慢线，因为数据要从内网逐级导出，最快也得等两天，加急费都不收，说明这个接口的风控已经严到随时可能断。"
   }
 }

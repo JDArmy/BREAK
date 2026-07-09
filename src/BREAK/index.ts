@@ -2,7 +2,7 @@ import basicInfo from "./basic-info";
 import risks from "./risks";
 import avoidances from "./avoidances";
 import avoidanceCategories from "./avoidance-categories";
-import businessScenes from "./business-scenes";
+import businessDomains from "./business-domains";
 import attackTools from "./attack-tools";
 import threatActors from "./threat-actors";
 import terms from "./terms";
@@ -13,7 +13,7 @@ const BREAK = {
   ...risks, //业务风险枚举
   ...avoidances, //规避手段枚举
   ...avoidanceCategories, //规避手段分类
-  ...businessScenes, //业务场景
+  ...businessDomains, //业务域
   ...attackTools, //攻击工具
   ...threatActors, //威胁行为者
   ...terms, //行业术语

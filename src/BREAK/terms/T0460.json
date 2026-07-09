@@ -35,8 +35,8 @@
       "TA0005-001",
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -52,7 +52,7 @@
         "link": "https://www.jfdaily.com/wx/detail.do?id=429129"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "某洗钱团伙购买了20套四件套用于搭建资金通道，将电信诈骗所得分散转入这些账户后通过多层转账和提现完成资金清洗。"
   }
 }

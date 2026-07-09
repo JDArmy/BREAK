@@ -10,8 +10,8 @@ vi.mock("@/BREAK/home", () => ({
       R0003: { title: "C", definition: "定义C" },
       "R0001-001": { title: "子风险", definition: "子定义" },
     },
-    businessScenes: {
-      BS00: {
+    businessDomains: {
+      BD00: {
         riskDimensions: {
           RD01: { title: "维度1", riskScenes: ["RS01", "RS02"] },
           RD02: { title: "维度二", riskScenes: ["RS03"] },
@@ -22,7 +22,7 @@ vi.mock("@/BREAK/home", () => ({
           RS03: { title: "场景LongName长名称场景", risks: ["R0001"] },
         },
       },
-      BS01: {
+      BD01: {
         riskDimensions: {
           RD01: { title: "DIM1", riskScenes: ["RS01", "RS02", "RS03", "RS04", "RS05", "RS06", "RS07", "RS08", "RS09"] },
         },
@@ -38,8 +38,8 @@ vi.mock("@/BREAK/home", () => ({
           RS09: { title: "S9", risks: ["R0001"] },
         },
       },
-      // BS18 结构：4 维度，RS29/RS30/RS32 跨维度复用，触发历史折行 bug
-      BS18: {
+      // BD18 结构：4 维度，RS29/RS30/RS32 跨维度复用，触发历史折行 bug
+      BD18: {
         riskDimensions: {
           RD01: { title: "交易维度", riskScenes: ["RS29", "RS32"] },
           RD02: { title: "运营维度", riskScenes: ["RS30", "RS31"] },
@@ -61,10 +61,10 @@ import { useHomeSceneLayout, useSubRiskToggle } from "@/composables/useHomeScene
 
 describe("useHomeSceneLayout", () => {
   it("返回 sceneLayout 计算属性", () => {
-    const bsKey = ref("BS00");
+    const bdKey = ref("BD00");
     const locale = ref("cn");
     const { sceneLayout, sceneBREAK, shouldEnableScroll } = useHomeSceneLayout(
-      bsKey,
+      bdKey,
       locale,
       {
         riskScene: (key) => sceneBREAK.value.riskScenes[key]?.title ?? key,
@@ -80,10 +80,10 @@ describe("useHomeSceneLayout", () => {
   });
 
   it("英文 locale 仍启用滚动", () => {
-    const bsKey = ref("BS00");
+    const bdKey = ref("BD00");
     const locale = ref("en");
     const { shouldEnableScroll, sceneBREAK } = useHomeSceneLayout(
-      bsKey,
+      bdKey,
       locale,
       {
         riskScene: (key) => sceneBREAK.value.riskScenes[key]?.title ?? key,
@@ -94,10 +94,10 @@ describe("useHomeSceneLayout", () => {
   });
 
   it("统一启用滚动并计算维度宽度", () => {
-    const bsKey = ref("BS01"); // 9 个场景
+    const bdKey = ref("BD01"); // 9 个场景
     const locale = ref("cn");
     const { sceneLayout, sceneBREAK, shouldEnableScroll } = useHomeSceneLayout(
-      bsKey,
+      bdKey,
       locale,
       {
         riskScene: (key) => sceneBREAK.value.riskScenes[key]?.title ?? key,
@@ -114,10 +114,10 @@ describe("useHomeSceneLayout", () => {
   });
 
   it("多维度统一占满整行且各有宽度", () => {
-    const bsKey = ref("BS00");
+    const bdKey = ref("BD00");
     const locale = ref("cn");
     const { sceneLayout, sceneBREAK } = useHomeSceneLayout(
-      bsKey,
+      bdKey,
       locale,
       {
         riskScene: (key) => sceneBREAK.value.riskScenes[key]?.title ?? key,
@@ -125,7 +125,7 @@ describe("useHomeSceneLayout", () => {
       },
     );
 
-    // BS00 有 2 个维度
+    // BD00 有 2 个维度
     expect(sceneLayout.value).toHaveLength(2);
     // 统一走滚动分支后 dimensionSize 恒为 24（桌面端模板传 md=undefined 不消费 size）
     for (const dim of sceneLayout.value) {
@@ -134,13 +134,13 @@ describe("useHomeSceneLayout", () => {
     }
   });
 
-  it("RS 跨维度复用时不折行（BS18 回归）", () => {
-    // 模拟 BS18 结构：4 个维度，RS29/RS30/RS32 被多个维度复用，
+  it("RS 跨维度复用时不折行（BD18 回归）", () => {
+    // 模拟 BD18 结构：4 个维度，RS29/RS30/RS32 被多个维度复用，
     // 历史上非滚动分支因 Σ(维度场景数) > totalScenes 导致 dimensionSize 之和 > 24 折行。
-    const bsKey = ref("BS18");
+    const bdKey = ref("BD18");
     const locale = ref("cn");
     const { sceneLayout, shouldEnableScroll } = useHomeSceneLayout(
-      bsKey,
+      bdKey,
       locale,
       {
         riskScene: (key) => key,
@@ -162,10 +162,10 @@ describe("useHomeSceneLayout", () => {
   });
 
   it("isChineseLocale 正确响应", () => {
-    const bsKey = ref("BS00");
+    const bdKey = ref("BD00");
     const locale = ref("cn");
     const { isChineseLocale, sceneBREAK } = useHomeSceneLayout(
-      bsKey,
+      bdKey,
       locale,
       {
         riskScene: (key) => sceneBREAK.value.riskScenes[key]?.title ?? key,

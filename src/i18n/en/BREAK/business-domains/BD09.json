@@ -1,0 +1,46 @@
+{
+  "BD09": {
+    "title": "Government Websites",
+    "riskDimensions": {
+      "RD01": {
+        "title": "Transaction and Entitlement Risk"
+      },
+      "RD03": {
+        "title": "Account and Identity Risk"
+      },
+      "RD04": {
+        "title": "Platform, Interface, and Automation Abuse Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
+      }
+    },
+    "riskScenes": {
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS06": {
+        "title": "Internal Security"
+      },
+      "RS28": {
+        "title": "Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS24": {
+        "title": "Booking, Ticketing, and Inventory Resource Abuse"
+      }
+    },
+    "description": "Government website scenarios covering public services, resource trading, information disclosure, and online services, facing identity impersonation, resource grabbing, and data leakage risks."
+  }
+}

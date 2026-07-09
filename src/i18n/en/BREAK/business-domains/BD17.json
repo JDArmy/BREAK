@@ -1,0 +1,61 @@
+{
+  "BD17": {
+    "title": "Metaverse",
+    "description": "Security risks in metaverse, virtual worlds, VR/AR, digital humans, virtual assets and other scenarios",
+    "riskDimensions": {
+      "RD02": {
+        "title": "Content and Ecosystem Governance Risk"
+      },
+      "RD03": {
+        "title": "Account and Identity Risk"
+      },
+      "RD04": {
+        "title": "Platform, Interface, and Automation Abuse Risk"
+      },
+      "RD06": {
+        "title": "Virtual Asset and Emerging Technology Risk"
+      },
+      "RD08": {
+        "title": "Internal, Supply-Chain, and Compliance Risk"
+      }
+    },
+    "riskScenes": {
+      "RS22": {
+        "title": "Virtual Asset and Economic Fraud"
+      },
+      "RS23": {
+        "title": "Virtual Identity, XR, and Immersive Content Security"
+      },
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS05": {
+        "title": "Content and Community Governance"
+      },
+      "RS06": {
+        "title": "Internal Security"
+      },
+      "RS28": {
+        "title": "Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS10": {
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
+      },
+      "RS18": {
+        "title": "On-Chain Privacy, NFT, and Virtual Asset Trading"
+      },
+      "RS27": {
+        "title": "Location, Trajectory, and Spatial Data Fraud"
+      }
+    }
+  }
+}

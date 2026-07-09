@@ -6,7 +6,7 @@
 
 ## 0. 目的与适用范围
 
-现有校验（`validate:data` 28 道门禁 + `data-integrity.test.ts`）已覆盖结构完整性、命名/ID/枚举、交叉引用、孤儿检测、keywords 含 title、i18n 同步、BS 归类、riskAssessment、title 去重/格式、updated 同步、ID 连续性、套话短语、Case.category 域名一致性、Risk.complexity AC 覆盖、Case.summary 关联交叉、Term.category 枚举、实体粒度初筛。本标准补 6 个准入空白：
+现有校验（`validate:data` 28 道门禁 + `data-integrity.test.ts`）已覆盖结构完整性、命名/ID/枚举、交叉引用、孤儿检测、keywords 含 title、i18n 同步、BD 归类、riskAssessment、title 去重/格式、updated 同步、ID 连续性、套话短语、Case.category 域名一致性、Risk.complexity AC 覆盖、Case.summary 关联交叉、Term.category 枚举、实体粒度初筛。本标准补 6 个准入空白：
 
 | 空白 | 机器卡（admission.mjs） | 人判（文档 + discover 评审关） |
 |---|---|---|
@@ -23,7 +23,7 @@
 
 ### 1.1 必要性：是否值得录入（人判）
 
-- 是否有真实业务场景/案例佐证该实体存在且值得独立成条？
+- 是否有真实业务域/案例佐证该实体存在且值得独立成条？
 - 是否有可观测的具体特征（攻击手法/防御手段/工具实体/角色行为模式/术语定义）？
 - 是否与现有条目有明确区分（不是现有条目的子集或换个说法）？
 - 泛泛概念、临时新闻用语、产品宣传、趋势综述 → 不录入。

@@ -34,9 +34,9 @@
       "TA0009",
       "TA0017"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -48,6 +48,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   }
 }

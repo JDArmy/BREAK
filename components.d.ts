@@ -71,7 +71,7 @@ declare module 'vue' {
     RelationNetworkPane: typeof import('./src/components/relation/RelationNetworkPane.vue')['default']
     RelationNodeAnalysisBlock: typeof import('./src/components/relation/RelationNodeAnalysisBlock.vue')['default']
     RelationNodeAttackPathBlock: typeof import('./src/components/relation/RelationNodeAttackPathBlock.vue')['default']
-    RelationNodeBusinessSceneImpactBlock: typeof import('./src/components/relation/RelationNodeBusinessSceneImpactBlock.vue')['default']
+    RelationNodeBusinessDomainImpactBlock: typeof import('./src/components/relation/RelationNodeBusinessDomainImpactBlock.vue')['default']
     RelationNodeCoverageBlock: typeof import('./src/components/relation/RelationNodeCoverageBlock.vue')['default']
     RelationNodeDetailContent: typeof import('./src/components/relation/RelationNodeDetailContent.vue')['default']
     RelationNodeDetailDrawer: typeof import('./src/components/relation/RelationNodeDetailDrawer.vue')['default']

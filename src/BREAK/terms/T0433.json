@@ -34,9 +34,9 @@
       "TA0004",
       "TA0038"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -48,7 +48,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "中介以两万元价格将这名背债人的身份信息买断给下游团伙，意味着此后此人被反复用于注册公司、开票、骗贷所产生的全部收益都与原中介无关。"
   }
 }

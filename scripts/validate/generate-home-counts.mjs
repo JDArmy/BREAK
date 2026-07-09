@@ -42,7 +42,7 @@ const entityCounts = {
 
 const content = `import basicInfo from "./basic-info";
 import risks from "./risks";
-import businessScenes from "./business-scenes";
+import businessDomains from "./business-domains";
 
 // 由 scripts/validate/generate-home-counts.mjs 生成，勿手动编辑。
 // 数据变化后运行 npm run generate:home-counts 刷新（build 链已包含）。
@@ -60,7 +60,7 @@ const entityCounts = {
 const homeBREAK = {
   ...basicInfo,
   ...risks,
-  ...businessScenes,
+  ...businessDomains,
   entityCounts,
 };
 

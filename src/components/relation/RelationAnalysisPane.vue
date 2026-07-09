@@ -30,7 +30,7 @@ const {
   selectedNetworkNode,
   selectedNodeAnalysisSummary,
   selectedNodeAttackPathSummary,
-  selectedNodeBusinessSceneImpactSummary,
+  selectedNodeBusinessDomainImpactSummary,
   selectedNodeCoverageSummary,
   selectedNodeSpecialInsightSummary,
   rootNodeRelations,
@@ -122,7 +122,7 @@ const hasAnyAnalysis = computed(
   () =>
     selectedNodeAnalysisSummary.value ||
     selectedNodeSpecialInsightSummary.value ||
-    selectedNodeBusinessSceneImpactSummary.value ||
+    selectedNodeBusinessDomainImpactSummary.value ||
     selectedNodeCoverageSummary.value ||
     selectedNodeAttackPathSummary.value.length > 0 ||
     riskAvoidanceCoverage.value ||

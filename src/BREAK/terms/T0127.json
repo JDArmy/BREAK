@@ -36,8 +36,8 @@
       "TA0008",
       "TA0042"
     ],
-    "relatedBusinessScenes": [
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD04"
     ],
     "references": [
       {
@@ -45,7 +45,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0127-001": {
     "title": "惑猪",
@@ -84,8 +84,8 @@
       "TA0008",
       "TA0042"
     ],
-    "relatedBusinessScenes": [
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD04"
     ],
     "references": [
       {
@@ -93,7 +93,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0127-002": {
     "title": "喂猪",
@@ -132,8 +132,8 @@
       "TA0008",
       "TA0042"
     ],
-    "relatedBusinessScenes": [
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD04"
     ],
     "references": [
       {
@@ -141,7 +141,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0127-003": {
     "title": "猪饲料",
@@ -184,8 +184,8 @@
       "TA0008",
       "TA0042"
     ],
-    "relatedBusinessScenes": [
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD04"
     ],
     "references": [
       {
@@ -193,7 +193,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0127-004": {
     "title": "猪食槽",
@@ -239,8 +239,8 @@
       "TA0008",
       "TA0042"
     ],
-    "relatedBusinessScenes": [
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD04"
     ],
     "references": [
       {
@@ -248,7 +248,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   },
   "T0127-005": {
     "title": "找猪",
@@ -293,8 +293,8 @@
       "TA0008",
       "TA0042"
     ],
-    "relatedBusinessScenes": [
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD04"
     ],
     "references": [
       {
@@ -302,6 +302,6 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

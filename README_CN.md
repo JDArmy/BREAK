@@ -18,9 +18,9 @@ JDArmy BREAK 是英文 "Business Risk Enumeration & Avoidance Knowledge" 的缩�
 
 ## 方法
 
-框架整体按照：业务场景、风险维度、风险场景、风险点的划分原则组织。业务场景对应行业或业务域；风险维度是业务风险域，用于把风险场景归入交易与权益、内容与生态治理、账号与身份、平台接口与自动化对抗、数据算法与模型、虚拟资产与新兴技术、设备物理与基础设施、内部供应链与合规等稳定分组；每个风险场景包含若干风险点。
+框架整体按照：业务域、风险维度、风险场景、风险点的划分原则组织。业务域对应行业或业务范围；风险维度是业务风险域，用于把风险场景归入交易与权益、内容与生态治理、账号与身份、平台接口与自动化对抗、数据算法与模型、虚拟资产与新兴技术、设备物理与基础设施、内部供应链与合规等稳定分组；每个风险场景包含若干风险点。
 
-目前框架共收集和整理风险点 378 个、规避手段 318 个、攻击工具 118 个、威胁行为者 75 个、行业术语 592 个、业务场景 20 个、规避手段分类 4 个、案例 1782 个，后续会根据情况和反馈进行动态添加、升级或调整。每个风险点由风险编号、风险标题、风险定义、风险描述、风险复杂度、风险影响、规避手段、参考资料和攻击工具等组成。风险编号通过 R00xx 的方式来进行唯一编号（效仿Mitre ATT&CK），以便后期交流和情报传递。而攻击描述可以指引企业蓝军更好地进行安全能力评估，规避手段可以帮助企业红军或业务风控来加强安全能力建设，以降低业务风险。
+目前框架共收集和整理风险点 382 个、规避手段 318 个、攻击工具 118 个、威胁行为者 75 个、行业术语 592 个、业务域 20 个、规避手段分类 4 个、案例 1782 个，后续会根据情况和反馈进行动态添加、升级或调整。每个风险点由风险编号、风险标题、风险定义、风险描述、风险复杂度、风险影响、规避手段、参考资料和攻击工具等组成。风险编号通过 R00xx 的方式来进行唯一编号（效仿Mitre ATT&CK），以便后期交流和情报传递。而攻击描述可以指引企业蓝军更好地进行安全能力评估，规避手段可以帮助企业红军或业务风控来加强安全能力建设，以降低业务风险。
 
 **主要注意的是：** 业务风险和漏洞不是一回事情。一般来说漏洞是由于业务编码的缺陷导致的，可以通过修改代码去除缺陷来修复漏洞；而业务风险很大程度上并不是由编码缺陷造成的，只是攻击者对正常业务逻辑的一种非预期的利用。也因此，在大部分情况下，并不能完全消除风险，只能将风险降低到一定的可接受范围。所以并不一定可以通过直接修改代码来修复漏洞，通常业务风险需要外挂安全能力、构造风控模型来减缓攻击、降低攻击ROI或缩小攻击面。
 
@@ -60,9 +60,9 @@ scripts/skill/package_skill.sh
 - `risks` 文件夹中存放风险列表
 - `avoidances` 文件夹中存放规避手段
 - `avoidance-categories` 文件夹中存放规避手段分类
-- `business-scenes` 文件夹中存放业务场景
-  - `riskDimensions` 字段为该业务场景所涉及的业务风险域，并维护其包含的风险场景 ID
-  - `riskScenes` 字段为该业务场景所涉及的风险场景及相关风险；同一风险场景中不要同时列出父风险和子风险，父风险会在前端展开其子风险
+- `business-domains` 文件夹中存放业务域
+  - `riskDimensions` 字段为该业务域内的风险维度，并维护其包含的风险场景 ID
+  - `riskScenes` 字段为该业务域所涉及的风险场景及相关风险；同一风险场景中不要同时列出父风险和子风险，父风险会在前端展开其子风险
 - `attack-tools` 文件夹中存放攻击工具列表
 - `threat-actors` 文件夹中存放威胁行为者列表
 - `terms` 文件夹中存放行业术语与黑话词汇表
@@ -121,7 +121,7 @@ npm run lint
 npm run type-check
 ```
 
-`npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计、业务场景校验、引用覆盖、内容质量与生成式 Schema 文档同步检查；BusinessScene 子风险校验只阻断同一 riskScene 同时列出父风险和子风险的重复展示问题。
+`npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计、业务域校验、引用覆盖、内容质量与生成式 Schema 文档同步检查；BusinessDomain 子风险校验只阻断同一 riskScene 同时列出父风险和子风险的重复展示问题。
 `npm run validate:docs-freshness` 会阻断文档滞后：当路由、UI 组件、Schema、验证脚本、公共命令、导出链路或 Skill 数据 / 搜索行为变化时，必须在同一次变更中同步更新对应的使用手册、README 和 Skill 文档。
 `npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:home-counts`、`export:data`、`export:data-en`、`export:stix`、`export:jsonld`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export`、`validate:data-package` 和 `validate:stix`。
 `npm run test:coverage` 会对关系分析、Sankey 攻击路径、根节点路径洞察、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
@@ -139,7 +139,7 @@ npm run type-check
 `npm run validate:data-package` 会检查 npm 包边界、运行时入口、类型声明、README、manifest hash 和版本一致性。
 `npm run test:smoke`、`npm run test:performance`、`npm run test:visual-review`、`npm run test:relation-stability` 和 `npm run test:lighthouse` 会使用 Playwright/Chromium 验证生成后的静态站点。PR CI 会在每个 PR 中把 `test:smoke` 作为 hard-fail 浏览器门禁执行；较慢的浏览器回归、视觉复核、关系稳定性和 Lighthouse 检查仅在 major/minor 版本变化时进入 PR CI，也可以通过相同 npm scripts 在本地手动执行。Deploy 不重复运行 Playwright/Lighthouse。
 `npm run audit:quality-report` 会重新生成前端可消费的质量报告 JSON。
-`npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务场景覆盖基线报告。
+`npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务域覆盖基线报告。
 `npm run audit:bundle` 会基于 `dist/assets` 检查构建产物是否超过 bundle 预算。
 `npm run audit:maintenance` 会刷新审计报告并生成统一维护汇总。
 
@@ -160,7 +160,7 @@ npm run type-check
 
 BREAK 提供标准化导出格式，用于与外部 CTI/SIEM 平台和语义网工具集成：
 
-**STIX 2.1** — 全部 7 类实体（Risk、Avoidance、AttackTool、ThreatActor、Term、Case、BusinessScene）均映射为 STIX SDO，使用确定性 UUID v5 标识符。跨实体和同类实体关系映射为 STIX Relationship SRO。BREAK 特有字段通过 7 个 Extension Definition 保留。中英文 Bundle 共享相同 UUID，仅文本内容不同。完整映射规范见 [STIX_MAPPING.md](./STIX_MAPPING.md)。
+**STIX 2.1** — 全部 7 类实体（Risk、Avoidance、AttackTool、ThreatActor、Term、Case、BusinessDomain）均映射为 STIX SDO，使用确定性 UUID v5 标识符。跨实体和同类实体关系映射为 STIX Relationship SRO。BREAK 特有字段通过 7 个 Extension Definition 保留。中英文 Bundle 共享相同 UUID，仅文本内容不同。完整映射规范见 [STIX_MAPPING.md](./STIX_MAPPING.md)。
 
 **JSON-LD** — 实体导出为 `@graph` 链接数据节点，使用 `schema.org` 词汇表和 BREAK 专用术语。每个实体携带 `stixId` 字段，实现与 STIX Bundle 的双向交叉引用。实体 URI 格式为 `https://break.jd.army/entity/{ID}`。
 

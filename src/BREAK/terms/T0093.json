@@ -36,8 +36,8 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -49,7 +49,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "某大型电商平台数据泄露后，一名活跃于Telegram的料主以2万美元打包出售500万条含手机号和收货地址的一手订单信息，声称“绝对新鲜”，吸引大量下游买家询价。"
   }
 }

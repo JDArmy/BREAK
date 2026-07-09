@@ -31,8 +31,8 @@
       "TA0036",
       "TA0012"
     ],
-    "relatedBusinessScenes": [
-      "BS06"
+    "relatedBusinessDomains": [
+      "BD06"
     ],
     "references": [
       {
@@ -48,7 +48,7 @@
         "link": "https://www.163.com/dy/article/JRM9J9G70514JACF.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "某热门网游的私服吸引了5万玩家，通过修改掉率和开放付费道具免费获取来引流，造成官方服务器大量玩家流失和收入下降。"
   }
 }

@@ -33,7 +33,7 @@ Risk 是核心实体。除通用字段外，特有字段：
 - **`relatedRisks`**：风险间语义关联（**手维护**，见下文关系类型）
 - **`updated`**：YYYY-MM-DD，修改实质内容时必须同步更新
 
-Risk **不维护** `relatedBusinessScenes`——风险所属场景是 BusinessScene 的权威，关系在 `src/BREAK/business-scenes/*.json` 的 `riskScenes[*].risks` 中。
+Risk **不维护** `relatedBusinessDomains`——风险所属业务域以 BusinessDomain 为权威，关系在 `src/BREAK/business-domains/*.json` 的 `riskScenes[*].risks` 中。
 
 ## Avoidance（规避手段）
 
@@ -65,7 +65,7 @@ Risk **不维护** `relatedBusinessScenes`——风险所属场景是 BusinessSc
 - **`category`**：自由字符串（如「数据采集」「业务欺诈」「黑产服务」），沿用已有取值
 - **`aliases`**：别名数组
 - **`usageExample`**：使用场景示例（必填），必须含 title 或 aliases 中至少一个词（前端高亮）
-- 可维护 `relatedRisks` / `relatedAvoidances` / `relatedAttackTools` / `relatedThreatActors` / `relatedBusinessScenes`
+- 可维护 `relatedRisks` / `relatedAvoidances` / `relatedAttackTools` / `relatedThreatActors` / `relatedBusinessDomains`
 
 ## Case（典型案例）
 

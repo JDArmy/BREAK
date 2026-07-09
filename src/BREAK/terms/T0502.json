@@ -34,10 +34,10 @@
       "TA0039",
       "TA0045"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS15",
-      "BS17"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD15",
+      "BD17"
     ],
     "references": [
       {
@@ -49,6 +49,6 @@
         "title": "Former 'bitcoin mayor' Eric Adams faces $3 million rugpull allegation ..."
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-07-09"
   }
 }

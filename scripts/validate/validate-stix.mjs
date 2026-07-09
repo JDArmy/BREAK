@@ -243,7 +243,7 @@ function validateBusinessRules(bundle, label) {
       'threat-actor': Object.keys(data.threatActors || {}).length,
       'x-break-term': Object.keys(data.terms || {}).length,
       'report': Object.keys(data.cases || {}).length,
-      'x-break-business-scene': Object.keys(data.businessScenes || {}).length,
+      'x-break-business-domain': Object.keys(data.businessDomains || {}).length,
     };
 
     for (const [stixType, expectedCount] of Object.entries(typeCounts)) {
@@ -308,7 +308,7 @@ function countExpectedRelationships(data) {
   countArrayField(data.terms, 'T', 'relatedAvoidances', 'related-to', 'A');
   countArrayField(data.terms, 'T', 'relatedAttackTools', 'related-to', 'AT');
   countArrayField(data.terms, 'T', 'relatedThreatActors', 'related-to', 'TA');
-  countArrayField(data.terms, 'T', 'relatedBusinessScenes', 'related-to', 'BS');
+  countArrayField(data.terms, 'T', 'relatedBusinessDomains', 'related-to', 'BD');
 
   // 同类型内部关系
   countObjectField(data.risks, 'R', 'relatedRisks');
@@ -316,11 +316,11 @@ function countExpectedRelationships(data) {
   countObjectField(data.attackTools, 'AT', 'relatedAttackTools');
   countObjectField(data.threatActors, 'TA', 'relatedThreatActors');
 
-  // BusinessScene → Risk（riskScenes.*.risks）
-  for (const [bsId, bs] of Object.entries(data.businessScenes || {})) {
-    for (const rs of Object.values(bs.riskScenes || {})) {
+  // BusinessDomain → Risk（riskScenes.*.risks）
+  for (const [bdId, domain] of Object.entries(data.businessDomains || {})) {
+    for (const rs of Object.values(domain.riskScenes || {})) {
       for (const riskId of rs.risks || []) {
-        const key = `BS:${bsId}|related-to|R:${riskId}`;
+        const key = `BD:${bdId}|related-to|R:${riskId}`;
         seen.add(key);
       }
     }

@@ -33,9 +33,9 @@
       "TA0039",
       "TA0045"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS15"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD15"
     ],
     "references": [
       {
@@ -51,7 +51,7 @@
         "link": "https://www.jianshu.com/p/b5be22f3f3ff"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "某DeFi借贷协议使用智能合约自动执行抵押品存入、贷款发放、利息计算和清算，无需中心化平台运营方介入。攻击者利用合约漏洞在单笔交易中提取了价值800万美元的资产。"
   }
 }

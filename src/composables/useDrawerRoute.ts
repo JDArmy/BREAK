@@ -4,7 +4,7 @@ import { useI18n } from "vue-i18n";
 import { ElMessage } from "element-plus";
 
 interface DrawerConfig {
-  /** 触发该抽屉的路由名称（可多个，如 riskDetail + businessSceneRiskDetail） */
+  /** 触发该抽屉的路由名称（可多个，如 riskDetail + businessDomainRiskDetail） */
   routeNames: string[];
   /** 路由参数中对应实体 key 的参数名 */
   routeParam: string;

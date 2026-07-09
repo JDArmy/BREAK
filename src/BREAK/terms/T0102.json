@@ -39,9 +39,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD04"
     ],
     "references": [
       {
@@ -53,7 +53,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "一名离职员工将公司HR系统数据卖给黑产，这些数据随后被整合进一个庞大的社工库，攻击者只需输入手机号即可查询到其关联的社保、出行和通话记录。"
   }
 }

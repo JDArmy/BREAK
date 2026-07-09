@@ -13,8 +13,8 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "version": 2
   }
 }

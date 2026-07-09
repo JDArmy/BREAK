@@ -33,8 +33,8 @@
     "relatedThreatActors": [
       "TA0002"
     ],
-    "relatedBusinessScenes": [
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD02"
     ],
     "references": [
       {
@@ -42,7 +42,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "为了制造虚假的交易流水以骗取平台补贴，刷单商家与物流内鬼合作，向全国各地发出了数万个内装废纸的\"空包\"。"
   }
 }

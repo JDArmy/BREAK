@@ -15,8 +15,8 @@
 
 近期未发布变更汇总（基于最近两周提交）
 
-- 业务场景风险维度从“交易/运营/身份/对抗 + 技术维度”收敛为稳定业务风险域，并同步 20 个 BusinessScene 的中英文维度标题与风险场景归属。
-- BusinessScene 子风险校验只检查同一 `riskScene.risks` 中父风险与子风险同时出现的重复展示问题；孤立子风险不再提示，父风险在覆盖统计中可代表其子风险。
+- 业务域风险维度从“交易/运营/身份/对抗 + 技术维度”收敛为稳定业务风险域，并同步 20 个 BusinessDomain 的中英文维度标题与风险场景归属。
+- BusinessDomain 子风险校验只检查同一 `riskScene.risks` 中父风险与子风险同时出现的重复展示问题；孤立子风险不再提示，父风险在覆盖统计中可代表其子风险。
 - 首页与菜单交互优化：风险标题 tooltip 展示 ID、标题与定义，首页统计卡片颜色调整，菜单与抽屉详情样式进一步统一。
 - 近两周完成多轮数据治理：Case 事实核验、references 权威源补强、Case 关联错配修复、Term/Avoidance/AttackTool/ThreatActor 关系质量复核，以及增量 LLM 评审门禁和指纹基线完善。
 
@@ -161,7 +161,7 @@ case-fact 全量评审完成 + 44 个新 fail 事实错误修复，4 批 subagen
 - 首页抽屉的同类关联(Risk→Related Risk、Avoidance→Related Avoidance、AttackTool→Related AttackTool、ThreatActor→Related ThreatActor)由新窗口改为开嵌套抽屉,统一"抽屉内链接尽量开新抽屉"的交互
 - 4 个抽屉组件用 createRecoverableAsyncComponent 自引用(项目首个自引用先例),保留 relation type + note 渲染
 - RiskDetail 顶层补 append-to-body=true,与其它嵌套抽屉统一
-- 跨类嵌套、Case 新窗口、BusinessScene 路由跳转、知识库详情页 router-link 维持不变
+- 跨类嵌套、Case 新窗口、BusinessDomain 路由跳转、知识库详情页 router-link 维持不变
 
 ## 2.42.24
 
@@ -304,7 +304,7 @@ case-relation 全量 254 fail 深度甄别修复（之前误标为"LLM 主观判
 - **AT0054 漏洞利用工具聚焦**：description 从"扫描/挖掘/利用混合"改为聚焦漏洞利用核心（EXP 构建/载荷投递/提权/利用框架），排除上游扫描挖掘。granularity fail→review。
 - **AT0083 OT与物联网协议工具重写**：title "工业与车联网协议利用工具"→"OT与物联网协议利用工具"（原 title 漏医疗/边缘），description 重写为统一的 OT/IoT 协议层攻击面叙事，与 directCauseRisks 对齐。granularity fail→pass。
 - **T0412 合并入 T0307**：T0412（一手操作）与 T0307（一手直盘）实质重复，删 T0412，内容（aliases/keywords/related*）并入 T0307。terms 593→592。顺带移除 T0307 损坏的脱敏 zhihu 链接。
-- **R0091 加入游戏账号接管场景**：R0091 游戏洗号加入 BS06/RS07（账号接管与身份盗用）。risk-scene fail→pass。
+- **R0091 加入游戏账号接管场景**：R0091 游戏洗号加入 BD06/RS07（账号接管与身份盗用）。risk-scene fail→pass。
 - **AT0053 AI滥用工具集上位类定位**：description 重写为"AI 黑产工具集上位分类"，按生成模态枚举 7 个子工具，明确与单点工具边界。granularity fail→pass，should-extract fail→review。
 - **T0386 野路子 category 信贷欺诈→非法经营**（无牌照非法放贷平台属非法经营金融业务，非借款人信贷欺诈）。
 - R0239 漏归电商营销场景（已处理，旧 report 缓存）；R0174/R0202 重复（R0202 已删，旧 report 残留）。
@@ -364,9 +364,9 @@ case-relation 全量 254 fail 深度甄别修复（之前误标为"LLM 主观判
   - 新增：`title-dedup`（精确/归一化/编辑距离近义）、`title-format`（Term.title 括号/间隔号/顿号/过长，CLAUDE.md 已禁但无脚本管）、`updated-sync-gate`（内容变更但 updated 未刷新）、`id-continuity`（主 ID 跳号）、`generic-phrase-blocklist`（套话短语黑名单）、`case-category-domain-consistency`（Case.category 与 refs 域名特征）、`risk-complexity-coverage`（Risk.complexity 与 AC 覆盖）、`case-summary-relation-consistency`（Case.summary 与 related* 交叉）、`term-category-enum`（Term.category 沿用已有取值，含 allowlist）、`entity-granularity`（description 多场景拆分初筛 + 父子 title）。
   - 增强：`content-quality`（增 title 重复 + description≈title）、`references`（统一用 source-classify 的 11 个 weakDomains + title-domain 强信号不一致 + 根域首页）、`case-incident-time`（增 incidentTime 与 summary 年份一致性）、`avoidance-content`（扩充 PLACEHOLDER_LIM）。
   - references 权威性机器化复用 `source-classify.mjs` 的 250+ 域名白名单 + classifySource，不必丢 LLM。
-- **第二层·B 类 subagent 交叉判断（`review:*` 命令，fail 阻断）**：需要读实体实际内容做语义交叉的规则，用 subagent 加载知识库已有实体内容判断。新增 9 个脚本：`review-risk-avoidance`（规避手段是否真能缓解风险 + 漏加）、`review-risk-scene`（应加其他业务场景）、`review-case-relation`（Case 与关联风险匹配）、`review-tool-risks`（directCause/indirectSupport 划分）、`review-actor-consistency`（自建/使用工具划分）、`review-term-completeness`（related* 漏挂）、`review-granularity`（合并/拆分双向 + title 近义终判）、`review-should-extract`（应提炼新风险/手段/工具/行为者/术语/案例）、`review-references`（权威性应补源）。
+- **第二层·B 类 subagent 交叉判断（`review:*` 命令，fail 阻断）**：需要读实体实际内容做语义交叉的规则，用 subagent 加载知识库已有实体内容判断。新增 9 个脚本：`review-risk-avoidance`（规避手段是否真能缓解风险 + 漏加）、`review-risk-scene`（应加其他业务域）、`review-case-relation`（Case 与关联风险匹配）、`review-tool-risks`（directCause/indirectSupport 划分）、`review-actor-consistency`（自建/使用工具划分）、`review-term-completeness`（related* 漏挂）、`review-granularity`（合并/拆分双向 + title 近义终判）、`review-should-extract`（应提炼新风险/手段/工具/行为者/术语/案例）、`review-references`（权威性应补源）。
 - **第三层·C 类 LLM+抓取（最小集）**：`review-case-fact`（Scrapingdog 抓取网页核验 summary 事实）、`review-field-density`（信息密度）、`review-classification`（category 语义贴切）。
-- **基础设施**：统一 LLM client `scripts/llm/llm-client.mjs`（双模型 GLM-5.2/GPT-5.5，从 .env 读 LLM_*）；共享运行器 `llm-review-runner`/`subagent-review`（worker 池 + 断点续传 + 内容指纹 + 429 重试）；变更检测共享模块 `changed-entities.mjs`（抽自 auto-version，含 untracked 新文件检测，auto-version 改薄封装不回归）；全库加载 `llm-review-helpers.mjs`（补 common.mjs 对 terms/BS 缺口 + title 索引 + 相关实体加载）。`scripts/research/llm.mjs` 改兼容层保护旧 `review:avoidance-signal`。
+- **基础设施**：统一 LLM client `scripts/llm/llm-client.mjs`（双模型 GLM-5.2/GPT-5.5，从 .env 读 LLM_*）；共享运行器 `llm-review-runner`/`subagent-review`（worker 池 + 断点续传 + 内容指纹 + 429 重试）；变更检测共享模块 `changed-entities.mjs`（抽自 auto-version，含 untracked 新文件检测，auto-version 改薄封装不回归）；全库加载 `llm-review-helpers.mjs`（补 common.mjs 对 terms/BD 缺口 + title 索引 + 相关实体加载）。`scripts/research/llm.mjs` 改兼容层保护旧 `review:avoidance-signal`。
 - **编排与门禁**：`review:changed` 编排器（变更实体按类型分派 B+C 类 + 汇总）、`review:full` 全库指纹增量兜底、`.husky/pre-commit` 追加 `BREAK_REVIEW_ON_COMMIT=1` 可选触发（默认关不拖慢日常提交）。
 - **文档**：`scripts/llm/README.md` 三层门禁速查、`CLAUDE.md` 补「LLM 评审体系」章节并更新过时 LLM 凭据信息。
 - **顺带修复**：T0116 title 格式违规（"杀鱼盘（杀鱼、鲨鱼）"→"杀鱼盘"，括号内别名迁入 aliases）+ 英文 aliases 补 angler/fish cutter。
@@ -393,7 +393,7 @@ case-relation 全量 254 fail 深度甄别修复（之前误标为"LLM 主观判
 
 - **`public/data/changelog.json` 改为 gitignore**：该文件是 `generate:changelog` 的构建产物，部署时 CI 会重新生成，入库后每次改 CHANGELOG.md 都制造漂移（历史已被连带提交 45 次）。现与 `public/data/` 下其余 7 个产物（break-data/stix/jsonld/manifest/quality-report）保持一致，`git rm --cached` 移出索引、加入 `.gitignore`。本地 dev 时 ChangelogView 有 404 容错，需要时跑 `npm run generate:changelog` 即可恢复。
 - **`.gitignore` 补 `test-results/`**：Playwright/e2e 产物目录，此前 `coverage/`、`dist/` 都已忽略却漏了它，补齐规则缺口。
-- **更新 `SKILL.md` / `SKILL_en.md` 计数表**：原表为历史快照（Risk 350/Avoidance 300/AttackTool 110/ThreatActor 70/Term 600/Case 1797/BusinessScene 18），与现状脱节。统一为 `.total` 口径（与 README/docs-consistency 一致）：382/318/118/75/593/1778/20，总数 3200+ → 3280+。
+- **更新 `SKILL.md` / `SKILL_en.md` 计数表**：原表为历史快照（Risk 350/Avoidance 300/AttackTool 110/ThreatActor 70/Term 600/Case 1797/BusinessDomain 18），与现状脱节。统一为 `.total` 口径（与 README/docs-consistency 一致）：382/318/118/75/593/1778/20，总数 3200+ → 3280+。
 - **更新 `ADMISSION-STANDARD.md`**：`validate:data` 门禁数 14 → 18（链中脚本实际数量）。
 - 清理本地 `.DS_Store` × 2（已被 gitignore，纯本地垃圾）。
 
@@ -652,7 +652,7 @@ Code review 修复：解决 4 个 P0 Bug + 4 个 P1 设计/复用问题 + 4 个 
 架构评审修复 B5：路由表程序化生成，消除 34 条扁平路由中的重复模式。
 
 - **路由表程序化生成**（#5）：`router/index.ts` 的 34 条路由从 `entityRegistry` 与 `RELATION_PERSPECTIVE_ROUTES` 派生：
-  - home 族 12 条：`entityRegistry.filter(e => e.homeDetailRouteName)` 派生 `/home/{entity}/{id}` 与 `/business-scene/:bsKey/{entity}/{id}`
+  - home 族 12 条：`entityRegistry.filter(e => e.homeDetailRouteName)` 派生 `/home/{entity}/{id}` 与 `/business-domain/:bdKey/{entity}/{id}`
   - knowledges list/detail 12 条：`entityRegistry.flatMap` 配对生成 list 与 detail 路由，共用同一 View 组件（由 `route.params` 是否含 id 区分模式，不引入 RouterView 嵌套以保留 KnowledgeSplitView 左右联动）
   - relations 8 条：`RELATION_PERSPECTIVE_ROUTES.flatMap` 派生 4 视角 × 2 形态（pathExplorer 独立于 relationAnalysisPerspectiveOptions，故路由元信息独立维护）
   - `viewLoaders` 映射实体类型 → View 懒加载工厂
@@ -717,7 +717,7 @@ Code review 修复：解决 4 个 P0 Bug + 4 个 P1 设计/复用问题 + 4 个 
 架构评审修复 B1：Schema strict 全量落地 + references link 协议限制，补齐一致性与安全盲区。
 
 - **references link 协议限制**（#1）：`referenceSchema.link` 在 `.url()` 基础上加 `^https?://` 正则校验，拒绝 `javascript:`/`data:`/`file:` 等伪协议。安全类知识库的引用链接必须为 http/https。
-- **全量实体 schema 加 strict**（#8）：`riskSchema`/`avoidanceSchema`/`attackToolSchema`/`threatActorSchema`/`termSchema`/`businessSceneSchema` 以及嵌套的 `riskAssessmentSchema`/4 个 `*RelationSchema`/`referenceSchema` 全部加 `.strict()`，与 `caseSchema` 对齐。拒绝任何未定义字段（如 typo 字段），英文 i18n 误填结构字段时 schema 层先兜住。
+- **全量实体 schema 加 strict**（#8）：`riskSchema`/`avoidanceSchema`/`attackToolSchema`/`threatActorSchema`/`termSchema`/`businessDomainSchema` 以及嵌套的 `riskAssessmentSchema`/4 个 `*RelationSchema`/`referenceSchema` 全部加 `.strict()`，与 `caseSchema` 对齐。拒绝任何未定义字段（如 typo 字段），英文 i18n 误填结构字段时 schema 层先兜住。
 - **历史脏数据清理**：strict 暴露 29 个 risks 文件带遗留 `limitation` 字段（Risk schema 不维护此字段）。逐条将有价值的 limitation 内容迁移到 `description` 末尾（"局限性："前缀）后删除字段，同步更新 `updated`。
 
 ### 变更文件
@@ -764,7 +764,7 @@ Avoidance 内容规范三档控制落地：明确 description（检测信号）�
 
 ## 2.38.1
 
-补强具身智能场景（BS19）新增案例的一手来源覆盖率：
+补强具身智能场景（BD19）新增案例的一手来源覆盖率：
 
 - **案例一手来源补全**：为 13 个具身智能场景案例补充官方/原始一手来源，highValueMissingPrimary 由 90 降至 77，高价值案例一手来源覆盖率由 91.8% 提升至 92.99%。
   - 5 条刑事判决（C1798/C1800/C1801/C1803/C1804）：补法院官网、政法委官网、政务微信等一手通报。
@@ -812,17 +812,17 @@ Avoidance 内容规范三档控制落地：明确 description（检测信号）�
 
 ## 2.37.0
 
-新增具身智能业务场景（BS19），补齐人形机器人、服务机器人、协作机器人、医疗/手术机器人、自动驾驶具身系统、机器人集群等领域的"风险有刻画、防御有手段、工具可识别、术语成体系、案例有支撑"闭环。具身智能跨 AI(BS14)/IoT(BS16)/汽车(BS11)/元宇宙(BS17)，但有 VLA 模型对抗、遥操作劫持、ROS 中间件漏洞、机器人物理伤害与功能安全、集群协同失控、物理世界提示注入等特有风险，独立成场景。
+新增具身智能业务域（BD19），补齐人形机器人、服务机器人、协作机器人、医疗/手术机器人、自动驾驶具身系统、机器人集群等领域的"风险有刻画、防御有手段、工具可识别、术语成体系、案例有支撑"闭环。具身智能跨 AI(BD14)/IoT(BD16)/汽车(BD11)/元宇宙(BD17)，但有 VLA 模型对抗、遥操作劫持、ROS 中间件漏洞、机器人物理伤害与功能安全、集群协同失控、物理世界提示注入等特有风险，独立成场景。
 
-- **新增业务场景 BS19 具身智能**：5 维度（感知与物理对抗/模型与智能体/设备与中间件/运营与合规/身份与协同）× 6 风险场景（RS33-RS38），混合新建风险与复用现有 IoT/AI/V2X 风险归类。
+- **新增业务域 BD19 具身智能**：5 维度（感知与物理对抗/模型与智能体/设备与中间件/运营与合规/身份与协同）× 6 风险场景（RS33-RS38），混合新建风险与复用现有 IoT/AI/V2X 风险归类。
 - **新增 12 个 Risk（R0267-R0278）**：物理世界提示注入攻击、机器人感知对抗攻击、遥操作信道劫持攻击、机器人调试与维护接口滥用、VLA/VLM模型对抗攻击、具身智能体越狱与过度自主风险、VLA模型后门与训练数据投毒、跨模态注入攻击、机器人中间件(ROS/DDS)漏洞利用、机器人物理伤害与功能安全失效、机器人集群协同失控风险、具身智能数据采集隐私泄露。
 - **新增 12 个 Avoidance（A0225-A0236）**：物理世界提示注入检测、多模态感知交叉校验、遥操作信道加密认证、机器人调试接口硬化、VLA对抗训练与鲁棒性、动作安全边界与权限收敛、SROS2与DDS-Security部署、机器人安全停机E-stop与功能安全设计、集群协同容错与拜占庭防御、具身数据采集隐私保护、Sim-to-Real域随机化与一致性校验、机器人黑匣子与行为审计。
 - **新增 4 个 AttackTool（AT0100-AT0103）**：VLA对抗攻击工具、机器人遥操作劫持工具、机器人硬件调试接口利用工具、机器人中间件漏洞利用工具。
 - **新增 2 个 ThreatActor（TA0065-TA0066）**：机器人与具身智能攻击者、具身智能隐私窃取者。
 - **新增 10 个 Term（T0605-T0614）**：具身智能、人形机器人、VLA模型、遥操作、机器人操作系统、安全停机、功能安全、对抗补丁、机器人集群、物理世界提示注入。
 - **新增 15 个 Case（C1806-C1820）**：Unitree UniPwn(CVE-2025-35027)、Unitree Go1 CloudSail(CVE-2025-2894)、iRobot Roomba J7隐私泄露、Knightscope K5撞人、Raven II手术机器人劫持、KARGU-2自主武器、特斯拉车道线贴纸、RoboPAIR越狱、Alias Robotics Unitree G1评估、Ecovacs扫地机劫持、大众Baunatal机器人致死、腾讯科恩特斯拉入侵、马杜罗无人机刺杀、DJI Romo越权、Humphreys GPS欺骗。
-- **全场景覆盖与门禁**：12 个新建具身智能 Risk 与 12 个 BS18 物流特有 Risk 全部归类到 BS00 全场景对应 RS；新增 `business-scene-coverage.mjs` 门禁脚本（接入 `validate:data` 链），校验专题场景特有 Risk 必须归到 BS00 全场景，防止未来新增专题场景时遗漏全场景归类。
-- **语义审查修复**：R0274 跨模态注入补 A0226 多模态感知交叉校验；AT0100 的 R0273 由 directCauseRisks 调整为 indirectSupportRisks；AT0101 的 R0277 由 directCauseRisks 调整为 indirectSupportRisks；TA0065 的 R0270 由 indirectSupportRisks 升级为 directCauseRisks；C1814 移除 R0271 补 R0278；C1817 移除 R0269；BS19 RS35 移除 R0071。
+- **全域覆盖与门禁**：12 个新建具身智能 Risk 与 12 个 BD18 物流特有 Risk 全部归类到 BD00 全域对应 RS；新增 `business-domain-coverage.mjs` 门禁脚本（接入 `validate:data` 链），校验专题域特有 Risk 必须归到 BD00 全域，防止未来新增专题域时遗漏全域归类。
+- **语义审查修复**：R0274 跨模态注入补 A0226 多模态感知交叉校验；AT0100 的 R0273 由 directCauseRisks 调整为 indirectSupportRisks；AT0101 的 R0277 由 directCauseRisks 调整为 indirectSupportRisks；TA0065 的 R0270 由 indirectSupportRisks 升级为 directCauseRisks；C1814 移除 R0271 补 R0278；C1817 移除 R0269；BD19 RS35 移除 R0071。
 - **真实案例支撑**：所有新建 Case 引用真实可查来源（CVE NVD/IEEE Spectrum/MIT Tech Review/arXiv 论文/权威新闻）。
 - 中英文翻译同步（新增 56 个 EN 文件），`sync:lateral-relations` 重算横向关系，`validate:data` + `build` 全绿。
 
@@ -887,13 +887,13 @@ Avoidance 内容规范三档控制落地：明确 description（检测信号）�
 
 ## 2.35.4
 
-物流业务场景(BS18)纳入 6 个在物流环节有显著特化形态的通用风险，补全物流场景的风险覆盖：
+物流业务域(BD18)纳入 6 个在物流环节有显著特化形态的通用风险，补全物流场景的风险覆盖：
 
 - **RS29 快递快运与售后滥用（交易维度）新增 4 个**：R0004 虚假发货（配合售后骗赔/盲销诈骗走虚假运单）、R0054 恶意退货（配合到付弃件/售后骗赔的退货侧滥用）、R0064 拆单套利（与三同拆单套利同源的运费/赠品凑单套利）、R0068 售后权益滥用（批量售后骗赔的上位权益滥用概念）。
 - **RS30 运力与车辆调度欺诈（运营维度）新增 1 个**：R0141 地理位置欺诈（伪造 GPS 定位配合众包司机刷单抢单、区域运价套利，是运价规则套利 R0265 的实施手段）。
 - **RS31 快递重量与货品欺诈（运营维度）新增 1 个**：R0052 低价高邮（卖家压低商品价、抬高运费转嫁成本，物流计费环节典型形态）。
-- 均为跨场景归类（Risk 跨 riskScenes 是允许的，区别于 RS 跨 riskDimensions 的错误）：这 6 个风险当前已归 BS00 等通用/电商场景，纳入 BS18 后命中「全场景通用风险与行业专题场景并行复用」自动推断，无需手维护跨场景理由。
-- 英文 i18n 文件无需改动（BS18 英文只翻译 title/description，不维护 risks 数组）；`business-scenes` / `business-scene-sub-risks` / `business-scene-dimensions` / `metrics` / `home-counts` 校验全绿，未引入新问题。
+- 均为跨业务域归类（Risk 跨 riskScenes 是允许的，区别于 RS 跨 riskDimensions 的错误）：这 6 个风险当前已归 BD00 等通用/电商业务域，纳入 BD18 后命中「全域通用风险与行业专题域并行复用」自动推断，无需手维护跨业务域理由。
+- 英文 i18n 文件无需改动（BD18 英文只翻译 title/description，不维护 risks 数组）；`business-domains` / `business-domain-sub-risks` / `business-domain-dimensions` / `metrics` / `home-counts` 校验全绿，未引入新问题。
 
 ## 2.35.3
 
@@ -905,11 +905,11 @@ Avoidance 内容规范三档控制落地：明确 description（检测信号）�
 
 ## 2.35.2
 
-修复业务场景详情页风险维度折行 bug：
+修复业务域详情页风险维度折行 bug：
 
-- **根因**：`useHomeSceneLayout.ts` 的非滚动分支（场景数 ≤ 阈值 8）用栅格 `dimension.size` 分配宽度，当 RS 被多个维度复用时（如 BS18 的 RS29/RS30/RS32 各被 2 个维度引用），`Σ(维度场景数) > totalScenes`，按比例算出的 `dimensionSize` 之和超过 24，加上 `remainingRowSize || 24` 在 remainingRowSize=0 时回退到 24 的 bug，导致维度折行。
+- **根因**：`useHomeSceneLayout.ts` 的非滚动分支（场景数 ≤ 阈值 8）用栅格 `dimension.size` 分配宽度，当 RS 被多个维度复用时（如 BD18 的 RS29/RS30/RS32 各被 2 个维度引用），`Σ(维度场景数) > totalScenes`，按比例算出的 `dimensionSize` 之和超过 24，加上 `remainingRowSize || 24` 在 remainingRowSize=0 时回退到 24 的 bug，导致维度折行。
 - **修复**：移除 `SCROLL_THRESHOLD` 阈值判断，所有桌面场景统一走滚动布局分支——`flex-wrap: nowrap` 保证维度始终在同一行，内容宽度 < 容器宽时铺满无滚动条，超出则横向滚动。移动端不受影响（用 `xs/sm=24` 垂直堆叠）。
-- `shouldEnableScroll` 改为恒 true（保留导出供桌面/移动端切换）；`sceneLayout` 删非滚动分支；测试断言更新并新增 BS18 RS 跨维度复用回归测试。
+- `shouldEnableScroll` 改为恒 true（保留导出供桌面/移动端切换）；`sceneLayout` 删非滚动分支；测试断言更新并新增 BD18 RS 跨维度复用回归测试。
 
 ## 2.35.1
 
@@ -923,16 +923,16 @@ Avoidance 内容规范三档控制落地：明确 description（检测信号）�
 
 ## 2.35.0
 
-新增「物流」业务场景(BS18)，纳入 12 个物流风险文件与 1 个规避手段文件，覆盖快递快运、运力、偷重漏重、商家评估 4 个子领域：
+新增「物流」业务域(BD18)，纳入 12 个物流风险文件与 1 个规避手段文件，覆盖快递快运、运力、偷重漏重、商家评估 4 个子领域：
 
-- **新增业务场景 BS18 物流**：新建 RS29 快递快运与售后滥用 / RS30 运力与车辆调度欺诈 / RS31 快递重量与货品欺诈 / RS32 商家与账号治理风险 4 个风险场景，RD01-04 四维度。参照 BS13 出行行业组织模式，只列入有风险的 RS（不预列空通用 RS）。
+- **新增业务域 BD18 物流**：新建 RS29 快递快运与售后滥用 / RS30 运力与车辆调度欺诈 / RS31 快递重量与货品欺诈 / RS32 商家与账号治理风险 4 个风险场景，RD01-04 四维度。参照 BD13 出行行业组织模式，只列入有风险的 RS（不预列空通用 RS）。
 - **新增 12 个 Risk 文件（R0255-R0266，16 个风险实体）**：
   - 快递快运：R0255 批量售后骗赔、R0256 众包三同拆单套利、R0257 C2C到付弃件、R0258 虚假路由套计提、R0259 C2C盲销诈骗（含子风险 R0259-001 盲销诈骗，盲销黑话并入）、R0260 重货拆小件套取揽派费、R0261 跨考勤月取消套利、R0262 虚假接驳套费、R0263 散单专业市场账号套用
   - 运力：R0264 整车运力虚报与套计（含子风险 R0264-001 一车多车型套费 / -002 京驿整车通道套用 / -003 虚假车次套费）、R0265 运价规则套利
   - 偷重漏重：R0266 快递偷重漏重
 - **新增 1 个 Avoidance 文件 A0222 定向抽检**（含子手段 A0222-001 信任商家定向抽检 / -002 快递定向抽检任务）。按 CLAUDE.md 定义边界，「信任商家定向抽检」「快递定向抽检任务」是检测手段(Avoidance)非风险本身。
 - **定义边界归一化**：「京驿整车」是京东物流正规产品名，重定义为整车运力虚报套计的子风险「京驿整车通道套用」；「盲销风险」与「C2C盲销诈骗」合并为一族。
-- **校验脚本**：`business-scenes.mjs` 的 `defaultCrossSceneReason` 补 R0259 跨 RS29/RS32 理由条目。
+- **校验脚本**：`business-domains.mjs` 的 `defaultCrossSceneReason` 补 R0259 跨 RS29/RS32 理由条目。
 - 中英文翻译同步（14 个 EN 文件），`sync:lateral-relations` 重算横向关系，README/README_CN 实体计数更新，`validate:data` + `build` 全绿。
 
 ## 2.34.1
@@ -947,7 +947,7 @@ case incidentTime 校验加固：
 
 - 新增 `src/utils/dom.ts` 工具函数 `scrollActiveContainerToTop`：定位 App 主内容区 `.el-main`，在其子树内深度优先查找第一个可见且内容溢出的可滚动元素（overflow-y 为 auto/scroll 且 scrollHeight > clientHeight），平滑滚到顶部；找不到则回退到 `.el-main` 自身或 `window`。滚动容器不在 banner 祖先链上（el-main 是 el-header 的兄弟），故不采用向上找祖先的方式，自动适配各页面不同滚动容器
 - `MenuList.vue` 移动端中间 banner（`<h3 class="banner">`）加点击事件调用上述函数，补 `role="button"` / `tabindex="0"` / `title` / 回车键支持；桌面端（≥768px）不响应。文案复用已有 `backtop` i18n key
-- 适配各页面滚动容器：首页 / 关系图谱（analysis/sankey/pathExplorer）/ 业务场景由 `.el-main` 滚；知识库列表态由 `.knowledge-list` 滚；详情态由 `.knowledge-detail` 滚
+- 适配各页面滚动容器：首页 / 关系图谱（analysis/sankey/pathExplorer）/ 业务域由 `.el-main` 滚；知识库列表态由 `.knowledge-list` 滚；详情态由 `.knowledge-detail` 滚
 
 ## 2.33.0
 
@@ -997,11 +997,11 @@ case incidentTime 校验加固：
 
 ## 2.31.2
 
-修复商业场景子风险重复显示：
+修复业务域子风险重复显示：
 
-- 新增 `business-scene-sub-risks.mjs` 校验脚本，检测并修复 riskScenes 中父子风险同时存在的重复问题
-- 清理 18 个 BS 文件中 947 处父子重复（子风险由前端 `useSubRiskToggle` 自动展开，无需在数据中显式列出）
-- 修复关系图谱商业场景影响分析：`buildBusinessSceneIndex` 自动将父风险的场景归类扩展到子风险
+- 新增 `business-domain-sub-risks.mjs` 校验脚本，检测并修复 riskScenes 中父子风险同时存在的重复问题
+- 清理 18 个 BD 文件中 947 处父子重复（子风险由前端 `useSubRiskToggle` 自动展开，无需在数据中显式列出）
+- 修复关系图谱业务域影响分析：`buildBusinessDomainIndex` 自动将父风险的业务域归类扩展到子风险
 - 集成到 `validate:data` 命令链，防止重复问题再次引入
 
 ## 2.31.1
@@ -1009,7 +1009,7 @@ case incidentTime 校验加固：
 术语实体去重与定义质量修复：
 
 - 合并重复术语实体：查档、库主、强登、手工打扶贫粉、直播虚拟礼物回收渠道、扶贫对象数据
-- 对同名但业务场景不同的术语进行消歧：数据查档收单、信贷收单、跑分点位、信贷点位
+- 对同名但业务域不同的术语进行消歧：数据查档收单、信贷收单、跑分点位、信贷点位
 - 重写 T0522-T0599 术语描述，移除“用于识别相关风险、滥用模式、控制要求及运营信号”类模板化内容
 - 同步更新英文 i18n 文本，保持中英文术语 key 和结构一致
 - 更新术语统计数量、首页轻量计数、数据 Schema 文档和静态数据导出产物
@@ -1023,7 +1023,7 @@ case incidentTime 校验加固：
 - 案例列表增加 incidentTime 展示和分类 badge（6 种分类 6 种颜色）
 - 术语列表增加分类 badge（35 个分类通过哈希映射到 8 色调色板）
 - 所有 badge 颜色通过 CSS 变量定义，亮/暗模式分别适配
-- 首页商业场景选择器下方展示场景 description
+- 首页业务域选择器下方展示场景 description
 - 新增应用内更新日志页面（`/changelog`），构建时将 CHANGELOG.md 解析为 JSON，前端异步加载
 - 更新日志页面复用 KnowledgeSplitView 双栏布局，支持版本搜索，轻量 markdown 渲染（零依赖）
 - 知识库菜单下拉末尾新增「更新日志」入口，桌面端和移动端同步
@@ -1045,11 +1045,11 @@ case incidentTime 校验加固：
 Entity Registry 硬编码清理：
 
 - 注册表新增 `listRouteName`、`relationPerspectiveRouteName` 字段，覆盖知识库列表路由和关系图视角路由
-- SearchDialog：3 套详情路由映射 + ID 前缀推断 + 首页/业务场景路由集合全部改为 Registry 派生
+- SearchDialog：3 套详情路由映射 + ID 前缀推断 + 首页/业务域路由集合全部改为 Registry 派生
 - EntityLinkSection：`BREAK_KEY_BY_ROUTE_NAME` 映射和 `summaryFieldByEntityType` 映射改为 Registry 派生
 - useRelationGraph + relationNodeRouting：2 处重复的关系图视角路由映射合并为 Registry 派生
 - 5 个 Detail 组件（RiskDetail/AvoidanceDetail/AttackToolDetail/ThreatActorDetail/TermDetail）：详情路由名+paramKey 改用 `entityDetailHref`，关系图路由名改用 Registry
-- HomeView：`businessSceneDrawerRouteNames` 改为 Registry 派生
+- HomeView：`businessDomainDrawerRouteNames` 改为 Registry 派生
 - relationNote.ts：`translatedEntityTitle` 改为接收 EntityType，消除 breakKey/i18n 路径前缀硬编码
 
 ## 2.29.6
@@ -1212,7 +1212,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 - 移除所有场景下"查看详细描述"按钮
 - 分析视角中隐藏关联实体的 3 个操作按钮
 - 修复实体 ID 悬浮提示回归（MutationObserver 防抖数据丢失、按钮内部 span 重复弹窗）
-- 修复术语详情页业务场景链接多余 hash
+- 修复术语详情页业务域链接多余 hash
 
 ## 2.28.0
 
@@ -1248,7 +1248,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 全局搜索体验优化：
 
-- 修复首页/业务场景已打开抽屉时（如 `/#/home/risk/R0003-001`），搜索结果错误跳转到知识库而非替换抽屉的问题
+- 修复首页/业务域已打开抽屉时（如 `/#/home/risk/R0003-001`），搜索结果错误跳转到知识库而非替换抽屉的问题
 - 搜索实体 ID 时自动将匹配类型的分组提前显示（如搜索 `A0001` 时规避手段排第一位，而非固定的风险→规避→攻击工具顺序）
 - 搜索索引新增 `references[].title`（参考资料标题）和 Case 的 `description`（详细背景）字段
 - 搜索结果 snippet 前新增字段来源 badge（如「定义」「描述」「关键词」「参考」），帮助用户识别匹配命中的属性
@@ -1265,7 +1265,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 全站路由/链接结构统一重构，URL 语义更清晰、关系图视角参数不再串扰：
 
-- 首页抽屉路由统一为 `/home/{entity}/{id}`（原 `/risks/:rKey` 等扁平路径）；业务场景新增 `/business-scene/:bsKey/{entity}/{id}` 支持所有实体类型，关闭抽屉时回到对应业务场景
+- 首页抽屉路由统一为 `/home/{entity}/{id}`（原 `/risks/:rKey` 等扁平路径）；业务域新增 `/business-domain/:bdKey/{entity}/{id}` 支持所有实体类型，关闭抽屉时回到对应业务域
 - 知识库路由统一为 `/knowledges/{entity}/list` 与 `/knowledges/{entity}/detail/{id}`（entity 段单数）；PC 下 list 默认激活第一个条目，`list?selected={id}` 自动跳转 detail，list/detail 同组件互跳；移动端 list 显示列表、detail 两态切换
 - 关系图谱拆分为 4 个独立视角路由：`/relations/risk-relation`、`/relations/attack-path`、`/relations/defense-coverage`、`/relations/path-explorer`，选中实体为 `/relations/{视角}/{entity}/{id}`（entity 单数）；视角由路由 name 决定，切换视角时按 query 白名单隔离参数，彻底消除 pathExplorer 的 endType/endKey/maxDepth/maxPaths 残留到其它视角的问题
 - 抽屉中跳知识库详情页的链接改为新窗口打开并补充 TopRight 跳转图标；参考链接 references 补充链接图标
@@ -1300,7 +1300,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 ## 2.26.3
 
 - 将 Vitest 全局覆盖率阈值提升到 80%，并补充关系图、案例懒加载、抽屉路由、主题和知识库分栏等测试
-- 覆盖路径探索、业务场景影响、关系摘要、节点覆盖分析、英文案例合并和懒加载案例 section 等关键分支
+- 覆盖路径探索、业务域影响、关系摘要、节点覆盖分析、英文案例合并和懒加载案例 section 等关键分支
 - 修复关系视图装配中 `RelationType` 仅作为类型导入导致运行时 watcher 访问失败的问题
 
 ## 2.26.2
@@ -2256,7 +2256,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 - 继续补强高价值司法和行政监管案例 primary source，为 `C0455` 追加公安部涉银行卡犯罪典型案例原文，为 `C0523` 追加广东省通信管理局 App 监管通报原文，并同步英文引用标题
 - 案例 primary 覆盖提升到 846，高价值 primary 覆盖提升到 523，primary 覆盖率提升到 47.08%，高价值 primary 覆盖率提升到 48.47%
-- 补充 `HomeView` 和 `RelationView` 页面级组合测试，覆盖首页统计、详情路由、非法路由回退、业务场景关闭、关系页预加载、卸载清理、详情抽屉和网络面板事件转发
+- 补充 `HomeView` 和 `RelationView` 页面级组合测试，覆盖首页统计、详情路由、非法路由回退、业务域关闭、关系页预加载、卸载清理、详情抽屉和网络面板事件转发
 - 补充布局、主题和案例相关 composables 测试，覆盖 `useBreakpoints`、`useTheme`、`useDrawerWidth`、`useCasesByRisk`、`useLazyCasesSection`、`useRelationGraph`
 - 将 Vitest coverage 阈值从 62% 提升到 65%；当前测试规模为 44 个测试文件、248 个测试，coverage 为 statements 81.11%、branches 65.06%、functions 81.19%、lines 83.68%
 - 为浏览器视觉巡检增加 `knownWarnings` 分类，区分首页英文矩阵受控横向滚动、移动端关系图画布和抽屉打开态等已知复核项；本地巡检 unknown warning 已降为 0
@@ -2624,8 +2624,8 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 ## 2.23.2
 
 - 新增 `RelationEntityType` 强类型别名和实体类型常量，收紧关系页 `Node.type`、`GraphNode.type`、Sankey 节点和分析摘要的类型边界
-- 关系图构建、布局、攻击路径、覆盖分析和业务场景影响模块改用实体类型别名，减少 `as RelationType` 和冗余实体类型守卫
-- 更新关系页相关单测类型签名，覆盖强类型节点在攻击路径、覆盖分析、业务场景影响和边 fixture 中的使用
+- 关系图构建、布局、攻击路径、覆盖分析和业务域影响模块改用实体类型别名，减少 `as RelationType` 和冗余实体类型守卫
+- 更新关系页相关单测类型签名，覆盖强类型节点在攻击路径、覆盖分析、业务域影响和边 fixture 中的使用
 
 ## 2.23.1
 
@@ -2635,7 +2635,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 ## 2.23.0
 
-- 新增 STIX 2.1 标准化导出，支持将全部 7 类实体（Risk/Avoidance/AttackTool/ThreatActor/Term/Case/BusinessScene）及 26,000+ 关系边映射为合法 STIX 2.1 Bundle
+- 新增 STIX 2.1 标准化导出，支持将全部 7 类实体（Risk/Avoidance/AttackTool/ThreatActor/Term/Case/BusinessDomain）及 26,000+ 关系边映射为合法 STIX 2.1 Bundle
 - 新增 JSON-LD 语义网导出，面向知识图谱和 RDF/SPARQL 消费场景
 - 中英文双 Bundle 导出，STIX UUID 确定性生成（UUID v5），中英文共享相同 ID
 - 新增实体级 `version` 字段（可选整数），支持追踪实体变更版本
@@ -2800,7 +2800,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 ## 2.21.16
 
-- 新增前端可消费质量报告导出：`export:data` 同步生成 `public/data/quality-report.json`，包含弱关系、缺覆盖、业务场景异常和 i18n 异常四类稳定结构
+- 新增前端可消费质量报告导出：`export:data` 同步生成 `public/data/quality-report.json`，包含弱关系、缺覆盖、业务域异常和 i18n 异常四类稳定结构
 - 将质量报告纳入静态数据 manifest、GitHub Pages 导出校验和 npm 数据包评估产物
 - 回写 `UPGRADE_PLAN.md` 的 A6 状态：质量报告 JSON 第一阶段已完成，后续作为审计报告和内部数据治理输入
 
@@ -2878,7 +2878,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 ## 2.21.1
 
-- 修复首页业务场景风险列表的 i18n key not found 警告：HomeView 风险表格 aria-label 直接用 $t(`BREAK.risks.${rKey}.title`)，首页轻量数据入口首屏未注入全部 risks title，中英文环境批量报 "[intlify] Not found 'BREAK.risks.R0003.title'" 等警告（英文环境约 3904 条）；aria-label 改用既有 getRiskTitle，并将 getLocalizedText 英文分支改为先用 te 检查 key 是否存在、不存在则用中文兜底，彻底消除中英文环境的 not found 警告
+- 修复首页业务域风险列表的 i18n key not found 警告：HomeView 风险表格 aria-label 直接用 $t(`BREAK.risks.${rKey}.title`)，首页轻量数据入口首屏未注入全部 risks title，中英文环境批量报 "[intlify] Not found 'BREAK.risks.R0003.title'" 等警告（英文环境约 3904 条）；aria-label 改用既有 getRiskTitle，并将 getLocalizedText 英文分支改为先用 te 检查 key 是否存在、不存在则用中文兜底，彻底消除中英文环境的 not found 警告
 - 移动端子风险显示切换按钮组填满整行：HomeView 的 subrisk-toggle（显示/隐藏所有子风险）在移动端虽有 width:100%+flex，但 el-radio-button 的 inner 未撑满 label，两个按钮收缩在左侧未填满整行；移动端给 el-radio-button 加 display:flex、inner 加 width:100%，使两个按钮平分整行宽度
 
 ## 2.21.0
@@ -3051,7 +3051,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 - 优化：提升 Lighthouse 无障碍基线
   - 为桌面和移动端导航、搜索入口、主题/语言切换、GitHub 链接补充可访问名称和更稳定的导航语义
-  - 为首页业务场景筛选、子风险切换和业务场景矩阵补充表单/表格语义，并提升 Footer 与控件对比度
+  - 为首页业务域筛选、子风险切换和业务域矩阵补充表单/表格语义，并提升 Footer 与控件对比度
   - Lighthouse a11y 基线提升到 desktop/home 90、desktop/risks 91、desktop/relation-sankey 91、mobile/home 95、mobile/risks 100、mobile/relation-sankey 96
 
 ## 2.14.4
@@ -3063,7 +3063,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 ## 2.14.3
 
 - 优化：移动端 Sankey 关系页首屏性能
-  - 首页相关路由改为按需加载，直达关系页时不再提前拉取 HomeView 和首页业务场景矩阵依赖
+  - 首页相关路由改为按需加载，直达关系页时不再提前拉取 HomeView 和首页业务域矩阵依赖
   - 新增关系页路由轻量 shell，移动端先展示首屏骨架后再加载完整关系页，PC 端保持立即加载以优先保证点击响应速度
   - 入口启动不再等待完整 BREAK 语言消息注入完成后才挂载应用，语言实体消息改为空闲阶段初始化
   - mobile/relation-sankey 最新 trace：performance 91、LCP 2406ms、TBT 195ms、CLS 0；相比上轮回归点 LCP 从约 5709ms 降至约 2406ms
@@ -3074,14 +3074,14 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
   - 补充 Sankey 攻击路径、路径解释、关系洞察和复杂图谱交互的回归样本
   - 测试基线更新为 9 个测试文件、102 个用例，并保持核心逻辑覆盖率门禁通过
 - 合并：关系图谱可解释性增强分支
-  - 合入业务场景影响解释、分析面板和关系说明增强
+  - 合入业务域影响解释、分析面板和关系说明增强
   - 测试基线更新为 10 个测试文件、106 个用例
 
 ## 2.14.2
 
 - 新增：扩充业务风险数据规模
   - 新增 34 个风险、29 个规避手段、13 个攻击工具、11 个威胁行为者和 79 个行业术语
-  - 同步中英文实体数据、业务场景归类和构建产物
+  - 同步中英文实体数据、业务域归类和构建产物
 - 优化：Bundle 预算进入强门禁
   - `npm run build`、CI 和 GitHub Pages Deploy 均在构建后执行 `audit:bundle:check`
   - `bundle-budget` 支持 `--check-only`，门禁模式不刷新报告文件
@@ -3096,7 +3096,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
   - 补齐 GitHub Pages 构建产物的运行时性能回归保护
 - 新增：英文 i18n 质量校验
   - `validate:data` 会检查英文实体字段缺失和英文展示内容中的中文残留
-  - 修正英文风险、规避手段、攻击工具、威胁行为者、术语和业务场景数据的翻译覆盖
+  - 修正英文风险、规避手段、攻击工具、威胁行为者、术语和业务域数据的翻译覆盖
   - 补充模板化英文关键词/别名检测，并清理残留的生成式占位内容
 - 新增：文档统计一致性校验脚本
   - `validate:data` 现在会检查 README、README_CN、ROADMAP 的实体规模、参考资料口径和版本号
@@ -3113,7 +3113,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
   - `keywords` 审计新增纯实体 ID 关键词拦截，并清理新扩展数据中的 ID 占位关键词
   - `fix:keywords` 保持显式写入模式，普通 `validate:data` 只报告不改写实体文件
   - `npm run build`、CI 和 Deploy 会先检查已提交 `docs/` 同步状态，再重新生成 Pages 产物用于后续 smoke/performance 验证
-  - 统一中文界面中的“业务场景”表述
+  - 统一中文界面中的“业务域”表述
 - 新增：数据 Schema 文档生成
   - 新增 `DATA_SCHEMA.md` 说明实体文件规则、字段约束、引用结构和关系语义
   - 新增 `schema:docs:write` 从 `src/validation/breakSchema.ts` 生成文档
@@ -3125,9 +3125,9 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 - 新增：核心逻辑测试覆盖率门禁
   - `npm run build`、CI 和 GitHub Pages Deploy 会执行 `test:coverage`
   - 对关系攻击路径、关系洞察、关系布局、搜索和安全 i18n 核心模块设置覆盖率阈值
-- 优化：业务场景供应链安全归类
+- 优化：业务域供应链安全归类
   - 将原“内部与供应链安全”拆分为 RS06“内部安全”和 RS28“供应链安全”
-  - 同步 18 个业务场景及英文 i18n 场景标题，降低内部治理风险与供应链风险的归类混淆
+  - 同步 18 个业务域及英文 i18n 场景标题，降低内部治理风险与供应链风险的归类混淆
 - 优化：静态站运行时回归测试
   - smoke/performance 测试改为对同源资源失败强阻断，并忽略已降级处理的第三方统计/API 资源加载失败
   - 保留主路由、构建资源和业务页面渲染的回归保护，避免外部服务 403 误伤本地 Pages 验证
@@ -3186,7 +3186,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 - 修复：同步中文 README 数据规模统计，保持与当前数据口径一致
 - 优化：关系审计和指标脚本口径
   - ThreatActor 工具关系按 build/use 合并覆盖统计
-  - 业务场景重复引用改为观察项，不再直接生成维护任务
+  - 业务域重复引用改为观察项，不再直接生成维护任务
 - 完善：补齐部分风险规避关系和威胁行为者工具关系，提升关系覆盖质量
 - 优化：抽离关系图 ECharts 核心加载入口，刷新生产构建产物
 - 优化：启用 TypeScript 严格模式，提升类型安全
@@ -3236,16 +3236,16 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 ## 2.13.0
 
-- 重构：区块链安全场景优化（5个场景 → 3个场景）
+- 重构：区块链安全域优化（5个场景 → 3个场景）
   - **RS12 Web3生态攻击**（5个风险）：供应链攻击、EIP/协议钓鱼、Telegram Bot钓鱼、多签钱包社工、DApp前端劫持
   - **RS15 智能合约与DeFi安全**（13个风险）：合并原智能合约场景、DeFi协议场景，新增代币漏洞、NFT版税、Layer2桥接、账户抽象、MEV攻击
   - **RS17 区块链基础设施安全**（12个风险）：合并原共识攻击场景、密钥资产场景，新增量子威胁、链上隐私
-  - 删除：RS16（DeFi协议攻击）、RS18（密钥与资产安全）已合并到其他场景
-- 重构：物联网安全场景优化（4个场景 → 2个场景）
+  - 删除：RS16（DeFi协议攻击）、RS18（密钥与资产安全）已合并到其他业务域
+- 重构：物联网安全域优化（4个场景 → 2个场景）
   - **RS19 IoT设备与数据安全**（14个风险）：合并原IoT新兴威胁、IoT设备攻击、IoT数据与侧信道场景
   - **RS20 工业与车联网安全**（6个风险）：保持独立，覆盖工业物联网、车联网等垂直行业场景
   - 删除：RS18（IoT新兴威胁）、RS21（IoT数据与侧信道）已合并到 RS19
-- 完善：为 BS15/BS16/BS17 补充通用风险维度
+- 完善：为 BD15/BD16/BD17 补充通用风险维度
   - 新增 RD02（运营维度）：合规风险、内容风险、内部风险
   - 新增 RD03（身份维度）：身份盗用风险、身份识别风险
   - 新增 RD04（对抗维度）：非法请求风险、终端对抗风险
@@ -3268,10 +3268,10 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
   - 区块链：11个（供应链安全审计、EIP安全验证、多签时间锁、后量子密码、MEV保护等）
   - 物联网：9个（AIoT模型安全、硬件安全模块、医疗设备网关、工业协议DPI等）
   - 元宇宙：8个（虚拟人水印验证、身份联邦认证、XR可信启动、空间隐私保护等）
-- 完善：业务场景更新
-  - BS15（Web3与区块链）：新增RS12场景（Web3生态攻击），风险从18个扩展至30个
-  - BS16（物联网）：新增RS18场景（IoT新兴威胁），风险从11个扩展至20个
-  - BS17（元宇宙）：风险从5个扩展至13个
+- 完善：业务域更新
+  - BD15（Web3与区块链）：新增RS12场景（Web3生态攻击），风险从18个扩展至30个
+  - BD16（物联网）：新增RS18场景（IoT新兴威胁），风险从11个扩展至20个
+  - BD17（元宇宙）：风险从5个扩展至13个
 - 优化：首页横向滚动功能
   - 场景数>10时启用横向滚动，容器宽度精确匹配内容
   - 场景宽度优化至180px，提升内容密度
@@ -3279,12 +3279,12 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 ## 2.11.3
 
-- 重构：优化业务场景维度结构（符合框架设计惯例）
+- 重构：优化业务域维度结构（符合框架设计惯例）
   - 维度数量从 13个 优化至 7个（每个维度包含多个场景）
   - RD05：区块链安全维度（智能合约、DeFi、共识、密钥 - 4个场景）
   - RD06：物联网安全维度（设备、工业车联网、数据侧信道 - 3个场景）
   - RD07：元宇宙安全维度（虚拟资产、虚拟环境 - 2个场景）
-- 修复：全场景（BS00）包含所有最新业务场景
+- 修复：全域（BD00）包含所有最新业务域
 - 修复：首页术语统计卡片高度统一
 - 更新：README 统计数据（287风险、243规避手段、488术语）
 
@@ -3496,7 +3496,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
   - 精简 ThreatActors（44个文件）：移除 buildAttackTools、useAttackTools、directCauseRisks、indirectSupportRisks、references[].link、updated
   - 精简 Risks（158个文件）：移除 references[].link
   - 精简 Avoidances（93个文件）：移除 references[].link
-  - 精简 BusinessScenes（15个文件）：移除 risks 数组、description、updated 及嵌套结构字段
+  - 精简 BusinessDomains（15个文件）：移除 risks 数组、description、updated 及嵌套结构字段
   - 将 EN Basic Info 从硬编码 JS 对象迁移为独立 JSON 文件（src/i18n/en/BREAK/basic-info/main.json）
   - 组件无需任何修改，dual-access 模式（import BREAK + $t()）完全兼容
   - Editor 组件不受影响，继续读写 src/BREAK/ 中文源文件
@@ -3523,7 +3523,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
   - 基于领域知识严格映射，仅对确实开发工具的TA补充
   - 剩余14个空值为合理空值（众包工人、打码员、狗推等不自建工具）
 - 关联：21个孤儿 Avoidance 全部关联到对应 Risk
-- 关联：29个孤儿 Risk 全部关联到 BusinessScene 和/或 AT
+- 关联：29个孤儿 Risk 全部关联到 BusinessDomain 和/或 AT
 - 所有变更同步英文 i18n 翻译文件
 
 ## 2.3.1
@@ -3867,7 +3867,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 - 修复：威胁行为者关系审计——收窄打金工作室/跨境黑产组织/狗推/游戏代练员/料商/数字人运营团伙的过宽关系（共 15 条）
   - 打金工作室：删除营销活动作弊风险、租号平台开发关系、反编译/发包改包/AI黑应用使用关系
-  - 跨境黑产组织：删除 NFT 欺诈风险（非典型业务场景）
+  - 跨境黑产组织：删除 NFT 欺诈风险（非典型业务域）
   - 狗推：删除 AI 黑应用使用关系和生成式 AI 风险（与社交媒体推广无关）
   - 游戏代练员：删除租号平台开发关系和 AI 黑应用使用关系
   - 料商：删除四件套开发关系（四件套是商品非其制造的工具）和木马病毒使用关系（料商是中间商非黑客）
@@ -4001,8 +4001,8 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 
 ## 1.3.0
 
-- 将新增的10个风险项（R0136-R0145）补充到BS00（全场景）及BS01-BS14各业务场景中
-- 修正业务场景中4处风险分类错误
+- 将新增的10个风险项（R0136-R0145）补充到BD00（全域）及BD01-BD14各业务域中
+- 修正业务域中4处风险分类错误
 
 ## 1.2.0
 
@@ -4018,7 +4018,7 @@ EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试
 - 新增10个规避手段（A0064-A0073）
 - 新增7个攻击工具（AT0056-AT0062）
 - 新增3个威胁行为者（TA0031-TA0033）
-- 新增"人工智能"业务场景（BS14）
+- 新增"人工智能"业务域（BD14）
 
 ## 1.0.0
 

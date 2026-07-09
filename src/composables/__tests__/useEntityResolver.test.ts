@@ -38,7 +38,7 @@ describe("entityRoute", () => {
     it("未知前缀返回 null", () => {
       expect(inferEntityType("X0001")).toBeNull();
       expect(inferEntityType("")).toBeNull();
-      expect(inferEntityType("BS01")).toBeNull();
+      expect(inferEntityType("BD01")).toBeNull();
     });
   });
 

@@ -28,11 +28,11 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02",
-      "BS03",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD02",
+      "BD03",
+      "BD04"
     ],
     "references": [
       {
@@ -44,6 +44,6 @@
         "title": "大数据时代算法歧视的法律规制研究"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   }
 }

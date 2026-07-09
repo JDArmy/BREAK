@@ -30,8 +30,8 @@
       "TA0040",
       "TA0057"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -43,7 +43,7 @@
         "title": "什么是数据安全合规_数据安全合规简介_数据安全合规的优势以及..."
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "某跨国企业因违反数据合规要求，未经用户明确同意将欧洲用户数据传输至第三国处理，被处以5000万欧元GDPR罚款。"
   }
 }

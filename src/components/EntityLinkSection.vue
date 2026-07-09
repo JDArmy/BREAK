@@ -22,7 +22,7 @@ interface EntityReferenceRecord {
  * - 详情抽屉（RiskDetail 等）：传 onNavigate，标题列用 button 触发回调（开嵌套抽屉/新窗口）
  *
  * 知识库实体传 entityType（强类型，从 entityRegistry 推导 breakKey/fieldPriority/路由）。
- * businessScene 无 EntityType（不在 registry），传 i18nEntityType + routeName/paramKey 逃生舱（走 route + hash）。
+ * businessDomain 无 EntityType（不在 registry），传 i18nEntityType + routeName/paramKey 逃生舱（走 route + hash）。
  * ID 列为纯文本，仅标题列可点击跳转。
  */
 const props = defineProps<{
@@ -36,28 +36,28 @@ const props = defineProps<{
   onNavigate?: (key: string) => void;
   /** section 锚点（data-detail-anchor），如 "risks" / "attack-tools" */
   anchor?: string;
-  /** i18n 路径段（BREAK 键），如 "businessScenes"；businessScene 不在 registry，用此逃生舱 */
+  /** i18n 路径段（BREAK 键），如 "businessDomains"；businessDomain 不在 registry，用此逃生舱 */
   i18nEntityType?: string;
-  /** businessScene hash 模式用：列表路由 name（与 detailRouteName 相同时走 route + hash） */
+  /** businessDomain hash 模式用：列表路由 name（与 detailRouteName 相同时走 route + hash） */
   routeName?: string;
-  /** businessScene hash 模式用：路由 param 字段名 */
+  /** businessDomain hash 模式用：路由 param 字段名 */
   paramKey?: string;
   /** 懒加载实体可直接传记录数据，例如 cases 不在 BREAK.cases i18n 树中 */
   entityRecords?: Record<string, EntityReferenceRecord | undefined>;
 }>();
 
-// 知识库列表路由 name → BREAK 数据键——从 entityRegistry 动态构建（businessScene 逃生舱用）
+// 知识库列表路由 name → BREAK 数据键——从 entityRegistry 动态构建（businessDomain 逃生舱用）
 const BREAK_KEY_BY_ROUTE_NAME: Record<string, string> = Object.fromEntries(
   entityRegistry.map((e) => [e.listRouteName, e.breakKey]),
 );
 
-// breakKey：entityType 优先，其次 i18nEntityType，最后从 routeName 推导（businessScene）
+// breakKey：entityType 优先，其次 i18nEntityType，最后从 routeName 推导（businessDomain）
 const breakKey = computed(() => {
   if (props.entityType) return getEntityEntry(props.entityType)?.breakKey ?? props.entityType;
   return props.i18nEntityType ?? (props.routeName ? BREAK_KEY_BY_ROUTE_NAME[props.routeName] : undefined) ?? props.i18nEntityType ?? "";
 });
 
-// registry entry：entityType 有则取，businessScene 无则按 breakKey 反查
+// registry entry：entityType 有则取，businessDomain 无则按 breakKey 反查
 const entry = computed(() => {
   if (props.entityType) return getEntityEntry(props.entityType);
   return getEntityEntryByBreakKey(breakKey.value);
@@ -71,8 +71,8 @@ const to = (k: string) => {
     if (!e) return {};
     return { name: e.detailRouteName, params: { [e.paramKey]: k } };
   }
-  // businessScene hash 模式
-  return { name: props.routeName, params: { [props.paramKey ?? "bsKey"]: k }, hash: `#${k}` };
+  // businessDomain hash 模式
+  return { name: props.routeName, params: { [props.paramKey ?? "bdKey"]: k }, hash: `#${k}` };
 };
 
 const titlePath = (k: string) => `BREAK.${breakKey.value}.${k}.title`;

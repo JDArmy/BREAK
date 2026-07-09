@@ -72,7 +72,7 @@ const createViewModel = () => ({
   selectedNodeAttackPathSummary: ref(null),
   selectedNodeAttackPathDescription: ref(""),
   selectedNodeAttackPathExplanations: ref([]),
-  selectedNodeBusinessSceneImpactSummary: ref(null),
+  selectedNodeBusinessDomainImpactSummary: ref(null),
   selectedNodeCoverageSummary: ref(null),
   selectedNodeSpecialInsightSummary: ref(null),
   selectedNetworkNodeTitle: computed(() => "R0001"),

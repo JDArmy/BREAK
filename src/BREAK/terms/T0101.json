@@ -45,11 +45,11 @@
       "TA0005",
       "TA0040"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS04",
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01",
+      "BD04",
+      "BD02"
     ],
     "references": [
       {
@@ -61,7 +61,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-09",
     "usageExample": "某团伙安排专人潜入乡镇社区，以“扶贫调研”为名手工打扶贫粉，逐户登记低保对象的身份证号和银行卡信息，整理成册后卖给诈骗团伙。",
     "version": 2
   }

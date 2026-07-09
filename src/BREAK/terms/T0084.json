@@ -46,9 +46,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD02"
     ],
     "references": [
       {
@@ -60,7 +60,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "usageExample": "骗子买来一批被微博限制功能的“跳转号”，利用其仍可授权登录其他平台的特性，批量注册水军账号进行刷量控评。"
   }
 }

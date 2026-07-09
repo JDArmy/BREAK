@@ -22,7 +22,7 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessDomains": [],
     "references": [
       {
         "title": "指导案例102号：付宣豪、黄子超破坏计算机信息系统案（DNS劫持流量劫持定罪）- 中华人民共和国最高人民法院",
@@ -37,7 +37,7 @@
         "link": "https://new.qq.com/rain/a/20220813A01DFQ00"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "usageExample": "攻击者通过流量劫持手段篡改了某加密货币交易所的BGP路由，将用户流量重定向到伪造站点，在12小时内窃取了价值300万美元的用户凭证和数字资产。"
   }
 }

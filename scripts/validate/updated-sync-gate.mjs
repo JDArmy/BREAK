@@ -4,7 +4,7 @@
 //   1. 实体内容字段（排除 version/updated/横向关系字段）相对 git base 有变但 updated≠today() → error
 //   2. updated 格式非 YYYY-MM-DD → error
 //   3. updated 未来日期 → error
-//   4. BS 嵌套 riskDimensions[*].updated / riskScenes[*].updated 与顶层 updated 一致 → review
+//   4. BD 嵌套 riskDimensions[*].updated / riskScenes[*].updated 与顶层 updated 一致 → review
 //
 // 仅校验"变更实体"（git diff 检测），不扫全库（全库扫太慢且历史实体 updated 已固化）。
 // 横向关系字段（relatedAvoidances/relatedAttackTools/relatedThreatActors/relatedRisks）
@@ -51,8 +51,8 @@ for (const { type, key, entity, oldEntity, isNew } of changed) {
     issues.push({ severity: 'error', type, key, type2: 'updated_not_today', message: `${key}.updated="${updated}" 新增实体应设为今日 ${todayStr}` });
   }
 
-  // BS 嵌套 updated 一致性
-  if (type === 'businessScenes') {
+  // BD 嵌套 updated 一致性
+  if (type === 'businessDomains') {
     const topUpdated = entity.updated;
     for (const [rdId, rd] of Object.entries(entity.riskDimensions || {})) {
       if (rd.updated && rd.updated !== topUpdated) {

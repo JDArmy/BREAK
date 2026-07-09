@@ -36,8 +36,8 @@
     "relatedThreatActors": [
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD01"
     ],
     "references": [
       {
@@ -49,6 +49,6 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-09"
   }
 }

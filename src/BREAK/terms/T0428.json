@@ -31,9 +31,9 @@
       "TA0009",
       "TA0017"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -45,7 +45,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "信贷点位会随贷款包装难度和风控拦截概率升高而上浮，高风险背债业务通常报价更高。",
     "version": 2
   }

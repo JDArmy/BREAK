@@ -35,9 +35,9 @@
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD11"
     ],
     "references": [
       {
@@ -53,7 +53,7 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "usageExample": "中介在朋友圈晒出“公积金包装”套餐，声称只需缴纳三个月服务费就能伪造连续半年的高基数缴存记录，帮客户从银行骗出30万信用贷。"
   }
 }

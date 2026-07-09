@@ -193,7 +193,7 @@ const createMockViewModel = (options: MockViewModelOptions = {}) => {
     selectedNodeAttackPathSummary: ref<string[]>([]),
     selectedNodeAttackPathDescription: ref<string>(""),
     selectedNodeAttackPathExplanations: ref<unknown[]>([]),
-    selectedNodeBusinessSceneImpactSummary: ref<unknown>(null),
+    selectedNodeBusinessDomainImpactSummary: ref<unknown>(null),
     selectedNodeCoverageSummary: ref<unknown>(null),
     selectedNodeSpecialInsightSummary: ref<NodeSpecialInsightSummary | null>(
       hasSpecialInsight ? options.selectedNodeSpecialInsightSummary! : null,

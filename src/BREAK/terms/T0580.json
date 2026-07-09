@@ -25,8 +25,8 @@
       "TA0060",
       "TA0012"
     ],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -38,7 +38,7 @@
         "link": "https://developer.android.com/studio/publish/app-signing"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "version": 2
   }
 }

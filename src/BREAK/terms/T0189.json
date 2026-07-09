@@ -42,9 +42,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -56,7 +56,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "催收人员拿到欠款人的银行卡号后，直接找黑产做卡反，几分钟内就查出了对方的真实姓名、身份证号和预留手机号，随后开始密集电话轰炸骚扰。"
   }
 }

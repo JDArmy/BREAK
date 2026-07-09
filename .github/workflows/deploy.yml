@@ -71,7 +71,7 @@ jobs:
               '| 威胁行为者（ThreatActor） | ' + c.threatActors.total + ' |',
               '| 行业术语（Term） | ' + c.terms.total + ' |',
               '| 典型案例（Case） | ' + c.cases.total + ' |',
-              '| 业务场景（BusinessScene） | ' + c.businessScenes.total + ' |',
+              '| 业务域（BusinessDomain） | ' + c.businessDomains.total + ' |',
               '| **总计** | **' + total + '** |',
             ].join('\n'));
           ")

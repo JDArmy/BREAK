@@ -42,9 +42,9 @@
       "TA0040",
       "TA0018"
     ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD01"
     ],
     "references": [
       {
@@ -56,7 +56,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "拿到目标手机号和模糊住址后，黑产人员打开查档工具开始补齐，通过撞库和比对快递接口，不到半小时就把缺失的身份证号和详细门牌号补全，为后续精准诈骗铺好了路。"
   }
 }

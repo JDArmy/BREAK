@@ -44,9 +44,9 @@
     "relatedThreatActors": [
       "TA0003"
     ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
+    "relatedBusinessDomains": [
+      "BD02",
+      "BD04"
     ],
     "references": [
       {
@@ -58,6 +58,6 @@
         "link": "http://finance.sina.com.cn/china/2021-12-26/doc-ikyakumx6440626.shtml"
       }
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-09"
   }
 }

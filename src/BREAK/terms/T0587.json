@@ -15,8 +15,8 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS00"
+    "relatedBusinessDomains": [
+      "BD00"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://wiki.st.com/stm32mcu/wiki/Security:Introduction_to_Secure_boot_and_Secure_firmware_update"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-09",
     "version": 2
   }
 }

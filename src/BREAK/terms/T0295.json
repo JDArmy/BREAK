@@ -34,9 +34,9 @@
     "relatedThreatActors": [
       "TA0014"
     ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02"
+    "relatedBusinessDomains": [
+      "BD01",
+      "BD02"
     ],
     "references": [
       {
@@ -48,7 +48,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "警方发现一笔涉诈资金流经了一家看似正常的便利店，原来这家白商户的收款码被黑产偷换，在不知情中成为了洗钱的一环。"
   }
 }

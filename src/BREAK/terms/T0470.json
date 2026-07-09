@@ -23,7 +23,7 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessDomains": [],
     "references": [
       {
         "title": "DNS劫持_360百科",
@@ -38,7 +38,7 @@
         "title": "https会被dns劫持么?怎么防止网站被dns劫持? - 知乎"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-09",
     "usageExample": "DNS劫持攻击入侵家用路由器，将银行域名解析到钓鱼服务器，3000多名用户在登录时泄露了网银凭证。"
   }
 }

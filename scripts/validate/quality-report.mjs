@@ -15,7 +15,7 @@ const entityLabels = {
   attackTool: 'AttackTool',
   threatActor: 'ThreatActor',
   term: 'Term',
-  businessScene: 'BusinessScene',
+  businessDomain: 'BusinessDomain',
   case: 'Case',
 };
 
@@ -25,7 +25,7 @@ const entityDirs = [
   { type: 'attackTool', zhDir: 'src/BREAK/attack-tools', enDir: 'src/i18n/en/BREAK/attack-tools' },
   { type: 'threatActor', zhDir: 'src/BREAK/threat-actors', enDir: 'src/i18n/en/BREAK/threat-actors' },
   { type: 'term', zhDir: 'src/BREAK/terms', enDir: 'src/i18n/en/BREAK/terms' },
-  { type: 'businessScene', zhDir: 'src/BREAK/business-scenes', enDir: 'src/i18n/en/BREAK/business-scenes' },
+  { type: 'businessDomain', zhDir: 'src/BREAK/business-domains', enDir: 'src/i18n/en/BREAK/business-domains' },
   { type: 'case', zhDir: 'src/BREAK/cases', enDir: 'src/i18n/en/BREAK/cases' },
 ];
 
@@ -69,7 +69,7 @@ function readOptionalJson(filePath) {
   return readJson(filePath);
 }
 
-function collectBusinessSceneRisks(scene) {
+function collectBusinessDomainRisks(scene) {
   return [
     ...(Array.isArray(scene.risks) ? scene.risks : []),
     ...Object.values(scene.riskScenes || {}).flatMap((riskScene) =>
@@ -159,35 +159,35 @@ function collectMissingCoverage(collections) {
   );
 }
 
-function collectSceneIssues(businessScenes, riskIds) {
-  return businessScenes.flatMap(({ key, entity }) => {
-    const sceneRisks = collectBusinessSceneRisks(entity);
+function collectSceneIssues(businessDomains, riskIds) {
+  return businessDomains.flatMap(({ key, entity }) => {
+    const sceneRisks = collectBusinessDomainRisks(entity);
     const uniqueRisks = unique(sceneRisks);
     const issues = [];
 
     if (uniqueRisks.length === 0) {
       issues.push({
-        id: issueId('sceneIssue', 'businessSceneWithoutRisks', key),
-        type: 'businessSceneWithoutRisks',
+        id: issueId('sceneIssue', 'businessDomainWithoutRisks', key),
+        type: 'businessDomainWithoutRisks',
         severity: 'review',
-        entityType: 'businessScene',
+        entityType: 'businessDomain',
         key,
         title: entity.title || '',
-        message: `BusinessScene 未覆盖风险: ${key}`,
+        message: `BusinessDomain 未覆盖风险: ${key}`,
       });
     }
 
     const invalidRisks = uniqueRisks.filter((riskKey) => !riskIds.has(riskKey));
     for (const riskKey of invalidRisks) {
       issues.push({
-        id: issueId('sceneIssue', 'invalidBusinessSceneRiskRef', key, riskKey),
-        type: 'invalidBusinessSceneRiskRef',
+        id: issueId('sceneIssue', 'invalidBusinessDomainRiskRef', key, riskKey),
+        type: 'invalidBusinessDomainRiskRef',
         severity: 'error',
-        entityType: 'businessScene',
+        entityType: 'businessDomain',
         key,
         title: entity.title || '',
         ref: riskKey,
-        message: `BusinessScene 引用了不存在的 Risk: ${riskKey}`,
+        message: `BusinessDomain 引用了不存在的 Risk: ${riskKey}`,
       });
     }
 
@@ -405,12 +405,12 @@ export function buildQualityReport({ generatedAt = new Date().toISOString() } = 
     avoidances: loadEntities('avoidances'),
     attackTools: loadEntities('attack-tools'),
     threatActors: loadEntities('threat-actors'),
-    businessScenes: loadJsonRecords('src/BREAK/business-scenes'),
+    businessDomains: loadJsonRecords('src/BREAK/business-domains'),
   };
   const riskIds = new Set(collections.risks.map(({ key }) => key));
   const weakRelations = collectWeakRelations(collections);
   const missingCoverage = collectMissingCoverage(collections);
-  const sceneIssues = collectSceneIssues(collections.businessScenes, riskIds);
+  const sceneIssues = collectSceneIssues(collections.businessDomains, riskIds);
   const i18nIssues = collectI18nIssues();
   const referenceHealthReport = readOptionalJson(referenceHealthReportPath);
   const caseSourceQualityReport = readOptionalJson(caseSourceQualityReportPath);
