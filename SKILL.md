@@ -167,6 +167,8 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 
 Case 事实核验使用抓取正文送入 LLM。维护 `review-case-fact.mjs` 时需保证送审片段足够覆盖正文关键段落；大批量清理 P2 待办时按约 100 个改动设置 checkpoint，先跑 `validate:data` / `review:changed` 再提交，避免长时间积累未验证变更。
 
+2026-07-09 的 Case P2 事实核验维护仅补强或收敛案例 `summary` / `references` / 英文翻译，不改变 Skill 调用参数、搜索字段、返回格式或实体结构。
+
 `review:should-extract` 会用全库实体 title、keywords、aliases 以及当前实体已引用关系识别已覆盖的候选实体；维护该脚本时，应保持重复抽取建议被降噪，避免 Skill 检索结果中出现语义重复的新增实体。
 
 ## 实体关系图谱

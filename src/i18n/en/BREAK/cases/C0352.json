@@ -11,11 +11,15 @@
       "dark web credential trade",
       "bulk login attack"
     ],
-    "summary": "In April 2021, police in Yancheng, Jiangsu Province uncovered a criminal group using credential stuffing techniques. The group aggregated leaked username-password pairs from the internet, built a database, and launched mass login attempts against a major e-commerce platform, reaching up to one million abnormal logins per day. After gaining access, they exploited stored coupons to purchase goods at",
+    "summary": "In April 2021, police in Yancheng, Jiangsu Province uncovered a criminal group using credential stuffing techniques. The group aggregated leaked username-password pairs from the internet, built a database, and launched mass login attempts against a major e-commerce platform, reaching up to one million abnormal logins per day. After gaining access, they exploited stored coupons and benefits to buy goods at low prices for resale, or resold compromised account credentials. Police arrested 10 suspects across several provinces, with more than 12,900 accounts stolen and nearly 10 million yuan involved.",
     "references": [
       {
         "title": "Yancheng Police Crack Credential Stuffing Account Theft Case",
         "link": "https://www.chinapeace.gov.cn/chinapeace/c100046/2021-11/18/content_12561584.shtml"
+      },
+      {
+        "title": "Yancheng Police Crack Credential Stuffing Account Theft Case - Tencent News",
+        "link": "https://new.qq.com/omn/20211118/20211118A099OK00.html"
       }
     ]
   }

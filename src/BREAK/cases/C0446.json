@@ -1,6 +1,6 @@
 {
   "C0446": {
-    "title": "80万斤鸡蛋凭空消失4年!一个偷蛋案,撕开了基本面分析的盲区",
+    "title": "湘佳股份400万元鸡蛋被侵占，6人一审获刑",
     "keywords": [
       "湘佳牧业",
       "职务侵占",
@@ -12,19 +12,27 @@
       "上市公司",
       "供应链舞弊"
     ],
-    "summary": "湖南湘佳牧业6名员工在近4年内，通过更改出库件数、虚报数据等手段，侵占公司鸡蛋超80万斤，涉案金额超400万元。被盗鸡蛋在台账上始终处于“在库状态”，导致企业对外披露的库存数据长期虚高，严重误导市场供需判断。",
+    "summary": "2026年5月，湖南石门县法院一审宣判一起职务侵占案。湘佳股份非种蛋库保管人员与购货人员勾结，通过更改鸡蛋出库件数、虚报数据、多提少记等方式侵占公司鸡蛋，涉案价值超400万元，6名被告人分别获刑并处罚金；案发跨度为2021年1月至2024年9月。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0042"
+      "R0072-001"
     ],
     "references": [
       {
-        "title": "80万斤鸡蛋凭空消失，6名员工获刑",
-        "link": "https://mp.weixin.qq.com/s/Az4jgSR42S-qjtRmJTC2Dg"
+        "title": "湘佳股份400万元鸡蛋被侵占，6人一审获刑，涉案长达四年暴露公司内控短板",
+        "link": "https://www.popcj.com/depth/4191352606429913"
+      },
+      {
+        "title": "内外勾结，6人联手侵占上市公司鸡蛋，价值超400万元！湘佳股份涉案人员一审获刑",
+        "link": "https://m.thepaper.cn/newsDetail_forward_33283851"
+      },
+      {
+        "title": "伙同外人“偷”超400万元鸡蛋，上市公司4人获刑",
+        "link": "https://finance.sina.com.cn/stock/roll/2026-06-02/doc-inhzysxu3338405.shtml?froms=ggmp"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-06",
+    "updated": "2026-07-09",
+    "incidentTime": "2026-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

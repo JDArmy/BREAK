@@ -12,7 +12,7 @@
       "payment security",
       "fraud detection"
     ],
-    "summary": "FraudBlocker disclosed that its platform identified and blocked a coordinated carding attack. The attackers used payment forms and transaction flows to test card validity at scale, attempting to identify usable cards and complete abnormal transactions. The case illustrates how carding attacks can use automated requests, repeated small transactions, and traffic from multiple sources to evade single-point blocking.",
+    "summary": "In an April 2026 article, FraudBlocker said its team deals with carding attacks regularly, sometimes seeing dozens of attempts every day for months. The article explains that attackers use stolen credit card details to make small test transactions on websites, automate large-scale card validation with bots, and can cause payment gateway blocks, processing fees, and chargeback losses.",
     "references": [
       {
         "title": "How We Identified and Blocked a Coordinated Carding Attack",

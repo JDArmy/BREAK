@@ -11,8 +11,8 @@
       "经纪商",
       "美国证券交易委员会"
     ],
-    "summary": "美国证券交易委员会（SEC）发布风险警示，指出内幕交易可能通过子账户进行以规避检测。主账户持有人（若非注册经纪商）可能利用子账户隐藏交易行为，使监管难以追踪实际控制人，构成典型的子账号滥用风险。",
-    "category": "administrative_enforcement",
+    "summary": "2011年9月29日，美国证券交易委员会（SEC）合规检查与审查办公室发布主/子账户风险警示，说明该交易结构可能被用于洗钱、内幕交易、市场操纵、账户入侵、信息安全问题、未注册经纪商活动及过度杠杆等违法违规风险。警示还指出，部分主账户客户可能通过这种结构规避或降低监管义务与监督。",
+    "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0031"
     ],
@@ -22,9 +22,9 @@
         "link": "https://www.sec.gov/about/offices/ocie/riskalert-mastersubaccounts.pdf"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2010-01-07"
+    "incidentTime": "2011-09-29"
   }
 }

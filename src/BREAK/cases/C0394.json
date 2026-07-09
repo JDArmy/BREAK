@@ -13,7 +13,7 @@
       "江西鹰潭"
     ],
     "summary": "江西鹰潭警方破获一起侵犯公民个人信息案，嫌疑人徐某自2021年起非法收购超千万条实名邮箱账号密码，使用自动脚本批量“养号”提升账号等级，再将成品号售卖给未成年人以绕开游戏防沉迷系统。现场查获百余部手机同步运行养号脚本。",
-    "category": "criminal_verdict",
+    "category": "news_report",
     "relatedRisks": [
       "R0034"
     ],
@@ -21,10 +21,14 @@
       {
         "title": "非法收购个人信息开“养号工厂” - 市县动态 - 江西政法网",
         "link": "https://www.jxzfw.gov.cn/2026/0507/2026050770691.html"
+      },
+      {
+        "title": "非法收购个人信息开“养号工厂” - 新法治报 - 大江网",
+        "link": "https://jxfzb.jxnews.com.cn/system/2026/05/07/031123685.shtml"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-05",
+    "updated": "2026-07-09",
+    "incidentTime": "2026-04",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

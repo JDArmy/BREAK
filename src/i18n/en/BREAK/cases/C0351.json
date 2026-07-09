@@ -11,7 +11,7 @@
       "password reset",
       "PII exposure"
     ],
-    "summary": "In April 2022, General Motors detected malicious login activity and found that attackers had used credentials leaked from other non-GM sites to launch a credential stuffing attack against its online platform. After successfully accessing customer accounts, the attackers stole personal information and redeemed reward points for gift cards. GM subsequently required affected users to reset their pass",
+    "summary": "In April 2022, General Motors detected malicious login activity and found that attackers had used credentials leaked from other non-GM sites to launch a credential stuffing attack against its online platform. After successfully accessing customer accounts, the attackers stole personal information and redeemed reward points for gift cards. GM subsequently required affected users to reset their passwords.",
     "references": [
       {
         "title": "GM hit by credential stuffing attack, owner personal info exposed",

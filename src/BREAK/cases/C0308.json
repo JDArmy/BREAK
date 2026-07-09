@@ -1,6 +1,6 @@
 {
   "C0308": {
-    "title": "当局摧毁全球最大物联网DDoS僵尸网络",
+    "title": "当局摧毁四个大型物联网DDoS僵尸网络",
     "keywords": [
       "物联网",
       "DDoS",
@@ -11,7 +11,7 @@
       "摧毁",
       "分布式拒绝服务"
     ],
-    "summary": "美国司法部公布，当局成功摧毁了全球最大的物联网DDoS僵尸网络。法庭文件显示，名为Aisuru的僵尸网络发出了超过20万次DDoS攻击指令，而KimWolf僵尸网络则发出了超过2.5万次攻击指令，这些僵尸网络曾用于发动创纪录的攻击。",
+    "summary": "2026年3月19日，美国司法部称当局干扰了 Aisuru、KimWolf、JackSkid 和 Mossad 四个物联网DDoS僵尸网络的C2基础设施。法庭文件称，Aisuru 发出20万余次DDoS攻击指令，JackSkid、KimWolf、Mossad分别发出9万余次、2.5万余次和1000余次攻击指令。",
     "category": "security_incident",
     "relatedRisks": [
       "R0029-004"
@@ -20,9 +20,13 @@
       {
         "title": "Authorities disrupt world's largest IoT DDoS botnets responsible for ...",
         "link": "https://www.justice.gov/usao-ak/pr/authorities-disrupt-worlds-largest-iot-ddos-botnets-responsible-record-breaking-attacks"
+      },
+      {
+        "title": "Authorities disrupt four IoT botnets behind record DDoS attacks",
+        "link": "https://www.helpnetsecurity.com/2026/03/20/us-disrupts-iot-botnets-ddos-attacks-aisuru-kimwolf/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-09",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2026-03-19"

@@ -164,6 +164,8 @@ The 2026-07-09 Case P1 reference-quality maintenance only strengthens the refere
 
 Case fact review sends scraped article text to the LLM. When maintaining `review-case-fact.mjs`, keep the submitted snippet long enough to cover key article sections; when clearing P2 items in bulk, create checkpoints after roughly 100 changes and run `validate:data` / `review:changed` before committing, so large batches do not accumulate unverified changes.
 
+The 2026-07-09 Case P2 fact-review maintenance only strengthens or narrows Case `summary` / `references` / English translations; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph

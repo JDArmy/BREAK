@@ -1,6 +1,6 @@
 {
   "C0308": {
-    "title": "Authorities Dismantle World's Largest IoT DDoS Botnet",
+    "title": "Authorities Disrupt Four Major IoT DDoS Botnets",
     "keywords": [
       "IoT botnet takedown",
       "DDoS attack infrastructure",
@@ -9,11 +9,15 @@
       "U.S. Department of Justice",
       "distributed denial of service"
     ],
-    "summary": "The U.S. Department of Justice announced the successful takedown of the world's largest IoT DDoS botnet. Court documents revealed that the Aisuru botnet issued over 200,000 DDoS attack commands, while the KimWolf botnet issued over 25,000, both used to launch record-breaking attacks.",
+    "summary": "On March 19, 2026, the U.S. Department of Justice said authorities disrupted command-and-control infrastructure used by the Aisuru, KimWolf, JackSkid, and Mossad IoT DDoS botnets. Court documents alleged that Aisuru issued more than 200,000 DDoS attack commands, while JackSkid, KimWolf, and Mossad issued more than 90,000, 25,000, and 1,000 commands respectively.",
     "references": [
       {
         "title": "Authorities disrupt world's largest IoT DDoS botnets responsible for ...",
         "link": "https://www.justice.gov/usao-ak/pr/authorities-disrupt-worlds-largest-iot-ddos-botnets-responsible-record-breaking-attacks"
+      },
+      {
+        "title": "Authorities disrupt four IoT botnets behind record DDoS attacks",
+        "link": "https://www.helpnetsecurity.com/2026/03/20/us-disrupts-iot-botnets-ddos-attacks-aisuru-kimwolf/"
       }
     ]
   }

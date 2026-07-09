@@ -11,7 +11,7 @@
       "认证缺陷",
       "安全研究"
     ],
-    "summary": "在HackerOne平台上，研究人员发现其漏洞报告系统存在缺陷。主提交页面强制要求启用双因素认证（2FA），但通过嵌入式表单提交报告时，该检查被绕过，未启用2FA的用户也能成功提交，暴露了MFA流程的绕过漏洞。",
+    "summary": "2018年，HackerOne报告披露其漏洞报告提交流程存在2FA要求绕过问题。研究人员发现，主提交页面会要求用户启用双因素认证，但通过嵌入式表单提交报告时相关检查未生效，未启用2FA的用户也能继续提交，相关绕过还影响报告者黑名单检查。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0036"
@@ -20,10 +20,14 @@
       {
         "title": "HackerOne 报告：绕过 2FA 要求和报告者黑名单",
         "link": "https://hackerone.com/reports/418767"
+      },
+      {
+        "title": "Bypass HackerOne 2FA Requirement and Reporter Blacklist",
+        "link": "https://infosecwriteups.com/bypass-hackerone-2fa-requirement-and-reporter-blacklist-46d7959f1ee5"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-02",
+    "updated": "2026-07-09",
+    "incidentTime": "2018-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

@@ -11,11 +11,15 @@
       "OAuth",
       "login credential theft"
     ],
-    "summary": "In 2019, a researcher on a bug bounty platform discovered a vulnerability in Slack that allowed attackers to forcibly redirect users to a rogue session, enabling theft of their session cookies. The flaw granted access to any data shared within Slack and posed a serious threat to numerous organizations. Slack patched the issue within 24 hours.",
+    "summary": "In 2019, a HackerOne report disclosed an HTTP request smuggling vulnerability in Slack that could be used for mass account takeover. The researcher explained that an attacker could force users into an attacker-controlled session flow and steal session cookies, enabling access to data shared in Slack workspaces; the report records that Slack fixed the issue after disclosure and paid a bounty.",
     "references": [
       {
         "title": "HackerOne Report #737140: Mass Account Takeovers Using HTTP Request Smuggling in Slack",
         "link": "https://hackerone.com/reports/737140"
+      },
+      {
+        "title": "$6.5k HTTP Request Smuggling Mass Account Takeover - Slack",
+        "link": "https://www.bugbountyexplained.com/65k-5k-http-request-smuggling-mass-account-takeover-slack-zomato/"
       }
     ]
   }

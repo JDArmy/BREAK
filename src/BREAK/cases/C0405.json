@@ -13,7 +13,7 @@
       "云安全",
       "横向移动"
     ],
-    "summary": "思科2025年网络安全就绪指数指出，在 Cisco Talos 事件响应案例中，基于身份的攻击占 60%。攻击者利用被盗或被滥用的有效账号支持初始入侵、横向移动和权限提升，暴露出凭证复用、钓鱼和云访问令牌滥用带来的身份安全风险。",
+    "summary": "思科2025年网络安全就绪指数引用Cisco Talos 2024年度回顾称，基于身份的攻击占Talos事件响应案例的60%。报告指出，攻击者依赖身份攻击推进初始入侵、横向移动和权限提升，并通过受损的有效账号延长潜伏时间，暴露凭证复用、钓鱼和云访问令牌滥用风险。",
     "category": "news_report",
     "relatedRisks": [
       "R0035"
@@ -22,13 +22,16 @@
       {
         "title": "2025 Cisco Cybersecurity Readiness Index",
         "link": "https://newsroom.cisco.com/c/dam/r/newsroom/en/us/interactive/cybersecurity-readiness-index/2025/documents/2025_Cisco_Cybersecurity_Readiness_Index.pdf"
+      },
+      {
+        "title": "Available now: 2024 Year in Review - Cisco Talos Blog",
+        "link": "https://blog.talosintelligence.com/available-now-2024-year-in-review/"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-10",
+    "updated": "2026-07-09",
+    "incidentTime": "2025-04",
     "relatedAttackTools": [
-      "AT0042",
-      "AT0061-003"
+      "AT0042"
     ],
     "relatedThreatActors": []
   }

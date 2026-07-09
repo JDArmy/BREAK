@@ -12,11 +12,15 @@
       "cloud security",
       "lateral movement"
     ],
-    "summary": "The 2025 Cisco Cybersecurity Readiness Index reports that identity-based attacks accounted for 60% of Cisco Talos incident response cases. Attackers use stolen or abused valid accounts to support initial access, lateral movement, and privilege escalation, exposing identity-security risks from credential reuse, phishing, and abused cloud access tokens.",
+    "summary": "Cisco's 2025 Cybersecurity Readiness Index cites the Cisco Talos 2024 Year in Review, which found identity-based attacks accounted for 60% of Talos incident response cases. The report says attackers relied on identity attacks for initial compromise, lateral movement, and privilege escalation, often extending dwell time by using compromised valid accounts and exposing risks from credential reuse, phishing, and abused cloud access tokens.",
     "references": [
       {
         "title": "2025 Cisco Cybersecurity Readiness Index",
         "link": "https://newsroom.cisco.com/c/dam/r/newsroom/en/us/interactive/cybersecurity-readiness-index/2025/documents/2025_Cisco_Cybersecurity_Readiness_Index.pdf"
+      },
+      {
+        "title": "Available Now: 2024 Year in Review - Cisco Talos Blog",
+        "link": "https://blog.talosintelligence.com/available-now-2024-year-in-review/"
       }
     ]
   }
