@@ -169,8 +169,8 @@
           </div>
           <p class="break-boot__hint" id="break-boot-hint">首次访问或网络较慢时可能需要稍等。</p>
           <div class="break-boot__actions" id="break-boot-actions">
-            <button class="break-boot__button" type="button" data-break-boot-reload>刷新页面</button>
-            <button class="break-boot__button" type="button" data-break-boot-clear>清理缓存并刷新</button>
+            <button class="break-boot__button" type="button" data-break-boot-reload id="break-boot-reload">刷新页面</button>
+            <button class="break-boot__button" type="button" data-break-boot-clear id="break-boot-clear">清理缓存并刷新</button>
           </div>
         </div>
       </section>
@@ -182,6 +182,46 @@
         var hint = document.getElementById("break-boot-hint");
         var progress = document.getElementById("break-boot-progress");
         var bar = document.querySelector(".break-boot__bar");
+        var reloadButton = document.getElementById("break-boot-reload");
+        var clearButton = document.getElementById("break-boot-clear");
+        var bootMessages = {
+          cn: {
+            initialStage: "正在加载应用资源...",
+            progressLabel: "应用加载进度",
+            initialHint: "首次访问或网络较慢时可能需要稍等。",
+            slowHint: "网络较慢，正在继续加载核心资源。",
+            timeoutError: "加载时间较长，可能是网络异常或页面资源正在更新。",
+            genericError: "页面资源加载失败。",
+            retryHint: "可以刷新页面；如果问题持续，请清理缓存后重试。",
+            reload: "刷新页面",
+            clear: "清理缓存并刷新"
+          },
+          en: {
+            initialStage: "Loading application resources...",
+            progressLabel: "Application loading progress",
+            initialHint: "First visits or slow networks may take a moment.",
+            slowHint: "The network is slow. Still loading core resources.",
+            timeoutError: "Loading is taking longer than expected. The network may be unstable or page resources may be updating.",
+            genericError: "Page resources failed to load.",
+            retryHint: "Refresh the page. If the issue continues, clear the cache and try again.",
+            reload: "Refresh page",
+            clear: "Clear cache and refresh"
+          }
+        };
+        var savedLocale = null;
+        try {
+          savedLocale = window.localStorage ? window.localStorage.getItem("break-locale") : null;
+        } catch (error) {
+          savedLocale = null;
+        }
+        var browserLanguage = window.navigator && window.navigator.language ? window.navigator.language : "";
+        var bootLocale = savedLocale === "en" || (!savedLocale && browserLanguage.indexOf("en") === 0) ? "en" : "cn";
+        var bootText = bootMessages[bootLocale];
+        if (stage) stage.textContent = bootText.initialStage;
+        if (bar) bar.setAttribute("aria-label", bootText.progressLabel);
+        if (hint) hint.textContent = bootText.initialHint;
+        if (reloadButton) reloadButton.textContent = bootText.reload;
+        if (clearButton) clearButton.textContent = bootText.clear;
         var currentPercent = 12;
         var progressTimer = window.setInterval(function () {
           if (!root || root.dataset.done === "true") return;
@@ -191,11 +231,11 @@
         }, 700);
         var slowTimer = window.setTimeout(function () {
           if (!root || root.dataset.done === "true") return;
-          hint.textContent = "网络较慢，正在继续加载核心资源。";
+          hint.textContent = bootText.slowHint;
         }, 6000);
         var errorTimer = window.setTimeout(function () {
           if (!root || root.dataset.done === "true") return;
-          setError("加载时间较长，可能是网络异常或页面资源正在更新。");
+          setError(bootText.timeoutError);
         }, 15000);
 
         function updateProgress(percent) {
@@ -218,8 +258,8 @@
           if (!root || root.dataset.done === "true") return;
           root.classList.add("is-error");
           root.setAttribute("aria-busy", "false");
-          if (stage) stage.textContent = text || "页面资源加载失败。";
-          if (hint) hint.textContent = "可以刷新页面；如果问题持续，请清理缓存后重试。";
+          if (stage) stage.textContent = text || bootText.genericError;
+          if (hint) hint.textContent = bootText.retryHint;
         }
 
         function done() {

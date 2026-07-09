@@ -728,10 +728,11 @@ const caseDrawer = useDrawerRoute({
   --stat-accent-soft: var(--break-highlight-bg);
 
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 16px 24px;
+  padding: 12px 20px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.96) 100%),
     linear-gradient(135deg, var(--stat-accent-soft) 0%, var(--break-bg-card) 100%);
@@ -741,7 +742,7 @@ const caseDrawer = useDrawerRoute({
   text-decoration: none;
   color: var(--break-text-primary);
   min-width: 0;
-  min-height: 132px;
+  min-height: 108px;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -820,7 +821,7 @@ html.dark .stat-card:active {
 }
 
 .stat-number {
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: bold;
   line-height: 1;
   margin-top: 4px;
@@ -985,11 +986,12 @@ html.dark .stat-card:active {
 
   .stat-card {
     min-width: 0 !important;
-    padding: 12px 16px;
+    min-height: 96px;
+    padding: 10px 12px;
   }
 
   .stat-number {
-    font-size: 1.5em;
+    font-size: 1.35em;
   }
 
   .scrollable-container {
