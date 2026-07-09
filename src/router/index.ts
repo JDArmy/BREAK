@@ -42,6 +42,25 @@ import { RELATION_PERSPECTIVE_ROUTES } from "@/views/relation/relationAnalysisPe
 
 type RelationPreloadTarget = "network" | "sankey";
 
+const normalizeDocsHashRoute = () => {
+  if (typeof window === "undefined") return;
+  const base = import.meta.env.BASE_URL || "/";
+  const basePath = base.endsWith("/") ? base.slice(0, -1) : base;
+  const pathname = window.location.pathname;
+  const relativePath =
+    basePath && pathname.startsWith(`${basePath}/`)
+      ? pathname.slice(basePath.length)
+      : pathname;
+
+  if (!relativePath.startsWith("/docs")) return;
+  if (window.location.hash && window.location.hash !== "#/") return;
+
+  const normalized = `${basePath || ""}/#${relativePath}${window.location.search}`;
+  window.history.replaceState(null, "", normalized);
+};
+
+normalizeDocsHashRoute();
+
 export const preloadRelationView = (target?: RelationPreloadTarget) => {
   void loadRelationView();
   if (target === "network") {

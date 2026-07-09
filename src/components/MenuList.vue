@@ -4,7 +4,7 @@ import "element-plus/theme-chalk/display.css";
 import GithubPane from "@/components/GithubPane.vue";
 import ThemeToggle from "@/components/ThemeToggle.vue";
 import iconTranslate from "@/components/icons/iconTranslate.vue";
-import { ArrowDown, Search, Menu as MenuIcon, Loading } from "@element-plus/icons-vue";
+import { ArrowDown, Search, Menu as MenuIcon, Loading, TopRight } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
 import { useTheme } from "@/composables/useTheme";
@@ -18,7 +18,7 @@ import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 import { topLoadingState } from "@/utils/topLoading";
 import { buildProjectFeedbackIssueUrl } from "@/utils/feedback";
 
-const { isMobile } = useBreakpoints();
+const { isMobile, isDesktop } = useBreakpoints();
 const topLoadingActive = topLoadingState.active;
 const topLoadingProgress = topLoadingState.progress;
 
@@ -47,6 +47,7 @@ const shortcutHint =
   typeof navigator !== "undefined" && navigator.platform?.includes("Mac")
     ? "⌘K"
     : "Ctrl+K";
+const localeGroupTitle = computed(() => (locale.value === "en" ? "Language" : "语言"));
 
 const preloadSearchDialog = () => {
   void loadSearchDialog();
@@ -178,14 +179,13 @@ const handleGlobalKeydown = (event: KeyboardEvent) => {
 
 onMounted(() => {
   document.addEventListener("keydown", handleGlobalKeydown);
-  // 桌面端菜单响应式收起：监听菜单容器尺寸变化，溢出时从右往左收进汉堡
-  if (window.innerWidth >= 768 && desktopMenuRef.value && typeof ResizeObserver !== "undefined") {
+  if (desktopMenuRef.value && typeof ResizeObserver !== "undefined") {
     resizeObserver = new ResizeObserver(() => scheduleRecalc());
     resizeObserver.observe(desktopMenuRef.value);
-    // 首次测量（nextTick 确保 DOM 渲染完成）
-    void nextTick(() => scheduleRecalc());
   }
-  if (window.innerWidth >= 768) {
+  void nextTick(() => scheduleRecalc());
+
+  if (isDesktop.value) {
     preloadSearchDialog();
     prefetchAllKnowledgeViews();
     preloadRelationView("network");
@@ -214,6 +214,24 @@ onUnmounted(() => {
 watch(locale, () => {
   void nextTick(() => scheduleRecalc());
 });
+
+watch(isDesktop, (desktop) => {
+  if (desktop) {
+    void nextTick(() => scheduleRecalc());
+    preloadSearchDialog();
+    prefetchAllKnowledgeViews();
+    preloadRelationView("network");
+  } else {
+    hiddenCount.value = 0;
+  }
+});
+
+watch(
+  () => route.fullPath,
+  () => {
+    void nextTick(() => scheduleRecalc());
+  },
+);
 
 const isKnowledgeActive = (fullPath: string) => {
   const active = getActiveIndex(fullPath);
@@ -262,7 +280,7 @@ const getActiveIndex = (fullPath: string) => {
 // ============ 桌面端菜单响应式收起（从右往左收进汉堡） ============
 // 可收起项按从左到右顺序排列；hiddenCount 表示从右往左收起几项。
 // 屏幕变窄溢出时 hiddenCount++，变宽有余量时 hiddenCount--。
-const { setTheme } = useTheme();
+const { theme, setTheme } = useTheme();
 
 // 可收起项配置：key 唯一标识，kind 决定汉堡内渲染方式
 type CollapsibleKind = "link" | "knowledge" | "more" | "jdarmy" | "theme" | "locale" | "github";
@@ -315,6 +333,10 @@ const recalculateOverflow = async () => {
   // 子项总宽超过自身宽度时 scrollWidth > clientWidth。nav 仅作为 ResizeObserver 触发器。
   const el = desktopMenuRef.value?.querySelector<HTMLElement>(".el-menu");
   if (!el) return;
+  if (!isDesktop.value || el.clientWidth === 0) {
+    hiddenCount.value = 0;
+    return;
+  }
   const overflowing = () => el.scrollWidth > el.clientWidth + 1;
   let guard = COLLAPSIBLE_TOTAL + 1;
 
@@ -442,14 +464,15 @@ const scheduleRecalc = () => {
 
       <div class="mobile-nav-group">
         <div class="mobile-nav-group-title">{{ $t("menu.more") }}</div>
-        <div class="mobile-nav-item" :class="{ active: route.fullPath.startsWith('/changelog') }" @click="handleMobileNav('/changelog')">
-          <span>{{ $t("menu.changelog") }}</span>
-        </div>
         <div class="mobile-nav-item" :class="{ active: route.fullPath.startsWith('/docs') }" @click="handleMobileNav('/docs')">
           <span>{{ $t("menu.docs") }}</span>
         </div>
-        <div class="mobile-nav-item" @click="openProjectFeedback">
+        <div class="mobile-nav-item" :class="{ active: route.fullPath.startsWith('/changelog') }" @click="handleMobileNav('/changelog')">
+          <span>{{ $t("menu.changelog") }}</span>
+        </div>
+        <div class="mobile-nav-item mobile-nav-item--with-icon" @click="openProjectFeedback">
           <span>{{ $t("menu.feedback") }}</span>
+          <el-icon><TopRight /></el-icon>
         </div>
       </div>
 
@@ -457,23 +480,25 @@ const scheduleRecalc = () => {
 
       <div class="mobile-nav-group">
         <div class="mobile-nav-group-title">JDArmy</div>
-        <a class="mobile-nav-item mobile-nav-link" href="https://jd.army" target="_blank" rel="noopener noreferrer">
+        <a class="mobile-nav-item mobile-nav-link mobile-nav-item--with-icon" href="https://jd.army" target="_blank" rel="noopener noreferrer">
           <span>Webpage</span>
+          <el-icon><TopRight /></el-icon>
         </a>
-        <a class="mobile-nav-item mobile-nav-link" href="https://blog.jd.army" target="_blank" rel="noopener noreferrer">
+        <a class="mobile-nav-item mobile-nav-link mobile-nav-item--with-icon" href="https://blog.jd.army" target="_blank" rel="noopener noreferrer">
           <span>Blog</span>
+          <el-icon><TopRight /></el-icon>
         </a>
-        <a class="mobile-nav-item mobile-nav-link" href="https://rtass.jd.army" target="_blank" rel="noopener noreferrer">
+        <a class="mobile-nav-item mobile-nav-link mobile-nav-item--with-icon" href="https://rtass.jd.army" target="_blank" rel="noopener noreferrer">
           <span>RTASS</span>
+          <el-icon><TopRight /></el-icon>
         </a>
-        <a class="mobile-nav-item mobile-nav-link" href="https://break.jd.army" target="_blank" rel="noopener noreferrer">
-          <span>BREAK</span>
-        </a>
-        <a class="mobile-nav-item mobile-nav-link" href="https://dsre.jd.army" target="_blank" rel="noopener noreferrer">
+        <a class="mobile-nav-item mobile-nav-link mobile-nav-item--with-icon" href="https://dsre.jd.army" target="_blank" rel="noopener noreferrer">
           <span>DSRE</span>
+          <el-icon><TopRight /></el-icon>
         </a>
-        <a class="mobile-nav-item mobile-nav-link" href="https://textwatermark.jd.army" target="_blank" rel="noopener noreferrer">
+        <a class="mobile-nav-item mobile-nav-link mobile-nav-item--with-icon" href="https://textwatermark.jd.army" target="_blank" rel="noopener noreferrer">
           <span>Text Watermark</span>
+          <el-icon><TopRight /></el-icon>
         </a>
       </div>
 
@@ -481,7 +506,7 @@ const scheduleRecalc = () => {
 
       <div class="mobile-nav-actions">
         <ThemeToggle />
-        <el-dropdown trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
+        <el-dropdown trigger="click" :disabled="localeChanging" popper-class="mobile-locale-dropdown-menu" @command="handleLocaleChange">
           <span class="mobile-locale-toggle">
             <el-icon v-if="localeChanging" class="locale-loading-icon"><Loading /></el-icon>
             <icon-translate v-else />
@@ -592,9 +617,9 @@ const scheduleRecalc = () => {
       </span>
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item command="changelog" :class="{ 'is-active': getActiveIndex($route.fullPath) === '/changelog' }">{{ $t("menu.changelog") }}</el-dropdown-item>
           <el-dropdown-item command="docs" :class="{ 'is-active': getActiveIndex($route.fullPath) === '/docs' }">{{ $t("menu.docs") }}</el-dropdown-item>
-          <el-dropdown-item command="feedback">{{ $t("menu.feedback") }}</el-dropdown-item>
+          <el-dropdown-item command="changelog" :class="{ 'is-active': getActiveIndex($route.fullPath) === '/changelog' }">{{ $t("menu.changelog") }}</el-dropdown-item>
+          <el-dropdown-item command="feedback" class="feedback-menu-item">{{ $t("menu.feedback") }}<el-icon><TopRight /></el-icon></el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
@@ -608,45 +633,40 @@ const scheduleRecalc = () => {
       <template #dropdown>
         <el-dropdown-menu class="outside-link-menu">
           <el-dropdown-item
-            ><a target="_blank" rel="noopener noreferrer" href="https://jd.army"
-              >Webpage</a
+            ><a class="external-link-item" target="_blank" rel="noopener noreferrer" href="https://jd.army"
+              ><span>Webpage</span><el-icon><TopRight /></el-icon></a
             ></el-dropdown-item
           >
           <el-dropdown-item
-            ><a target="_blank" rel="noopener noreferrer" href="https://blog.jd.army"
-              >Blog</a
+            ><a class="external-link-item" target="_blank" rel="noopener noreferrer" href="https://blog.jd.army"
+              ><span>Blog</span><el-icon><TopRight /></el-icon></a
             ></el-dropdown-item
           >
           <el-dropdown-item divided
             ><a
+              class="external-link-item"
               target="_blank" rel="noopener noreferrer"
               href="https://rtass.jd.army"
               title="Red Team Assessment Scoring System Open Source Framework"
-              >RTASS</a
+              ><span>RTASS</span><el-icon><TopRight /></el-icon></a
             ></el-dropdown-item
           >
           <el-dropdown-item
             ><a
-              target="_blank" rel="noopener noreferrer"
-              href="https://break.jd.army"
-              title="Business Risk Enumeration & Avoidance Kownledge Open Source Framework"
-              >BREAK</a
-            ></el-dropdown-item
-          >
-          <el-dropdown-item
-            ><a
+              class="external-link-item"
               target="_blank" rel="noopener noreferrer"
               href="https://dsre.jd.army"
               title="Data Security Risk Enumeration Open Source Framkework"
-              >DSRE</a
+              ><span>DSRE</span><el-icon><TopRight /></el-icon></a
             ></el-dropdown-item
           >
           <el-dropdown-item divided
             ><a
+              class="external-link-item"
               target="_blank" rel="noopener noreferrer"
               href="https://textwatermark.jd.army"
               title="A Open Source Library for Text Watermarking in python"
-              >Text Watermark</a
+              ><span>Text Watermark</span><el-icon><TopRight /></el-icon></a
             ></el-dropdown-item
           >
         </el-dropdown-menu>
@@ -713,33 +733,32 @@ const scheduleRecalc = () => {
             <!-- 更多：平铺 3 个子项 -->
             <template v-else-if="item.kind === 'more'">
               <el-dropdown-item divided :disabled="true" class="overflow-group-title">{{ $t('menu.more') }}</el-dropdown-item>
-              <el-dropdown-item @click="handleMoreCommand('changelog')">{{ $t('menu.changelog') }}</el-dropdown-item>
               <el-dropdown-item @click="handleMoreCommand('docs')">{{ $t('menu.docs') }}</el-dropdown-item>
-              <el-dropdown-item @click="handleMoreCommand('feedback')">{{ $t('menu.feedback') }}</el-dropdown-item>
+              <el-dropdown-item @click="handleMoreCommand('changelog')">{{ $t('menu.changelog') }}</el-dropdown-item>
+              <el-dropdown-item class="feedback-menu-item" @click="handleMoreCommand('feedback')">{{ $t('menu.feedback') }}<el-icon><TopRight /></el-icon></el-dropdown-item>
             </template>
 
             <!-- JDArmy：平铺外链子项 -->
             <template v-else-if="item.kind === 'jdarmy'">
               <el-dropdown-item divided :disabled="true" class="overflow-group-title">JDArmy</el-dropdown-item>
-              <el-dropdown-item><a target="_blank" rel="noopener noreferrer" href="https://jd.army">Webpage</a></el-dropdown-item>
-              <el-dropdown-item><a target="_blank" rel="noopener noreferrer" href="https://blog.jd.army">Blog</a></el-dropdown-item>
-              <el-dropdown-item divided><a target="_blank" rel="noopener noreferrer" href="https://rtass.jd.army" title="Red Team Assessment Scoring System Open Source Framework">RTASS</a></el-dropdown-item>
-              <el-dropdown-item><a target="_blank" rel="noopener noreferrer" href="https://break.jd.army" title="Business Risk Enumeration & Avoidance Kownledge Open Source Framework">BREAK</a></el-dropdown-item>
-              <el-dropdown-item><a target="_blank" rel="noopener noreferrer" href="https://dsre.jd.army" title="Data Security Risk Enumeration Open Source Framkework">DSRE</a></el-dropdown-item>
-              <el-dropdown-item divided><a target="_blank" rel="noopener noreferrer" href="https://textwatermark.jd.army" title="A Open Source Library for Text Watermarking in python">Text Watermark</a></el-dropdown-item>
+              <el-dropdown-item><a class="external-link-item" target="_blank" rel="noopener noreferrer" href="https://jd.army"><span>Webpage</span><el-icon><TopRight /></el-icon></a></el-dropdown-item>
+              <el-dropdown-item><a class="external-link-item" target="_blank" rel="noopener noreferrer" href="https://blog.jd.army"><span>Blog</span><el-icon><TopRight /></el-icon></a></el-dropdown-item>
+              <el-dropdown-item divided><a class="external-link-item" target="_blank" rel="noopener noreferrer" href="https://rtass.jd.army" title="Red Team Assessment Scoring System Open Source Framework"><span>RTASS</span><el-icon><TopRight /></el-icon></a></el-dropdown-item>
+              <el-dropdown-item><a class="external-link-item" target="_blank" rel="noopener noreferrer" href="https://dsre.jd.army" title="Data Security Risk Enumeration Open Source Framkework"><span>DSRE</span><el-icon><TopRight /></el-icon></a></el-dropdown-item>
+              <el-dropdown-item divided><a class="external-link-item" target="_blank" rel="noopener noreferrer" href="https://textwatermark.jd.army" title="A Open Source Library for Text Watermarking in python"><span>Text Watermark</span><el-icon><TopRight /></el-icon></a></el-dropdown-item>
             </template>
 
             <!-- 主题：平铺 3 个模式 -->
             <template v-else-if="item.kind === 'theme'">
               <el-dropdown-item divided :disabled="true" class="overflow-group-title">{{ $t('theme.current') }}</el-dropdown-item>
-              <el-dropdown-item @click="setTheme('light')">{{ $t('theme.light') }}</el-dropdown-item>
-              <el-dropdown-item @click="setTheme('dark')">{{ $t('theme.dark') }}</el-dropdown-item>
-              <el-dropdown-item @click="setTheme('system')">{{ $t('theme.system') }}</el-dropdown-item>
+              <el-dropdown-item :class="{ 'is-active': theme === 'light' }" @click="setTheme('light')">{{ $t('theme.light') }}</el-dropdown-item>
+              <el-dropdown-item :class="{ 'is-active': theme === 'dark' }" @click="setTheme('dark')">{{ $t('theme.dark') }}</el-dropdown-item>
+              <el-dropdown-item :class="{ 'is-active': theme === 'system' }" @click="setTheme('system')">{{ $t('theme.system') }}</el-dropdown-item>
             </template>
 
             <!-- 语言：平铺语言选项 -->
             <template v-else-if="item.kind === 'locale'">
-              <el-dropdown-item divided :disabled="true" class="overflow-group-title">{{ languages[locale as keyof typeof languages] }}</el-dropdown-item>
+              <el-dropdown-item divided :disabled="true" class="overflow-group-title">{{ localeGroupTitle }}</el-dropdown-item>
               <el-dropdown-item
                 v-for="(label, lang) in languages"
                 :key="lang"
@@ -782,6 +801,22 @@ const scheduleRecalc = () => {
 .desktop-nav {
   height: 100%;
   position: relative;
+}
+
+.desktop-menu {
+  flex-wrap: nowrap;
+}
+
+.desktop-menu :deep(.el-menu-item),
+.desktop-menu :deep(.el-sub-menu__title),
+.desktop-menu .knowledge-menu,
+.desktop-menu .more-menu,
+.desktop-menu .outside-link,
+.desktop-menu .translate,
+.desktop-menu .github,
+.desktop-menu .overflow-menu {
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .top-loading-line {
@@ -835,6 +870,7 @@ const scheduleRecalc = () => {
 
 .flex-grow {
   flex-grow: 1;
+  min-width: 160px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -917,6 +953,7 @@ const scheduleRecalc = () => {
   text-align: center;
   font-weight: 600;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .banner--clickable {
@@ -958,6 +995,7 @@ const scheduleRecalc = () => {
   gap: 4px;
   color: var(--el-menu-text-color);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .locale-label {
@@ -989,6 +1027,7 @@ const scheduleRecalc = () => {
   gap: 4px;
   color: var(--el-menu-text-color);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .knowledge-menu.is-active .el-dropdown-link,
@@ -1012,7 +1051,10 @@ const scheduleRecalc = () => {
 }
 
 .outside-link-menu a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1051,11 +1093,40 @@ const scheduleRecalc = () => {
   user-select: none;
 }
 
+:global(.overflow-menu-list .overflow-group-title.el-dropdown-menu__item) {
+  color: var(--break-text-muted) !important;
+  background: transparent !important;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0.72;
+  cursor: default;
+}
+
+:global(.overflow-menu-list .overflow-group-title.el-dropdown-menu__item:hover),
+:global(.overflow-menu-list .overflow-group-title.el-dropdown-menu__item:focus) {
+  color: var(--break-text-muted) !important;
+  background: transparent !important;
+}
+
+:global(.feedback-menu-item.el-dropdown-menu__item) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .overflow-menu-list a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
   width: 100%;
   color: inherit;
   text-decoration: none;
+}
+
+.external-link-item {
+  min-width: 0;
 }
 
 /* 移动端侧滑菜单样式 */
@@ -1100,6 +1171,13 @@ const scheduleRecalc = () => {
 .mobile-nav-item.active {
   background: var(--break-highlight-bg);
   color: var(--break-link);
+}
+
+.mobile-nav-item--with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .mobile-nav-link {
@@ -1170,6 +1248,17 @@ const scheduleRecalc = () => {
 </style>
 
 <style>
+.mobile-locale-dropdown-menu .el-dropdown-menu__item.is-active {
+  color: var(--el-color-primary) !important;
+  background-color: var(--el-color-primary-light-9) !important;
+}
+
+.mobile-locale-dropdown-menu .el-dropdown-menu__item.is-active:hover,
+.mobile-locale-dropdown-menu .el-dropdown-menu__item.is-active:focus {
+  color: var(--el-color-primary) !important;
+  background-color: var(--el-color-primary-light-7) !important;
+}
+
 /* 非 scoped：Drawer 样式覆盖 */
 .mobile-nav-drawer .el-drawer__header {
   margin-bottom: 0;

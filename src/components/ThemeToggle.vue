@@ -19,6 +19,7 @@ const themeOptions: { mode: ThemeMode; labelKey: string; icon: "sun" | "moon" | 
     class="theme-toggle"
     trigger="click"
     placement="bottom"
+    popper-class="theme-dropdown-menu"
     @command="(m: ThemeMode) => setTheme(m)"
   >
     <span class="el-dropdown-link" role="button" tabindex="0" :aria-label="t('theme.current')">
@@ -97,5 +98,18 @@ const themeOptions: { mode: ThemeMode; labelKey: string; icon: "sun" | "moon" | 
   line-height: var(--el-menu-item-height);
   color: var(--el-menu-text-color);
   cursor: pointer;
+}
+</style>
+
+<style>
+.theme-dropdown-menu .el-dropdown-menu__item.is-active {
+  color: var(--el-color-primary) !important;
+  background-color: var(--el-color-primary-light-9) !important;
+}
+
+.theme-dropdown-menu .el-dropdown-menu__item.is-active:hover,
+.theme-dropdown-menu .el-dropdown-menu__item.is-active:focus {
+  color: var(--el-color-primary) !important;
+  background-color: var(--el-color-primary-light-7) !important;
 }
 </style>

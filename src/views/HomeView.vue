@@ -713,12 +713,14 @@ const caseDrawer = useDrawerRoute({
 }
 
 .stats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 16px;
+  width: min(100%, 1280px);
   margin-top: 1em;
   margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stat-card {
@@ -738,7 +740,8 @@ const caseDrawer = useDrawerRoute({
   border-radius: 10px;
   text-decoration: none;
   color: var(--break-text-primary);
-  min-width: 120px;
+  min-width: 0;
+  min-height: 132px;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -827,7 +830,7 @@ html.dark .stat-card:active {
 
 .stat-label {
   font-size: 0.9em;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
   color: var(--break-text-secondary);
 }
 

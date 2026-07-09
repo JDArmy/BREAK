@@ -25,7 +25,7 @@ public/data/break-stix-en.json
 public/data/break-ld-zh.jsonld
 public/data/break-ld-en.jsonld
 public/data/changelog.json
-public/data/docs-zh.json
+public/data/docs-zh-CN.json
 public/data/docs-en.json
 
 # 构建时预合并的英文完整数据（generate-en-full.mjs 生成），不纳入版本库

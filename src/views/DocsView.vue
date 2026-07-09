@@ -9,6 +9,7 @@ interface DocEntry {
   title: string;
   category: string;
   order: number;
+  summary?: string;
   bodyHtml: string;
 }
 
@@ -21,8 +22,38 @@ const docs = ref<DocEntry[]>([]);
 const loading = ref(true);
 const error = ref(false);
 const selectedSlug = ref("");
+const SITE_TITLE = "JDArmy BREAK";
 
-const docsLocale = computed(() => (locale.value === "en" ? "en" : "zh"));
+const docsLocale = computed(() => (locale.value === "en" ? "en" : "zh-CN"));
+
+const routeSlug = computed(() => route.params.slug as string | undefined);
+
+const selectFirstDoc = (data: DocEntry[], replace = true) => {
+  const first = data[0];
+  if (!first) return;
+  selectedSlug.value = first.slug;
+  const location = { name: "docs-detail", params: { slug: first.slug } };
+  if (replace) {
+    void router.replace(location);
+  } else {
+    void router.push(location);
+  }
+};
+
+const normalizeSelectedDoc = (data: DocEntry[]) => {
+  if (!data.length) {
+    selectedSlug.value = "";
+    return;
+  }
+
+  const slug = routeSlug.value;
+  if (slug && data.some((entry) => entry.slug === slug)) {
+    selectedSlug.value = slug;
+    return;
+  }
+
+  selectFirstDoc(data);
+};
 
 const loadDocs = async (lang: string) => {
   // 重试时重置状态，确保列表区重新展示加载中而非残留失败态
@@ -33,10 +64,7 @@ const loadDocs = async (lang: string) => {
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data: DocEntry[] = await resp.json();
     docs.value = data;
-    // 进入 list 路由（/docs 无 slug）时，默认跳转首篇，支持分享链接与浏览器历史
-    if (data.length > 0 && route.name === "docs") {
-      void router.replace({ name: "docs-detail", params: { slug: data[0].slug } });
-    }
+    normalizeSelectedDoc(data);
   } catch {
     error.value = true;
   } finally {
@@ -46,9 +74,15 @@ const loadDocs = async (lang: string) => {
 
 onMounted(() => loadDocs(docsLocale.value));
 
-// 切换语言时重新加载对应语言的文档；若当前在 detail 路由，跳转到对应语言首篇
+// 切换语言时重新加载对应语言的文档，并校正当前 slug。
 watch(docsLocale, (lang) => {
   void loadDocs(lang);
+});
+
+watch(routeSlug, () => {
+  if (!loading.value && !error.value) {
+    normalizeSelectedDoc(docs.value);
+  }
 });
 
 const retryLoad = () => {
@@ -58,16 +92,17 @@ const retryLoad = () => {
 const items = computed(() =>
   docs.value.map((entry) => ({
     id: entry.slug,
+    displayId: String(entry.order).padStart(2, "0"),
     title: entry.title,
-    subtitle: entry.category,
-    searchText: `${entry.title} ${entry.category}`,
+    subtitle: entry.summary || entry.category,
+    searchText: `${entry.title} ${entry.category} ${entry.summary || ""}`,
   })),
 );
 
 // 选中态由 detail 路由的 slug 参数驱动：KnowledgeSplitView 监听 route.params
 // 变化时会 emit select 同步选中项，这里以 route.params.slug 作为权威选中键。
 const effectiveSelectedKey = computed(() => {
-  const paramSlug = route.params.slug as string | undefined;
+  const paramSlug = routeSlug.value;
   if (paramSlug && docs.value.some((e) => e.slug === paramSlug)) {
     return paramSlug;
   }
@@ -77,10 +112,18 @@ const effectiveSelectedKey = computed(() => {
 // 右栏渲染同样以 route.params.slug 为权威键，避免初始跳转时 emit select
 // 时序导致的首屏空白；selectedSlug 作为 list 态（无 slug 参数）的兜底。
 const selectedEntry = computed(() => {
-  const paramSlug = route.params.slug as string | undefined;
+  const paramSlug = routeSlug.value;
   const key = paramSlug && docs.value.some((e) => e.slug === paramSlug) ? paramSlug : selectedSlug.value;
   return docs.value.find((e) => e.slug === key);
 });
+
+watch(
+  [selectedEntry, () => t("menu.docs")],
+  ([entry, docsTitle]) => {
+    document.title = `${entry?.title || docsTitle} | ${SITE_TITLE}`;
+  },
+  { immediate: true },
+);
 
 // KnowledgeSplitView 传了 detail-route-name，组件内部会自行 router.push 到
 // docs-detail 路由，这里只更新本地选中态供 list 态兜底。
@@ -104,12 +147,6 @@ const handleSelect = (key: string) => {
     @retry="retryLoad"
   >
     <article v-if="selectedEntry" class="detail-panel docs-detail">
-      <div class="detail-heading">
-        <div>
-          <h2>{{ selectedEntry.title }}</h2>
-        </div>
-      </div>
-
       <section class="detail-section">
         <div class="docs-body" v-html="selectedEntry.bodyHtml" />
       </section>

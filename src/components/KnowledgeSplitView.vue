@@ -6,6 +6,7 @@ import { ArrowLeft } from "@element-plus/icons-vue";
 
 interface KnowledgeItem {
   id: string;
+  displayId?: string;
   title: string;
   subtitle?: string;
   badge?: string;
@@ -518,7 +519,7 @@ onBeforeUnmount(() => {
           type="button"
           @click="selectItem(item.id)"
         >
-          <span class="knowledge-id">{{ item.id }}</span>
+          <span class="knowledge-id">{{ item.displayId || item.id }}</span>
           <span class="knowledge-name">{{ item.title }}</span>
           <span v-if="item.subtitle || item.badge" class="knowledge-subtitle">
             <span v-if="item.subtitle" class="knowledge-subtitle-text">{{ item.subtitle }}</span>
@@ -605,7 +606,7 @@ onBeforeUnmount(() => {
             type="button"
             @click="selectItem(item.id)"
           >
-            <span class="knowledge-id">{{ item.id }}</span>
+            <span class="knowledge-id">{{ item.displayId || item.id }}</span>
             <span class="knowledge-name">{{ item.title }}</span>
             <span v-if="item.subtitle || item.badge" class="knowledge-subtitle">
               <span v-if="item.subtitle" class="knowledge-subtitle-text">{{ item.subtitle }}</span>
@@ -645,7 +646,7 @@ onBeforeUnmount(() => {
           {{ $t("back") }}
         </el-button>
         <span v-if="selectedItem" class="mobile-detail-title">
-          <span class="knowledge-id">{{ selectedItem.id }}</span>
+          <span class="knowledge-id">{{ selectedItem.displayId || selectedItem.id }}</span>
           <span class="knowledge-name">{{ selectedItem.title }}</span>
         </span>
       </div>

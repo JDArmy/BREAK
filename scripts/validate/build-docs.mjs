@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 将 docs/{zh,en}/*.md 编译为结构化 JSON，输出到 public/data/docs-{lang}.json
+ * 将 docs/{zh-CN,en}/*.md 编译为结构化 JSON，输出到 public/data/docs-{lang}.json
  * 供前端 DocsView 异步加载使用。
  *
  * - frontmatter 用正则自解析（title/category/order/slug）
@@ -9,7 +9,7 @@
  *
  * 用法：node scripts/validate/build-docs.mjs
  */
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, unlinkSync } from "fs";
 import { resolve, dirname, basename } from "path";
 import { fileURLToPath } from "url";
 import { marked } from "marked";
@@ -21,7 +21,7 @@ const ROOT = resolve(__dirname, "../..");
 const DOCS_DIR = resolve(ROOT, "docs");
 const OUTPUT_DIR = resolve(ROOT, "public/data");
 
-const LANGS = ["zh", "en"];
+const LANGS = ["zh-CN", "en"];
 
 // marked 配置：GFM 表格 / 任务列表
 marked.setOptions({ gfm: true, breaks: false });
@@ -80,6 +80,37 @@ function parseFrontmatter(raw) {
   return { frontmatter, body };
 }
 
+function stripMarkdownInline(text) {
+  return text
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function limitSummary(text, lang) {
+  const maxLength = lang === "zh-CN" ? 72 : 140;
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength).trim()}...`;
+}
+
+function extractSummary(body, lang) {
+  const blocks = body
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter(Boolean);
+  const paragraph = blocks.find((block) =>
+    !block.startsWith("#") &&
+    !block.startsWith(">") &&
+    !block.startsWith("```") &&
+    !block.startsWith("|")
+  );
+  return limitSummary(stripMarkdownInline(paragraph || ""), lang);
+}
+
 function buildLang(lang) {
   const dir = resolve(DOCS_DIR, lang);
   if (!existsSync(dir)) {
@@ -102,23 +133,31 @@ function buildLang(lang) {
     const title = frontmatter.title || slug;
     const category = frontmatter.category || "文档";
     const order = typeof frontmatter.order === "number" ? frontmatter.order : 99;
+    const summary = extractSummary(body, lang);
 
     const rawHtml = marked.parse(body);
     const bodyHtml = DOMPurify.sanitize(rawHtml, SANITIZE_CONFIG);
 
-    docs.push({ slug, title, category, order, bodyHtml });
+    docs.push({ slug, title, category, order, summary, bodyHtml });
   }
 
-  // 按 category 分组，组内按 order 升序
+  // order 是跨语言稳定顺序；category/title 只用于同序兜底，避免中英文分类名排序导致首篇不一致。
   docs.sort((a, b) => {
-    if (a.category !== b.category) return a.category.localeCompare(b.category, lang === "zh" ? "zh-Hans-CN" : "en");
-    return a.order - b.order;
+    const orderDiff = a.order - b.order;
+    if (orderDiff !== 0) return orderDiff;
+    if (a.category !== b.category) return a.category.localeCompare(b.category, lang === "zh-CN" ? "zh-Hans-CN" : "en");
+    return a.title.localeCompare(b.title, lang === "zh-CN" ? "zh-Hans-CN" : "en");
   });
 
   return docs;
 }
 
 mkdirSync(OUTPUT_DIR, { recursive: true });
+for (const file of readdirSync(OUTPUT_DIR)) {
+  if (/^docs-.+\.json$/.test(file)) {
+    unlinkSync(resolve(OUTPUT_DIR, file));
+  }
+}
 
 let total = 0;
 for (const lang of LANGS) {
