@@ -1,0 +1,47 @@
+{
+  "T0630": {
+    "title": "市场状态切换",
+    "aliases": [
+      "Regime Shift",
+      "市场状态迁移"
+    ],
+    "category": "金融交易安全",
+    "keywords": [
+      "市场状态切换",
+      "Regime Shift",
+      "市场状态迁移",
+      "市场体制切换"
+    ],
+    "definition": "市场波动、相关性、流动性或风险偏好从一种稳定状态切换到另一种状态。",
+    "description": "市场状态切换是证券、量化、虚拟资产或金融交易风控语境中的稳定术语。它可作为识别市场微观结构操纵、量化模型诱导、市场信息操纵、交易指标误导、流动性欺骗或 AI 投资智能体操纵的上下文线索。\n\n在 BREAK 知识库中，该术语不单独等同于风险本身；只有当攻击者利用该概念误导交易对手、污染模型、规避监测或造成资金损失时，才映射到相关 Risk。",
+    "usageExample": "风控复盘中发现多个账户利用市场状态切换相关信号诱导其他交易者下单。",
+    "relatedRisks": [
+      "R0280",
+      "R0281",
+      "R0282",
+      "R0284",
+      "R0285",
+      "R0286",
+      "R0287"
+    ],
+    "relatedAvoidances": [
+      "A0077"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD01"
+    ],
+    "references": [
+      {
+        "title": "A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle",
+        "link": "https://www.jstor.org/stable/1912559"
+      },
+      {
+        "title": "Hamilton (1989) regime-switching model record",
+        "link": "https://ideas.repec.org/a/ecm/emetrp/v57y1989i2p357-84.html"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

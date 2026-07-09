@@ -1,0 +1,60 @@
+{
+  "R0281": {
+    "title": "量化模型诱导风险",
+    "definition": "攻击者通过污染样本、制造因子失效、伪装市场状态或传播误导性回测结论，诱导量化模型和交易策略产生错误决策。",
+    "description": "量化模型诱导风险聚焦攻击者有意识地影响模型输入、训练样本、因子解释、回测语境或市场状态判断。常见方式包括构造样本污染、利用幸存者偏差、诱导 Look-ahead Bias、伪装 Regime Shift、制造假相关或包装过拟合回测结果。\n\n该风险不同于模型自身能力不足。只有当外部主体主动构造或利用这些偏差，使模型、研究员或投资决策流程被误导时，才构成业务风险。影响包括策略失效、错误调仓、风险敞口失真和模型治理责任扩大。",
+    "complexity": "advanced",
+    "influence": "导致量化策略回测收益失真、实盘交易偏离真实风险、模型因子误判和投资组合异常调仓。",
+    "avoidances": [
+      "A0072",
+      "A0213",
+      "A0258",
+      "A0259",
+      "A0077"
+    ],
+    "references": [
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      },
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "量化模型诱导风险",
+      "因子失效制造",
+      "样本污染",
+      "幸存者偏差利用",
+      "Regime Shift伪装",
+      "Look-ahead Bias诱导",
+      "Data Spoofing Trap",
+      "Backtest Overfitting",
+      "假相关"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "priority": "P3",
+      "observables": [
+        "模型训练样本在关键时间窗口出现异常集中或异常缺失",
+        "回测表现高度依赖事后可知字段或被筛选幸存样本",
+        "因子在真实交易中迅速失效但历史解释异常完美",
+        "研究报告或策略包反复传播无法复现实验结果"
+      ],
+      "assessedAt": "2026-07-09"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0287",
+        "relation": "co-occurrence",
+        "note": "量化模型诱导风险与AI投资智能体操纵风险共享规避手段“AI训练数据治理”。"
+      }
+    ]
+  }
+}

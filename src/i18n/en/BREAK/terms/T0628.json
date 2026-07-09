@@ -1,0 +1,29 @@
+{
+  "T0628": {
+    "title": "Survivorship Bias",
+    "aliases": [
+      "survivorship bias",
+      "survivor sample bias"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Survivorship Bias",
+      "survivor sample bias",
+      "sample selection bias",
+      "delisted sample exclusion"
+    ],
+    "definition": "Survivorship Bias is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Survivorship Bias is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Survivorship Bias-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "What Is Survivorship Bias? Definition and Use in Investing",
+        "link": "https://www.investopedia.com/terms/s/survivorshipbias.asp"
+      },
+      {
+        "title": "Survivorship Bias and Mutual Fund Performance",
+        "link": "https://www.jstor.org/stable/2962224"
+      }
+    ]
+  }
+}

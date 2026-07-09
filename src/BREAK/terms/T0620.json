@@ -1,0 +1,44 @@
+{
+  "T0620": {
+    "title": "灰度",
+    "aliases": [
+      "灰度发布",
+      "灰度放量",
+      "分阶段发布"
+    ],
+    "category": "业务安全",
+    "keywords": [
+      "灰度",
+      "灰度发布",
+      "灰度放量",
+      "分阶段发布",
+      "渐进式发布",
+      "灰度范围"
+    ],
+    "definition": "灰度是在规则、功能或策略变更发布时，先对小范围用户、流量、商户或区域生效，再按监测结果逐步扩大范围的发布控制策略。",
+    "description": "灰度用于降低营销、价格、支付、风控和推荐策略变更的爆炸半径。发布方通常按用户分层、地域、商户、设备、流量比例或活动批次逐步放量，并持续监测错误率、资损指标、投诉、订单转化和异常优惠比例。\n\n在业务安全场景中，灰度不是单纯的技术发布动作，而是规则变更审批和回滚机制的一部分。合理的灰度可以在低价购、优惠叠加、支付状态异常或风控误伤扩大前提前发现问题，并保留快速回滚或暂停活动的窗口。",
+    "usageExample": "新优惠规则先在5%的灰度流量中生效，风控监测到异常优惠比例升高后立即回滚配置。",
+    "relatedRisks": [
+      "R0055",
+      "R0055-001",
+      "R0055-005"
+    ],
+    "relatedAvoidances": [
+      "A0247",
+      "A0241",
+      "A0243"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD02"
+    ],
+    "references": [
+      {
+        "title": "NIST SP 800-128 Guide for Security-Focused Configuration Management",
+        "link": "https://csrc.nist.gov/pubs/sp/800/128/upd1/final"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

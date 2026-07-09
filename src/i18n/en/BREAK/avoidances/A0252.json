@@ -1,0 +1,27 @@
+{
+  "A0252": {
+    "title": "Transaction State-Machine Consistency and Batch Convergence",
+    "definition": "Use a unified state machine, transition constraints, batch cut-off rules, and compensation jobs to ensure orders, payments, refunds, shipments, and settlement states converge under consistent definitions.",
+    "description": "Transaction state-machine consistency and batch convergence defines unified states, valid transitions, terminal conditions, reverse operations, batch cut-off times, and exception compensation jobs across order, payment, refund, shipment, benefit issuance, and clearing-and-settlement flows. Systems should prevent refunded orders from continuing to ship, revoked payments from continuing to settle, and the same event from being posted repeatedly across batches, while scheduled compensation, replay-safe queues, and discrepancy recalculation help asynchronous systems converge on the same business fact.\n\nThis control applies to clearing and settlement discrepancy arbitrage, payment amount tampering, and webhook forgery and replay. Implementation should work with transaction idempotency, payment channel inquiry, financial reconciliation, and discrepancy freezing and compensation recovery so that individual systems are not correct in isolation while cross-system definitions diverge.",
+    "limitation": "State-machine consistency depends on cross-system refactoring and historical state-definition cleanup. Legacy systems, manual adjustment, channel delay, and offline batch processing can bypass unified state constraints. Fast batch convergence may misclassify legitimate delayed receipts, while slow convergence expands the arbitrage window. Attackers may still exploit boundary timing, compensation-job retries, or manual exception handling, so continuous monitoring and audit are needed.",
+    "references": [
+      {
+        "title": "Idempotent requests - Stripe API",
+        "link": "https://docs.stripe.com/api/idempotent_requests"
+      },
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      }
+    ],
+    "keywords": [
+      "Transaction State-Machine Consistency and Batch Convergence",
+      "transaction state machine",
+      "state transition constraints",
+      "batch convergence",
+      "settlement batch convergence",
+      "state consistency",
+      "exception compensation job"
+    ]
+  }
+}

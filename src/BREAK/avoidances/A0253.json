@@ -1,0 +1,51 @@
+{
+  "A0253": {
+    "title": "盘口异常行为监测",
+    "category": "AC03",
+    "definition": "采集订单簿挂单、撤单、成交、队列和价差变化，识别诱骗、分层挂单和异常盘口压力。",
+    "description": "盘口异常行为监测通过采集逐笔委托、逐笔成交、撤单、订单生命周期、队列位置、买卖盘深度、价差和跨账户关联特征，建立正常盘口行为基线。系统可用阈值、规则、序列模型和异常检测识别大额挂单后快速撤单、分层挂单、盘口压力突然消失、价格跟随虚假深度移动等模式。\n\n该手段用于发现市场微观结构操纵、订单簿诱骗和流动性幻觉等风险。落地时应结合交易账户关联、交易场所规则、做市商豁免范围和人工复核，避免把正常做市、调仓或流动性管理误判为操纵。",
+    "limitation": "盘口行为受品种流动性、交易时段、做市策略和市场波动影响很大，单一撤单率或挂单规模阈值容易误报。攻击者可降低单次挂单规模、分散账户、跨场所拆分或模仿做市节奏规避监测，需要结合关联图谱和跨市场数据复核。",
+    "references": [
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      },
+      {
+        "title": "CFTC Interpretive Guidance and Policy Statement on Disruptive Trading Practices",
+        "link": "https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2013-12440.html"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "盘口异常行为监测",
+      "订单簿异常监测",
+      "异常撤单监测",
+      "分层挂单检测",
+      "诱骗交易检测",
+      "盘口压力监测"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0077",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0254",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0255",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

@@ -89,5 +89,38 @@
         "Referral reward claims surge explosively within a short window right after the activity launches"
       ]
     }
+  },
+  "R0005-003": {
+    "title": "Automated Red Packet Grabbing",
+    "definition": "Using scripts, plug-ins, or automated clients to claim red packets, cash coupons, or random rewards ahead of legitimate users or at scale.",
+    "description": "Automated red packet grabbing occurs when a platform distributes red packets, cash coupons, random rewards, limited-time benefits, or social referral incentives. Attackers use red-packet plug-ins, UI automation tools, device-control systems, or API scripts to monitor reward signals and automatically click, submit, or call claim endpoints within a very short window, taking rewards that should have been randomly or fairly obtained by real users.\n\nCompared with general promotional activity cheating, this risk emphasizes that limited-time, random, or first-come-first-served reward mechanisms are distorted by machine speed and bulk accounts. At scale, rewards concentrate in a small set of accounts or device clusters, real user experience degrades, campaign budgets drain quickly, and the proceeds may be monetized through recyclers or secondary markets.",
+    "influence": "Red packets, cash coupons, and random rewards are captured by automation, campaign budgets are consumed abnormally, and real-user fairness and experience are damaged.",
+    "references": [
+      {
+        "title": "OAT-005 Scalping - OWASP Automated Threats",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+      },
+      {
+        "title": "Yancheng Police Crack China’s First WeChat Red-Packet Plug-in Case",
+        "link": "https://jsnews.jschina.com.cn/sy/yw/201703/t20170309_189161.shtml"
+      }
+    ],
+    "keywords": [
+      "Automated Red Packet Grabbing",
+      "red packet bot",
+      "red packet plug-in",
+      "reward grabbing bot",
+      "red packet scalping",
+      "automated reward claiming",
+      "red packet script"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Red packets are claimed within milliseconds or seconds by clustered devices or accounts after release",
+        "Claiming behavior lacks normal browsing, dwell time, and interaction paths, with highly mechanical timing",
+        "Multiple accounts share accessibility-service, simulated-click, or script-environment characteristics",
+        "Claimed rewards quickly flow to a small set of accounts, addresses, or recycling channels"
+      ]
+    }
   }
 }

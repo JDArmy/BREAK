@@ -1,0 +1,76 @@
+{
+  "R0279": {
+    "title": "清结算差异套利",
+    "definition": "攻击者利用订单、支付、退款、发货或结算记录之间的差异窗口，制造重复结算、漏结算、未回滚优惠或提前提现获利。",
+    "description": "清结算差异套利发生在交易、支付、退款、发货、补贴和渠道回单由多个系统异步处理时。攻击者通过伪造或重放支付回调、利用退款回滚缺口、触发重复结算、制造漏结算、抢在差异清单处理前发货或提现，把账务差异转化为商品、权益或资金收益。\n\n该风险不等同于普通对账差错，重点在于攻击者有意识地利用清结算口径不一致、批次延迟、状态机竞态或差异处置滞后。治理时由交易状态机一致性与批次收敛减少状态和批次缺口，再由差异冻结与赔付追偿阻断发货、提现或结算流出。规模化利用会造成货款、补贴、商户结算和履约数据同时错配，并让后续追偿、赔付和财务调账成本上升。",
+    "complexity": "intermediate",
+    "influence": "重复结算、漏结算、退款未回滚优惠或差异处理滞后会造成资金损失、错误发货、商户结算争议和财务调账成本。",
+    "avoidances": [
+      "A0004",
+      "A0015",
+      "A0020",
+      "A0245",
+      "A0246",
+      "A0248",
+      "A0251",
+      "A0252"
+    ],
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "清结算差异套利",
+      "重复结算套利",
+      "漏结算套利",
+      "退款未回滚优惠",
+      "结算差异套利",
+      "对账差异套利"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "observables": [
+        "订单、支付、退款、发货和结算批次之间出现可被重复利用的差异",
+        "同一渠道交易号或结算批次触发重复入账、重复发券或重复发货",
+        "退款后优惠、补贴、赠品或可提现余额未同步回滚",
+        "差异清单生成前相关账户已完成提现、转卖或商户结算",
+        "支付回调、渠道查单和财务对账结果长期不一致"
+      ],
+      "assessedAt": "2026-07-09",
+      "priority": "P2"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0055-004",
+        "relation": "co-occurrence",
+        "note": "清结算差异套利与支付金额篡改共享规避手段“频率限制”。"
+      },
+      {
+        "key": "R0225",
+        "relation": "co-occurrence",
+        "note": "清结算差异套利与Webhook伪造与事件重放共享规避手段“频率限制”。"
+      },
+      {
+        "key": "R0054-003",
+        "relation": "co-occurrence",
+        "note": "清结算差异套利与闪退套利共享规避手段“风控策略”。"
+      },
+      {
+        "key": "R0055-005",
+        "relation": "co-occurrence",
+        "note": "清结算差异套利与优惠叠加套利共享规避手段“频率限制”。"
+      }
+    ]
+  }
+}

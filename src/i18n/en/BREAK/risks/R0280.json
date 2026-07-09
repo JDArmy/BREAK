@@ -1,0 +1,40 @@
+{
+  "R0280": {
+    "title": "Market Microstructure Manipulation",
+    "definition": "Attackers use order placement, cancellation, quote flooding, or queue behavior to create false supply, demand, and execution pressure, misleading counterparties, matching systems, or quantitative models.",
+    "description": "Market microstructure manipulation occurs in securities, futures, FX, virtual-asset, and other order-matching markets. Attackers submit and rapidly cancel orders, layer orders at multiple price levels, flood quotes, or flicker orders so that other traders and automated strategies misread the order book as genuine buying or selling pressure.\n\nThe core issue is not legitimate market making or high-frequency trading. It is the intentional abuse of order-book visibility, queue priority, and matching latency to create a false market state. At scale, it damages price discovery, induces wrong orders, increases slippage and trading losses, and weakens market fairness and regulatory trust.",
+    "influence": "It causes counterparties to misread supply and demand, distorts prices, widens slippage, induces strategy orders, and can trigger regulatory enforcement and market-fairness disputes.",
+    "references": [
+      {
+        "title": "CFTC Interpretive Guidance and Policy Statement on Disruptive Trading Practices",
+        "link": "https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2013-12440.html"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      },
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ],
+    "keywords": [
+      "Market Microstructure Manipulation",
+      "order book manipulation",
+      "spoofing",
+      "layering",
+      "quote stuffing",
+      "flickering orders",
+      "queue withdrawal",
+      "market depth deception"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Large orders appear and are rapidly cancelled with little execution intent",
+        "The same actor layers orders across price levels to create directional pressure",
+        "Quote updates and cancellations far exceed peer behavior",
+        "Prices reverse quickly after false depth disappears"
+      ]
+    }
+  }
+}

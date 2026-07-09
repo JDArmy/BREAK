@@ -1,0 +1,37 @@
+{
+  "R0281": {
+    "title": "Quant Model Inducement Risk",
+    "definition": "Attackers pollute samples, manufacture factor decay, disguise market regimes, or spread misleading backtest results to induce quantitative models and trading strategies into wrong decisions.",
+    "description": "Quant model inducement focuses on intentional influence over model inputs, training samples, factor interpretation, backtest context, or market-regime judgment. Common methods include sample pollution, survivorship-bias exploitation, look-ahead-bias inducement, disguised regime shifts, false correlation, and packaged overfitted backtests.\n\nThis is different from a model merely being weak. It becomes a business risk when an external actor actively constructs or exploits those biases to mislead models, researchers, or investment decision workflows. Impacts include strategy failure, wrong rebalancing, distorted exposures, and expanded model-governance liability.",
+    "influence": "It distorts backtest returns, makes live trading depart from real risk, misleads factor interpretation, and causes abnormal portfolio rebalancing.",
+    "references": [
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      },
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ],
+    "keywords": [
+      "Quant Model Inducement Risk",
+      "factor decay inducement",
+      "sample pollution",
+      "survivorship bias exploitation",
+      "regime shift disguise",
+      "look-ahead bias",
+      "data spoofing trap",
+      "backtest overfitting",
+      "false correlation"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Training samples are unusually concentrated or missing in key windows",
+        "Backtests depend on after-the-fact fields or selected survivor samples",
+        "Factors fail quickly in live trading despite perfect historical explanations",
+        "Research packages repeatedly spread unreproducible results"
+      ]
+    }
+  }
+}

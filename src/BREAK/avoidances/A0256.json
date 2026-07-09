@@ -1,0 +1,56 @@
+{
+  "A0256": {
+    "title": "流动性异常与虚假深度检测",
+    "category": "AC03",
+    "definition": "监测盘口深度、成交冲击、隐藏流动性和流动性撤离特征，识别幽灵流动性、流动性幻觉和虚假突破。",
+    "description": "流动性异常与虚假深度检测通过采集可见深度、实际成交量、订单冲击成本、成交前撤单、隐藏流动性线索、止损触发区间和跨场所流动性变化，判断市场显示的可成交能力是否真实。系统可用滑点基线、深度消失率、冲击成本模型和突破后回撤模式识别虚假深度与流动性幻觉。\n\n该手段适用于流动性欺骗、交易指标误导和市场微观结构操纵等风险。它不只看盘口数量，还要验证订单是否能以合理冲击成本真实成交，并结合异常账户行为和信息传播节奏确认是否存在诱导交易意图。",
+    "limitation": "真实市场压力、突发新闻和大额调仓也会造成流动性骤降，检测容易误判；隐藏流动性和暗池成交数据不可见时模型只能间接推断。攻击者可用小额真实成交增强可信度，需要结合多维信号和事后复盘。",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "流动性异常与虚假深度检测",
+      "虚假深度检测",
+      "幽灵流动性检测",
+      "流动性幻觉检测",
+      "滑点异常监测",
+      "流动性撤离监测"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0075",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0077",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0255",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0257",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

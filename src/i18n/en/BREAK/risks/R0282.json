@@ -1,0 +1,37 @@
+{
+  "R0282": {
+    "title": "Investor Cognition Manipulation",
+    "definition": "Attackers influence investors and trading strategies through narrative hype, theme rotation, emotional anchoring, FOMO creation, or consensus traps.",
+    "description": "Investor cognition manipulation occurs in investment communities, social media, research groups, live streams, short videos, and trading-discussion spaces. Attackers build viral narratives around concepts, stories, leading-stock rotation, reverse-limit-up inducement, emotional anchoring, or so-called story alpha to drive investors into chasing prices, cutting losses, rotating positions, or entering high-risk trades.\n\nThis differs from ordinary opinion. The focus is profit-seeking through communication timing, group psychology, and trade timing. It can combine with market information manipulation, ranking misleading, and liquidity deception to create a chain of hype, liquidity attraction, and exit or reverse trading.",
+    "influence": "It induces investors to chase rallies, sell panics, rotate wrongly, absorb exits, or enter high-risk trades, causing losses and market disruption.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "keywords": [
+      "Investor Cognition Manipulation",
+      "narrative hype",
+      "theme migration",
+      "leader rotation",
+      "emotional anchoring",
+      "FOMO creation",
+      "attention hijacking",
+      "story alpha",
+      "consensus trap"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Social discussion and trading volume spike together",
+        "Multiple accounts spread similar narratives toward the same instrument",
+        "Theme rotation coincides with large exits, reverse trades, or liquidity withdrawal",
+        "Complaints point to narrative-induced trading or copy-trading"
+      ]
+    }
+  }
+}

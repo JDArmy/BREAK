@@ -1,0 +1,27 @@
+{
+  "A0258": {
+    "title": "Quant Data Lineage and Backtest Leakage Audit",
+    "definition": "Audit quant data sources, timestamps, sample selection, feature generation, and backtest workflows to identify sample pollution, look-ahead bias, and overfitting.",
+    "description": "Quant data lineage and backtest leakage audit records the full lineage of market data, fundamentals, sentiment, reports, trade labels, and model features from collection and cleaning to storage, training, and backtesting. It validates timestamp availability, field publication time, sample inclusion rules, survivorship bias, future functions, duplicate samples, abnormal labels, and traces of parameter searching.\n\nThis control reduces quant model inducement, investment-model data poisoning, and AI investment agent manipulation. Deployment should lock data versions, feature-generation code, backtest parameters, and experiment results to support reproducibility and rollback, preventing polluted data or overfitted conclusions from entering production strategies.",
+    "limitation": "Historical data vendors and external reports may lack complete publication times, revision records, and field definitions, leaving lineage gaps. Heavy audit can slow research iteration. Attackers can use slow poisoning, edge samples, or legitimate channels, requiring continuous sampling review.",
+    "references": [
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      },
+      {
+        "title": "OWASP LLM03 Training Data Poisoning",
+        "link": "https://genai.owasp.org/llmrisk/llm03-training-data-poisoning/"
+      }
+    ],
+    "keywords": [
+      "Quant Data Lineage and Backtest Leakage Audit",
+      "quant data lineage",
+      "backtest leakage audit",
+      "look-ahead bias detection",
+      "sample pollution detection",
+      "overfitting detection",
+      "future function detection"
+    ]
+  }
+}

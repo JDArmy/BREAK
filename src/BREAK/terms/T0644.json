@@ -1,0 +1,46 @@
+{
+  "T0644": {
+    "title": "智能体提示注入",
+    "aliases": [
+      "Agent Prompt Injection"
+    ],
+    "category": "金融交易安全",
+    "keywords": [
+      "智能体提示注入",
+      "Agent Prompt Injection",
+      "工具调用注入",
+      "智能体越权指令"
+    ],
+    "definition": "将恶意指令嵌入智能体读取的外部内容或工具返回中，诱导其偏离原始任务和安全约束。",
+    "description": "智能体提示注入是证券、量化、虚拟资产或金融交易风控语境中的稳定术语。它可作为识别市场微观结构操纵、量化模型诱导、市场信息操纵、交易指标误导、流动性欺骗或 AI 投资智能体操纵的上下文线索。\n\n在 BREAK 知识库中，该术语不单独等同于风险本身；只有当攻击者利用该概念误导交易对手、污染模型、规避监测或造成资金损失时，才映射到相关 Risk。",
+    "usageExample": "风控复盘中发现多个账户利用智能体提示注入相关信号诱导其他交易者下单。",
+    "relatedRisks": [
+      "R0280",
+      "R0281",
+      "R0282",
+      "R0284",
+      "R0285",
+      "R0286",
+      "R0287"
+    ],
+    "relatedAvoidances": [
+      "A0077"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD01"
+    ],
+    "references": [
+      {
+        "title": "LLM01:2025 Prompt Injection",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+      },
+      {
+        "title": "LLM Prompt Injection Prevention Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "T0635": {
+    "title": "Block Trade",
+    "aliases": [
+      "block trade",
+      "large block transaction"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Block Trade",
+      "large block transaction",
+      "large negotiated trade",
+      "bulk transaction"
+    ],
+    "definition": "Block Trade is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Block Trade is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Block Trade-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ]
+  }
+}

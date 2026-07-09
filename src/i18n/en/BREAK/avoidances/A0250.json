@@ -1,0 +1,27 @@
+{
+  "A0250": {
+    "title": "Delayed Benefit Issuance and Recovery",
+    "definition": "Set confirmation windows, delayed issuance, and refund recovery rules for red packets, coupons, points, gifts, rebates, and other benefits to reduce claim-then-refund arbitrage.",
+    "description": "Delayed benefit issuance and recovery avoids immediately granting resellable or cashable red packets, coupons, points, gifts, or rebates before payment, receipt, fulfillment, or after-sales confirmation, or marks them as frozen. When a user refunds, rejects delivery, returns goods, cancels an order, or triggers abnormal after-sales behavior, the system revokes unvested benefits, recovers the value of issued benefits, or deducts the corresponding subsidy from the refund based on order records, benefit ledgers, and campaign rules.\n\nThis control applies to instant-refund arbitrage, refund-without-returning-rewards, gift retention, and after-sales arbitrage after excessive discount stacking. Implementation should record issuance conditions, confirmation windows, recovery priority, and manual review rules, and feed recovery failures, duplicate coupon issuance, and abnormal refund rollback into reconciliation and after-sales review loops.",
+    "limitation": "Delayed issuance can hurt the experience of legitimate users expecting immediate rewards, and long confirmation windows may reduce campaign conversion. Attackers may wait until the confirmation window passes before reselling goods, or use genuine logistics to reduce recovery hits. Once benefits have been consumed, transferred, or used across systems, recovery can create false positives, false negatives, and customer-service disputes, so it needs account linkage, reconciliation, and manual review tiers.",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ],
+    "keywords": [
+      "Delayed Benefit Issuance and Recovery",
+      "delayed reward issuance",
+      "refund benefit recovery",
+      "coupon issuance delay",
+      "gift recovery",
+      "reward rollback",
+      "subsidy clawback"
+    ]
+  }
+}

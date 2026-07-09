@@ -1,0 +1,24 @@
+{
+  "T0631": {
+    "title": "FOMO",
+    "aliases": [
+      "fear of missing out"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "FOMO",
+      "fear of missing out",
+      "FOMO trading",
+      "missing-out fear"
+    ],
+    "definition": "FOMO is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "FOMO is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using FOMO-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ]
+  }
+}

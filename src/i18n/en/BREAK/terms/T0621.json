@@ -1,0 +1,26 @@
+{
+  "T0621": {
+    "title": "Clearing and Settlement",
+    "aliases": [
+      "payment clearing and settlement",
+      "fund clearing and settlement"
+    ],
+    "category": "Business Security",
+    "keywords": [
+      "Clearing and Settlement",
+      "payment clearing",
+      "fund settlement",
+      "settlement batch",
+      "channel receipt"
+    ],
+    "definition": "Clearing and settlement is the post-transaction process of clearing, reconciling, and settling orders, payments, refunds, fees, subsidies, and channel receipts.",
+    "description": "Clearing and settlement consolidates orders, payment records, refunds, fees, marketing subsidies, channel receipts, and settlement batches into a fund view to confirm receivables and payables among platforms, merchants, payment channels, and users. It usually works together with reconciliation, channel inquiry, discrepancy handling, and compensation recovery processes.\n\nIn business security, clearing and settlement data is an important factual source for detecting payment amount tampering, webhook anomalies, duplicate settlement, missed settlement, refunds without discount rollback, and abnormal low-price transactions. If settlement definitions differ across systems or batch delays are too long, attackers may complete shipment, withdrawal, or resale before discrepancies surface.",
+    "usageExample": "After a settlement batch was generated, the system found a mismatch between a payment channel’s paid amount and the order amount and routed it into discrepancy handling.",
+    "references": [
+      {
+        "title": "Measures for Payment and Settlement Administration - China National Clearing Center",
+        "link": "https://www.cncc.cn/zcfg/200903/t20090323_286.html"
+      }
+    ]
+  }
+}

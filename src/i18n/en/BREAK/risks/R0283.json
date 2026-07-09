@@ -1,0 +1,35 @@
+{
+  "R0283": {
+    "title": "Trading Identity and Behavior Camouflage",
+    "definition": "Attackers camouflage trading devices, identities, expert endorsements, or behavior patterns to evade trading risk controls, anti-manipulation monitoring, and regulatory audit.",
+    "description": "Trading identity and behavior camouflage occurs in trading accounts, research communities, broker APIs, quant platforms, and virtual-asset trading. Attackers use digital fingerprint spoofing, user-agent rotation, proxy networks, trading-rhythm disguise, counter-surveillance trading, or fake expert identities so risk systems cannot identify real control relationships and trade intent.\n\nThis is usually not the direct profit mechanism. It is an enabling condition for other trading manipulation. It helps attackers hide common control, evade device and IP linkage, avoid abnormal cancellation or dissemination monitoring, and increase the stealth of market information and order-book manipulation.",
+    "influence": "It reduces the accuracy of trading risk controls and anti-manipulation monitoring, hides linked accounts and true controllers, and amplifies market manipulation, copy-trading fraud, and false dissemination.",
+    "references": [
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      },
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ],
+    "keywords": [
+      "Trading Identity and Behavior Camouflage",
+      "digital fingerprint spoofing",
+      "user agent rotation",
+      "counter-surveillance trading",
+      "fake expert",
+      "trading device spoofing",
+      "linked account hiding"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Multiple accounts show deliberately dispersed device, network, and rhythm patterns",
+        "Accounts rotate user agents, proxy exits, and terminals abnormally",
+        "Expert personas have hidden links to trading and dissemination accounts",
+        "Abnormal trading changes rhythm, instrument, or channel after detection"
+      ]
+    }
+  }
+}

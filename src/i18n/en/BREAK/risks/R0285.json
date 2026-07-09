@@ -1,0 +1,36 @@
+{
+  "R0285": {
+    "title": "Trading Indicator and Ranking Misleading",
+    "definition": "Attackers manipulate volume, rankings, index weights, block-trade display, or benchmarks to create false market heat, authority, or trade-quality signals.",
+    "description": "Trading indicator and ranking misleading occurs in rankings, indices, leader boards, block trades, volume, heat scores, recommendation positions, and benchmark mechanisms. Attackers use wash-like activity, index-weight misleading, ranking manipulation, block-trade illusion, or benchmark gaming so investors and models believe an instrument is more active, authoritative, or institutionally endorsed.\n\nThe harm is that manipulated derivative indicators are packaged as objective market signals. If platforms, media, or trading systems use those indicators for recommendation, ranking, risk control, or strategy inputs, the false signal is amplified.",
+    "influence": "It misleads investors and quant models into using polluted indicators, amplifying chasing, copy-trading, rebalancing, and wrong risk assessment.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "keywords": [
+      "Trading Indicator and Ranking Misleading",
+      "ranking manipulation",
+      "index weight misleading",
+      "leaderboard misleading",
+      "block trade illusion",
+      "benchmark gaming",
+      "trading heat manipulation",
+      "wash-like signal"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Rankings, heat scores, or index weights do not match real execution quality",
+        "Block-trade display is used to imply institutional endorsement",
+        "Indicator spikes are followed by concentrated exits or reverse trades",
+        "Recommendation or ranking inputs are artificially boosted in short windows"
+      ]
+    }
+  }
+}

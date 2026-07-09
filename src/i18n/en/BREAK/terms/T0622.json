@@ -1,0 +1,28 @@
+{
+  "T0622": {
+    "title": "Reconciliation Discrepancy List",
+    "aliases": [
+      "discrepancy list",
+      "reconciliation discrepancy ticket",
+      "accounting discrepancy ticket"
+    ],
+    "category": "Business Security",
+    "keywords": [
+      "Reconciliation Discrepancy List",
+      "discrepancy list",
+      "reconciliation discrepancy",
+      "accounting discrepancy",
+      "fund mismatch",
+      "exception ticket"
+    ],
+    "definition": "A reconciliation discrepancy list is an exception detail list generated when transaction, payment, refund, shipment, or settlement records are inconsistent, used to locate fund discrepancies and trigger handling workflows.",
+    "description": "A reconciliation discrepancy list usually records order ID, payment ID, channel transaction ID, payable amount, paid amount, refund amount, promotional subsidy, shipment status, settlement batch, discrepancy cause, and handling status. Systems can generate the list through thresholds, rules, or models and route high-risk discrepancies to shipment freezing, channel inquiry, after-sales review, compensation recovery, or manual review.\n\nIn business security governance, the list turns scattered fund anomalies into actionable tasks. It can help detect payment amount tampering, forged payment callbacks, refunds without discount rollback, duplicate settlement, missed settlement, and abnormal low-price orders, but depends on consistent upstream and downstream field definitions and timely handling closure.",
+    "usageExample": "After reconciliation generated a discrepancy list, risk control froze shipment for an abnormal low-price order and initiated a channel inquiry.",
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ]
+  }
+}

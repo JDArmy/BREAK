@@ -1,0 +1,26 @@
+{
+  "A0257": {
+    "title": "Market Information Source Credibility Validation",
+    "definition": "Validate sources, timestamps, signatures, historical credibility, and cross-source consistency of market news, reports, minutes, social content, and dissemination accounts.",
+    "description": "Market information source credibility validation collects source domains, publication times, author identity, digital signatures, repost chains, historical accuracy, account linkage, and cross-source consistency for news, announcements, research reports, minutes, rumor essays, social posts, and multimedia material. Rules, provenance, AI-content detection, and knowledge graphs identify forged sources, delayed information, rewritten reports, and coordinated amplification.\n\nThis control detects market information manipulation, investor cognition manipulation, and trading indicator misleading. Deployment should down-rank or flag unverified information and validate sources before high-risk trading advice, automated order placement, or research-summary generation.",
+    "limitation": "Authoritative information can also have publication and repost delays, and strict validation may reduce research timeliness. Attackers can spoof authoritative pages, spread screenshots, or use real accounts to bypass source checks, requiring forensics, account reputation, and manual review.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      }
+    ],
+    "keywords": [
+      "Market Information Source Credibility Validation",
+      "source credibility validation",
+      "research source validation",
+      "market news verification",
+      "sentiment source validation",
+      "provenance checking"
+    ]
+  }
+}

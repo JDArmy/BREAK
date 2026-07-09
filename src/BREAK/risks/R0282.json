@@ -1,0 +1,62 @@
+{
+  "R0282": {
+    "title": "投资者认知操纵风险",
+    "definition": "攻击者通过叙事炒作、热点迁移、情绪锚定、FOMO 制造或共识陷阱影响投资者和交易策略判断。",
+    "description": "投资者认知操纵风险发生在投资社区、社交媒体、研究社群、直播间、短视频和交易讨论场景中。攻击者围绕概念、故事、龙头切换、反核诱导、情绪锚定或所谓 Story Alpha 制造可传播叙事，吸引投资者追涨、止损、换仓或参与高风险交易。\n\n该风险与普通观点表达不同，重点在于攻击者利用传播节奏、群体心理和交易时点谋取利益。它可与市场信息操纵、榜单误导和流动性欺骗联动，形成先造势、再吸引流动性、最后出货或反向交易的链条。",
+    "complexity": "advanced",
+    "influence": "诱导投资者集中追涨杀跌、错误换仓、承接出货或参与高风险交易，造成资金损失和市场秩序扰动。",
+    "avoidances": [
+      "A0016",
+      "A0064",
+      "A0257",
+      "A0077",
+      "A0075"
+    ],
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "投资者认知操纵风险",
+      "概念炒作",
+      "故事炒作",
+      "热点迁移",
+      "龙头切换",
+      "反核诱导",
+      "情绪锚定",
+      "FOMO制造",
+      "Attention Hijacking",
+      "Story Alpha",
+      "共识陷阱"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "priority": "P3",
+      "observables": [
+        "社交讨论热度与交易量在短时间内同步异常放大",
+        "多个账号传播高度相似叙事并集中指向同一交易标的",
+        "热点切换与大额减持、反向交易或流动性撤离同步出现",
+        "用户投诉集中指向被话术诱导交易或跟单"
+      ],
+      "assessedAt": "2026-07-09"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0284",
+        "relation": "co-occurrence",
+        "note": "投资者认知操纵风险与市场信息操纵风险共享规避手段“威胁情报”。"
+      }
+    ]
+  }
+}

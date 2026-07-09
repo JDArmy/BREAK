@@ -1,0 +1,30 @@
+{
+  "T0630": {
+    "title": "Regime Shift",
+    "aliases": [
+      "regime shift",
+      "market regime shift",
+      "state transition"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Regime Shift",
+      "market regime shift",
+      "state transition",
+      "market state change"
+    ],
+    "definition": "Regime Shift is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Regime Shift is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Regime Shift-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle",
+        "link": "https://www.jstor.org/stable/1912559"
+      },
+      {
+        "title": "Hamilton (1989) regime-switching model record",
+        "link": "https://ideas.repec.org/a/ecm/emetrp/v57y1989i2p357-84.html"
+      }
+    ]
+  }
+}

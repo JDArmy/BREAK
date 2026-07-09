@@ -1,0 +1,30 @@
+{
+  "T0629": {
+    "title": "Backtest Overfitting",
+    "aliases": [
+      "backtest overfitting",
+      "overfit backtest",
+      "curve fitting"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Backtest Overfitting",
+      "overfit backtest",
+      "curve fitting",
+      "strategy overfitting"
+    ],
+    "definition": "Backtest Overfitting is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Backtest Overfitting is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Backtest Overfitting-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "The Probability of Backtest Overfitting",
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2326253"
+      },
+      {
+        "title": "The Effects of Backtest Overfitting on Out-of-Sample Performance",
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2308659"
+      }
+    ]
+  }
+}

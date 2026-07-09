@@ -1,0 +1,22 @@
+{
+  "A0259": {
+    "title": "Investment Model Output Anomaly Monitoring",
+    "definition": "Monitor recommendations, risk scores, position changes, and explanation consistency from investment models and research agents to detect induced or poisoned output drift.",
+    "description": "Investment model output anomaly monitoring collects model recommendations, confidence, explanations, input data versions, feature contribution, portfolio changes, trade triggers, and human-review outcomes. Baseline drift, explanation consistency, cross-model voting, risk-constraint validation, and anomaly replay identify abnormal outputs after data pollution, synthetic market signals, or prompt injection.\n\nThis control applies to quant model inducement and AI investment agent manipulation. Deployment should isolate abnormal outputs from real trading permissions and route high-risk advice to human confirmation or sandbox backtesting so model errors do not directly become financial losses.",
+    "limitation": "In new regimes, model outputs may legitimately depart from historical baselines, and over-blocking can slow strategy response. Attackers can drift outputs gradually to bypass thresholds. Data lineage, trading outcomes, risk constraints, and human review are needed.",
+    "references": [
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      }
+    ],
+    "keywords": [
+      "Investment Model Output Anomaly Monitoring",
+      "model output anomaly monitoring",
+      "investment advice anomaly detection",
+      "model drift monitoring",
+      "explanation consistency validation",
+      "AI trading advice monitoring"
+    ]
+  }
+}

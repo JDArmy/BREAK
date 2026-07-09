@@ -1,0 +1,42 @@
+{
+  "R0287": {
+    "title": "AI Investment Agent Manipulation",
+    "definition": "Attackers target AI investment advisers, research assistants, quant agents, or trading agents with prompt injection, data poisoning, model inversion, or synthetic market-signal inducement.",
+    "description": "AI investment agent manipulation is the financial-trading manifestation of general AI-agent risk. Attackers can hide malicious instructions in news, research reports, webpages, social content, trading comments, or data feeds to induce agents to ignore risk constraints, call privileged tools, output wrong investment advice, or execute wrong trades.\n\nIt also includes synthetic market signals, hallucination exploitation, agent poisoning, AI consensus attacks, model inversion, and data poisoning. Because investment agents may connect to market data, order routing, research, risk controls, and funding systems, manipulation can escalate from wrong text to real trades and financial loss.",
+    "influence": "It distorts AI investment advice, causes erroneous automated trades, manipulates model consensus, leaks sensitive trading strategies, and causes financial loss.",
+    "references": [
+      {
+        "title": "OWASP LLM01 Prompt Injection",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+      },
+      {
+        "title": "OWASP LLM03 Training Data Poisoning",
+        "link": "https://genai.owasp.org/llmrisk/llm03-training-data-poisoning/"
+      },
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      }
+    ],
+    "keywords": [
+      "AI Investment Agent Manipulation",
+      "agent prompt injection",
+      "synthetic market signal",
+      "agent poisoning",
+      "AI consensus attack",
+      "hallucination exploitation",
+      "model inversion attack",
+      "data poisoning",
+      "adversarial sample",
+      "trading agent manipulation"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "External content used by agents contains hidden instructions or privileged-action inducement",
+        "Multiple agents output highly similar trading advice under the same forged signal",
+        "Agent tool calls exceed research-task boundaries and trigger orders, exports, or high-risk APIs",
+        "Poisoned training or retrieval sources cause systematic advice drift"
+      ]
+    }
+  }
+}

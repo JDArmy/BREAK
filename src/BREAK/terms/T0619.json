@@ -22,11 +22,17 @@
       "R0055",
       "R0054-003",
       "R0064",
-      "R0032"
+      "R0032",
+      "R0003",
+      "R0009"
     ],
     "relatedAvoidances": [
       "A0242",
-      "A0016"
+      "A0016",
+      "A0245",
+      "A0249",
+      "A0037",
+      "A0015"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [

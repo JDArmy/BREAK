@@ -1,0 +1,27 @@
+{
+  "A0251": {
+    "title": "Discrepancy Freezing and Compensation Recovery",
+    "definition": "When transaction, payment, refund, or settlement discrepancies appear, freeze shipment, withdrawal, settlement, or benefit transfer, then compensate, deduct, or recover funds after the abnormality is confirmed.",
+    "description": "Discrepancy freezing and compensation recovery first freezes shipment, coupon issuance, withdrawal, merchant settlement, refund release, or benefit transfer for high-risk orders after reconciliation, channel inquiry, webhook validation, after-sales review, or abnormal discount monitoring finds a discrepancy. It then routes the case into manual review, channel dispute, discount deduction, user compensation, merchant recovery, or attacker-account recovery based on the discrepancy cause.\n\nThis control turns reconciliation discrepancy lists into executable loss-control actions so that anomalies do not remain reports while goods, funds, or benefits flow out. It applies to clearing and settlement discrepancy arbitrage, payment amount tampering, webhook forgery and replay, instant-refund arbitrage, and discount stacking arbitrage, usually together with reconciliation, payment channel inquiry, transaction idempotency, and after-sales review.",
+    "limitation": "Discrepancy freezing depends on detection timeliness and handling authority. If detection is too late, goods, funds, or benefits may already have left the platform and only post-event recovery remains. Strict freezing thresholds can harm legitimate orders, merchant settlement, and user withdrawals, while loose thresholds allow low-frequency arbitrage. Cross-channel, merchant, and logistics recovery is also limited by contracts, evidence completeness, and customer-service capacity.",
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      },
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      }
+    ],
+    "keywords": [
+      "Discrepancy Freezing and Compensation Recovery",
+      "shipment freeze",
+      "withdrawal freeze",
+      "settlement freeze",
+      "compensation recovery",
+      "fund recovery",
+      "discrepancy handling"
+    ]
+  }
+}

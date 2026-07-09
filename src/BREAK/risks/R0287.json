@@ -1,0 +1,68 @@
+{
+  "R0287": {
+    "title": "AI投资智能体操纵风险",
+    "definition": "攻击者针对 AI 投资顾问、研究助手、量化 Agent 或交易智能体实施提示注入、数据投毒、模型逆向或合成市场信号诱导。",
+    "description": "AI投资智能体操纵风险是通用 AI 智能体风险在金融交易场景中的业务化落点。攻击者可把恶意指令藏入新闻、研报、网页、社交内容、交易评论或数据源，诱导智能体忽略风险约束、调用高权限工具、输出错误投资建议或执行错误交易。\n\n该风险也包括合成市场信号、模型幻觉利用、智能体投毒、AI 共识攻击、模型逆向和数据投毒等路径。由于投资智能体可能连接行情、订单、研究、风控和资金系统，一旦被操纵，影响会从错误文本扩展到真实交易和资金损失。",
+    "complexity": "advanced",
+    "influence": "造成 AI 投资建议失真、自动交易误执行、模型共识被操纵、敏感交易策略泄露和资金损失。",
+    "avoidances": [
+      "A0087",
+      "A0089",
+      "A0213",
+      "A0215",
+      "A0258",
+      "A0260",
+      "A0261",
+      "A0077"
+    ],
+    "references": [
+      {
+        "title": "OWASP LLM01 Prompt Injection",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+      },
+      {
+        "title": "OWASP LLM03 Training Data Poisoning",
+        "link": "https://genai.owasp.org/llmrisk/llm03-training-data-poisoning/"
+      },
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "AI投资智能体操纵风险",
+      "智能体提示注入",
+      "合成市场信号",
+      "智能体投毒",
+      "AI共识攻击",
+      "模型幻觉利用",
+      "模型逆向攻击",
+      "数据投毒",
+      "对抗样本",
+      "交易Agent操纵"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "priority": "P2",
+      "observables": [
+        "投资智能体引用的外部内容中出现隐藏指令或越权操作诱导",
+        "多个智能体在同一伪造信号下输出高度一致的交易建议",
+        "Agent 工具调用超出研究任务边界并触发下单、导出或高风险接口",
+        "训练或检索数据源被污染后模型建议出现系统性偏移"
+      ],
+      "assessedAt": "2026-07-09"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0148",
+        "relation": "variant",
+        "note": "AI投资智能体操纵风险与AI智能体工具滥用/过度自主风险是相关变体。"
+      }
+    ]
+  }
+}

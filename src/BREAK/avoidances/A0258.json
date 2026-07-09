@@ -1,0 +1,62 @@
+{
+  "A0258": {
+    "title": "量化数据血缘与回测泄漏审计",
+    "category": "AC03",
+    "definition": "审计量化数据来源、时间戳、样本选择、特征生成和回测流程，识别样本污染、前视偏差和过拟合。",
+    "description": "量化数据血缘与回测泄漏审计记录行情、基本面、舆情、研报、交易标签和模型特征从采集、清洗、存储到训练和回测的完整血缘。系统应校验时间戳可用性、字段发布时间、样本纳入规则、幸存者偏差、未来函数、重复样本、异常标注和回测参数搜索痕迹。\n\n该手段用于降低量化模型诱导、投资模型数据投毒和 AI 投资智能体操纵风险。落地时应将数据版本、特征生成代码、回测参数和实验结果固化，支持复现实验和异常回滚，避免被污染数据或过拟合结论进入生产策略。",
+    "limitation": "历史数据供应商和外部研报的发布时间、修订记录和字段口径可能不完整，导致血缘链路仍有盲区；过度审计会拖慢研究迭代。攻击者可通过缓慢污染、边缘样本或合法渠道数据源规避，需要持续抽样复核。",
+    "references": [
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      },
+      {
+        "title": "OWASP LLM03 Training Data Poisoning",
+        "link": "https://genai.owasp.org/llmrisk/llm03-training-data-poisoning/"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "量化数据血缘与回测泄漏审计",
+      "量化数据血缘",
+      "回测泄漏审计",
+      "前视偏差检测",
+      "样本污染检测",
+      "过拟合检测",
+      "未来函数检测"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0077",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0213",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0072",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0087",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0089",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0215",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

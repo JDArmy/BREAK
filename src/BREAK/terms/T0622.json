@@ -1,0 +1,48 @@
+{
+  "T0622": {
+    "title": "对账差异清单",
+    "aliases": [
+      "差异清单",
+      "对账差异单",
+      "账务差异单"
+    ],
+    "category": "业务安全",
+    "keywords": [
+      "对账差异清单",
+      "差异清单",
+      "对账差异单",
+      "账务差异单",
+      "资金差异",
+      "异常差异单"
+    ],
+    "definition": "对账差异清单是在交易、支付、退款、发货和结算记录不一致时生成的异常明细，用于定位资金差异和触发处置流程。",
+    "description": "对账差异清单通常记录订单号、支付单号、渠道交易号、应付金额、实付金额、退款金额、优惠补贴、发货状态、结算批次、差异原因和处理状态。系统可按阈值、规则或模型生成清单，并将高风险差异流转到冻结发货、渠道查单、售后审核、赔付追偿或人工复核。\n\n在业务安全治理中，对账差异清单把分散的资金异常转化为可处置任务。它可以帮助发现支付金额篡改、支付回调伪造、退款未回滚优惠、重复结算、漏结算和异常低价订单，但也依赖上下游字段口径一致和及时处理闭环。",
+    "usageExample": "财务对账生成对账差异清单后，风控对异常低价订单先冻结发货并发起渠道查单。",
+    "relatedRisks": [
+      "R0055",
+      "R0055-004",
+      "R0225",
+      "R0279"
+    ],
+    "relatedAvoidances": [
+      "A0245",
+      "A0248",
+      "A0249",
+      "A0250",
+      "A0251",
+      "A0252"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD02"
+    ],
+    "references": [
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

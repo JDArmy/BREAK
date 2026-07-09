@@ -1,0 +1,61 @@
+{
+  "R0286": {
+    "title": "流动性欺骗风险",
+    "definition": "攻击者制造、隐藏、迁移或伪装流动性，使交易对手或模型误判市场深度、成交能力和价格冲击。",
+    "description": "流动性欺骗风险发生在订单簿、跨交易场所、OTC、暗池、虚拟资产池和做市系统中。攻击者可制造幽灵流动性、流动性幻觉、隐藏流动性、流动性真空、跨场所流动性迁移或 False Break Liquidity 诱多，使交易者误判可成交规模和价格韧性。\n\n该风险与普通低流动性不同，重点是攻击者利用可见深度、隐藏挂单、跨场所割裂和成交显示规则制造错误信号。影响包括大额订单滑点扩大、止损触发、错误突破判断和做市风险暴露。",
+    "complexity": "advanced",
+    "influence": "导致交易对手误判市场深度和可成交规模，大额订单遭遇滑点、虚假突破、止损触发或流动性突然消失。",
+    "avoidances": [
+      "A0077",
+      "A0255",
+      "A0256",
+      "A0075",
+      "A0016"
+    ],
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "流动性欺骗风险",
+      "幽灵流动性",
+      "流动性真空",
+      "流动性幻觉",
+      "隐藏流动性",
+      "Liquidity Fragmentation",
+      "Cross Venue Liquidity Shift",
+      "False Break Liquidity",
+      "队列幻觉",
+      "暗池"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "priority": "P2",
+      "observables": [
+        "可见盘口深度在接近成交前快速消失",
+        "跨场所同一标的深度和成交价格短时显著背离",
+        "突破信号出现后流动性撤离并迅速反向波动",
+        "大额订单拆分执行时价格冲击显著高于历史基线"
+      ],
+      "assessedAt": "2026-07-09"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0280",
+        "relation": "co-occurrence",
+        "note": "流动性欺骗风险与市场微观结构操纵风险共享规避手段“交易风险监控”。"
+      }
+    ]
+  }
+}

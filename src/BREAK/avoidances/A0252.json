@@ -1,0 +1,62 @@
+{
+  "A0252": {
+    "title": "交易状态机一致性与批次收敛",
+    "category": "AC01",
+    "definition": "用统一状态机、状态迁移约束、批次截止规则和补偿任务，确保订单、支付、退款、发货和结算状态按一致口径收敛。",
+    "description": "交易状态机一致性与批次收敛是在订单、支付、退款、发货、权益发放和清结算链路中，统一定义状态枚举、合法迁移、终态条件、逆向操作、批次截止时间和异常补偿任务。系统应禁止已退款订单继续发货、已撤销支付继续结算、同一事件跨批次重复入账，并通过定时补偿、重放安全队列和差异重算让异步系统最终收敛到同一业务事实。\n\n该手段适用于清结算差异套利、支付金额篡改、Webhook伪造与事件重放等场景。落地时应与交易幂等控制、支付渠道主动查单、财务对账、差异冻结与赔付追偿配合，避免单个系统状态正确但跨系统口径不一致。",
+    "limitation": "状态机一致性依赖跨系统改造和历史状态口径治理，老系统、人工补单、渠道延迟和离线批处理都可能绕过统一状态约束。批次收敛过快会误判正常延迟回单，过慢又会扩大套利窗口；攻击者仍可能利用边界时点、补偿任务重试或人工处理例外规避，需要持续监测和审计。",
+    "references": [
+      {
+        "title": "Idempotent requests - Stripe API",
+        "link": "https://docs.stripe.com/api/idempotent_requests"
+      },
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "交易状态机一致性与批次收敛",
+      "交易状态机",
+      "状态迁移约束",
+      "批次收敛",
+      "结算批次收敛",
+      "状态一致性",
+      "异常补偿任务"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0245",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0246",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0248",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

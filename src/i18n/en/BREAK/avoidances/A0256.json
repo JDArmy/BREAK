@@ -1,0 +1,26 @@
+{
+  "A0256": {
+    "title": "Liquidity Anomaly and False Depth Detection",
+    "definition": "Monitor depth, execution impact, hidden liquidity, and liquidity withdrawal to identify ghost liquidity, liquidity illusion, and false breakouts.",
+    "description": "Liquidity anomaly and false depth detection collects visible depth, executed volume, order-impact cost, pre-execution cancellations, hidden-liquidity clues, stop-loss zones, and cross-venue liquidity changes to judge whether displayed execution capacity is real. Slippage baselines, depth-disappearance rate, impact-cost models, and post-breakout retracement patterns identify false depth and liquidity illusion.\n\nThis control applies to liquidity deception, trading indicator misleading, and market microstructure manipulation. It verifies not only displayed depth but whether orders can actually execute at reasonable impact cost, then combines abnormal account behavior and information timing to confirm inducement intent.",
+    "limitation": "Real stress, breaking news, and large rebalancing can also cause liquidity drops, creating false positives. Hidden liquidity and dark-pool trades may be invisible, so models infer indirectly. Attackers can add small real executions to improve credibility, requiring multi-signal and post-event review.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "keywords": [
+      "Liquidity Anomaly and False Depth Detection",
+      "false depth detection",
+      "ghost liquidity detection",
+      "liquidity illusion detection",
+      "slippage anomaly monitoring",
+      "liquidity withdrawal monitoring"
+    ]
+  }
+}

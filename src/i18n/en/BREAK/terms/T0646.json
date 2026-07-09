@@ -1,0 +1,28 @@
+{
+  "T0646": {
+    "title": "AI Consensus Attack",
+    "aliases": [
+      "AI consensus attack",
+      "AI consensus manipulation"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "AI Consensus Attack",
+      "AI consensus manipulation",
+      "model consensus attack"
+    ],
+    "definition": "AI Consensus Attack is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "AI Consensus Attack is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using AI Consensus Attack-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "Investigating Social Influence of Multiple Agents in Human-Agent Interactions",
+        "link": "https://arxiv.org/html/2411.04578v2"
+      },
+      {
+        "title": "When collaboration fails: persuasion driven adversarial influence in LLM-to-LLM debate",
+        "link": "https://www.nature.com/articles/s41598-026-42705-7"
+      }
+    ]
+  }
+}

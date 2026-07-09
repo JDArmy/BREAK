@@ -1,0 +1,29 @@
+{
+  "T0643": {
+    "title": "Source Credibility Manipulation",
+    "aliases": [
+      "source credibility manipulation",
+      "source spoofing"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Source Credibility Manipulation",
+      "source spoofing",
+      "credibility spoofing",
+      "source endorsement manipulation"
+    ],
+    "definition": "Source Credibility Manipulation is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Source Credibility Manipulation is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Source Credibility Manipulation-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "Truth Decay: An Initial Exploration of the Diminishing Role of Facts and Analysis in American Public Life",
+        "link": "https://www.rand.org/pubs/research_reports/RR2314.html"
+      },
+      {
+        "title": "What to know about disinformation and how to address it",
+        "link": "https://news.stanford.edu/stories/2022/04/know-disinformation-address"
+      }
+    ]
+  }
+}

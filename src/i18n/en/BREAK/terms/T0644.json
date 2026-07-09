@@ -1,0 +1,29 @@
+{
+  "T0644": {
+    "title": "Agent Prompt Injection",
+    "aliases": [
+      "agent prompt injection",
+      "tool-using agent prompt injection"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Agent Prompt Injection",
+      "tool-using agent prompt injection",
+      "agent instruction injection",
+      "tool-call injection"
+    ],
+    "definition": "Agent Prompt Injection is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Agent Prompt Injection is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Agent Prompt Injection-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "LLM01:2025 Prompt Injection",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+      },
+      {
+        "title": "LLM Prompt Injection Prevention Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
+      }
+    ]
+  }
+}

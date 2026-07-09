@@ -1,0 +1,59 @@
+{
+  "R0283": {
+    "title": "交易身份与行为伪装风险",
+    "definition": "攻击者伪装交易设备、身份、专家背书或行为模式，规避交易风控、反操纵监测和监管审计。",
+    "description": "交易身份与行为伪装风险发生在交易账户、研究社群、券商接口、量化平台和虚拟资产交易场景中。攻击者通过数字指纹欺骗、User Agent Rotation、代理网络、交易节奏伪装、反侦察交易或仿专家身份，使风控系统难以识别真实控制关系和交易意图。\n\n该风险通常不是独立获利手段，而是其他交易操纵的支撑条件。它能帮助攻击者隐藏同源账户、规避设备和 IP 关联、逃避异常撤单或异常传播监测，并提升市场信息操纵和盘口操纵的隐蔽性。",
+    "complexity": "advanced",
+    "influence": "降低交易风控和反操纵监测准确性，隐藏关联账户和真实控制人，放大后续市场操纵、跟单欺诈和虚假传播影响。",
+    "avoidances": [
+      "A0005",
+      "A0010",
+      "A0075",
+      "A0077",
+      "A0016"
+    ],
+    "references": [
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      },
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "交易身份与行为伪装风险",
+      "数字指纹欺骗",
+      "User Agent Rotation",
+      "反侦察交易",
+      "仿专家",
+      "交易设备伪装",
+      "交易行为伪装",
+      "关联账户隐藏"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "priority": "P3",
+      "observables": [
+        "多个交易账户设备指纹、网络路径和行为节奏呈现刻意分散特征",
+        "账号切换 User Agent、代理出口和交易终端频率异常",
+        "专家账号与交易账户、传播账号存在隐性关联",
+        "异常交易在被监测后迅速改变节奏、品种或通道"
+      ],
+      "assessedAt": "2026-07-09"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0280",
+        "relation": "prerequisite",
+        "note": "交易身份与行为伪装风险是市场微观结构操纵风险的前置条件。"
+      }
+    ]
+  }
+}

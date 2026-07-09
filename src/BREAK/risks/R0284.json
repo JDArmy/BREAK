@@ -1,0 +1,63 @@
+{
+  "R0284": {
+    "title": "市场信息操纵风险",
+    "definition": "攻击者伪造、放大、污染或延迟市场信息，影响价格发现、交易决策、舆情判断或风险评估。",
+    "description": "市场信息操纵风险覆盖虚假新闻、小作文、AI 生成纪要或研报、深度伪造内容、社交媒体操控、舆情污染、信息时延攻击和信息同步差利用。攻击者可能伪造上市公司、研究员、媒体、交易员或专家口吻，制造足以影响交易判断的信息。\n\n该风险与一般虚假内容不同，重点在于信息被用于改变市场预期和交易行为。AI 生成内容、深度伪造与跨平台传播降低了造假成本，使谣言、虚假研报和延迟信息更容易在交易窗口内放大影响。",
+    "complexity": "advanced",
+    "influence": "造成市场预期扭曲、投资者误判、交易价格异常波动、声誉损害和监管风险。",
+    "avoidances": [
+      "A0064",
+      "A0066",
+      "A0088",
+      "A0257",
+      "A0077",
+      "A0016"
+    ],
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "市场信息操纵风险",
+      "虚假新闻",
+      "小作文",
+      "AI生成研报",
+      "AI生成纪要",
+      "社交媒体操控",
+      "舆情污染",
+      "信息时延攻击",
+      "信息同步差利用",
+      "Source Credibility Manipulation",
+      "深度伪造"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "priority": "P2",
+      "observables": [
+        "疑似虚假消息在交易窗口前后快速扩散并伴随价格波动",
+        "AI 生成研报或纪要缺少可核验来源却被集中传播",
+        "同一叙事在多个平台由关联账号同步放大",
+        "交易决策依赖的信息源与权威披露存在时间差或内容差异"
+      ],
+      "assessedAt": "2026-07-09"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0071-009",
+        "relation": "co-occurrence",
+        "note": "市场信息操纵风险与AI深度伪造风险共享规避手段“AI内容检测”。"
+      }
+    ]
+  }
+}

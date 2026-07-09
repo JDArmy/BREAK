@@ -1,0 +1,25 @@
+{
+  "AT0105": {
+    "title": "Red Packet Plug-ins",
+    "description": "Red packet plug-ins are helper software, plug-ins, or scripts designed to automatically monitor, click, and claim red packets, cash coupons, or random rewards. Typical implementations use accessibility services, notification listeners, coordinate clicks, image recognition, or API calls to enter a chat, tap the claim button, and record proceeds as soon as a red packet appears.\n\nIn gray-market scenarios, they can be combined with bulk accounts, emulators, device-control systems, CAPTCHA-solving services, and proxy networks to automate red packet, cash coupon, or random reward grabbing at scale. They undermine randomness and fairness and may also collect chat, notification, or account data.",
+    "references": [
+      {
+        "title": "Court Finds Automatic WeChat Red-Packet Software Constituted Unfair Competition",
+        "link": "https://www.legaldaily.com.cn/IT/content/2021-05/19/content_8509910.html"
+      },
+      {
+        "title": "Yancheng Police Crack China’s First WeChat Red-Packet Plug-in Case",
+        "link": "https://jsnews.jschina.com.cn/sy/yw/201703/t20170309_189161.shtml"
+      }
+    ],
+    "keywords": [
+      "Red Packet Plug-ins",
+      "auto red packet grabbing",
+      "red packet bot",
+      "red packet helper",
+      "red packet script",
+      "reward grabbing plug-in",
+      "red packet automation"
+    ]
+  }
+}

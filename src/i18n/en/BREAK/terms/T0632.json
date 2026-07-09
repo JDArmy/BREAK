@@ -1,0 +1,25 @@
+{
+  "T0632": {
+    "title": "Story Alpha",
+    "aliases": [
+      "story alpha",
+      "narrative alpha"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Story Alpha",
+      "narrative alpha",
+      "narrative trading",
+      "story-driven alpha"
+    ],
+    "definition": "Story Alpha is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Story Alpha is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Story Alpha-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ]
+  }
+}

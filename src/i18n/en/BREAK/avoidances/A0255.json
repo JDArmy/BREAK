@@ -1,0 +1,25 @@
+{
+  "A0255": {
+    "title": "Cross-Market Order Book Consistency Monitoring",
+    "definition": "Compare order books, trades, spreads, and liquidity changes for the same or related instruments across venues to detect cross-venue manipulation and abnormal liquidity shifts.",
+    "description": "Cross-market order-book consistency monitoring collects depth, execution prices, spreads, cancellations, funding rates, and liquidity-shift signals across venues, instruments, and derivatives. Cross-venue baselines, lead-lag relationships, spread divergence, and common-control behavior identify paths where one venue creates false depth while another executes trades or induces breakouts.\n\nThis control detects cross-venue liquidity shifts, false-break inducement, ghost liquidity, and cross-platform market manipulation. Deployment requires lawful data access and adjustment for matching rules, market-data latency, and session differences.",
+    "limitation": "Cross-market data latency, rule differences, currency and contract definitions create natural divergence; OTC and dark-pool opacity can cause false negatives. Attackers may exploit data gaps or latency windows, requiring counterparty, custody, and clearing cross-checks.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "keywords": [
+      "Cross-Market Order Book Consistency Monitoring",
+      "cross-venue liquidity monitoring",
+      "cross-market depth monitoring",
+      "exchange spread monitoring",
+      "liquidity shift monitoring"
+    ]
+  }
+}

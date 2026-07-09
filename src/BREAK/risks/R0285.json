@@ -1,0 +1,60 @@
+{
+  "R0285": {
+    "title": "交易指标与榜单误导风险",
+    "definition": "攻击者通过刷量、榜单、指数权重、大宗交易展示或基准指标操纵，制造市场热度、权威性或交易质量假象。",
+    "description": "交易指标与榜单误导风险发生在榜单、指数、龙虎榜、大宗交易、成交量、热度、推荐位和基准评价机制中。攻击者通过套刷假象、指数权重误导、龙虎榜误导、Block Trade Illusion 或 Benchmark Gaming，让投资者和模型误以为某一标的更活跃、更权威或更具机构认可度。\n\n该风险的危害在于把被操纵的衍生指标包装成客观市场信号。若平台、媒体或交易系统直接使用这些指标做推荐、排序、风控或策略输入，会进一步放大错误信号。",
+    "complexity": "advanced",
+    "influence": "误导投资者和量化模型使用被污染指标，放大追涨、跟单、换仓和错误风险评估。",
+    "avoidances": [
+      "A0077",
+      "A0075",
+      "A0256",
+      "A0257",
+      "A0016"
+    ],
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "交易指标与榜单误导风险",
+      "套刷假象",
+      "指数权重误导",
+      "龙虎榜误导",
+      "Block Trade Illusion",
+      "Benchmark Gaming",
+      "交易热度操纵",
+      "榜单误导",
+      "大宗交易假象"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "medium",
+      "attackCost": "medium",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "priority": "P3",
+      "observables": [
+        "榜单排名、交易热度或指数权重变化与真实成交质量不匹配",
+        "大宗交易展示被用于制造机构认可假象",
+        "指标异常抬升后出现集中出货或反向交易",
+        "推荐和排序系统依赖的交易指标被短时集中刷高"
+      ],
+      "assessedAt": "2026-07-09"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0284",
+        "relation": "co-occurrence",
+        "note": "交易指标与榜单误导风险与市场信息操纵风险共享规避手段“交易风险监控”。"
+      }
+    ]
+  }
+}

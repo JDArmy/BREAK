@@ -1,0 +1,25 @@
+{
+  "T0637": {
+    "title": "Dark Pool",
+    "aliases": [
+      "dark pool",
+      "dark pool trading"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Dark Pool",
+      "dark pool trading",
+      "private trading venue",
+      "non-displayed venue"
+    ],
+    "definition": "Dark Pool is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Dark Pool is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Dark Pool-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ]
+  }
+}

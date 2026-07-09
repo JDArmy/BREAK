@@ -1,0 +1,38 @@
+{
+  "R0286": {
+    "title": "Liquidity Deception Risk",
+    "definition": "Attackers manufacture, hide, shift, or disguise liquidity so counterparties or models misjudge market depth, execution capacity, and price impact.",
+    "description": "Liquidity deception occurs in order books, cross-venue trading, OTC, dark pools, virtual-asset pools, and market-making systems. Attackers may create ghost liquidity, liquidity illusion, hidden liquidity, liquidity vacuum, cross-venue liquidity shifts, or false-break liquidity inducement so traders misjudge executable size and price resilience.\n\nThis differs from ordinary low liquidity. The focus is intentional use of visible depth, hidden orders, venue fragmentation, and trade-display rules to create false signals. Impacts include wider slippage for large orders, stop-loss triggering, false breakout judgments, and market-maker exposure.",
+    "influence": "It causes counterparties to misjudge depth and executable size, exposing large orders to slippage, false breakouts, stop-loss triggers, or sudden liquidity disappearance.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "keywords": [
+      "Liquidity Deception Risk",
+      "ghost liquidity",
+      "liquidity vacuum",
+      "liquidity illusion",
+      "hidden liquidity",
+      "liquidity fragmentation",
+      "cross-venue liquidity shift",
+      "false break liquidity",
+      "queue illusion",
+      "dark pool"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Visible depth disappears as execution approaches",
+        "Cross-venue depth and prices diverge sharply for the same instrument",
+        "Liquidity withdraws after a breakout signal and price reverses quickly",
+        "Split large orders experience price impact far above baseline"
+      ]
+    }
+  }
+}

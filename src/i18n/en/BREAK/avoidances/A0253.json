@@ -1,0 +1,26 @@
+{
+  "A0253": {
+    "title": "Order Book Anomaly Monitoring",
+    "definition": "Collect order-book placements, cancellations, executions, queue changes, and spread movement to identify spoofing, layering, and abnormal order-book pressure.",
+    "description": "Order book anomaly monitoring collects order-by-order submissions, executions, cancellations, order lifecycles, queue positions, bid/ask depth, spreads, and cross-account linkage features to build a normal order-book baseline. Thresholds, rules, sequence models, and anomaly detection can identify rapid cancellation after large orders, layering, sudden disappearance of order-book pressure, and prices following false depth.\n\nThis control detects market microstructure manipulation, order-book spoofing, and liquidity illusion. It should be combined with account linkage, venue rules, market-maker exemptions, and manual review to avoid misclassifying legitimate market making, rebalancing, or liquidity management.",
+    "limitation": "Order-book behavior varies by instrument liquidity, session, market-making strategy, and volatility, so simple cancellation-rate or order-size thresholds can misfire. Attackers can reduce order size, split across accounts and venues, or mimic market-making rhythm, requiring graph linkage and cross-market review.",
+    "references": [
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      },
+      {
+        "title": "CFTC Interpretive Guidance and Policy Statement on Disruptive Trading Practices",
+        "link": "https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2013-12440.html"
+      }
+    ],
+    "keywords": [
+      "Order Book Anomaly Monitoring",
+      "order book surveillance",
+      "abnormal cancellation monitoring",
+      "layering detection",
+      "spoofing detection",
+      "order book pressure monitoring"
+    ]
+  }
+}

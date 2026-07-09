@@ -1,0 +1,25 @@
+{
+  "A0254": {
+    "title": "High-Frequency Cancellation and Quote Stuffing Detection",
+    "definition": "Monitor dense order submissions, cancellations, quote updates, and channel usage to detect quote stuffing, flickering orders, and cancellation disruption.",
+    "description": "High-frequency cancellation and quote stuffing detection collects order rate, cancellation rate, quote-update interval, order lifetime, channel usage, matching latency, and synchronized behavior across account/device clusters. Rate thresholds, anomaly baselines, burst-window detection, and common-control clustering identify quote stuffing, flickering orders, and noise generation through matching latency.\n\nThis control applies to market microstructure manipulation and order-book spoofing. It focuses on behavior that consumes market-data, matching, or risk-control resources without genuine execution intent. Deployment should distinguish legitimate high-frequency market making from disruptive trading by combining execution contribution, order lifecycle, and venue rules.",
+    "limitation": "Legitimate high-frequency market making can also have high cancellation rates, so simple thresholds may harm liquidity providers. Attackers can split activity across accounts, memberships, venues, or lower bursts, requiring cross-account clustering and venue-rule interpretation.",
+    "references": [
+      {
+        "title": "CFTC Interpretive Guidance and Policy Statement on Disruptive Trading Practices",
+        "link": "https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2013-12440.html"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "keywords": [
+      "High-Frequency Cancellation and Quote Stuffing Detection",
+      "quote stuffing detection",
+      "high-frequency cancellation monitoring",
+      "flickering order detection",
+      "order burst detection"
+    ]
+  }
+}

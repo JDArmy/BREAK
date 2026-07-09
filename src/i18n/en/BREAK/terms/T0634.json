@@ -1,0 +1,30 @@
+{
+  "T0634": {
+    "title": "Trading Leaderboard",
+    "aliases": [
+      "trading leaderboard",
+      "active broker ranking",
+      "leaderboard signal"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Trading Leaderboard",
+      "active broker ranking",
+      "leaderboard signal",
+      "trading seat ranking"
+    ],
+    "definition": "Trading Leaderboard is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Trading Leaderboard is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Trading Leaderboard-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "Shanghai Stock Exchange Public Trading Information",
+        "link": "https://www.sse.com.cn/disclosure/diclosure/public/"
+      },
+      {
+        "title": "Eastmoney Trading Leaderboard Data Center",
+        "link": "https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_11_0"
+      }
+    ]
+  }
+}

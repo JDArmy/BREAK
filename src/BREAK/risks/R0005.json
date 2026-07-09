@@ -108,6 +108,11 @@
         "key": "R0009",
         "relation": "co-occurrence",
         "note": "营销活动作弊与恶意薅羊毛均可由攻击工具“自动化脚本”直接造成。"
+      },
+      {
+        "key": "R0005-003",
+        "relation": "variant",
+        "note": "自动化抢红包是营销活动作弊的细分变体。"
       }
     ]
   },
@@ -301,6 +306,74 @@
         "key": "R0003-003",
         "relation": "co-occurrence",
         "note": "虚假裂变与刷子风险均可由攻击工具“众包平台”直接造成。"
+      }
+    ]
+  },
+  "R0005-003": {
+    "title": "自动化抢红包",
+    "definition": "利用脚本、外挂或自动化客户端在红包、现金券、随机奖励发放时抢先领取或批量领取奖励。",
+    "description": "自动化抢红包发生在平台通过红包、现金券、随机奖励、限时福利或社交裂变活动发放权益时。攻击者使用红包外挂、UI自动化工具、群控设备或接口脚本监控红包出现信号，并在极短时间内自动点击、提交或调用领取接口，抢占本应由真实用户随机获得的奖励。\n\n该风险与一般营销活动作弊相比，更强调“限时、随机、先到先得”的领取机制被机器速度和批量账号破坏。规模化利用会造成活动奖励被少数账号或设备簇集中领取，真实用户体验下降，红包预算快速流失，并可能通过回收商或二级交易渠道变现。",
+    "complexity": "intermediate",
+    "influence": "红包、现金券和随机奖励被机器化抢占，营销预算被异常消耗，真实用户活动体验和公平性受损。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0010",
+      "A0010-004",
+      "A0015",
+      "A0016",
+      "A0020",
+      "A0021",
+      "A0241",
+      "A0243"
+    ],
+    "references": [
+      {
+        "title": "OAT-005 Scalping - OWASP Automated Threats",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+      },
+      {
+        "title": "盐城警方破获全国首例开挂抢微信红包案 - 中国江苏网",
+        "link": "https://jsnews.jschina.com.cn/sy/yw/201703/t20170309_189161.shtml"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "自动化抢红包",
+      "抢红包外挂",
+      "红包套利",
+      "红包秒抢",
+      "机器抢红包",
+      "红包脚本",
+      "自动抢红包"
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "红包发放后毫秒级或秒级内被同一设备簇、账号簇集中领取",
+        "领取行为缺少正常浏览、停留和互动路径，时序高度机械",
+        "多个账号使用相同无障碍服务、模拟点击或脚本环境特征",
+        "红包领取后奖励快速流向少数账户、地址或回收渠道"
+      ],
+      "assessedAt": "2026-07-09",
+      "priority": "P1"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0005",
+        "relation": "variant",
+        "note": "营销活动作弊是自动化抢红包的上层风险。"
+      },
+      {
+        "key": "R0009",
+        "relation": "co-occurrence",
+        "note": "自动化抢红包与恶意薅羊毛共享规避手段“接口签名校验”。"
       }
     ]
   }

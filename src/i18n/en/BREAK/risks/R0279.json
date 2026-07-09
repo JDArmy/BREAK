@@ -1,0 +1,35 @@
+{
+  "R0279": {
+    "title": "Clearing and Settlement Discrepancy Arbitrage",
+    "definition": "Attackers exploit discrepancy windows among order, payment, refund, shipment, or settlement records to profit from duplicate settlement, missed settlement, unrolled-back discounts, or early withdrawal.",
+    "description": "Clearing and settlement discrepancy arbitrage occurs when transactions, payments, refunds, shipments, subsidies, and channel receipts are processed asynchronously across multiple systems. Attackers may forge or replay payment callbacks, exploit refund rollback gaps, trigger duplicate settlement, create missed settlement, or ship or withdraw funds before discrepancy lists are handled, turning accounting differences into goods, benefits, or cash gains.\n\nThis risk is not ordinary reconciliation error. The focus is intentional exploitation of inconsistent settlement definitions, batch delays, state-machine races, or slow discrepancy handling. Governance uses transaction state-machine consistency and batch convergence to reduce state and batch gaps, then discrepancy freezing and compensation recovery to block shipment, withdrawal, or settlement outflows. At scale, it can create mismatches across payment, subsidy, merchant settlement, and fulfillment records while increasing recovery, compensation, and accounting adjustment costs.",
+    "influence": "Duplicate settlement, missed settlement, refunds without discount rollback, or delayed discrepancy handling can cause fund loss, wrong shipment, merchant settlement disputes, and accounting adjustment costs.",
+    "references": [
+      {
+        "title": "Test Payment Functionality - OWASP Web Security Testing Guide",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
+      },
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ],
+    "keywords": [
+      "Clearing and Settlement Discrepancy Arbitrage",
+      "duplicate settlement arbitrage",
+      "missed settlement arbitrage",
+      "refund without discount rollback",
+      "settlement discrepancy arbitrage",
+      "reconciliation discrepancy arbitrage"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Reusable discrepancies appear among order, payment, refund, shipment, and settlement batch records",
+        "The same channel transaction ID or settlement batch triggers duplicate posting, coupon issuance, or shipment",
+        "Discounts, subsidies, gifts, or withdrawable balances are not rolled back after refunds",
+        "Related accounts complete withdrawal, resale, or merchant settlement before discrepancy lists are handled",
+        "Payment callbacks, channel inquiries, and financial reconciliation results remain inconsistent over time"
+      ]
+    }
+  }
+}

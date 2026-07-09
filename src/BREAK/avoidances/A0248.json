@@ -29,10 +29,20 @@
       {
         "key": "A0004",
         "relation": "complement",
-        "note": "共同覆盖 2 个风险。"
+        "note": "共同覆盖 3 个风险。"
       },
       {
         "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0246",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0020",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       },
@@ -42,19 +52,9 @@
         "note": "共同覆盖 2 个风险。"
       },
       {
-        "key": "A0246",
+        "key": "A0245",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
-      },
-      {
-        "key": "A0002",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0009",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
       }
     ]
   }

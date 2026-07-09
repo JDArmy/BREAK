@@ -1,0 +1,27 @@
+{
+  "T0645": {
+    "title": "Model Inversion",
+    "aliases": [
+      "model inversion",
+      "model inversion attack"
+    ],
+    "category": "Financial Trading Security",
+    "keywords": [
+      "Model Inversion",
+      "model inversion attack"
+    ],
+    "definition": "Model Inversion is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts.",
+    "description": "Model Inversion is a stable term in securities, quantitative trading, virtual-asset, or financial trading risk-control contexts. It can provide context for detecting market microstructure manipulation, quant model inducement, market information manipulation, trading indicator misleading, liquidity deception, or AI investment agent manipulation.\n\nIn the BREAK knowledge base, this term is not automatically a standalone risk. It maps to related Risks only when an attacker uses the concept to mislead counterparties, pollute models, evade monitoring, or cause financial loss.",
+    "usageExample": "A risk review found several accounts using Model Inversion-related signals to induce other traders to place orders.",
+    "references": [
+      {
+        "title": "Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures",
+        "link": "https://rist.tech.cornell.edu/papers/mi-ccs.pdf"
+      },
+      {
+        "title": "Algorithms that remember: model inversion attacks and data protection law",
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6191664/"
+      }
+    ]
+  }
+}

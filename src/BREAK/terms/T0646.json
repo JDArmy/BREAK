@@ -1,0 +1,46 @@
+{
+  "T0646": {
+    "title": "AI共识攻击",
+    "aliases": [
+      "AI共识操纵"
+    ],
+    "category": "金融交易安全",
+    "keywords": [
+      "AI共识攻击",
+      "AI共识操纵",
+      "AI Consensus Attack",
+      "模型共识攻击"
+    ],
+    "definition": "利用相似数据源、模型架构或提示诱导多个 AI 系统形成一致但错误的判断。",
+    "description": "AI共识攻击是证券、量化、虚拟资产或金融交易风控语境中的稳定术语。它可作为识别市场微观结构操纵、量化模型诱导、市场信息操纵、交易指标误导、流动性欺骗或 AI 投资智能体操纵的上下文线索。\n\n在 BREAK 知识库中，该术语不单独等同于风险本身；只有当攻击者利用该概念误导交易对手、污染模型、规避监测或造成资金损失时，才映射到相关 Risk。",
+    "usageExample": "风控复盘中发现多个账户利用AI共识攻击相关信号诱导其他交易者下单。",
+    "relatedRisks": [
+      "R0280",
+      "R0281",
+      "R0282",
+      "R0284",
+      "R0285",
+      "R0286",
+      "R0287"
+    ],
+    "relatedAvoidances": [
+      "A0077"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD01"
+    ],
+    "references": [
+      {
+        "title": "Investigating Social Influence of Multiple Agents in Human-Agent Interactions",
+        "link": "https://arxiv.org/html/2411.04578v2"
+      },
+      {
+        "title": "When collaboration fails: persuasion driven adversarial influence in LLM-to-LLM debate",
+        "link": "https://www.nature.com/articles/s41598-026-42705-7"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

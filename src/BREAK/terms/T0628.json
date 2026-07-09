@@ -1,0 +1,46 @@
+{
+  "T0628": {
+    "title": "幸存者偏差",
+    "aliases": [
+      "Survivorship Bias"
+    ],
+    "category": "金融交易安全",
+    "keywords": [
+      "幸存者偏差",
+      "Survivorship Bias",
+      "样本选择偏差",
+      "退市样本缺失"
+    ],
+    "definition": "样本只保留存活对象而排除失败对象，导致策略、因子或模型效果被系统性高估。",
+    "description": "幸存者偏差是证券、量化、虚拟资产或金融交易风控语境中的稳定术语。它可作为识别市场微观结构操纵、量化模型诱导、市场信息操纵、交易指标误导、流动性欺骗或 AI 投资智能体操纵的上下文线索。\n\n在 BREAK 知识库中，该术语不单独等同于风险本身；只有当攻击者利用该概念误导交易对手、污染模型、规避监测或造成资金损失时，才映射到相关 Risk。",
+    "usageExample": "风控复盘中发现多个账户利用幸存者偏差相关信号诱导其他交易者下单。",
+    "relatedRisks": [
+      "R0280",
+      "R0281",
+      "R0282",
+      "R0284",
+      "R0285",
+      "R0286",
+      "R0287"
+    ],
+    "relatedAvoidances": [
+      "A0077"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD01"
+    ],
+    "references": [
+      {
+        "title": "What Is Survivorship Bias? Definition and Use in Investing",
+        "link": "https://www.investopedia.com/terms/s/survivorshipbias.asp"
+      },
+      {
+        "title": "Survivorship Bias and Mutual Fund Performance",
+        "link": "https://www.jstor.org/stable/2962224"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

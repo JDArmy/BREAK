@@ -1,0 +1,51 @@
+{
+  "A0254": {
+    "title": "高频撤单与报价洪泛检测",
+    "category": "AC03",
+    "definition": "监测短时间内异常密集的报撤单、报价更新和通道占用，识别报价洪泛、闪单和撤单扰动。",
+    "description": "高频撤单与报价洪泛检测采集委托频率、撤单频率、报价更新间隔、订单存活时间、通道占用、撮合延迟、同账户与同设备簇的同步行为等信号。系统可用速率阈值、异常基线、突发窗口检测和同源账户聚类，识别报价洪泛、闪单扰动和利用撮合延迟制造噪声的行为。\n\n该手段适用于市场微观结构操纵和订单簿诱骗等风险，重点是识别没有真实成交意图却大量占用行情、撮合或风控资源的交易行为。落地时应区分正常高频做市和破坏性交易，结合成交贡献、订单生命周期和交易场所规则综合判定。",
+    "limitation": "正常高频做市也可能表现出高报撤单率，简单阈值容易误伤流动性提供者；攻击者可通过多账户、多席位、跨场所拆分或降低瞬时峰值规避检测。需要跨账户聚类和交易场所规则解释支持。",
+    "references": [
+      {
+        "title": "CFTC Interpretive Guidance and Policy Statement on Disruptive Trading Practices",
+        "link": "https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2013-12440.html"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "高频撤单与报价洪泛检测",
+      "报价洪泛检测",
+      "高频撤单监测",
+      "闪单检测",
+      "Quote Stuffing Detection",
+      "Flickering Orders检测"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0077",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0253",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0255",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

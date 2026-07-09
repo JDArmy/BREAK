@@ -1,0 +1,28 @@
+{
+  "T0620": {
+    "title": "Canary Release",
+    "aliases": [
+      "gray release",
+      "gradual rollout",
+      "phased rollout"
+    ],
+    "category": "Business Security",
+    "keywords": [
+      "Canary Release",
+      "gray release",
+      "gradual rollout",
+      "phased rollout",
+      "progressive release",
+      "rollout scope"
+    ],
+    "definition": "A canary release is a release-control strategy in which rule, feature, or policy changes first apply to a small scope of users, traffic, merchants, or regions before gradually expanding based on monitoring results.",
+    "description": "Canary release reduces the blast radius of changes to marketing, pricing, payment, risk-control, and recommendation strategies. Rollouts are usually staged by user segment, region, merchant, device, traffic percentage, or campaign batch while monitoring error rates, loss indicators, complaints, order conversion, and abnormal discount ratios.\n\nIn business security, canary release is not merely a technical deployment action; it is part of rule-change approval and rollback control. Proper canary release can surface unauthorized discount purchases, discount stacking, payment-state errors, or risk-control false positives before they expand, while preserving a window for fast rollback or campaign suspension.",
+    "usageExample": "A new coupon rule first applied to 5% canary traffic, and risk control rolled it back immediately after abnormal discount ratios increased.",
+    "references": [
+      {
+        "title": "NIST SP 800-128 Guide for Security-Focused Configuration Management",
+        "link": "https://csrc.nist.gov/pubs/sp/800/128/upd1/final"
+      }
+    ]
+  }
+}

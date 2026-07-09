@@ -1,0 +1,47 @@
+{
+  "T0645": {
+    "title": "模型逆向",
+    "aliases": [
+      "Model Inversion Attack",
+      "模型逆向攻击"
+    ],
+    "category": "金融交易安全",
+    "keywords": [
+      "模型逆向",
+      "Model Inversion Attack",
+      "模型逆向攻击",
+      "Model Inversion"
+    ],
+    "definition": "通过模型输出反推训练数据、敏感特征或策略逻辑的攻击方法。",
+    "description": "模型逆向是证券、量化、虚拟资产或金融交易风控语境中的稳定术语。它可作为识别市场微观结构操纵、量化模型诱导、市场信息操纵、交易指标误导、流动性欺骗或 AI 投资智能体操纵的上下文线索。\n\n在 BREAK 知识库中，该术语不单独等同于风险本身；只有当攻击者利用该概念误导交易对手、污染模型、规避监测或造成资金损失时，才映射到相关 Risk。",
+    "usageExample": "风控复盘中发现多个账户利用模型逆向相关信号诱导其他交易者下单。",
+    "relatedRisks": [
+      "R0280",
+      "R0281",
+      "R0282",
+      "R0284",
+      "R0285",
+      "R0286",
+      "R0287"
+    ],
+    "relatedAvoidances": [
+      "A0077"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD01"
+    ],
+    "references": [
+      {
+        "title": "Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures",
+        "link": "https://rist.tech.cornell.edu/papers/mi-ccs.pdf"
+      },
+      {
+        "title": "Algorithms that remember: model inversion attacks and data protection law",
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6191664/"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

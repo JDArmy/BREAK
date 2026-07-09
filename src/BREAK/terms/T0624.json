@@ -1,0 +1,43 @@
+{
+  "T0624": {
+    "title": "分层挂单",
+    "aliases": [
+      "Layering",
+      "分层诱骗"
+    ],
+    "category": "金融交易安全",
+    "keywords": [
+      "分层挂单",
+      "Layering",
+      "分层诱骗",
+      "分层下单"
+    ],
+    "definition": "攻击者在多个价格层级同时挂出订单制造方向性压力，诱导价格或其他交易者行为后撤单。",
+    "description": "分层挂单是证券、量化、虚拟资产或金融交易风控语境中的稳定术语。它可作为识别市场微观结构操纵、量化模型诱导、市场信息操纵、交易指标误导、流动性欺骗或 AI 投资智能体操纵的上下文线索。\n\n在 BREAK 知识库中，该术语不单独等同于风险本身；只有当攻击者利用该概念误导交易对手、污染模型、规避监测或造成资金损失时，才映射到相关 Risk。",
+    "usageExample": "风控复盘中发现多个账户利用分层挂单相关信号诱导其他交易者下单。",
+    "relatedRisks": [
+      "R0280",
+      "R0281",
+      "R0282",
+      "R0284",
+      "R0285",
+      "R0286",
+      "R0287"
+    ],
+    "relatedAvoidances": [
+      "A0077"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD01"
+    ],
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

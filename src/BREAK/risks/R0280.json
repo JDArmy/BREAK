@@ -1,0 +1,65 @@
+{
+  "R0280": {
+    "title": "市场微观结构操纵风险",
+    "definition": "攻击者通过盘口挂单、撤单、报价洪泛或队列行为制造虚假供需与成交压力，误导交易对手、撮合系统或量化模型。",
+    "description": "市场微观结构操纵风险发生在证券、期货、外汇、虚拟资产或其他撮合交易市场中。攻击者在订单簿中提交并快速撤销订单、分层挂单、制造报价洪泛或闪单扰动，让其他交易者和自动化策略误以为某一价格方向存在真实买卖压力。\n\n该风险的核心不是正常做市或高频交易，而是利用订单簿可见性、队列优先级和撮合延迟制造虚假市场状态。规模化利用会破坏价格发现，诱导错误下单，放大滑点和交易损失，并削弱市场公平性与监管可信度。",
+    "complexity": "advanced",
+    "influence": "造成交易对手误判供需、价格短时失真、滑点扩大、策略被诱导下单，并可能引发监管处罚和市场公平性争议。",
+    "avoidances": [
+      "A0077",
+      "A0253",
+      "A0254",
+      "A0255",
+      "A0016"
+    ],
+    "references": [
+      {
+        "title": "CFTC Interpretive Guidance and Policy Statement on Disruptive Trading Practices",
+        "link": "https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2013-12440.html"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      },
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "市场微观结构操纵风险",
+      "盘口操纵",
+      "订单簿诱骗",
+      "Spoofing",
+      "Layering",
+      "Quote Stuffing",
+      "报价洪泛",
+      "闪单",
+      "队列后撤",
+      "Flickering Orders"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "priority": "P2",
+      "observables": [
+        "订单簿出现大额挂单后快速撤单且成交意图不足",
+        "同一主体在多个价位分层挂单制造方向性压力",
+        "短时间内报价更新和撤单频率远高于同类交易者",
+        "被操纵品种价格在虚假深度消失后快速反向回落"
+      ],
+      "assessedAt": "2026-07-09"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0286",
+        "relation": "co-occurrence",
+        "note": "市场微观结构操纵风险与流动性欺骗风险共享规避手段“交易风险监控”。"
+      }
+    ]
+  }
+}

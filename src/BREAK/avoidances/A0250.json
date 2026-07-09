@@ -1,0 +1,62 @@
+{
+  "A0250": {
+    "title": "权益延迟发放与回收",
+    "category": "AC04",
+    "definition": "对红包、券、积分、赠品、返利等权益设置确认期、延迟发放和退款回收规则，减少先获益后退款套利。",
+    "description": "权益延迟发放与回收是在订单支付、签收、履约或售后确认前，不立即发放可转卖或可提现的红包、券、积分、赠品和返利，或将其标记为冻结状态。系统在用户退款、拒收、退货、取消订单或触发异常售后时，按订单、权益流水和活动规则撤销未生效权益，回收已发放权益价值，或在退款金额中扣回相应补贴。\n\n该手段适用于闪退套利、退款不退奖励、赠品保留和优惠叠加后的售后套利。落地时应记录权益发放条件、确认期、回收优先级和人工复核规则，并把回收失败、重复发券或异常退款回滚纳入财务对账和售后审核闭环。",
+    "limitation": "延迟发放会影响真实用户即时获得奖励的体验，确认期过长可能降低活动转化；攻击者可等待确认期后再转卖或通过真实物流降低回收命中率。权益已被消耗、转赠或跨系统使用时，回收会产生误报、漏报和客服争议，需要配合账号关联、财务对账和人工复核分层处理。",
+    "references": [
+      {
+        "title": "Business Logic Security Cheat Sheet - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "ACFE Fraud Risk Management Guide",
+        "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
+      }
+    ],
+    "updated": "2026-07-09",
+    "keywords": [
+      "权益延迟发放与回收",
+      "权益延迟发放",
+      "退款权益回收",
+      "发券延迟",
+      "赠品回收",
+      "奖励回滚",
+      "补贴扣回"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0009",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

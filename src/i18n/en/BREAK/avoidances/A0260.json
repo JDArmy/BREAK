@@ -1,0 +1,26 @@
+{
+  "A0260": {
+    "title": "Trading Agent Input Isolation and Prompt Injection Defense",
+    "definition": "Separate instructions, market data, webpages, reports, and tool parameters for trading agents to prevent prompt injection in external content from affecting privileged actions.",
+    "description": "Trading agent input isolation and prompt injection defense separates system instructions, user authorization, market data, report text, webpages, social media, tool outputs, and order parameters. External text should be marked untrusted and prevented from overriding trading rules, risk thresholds, tool allowlists, and funding permissions. High-risk actions such as order placement, rebalancing, strategy export, or broker API connection require secondary confirmation.\n\nThis is a core control for AI investment agent manipulation. It should work with AI agent tool governance, behavior sandboxing, RAG authorization, investment model output monitoring, and audit logs so external content can influence summaries and analysis but not trading permissions.",
+    "limitation": "Prompt injection is diverse and can use encoding, tables, OCR, or multi-turn context to influence models indirectly, so filtering alone is insufficient. Strict isolation can reduce analysis quality, requiring least privilege, human confirmation, and runtime monitoring.",
+    "references": [
+      {
+        "title": "OWASP LLM01 Prompt Injection",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+      },
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      }
+    ],
+    "keywords": [
+      "Trading Agent Input Isolation and Prompt Injection Defense",
+      "trading agent prompt injection defense",
+      "investment agent input isolation",
+      "untrusted external content marking",
+      "trading tool permission isolation",
+      "agent order confirmation"
+    ]
+  }
+}

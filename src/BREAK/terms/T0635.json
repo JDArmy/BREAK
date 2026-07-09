@@ -1,0 +1,42 @@
+{
+  "T0635": {
+    "title": "大宗交易",
+    "aliases": [
+      "Block Trade"
+    ],
+    "category": "金融交易安全",
+    "keywords": [
+      "大宗交易",
+      "Block Trade",
+      "大额成交",
+      "协议转让"
+    ],
+    "definition": "以较大规模、通常通过特定机制完成的证券或资产交易，可能被市场解读为机构意图信号。",
+    "description": "大宗交易是证券、量化、虚拟资产或金融交易风控语境中的稳定术语。它可作为识别市场微观结构操纵、量化模型诱导、市场信息操纵、交易指标误导、流动性欺骗或 AI 投资智能体操纵的上下文线索。\n\n在 BREAK 知识库中，该术语不单独等同于风险本身；只有当攻击者利用该概念误导交易对手、污染模型、规避监测或造成资金损失时，才映射到相关 Risk。",
+    "usageExample": "风控复盘中发现多个账户利用大宗交易相关信号诱导其他交易者下单。",
+    "relatedRisks": [
+      "R0280",
+      "R0281",
+      "R0282",
+      "R0284",
+      "R0285",
+      "R0286",
+      "R0287"
+    ],
+    "relatedAvoidances": [
+      "A0077"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD01"
+    ],
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      }
+    ],
+    "updated": "2026-07-09"
+  }
+}

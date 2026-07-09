@@ -1,0 +1,38 @@
+{
+  "R0284": {
+    "title": "Market Information Manipulation",
+    "definition": "Attackers forge, amplify, pollute, or delay market information to affect price discovery, trading decisions, sentiment judgment, or risk assessment.",
+    "description": "Market information manipulation covers false news, informal rumor essays, AI-generated minutes or research reports, deepfake content, social-media manipulation, sentiment pollution, information-latency attacks, and information-synchronization-gap exploitation. Attackers may impersonate issuers, analysts, media outlets, traders, or experts to create information capable of affecting trading judgment.\n\nThis differs from generic false content. The focus is information used to change market expectations and trading behavior. AI-generated content, deepfakes, and cross-platform dissemination lower the cost of fabrication, making rumors, false reports, and delayed information easier to amplify within trading windows.",
+    "influence": "It distorts market expectations, misleads investors, creates abnormal price volatility, damages reputation, and creates regulatory risk.",
+    "references": [
+      {
+        "title": "ESMA Market Abuse",
+        "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
+      },
+      {
+        "title": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+      }
+    ],
+    "keywords": [
+      "Market Information Manipulation",
+      "false news",
+      "rumor essay",
+      "AI-generated research report",
+      "AI-generated meeting minutes",
+      "social media manipulation",
+      "sentiment pollution",
+      "information latency attack",
+      "source credibility manipulation",
+      "deepfake"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Suspected false messages spread rapidly around trading windows with price moves",
+        "AI-generated reports or minutes lack verifiable sources yet are amplified",
+        "The same narrative is synchronized by linked accounts across platforms",
+        "Information used for trading differs from authoritative disclosure in timing or content"
+      ]
+    }
+  }
+}
