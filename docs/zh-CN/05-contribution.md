@@ -62,6 +62,8 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 
 2026-07-10 起，新增或调整 Risk / Avoidance 并影响业务域归类时，需要同步检查 `src/BREAK/business-domains/*.json` 中对应 `riskScenes[*].risks`，避免遗漏直接对应的行业场景或物理后果场景；若关系数组变化影响 Avoidance / AttackTool / ThreatActor 横向关系，应在提交前运行 `npm run sync:lateral-relations`。仅补充实体数据和场景归类、不改变维护流程时，同步 README / Skill 统计与本文说明即可。
 
+实体 ID 与正文行业术语共用 `EntityPopoverContent` 展示摘要。维护该组件时，定义与补充描述合计最多显示 5 行，避免长文本遮挡正文或超出移动端视口。
+
 需要推动 `README.md` 与 `README_CN.md` 更新的典型变更包括：公共命令、构建 / 发布门禁、CI 工作流、数据导出、STIX / JSON-LD / npm 数据包、Schema 文档、实体类型或基础信息。
 
 修改 `review:*` 评审脚本时，需要在使用手册中说明评审口径变化；若影响公共命令、提交门禁或维护流程，也要同步 README。

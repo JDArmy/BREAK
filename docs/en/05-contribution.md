@@ -62,6 +62,8 @@ When changing business-domain classification validation, also document the maint
 
 As of 2026-07-10, when adding or adjusting Risk / Avoidance entries that affect business-domain classification, also check the corresponding `riskScenes[*].risks` in `src/BREAK/business-domains/*.json` so directly relevant industry scenes or physical-consequence scenes are not missed. If relation-array changes affect derived Avoidance / AttackTool / ThreatActor lateral relations, run `npm run sync:lateral-relations` before committing. When the change only updates entity data and scene classification without changing the maintenance workflow, syncing README / Skill counts and this note is sufficient.
 
+Entity IDs and automatically matched industry terms share `EntityPopoverContent` for summaries. Keep the combined definition and supplementary description to at most five visible lines so long text does not obscure page content or overflow mobile viewports.
+
 Typical changes that require updating `README.md` and `README_CN.md` include: public commands, build / release gates, CI workflows, data exports, STIX / JSON-LD / npm data package outputs, schema documentation, entity types, or basic project information.
 
 When changing a `review:*` script, document the changed review policy in the user manual. If the change affects public commands, commit gates, or maintenance workflow, update the README files as well.

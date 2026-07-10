@@ -2,6 +2,7 @@ import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import {
   ATTR,
   CLS,
+  MATCH_SOURCE_ATTR,
   createTermMatcher,
   isInsideSkipZone,
   extractEntityId,
@@ -249,6 +250,28 @@ describe("processTextNode", () => {
       "凭证填充",
       "自动化攻击",
     ]);
+    expect(Array.from(spans).map((span) => span.getAttribute(MATCH_SOURCE_ATTR))).toEqual([
+      "title",
+      "alias",
+      "keyword",
+    ]);
+  });
+
+  it("术语详情页不自动链接当前术语的标题、别名和关键词", () => {
+    container.setAttribute("data-current-term-id", "T0001");
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "神父", source: "title" },
+      { id: "T0001", text: "身份证料", source: "alias" },
+      { id: "T0001", text: "绕过认证", source: "keyword" },
+      { id: "T0002", text: "未授权访问", source: "title" },
+    ]);
+    const textNode = appendText(container, "神父与身份证料可被用于绕过认证和未授权访问");
+
+    processTextNode(textNode, processed, matcher);
+
+    const spans = container.querySelectorAll(`.${CLS}`);
+    expect(Array.from(spans).map((span) => span.getAttribute(ATTR))).toEqual(["T0002"]);
+    expect(spans[0].textContent).toBe("未授权访问");
   });
 
   it("术语匹配优先采用最长词，且不覆盖实体 ID", () => {
@@ -277,7 +300,7 @@ describe("createTermMatcher", () => {
     ]);
 
     expect(matcher.find("使用接码平台")).toEqual([
-      { id: "T0001", start: 2, end: 6 },
+      { id: "T0001", start: 2, end: 6, source: "title" },
     ]);
   });
 
@@ -296,7 +319,7 @@ describe("createTermMatcher", () => {
     ]);
 
     expect(matcher.find("BOT management")).toEqual([
-      { id: "T0001", start: 0, end: 3 },
+      { id: "T0001", start: 0, end: 3, source: "title" },
     ]);
     expect(matcher.find("robot management")).toEqual([]);
   });

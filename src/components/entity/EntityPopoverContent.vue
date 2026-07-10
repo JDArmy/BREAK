@@ -8,6 +8,8 @@ import { TopRight } from "@element-plus/icons-vue";
 
 defineProps<{
   entity: EntitySummary;
+  matchSource?: "alias" | "keyword";
+  matchText?: string;
 }>();
 
 /** 类型对应的 emoji 图标 */
@@ -37,6 +39,12 @@ const TYPE_ICON: Record<string, string> = {
 
     <!-- 标题 -->
     <div class="entity-card__title">{{ entity.title }}</div>
+    <div
+      v-if="entity.type === 'term' && matchSource && matchText"
+      class="entity-card__match"
+    >
+      {{ $t(`entityPopover.matched${matchSource === "alias" ? "Alias" : "Keyword"}`, { text: matchText }) }}
+    </div>
 
     <!-- 实体不存在时的提示 -->
     <div v-if="!entity.exists" class="entity-card__not-found">
@@ -45,12 +53,17 @@ const TYPE_ICON: Record<string, string> = {
 
     <!-- 定义 / 摘要 -->
     <template v-else>
-      <p v-if="entity.definition" class="entity-card__definition">
-        {{ entity.definition }}
-      </p>
-      <p v-if="entity.description" class="entity-card__description">
-        {{ entity.description }}
-      </p>
+      <div
+        v-if="entity.definition || entity.description"
+        class="entity-card__summary"
+      >
+        <p v-if="entity.definition" class="entity-card__definition">
+          {{ entity.definition }}
+        </p>
+        <p v-if="entity.description" class="entity-card__description">
+          {{ entity.description }}
+        </p>
+      </div>
     </template>
 
     <!-- 底部操作栏 -->
@@ -118,18 +131,31 @@ const TYPE_ICON: Record<string, string> = {
   overflow: hidden;
 }
 
-.entity-card__definition,
-.entity-card__description {
-  margin: 0 0 4px;
-  font-size: 12px;
-  color: var(--el-text-color-regular);
+.entity-card__match {
+  margin: -2px 0 6px;
+  color: var(--el-text-color-secondary);
+  font-size: 11px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.entity-card__summary {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
+.entity-card__definition,
 .entity-card__description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--el-text-color-regular);
+}
+
+.entity-card__description {
+  margin-top: 4px;
   color: var(--el-text-color-secondary);
 }
 

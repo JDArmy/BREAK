@@ -619,7 +619,9 @@
   },
   "entityPopover": {
     "viewDetail": "查看详情",
-    "notFound": "ID 未收录"
+    "notFound": "ID 未收录",
+    "matchedKeyword": "命中关键词：{text}",
+    "matchedAlias": "命中别名：{text}"
   },
   "relationLine": {
     "avoidanceMeans": "规避手段",

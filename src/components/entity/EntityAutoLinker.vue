@@ -22,12 +22,14 @@ import {
   ATTR,
   CLS,
   EXCLUDE_ZONE,
+  MATCH_SOURCE_ATTR,
   TEXT_ROOT_CLS,
   TEXT_SOURCE_CLS,
   createTermMatcher,
   processTextNode,
   scanSubtree,
   type TermCandidate,
+  type TermSource,
 } from "./autoLinkerCore";
 
 // ─── 配置 ───────────────────────────────────────────────
@@ -37,6 +39,7 @@ const processed = new WeakSet<Text>();
 // ─── Popover 状态 ─────────────────────────────────────
 const popoverVisible = ref(false);
 const popoverEntity = ref<EntitySummary | null>(null);
+const popoverMatch = ref<{ source: Exclude<TermSource, "title">; text: string } | null>(null);
 const triggerRef = ref<HTMLElement | null>(null);
 let hideTimer: ReturnType<typeof setTimeout> | null = null;
 
@@ -85,7 +88,12 @@ function showPopover(el: HTMLElement, id: string) {
   }
   if (showTimer) clearTimeout(showTimer);
   showTimer = setTimeout(() => {
+    const source = el.getAttribute(MATCH_SOURCE_ATTR);
     popoverEntity.value = entity;
+    popoverMatch.value =
+      entity.type === "term" && (source === "alias" || source === "keyword")
+        ? { source, text: el.textContent?.trim() || "" }
+        : null;
     triggerRef.value = el;
     popoverVisible.value = true;
   }, 400);
@@ -104,6 +112,7 @@ function scheduleHide() {
   hideTimer = setTimeout(() => {
     popoverVisible.value = false;
     popoverEntity.value = null;
+    popoverMatch.value = null;
     triggerRef.value = null;
   }, 200);
 }
@@ -259,6 +268,8 @@ onUnmounted(() => {
       <EntityPopoverContent
         v-if="popoverEntity"
         :entity="popoverEntity"
+        :match-source="popoverMatch?.source"
+        :match-text="popoverMatch?.text"
       />
     </div>
   </el-popover>

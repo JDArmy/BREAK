@@ -104,7 +104,11 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
 </script>
 
 <template>
-  <article :class="['detail-panel', { 'drawer-detail-panel': isDrawer }]">
+  <article
+    :key="tKey"
+    :class="['detail-panel', { 'drawer-detail-panel': isDrawer }]"
+    :data-current-term-id="tKey"
+  >
     <div class="detail-heading">
       <div>
         <!-- list: 纯文本 / drawer: a 新窗口 + icon -->

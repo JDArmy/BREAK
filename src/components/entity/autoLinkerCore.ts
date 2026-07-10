@@ -15,6 +15,8 @@ import { ENTITY_ID_PATTERN, inferEntityType } from "@/utils/entityRoute";
 // ─── 常量 ───────────────────────────────────────────────
 /** 标记属性 */
 export const ATTR = "data-entity-id";
+/** 术语通过别名或关键词命中时记录来源，供 Popover 说明命中原因 */
+export const MATCH_SOURCE_ATTR = "data-entity-match-source";
 /** 自动添加的 CSS 类 */
 export const CLS = "entity-id-auto";
 /** 自动链接文本的容器与 Vue 原始文本节点容器 */
@@ -34,6 +36,7 @@ export interface TermMatch {
   id: string;
   start: number;
   end: number;
+  source?: TermSource;
 }
 
 export interface TermMatcher {
@@ -43,6 +46,7 @@ export interface TermMatcher {
 interface ResolvedTerm {
   id: string;
   text: string;
+  source: TermSource;
   rank: number;
 }
 
@@ -203,7 +207,12 @@ export function createTermMatcher(candidates: TermCandidate[]): TermMatcher {
     const normalized = text.toLocaleLowerCase();
     const byEntity = ownership.get(normalized) ?? new Map<string, ResolvedTerm>();
     const current = byEntity.get(candidate.id);
-    const next = { id: candidate.id, text, rank: TERM_SOURCE_RANK[candidate.source] };
+    const next = {
+      id: candidate.id,
+      text,
+      source: candidate.source,
+      rank: TERM_SOURCE_RANK[candidate.source],
+    };
     if (!current || next.rank < current.rank) byEntity.set(candidate.id, next);
     ownership.set(normalized, byEntity);
   }
@@ -260,7 +269,7 @@ export function createTermMatcher(candidates: TermCandidate[]): TermMatcher {
         }
 
         if (best) {
-          matches.push({ id: best.id, start: cursor, end: bestEnd });
+          matches.push({ id: best.id, start: cursor, end: bestEnd, source: best.source });
           cursor = bestEnd;
         } else {
           cursor += 1;
@@ -299,6 +308,9 @@ export function processTextNode(
   const regex = new RegExp(ENTITY_ID_PATTERN.source, "g");
   const matches: TermMatch[] = [];
   const occupiedRanges: Array<{ start: number; end: number }> = [];
+  const currentTermId = textNode.parentElement
+    ?.closest<HTMLElement>("[data-current-term-id]")
+    ?.getAttribute("data-current-term-id");
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
@@ -311,6 +323,7 @@ export function processTextNode(
 
   if (termMatcher) {
     for (const termMatch of termMatcher.find(text)) {
+      if (termMatch.id === currentTermId) continue;
       const overlapsId = occupiedRanges.some(
         (range) => termMatch.start < range.end && termMatch.end > range.start,
       );
@@ -328,11 +341,15 @@ export function processTextNode(
   }
   matches.sort((a, b) => a.start - b.start || b.end - a.end);
 
-  const fragments: (string | { id: string; text: string })[] = [];
+  const fragments: (string | { id: string; text: string; source?: TermSource })[] = [];
   for (const item of matches) {
     if (item.start < lastIndex) continue;
     if (item.start > lastIndex) fragments.push(text.slice(lastIndex, item.start));
-    fragments.push({ id: item.id, text: text.slice(item.start, item.end) });
+    fragments.push({
+      id: item.id,
+      text: text.slice(item.start, item.end),
+      source: item.source,
+    });
     lastIndex = item.end;
   }
   if (lastIndex < text.length) fragments.push(text.slice(lastIndex));
@@ -352,6 +369,7 @@ export function processTextNode(
       const span = document.createElement("span");
       span.className = CLS;
       span.setAttribute(ATTR, part.id);
+      if (part.source) span.setAttribute(MATCH_SOURCE_ATTR, part.source);
       span.textContent = part.text;
       renderedHolder.appendChild(span);
     }
