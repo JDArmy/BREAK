@@ -11,12 +11,20 @@
       "绍兴",
       "新昌县公安局"
     ],
-    "summary": "2022年，新昌县公安局披露一起网络著作权侵权案。王某经营网店，将未经授权的音乐作品复制到U盘、SD卡后销售，累计销售侵权产品4000余个、销售额21万余元。警方抓获王某、裘某、尧某等3人；新昌县法院以侵犯著作权罪判处王某有期徒刑三年、缓刑四年，并处罚金6万元。",
+    "summary": "2022年9月，新昌县公安局披露一起网络著作权侵权案。王某经营网店，将未经授权的音乐作品复制到U盘、SD卡后销售，累计销售侵权产品4000余个、销售额21万余元。警方抓获王某、裘某、尧某等3人；王某、裘某均因侵犯著作权罪被判刑并处罚金。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0023"
     ],
     "references": [
+      {
+        "title": "你以为是小本生意，其实已犯法！U盘打包卖歌曲涉嫌侵权，绍兴男子被判刑",
+        "link": "https://finance.sina.com.cn/china/2022-09-26/doc-imqqsmrp0538300.shtml"
+      },
+      {
+        "title": "U盘打包卖歌曲涉嫌侵权，浙江绍兴男子被判刑 - 茂名市人民政府门户网站",
+        "link": "http://www.maoming.gov.cn/zwgk/zwzl/zdlyxxgkzl/zscqxzcfgs/qtqflqxw/content/post_1087857.html"
+      },
       {
         "title": "网店卖的U盘里藏猫腻，新昌一男子判刑",
         "link": "https://www.shaoxing.com.cn/p/2966240.html"
@@ -24,17 +32,9 @@
       {
         "title": "其实已犯法！U盘打包卖歌曲涉嫌侵权，绍兴男子被判刑",
         "link": "https://tidenews.com.cn/news.html?id=853486"
-      },
-      {
-        "title": "U盘打包卖歌曲涉嫌侵权，浙江绍兴男子被判刑 - 茂名市人民政府门户网站",
-        "link": "http://www.maoming.gov.cn/zwgk/zwzl/zdlyxxgkzl/zscqxzcfgs/qtqflqxw/content/post_1087857.html"
-      },
-      {
-        "title": "你以为是小本生意，其实已犯法！U盘打包卖歌曲涉嫌侵权，绍兴男子被判刑",
-        "link": "https://finance.sina.com.cn/china/2022-09-26/doc-imqqsmrp0538300.shtml"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "incidentTime": "2022-09",
     "relatedAttackTools": [],
     "relatedThreatActors": []

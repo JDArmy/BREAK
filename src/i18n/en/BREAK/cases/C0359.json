@@ -1,23 +1,31 @@
 {
   "C0359": {
-    "title": "Door-Gap Squeezing and Password Guessing: Gongshu Police Crack Theft Case",
+    "title": "Midnight Blizzard Password-Spraying Attack Against Microsoft Corporate Systems",
     "keywords": [
       "password spraying",
-      "trial password",
-      "brute force attack",
-      "door gap intrusion",
-      "theft",
-      "Hangzhou",
-      "Gongshu",
-      "Chaoming Police Station",
-      "physical intrusion",
-      "combination lock"
+      "Midnight Blizzard",
+      "Nobelium",
+      "Microsoft",
+      "corporate email",
+      "legacy test tenant",
+      "nation-state attack",
+      "Russian state-sponsored actor",
+      "email exfiltration",
+      "weak password"
     ],
-    "summary": "A thief in Hangzhou's Gongshu District first broke into a warehouse by squeezing through a door gap. After the owner upgraded to a combination lock, the thief successfully cracked the code through repeated trial and error and stole again. Police eventually apprehended the suspect and recovered the stolen items.",
+    "summary": "Microsoft disclosed that, beginning in late November 2023, the Russian state-sponsored actor Midnight Blizzard used a password-spraying attack to compromise a legacy non-production test tenant account. The actor used that account's permissions to access a small number of Microsoft corporate email accounts, including senior leadership and cybersecurity and legal staff, and exfiltrated some emails and attachments. Microsoft detected the attack on January 12, 2024 and began its response.",
     "references": [
       {
-        "title": "Squeezing through door gaps, trying passwords... Gongshu police crack theft case",
-        "link": "https://www.cpd.com.cn/wsjwlm/zhejiang/gongye/yxjx/126/t_1219637.html"
+        "title": "Microsoft Actions Following Attack by Nation State Actor Midnight Blizzard",
+        "link": "https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard"
+      },
+      {
+        "title": "Microsoft: Midnight Blizzard Guidance for Responders on Nation-State Attack",
+        "link": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/"
+      },
+      {
+        "title": "SEC Exhibit 99.1: Microsoft Actions Following Attack by Nation State Actor Midnight Blizzard",
+        "link": "https://www.sec.gov/Archives/edgar/data/789019/000119312524011295/d708866dex991.htm"
       }
     ]
   }

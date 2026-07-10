@@ -1,6 +1,6 @@
 {
   "C0362": {
-    "title": "Self-Developed Decryption Program Used Over 2.18 Million Times by Others",
+    "title": "Case Involving a Self-Developed Decryption Program Used Over 2.18 Million Times by Others",
     "keywords": [
       "password spraying",
       "cracking program",
@@ -10,19 +10,15 @@
       "decryption tool",
       "credential extraction"
     ],
-    "summary": "In November 2022, China Court Network reported that defendant Li built a website offering a self-developed password-cracking program, which was used over 2.18 million times by others. Zhuo then wrote scripts on that basis to batch-crack extraction passwords, illegally obtaining more than 15,000 sets of share links and matching passwords. Li was held criminally liable for providing programs used to intrude into computer information systems, reflecting the batch account and resource-access risks caused by platformized cracking tools.",
+    "summary": "In November 2022, Fujian Court Network reported that defendant Li built a website offering a self-developed program for cracking extraction passwords on cloud-drive share links, and that the function was used over 2.18 million times by others. Zhuo then wrote scripts on that basis to batch-crack extraction passwords, illegally obtaining more than 15,000 sets of share links and matching passwords. The court convicted Li of providing programs used to intrude into computer information systems, sentencing him to three years in prison with a three-year-and-six-month reprieve and a 20,000 yuan fine.",
     "references": [
-      {
-        "title": "Self-made decryption program used over 2.18 million times by others - China Court Network",
-        "link": "https://www.chinacourt.org/article/detail/2022/11/id/7016488.shtml"
-      },
       {
         "title": "Self-made decryption program used over 2.18 million times by others - Fujian Court Network",
         "link": "https://fjfy.fjcourt.gov.cn/article/detail/2022/11/id/7016967.shtml"
       },
       {
-        "title": "Self-made decryption program used over 2.18 million times by others - People's Daily Online",
-        "link": "https://society.people.com.cn/n1/2022/1115/c1008-32566292.html"
+        "title": "Self-made decryption program used over 2.18 million times by others - China.com Henan",
+        "link": "https://henan.china.com/m/news/fz/2022/1115/2530322708.html"
       }
     ]
   }

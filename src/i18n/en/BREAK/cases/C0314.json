@@ -12,11 +12,19 @@
       "DNS resolver",
       "network traffic analysis"
     ],
-    "summary": "This 2024 IEEE AIC conference paper studies DNS DDoS amplification attack detection using a multi-layer perceptron (MLP) classification algorithm to analyze network traffic and identify abnormal traffic patterns with machine learning. It focuses on attacks that abuse DNS resolvers to amplify small queries into high-volume traffic and cause denial of service; the source page verifies the paper title, conference, and DOI.",
+    "summary": "In July 2024, this IEEE AIC conference paper studied DNS DDoS amplification attack detection using a multi-layer perceptron (MLP) classification algorithm to analyze network traffic and identify abnormal traffic patterns with machine learning. It focuses on attacks that abuse DNS resolvers to amplify small queries into high-volume traffic and cause denial of service; Crossref and OpenAlex metadata verify the paper title, conference, DOI, and abstract.",
     "references": [
       {
         "title": "DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron Classification Algorithm",
         "link": "https://doi.org/10.1109/AIC61668.2024.10730978"
+      },
+      {
+        "title": "Crossref Metadata for DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron Classification Algorithm",
+        "link": "https://api.crossref.org/works/10.1109/AIC61668.2024.10730978"
+      },
+      {
+        "title": "OpenAlex Metadata for DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron Classification Algorithm",
+        "link": "https://api.openalex.org/works/doi:10.1109/AIC61668.2024.10730978"
       }
     ]
   }

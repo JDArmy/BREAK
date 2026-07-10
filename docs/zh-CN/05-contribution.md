@@ -50,7 +50,7 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 
 ### 第三层：C 类·LLM + 抓取（最小集）
 
-不可机器化的规则：`review:case-fact`（Scrapingdog 抓取核验）、`review:field-density`（信息密度）、`review:classification`（category 语义贴切）。
+不可机器化的规则：`review:case-fact`（网页抓取事实核验，Scrapingdog 优先，失败时使用带浏览器 UA、30 秒超时和中文页面编码识别的本地直连抓取）、`review:field-density`（信息密度）、`review:classification`（category 语义贴切）。
 
 ## 文档新鲜度门禁
 

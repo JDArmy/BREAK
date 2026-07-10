@@ -20,7 +20,7 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务
 | Case（案例） | 1782 | C0001 | 真实的安全事件案例 |
 | BusinessDomain（业务域） | 20 | BD00 | 行业/业务域分类 |
 
-维护说明：本 Skill 的调用方式保持不变，实体统计与知识库数据关系补强同步更新。
+维护说明：本 Skill 的调用方式保持不变，实体统计与知识库案例事实、来源质量及数据关系补强同步更新。
 
 ## 调用方式
 
@@ -165,7 +165,7 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 
 2026-07-09 的 Case P1 引用质量维护仅补强 C0066、C0130、C0248 的 references / summary 与英文翻译；未改变 Skill 调用参数、搜索字段、返回格式或实体结构。
 
-Case 事实核验使用抓取正文送入 LLM。维护 `review-case-fact.mjs` 时需保证送审片段足够覆盖正文关键段落；大批量清理 P2 待办时按约 100 个改动设置 checkpoint，先跑 `validate:data` / `review:changed` 再提交，避免长时间积累未验证变更。
+Case 事实核验使用抓取正文送入 LLM。`review-case-fact.mjs` 优先使用 Scrapingdog 抓取，失败或正文为空时回退本地直连抓取，并按页面声明处理 UTF-8 / GBK / GB18030；维护该脚本时需保证送审片段足够覆盖正文关键段落。大批量清理 P2 待办时按约 100 个改动设置 checkpoint，先跑 `validate:data` / `review:changed` 再提交，避免长时间积累未验证变更。
 
 2026-07-09 的 Case P2 事实核验维护仅补强或收敛案例 `summary` / `references` / 英文翻译，不改变 Skill 调用参数、搜索字段、返回格式或实体结构。
 

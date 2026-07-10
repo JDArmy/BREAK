@@ -26,6 +26,19 @@ ensureDir(SCRAPED_DIR);
 
 const SCRAPINGDOG_KEY = process.env.SCRAPINGDOG_API_KEY;
 
+function htmlToText(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 // 收集待审 Case
 let items;
 if (opts.full) {
@@ -43,10 +56,36 @@ if (opts.keys) {
 }
 if (opts.limit > 0) items = items.slice(0, opts.limit);
 
-// Scrapingdog 抓取网页正文（通用 scrape 端点）
+async function directFetchUrl(url) {
+  try {
+    const res = await fetch(url, {
+      headers: {
+        'user-agent':
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8'
+      },
+      signal: AbortSignal.timeout(30000)
+    });
+    if (!res.ok) return { ok: false, reason: `direct HTTP ${res.status}`, content: '' };
+    const buffer = Buffer.from(await res.arrayBuffer());
+    const contentType = res.headers.get('content-type') || '';
+    const head = buffer.subarray(0, 2048).toString('latin1');
+    const declared = `${contentType} ${head}`.match(/charset=["']?([a-zA-Z0-9_-]+)/i)?.[1]?.toLowerCase();
+    const charset = declared && ['gbk', 'gb2312', 'gb18030'].includes(declared) ? 'gb18030' : 'utf-8';
+    const html = new TextDecoder(charset).decode(buffer);
+    const text = htmlToText(html);
+    if (!text) return { ok: false, reason: 'direct empty content', content: '' };
+    return { ok: true, reason: 'direct', content: text.slice(0, 4000) };
+  } catch (e) {
+    return { ok: false, reason: `direct ${String(e.message || e).slice(0, 100)}`, content: '' };
+  }
+}
+
+// Scrapingdog 抓取网页正文（通用 scrape 端点），失败时回退本地直连抓取。
 async function scrapeUrl(url) {
   if (!SCRAPINGDOG_KEY) {
-    return { ok: false, reason: 'SCRAPINGDOG_API_KEY 未配置', content: '' };
+    return directFetchUrl(url);
   }
   try {
     const apiUrl = new URL('https://api.scrapingdog.com/scrape');
@@ -55,23 +94,21 @@ async function scrapeUrl(url) {
     apiUrl.searchParams.set('dynamic', 'false');
     const res = await fetch(apiUrl.toString(), { signal: AbortSignal.timeout(30000) });
     if (!res.ok) {
-      return { ok: false, reason: `HTTP ${res.status}`, content: '' };
+      const direct = await directFetchUrl(url);
+      if (direct.ok) return direct;
+      return { ok: false, reason: `HTTP ${res.status}; ${direct.reason}`, content: '' };
     }
     const html = await res.text();
-    // 简易 HTML→文本：去标签、去脚本、合并空白
-    const text = html
-      .replace(/<script[\s\S]*?<\/script>/gi, '')
-      .replace(/<style[\s\S]*?<\/style>/gi, '')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/\s+/g, ' ')
-      .trim();
+    const text = htmlToText(html);
+    if (!text) {
+      const direct = await directFetchUrl(url);
+      if (direct.ok) return direct;
+    }
     return { ok: true, reason: '', content: text.slice(0, 4000) };
   } catch (e) {
-    return { ok: false, reason: String(e.message || e).slice(0, 100), content: '' };
+    const direct = await directFetchUrl(url);
+    if (direct.ok) return direct;
+    return { ok: false, reason: `${String(e.message || e).slice(0, 100)}; ${direct.reason}`, content: '' };
   }
 }
 

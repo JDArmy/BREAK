@@ -123,7 +123,7 @@ npm run type-check
 
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计、业务域校验、引用覆盖、内容质量与生成式 Schema 文档同步检查；BusinessDomain 子风险校验只阻断同一 riskScene 同时列出父风险和子风险的重复展示问题。
 `npm run validate:docs-freshness` 会阻断文档滞后：当路由、UI 组件、Schema、验证脚本、公共命令、导出链路或 Skill 数据 / 搜索行为变化时，必须在同一次变更中同步更新对应的使用手册、README 和 Skill 文档。
-`npm run review:changed` 会对变更实体运行语义评审；其中 `review:should-extract` 会用全库实体 title、keywords、aliases 和当前关系作为索引，自动识别已覆盖的抽取建议，减少重复建模误报；脚本也会先归一化结构化 `new*` 建议对象，再判断是否仍有可执行待办。
+`npm run review:changed` 会对变更实体运行语义评审；其中 `review:should-extract` 会用全库实体 title、keywords、aliases 和当前关系作为索引，自动识别已覆盖的抽取建议，减少重复建模误报；脚本也会先归一化结构化 `new*` 建议对象，再判断是否仍有可执行待办。`review:case-fact` 会优先使用 Scrapingdog 抓取正文，失败时回退到带浏览器 UA、30 秒超时和中文页面编码识别的本地直连抓取，再把正文送入 LLM。
 `npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:home-counts`、`export:data`、`export:data-en`、`export:stix`、`export:jsonld`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export`、`validate:data-package` 和 `validate:stix`。
 `npm run test:coverage` 会对关系分析、Sankey 攻击路径、根节点路径洞察、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
 `npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。

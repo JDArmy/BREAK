@@ -11,10 +11,10 @@
       "password reset",
       "PII exposure"
     ],
-    "summary": "In April 2022, General Motors detected malicious login activity and found that attackers had used credentials leaked from other non-GM sites to launch a credential stuffing attack against its online platform. After successfully accessing customer accounts, the attackers stole personal information and redeemed reward points for gift cards. GM subsequently required affected users to reset their passwords.",
+    "summary": "From April 11 to April 29, 2022, General Motors found that attackers used credentials obtained from non-GM websites to access customer online accounts. The attackers viewed some customers' names, addresses, phone numbers, email addresses, usernames, and other information, and redeemed reward points from some accounts for gift cards. GM then notified affected users and required password resets.",
     "references": [
       {
-        "title": "California DOJ: General Motors Data Breach Notification Sample",
+        "title": "California DOJ: Data Breach Notification Sample Submitted by General Motors",
         "link": "https://oag.ca.gov/ecrime/databreach/reports/sb24-553442"
       },
       {

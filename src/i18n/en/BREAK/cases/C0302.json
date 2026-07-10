@@ -11,8 +11,12 @@
       "connection blocking",
       "entropy-based algorithm"
     ],
-    "summary": "This 2012 conference paper proposes an information-entropy-based algorithm for real-time CC attack detection and defense, including attack detection, attack-source identification, and connection blocking. It describes CC attacks as application-layer denial-of-service attacks that consume server resources through large numbers of forged HTTP requests.",
+    "summary": "In August 2012, the IEEE conference paper \"An Algorithm of Detecting and Defending CC Attack in Real Time\" proposed an algorithm for real-time CC attack detection and defense. The paper uses the way CC attacks disrupt the random distribution of web pages, applies information entropy to detect attacks and identify attack sources, and combines HTTP redirection with cookies to block connections.",
     "references": [
+      {
+        "title": "OpenAlex: An Algorithm of Detecting and Defending CC Attack in Real Time",
+        "link": "https://api.openalex.org/works/https://doi.org/10.1109/ICICEE.2012.477"
+      },
       {
         "title": "An Algorithm of Detecting and Defending CC Attack in Real Time",
         "link": "https://doi.org/10.1109/ICICEE.2012.477"

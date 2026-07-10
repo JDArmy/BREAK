@@ -47,7 +47,7 @@
 
 | 命令 | 规则 | 模型 |
 | --- | --- | --- |
-| `review:case-fact` | Case summary 与 Scrapingdog 抓取网页事实核验 | multi |
+| `review:case-fact` | Case summary 与网页事实核验（Scrapingdog 优先，失败时本地直连抓取） | multi |
 | `review:field-density` | 字段信息密度深层判断 | text |
 | `review:classification` | category 语义贴切度 | text |
 
@@ -98,7 +98,7 @@ SCRAPINGDOG_API_KEY=...     # Case 事实核验抓取
 - 仅变更实体评审（git diff 检测，含 untracked 新文件）
 - 内容指纹增量（sha256 前 16 位，内容不变不重评）
 - 双模型分工（轻量用 GLM-5.2，重型才用 GPT-5.5）
-- Case 抓取缓存到 `research/search-reports/case-fact-review/scraped/` 避免重抓
+- Case 抓取缓存到 `research/search-reports/case-fact-review/scraped/` 避免重抓；抓取链路优先使用 Scrapingdog `/scrape`，失败或返回空正文时回退到本地直连抓取，并按页面声明处理 UTF-8 / GBK / GB18030 编码。
 - `--limit` 限量
 
 ## 输出目录（均 gitignored）

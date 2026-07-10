@@ -11,12 +11,16 @@
       "攻击源识别",
       "连接阻断"
     ],
-    "summary": "2012年会议论文提出一种基于信息熵的CC攻击实时检测与防御算法，用于检测CC攻击、识别攻击源并阻断攻击连接。论文将CC攻击描述为通过大量伪造HTTP请求占用服务器资源的应用层拒绝服务攻击。",
+    "summary": "2012年8月，IEEE会议论文《An Algorithm of Detecting and Defending CC Attack in Real Time》提出实时检测与防御CC攻击的算法。论文基于CC攻击会破坏网页随机分布的特征，利用信息熵检测攻击、定位攻击源，并结合HTTP重定向与Cookie阻断连接。",
     "category": "academic_research",
     "relatedRisks": [
       "R0029-003"
     ],
     "references": [
+      {
+        "title": "OpenAlex: An Algorithm of Detecting and Defending CC Attack in Real Time",
+        "link": "https://api.openalex.org/works/https://doi.org/10.1109/ICICEE.2012.477"
+      },
       {
         "title": "An Algorithm of Detecting and Defending CC Attack in Real Time",
         "link": "https://doi.org/10.1109/ICICEE.2012.477"
@@ -25,6 +29,6 @@
     "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2012-08-25"
+    "incidentTime": "2012-08"
   }
 }

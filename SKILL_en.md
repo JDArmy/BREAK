@@ -20,7 +20,7 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge fra
 | Case | 1782 | C0001 | Real-world security incident cases |
 | BusinessDomain | 20 | BD00 | Industry/business domain categories |
 
-Maintenance note: the Skill invocation workflow is unchanged; entity counts stay synchronized with knowledge-base relationship updates.
+Maintenance note: the Skill invocation workflow is unchanged; entity counts stay synchronized with knowledge-base case facts, source-quality updates, and relationship updates.
 
 ## How to Invoke
 
@@ -162,7 +162,7 @@ When strengthening references for high-value Cases, first look for primary sourc
 
 The 2026-07-09 Case P1 reference-quality maintenance only strengthens the references / summary and English translations for C0066, C0130, and C0248; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
-Case fact review sends scraped article text to the LLM. When maintaining `review-case-fact.mjs`, keep the submitted snippet long enough to cover key article sections; when clearing P2 items in bulk, create checkpoints after roughly 100 changes and run `validate:data` / `review:changed` before committing, so large batches do not accumulate unverified changes.
+Case fact review sends scraped article text to the LLM. `review-case-fact.mjs` uses Scrapingdog first, falls back to direct local fetching when scraping fails or returns empty text, and handles UTF-8 / GBK / GB18030 according to page declarations. When maintaining it, keep the submitted snippet long enough to cover key article sections; when clearing P2 items in bulk, create checkpoints after roughly 100 changes and run `validate:data` / `review:changed` before committing, so large batches do not accumulate unverified changes.
 
 The 2026-07-09 Case P2 fact-review maintenance only strengthens or narrows Case `summary` / `references` / English translations; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 

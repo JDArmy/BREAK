@@ -1,31 +1,39 @@
 {
   "C0359": {
-    "title": "挤门缝、试密码……拱墅警方破获盗窃案",
+    "title": "Midnight Blizzard 对微软公司系统实施密码喷射攻击",
     "keywords": [
       "密码喷射",
-      "试密码",
-      "暴力破解",
-      "门缝挤入",
-      "盗窃",
-      "杭州",
-      "拱墅",
-      "潮鸣派出所",
-      "物理入侵",
-      "密码锁"
+      "Midnight Blizzard",
+      "Nobelium",
+      "微软",
+      "公司邮箱",
+      "遗留测试租户",
+      "国家支持攻击",
+      "俄罗斯国家支持攻击",
+      "邮件外泄",
+      "弱口令"
     ],
-    "summary": "杭州拱墅区一窃贼首次通过门缝挤入仓库行窃，店主升级为密码锁后，窃贼通过反复试错成功破解密码再次盗窃。警方最终将其抓获并追回被盗物品。",
-    "category": "news_report",
+    "summary": "微软披露，2023年11月下旬起，俄罗斯国家支持攻击组织 Midnight Blizzard 使用密码喷射攻击攻陷一个遗留非生产测试租户账户，并借其权限访问少量微软公司邮箱，包括高管及网络安全、法务等部门员工账户，窃取部分邮件和附件。微软于2024年1月12日发现攻击并启动响应。",
+    "category": "security_incident",
     "relatedRisks": [
-      "R0032-003"
+      "R0032-002"
     ],
     "references": [
       {
-        "title": "挤门缝、试密码……拱墅警方破获盗窃案--中国警察网",
-        "link": "https://www.cpd.com.cn/wsjwlm/zhejiang/gongye/yxjx/126/t_1219637.html"
+        "title": "Microsoft Actions Following Attack by Nation State Actor Midnight Blizzard",
+        "link": "https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard"
+      },
+      {
+        "title": "Microsoft：Midnight Blizzard Guidance for Responders on Nation-State Attack",
+        "link": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/"
+      },
+      {
+        "title": "SEC Exhibit 99.1：Microsoft Actions Following Attack by Nation State Actor Midnight Blizzard",
+        "link": "https://www.sec.gov/Archives/edgar/data/789019/000119312524011295/d708866dex991.htm"
       }
     ],
-    "updated": "2026-07-05",
-    "incidentTime": "2026-01",
+    "updated": "2026-07-10",
+    "incidentTime": "2023-11",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }
