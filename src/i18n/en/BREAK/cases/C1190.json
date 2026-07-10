@@ -11,7 +11,7 @@
       "AWS S3",
       "cloud security"
     ],
-    "summary": "On July 19, 2019, Capital One confirmed that an outside individual had gained unauthorized access to personal information associated with credit-card applications, affecting about 100 million people in the United States and 6 million in Canada. The company said credit-card account numbers and login credentials were not compromised and fewer than one percent of Social Security numbers were affected. The FBI arrested the suspect, and the government said it believed the data had been recovered.",
+    "summary": "On July 29, 2019, Capital One disclosed that an outside individual had gained unauthorized access to credit-card application data affecting about 100 million people in the United States and 6 million in Canada. The company said credit-card account numbers and login credentials were not obtained, although some Social Security numbers, bank account numbers, and Canadian Social Insurance Numbers were affected. Federal authorities arrested a suspect in the case.",
     "references": [
       {
         "title": "Capital One Announces Data Security Incident",
@@ -20,6 +20,10 @@
       {
         "title": "Capital One Announces Data Security Incident - Official Release Text Mirror",
         "link": "https://r.jina.ai/https://www.capitalone.com/about/newsroom/capital-one-announces-data-security-incident"
+      },
+      {
+        "title": "FTC: The Capital One Data Breach",
+        "link": "https://consumer.ftc.gov/consumer-alerts/2019/07/capital-one-data-breach-time-check-your-credit-report"
       }
     ]
   }

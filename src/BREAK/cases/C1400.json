@@ -11,7 +11,7 @@
       "智能合约",
       "去中心化自治组织"
     ],
-    "summary": "学术论文《SoK: Attacks on DAOs》将 Indexed Finance DAO 作为案例研究对象，分析了该 DAO 通过代币收购方式遭受的两次连续治理攻击。攻击者利用治理代币获取手段操纵投票权，从而控制 DAO 决策。",
+    "summary": "2024年论文《SoK: Attacks on DAOs》系统整理已发生、理论提出及审计发现的DAO攻击，并以Indexed Finance为案例分析两次连续的代币收购型治理攻击。论文关注攻击者如何积累治理代币和投票权、推动不利提案，并将此类社会与治理层攻击区别于纯代码漏洞。",
     "category": "academic_research",
     "relatedRisks": [
       "R0167"
@@ -20,9 +20,13 @@
       {
         "title": "Sok: Attacks on daos",
         "link": "https://arxiv.org/abs/2406.15071"
+      },
+      {
+        "title": "SoK: Attacks on DAOs - AFT 2024",
+        "link": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.AFT.2024.28"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-11",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2024-06"

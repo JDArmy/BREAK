@@ -1,0 +1,14 @@
+{
+  "T0659": {
+    "title": "Privacy Coin",
+    "aliases": ["privacy cryptocurrency", "anonymous cryptocurrency", "anonymity-enhanced cryptocurrency"],
+    "keywords": ["Privacy Coin", "privacy cryptocurrency", "anonymous cryptocurrency", "anonymity-enhanced cryptocurrency", "Monero", "Zcash"],
+    "definition": "A privacy coin is a cryptocurrency designed to conceal transaction participants, amounts, or fund paths and thereby strengthen on-chain financial privacy.",
+    "description": "Privacy coins use technologies such as ring signatures, stealth addresses, confidential transactions, or zero-knowledge proofs to reduce an observer's ability to link blockchain activity to specific addresses and amounts. Monero and Zcash are common examples, although their privacy models, defaults, and traceability differ. These assets can support legitimate financial privacy, but money laundering, ransomware, and underground markets may also use them to complicate fund tracing, leading some exchanges to apply stricter listing, withdrawal, and anti-money-laundering controls.",
+    "usageExample": "An illicit address converted mainstream crypto assets into a privacy coin and dispersed them, making the subsequent fund path harder for the exchange to identify.",
+    "references": [
+      {"title": "Privacy coin - Wikipedia", "link": "https://en.wikipedia.org/wiki/Privacy_coin"},
+      {"title": "Virtual Assets Red Flag Indicators of Money Laundering and Terrorist Financing - FATF", "link": "https://www.fatf-gafi.org/en/publications/Methodsandtrends/Virtual-assets-red-flag-indicators.html"}
+    ]
+  }
+}

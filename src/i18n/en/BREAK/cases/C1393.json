@@ -1,6 +1,6 @@
 {
   "C1393": {
-    "title": "Mirai Co-Author Paras Jha Ordered to Pay $8.6 Million Restitution",
+    "title": "Paras Jha Ordered to Pay $8.6 Million for Rutgers DDoS Attacks",
     "keywords": [
       "Mirai",
       "botnet",
@@ -12,11 +12,19 @@
       "U.S. federal court",
       "IoT security"
     ],
-    "summary": "The U.S. Department of Justice said Mirai botnet co-author Paras Jha was ordered by a federal court in New Jersey to pay $8.6 million in restitution for a series of DDoS attacks against Rutgers University. He was also sentenced to six months of home incarceration, 2,500 hours of community service, and five years of supervised release. The case shows that using compromised IoT devices to build botnets for sustained DDoS attacks can lead to serious criminal and restitution consequences.",
+    "summary": "The U.S. Department of Justice said Paras Jha repeatedly attacked Rutgers University's network from November 2014 through September 2016, disrupting its central authentication portal and forcing the university to incur incident-response and DDoS-mitigation costs. In October 2018, the court relied on the university's loss documentation to order $8.6 million in restitution, along with home confinement, community service, and supervised release.",
     "references": [
       {
         "title": "Computer Hacker Who Launched Attacks on Rutgers University Ordered to Pay $8.6M Restitution",
         "link": "https://www.justice.gov/usao-nj/pr/computer-hacker-who-launched-attacks-rutgers-university-ordered-pay-86m-restitution"
+      },
+      {
+        "title": "Mirai Co-Author Gets 6 Months Confinement, $8.6M in Fines for Rutgers Attacks",
+        "link": "https://krebsonsecurity.com/2018/10/mirai-co-author-gets-6-months-confinement-8-6m-in-fines-for-rutgers-attacks/"
+      },
+      {
+        "title": "United States v. Paras Jha Charging Document",
+        "link": "https://www.justice.gov/archives/opa/press-release/file/1017566/dl"
       }
     ]
   }

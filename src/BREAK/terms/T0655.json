@@ -1,0 +1,22 @@
+{
+  "T0655": {
+    "title": "人肉刷",
+    "aliases": ["人工刷量", "真人刷量", "众包刷量"],
+    "category": "marketing_fraud",
+    "keywords": ["人肉刷", "人工刷量", "真人刷量", "众包刷量", "真人下载", "人工冲榜"],
+    "definition": "人肉刷是组织真实人员使用真实账号和设备完成下载、点击、评价等任务，以制造虚假业务指标的刷量方式。",
+    "description": "人肉刷通常由任务平台、工作室或中介把下载应用、搜索关键词、点赞评论、下单投票等任务分发给大量兼职人员。执行者使用真实账号、设备和网络完成指定步骤，行为轨迹比脚本机刷更接近正常用户，因此更难仅依靠设备或频次规则识别。其本质仍是以有偿众包方式操纵榜单、销量、热度或口碑，并不等同于正常的用户增长活动。",
+    "usageExample": "某应用为冲高商店排名，通过任务群组织人肉刷，要求兼职人员搜索应用名、下载安装并提交五星评价截图。",
+    "relatedRisks": [],
+    "relatedAvoidances": [],
+    "relatedAttackTools": ["AT0046"],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "Astroturfing - Wikipedia", "link": "https://en.wikipedia.org/wiki/Astroturfing"},
+      {"title": "Ranking Fraud Detection for Mobile Apps: A Holistic View", "link": "https://dl.acm.org/doi/10.1145/2505515.2505547"}
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

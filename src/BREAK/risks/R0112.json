@@ -509,12 +509,12 @@
     "influence": "可能导致敏感信息泄露、中间人攻击造成数据篡改、未经授权的网络访问，以及业务系统中断等安全风险。",
     "avoidances": [
       "A0017",
-      "A0017-001",
       "A0018",
       "A0037",
       "A0028",
       "A0051",
-      "A0052"
+      "A0007",
+      "A0016"
     ],
     "references": [
       {
@@ -530,7 +530,7 @@
         "link": "https://www.cisa.gov/news-events/news/securing-enterprise-wireless-networks"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "无线网络风险",
       "WiFi安全",

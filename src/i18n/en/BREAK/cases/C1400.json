@@ -11,11 +11,15 @@
       "decentralized autonomous organization",
       "DAOs"
     ],
-    "summary": "The academic paper SoK: Attacks on DAOs examines Indexed Finance DAO as a case study, analyzing two consecutive governance attacks carried out through token acquisition. The attacker manipulated voting power by accumulating governance tokens to seize control of DAO decision-making.",
+    "summary": "The 2024 paper SoK: Attacks on DAOs systematically organizes attacks that occurred in practice, were proposed in theory, or were identified during audits. It uses Indexed Finance as a case study of two consecutive token-acquisition governance attacks, examining how attackers accumulated governance tokens and voting power to advance harmful proposals and distinguishing these social and governance-layer attacks from purely technical code vulnerabilities.",
     "references": [
       {
         "title": "SoK: Attacks on DAOs",
         "link": "https://arxiv.org/abs/2406.15071"
+      },
+      {
+        "title": "SoK: Attacks on DAOs - AFT 2024",
+        "link": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.AFT.2024.28"
       }
     ]
   }

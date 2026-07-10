@@ -11,7 +11,7 @@
       "云安全",
       "AWS S3"
     ],
-    "summary": "2019年7月19日，Capital One确认一名外部人员未经授权获取信用卡申请相关个人信息，影响美国约1亿人和加拿大约600万人。公司称信用卡账号和登录凭据未被泄露，社会安全号码受影响比例低于1%；FBI随后抓获涉案人员，政府认为数据已被找回。",
+    "summary": "2019年7月29日，Capital One披露一名外部人员未经授权访问其信用卡申请数据，影响美国约1亿人和加拿大约600万人。公司称信用卡账号与登录凭据未被获取，但部分社会安全号码、银行账户号码及加拿大社会保险号码受到影响；涉案嫌疑人已被联邦执法部门逮捕。",
     "category": "security_incident",
     "relatedRisks": [
       "R0128"
@@ -24,10 +24,14 @@
       {
         "title": "Capital One Announces Data Security Incident - Official Release Text Mirror",
         "link": "https://r.jina.ai/https://www.capitalone.com/about/newsroom/capital-one-announces-data-security-incident"
+      },
+      {
+        "title": "FTC: The Capital One data breach",
+        "link": "https://consumer.ftc.gov/consumer-alerts/2019/07/capital-one-data-breach-time-check-your-credit-report"
       }
     ],
-    "updated": "2026-07-10",
-    "incidentTime": "2019-07-19",
+    "updated": "2026-07-11",
+    "incidentTime": "2019-07-29",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

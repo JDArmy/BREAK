@@ -7,8 +7,6 @@
       "AT0082"
     ],
     "useAttackTools": [
-      "AT0081",
-      "AT0082",
       "AT0054",
       "AT0013"
     ],
@@ -20,7 +18,6 @@
       "R0166",
       "R0181",
       "R0182",
-      "R0189",
       "R0213"
     ],
     "indirectSupportRisks": [
@@ -45,13 +42,8 @@
       "设备劫持团伙",
       "IoT恶意软件运营者"
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "relatedThreatActors": [
-      {
-        "key": "TA0049",
-        "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
-      },
       {
         "key": "TA0018",
         "relation": "co-involved",
@@ -76,6 +68,11 @@
         "key": "TA0063",
         "relation": "co-involved",
         "note": "共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0002-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
       }
     ],
     "version": 2

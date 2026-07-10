@@ -11,20 +11,24 @@
       "恶意软件",
       "设备劫持"
     ],
-    "summary": "Mirai僵尸网络通过扫描并感染存在弱密码漏洞的物联网设备，将其纳入僵尸网络，曾发起史上最大规模的DDoS攻击。其创建者被捕后，攻击活动才得以停止。该事件暴露了IoT设备因弱密码等安全问题被劫持用于网络攻击的巨大风险。",
+    "summary": "2016年，Mirai恶意软件持续扫描互联网，尝试使用设备仍保留的默认用户名和密码登录物联网设备，并将成功入侵的设备纳入僵尸网络。由大量摄像头、路由器等设备形成的网络随后被用于高流量DDoS攻击，影响多项互联网服务，促使美国网络安全机构专门发布威胁警报。",
     "category": "security_incident",
     "relatedRisks": [
       "R0163"
     ],
     "references": [
       {
-        "title": "Consumer, commercial, and industrial iot (in) security: Attack taxonomy and case studies",
-        "link": "https://ieeexplore.ieee.org/abstract/document/9430606/"
+        "title": "Heightened DDoS Threat Posed by Mirai and Other Botnets",
+        "link": "https://www.cisa.gov/news-events/alerts/2016/10/14/heightened-ddos-threat-posed-mirai-and-other-botnets"
+      },
+      {
+        "title": "Inside the infamous Mirai IoT Botnet: A Retrospective Analysis",
+        "link": "https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-11",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2021-05-13"
+    "incidentTime": "2016-10"
   }
 }

@@ -574,7 +574,7 @@
         "link": "https://arxiv.org/abs/2308.14970"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",
@@ -594,6 +594,7 @@
       "AI语音克隆欺诈",
       "语音克隆诈骗",
       "AI拟声",
+      "零样本语音克隆",
       "声纹冒充",
       "声音合成诈骗",
       "声纹绕过"
@@ -630,7 +631,7 @@
         "note": "AI语音克隆欺诈与AI深度伪造风险均可由攻击工具“AI深度伪造工具”直接造成。"
       }
     ],
-    "version": 2
+    "version": 3
   },
   "R0071-008": {
     "title": "数字人直播欺诈",

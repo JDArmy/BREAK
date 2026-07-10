@@ -20,11 +20,11 @@
         "link": "https://owasp.org/www-project-agent-memory-guard/"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0074"
+    ],
     "useAttackTools": [
-      "AT0053-004",
-      "AT0074",
-      "AT0108"
+      "AT0053-004"
     ],
     "directCauseRisks": [
       "R0287",
@@ -36,11 +36,6 @@
     ],
     "relatedThreatActors": [
       {
-        "key": "TA0041",
-        "relation": "co-involved",
-        "note": "共同使用 2 个攻击工具。"
-      },
-      {
         "key": "TA0058",
         "relation": "co-involved",
         "note": "共同直接造成 1 个风险。"
@@ -51,7 +46,7 @@
         "note": "共同使用 1 个攻击工具。"
       },
       {
-        "key": "TA0031",
+        "key": "TA0041",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       },
@@ -66,7 +61,7 @@
         "note": "共同使用 1 个攻击工具。"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "version": 1
   }
 }

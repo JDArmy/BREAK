@@ -13,7 +13,7 @@
       "投票权",
       "资金窃取"
     ],
-    "summary": "2022 年，Beanstalk DAO 遭受治理攻击，攻击者利用闪电贷获取大量治理代币，获得超级多数投票权后，通过紧急提交函数执行恶意提案，窃取约 1.81 亿美元资金。攻击使用了两个提案，其中 BIP18 为木马提案，BIP19 为转移注意力的提案。",
+    "summary": "2022年4月17日，Beanstalk协议遭到治理攻击。攻击者使用闪电贷临时获得大量治理投票权，使预先提交的恶意提案达到紧急执行门槛，并从协议中转出资产。安全分析估算协议损失约1.81亿美元，其中攻击者最终取得的可变现资产约8000万美元，事件暴露了无执行延迟治理机制的风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0167"
@@ -22,10 +22,14 @@
       {
         "title": "Governance Attack - Cyfrin Glossary",
         "link": "https://www.cyfrin.io/glossary/governance-attack"
+      },
+      {
+        "title": "Hack Analysis: Beanstalk Governance Attack, April 2022",
+        "link": "https://medium.com/immunefi/hack-analysis-beanstalk-governance-attack-april-2022-f42788fc821e"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2022",
+    "updated": "2026-07-11",
+    "incidentTime": "2022-04-17",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

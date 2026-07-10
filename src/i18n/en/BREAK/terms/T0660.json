@@ -1,0 +1,14 @@
+{
+  "T0660": {
+    "title": "Zero-Shot Voice Cloning",
+    "aliases": ["few-shot voice cloning", "instant voice cloning", "speaker voice cloning"],
+    "keywords": ["Zero-Shot Voice Cloning", "few-shot voice cloning", "instant voice cloning", "speaker voice cloning", "voiceprint cloning", "synthetic voice impersonation"],
+    "definition": "Zero-shot voice cloning synthesizes a target speaker's timbre and speaking characteristics from a short reference recording without retraining a model specifically for that speaker.",
+    "description": "Pretrained speaker encoders and speech-generation models extract timbre, prosody, and related features from seconds or minutes of reference audio, then synthesize new content the target never spoke. The technique reduces the data and training cost of custom voices and supports dubbing, assistive communication, and personalized speech, but it can also impersonate relatives or executives, bypass voice authentication, and fabricate recordings. The term describes the technical capability itself; using cloned speech to deceive victims is the separate risk of AI voice-cloning fraud.",
+    "usageExample": "An attacker took a short sample from a public video and used zero-shot voice cloning to generate a fraudulent transfer instruction in an executive's voice.",
+    "references": [
+      {"title": "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud - FBI IC3", "link": "https://www.ic3.gov/PSA/2024/PSA241203"},
+      {"title": "A Survey of Voice Deepfake Detection", "link": "https://arxiv.org/abs/2308.14970"}
+    ]
+  }
+}

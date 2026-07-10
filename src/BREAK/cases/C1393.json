@@ -1,6 +1,6 @@
 {
   "C1393": {
-    "title": "Mirai僵尸网络黑客被勒令支付860万美元赔偿",
+    "title": "Paras Jha因罗格斯大学DDoS攻击承担860万美元赔偿",
     "keywords": [
       "Mirai",
       "僵尸网络",
@@ -12,7 +12,7 @@
       "美国联邦法院",
       "IoT安全"
     ],
-    "summary": "美国司法部披露，Mirai 僵尸网络共同作者 Paras Jha 因针对罗格斯大学发动一系列 DDoS 攻击，被新泽西联邦法院责令支付860万美元赔偿，并判处6个月居家监禁、2500小时社区服务和5年监督释放。该案说明，利用受感染物联网设备构建僵尸网络实施持续 DDoS 攻击，会带来重大刑事责任和赔偿责任。",
+    "summary": "美国司法部称，Paras Jha在2014年11月至2016年9月间反复攻击罗格斯大学网络，造成中央认证门户中断，并迫使学校增加事件响应和DDoS防护支出。2018年10月，法院依据学校提交的损失材料，责令其支付860万美元赔偿，同时判处居家监禁、社区服务和监督释放。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0165"
@@ -21,9 +21,17 @@
       {
         "title": "Computer Hacker Who Launched Attacks On Rutgers University Ordered To Pay $8.6M Restitution",
         "link": "https://www.justice.gov/usao-nj/pr/computer-hacker-who-launched-attacks-rutgers-university-ordered-pay-86m-restitution"
+      },
+      {
+        "title": "Mirai Co-Author Gets 6 Months Confinement, $8.6M in Fines for Rutgers Attacks",
+        "link": "https://krebsonsecurity.com/2018/10/mirai-co-author-gets-6-months-confinement-8-6m-in-fines-for-rutgers-attacks/"
+      },
+      {
+        "title": "United States v. Paras Jha charging document",
+        "link": "https://www.justice.gov/archives/opa/press-release/file/1017566/dl"
       }
     ],
-    "updated": "2026-06-26",
+    "updated": "2026-07-11",
     "incidentTime": "2018-10",
     "relatedAttackTools": [
       "AT0082"

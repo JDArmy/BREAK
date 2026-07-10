@@ -11,7 +11,7 @@
       "scam revenue",
       "DeFi ecosystem"
     ],
-    "summary": "Chainalysis报告指出，2021年Rug Pull占所有加密货币诈骗收入的37%，而2020年仅占1%，显示Rug Pull已成为DeFi生态中最主要的诈骗手段之一。",
+    "summary": "Chainalysis于2021年12月发布分析称，当年加密货币诈骗地址从受害者处获得超过77亿美元，同比增加81%。其中Rug Pull带来约28亿美元，占全部诈骗收入的37%，而2020年占比仅为1%。报告将其定义为开发者突然放弃项目并带走投资者资金的骗局，指出该手法在DeFi项目中尤为常见。",
     "category": "news_report",
     "relatedRisks": [
       "R0168"
@@ -22,7 +22,7 @@
         "link": "https://www.chainalysis.com/blog/2021-crypto-scam-revenues/"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-11",
     "incidentTime": "2021",
     "relatedAttackTools": [],
     "relatedThreatActors": [

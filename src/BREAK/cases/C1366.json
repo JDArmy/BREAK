@@ -11,7 +11,7 @@
       "DeFi攻击",
       "2022年6月"
     ],
-    "summary": "2022年6月24日，Harmony团队发布推特称其Horizon跨链桥遭到攻击，损失金额约1亿美元。该事件涉及跨链桥验证机制被突破，导致锁定资产被大规模窃取。",
+    "summary": "2022年6月24日，Harmony报告其Horizon跨链桥约1亿美元虚拟资产被盗。美国联邦调查局于2023年确认，朝鲜关联的Lazarus Group（又称APT38）对该盗窃负责，并披露其后续通过隐私协议和多个钱包转移、清洗部分被盗资产的活动。",
     "category": "security_incident",
     "relatedRisks": [
       "R0161"
@@ -26,7 +26,7 @@
         "link": "https://www.fbi.gov/news/press-releases/fbi-confirms-lazarus-group-cyber-actors-responsible-for-harmonys-horizon-bridge-currency-theft"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-11",
     "incidentTime": "2022-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []

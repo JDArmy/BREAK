@@ -1,0 +1,22 @@
+{
+  "T0657": {
+    "title": "溯源",
+    "aliases": ["安全溯源", "攻击溯源", "来源追踪"],
+    "category": "security_defense",
+    "keywords": ["溯源", "安全溯源", "攻击溯源", "来源追踪", "泄露源定位", "责任归因"],
+    "definition": "溯源是在安全事件、数据泄露或内容传播后，依据日志、标记和证据链追踪来源、路径及责任主体的过程。",
+    "description": "安全溯源通过审计日志、网络流量、账号与设备关联、数字水印、内容凭证、文件元数据和时间线等证据，重建攻击、泄露或传播路径。其目标可以是定位最初入口、识别数据泄露源、确认内容生成与修改历史，或为事件处置和法律取证提供归因依据。溯源结论依赖证据完整性和多源交叉验证，单一IP、单个水印或可被伪造的元数据通常不足以独立确认责任主体。",
+    "usageExample": "企业通过文档暗水印、下载日志和账号设备记录进行溯源，定位到批量外传客户数据的内部账号。",
+    "relatedRisks": ["R0027-004"],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "Digital Watermarking - Wikipedia", "link": "https://en.wikipedia.org/wiki/Digital_watermarking"},
+      {"title": "C2PA Technical Specification", "link": "https://c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html"}
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

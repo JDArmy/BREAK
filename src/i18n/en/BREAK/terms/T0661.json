@@ -1,0 +1,14 @@
+{
+  "T0661": {
+    "title": "PII",
+    "aliases": ["Personally Identifiable Information", "personal identifying information", "identifiable personal data"],
+    "keywords": ["PII", "Personally Identifiable Information", "personal identifying information", "identifiable personal data", "identity data", "personal information"],
+    "definition": "PII is information that can identify, contact, or locate a specific individual by itself or when combined with other data.",
+    "description": "PII commonly includes direct identifiers such as names, government identification numbers, contact details, account identifiers, precise locations, and biometric characteristics, as well as indirect identifiers that become identifying when combined. Countries, industries, and regulations do not define the scope, sensitivity, and handling duties of PII or personal data identically, so classification must follow applicable law. Unauthorized access, disclosure, or misuse can enable identity theft, targeted fraud, account takeover, and privacy harm.",
+    "usageExample": "A security review found that support logs stored phone numbers and identity-document numbers as plaintext PII, requiring immediate redaction and access restrictions.",
+    "references": [
+      {"title": "Personally identifiable information - Wikipedia", "link": "https://en.wikipedia.org/wiki/Personal_data"},
+      {"title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122", "link": "https://csrc.nist.gov/pubs/sp/800/122/final"}
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "T0659": {
+    "title": "隐私币",
+    "aliases": ["隐私型加密货币", "匿名币", "Privacy Coin"],
+    "category": "blockchain",
+    "keywords": ["隐私币", "隐私型加密货币", "匿名币", "Privacy Coin", "门罗币", "Monero", "Zcash"],
+    "definition": "隐私币是通过隐藏交易参与方、金额或资金路径来增强链上交易隐私的加密货币。",
+    "description": "隐私币使用环签名、隐匿地址、机密交易或零知识证明等技术，降低外部观察者把链上交易关联到具体地址和金额的能力。Monero和Zcash是常见代表，但不同网络的隐私机制、默认配置和可追踪程度并不相同。隐私币可用于合法的财务隐私保护，也可能被洗钱、勒索和地下交易利用来增加资金追踪难度，因此部分交易平台会实施更严格的上币、提现和反洗钱审查。",
+    "usageExample": "涉案地址把主流加密资产兑换为隐私币后再分散转移，增加了交易所对后续资金路径的识别难度。",
+    "relatedRisks": ["R0060-001"],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "Privacy coin - Wikipedia", "link": "https://en.wikipedia.org/wiki/Privacy_coin"},
+      {"title": "Virtual Assets Red Flag Indicators of Money Laundering and Terrorist Financing - FATF", "link": "https://www.fatf-gafi.org/en/publications/Methodsandtrends/Virtual-assets-red-flag-indicators.html"}
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

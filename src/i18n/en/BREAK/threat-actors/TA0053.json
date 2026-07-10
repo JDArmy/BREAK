@@ -1,7 +1,7 @@
 {
   "TA0053": {
     "title": "Cloud Resource Abusers",
-    "description": "Attackers who use leaked cloud API keys, service-account credentials, excessive privileges, or misconfiguration to access cloud resources or steal data. They can call cloud APIs to create compute instances, read storage, and modify configuration, causing API-key abuse, excessive cloud-IAM access, stolen computing capacity, and persistent access to cloud environments.",
+    "description": "Attackers who use leaked cloud API keys, service-account credentials, excessive privileges, or misconfiguration to access cloud resources or steal data. They can call cloud APIs to create compute instances, read storage, and modify configuration, causing API-key abuse, excessive cloud-IAM access, and stolen computing capacity. They may also abuse configuration interfaces for cloud edge services such as CDNs and edge functions to perform cache poisoning, bypass access controls, or inject malicious code. Some attackers steal remote administration accounts from MSSPs and other managed cloud providers, exploiting supply-chain trust to gain unauthorized access to customer cloud environments and maintain persistence.",
     "references": [
       {
         "title": "Unit 42: Compromised Cloud Compute Credentials—Case Studies",

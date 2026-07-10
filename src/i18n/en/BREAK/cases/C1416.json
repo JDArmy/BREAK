@@ -11,11 +11,19 @@
       "liquidation logic",
       "Chengdu LianAn"
     ],
-    "summary": "On June 28, 2023, the crypto lending protocol Themis suffered an oracle manipulation attack. The attacker exploited external price data fed by the oracle to distort the protocol's normal lending or liquidation logic, ultimately profiting approximately $370,000.",
+    "summary": "On June 28, 2023, the Themis lending protocol suffered a flash-loan price manipulation attack. Security analyses said the attacker borrowed substantial assets from Aave, used trades to distort a price calculation consumed by Themis, then borrowed other assets against the inflated collateral valuation before repaying the flash loan. The attacker ultimately made approximately $370,000, illustrating the risk of using manipulable on-chain prices as oracle inputs.",
     "references": [
       {
         "title": "WTF Solidity Contract Security: S15. Manipulating Oracles - GitHub",
         "link": "https://github.com/AmazingAng/WTF-Solidity/blob/main/S15_OracleManipulation/readme.md"
+      },
+      {
+        "title": "SharkTeam: Analysis of Flash Loan Price Manipulation Attacks on the Themis Protocol",
+        "link": "https://medium.com/@sharkteam/sharkteam-analysis-of-lightning-loan-price-manipulation-attacks-on-the-themis-protocol-d3f7d2abc0a8"
+      },
+      {
+        "title": "Themis Protocol Hack Analysis",
+        "link": "https://blog.solidityscan.com/themis-protocol-hack-analysis-7241f6470b2e/"
       }
     ]
   }

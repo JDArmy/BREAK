@@ -46,11 +46,6 @@
     "updated": "2026-06-16",
     "relatedThreatActors": [
       {
-        "key": "TA0048",
-        "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
-      },
-      {
         "key": "TA0017",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
@@ -72,6 +67,11 @@
       },
       {
         "key": "TA0045",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0048",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }

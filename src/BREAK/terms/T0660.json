@@ -1,0 +1,22 @@
+{
+  "T0660": {
+    "title": "零样本语音克隆",
+    "aliases": ["Zero-shot Voice Cloning", "少样本语音克隆", "即时语音克隆"],
+    "category": "artificial_intelligence",
+    "keywords": ["零样本语音克隆", "Zero-shot Voice Cloning", "少样本语音克隆", "即时语音克隆", "声纹克隆", "语音模仿"],
+    "definition": "零样本语音克隆是模型无需针对目标说话人重新训练，仅凭短时参考音频即可合成其音色与说话特征的语音生成技术。",
+    "description": "零样本语音克隆通过预训练的说话人编码和语音生成模型，从几秒到数分钟的参考录音中提取音色、韵律等特征，再合成目标未说过的新内容。它降低了定制语音模型所需的数据和训练成本，可用于配音、辅助沟通和个性化语音，也可能被用于冒充亲友或管理者、绕过声纹认证、制作虚假录音。该术语描述技术能力本身，利用克隆声音实施诈骗则属于AI语音克隆欺诈风险。",
+    "usageExample": "攻击者从公开视频截取数十秒讲话样本，使用零样本语音克隆生成冒充公司领导的转账指令。",
+    "relatedRisks": ["R0071-007"],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud - FBI IC3", "link": "https://www.ic3.gov/PSA/2024/PSA241203"},
+      {"title": "A Survey of Voice Deepfake Detection", "link": "https://arxiv.org/abs/2308.14970"}
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

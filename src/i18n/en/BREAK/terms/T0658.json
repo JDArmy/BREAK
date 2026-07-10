@@ -1,0 +1,14 @@
+{
+  "T0658": {
+    "title": "DEX",
+    "aliases": ["decentralized exchange", "on-chain exchange", "non-custodial exchange"],
+    "keywords": ["DEX", "decentralized exchange", "on-chain exchange", "non-custodial exchange", "automated market maker", "permissionless token swap"],
+    "definition": "A DEX is a blockchain protocol that matches or automatically executes digital-asset trades through smart contracts, usually without a centralized institution taking custody of user assets.",
+    "description": "A DEX lets users connect self-custody wallets to smart contracts for token swaps, liquidity provision, or order matching, commonly through automated market makers or on-chain order books. It reduces centralized custody and single-party control but is not inherently anonymous or risk-free: transactions are usually public, while smart-contract flaws, malicious tokens, liquidity manipulation, and compromised front ends remain possible. Launderers may use permissionless swaps to complicate tracing across assets, although DEX protocols are also legitimate blockchain infrastructure.",
+    "usageExample": "Investigators found that illicit funds entered a DEX, were swapped through several tokens, and then dispersed to new addresses through a cross-chain bridge.",
+    "references": [
+      {"title": "Decentralized finance - Wikipedia", "link": "https://en.wikipedia.org/wiki/Decentralized_finance"},
+      {"title": "Virtual Assets Red Flag Indicators of Money Laundering and Terrorist Financing - FATF", "link": "https://www.fatf-gafi.org/en/publications/Methodsandtrends/Virtual-assets-red-flag-indicators.html"}
+    ]
+  }
+}

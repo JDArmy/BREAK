@@ -12,11 +12,15 @@
       "network outage",
       "campus cyberattack"
     ],
-    "summary": "Between 2014 and 2015, college student Paras Jha launched repeated DDoS attacks against Rutgers University's network using an IoT botnet he built with approximately 40,000 zombie nodes, aiming to force the school to switch its DDoS protection provider. The attacks crippled the registration system and caused prolonged campus network outages, severely disrupting academic operations.",
+    "summary": "From November 2014 through September 2016, former Rutgers University student Paras Jha repeatedly launched DDoS attacks against the university network. The attacks shut down the central authentication portal during multiple periods and disrupted access for students, faculty, and staff. The U.S. Department of Justice said some attacks occurred during exam periods and forced the university to incur additional response and DDoS-mitigation costs. Jha later pleaded guilty to related computer-crime charges.",
     "references": [
       {
         "title": "The Strange Story of the Teens Behind the Mirai Botnet",
         "link": "https://spectrum.ieee.org/mirai-botnet"
+      },
+      {
+        "title": "Computer Hacker Who Launched Attacks on Rutgers University Ordered to Pay $8.6M in Restitution",
+        "link": "https://www.justice.gov/usao-nj/pr/computer-hacker-who-launched-attacks-rutgers-university-ordered-pay-86m-restitution"
       }
     ]
   }

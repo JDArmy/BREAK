@@ -1,0 +1,22 @@
+{
+  "T0663": {
+    "title": "洗号",
+    "aliases": ["游戏洗号", "盗号洗号", "账号洗号"],
+    "category": "business_fraud",
+    "keywords": ["洗号", "游戏洗号", "盗号洗号", "账号洗号", "装备转移", "游戏币转移"],
+    "definition": "洗号是盗取游戏或平台账号后，迅速转移、出售其中虚拟资产并降低被追回概率的黑灰产行为。",
+    "description": "洗号常发生在游戏账号被木马、撞库、钓鱼或社交工程接管之后。实施者登录被盗账号，把游戏币、装备、道具或其他可交易权益通过低价挂单、定向赠送、多级小号中转或场外交易转移到可控账号，再出售变现。该过程强调对被盗账号价值的快速榨取和资产链路清洗，区别于单纯盗号，也不同于正常玩家之间的虚拟物品交易。部分语境还会把清空账号绑定资料或修改身份信息称为洗号，需要结合业务场景判断。",
+    "usageExample": "盗号团伙在异地登录后立即洗号，通过多个小号低价接走高价值装备并在场外市场出售。",
+    "relatedRisks": ["R0091"],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "CFPB Report Identifies Financial and Privacy Risks to Consumers in Video Gaming Marketplaces", "link": "https://www.consumerfinance.gov/archive/newsroom/cfpb-report-identifies-financial-and-privacy-risks-to-consumers-in-video-gaming-marketplaces/"},
+      {"title": "Theft of virtual items in online multiplayer computer games: an ontological and moral analysis", "link": "https://link.springer.com/article/10.1007/s10676-011-9285-3"}
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

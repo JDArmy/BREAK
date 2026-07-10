@@ -1,0 +1,22 @@
+{
+  "T0661": {
+    "title": "PII",
+    "aliases": ["个人身份信息", "个人可识别信息", "Personally Identifiable Information"],
+    "category": "data_governance",
+    "keywords": ["PII", "个人身份信息", "个人可识别信息", "Personally Identifiable Information", "身份识别数据", "个人信息"],
+    "definition": "PII是能够单独或与其他信息结合识别、联系或定位特定个人的信息。",
+    "description": "PII通常包括姓名、证件号码、联系方式、账号标识、精确位置、生物特征等直接标识信息，也包括与其他数据组合后能够识别个人的间接标识。不同国家、行业和法规对PII或个人信息的范围、敏感等级与处理义务并不完全相同，因此数据治理需要结合适用法律进行分类分级。PII一旦被未授权访问、披露或滥用，可能导致身份盗用、精准诈骗、账号接管和隐私侵害。",
+    "usageExample": "安全审计发现客服日志中明文记录了用户手机号和证件号码等PII，需要立即脱敏并限制访问。",
+    "relatedRisks": ["R0078-003"],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "Personally identifiable information - Wikipedia", "link": "https://en.wikipedia.org/wiki/Personal_data"},
+      {"title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122", "link": "https://csrc.nist.gov/pubs/sp/800/122/final"}
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

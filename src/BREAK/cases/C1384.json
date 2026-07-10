@@ -11,7 +11,7 @@
       "物理破坏",
       "硬件篡改"
     ],
-    "summary": "黎巴嫩真主党使用的寻呼机发生大规模爆炸，造成数十人死亡、数千人受伤。安全专家分析认为，攻击者很可能在生产或供应链环节物理接触设备，在寻呼机中植入炸药并篡改固件植入后门，通过远程信号引爆。此事件展示了固件篡改如何将网络攻击转化为物理世界的致命破坏。",
+    "summary": "2024年9月17日，黎巴嫩多地数千台真主党成员使用的寻呼机同时爆炸，首轮事件造成12人死亡、近3000人受伤；次日又发生对讲机爆炸。多方报道与专家分析认为，涉事设备可能在生产或供应链环节被植入爆炸物，并通过接收信号触发，说明通信设备供应链篡改可直接造成物理伤亡。",
     "category": "news_report",
     "relatedRisks": [
       "R0164"
@@ -20,9 +20,17 @@
       {
         "title": "黎巴嫩BP机爆炸案:警惕!网络攻击向物理世界的跨越_搜狐网",
         "link": "https://m.sohu.com/a/810245535_466840"
+      },
+      {
+        "title": "Attacks in Lebanon: First pagers, now walkie-talkies",
+        "link": "https://www.reuters.com/world/hezbollah-pager-explosions-live-2024-09-17/"
+      },
+      {
+        "title": "Exploding pagers and radios: A terrifying violation of international law, say UN experts",
+        "link": "https://www.ohchr.org/en/press-releases/2024/09/exploding-pagers-and-radios-terrifying-violation-international-law-say-un"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-11",
     "incidentTime": "2024-09",
     "relatedAttackTools": [],
     "relatedThreatActors": []

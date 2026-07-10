@@ -11,11 +11,15 @@
       "malware",
       "device hijacking"
     ],
-    "summary": "The Mirai botnet scanned for and infected IoT devices with weak password vulnerabilities, conscripting them into a botnet that launched some of the largest DDoS attacks on record. The attacks ceased only after the creator was arrested. The incident exposed the significant risk of IoT devices being hijacked for cyberattacks due to weak credentials.",
+    "summary": "In 2016, Mirai continuously scanned the internet and attempted to log in to IoT devices that still used default usernames and passwords. Successfully compromised cameras, routers, and other devices were enrolled into a botnet and used in high-volume DDoS attacks that disrupted major internet services, prompting a dedicated threat alert from U.S. cybersecurity authorities.",
     "references": [
       {
-        "title": "Consumer, Commercial, and Industrial IoT (In)Security: Attack Taxonomy and Case Studies",
-        "link": "https://ieeexplore.ieee.org/abstract/document/9430606/"
+        "title": "Heightened DDoS Threat Posed by Mirai and Other Botnets",
+        "link": "https://www.cisa.gov/news-events/alerts/2016/10/14/heightened-ddos-threat-posed-mirai-and-other-botnets"
+      },
+      {
+        "title": "Inside the Infamous Mirai IoT Botnet: A Retrospective Analysis",
+        "link": "https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/"
       }
     ]
   }

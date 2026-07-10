@@ -11,7 +11,7 @@
       "数字资产骗局",
       "区块链洗钱"
     ],
-    "summary": "Devin Alan Rhoden（化名Denny/Deviinz）和Berman Jerry Nowlin Jr.（化名Repulse）被指控实施NFT“Rug Pull”骗局，并通过区块链洗钱。两人通过虚假宣传吸引投资者购买数字资产后卷款跑路，被美国司法部以共谋电信欺诈和洗钱罪名起诉。",
+    "summary": "2024年2月，美国联邦检方起诉Rhoden和Nowlin。起诉书称，二人在Solana链发行多个NFT系列并以虚假权益宣传吸引购买；Undead Tombstone项目获得约13.5万美元后被放弃。二人还被指通过跨链转移和兑换美元掩饰收益，面临共谋电信欺诈及洗钱指控。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0168"
@@ -20,9 +20,13 @@
       {
         "title": "Two Individuals Charged With Non-Fungible Token “Rug Pull” And ...",
         "link": "https://www.justice.gov/usao-mdfl/pr/two-individuals-charged-non-fungible-token-rug-pull-and-laundering-proceeds-through"
+      },
+      {
+        "title": "2 Charged With NFT Money Laundering, Rug Pull of Digital Blockchains",
+        "link": "https://www.ice.gov/news/releases/2-charged-nft-money-laundering-rug-pull-digital-blockchains"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-11",
     "relatedAttackTools": [
       "AT0060"
     ],

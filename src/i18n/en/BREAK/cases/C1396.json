@@ -11,15 +11,15 @@
       "DDoS",
       "embedded devices"
     ],
-    "summary": "The Silex botnet exploited default credentials on IoT devices, permanently damaging or bricking a large number of them. What began as a prank led to real, widespread destruction, highlighting the severity of default credential risks.",
+    "summary": "On June 25, 2019, an Akamai researcher discovered Silexbot in a honeypot. The malware scanned internet-accessible IoT devices that still used known default login credentials. After gaining access, it deleted system files, network configuration, and firewall rules before halting the device, leaving it unable to boot or connect normally. Recovery generally required manually reflashing the firmware.",
     "references": [
-      {
-        "title": "OWASP IoT Top 10 Series: Weak or Hardcoded Password Policy",
-        "link": "https://blog.securelayer7.net/owasp-iot-top-10-series-weak-or-hardcoded-password-policy-owasp/"
-      },
       {
         "title": "Silexbot Bricking Systems With Known Default Login Credentials",
         "link": "https://www.akamai.com/blog/security/sirt-advisory-silexbot-bricking-systems-with-known-default-login-credentials"
+      },
+      {
+        "title": "New Silex Malware Trashes IoT Devices Using Default Passwords",
+        "link": "https://www.bleepingcomputer.com/news/security/new-silex-malware-trashes-iot-devices-using-default-passwords/"
       }
     ]
   }

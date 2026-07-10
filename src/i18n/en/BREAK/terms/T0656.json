@@ -1,0 +1,14 @@
+{
+  "T0656": {
+    "title": "Call Bombing",
+    "aliases": ["call flooding", "telephone bombing", "malicious redialing"],
+    "keywords": ["Call Bombing", "call flooding", "telephone bombing", "malicious redialing", "high-frequency harassment calls", "repeated dialing"],
+    "definition": "Call bombing uses automated dialers or many communication lines to place persistent high-frequency calls to a target number, causing harassment or disrupting normal communications.",
+    "description": "A call-bombing service sends a target number, call frequency, and duration to a cloud-calling platform, voice gateway, modem pool, or distributed handset fleet that repeatedly places calls. Operators may rotate caller numbers and routes to evade blocking and charge by duration, concurrency, or prepaid credits. The method is used for coercive debt collection, retaliatory harassment, extortion, or communications disruption; legitimate contact-center dialing becomes abusive only when it is non-consensual, persistently harassing, or intended to deny communication.",
+    "usageExample": "A debt-collection group purchased a call-bombing service that repeatedly dialed a borrower and the borrower's contacts to pressure repayment.",
+    "references": [
+      {"title": "Operating Malicious Calling Software Constitutes the Crime of Damaging Computer Information Systems - Guangzhou Courts", "link": "http://www.gzcourt.org.cn/ck487/ck335/ck490/2021/08/05101707814.html"},
+      {"title": "China Dismantles Its First Major Call-Bombing Criminal Network - CNR", "link": "https://www.cnr.cn/hubei/bk/sh/20180619/t20180619_524274233_1.shtml"}
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "C1392": {
-    "title": "Mirai恶意软件作者被判处居家监禁及860万美元罚款",
+    "title": "Mirai共同作者Paras Jha被判居家监禁并赔偿860万美元",
     "keywords": [
       "Mirai",
       "僵尸网络",
@@ -12,7 +12,7 @@
       "IoT设备",
       "网络犯罪"
     ],
-    "summary": "Mirai僵尸网络的共同作者之一因参与创建并部署该恶意软件，利用大量物联网设备构建僵尸网络发动大规模DDoS攻击，被美国法院判处6个月居家监禁、社区服务，并责令支付860万美元的赔偿金。该判决针对其利用IoT设备进行网络攻击的犯罪行为。",
+    "summary": "2018年10月，美国新泽西联邦法院就Paras Jha针对罗格斯大学实施的一系列DDoS攻击作出判决。Jha被判6个月居家监禁、5年监督释放及2500小时社区服务，并须向学校支付860万美元赔偿。司法部同时指出，他是Mirai僵尸网络恶意软件的共同作者之一。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0165"
@@ -27,8 +27,8 @@
         "link": "https://www.bankinfosecurity.com/mirai-co-author-gets-house-arrest-86-million-fine-a-11648"
       }
     ],
-    "updated": "2026-06-24",
-    "incidentTime": "2018-09",
+    "updated": "2026-07-11",
+    "incidentTime": "2018-10",
     "relatedAttackTools": [
       "AT0082"
     ],

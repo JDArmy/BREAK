@@ -1,0 +1,14 @@
+{
+  "T0655": {
+    "title": "Human-Powered Engagement Farming",
+    "aliases": ["manual engagement farming", "human click farming", "crowdsourced engagement farming"],
+    "keywords": ["Human-Powered Engagement Farming", "manual engagement farming", "human click farming", "crowdsourced engagement farming", "paid app installs", "manual ranking manipulation"],
+    "definition": "Human-powered engagement farming organizes real people to use genuine accounts and devices to complete downloads, clicks, reviews, or other tasks that fabricate business metrics.",
+    "description": "Task platforms, studios, or brokers distribute app downloads, keyword searches, likes, reviews, purchases, and voting assignments to large groups of paid workers. Because participants use real accounts, devices, and networks, their activity can resemble legitimate user behavior more closely than scripted automation and may evade simple device or rate controls. The practice is still coordinated manipulation of rankings, sales, popularity, or reputation rather than genuine customer acquisition.",
+    "usageExample": "An app hired a human-powered engagement farming network whose workers searched for the app, installed it, and submitted screenshots of five-star reviews.",
+    "references": [
+      {"title": "Astroturfing - Wikipedia", "link": "https://en.wikipedia.org/wiki/Astroturfing"},
+      {"title": "Ranking Fraud Detection for Mobile Apps: A Holistic View", "link": "https://dl.acm.org/doi/10.1145/2505515.2505547"}
+    ]
+  }
+}

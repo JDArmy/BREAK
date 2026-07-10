@@ -1,0 +1,14 @@
+{
+  "T0657": {
+    "title": "Traceability",
+    "aliases": ["security tracing", "attack tracing", "source tracing"],
+    "keywords": ["Traceability", "security tracing", "attack tracing", "source tracing", "leak source identification", "attribution evidence"],
+    "definition": "Traceability is the process of using logs, markers, and evidence chains to reconstruct the source, path, and responsible parties behind a security incident, data leak, or content distribution event.",
+    "description": "Security tracing combines audit logs, network traffic, account and device links, digital watermarks, content credentials, file metadata, and timelines to reconstruct an attack, leak, or distribution path. It may identify the initial access point, locate a data-leak source, establish content creation and modification history, or support incident response and legal evidence. Reliable attribution requires intact evidence and corroboration across sources; a single IP address, watermark, or forgeable metadata field is rarely sufficient on its own.",
+    "usageExample": "The company used document watermarks, download logs, and account-device records for traceability and identified the internal account that exported customer data.",
+    "references": [
+      {"title": "Digital Watermarking - Wikipedia", "link": "https://en.wikipedia.org/wiki/Digital_watermarking"},
+      {"title": "C2PA Technical Specification", "link": "https://c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html"}
+    ]
+  }
+}

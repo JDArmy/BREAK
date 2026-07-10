@@ -1,0 +1,22 @@
+{
+  "T0658": {
+    "title": "DEX",
+    "aliases": ["去中心化交易所", "Decentralized Exchange", "链上交易所"],
+    "category": "blockchain",
+    "keywords": ["DEX", "去中心化交易所", "Decentralized Exchange", "链上交易所", "自动做市商", "无许可代币兑换"],
+    "definition": "DEX是通过区块链智能合约撮合或自动执行数字资产交易、通常无需中心化机构托管用户资产的交易协议。",
+    "description": "DEX允许用户通过自托管钱包直接调用智能合约进行代币兑换、流动性提供或订单撮合，常见模式包括自动做市商和链上订单簿。它降低了中心化托管和单点控制，但并不天然等于匿名或无风险：交易记录通常公开可查，协议仍可能存在智能合约漏洞、恶意代币、流动性操纵和前端劫持。洗钱者可能利用无许可交易和跨资产兑换增加资金追踪复杂度，但DEX本身也是合法的区块链基础设施。",
+    "usageExample": "调查人员发现涉案资金进入DEX后被连续兑换成多种代币，并经跨链桥分散到新的地址。",
+    "relatedRisks": ["R0060-001"],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "Decentralized finance - Wikipedia", "link": "https://en.wikipedia.org/wiki/Decentralized_finance"},
+      {"title": "Virtual Assets Red Flag Indicators of Money Laundering and Terrorist Financing - FATF", "link": "https://www.fatf-gafi.org/en/publications/Methodsandtrends/Virtual-assets-red-flag-indicators.html"}
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

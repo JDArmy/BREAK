@@ -10,7 +10,7 @@
       "治理争议",
       "争端解决"
     ],
-    "summary": "2025年3月，Polymarket 上关于“乌克兰是否会在4月前同意特朗普稀土矿产协议”的预测市场进入 UMA 争议解决流程。官方市场页显示，该市场成交量约708万美元，结果经历 Proposed 与 Disputed 后最终结算为 Yes。该案说明预测市场在争议性新闻事件中依赖预言机治理结算时，可能出现用户预期、规则解释与最终结果之间的冲突。",
+    "summary": "2025年3月，Polymarket关于美乌能否在4月前达成矿产协议的市场进入UMA争议解决流程，并在截止日前结算为Yes。报道指出，该市场已有超过700万美元投注，一名持有大量UMA治理代币的参与者对投票结果具有显著影响；Polymarket称这是前所未有的情况，并表示将与UMA改进争议处理机制。",
     "category": "security_incident",
     "relatedRisks": [
       "R0169"
@@ -19,9 +19,13 @@
       {
         "title": "Ukraine agrees to give Trump rare earth minerals before April?",
         "link": "https://polymarket.com/event/ukraine-agrees-to-give-trump-rare-earth-metals-before-april/ukraine-agrees-to-give-trump-rare-earth-metals-before-april"
+      },
+      {
+        "title": "Polymarket’s $7M Ukraine Mineral Deal Debacle Traced to Oracle Whale",
+        "link": "https://thedefiant.io/news/defi/polymarket-s-usd7m-ukraine-mineral-deal-debacle-traced-to-oracle-whale"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-11",
     "incidentTime": "2025-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

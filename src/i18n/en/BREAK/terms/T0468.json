@@ -5,15 +5,14 @@
       "Social Engineering",
       "psychological manipulation",
       "human hacking",
+      "social engineering attack",
       "pretexting",
       "trust exploitation",
       "manipulation attack"
     ],
-    "aliases": [
-      "Shehui Gongcheng"
-    ],
+    "aliases": ["human manipulation attack", "social engineering attack"],
     "definition": "The practice of manipulating individuals through psychological tactics to divulge confidential information, grant unauthorized access, or perform actions that compromise security, bypassing technical controls by exploiting human psychology.",
-    "description": "Social engineering represents a class of attack vectors that target human decision-making rather than technical vulnerabilities. Attackers exploit psychological principles including authority bias, urgency, fear, curiosity, reciprocity, and trust to manipulate targets into compromising security. Common techniques include phishing emails impersonating trusted entities, pretexting scenarios that establish false contexts for information requests, baiting schemes that promise rewards for risky actions, tailgating to gain physical access, and impersonation of IT support or executives to extract credentials. Advanced operations conduct reconnaissance through social media and public records to craft convincing pretexts, use multiple communication channels to reinforce legitimacy, and establish long-term rapport before making requests. Social engineering attacks succeed because they exploit universal human cognitive biases that persist regardless of technical security measures. Defense requires security awareness training, verification procedures for sensitive requests, incident reporting channels, and organizational cultures that encourage questioning suspicious interactions without fear of repercussions.",
+    "description": "Social engineering targets human judgment rather than directly defeating a technical control. Attackers exploit trust, authority, urgency, fear, or greed through impersonation, pretexts, and pressure to obtain credentials, verification codes, sensitive information, transfers, software installation, or access. Common techniques include phishing, executive or support impersonation, phone pretexts, fabricated emergencies, invented identities, and physical tailgating. Modern operations combine open-source intelligence, breached data, AI voice cloning, and deepfakes to appear more credible; phishing, account takeover, and transfer fraud are specific outcomes of this shared manipulation method.",
     "usageExample": "An attacker called an employee impersonating IT support, created urgency by claiming a security incident required immediate password reset, and successfully obtained credentials that provided access to corporate systems.",
     "references": [
       {

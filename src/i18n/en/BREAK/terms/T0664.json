@@ -1,0 +1,14 @@
+{
+  "T0664": {
+    "title": "Tor",
+    "aliases": ["The Onion Router", "Tor network", "onion routing network"],
+    "keywords": ["Tor", "The Onion Router", "Tor network", "onion routing network", "onion services", "Tor exit node"],
+    "definition": "Tor is an anonymity network that routes traffic through relays with layered encryption to reduce the ability to associate a communication's source with its destination.",
+    "description": "The Tor client forwards traffic through several volunteer relays and applies layered encryption so that a single relay generally cannot know both the origin and final destination. It supports privacy, censorship circumvention, safer communications for journalists and researchers, and access to .onion services. Attackers may use Tor exits to hide source IPs, evade address-based blocking, or reach underground markets, but Tor is a general-purpose anonymity network rather than a synonym for the dark web or a malicious tool; exit-node intelligence and behavioral correlation can still identify its use.",
+    "usageExample": "The platform observed one account logging in through multiple Tor exit nodes and combined that signal with device fingerprints to identify blocklisted-IP evasion.",
+    "references": [
+      {"title": "What is Tor? - Tor Project Support", "link": "https://support.torproject.org/about/what-is-tor/"},
+      {"title": "Multi-hop Proxy, Sub-technique T1090.003 - MITRE ATT&CK", "link": "https://attack.mitre.org/techniques/T1090/003/"}
+    ]
+  }
+}

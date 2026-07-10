@@ -12,16 +12,12 @@
       "链上治理",
       "防御措施"
     ],
-    "summary": "2024年7月，Compound DAO 遭遇治理攻击：由巨鲸 Humpy 领导的 Golden Boys 团伙通过 Proposal 289 提案，将约 5% 的 COMP 国库（约 499,000 COMP，价值约 2400 万美元）转移至其控制的 goldCOMP 金库托管一年。该提案以 682,191 比 633,636 票微弱优势通过，社区指责其为协调性治理攻击。事件暴露了 DAO 链上治理中代币持币量决定投票权的固有漏洞。",
-    "category": "academic_research",
+    "summary": "2024年7月，Compound治理提案289以682191票对633636票通过，计划把国库中499000枚COMP、约值2400万美元的资产投入Golden Boys推动的goldCOMP收益策略。多名社区成员质疑提案方集中持币并协调投票构成治理攻击；随后各方达成替代安排，原资金转移计划被撤回。",
+    "category": "security_incident",
     "relatedRisks": [
       "R0167"
     ],
     "references": [
-      {
-        "title": "Compound 官方治理论坛安全通告：Governance Security Notice — goldCOMP Proposal 247/289（Golden Boys 治理攻击）",
-        "link": "https://www.comp.xyz/t/governance-security-notice-goldcomp-proposal-247/5220"
-      },
       {
         "title": "CertiK 安全分析：Navigating DAO Governance and the Compound DAO Incident",
         "link": "https://skynet.certik.com/quest/navigating-dao-governance-and-the-compound-dao-incident"
@@ -29,9 +25,13 @@
       {
         "title": "The Block：$24 million Compound Finance proposal passed by whale over DAO objections（2024-07-28 Humpy/Golden Boys 治理攻击报道）",
         "link": "https://www.theblock.co/post/307943/24-million-compound-finance-proposal-passed-by-whale-over-dao-objections"
+      },
+      {
+        "title": "Compound governance proposal withdrawn after agreement on staking product",
+        "link": "https://unchainedcrypto.com/compound-governance-attackers-agree-to-cancel-proposal-in-exchange-for-staking-product/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-11",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2024-07"

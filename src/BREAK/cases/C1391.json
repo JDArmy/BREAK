@@ -12,7 +12,7 @@
       "网络犯罪",
       "ProTraf Solutions"
     ],
-    "summary": "2014年至2015年，大学生Paras Jha为迫使学校更换DDoS防护服务商，利用其构建的包含约4万个僵尸节点的物联网僵尸网络，多次对罗格斯大学网络发起DDoS攻击，导致注册系统瘫痪、校园网络长时间中断，严重影响教学秩序。",
+    "summary": "2014年11月至2016年9月，罗格斯大学前学生Paras Jha多次对学校网络发动DDoS攻击，导致中央认证门户在多个时段关闭，干扰师生访问网络服务。美国司法部称，Jha在校内考试期间等时点实施攻击，校方为恢复服务和加强防护承担了额外费用；他随后对相关计算机犯罪指控认罪。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0165"
@@ -21,9 +21,13 @@
       {
         "title": "The Strange Story of the Teens Behind the Mirai Botnet",
         "link": "https://spectrum.ieee.org/mirai-botnet"
+      },
+      {
+        "title": "Computer Hacker Who Launched Attacks On Rutgers University Ordered To Pay $8.6M In Restitution",
+        "link": "https://www.justice.gov/usao-nj/pr/computer-hacker-who-launched-attacks-rutgers-university-ordered-pay-86m-restitution"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-11",
     "incidentTime": "2014-11",
     "relatedAttackTools": [
       "AT0082"

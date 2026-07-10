@@ -10,7 +10,7 @@ allowed-tools: Bash
 
 <!-- 2026-07-11: Internal Avoidance-category key migration; no visible Skill invocation change. -->
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,391 entries across the following entity types:
+BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,400 entries across the following entity types:
 
 | Type           | Count | ID Format          | Description                                   |
 | -------------- | ----- | ------------------ | --------------------------------------------- |
@@ -18,7 +18,7 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge fra
 | Avoidance      | 350   | A0001, A0001-001   | Defensive measures against risks              |
 | AttackTool     | 125   | AT0001, AT0001-001 | Tools used by threat actors                   |
 | ThreatActor    | 83    | TA0001, TA0001-001 | Groups that carry out attacks                 |
-| Term           | 632   | T0001              | Business security terminology                 |
+| Term           | 641   | T0001              | Business security terminology                 |
 | Case           | 1781  | C0001              | Real-world security incident cases            |
 | BusinessDomain | 20    | BD00               | Industry/business domain categories           |
 
@@ -197,6 +197,8 @@ The 2026-07-10 AI data-poisoning relationship review corrects AT0108's direct ca
 The follow-up 2026-07-10 Case P2 fact-review maintenance strengthens crawlable sources, `summary`, `incidentTime`, and English translations for C1056, C1060, C1064, C1067, C1069, C1077, C1100, C1102, and related cases; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
 The 2026-07-10 Case P2 fact-review checkpoint further revises `summary`, `references`, `incidentTime`, relationships, and English translations for C1482, C1484, C1485, C1488, C1490, C1493, C1495, C1498, C1500, C1501, C1504, C1505, C1511, C1512, C1518, C1519, C1521, C1523, C1528, and C1531, and adds an e-commerce platform product-inspection source for A0222-001; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
+The 2026-07-11 P2 cleanup batch revises factual summaries and sources for C1190, C1251, C1287, C1366, C1377, C1380, C1384, C1386, C1391, C1392, C1393, C1396, C1400, C1401, C1404, C1406, C1407, C1412, C1414, and C1416, resolves five actor-consistency and five Risk-Avoidance relationship items, and adds terms for human-operated boosting, call bombing, traceability, DEX, privacy coins, zero-shot voice cloning, PII, social engineering, account washing, and Tor; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 

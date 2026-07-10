@@ -1,0 +1,14 @@
+{
+  "T0663": {
+    "title": "Game Account Stripping",
+    "aliases": ["game account laundering", "stolen account stripping", "virtual asset stripping"],
+    "keywords": ["Game Account Stripping", "game account laundering", "stolen account stripping", "virtual asset stripping", "item transfer", "in-game currency transfer"],
+    "definition": "Game account stripping is the underground practice of taking over a game or platform account, rapidly transferring or selling its virtual assets, and reducing the chance of recovery.",
+    "description": "Account stripping commonly follows takeover through malware, credential stuffing, phishing, or social engineering. Operators log in to the stolen account and move currency, equipment, items, or other tradable rights through underpriced listings, directed gifts, chains of intermediary accounts, or off-platform trades before selling them. The term emphasizes rapid extraction and laundering of value from the victim account, distinguishing it from account theft alone and from legitimate player trading. In some communities it can also refer to removing bindings or changing identity details, so the business context matters.",
+    "usageExample": "After a remote login, the theft group began game account stripping by moving valuable items through several mule accounts and selling them off-platform.",
+    "references": [
+      {"title": "CFPB Report Identifies Financial and Privacy Risks to Consumers in Video Gaming Marketplaces", "link": "https://www.consumerfinance.gov/archive/newsroom/cfpb-report-identifies-financial-and-privacy-risks-to-consumers-in-video-gaming-marketplaces/"},
+      {"title": "Theft of virtual items in online multiplayer computer games: an ontological and moral analysis", "link": "https://link.springer.com/article/10.1007/s10676-011-9285-3"}
+    ]
+  }
+}

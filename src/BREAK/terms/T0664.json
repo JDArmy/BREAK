@@ -1,0 +1,22 @@
+{
+  "T0664": {
+    "title": "Tor",
+    "aliases": ["The Onion Router", "洋葱路由", "Tor网络"],
+    "category": "network_attack",
+    "keywords": ["Tor", "The Onion Router", "洋葱路由", "Tor网络", "洋葱网络", "Tor出口节点"],
+    "definition": "Tor是通过多层加密和中继节点转发网络流量，以降低通信来源和目的地关联性的匿名通信网络。",
+    "description": "Tor客户端把流量经多个志愿者中继节点转发，并对路径进行分层加密，使单个中继通常无法同时获知通信来源和最终目的地。它可用于隐私保护、绕过审查、记者和研究人员的安全通信，也常用于访问.onion隐藏服务。攻击者可能借助Tor出口节点隐藏真实IP、规避基于地址的封禁或连接地下市场，但Tor本身是通用匿名网络，不应等同于暗网或恶意工具；出口流量仍可通过节点情报和行为关联被识别。",
+    "usageExample": "平台发现同一账号持续从多个Tor出口节点登录，并结合设备指纹判断其正在规避黑IP封禁。",
+    "relatedRisks": ["R0099"],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "What is Tor? - Tor Project Support", "link": "https://support.torproject.org/about/what-is-tor/"},
+      {"title": "Multi-hop Proxy, Sub-technique T1090.003 - MITRE ATT&CK", "link": "https://attack.mitre.org/techniques/T1090/003/"}
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}
