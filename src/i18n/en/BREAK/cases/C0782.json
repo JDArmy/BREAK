@@ -11,11 +11,11 @@
       "GitHub token theft",
       "C2 server"
     ],
-    "summary": "In April 2026, the open-source AI model deployment tool Xinference was found to have been compromised in a supply chain poisoning attack. Attackers gained access to its PyPI repository publishing permissions and embedded multi-layer Base64-encoded malicious code in the initialization files of versions 2.6.0, 2.6.1, and 2.6.2. Simply installing or importing the tool triggered automatic execution of",
+    "summary": "In April 2026, Xinference's PyPI release chain was poisoned and versions 2.6.0, 2.6.1, and 2.6.2 contained malicious code. JFrog and NSFOCUS reported that the payload was placed in xinference/__init__.py, could run when the package was imported, enumerated environment variables and local configuration paths, and collected cloud credentials, SSH keys, API tokens, database connection data, and other secrets for exfiltration. The affected versions were later removed from PyPI, and users were advised to upgrade and rotate exposed credentials.",
     "references": [
       {
-        "title": "In-Depth Analysis of Supply Chain Poisoning in AI Model Deployment Tool Xinference - Tencent Cloud Developer Community",
-        "link": "https://cloud.tencent.com/developer/article/2661904"
+        "title": "TeamPCP strikes again: Xinference PyPI package compromised - JFrog Security Research",
+        "link": "https://research.jfrog.com/post/xinference-compromise/"
       },
       {
         "title": "Xinference PyPI Supply Chain Poisoning Warning - NSFOCUS",

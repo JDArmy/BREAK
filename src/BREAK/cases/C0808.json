@@ -12,7 +12,7 @@
       "nsrvmzuq",
       "天问平台"
     ],
-    "summary": "2022年10月，天问平台发现用户nsrvmzuq在npm生态中上传了152个npm包，这些包的名称大多与下载量较高的包相似，属于typosquatting攻击。这些恶意包最终都会释放恶意后门wsrcsv.exe，对下游用户构成严重安全威胁。",
+    "summary": "奇安信星图实验室年度回顾称，天问平台在2022年10月2日发现 npm 用户 nsrvmzuq 上传 152 个与热门包名称相似的恶意包。相关包安装时执行脚本下载 Windows 快捷方式，并继续拉取 VBS 与 wsrcsv.exe 后门，主要影响误装包的 Windows 用户。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-005"
@@ -23,7 +23,7 @@
         "link": "https://tianwen.qianxin.com/blog/2023/01/16/npm-annual-malicious-packages-2022/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2022-10",
     "relatedAttackTools": [],
     "relatedThreatActors": []

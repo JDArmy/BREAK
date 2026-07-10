@@ -12,7 +12,7 @@
       "nsrvmzuq",
       "Tianwen platform"
     ],
-    "summary": "In October 2022, the Tianwen platform detected that a user named nsrvmzuq uploaded 152 packages to the npm ecosystem. Most of these package names closely resembled popular packages, constituting a typosquatting attack. All malicious packages ultimately dropped the wsrcsv.exe backdoor, posing a severe security threat to downstream users.",
+    "summary": "Qi An Xin Star Map Lab's annual review reported that on October 2, 2022, the Tianwen platform found npm user nsrvmzuq had uploaded 152 malicious packages with names similar to popular packages. During installation, the packages ran scripts that downloaded a Windows shortcut, then fetched VBS code and the wsrcsv.exe backdoor, mainly affecting Windows users who installed the typosquatted packages.",
     "references": [
       {
         "title": "Tianwen: 2022 Annual Review of npm Ecosystem Software Supply Chain Attacks | Star Map Lab",

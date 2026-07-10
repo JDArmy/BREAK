@@ -8,16 +8,16 @@ allowed-tools: Bash
 
 # BREAK Knowledge Base Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,383 entries across the following entity types:
+BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,378 entries across the following entity types:
 
 | Type | Count | ID Format | Description |
 |------|-------|-----------|-------------|
-| Risk | 401 | R0001, R0001-001 | Business security risk definitions and impact |
-| Avoidance | 351 | A0001, A0001-001 | Defensive measures against risks |
-| AttackTool | 124 | AT0001, AT0001-001 | Tools used by threat actors |
+| Risk | 400 | R0001, R0001-001 | Business security risk definitions and impact |
+| Avoidance | 350 | A0001, A0001-001 | Defensive measures against risks |
+| AttackTool | 123 | AT0001, AT0001-001 | Tools used by threat actors |
 | ThreatActor | 76 | TA0001, TA0001-001 | Groups that carry out attacks |
 | Term | 628 | T0001 | Business security terminology |
-| Case | 1783 | C0001 | Real-world security incident cases |
+| Case | 1781 | C0001 | Real-world security incident cases |
 | BusinessDomain | 20 | BD00 | Industry/business domain categories |
 
 Maintenance note: the Skill invocation workflow is unchanged; entity counts stay synchronized with knowledge-base case facts, source-quality updates, and relationship updates.
@@ -155,6 +155,10 @@ BREAK recommends the following avoidances for these risks:
 When `scripts/skill/` search / packaging scripts, exported Chinese / English data bundles, entity fields / relationship structure, Skill invocation parameters, or search-result format change, update both `SKILL.md` and `SKILL_en.md` in the same change. `npm run validate:docs-freshness` is wired into `npm run validate:data` and blocks relevant changes when Skill documentation is stale.
 
 Data-quality fixes also affect Skill search results. When fixing Case `references` / `summary` fact-check issues or adjusting Risk `avoidances` relationships, keep the English translation files in sync and make the first two Case references point to stable pages with crawlable article text whenever possible, so Skill-returned case facts remain reviewable.
+
+The 2026-07-10 entity-granularity review removes unrelated Term relationships from R0285 and a duplicate Avoidance reference from R0159. This maintenance does not change Skill invocation parameters, search fields, return format, or entity structure.
+
+The 2026-07-10 atomic-entity cleanup splits A0124 into Rug Pull on-chain detection and loss compensation / fund recovery, consolidates and removes duplicate A0142/A0160 entries, and removes AT0093 because it does not satisfy the concrete-tool admission boundary. Relationships are migrated to existing atomic entities without changing Skill invocation parameters or result formats.
 
 When clearing Case fact-review items, keep each `summary` limited to the subject, time, conduct, enforcement outcome, and impact directly supported by the referenced article text. Details such as amounts, counts, judgments, or regulatory measures that are only title-supported, fail to crawl, or are not covered by the source should be backed by a stable source before being retained, or rewritten as a more conservative factual statement.
 

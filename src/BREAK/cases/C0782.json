@@ -13,22 +13,22 @@
       "Base64编码",
       "软件供应链安全"
     ],
-    "summary": "2026年4月，开源AI模型部署工具Xinference被曝出供应链投毒事件。攻击者入侵其PyPI仓库发布权限，在2.6.0、2.6.1、2.6.2三个版本的初始化文件中植入多层Base64编码的恶意代码。用户仅需安装或导入该工具，恶意代码即自动执行，系统性窃取云服务凭证、SSH密钥、GitHub Token及数据库密码等敏感信息，并回传至攻击者C2服务器。",
+    "summary": "2026年4月，Xinference 的 PyPI 发布链被投毒，2.6.0、2.6.1、2.6.2 版本被植入恶意代码。JFrog 与绿盟等报告称，载荷位于 xinference/__init__.py，导入包时即可运行，枚举环境变量和本地配置路径，收集云凭证、SSH 密钥、API Token、数据库连接信息等敏感数据并外传。受影响版本随后从 PyPI 移除，用户需升级到清理后的版本并轮换可能泄露的凭证。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-001"
     ],
     "references": [
       {
-        "title": "AI模型部署工具Xinference供应链投毒详细介绍-腾讯云开发者社区",
-        "link": "https://cloud.tencent.com/developer/article/2661904"
+        "title": "TeamPCP strikes again: Xinference PyPI package compromised - JFrog Security Research",
+        "link": "https://research.jfrog.com/post/xinference-compromise/"
       },
       {
         "title": "Xinference PyPI Supply Chain Poisoning Warning - NSFOCUS",
         "link": "https://nsfocusglobal.com/xinference-pypi-supply-chain-poisoning-warning/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-04",
     "relatedAttackTools": [],
     "relatedThreatActors": []

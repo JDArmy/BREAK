@@ -12,18 +12,22 @@
       "MFA Fatigue",
       "Uber安全事件"
     ],
-    "summary": "2022年9月，Uber披露一起安全事件。攻击者购买外部承包商账号凭据后反复发起MFA登录请求，承包商最终批准其中一次请求，导致攻击者进入Uber内部系统。Uber称事件与Lapsus$有关，未发现用户账户或敏感数据被访问。",
+    "summary": "2022年9月，Uber披露一起内部系统安全事件。公开资料显示，攻击者使用外部承包商账号凭据并反复触发 MFA 请求，承包商最终批准登录，使攻击者进入 Uber 内部系统。Uber 称事件与 Lapsus$ 相关，未发现用户账户或敏感用户数据被访问。",
     "category": "security_incident",
     "relatedRisks": [
       "R0246"
     ],
     "references": [
       {
-        "title": "Security update",
+        "title": "How Uber Was Breached Through MFA Fatigue - centrexIT",
+        "link": "https://centrexit.com/blog/mfa-fatigue-uber-breach-2022/"
+      },
+      {
+        "title": "Security update - Uber Newsroom",
         "link": "https://www.uber.com/newsroom/security-update/"
       },
       {
-        "title": "Uber says Lapsus$ behind cyberattack, no user data exposed",
+        "title": "Uber says Lapsus$ behind cyberattack, no user data exposed - BleepingComputer",
         "link": "https://www.bleepingcomputer.com/news/security/uber-says-lapsus-behind-cyberattack-no-user-data-exposed/"
       }
     ],

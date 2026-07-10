@@ -23,7 +23,7 @@
       "反馈数据污染",
       "AI供应链攻击"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",
@@ -41,16 +41,6 @@
       "priority": "P2"
     },
     "relatedRisks": [
-      {
-        "key": "R0244",
-        "relation": "co-occurrence",
-        "note": "训练数据投毒风险与RAG越权召回均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
-      },
-      {
-        "key": "R0245",
-        "relation": "co-occurrence",
-        "note": "训练数据投毒风险与模型输出泄露敏感信息均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
-      },
       {
         "key": "R0242",
         "relation": "co-occurrence",

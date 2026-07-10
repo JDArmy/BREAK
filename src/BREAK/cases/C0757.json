@@ -1,6 +1,6 @@
 {
   "C0757": {
-    "title": "携程因未落实数据出境安全评估要求被罚1000万元",
+    "title": "上海携程商务有限公司因数据出境违规被罚1000万元",
     "keywords": [
       "携程",
       "数据出境",
@@ -11,23 +11,26 @@
       "罚款",
       "违法出境",
       "个人信息",
-      "合规",
-      "网信办",
       "数据合规",
-      "跨境传输"
+      "跨境传输",
+      "限期改正"
     ],
-    "summary": "2026年6月13日，上海市网信办针对上海携程商务有限公司未落实数据出境安全评估要求、违法出境个人信息等行为，依据《个人信息保护法》予以罚款1000万元的行政处罚，并责令限期改正。该案是网信部门加大网络执法力度、打击违法违规出境个人信息行为的典型案例。",
+    "summary": "2026年6月13日，上海市网信办通报，近期在国家网信办指导下办理一批网络数据安全执法案件，其中上海携程商务有限公司因未落实数据出境安全评估要求、违法出境个人信息等行为，被依据《个人信息保护法》罚款1000万元并责令限期改正；企业受处罚后积极配合，全面落实整改要求。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0077"
     ],
     "references": [
       {
-        "title": "上海携程商务有限公司被罚款1000万元",
-        "link": "https://mp.weixin.qq.com/s?__biz=Mzi1MDE2OTEyNQ==&mid=2651575022&idx=1&sn=adacaec3ecf7ff07d111d5b00d07e4bc&chksm=f378f513b9d6f9b9abcdd0a175a8023e855453160fdfa587ba8c166bfa9faff20736064dc02b&scene=27"
+        "title": "上海网信办：上海携程商务有限公司未落实数据出境安全评估等要求，予以罚款1000万元",
+        "link": "https://finance.sina.com.cn/roll/2026-06-13/doc-inicfzuu8325587.shtml"
+      },
+      {
+        "title": "上海携程商务有限公司，被罚款1000万元！",
+        "link": "https://www.thepaper.cn/newsDetail_forward_33374345"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []

@@ -24,7 +24,7 @@
       "LLM敏感信息泄露",
       "内部资料外泄"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -48,14 +48,9 @@
         "note": "模型输出泄露敏感信息与数据泄露共享规避手段“数据脱敏（脱密）”。"
       },
       {
-        "key": "R0243",
-        "relation": "co-occurrence",
-        "note": "模型输出泄露敏感信息与训练数据投毒风险均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
-      },
-      {
         "key": "R0244",
         "relation": "co-occurrence",
-        "note": "模型输出泄露敏感信息与RAG越权召回均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
+        "note": "模型输出泄露敏感信息与RAG越权召回共享规避手段“RAG知识库权限隔离”。"
       },
       {
         "key": "R0242",

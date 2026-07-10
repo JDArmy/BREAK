@@ -12,7 +12,7 @@
       "software supply chain",
       "GitLab"
     ],
-    "summary": "Attackers compromised Trivy's official distribution channel and released a tampered v0.69.4 binary. The malicious payload is a credential-stealing trojan that collects environment variables, cloud tokens, SSH keys, and CI/CD secrets from all CI/CD pipelines running Trivy scans. The incident has been assigned CVE-2026-33634 with a CVSS score of 9.4, representing a classic build tool poisoning attac",
+    "summary": "In March 2026, Aqua Security disclosed that a threat actor used compromised credentials to publish a malicious Trivy v0.69.4 release and retarget multiple trivy-action and setup-trivy tags to credential-stealing malware. On March 22, malicious Docker Hub images were also published. Aqua said the payload collected environment variables, CI/CD credentials, cloud tokens, and other secrets for exfiltration, and advised users to revoke affected releases and action tags. NVD tracks the incident as CVE-2026-33634.",
     "references": [
       {
         "title": "CVE-2026-33634 Detail (NVD - National Vulnerability Database)",

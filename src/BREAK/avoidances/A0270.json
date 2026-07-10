@@ -1,0 +1,42 @@
+{
+  "A0270": {
+    "title": "Rug Pull损失赔付与资金恢复",
+    "category": "AC04",
+    "definition": "在Rug Pull事件发生后通过DeFi保险理赔、冻结追踪和恢复协议补偿受害者或追回资金",
+    "description": "事件确认后，处置方依据保险承保条件、链上损失证明和治理表决启动理赔，向符合条件的投保用户支付赔款；同时对攻击资金流向进行链上追踪，协调交易平台冻结可识别资产，并由跨链恢复协议或治理机制执行资金返还。该手段面向损失已经发生的处置阶段，目标是降低最终净损失，而不是替代事前审计或实时预警。",
+    "complexity": "高级",
+    "limitation": "保险只覆盖保单明确列示的协议、事件和额度，未投保用户或不满足证据要求的损失无法获赔；资金恢复还依赖资产可追踪性、交易平台协作和治理决策，攻击者使用混币器、跨链桥或快速套现后，追回成功率会显著下降。",
+    "references": [
+      {
+        "title": "Rugsafe: A multichain protocol for recovering from rug pulls",
+        "link": "https://arxiv.org/html/2507.06423v1"
+      }
+    ],
+    "updated": "2026-07-10",
+    "keywords": [
+      "Rug Pull损失赔付与资金恢复",
+      "DeFi保险理赔",
+      "Rug Pull赔付",
+      "链上资金追踪",
+      "被盗资金恢复"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0095-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0123",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0124",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

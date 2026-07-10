@@ -73,7 +73,7 @@ Risk **不维护** `relatedBusinessDomains`——风险所属业务域以 Busine
 - **`category`**：`criminal_verdict` / `administrative_enforcement` / `security_incident` / `vulnerability_advisory` / `academic_research` / `news_report`（存 key，中英文通过 locale 映射）
 - **`incidentTime`**：事件时间
 - **`relatedRisks`**：至少 1 个（必填）；`relatedAttackTools` / `relatedThreatActors` 可选
-- Case 懒加载（1797+ 条），首页不加载，访问 `/cases` / 搜索 / 相关案例反查时才触发
+- Case 懒加载（1781+ 条），首页不加载，访问 `/cases` / 搜索 / 相关案例反查时才触发
 
 ## 关系字段语义
 

@@ -24,7 +24,7 @@
       "向量库权限",
       "敏感文档召回"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",
@@ -45,12 +45,7 @@
       {
         "key": "R0245",
         "relation": "co-occurrence",
-        "note": "RAG越权召回与模型输出泄露敏感信息均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
-      },
-      {
-        "key": "R0243",
-        "relation": "co-occurrence",
-        "note": "RAG越权召回与训练数据投毒风险均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
+        "note": "RAG越权召回与模型输出泄露敏感信息共享规避手段“RAG知识库权限隔离”。"
       },
       {
         "key": "R0242",

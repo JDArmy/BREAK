@@ -12,15 +12,19 @@
       "remote access trojan",
       "The Hacker News"
     ],
-    "summary": "A Keenadu firmware backdoor infected Android tablets through signed over-the-air updates, enabling attackers to leverage a supply chain compromise to implant a backdoor at the firmware level for remote control, ad fraud, and data theft, impacting 13,715 devices.",
+    "summary": "In February 2026, Kaspersky disclosed Keenadu, an Android firmware-level backdoor. The malware can be distributed in device firmware, system apps, or apps from official stores, and some compromised firmware was delivered through OTA updates. Once active, it operates as a multi-stage loader that can remotely control devices and has been used for ad fraud, installation monetization, and data collection.",
     "references": [
       {
-        "title": "Keenadu Firmware Backdoor Infects Android Tablets via Signed OTA Updates",
-        "link": "https://thehackernews.com/2026/02/keenadu-firmware-backdoor-infects.html"
+        "title": "Kaspersky discovers Keenadu, a multifaceted Android malware that can come preinstalled on new devices",
+        "link": "https://www.kaspersky.com/about/press-releases/kaspersky-discovers-keenadu-a-multifaceted-android-malware-that-can-come-preinstalled-on-new-devices"
       },
       {
-        "title": "Kaspersky Securelist: Keenadu Android Backdoor Research",
+        "title": "Keenadu the tablet conqueror and the links between major Android botnets - Securelist",
         "link": "https://securelist.com/keenadu-android-backdoor/118913/"
+      },
+      {
+        "title": "Keenadu Firmware Backdoor Infects Android Tablets via Signed OTA Updates - The Hacker News",
+        "link": "https://thehackernews.com/2026/02/keenadu-firmware-backdoor-infects.html"
       }
     ]
   }

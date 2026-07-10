@@ -40,11 +40,6 @@
         "note": "共同关联 1 个风险。"
       },
       {
-        "key": "AT0093",
-        "relation": "co-used",
-        "note": "共同关联 1 个风险。"
-      },
-      {
         "key": "AT0024",
         "relation": "co-used",
         "note": "被 1 个相同行为者使用或建设。"
@@ -61,6 +56,11 @@
       },
       {
         "key": "AT0102",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0103",
         "relation": "co-used",
         "note": "被 1 个相同行为者使用或建设。"
       }

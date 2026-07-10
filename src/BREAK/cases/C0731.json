@@ -12,18 +12,26 @@
       "敏感信息",
       "员工泄密"
     ],
-    "summary": "三星电子开放使用ChatGPT后不久即被曝出现不当使用风险。报道称员工将敏感数据输入外部生成式AI服务，相关内容可能被外部AI服务保存或用于训练，存在外泄风险。该事件凸显企业在引入生成式AI工具时需要限制敏感数据输入、配置审计和制定员工使用规范。",
+    "summary": "2023年3月，韩国媒体报道三星电子在开放 ChatGPT 后出现三起内部信息输入外部生成式 AI 服务的事件，涉及半导体业务相关代码、缺陷设备识别代码和会议录音整理。该事件暴露企业在引入生成式 AI 工具时，若缺少敏感数据输入限制、审计和员工使用规范，可能造成商业秘密外泄风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0071"
     ],
     "references": [
       {
+        "title": "Samsung employees leaked corporate data in ChatGPT: report - CIO Dive",
+        "link": "https://www.ciodive.com/news/Samsung-Electronics-ChatGPT-leak-data-privacy/647137/"
+      },
+      {
+        "title": "Samsung finds data leak due to use of ChatGPT: Korean media - CGTN",
+        "link": "https://news.cgtn.com/news/2023-04-03/Samsung-finds-data-leak-due-to-use-of-ChatGPT-Korean-media-1iHSzPcMDEk/index.html"
+      },
+      {
         "title": "[단독] 우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 '오남용' 속출",
         "link": "https://economist.co.kr/article/view/ecn202303300057"
       }
     ],
-    "updated": "2026-07-08",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0021"

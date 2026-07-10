@@ -10,11 +10,15 @@
       "developer credential theft",
       "supply chain attack"
     ],
-    "summary": "In mid-2025, North Korean attackers used fake job interviews to trick developers into downloading 67 malicious NPM packages, which were downloaded over 17,000 times. The packages implanted malware such as BeaverTail, compromising developer environments and stealing credentials.",
+    "summary": "In July 2025, Socket disclosed a new npm poisoning wave in the Contagious Interview operation: North Korea-linked actors published 67 malicious packages with more than 17,000 total downloads. The report said the packages used XORIndex or HexEval loaders to retrieve BeaverTail and were linked to the InvisibleFerret backdoor.",
     "references": [
       {
-        "title": "Supply Chain Attacks in Cloud Native Web Applications",
-        "link": "https://ieeexplore.ieee.org/abstract/document/11473029/"
+        "title": "Contagious Interview Campaign Escalates With 67 Malicious npm Packages and New Malware Loader - Socket",
+        "link": "https://socket.dev/blog/contagious-interview-campaign-escalates-67-malicious-npm-packages"
+      },
+      {
+        "title": "North Korean Hackers Flood npm Registry with XORIndex Malware in Ongoing Attack Campaign - The Hacker News",
+        "link": "https://thehackernews.com/2025/07/north-korean-hackers-flood-npm-registry.html"
       }
     ]
   }

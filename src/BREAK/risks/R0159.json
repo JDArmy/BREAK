@@ -9,8 +9,7 @@
       "A0095",
       "A0096",
       "A0097",
-      "A0097",
-      "A0160"
+      "A0082"
     ],
     "riskAssessment": {
       "likelihood": "high",
@@ -37,7 +36,7 @@
         "title": "GitHub - demining/Dao-Exploit"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "智能合约漏洞",
       "合约安全",
@@ -62,7 +61,7 @@
       {
         "key": "R0177",
         "relation": "co-occurrence",
-        "note": "智能合约漏洞与不可升级合约设计缺陷共享规避手段“代码审计与漏洞赏金”。"
+        "note": "智能合约漏洞与不可升级合约设计缺陷共享规避手段“智能合约安全审计”。"
       },
       {
         "key": "R0160",

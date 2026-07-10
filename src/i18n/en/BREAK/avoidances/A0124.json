@@ -1,11 +1,16 @@
 {
   "A0124": {
-    "title": "Real-Time Rug Pull Detection and Insurance Mechanisms",
-    "definition": "Using on-chain monitoring systems to detect Rug Pull characteristics in real time and mitigate investor losses through insurance or recovery protocols.",
-    "description": "Establishing early warning and loss compensation mechanisms. Detection methods: monitoring large-scale liquidity withdrawals, contract permission changes, abnormal token transfers, and other Rug Pull signals; analyzing token holding distribution to detect highly concentrated holdings (a small number of addresses holding the majority of tokens); tracking developer address behavior, such as suddenly transferring large amounts of tokens to exchanges; utilizing real-time detection engines from protocols like Rugsafe. Insurance mechanisms: investors purchase DeFi insurance (e.g., Nexus Mutual) and can receive compensation after a Rug Pull occurs; protocols like Rugsafe attempt to recover funds or compensate victims through multi-chain recovery mechanisms upon detecting a Rug Pull. This serves as the last line of passive defense.",
-    "limitation": "Detection systems have latency and may fail to issue alerts before a Rug Pull is completed; false positives may trigger panic selling; insurance coverage is limited and costly; recovery mechanisms rely on community governance and are difficult to execute; not all types of Rug Pulls can be prevented.",
+    "title": "Real-Time On-Chain Rug Pull Detection",
+    "definition": "Continuously collecting on-chain transactions, liquidity movements, and contract permission changes to identify Rug Pull indicators in real time through anomaly rules and risk models.",
+    "description": "On-chain monitoring systems continuously collect liquidity-pool balances and lock periods, token-holder distribution, contract ownership and upgrade-permission changes, developer-address transfers, abnormal token minting, and sell restrictions. The detection engine evaluates liquidity-drop thresholds, concentration rules, privileged-function call patterns, fund flows, and address-history baselines, while correlating project age, audit status, and team-address labels to reduce single-signal errors. When combinations indicating liquidity removal, mint-and-dump activity, or permission takeover are detected, the system issues tiered alerts to exchanges, governance teams, and investors, records triggering rules, transaction hashes, and address evidence, and may initiate trading pauses, exposure limits, or manual review. Confirmed incidents are replayed to tune thresholds and models as attackers adopt gradual withdrawals or transfers across multiple addresses.",
+    "limitation": "On-chain detection is affected by block-confirmation and indexing delays. Attackers may evade rules through gradual withdrawals, cross-chain transfers, address splitting, or transaction patterns that imitate normal activity. New projects also lack stable behavioral baselines and may generate false positives, while an alert cannot guarantee that transfers will be blocked before funds leave.",
     "keywords": [
-      "Real-Time Rug Pull Detection and Insurance Mechanisms"
+      "Real-Time On-Chain Rug Pull Detection",
+      "Rug Pull monitoring",
+      "on-chain anomaly detection",
+      "liquidity withdrawal alerts",
+      "developer address monitoring",
+      "Rug Pull risk alerts"
     ],
     "references": [
       {

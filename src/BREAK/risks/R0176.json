@@ -32,7 +32,7 @@
         "title": "Vulnerability: Timestamp Dependence"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "时间戳依赖攻击",
       "时间戳依赖",
@@ -45,7 +45,7 @@
       {
         "key": "R0177",
         "relation": "co-occurrence",
-        "note": "时间戳依赖攻击与不可升级合约设计缺陷均可被威胁行为者“DeFi协议攻击者”实施。"
+        "note": "时间戳依赖攻击与不可升级合约设计缺陷共享规避手段“智能合约安全审计”。"
       },
       {
         "key": "R0159",

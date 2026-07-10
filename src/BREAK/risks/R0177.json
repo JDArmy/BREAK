@@ -8,9 +8,10 @@
     "avoidances": [
       "A0140",
       "A0141",
-      "A0142",
       "A0140-001",
-      "A0160"
+      "A0095",
+      "A0097",
+      "A0082"
     ],
     "riskAssessment": {
       "likelihood": "medium",
@@ -33,7 +34,7 @@
         "title": "[2407.01493] Immutable in Principle, Upgradeable by Design - arXiv"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "不可升级合约设计缺陷",
       "不可升级合约",
@@ -47,12 +48,12 @@
       {
         "key": "R0159",
         "relation": "co-occurrence",
-        "note": "不可升级合约设计缺陷与智能合约漏洞共享规避手段“代码审计与漏洞赏金”。"
+        "note": "不可升级合约设计缺陷与智能合约漏洞共享规避手段“智能合约安全审计”。"
       },
       {
         "key": "R0176",
         "relation": "co-occurrence",
-        "note": "不可升级合约设计缺陷与时间戳依赖攻击均可被威胁行为者“DeFi协议攻击者”实施。"
+        "note": "不可升级合约设计缺陷与时间戳依赖攻击共享规避手段“智能合约安全审计”。"
       },
       {
         "key": "R0160",

@@ -23,11 +23,9 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/06/05/securing-ci-cd-in-agentic-world-claude-code-github-action-case/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-06",
-    "relatedAttackTools": [
-      "AT0093"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": []
   }
 }

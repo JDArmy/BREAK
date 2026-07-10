@@ -12,14 +12,18 @@
       "MFA push bombing",
       "Uber security incident"
     ],
-    "summary": "In September 2022, Uber disclosed a security incident in which an attacker bought credentials for an external contractor account and repeatedly triggered MFA login requests. The contractor eventually approved one request, giving the attacker access to internal Uber systems. Uber said the incident was linked to Lapsus$ and found no evidence that user accounts or sensitive user data were accessed.",
+    "summary": "In September 2022, Uber disclosed an internal-systems security incident. Public reporting indicates that the attacker used credentials for an external contractor account and repeatedly triggered MFA requests until the contractor approved a login, giving the attacker access to Uber internal systems. Uber linked the incident to Lapsus$ and said it found no evidence that user accounts or sensitive user data were accessed.",
     "references": [
       {
-        "title": "Security update",
+        "title": "How Uber Was Breached Through MFA Fatigue - centrexIT",
+        "link": "https://centrexit.com/blog/mfa-fatigue-uber-breach-2022/"
+      },
+      {
+        "title": "Security update - Uber Newsroom",
         "link": "https://www.uber.com/newsroom/security-update/"
       },
       {
-        "title": "Uber says Lapsus$ behind cyberattack, no user data exposed",
+        "title": "Uber says Lapsus$ behind cyberattack, no user data exposed - BleepingComputer",
         "link": "https://www.bleepingcomputer.com/news/security/uber-says-lapsus-behind-cyberattack-no-user-data-exposed/"
       }
     ]

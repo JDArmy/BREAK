@@ -12,7 +12,7 @@
       "软件供应链风险",
       "GitLab"
     ],
-    "summary": "攻击者同时入侵了Trivy的官方分发渠道，发布了被篡改的v0.69.4版本二进制文件。该恶意载荷为凭证窃取木马，能从所有运行Trivy扫描的CI/CD管道中收集环境变量、云令牌、SSH密钥和CI/CD机密。该事件被分配了CVE-2026-33634，CVSS评分高达9.4，属于典型的软件供应链构建工具投毒攻击。",
+    "summary": "2026年3月，Aqua Security 公告称攻击者利用受损凭证发布恶意 Trivy v0.69.4，并将 trivy-action 与 setup-trivy 多个标签指向窃密恶意代码；3月22日还发布了恶意 Docker Hub 镜像。官方称恶意载荷会收集环境变量、CI/CD 凭证、云令牌等秘密并外传，建议用户撤销受影响版本与动作标签。该事件被 NVD 收录为 CVE-2026-33634。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-001",
@@ -32,7 +32,7 @@
         "link": "https://thehackernews.com/2026/03/trivy-hack-spreads-infostealer-via.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

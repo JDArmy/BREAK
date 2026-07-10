@@ -8,16 +8,16 @@ allowed-tools: Bash
 
 # BREAK 知识库 Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3383 条业务安全风险知识条目，涵盖以下实体类型：
+BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3378 条业务安全风险知识条目，涵盖以下实体类型：
 
 | 类型 | 数量 | ID 格式 | 说明 |
 |------|------|---------|------|
-| Risk（风险） | 401 | R0001, R0001-001 | 业务安全风险定义和影响 |
-| Avoidance（规避手段） | 351 | A0001, A0001-001 | 应对风险的防御措施 |
-| AttackTool（攻击工具） | 124 | AT0001, AT0001-001 | 黑灰产使用的工具 |
+| Risk（风险） | 400 | R0001, R0001-001 | 业务安全风险定义和影响 |
+| Avoidance（规避手段） | 350 | A0001, A0001-001 | 应对风险的防御措施 |
+| AttackTool（攻击工具） | 123 | AT0001, AT0001-001 | 黑灰产使用的工具 |
 | ThreatActor（威胁行为者） | 76 | TA0001, TA0001-001 | 实施攻击的人群 |
 | Term（术语） | 628 | T0001 | 业务安全领域术语 |
-| Case（案例） | 1783 | C0001 | 真实的安全事件案例 |
+| Case（案例） | 1781 | C0001 | 真实的安全事件案例 |
 | BusinessDomain（业务域） | 20 | BD00 | 行业/业务域分类 |
 
 维护说明：本 Skill 的调用方式保持不变，实体统计与知识库案例事实、来源质量及数据关系补强同步更新。
@@ -158,6 +158,10 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 当 `scripts/skill/` 搜索 / 打包脚本、导出的中英文数据包、实体字段 / 关系结构、Skill 调用参数或搜索结果格式发生变化时，必须同步更新 `SKILL.md` 与 `SKILL_en.md`。`npm run validate:docs-freshness` 已接入 `npm run validate:data`，会在相关变更缺少 Skill 文档更新时阻断。
 
 数据治理改动也会影响 Skill 检索结果。修复 Case 的 `references` / `summary` 事实核验问题或调整 Risk 的 `avoidances` 关系时，应同步维护英文翻译文件，并确保前两条 Case references 尽量指向可抓取正文的稳定页面，避免 Skill 返回的案例事实无法被复核。
+
+2026-07-10 的实体粒度复核清理了 R0285 的无关 Term 关系及 R0159 的重复 Avoidance 引用；该维护不改变 Skill 调用参数、搜索字段、返回格式或实体结构。
+
+2026-07-10 的原子化治理将 A0124 拆分为 Rug Pull 链上实时检测与损失赔付/资金恢复，合并删除重复的 A0142/A0160，并删除不满足具体工具准入边界的 AT0093；关系已迁移到现有原子实体，不改变 Skill 调用参数和返回格式。
 
 清理 Case 事实待办时，`summary` 只保留来源正文直接支撑的主体、时间、行为、处置和影响信息；抓取失败、仅有标题支撑或来源未覆盖的金额、数量、判决结果、监管措施等细节，应补充稳定来源后再保留，或收敛为更保守的事实表述。
 

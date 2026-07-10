@@ -12,22 +12,26 @@
       "远程控制",
       "The Hacker News"
     ],
-    "summary": "Keenadu固件后门通过签名的OTA更新感染安卓平板电脑，攻击者利用供应链攻击方式在固件层面植入后门，实现对设备的远程控制、广告欺诈和数据窃取，影响了13715台设备。",
+    "summary": "2026年2月，Kaspersky 披露 Android 固件级后门 Keenadu。该恶意软件可在设备固件、系统应用或官方应用商店应用中分发，部分受感染固件通过 OTA 更新交付；激活后可作为多阶段加载器远程控制设备，并被用于广告欺诈、安装变现和数据收集等活动。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-002"
     ],
     "references": [
       {
-        "title": "Keenadu Firmware Backdoor Infects Android Tablets via Signed OTA Updates",
-        "link": "https://thehackernews.com/2026/02/keenadu-firmware-backdoor-infects.html"
+        "title": "Kaspersky discovers Keenadu, a multifaceted Android malware that can come preinstalled on new devices",
+        "link": "https://www.kaspersky.com/about/press-releases/kaspersky-discovers-keenadu-a-multifaceted-android-malware-that-can-come-preinstalled-on-new-devices"
       },
       {
-        "title": "Kaspersky Securelist：Keenadu Android 后门研究",
+        "title": "Keenadu the tablet conqueror and the links between major Android botnets - Securelist",
         "link": "https://securelist.com/keenadu-android-backdoor/118913/"
+      },
+      {
+        "title": "Keenadu Firmware Backdoor Infects Android Tablets via Signed OTA Updates - The Hacker News",
+        "link": "https://thehackernews.com/2026/02/keenadu-firmware-backdoor-infects.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-02",
     "relatedAttackTools": [
       "AT0013-001"

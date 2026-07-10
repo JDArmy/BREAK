@@ -12,10 +12,18 @@
       "sensitive information",
       "employee disclosure"
     ],
-    "summary": "Shortly after Samsung Electronics allowed use of ChatGPT, reports described improper-use risks. Employees reportedly entered sensitive data into an external generative AI service, and the content could be stored by the external service or used for training, creating leakage risk. The incident highlights the need for enterprises adopting generative AI tools to restrict sensitive-data input, configure auditing, and establish employee usage rules.",
+    "summary": "In March 2023, Korean media reported three incidents after Samsung Electronics allowed ChatGPT use in which internal information was entered into an external generative-AI service, involving semiconductor-related code, defective-equipment identification code, and meeting-recording transcription. The incident shows how enterprise adoption of generative-AI tools can create trade-secret leakage risk without sensitive-data input limits, auditing, and employee usage rules.",
     "references": [
       {
-        "title": "[Exclusive] Fears Become Reality: Samsung Electronics Faces ChatGPT Misuse Right After Unlocking Access",
+        "title": "Samsung employees leaked corporate data in ChatGPT: report - CIO Dive",
+        "link": "https://www.ciodive.com/news/Samsung-Electronics-ChatGPT-leak-data-privacy/647137/"
+      },
+      {
+        "title": "Samsung finds data leak due to use of ChatGPT: Korean media - CGTN",
+        "link": "https://news.cgtn.com/news/2023-04-03/Samsung-finds-data-leak-due-to-use-of-ChatGPT-Korean-media-1iHSzPcMDEk/index.html"
+      },
+      {
+        "title": "Samsung Electronics faces ChatGPT misuse after allowing access - The Economist Korea",
         "link": "https://economist.co.kr/article/view/ecn202303300057"
       }
     ]

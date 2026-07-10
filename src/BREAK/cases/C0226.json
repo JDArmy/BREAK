@@ -18,16 +18,12 @@
       "Google索引",
       "色情跳转"
     ],
-    "summary": "2025年12月，Cybernews 与 SC Media 报道称，美国多州及地方政府的 .gov 域名遭遇 SEO 污染攻击。攻击者通过政府站点的公共表单或文件上传功能投放含恶意链接的 PDF 等内容，这些附件被 Google 等搜索引擎索引后，用户点击官方域名结果会被引向 AI 色情广告、聊天机器人、成人用品或其他不良页面。报道提到至少 38 个 .gov 站点、18 个州受影响，第三方政府网站服务商 Granicus 表示已阻断公开访问上传文档。",
+    "summary": "2025年12月，SC Media 和 Cybernews 报道称，美国多个州及地方政府的 .gov 域名遭遇 SEO 污染攻击。攻击者将含跳转链接的 PDF 或页面植入政府网站可公开访问位置，相关内容被搜索引擎索引后，用户点击官方域名结果会被引向 AI 色情广告、聊天机器人、成人用品等不良页面。报道提到至少 38 个 .gov 站点、18 个州受影响。",
     "category": "security_incident",
     "relatedRisks": [
       "R0018"
     ],
     "references": [
-      {
-        "title": "Dominic Alvieri 关于美国政府网站 PDF SEO 污染活动的原始披露",
-        "link": "https://x.com/AlvieriD/status/1999403353466421320"
-      },
       {
         "title": "AI-generated porn pushed via hijacked State.gov sites - SC Media",
         "link": "https://www.scworld.com/brief/ai-generated-porn-pushed-via-hijacked-state-gov-sites"
@@ -35,6 +31,10 @@
       {
         "title": "Hackers hijack dozens State.gov websites to push AI Porn - Cybernews",
         "link": "https://cybernews.com/news/ai-porn-state-gov-websites-hijacked/"
+      },
+      {
+        "title": "Kansas AG website briefly hosted ad for 'AI-generated adult images' - StateScoop",
+        "link": "https://statescoop.com/kansas-ag-website-exploit-ai-generated-images/"
       }
     ],
     "updated": "2026-07-10",

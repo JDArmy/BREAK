@@ -73,7 +73,7 @@ Relation fields (all required, non-empty):
 - **`category`**: `criminal_verdict` / `administrative_enforcement` / `security_incident` / `vulnerability_advisory` / `academic_research` / `news_report` (stored as key, mapped via locale)
 - **`incidentTime`**: incident time
 - **`relatedRisks`**: at least 1 (required); `relatedAttackTools` / `relatedThreatActors` optional
-- Cases are lazily loaded (1782+ entries); the home page does not load them — they load only on `/cases`, search, or related-cases reverse query
+- Cases are lazily loaded (1781+ entries); the home page does not load them — they load only on `/cases`, search, or related-cases reverse query
 
 ## Relation Field Semantics
 
