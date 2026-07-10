@@ -1,17 +1,17 @@
 {
-  "AC01": {
+  "prevention": {
     "title": "Prevention",
     "description": "Pre-event or in-event risk prevention mechanisms, such as blocking, interception, and restriction measures."
   },
-  "AC02": {
+  "perception": {
     "title": "Perception",
     "description": "Pre-event or in-event risk perception mechanisms, such as monitoring, alerting, and early warning measures."
   },
-  "AC03": {
+  "detection": {
     "title": "Detection",
     "description": "In-event risk detection mechanisms, such as identification, verification, and recognition measures."
   },
-  "AC04": {
+  "disposition": {
     "title": "Disposition",
     "description": "In-event or post-event risk disposition mechanisms, such as handling, response, and remediation measures."
   }

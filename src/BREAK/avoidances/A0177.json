@@ -1,6 +1,6 @@
 {
   "A0177": {
-    "category": "AC01",
+    "category": "prevention",
     "title": "MEV保护机制",
     "description": "使用私有内存池、交易加密、公平排序、提交承诺等技术防止MEV机器人抢跑、三明治攻击和套利夹击，保护用户交易不被前置或后置交易利用。覆盖交易提交、排序、打包全环节，降低链上交易可观测性，使攻击者无法基于公开内存池构造套利。",
     "references": [
@@ -12,7 +12,7 @@
     "keywords": [
       "MEV保护机制"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "definition": "使用私有内存池、交易加密、公平排序等技术防止抢跑。",
     "effectiveness": "high",
     "limitation": "依赖私有内存池服务商与验证者的诚信，验证者本身仍可能抢跑或与攻击者串通；并非所有链都有成熟的私有交易池生态；公平排序需可信排序者或多方协议，去中心化实现难度大；交易加密在解密时机设计不当时仍可被时序攻击规避；保护服务可能降低交易确认速度，用户为安全付出延迟代价。",
@@ -47,11 +47,12 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0177-001": {
     "title": "私有交易池与MEV保护服务",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "通过私有内存池提交交易，绕过公开内存池避免被MEV机器人监控和抢跑",
     "description": "公开内存池中的待确认交易可被MEV机器人分析并抢跑。保护方案：使用Flashbots Protect、MEV Blocker等服务将交易直接发送给验证者；交易不进入公开内存池，避免被监控；验证者承诺不进行抢跑或三明治攻击；用户可以设置交易隐私级别和最大可接受MEV；支持返还部分MEV收益给用户。适用于大额交易、NFT铸造、DeFi操作等高价值场景。CoW DAO研究显示这可以有效防御前置交易和三明治攻击。",
     "complexity": "基础",
@@ -62,7 +63,7 @@
         "link": "https://cow.fi/learn/mev-attacks-explained"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-11",
     "keywords": [
       "私有交易池与MEV保护服务",
       "私有内存池",
@@ -102,6 +103,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

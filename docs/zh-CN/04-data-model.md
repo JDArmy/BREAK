@@ -37,10 +37,10 @@ slug: data-model
 
 ## 规避手段（`Avoidance`）
 
-- **`category`**：`AC01`（防止）/ `AC02`（感知）/ `AC03`（识别）/ `AC04`（处置），必填
+- **`category`**：`prevention`（防止）/ `perception`（感知）/ `detection`（识别）/ `disposition`（处置），必填
 - **`effectiveness`**：`high` / `medium` / `low`，可选，表示有效性强度
-- **`limitation`**：**必填**，中文 30-200 字、英文不超过 150 个单词，不得占位套话。AC02/AC03 必须含「被绕过方式」或「误报场景」
-- **`description`**：≥40 字。AC02/AC03 必须命中检测信号词（采集/埋点/指纹/阈值/模型等）
+- **`limitation`**：**必填**，中文 30-200 字、英文不超过 150 个单词，不得占位套话。perception/detection 必须含「被绕过方式」或「误报场景」
+- **`description`**：≥40 字。perception/detection 必须命中检测信号词（采集/埋点/指纹/阈值/模型等）
 
 横向关系字段 `relatedAvoidances` / `relatedAttackTools` / `relatedThreatActors` 由 `sync:lateral-relations` **自动维护**，不要手改。
 

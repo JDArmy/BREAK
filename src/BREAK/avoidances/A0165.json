@@ -1,7 +1,7 @@
 {
   "A0165": {
     "title": "区块链分析工具应用",
-    "category": "AC03",
+    "category": "detection",
     "definition": "使用Chainalysis等专业工具分析可疑交易和地址",
     "description": "分析工具：地址标签库；交易图谱；资金流向；关联分析；风险评分；合规检查；AML筛查。",
     "complexity": "中级",
@@ -20,7 +20,7 @@
         "link": "https://home.treasury.gov/system/files/246/GENIUS-Act-Illicit-Finance-Innovation-Congressional-Report-March-2026.pdf"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "区块链分析工具应用",
       "链分析",
@@ -61,6 +61,6 @@
         "note": "共同限制 1 个攻击工具。"
       }
     ],
-    "version": 2
+    "version": 3
   }
 }

@@ -1,6 +1,6 @@
 // C 类 LLM：category 语义贴切度
 // 规则：category_semantic_fit — A 类强信号校验之外，category 与 description 语义贴切度
-// （如 description 写感知内容但 category 标 AC01；Case category 与 summary 内容不符）
+// （如 description 写感知内容但 category 标 prevention；Case category 与 summary 内容不符）
 
 import { getChangedEntities, parseArgs } from './changed-entities.mjs';
 import { loadAllEntities } from './llm-review-helpers.mjs';
@@ -36,7 +36,7 @@ function buildPrompt(item) {
   const sys = `你是 BREAK 知识库的分类语义贴切度评审员。判断 category/complexity/effectiveness 是否与实体内容语义贴切。
 重要：不同实体类型有不同字段，不要评不存在的字段：
 - Risk：只有 complexity（basic/intermediate/advanced），**无 category 字段**，不要评 category（category 为空是正常的，不算缺失/错配）
-- Avoidance：有 category（AC01-04）+ effectiveness（high/medium/low）
+- Avoidance：有 category（prevention/perception/detection/disposition）+ effectiveness（high/medium/low）
 - Case：有 category（6 枚举）
 - Term：category 使用小写 snake_case 语义 key，必须引用 Term 分类注册表
 严格规则：
@@ -46,7 +46,7 @@ function buildPrompt(item) {
    - suggested: 建议的 category（若不贴切）
    - 对 Risk 跳过 category（设 current=true, suggested=null）
    分类枚举：
-     Avoidance.category: AC01(防止)/AC02(感知)/AC03(识别)/AC04(处置)
+     Avoidance.category: prevention(防止)/perception(感知)/detection(识别)/disposition(处置)
      Case.category: criminal_verdict/administrative_enforcement/security_incident/vulnerability_advisory/academic_research/news_report
      Term.category: 使用分类注册表中的语义 key，不得填写展示名称；合法候选为：${termCategoryOptions}
 3. complexity（仅 Risk）：basic/intermediate/advanced 是否贴切

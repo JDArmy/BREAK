@@ -356,7 +356,7 @@ html.dark .usage-highlight--link {
   overflow-wrap: anywhere;
 }
 
-/* 规避手段分类 badge：AC01 防止 / AC02 感知 / AC03 识别 / AC04 处置 */
+/* 规避手段分类 badge：prevention 防止 / perception 感知 / detection 识别 / disposition 处置 */
 .avoidance-category-badge {
   display: inline-block;
   width: fit-content;
@@ -366,22 +366,22 @@ html.dark .usage-highlight--link {
   font-weight: 700;
   border: 1px solid var(--break-border);
 }
-.avoidance-category-badge.avoidance-category-AC01 {
+.avoidance-category-badge.avoidance-category-prevention {
   background: color-mix(in srgb, var(--green-500) 18%, transparent);
   border-color: var(--green-500);
   color: var(--green-800);
 }
-.avoidance-category-badge.avoidance-category-AC02 {
+.avoidance-category-badge.avoidance-category-perception {
   background: color-mix(in srgb, var(--sky-500) 18%, transparent);
   border-color: var(--sky-500);
   color: var(--sky-800);
 }
-.avoidance-category-badge.avoidance-category-AC03 {
+.avoidance-category-badge.avoidance-category-detection {
   background: color-mix(in srgb, var(--purple-500) 18%, transparent);
   border-color: var(--purple-500);
   color: var(--purple-800);
 }
-.avoidance-category-badge.avoidance-category-AC04 {
+.avoidance-category-badge.avoidance-category-disposition {
   background: color-mix(in srgb, var(--amber-500) 18%, transparent);
   border-color: var(--amber-500);
   color: var(--amber-700);
@@ -414,10 +414,10 @@ html.dark .usage-highlight--link {
 }
 
 /* 暗黑模式：badge 文字改用浅色变体，保证对比度 */
-html.dark .avoidance-category-badge.avoidance-category-AC01 { color: var(--green-400); }
-html.dark .avoidance-category-badge.avoidance-category-AC02 { color: var(--sky-400); }
-html.dark .avoidance-category-badge.avoidance-category-AC03 { color: var(--purple-400); }
-html.dark .avoidance-category-badge.avoidance-category-AC04 { color: var(--amber-300); }
+html.dark .avoidance-category-badge.avoidance-category-prevention { color: var(--green-400); }
+html.dark .avoidance-category-badge.avoidance-category-perception { color: var(--sky-400); }
+html.dark .avoidance-category-badge.avoidance-category-detection { color: var(--purple-400); }
+html.dark .avoidance-category-badge.avoidance-category-disposition { color: var(--amber-300); }
 html.dark .avoidance-effectiveness-badge.effectiveness-high { color: var(--green-400); }
 html.dark .avoidance-effectiveness-badge.effectiveness-medium { color: var(--amber-300); }
 html.dark .avoidance-effectiveness-badge.effectiveness-low { color: var(--slate-300); }

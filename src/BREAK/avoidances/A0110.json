@@ -1,7 +1,7 @@
 {
   "A0110": {
     "title": "固件安全启动（Secure Boot）机制",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "通过加密签名验证确保设备只能运行未被篡改的可信固件",
     "description": "Secure Boot在设备启动时验证固件完整性，防止加载被篡改或恶意的固件。实施步骤：在硬件中存储可信根密钥（Root of Trust）；固件镜像使用厂商私钥签名；启动时用公钥验证签名，验证失败则拒绝启动；采用分层验证，每层验证下一层（UEFI Secure Boot模型）；使用硬件可信平台模块（TPM）存储度量值。这种机制广泛应用于服务器、IoT设备、路由器等关键设备，确保从硬件到操作系统的信任链完整。",
     "complexity": "高级",
@@ -12,7 +12,7 @@
         "link": "https://akitra.com/blog/firmware-security-the-unsung-hero-of-cyber-defense/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-11",
     "keywords": [
       "固件安全启动（Secure Boot）机制",
       "Secure Boot",
@@ -53,10 +53,11 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0110-001": {
-    "category": "AC01",
+    "category": "prevention",
     "title": "XR设备可信启动",
     "description": "XR头显及配套设备实施固件签名验证和安全启动机制，在硬件可信根基础上逐层验证 bootloader、操作系统、驱动等固件镜像签名，签名失败则拒绝启动，防止恶意固件被植入从而劫持传感器数据或渲染层实施空间计算攻击。",
     "references": [
@@ -68,7 +69,7 @@
     "keywords": [
       "XR设备可信启动"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "definition": "XR设备实施固件签名验证和安全启动，防止恶意固件。",
     "effectiveness": "high",
     "limitation": "依赖厂商私钥保管，私钥一旦泄露攻击者即可签名任意恶意固件绕过启动验证；解锁 bootloader 的开发模式、漏洞利用（如bootrom漏洞）可破解信任链；硬件可信根损坏或实施错误会导致设备变砖，影响正常用户；阻止用户安装自定义固件，对研究者与重度用户不友好，存在与开放性诉求的冲突。",
@@ -103,6 +104,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

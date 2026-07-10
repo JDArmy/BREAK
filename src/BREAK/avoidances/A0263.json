@@ -1,7 +1,7 @@
 {
   "A0263": {
     "title": "舆情叙事操纵监测",
-    "category": "AC03",
+    "category": "detection",
     "keywords": [
       "舆情叙事操纵监测",
       "舆情操纵监测",
@@ -23,7 +23,7 @@
         "link": "https://www.sec.gov/investor/alerts"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "effectiveness": "medium",
     "relatedAvoidances": [
       {
@@ -56,6 +56,7 @@
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

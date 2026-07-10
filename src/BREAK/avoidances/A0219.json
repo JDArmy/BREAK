@@ -1,6 +1,6 @@
 {
   "A0219": {
-    "category": "AC01",
+    "category": "prevention",
     "title": "Webhook签名验证与重放保护",
     "description": "对Webhook事件做签名校验、时间戳窗口校验、幂等去重和事件来源验证，防止攻击者伪造或重放Webhook事件触发业务系统执行未授权的回调动作。",
     "references": [
@@ -13,7 +13,7 @@
       "Webhook签名验证与重放保护",
       "Webhook签名验证重放保护"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-11",
     "definition": "对Webhook事件做签名校验、时间戳窗口、幂等处理和事件来源验证。",
     "effectiveness": "high",
     "limitation": "签名密钥泄露后攻击者可伪造任意合法签名事件绕过校验；时间戳窗口需容忍时钟偏移与网络延迟，窗口期内重放仍可被接受；幂等去重依赖事件ID存储，存储周期外的延迟重放可绕过去重；部分业务为兼容历史接入方关闭签名校验或使用弱签名算法，使重放防护形同虚设。",
@@ -48,6 +48,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

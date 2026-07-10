@@ -1,7 +1,7 @@
 {
   "A0111": {
     "title": "固件更新签名验证与回滚保护",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "对固件更新包进行加密签名验证，并防止降级到存在漏洞的旧版本",
     "description": "确保固件更新来源可信且不可被降级攻击。措施包括：更新包使用厂商私钥签名，设备验证签名后才安装；使用版本号单调递增机制，拒绝安装低于当前版本的固件；在不可篡改存储区记录已安装的最低安全版本号；更新过程使用加密通道（TLS），防止中间人攻击；失败时自动回退到上一个可用版本而非进入不可用状态。NHTSA关于车联网固件的指导强调了这些措施的重要性。",
     "complexity": "中级",
@@ -12,7 +12,7 @@
         "title": "TCG Guidance for Secure Update of Software and Firmware on ..."
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-11",
     "keywords": [
       "固件更新签名验证与回滚保护",
       "签名验证",
@@ -52,11 +52,12 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0111-001": {
     "title": "固件OTA更新签名验证",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "对OTA推送的固件包进行数字签名验证，确保来源可信且未被篡改",
     "description": "防止恶意固件通过OTA植入。措施：固件包使用厂商私钥签名；设备内置公钥验证；使用安全哈希算法；证书链验证；版本号防回滚；更新失败自动回退。",
     "complexity": "中级",
@@ -67,7 +68,7 @@
         "link": "https://www.nhtsa.gov/sites/nhtsa.gov/files/documents/cybersecurity_of_firmware_updates_oct2020.pdf"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "keywords": [
       "固件OTA更新签名验证",
       "OTA安全",
@@ -106,10 +107,11 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0111-002": {
-    "category": "AC01",
+    "category": "prevention",
     "title": "车联网OTA安全治理",
     "description": "对车端OTA升级包、升级通道、回滚策略和版本灰度实施端到端签名验证与安全监控，防止攻击者通过伪造OTA包向车端植入恶意固件或篡改控制逻辑。覆盖包签名、TLS通道、版本单调递增、灰度发布审批、升级日志审计等环节，保障整车型号升级链路可信。",
     "references": [
@@ -121,7 +123,7 @@
     "keywords": [
       "车联网OTA安全治理"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "definition": "对车端OTA包、升级通道、回滚策略和版本灰度实施签名验证与安全监控。",
     "effectiveness": "high",
     "limitation": "车厂签名私钥若被内鬼窃取或保管不当，攻击者可签发合法外观的恶意OTA包绕过验证；灰度回滚机制设计缺陷可能导致升级失败后无法回退，造成车辆无法启动；车企供应商链条复杂，第三方TSP或零部件厂商通道被攻破即可借此伪造升级指令；版本防回滚在紧急修复历史漏洞时会阻碍快速降级，存在运维与安全的张力。",
@@ -146,6 +148,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

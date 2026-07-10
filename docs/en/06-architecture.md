@@ -7,6 +7,8 @@ slug: architecture
 
 # Architecture & Data Pipeline
 
+<!-- 2026-07-11: Internal Avoidance-category key migration; the data model covers the field-value update. -->
+
 This page defines BREAK's authoritative data sources, runtime loading strategy, and generated-output boundaries. Before changing code or data, identify which module owns the field so derived relations and generated files are not edited manually.
 
 ## High-Level Flow

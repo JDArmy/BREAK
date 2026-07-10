@@ -841,52 +841,52 @@ onBeforeUnmount(() => {
   flex-shrink: 0;
 }
 
-.knowledge-badge.ac01 {
-  background: var(--break-badge-ac01-bg);
-  border-color: var(--break-badge-ac01-border);
-  color: var(--break-badge-ac01-text);
+.knowledge-badge.prevention {
+  background: var(--break-badge-prevention-bg);
+  border-color: var(--break-badge-prevention-border);
+  color: var(--break-badge-prevention-text);
 }
 
-.knowledge-badge.ac02 {
-  background: var(--break-badge-ac02-bg);
-  border-color: var(--break-badge-ac02-border);
-  color: var(--break-badge-ac02-text);
+.knowledge-badge.perception {
+  background: var(--break-badge-perception-bg);
+  border-color: var(--break-badge-perception-border);
+  color: var(--break-badge-perception-text);
 }
 
-.knowledge-badge.ac03 {
-  background: var(--break-badge-ac03-bg);
-  border-color: var(--break-badge-ac03-border);
-  color: var(--break-badge-ac03-text);
+.knowledge-badge.detection {
+  background: var(--break-badge-detection-bg);
+  border-color: var(--break-badge-detection-border);
+  color: var(--break-badge-detection-text);
 }
 
-.knowledge-badge.ac04 {
-  background: var(--break-badge-ac04-bg);
-  border-color: var(--break-badge-ac04-border);
-  color: var(--break-badge-ac04-text);
+.knowledge-badge.disposition {
+  background: var(--break-badge-disposition-bg);
+  border-color: var(--break-badge-disposition-border);
+  color: var(--break-badge-disposition-text);
 }
 
-html.dark .knowledge-badge.ac01 {
-  background: var(--break-badge-ac01-bg);
-  border-color: var(--break-badge-ac01-border);
-  color: var(--break-badge-ac01-text);
+html.dark .knowledge-badge.prevention {
+  background: var(--break-badge-prevention-bg);
+  border-color: var(--break-badge-prevention-border);
+  color: var(--break-badge-prevention-text);
 }
 
-html.dark .knowledge-badge.ac02 {
-  background: var(--break-badge-ac02-bg);
-  border-color: var(--break-badge-ac02-border);
-  color: var(--break-badge-ac02-text);
+html.dark .knowledge-badge.perception {
+  background: var(--break-badge-perception-bg);
+  border-color: var(--break-badge-perception-border);
+  color: var(--break-badge-perception-text);
 }
 
-html.dark .knowledge-badge.ac03 {
-  background: var(--break-badge-ac03-bg);
-  border-color: var(--break-badge-ac03-border);
-  color: var(--break-badge-ac03-text);
+html.dark .knowledge-badge.detection {
+  background: var(--break-badge-detection-bg);
+  border-color: var(--break-badge-detection-border);
+  color: var(--break-badge-detection-text);
 }
 
-html.dark .knowledge-badge.ac04 {
-  background: var(--break-badge-ac04-bg);
-  border-color: var(--break-badge-ac04-border);
-  color: var(--break-badge-ac04-text);
+html.dark .knowledge-badge.disposition {
+  background: var(--break-badge-disposition-bg);
+  border-color: var(--break-badge-disposition-border);
+  color: var(--break-badge-disposition-text);
 }
 
 .knowledge-badge.risk-basic {

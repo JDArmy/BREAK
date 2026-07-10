@@ -1,7 +1,7 @@
 {
   "A0164": {
     "title": "多链资产映射追踪",
-    "category": "AC03",
+    "category": "detection",
     "definition": "建立跨链资产映射关系，追踪资产在不同链上的流转",
     "description": "追踪体系：链上映射表；跨链索引；资产指纹；流转路径；总量监控；异常告警；取证支持。",
     "complexity": "高级",
@@ -16,7 +16,7 @@
         "link": "https://arxiv.org/abs/2510.09624"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "多链资产映射追踪",
       "跨链追踪",
@@ -56,6 +56,6 @@
         "note": "共同限制 1 个攻击工具。"
       }
     ],
-    "version": 2
+    "version": 3
   }
 }

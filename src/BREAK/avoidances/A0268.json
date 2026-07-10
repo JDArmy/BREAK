@@ -1,7 +1,7 @@
 {
   "A0268": {
     "title": "AI智能体记忆分级与写入治理",
-    "category": "AC01",
+    "category": "prevention",
     "keywords": [
       "AI智能体记忆分级与写入治理",
       "AI智能体记忆安全",
@@ -24,7 +24,7 @@
         "link": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "effectiveness": "high",
     "relatedAvoidances": [
       {
@@ -57,6 +57,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

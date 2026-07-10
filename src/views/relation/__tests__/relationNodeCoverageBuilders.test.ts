@@ -38,7 +38,7 @@ const addRisk = (id: string, avoidances: string[] = []) => {
 const addAvoidance = (id: string) => {
   (BREAK.avoidances as Record<string, unknown>)[id] = {
     title: id,
-    category: "AC01",
+    category: "prevention",
     keywords: [],
     definition: id,
     description: id,

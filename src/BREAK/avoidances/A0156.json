@@ -1,7 +1,7 @@
 {
   "A0156": {
     "title": "链上声誉与信用体系",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "基于链上行为数据构建信誉评分，替代传统KYC身份验证",
     "description": "信誉系统：链上交易历史；智能合约交互；DeFi信用分；社交图谱；Sybil抗性；灵魂绑定代币。",
     "complexity": "中级",
@@ -12,7 +12,7 @@
         "link": "https://vitalik.eth.limo/general/2022/01/26/soulbound.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "keywords": [
       "链上声誉与信用体系",
       "链上信誉",
@@ -52,6 +52,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

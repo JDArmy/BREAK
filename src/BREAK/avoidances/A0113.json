@@ -1,7 +1,7 @@
 {
   "A0113": {
     "title": "IoT流量异常检测与C&C通信阻断",
-    "category": "AC03",
+    "category": "detection",
     "definition": "使用机器学习模型检测IoT设备的异常网络行为，识别并阻断僵尸网络C&C（命令与控制）通信",
     "description": "僵尸网络依赖C&C服务器下发指令，切断通信可以瓦解攻击。检测方法：使用机器学习分析设备流量特征，识别DGA域名、异常DNS查询、非常规端口通信等僵尸网络特征；在网关部署深度包检测（DPI），识别已知僵尸网络协议（如Mirai变种）；监控设备突然的大量出站连接、扫描行为；建立正常流量基线，偏离即告警。阻断措施：DNS过滤阻断已知C&C域名；防火墙规则限制设备只能访问白名单服务；检测到感染后自动隔离设备。",
     "complexity": "高级",
@@ -12,7 +12,7 @@
         "link": "https://ieeexplore.ieee.org/document/10895253/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "IoT流量异常检测与C&C通信阻断",
       "异常检测",
@@ -48,10 +48,11 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0113-001": {
-    "category": "AC03",
+    "category": "detection",
     "title": "IoT流量监控与异常检测",
     "description": "通过监听并采集IoT设备的网络流量、出站连接、DNS查询与端口通信等信号，建立正常流量基线，运用机器学习模型与规则比对识别DGA域名、非常规端口、扫描外联等异常行为，偏离基线即告警。",
     "references": [
@@ -63,7 +64,7 @@
     "keywords": [
       "IoT流量监控与异常检测"
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "definition": "监控IoT设备网络流量，检测异常外联行为。",
     "effectiveness": "high",
     "limitation": "新型僵尸网络可使用加密通信、协议层伪造或快速变种DGA域名绕过检测，加密流量下DPI效果有限；正常固件升级、OTA轮询易与C&C外联混淆导致误报，IoT设备基数大也使基线难稳定。",
@@ -98,6 +99,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

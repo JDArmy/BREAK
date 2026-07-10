@@ -7,6 +7,8 @@ slug: index
 
 # Getting Started
 
+<!-- 2026-07-11: Internal Avoidance-category key migration; no visible UI or navigation workflow change. -->
+
 BREAK (Business Risk Enumeration & Avoidance Knowledge) is a knowledge framework for business security that decomposes "business risk" into six enumerable entity types and links them with relationships into a searchable, reason-about-able network. This page helps you build a mental model in 5 minutes.
 
 ## What BREAK Is

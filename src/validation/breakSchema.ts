@@ -11,7 +11,7 @@ const keywordArray = z
 const semanticCategoryKeySchema = z
   .string()
   .regex(/^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$/, "category 必须是有语义的小写 snake_case key");
-const avoidanceCategorySchema = z.enum(["AC01", "AC02", "AC03", "AC04"]);
+const avoidanceCategorySchema = z.enum(["prevention", "perception", "detection", "disposition"]);
 const avoidanceEffectivenessSchema = z.enum(["high", "medium", "low"]);
 const riskComplexitySchema = z.enum(["basic", "intermediate", "advanced"]);
 // 风险分级维度刻度：low/medium/high/critical，映射权重 1/2/3/4

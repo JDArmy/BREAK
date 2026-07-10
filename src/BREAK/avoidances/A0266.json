@@ -1,7 +1,7 @@
 {
   "A0266": {
     "title": "IOMMU与内核DMA保护",
-    "category": "AC01",
+    "category": "prevention",
     "keywords": [
       "IOMMU与内核DMA保护",
       "IOMMU",
@@ -23,7 +23,7 @@
         "link": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-kernel-dma-protection"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "effectiveness": "high",
     "relatedAvoidances": [
       {
@@ -57,6 +57,6 @@
         "note": "共同覆盖 1 个风险。"
       }
     ],
-    "version": 1
+    "version": 2
   }
 }

@@ -48,7 +48,7 @@ function buildPrompt(item) {
    - fail 当存在明显不匹配的 avoidance（如该 avoidance 是验证码而风险是支付欺诈，毫无缓解关系）
    - review 当匹配薄弱或边界
 3. risk_missing_avoidance：该风险攻击向量本应有哪些 AC 类规避但未列？给具体候选 avoidance title（从 avoidancesByCat 里找）。
-   - AC01=防止、AC02=感知、AC03=识别、AC04=处置
+   - prevention=防止、perception=感知、detection=识别、disposition=处置
 4. verdict：pass/review/fail。fail=存在明显不匹配的 avoidance 或关键 AC 类完全缺失；review=薄弱；pass=覆盖合理。
 5. reason: 一句话。suggestions: 数组，给具体补充建议。`;
   const relatedList = (relatedAvoidances || [])

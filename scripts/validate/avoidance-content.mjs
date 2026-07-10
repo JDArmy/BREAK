@@ -6,7 +6,7 @@ import { TEXT_LENGTH_POLICY } from './text-length-policy.mjs';
 // 长度阈值
 const DESC_MIN = 40; // 所有类别 description 最小长度
 const LIM_MIN = TEXT_LENGTH_POLICY.avoidances.limitation.minZh; // 所有类别 limitation 最小长度
-const LIM_SIGNAL_MIN = 40; // AC02/AC03 limitation 弱约束+长度补强阈值
+const LIM_SIGNAL_MIN = 40; // perception/detection limitation 弱约束+长度补强阈值
 
 // 词集（精确使用，不要增减）
 const COLLECT_WORDS = [
@@ -33,10 +33,10 @@ const FP_WORDS = [
 const PLACEHOLDER_LIM = ['无', '暂无', '待补充', 'N/A', '无明确局限', '暂无明确局限', '无已知局限', '无明确局限性', '暂无局限性', '无'];
 
 const CATEGORY_LABEL = {
-  AC01: '防止',
-  AC02: '感知',
-  AC03: '识别',
-  AC04: '处置',
+  prevention: '防止',
+  perception: '感知',
+  detection: '识别',
+  disposition: '处置',
 };
 
 const hasAny = (text, words) => words.some((w) => text.includes(w));
@@ -92,25 +92,25 @@ function validateAvoidance(record, issues) {
     });
   }
 
-  // 3. AC02/AC03 description 检测信号
-  if (category === 'AC02' && !hasAny(desc, COLLECT_WORDS) && !hasAny(desc, LOGIC_WORDS)) {
+  // 3. perception/detection description 检测信号
+  if (category === 'perception' && !hasAny(desc, COLLECT_WORDS) && !hasAny(desc, LOGIC_WORDS)) {
     addIssue(issues, {
       type: 'description_no_signal',
       ...ctx,
-      message: `${key}.description: AC02(感知)需含采集信号或判定逻辑相关词（如采集/埋点/指纹/阈值/模型），当前未命中`,
+      message: `${key}.description: perception(感知)需含采集信号或判定逻辑相关词（如采集/埋点/指纹/阈值/模型），当前未命中`,
     });
   }
-  if (category === 'AC03' && !hasAny(desc, LOGIC_WORDS) && !hasAny(desc, COLLECT_WORDS)) {
+  if (category === 'detection' && !hasAny(desc, LOGIC_WORDS) && !hasAny(desc, COLLECT_WORDS)) {
     addIssue(issues, {
       type: 'description_no_signal',
       ...ctx,
-      message: `${key}.description: AC03(识别)需含判定逻辑或采集信号相关词（如阈值/规则/模型/匹配/异常），当前未命中`,
+      message: `${key}.description: detection(识别)需含判定逻辑或采集信号相关词（如阈值/规则/模型/匹配/异常），当前未命中`,
     });
   }
 
-  // 4. AC02/AC03 limitation 弱约束+长度补强（仅在 lim 非空且非占位且非过短时才检查）
+  // 4. perception/detection limitation 弱约束+长度补强（仅在 lim 非空且非占位且非过短时才检查）
   if (
-    (category === 'AC02' || category === 'AC03') &&
+    (category === 'perception' || category === 'detection') &&
     lim &&
     !PLACEHOLDER_LIM.includes(lim) &&
     lim.length >= LIM_MIN
@@ -131,15 +131,15 @@ function validateAvoidance(record, issues) {
       });
     }
   }
-  // AC01/AC04 的 limitation 仅做长度+套话校验（上面已覆盖），不强制 BYPASS/FP
+  // prevention/disposition 的 limitation 仅做长度+套话校验（上面已覆盖），不强制 BYPASS/FP
 }
 
 function buildStats(records) {
   const stats = {
-    AC01: { count: 0, noLimitation: 0 },
-    AC02: { count: 0, noLimitation: 0 },
-    AC03: { count: 0, noLimitation: 0 },
-    AC04: { count: 0, noLimitation: 0 },
+    prevention: { count: 0, noLimitation: 0 },
+    perception: { count: 0, noLimitation: 0 },
+    detection: { count: 0, noLimitation: 0 },
+    disposition: { count: 0, noLimitation: 0 },
     total: records.length,
     withLimitation: 0,
     coverage: '0%',
@@ -174,7 +174,7 @@ function renderMarkdown(stats, issues) {
     '| --- | --- | ---: | ---: |',
   ];
 
-  for (const cat of ['AC01', 'AC02', 'AC03', 'AC04']) {
+  for (const cat of ['prevention', 'perception', 'detection', 'disposition']) {
     const item = stats[cat] || { count: 0, noLimitation: 0 };
     lines.push(`| ${cat} | ${CATEGORY_LABEL[cat] || ''} | ${item.count} | ${item.noLimitation} |`);
   }
@@ -247,7 +247,7 @@ function main() {
   fs.writeFileSync(path.join(reportDir, 'avoidance-content.md'), renderMarkdown(stats, issues));
 
   console.log('\n=== Avoidance 内容规范检查 ===');
-  const cats = ['AC01', 'AC02', 'AC03', 'AC04'];
+  const cats = ['prevention', 'perception', 'detection', 'disposition'];
   console.log(
     cats.map((cat) => `${cat}: ${stats[cat].count} 条`).join(' | '),
   );

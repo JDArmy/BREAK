@@ -2,6 +2,8 @@
 
 English | [中文](./README_CN.md)
 
+<!-- 2026-07-11: Internal Avoidance-category key migration; no visible README workflow change. -->
+
 ## Online: <https://break.jd.army/>
 
 ## Introduction

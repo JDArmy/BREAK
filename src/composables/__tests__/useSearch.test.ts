@@ -14,8 +14,8 @@ vi.mock("@/BREAK", () => ({
       R0032: { title: "账号盗取", keywords: ["盗号", "账号被盗", "ATO"], avoidances: ["A0007"] },
     },
     avoidances: {
-      A0001: { title: "人机验证技术", keywords: ["验证码", "CAPTCHA"], category: "AC01" },
-      A0007: { title: "多因素验证", keywords: ["MFA", "2FA"], category: "AC02" },
+      A0001: { title: "人机验证技术", keywords: ["验证码", "CAPTCHA"], category: "prevention" },
+      A0007: { title: "多因素验证", keywords: ["MFA", "2FA"], category: "perception" },
     },
     attackTools: {
       AT0001: { title: "打码平台", keywords: ["验证码平台"], directCauseRisks: ["R0001"] },

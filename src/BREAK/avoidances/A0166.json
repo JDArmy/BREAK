@@ -1,7 +1,7 @@
 {
   "A0166": {
     "title": "链上合规与监管协作",
-    "category": "AC04",
+    "category": "disposition",
     "definition": "与监管机构协作建立链上监管机制和合规报告",
     "description": "合规框架：旅行规则实施；可疑交易报告；黑名单共享；监管节点；链上监管科技；跨境协作；取证接口。",
     "complexity": "高级",
@@ -12,7 +12,7 @@
         "title": "On-chain Privacy and Financial Compliance - TRM Labs"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "keywords": [
       "链上合规与监管协作",
       "链上监管",
@@ -52,6 +52,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

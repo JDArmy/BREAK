@@ -1,7 +1,7 @@
 {
   "A0150": {
     "title": "OTA通道加密与完整性保护",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "使用TLS等加密协议保护OTA更新传输过程，防止中间人攻击",
     "description": "传输层防护：强制HTTPS/TLS通信；证书固定防MITM；完整性校验和；分片传输验证；断点续传保护；服务器身份认证。",
     "complexity": "基础",
@@ -12,7 +12,7 @@
         "link": "https://www.embedded.com/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "keywords": [
       "OTA通道加密与完整性保护",
       "TLS",
@@ -51,6 +51,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

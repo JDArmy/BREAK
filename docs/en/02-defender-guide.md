@@ -11,7 +11,7 @@ This page is for defenders — security / risk-control / anti-fraud teams. It ex
 
 ## Core Flow: Scene → Risk → Avoidance → Defense-in-Depth → Validation
 
-The defender's typical BREAK workflow is reverse inference: first locate the risk scenes relevant to your business, scope the related risks, then follow Risk → Avoidance to find measures, arrange defense-in-depth across the AC01–AC04 phases, and finally validate with real Cases.
+The defender's typical BREAK workflow is reverse inference: first locate the risk scenes relevant to your business, scope the related risks, then follow Risk → Avoidance to find measures, arrange defense-in-depth across the prevention–disposition phases, and finally validate with real Cases.
 
 ## Step 1: Locate Relevant Risks via Business Domains
 
@@ -31,23 +31,23 @@ On the risk detail page (`/knowledges/risk/list#R0001`), every risk has an `avoi
 
 **Pay special attention to `limitation`**: it documents the real-world attacker counter-techniques and failure modes. A measure's limitation is often more valuable than its description — it tells you "once you deploy this, how the adversary bypasses it and what you should add next".
 
-## Step 3: Arrange Defense-in-Depth Across AC01–AC04
+## Step 3: Arrange Defense-in-Depth Across prevention–disposition
 
 Avoidance's `category` field groups all measures into the four phases of "prevent → sense → identify → dispose", which is also the standard skeleton for defense-in-depth:
 
 ```mermaid
 flowchart LR
-  P["Prevent<br/>AC01"] --> S["Sense<br/>AC02"] --> I["Identify<br/>AC03"] --> D["Dispose<br/>AC04"]
+  P["Prevent<br/>prevention"] --> S["Sense<br/>perception"] --> I["Identify<br/>detection"] --> D["Dispose<br/>disposition"]
 ```
 
 | Phase | category | What it does | Signal traits |
 |-------|----------|--------------|---------------|
-| Prevent | AC01 | Raise the attack bar so the attack can't succeed | CAPTCHA, device fingerprint, risk rules |
-| Sense | AC02 | Collect detection signals, spot anomalies | Telemetry, traffic, behavioral features |
-| Identify | AC03 | Use rules / models to judge anomalies | Thresholds, baselines, model matching |
-| Dispose | AC04 | Act on identification results | Rate-limiting, banning, manual review |
+| Prevent | prevention | Raise the attack bar so the attack can't succeed | CAPTCHA, device fingerprint, risk rules |
+| Sense | perception | Collect detection signals, spot anomalies | Telemetry, traffic, behavioral features |
+| Identify | detection | Use rules / models to judge anomalies | Thresholds, baselines, model matching |
+| Dispose | disposition | Act on identification results | Rate-limiting, banning, manual review |
 
-When planning defenses, ensure each critical risk has coverage across all four phases — don't pile up only AC01 (prevent) and neglect AC02/AC03 (sense/identify), which are key to detecting novel attacks. The rule that AC02/AC03 descriptions must substantively describe "what signal is collected" or "what logic judges anomalies" is itself a checklist for defenders: if a measure's description only says "detects anomalies" without naming a signal, it has no reference value for you.
+When planning defenses, ensure each critical risk has coverage across all four phases — don't pile up only prevention (prevent) and neglect perception/detection (sense/identify), which are key to detecting novel attacks. The rule that perception/detection descriptions must substantively describe "what signal is collected" or "what logic judges anomalies" is itself a checklist for defenders: if a measure's description only says "detects anomalies" without naming a signal, it has no reference value for you.
 
 ## Step 4: Weigh ROI with complexity
 
@@ -57,7 +57,7 @@ Every Risk has a `complexity` (basic / intermediate / advanced), indicating the 
 - **intermediate**: needs some skill or tooling — monitor closely
 - **advanced**: needs expertise / custom tools / multi-party coordination — dedicated response
 
-With a limited budget, first complete the AC01 prevent measures for basic risks, then handle intermediate's AC02/AC03 sense/identify, and reserve a dedicated budget for advanced risks. This is far more effective than "spreading effort evenly".
+With a limited budget, first complete the prevention prevent measures for basic risks, then handle intermediate's perception/detection sense/identify, and reserve a dedicated budget for advanced risks. This is far more effective than "spreading effort evenly".
 
 ## Step 5: Validate Measures Against Related Cases
 
@@ -89,8 +89,8 @@ When a defender runs a risk inventory for a new business:
 
 1. [ ] Locate the business's Business Domain (BusinessDomain), expand to specific RiskScenes
 2. [ ] Export the Risk list covered by the RiskScene, sort by complexity
-3. [ ] For each basic risk, confirm AC01 prevent measures are in place
-4. [ ] For each intermediate/advanced risk, confirm AC02/AC03 sense/identify coverage
+3. [ ] For each basic risk, confirm prevention prevent measures are in place
+4. [ ] For each intermediate/advanced risk, confirm perception/detection sense/identify coverage
 5. [ ] Review the limitation of each selected Avoidance, anticipate attacker bypass paths
 6. [ ] Validate actual attack techniques against related Cases (prioritize criminal_verdict)
 7. [ ] Expand laterally: follow relatedAvoidances to fill defense-in-depth gaps

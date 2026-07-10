@@ -18,6 +18,11 @@ const getInitialKey = () => {
 };
 const selectedAvoidanceKey = ref(getInitialKey());
 const selectedCategory = ref("");
+const avoidanceCategories = computed(() =>
+  Object.entries(BREAK.avoidanceCategories).sort(
+    ([, left], [, right]) => (left.order ?? 0) - (right.order ?? 0)
+  )
+);
 
 watch(
   () => route.params.aKey,
@@ -95,10 +100,10 @@ watch(selectedCategory, () => {
         :placeholder="$t('allCategories')"
       >
         <el-option
-          v-for="(category, categoryKey) in BREAK.avoidanceCategories"
-          :key="categoryKey"
-          :label="$t(`BREAK.avoidanceCategories.${categoryKey}.title`)"
-          :value="categoryKey"
+          v-for="entry in avoidanceCategories"
+          :key="entry[0]"
+          :label="$t(`BREAK.avoidanceCategories.${entry[0]}.title`)"
+          :value="entry[0]"
         />
       </el-select>
     </template>

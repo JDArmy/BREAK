@@ -122,7 +122,7 @@ const enumValues = {
   complexity: ['basic', 'intermediate', 'advanced'],
   riskSeverity: ['low', 'medium', 'high', 'critical'],
   riskPriority: ['P0', 'P1', 'P2', 'P3'],
-  avoidanceCategorySchema: ['AC01', 'AC02', 'AC03', 'AC04'],
+  avoidanceCategorySchema: ['prevention', 'perception', 'detection', 'disposition'],
   avoidanceEffectivenessSchema: ['high', 'medium', 'low'],
   category: ['criminal_verdict', 'administrative_enforcement', 'security_incident', 'vulnerability_advisory', 'academic_research', 'news_report'],
 };

@@ -8,6 +8,8 @@ allowed-tools: Bash
 
 # BREAK 知识库 Skill
 
+<!-- 2026-07-11：规避分类语义 key 内部迁移，无 Skill 可见调用流程变化。 -->
+
 BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3391 条业务安全风险知识条目，涵盖以下实体类型：
 
 | 类型                      | 数量 | ID 格式            | 说明                   |

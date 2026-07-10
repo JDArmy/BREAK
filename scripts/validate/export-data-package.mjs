@@ -62,7 +62,7 @@ export interface BreakRisk extends BreakBaseEntity {
   businessDomains: string[];
 }
 
-export type BreakAvoidanceCategoryId = 'AC01' | 'AC02' | 'AC03' | 'AC04';
+export type BreakAvoidanceCategoryId = 'prevention' | 'perception' | 'detection' | 'disposition';
 export type BreakAvoidanceEffectiveness = 'high' | 'medium' | 'low';
 export type BreakAvoidanceRelationType = 'prerequisite' | 'complement' | 'alternative' | 'mitigates-gap';
 
@@ -146,6 +146,8 @@ export interface BreakBusinessDomain {
 export interface BreakAvoidanceCategory {
   title: string;
   description: string;
+  keyword: string;
+  order: number;
 }
 
 export interface BreakCase {

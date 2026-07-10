@@ -1,7 +1,7 @@
 {
   "A0262": {
     "title": "模型输出最小化与反抽取控制",
-    "category": "AC01",
+    "category": "prevention",
     "keywords": [
       "模型输出最小化与反抽取控制",
       "模型抽取防护",
@@ -23,7 +23,7 @@
         "link": "https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "effectiveness": "medium",
     "relatedAvoidances": [
       {
@@ -56,6 +56,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

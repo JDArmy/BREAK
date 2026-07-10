@@ -1,7 +1,7 @@
 {
   "A0139": {
     "title": "签名消费与状态跟踪",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "记录已使用的签名或消息哈希，拒绝重复使用，并在验证后立即标记为已消费",
     "description": "防止同一签名被多次使用。实施细节：维护已使用签名的哈希映射（used mapping）；验证签名有效后立即标记为已使用；使用布隆过滤器优化存储；定期清理过期签名记录；确保标记操作不可回滚（即使后续逻辑失败）。Cyfrin Solodit清单强调消费nonce后不应回滚。",
     "complexity": "中级",
@@ -12,7 +12,7 @@
         "link": "https://www.cyfrin.io/blog/solodit-checklist-explained-9-replay-attack"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-11",
     "keywords": [
       "签名消费与状态跟踪",
       "签名消费",
@@ -32,6 +32,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

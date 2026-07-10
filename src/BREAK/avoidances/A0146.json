@@ -1,7 +1,7 @@
 {
   "A0146": {
     "title": "工业网络隔离与区域划分",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "将工业控制网络与IT网络物理或逻辑隔离，划分安全区域限制攻击扩散",
     "description": "Purdue模型网络分层：0-2层（生产现场）与3-5层（企业网络）隔离；使用防火墙和二极管单向数据流；OT设备专用VLAN；DMZ区域缓冲；严格访问控制。",
     "complexity": "中级",
@@ -12,7 +12,7 @@
         "link": "https://www.sans.org/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "keywords": [
       "工业网络隔离与区域划分",
       "网络隔离",
@@ -52,6 +52,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

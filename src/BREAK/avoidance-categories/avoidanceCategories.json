@@ -1,22 +1,26 @@
 {
-  "AC01": {
+  "prevention": {
     "title": "防止",
     "description": "事前或事中的风险防止机制。通过此类手段对业务系统进行防护，提升攻击门槛，阻止、规避或减少攻击发生概率。",
-    "keyword": "Prevention"
+    "keyword": "Prevention",
+    "order": 1
   },
-  "AC02": {
+  "perception": {
     "title": "感知",
     "description": "事前或事中的风险感知机制。通过此类手段来收集终端特征/采集终端异常行为，及时感知到攻击事件。",
-    "keyword": "Perception"
+    "keyword": "Perception",
+    "order": 2
   },
-  "AC03": {
+  "detection": {
     "title": "识别",
     "description": "事中的风险识别机制。通过此类手段对传递到服务端的终端请求或传递数据进行风险识别，以便及时处置。",
-    "keyword": "Detection"
+    "keyword": "Detection",
+    "order": 3
   },
-  "AC04": {
+  "disposition": {
     "title": "处置",
     "description": "事中或事后的风险处置机制。通过此类手段来阻止或削减攻击影响，降低安全风险。",
-    "keyword": "Disposition"
+    "keyword": "Disposition",
+    "order": 4
   }
 }

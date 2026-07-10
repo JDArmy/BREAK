@@ -1,7 +1,7 @@
 {
   "A0154": {
     "title": "虚拟资产估值与信息披露",
-    "category": "AC03",
+    "category": "detection",
     "definition": "建立透明的资产估值体系和强制信息披露制度，帮助用户理性判断",
     "description": "信息透明化：历史交易数据公开；项目方背景披露；开发路线图；财务状况；风险提示；第三方评级；禁止虚假宣传。",
     "complexity": "基础",
@@ -12,7 +12,7 @@
         "title": "How to Value Digital Tokens: A 5-Step Fair Value Framework"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "keywords": [
       "虚拟资产估值与信息披露",
       "信息披露",
@@ -51,6 +51,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

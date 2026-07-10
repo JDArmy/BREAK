@@ -1,7 +1,7 @@
 {
   "A0004": {
     "title": "频率限制",
-    "category": "AC04",
+    "category": "disposition",
     "definition": "对访问者请求相关资源时进行访问频率控制。",
     "description": "频率限制通常可以用在流量削峰等场景，其目的是为了缓解服务器压力，对于远超过人类正常请求的超高频数据请求的爬虫场景下会有较为直接的拦截作用，避免远超服务器承载的流量导致服务器拒绝服务器以及所引起的雪崩效应。",
     "limitation": "与爬虫识别（A0003）不同，频率限制并不会严格区分人类流量和自动化流量，这导致过低的阈值通常会将部分人类访问请求误拦截，而过高的阈值又会将低频请求爬虫放行，也因此并不能算成一种有效的爬虫识别与拦截手段。",
@@ -11,7 +11,7 @@
         "link": "https://owasp.org/API-Security/editions/2019/en/0xa4-lack-of-resources-and-rate-limiting/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "频率限制",
       "限流",
@@ -53,10 +53,11 @@
         "relation": "complement",
         "note": "共同覆盖 44 个风险，共同限制 12 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0004-001": {
-    "category": "AC01",
+    "category": "prevention",
     "title": "API速率限制与配额控制",
     "description": "按用户、设备、IP、租户、接口和业务动作实施动态限流、配额和熔断，对超过阈值的请求进行限速、排队或拒绝，避免接口被高频自动化调用打穿。可结合令牌桶、漏桶等算法实现精细化流量控制，并通过熔断机制在依赖异常时快速失败以保护后端服务。",
     "references": [
@@ -69,7 +70,7 @@
       "API速率限制与配额控制",
       "API速率限制配额控制"
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "definition": "按用户、设备、IP、租户、接口和业务动作实施动态限流、配额和熔断。",
     "effectiveness": "high",
     "limitation": "黑产通过代理池（AT0098）和代理IP（AT0034-001）轮换海量出口IP，将单IP请求分散到分布式节点，规避基于IP的速率限制；账号池配合养号策略绕过按用户/设备的配额控制；阈值设置存在两难——过低会误拦正常用户的高频合法请求（如抢购、对账），过高则放行低频慢速爬虫；熔断机制可能被恶意触发，通过制造异常请求导致服务自我熔断，形成拒绝服务。",
@@ -104,11 +105,12 @@
         "relation": "complement",
         "note": "共同覆盖 10 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0004-002": {
     "title": "IoT僵尸网络流量过滤与限速",
-    "category": "AC04",
+    "category": "disposition",
     "definition": "在网络边界实施DDoS流量过滤和速率限制，减轻已感染设备发起的攻击影响",
     "description": "即使设备被感染，也要限制其攻击能力。防御措施：在上游ISP或CDN层部署DDoS清洗服务（如Cloudflare、Akamai），过滤来自僵尸网络的大流量攻击；对单个IoT设备设置出站流量限额，异常大流量自动限速或阻断；使用基于行为的速率限制（rate limiting），而非固定阈值；部署Botnet Traffic Filter（BTF），识别并丢弃僵尸网络特征流量；与威胁情报源联动，实时更新僵尸网络IP黑名单。这是纵深防御的最后一道防线。",
     "complexity": "中级",
@@ -119,7 +121,7 @@
         "link": "https://www.sumologic.com/blog/iot-botnet"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "IoT僵尸网络流量过滤与限速",
       "流量过滤",
@@ -155,6 +157,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -1,7 +1,7 @@
 {
   "A0038": {
     "title": "代理识别",
-    "category": "AC03",
+    "category": "detection",
     "definition": "感知用户请求网络资源时的代理使用情况",
     "description": "代理识别主要是通过分析用户请求的数据特征等，识别判断用户的网络代理和终端代理使用情况，进一步确认是否为真实的用户请求。",
     "limitation": "代理识别的最大问题是正常用户也可能使用代理（如企业出口、CDN、加速器），容易误拦截误伤正常业务；黑产借助住宅代理池、拨号ADSL频繁切换IP可绕过封禁，移动运营商出口IP难以直接拉黑。",
@@ -15,7 +15,7 @@
         "link": "https://dev.maxmind.com/geoip/docs/databases/anonymous-ip/"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "代理识别",
       "代理检测",
@@ -58,11 +58,11 @@
         "note": "共同覆盖 15 个风险，共同限制 7 个攻击工具。"
       }
     ],
-    "version": 2
+    "version": 3
   },
   "A0038-001": {
     "title": "网页访问代理识别",
-    "category": "AC03",
+    "category": "detection",
     "definition": "对用户请求资源时的访问代理进行识别（典型的访问代理是网页浏览器）",
     "description": "黑灰产可能会使用非常规用户使用的网页访问代理来请求资源，譬如：使用无头浏览器、使用CURL、WGET等软件、使用各种编程语言自带的HTTP Lib库等。可以通过：判断User-Agent、JS判断运行环境、计算ja3、http2指纹等方式来进行网页访问代理的识别。",
     "limitation": "因为对网页访问代理识别的方法最终还是要依赖于对终端请求信息的判断，这意味着将此手段放在强对抗环节将很容易通过伪造和修改数据的方式进行破解。",
@@ -72,7 +72,7 @@
         "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-11",
     "keywords": [
       "网页访问代理识别",
       "浏览器代理识别",
@@ -114,11 +114,12 @@
         "relation": "complement",
         "note": "共同覆盖 7 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0038-002": {
     "title": "网络代理识别",
-    "category": "AC03",
+    "category": "detection",
     "definition": "对用户请求资源时是否进行了网络代理进行识别",
     "description": "常见的网络代理方式有：VPN、SOCKS5、HTTP代理等。目前常见的网络代理识别方法有：IP情报、请求IP聚类、IP属性判断、TCP/IP指纹判断、DNS Server归属地差异、利用WebRTC等暴露真实IP的特征、利用代理的网络延时特性等方法，来判断是否有网络代理被使用。",
     "limitation": "代理识别技术存在以下局限性：一是正常用户也可能使用网络代理，容易误拦截；二是使用移动运营商出口IP作为代理，导致即便识别也很难封禁；三是使用ADSL拨号网络作为代理，一旦封禁就立即通过重新拨号的方式来切换新代理",
@@ -128,7 +129,7 @@
         "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-11",
     "keywords": [
       "网络代理识别",
       "VPN识别",
@@ -170,11 +171,12 @@
         "relation": "complement",
         "note": "共同覆盖 7 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0038-003": {
     "title": "TLS/HTTP 指纹识别",
-    "category": "AC03",
+    "category": "detection",
     "definition": "通过 TLS 握手、HTTP/2 协议层指纹识别客户端的真实类型，区分真实浏览器与协议爬虫、自动化脚本。",
     "description": "TLS/HTTP 指纹识别是基于协议层特征识别客户端类型的技术。典型指纹包括：JA3/JA4 指纹（基于 TLS ClientHello 的版本、密码套件、扩展、椭圆曲线等字段计算出的哈希，可标识客户端 TLS 实现库如 OpenSSL、BoringSSL、浏览器 TLS 栈等）、HTTP/2 指纹（基于 SETTINGS 帧参数、窗口更新、头部压缩动态表等特征，区分浏览器与 curl/Python requests 等库）、TCP/IP 指纹（基于 MSS、窗口大小、TLS 选项等区分操作系统）。真实浏览器与协议爬虫、自动化库在协议层实现上存在固有差异，即使攻击者伪造了 User-Agent，其 TLS/HTTP2 指纹仍会暴露真实客户端类型。该手段是对网页访问代理识别中 UA、JS 环境判断的协议层补充，比 UA 更难伪造，是识别协议爬虫、自动化脚本的重要技术，也可用于接口风控中的客户端一致性校验。需注意与网页访问代理识别的区分：后者侧重浏览器代理类型识别（无头浏览器、curl、wget 等），本手段侧重底层协议指纹、TLS 栈实现和 HTTP/2 行为序列这一具体技术手段。",
     "limitation": "主流浏览器与自动化工具的 TLS 指纹可被刻意对齐（如使用 curl-impersonate、修改 TLS 库参数模拟浏览器指纹）；JA3/JA4 指纹库需持续维护以覆盖新版本客户端；部分客户端因系统/库升级指纹会变化，存在误判风险；CDN、安全网关等中间层可能改写 TLS 指纹导致识别失真。",
@@ -192,7 +194,7 @@
         "link": "https://www.akamai.com/blog/security/HTTP2-fingerprinting"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "TLS/HTTP 指纹识别",
       "TLS指纹识别",
@@ -237,6 +239,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

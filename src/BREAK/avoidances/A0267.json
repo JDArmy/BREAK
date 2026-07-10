@@ -1,7 +1,7 @@
 {
   "A0267": {
     "title": "滚动码与挑战响应门禁认证",
-    "category": "AC01",
+    "category": "prevention",
     "keywords": [
       "滚动码与挑战响应门禁认证",
       "滚动码",
@@ -23,7 +23,7 @@
         "link": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-98.pdf"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "effectiveness": "high",
     "relatedAvoidances": [
       {
@@ -47,6 +47,6 @@
         "note": "共同覆盖 1 个风险。"
       }
     ],
-    "version": 1
+    "version": 2
   }
 }

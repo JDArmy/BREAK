@@ -37,10 +37,10 @@ Risk does **not** maintain `relatedBusinessDomains` — a risk's business-domain
 
 ## Avoidance
 
-- **`category`**: `AC01` (prevent) / `AC02` (sense) / `AC03` (identify) / `AC04` (dispose), required
+- **`category`**: `prevention` (prevent) / `perception` (sense) / `detection` (identify) / `disposition` (dispose), required
 - **`effectiveness`**: `high` / `medium` / `low`, optional, indicates effectiveness strength
-- **`limitation`**: **required**, ≥30 chars, no placeholder clichés. AC02/AC03 must contain "bypass method" or "false-positive scenario"
-- **`description`**: ≥40 chars. AC02/AC03 must hit a detection-signal keyword (collect/telemetry/fingerprint/threshold/model, etc.)
+- **`limitation`**: **required**, ≥30 chars, no placeholder clichés. perception/detection must contain "bypass method" or "false-positive scenario"
+- **`description`**: ≥40 chars. perception/detection must hit a detection-signal keyword (collect/telemetry/fingerprint/threshold/model, etc.)
 
 The lateral-relation fields `relatedAvoidances` / `relatedAttackTools` / `relatedThreatActors` are **auto-maintained** by `sync:lateral-relations` — do not hand-edit.
 

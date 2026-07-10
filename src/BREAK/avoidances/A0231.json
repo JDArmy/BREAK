@@ -1,7 +1,7 @@
 {
   "A0231": {
     "title": "SROS2与DDS-Security部署",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "启用ROS2的SROS2与DDS-Security（认证、加密、访问控制），替换默认无认证的DDS组播配置，防止机器人节点被未授权接入或话题被注入篡改。",
     "description": "SROS2与DDS-Security部署针对ROS/ROS2默认DDS通信无认证、明文组播、节点可任意发布订阅话题的不安全配置，启用OMG DDS-Security规范的五项安全SPI（身份认证、访问控制、数据机密性、数据完整性、数据源认证）。SROS2提供证书管理与PKI集成，简化DDS-Security的部署。启用后，节点间通信需双向认证，话题发布订阅受访问控制列表约束，数据传输加密防窃听篡改，DDS Discovery协议不再泄露局域网全部机器人应用信息。\n\n该手段与A0108（IoT设备网络隔离与访问控制）、A0118（基于证书的设备认证）、A0146（工业网络隔离与区域划分）配合，是CVE-2024-30259（FastDDS堆溢出）等ROS2漏洞利用后的核心架构级防御。",
     "limitation": "DDS-Security带来显著性能开销，影响实时控制延迟；部分旧ROS节点与跨厂商DDS互操作性差，可能无法启用完整安全特性；证书与PKI管理增加部署复杂度；SROS2仅实现DDS-Security五项SPI中的三项，剩余两项需厂商扩展。",
@@ -38,6 +38,7 @@
         "note": "共同覆盖 1 个风险。"
       }
     ],
-    "updated": "2026-07-04"
+    "updated": "2026-07-11",
+    "version": 2
   }
 }

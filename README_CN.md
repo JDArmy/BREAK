@@ -2,6 +2,8 @@
 
 [English](./README.md) | 中文
 
+<!-- 2026-07-11：规避分类语义 key 内部迁移，无 README 可见使用流程变化。 -->
+
 ## 框架线上地址：<https://break.jd.army/>
 
 ## 介绍

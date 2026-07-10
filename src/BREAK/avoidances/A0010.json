@@ -1,7 +1,7 @@
 {
   "A0010": {
     "title": "终端异常环境检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "对应用运行环境及用户请求环境进行识别，发现异常环境。",
     "description": "异常环境识别通过获取包括不限于终端静默人机挑战、应用合法性、进程合法性、是否越狱（ROOT）、陀螺仪状态、是否外挂插件等数十种数据的获取、分析和判断。具体业务域下的异常环境识别一般是通过业务终端访问系统实现的。根据业务访问模式的不同，终端访问系统可能是浏览器、APP移动应用、桌面级程序等形式。异常环境识别能力严重依赖业务终端访问系统的权限，由于用户授权限制以及法律法规限制，异常环境识别具有一定的局限性，且也受到对抗和终端数据完整性制约。",
     "limitation": "因为异常环境检测都是在用户可控的终端上展开的，所以最终效果取决于对抗性。从理论上讲，因为终端可控，那么就总是能够绕过各种异常环境检测策略，最终就是个时间成本与能力高低问题。",
@@ -15,7 +15,7 @@
         "link": "https://developer.android.com/google/play/integrity/overview"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "终端异常环境检测",
       "设备环境检测",
@@ -58,11 +58,11 @@
         "note": "共同覆盖 43 个风险，共同限制 10 个攻击工具。"
       }
     ],
-    "version": 2
+    "version": 3
   },
   "A0010-001": {
     "title": "模拟器检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "识别APP是否运行在手机模拟器中并采集特征进行判定",
     "description": "模拟器常常被用来刷单，如何准确的识别模拟器成为App开发中的一个重要模块，目前也有专门的公司提供相应的SDK供开发者识别模拟器。 目前流行的Android模拟器大概分为两种，一种是基于Qemu，另一类是基于Genymotion(VirtualBox类)，网上现在流行用一些模拟器特征进行鉴别，比如：通过判断IMEI是否全部为0000000000格式；判断Build中的一些模拟器特征值；匹配Qemu的一些特征文件以及属性；通过获取cpu信息，将x86的给过滤掉（真机一般都是基于ARM）等",
     "limitation": "手机模拟器检测的对抗点有两处：一是对APP采集的信息提前进行伪造，二是对APP采集后上传的信息进行伪造。",
@@ -72,7 +72,7 @@
         "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "模拟器检测",
       "安卓模拟器检测",
@@ -114,11 +114,12 @@
         "relation": "complement",
         "note": "共同覆盖 4 个风险，共同限制 2 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-002": {
     "title": "云手机检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "识别APP是否运行在云手机中并采集特征进行判定",
     "description": "可以通过识别手机模拟器（A0010-001）的方式来进行云手机识别，此外设备指纹、异常环境监测、出网IP等也可用来进行云手机识别。由于云手机通常不能修改ROM，大部分甚至不能获得ROOT权限，所以对抗效果通常会好于手机模拟器检测（A0010-001）",
     "limitation": "随着云手机、云游戏普及，APP厂商若采用“云即黑”的统一拦截会误伤大量正常用户；黑产也可租用合规云手机、模拟正常使用轨迹或混入云游戏流量绕过检测，使云环境信号只能作为风险因子而不能单独定性。",
@@ -128,7 +129,7 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/124/r2/final"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "云手机检测",
       "云机检测",
@@ -170,11 +171,12 @@
         "relation": "complement",
         "note": "共同覆盖 4 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-003": {
     "title": "ROOT/越狱检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "对APP是否运行在被Root或越狱破解的设备上进行识别",
     "description": "通过Root或越狱后的特征来进行判断，譬如：可以查看发布的系统版本，是test-keys（测试版），还是release-keys（发布版）；检查是否存在Superuser.apk；检测在常用目录下是否存在su；使用which命令查看是否存在su；执行su，看能否获取到root权限；是否存在busybox；访问/data目录，查看读写权限等",
     "limitation": "对于ROOT机反检测有两种策略：其一是对应用下手，干预应用的ROOT检测行为；另外一个思路则是对系统下手，隐藏系统自身ROOT相关的特征。通过还原手机ROOT检测的每一条策略和规则，就能提前预制反检测策略。譬如开源的RootCloak就可以通过hook调用api的函数用来对抗root监测",
@@ -184,7 +186,7 @@
         "link": "https://www.lmlphp.com/user/58076/article/item/637693/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "ROOT/越狱检测",
       "Root检测",
@@ -226,11 +228,12 @@
         "relation": "complement",
         "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-004": {
     "title": "外挂检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "对程序是否被注入运行时指令或外挂程序进行识别",
     "description": "通过对程序运行时进行完整性校验、关键词或DLL列表采集，对进程列表、窗口标题关键词等特征进行规则匹配与基线监测，识别是否存在外挂程序注入。",
     "limitation": "与手机ROOT/越狱检测（A0010-003）的局限性一样，通过分析并还原检测过程，阻断或提供Hook后的虚假值即可绕过外挂检测策略。不过因外挂通常用在游戏中，而游戏的数据包可读性比基于HTTP协议的APP应用差许多，如果将外挂检测逻辑和数据回传隐藏在正常的游戏运行和通信中，将加大外挂反检测的难度。",
@@ -240,7 +243,7 @@
         "link": "https://www.163.com/dy/article/KOVL1LB80556IVC7.html"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "外挂检测",
       "作弊器检测",
@@ -282,11 +285,12 @@
         "relation": "complement",
         "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-005": {
     "title": "多开检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "识别APP是否在终端上被多开分身并采集特征进行判定",
     "description": "通过采集并监听终端进程、互斥对象、信号量、窗口标题、共享内存等运行时特征，运用规则匹配与基线比对检测APP是否在终端上被多开分身。事前检测禁止多开，事中、事后检测作为封号处罚依据，方法包括枚举进程多开检测、互斥对象多开检测、信号量多开检测、窗口多开检测、共享内存检测多开等。",
     "limitation": "与外挂检测（A0010-004）的局限性类似，通过分析并还原检测过程，阻断或提供Hook后的虚假值即可绕过多开检测策略。",
@@ -296,7 +300,7 @@
         "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "多开检测",
       "分身检测",
@@ -338,11 +342,12 @@
         "relation": "complement",
         "note": "共同覆盖 5 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-006": {
     "title": "调试器检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "识别程序是否被动态调试器附加并采集特征进行判定",
     "description": "最基本的调试器检测技术就是检测进程环境块(PEB)中的BeingDebugged标志。PEB另一个成员被称作NtGlobalFlag（偏移0x68），壳也通过它来检测程序是否用调试器加载。Kernel32!CheckRemoteDebuggerPresent()是另一个可以用于确定是否有调试器被附加到进程的API。在调试器中步过INT3和INT1指令的时候，由于调试器通常会处理这些调试中断，所以异常处理例程默认情况下将不会被调用，Debugger Interrupts就利用了这个事实。这样壳可以在异常处理例程中设置标志，通过INT指令后如果这些标志没有被设置则意味着进程正在被调试。更多方式请阅读参考资料。",
     "limitation": "与外挂检测（A0010-004）的局限性类似，通过分析并还原检测过程，阻断或提供Hook后的虚假值即可绕过调试器检测策略。",
@@ -352,7 +357,7 @@
         "link": "https://mas.owasp.org/MASTG-KNOW-0085/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "调试器检测",
       "反调试",
@@ -394,11 +399,12 @@
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-007": {
     "title": "虚拟机检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "识别APP是否运行在虚拟机中并采集特征进行判定",
     "description": "虚拟机运行环境检测，指的是软件能够判断当前是不是在虚拟机中运行，根据判断结果，做对应的处理。从恶意软件的视角，它可以在虚拟机中改变自身行为，加大分析难度。从软件自身安全出发，用于防止被逆向调试以及某些场景下的非正常使用。",
     "limitation": "与模拟器检测（A0010-001）的局限性类似，虚拟机检测方法主要是通过检测一些环境属性和文件，但是这些方法并不是绝对可靠的，因为黑灰产业者可以通过修改虚拟机的环境属性和文件来规避检测",
@@ -408,7 +414,7 @@
         "link": "https://www.cnblogs.com/cherishui/p/14366072.html"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "虚拟机检测",
       "VM检测",
@@ -450,11 +456,12 @@
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-008": {
     "title": "无头浏览器检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "识别APP是否运行在无头浏览器中并采集特征进行判定",
     "description": "无头浏览器检测，指的是软件能够判断当前是不是在无头浏览器中运行，根据判断结果，做对应的处理。从恶意软件的视角，它可以在无头浏览器中改变自身行为，加大分析难度。从软件自身安全出发，用于防止被逆向调试以及某些场景下的非正常使用。",
     "limitation": "与模拟器检测（A0010-001）的局限性类似，无头浏览器检测方法主要是通过检测一些环境属性和文件，但是这些方法并不是绝对可靠的，因为黑灰产业者可以通过修改无头浏览器的环境属性和文件来规避检测",
@@ -468,7 +475,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "无头浏览器检测",
       "Headless检测",
@@ -510,11 +517,12 @@
         "relation": "complement",
         "note": "共同覆盖 3 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-009": {
     "title": "HOOK检测",
-    "category": "AC02",
+    "category": "perception",
     "definition": "对APP是否运行在HOOK环境中进行识别",
     "description": "HOOK检测，指的是软件能够判断当前是不是在HOOK环境中运行，根据判断结果，做对应的处理。从恶意软件的视角，它可以在HOOK环境中改变自身行为，加大分析难度。从软件自身安全出发，用于防止被逆向调试以及某些场景下的非正常使用。",
     "limitation": "与模拟器检测（A0010-001）的局限性类似，HOOK检测方法主要是通过检测一些环境属性和文件，但是这些方法并不是绝对可靠的，因为黑灰产业者可以通过修改HOOK环境的环境属性和文件来规避检测",
@@ -524,7 +532,7 @@
         "link": "https://tech.meituan.com/2018/02/02/android-anti-hooking.html"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "keywords": [
       "HOOK检测",
       "Xposed检测",
@@ -565,6 +573,7 @@
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

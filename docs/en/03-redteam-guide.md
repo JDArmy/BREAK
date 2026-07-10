@@ -71,7 +71,7 @@ When reproducing, extract three elements: **timeline** (incidentTime), **subject
 
 This is the field the red team should read most. Every Avoidance's `limitation` documents "how it's bypassed / where it false-positives". List the target business's defense inventory, read each limitation, and these are your attack breakthroughs:
 
-- "CAPTCHA can be solved by CAPTCHA-solving platforms" → the CAPTCHA AC01 prevent measure fails, bypassable
+- "CAPTCHA can be solved by CAPTCHA-solving platforms" → the CAPTCHA prevention prevent measure fails, bypassable
 - "Device fingerprint can be spoofed by emulators" → device fingerprint fails
 - "Behavior analysis false-positives heavily on new accounts" → use new accounts to bypass the behavior baseline
 

@@ -1,6 +1,6 @@
 {
   "A0195": {
-    "category": "AC03",
+    "category": "detection",
     "title": "API资产发现与目录治理",
     "description": "采集API请求、网关日志与流量特征建立统一API资产目录，运用规则匹配、调用基线比对与异常监测发现影子API、未授权接口和生命周期异常，降低未知接口暴露风险。",
     "references": [
@@ -13,7 +13,7 @@
       "API资产发现与目录治理",
       "API资产发现目录治理"
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-11",
     "definition": "建立统一API资产目录、影子API发现、接口归属和生命周期治理，降低未知接口暴露风险。",
     "effectiveness": "high",
     "limitation": "动态生成的Serverless、BFF接口使资产目录难以及时同步，攻击者可借助未登记影子API绕过监测；正常业务频繁迭代接口易漏报，老旧未下线接口与正常灰度接口边界模糊导致噪声大。",
@@ -43,6 +43,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

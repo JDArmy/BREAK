@@ -1,6 +1,6 @@
 {
   "A0205": {
-    "category": "AC03",
+    "category": "detection",
     "title": "SaaS应用权限审计",
     "description": "采集SaaS管理员账号、OAuth授权、外部共享与第三方应用配置等特征，运用规则匹配、权限评分与基线比对识别高危授权、过度权限和异常外部共享。",
     "references": [
@@ -16,7 +16,7 @@
     "keywords": [
       "SaaS应用权限审计"
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "definition": "盘点SaaS管理员、OAuth授权、外部共享和第三方应用，识别高危授权。",
     "effectiveness": "high",
     "limitation": "攻击者可借用合法OAuth令牌、长期未撤销授权绕过权限审计，SaaS厂商频繁更新scope使基线难稳定；正常业务协作所需的高权限易被误判误拦，第三方应用授权边界模糊导致噪声大。",
@@ -41,6 +41,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

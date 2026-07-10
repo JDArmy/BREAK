@@ -1,7 +1,7 @@
 {
   "A0265": {
     "title": "票务转售管控",
-    "category": "AC01",
+    "category": "prevention",
     "keywords": [
       "票务转售管控",
       "转售管控",
@@ -23,7 +23,7 @@
         "link": "https://www.ftc.gov/business-guidance/resources/better-online-ticket-sales-act"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "effectiveness": "medium",
     "relatedAvoidances": [
       {
@@ -56,6 +56,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

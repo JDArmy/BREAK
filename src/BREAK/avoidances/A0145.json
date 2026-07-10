@@ -1,7 +1,7 @@
 {
   "A0145": {
     "title": "侧信道攻击检测与监控",
-    "category": "AC03",
+    "category": "detection",
     "definition": "部署监控系统检测针对设备的侧信道攻击企图",
     "description": "检测措施：功耗异常监控；物理访问日志；异常探测信号检测；防护罩传感器；入侵告警系统。",
     "complexity": "中级",
@@ -12,7 +12,7 @@
         "link": "https://ieeexplore.ieee.org/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "keywords": [
       "侧信道攻击检测与监控",
       "入侵检测",
@@ -31,6 +31,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

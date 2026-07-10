@@ -1,7 +1,7 @@
 {
   "A0095": {
     "title": "智能合约安全审计",
-    "category": "AC03",
+    "category": "detection",
     "definition": "对智能合约代码进行系统性的人工审查和专业分析，识别潜在的安全漏洞和逻辑缺陷",
     "description": "智能合约安全审计由专业团队对合约代码进行系统性人工审查与规则匹配，运用权限校验、重入检测、整数溢出比对、序列校验等判定逻辑识别安全漏洞和逻辑缺陷，审计报告按严重/高危/中危/低危分级并给出修复建议。",
     "complexity": "中级",
@@ -12,7 +12,7 @@
         "link": "https://www.nethermind.io/blog/smart-contract-vulnerabilities-and-mitigation-strategies"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "智能合约安全审计",
       "智能合约",
@@ -52,11 +52,12 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0095-001": {
     "title": "智能合约代码审计与公开验证",
-    "category": "AC03",
+    "category": "detection",
     "definition": "在项目发布前进行第三方代码审计，并在区块链浏览器上公开验证合约源代码",
     "description": "通过透明度和专业审查降低Rug Pull风险。实施要点：聘请知名审计公司（如CertiK、Quantstamp）进行全面代码审计，公开发布审计报告；在Etherscan等区块链浏览器上验证并公开合约源代码，让投资者可以检查；重点审查是否存在隐藏的铸币函数、暂停交易函数、owner特权、流动性撤回后门等Rug Pull常见手法；检查代理合约的升级权限，确保无法恶意替换实现；审计后的代码不应再修改，如需修改需重新审计。Coinbase等平台建议投资者优先选择经过审计的项目。",
     "complexity": "中级",
@@ -67,7 +68,7 @@
         "link": "https://arxiv.org/html/2507.06423v1"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "智能合约代码审计与公开验证",
       "代码审计",
@@ -92,6 +93,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

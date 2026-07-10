@@ -152,13 +152,13 @@ export function loadRelatedEntities(type, keys, fields = ['title', 'definition',
 }
 
 /**
- * 加载全部 Avoidance（按 AC 分类），供 risk-missing-avoidance 评审
+ * 加载全部 Avoidance（按规避分类），供 risk-missing-avoidance 评审
  */
 export function loadAvoidancesByCategory() {
   const records = loadAllEntities('avoidances');
-  const byCat = { AC01: [], AC02: [], AC03: [], AC04: [] };
+  const byCat = { prevention: [], perception: [], detection: [], disposition: [] };
   for (const { key, entity } of records) {
-    const cat = entity.category || 'AC01';
+    const cat = entity.category || 'prevention';
     if (!byCat[cat]) byCat[cat] = [];
     byCat[cat].push({ key, title: entity.title, definition: entity.definition, description: String(entity.description || '').slice(0, 200) });
   }

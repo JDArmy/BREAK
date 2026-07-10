@@ -1,7 +1,7 @@
 {
   "A0270": {
     "title": "Rug Pull损失赔付与资金恢复",
-    "category": "AC04",
+    "category": "disposition",
     "definition": "在Rug Pull事件发生后通过事后赔付、资金流向追踪和协作处置补偿受害者或追回资金",
     "description": "事件确认后，处置方依据赔付规则、链上损失记录和治理表决启动补偿流程，向符合条件的受害用户支付赔款；同时对攻击资金流向进行链上追踪，通过平台协作、执法协作或项目治理渠道限制可识别资产继续流转，并在条件满足时执行资金返还。该手段面向损失已经发生的处置阶段，目标是降低最终净损失，而不是替代事前审计或实时预警。",
     "complexity": "高级",
@@ -20,7 +20,7 @@
         "link": "https://www.trmlabs.com/resources/blog/seize-burn-block-reissue-understanding-the-legal-tools-behind-crypto-asset-recovery"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "keywords": [
       "Rug Pull损失赔付与资金恢复",
       "链上损失赔付",
@@ -45,6 +45,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

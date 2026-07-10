@@ -1,7 +1,7 @@
 {
   "A0136": {
     "title": "链下交易与状态通道",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "将大部分交易移至链下或L2，只在必要时提交汇总数据到主链，减少链上隐私暴露",
     "description": "链下交易不公开记录，保护隐私。实施方式：使用闪电网络、Raiden等状态通道进行高频小额交易；采用Rollup技术（zkRollup、Optimistic Rollup），交易细节不上链只提交证明；通过侧链或L2（Arbitrum、Optimism）进行隐私敏感操作；使用链下订单簿，只将最终结算上链。Stanford研究表明链下方案可在保护隐私的同时满足合规要求。",
     "complexity": "中级",
@@ -12,7 +12,7 @@
         "link": "https://l2beat.com/publications/privacy-best-practices"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-11",
     "keywords": [
       "链下交易与状态通道",
       "链下交易",
@@ -53,6 +53,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

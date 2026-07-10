@@ -7,6 +7,8 @@ slug: release-maintenance
 
 # Release & Maintenance
 
+<!-- 2026-07-11: Internal Avoidance-category key migration; no new public release or maintenance workflow. -->
+
 BREAK maintains both project versions and entity versions. They serve different purposes and must be handled separately.
 
 ## Entity Versions

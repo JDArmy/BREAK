@@ -1,7 +1,7 @@
 {
   "A0141": {
     "title": "模块化与最小化合约设计",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "将复杂系统拆分为独立模块，每个合约保持简单，降低缺陷风险和审计难度",
     "description": "简单合约更容易审计和验证。设计原则：单一职责，每个合约只做一件事；模块化设计，通过接口组合功能；使用经过审计的库（OpenZeppelin）而非自己实现；避免过度优化导致代码难以理解；保持函数简短，逻辑清晰；充分的代码注释和文档。Kaia和Dotsquares最佳实践强调简单性是安全的基础。",
     "complexity": "基础",
@@ -12,7 +12,7 @@
         "link": "https://docs.kaia.io/build/best-practices/smart-contract-security-best-practices/"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-11",
     "keywords": [
       "模块化与最小化合约设计",
       "模块化",
@@ -47,6 +47,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

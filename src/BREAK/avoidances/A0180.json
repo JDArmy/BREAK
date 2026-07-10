@@ -1,6 +1,6 @@
 {
   "A0180": {
-    "category": "AC01",
+    "category": "prevention",
     "title": "eSIM安全管理",
     "description": "加强eSIM远程配置（RSP）的身份验证、授权与传输加密，对profile下载、激活、切换实施双向证书校验与审计，防止攻击者通过伪造SM-DP+服务器或劫持配置流程非法写入profile劫持号码。",
     "references": [
@@ -12,7 +12,7 @@
     "keywords": [
       "eSIM安全管理"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "definition": "加强eSIM远程配置的身份验证和授权，防止非法劫持。",
     "effectiveness": "high",
     "limitation": "依赖SM-DP+服务器与运营商系统的安全，供应链任一环节被攻破即可下发恶意profile绕过终端校验；激活码泄露后攻击者可结合社工欺骗完成profile转移劫持号码；eUICC芯片侧信道漏洞可被利用提取密钥伪造授权；用户换机/补卡流程中身份核验薄弱时，攻击者冒充机主即可重置eSIM，使安全管理形同虚设。",
@@ -37,6 +37,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

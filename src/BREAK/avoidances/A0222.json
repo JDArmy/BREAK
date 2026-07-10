@@ -1,7 +1,7 @@
 {
   "A0222": {
     "title": "定向抽检",
-    "category": "AC03",
+    "category": "detection",
     "definition": "对高风险商家、网点或快递揽派任务按规则定向发起抽检核验，校验实物与系统数据一致性。",
     "description": "定向抽检基于风险评分、历史异常与场景特征，对疑似异常的商家履约、快递揽派任务发起人工或系统抽检，核验货品、重量、路由、签收等实物与系统数据是否一致。\n\n该手段用于治理偷重漏重、虚假路由、重货拆小件等数据失真类风险，治理方向是「数据异常 → 定向核验 → 处置闭环」，需配合取证与申诉机制避免误伤正常履约。",
     "effectiveness": "high",
@@ -28,7 +28,7 @@
       "定向核验",
       "targeted inspection"
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "relatedAvoidances": [
       {
         "key": "A0005",
@@ -60,11 +60,12 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0222-001": {
     "title": "信任商家定向抽检",
-    "category": "AC03",
+    "category": "detection",
     "definition": "对进入信任名单的商家按低频定向抽检，核验其履约货品与申报一致性。",
     "description": "信任商家通常享有免检或快速通道权益，定向抽检以低频抽样方式验证信任未被滥用，重点核查货品一致性、重量与品类申报是否与订单匹配。\n\n该手段在保障信任商家履约效率的同时，识别借信任资质实施虚假发货、调包或申报不实的行为，治理方向是「信任准入 + 抽样复核 + 信任降级」。",
     "effectiveness": "medium",
@@ -86,7 +87,7 @@
       "信任商家复核",
       "trust merchant inspection"
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "relatedAvoidances": [
       {
         "key": "A0015",
@@ -118,11 +119,12 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0222-002": {
     "title": "快递定向抽检任务",
-    "category": "AC03",
+    "category": "detection",
     "definition": "对高风险快递揽派任务定向下发抽检，核验重量、路由与签收真实性。",
     "description": "针对偷重漏重、虚假路由、虚假接驳等风险，按任务级风险评分定向派发抽检任务，由质检或风控人员现场或系统核验计费重量、节点轨迹与签收数据是否与申报一致。\n\n该手段将抽检下沉到单任务粒度，能在履约环节及时拦截数据造假，治理方向是「任务评分 → 定向派检 → 现场核验 → 责任处置」。",
     "effectiveness": "high",
@@ -141,7 +143,7 @@
       "重量抽检",
       "parcel inspection task"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-11",
     "relatedAvoidances": [
       {
         "key": "A0014",
@@ -173,6 +175,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

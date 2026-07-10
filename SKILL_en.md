@@ -8,6 +8,8 @@ allowed-tools: Bash
 
 # BREAK Knowledge Base Skill
 
+<!-- 2026-07-11: Internal Avoidance-category key migration; no visible Skill invocation change. -->
+
 BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,391 entries across the following entity types:
 
 | Type           | Count | ID Format          | Description                                   |

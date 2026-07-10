@@ -1,7 +1,7 @@
 {
   "A0264": {
     "title": "投资者风险提示与适当性干预",
-    "category": "AC01",
+    "category": "prevention",
     "keywords": [
       "投资者风险提示与适当性干预",
       "投资者风险提示",
@@ -23,7 +23,7 @@
         "link": "https://www.finra.org/investors/insights"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-11",
     "effectiveness": "medium",
     "relatedAvoidances": [
       {
@@ -56,6 +56,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -1,9 +1,8 @@
-// A 类机器强约束：Risk.complexity 与 avoidances AC 覆盖一致性
+// A 类机器强约束：Risk.complexity 与 Avoidance 分类覆盖一致性
 // verdict：review
 // 规则：
-//   advanced 风险的 avoidances 须覆盖 AC02(感知) 或 AC03(识别) —— 高级风险应有感知/识别手段
-//   basic 风险的 avoidances 不应全是 AC01(防止) 之外的高级处置
-//   所有风险至少覆盖 2 个 AC 类别（防止→感知→识别→处置 的多环节覆盖）
+//   advanced 风险的 avoidances 须覆盖 perception(感知) 或 detection(识别) —— 高级风险应有感知/识别手段
+//   所有风险至少覆盖 2 个分类（防止→感知→识别→处置 的多环节覆盖）
 // 子风险继承父风险的 complexity（schema 不强制，但语义上应一致）
 
 import fs from 'fs';
@@ -31,18 +30,18 @@ for (const { key, entity } of risks) {
   const catList = [...cats];
 
   if (complexity === 'advanced') {
-    if (!cats.has('AC02') && !cats.has('AC03')) {
+    if (!cats.has('perception') && !cats.has('detection')) {
       issues.push({
         severity: 'review',
         type: 'risks',
         key,
         title: entity.title,
         type2: 'advanced_risk_no_detection',
-        message: `${key} [advanced] avoidances 未覆盖 AC02(感知)/AC03(识别)（当前 AC: ${catList.join(',') || '无'}）—— 高级风险应有感知/识别手段`,
+        message: `${key} [advanced] avoidances 未覆盖 perception(感知)/detection(识别)（当前分类: ${catList.join(',') || '无'}）—— 高级风险应有感知/识别手段`,
       });
     }
   }
-  // 至少覆盖 2 个 AC 类别
+  // 至少覆盖 2 个分类
   if (catList.length < 2) {
     issues.push({
       severity: 'review',
@@ -50,7 +49,7 @@ for (const { key, entity } of risks) {
       key,
       title: entity.title,
       type2: 'risk_single_ac_category',
-      message: `${key} avoidances 仅覆盖 ${catList.length} 个 AC 类别（${catList.join(',') || '无'}）—— 应多环节覆盖（防止→感知→识别→处置）`,
+        message: `${key} avoidances 仅覆盖 ${catList.length} 个分类（${catList.join(',') || '无'}）—— 应多环节覆盖（防止→感知→识别→处置）`,
     });
   }
 }
@@ -63,7 +62,7 @@ writeJson(path.join(reportDir, 'risk-complexity-coverage.json'), {
   issues,
 });
 
-console.log('\n=== Risk.complexity 与 AC 覆盖一致性 ===');
+console.log('\n=== Risk.complexity 与规避分类覆盖一致性 ===');
 console.log(`review: ${issues.length}`);
 for (const issue of issues.slice(0, 40)) {
   console.log(`  🔍 ${issue.message}`);

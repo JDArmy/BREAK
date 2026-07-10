@@ -1,7 +1,7 @@
 {
   "A0138": {
     "title": "时间戳与过期机制",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "为签名消息添加时间戳和过期时间，限制消息的有效期防止旧消息被重放",
     "description": "时间限制降低重放攻击窗口。实施方法：签名中包含创建时间戳和过期时间（deadline）；合约验证当前时间在有效期内；使用区块号而非时间戳避免时间操纵；过期的签名立即拒绝；记录已使用的签名哈希，双重验证。Cube Exchange指出时间戳是nonce的有效补充。",
     "complexity": "基础",
@@ -12,7 +12,7 @@
         "link": "https://orochi.network/blog/Exploring-Blockchain-Replay-Attacks-All-Typical-Examples"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-11",
     "keywords": [
       "时间戳与过期机制",
       "时间戳",
@@ -32,6 +32,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

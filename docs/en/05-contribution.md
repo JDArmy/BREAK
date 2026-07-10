@@ -80,8 +80,8 @@ Typical changes that require updating `SKILL.md` and `SKILL_en.md` include: `scr
 
 ### Avoidance content (validated by `avoidance-content.mjs`)
 
-- **description** ≥40 chars. AC02 (sense) / AC03 (identify) must hit a detection-signal keyword (collection side: collect/telemetry/fingerprint/log/traffic; judgment side: threshold/rule/model/baseline). Just writing "detect/identify" self-referential words is insufficient.
-- **limitation** required, ≥30 chars, no placeholder clichés. AC02/AC03 must contain a "bypass method" (bypass/crack/forgery/simulate) or "false-positive scenario" (false-positive/false-negative/misjudge).
+- **description** ≥40 chars. perception (sense) / detection (identify) must hit a detection-signal keyword (collection side: collect/telemetry/fingerprint/log/traffic; judgment side: threshold/rule/model/baseline). Just writing "detect/identify" self-referential words is insufficient.
+- **limitation** required, ≥30 chars, no placeholder clichés. perception/detection must contain a "bypass method" (bypass/crack/forgery/simulate) or "false-positive scenario" (false-positive/false-negative/misjudge).
 
 ### Choosing `keywords`
 

@@ -35,7 +35,7 @@ const ID_PATTERNS = {
   terms:                /^T\d{4}$/i,
   cases:                /^C\d{4}$/i,
   businessDomains:       /^BD\d{2}$/i,
-  avoidanceCategories:  /^AC\d{2}$/i,
+  avoidanceCategories:  /^(?:prevention|perception|detection|disposition)$/i,
 };
 
 /** 实体类型显示名称和 emoji */

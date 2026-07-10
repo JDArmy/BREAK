@@ -1,7 +1,7 @@
 {
   "A0144": {
     "title": "软件层侧信道缓解",
-    "category": "AC01",
+    "category": "prevention",
     "definition": "通过软件实现技术降低侧信道信息泄露",
     "description": "软件层防护：恒定时间密码库；避免密钥相关分支；内存访问模式混淆；使用位掩码代替条件；定期密钥轮换；最小化特权代码范围。",
     "complexity": "中级",
@@ -16,7 +16,7 @@
         "link": "https://www.anquanke.com/post/id/285863"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-11",
     "keywords": [
       "软件层侧信道缓解",
       "恒定时间",
@@ -35,6 +35,7 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -67,7 +67,7 @@ describe("relationCoverageAnalysis", () => {
     cleanupKeys.avoidances.push(id);
     avoidanceStore[id] = {
       title: id,
-      category: "AC01",
+      category: "prevention",
       keywords: [],
       definition: `${id} definition`,
       description: `${id} description`,

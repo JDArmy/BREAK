@@ -7,6 +7,8 @@ slug: index
 
 # 快速上手
 
+<!-- 2026-07-11：规避分类语义 key 内部迁移，无可见界面或导航流程变化。 -->
+
 BREAK（Business Risk Enumeration & Avoidance Knowledge）是一个面向业务安全的知识框架，把「业务风险」拆解为可枚举的六类实体，并用关系把它们串成可检索、可推演的网络。本文帮你在 5 分钟内建立整体认知。
 
 ## BREAK 是什么
