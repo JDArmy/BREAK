@@ -12,7 +12,7 @@
       "声音克隆",
       "印度"
     ],
-    "summary": "印度演员 Amitabh Bachchan 向德里高等法院起诉 Rajat Nagi 等被告，称其姓名、肖像、声音和其他人格特征被未经授权用于推广商品和服务。德里高等法院于 2022 年 11 月 25 日作出临时禁令，禁止被告未经许可使用 Bachchan 的姓名、形象、声音或其他与其相关的人格属性进行商业活动。该案体现了生成式内容、声音克隆和虚拟形象场景下名人权益保护的边界。",
+    "summary": "印度演员Amitabh Bachchan因姓名、肖像、声音等人格属性被网站、应用和商品经营者擅自利用，向德里高等法院起诉Rajat Nagi等被告。法院于2022年11月25日作出单方临时禁令，禁止被告未经许可使用相关人格属性从事商业活动，并要求有关网络中介协助限制侵权内容。",
     "category": "news_report",
     "relatedRisks": [
       "R0184"
@@ -21,18 +21,15 @@
       {
         "title": "Amitabh Bachchan v. Rajat Nagi and Others",
         "link": "https://delhihighcourt.nic.in/app/showlogo/1669383973237_80487_2022.pdf/2022"
+      },
+      {
+        "title": "Amitabh Bachchan诉Rajat Nagi等案裁定文本",
+        "link": "https://indiankanoon.org/doc/23523817/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2022-11",
-    "relatedAttackTools": [
-      "AT0053-003",
-      "AT0053-006",
-      "AT0053-005"
-    ],
-    "relatedThreatActors": [
-      "TA0031",
-      "TA0032"
-    ]
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }

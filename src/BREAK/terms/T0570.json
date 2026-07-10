@@ -2,7 +2,7 @@
   "T0570": {
     "title": "提示注入",
     "aliases": [],
-    "category": "业务安全",
+    "category": "ai_security",
     "keywords": [
       "提示注入"
     ],
@@ -24,7 +24,7 @@
         "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

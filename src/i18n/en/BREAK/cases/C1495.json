@@ -11,11 +11,11 @@
       "fork chain",
       "private key compromise"
     ],
-    "summary": "This research introduces a stake-bleeding attack leveraging eclipse attacks, involving long-range attack vectors and corresponding defense mechanisms. An attacker can combine network isolation with compromised historical private keys to fork from an early block and construct an alternative chain, exploiting the costless simulation property of Proof-of-Stake to overwrite the main chain history.",
+    "summary": "This 2019 study introduces a stake-bleeding attack against Proof-of-Stake blockchains. An attacker first isolates a target node through an eclipse attack, builds a private fork from an earlier block, and exploits the low cost of generating historical PoS blocks to accumulate stake until the target accepts the alternative chain. The paper relates this technique to long-range attacks and discusses mitigations such as checkpointing.",
     "references": [
       {
-        "title": "Closing the Proof-of-Stake Security Gap: A Signature-Based Defense Against Malicious Validators in Long-Range Attacks",
-        "link": "https://dl.acm.org/doi/abs/10.1145/3327960.3332391"
+        "title": "Eclipse-based Stake-Bleeding Attacks in PoS Blockchain Systems",
+        "link": "https://www.semanticscholar.org/paper/Eclipse-based-Stake-Bleeding-Attacks-in-PoS-Systems-Zhang-Lee/5d074b833e98471b1cf998714b7d45fb95765079"
       }
     ]
   }

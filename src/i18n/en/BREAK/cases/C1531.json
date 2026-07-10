@@ -10,11 +10,15 @@
       "crypto market panic index",
       "quantum threat to blockchain"
     ],
-    "summary": "Coinbase warned that quantum computers could threaten the security of approximately 7 million bitcoins. The alert came amid a market panic index nearing 10 and Bitcoin falling below $60,000, highlighting the potential systemic risk quantum computing poses to existing blockchain encryption systems.",
+    "summary": "In June 2026, the Coinbase Quantum Advisory Council published an analysis of Bitcoin's post-quantum migration and estimated that approximately seven million Bitcoin were potentially quantum-vulnerable, including funds held at addresses with exposed public keys and reused addresses. The article discusses theft risks if future quantum computers break elliptic-curve signatures and urges the ecosystem to plan address migration and rules for abandoned coins in advance.",
     "references": [
       {
         "title": "Blockchain Security Weekly Digest (0608-0614) - Tencent Cloud Developer Community - Tencent Cloud",
         "link": "https://developer.cloud.tencent.com/article/2689126?policyId=1004"
+      },
+      {
+        "title": "Post-Quantum Migration and Abandoned Coins",
+        "link": "https://www.coinbase.com/blog/coinbase-quantum-advisory-council-post-quantum-migration-and-abandoned-coins"
       }
     ]
   }

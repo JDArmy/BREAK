@@ -12,7 +12,6 @@
       "privacy label bypass"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An operation in which criminals restore full phone numbers from partially masked information on privacy-enhanced express delivery waybills.",
     "description": "Decryption services primarily serve telecom fraud rings and underground marketing operations, forming a critical link in the express information leakage chain. Operators illegally obtain waybill numbers and their corresponding virtual or masked phone numbers, then restore the full number using internal system access or cracking tools. Once obtained, the complete phone numbers are used for precision scams, advertising, or resale, directly violating user privacy.",
     "references": [

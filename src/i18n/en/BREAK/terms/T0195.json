@@ -12,7 +12,6 @@
       "non-precise address"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A vague address containing only the province, city, and district levels of administrative division, used in underground data lookup scenarios.",
     "description": "This type of address cannot pinpoint a specific house or residential compound and is mainly used for initial screening, bulk profiling, or to lower transaction costs. Data brokers often attract buyers with low prices, but the delivered content only includes administrative division names with no practical locating capability. In debt collection and fraud chains, vague addresses often serve as a low-cost lead to upsell buyers on a premium service for real addresses.",
     "usageExample": "\"Nationwide vague addresses for individual accounts, 12 yuan each, still available, inquiries welcome.\"",

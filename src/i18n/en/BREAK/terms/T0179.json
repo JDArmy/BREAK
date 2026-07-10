@@ -13,7 +13,6 @@
       "basic PII record"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A basic personal profile containing an ID photo, name, ID number, and detailed residential address.",
     "description": "This is the most fundamental personal information unit in illegal data trading, typically including a citizen's ID card front photo, name and ID number, and detailed address. Due to its completeness, this information is a basic material for identity theft and targeted scams, circulating frequently in the black market.",
     "usageExample": "\"Individual profiles, front and back of ID, instant delivery before 6 PM.\"",

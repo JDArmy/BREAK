@@ -12,7 +12,6 @@
       "comprehensive link analysis"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An in-depth, illicit correlation query service that reveals a target's multi-dimensional relationships, such as cohabitants, institutional affiliations, marital ties, and shared travel or border-crossing records.",
     "description": "This service reconstructs a target's full social network by correlating data from multiple sources, and is commonly used for debt recovery, background checks, or intelligence gathering. Methods include bulk data export by insiders, system credential stuffing, or cross-departmental data aggregation. The output includes related individuals' names, national ID numbers, and relationship types. This service carries extreme risk and can easily trigger cascading privacy breaches and downstream criminal escalation.",
     "references": [

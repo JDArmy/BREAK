@@ -13,7 +13,6 @@
       "data leak"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In the context of the underground industry, broadly refers to various types of sensitive data illegally obtained and used for profit.",
     "description": "This data encompasses personal information, corporate secrets, login credentials, and more, serving as the foundational resource for online fraud, unauthorized transactions, and marketing scams. Within the underground supply chain, this data is often resold multiple times, processed from raw data into refined, high-value data, and ultimately used by downstream criminal groups for monetization.",
     "references": [
@@ -42,7 +41,6 @@
       "data resale"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Second-hand data refers to personal or corporate data that has been resold one or more times in illicit data trading markets.",
     "description": "Due to repeated reselling, this data often suffers from missing fields, outdated information, or tampering, significantly reducing its accuracy and validity. In the underground supply chain, second-hand data is typically used for broad-stroke scams or low-quality marketing campaigns. Its trading price is far lower than that of fresh data, and buyers are usually downstream fraudsters with limited budgets.",
     "references": [
@@ -71,7 +69,6 @@
       "broad data scrape"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Bulk data refers to a broad, unfiltered collection of personal information with low precision, traded in illicit data markets.",
     "description": "This type of data usually comes from messy sources and contains a high volume of invalid, duplicate, or erroneous records, lacking any specific targeting. After purchasing bulk data, fraudsters often need to invest additional effort in cleaning and filtering before it can be used for scams or marketing. Due to its extremely low conversion rate, bulk data is cheap on the market and is commonly used for low-level attacks such as mass phishing SMS blasts.",
     "references": [
@@ -100,7 +97,6 @@
       "data re-aging"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Refurbished data refers to old data that has been processed and disguised as new data in illicit data trading.",
     "description": "Fraudsters repackage outdated data by supplementing it with fabricated information, altering timestamps, or deduplicating records. On the surface, this data appears fresh and valid, but the core information is stale, often leading to failed scams or blocked marketing efforts when used by buyers. Refurbished data is commonly used to deceive downstream buyers by passing off inferior goods as high-quality, reaping excessive profits.",
     "references": [
@@ -137,7 +133,6 @@
       "subsidy phishing leads"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Personal information about recipients of poverty-alleviation, welfare, or subsidy programs that is traded in illicit data markets.",
     "description": "Subsidy recipient data typically contains identities, contact details, addresses, and benefit records of low-income or aid-recipient groups. Criminals obtain it through insiders, exposed systems, or leaked public records, then sell it to downstream fraud rings.\n\nBecause the data is accurate and tied to vulnerable groups, attackers can impersonate government or welfare staff and run highly convincing subsidy scams. Controls focus on minimizing public exposure, auditing access to aid-recipient lists, and warning high-risk groups about impersonation schemes.",
     "references": [
@@ -166,7 +161,6 @@
       "data time delay"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Aged data refers to data that attackers deliberately delay selling for a period after exfiltrating it, in illicit data trading.",
     "description": "To evade risk tracking or wait for the heat to die down, attackers hoard freshly stolen data for a while before releasing it onto the black market. This delayed transaction severely lags the discovery of and response to the data breach, causing victims to suffer ongoing losses often without their knowledge. Aged data is frequently used for highly targeted scams and is favored by underground actors for its strong stealth.",
     "references": [
@@ -195,7 +189,6 @@
       "investor database"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Investor data refers to personal information specifically tailored for targeting stock investors, traded in illicit data markets.",
     "description": "This data precisely targets high-net-worth or active retail investors and contains sensitive information such as investment preferences and portfolio holdings. Fraud rings use this data to carry out stock recommendation scams, pump-and-dump schemes, and other illegal activities, with single fraud amounts often being substantial. Due to its high conversion rate and strong monetization potential, investor data is a high-value commodity in darknet trading.",
     "references": [
@@ -224,7 +217,6 @@
       "skimmed fullz"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Track data refers to bank card magnetic stripe information obtained through skimming devices installed on compromised POS terminals, traded in illicit data markets.",
     "description": "By implanting skimming modules in POS terminals, fraudsters steal magnetic stripe data and PINs from bank cards. This data is extremely precise and can be directly used to clone cards for fraudulent transactions or sold to downstream gangs for telecom fraud. Track data is core financial information, and its leakage directly threatens the financial security of cardholders.",
     "references": [
@@ -253,7 +245,6 @@
       "valid credentials"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal or organizational information that is still valid and can be immediately used for fraudulent activities.",
     "description": "This type of data is typically the latest leaked or stolen first-hand information, not yet resold multiple times, and has a high verification success rate. After purchasing it, underground practitioners can directly use it for targeted scams, unauthorized transactions, or account takeovers without additional cleaning. Due to its timeliness, its price on dark web forums and Telegram groups is significantly higher than that of expired data.",
     "references": [
@@ -282,7 +273,6 @@
       "high-value targets"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal information or account credentials that have been meticulously filtered and verified, possessing extremely high authenticity.",
     "description": "This data often includes detailed contact information, asset status, or specific consumption records, cleaned and annotated by specialized groups. Fraudsters exploit its high accuracy to conduct targeted phishing or business fraud, with success rates far exceeding ordinary data. In underground market transactions, this data is often sold at a high price per record and is a core tool leading to substantial financial losses.",
     "references": [
@@ -311,7 +301,6 @@
       "low-volume data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal or corporate information with low market demand that is difficult to monetize.",
     "description": "This data may be of little interest to underground practitioners due to the target group's weak purchasing power, outdated information, or narrow application scenarios. Such data is often sold off cheaply in bulk or bundled with other high-value data, used to fill databases or for low-cost, wide-net scams.",
     "references": [
@@ -340,7 +329,6 @@
       "uncleaned leak"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to raw, leaked data that has not been cleaned, filtered, or categorized.",
     "description": "This data typically contains a large amount of redundant, duplicate, or invalid information, making direct use highly inefficient. Data brokers or technical groups in the underground economy purchase this raw data, clean and process it through methods like credential stuffing and cross-referencing, extract valid fields, and then resell it at a markup to downstream fraud or marketing teams.",
     "references": [
@@ -369,7 +357,6 @@
       "parenting targets"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal information and consumption data related to pregnant women, new mothers, and infants.",
     "description": "This data includes maternal health records, infant birth registrations, and baby product purchase lists, leaked from channels such as hospitals and e-commerce platforms. After acquiring it, underground groups resell it to confinement centers and photography studios for telemarketing harassment, or directly use it for targeted scams impersonating medical staff.",
     "references": [
@@ -398,7 +385,6 @@
       "cardholder profiles"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to the four core pieces of information for a domestic bank card: the card number, password, cardholder's ID number, and linked mobile phone number.",
     "description": "These four pieces of data are critical for conducting unauthorized transactions, money laundering, and account takeovers, typically obtained through phishing sites, trojans, or system vulnerabilities. Underground groups use them to directly transfer funds or register fake accounts for money laundering through transaction splitting, posing a direct threat to personal financial security.",
     "references": [
@@ -426,7 +412,6 @@
       "new stolen data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Refers to freshly stolen, first-hand personal or organizational data that has not been resold, commanding the highest price on the black market due to its timeliness.",
     "description": "Real-time material emphasizes data freshness and immediate usability, often sourced from recent system intrusions, insider leaks, or phishing harvests. Black-market actors quickly distribute it through automated card-selling platforms or darknet groups, aiming to monetize it before it becomes obsolete. Buyers typically use it for real-time fraud, credential-stuffing attacks, or registering malicious accounts, as shorter delays yield higher success rates.",
     "references": [
@@ -454,7 +439,6 @@
       "stale data dump"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal or organizational data that has expired and can no longer be exploited, regarded as worthless inventory within the black market.",
     "description": "Dead material loses its utility due to age, information changes, or upgraded platform risk controls, such as deactivated phone numbers, frozen bank cards, or invalid login credentials. This data finds no buyers on the market and is sometimes mixed into data packs to deceive inexperienced downstream purchasers. Once identified as dead material, it is typically discarded and cannot be used in subsequent fraud or marketing operations.",
     "references": [
@@ -482,7 +466,6 @@
       "offshore card info"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Refers to four types of overseas bank card information—card number, password, cardholder ID number, and linked phone number—known in the black market as “foreign material” or “CVV fullz.”",
     "description": "Foreign material primarily originates from data breaches involving overseas cards, including phishing sites, payment interface hijacking, or darknet database dumps. Black-market actors sell these full sets to downstream buyers for cross-border carding, fraudulent transactions, or impersonation-based telecom fraud. Due to the involvement of overseas cards, tracing is difficult, and the laundering process often integrates with underground money-transfer platforms, making the cash-out path covert. Once such information enters the market, cardholders face direct financial loss and identity theft risks.",
     "references": [
@@ -510,7 +493,6 @@
       "zero-day data leak"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Refers to personal or organizational data obtained directly from the breach source without any intermediary resale, commanding a premium in black-market trading due to its high integrity.",
     "description": "First-hand material avoids the contamination and adulteration caused by multiple resales and typically comes directly from data sources such as insiders, system vulnerabilities, or real-time phishing results. Black-market actors prioritize using first-hand material for high-value fraud or precision marketing because its completeness and strong correlations yield much higher conversion rates than second-hand material. Sellers often advertise “first-hand supply” to attract buyers, though actual transactions may include dead or duplicate data to inflate volumes.",
     "references": [
@@ -538,7 +520,6 @@
       "stock tip leads"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to sensitive customer information illegally obtained from stock investment platforms or advisory firms, known in the black market as “stock advisory material.”",
     "description": "This data covers personal identities, transaction records, portfolio preferences, and contact details, often leaked by internal employees or obtained through system intrusions. Black-market actors resell stock advisory material to investment scam rings, illegal margin-trading platforms, or precision marketing agencies, who use it for fraudulent investment inducement, fake stock recommendations, or charging exorbitant service fees. Victims are easily misled into believing the scammers are legitimate advisors due to the precise matching of their personal investment profiles, ultimately resulting in financial loss.",
     "references": [
@@ -566,7 +547,6 @@
       "Loan application data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A data package from high-interest or private lending containing signed IOUs, personal identity information, and contact details of borrowers.",
     "description": "This data typically leaks from illegal lending platforms or private loan shark groups and contains detailed borrower privacy information. After acquisition, underground actors use it for secondary fraud, aggressive debt collection, or resale to other criminal groups. Victims are highly susceptible to scams due to the data's authenticity and the debt relationship involved.",
     "usageExample": "\"Selling real-time IOU data, risk-control data, high volume, guaranteed first-hand source, good price\"",
@@ -594,7 +574,6 @@
       "Underwriting data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A collection of user data leaked from financial platform risk-control systems, containing preliminary analysis and risk tags.",
     "description": "This data often includes sensitive information such as credit ratings, spending habits, and risk labels, leaked by insiders or third-party service providers. Underground actors use these precise profiles for customized marketing fraud, loan scams, and other illegal activities. Its targeted nature leads to a much higher scam success rate compared to random attacks.",
     "usageExample": "\"Selling real-time IOU data, risk-control data, high volume, guaranteed first-hand source, good price.\"",
@@ -622,7 +601,6 @@
       "Loan broker data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A complete set of loan applicant documents leaked from online lending platforms, including ID cards, bank cards, and credit reports.",
     "description": "This data is leaked internally from loan facilitation platforms or financial institutions, classified by credit rating by underground brokers, and sold at a premium. Downstream fraud rings purchase it to impersonate platform customer service and conduct secondary scams under the guise of 'unfreezing fees' or 'security deposits.' The detailed loan information makes these scams highly deceptive.",
     "usageExample": "\"Various loan application data, welcome to inquire\"",
@@ -650,7 +628,6 @@
       "Gold financing data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Refers to user information from small, illegal cash-out platforms that support gold purchases with installment repayments, known as 'gold material' in underground data markets.",
     "description": "These platforms use gold purchases as a front to help users obtain cash, charging high handling fees. Black-market actors compile the personal information of users involved in cash-outs and sell it as 'gold material.' This data is often used for secondary scams, where victims not only face financial loss but may also become entangled in legal disputes due to the cash-out activity.",
     "references": [
@@ -679,7 +656,6 @@
       "flight data dump"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Refers to complete flight booking data leaked from airline systems, containing sensitive information such as passenger names, ID numbers, and flight numbers.",
     "description": "This data is typically leaked by insiders within ticketing systems or stolen through hacking. After purchasing it, fraud rings impersonate airline customer service agents, tricking victims into transferring money under the pretext of flight cancellations, rebookings, or refunds. The success rate of such scams is extremely high because the scammers can accurately provide the flight details.",
     "usageExample": "'Selling undeparted flight ticket material'",
@@ -708,7 +684,6 @@
       "device financing data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Refers to user order data leaked from phone rental platforms, including phone models, rental periods, repayment records, and personal identity information.",
     "description": "Black-market actors obtain this data by infiltrating rental platform backends or bribing insiders. Buyers use this information for targeted marketing to rental users or to impersonate platform customer service for scams. This data can also be used for malicious debt collection or to screen users with financial needs for secondary fraud.",
     "usageExample": "'Need phone rental material, next-day real-time device data, can test, contact me'",
@@ -737,7 +712,6 @@
       "card installment data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Refers to user information from small cash-out platforms that support purchasing E-cards or gift cards with installment repayments, illegally traded as 'card voucher material' or 'E-card material.'",
     "description": "These platforms allow users to buy virtual cards and resell them for cash, essentially functioning as illegal lending operations. Black-market actors collect the data of users involved in these cash-outs and package it for sale. This data is often used to promote other illicit lending products or to conduct targeted scams against the users.",
     "references": [

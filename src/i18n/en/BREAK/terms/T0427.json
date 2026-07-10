@@ -12,7 +12,6 @@
       "settlement cut"
     ],
     "aliases": [],
-    "category": "Credit Fraud",
     "definition": "The agreed percentage split of the loan disbursement among parties in a loan fraud scheme.",
     "description": "In the chain of debt assumption or intermediary-facilitated loan fraud, after the loan is disbursed, the capital provider, operator, debt assumer, and intermediaries at various levels split the proceeds according to a pre-agreed ratio. This ratio is often expressed in “tenths,” e.g., 7 tenths means taking 70% of the total disbursed amount. The settlement tier determines the profit distribution at each stage; the higher the tier and the more core the resources controlled, the larger the share. This profit-sharing mechanism incentivizes multi-level intermediary referrals and amplifies the scale of credit fraud.",
     "usageExample": "Direct capital source settles at 70% (net profit) with generous rebates, priority given to dual-clean applicants.",

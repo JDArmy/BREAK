@@ -18,6 +18,7 @@ const businessDomainFiles = import.meta.glob("./.generated/business-domains/*.js
 const attackToolFiles = import.meta.glob("./.generated/attack-tools/*.json", { eager: true });
 const threatActorFiles = import.meta.glob("./.generated/threat-actors/*.json", { eager: true });
 const termFiles = import.meta.glob("./.generated/terms/*.json", { eager: true });
+const termCategoryFiles = import.meta.glob("./.generated/term-categories/*.json", { eager: true });
 
 const BREAK = {
   ...basicInfo,
@@ -28,6 +29,7 @@ const BREAK = {
   attackTools: loadJsonModules(attackToolFiles),
   threatActors: loadJsonModules(threatActorFiles),
   terms: loadJsonModules(termFiles),
+  termCategories: loadJsonModules(termCategoryFiles),
 };
 
 export default BREAK;

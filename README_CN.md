@@ -200,3 +200,7 @@ BREAK 提供标准化导出格式，用于与外部 CTI/SIEM 平台和语义网�
 `npm run export:data-package` 会生成 `dist/break-data-package`，用于评估未来发布 `@jdarmy/break-data` 或等价 npm 包。该产物只包含数据，不包含 Vue 应用、ECharts 运行时和浏览器 UI 代码，文件边界为 `data/break-data.json`、`data/break-manifest.json`、`data/quality-report.json`、STIX 2.1 Bundle（`data/break-stix-zh.json`、`data/break-stix-en.json`）、JSON-LD 文档（`data/break-ld-zh.jsonld`、`data/break-ld-en.jsonld`）、`index.js`、`index.d.ts` 和独立 README。
 
 包版本跟随 BREAK 应用版本。生成的 manifest 与 GitHub Pages 静态数据包保持相同 SHA-256 校验值和实体计数，外部使用方可以在不改变权威数据源的前提下评估 npm 消费方式。
+
+### 2.45.0 术语分类
+
+Term 的 `category` 自 2.45.0 起存储稳定枚举 key，中英文名称由 locale 映射展示。搜索、静态数据、STIX、JSON-LD 与 npm 数据包均保留同一结构 key；新增或调整分类时必须同步更新 schema、双语映射与分类校验，不能直接写任意展示文本。

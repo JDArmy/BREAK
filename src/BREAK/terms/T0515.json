@@ -6,7 +6,7 @@
       "WAF",
       "访问控制"
     ],
-    "category": "安全防护",
+    "category": "security_defense",
     "keywords": [
       "防火墙",
       "Firewall",
@@ -45,6 +45,7 @@
         "title": "What is a Firewall? - Cloudflare"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

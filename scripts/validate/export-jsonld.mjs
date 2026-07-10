@@ -167,7 +167,8 @@ function convertThreatActorNode(breakId, entity) {
   };
 }
 
-function convertTermNode(breakId, entity) {
+function convertTermNode(breakId, entity, categoryRegistry) {
+  const category = categoryRegistry?.categories?.[entity.category];
   return {
     '@id': entityUri(breakId),
     '@type': 'Term',
@@ -179,6 +180,7 @@ function convertTermNode(breakId, entity) {
     description: entity.description,
     aliases: entity.aliases || [],
     category: entity.category,
+    categoryLabel: category?.title || entity.category,
     keywords: entity.keywords,
     usageExample: entity.usageExample || '',
     relatedRisks: (entity.relatedRisks || []).map(entityUri),
@@ -278,7 +280,7 @@ function convertToJsonLd(breakBundle) {
     graph.push(convertThreatActorNode(id, entity));
   }
   for (const [id, entity] of Object.entries(data.terms || {})) {
-    graph.push(convertTermNode(id, entity));
+    graph.push(convertTermNode(id, entity, data.termCategories));
   }
   for (const [id, entity] of Object.entries(data.cases || {})) {
     graph.push(convertCaseNode(id, entity));

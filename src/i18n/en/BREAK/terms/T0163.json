@@ -13,7 +13,6 @@
       "keystroke logging"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A technical method where malicious actors implant code on web pages or in apps to capture user input in real time.",
     "description": "By embedding scripts into target applications or websites, or by tampering with app packages, sensitive data such as passwords, verification codes, and bank card numbers is simultaneously transmitted to black-market servers as the user types. This technique is commonly used on phishing sites and in cracked apps, serving as a primary channel for harvesting first-hand, high-precision data.",
     "references": [

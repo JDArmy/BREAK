@@ -17,6 +17,7 @@ const exportConfigs = [
   { key: 'attackTools', dir: 'src/BREAK/attack-tools', hasVersion: true },
   { key: 'threatActors', dir: 'src/BREAK/threat-actors', hasVersion: true },
   { key: 'terms', dir: 'src/BREAK/terms', hasVersion: true },
+  { key: 'termCategories', dir: 'src/BREAK/term-categories', hasVersion: false },
   { key: 'businessDomains', dir: 'src/BREAK/business-domains', hasVersion: true },
   { key: 'avoidanceCategories', dir: 'src/BREAK/avoidance-categories', hasVersion: false },
   { key: 'cases', dir: 'src/BREAK/cases', hasVersion: true },
@@ -137,7 +138,7 @@ console.log(`data=${path.relative(projectRoot, dataPath)}`);
 console.log(`manifest=${path.relative(projectRoot, manifestPath)}`);
 console.log(`qualityReport=${path.relative(projectRoot, qualityReportPath)}`);
 console.log(
-  `entities=${counts.risks.total}/${counts.avoidances.total}/${counts.attackTools.total}/${counts.threatActors.total}/${counts.terms.total}/${counts.businessDomains.total}/${counts.avoidanceCategories.total}/${counts.cases.total}`
+  `entities=${counts.risks.total}/${counts.avoidances.total}/${counts.attackTools.total}/${counts.threatActors.total}/${counts.terms.total}/${counts.termCategories.total}/${counts.businessDomains.total}/${counts.avoidanceCategories.total}/${counts.cases.total}`
 );
 console.log(
   `quality=${qualityReport.weakRelations.length}/${qualityReport.missingCoverage.length}/${qualityReport.sceneIssues.length}/${qualityReport.i18nIssues.length}/${qualityReport.referenceHealthIssues.length}/${qualityReport.caseSourceIssues.length}`

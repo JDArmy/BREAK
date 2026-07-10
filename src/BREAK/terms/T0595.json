@@ -2,7 +2,7 @@
   "T0595": {
     "title": "供应商远程访问",
     "aliases": [],
-    "category": "业务安全",
+    "category": "third_party_risk",
     "keywords": [
       "供应商远程访问"
     ],
@@ -30,7 +30,7 @@
         "link": "https://www.cyberark.com/resources/blog/securing-remote-access-best-practices-for-third-party-risk-management"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

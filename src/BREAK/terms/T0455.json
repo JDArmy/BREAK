@@ -10,7 +10,7 @@
     "aliases": [
       "非同质化代币"
     ],
-    "category": "区块链资产",
+    "category": "blockchain",
     "definition": "基于区块链技术的非同质化代币，每个代币都具有唯一标识和所有权记录，用于表示数字或实物资产。",
     "description": "NFT通过区块链技术为数字资产提供唯一性证明和所有权确权，广泛应用于数字艺术品、游戏道具、虚拟地产等领域。每个NFT都有独特的元数据和Token ID，不可互换且不可分割，但也存在伪造、盗窃、版权纠纷等风险。",
     "relatedRisks": [
@@ -46,7 +46,8 @@
         "link": "https://dy.163.com/article/GFFFG6CP0552D26Z.html"
       }
     ],
-    "updated": "2026-07-09",
-    "usageExample": "一位数字艺术家在以太坊上将作品铸造为NFT，通过OpenSea出售。买家后来发现该艺术品是从他人处剽窃的，导致NFT价值归零且无法退款。"
+    "updated": "2026-07-10",
+    "usageExample": "一位数字艺术家在以太坊上将作品铸造为NFT，通过OpenSea出售。买家后来发现该艺术品是从他人处剽窃的，导致NFT价值归零且无法退款。",
+    "version": 2
   }
 }

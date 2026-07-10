@@ -23,7 +23,6 @@
       "account forced login",
       "unauthorized account access"
     ],
-    "category": "Data Leakage",
     "definition": "Unauthorized account takeover performed through credential stuffing, vulnerability exploitation, malware, or authentication bypass without the user's knowledge.",
     "description": "Forced account takeover centers on unauthorized login and control of an account. Common methods include credential stuffing, password spraying, session hijacking, vulnerability exploitation, malware-based credential theft, and MFA bypass. After access is obtained, criminals may steal orders, balances, contacts, messages, enterprise backend data, or use the account for further fraud.\n\nIn underground data markets, the term also signals that the data came from live account access and may be fresh or actionable. Controls focus on anomalous login detection, credential-exposure monitoring, device and session risk scoring, step-up verification for sensitive actions, and rapid post-takeover response.",
     "references": [

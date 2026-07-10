@@ -12,7 +12,7 @@
       "恶意连接",
       "攻击检测"
     ],
-    "summary": "该研究针对以太坊网络中的日食攻击设计了一个智能检测器。日食攻击使恶意行为者能够通过控制目标用户的所有传出连接来隔离系统用户，此类攻击在区块链应用中难以被检测。该检测器旨在解决这一难题，帮助用户识别自身是否被日食攻击隔离。",
+    "summary": "该研究针对以太坊网络提出日食攻击智能检测器。攻击者可控制目标节点的对等连接，使其与正常网络隔离并接收被操纵的区块链视图。论文分析以太坊节点连接和消息交互特征，构建识别异常隔离状态的方法，帮助节点运营者判断自身是否遭受日食攻击，并降低攻击对交易与共识判断的干扰。",
     "category": "academic_research",
     "relatedRisks": [
       "R0186"
@@ -20,16 +20,16 @@
     "references": [
       {
         "title": "Am I eclipsed? A smart detector of eclipse attacks for Ethereum",
-        "link": "https://www.sciencedirect.com/science/article/abs/pii/S0167404818313798"
+        "link": "https://repository.tudelft.nl/record/uuid:582aa03f-93fc-4c06-b95b-bd7111f523d9"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [
       "AT0078"
     ],
     "relatedThreatActors": [
       "TA0046"
     ],
-    "incidentTime": "2017-08-20"
+    "incidentTime": "2019-09"
   }
 }

@@ -20,7 +20,7 @@
 | `case-category-domain-consistency.mjs` | Case.category 与 refs 域名特征 | review |
 | `risk-complexity-coverage.mjs` | Risk.complexity 与 AC 覆盖 | review |
 | `case-summary-relation-consistency.mjs` | Case.summary 与 related* 交叉 | review |
-| `term-category-enum.mjs` | Term.category 沿用已有取值 | review |
+| `term-category-enum.mjs` | Term.category 语义 key、注册表引用、短名称与英文翻译 | error/review |
 | `entity-granularity.mjs` | description 多场景拆分/父子 title | review |
 
 ### 第二层：B 类·subagent 交叉判断（`review:*` 命令）

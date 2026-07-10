@@ -4,7 +4,7 @@
     "aliases": [
       "Agent Prompt Injection"
     ],
-    "category": "金融交易安全",
+    "category": "ai_security",
     "keywords": [
       "智能体提示注入",
       "Agent Prompt Injection",
@@ -43,6 +43,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-07-10"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

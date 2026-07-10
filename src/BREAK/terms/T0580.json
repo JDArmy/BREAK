@@ -2,7 +2,7 @@
   "T0580": {
     "title": "APK签名",
     "aliases": [],
-    "category": "业务安全",
+    "category": "application_security",
     "keywords": [
       "APK签名"
     ],
@@ -38,7 +38,7 @@
         "link": "https://developer.android.com/studio/publish/app-signing"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

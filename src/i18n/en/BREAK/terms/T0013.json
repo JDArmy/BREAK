@@ -13,7 +13,6 @@
       "void shipment"
     ],
     "aliases": [],
-    "category": "Marketing Fraud",
     "definition": "A package sent during a fake transaction that contains no actual goods or is filled with irrelevant items.",
     "description": "Empty packages are a common tactic in fake order brushing and false shipping. Sellers send empty packages to generate a logistics trail, creating the illusion of a completed transaction to fraudulently boost sales rankings and reputation scores. In marketing fraud, empty packages are also used to fabricate delivery records for proxy purchasing schemes, concealing the actual flow of goods. This constitutes direct transactional fraud.",
     "references": [

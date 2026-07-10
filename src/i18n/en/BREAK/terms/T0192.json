@@ -12,7 +12,6 @@
       "mobile number origin check"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illegal lookup service that queries the carrier and geographic location associated with a phone number.",
     "description": "In illegal data trading, 'Phone Location' is a service where fraudsters input a phone number to obtain its carrier and registered location. This service is commonly used to pinpoint targets, analyze their activity range, or provide geographic context for telecom fraud and marketing harassment.",
     "usageExample": "Can filter by region, phone location, contact for real-name verification orders.",

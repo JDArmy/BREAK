@@ -12,7 +12,6 @@
       "time-sensitive QR"
     ],
     "aliases": [],
-    "category": "Telecom Fraud",
     "definition": "‘Send and scan immediately’ is an instruction used in the money-laundering or fraudulent collection stage, demanding that a victim or money mule generate a payment code and have it scanned instantly to complete the fund transfer.",
     "description": "Because payment platforms typically keep payment codes valid for only tens of seconds to a minute, underground operators rush to complete the transfer before risk-control systems can intervene, urging the counterparty to ‘scan it the moment the code appears.’ This practice is common in money-muling groups, gambling top-up operations, and the final emergency collection stage of a scam, where speed is critical to evade transaction blocking and account freezes. Any delay that causes the payment code to expire will break the fund chain.",
     "usageExample": "“The group kept shouting ‘send and scan immediately.’ My code was swept away less than ten seconds after it appeared—I didn’t even have time to react.”",

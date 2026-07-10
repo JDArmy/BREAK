@@ -10,11 +10,11 @@
       "human-computer interaction",
       "user experience study"
     ],
-    "summary": "A study investigated how users perceive and respond to in-headset security warnings within immersive XR environments. It found that alerts triggered during denial-of-service (DoS) attacks affect whether users can understand the risk, leave the disrupted scene, and reduce attack impact on performance and health.",
+    "summary": "A 2025 mixed-methods study investigates how users understand and respond to security warnings in immersive XR. During experiments, headset users received warnings while denial-of-service attacks disrupted their experience, and researchers combined behavioral observation with interviews. The work examines whether warnings help users recognize attacks and take protective actions, and how warning design affects task performance, experience, and health risks.",
     "references": [
       {
         "title": "A Mixed-Methods Investigation of XR Security Warnings—Lessons Learned",
-        "link": "https://ieeexplore.ieee.org/document/11339289"
+        "link": "https://zenodo.org/records/17311790"
       }
     ]
   }

@@ -1,22 +1,51 @@
 {
   "T0652": {
     "title": "声纹认证",
-    "aliases": ["语音生物认证", "声纹识别认证", "Voice Authentication", "Voice Biometrics"],
-    "category": "安全防护",
-    "keywords": ["声纹认证", "声纹识别", "语音生物认证", "说话人验证", "Voice Authentication", "Voice Biometrics"],
+    "aliases": [
+      "语音生物认证",
+      "声纹识别认证",
+      "Voice Authentication",
+      "Voice Biometrics"
+    ],
+    "category": "security_defense",
+    "keywords": [
+      "声纹认证",
+      "声纹识别",
+      "语音生物认证",
+      "说话人验证",
+      "Voice Authentication",
+      "Voice Biometrics"
+    ],
     "definition": "声纹认证是提取说话人的语音生物特征并与已登记声纹模板进行比对，以验证其是否为声明身份主体的认证技术。",
     "description": "声纹认证通过分析音高、频谱、共振峰、发音习惯、语速和声道特征等信息建立说话人模板，在登录、电话客服、远程交易或高风险操作中比较实时语音与模板的相似度。系统可采用固定口令、随机文本或自由语音，并结合活体检测、设备与通话元数据降低录音重放风险。\n\n声纹会受噪声、麦克风、疾病和年龄变化影响，也可能被录音重放、语音转换或AI语音克隆绕过。因此声纹认证通常不应单独承担高风险身份验证，而应与持有因子、行为信号、挑战应答和异常检测组合使用，并为误拒用户保留替代验证流程。",
     "usageExample": "银行在电话交易中使用声纹认证核验客户身份，同时通过随机挑战语句和设备风险信号检测录音重放。",
-    "relatedRisks": ["R0071-007", "R0098"],
-    "relatedAvoidances": ["A0023", "A0007", "A0066"],
-    "relatedAttackTools": ["AT0053-006"],
-    "relatedThreatActors": ["TA0031"],
+    "relatedRisks": [
+      "R0071-007",
+      "R0098"
+    ],
+    "relatedAvoidances": [
+      "A0023",
+      "A0007",
+      "A0066"
+    ],
+    "relatedAttackTools": [
+      "AT0053-006"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ],
     "relatedBusinessDomains": [],
     "references": [
-      {"title": "Investigatory Voice Biometrics - NIST", "link": "https://www.nist.gov/itl/iad/mltg/investigatory-voice-biometrics"},
-      {"title": "Authenticator Requirements: Restricted Use of Biometrics - NIST SP 800-63B", "link": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"}
+      {
+        "title": "Investigatory Voice Biometrics - NIST",
+        "link": "https://www.nist.gov/itl/iad/mltg/investigatory-voice-biometrics"
+      },
+      {
+        "title": "Authenticator Requirements: Restricted Use of Biometrics - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"
+      }
     ],
     "updated": "2026-07-10",
-    "version": 1
+    "version": 2
   }
 }

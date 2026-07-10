@@ -14,7 +14,6 @@
       "lead procurement"
     ],
     "aliases": [],
-    "category": "Credit Fraud",
     "definition": "In credit-fraud ecosystems, the acquisition of loan-seeking customer leads by brokers that control lending, packaging, or approval channels.",
     "description": "Credit lead intake occurs when brokers with lending, packaging, or approval channels buy loan-seeking customers from other intermediaries. The lead supplier provides customer information and intent, while the intake broker prices the lead by credit profile, expected amount, channel success rate, and commission rules, then shares proceeds after approval or signing.\n\nThis model causes customer data to circulate through multiple broker layers, increasing privacy leakage, false packaging, induced borrowing, and secondary fraud. Controls focus on intermediary-chain detection, customer-source verification, abnormal commission monitoring, and consistency checks across loan materials.",
     "usageExample": "Credit Lead Intake brokers advertise upfront signing rebates to attract other intermediaries to send loan-seeking customers.",

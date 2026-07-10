@@ -10,7 +10,7 @@
     "aliases": [
       "去中心化金融"
     ],
-    "category": "区块链金融",
+    "category": "blockchain",
     "definition": "基于区块链技术的去中心化金融服务体系，通过智能合约实现借贷、交易、理财等金融功能。",
     "description": "DeFi消除了传统金融的中间机构，用户可直接通过智能合约进行资产交易、抵押借贷、流动性挖矿等操作。所有交易记录公开透明且不可篡改，但也面临智能合约漏洞、闪电贷攻击、价格操纵等安全风险。",
     "relatedRisks": [
@@ -53,7 +53,8 @@
         "link": "https://news.qq.com/rain/a/20230213A03H3500"
       }
     ],
-    "updated": "2026-07-09",
-    "usageExample": "用户通过DeFi协议将USDC存入Aave借贷池赚取利息，然后以存款作为抵押借出ETH进行杠杆交易。当ETH价格暴跌时触发清算，用户损失了全部抵押品。"
+    "updated": "2026-07-10",
+    "usageExample": "用户通过DeFi协议将USDC存入Aave借贷池赚取利息，然后以存款作为抵押借出ETH进行杠杆交易。当ETH价格暴跌时触发清算，用户损失了全部抵押品。",
+    "version": 2
   }
 }

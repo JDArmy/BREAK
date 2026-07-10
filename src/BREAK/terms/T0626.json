@@ -5,7 +5,7 @@
       "Flickering Orders",
       "闪烁订单"
     ],
-    "category": "金融交易安全",
+    "category": "trading_security",
     "keywords": [
       "闪单",
       "Flickering Orders",
@@ -40,6 +40,7 @@
         "link": "https://www.esma.europa.eu/regulation/trading/market-abuse"
       }
     ],
-    "updated": "2026-07-10"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

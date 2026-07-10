@@ -12,7 +12,6 @@
       "ID geographic lookup"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illegal lookup service that queries the household registration location based on a national ID number.",
     "description": "In underground data markets, 'ID Location' is a service where fraudsters use the first six digits of a national ID number to determine the target's place of household registration. This information is often used to filter victims by region or conduct geographically targeted marketing scams, helping criminals narrow down their target pool.",
     "usageExample": "Can filter by region, ID location and phone location, contact for real-name verification orders.",

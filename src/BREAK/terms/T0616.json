@@ -6,7 +6,7 @@
       "促销试算",
       "用券试算"
     ],
-    "category": "营销欺诈",
+    "category": "marketing_fraud",
     "keywords": [
       "优惠试算",
       "优惠预计算",
@@ -42,6 +42,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

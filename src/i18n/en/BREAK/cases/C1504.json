@@ -10,11 +10,11 @@
       "physical system security",
       "spoofing attack synthesis"
     ],
-    "summary": "Researchers propose a method that uses a program analysis framework to generate sensor spoofing attacks. Analysts can produce sensor reading trajectories that drive a system into unsafe states. As a case study, the system generates forged wireless signals to spoof wireless sensors, demonstrating the feasibility of signal injection attacks.",
+    "summary": "A 2017 study proposes using program analysis to synthesize sensor spoofing attacks automatically. Given a target control program and desired unsafe state, the framework generates sensor-reading trajectories that drive execution along a chosen path. In a case study, researchers converted synthesized readings into forged wireless signals and injected them into sensors, showing that manipulated physical inputs can induce unsafe system behavior.",
     "references": [
       {
         "title": "Using program analysis to synthesize sensor spoofing attacks",
-        "link": "https://dl.acm.org/doi/abs/10.1145/3052973.3053038"
+        "link": "https://rist.tech.cornell.edu/papers/spoofing_asiaccs17.pdf"
       }
     ]
   }

@@ -13,7 +13,6 @@
       "approximate match"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A query method within social engineering databases that uses scattered clues for fuzzy matching to unearth sensitive information on a specific target.",
     "description": "Attackers leverage known fragments of a target's information to perform associative searches within underground databases, piecing together a complete profile of their identity, social connections, and finances. This type of query is often used for doxing and the intelligence-gathering phase preceding precision fraud, significantly increasing the success rate of downstream crimes.",
     "references": [

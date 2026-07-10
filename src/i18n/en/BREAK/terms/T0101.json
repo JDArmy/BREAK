@@ -24,7 +24,6 @@
       "manual poverty data collection",
       "vulnerable-group data harvesting"
     ],
-    "category": "Data Leakage",
     "definition": "Manual collection of personal data from poverty-aid recipients or other vulnerable groups by criminals posing as aid, research, or service personnel.",
     "description": "Manual welfare data harvesting targets vulnerable groups through social media, chat groups, offline visits, or fake public-service outreach. Operators pose as aid workers, researchers, or officials to induce low-income people, subsidy recipients, or poverty-aid targets to provide IDs, bank cards, addresses, subsidy records, and other sensitive data.\n\nThe collected data can be used for subsidy fraud, identity misuse, targeted scams, or resale. Controls focus on minimizing public exposure of beneficiary data, detecting impersonated aid outreach, anti-fraud education for vulnerable groups, data-flow auditing, and verification of offline collection channels.",
     "references": [

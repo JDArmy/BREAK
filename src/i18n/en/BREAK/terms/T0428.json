@@ -13,7 +13,6 @@
       "channel fee percentage"
     ],
     "aliases": [],
-    "category": "Credit Fraud",
     "definition": "In credit fraud or loan-packaging chains, the service-fee percentage charged by brokers according to operational risk and expected deal value.",
     "description": "Credit-fraud service fee rate expresses the percentage charged for loan packaging, approval facilitation, debt-assumption schemes, or channel brokerage. The rate changes with customer profile, loan size, document-fabrication difficulty, channel concealment, and the chance of risk-control interception; higher risk or higher expected return usually leads to a higher rate.\n\nIt is a key language for pricing risk, allocating commissions, and recruiting agents in credit-fraud networks. Controls focus on intermediary quote monitoring, abnormal service-fee detection, packaging-channel profiling, and end-to-end tracing of loan application flows.",
     "references": [

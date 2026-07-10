@@ -1,6 +1,6 @@
 {
   "C1462": {
-    "title": "网络安全详解——下_防侧信道攻击",
+    "title": "DAGguise侧信道内存攻击防护研究",
     "keywords": [
       "侧信道攻击",
       "功耗分析",
@@ -12,8 +12,8 @@
       "攻击面最小化",
       "IoT设备安全"
     ],
-    "summary": "该博客文章在分析IoT设备安全风险时，将侧信道攻击列为攻击向量示例，指出攻击者可通过功耗分析提取加密密钥，特别提及针对医疗IoT设备的威胁。文章同时介绍了安全启动、最小化攻击面、网络分段等缓解措施，并引用了IEC 62443等行业安全标准。",
-    "category": "academic_research",
+    "summary": "2022年麻省理工学院团队提出DAGguise，用于降低共享内存控制器泄露程序访问时序的风险。该方案以有向无环图组织请求，按固定计划发送真实或伪造的内存访问，从而隐藏程序实际行为。研究模拟显示其能抵御内存时序侧信道，同时比独占控制器方案保留更高共享效率。",
+    "category": "news_report",
     "relatedRisks": [
       "R0178"
     ],
@@ -21,10 +21,14 @@
       {
         "title": "一种有效应对侧信道内存攻击的新方法 - 安全内参",
         "link": "https://www.secrss.com/articles/40105"
+      },
+      {
+        "title": "MIT：以更低性能代价阻止侧信道攻击",
+        "link": "https://news.mit.edu/2022/cyber-security-attackers-0223"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2025-04",
+    "updated": "2026-07-10",
+    "incidentTime": "2022-02-23",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

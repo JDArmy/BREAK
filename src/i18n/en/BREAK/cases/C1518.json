@@ -11,7 +11,7 @@
       "open-source library attack",
       "developer credential theft"
     ],
-    "summary": "The deep learning package 'lightning' on the Python Package Index (PyPI), with over a million downloads, was embedded with malicious code designed to steal GitHub Tokens and cloud credentials, and further poison other code repositories. This incident severely threatens the entire crypto development ecosystem that relies on open-source libraries.",
+    "summary": "On April 30, 2026, the PyTorch Lightning community was alerted that PyPI releases lightning 2.6.2 and 2.6.3 contained a hidden execution chain that downloaded and ran an external payload, creating a software supply-chain risk. Maintainers removed the affected releases, issued fixed versions, and rotated relevant credentials; the official account says remediation took about 42 minutes from the initial report.",
     "references": [
       {
         "title": "Chongming Chain Trace: Weekly Blockchain Security Briefing (April 27 - May 3) - Tencent Cloud Developer Community",
@@ -20,6 +20,10 @@
       {
         "title": "How the PyTorch Lightning Community Discovered a Supply Chain Attack",
         "link": "https://lightning.ai/blog/pytorch-lightning-supply-chain-attack"
+      },
+      {
+        "title": "Possible supply chain attack on version 2.6.3",
+        "link": "https://github.com/Lightning-AI/pytorch-lightning/issues/21689"
       }
     ]
   }

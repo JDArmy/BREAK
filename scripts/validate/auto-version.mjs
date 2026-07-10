@@ -10,6 +10,7 @@
  *   node scripts/validate/auto-version.mjs --dry-run   # 仅预览不写入
  *   node scripts/validate/auto-version.mjs --base HEAD~1  # 自定义对比基准
  *   node scripts/validate/auto-version.mjs --staged-only   # 仅暂存区变更（pre-commit 场景）
+ *   node scripts/validate/auto-version.mjs --type terms    # 只处理指定实体目录
  */
 
 import fs from 'node:fs';
@@ -22,6 +23,13 @@ const dryRun = args.includes('--dry-run');
 const baseIdx = args.indexOf('--base');
 const baseRef = baseIdx >= 0 && args[baseIdx + 1] ? args[baseIdx + 1] : 'HEAD';
 const stagedOnly = args.includes('--staged-only');
+const typeIdx = args.indexOf('--type');
+const entityType = typeIdx >= 0 && args[typeIdx + 1] ? args[typeIdx + 1] : '';
+const entityDirs = new Set(['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms', 'business-domains', 'cases']);
+if (entityType && !entityDirs.has(entityType)) {
+  console.error(`❌ --type 不支持 ${entityType}，可选值：${[...entityDirs].join(', ')}`);
+  process.exit(1);
+}
 
 // version 和 updated 字段不参与内容变更比较
 const IGNORED_FIELDS = new Set(['version', 'updated']);
@@ -63,7 +71,8 @@ function hasContentChange(oldEntity, newEntity) {
 
 // 复用 changed-entities.mjs 的 getChangedEntityFiles（含 untracked 新文件检测，
 // 避免本脚本自己维护一份 git diff 逻辑而漏掉 untracked）。
-const changedFiles = getChangedEntityFiles({ baseRef, stagedOnly });
+const changedFiles = getChangedEntityFiles({ baseRef, stagedOnly })
+  .filter((file) => !entityType || file.startsWith(`src/BREAK/${entityType}/`));
 
 if (changedFiles.length === 0) {
   console.log('✅ 没有检测到实体文件变更，无需递增版本');

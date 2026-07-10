@@ -19,6 +19,9 @@ export type {
   ThreatActorRelation,
   ThreatActor,
   Term,
+  TermCategoryItem,
+  TermCategoryGroup,
+  TermCategoryRegistry,
   CaseCategory,
   CaseEntity,
 } from "@/validation/breakSchema";

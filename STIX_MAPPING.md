@@ -50,6 +50,8 @@ Bundle 中包含 7 个 Extension Definition，承载 BREAK 特有字段：
 | `x-break-case-ext` | `property-extension` | `x_break_summary`, `x_break_case_category`, `x_break_incident_time`, `x_break_keywords`, `x_break_version` |
 | `x-break-business-domain-ext` | `new-sdo` | `x_break_risk_dimensions`, `x_break_risk_scenes`, `x_break_version` |
 
+Term 的 `x_break_category` 输出稳定的小写 snake_case 语义 key（如 `credit_fraud`），展示名称由数据包中的 `termCategories` 注册表解析，不在 STIX 字段中重复固化多语言文本。
+
 ## 5. 关系映射
 
 ### 5.1 跨类型关系

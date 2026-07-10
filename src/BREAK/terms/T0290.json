@@ -12,7 +12,7 @@
       "资金流转"
     ],
     "aliases": [],
-    "category": "跑分洗钱",
+    "category": "money_laundering",
     "definition": "经过初步清洗后再次流转的非法资金。",
     "description": "黑产将诈骗或赌博所得的一手赃款通过多层转账、混币或虚假交易进行初步清洗，形成二道资金。这种资金已脱离原始来源账户，隐蔽性更高，常被用于下游跑分、购买虚拟币或转入白商户账户。二道资金是洗钱链条中的关键中转环节，增加了追踪难度。",
     "usageExample": "料找车合作，二道资金盘。",
@@ -53,6 +53,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

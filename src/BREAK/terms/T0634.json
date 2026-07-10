@@ -2,7 +2,7 @@
   "T0634": {
     "title": "龙虎榜",
     "aliases": [],
-    "category": "金融交易安全",
+    "category": "trading_security",
     "keywords": [
       "龙虎榜",
       "Trading Leaderboard",
@@ -41,6 +41,7 @@
         "link": "https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_11_0"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

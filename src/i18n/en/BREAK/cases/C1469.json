@@ -1,24 +1,10 @@
 {
   "C1469": {
-    "title": "Cyberattack on German Steel Plant Causes Physical Damage",
-    "keywords": [
-      "German steel plant",
-      "cyberattack",
-      "advanced persistent threat",
-      "spear-phishing",
-      "industrial control system",
-      "blast furnace control",
-      "physical damage",
-      "production network breach",
-      "OT network",
-      "ICS security incident"
-    ],
-    "summary": "A German steel plant suffered an advanced persistent threat attack in which threat actors used spear-phishing emails to infiltrate the office network and subsequently breach the production network. The attackers gained access to the blast furnace control system, preventing a proper shutdown and resulting in significant physical damage.",
+    "title": "Cyberattack on a German Steel Mill Causes Physical Damage",
+    "keywords": ["German steel mill", "targeted cyberattack", "spear phishing", "social engineering", "production network", "blast furnace shutdown", "physical damage", "BSI 2014 report"],
+    "summary": "Germany's Federal Office for Information Security disclosed in its 2014 annual report that a German steel mill had suffered a targeted cyberattack. The attackers entered the office network through spear phishing and social engineering, progressively reached the production network, and controlled multiple system components. A blast furnace could not be shut down as planned, causing significant physical damage; the report did not identify the company or attackers.",
     "references": [
-      {
-        "title": "A multi-layer industrial-IoT attack taxonomy: Layers, dimensions, techniques and application",
-        "link": "https://ieeexplore.ieee.org/abstract/document/9343166/"
-      }
+      {"title": "BSI: The State of IT Security in Germany 2014", "link": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Securitysituation/IT-Security-Situation-in-Germany-2014.pdf?__blob=publicationFile&v=3"}
     ]
   }
 }

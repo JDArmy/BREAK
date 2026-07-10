@@ -12,7 +12,6 @@
       "vehicle title lookup"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illicit data service that queries all vehicles registered under an individual's name.",
     "description": "This data is usually sourced from insiders at the vehicle administration or through leaked system interfaces. Output fields include license plate number, vehicle model, registration date, and owner identity. The service is used for asset investigation, collateral fraud, vehicle tracking, or illegal debt collection, directly exposing a target's financial status. Underground operators often sell this data per page or per query, and bundle it with derivative services like transfer history and traffic violation handler records to create a complete vehicle information chain.",
     "usageExample": "\"Direct-source vehicle records. One page, three pages, vehicles under a name, transfer history, traffic violation handlers. DMV-sourced vehicle records, same-day return.\"",

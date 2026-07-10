@@ -13,11 +13,11 @@
       "PoW consensus",
       "statistical detection"
     ],
-    "summary": "Researchers identified a miner cartel in the Monacoin blockchain, where miners secretly shared newly mined block information in advance to coordinate selfish mining attacks. This collaborative attack leveraged block withholding and selective broadcasting to enable the miner group to earn rewards exceeding their share of hash power.",
+    "summary": "A 2024 study proposes a statistical method based on inter-block time distributions to identify selfish mining in Proof-of-Work chains. Applying it to historical data from Monacoin, Ethereum, and Bitcoin Cash, the researchers found statistical evidence in Monacoin consistent with collaborative selfish mining, in which multiple miners may privately share new blocks and coordinate publication to increase relative rewards.",
     "references": [
       {
         "title": "Statistical detection of selfish mining in proof-of-work ...",
-        "link": "https://r.search.yahoo.com/_ylt=AwrOu.qwdTJqIQIA.atXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1782901425/RO=10/RU=https%3a%2f%2fwww.nature.com%2farticles%2fs41598-024-55348-3/RK=2/RS=0ske7LaJ2_lAkZPJyuf4UeXhiA4-"
+        "link": "https://www.nature.com/articles/s41598-024-55348-3"
       }
     ]
   }

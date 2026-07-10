@@ -1,0 +1,70 @@
+{
+  "groups": {
+    "fraud_abuse": {
+      "title": "Fraud and Abuse",
+      "description": "Terms covering marketing, credit, telecom, and general business fraud."
+    },
+    "financial_crime": {
+      "title": "Financial Crime",
+      "description": "Terms covering money laundering, gambling, and other financially motivated crimes."
+    },
+    "data_security": {
+      "title": "Data Security",
+      "description": "Terms covering data collection, leakage, governance, and protection."
+    },
+    "attack_security": {
+      "title": "Attack Techniques",
+      "description": "Terms covering network attacks, code exploitation, social engineering, and automated attacks."
+    },
+    "defense_controls": {
+      "title": "Security Controls",
+      "description": "Terms covering application, identity, cloud, supply-chain, IoT, and third-party security controls."
+    },
+    "governance": {
+      "title": "Governance and Compliance",
+      "description": "Terms covering algorithm, platform, data, and regulatory governance."
+    },
+    "emerging_technology": {
+      "title": "Emerging Technology",
+      "description": "Terms covering artificial intelligence, blockchain, and related security issues."
+    },
+    "market_security": {
+      "title": "Trading Security",
+      "description": "Terms covering payments, settlement, market microstructure, and trading risk controls."
+    },
+    "underground_economy": {
+      "title": "Underground Economy",
+      "description": "Terms covering underground actors, resources, services, and ecosystem concepts."
+    }
+  },
+  "categories": {
+    "marketing_fraud": { "title": "Marketing Fraud", "description": "Fraud terms involving campaigns, incentives, advertising, and channel settlement." },
+    "credit_fraud": { "title": "Credit Fraud", "description": "Terms from credit application, approval, lending, collection, and related data markets." },
+    "telecom_fraud": { "title": "Telecom Fraud", "description": "Terms from telecom fraud organizations, scripts, traffic acquisition, and execution." },
+    "business_fraud": { "title": "Business Fraud", "description": "Terms involving abuse of transactions, accounts, payments, refunds, and business workflows." },
+    "money_laundering": { "title": "Money Laundering", "description": "Terms involving money-mule operations, aggregation, layering, transfer, and laundering." },
+    "gambling": { "title": "Gambling", "description": "Terms involving illegal gambling platforms, agents, betting, and fund settlement." },
+    "cybercrime": { "title": "Cybercrime", "description": "Cybercrime terms that do not fit the fraud, laundering, or gambling categories." },
+    "data_leakage": { "title": "Data Leakage", "description": "Terms involving leaked data, illicit data trading, and underground names for exposed datasets." },
+    "data_collection": { "title": "Data Collection", "description": "Terms involving automated crawling, protocol collection, and data acquisition." },
+    "data_governance": { "title": "Data Governance", "description": "Terms involving data classification, purpose controls, privacy assessment, and leakage prevention." },
+    "network_attack": { "title": "Network Attacks", "description": "Terms involving intrusion, traffic hijacking, malware, and vulnerability exploitation." },
+    "code_injection": { "title": "Code Injection", "description": "Terms involving malicious input that changes program, query, or page execution." },
+    "social_engineering": { "title": "Social Engineering", "description": "Terms involving psychological manipulation, impersonation, and induced interaction." },
+    "automation_tools": { "title": "Automation Tools", "description": "Tool concepts used to automate, control at scale, or simulate business operations." },
+    "security_defense": { "title": "Security Controls", "description": "Terms for general authentication, encryption, detection, isolation, and defensive controls." },
+    "api_security": { "title": "API Security", "description": "Terms involving API exposure, authorization, replay protection, gateways, and traffic controls." },
+    "supply_chain_security": { "title": "Supply-Chain Security", "description": "Terms involving software builds, dependencies, artifacts, releases, and supply-chain integrity." },
+    "cloud_security": { "title": "Cloud Security", "description": "Terms involving cloud identity, storage, SaaS configuration, and third-party authorization." },
+    "identity_security": { "title": "Identity Security", "description": "Terms involving credentials, sessions, identity binding, and decentralized identity." },
+    "application_security": { "title": "Application Security", "description": "Terms involving mobile and edge applications, caching, and runtime protection." },
+    "iot_security": { "title": "IoT Security", "description": "Terms involving IoT, connected vehicles, firmware, device interfaces, and communication credentials." },
+    "third_party_risk": { "title": "Third-Party Risk", "description": "Terms involving vendor access, outsourced operations, and exposure through third-party systems." },
+    "governance_compliance": { "title": "Governance and Compliance", "description": "Terms involving algorithm governance, platform rules, privacy, competition, and regulation." },
+    "artificial_intelligence": { "title": "Artificial Intelligence", "description": "Terms involving AI models, agents, robotics, and supporting technologies." },
+    "ai_security": { "title": "AI Security", "description": "Terms involving attacks and controls across AI models, agents, training, and inference." },
+    "blockchain": { "title": "Blockchain", "description": "Terms involving blockchain technology, wallets, assets, governance, infrastructure, and DeFi security." },
+    "trading_security": { "title": "Trading Security", "description": "Terms involving payment protection, settlement, market manipulation, quantitative bias, and trading controls." },
+    "underground_ecosystem": { "title": "Underground Economy", "description": "Terms involving underground actors, resources, services, infrastructure, and ecosystem concepts." }
+  }
+}

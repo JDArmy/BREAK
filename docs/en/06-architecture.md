@@ -60,3 +60,7 @@ The following paths are generated and are not manual editing targets:
 5. Run `npm run build` before submission.
 
 See [Data Model & Field Reference](/docs/data-model) for entity rules and [Release & Maintenance](/docs/release-maintenance) for release operations.
+
+## Term Category Architecture
+
+Starting with 2.45.0, `Term.category` stores a stable enum key in the Chinese structural source, while localized labels come from the i18n category mapping. Schema validation, search, full English merging, static exports, STIX/JSON-LD, and data-package generation consume the same key. `term-category-enum.mjs` now validates against the authoritative category definition instead of a separate allowlist file.

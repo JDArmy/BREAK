@@ -69,7 +69,6 @@ const categories = [
       "title",
       "keywords",
       "aliases",
-      "category",
       "definition",
       "description",
       "usageExample",

@@ -2,7 +2,7 @@
   "T0526": {
     "title": "重放攻击",
     "aliases": [],
-    "category": "业务安全",
+    "category": "api_security",
     "keywords": [
       "重放攻击"
     ],
@@ -26,7 +26,7 @@
         "link": "https://en.wikipedia.org/wiki/Replay_attack"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

@@ -2,7 +2,7 @@
   "T0588": {
     "title": "诊断接口",
     "aliases": [],
-    "category": "业务安全",
+    "category": "iot_security",
     "keywords": [
       "诊断接口"
     ],
@@ -28,7 +28,7 @@
         "link": "https://www.csselectronics.com/pages/uds-protocol-tutorial-unified-diagnostic-services"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

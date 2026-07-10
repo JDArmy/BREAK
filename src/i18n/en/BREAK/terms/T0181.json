@@ -13,7 +13,6 @@
       "head-of-household PII"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A type of record check that only retrieves the householder's page and ID photo from a family register.",
     "description": "A specific type of illegal record check where black market actors obtain the householder's information through illicit channels. The data is limited to the householder and does not include other family members, often used for targeted scams or asset investigations against the head of the household.",
     "usageExample": "\"This batch of single-head-full-household is 25 USDT, one batch per day.\"",

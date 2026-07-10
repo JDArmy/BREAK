@@ -1,27 +1,11 @@
 {
   "C1423": {
     "title": "Horizen (ZenCash) Suffers 51% Attack with Over $500K in Losses",
-    "keywords": [
-      "Horizen",
-      "ZenCash",
-      "51% attack",
-      "double spend attack",
-      "privacy coin",
-      "blockchain security",
-      "hashrate control",
-      "malicious miner",
-      "delayed function defense"
-    ],
-    "summary": "On June 2, 2018, the privacy coin Horizen (formerly ZenCash) suffered a 51% attack. The attacker rented hash power to gain majority control and double-spent approximately 23,000 ZEN, resulting in losses of about $550,000. The ZenCash team subsequently required exchanges to increase confirmations and developed a delayed-function mechanism to penalize malicious miners.",
+    "keywords": ["Horizen", "ZenCash", "51% attack", "double spending", "ZEN", "hashrate control", "blockchain security"],
+    "summary": "On June 2, 2018, ZenCash, later renamed Horizen, suffered a 51 percent attack. After gaining majority control of the network's hash power, the attacker double-spent about 23,000 ZEN, worth approximately $550,000 at the time. After detecting the activity, the team warned exchanges and mining pools and recommended increasing the block-confirmation requirement for ZEN deposits.",
     "references": [
-      {
-        "title": "Distributed Networks Institute: ZenCash 51% Attack Incident",
-        "link": "https://dn.institute/research/cyberattacks/incidents/2018-06-02-zencash-horizen-zen/"
-      },
-      {
-        "title": "From ZenCash to Horizen",
-        "link": "https://www.horizen.io/academy/zencash-to-horizen/"
-      }
+      {"title": "Distributed Networks Institute: ZenCash 51% Attack Incident", "link": "https://dn.institute/research/cyberattacks/incidents/2018-06-02-zencash-horizen-zen/"},
+      {"title": "From ZenCash to Horizen", "link": "https://www.horizen.io/academy/zencash-to-horizen/"}
     ]
   }
 }

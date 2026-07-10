@@ -2,7 +2,7 @@
   "T0547": {
     "title": "第三方应用授权",
     "aliases": [],
-    "category": "业务安全",
+    "category": "cloud_security",
     "keywords": [
       "第三方应用授权"
     ],
@@ -26,7 +26,7 @@
         "link": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/user-admin-consent-overview"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

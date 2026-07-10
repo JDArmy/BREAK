@@ -6,7 +6,7 @@
       "Intrusion Detection System",
       "异常检测"
     ],
-    "category": "安全防护",
+    "category": "security_defense",
     "keywords": [
       "入侵检测系统",
       "IDS",
@@ -43,6 +43,7 @@
         "title": "Introduction to Intrusion Detection Systems - SANS"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

@@ -12,7 +12,6 @@
       "credential stuffing"
     ],
     "aliases": [],
-    "category": "Business Fraud",
     "definition": "An account that can be logged into directly without SMS verification or a password, usually mass-produced by fraud rings through protocol exploits or credential-stuffing.",
     "description": "These accounts bypass secondary verification, allowing fraudsters to quickly switch devices for batch operations such as fake orders, spam advertising, or money laundering. Direct-login accounts command a premium in underground markets and are sold by platform, activity level, and whether they include payment functions. Buyers can run scripts on them immediately, drastically reducing operational time costs.",
     "usageExample": "Telegram direct-login accounts, fresh protocol accounts, large stock available.",

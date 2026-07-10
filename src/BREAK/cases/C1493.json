@@ -11,18 +11,18 @@
       "区块链安全",
       "Pikachu"
     ],
-    "summary": "该研究指出PoS区块链易受长程攻击，攻击者可腐蚀早期参与者以重写链的完整历史。文章提出通过将PoS链的检查点嵌入比特币PoW链来防御此类攻击，防止攻击者利用无成本模拟构造替代链。",
+    "summary": "2022年发布的Pikachu研究讨论PoS区块链的长程攻击：攻击者获得早期验证者密钥后，可低成本构造从历史区块分叉的替代链。论文提出利用Taproot将PoS链检查点嵌入比特币PoW链，使节点能够依据比特币上的不可篡改记录验证历史，从而限制攻击者重写PoS链完整历史。",
     "category": "academic_research",
     "relatedRisks": [
       "R0187"
     ],
     "references": [
       {
-        "title": "[PDF] Pikachu: Securing PoS Blockchains from Long-Range Attacks by ...",
-        "link": "https://arxiv.org/pdf/2208.05408"
+        "title": "Pikachu: Securing PoS Blockchains from Long-Range Attacks by Checkpointing into Bitcoin PoW using Taproot",
+        "link": "https://arxiv.org/abs/2208.05408"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-10",
     "incidentTime": "2022-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []

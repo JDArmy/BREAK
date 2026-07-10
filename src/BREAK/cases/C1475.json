@@ -12,23 +12,19 @@
       "IoT安全",
       "节点模拟攻击"
     ],
-    "summary": "攻击者通过物理捕获Itron-Centron CL200智能电表，分析其EEPROM内存转储，发现设备ID存储于本地且无读写保护。攻击者将另一电表ID复制填入EEPROM，使该设备模拟另一智能电表，导致能耗数据被盗。日志显示两个不同设备共享同一ID但功耗值不同，造成能源盗窃及经济损失。",
-    "category": "vulnerability_advisory",
+    "summary": "2019年发布的物联网漏洞案例文章记录Itron-Centron CL200智能电表节点篡改实验。研究人员从EEPROM转储中发现本地设备ID缺少读写保护，将另一电表ID写入后即可模拟目标设备。实验日志出现两个设备共用同一ID但功耗不同的读数，说明该缺陷可造成计量数据混淆和能源盗窃。",
+    "category": "news_report",
     "relatedRisks": [
       "R0182"
     ],
     "references": [
       {
-        "title": "Security and Privacy in IoT Era",
-        "link": "https://www.jinyier.me/papers/IoT_Chapter17_Temp.pdf"
-      },
-      {
         "title": "物联网安全漏洞案例研究与解决方案-腾讯云开发者社区-腾讯云",
         "link": "https://www.cloud.tencent.com/developer/article/1543779"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2019-11",
+    "updated": "2026-07-10",
+    "incidentTime": "2019-11-25",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

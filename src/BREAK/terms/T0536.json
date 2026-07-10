@@ -2,7 +2,7 @@
   "T0536": {
     "title": "SBOM",
     "aliases": [],
-    "category": "业务安全",
+    "category": "supply_chain_security",
     "keywords": [
       "SBOM"
     ],
@@ -24,7 +24,7 @@
         "link": "https://en.wikipedia.org/wiki/Software_bill_of_materials"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

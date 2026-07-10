@@ -49,3 +49,7 @@ Pull-request CI runs static checks, unit tests, data exports, the site build, an
 - Schema documentation is stale: run `npm run schema:docs:write`.
 - Static-data validation fails: rerun the relevant `export:*` command instead of editing generated files.
 - Do not rewrite an already published version after a failed release. Fix the issue, publish a new patch version, and document it in the changelog.
+
+## 2.45.0 Category Migration Check
+
+For the Term category enum migration, verify localized category labels, list filters, search, static datasets, STIX/JSON-LD, and npm data-package output in addition to the normal build. Legacy free-text categories and the separate allowlist must not remain in source or generated artifacts.

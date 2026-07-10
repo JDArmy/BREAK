@@ -5,7 +5,7 @@
       "Watering Hole Attack",
       "战略网络入侵"
     ],
-    "category": "网络攻击",
+    "category": "network_attack",
     "keywords": [
       "水坑攻击",
       "Watering Hole Attack",
@@ -49,6 +49,7 @@
         "title": "Drive-by Compromise - MITRE ATT&CK"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

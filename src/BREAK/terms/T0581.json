@@ -2,7 +2,7 @@
   "T0581": {
     "title": "运行时防护",
     "aliases": [],
-    "category": "业务安全",
+    "category": "application_security",
     "keywords": [
       "运行时防护"
     ],
@@ -26,7 +26,7 @@
         "link": "https://mas.owasp.org/MASTG/techniques/generic/MASTG-TECH-0051/"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

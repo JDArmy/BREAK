@@ -13,7 +13,7 @@
     "aliases": [
       "MITM"
     ],
-    "category": "网络攻击",
+    "category": "network_attack",
     "definition": "攻击者拦截并可能篡改两方通信内容的攻击技术。",
     "description": "攻击者在用户与服务器之间建立中继，秘密监听、记录甚至篡改双方的通信数据。常见手段包括ARP欺骗、伪造WiFi热点、SSL剥离等。攻击者可窃取登录凭证、会话令牌、支付信息等敏感数据，或向通信中注入恶意内容，对用户隐私和资金安全构成严重威胁。",
     "relatedRisks": [
@@ -31,7 +31,8 @@
         "link": "https://blog.csdn.net/ewii12567/article/details/140102109"
       }
     ],
-    "updated": "2026-07-09",
-    "usageExample": "攻击者在机场设置名为'Airport_Free_WiFi'的恶意热点，对连接用户实施中间人攻击，截获了数百个未加密的登录凭证和会话令牌。"
+    "updated": "2026-07-10",
+    "usageExample": "攻击者在机场设置名为'Airport_Free_WiFi'的恶意热点，对连接用户实施中间人攻击，截获了数百个未加密的登录凭证和会话令牌。",
+    "version": 2
   }
 }

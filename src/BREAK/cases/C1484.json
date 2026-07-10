@@ -10,7 +10,7 @@
       "区块链安全",
       "资产补偿"
     ],
-    "summary": "2022年6月，Harmony区块链的Horizon跨链桥遭黑客攻击，价值约1亿美元的多种加密资产被盗。攻击者利用私钥漏洞控制跨链桥，转移大量代币。事后Harmony发布补偿提案，计划增发代币进行赔偿。",
+    "summary": "2022年6月，Harmony区块链的Horizon跨链桥遭攻击，价值约1亿美元的虚拟资产被盗。美国联邦调查局后续确认，朝鲜网络攻击组织Lazarus Group（又称APT38）实施了此次盗窃，并追踪到部分赃款经隐私协议转移。Harmony事后提出增发ONE代币的补偿方案。",
     "category": "security_incident",
     "relatedRisks": [
       "R0161"
@@ -25,7 +25,7 @@
         "link": "https://www.fbi.gov/news/press-releases/fbi-confirms-lazarus-group-cyber-actors-responsible-for-harmonys-horizon-bridge-currency-theft"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "incidentTime": "2022-06",
     "relatedAttackTools": [],
     "relatedThreatActors": [

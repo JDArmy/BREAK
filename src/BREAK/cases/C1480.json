@@ -1,6 +1,6 @@
 {
   "C1480": {
-    "title": "虚拟强奸案背后,元宇宙世界中的犯罪现象如何治理?",
+    "title": "元宇宙身份、犯罪与执法研究",
     "keywords": [
       "元宇宙",
       "数字身份",
@@ -11,19 +11,19 @@
       "虚拟犯罪",
       "虚拟强奸"
     ],
-    "summary": "文章指出，元宇宙用户必须拥有数字身份才能创建虚拟世界，恶意行为者可能盗用某用户的数字身份，进而窃取用户名下的数字资产。此外，虚拟道具也常成为盗窃目标，网络钓鱼手法被用于骗取用户钱包等关键数据。",
-    "category": "news_report",
+    "summary": "2025年发表于Humanities and Social Sciences Communications的研究分析元宇宙中的身份体系、犯罪形态与执法难题。论文指出，跨平台虚拟身份、头像和数字资产可能被冒用或窃取，而匿名性、司法辖区重叠及平台证据保存差异会增加主体识别、案件归责和跨境调查难度。",
+    "category": "academic_research",
     "relatedRisks": [
       "R0184"
     ],
     "references": [
       {
-        "title": "虚拟强奸案背后,元宇宙世界中的犯罪现象如何治理?—顶端新闻",
-        "link": "https://www.dingxinwen.cn/detail/1750DEE347BA4D75BD639631CBC204"
+        "title": "元宇宙中的身份、犯罪与执法",
+        "link": "https://www.nature.com/articles/s41599-024-04266-w"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2024-07",
+    "updated": "2026-07-10",
+    "incidentTime": "2025-02-12",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

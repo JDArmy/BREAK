@@ -13,7 +13,6 @@
       "SIM hosting"
     ],
     "aliases": [],
-    "category": "Marketing Fraud",
     "definition": "Physical SIM cardsheld by card suppliers and inserted into modem pool devices for bulk sending and reception of SMS verification codes.",
     "description": "Modem pool cards are the hardware foundation of the SMS code reception supply chain. Card suppliers use modem pool devices to control a large number of SIM cards simultaneously, providing verification code reception services to downstream black-market operations. These cards are often sourced from operator loopholes, illegally resold IoT cards, or identity fraud, and are widely used for bulk account registration and exploiting platform promotions. The existence of these cards allows fraud rings to bypass identity verification mechanisms at scale and low cost.",
     "references": [

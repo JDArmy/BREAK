@@ -10,7 +10,7 @@
       "量子威胁",
       "市场恐慌"
     ],
-    "summary": "Coinbase发布预警，指出量子计算机可能威胁约700万枚比特币的安全。该预警出现在市场恐慌指数逼近10、比特币跌破6万美元的背景下，凸显了量子计算对现有区块链加密体系构成的潜在系统性风险。",
+    "summary": "2026年6月，Coinbase量子咨询委员会发布比特币后量子迁移分析，估算约700万枚比特币目前暴露于潜在量子风险，其中包括使用公开公钥地址及重复使用地址的资产。文章讨论量子计算未来破解椭圆曲线签名后可能造成的盗币风险，并建议生态提前规划地址迁移和遗弃币处置规则。",
     "category": "news_report",
     "relatedRisks": [
       "R0196"
@@ -19,9 +19,13 @@
       {
         "title": "重明链迹丨每周区块链安全要闻(0608-0614)-腾讯云开发者社区-腾讯云",
         "link": "https://developer.cloud.tencent.com/article/2689126?policyId=1004"
+      },
+      {
+        "title": "Post-Quantum Migration and Abandoned Coins",
+        "link": "https://www.coinbase.com/blog/coinbase-quantum-advisory-council-post-quantum-migration-and-abandoned-coins"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-10",
     "incidentTime": "2026-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []

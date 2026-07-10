@@ -5,7 +5,7 @@
       "APT",
       "高级持续性威胁"
     ],
-    "category": "网络攻击",
+    "category": "network_attack",
     "keywords": [
       "APT攻击",
       "APT",
@@ -55,6 +55,7 @@
         "title": "Groups - MITRE ATT&CK"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

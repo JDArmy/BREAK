@@ -62,7 +62,7 @@ slug: data-model
 
 ## 行业术语（`Term`）
 
-- **`category`**：自由字符串（如「数据采集」「业务欺诈」「黑产服务」），沿用已有取值
+- **`category`**：有语义的小写 snake_case key（如 `data_collection`、`business_fraud`），必须引用 `src/BREAK/term-categories/termCategories.json`。分类中文名最多 6 个汉字
 - **`aliases`**：别名数组
 - **`usageExample`**：使用场景示例（必填），必须含标题（`title`）或别名（`aliases`）中的至少一个词（前端高亮）
 - 可维护 `relatedRisks` / `relatedAvoidances` / `relatedAttackTools` / `relatedThreatActors` / `relatedBusinessDomains`
@@ -113,7 +113,7 @@ slug: data-model
 - **风险英文文件**：`title`, `definition`, `description`, `influence`, `references`, `keywords`（不维护 `complexity`，该字段已是英文枚举值，由运行时合并）
 - **攻击工具英文文件**：`title`, `description`, `references`, `keywords`
 - **威胁行为者英文文件**：`title`, `description`, `references`, `keywords`
-- **行业术语英文文件**：`title`, `aliases`, `keywords`, `definition`, `description`, `usageExample`, `references`, `category`（自由字符串需翻译）
+- **行业术语英文文件**：`title`, `aliases`, `keywords`, `definition`, `description`, `usageExample`, `references`（不维护 `category`，分类标题由英文分类注册表集中翻译）
 - **典型案例英文文件**：`title`, `keywords`, `summary`, `references`（`category` 存枚举键，不翻译）
 
 ## 引用（`references`）规范

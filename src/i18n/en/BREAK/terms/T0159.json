@@ -13,7 +13,6 @@
       "completed transaction"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "The act of a service provider completing a query and delivering the results to the buyer in an illegal data transaction.",
     "description": "'Returning the order' signifies that the data query has been completed and delivered, marking the closure of the illicit transaction. After receiving feedback from upstream sources, the provider sends documents or screenshots containing personal privacy information or account statements to the buyer, finalizing the deal. The turnaround time for returning orders is often used as a competitive selling point, with providers emphasizing 'fast returns' to attract buyers in urgent need of information.",
     "usageExample": "\"Direct from the source, price: 200 RMB, results returned in about ten minutes. Affordable and fast.\"",

@@ -12,7 +12,7 @@
       "网络层隐私",
       "假名关联"
     ],
-    "summary": "研究人员提出一种新颖的去匿名化攻击方法，能够将区块链RPC用户的IP地址与其区块链假名关联起来，且该攻击不产生任何交易费用。通过数学建模、大规模账本测量和真实世界攻击验证，该攻击利用时间分析技术实现了对区块链用户的去匿名化，揭示了公链交易公开透明特性下用户身份和网络地址被追踪的严重隐私风险。",
+    "summary": "2025年研究提出一种面向区块链RPC用户的被动去匿名化方法。攻击者比较RPC服务收到请求的时间与公开账本中交易出现的时间，可将用户网络地址同链上假名建立关联；方法无需主动发送链上交易，因此不产生交易费。论文通过模型、账本测量和真实环境实验评估了该风险。",
     "category": "academic_research",
     "relatedRisks": [
       "R0174"
@@ -20,10 +20,10 @@
     "references": [
       {
         "title": "Time Tells All: Deanonymization of Blockchain RPC Users with Zero ...",
-        "link": "https://arxiv.org/pdf/2508.21440"
+        "link": "https://arxiv.org/abs/2508.21440"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "relatedAttackTools": [
       "AT0080"
     ],

@@ -60,3 +60,7 @@ BusinessDomain 是风险业务归类的权威来源。Risk 文件不维护 `rela
 5. 提交前运行 `npm run build`。
 
 实体字段规则见 [数据模型与字段说明](/docs/data-model)，发布流程见 [发布与维护](/docs/release-maintenance)。
+
+## 术语分类架构
+
+2.45.0 起，Term.category 在中文结构源中存储稳定枚举 key，双语展示名由 i18n 分类映射提供。Schema、搜索、全量英文合并、静态导出、STIX/JSON-LD 与数据包生成均消费同一 key，`term-category-enum.mjs` 直接从权威分类定义校验，不再依赖独立 allowlist 文件。

@@ -13,7 +13,6 @@
       "masking period"
     ],
     "aliases": [],
-    "category": "Credit Fraud",
     "definition": "A period of staged, on-time repayments orchestrated by fraud rings to evade detection by financial institutions.",
     "description": "After obtaining a loan using false identities or fabricated documents, fraud rings will make the initial monthly payments on behalf of the straw borrower. This artificially created 'good repayment record' is the risk-control period, designed to lull the monitoring system into a false sense of security. The goal is to buy time to apply for larger loans or to abscond with the funds, with a longer period further delaying the exposure of the fraud.",
     "usageExample": "Operating in XX area, the borrower gets XXX in hand, asset package, three-year risk-control period.",

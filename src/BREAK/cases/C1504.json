@@ -10,7 +10,7 @@
       "安全漏洞",
       "物理系统安全"
     ],
-    "summary": "研究人员提出一种利用程序分析框架生成传感器欺骗攻击的方法。分析师可据此生成能驱动系统进入危险状态的传感器读数轨迹。作为案例研究，该系统生成了用于欺骗无线传感器的伪造无线信号，展示了信号注入攻击的可行性。",
+    "summary": "2017年研究提出利用程序分析自动合成传感器欺骗攻击。框架根据目标控制程序和期望危险状态，生成可使系统沿特定路径执行的传感器读数轨迹。研究者在案例实验中把合成结果转换为伪造无线信号并注入传感器，验证了攻击者可通过改变物理环境输入诱导系统进入不安全状态。",
     "category": "academic_research",
     "relatedRisks": [
       "R0189"
@@ -18,10 +18,10 @@
     "references": [
       {
         "title": "Using program analysis to synthesize sensor spoofing attacks",
-        "link": "https://dl.acm.org/doi/abs/10.1145/3052973.3053038"
+        "link": "https://rist.tech.cornell.edu/papers/spoofing_asiaccs17.pdf"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2017-04-02"

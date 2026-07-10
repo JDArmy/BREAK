@@ -17,6 +17,7 @@ const expectedCounts = {
   attackTools: countRecords('src/BREAK/attack-tools'),
   threatActors: countRecords('src/BREAK/threat-actors'),
   terms: countRecords('src/BREAK/terms'),
+  termCategories: countRecords('src/BREAK/term-categories'),
   businessDomains: countRecords('src/BREAK/business-domains'),
   avoidanceCategories: countRecords('src/BREAK/avoidance-categories'),
   cases: countRecords('src/BREAK/cases'),
@@ -183,5 +184,5 @@ if (issues.length > 0) {
 
 console.log('\n✅ 静态数据导出校验通过');
 console.log(
-  `entities=${expectedCounts.risks.total}/${expectedCounts.avoidances.total}/${expectedCounts.attackTools.total}/${expectedCounts.threatActors.total}/${expectedCounts.terms.total}/${expectedCounts.businessDomains.total}/${expectedCounts.avoidanceCategories.total}/${expectedCounts.cases.total}`
+  `entities=${expectedCounts.risks.total}/${expectedCounts.avoidances.total}/${expectedCounts.attackTools.total}/${expectedCounts.threatActors.total}/${expectedCounts.terms.total}/${expectedCounts.termCategories.total}/${expectedCounts.businessDomains.total}/${expectedCounts.avoidanceCategories.total}/${expectedCounts.cases.total}`
 );

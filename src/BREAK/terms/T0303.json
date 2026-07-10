@@ -13,7 +13,7 @@
       "身份料"
     ],
     "aliases": [],
-    "category": "跑分洗钱",
+    "category": "money_laundering",
     "definition": "无卡人头是仅提供身份信息而不提供实体银行卡的供体。",
     "description": "无卡人头通常只提供身份证照片、手持照等用于线上实名认证，帮助黑产绕过平台注册环节。他们不直接提供银行卡，但被用于注册的虚拟账户同样可用于接收和转移资金。这种模式降低了人头的风险感知，使其更容易被招募。",
     "usageExample": "无卡人头谁要，名下有xx银行非柜5000额度。",
@@ -52,6 +52,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

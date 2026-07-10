@@ -6,7 +6,7 @@
       "订单价格快照",
       "可信价格快照"
     ],
-    "category": "业务安全",
+    "category": "trading_security",
     "keywords": [
       "价格快照",
       "商品价格快照",
@@ -43,6 +43,7 @@
         "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

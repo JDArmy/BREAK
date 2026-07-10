@@ -12,23 +12,23 @@
       "加密货币盗窃",
       "MIT"
     ],
-    "summary": "2024年5月，毕业于MIT的Anton和James Peraire-Bueno兄弟被美国司法部指控利用以太坊MEV-Boost漏洞，在约12秒内通过重新排序交易窃取价值约2500万美元的加密货币。两人通过设立皮包公司、使用多个私人地址和境外交易所隐藏身份和洗钱，这是首个被提起刑事诉讼的MEV攻击案件。",
+    "summary": "2024年5月15日，美国司法部公布对Anton与James Peraire-Bueno兄弟的起诉。检方指控二人经过数月筹划，操纵以太坊区块构建流程并诱使交易机器人暴露交易内容，在约12秒内取得约2500万美元加密货币，随后还试图隐匿和清洗所得。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0170"
     ],
     "references": [
       {
-        "title": "美国司法部:12秒盗走2500万美元,MIT两位高材生MEV攻击过程全披露...",
-        "link": "https://www.panewslab.com/en/articles/qt50cy12"
+        "title": "美国司法部：两兄弟被控攻击以太坊区块链并窃取2500万美元",
+        "link": "https://www.justice.gov/usao-sdny/pr/two-brothers-arrested-attacking-ethereum-blockchain-and-stealing-25-million"
       },
       {
         "title": "美国司法部：两兄弟因攻击以太坊区块链并窃取2500万美元加密货币被捕",
         "link": "https://www.justice.gov/archives/opa/pr/two-brothers-arrested-attacking-ethereum-blockchain-and-stealing-25m-cryptocurrency"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2024-05",
+    "updated": "2026-07-10",
+    "incidentTime": "2024-05-15",
     "relatedAttackTools": [
       "AT0076"
     ],

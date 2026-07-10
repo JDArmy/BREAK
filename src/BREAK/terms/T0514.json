@@ -6,7 +6,7 @@
       "零日漏洞",
       "未公开漏洞"
     ],
-    "category": "网络攻击",
+    "category": "network_attack",
     "keywords": [
       "0day漏洞",
       "Zero-day",
@@ -49,6 +49,7 @@
         "title": "Microsoft Security Response Center Blog"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

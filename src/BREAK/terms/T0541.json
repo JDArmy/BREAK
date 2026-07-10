@@ -2,7 +2,7 @@
   "T0541": {
     "title": "云IAM",
     "aliases": [],
-    "category": "业务安全",
+    "category": "cloud_security",
     "keywords": [
       "云IAM"
     ],
@@ -24,7 +24,7 @@
         "link": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

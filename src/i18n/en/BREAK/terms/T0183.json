@@ -13,7 +13,6 @@
       "full text household"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A type of record check that provides a text-only description of household members, including names, ID numbers, and relationships.",
     "description": "A text-based household registration information service provided by black market actors. It lacks photos but includes key textual data like names, ID numbers, and familial relationships. This plain text format is easy to transmit and process, often used for batch matching, credential stuffing, or as an index for querying more complete household information.",
     "usageExample": "\"Text-only full records with relationships, Chunjiang escrow accepted.\"",

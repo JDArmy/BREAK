@@ -6,7 +6,7 @@
       "登录凭据复用",
       "Credential Reuse"
     ],
-    "category": "安全防护",
+    "category": "identity_security",
     "keywords": [
       "凭据复用",
       "凭证复用",
@@ -46,6 +46,7 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

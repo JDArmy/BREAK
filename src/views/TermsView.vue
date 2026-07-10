@@ -13,15 +13,6 @@ const { locale, messages } = useI18n();
 const termKeys = Object.keys(BREAK.terms);
 const selectedCategory = ref("");
 
-// 动态提取所有分类值（去重排序）
-const categoryOptions = computed(() => {
-  const cats = new Set<string>();
-  for (const term of Object.values(BREAK.terms)) {
-    if (term.category) cats.add(term.category);
-  }
-  return [...cats].sort();
-});
-
 const getInitialKey = () => {
   const paramKey = typeof route.params.tKey === "string" ? route.params.tKey : "";
   return paramKey || termKeys[0] || "";
@@ -54,7 +45,38 @@ const getTermString = (termKey: string, field: string) =>
 const getTermStringArray = (termKey: string, field: string) =>
   getMessageStringArray(localeMessages.value, `BREAK.terms.${termKey}.${field}`);
 
-// 8 种调色板，35 个分类通过哈希映射循环取色
+const getCategoryString = (kind: "groups" | "categories", key: string, field: string) =>
+  String(getNestedMessageValue(localeMessages.value, `BREAK.termCategories.${kind}.${key}.${field}`) || key);
+
+const categoryUsage = computed(() => {
+  const counts = new Map<string, number>();
+  for (const term of Object.values(BREAK.terms)) {
+    counts.set(term.category, (counts.get(term.category) ?? 0) + 1);
+  }
+  return counts;
+});
+
+// 分类结构和顺序统一来自注册表；筛选值始终使用稳定语义 key。
+const categoryGroups = computed(() =>
+  Object.entries(BREAK.termCategories.groups)
+    .sort(([, left], [, right]) => left.order - right.order)
+    .map(([groupKey]) => ({
+      key: groupKey,
+      label: getCategoryString("groups", groupKey, "title"),
+      categories: Object.entries(BREAK.termCategories.categories)
+        .filter(([, category]) => category.group === groupKey)
+        .filter(([categoryKey]) => categoryUsage.value.has(categoryKey))
+        .sort(([, left], [, right]) => left.order - right.order)
+        .map(([categoryKey]) => ({
+          key: categoryKey,
+          label: getCategoryString("categories", categoryKey, "title"),
+          count: categoryUsage.value.get(categoryKey) ?? 0,
+        })),
+    }))
+    .filter((group) => group.categories.length > 0),
+);
+
+// 8 种调色板，分类通过稳定语义 key 哈希映射循环取色
 const TERM_BADGE_PALETTE_COUNT = 8;
 const termCategoryColorIndex = (cat: string): number => {
   let hash = 0;
@@ -72,10 +94,11 @@ const termItems = computed(() =>
     })
     .map((termKey) => {
     const aliases = getTermStringArray(termKey, "aliases");
-    const category = getTermString(termKey, "category");
-    const definition = getTermString(termKey, "definition");
-    // 用源数据的 category（不随语言变化）做哈希，确保中英文颜色一致
     const rawCategory = BREAK.terms[termKey].category || "";
+    const category = getCategoryString("categories", rawCategory, "title");
+    const groupKey = BREAK.termCategories.categories[rawCategory as keyof typeof BREAK.termCategories.categories]?.group || "";
+    const categoryGroup = groupKey ? getCategoryString("groups", groupKey, "title") : "";
+    const definition = getTermString(termKey, "definition");
 
     return {
       id: termKey,
@@ -89,6 +112,7 @@ const termItems = computed(() =>
         definition,
         getTermString(termKey, "description"),
         category,
+        categoryGroup,
       ]
         .filter(Boolean)
         .join(" "),
@@ -117,12 +141,18 @@ const termItems = computed(() =>
         filterable
         :placeholder="$t('allCategories')"
       >
-        <el-option
-          v-for="cat in categoryOptions"
-          :key="cat"
-          :label="cat"
-          :value="cat"
-        />
+        <el-option-group
+          v-for="group in categoryGroups"
+          :key="group.key"
+          :label="group.label"
+        >
+          <el-option
+            v-for="category in group.categories"
+            :key="category.key"
+            :label="`${category.label} (${category.count})`"
+            :value="category.key"
+          />
+        </el-option-group>
       </el-select>
     </template>
     <TermDetailBody v-if="selectedTerm" :t-key="selectedTermKey" mode="list" />

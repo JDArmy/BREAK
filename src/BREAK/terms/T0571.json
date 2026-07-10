@@ -2,7 +2,7 @@
   "T0571": {
     "title": "训练数据投毒",
     "aliases": [],
-    "category": "业务安全",
+    "category": "ai_security",
     "keywords": [
       "训练数据投毒"
     ],
@@ -35,6 +35,6 @@
       }
     ],
     "updated": "2026-07-10",
-    "version": 2
+    "version": 3
   }
 }

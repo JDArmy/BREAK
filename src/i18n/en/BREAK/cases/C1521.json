@@ -9,11 +9,15 @@
       "EOA smart contract",
       "asset transfer exploit"
     ],
-    "summary": "On May 24, 2025, the phishing group Inferno Drainer leveraged the Ethereum EIP-7702 upgrade to carry out a novel attack, resulting in a single loss of approximately $150,000. EIP-7702 allows externally owned accounts (EOAs) to temporarily gain smart contract functionality, and attackers used an authorized MetaMask to trick users into signing malicious approvals, thereby transferring assets.",
+    "summary": "On May 24, 2025, the wallet-draining service Inferno Drainer was found abusing Ethereum's EIP-7702 in an attack that cost one victim about $150,000. The phishing page induced the user to sign an authorization that delegated an externally owned account to attacker-selected contract logic. Malicious code could then approve token transfers in the background and drain the wallet without displaying each conventional approval separately.",
     "references": [
       {
         "title": "[Security Monthly Report] | Approximately $182 million lost in May due to hacks, scams, etc....",
         "link": "https://www.freebuf.com/articles/web/433364.html"
+      },
+      {
+        "title": "Inferno Drainer Steals $150,000 in Crypto Phishing Attack",
+        "link": "https://beincrypto.com/inferno-drainer-ethereum-wallet-crypto-phishing-attack/"
       }
     ]
   }

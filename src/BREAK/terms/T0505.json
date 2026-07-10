@@ -5,7 +5,7 @@
       "Phishing",
       "钓鱼攻击"
     ],
-    "category": "社会工程",
+    "category": "social_engineering",
     "keywords": [
       "网络钓鱼",
       "Phishing",
@@ -57,7 +57,8 @@
         "title": "Recognize and Report Phishing - CISA"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   },
   "T0505-001": {
     "title": "鱼叉式钓鱼",
@@ -66,7 +67,7 @@
       "定向钓鱼",
       "精准钓鱼"
     ],
-    "category": "社会工程",
+    "category": "social_engineering",
     "keywords": [
       "鱼叉式钓鱼",
       "Spear Phishing",
@@ -109,7 +110,8 @@
         "title": "Spear Phishing - Proofpoint"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   },
   "T0505-002": {
     "title": "捕鲸攻击",
@@ -118,7 +120,7 @@
       "高管钓鱼",
       "BEC"
     ],
-    "category": "社会工程",
+    "category": "social_engineering",
     "keywords": [
       "捕鲸攻击",
       "Whaling Attack",
@@ -164,6 +166,7 @@
         "title": "What is a Whaling Attack? - Fortinet"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

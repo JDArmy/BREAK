@@ -13,7 +13,7 @@
       "CVV通道"
     ],
     "aliases": [],
-    "category": "业务欺诈",
+    "category": "business_fraud",
     "definition": "CVV是银行卡背面签名栏上的安全验证码，用于验证持卡人身份。",
     "description": "在信用卡欺诈场景中，CVV常与卡号、有效期等信息一同被非法获取并出售，用于线上盗刷。黑灰产通过钓鱼网站、数据库拖库或恶意软件窃取完整的信用卡信息，随后在境外网站或虚拟商品平台快速变现。CVV泄露意味着卡片面临极高的盗用风险。",
     "usageExample": "出一批新鲜CVV，全球可挑，走担保。",
@@ -63,6 +63,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

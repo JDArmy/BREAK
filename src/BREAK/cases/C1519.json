@@ -13,7 +13,7 @@
       "供应链攻击",
       "Koi"
     ],
-    "summary": "安全公司Koi发现火狐浏览器官方插件商店出现40余个假冒加密钱包扩展程序，仿冒对象包括MetaMask、Coinbase Wallet等主流钱包。这些恶意插件通过植入事件监听代码窃取超过30个字符的输入内容（主要针对助记词），并将数据回传至攻击者服务器。",
+    "summary": "2025年7月，安全公司Koi披露FoxyWallet恶意扩展活动，将40余个Firefox扩展关联到同一攻击集群。这些扩展仿冒Coinbase、MetaMask、Trust Wallet、Phantom等主流钱包，通过复制合法插件名称与界面诱导安装，随后窃取钱包凭证和秘密信息并外传至攻击者服务器。",
     "category": "security_incident",
     "relatedRisks": [
       "R0193"
@@ -26,9 +26,13 @@
       {
         "title": "FoxyWallet: 40+ Malicious Firefox Extensions Exposed",
         "link": "https://www.koi.ai/blog/foxywallet-40-malicious-firefox-extensions-exposed"
+      },
+      {
+        "title": "Over 40 Malicious Firefox Extensions Target Cryptocurrency Wallets",
+        "link": "https://thehackernews.com/2025/07/over-40-malicious-firefox-extensions.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2025-07",
     "relatedAttackTools": [
       "AT0032",

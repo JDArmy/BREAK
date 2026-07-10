@@ -12,7 +12,6 @@
       "bank detail exploit"
     ],
     "aliases": [],
-    "category": "Telecom Fraud",
     "definition": "An unauthorized payment method that bypasses the need for a physical card, requiring only account details and a verification code.",
     "description": "Once a cardholder's number, name, ID, phone number, and SMS verification code are compromised, fraudsters can initiate a card-not-present transaction, circumventing the physical card and its PIN. This technique is common in the fund-draining phase following information theft via phishing sites or trojans. The transfer is swift, and victims often only realize something is wrong upon receiving a debit notification.",
     "usageExample": "He clicked a link and filled in his details, and then a card-not-present fraud happened. The money was drained in three transactions; he only knew when the bank's text alerts came through.",

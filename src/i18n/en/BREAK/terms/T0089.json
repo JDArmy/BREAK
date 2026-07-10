@@ -25,7 +25,6 @@
       "personal dossier lookup",
       "background check service"
     ],
-    "category": "Data Leakage",
     "definition": "An illicit service that reverse-lookups a target's complete personal dossier from a single clue such as a phone number.",
     "description": "Illicit record lookup is a core underground data-trading service. Operators use social-engineering databases, insider access, exposed interfaces, or breached datasets to turn a phone number, name, or ID number into sensitive personal records such as identity details, addresses, bank cards, assets, travel, or hotel-stay information.\n\nThe service feeds targeted fraud, extortion, debt collection, and privacy abuse. Relevant controls focus on data-source tracing, abnormal query detection, insider misuse, and downstream trading channels.",
     "references": [

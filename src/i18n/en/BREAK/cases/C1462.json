@@ -1,23 +1,11 @@
 {
   "C1462": {
-    "title": "Cybersecurity Explained (Part 2): Defending Against Side-Channel Attacks",
-    "keywords": [
-      "side-channel attack",
-      "power analysis",
-      "encryption key extraction",
-      "medical IoT security",
-      "secure boot",
-      "network segmentation",
-      "IEC 62443",
-      "attack surface minimization",
-      "IoT device hardening"
-    ],
-    "summary": "This blog post examines IoT device security risks, highlighting side-channel attacks as an attack vector where adversaries can extract encryption keys through power analysis, with specific mention of threats to medical IoT devices. It also covers mitigations such as secure boot, attack surface minimization, and network segmentation, referencing industry standards like IEC 62443.",
+    "title": "DAGguise Research on Defending Against Memory Side Channels",
+    "keywords": ["DAGguise", "memory side channel", "memory controller", "request shaping", "directed acyclic graph", "timing leakage", "shared memory security"],
+    "summary": "In 2022, an MIT team introduced DAGguise to reduce leakage of program-access timing through shared memory controllers. The design organizes requests in a directed acyclic graph and sends real or dummy memory accesses on a fixed schedule, hiding a program's actual behavior. Simulations indicated that it could resist memory-timing side channels while preserving more sharing efficiency than schemes that dedicate the controller to one program at a time.",
     "references": [
-      {
-        "title": "A New Method to Effectively Counter Side-Channel Memory Attacks - Security Inner Circle",
-        "link": "https://www.secrss.com/articles/40105"
-      }
+      {"title": "A New Method to Effectively Counter Side-Channel Memory Attacks", "link": "https://www.secrss.com/articles/40105"},
+      {"title": "MIT: Foiling Cyberattackers with Lower Performance Costs", "link": "https://news.mit.edu/2022/cyber-security-attackers-0223"}
     ]
   }
 }

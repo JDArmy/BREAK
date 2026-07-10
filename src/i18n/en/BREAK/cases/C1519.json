@@ -13,7 +13,7 @@
       "event listener injection",
       "cryptocurrency wallet scam"
     ],
-    "summary": "Security firm Koi discovered more than 40 counterfeit cryptocurrency wallet extensions on the official Firefox add-on store, impersonating popular wallets such as MetaMask and Coinbase Wallet. These malicious extensions injected event listeners to steal input content exceeding 30 characters, primarily targeting seed phrases, and exfiltrated the data to attacker-controlled servers.",
+    "summary": "In July 2025, security firm Koi disclosed the FoxyWallet campaign and linked more than 40 Firefox extensions to one malicious cluster. The extensions impersonated major cryptocurrency wallets including Coinbase, MetaMask, Trust Wallet, and Phantom, copying legitimate names and interfaces to induce installation. Once installed, they stole wallet credentials and secret information and sent it to attacker-controlled servers.",
     "references": [
       {
         "title": "PA Daily | Vitalik: If empty decentralization slogans are shouted, Ethereum will face risks; Silicon Valley tycoon...",
@@ -22,6 +22,10 @@
       {
         "title": "FoxyWallet: 40+ Malicious Firefox Extensions Exposed",
         "link": "https://www.koi.ai/blog/foxywallet-40-malicious-firefox-extensions-exposed"
+      },
+      {
+        "title": "Over 40 Malicious Firefox Extensions Target Cryptocurrency Wallets",
+        "link": "https://thehackernews.com/2025/07/over-40-malicious-firefox-extensions.html"
       }
     ]
   }

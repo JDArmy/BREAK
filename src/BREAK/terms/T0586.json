@@ -2,7 +2,7 @@
   "T0586": {
     "title": "OTA更新",
     "aliases": [],
-    "category": "业务安全",
+    "category": "iot_security",
     "keywords": [
       "OTA更新"
     ],
@@ -24,7 +24,7 @@
         "link": "https://en.wikipedia.org/wiki/Over-the-air_update"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

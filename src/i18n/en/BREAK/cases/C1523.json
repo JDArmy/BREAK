@@ -11,7 +11,7 @@
       "crypto wallet drainer",
       "ad poisoning attack"
     ],
-    "summary": "Between April 12 and 21, 2022, approximately 52 addresses on the Terra blockchain had funds maliciously transferred, resulting in a total loss of around $4.31 million. Analysis confirmed the attack was a bulk Google keyword ad phishing campaign. Users searching for well-known projects such as Astroport and Nexus Protocol clicked on seemingly legitimate ad links in search results and were tricked i",
+    "summary": "Between April 12 and 21, 2022, Terra ecosystem users lost approximately $4.31 million from 52 addresses in a malicious Google Ads phishing campaign. Attackers purchased search ads for projects including Astroport, Nexus Protocol, and Anchor Protocol and placed counterfeit sites near the top of search results. Users who opened the fake sites and connected their wallets had assets transferred to attacker-controlled addresses.",
     "references": [
       {
         "title": "SlowMist: Analysis of Google phishing ad attacks against Terra ecosystem projects",
@@ -20,6 +20,14 @@
       {
         "title": "PA Daily | US sanctions on Russia expanded to crypto mining firms; TON Foundation has raised over $1 billion...",
         "link": "https://new.qq.com/omn/20220421/20220421A0C9RV00.html"
+      },
+      {
+        "title": "Terra Users Lose $4.3M in Crypto to Phishing Scam Over 10 Days",
+        "link": "https://cryptopotato.com/terra-users-lose-4-3m-in-crypto-to-phishing-scam-over-10-days/"
+      },
+      {
+        "title": "Hackers Use Malicious Google Ads to Steal $4 Million in Crypto",
+        "link": "https://www.vice.com/en/article/hackers-use-malicious-google-ads-to-steal-dollar4-million-in-crypto-stablecoin/"
       }
     ]
   }

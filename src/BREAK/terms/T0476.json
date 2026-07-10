@@ -15,7 +15,7 @@
     "aliases": [
       "跨站脚本攻击"
     ],
-    "category": "代码注入",
+    "category": "code_injection",
     "definition": "跨站脚本攻击，在网页中注入恶意脚本的攻击方式。",
     "description": "攻击者将恶意JavaScript代码注入到网页中，当其他用户访问该页面时，恶意脚本在受害者浏览器中执行。可窃取Cookie、会话令牌、键盘记录、钓鱼、植入木马等。分为反射型（通过URL传参）、存储型（存储在数据库）、DOM型（客户端脚本漏洞）三类，是Web应用最常见的安全漏洞之一。",
     "relatedRisks": [],
@@ -35,7 +35,8 @@
         "link": "https://blog.csdn.net/2301_77472496/article/details/156947232"
       }
     ],
-    "updated": "2026-07-09",
-    "usageExample": "攻击者在论坛帖子中注入XSS攻击脚本，当其他用户浏览该帖时，脚本自动窃取其会话Cookie并发送到攻击者服务器，批量劫持了2000个账号。"
+    "updated": "2026-07-10",
+    "usageExample": "攻击者在论坛帖子中注入XSS攻击脚本，当其他用户浏览该帖时，脚本自动窃取其会话Cookie并发送到攻击者服务器，批量劫持了2000个账号。",
+    "version": 2
   }
 }

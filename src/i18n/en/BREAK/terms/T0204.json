@@ -12,7 +12,6 @@
       "Itinerary data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illegal service that tracks an individual's travel patterns by aggregating data from transportation, accommodation, and other sources.",
     "description": "This service integrates data from hotel stays, traffic checkpoints, and other sources to map a target's complete activity trail. Underground actors use this intelligence to support serious crimes such as aggressive debt collection, illegal investigation, and even kidnapping. Its danger lies in piecing together fragmented information into a comprehensive portrait of a person's movements.",
     "references": [

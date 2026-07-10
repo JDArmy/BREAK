@@ -131,3 +131,7 @@ npm run build                      # full release gate (lint→validate→test�
 During any task, if you find a knowledge-base entity with a description error, relation error, or field-convention issue (whether or not related to the current task), spawn a subagent to fix it immediately — don't leave it for later. This is a data-hygiene principle that runs through all tasks.
 
 For broad same-class issues (e.g. a batch of entities with placeholder limitations), dispatch multiple subagents in parallel per the "Keywords batch-processing" pattern.
+
+## Maintaining Term Categories
+
+Starting with 2.45.0, adding or changing a Term category requires updating the authoritative enum definition and both localized labels, then checking schema validation, search filters, static exports, STIX/JSON-LD, and data-package type declarations. Run `npm run validate:data` before committing to ensure every `Term.category` uses a valid key and English translation files do not duplicate structural fields.

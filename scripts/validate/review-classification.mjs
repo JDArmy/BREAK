@@ -5,6 +5,12 @@
 import { getChangedEntities, parseArgs } from './changed-entities.mjs';
 import { loadAllEntities } from './llm-review-helpers.mjs';
 import { runReview, exitCodeFor } from '../llm/llm-review-runner.mjs';
+import { projectRoot, readJson } from '../search/common.mjs';
+
+const termCategoryRegistry = readJson(`${projectRoot}/src/BREAK/term-categories/termCategories.json`);
+const termCategoryOptions = Object.entries(termCategoryRegistry.categories)
+  .map(([key, category]) => `${key}(${category.title})`)
+  .join('、');
 
 const opts = parseArgs(process.argv.slice(2));
 
@@ -32,7 +38,7 @@ function buildPrompt(item) {
 - Risk：只有 complexity（basic/intermediate/advanced），**无 category 字段**，不要评 category（category 为空是正常的，不算缺失/错配）
 - Avoidance：有 category（AC01-04）+ effectiveness（high/medium/low）
 - Case：有 category（6 枚举）
-- Term：有 category（自由字符串）
+- Term：category 使用小写 snake_case 语义 key，必须引用 Term 分类注册表
 严格规则：
 1. 只输出 JSON 对象。
 2. category（仅 Avoidance/Case/Term）：
@@ -42,7 +48,7 @@ function buildPrompt(item) {
    分类枚举：
      Avoidance.category: AC01(防止)/AC02(感知)/AC03(识别)/AC04(处置)
      Case.category: criminal_verdict/administrative_enforcement/security_incident/vulnerability_advisory/academic_research/news_report
-     Term.category: 自由字符串（如"信贷欺诈""数据泄露"等）
+     Term.category: 使用分类注册表中的语义 key，不得填写展示名称；合法候选为：${termCategoryOptions}
 3. complexity（仅 Risk）：basic/intermediate/advanced 是否贴切
 4. effectiveness（仅 Avoidance）：high/medium/low 是否贴切
 5. verdict：pass(贴切)/review(边界)/fail(明显错配)。

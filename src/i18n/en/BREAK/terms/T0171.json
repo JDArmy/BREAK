@@ -13,7 +13,6 @@
       "intermediary resale data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Leftover data from a one-time illegal lookup that was not directly used and can be resold.",
     "description": "In illicit data trading, leftovers refer to surplus personal information from a single query, such as extra ID numbers or addresses. This data is not discarded but is repackaged by intermediaries and fed into social engineering databases or sold at low prices to downstream criminals. The circulation of leftovers broadens the scope of data breaches, exposing more victims to harassment and fraud risks.",
     "references": [

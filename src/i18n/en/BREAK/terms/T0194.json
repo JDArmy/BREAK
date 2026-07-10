@@ -12,7 +12,6 @@
       "exact address query"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A detailed residential address with a full house number, illegally obtained from official systems in underground data lookup services.",
     "description": "Unlike vague addresses that only specify a district or county, these precise addresses are typically pulled from household registration, social security, or courier systems by malicious insiders. This data is used for in-person debt collection, offline retaliation, precision scams, or asset investigation, making it extremely dangerous. Due to its accuracy, it commands a much higher price than vague addresses and is often sold alongside names and national ID numbers.",
     "usageExample": "\"Real addresses for individual accounts, random batch of 2 versions out today, same-day return.\"",

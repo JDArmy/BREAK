@@ -46,6 +46,12 @@ const enAttackTools = loadAllJson(join(I18N_EN_ROOT, "attack-tools"));
 const enThreatActors = loadAllJson(join(I18N_EN_ROOT, "threat-actors"));
 const enTerms = loadAllJson(join(I18N_EN_ROOT, "terms"));
 const enBusinessDomains = loadAllJson(join(I18N_EN_ROOT, "business-domains"));
+const termCategoryRegistry = JSON.parse(
+  readFileSync(join(ROOT, "term-categories", "termCategories.json"), "utf-8"),
+) as {
+  groups: Record<string, { title: string }>;
+  categories: Record<string, { title: string; group: string }>;
+};
 
 const riskIds = Object.keys(risks);
 const avoidanceIds = Object.keys(avoidances);
@@ -123,6 +129,42 @@ describe("数据完整性", () => {
         if (!entity.description) missing.push(`${id}.description`);
       }
       expect(missing, `缺少必填字段: ${missing.join(", ")}`).toEqual([]);
+    });
+
+    it("所有 Term.category 均为注册表中的语义 key", () => {
+      const invalid: string[] = [];
+      const keyPattern = /^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$/;
+      for (const [id, entity] of Object.entries(terms)) {
+        const category = String(entity.category ?? "");
+        if (!keyPattern.test(category) || !termCategoryRegistry.categories[category]) {
+          invalid.push(`${id}.category=${category}`);
+        }
+      }
+      expect(invalid, `非法分类引用: ${invalid.join(", ")}`).toEqual([]);
+    });
+
+    it("Term 分类注册表名称简短且分组引用有效", () => {
+      const invalid: string[] = [];
+      for (const [kind, records] of Object.entries({
+        groups: termCategoryRegistry.groups,
+        categories: termCategoryRegistry.categories,
+      })) {
+        for (const [key, item] of Object.entries(records)) {
+          const hanCount = item.title.match(/\p{Script=Han}/gu)?.length ?? 0;
+          if (hanCount > 6) invalid.push(`${kind}.${key}.title=${item.title}`);
+          if (kind === "categories" && !termCategoryRegistry.groups[(item as { group: string }).group]) {
+            invalid.push(`${kind}.${key}.group=${(item as { group: string }).group}`);
+          }
+        }
+      }
+      expect(invalid, `分类注册表违规: ${invalid.join(", ")}`).toEqual([]);
+    });
+
+    it("英文 Term 文件不重复维护 category", () => {
+      const invalid = Object.entries(enTerms)
+        .filter(([, entity]) => Object.prototype.hasOwnProperty.call(entity, "category"))
+        .map(([id]) => id);
+      expect(invalid, `英文 Term 含 category: ${invalid.join(", ")}`).toEqual([]);
     });
 
     it("所有 Risk 条目均含 keywords", () => {

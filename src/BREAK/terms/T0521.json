@@ -6,7 +6,7 @@
       "诱饵系统",
       "蜜网"
     ],
-    "category": "安全防护",
+    "category": "security_defense",
     "keywords": [
       "蜜罐",
       "Honeypot",
@@ -42,6 +42,7 @@
         "title": "Honeypots: A Sweet Solution? - SANS"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

@@ -6,7 +6,7 @@
       "肉鸡网络",
       "C2网络"
     ],
-    "category": "网络攻击",
+    "category": "network_attack",
     "keywords": [
       "僵尸网络",
       "Botnet",
@@ -56,6 +56,7 @@
         "title": "Understanding Denial-of-Service Attacks - CISA"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

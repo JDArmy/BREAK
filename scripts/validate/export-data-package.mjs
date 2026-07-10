@@ -113,10 +113,29 @@ export interface BreakThreatActorRelation {
 export interface BreakTerm extends BreakBaseEntity {
   aliases?: string[];
   usageExample?: string;
+  category: string;
   relatedRisks: string[];
   relatedAvoidances: string[];
   relatedAttackTools: string[];
   relatedThreatActors: string[];
+}
+
+export interface BreakTermCategoryGroup {
+  title: string;
+  description: string;
+  order: number;
+}
+
+export interface BreakTermCategoryItem {
+  title: string;
+  description: string;
+  group: string;
+  order: number;
+}
+
+export interface BreakTermCategoryRegistry {
+  groups: Record<string, BreakTermCategoryGroup>;
+  categories: Record<string, BreakTermCategoryItem>;
 }
 
 export interface BreakBusinessDomain {
@@ -148,6 +167,7 @@ export interface BreakDataCollections {
   attackTools: Record<string, BreakAttackTool>;
   threatActors: Record<string, BreakThreatActor>;
   terms: Record<string, BreakTerm>;
+  termCategories: BreakTermCategoryRegistry;
   businessDomains: Record<string, BreakBusinessDomain>;
   avoidanceCategories: Record<string, BreakAvoidanceCategory>;
   cases: Record<string, BreakCase>;

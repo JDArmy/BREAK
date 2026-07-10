@@ -13,7 +13,7 @@
       "PoW共识",
       "统计检测"
     ],
-    "summary": "研究人员在 Monacoin 区块链中检测到矿工卡特尔的存在，不同矿工之间提前秘密共享新挖出区块的信息，协调发动自私挖矿攻击。这种协作式攻击通过隐藏区块和选择性广播，使得矿工群体获得超出其算力占比的收益。",
+    "summary": "2024年研究提出基于区块间隔时间分布的统计方法，用于识别工作量证明链上的自私挖矿。研究者将方法应用于Monacoin、Ethereum和Bitcoin Cash历史数据，在Monacoin中发现与协作式自私挖矿相符的统计证据：多个矿工可能私下共享新区块并协调发布，以提高相对收益。",
     "category": "academic_research",
     "relatedRisks": [
       "R0188"
@@ -21,10 +21,10 @@
     "references": [
       {
         "title": "Statistical detection of selfish mining in proof-of-work ...",
-        "link": "https://r.search.yahoo.com/_ylt=AwrOu.qwdTJqIQIA.atXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1782901425/RO=10/RU=https%3a%2f%2fwww.nature.com%2farticles%2fs41598-024-55348-3/RK=2/RS=0ske7LaJ2_lAkZPJyuf4UeXhiA4-"
+        "link": "https://www.nature.com/articles/s41598-024-55348-3"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2024-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

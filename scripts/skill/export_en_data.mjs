@@ -29,6 +29,7 @@ const enDirConfigs = [
   { key: 'attackTools', dir: 'src/i18n/en/BREAK/attack-tools' },
   { key: 'threatActors', dir: 'src/i18n/en/BREAK/threat-actors' },
   { key: 'terms', dir: 'src/i18n/en/BREAK/terms' },
+  { key: 'termCategories', dir: 'src/i18n/en/BREAK/term-categories' },
   { key: 'businessDomains', dir: 'src/i18n/en/BREAK/business-domains' },
   { key: 'avoidanceCategories', dir: 'src/i18n/en/BREAK/avoidance-categories' },
   { key: 'cases', dir: 'src/i18n/en/BREAK/cases' },

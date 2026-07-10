@@ -12,7 +12,7 @@
       "无差别洗钱"
     ],
     "aliases": [],
-    "category": "跑分洗钱",
+    "category": "money_laundering",
     "definition": "不区分资金来源、全盘接收的洗钱操作。",
     "description": "洗钱中介或跑分团队对上游提供的资金不进行任何审查，无论是诈骗、赌博还是色情黑产所得，均直接接入清洗流程。这种操作效率高但风险极大，容易因涉及重案资金被追踪。无视料常见于短期套现场景，参与者往往因贪图快钱而忽略法律后果。",
     "usageExample": "无视料,是钱就要。",
@@ -51,6 +51,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

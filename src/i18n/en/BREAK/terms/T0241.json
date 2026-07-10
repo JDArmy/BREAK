@@ -12,7 +12,6 @@
       "circular trading"
     ],
     "aliases": [],
-    "category": "Business Fraud",
     "definition": "A fraud tactic in which a single operator simultaneously controls both buyer and seller accounts to fabricate transactions and defraud the platform of marketing subsidies or funds.",
     "description": "The operator typically registers or controls multiple accounts, acting as both the buyer placing orders and the seller fulfilling them, creating a complete fake transaction loop. This technique is commonly used in e-commerce scenarios involving new-user subsidies, promotional discounts, or referral rewards, generating fraudulent order volume. If the platform's risk controls fail to detect it, the fraudster can cash out the subsidies, resulting in direct financial losses for the platform.",
     "usageExample": "That workshop ran tens of thousands of fake orders using the left-right hand trick and drained all the platform's new-user subsidies.",

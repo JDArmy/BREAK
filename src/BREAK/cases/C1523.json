@@ -12,7 +12,7 @@
       "加密货币盗窃",
       "私钥泄露"
     ],
-    "summary": "2022年4月12日至21日，Terra链上约52个地址的资金被恶意转出，总损失约431万美元。经分析确认，攻击为批量谷歌关键词广告投放钓鱼，用户在搜索Astroport、Nexus Protocol等知名项目时，点击搜索结果中看似正常的广告链接后被诱导签署恶意授权。",
+    "summary": "2022年4月12日至21日，Terra生态用户遭遇恶意Google广告钓鱼，52个地址合计损失约431万美元。攻击者购买Astroport、Nexus Protocol、Anchor Protocol等项目关键词广告，将仿冒站点置于搜索结果前列；用户进入假网站并连接钱包后，资产被转往攻击者地址。",
     "category": "security_incident",
     "relatedRisks": [
       "R0084-002"
@@ -25,9 +25,17 @@
       {
         "title": "PA日报|美对俄制裁扩大至加密矿企;TON基金会已募集逾10亿美元...",
         "link": "https://new.qq.com/omn/20220421/20220421A0C9RV00.html"
+      },
+      {
+        "title": "Terra Users Lose $4.3M in Crypto to Phishing Scam Over 10 Days",
+        "link": "https://cryptopotato.com/terra-users-lose-4-3m-in-crypto-to-phishing-scam-over-10-days/"
+      },
+      {
+        "title": "Hackers Use Malicious Google Ads to Steal $4 Million in Crypto",
+        "link": "https://www.vice.com/en/article/hackers-use-malicious-google-ads-to-steal-dollar4-million-in-crypto-stablecoin/"
       }
     ],
-    "updated": "2026-06-24",
+    "updated": "2026-07-10",
     "incidentTime": "2022-04",
     "relatedAttackTools": [
       "AT0063",

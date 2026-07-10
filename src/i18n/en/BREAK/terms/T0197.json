@@ -12,7 +12,6 @@
       "identity correlation"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A lightweight, illicit social relationship query service that outputs only the names and national ID numbers of related individuals.",
     "description": "This is a downgraded version of a full correlation query, providing only basic identifiers without specific relationship types or address extensions. It is often used to quickly identify people around a target, for bulk matching, or as a starting point for further queries. Data brokers typically sell these records at a low price per entry, combining them with other lookup services to lower the cost barrier for buyers.",
     "usageExample": "\"Ten-year flight and border-crossing records, single hotel check-in records, co-check-in records, ghost records, and basic relationship queries.\"",

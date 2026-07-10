@@ -6,7 +6,7 @@
       "对账差异单",
       "账务差异单"
     ],
-    "category": "业务安全",
+    "category": "trading_security",
     "keywords": [
       "对账差异清单",
       "差异清单",
@@ -43,6 +43,7 @@
         "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

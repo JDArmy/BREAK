@@ -12,7 +12,7 @@
       "车队接料"
     ],
     "aliases": [],
-    "category": "跑分洗钱",
+    "category": "money_laundering",
     "definition": "诈骗团伙将非法资金分发给下游进行清洗的行为。",
     "description": "放料是洗钱链条的上游环节，诈骗团伙将电信诈骗、赌博等非法所得交由跑分团队或洗钱中介处理。下游通过分散转账、购买虚拟币或利用商户账户将赃款洗白。放料者通常不直接参与清洗，而是通过抽成获利，风险转嫁给执行层。",
     "usageExample": "长期放料：资金盘",
@@ -51,6 +51,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

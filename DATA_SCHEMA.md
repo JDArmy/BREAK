@@ -34,6 +34,13 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 - Pure entity IDs such as `R0001`, `A0001`, `AT0001`, `TA0001`, or `T0001` are not accepted as standalone keywords.
 - Use `npm run audit:keywords` to check keyword quality and `npm run fix:keywords` to normalize whitespace and duplicates.
 
+### TermCategory Registry
+
+- The registry source is `src/BREAK/term-categories/termCategories.json`.
+- `Term.category` stores a semantic lowercase snake_case leaf key such as `credit_fraud`; display labels are resolved through the registry.
+- Group and category Chinese titles are limited to six Han characters.
+- English Term files do not repeat `category`; localized category titles and descriptions are maintained once in the English registry.
+
 ## Entity Schemas
 
 ### Risk
@@ -63,7 +70,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 |-------|------|-------------|-------------|
 | `title` | string | required | 展示标题。 |
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
-| `category` | "AC01" \| "AC02" \| "AC03" \| "AC04" | required | 分类 ID。 |
+| `category` | "AC01" \| "AC02" \| "AC03" \| "AC04" | required | 分类 key；具体值域由对应实体 schema 或集中分类注册表约束。 |
 | `effectiveness` | "high" \| "medium" \| "low" | required | 规避手段有效性分级，用于防御覆盖排序。 |
 | `definition` | string | required | 简短定义。 |
 | `description` | string | required | 详细说明。 |
@@ -118,7 +125,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `title` | string | required | 展示标题。 |
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
 | `aliases` | string[] | optional, defaults to empty array | 别名列表。 |
-| `category` | string | required | 分类 ID。 |
+| `category` | string | required | 分类 key；具体值域由对应实体 schema 或集中分类注册表约束。 |
 | `definition` | string | required | 简短定义。 |
 | `description` | string | required | 详细说明。 |
 | `usageExample` | string | optional | 使用示例。 |
@@ -154,7 +161,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `title` | string | required | 展示标题。 |
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
 | `summary` | string | required | 案例摘要，中文 80-300 字事实性描述；英文不超过 180 个单词。 |
-| `category` | string | required | 分类 ID。 |
+| `category` | string | required | 分类 key；具体值域由对应实体 schema 或集中分类注册表约束。 |
 | `incidentTime` | string | optional | 案例发生时间，YYYY、YYYY-MM 或 YYYY-MM-DD。 |
 | `relatedRisks` | string | required | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |
 | `relatedAttackTools` | string | optional, defaults to empty array | 相关攻击工具列表；AttackTool 中为攻击工具间关联对象列表。 Target: AttackTool. |
@@ -196,7 +203,8 @@ Allowed English translation fields are:
 | Avoidance | `title`, `keywords`, `definition`, `description`, `complexity`, `limitation`, `references[].title`, `references[].link` |
 | AttackTool | `title`, `keywords`, `description`, `references[].title`, `references[].link` |
 | ThreatActor | `title`, `keywords`, `description`, `references[].title`, `references[].link` |
-| Term | `title`, `keywords`, `aliases`, `category`, `definition`, `description`, `usageExample`, `references[].title`, `references[].link` |
+| Term | `title`, `keywords`, `aliases`, `definition`, `description`, `usageExample`, `references[].title`, `references[].link` |
+| TermCategory | `title`, `description` |
 | BusinessDomain | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |
 | Case | `title`, `keywords`, `summary`, `references[].title`, `references[].link` |
 

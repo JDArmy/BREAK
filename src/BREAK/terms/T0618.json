@@ -6,7 +6,7 @@
       "营销补贴损失",
       "活动资损"
     ],
-    "category": "营销欺诈",
+    "category": "marketing_fraud",
     "keywords": [
       "营销资损",
       "营销资金损失",
@@ -51,6 +51,7 @@
         "link": "https://legacy.acfe.com/fraudrisktools/tools/coso-fraud-risk-management-guide.pdf"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

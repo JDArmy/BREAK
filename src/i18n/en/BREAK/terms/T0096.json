@@ -12,7 +12,6 @@
       "fuzzy record search"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A technique used in social engineering databases to precisely locate a target's data by filtering results with auxiliary fields when only vague information like a name is known.",
     "description": "Demon hunting is a common query technique in social engineering databases. When an attacker only knows a target's name, they cross-reference the returned results with auxiliary information like birthdate, region, and gender. This method allows them to precisely filter a specific target's complete dossier from a massive pool of homonymous data. This technique is a critical step in executing precision scams and doxing.",
     "references": [

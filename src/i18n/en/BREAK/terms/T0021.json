@@ -13,7 +13,6 @@
       "rule engine bypass"
     ],
     "aliases": [],
-    "category": "Marketing Fraud",
     "definition": "The technical methods used by fraud operators to crack or circumvent a platform’s security and risk-control systems.",
     "description": "Fraud technicians employ vulnerability scanning, protocol cracking, emulator-based device spoofing, and other techniques to defeat CAPTCHA challenges, device fingerprinting, and behavioral analysis. Successfully breaking through these defenses is a prerequisite for large-scale account registration, flash purchasing, or data scraping, making it the preparatory step for a wide range of cyberattacks and marketing fraud schemes.",
     "usageExample": "This campaign just added device fingerprinting checks—if we don’t break through the shield first, our scripts won’t even be able to log in.",

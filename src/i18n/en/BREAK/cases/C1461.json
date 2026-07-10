@@ -1,21 +1,11 @@
 {
   "C1461": {
-    "title": "Electromagnetic Side-Channel Attacks on IoT Devices - ACM Digital Library",
-    "keywords": [
-      "electromagnetic side-channel attacks",
-      "IoT device security",
-      "electromagnetic emanation analysis",
-      "side-channel analysis",
-      "physical characteristic extraction",
-      "sensitive information leakage",
-      "ACM"
-    ],
-    "summary": "This literature investigates the use of electromagnetic side-channel analysis techniques to examine the security of IoT devices. It highlights that IoT devices significantly expand the attack surface, as attackers can extract sensitive information by analyzing physical characteristics such as electromagnetic radiation emitted during device operation, posing a serious threat to IoT security.",
+    "title": "Electromagnetic Side-Channel Analysis for Digital Forensics",
+    "keywords": ["electromagnetic side channel", "digital forensics", "electromagnetic emanation", "encrypted device analysis", "signal acquisition", "side-channel experiment", "forensic research"],
+    "summary": "A 2018 study evaluated electromagnetic side-channel analysis as a digital-forensics technique. The authors argued that, when encryption or access controls obstruct conventional examination, electromagnetic emanations from device computation may expose patterns associated with internal activity. Experimental cases explored the feasibility of collecting and analyzing those signals while noting limitations from device variation, environmental noise, and training data.",
     "references": [
-      {
-        "title": "Electromagnetic side-channel attacks - ACM Digital Library",
-        "link": "https://dl.acm.org/doi/10.1145/3236454.3236512"
-      }
+      {"title": "Electromagnetic Side-Channel Attacks - ACM Digital Library", "link": "https://dl.acm.org/doi/10.1145/3236454.3236512"},
+      {"title": "Electromagnetic Side-Channel Attacks: Potential for Progressing Hindered Digital Forensic Analysis", "link": "https://markscanlon.co/publications/EMSideChannelsForForensics"}
     ]
   }
 }

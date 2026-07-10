@@ -1,15 +1,31 @@
 {
   "T0652": {
     "title": "Voice Authentication",
-    "aliases": ["Voice Biometrics", "Voiceprint Authentication", "Speaker Verification"],
-    "category": "Security Control",
-    "keywords": ["Voice Authentication", "Voice Biometrics", "voiceprint recognition", "speaker verification", "biometric authentication", "voice liveness"],
+    "aliases": [
+      "Voice Biometrics",
+      "Voiceprint Authentication",
+      "Speaker Verification"
+    ],
+    "keywords": [
+      "Voice Authentication",
+      "Voice Biometrics",
+      "voiceprint recognition",
+      "speaker verification",
+      "biometric authentication",
+      "voice liveness"
+    ],
     "definition": "Voice authentication extracts biometric characteristics from a speaker's voice and compares them with an enrolled voiceprint template to verify that the speaker is the claimed person.",
     "description": "Voice authentication builds a speaker template from pitch, spectrum, formants, speaking habits, tempo, and vocal-tract characteristics. During login, telephone service, remote transactions, or sensitive operations, it compares live speech with the template. Systems may use a fixed phrase, prompted random text, or free speech and can combine liveness checks with device and call metadata to reduce replay risk.\n\nNoise, microphones, illness, and aging can change the signal, while recordings, voice conversion, and AI voice cloning can bypass weak implementations. Voice authentication should therefore not be the sole factor for high-risk verification. It is stronger when combined with possession factors, behavioral signals, challenge-response, anomaly detection, and an alternative recovery path for legitimate users who are rejected.",
     "usageExample": "The bank uses Voice Authentication during telephone transactions and combines it with a random spoken challenge and device-risk signals to detect replayed recordings.",
     "references": [
-      {"title": "Investigatory Voice Biometrics - NIST", "link": "https://www.nist.gov/itl/iad/mltg/investigatory-voice-biometrics"},
-      {"title": "Authenticator Requirements: Restricted Use of Biometrics - NIST SP 800-63B", "link": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"}
+      {
+        "title": "Investigatory Voice Biometrics - NIST",
+        "link": "https://www.nist.gov/itl/iad/mltg/investigatory-voice-biometrics"
+      },
+      {
+        "title": "Authenticator Requirements: Restricted Use of Biometrics - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"
+      }
     ]
   }
 }

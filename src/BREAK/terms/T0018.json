@@ -16,7 +16,7 @@
     "aliases": [
       "喵呜"
     ],
-    "category": "营销欺诈",
+    "category": "marketing_fraud",
     "definition": "指热门商品在营销活动中被黑灰产瞬间抢空，导致正常用户无法购买的现象。",
     "description": "黑灰产利用自动化工具在抢购开始的毫秒级时间内完成批量下单，造成商品库存迅速归零。这种策略常用于囤积居奇或转卖获利，严重干扰平台销售秩序，使普通消费者丧失购买机会。",
     "usageExample": "那个限量球鞋刚上架就秒无，肯定又是被那群用外挂的扫光了。",
@@ -49,6 +49,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

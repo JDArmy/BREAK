@@ -12,11 +12,11 @@
       "blockchain",
       "game theory"
     ],
-    "summary": "This study examines the feasibility of semi-selfish mining attacks, where a mining pool sponsors a selfish mining operation to gain excess rewards. Honest miners may exit upon detecting abnormal fork behavior, while the attacker leverages this strategy to continuously earn a disproportionate share of block rewards without being detected.",
+    "summary": "A 2021 study evaluates whether semi-selfish mining can remain undetected and uses backward deduction to design strategies whose observable fork rate resembles normal mining. Simulations show that large pools do not necessarily gain excess rewards. Small pools may profit in theory, but their probability of implementing the strategy successfully without detection is very low, leading the paper to conclude that covert sponsorship is impractical.",
     "references": [
       {
         "title": "Is semi‐selfish mining available without being detected?",
-        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/int.22656"
+        "link": "https://www.semanticscholar.org/paper/93832c1fb5b9be09e72f0935e0e7c2221bb4d264"
       }
     ]
   }

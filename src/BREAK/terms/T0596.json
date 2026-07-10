@@ -2,7 +2,7 @@
   "T0596": {
     "title": "第三方运维",
     "aliases": [],
-    "category": "业务安全",
+    "category": "third_party_risk",
     "keywords": [
       "第三方运维"
     ],
@@ -30,7 +30,7 @@
         "link": "https://www.fortinet.com/resources/cyberglossary/what-is-mssp"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

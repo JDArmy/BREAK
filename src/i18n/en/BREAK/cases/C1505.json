@@ -10,11 +10,11 @@
       "sensor manipulation",
       "faulty sensor data"
     ],
-    "summary": "This study examines security issues related to sensor spoofing and data injection attacks in Matter protocol IoT devices. Attackers can manipulate sensor inputs to cause erroneous device behavior. Such sensor manipulation attacks represent a serious concern in anomaly detection, where faulty sensor data may trigger unintended device actions.",
+    "summary": "A 2025 study evaluates sensor manipulation and faulty-data injection in Matter-enabled IoT devices. Altered sensor inputs can produce incorrect control feedback and place devices in unsafe or inefficient states. The paper uses Isolation Forest to identify injected values as outliers in sensor readings and examines whether a lightweight, extensible approach can improve the reliability of anomaly detection in Matter networks.",
     "references": [
       {
         "title": "Anomaly Detection for Sensor Manipulation in Matter Enabled-IoT Devices ...",
-        "link": "https://ieeexplore.ieee.org/document/10940262"
+        "link": "https://www.semanticscholar.org/paper/c0794bb922ac5f59cebf73f4ac70b264c802e206"
       }
     ]
   }

@@ -6,7 +6,7 @@
       "灰度放量",
       "分阶段发布"
     ],
-    "category": "业务安全",
+    "category": "supply_chain_security",
     "keywords": [
       "灰度",
       "灰度发布",
@@ -39,6 +39,7 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/128/upd1/final"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

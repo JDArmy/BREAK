@@ -2,7 +2,7 @@
   "T0600": {
     "title": "客服数据泄露",
     "aliases": [],
-    "category": "业务安全",
+    "category": "data_leakage",
     "keywords": [
       "客服数据泄露"
     ],
@@ -24,6 +24,7 @@
         "link": "https://www.threatlocker.com/blog/discord-zendesk-breach-highlights-growing-risk-of-third-party-vendor-access"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

@@ -13,7 +13,6 @@
       "Remote Identity Provider"
     ],
     "aliases": [],
-    "category": "Money Laundering",
     "definition": "A provider who supplies only identity information without a physical bank card.",
     "description": "A 'cardless provider' typically only offers ID photos, selfies holding an ID, and similar materials for online identity verification, helping underground operations bypass platform registration requirements. They do not provide a physical bank card, but the virtual accounts registered with their information can still be used to receive and transfer funds. This model lowers the perceived risk for the provider, making them easier to recruit.",
     "usageExample": "Who needs a cardless provider? Has a bank account with a 5,000 yuan non-counter limit.",

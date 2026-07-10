@@ -11,7 +11,6 @@
       "ID-only car loan"
     ],
     "aliases": [],
-    "category": "Credit Fraud",
     "definition": "A simplified loan application model requiring only an ID card and a bank card, commonly seen in car loan fraud.",
     "description": "Exploiting lax review processes at some financial institutions, fraud rings apply for car loans using only an ID and bank card. In practice, they often forge supporting documents like driver's licenses to pass verification. This model is easily exploited for 'buy-and-cash-out' fraud schemes.",
     "usageExample": "Two IDs one card, credit record, settle at 5.7; One ID one card, credit record, settle at 5.",

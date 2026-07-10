@@ -4,7 +4,7 @@
     "aliases": [
       "Backtest Overfitting"
     ],
-    "category": "金融交易安全",
+    "category": "trading_security",
     "keywords": [
       "回测过拟合",
       "Backtest Overfitting",
@@ -43,6 +43,7 @@
         "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2308659"
       }
     ],
-    "updated": "2026-07-10"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

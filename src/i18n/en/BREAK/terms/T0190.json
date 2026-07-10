@@ -13,7 +13,6 @@
       "QR reverse search"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illegal lookup service that reverse-queries a software account's QR code to retrieve the associated phone number.",
     "description": "In illegal data trading, 'Code Reverse' is a service where fraudsters provide a target account's QR code, and sellers use technical means or internal interfaces to trace the bound phone number. This service is commonly used for identity mining after social media account takeover or to provide contact leads for precision scams.",
     "usageExample": "Accepting code reverse orders, all reverse queries accepted, high efficiency and speed, no tricks.",

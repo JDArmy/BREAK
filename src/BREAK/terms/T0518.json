@@ -6,7 +6,7 @@
       "SSL证书",
       "PKI"
     ],
-    "category": "安全防护",
+    "category": "security_defense",
     "keywords": [
       "数字证书",
       "Digital Certificate",
@@ -48,6 +48,7 @@
         "title": "What is SSL? | Learning Center - Cloudflare"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

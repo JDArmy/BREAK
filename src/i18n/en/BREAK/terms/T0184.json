@@ -13,7 +13,6 @@
       "spouse database query"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illicit service for querying a target's spouse information through API vulnerabilities or social engineering databases.",
     "description": "Black market actors refer to spouse information as 'po' and obtain it through two main methods: real-time querying via system API vulnerabilities, or retrieval from previously leaked social engineering databases. Acquiring spouse information is commonly used to aid fraud, blackmail, or to complete a target's social relationship map.",
     "usageExample": "\"National text-based 'po' with marriage/divorce status, bonus: both parties' frequently used phone numbers, with dates, instant delivery.\"",

@@ -12,7 +12,7 @@
       "形式化对抗模型",
       "区块链安全"
     ],
-    "summary": "日食攻击通过垄断受害者节点的对等连接来隔离节点，对以太坊的共识机制构成严重威胁。该研究提出了一个基于形式化对抗模型的以太坊P2P网络日食攻击检测框架，旨在系统性地识别和防御此类攻击，保护节点不被隔离出诚实网络。",
+    "summary": "该研究面向以太坊网络中的日食攻击提出检测框架。日食攻击通过控制目标节点的对等连接，使其与诚实网络隔离并接收攻击者选择的信息。论文以形式化对抗模型描述攻击者能力，分析以太坊P2P连接特征，并设计用于识别节点遭隔离状态的检测方法，以降低此类攻击对共识参与的影响。",
     "category": "academic_research",
     "relatedRisks": [
       "R0186"
@@ -20,10 +20,10 @@
     "references": [
       {
         "title": "A robust eclipse attack detection framework for Ethereum networks",
-        "link": "https://dl.acm.org/doi/10.1016/j.jnca.2025.104416"
+        "link": "https://www.sciencedirect.com/science/article/pii/S1084804525003133"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-10",
     "incidentTime": "2025",
     "relatedAttackTools": [
       "AT0078"

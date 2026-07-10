@@ -1,23 +1,11 @@
 {
   "C1417": {
-    "title": "Deus Finance Oracle Manipulation Attack Causes Over $3 Million Loss",
-    "keywords": [
-      "Deus Finance oracle manipulation",
-      "price manipulation attack",
-      "DeFi oracle exploit",
-      "multi-transaction manipulation",
-      "erroneous liquidation",
-      "arbitrage attack",
-      "smart contract vulnerability",
-      "Pomabuster",
-      "IEEE oracle manipulation case"
-    ],
-    "summary": "Deus Finance suffered an oracle manipulation attack where the attacker manipulated oracle data through large transactions, leading to a series of erroneous liquidations in the protocol. The attacker subsequently exploited price discrepancies to conduct arbitrage trades, profiting over $3 million. This incident is cited in an IEEE paper as a typical case of multi-transaction oracle manipulation att",
+    "title": "Deus Finance 2022 Oracle Manipulation Attack",
+    "keywords": ["Deus Finance", "oracle manipulation", "price manipulation", "flash loan", "DEI", "DeFi security", "POMABuster"],
+    "summary": "On March 15, 2022, Deus Finance suffered a flash-loan and price-oracle manipulation attack. The attacker distorted the quoted price of a DEI-related trading pair, causing the protocol to value collateral incorrectly and release funds. Public reporting estimated the loss at about $3 million, and later oracle-manipulation research discussed the incident as a real-world attack sample.",
     "references": [
-      {
-        "title": "Pomabuster: Detecting Price Oracle Manipulation Attacks in Decentralized Finance",
-        "link": "https://ieeexplore.ieee.org/abstract/document/10646773/"
-      }
+      {"title": "POMABuster: Detecting Price Oracle Manipulation Attacks in Decentralized Finance", "link": "https://ieeexplore.ieee.org/abstract/document/10646773/"},
+      {"title": "Deus Finance Loses About $3 Million in Oracle Exploit", "link": "https://cryptobriefing.com/deus-finance-suffers-3m-oracle-exploit/"}
     ]
   }
 }

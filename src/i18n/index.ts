@@ -51,7 +51,10 @@ const hasBreakMessages = (locale: Locale) => {
       "risks" in breakMessages &&
       "avoidances" in breakMessages &&
       "attackTools" in breakMessages &&
-      "threatActors" in breakMessages
+      "threatActors" in breakMessages &&
+      "terms" in breakMessages &&
+      "businessDomains" in breakMessages &&
+      "termCategories" in breakMessages
   );
 };
 

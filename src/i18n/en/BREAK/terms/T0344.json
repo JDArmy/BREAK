@@ -14,7 +14,6 @@
       "commission tier"
     ],
     "aliases": [],
-    "category": "Money Laundering",
     "definition": "In money-mule laundering chains, the commission rate taken by each participant layer as a percentage of fund flow.",
     "description": "Money-mule commission rate describes profit sharing in laundering chains. Different layers, from account holders and mule teams to payment handlers and upstream organizers, take commissions according to agreed percentages. Rates vary with account quality, settlement speed, fund volume, risk-control pressure, and criminal exposure.\n\nThe rate is a core incentive mechanism for mule networks and can reveal the risk premium of specific accounts or channels. Controls focus on layered fund-flow detection, commission-settlement analysis, recruitment-ad monitoring, and inference of abnormal fee ratios from transaction behavior.",
     "usageExample": "Money-Mule Commission Rate ads use point-based percentages to describe each layer's cut in a laundering chain.",

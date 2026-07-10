@@ -13,7 +13,6 @@
       "phone owner details"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "The personal identity information of the actual user or registered owner of a mobile phone number.",
     "description": "In illegal data trading, 'owner info' typically includes the name, national ID number, and linked accounts of the phone number's user. Fraudsters obtain this data through insider access or leaked databases, using it for targeted scams, account takeover, or identity theft. This information is often sold in bulk at low prices, serving as a foundational resource for downstream crimes.",
     "usageExample": "Owner info for 4u each, orders fulfilled via insider access, any escrow accepted, priority for those with groups.",

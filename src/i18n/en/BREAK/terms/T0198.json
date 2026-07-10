@@ -12,7 +12,6 @@
       "cohabitant search"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A targeted, illicit query service that illegally obtains information about a specific person's cohabitants.",
     "description": "This service typically relies on hotel systems, household registration, or community grid data, pulled directly by insiders or through technical infiltration. The results are often used for debt collection, infidelity investigations, or personal threats, as they can precisely locate a target's living patterns and cohabitation relationships. Due to the highly sensitive privacy involved, this is a high-value, high-risk category in the underground data market and is often sold bundled with hotel check-in records.",
     "references": [

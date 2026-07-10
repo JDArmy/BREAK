@@ -12,7 +12,7 @@
       "人机交互",
       "网络安全感知"
     ],
-    "summary": "一项研究调查了用户在沉浸式XR环境中对头显内安全警告的感知和响应。研究发现，在拒绝服务（DoS）攻击期间触发的警报会影响用户能否及时理解风险、退出受干扰场景并减少网络攻击对表现和健康的损害。",
+    "summary": "2025年研究以混合方法调查用户如何理解和响应沉浸式XR环境中的安全警告。实验在拒绝服务攻击干扰体验时向头显用户展示提示，并结合行为观察和访谈分析警告效果。研究关注提示能否帮助用户识别网络攻击、采取退出等保护行动，以及警告设计对任务表现、体验和健康风险的影响。",
     "category": "academic_research",
     "relatedRisks": [
       "R0191"
@@ -20,10 +20,10 @@
     "references": [
       {
         "title": "A Mixed-Methods Investigation of XR Security Warnings—Lessons Learned",
-        "link": "https://ieeexplore.ieee.org/document/11339289"
+        "link": "https://zenodo.org/records/17311790"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2025-10-24"

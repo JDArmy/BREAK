@@ -30,7 +30,7 @@ const categories = [
     name: "Terms",
     zhDir: "src/BREAK/terms",
     enDir: "src/i18n/en/BREAK/terms",
-    fields: ["title", "definition", "description", "usageExample", "keywords", "aliases", "category"],
+    fields: ["title", "definition", "description", "usageExample", "keywords", "aliases"],
   },
   {
     name: "BusinessDomains",

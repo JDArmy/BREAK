@@ -13,7 +13,6 @@
       "drop buyer"
     ],
     "aliases": [],
-    "category": "Marketing Fraud",
     "definition": "A practice where fraud rings organize real users to remotely place orders, systematically circumventing purchase limits to acquire discounted goods for resale.",
     "description": "In this model, upstream suppliers provide the purchasing scheme and funds, while downstream participants use their personal accounts to place orders to designated addresses. Once the goods arrive, the supplier collects and resells them. This method bypasses per-account purchase limits by using genuine users as ordering tools, enabling large-scale exploitation. Because the transactions are conducted by real individuals, they closely mimic legitimate consumer behavior, making detection by platforms more difficult.",
     "references": [

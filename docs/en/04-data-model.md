@@ -62,7 +62,7 @@ Relation fields (all required, non-empty):
 
 ## Term
 
-- **`category`**: free string (e.g. "Data collection", "Business fraud", "Underground services"), reuse existing values
+- **`category`**: semantic lowercase snake_case key (for example `data_collection` or `business_fraud`) registered in `src/BREAK/term-categories/termCategories.json`; Chinese display names are limited to six Han characters
 - **`aliases`**: alias array
 - **`usageExample`**: usage scenario example (required), must contain at least one of title or aliases (front-end highlights it)
 - May maintain `relatedRisks` / `relatedAvoidances` / `relatedAttackTools` / `relatedThreatActors` / `relatedBusinessDomains`
@@ -113,7 +113,7 @@ Per-entity English translation file field lists:
 - **Risk EN**: title, definition, description, influence, references, keywords (`complexity` is not maintained — already an English enum, merged at runtime)
 - **AttackTool EN**: title, description, references, keywords
 - **ThreatActor EN**: title, description, references, keywords
-- **Term EN**: title, aliases, keywords, definition, description, usageExample, references, category (free string, must be translated)
+- **Term EN**: title, aliases, keywords, definition, description, usageExample, references. `category` is a semantic snake_case key from the centralized Term category registry and is not translated per entity.
 - **Case EN**: title, keywords, summary, references (`category` is a key, not translated)
 
 ## references Rules

@@ -1,6 +1,6 @@
 {
   "C1468": {
-    "title": "Clorox公司IIoT生产线遭勒索软件攻击",
+    "title": "Clorox 2023年网络攻击导致生产中断",
     "keywords": [
       "Clorox",
       "勒索软件",
@@ -12,19 +12,23 @@
       "生产系统攻击",
       "财务损失"
     ],
-    "summary": "2023年，消费品公司Clorox遭受勒索软件攻击，被迫关闭其IIoT连接的生产线数周。攻击严重影响了公司的生产和供应链，导致产品短缺和财务损失，凸显了勒索软件对制造业IIoT环境的破坏性影响。",
+    "summary": "2023年8月，Clorox发现部分IT系统存在未授权活动并采取下线措施。公司向美国证交会披露，事件造成大范围运营中断，订单处理一度转为人工，生产降至较低水平并引发产品供应短缺。公开文件称多数制造基地随后恢复生产，但没有把事件定性为勒索软件或确认IIoT系统被攻陷。",
     "category": "security_incident",
     "relatedRisks": [
       "R0179"
     ],
     "references": [
       {
-        "title": "Multi-Stage Deep Learning for Intrusion Detection in Industrial ...",
-        "link": "https://ieeexplore.ieee.org/iel8/6287639/10820123/10949493.pdf"
+        "title": "Clorox关于2023年网络攻击及生产恢复的8-K文件",
+        "link": "https://www.sec.gov/Archives/edgar/data/21076/000120677423001133/clx4242401-8k.htm"
+      },
+      {
+        "title": "Clorox 2023财年第一季度报告中的网络攻击披露",
+        "link": "https://www.sec.gov/Archives/edgar/data/21076/000002107623000048/clx-20230930.htm"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2023",
+    "updated": "2026-07-10",
+    "incidentTime": "2023-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

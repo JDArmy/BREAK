@@ -12,7 +12,7 @@
       "区块链安全",
       "博弈论"
     ],
-    "summary": "研究探讨了半自私挖矿攻击的可行性，矿池通过赞助自私挖矿攻击来获取超额收益。当诚实矿工检测到异常分叉行为时可能会退出挖矿，而攻击者则利用这种策略在未被检测的情况下持续获得超出其算力比例的区块奖励。",
+    "summary": "2021年研究评估半自私挖矿在不被检测条件下的可行性，并以逆向推导设计让可观察分叉率接近正常水平的挖矿策略。模拟结果显示，大矿池并不必然获得额外收益；小矿池虽可能从策略中获利，但成功实施且持续不被发现的概率很低，因此论文认为矿池实际上难以隐蔽赞助此类攻击。",
     "category": "academic_research",
     "relatedRisks": [
       "R0188"
@@ -20,10 +20,10 @@
     "references": [
       {
         "title": "Is semi‐selfish mining available without being detected?",
-        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/int.22656"
+        "link": "https://www.semanticscholar.org/paper/93832c1fb5b9be09e72f0935e0e7c2221bb4d264"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2021-10-04"

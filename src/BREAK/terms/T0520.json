@@ -6,7 +6,7 @@
       "沙盒",
       "隔离环境"
     ],
-    "category": "安全防护",
+    "category": "security_defense",
     "keywords": [
       "沙箱",
       "Sandbox",
@@ -50,6 +50,7 @@
         "title": "Virtualization/Sandbox Evasion - MITRE ATT&CK"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

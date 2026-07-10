@@ -2,7 +2,7 @@
   "T0523": {
     "title": "对象级授权",
     "aliases": [],
-    "category": "业务安全",
+    "category": "api_security",
     "keywords": [
       "对象级授权"
     ],
@@ -25,7 +25,7 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

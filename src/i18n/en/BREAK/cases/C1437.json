@@ -1,23 +1,11 @@
 {
   "C1437": {
-    "title": "EIP-1559 Base Fee Manipulation Attack Research",
-    "keywords": [
-      "EIP-1559",
-      "base fee manipulation",
-      "Ethereum",
-      "gas fee mechanism",
-      "miner attack",
-      "transaction fee manipulation",
-      "hash power attack",
-      "demand curve",
-      "fee market"
-    ],
-    "summary": "Academic research reveals that Ethereum's EIP-1559 transaction fee mechanism, under the conservative assumption of a stable demand curve, is susceptible to manipulation by a small group of attackers, such as miners with 20% of the hash power. Attackers can strategically send transactions to manipulate the base fee, and smaller miners may be incentivized to join the attack. This study provides a th",
+    "title": "Research on EIP-1559 Base Fee Manipulation",
+    "keywords": ["EIP-1559", "base fee manipulation", "Ethereum", "gas fee mechanism", "miner strategy", "transaction demand", "fee market"],
+    "summary": "A 2023 study used game-theoretic and simulation analysis to examine Ethereum's EIP-1559 base-fee mechanism. Under model assumptions such as stable transaction demand, miners controlling part of the hash power could strategically add transactions to affect block congestion and later base fees. The paper also analyzed incentives for other miners to join the strategy and did not claim that a specific on-chain attack had occurred.",
     "references": [
-      {
-        "title": "Base Fee Manipulation in Ethereum's EIP-1559 Transaction Fee Mechanism",
-        "link": "https://arxiv.org/pdf/2304.11478"
-      }
+      {"title": "Base Fee Manipulation in Ethereum's EIP-1559 Transaction Fee Mechanism", "link": "https://arxiv.org/abs/2304.11478"},
+      {"title": "DISC 2023: Research on EIP-1559 Base Fee Manipulation", "link": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.DISC.2023.6"}
     ]
   }
 }

@@ -12,7 +12,6 @@
       "assist loss"
     ],
     "aliases": [],
-    "category": "Business Fraud",
     "definition": "In group-buying, bargaining, or referral campaigns, when a fraudulent assistance action performed by a fake account is invalidated by the platform’s risk engine.",
     "description": "Fraudsters promise clients a certain number of assists, but the platform’s risk controls flag the accounts as batch-registered, sharing device fingerprints, or exhibiting abnormal behavior, voiding the assist. For the buyer, money is spent but the progress bar does not move—a typical fraud loss. Service providers often guarantee “swallowed assists will be re-done” as a fallback.",
     "usageExample": "Anyone need xxx speed version assists? I’ll return 5 assists for your xxx; swallowed assists will be re-done.",

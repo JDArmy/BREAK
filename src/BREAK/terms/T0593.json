@@ -2,7 +2,7 @@
   "T0593": {
     "title": "VC撤销",
     "aliases": [],
-    "category": "业务安全",
+    "category": "identity_security",
     "keywords": [
       "VC撤销"
     ],
@@ -22,7 +22,7 @@
         "link": "https://w3c.github.io/vc-bitstring-status-list/"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

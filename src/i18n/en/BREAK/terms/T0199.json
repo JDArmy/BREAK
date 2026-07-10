@@ -12,7 +12,6 @@
       "hotel room share"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illicit data service that provides access to hotel check-in records and co-guest information.",
     "description": "This service directly taps into hotel Property Management Systems or public security lodging data sources through insiders, API abuse, or credential stuffing. The output includes check-in dates, hotel names, and the names and national ID numbers of co-guests. It is widely used for blackmail, infidelity evidence gathering, and debt collection by gambling rings. Data brokers often recruit agents in a pyramid scheme, settling payments per query or volume, and may offer escrow services to reduce buyer risk.",
     "usageExample": "\"Five-year hotel co-guest records. Looking for high-volume agents. Price depends on volume, DM for quote. Bulk orders get discounts. Two to three days for results. We only do co-guest records, five years only, escrow accepted.\"",

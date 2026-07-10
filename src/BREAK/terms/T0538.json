@@ -2,7 +2,7 @@
   "T0538": {
     "title": "恶意包",
     "aliases": [],
-    "category": "业务安全",
+    "category": "supply_chain_security",
     "keywords": [
       "恶意包"
     ],
@@ -29,7 +29,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

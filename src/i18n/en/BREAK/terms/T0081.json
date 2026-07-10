@@ -12,7 +12,6 @@
       "customs PII leak"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal or logistics data stolen during the customs clearance of overseas shipments, packaged and sold as “customs clearance material.”",
     "description": "This type of data typically leaks through cross-border logistics processes and includes sensitive information such as recipient identity, addresses, and phone numbers. Black-market actors intercept data at customs clearance nodes via insiders or system vulnerabilities, then sort and sell it based on freshness and completeness. Downstream buyers often use it for precision fraud, marketing harassment, or identity theft. Due to its high timeliness, this data can be monetized quickly in the short term.",
     "references": [

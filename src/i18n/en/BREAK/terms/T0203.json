@@ -12,7 +12,6 @@
       "Travel surveillance"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An underground service that tracks an individual's movements by illegally obtaining travel records such as flight and train bookings.",
     "description": "Data is often sourced from internal leaks in ticketing systems or the abuse of third-party APIs, packaged and sold as a lookup service. This service is frequently used to track specific targets, monitor business competitors, or conduct precision fraud. Its ability to reflect real-time personal movements poses a severe threat to individual privacy and security.",
     "usageExample": "\"Flight records + entry/exit records, affordable price / fast turnaround\"",

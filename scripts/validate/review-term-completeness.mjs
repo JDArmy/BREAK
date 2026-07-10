@@ -4,6 +4,9 @@
 import { getChangedEntities, parseArgs } from './changed-entities.mjs';
 import { loadAllEntities, loadRelatedEntities } from './llm-review-helpers.mjs';
 import { runSubagentReview, exitCodeFor } from '../llm/subagent-review.mjs';
+import { projectRoot, readJson } from '../search/common.mjs';
+
+const termCategoryRegistry = readJson(`${projectRoot}/src/BREAK/term-categories/termCategories.json`);
 
 const opts = parseArgs(process.argv.slice(2));
 
@@ -50,8 +53,9 @@ function buildPrompt(item) {
    - pass=合理。
 5. reason: 一句话。suggestions: 数组。`;
   const fmt = (list) => (list || []).map((r) => `- ${r.key} ${r.title}`).join('\n');
+  const category = termCategoryRegistry.categories?.[entity.category];
   const user = `【术语】${item.key} ${entity.title}
-【category】${entity.category}
+【category】${entity.category}（${category?.title || '未知分类'}：${category?.description || '注册表无说明'}）
 【definition】${entity.definition || ''}
 【description】${String(entity.description || '').slice(0, 200)}
 

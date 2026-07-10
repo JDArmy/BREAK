@@ -2,7 +2,7 @@
   "T0542": {
     "title": "临时凭证",
     "aliases": [],
-    "category": "业务安全",
+    "category": "cloud_security",
     "keywords": [
       "临时凭证"
     ],
@@ -22,7 +22,7 @@
         "link": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

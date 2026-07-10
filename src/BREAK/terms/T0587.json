@@ -2,7 +2,7 @@
   "T0587": {
     "title": "固件签名",
     "aliases": [],
-    "category": "安全防护",
+    "category": "iot_security",
     "keywords": [
       "固件签名"
     ],
@@ -28,7 +28,7 @@
         "link": "https://wiki.st.com/stm32mcu/wiki/Security:Introduction_to_Secure_boot_and_Secure_firmware_update"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

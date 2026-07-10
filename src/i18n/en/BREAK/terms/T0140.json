@@ -12,7 +12,6 @@
       "code hijacking"
     ],
     "aliases": [],
-    "category": "Telecom Fraud",
     "definition": "Reverse scanning is a money-laundering technique in which a complicit merchant’s barcode scanner or point-of-sale scanning device is used to process fraudulent funds as if they were legitimate consumer payments, enabling rapid fund transfer.",
     "description": "Money-muling rings typically recruit merchants with physical storefronts. They transmit fraudulently obtained payment codes online to the merchant, who then uses a barcode scanner to ‘reverse scan’ and complete the transaction. Once the funds enter the merchant’s account, they are cycled back to underground-controlled accounts under the guise of payment for goods or top-ups. This method exploits the instant settlement and relatively lax risk controls of offline payment scenarios, allowing dirty money to be laundered quickly. Merchants often become unwitting or incentivized conduits for money laundering.",
     "usageExample": "“They told me to send over my payment code and said they’d just scan it with the shop’s barcode scanner to settle up. In reality, they were using my code to wash dirty money.”",

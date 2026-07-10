@@ -12,7 +12,7 @@
       "身份冒用"
     ],
     "aliases": [],
-    "category": "数据泄露",
+    "category": "data_leakage",
     "definition": "公民身份证正反面的高清照片或扫描件，包含姓名、住址、证件号等核心身份信息。",
     "description": "黑产术语，指获取到的身份证正反面高清图片，信息完整且真实有效。这些资料常被用于绕过实名认证、注册非法账号或伪造证件，是身份冒用类犯罪的核心物料。",
     "usageExample": "“全国神父 真实有效期 6u 全天都在 有多少来多少”",
@@ -53,6 +53,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

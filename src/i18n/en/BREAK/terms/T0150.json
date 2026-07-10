@@ -12,7 +12,6 @@
       "system override"
     ],
     "aliases": [],
-    "category": "Telecom Fraud",
     "definition": "A technical method used by fraudsters to breach a platform's risk-control system.",
     "description": "Bypassing security is a core part of fraud operations. Attackers use scripts, device-fingerprint spoofing tools, and proxy IPs to circumvent a platform's device fingerprinting, behavioral analysis, and other risk-control rules. A successful bypass allows fraudsters to mass-register accounts, claim promotional rewards, or conduct credential-stuffing attacks, paving the way for downstream scams and traffic manipulation.",
     "usageExample": "The new system's risk control is too tight, and our old scripts are useless. The tech team is working on a new bypass solution.",

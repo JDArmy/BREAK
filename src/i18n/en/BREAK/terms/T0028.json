@@ -11,7 +11,6 @@
       "payment token block"
     ],
     "aliases": [],
-    "category": "Marketing Fraud",
     "definition": "Accounts flagged and restricted by UnionPay QuickPass's risk control system, preventing them from participating in marketing campaigns.",
     "description": "To combat marketing fraud, UnionPay QuickPass applies risk control flags to abnormal accounts, which are internally referred to as \"cloud blacklisted.\" Once an account is placed on this blacklist, the user is barred from participating in any promotions, red packet giveaways, or lucky draws offered by the platform. When organizing coupon-harvesting operations, fraud rings prioritize non-blacklisted accounts for bulk actions to circumvent platform restrictions and ensure they can successfully drain marketing funds.",
     "references": [

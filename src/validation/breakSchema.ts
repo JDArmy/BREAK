@@ -8,6 +8,9 @@ const keywordArray = z
   .refine((items) => new Set(items).size === items.length, {
     message: "keywords 不能重复",
   });
+const semanticCategoryKeySchema = z
+  .string()
+  .regex(/^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$/, "category 必须是有语义的小写 snake_case key");
 const avoidanceCategorySchema = z.enum(["AC01", "AC02", "AC03", "AC04"]);
 const avoidanceEffectivenessSchema = z.enum(["high", "medium", "low"]);
 const riskComplexitySchema = z.enum(["basic", "intermediate", "advanced"]);
@@ -131,7 +134,7 @@ export const termSchema = z.object({
   title: nonEmptyString,
   keywords: keywordArray,
   aliases: z.array(nonEmptyString).default([]),
-  category: nonEmptyString,
+  category: semanticCategoryKeySchema,
   definition: nonEmptyString,
   description: nonEmptyString,
   usageExample: z.string().optional(),
@@ -143,6 +146,24 @@ export const termSchema = z.object({
   references: z.array(referenceSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
+}).strict();
+
+export const termCategoryItemSchema = z.object({
+  title: nonEmptyString,
+  description: nonEmptyString,
+  group: semanticCategoryKeySchema,
+  order: z.number().int().nonnegative(),
+}).strict();
+
+export const termCategoryGroupSchema = z.object({
+  title: nonEmptyString,
+  description: nonEmptyString,
+  order: z.number().int().nonnegative(),
+}).strict();
+
+export const termCategoryRegistrySchema = z.object({
+  groups: z.record(semanticCategoryKeySchema, termCategoryGroupSchema),
+  categories: z.record(semanticCategoryKeySchema, termCategoryItemSchema),
 }).strict();
 
 export const businessDomainSchema = z.object({
@@ -220,6 +241,9 @@ export type ThreatActorRelation = z.infer<typeof threatActorRelationSchema>;
 export type ThreatActor = z.infer<typeof threatActorSchema>;
 
 export type Term = z.infer<typeof termSchema>;
+export type TermCategoryItem = z.infer<typeof termCategoryItemSchema>;
+export type TermCategoryGroup = z.infer<typeof termCategoryGroupSchema>;
+export type TermCategoryRegistry = z.infer<typeof termCategoryRegistrySchema>;
 
 export type CaseCategory = z.infer<typeof caseCategorySchema>;
 export type CaseEntity = z.infer<typeof caseSchema>;

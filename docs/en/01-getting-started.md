@@ -62,3 +62,7 @@ The site is bilingual. The language switcher in the top-right toggles the entire
 - **To understand the code and data flow**: read [Architecture & Data Pipeline](/docs/architecture)
 - **To consume the public datasets**: read the [Data Consumption Guide](/docs/data-consumption)
 - **To manage releases**: read [Release & Maintenance](/docs/release-maintenance)
+
+## Term Category Filtering
+
+Starting with 2.45.0, the Term list filters on stable category keys and renders localized Chinese or English labels. Switching languages does not change filter semantics, and the category value remains consistent across URLs, search, and exported data.

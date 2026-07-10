@@ -11,7 +11,7 @@
       "GitHub项目",
       "攻击复现"
     ],
-    "summary": "GitHub上的一个CTF挑战项目，基于易受长程攻击的PoS区块链构建。该项目提供了一个易受攻击的PoS区块链环境，参与者需要利用长程攻击漏洞完成挑战，并提供了详细的解决方案指南。",
+    "summary": "2025年9月，GitHub项目miniblockchain2发布PoS区块链长程攻击CTF。挑战中的链缺少终局性和检查点，验证者选择依赖可操纵时间戳与弱随机数。参与者需从创世区块构造更长的替代历史，转移宝藏资产并取得旗标；仓库同时提供示例利用脚本和解题指南。",
     "category": "academic_research",
     "relatedRisks": [
       "R0187"
@@ -19,10 +19,10 @@
     "references": [
       {
         "title": "GitHub - goudanwang/miniblockchain2",
-        "link": "https://github.com/goudanwang/miniblockchain2"
+        "link": "https://raw.githubusercontent.com/goudanwang/miniblockchain2/main/README.md"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [
       "AT0078"
     ],

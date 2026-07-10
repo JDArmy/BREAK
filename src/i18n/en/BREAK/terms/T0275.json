@@ -12,7 +12,6 @@
       "quick flash code"
     ],
     "aliases": [],
-    "category": "Business Fraud",
     "definition": "A QR code that appears for an extremely short duration within a short video or live stream, designed to redirect traffic.",
     "description": "Fraud rings embed QR codes into video frames, exploiting the fact that they are imperceptible to the human eye but can be captured in a screenshot, thereby bypassing platform content moderation. The code is invisible during normal viewing but can be obtained by recording the screen or taking a screenshot. This method is widely used to redirect public traffic to private channels for adult content, underground lotteries, or borderline live streams.",
     "usageExample": "That live stream flashed for a second. I took a screenshot and saw it was a flash code. Scanning it led to nothing but gambling ads.",

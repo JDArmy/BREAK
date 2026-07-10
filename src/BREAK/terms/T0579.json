@@ -2,7 +2,7 @@
   "T0579": {
     "title": "移动应用重打包",
     "aliases": [],
-    "category": "业务安全",
+    "category": "application_security",
     "keywords": [
       "移动应用重打包"
     ],
@@ -24,7 +24,7 @@
         "link": "https://mas.owasp.org/MASTG/techniques/android/MASTG-TECH-0039/"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

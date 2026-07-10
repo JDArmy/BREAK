@@ -6,7 +6,7 @@
       "安全漏洞",
       "弱点"
     ],
-    "category": "网络攻击",
+    "category": "network_attack",
     "keywords": [
       "漏洞",
       "Vulnerability",
@@ -48,6 +48,7 @@
         "title": "Known Exploited Vulnerabilities Catalog - CISA"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

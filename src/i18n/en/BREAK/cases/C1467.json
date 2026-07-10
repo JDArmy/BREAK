@@ -1,27 +1,11 @@
 {
   "C1467": {
     "title": "Colonial Pipeline Ransomware Attack",
-    "keywords": [
-      "Colonial Pipeline",
-      "ransomware attack",
-      "critical infrastructure",
-      "industrial control systems",
-      "ICS security",
-      "OT systems",
-      "fuel pipeline",
-      "supply chain disruption",
-      "DarkSide"
-    ],
-    "summary": "Colonial Pipeline suffered a ransomware attack that forced the shutdown of its fuel pipeline system, triggering fuel supply shortages across the U.S. East Coast. The incident highlighted cybersecurity threats to critical infrastructure industrial control systems, where attackers pivoted from IT networks into OT systems, causing large-scale physical service disruption.",
+    "keywords": ["Colonial Pipeline", "DarkSide ransomware", "critical infrastructure", "IT network compromise", "pipeline shutdown", "fuel disruption", "U.S. East Coast"],
+    "summary": "In May 2021, Colonial Pipeline detected a network intrusion and proactively paused pipeline operations. The FBI attributed the incident to DarkSide ransomware. Public investigations identified the corporate IT network as affected and did not establish that attackers entered pipeline OT controls; nevertheless, the precautionary shutdown disrupted fuel distribution across the U.S. East Coast and contributed to localized shortages and panic buying.",
     "references": [
-      {
-        "title": "Industrial IoT Security Threats: Top Risks and Mitigation Strategies 2025",
-        "link": "https://deviceauthority.com/industrial-iot-security-threats-top-risks-and-mitigation-strategies-2025/"
-      },
-      {
-        "title": "FBI: Statement on Compromise of Colonial Pipeline Networks",
-        "link": "https://www.fbi.gov/news/press-releases/fbi-statement-on-compromise-of-colonial-pipeline-networks"
-      }
+      {"title": "CISA: DarkSide Ransomware and the Colonial Pipeline Incident", "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-131a"},
+      {"title": "FBI: Statement on Compromise of Colonial Pipeline Networks", "link": "https://www.fbi.gov/news/press-releases/fbi-statement-on-compromise-of-colonial-pipeline-networks"}
     ]
   }
 }

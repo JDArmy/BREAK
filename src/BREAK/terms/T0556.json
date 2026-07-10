@@ -2,7 +2,7 @@
   "T0556": {
     "title": "拒付",
     "aliases": [],
-    "category": "业务安全",
+    "category": "business_fraud",
     "keywords": [
       "拒付"
     ],
@@ -25,6 +25,6 @@
       }
     ],
     "updated": "2026-07-10",
-    "version": 2
+    "version": 3
   }
 }

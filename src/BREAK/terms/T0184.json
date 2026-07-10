@@ -12,7 +12,7 @@
       "接口查"
     ],
     "aliases": [],
-    "category": "数据泄露",
+    "category": "data_leakage",
     "definition": "黑产通过API漏洞或社工库查询目标人物配偶信息的非法服务。",
     "description": "黑产将配偶信息称为“po”，通过两种主要方式获取：一是利用系统接口漏洞实时查询，二是从已泄露的社工库中检索。获取配偶信息常用于辅助诈骗、要挟或完善目标人物的社会关系图谱。",
     "usageExample": "接口po广告：全国文字po带离结，送双方常用号，带日期，秒出。",
@@ -52,6 +52,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

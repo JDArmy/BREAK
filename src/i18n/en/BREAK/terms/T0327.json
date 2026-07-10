@@ -13,7 +13,6 @@
       "virtual card redemption"
     ],
     "aliases": [],
-    "category": "Money Laundering",
     "definition": "Virtual stored-value cards, such as online E-cards and supermarket gift cards, which criminals purchase with illicit funds and then cash out by redeeming or reselling the card details, serving as a virtual liquidation channel for money laundering.",
     "description": "E-cards exist as a card number and password without requiring physical delivery. Criminals buy them in bulk with illicit funds and then clean the money by reselling the card details or redeeming them to purchase physical goods for resale. Because the purchase and redemption actions can be separated across different accounts and IP addresses, this method inherently provides a fund isolation effect. Commonly found on e-commerce and lifestyle service platforms, these cards have small individual values but can be processed in bulk, making them suitable for high-frequency, small-sum money laundering.",
     "usageExample": "Money-laundering gangs use illicit funds to bulk-purchase e-commerce e-card PINs, then resell them at a discount through second-hand channels or redeem them for physical goods, separating purchase from redemption to sever the money trail.",

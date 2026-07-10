@@ -13,7 +13,6 @@
       "Active Line Check"
     ],
     "aliases": [],
-    "category": "Business Fraud",
     "definition": "Using technical methods to check the status of phone numbers in bulk or in real time, filtering out invalid numbers such as disconnected, suspended, or powered-off lines.",
     "description": "In marketing fraud, telecom scams, or data trading, black and gray market actors first clean number databases with number-checking tools to eliminate invalid resources and reduce costs. Operators connect to third-party verification APIs or use custom scripts to query number statuses, selecting active numbers for registration, fake orders, or traffic driving. Active numbers can be resold at a premium, while risky ones are discarded, all aimed at improving the efficiency and hit rate of fraudulent operations.",
     "usageExample": "Domestic number screening: active and risky number filtering, precise removal of disconnected and inactive numbers.",

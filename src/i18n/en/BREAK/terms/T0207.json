@@ -12,7 +12,6 @@
       "Loan stacking detection"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Data leaked from shared online lending databases that records a borrower's applications to multiple institutions within a short period.",
     "description": "This data originates from risk-control systems built jointly by multiple online lending companies to identify high-risk borrowers. After acquisition, underground actors can precisely target individuals in urgent need of money for scams like 'student loan cancellation' or 'loan deposit' fraud. Leaks typically occur through system interface abuse or insider trading.",
     "references": [

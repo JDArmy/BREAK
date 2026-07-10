@@ -13,7 +13,7 @@
       "Python包",
       "开发者凭证"
     ],
-    "summary": "Python软件包索引(PyPI)中下载量过百万的深度学习包“lightning”被植入恶意代码，用以窃取GitHub Token和云凭证，并进一步污染其他代码仓库。该事件严重威胁依赖开源库的整个加密开发生态。",
+    "summary": "2026年4月30日，PyTorch Lightning社区获报，PyPI发布的lightning 2.6.2和2.6.3版本包含隐藏执行链，会下载并运行外部载荷，形成软件供应链风险。维护团队在确认后撤下受影响版本、发布修复版本并轮换相关凭证，官方称从收到报告到完成处置约用42分钟。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081-005"
@@ -26,10 +26,14 @@
       {
         "title": "How the PyTorch Lightning Community Discovered a Supply Chain Attack",
         "link": "https://lightning.ai/blog/pytorch-lightning-supply-chain-attack"
+      },
+      {
+        "title": "Possible supply chain attack on version 2.6.3",
+        "link": "https://github.com/Lightning-AI/pytorch-lightning/issues/21689"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-05",
+    "updated": "2026-07-10",
+    "incidentTime": "2026-04-30",
     "relatedAttackTools": [
       "AT0064"
     ],

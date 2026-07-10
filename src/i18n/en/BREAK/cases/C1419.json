@@ -1,27 +1,11 @@
 {
   "C1419": {
     "title": "MIT Brothers Charged in $25M MEV Exploit Lasting 12 Seconds",
-    "keywords": [
-      "MEV exploit",
-      "Ethereum",
-      "MEV-Boost",
-      "Anton Peraire-Bueno",
-      "James Peraire-Bueno",
-      "U.S. Department of Justice",
-      "transaction reordering",
-      "cryptocurrency theft",
-      "MIT"
-    ],
-    "summary": "In May 2024, MIT graduates Anton and James Peraire-Bueno were indicted by the U.S. Department of Justice for exploiting an Ethereum MEV-Boost vulnerability, stealing approximately $25 million in cryptocurrency within roughly 12 seconds through transaction reordering. The brothers concealed their identities and laundered proceeds using shell companies, multiple private addresses, and foreign exchan",
+    "keywords": ["MEV exploit", "Ethereum", "MEV-Boost", "Anton Peraire-Bueno", "James Peraire-Bueno", "U.S. Department of Justice", "cryptocurrency theft", "MIT"],
+    "summary": "On May 15, 2024, the U.S. Department of Justice announced charges against brothers Anton and James Peraire-Bueno. Prosecutors alleged that, after months of planning, they manipulated Ethereum's block-building process, induced trading bots to reveal transaction contents, obtained about $25 million in cryptocurrency within roughly 12 seconds, and then attempted to conceal and launder the proceeds.",
     "references": [
-      {
-        "title": "U.S. Department of Justice: $25 Million Stolen in 12 Seconds, Full Disclosure of MEV Attack Process by Two MIT Graduates...",
-        "link": "https://www.panewslab.com/en/articles/qt50cy12"
-      },
-      {
-        "title": "DOJ: Two Brothers Arrested for Attacking Ethereum Blockchain and Stealing $25M in Cryptocurrency",
-        "link": "https://www.justice.gov/archives/opa/pr/two-brothers-arrested-attacking-ethereum-blockchain-and-stealing-25m-cryptocurrency"
-      }
+      {"title": "DOJ: Two Brothers Charged with Attacking Ethereum Blockchain and Stealing $25 Million", "link": "https://www.justice.gov/usao-sdny/pr/two-brothers-arrested-attacking-ethereum-blockchain-and-stealing-25-million"},
+      {"title": "DOJ: Two Brothers Arrested for Attacking Ethereum Blockchain and Stealing $25M in Cryptocurrency", "link": "https://www.justice.gov/archives/opa/pr/two-brothers-arrested-attacking-ethereum-blockchain-and-stealing-25m-cryptocurrency"}
     ]
   }
 }

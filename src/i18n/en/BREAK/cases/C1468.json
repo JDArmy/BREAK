@@ -1,21 +1,11 @@
 {
   "C1468": {
-    "title": "Clorox IIoT Production Lines Hit by Ransomware Attack",
-    "keywords": [
-      "Clorox ransomware",
-      "IIoT production line shutdown",
-      "manufacturing ransomware attack",
-      "supply chain disruption",
-      "industrial IoT security incident",
-      "production system attack",
-      "ransomware financial loss"
-    ],
-    "summary": "In 2023, consumer goods company Clorox suffered a ransomware attack that forced it to shut down IIoT-connected production lines for weeks. The attack severely disrupted manufacturing and supply chains, leading to product shortages and financial losses, highlighting the destructive impact of ransomware on IIoT environments in manufacturing.",
+    "title": "Clorox 2023 Cyberattack Disrupts Production",
+    "keywords": ["Clorox cyberattack", "unauthorized IT activity", "manufacturing disruption", "manual order processing", "product shortage", "SEC disclosure", "operational recovery"],
+    "summary": "In August 2023, Clorox identified unauthorized activity on parts of its IT environment and took systems offline. The company told the U.S. Securities and Exchange Commission that the incident caused widespread operational disruption, forced temporary manual order processing, reduced production, and contributed to product shortages. Filings later reported that most manufacturing sites had resumed production, but did not classify the incident as ransomware or confirm compromise of IIoT systems.",
     "references": [
-      {
-        "title": "Multi-Stage Deep Learning for Intrusion Detection in Industrial ...",
-        "link": "https://ieeexplore.ieee.org/iel8/6287639/10820123/10949493.pdf"
-      }
+      {"title": "Clorox 8-K Filing on the 2023 Cyberattack and Production Recovery", "link": "https://www.sec.gov/Archives/edgar/data/21076/000120677423001133/clx4242401-8k.htm"},
+      {"title": "Clorox Quarterly Report Disclosure on the 2023 Cyberattack", "link": "https://www.sec.gov/Archives/edgar/data/21076/000002107623000048/clx-20230930.htm"}
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "C1421": {
-    "title": "以太坊三明治攻击检测研究：2024年初检测到超56万次攻击",
+    "title": "SandWatch以太坊三明治攻击检测研究",
     "keywords": [
       "以太坊",
       "三明治攻击",
@@ -11,19 +11,23 @@
       "交易排序",
       "检测模型"
     ],
-    "summary": "一项发表于2024年的研究，通过部署检测模型对以太坊2024年1月至5月的数据进行分析，发现了超过56.3万次三明治攻击，其中包括2.4万次多重攻击案例，揭示了攻击的普遍性。",
+    "summary": "2026年发表的SandWatch研究提出双任务图神经网络，用于同时识别以太坊三明治攻击交易和攻击账户。作者在链上数据中检测出563453次三明治攻击，其中包括24404次多重攻击、4902次跨区块攻击和1057次流动性池失败变体，并报告整体召回率为98.63%。",
     "category": "academic_research",
     "relatedRisks": [
       "R0170"
     ],
     "references": [
       {
-        "title": "Towards Detecting Sandwich Attacks in Ethereum Using a Dual ...",
+        "title": "SandWatch：使用双任务图神经网络检测以太坊三明治攻击",
         "link": "https://dl.acm.org/doi/10.1145/3787205"
+      },
+      {
+        "title": "SandWatch论文元数据与摘要",
+        "link": "https://ouci.dntb.gov.ua/en/works/7pXrbvWk/"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2024-05",
+    "updated": "2026-07-10",
+    "incidentTime": "2026-01",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

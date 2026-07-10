@@ -12,7 +12,6 @@
       "shadow credit line"
     ],
     "aliases": [],
-    "category": "Credit Fraud",
     "definition": "Bypassing bank or online lending platform risk controls to restore frozen borrowing or credit limit increase functions through specific operations.",
     "description": "In credit fraud, some users are placed in a “black room” by the system after triggering risk control rules, preventing them from borrowing or increasing their credit limit. Fraud syndicates or users forcibly restore account functions by fabricating transaction records, binding specific co-branded cards, or altering device fingerprints to circumvent the platform’s risk model. Such operations often involve fake transactions and identity forgery. Once detected by the platform, they may lead to stricter account freezes or legal liability.",
     "usageExample": "A few days ago I successfully bypassed the blacklist using the XX co-branded card, and my limit is now 15k04.",

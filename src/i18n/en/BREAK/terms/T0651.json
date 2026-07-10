@@ -1,15 +1,31 @@
 {
   "T0651": {
     "title": "Digital Human",
-    "aliases": ["Virtual Human", "Virtual Digital Human", "AI Avatar"],
-    "category": "Artificial Intelligence",
-    "keywords": ["Digital Human", "Virtual Human", "AI avatar", "digital human livestream", "virtual presenter", "synthetic persona"],
+    "aliases": [
+      "Virtual Human",
+      "Virtual Digital Human",
+      "AI Avatar"
+    ],
+    "keywords": [
+      "Digital Human",
+      "Virtual Human",
+      "AI avatar",
+      "digital human livestream",
+      "virtual presenter",
+      "synthetic persona"
+    ],
     "definition": "A digital human is a virtual character with a computer-generated appearance and interactive behavior produced through graphics, motion driving, speech synthesis, and artificial intelligence technologies.",
     "description": "A digital human commonly combines character modeling, rendering, motion capture or generation, speech synthesis, lip synchronization, and conversational models. It may serve as a virtual presenter, customer-service agent, brand representative, instructor, or social character. Digital humans can be driven by a person, rules, or AI and can use photorealistic, cartoon, or stylized appearances.\n\nIn business-security contexts, the technology can reduce livestreaming, service, and content-production costs, but it can also support impersonation, undisclosed synthetic identities, deceptive livestream sales, mass-produced marketing content, or emotional fraud. Risk analysis should distinguish the neutral concept of a digital human from the tools that generate one and from concrete fraud conducted through one.",
     "usageExample": "The platform requires each Digital Human livestream to disclose its synthetic identity and verify authorization for the likeness, voice, and operating organization.",
     "references": [
-      {"title": "White Paper on Artificial Intelligence Generated Content - CAICT", "link": "http://www.caict.ac.cn/kxyj/qwfb/bps/202209/P020220902534520798735.pdf"},
-      {"title": "2022 China Virtual Digital Human Research White Paper", "link": "https://pdf.dfcfw.com/pdf/H3_AP202205091564456955_1.pdf"}
+      {
+        "title": "White Paper on Artificial Intelligence Generated Content - CAICT",
+        "link": "http://www.caict.ac.cn/kxyj/qwfb/bps/202209/P020220902534520798735.pdf"
+      },
+      {
+        "title": "2022 China Virtual Digital Human Research White Paper",
+        "link": "https://pdf.dfcfw.com/pdf/H3_AP202205091564456955_1.pdf"
+      }
     ]
   }
 }

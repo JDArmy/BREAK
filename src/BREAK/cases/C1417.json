@@ -1,6 +1,6 @@
 {
   "C1417": {
-    "title": "Deus Finance 预言机操纵攻击损失超300万美元",
+    "title": "Deus Finance 2022年预言机操纵攻击",
     "keywords": [
       "Deus Finance",
       "预言机操纵",
@@ -13,20 +13,24 @@
       "Pomabuster",
       "IEEE论文"
     ],
-    "summary": "Deus Finance遭遇预言机操纵攻击，攻击者通过大额交易操纵预言机数据，导致协议发生一系列错误清算。攻击者随后利用价格差异进行套利交易，从中获利超过300万美元。该事件被IEEE论文引用为典型的多交易预言机操纵攻击案例。",
+    "summary": "2022年3月15日，Deus Finance遭遇闪电贷与价格预言机操纵攻击。攻击者操纵DEI相关交易对的报价，使协议按失真价格处理抵押资产并提取资金。公开报道估计协议损失约300万美元，该事件后来被预言机操纵检测研究作为真实攻击样本讨论。",
     "category": "security_incident",
     "relatedRisks": [
       "R0169"
     ],
     "references": [
       {
-        "title": "Pomabuster: Detecting price oracle manipulation attacks in decentralized finance",
+        "title": "POMABuster：去中心化金融价格预言机操纵攻击检测",
         "link": "https://ieeexplore.ieee.org/abstract/document/10646773/"
+      },
+      {
+        "title": "Deus Finance因预言机漏洞损失约300万美元",
+        "link": "https://cryptobriefing.com/deus-finance-suffers-3m-oracle-exploit/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2024-05-23"
+    "incidentTime": "2022-03-15"
   }
 }

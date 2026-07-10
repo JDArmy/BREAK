@@ -12,7 +12,6 @@
       "personal info dump"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illicit, consolidated information database built by aggregating data leaked from multiple sources.",
     "description": "Fraudsters compile data from public records, database breaches, and social engineering to create a comprehensive repository containing personal identities, contact details, and social connections. Attackers use this database to quickly build detailed profiles of targets, enabling highly effective targeted fraud, extortion, or account takeover.",
     "references": [

@@ -1,22 +1,10 @@
 {
   "C1472": {
-    "title": "V2X Communication Security Faces Three Major Threats: Fake Messages, Trajectory Tracking, and Replay Attacks",
-    "keywords": [
-      "V2X communication security",
-      "BSM message forgery",
-      "trajectory tracking",
-      "replay attack",
-      "GPS privacy leakage",
-      "misbehavior detection",
-      "V2X certificate revocation",
-      "vehicular ad hoc network threats"
-    ],
-    "summary": "Vehicular V2X systems are vulnerable due to their open broadcast nature. Attackers can inject fabricated BSM messages—such as falsely reporting an oncoming ambulance or road construction ahead—causing surrounding vehicles to brake suddenly or trigger chain-reaction collisions. By persistently monitoring fixed vehicle IDs combined with GPS location data, adversaries can reconstruct a driver’s compl",
+    "title": "2024 Survey of V2X Air-Interface Communication Security",
+    "keywords": ["V2X security", "DSRC", "C-V2X", "air-interface security", "signal interception", "data tampering", "identity spoofing", "intrusion detection"],
+    "summary": "A 2024 survey from the Science and Technology Branch of the China Confidentiality Association reviewed the DSRC and C-V2X technology paths and analyzed threats to air-interface communication between vehicles and roadside units. It covered signal interception, data tampering, unauthorized access, identity spoofing, man-in-the-middle attacks, and wireless interference, and summarized mitigations including encryption, device authentication, intrusion detection, and prevention.",
     "references": [
-      {
-        "title": "A Survey of Vehicle Networking Technology and Security",
-        "link": "https://www.secrss.com/articles/70898"
-      }
+      {"title": "A Survey of Vehicle Networking Technology and Security", "link": "https://www.secrss.com/articles/70898"}
     ]
   }
 }

@@ -14,7 +14,6 @@
       "same-day response"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "In illegal data trading, the intake and acceptance of orders for record lookup, transaction lookup, location tracking, or similar data-query services.",
     "description": "Data lookup order intake sits at the front of underground data-query chains. Order takers advertise that they can handle requests such as personal record lookup, transaction-record lookup, and movement tracking, collect target clues and delivery requirements from clients, and forward the work to upstream interfaces, insiders, or social-engineering database operators.\n\nThey may not own the data source themselves, but profit by aggregating demand, splitting requests, and reselling access. Controls focus on monitoring public order-intake ads, identifying query broker networks, tracing order flows, and disrupting upstream data interfaces.",
     "usageExample": "Data Lookup Order Intake ads often promise same-day results for record lookup, transaction lookup, or location-tracking requests.",

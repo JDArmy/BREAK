@@ -13,7 +13,6 @@
       "delayed record lookup"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "An illicit channel that provides slow data queries, with feedback taking from one day to several days.",
     "description": "The slow line refers to a data lookup method that relies on special relationships or manual operations, such as a corporate insider manually exporting data. Although timeliness is poor, it may access deeper information that express lines cannot cover, such as historical records or encrypted files. The slow line is often used for non-urgent bulk data reselling and serves as a covert, long-term infiltration channel for underground networks.",
     "references": [

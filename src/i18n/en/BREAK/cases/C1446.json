@@ -1,21 +1,10 @@
 {
   "C1446": {
-    "title": "What is a replay attack? - Exodus Knowledge Base",
-    "keywords": [
-      "replay attack",
-      "blockchain fork",
-      "cryptocurrency",
-      "transaction replay",
-      "cross-chain compatibility",
-      "Exodus",
-      "forked chains"
-    ],
-    "summary": "The article explains that a replay attack can occur when two forked cryptocurrencies allow transactions to be valid on both chains. This aligns with the definition of replay attacks in blockchain fork scenarios, where an attacker exploits cross-chain compatibility to replay a legitimate transaction from one chain onto the other, resulting in duplicated asset transfers.",
+    "title": "Exodus Explanation of Replay Attacks After Blockchain Forks",
+    "keywords": ["replay attack", "blockchain hard fork", "replay protection", "signed transaction", "forked assets", "Exodus", "cryptocurrency security"],
+    "summary": "Exodus updated its replay-attack explanation in 2024. After a blockchain hard fork, if the old and new chains do not implement replay protection, the same signed transaction may be valid on both chains. An attacker can copy a transaction broadcast on one chain and submit it on the other, causing assets that the user intended to move on only one branch to be transferred on both.",
     "references": [
-      {
-        "title": "What is a replay attack? - Exodus Knowledge Base",
-        "link": "https://support.exodus.com/support/en/articles/8598706-what-is-a-replay-attack"
-      }
+      {"title": "What Is a Replay Attack? - Exodus Knowledge Base", "link": "https://support.exodus.com/support/en/articles/8598706-what-is-a-replay-attack"}
     ]
   }
 }

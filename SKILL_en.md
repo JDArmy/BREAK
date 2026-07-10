@@ -194,6 +194,8 @@ The 2026-07-10 AI data-poisoning relationship review corrects AT0108's direct ca
 
 The follow-up 2026-07-10 Case P2 fact-review maintenance strengthens crawlable sources, `summary`, `incidentTime`, and English translations for C1056, C1060, C1064, C1067, C1069, C1077, C1100, C1102, and related cases; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The 2026-07-10 Case P2 fact-review checkpoint further revises `summary`, `references`, `incidentTime`, relationships, and English translations for C1482, C1484, C1485, C1488, C1490, C1493, C1495, C1498, C1500, C1501, C1504, C1505, C1511, C1512, C1518, C1519, C1521, C1523, C1528, and C1531, and adds an e-commerce platform product-inspection source for A0222-001; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph

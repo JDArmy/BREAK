@@ -2,7 +2,7 @@
   "T0582": {
     "title": "CDN缓存键",
     "aliases": [],
-    "category": "业务安全",
+    "category": "application_security",
     "keywords": [
       "CDN缓存键"
     ],
@@ -29,7 +29,7 @@
         "link": "https://developers.cloudflare.com/cache/how-to/cache-keys/"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

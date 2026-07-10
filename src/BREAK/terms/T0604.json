@@ -6,7 +6,7 @@
       "住宅IP代理",
       "家庭宽带代理"
     ],
-    "category": "黑产服务",
+    "category": "underground_ecosystem",
     "keywords": [
       "住宅代理",
       "Residential Proxy",
@@ -42,6 +42,7 @@
         "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

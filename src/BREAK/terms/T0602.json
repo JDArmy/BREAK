@@ -6,7 +6,7 @@
       "Bot Management",
       "Bot 防护"
     ],
-    "category": "自动化工具",
+    "category": "automation_tools",
     "keywords": [
       "Bot管理",
       "Bot Management",
@@ -45,6 +45,7 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

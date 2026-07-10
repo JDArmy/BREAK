@@ -16,7 +16,7 @@
     "aliases": [
       "锁丹"
     ],
-    "category": "营销欺诈",
+    "category": "marketing_fraud",
     "definition": "指黑灰产在电商大促期间利用程序批量下单但不付款，以占用库存或优惠名额的行为。",
     "description": "黑灰产在识别到价格漏洞或高价值优惠券后，通过自动化工具瞬间生成大量待支付订单，将商品库存锁定。此举旨在囤货居奇或待价而沽，导致商家无法正常销售，其他消费者无法购买。",
     "usageExample": "别急着付款，先把低价货全部锁单，等价格涨回去咱们再转手卖订单。",
@@ -48,6 +48,7 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

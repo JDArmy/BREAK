@@ -2,7 +2,7 @@
   "T0592": {
     "title": "可验证凭证",
     "aliases": [],
-    "category": "业务安全",
+    "category": "identity_security",
     "keywords": [
       "可验证凭证"
     ],
@@ -24,7 +24,7 @@
         "link": "https://www.w3.org/TR/vc-data-model-2.0/"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

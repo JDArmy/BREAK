@@ -2,7 +2,7 @@
   "T0572": {
     "title": "模型输出审计",
     "aliases": [],
-    "category": "业务安全",
+    "category": "ai_security",
     "keywords": [
       "模型输出审计"
     ],
@@ -30,7 +30,7 @@
         "link": "https://arxiv.org/html/2601.20727v1"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

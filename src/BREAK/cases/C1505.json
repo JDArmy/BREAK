@@ -11,7 +11,7 @@
       "IoT安全",
       "故障传感器"
     ],
-    "summary": "研究关注Matter协议物联网设备中传感器欺骗和数据注入攻击的安全问题。攻击者操纵传感器输入可导致设备产生错误行为，此类传感器操纵攻击是异常检测领域的严重关切问题，故障传感器数据可能引发设备误动作。",
+    "summary": "2025年研究评估Matter物联网设备中的传感器操纵与故障数据注入问题。攻击者篡改传感器输入后，错误控制反馈可能使设备处于不安全或低效状态。论文采用Isolation Forest将异常注入识别为传感器读数中的离群点，并讨论以轻量、可扩展方式提高Matter网络异常检测可靠性的可行性。",
     "category": "academic_research",
     "relatedRisks": [
       "R0189"
@@ -19,12 +19,12 @@
     "references": [
       {
         "title": "Anomaly Detection for Sensor Manipulation in Matter Enabled-IoT Devices ...",
-        "link": "https://ieeexplore.ieee.org/document/10940262"
+        "link": "https://www.semanticscholar.org/paper/c0794bb922ac5f59cebf73f4ac70b264c802e206"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2025-02-09"
+    "incidentTime": "2025-02-08"
   }
 }

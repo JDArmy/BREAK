@@ -13,7 +13,7 @@
       "孟动",
       "刑事判决"
     ],
-    "summary": "2005年7月，被告人孟动利用黑客程序窃取茂立公司在线充值系统账号密码，伙同何立康盗取Q币32298只及游戏点卡，价值人民币25910.86元，并通过低价抛售获利。法院认定Q币具有财产属性，以盗窃罪判处二人有期徒刑。",
+    "summary": "2005年7月，孟动利用黑客程序获取茂立公司在线充值系统的账号密码，伙同何立康盗取Q币及游戏点卡并低价出售。上海市黄浦区人民法院认定二人以非法占有为目的，通过网络秘密窃取价值25948.96元的财物，行为构成盗窃罪，分别判处相应刑罚。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0185"
@@ -22,9 +22,13 @@
       {
         "title": "上海市黄浦区人民检察院诉孟动、何立康网络盗窃案",
         "link": "https://gongbao.court.gov.cn/Details/406ca9118bc547a19d6356ce09a215.html"
+      },
+      {
+        "title": "孟动、何立康网络盗窃案判解研究",
+        "link": "https://www.chinesetortlaw.com/article/default.asp?id=1600"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2005-07",
     "relatedAttackTools": [
       "AT0013"

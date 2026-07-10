@@ -2,7 +2,7 @@
   "T0585": {
     "title": "WAF规则",
     "aliases": [],
-    "category": "业务安全",
+    "category": "application_security",
     "keywords": [
       "WAF规则"
     ],
@@ -28,7 +28,7 @@
         "link": "https://owasp.org/www-community/Web_Application_Firewall"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

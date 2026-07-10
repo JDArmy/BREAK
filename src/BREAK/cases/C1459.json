@@ -1,6 +1,6 @@
 {
   "C1459": {
-    "title": "物联网摄像头电磁侧信道分析",
+    "title": "物联网设备侧信道架构脆弱性研究",
     "keywords": [
       "电磁侧信道",
       "物联网摄像头",
@@ -11,20 +11,24 @@
       "信息提取",
       "硬件安全"
     ],
-    "summary": "该研究针对广泛部署的物联网摄像头Axis M3045-V实施电磁侧信道攻击。通过分析设备的电磁辐射泄露，成功提取内部信息。该案例展示了电磁分析对物联网设备构成的现实威胁。",
+    "summary": "2025年ACDSA会议论文从设备架构角度研究物联网侧信道风险。作者分析资源受限设备在功耗、电磁辐射和执行时序等可观测特征上的信息泄露面，讨论攻击者如何借助这些非功能性信号推断内部处理活动，并归纳硬件与软件设计中需要缓解的暴露点。",
     "category": "academic_research",
     "relatedRisks": [
       "R0178"
     ],
     "references": [
       {
-        "title": "Architectural vulnerabilities of IoT devices in the context of side ...",
+        "title": "侧信道攻击背景下物联网设备的架构脆弱性",
         "link": "https://ieeexplore.ieee.org/document/11165979"
+      },
+      {
+        "title": "侧信道架构脆弱性论文元数据",
+        "link": "https://www.semanticscholar.org/paper/Architectural-vulnerabilities-of-IoT-devices-in-the-Trifonov-Ponomareva/c4fe4d1f6cdfb1476c3631556f95010b786a0739"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2025-08-09"
+    "incidentTime": "2025-08"
   }
 }

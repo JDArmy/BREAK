@@ -6,7 +6,7 @@
       "PCIe DMA攻击",
       "Direct Memory Access Attack"
     ],
-    "category": "攻击手段",
+    "category": "network_attack",
     "keywords": [
       "DMA攻击",
       "直接内存访问攻击",
@@ -53,6 +53,6 @@
       }
     ],
     "updated": "2026-07-10",
-    "version": 1
+    "version": 2
   }
 }

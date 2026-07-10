@@ -12,7 +12,6 @@
       "full-spectrum lending fraud"
     ],
     "aliases": [],
-    "category": "Credit Fraud",
     "definition": "A sequential fraud model combining mortgage, credit, and business loans to maximize extraction from a single debt mule.",
     "description": "This is a fixed operational process for multi-round loan fraud against a single mule. The syndicate first uses the mule to apply for a mortgage, then leverages the property for consumer credit or renovation loans, and finally packages the mule as a business owner for a corporate loan. This layered approach maximizes the mule's credit value in the shortest possible time.",
     "usageExample": "Mortgage, credit, business, car loans. Looking for credit invisibles with total liabilities under 50,000. Upfront costs covered.",

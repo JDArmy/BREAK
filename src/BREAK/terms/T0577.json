@@ -2,7 +2,7 @@
   "T0577": {
     "title": "Cookie重放",
     "aliases": [],
-    "category": "业务安全",
+    "category": "identity_security",
     "keywords": [
       "Cookie重放"
     ],
@@ -29,7 +29,7 @@
         "link": "https://keepnetlabs.com/blog/what-is-cookie-hijacking-aka-session-hijacking"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

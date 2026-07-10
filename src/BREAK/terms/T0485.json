@@ -11,7 +11,7 @@
       "移动设备模拟器"
     ],
     "aliases": [],
-    "category": "自动化工具",
+    "category": "automation_tools",
     "definition": "模拟移动设备或浏览器环境的软件工具，用于在电脑上运行移动应用或网页，实现批量化操作。",
     "description": "模拟器是黑产团伙在PC端批量操作移动应用的重要工具。通过安卓模拟器、iOS模拟器等软件，攻击者可在一台电脑上同时运行多个虚拟设备，配合改机工具和群控系统实现大规模自动化作业。模拟器具有成本低、易管理、便于脚本控制等优势，常用于批量注册、刷单刷量、薅羊毛等场景，是移动端黑产的核心基础设施。",
     "relatedRisks": [
@@ -39,7 +39,8 @@
         "link": "https://developer.apple.com/documentation/xcode/running-your-app-on-simulated-or-physical-devices"
       }
     ],
-    "updated": "2026-07-09",
-    "usageExample": "诈骗团伙在云服务器上运行500个模拟器实例，每个实例伪装为不同型号的手机，批量注册账号领取新用户优惠券。"
+    "updated": "2026-07-10",
+    "usageExample": "诈骗团伙在云服务器上运行500个模拟器实例，每个实例伪装为不同型号的手机，批量注册账号领取新用户优惠券。",
+    "version": 2
   }
 }

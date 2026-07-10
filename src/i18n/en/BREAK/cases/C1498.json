@@ -11,11 +11,11 @@
       "GitHub project",
       "attack reproduction"
     ],
-    "summary": "A GitHub-hosted CTF challenge project built on a Proof-of-Stake blockchain susceptible to long-range attacks. It provides a vulnerable PoS blockchain environment where participants must exploit long-range attack flaws to complete the challenge, accompanied by a detailed solution guide.",
+    "summary": "In September 2025, the GitHub project miniblockchain2 published a Proof-of-Stake long-range attack CTF. Its chain lacks finality and checkpointing, while validator selection relies on manipulable timestamps and weak randomness. Participants must build a longer alternative history from the genesis block, transfer the treasure, and obtain the flag; the repository also provides an example exploit and solution guide.",
     "references": [
       {
-        "title": "Optimal Selfish Mining-Based Denial-of-Service Attack",
-        "link": "https://github.com/goudanwang/miniblockchain2"
+        "title": "PoS Blockchain CTF - Long Range Attack Challenge",
+        "link": "https://raw.githubusercontent.com/goudanwang/miniblockchain2/main/README.md"
       }
     ]
   }

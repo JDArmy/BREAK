@@ -68,7 +68,7 @@ const SEARCH_CONFIGS = {
   },
   terms: {
     title: 2.0, keywords: 1.6, definition: 1.5,
-    description: 1.0, aliases: 1.0,
+    description: 1.0, aliases: 1.0, categoryLabel: 0.8, categoryGroupLabel: 0.5,
   },
   cases: {
     title: 2.0, keywords: 1.6, summary: 1.2,
@@ -225,6 +225,13 @@ class BreakSearchEngine {
 
     const bundle = JSON.parse(readFileSync(filepath, 'utf-8'));
     this.data = bundle.data || {};
+    const categoryRegistry = this.data.termCategories || {};
+    for (const term of Object.values(this.data.terms || {})) {
+      const category = categoryRegistry.categories?.[term.category];
+      const group = categoryRegistry.groups?.[category?.group];
+      term.categoryLabel = category?.title || term.category;
+      term.categoryGroupLabel = group?.title || '';
+    }
     this.version = bundle.packageVersion || 'unknown';
   }
 
@@ -358,7 +365,12 @@ function formatEntityDetail(engine, entityType, entityId, entity) {
     ['complexity', '复杂度'], ['category', '分类'],
     ['effectiveness', '有效性'], ['incidentTime', '事件时间'],
   ]) {
-    if (entity[field]) metaParts.push(`${label}: ${entity[field]}`);
+    if (entity[field]) {
+      const value = entityType === 'terms' && field === 'category'
+        ? (entity.categoryLabel || entity[field])
+        : entity[field];
+      metaParts.push(`${label}: ${value}`);
+    }
   }
   if (metaParts.length) { lines.push(metaParts.join(' | ')); lines.push(''); }
 

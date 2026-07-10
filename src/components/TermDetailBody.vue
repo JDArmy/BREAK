@@ -61,6 +61,16 @@ const aliases = computed(() =>
 const keywords = computed(() =>
   getMessageStringArray(localeMessages.value, `BREAK.terms.${props.tKey}.keywords`),
 );
+const categoryTitle = computed(() => {
+  const categoryKey = selectedTerm.value?.category;
+  if (!categoryKey) return "";
+  return String(
+    getNestedMessageValue(
+      localeMessages.value,
+      `BREAK.termCategories.categories.${categoryKey}.title`,
+    ) || categoryKey,
+  );
+});
 
 /**
  * 对 usageExample 文本中出现的术语名（title + aliases）进行高亮标记。
@@ -146,7 +156,7 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
     </section>
     <section v-if="selectedTerm?.category" class="detail-section">
       <h3>{{ $t("termCategory") }}</h3>
-      <p>{{ $t(`BREAK.terms.${tKey}.category`) }}</p>
+      <p>{{ categoryTitle }}</p>
     </section>
     <section v-if="aliases.length" class="detail-section">
       <h3>{{ $t("aliases") }}</h3>

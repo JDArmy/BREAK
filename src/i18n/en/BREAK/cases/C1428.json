@@ -1,21 +1,10 @@
 {
   "C1428": {
-    "title": "Sybil Attack Vulnerability Analysis in Kad Networks",
-    "keywords": [
-      "Kad network",
-      "Sybil attack",
-      "P2P file sharing",
-      "identity forgery",
-      "node impersonation",
-      "vulnerability analysis",
-      "Kad protocol"
-    ],
-    "summary": "Researchers analyzed the Kad protocol and its source code, uncovering multiple Sybil attack vulnerabilities. Attackers can arbitrarily join the Kad network by masquerading as legitimate nodes and exploit these flaws to forge identities, thereby compromising the security and reliability of P2P file-sharing systems.",
+    "title": "Sybil Attack Vulnerability Analysis in the Kad Network",
+    "keywords": ["Kad network", "Sybil attack", "P2P file sharing", "fake identities", "attack detection", "Kad protocol", "ICESS 2017"],
+    "summary": "A paper presented at IEEE ICESS 2017 analyzed the Kad protocol and its source code and identified several design weaknesses exploitable by Sybil attacks. The researchers designed an attack that introduced many forged identities into the P2P file-sharing network to interfere with legitimate nodes, proposed a corresponding detection mechanism, and experimentally evaluated both the attack and the detector.",
     "references": [
-      {
-        "title": "Research on the P2P Sybil Attack and the Detection Mechanism",
-        "link": "https://ieeexplore.ieee.org/document/8343002/"
-      }
+      {"title": "Research on the P2P Sybil Attack and the Detection Mechanism", "link": "https://ieeexplore.ieee.org/document/8343002/"}
     ]
   }
 }

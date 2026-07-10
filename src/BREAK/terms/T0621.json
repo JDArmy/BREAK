@@ -6,7 +6,7 @@
       "支付清结算",
       "资金清结算"
     ],
-    "category": "业务安全",
+    "category": "trading_security",
     "keywords": [
       "清结算",
       "清算结算",
@@ -42,6 +42,7 @@
         "link": "https://www.cncc.cn/zcfg/200903/t20090323_286.html"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

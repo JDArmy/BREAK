@@ -2,7 +2,7 @@
   "T0528": {
     "title": "API网关",
     "aliases": [],
-    "category": "业务安全",
+    "category": "api_security",
     "keywords": [
       "API网关"
     ],
@@ -26,7 +26,7 @@
         "link": "https://en.wikipedia.org/wiki/API_gateway"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

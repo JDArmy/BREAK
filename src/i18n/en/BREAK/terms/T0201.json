@@ -13,7 +13,6 @@
       "Fullz car"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "Vehicle registration data containing core personal identifiers such as the owner's name and national ID number, traded on the black market.",
     "description": "This data typically originates from internal leaks within vehicle administration offices. It is considered high-value information in underground data lookup services. After being obtained through insiders or system exploits, it is used for targeted fraud, identity theft, or debt collection. Due to its completeness, downstream criminal groups are willing to pay a premium for it.",
     "references": [

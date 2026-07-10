@@ -13,7 +13,6 @@
       "payment gateway for fraud"
     ],
     "aliases": [],
-    "category": "Money Laundering",
     "definition": "A third-party payment platform used by criminals as a buffer layer between bank cards and final recipient accounts to facilitate payment jumps in money laundering.",
     "description": "Third-party payment platforms provide interfaces for wallet top-ups, transfers, and purchases. Criminals transfer illicit funds from bank cards into third-party accounts, then further obscure the money trail through inter-account transfers or purchases of virtual goods. Common tactics include using inter-account transfers, proxy payments, and red packet features to commingle funds. Because these platforms operate independently of the bank clearing system, they can form information silos, making them a critical isolation layer in the money muling chain.",
     "usageExample": "Large amounts via third-party, large amounts via secondary cards, must pass through third-party, reverse scan.",

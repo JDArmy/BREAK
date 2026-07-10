@@ -6,6 +6,7 @@ import businessDomains from "./business-domains";
 import attackTools from "./attack-tools";
 import threatActors from "./threat-actors";
 import terms from "./terms";
+import termCategories from "./term-categories";
 // cases 数据量大，懒加载，不并入 BREAK 主对象（由 useCases composable 异步管理）
 
 const BREAK = {
@@ -17,6 +18,7 @@ const BREAK = {
   ...attackTools, //攻击工具
   ...threatActors, //威胁行为者
   ...terms, //行业术语
+  ...termCategories, //行业术语分类
 };
 
 export default BREAK;

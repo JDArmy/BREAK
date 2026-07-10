@@ -11,7 +11,7 @@
       "节点伪装",
       "网络安全"
     ],
-    "summary": "研究人员通过分析Kad协议及其源代码，发现Kad网络存在多个女巫攻击漏洞。攻击者可伪装成正常节点任意加入Kad网络，利用这些漏洞进行身份伪造，从而破坏P2P文件共享系统的安全性和可靠性。",
+    "summary": "2017年IEEE ICESS会议论文分析Kad协议及其源代码，指出这一P2P文件共享网络存在多处可被女巫攻击利用的设计弱点。研究据此设计攻击方法，使大量伪造身份进入网络并干扰正常节点，同时提出检测机制，并通过实验评估攻击效果与识别能力。",
     "category": "academic_research",
     "relatedRisks": [
       "R0172"
@@ -22,7 +22,7 @@
         "link": "https://ieeexplore.ieee.org/document/8343002/"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2017-11-26"

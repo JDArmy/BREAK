@@ -12,7 +12,6 @@
       "timestamped identity data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A standardized data format in underground data trading that bundles a person's name, phone number, and a timestamp.",
     "description": "This format is a basic information package sold by data brokers, typically sourced from insider leaks, database dumps, or social engineering databases. Buyers purchase records in bulk or by batch for telecom fraud lead generation, debt collection targeting, or precision marketing campaigns. The inclusion of a real-time timestamp helps assess data freshness and the target's active window, causing prices to fluctuate based on timeliness.",
     "usageExample": "\"We have fresh name-phone-time records dropping daily. Bosses who need them, please order in advance.\"",

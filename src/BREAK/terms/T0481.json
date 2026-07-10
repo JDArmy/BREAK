@@ -10,7 +10,7 @@
       "隐私政策"
     ],
     "aliases": [],
-    "category": "合规管理",
+    "category": "governance_compliance",
     "definition": "企业个人信息处理活动符合隐私保护法律法规的要求。",
     "description": "指企业在收集、使用、存储、传输和删除个人信息时，遵守隐私保护相关法律法规，包括获取用户明示同意、最小化收集原则、透明告知义务、保障用户权利等。需建立完善的隐私管理体系，定期开展隐私影响评估，确保个人信息处理的合规性。",
     "relatedRisks": [
@@ -32,7 +32,8 @@
         "link": "https://mp.weixin.qq.com/s?__biz=MzI2NzkwMjA0Mg==&mid=2247504728&idx=4&sn=287c09619f0fb41a7db0bbd8980725e0&chksm=eaf55e6ddd82d77b426e5414ba1b60fd66a7375249d17ed99f25a503cf9fe78d2359d93ed894&scene=27"
       }
     ],
-    "updated": "2026-07-09",
-    "usageExample": "某APP公司因违反隐私合规规定，在未告知用户的情况下收集位置数据、通讯录和浏览历史，被监管部门处罚并要求下架整改。"
+    "updated": "2026-07-10",
+    "usageExample": "某APP公司因违反隐私合规规定，在未告知用户的情况下收集位置数据、通讯录和浏览历史，被监管部门处罚并要求下架整改。",
+    "version": 2
   }
 }

@@ -12,22 +12,20 @@
       "工业物联网安全",
       "生产网络渗透"
     ],
-    "summary": "德国一家钢铁厂遭受高级持续性威胁攻击，攻击者通过鱼叉式钓鱼邮件渗透办公网络，进而入侵生产网络。攻击者获得了高炉控制系统的访问权限，导致设备无法正常关闭，造成重大物理损坏。",
-    "category": "news_report",
+    "summary": "德国联邦信息安全办公室在2014年度报告中披露，一家德国钢铁厂遭定向网络攻击。攻击者先以鱼叉式钓鱼和社会工程进入办公网络，随后逐步渗透生产网络并控制多个系统组件。事件导致高炉无法按计划正常停机，厂方设备遭受显著物理损坏，但报告未公开企业名称和攻击者身份。",
+    "category": "security_incident",
     "relatedRisks": [
       "R0179"
     ],
     "references": [
       {
-        "title": "A multi-layer industrial-IoT attack taxonomy: Layers, dimensions, techniques and application",
-        "link": "https://ieeexplore.ieee.org/abstract/document/9343166/"
+        "title": "德国联邦信息安全办公室：2014年德国IT安全态势报告",
+        "link": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Securitysituation/IT-Security-Situation-in-Germany-2014.pdf?__blob=publicationFile&v=3"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2014",
-    "relatedAttackTools": [
-      "AT0063"
-    ],
+    "relatedAttackTools": [],
     "relatedThreatActors": []
   }
 }

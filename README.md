@@ -66,6 +66,7 @@ The framework is described in JSON format under the `/src/BREAK` directory:
 - `attack-tools` — attack tool catalogue
 - `threat-actors` — threat actor catalogue
 - `terms` — industry terms and slang glossary
+- `termCategories` — semantic Term category registry and localized display metadata
 - `cases` — typical case catalogue (real cases linked to risks)
 - `utils.ts` — common data loading utility functions
 

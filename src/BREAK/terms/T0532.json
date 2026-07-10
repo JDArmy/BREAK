@@ -2,7 +2,7 @@
   "T0532": {
     "title": "Runner",
     "aliases": [],
-    "category": "业务安全",
+    "category": "supply_chain_security",
     "keywords": [
       "Runner"
     ],
@@ -24,7 +24,7 @@
         "link": "https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

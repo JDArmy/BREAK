@@ -13,11 +13,11 @@
       "Ethereum node isolation",
       "attack detector"
     ],
-    "summary": "This study presents a smart detector designed to identify eclipse attacks in the Ethereum network. Eclipse attacks allow malicious actors to isolate a system user by controlling all outgoing connections, and such attacks are difficult to detect in blockchain applications. The proposed detector aims to address this challenge, helping users recognize whether they are being isolated by an eclipse att",
+    "summary": "This study proposes a smart detector for eclipse attacks on Ethereum. An attacker can control a target node's peer connections, isolate it from the normal network, and present a manipulated blockchain view. The paper analyzes Ethereum connection and message-interaction features and constructs a method for recognizing abnormal isolation, helping node operators determine whether an eclipse attack is disrupting transaction and consensus decisions.",
     "references": [
       {
-        "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network - ACM Digital Library",
-        "link": "https://www.sciencedirect.com/science/article/abs/pii/S0167404818313798"
+        "title": "Am I eclipsed? A smart detector of eclipse attacks for Ethereum",
+        "link": "https://repository.tudelft.nl/record/uuid:582aa03f-93fc-4c06-b95b-bd7111f523d9"
       }
     ]
   }

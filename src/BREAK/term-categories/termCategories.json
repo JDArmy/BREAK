@@ -1,0 +1,219 @@
+{
+  "groups": {
+    "fraud_abuse": {
+      "title": "欺诈滥用",
+      "description": "面向营销、信贷、电信及通用业务欺诈场景的术语分组。",
+      "order": 10
+    },
+    "financial_crime": {
+      "title": "金融犯罪",
+      "description": "涉及洗钱、赌博及其他以资金或非法经营为核心的犯罪术语分组。",
+      "order": 20
+    },
+    "data_security": {
+      "title": "数据安全",
+      "description": "涉及数据采集、泄露、治理和保护的术语分组。",
+      "order": 30
+    },
+    "attack_security": {
+      "title": "攻击技术",
+      "description": "涉及网络攻击、代码利用、社会工程及自动化攻击的术语分组。",
+      "order": 40
+    },
+    "defense_controls": {
+      "title": "安全防护",
+      "description": "涉及应用、身份、云、供应链、物联网及第三方安全控制的术语分组。",
+      "order": 50
+    },
+    "governance": {
+      "title": "治理合规",
+      "description": "涉及算法、平台、数据和监管合规的术语分组。",
+      "order": 60
+    },
+    "emerging_technology": {
+      "title": "新兴技术",
+      "description": "涉及人工智能、区块链等新兴技术及其安全问题的术语分组。",
+      "order": 70
+    },
+    "market_security": {
+      "title": "交易安全",
+      "description": "涉及支付、清结算、市场微观结构和交易风控的术语分组。",
+      "order": 80
+    },
+    "underground_economy": {
+      "title": "黑产生态",
+      "description": "涉及黑产角色、资源、服务和生态概念的术语分组。",
+      "order": 90
+    }
+  },
+  "categories": {
+    "marketing_fraud": {
+      "title": "营销欺诈",
+      "description": "营销活动、优惠权益、广告投放和渠道结算中的欺诈术语。",
+      "group": "fraud_abuse",
+      "order": 10
+    },
+    "credit_fraud": {
+      "title": "信贷欺诈",
+      "description": "信贷申请、审批、放款、贷后和相关数据黑产中的术语。",
+      "group": "fraud_abuse",
+      "order": 20
+    },
+    "telecom_fraud": {
+      "title": "电信诈骗",
+      "description": "电信网络诈骗组织、话术、引流和实施环节中的术语。",
+      "group": "fraud_abuse",
+      "order": 30
+    },
+    "business_fraud": {
+      "title": "业务欺诈",
+      "description": "交易、账户、支付、退款及其他业务流程滥用中的术语。",
+      "group": "fraud_abuse",
+      "order": 40
+    },
+    "money_laundering": {
+      "title": "跑分洗钱",
+      "description": "跑分、资金归集、分层转移和洗钱链路中的术语。",
+      "group": "financial_crime",
+      "order": 10
+    },
+    "gambling": {
+      "title": "赌博",
+      "description": "非法赌博平台、代理、投注和资金结算中的术语。",
+      "group": "financial_crime",
+      "order": 20
+    },
+    "cybercrime": {
+      "title": "网络犯罪",
+      "description": "无法归入欺诈、洗钱或赌博细类的网络违法犯罪术语。",
+      "group": "financial_crime",
+      "order": 30
+    },
+    "data_leakage": {
+      "title": "数据泄露",
+      "description": "数据泄露、倒卖及泄露数据黑话中的术语。",
+      "group": "data_security",
+      "order": 10
+    },
+    "data_collection": {
+      "title": "数据采集",
+      "description": "自动化抓取、协议采集和数据获取过程中的术语。",
+      "group": "data_security",
+      "order": 20
+    },
+    "data_governance": {
+      "title": "数据治理",
+      "description": "数据分类、用途控制、隐私评估和防泄漏治理中的术语。",
+      "group": "data_security",
+      "order": 30
+    },
+    "network_attack": {
+      "title": "网络攻击",
+      "description": "网络入侵、流量劫持、恶意软件和漏洞利用中的术语。",
+      "group": "attack_security",
+      "order": 10
+    },
+    "code_injection": {
+      "title": "代码注入",
+      "description": "通过恶意输入改变程序、查询或页面执行逻辑的术语。",
+      "group": "attack_security",
+      "order": 20
+    },
+    "social_engineering": {
+      "title": "社会工程",
+      "description": "利用心理操纵、身份伪装和诱导交互实施攻击的术语。",
+      "group": "attack_security",
+      "order": 30
+    },
+    "automation_tools": {
+      "title": "自动化工具",
+      "description": "用于自动执行、批量控制或模拟业务操作的工具概念。",
+      "group": "attack_security",
+      "order": 40
+    },
+    "security_defense": {
+      "title": "安全防护",
+      "description": "通用安全控制、认证、加密、检测和隔离技术术语。",
+      "group": "defense_controls",
+      "order": 10
+    },
+    "api_security": {
+      "title": "API安全",
+      "description": "API 暴露、授权、重放防护、网关和流量控制中的术语。",
+      "group": "defense_controls",
+      "order": 20
+    },
+    "supply_chain_security": {
+      "title": "供应链安全",
+      "description": "软件构建、依赖、制品、发布和供应链完整性中的术语。",
+      "group": "defense_controls",
+      "order": 30
+    },
+    "cloud_security": {
+      "title": "云安全",
+      "description": "云身份、云存储、SaaS 配置和第三方授权中的术语。",
+      "group": "defense_controls",
+      "order": 40
+    },
+    "identity_security": {
+      "title": "身份安全",
+      "description": "认证凭据、会话、身份绑定和去中心化身份中的术语。",
+      "group": "defense_controls",
+      "order": 50
+    },
+    "application_security": {
+      "title": "应用安全",
+      "description": "移动应用、边缘应用、缓存和运行时防护中的术语。",
+      "group": "defense_controls",
+      "order": 60
+    },
+    "iot_security": {
+      "title": "物联安全",
+      "description": "物联网、车联网、固件、设备接口和通信凭证中的术语。",
+      "group": "defense_controls",
+      "order": 70
+    },
+    "third_party_risk": {
+      "title": "三方风险",
+      "description": "供应商访问、外包运维和第三方业务系统暴露中的术语。",
+      "group": "defense_controls",
+      "order": 80
+    },
+    "governance_compliance": {
+      "title": "治理合规",
+      "description": "算法治理、平台规则、隐私、竞争和监管合规中的术语。",
+      "group": "governance",
+      "order": 10
+    },
+    "artificial_intelligence": {
+      "title": "人工智能",
+      "description": "人工智能模型、智能体、机器人及相关基础技术术语。",
+      "group": "emerging_technology",
+      "order": 10
+    },
+    "ai_security": {
+      "title": "AI安全",
+      "description": "针对人工智能模型、智能体和训练推理链路的攻击与防护术语。",
+      "group": "emerging_technology",
+      "order": 20
+    },
+    "blockchain": {
+      "title": "区块链",
+      "description": "区块链技术、钱包、资产、治理、基础设施和 DeFi 安全术语。",
+      "group": "emerging_technology",
+      "order": 30
+    },
+    "trading_security": {
+      "title": "交易安全",
+      "description": "支付保护、清结算、市场操纵、量化偏差和交易风控术语。",
+      "group": "market_security",
+      "order": 10
+    },
+    "underground_ecosystem": {
+      "title": "黑产生态",
+      "description": "黑产角色、资源、服务、基础设施及行业概念术语。",
+      "group": "underground_economy",
+      "order": 10
+    }
+  }
+}

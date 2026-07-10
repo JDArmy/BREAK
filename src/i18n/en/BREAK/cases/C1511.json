@@ -12,11 +12,11 @@
       "virtual reality security",
       "augmented reality threats"
     ],
-    "summary": "In February 2024, an academic paper presented a device-centric analysis of security and privacy attacks and defenses targeting extended reality (XR) devices, emphasizing the need for robust and privacy-aware security mechanisms to protect XR hardware and outlining future research directions and design considerations.",
+    "summary": "Published in February 2024, this study reviews extended reality security and privacy from a device-centered perspective. It covers attacks against headsets, sensors, interaction data, and immersive applications and surveys existing defenses. The paper emphasizes privacy risks created by continuous collection of environmental and user information and proposes design considerations and research directions that balance security, privacy, and usability.",
     "references": [
       {
         "title": "Augmenting Security and Privacy in the Virtual Realm: An Analysis of ...",
-        "link": "https://arxiv.org/pdf/2402.03114"
+        "link": "https://arxiv.org/abs/2402.03114"
       }
     ]
   }

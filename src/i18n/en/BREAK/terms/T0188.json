@@ -13,7 +13,6 @@
       "bank card owner data"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "The four core pieces of financial information: cardholder name, national ID number, bank card number, and bank-registered phone number.",
     "description": "In illegal data trading, the 'Four Elements' are critical for financial fraud and account takeover. Criminals obtain this data through insider leaks or database breaches, using it for unauthorized transactions, money laundering, or fraudulent loan applications. With all four elements, attackers can gain near-total control over a victim's financial accounts, posing an extreme risk.",
     "usageExample": "Bank four elements, legendary insider material, act fast or miss out.",

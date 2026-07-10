@@ -12,7 +12,7 @@
       "智能合约",
       "资产转移"
     ],
-    "summary": "2025年5月24日，钓鱼组织Inferno Drainer利用以太坊EIP-7702升级特性实施新型攻击，造成单笔约15万美元损失。EIP-7702允许外部拥有账户（EOA）临时具备智能合约功能，攻击者利用已授权的MetaMask诱导用户签署恶意授权，从而转移资产。",
+    "summary": "2025年5月24日，钱包钓鱼服务Inferno Drainer被发现滥用以太坊EIP-7702实施攻击，造成一名受害者约15万美元资产损失。攻击页面诱导用户签署授权，使外部拥有账户委托执行攻击者指定的合约逻辑；随后恶意代码可在后台批准代币转移并清空钱包，而界面不必逐项展示常规授权。",
     "category": "news_report",
     "relatedRisks": [
       "R0084-002"
@@ -21,9 +21,13 @@
       {
         "title": "【安全月报】| 5月份因黑客攻击、诈骗等导致损失约1.82亿美元...",
         "link": "https://www.freebuf.com/articles/web/433364.html"
+      },
+      {
+        "title": "Inferno Drainer Steals $150,000 in Crypto Phishing Attack",
+        "link": "https://beincrypto.com/inferno-drainer-ethereum-wallet-crypto-phishing-attack/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2025-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

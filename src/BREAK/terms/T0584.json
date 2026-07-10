@@ -2,7 +2,7 @@
   "T0584": {
     "title": "边缘函数",
     "aliases": [],
-    "category": "业务安全",
+    "category": "application_security",
     "keywords": [
       "边缘函数"
     ],
@@ -25,7 +25,7 @@
         "link": "https://developers.cloudflare.com/workers/"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

@@ -2,7 +2,7 @@
   "T0543": {
     "title": "对象存储桶",
     "aliases": [],
-    "category": "业务安全",
+    "category": "cloud_security",
     "keywords": [
       "对象存储桶"
     ],
@@ -25,7 +25,7 @@
         "link": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

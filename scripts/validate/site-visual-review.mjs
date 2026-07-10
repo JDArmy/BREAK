@@ -626,6 +626,9 @@ const knowledgeSearchConfigs = [
 async function runKnowledgeSearchAndFiltersScenario(page, scenario, interactions) {
   for (const config of knowledgeSearchConfigs) {
     await page.goto(page.baseUrl + config.path, { waitUntil: 'networkidle', timeout: 30000 });
+    await page.keyboard.press('Escape').catch(() => {});
+    await page.mouse.move(1200, 60);
+    await page.waitForTimeout(100);
     const queryIssues = [];
     try {
       await page.locator('#knowledge-search').fill(config.query);

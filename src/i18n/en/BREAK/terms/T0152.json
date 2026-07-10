@@ -13,7 +13,6 @@
       "fake support app"
     ],
     "aliases": [],
-    "category": "Telecom Fraud",
     "definition": "A scam where fraudsters directly control a victim's phone via remote access software to transfer funds.",
     "description": "Scammers, posing as customer service or law enforcement, trick victims into downloading a remote control app disguised as a legitimate tool and granting accessibility permissions. Once access is gained, the scammer can monitor the screen in real-time, intercept SMS messages, and directly operate the victim's mobile banking app to transfer money or make unauthorized purchases without the victim's knowledge.",
     "usageExample": "He downloaded a meeting app as instructed and shared his screen. Then the remote takeover happened; he watched helplessly as his phone moved on its own and his money was transferred out.",

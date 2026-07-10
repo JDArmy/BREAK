@@ -11,8 +11,8 @@
       "随机源",
       "Ethereum"
     ],
-    "summary": "OWASP Smart Contract Top 10 将时间戳依赖列为智能合约常见风险：以太坊合约常用 block.timestamp 控制拍卖、彩票、代币归属等时间敏感逻辑，但出块者可在协议允许范围内轻微调整时间戳。若合约把时间戳作为随机源或关键判定条件，恶意出块者可能操纵开奖、提前结束拍卖或触发不公平收益。",
-    "category": "security_incident",
+    "summary": "OWASP智能合约安全资料将时间戳依赖列为常见漏洞：以太坊合约常用block.timestamp控制拍卖、彩票和代币归属等逻辑，而出块者可在协议允许范围内调整区块时间。若开发者把时间戳作为随机源或关键条件，恶意出块者可能影响开奖、结束拍卖或触发不公平收益。",
+    "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0176"
     ],
@@ -22,10 +22,8 @@
         "link": "https://owasp.org/www-project-smart-contract-top-10/2023/en/src/SC03-timestamp-dependence.html"
       }
     ],
-    "updated": "2026-07-06",
-    "relatedAttackTools": [
-      "AT0076"
-    ],
+    "updated": "2026-07-10",
+    "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2023"
   }

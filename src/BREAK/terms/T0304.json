@@ -13,7 +13,7 @@
       "卡主招募"
     ],
     "aliases": [],
-    "category": "跑分洗钱",
+    "category": "money_laundering",
     "definition": "卡主是银行卡或支付账户的实名开户人，其账户被黑产用于洗钱。",
     "description": "卡主可能是在知情或不知情的情况下，将个人账户提供给他人使用。在跑分洗钱中，卡主账户被用作资金中转站，接收上游诈骗或赌博资金，再按指令转出。无论卡主是否获利，一旦账户涉案，其本人将面临信用惩戒甚至刑事责任。",
     "usageExample": "xx行3000，卡主在济南。",
@@ -53,6 +53,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

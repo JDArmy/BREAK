@@ -2,7 +2,7 @@
   "T0578": {
     "title": "Token绑定",
     "aliases": [],
-    "category": "业务安全",
+    "category": "identity_security",
     "keywords": [
       "Token绑定"
     ],
@@ -24,7 +24,7 @@
         "link": "https://datatracker.ietf.org/doc/html/rfc8471"
       }
     ],
-    "updated": "2026-07-09",
-    "version": 2
+    "updated": "2026-07-10",
+    "version": 3
   }
 }

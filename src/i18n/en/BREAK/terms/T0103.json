@@ -12,7 +12,6 @@
       "bulk extraction"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "A hacking technique used to exfiltrate an entire database from a target server.",
     "description": "After gaining full access to a database through vulnerability exploitation, privilege escalation, or insider collusion, attackers download the entire database file. The stolen data typically contains massive volumes of user information and serves as the source for subsequent database sales and data laundering, causing irreparable damage to businesses and users.",
     "references": [

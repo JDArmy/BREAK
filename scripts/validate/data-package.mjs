@@ -145,6 +145,7 @@ for (const expectedType of [
   'BreakAttackTool',
   'BreakThreatActor',
   'BreakTerm',
+  'BreakTermCategoryRegistry',
   'BreakCase',
   'BreakQualityReport',
   'BreakQualityIssue',

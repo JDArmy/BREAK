@@ -1,22 +1,11 @@
 {
   "C1459": {
-    "title": "Electromagnetic Side-Channel Analysis of IoT Cameras",
-    "keywords": [
-      "electromagnetic side-channel",
-      "IoT camera",
-      "Axis M3045-V",
-      "electromagnetic radiation leakage",
-      "side-channel attack",
-      "IoT security",
-      "information extraction",
-      "hardware security"
-    ],
-    "summary": "This study conducts an electromagnetic side-channel attack on the widely deployed IoT camera Axis M3045-V. By analyzing the device's electromagnetic radiation leakage, internal information was successfully extracted. This case demonstrates the real-world threat posed by electromagnetic analysis to IoT devices.",
+    "title": "Research on Architectural Side-Channel Vulnerabilities in IoT Devices",
+    "keywords": ["IoT side channel", "architectural vulnerability", "power leakage", "electromagnetic emanation", "timing leakage", "resource-constrained device", "hardware security"],
+    "summary": "A 2025 ACDSA conference paper examined IoT side-channel risks from an architectural perspective. The authors analyzed information exposure through observable properties of resource-constrained devices, including power consumption, electromagnetic emanations, and execution timing; discussed how such non-functional signals may reveal internal processing activity; and summarized hardware and software exposure points that designers should mitigate.",
     "references": [
-      {
-        "title": "Architectural vulnerabilities of IoT devices in the context of side ...",
-        "link": "https://ieeexplore.ieee.org/document/11165979"
-      }
+      {"title": "Architectural Vulnerabilities of IoT Devices in the Context of Side-Channel Attacks", "link": "https://ieeexplore.ieee.org/document/11165979"},
+      {"title": "Metadata for the Paper on Architectural Side-Channel Vulnerabilities", "link": "https://www.semanticscholar.org/paper/Architectural-vulnerabilities-of-IoT-devices-in-the-Trifonov-Ponomareva/c4fe4d1f6cdfb1476c3631556f95010b786a0739"}
     ]
   }
 }

@@ -13,7 +13,7 @@
       "出售银行卡"
     ],
     "aliases": [],
-    "category": "跑分洗钱",
+    "category": "money_laundering",
     "definition": "人头是向黑产出租或出卖自己身份信息和账户的个人。",
     "description": "人头为赚取佣金，主动或被动地将身份证、银行卡、支付账户等提供给跑分团伙使用，用于注册商户、接收赃款或充当法人。他们往往不清楚资金的具体来源和去向，但一旦涉案，作为账户持有人将首先面临法律制裁。",
     "usageExample": "人头点位：4u，上车来。",
@@ -51,6 +51,7 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

@@ -12,7 +12,6 @@
       "leak dump"
     ],
     "aliases": [],
-    "category": "Data Leakage",
     "definition": "The practice of selling stolen databases in bulk through illicit channels.",
     "description": "Fraudsters package sensitive data—such as personal information, account credentials, and passwords—obtained through various means and sell them at fixed prices on dark web forums or encrypted chat groups. Sellers often exaggerate data freshness and accuracy to inflate prices, while buyers use the data for targeted scams, brute-force attacks, or resale. This activity directly fuels downstream crime and causes large-scale privacy breaches.",
     "references": [
