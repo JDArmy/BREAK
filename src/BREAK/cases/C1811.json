@@ -3,7 +3,7 @@
     "title": "土耳其KARGU-2无人机自主攻击争议",
     "category": "security_incident",
     "incidentTime": "2021-03",
-    "summary": "2020年3月利比亚内战期间，据联合国安理会专家小组2021年548页报告，土耳其STM制造的KARGU-2自杀式无人机追捕撤退的利比亚国民军。该机使用深度学习与实时图像处理，具备景象与人脸识别、自主目标追踪分类、蜂群协同能力，可在无需操作员-弹药数据连接下发射后不管运行。若有人丧生可能是史上首例AI自主武器杀人，引发Stop Killer Robots联盟与ICRC呼吁2026年前达成自主武器国际法协议。",
+    "summary": "联合国利比亚问题专家小组2021年报告称，2020年利比亚冲突中包括土耳其STM KARGU-2在内的致命自主武器系统可能被用于追击撤退人员，并以无需持续数据连接的方式运行。公开资料未确认该系统是否自主造成死亡，但事件引发了对自主目标选择、攻击责任和国际人道法适用的持续争议。",
     "relatedRisks": [
       "R0276"
     ],
@@ -12,6 +12,10 @@
       "TA0065"
     ],
     "references": [
+      {
+        "title": "The Kargu-2 Autonomous Attack Drone: Legal and Ethical Dimensions",
+        "link": "https://lieber.westpoint.edu/kargu-2-autonomous-attack-drone-legal-ethical/"
+      },
       {
         "title": "UN Security Council: Final report of the Panel of Experts on Libya (S/2021/229)",
         "link": "https://undocs.org/en/S/2021/229"
@@ -33,6 +37,6 @@
       "致命自治系统",
       "LAWS"
     ],
-    "updated": "2026-07-05"
+    "updated": "2026-07-11"
   }
 }

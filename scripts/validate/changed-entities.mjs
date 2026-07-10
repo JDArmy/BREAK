@@ -7,7 +7,7 @@
 //   readGitFile(relativePath, baseRef)        — 读 git base ref 中的文件 JSON
 //   hasContentChange(oldEntity, newEntity)    — 排除 version/updated/横向关系字段后的实质变更判定
 //   today()                                   — YYYY-MM-DD
-//   parseArgs(argv)                           — 解析 --base/--full/--staged-only/--keys=/--limit= 等
+//   parseArgs(argv)                           — 解析 --base/--full/--staged-only/--keys=/--limit=/--force 等
 //   ENTITY_TYPE_BY_DIR                        — 目录名→规范 type 映射
 
 import { execFileSync } from 'node:child_process';
@@ -161,14 +161,16 @@ export async function getChangedEntities({ baseRef = 'HEAD', stagedOnly = false 
  *   --keys=R0001,A0001  仅评审指定 key（逗号分隔）
  *   --limit=N           限制数量
  *   --type=risks        按类型过滤
- *   --skip=case-fact   跳过某子评审
+ *   --skip=case-fact    跳过某子评审
+ *   --force             忽略已完成指纹，强制重新评审所选实体
  */
 export function parseArgs(argv) {
-  const opts = { baseRef: 'HEAD', full: false, stagedOnly: false, keys: null, limit: 0, type: null, skip: [] };
+  const opts = { baseRef: 'HEAD', full: false, stagedOnly: false, force: false, keys: null, limit: 0, type: null, skip: [] };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--full') opts.full = true;
     else if (a === '--staged-only') opts.stagedOnly = true;
+    else if (a === '--force') opts.force = true;
     else if (a === '--base') opts.baseRef = argv[++i];
     else if (a.startsWith('--base=')) opts.baseRef = a.slice(7);
     else if (a.startsWith('--keys=')) opts.keys = a.slice(7).split(',').map((s) => s.trim()).filter(Boolean);

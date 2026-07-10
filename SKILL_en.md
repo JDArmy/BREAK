@@ -200,6 +200,8 @@ The 2026-07-10 Case P2 fact-review checkpoint further revises `summary`, `refere
 
 The 2026-07-11 P2 cleanup batch revises factual summaries and sources for C1190, C1251, C1287, C1366, C1377, C1380, C1384, C1386, C1391, C1392, C1393, C1396, C1400, C1401, C1404, C1406, C1407, C1412, C1414, and C1416, resolves five actor-consistency and five Risk-Avoidance relationship items, and adds terms for human-operated boosting, call bombing, traceability, DEX, privacy coins, zero-shot voice cloning, PII, social engineering, account washing, and Tor; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The 2026-07-11 follow-up P1 reference-quality maintenance strengthens official or incident-specific sources for C1377, C1384, C1401, C1406, C1414, and C1416, and narrows C1384 to the source-supported supply-chain tampering risk; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph

@@ -11,16 +11,12 @@
       "清算逻辑",
       "成都链安"
     ],
-    "summary": "2023年6月28日，Themis借贷协议遭到闪电贷价格操纵攻击。安全分析显示，攻击者从Aave借入大量资产，通过交易影响Themis使用的价格计算结果，再利用失真的抵押品估值借出其他资产并归还闪电贷，最终获利约37万美元。该事件反映了依赖可操纵链上价格作为预言机输入的风险。",
+    "summary": "2023年6月28日，Themis借贷协议遭到闪电贷价格操纵攻击。安全分析显示，攻击者通过交易影响Themis使用的价格计算结果，再利用失真的抵押品估值借出其他资产并归还闪电贷，最终获利约37万美元。该事件反映了依赖可操纵链上价格作为预言机输入的风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0169"
     ],
     "references": [
-      {
-        "title": "WTF Solidity 合约安全: S15. 操纵预言机 - GitHub",
-        "link": "https://github.com/AmazingAng/WTF-Solidity/blob/main/S15_OracleManipulation/readme.md"
-      },
       {
         "title": "SharkTeam: Analysis of Flash Loan Price Manipulation Attacks on the Themis Protocol",
         "link": "https://medium.com/@sharkteam/sharkteam-analysis-of-lightning-loan-price-manipulation-attacks-on-the-themis-protocol-d3f7d2abc0a8"
@@ -28,6 +24,10 @@
       {
         "title": "Themis Protocol Hack Analysis",
         "link": "https://blog.solidityscan.com/themis-protocol-hack-analysis-7241f6470b2e/"
+      },
+      {
+        "title": "Themis Protocol hacked shortly after going live",
+        "link": "https://www.web3isgoinggreat.com/?id=themis-protocol-hacked-shortly-after-going-live"
       }
     ],
     "updated": "2026-07-11",

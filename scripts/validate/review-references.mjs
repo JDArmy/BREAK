@@ -41,9 +41,9 @@ function buildPrompt(item) {
 严格规则：
 1. 只输出 JSON 对象。
 2. refsReview：逐条判断 sourceType 是否合理、是否应替换为更权威源。
-3. coverageAdequate：来源覆盖是否充足？高价值 Case（criminal_verdict 等）须 ≥2 源含 ≥1 primary。
+3. coverageAdequate：来源能否可靠支撑实体核心事实。新增高价值 Case 的“≥2 源含 ≥1 primary”由 admission.mjs 硬门禁负责；历史条目或已有权威一手公告时，不因缺少可选补强源单独判 review。
 4. shouldReplaceWeak：是否应把 weak 源替换为 primary？
-5. verdict：pass(充足)/review(可补强)/fail(高价值实体仅 weak 源或标题链接严重不符)。
+5. verdict：pass(核心事实有可靠来源支撑；可把补强建议写入 suggestions)/review(核心事实来源不足、仅 weak 源或来源主题错配)/fail(标题链接严重不符或来源明确不支持实体)。不得仅因“还能补充更多来源”判 review。
 6. reason: 一句话。suggestions: 数组。`;
   const refList = (classifiedRefs || [])
     .map((r) => `- [${r.index}] ${r.sourceType}: ${r.title} (${r.link.slice(0, 60)})`)
@@ -81,6 +81,7 @@ const results = await runSubagentReview({
   buildPrompt,
   validateResult,
   fingerprintFields: ['references', 'definition', 'summary', 'category'],
+  promptVersion: 'references-v2-actionable-only',
   model: 'text',
   concurrency: 3,
   limit: opts.limit,

@@ -91,6 +91,7 @@ function saveProgress(progressPath, p) {
  *   buildPrompt: (item) => messages,
  *   validateResult: (data, item) => void,  — 校验 LLM 返回，失败 throw 触发重试
  *   fingerprintFields: string[],   — 用于计算指纹的字段（决定是否重评）
+ *   promptVersion?: string,        — 评审规则版本，变更后使旧结论自动失效
  *   model?: string,                — 'text'(默认) / 'multi'
  *   concurrency?: number,          — 默认 3
  *   limit?: number,                — 0=不限
@@ -105,6 +106,7 @@ export async function runReview(opts) {
     buildPrompt,
     validateResult,
     fingerprintFields,
+    promptVersion = '',
     model = 'text',
     concurrency = 3,
     limit = 0,
@@ -133,10 +135,11 @@ export async function runReview(opts) {
   // report 与退出码都只看 scope 内的 key，避免历史累积结果（如全库跑留下的其他实体 fail）
   // 永久阻断后续 changed-mode 提交。scope 外的历史结果不写入本次 report。
   const scopeKeys = new Set(items.map((it) => it.key));
+  const reviewFingerprint = (entity) => `${promptVersion ? `${promptVersion}:` : ''}${fingerprintOf(entity, fingerprintFields)}`;
 
   // 增量：指纹与 progress.done 不一致才重评
   let todo = items.filter((it) => {
-    const fp = fingerprintOf(it.entity, fingerprintFields);
+    const fp = reviewFingerprint(it.entity);
     return progress.done[it.key] !== fp;
   });
   if (limit > 0) todo = todo.slice(0, limit);
@@ -170,7 +173,7 @@ export async function runReview(opts) {
           type: item.type || '',
           title: item.entity?.title || '',
           ...data,
-          fingerprint: fingerprintOf(item.entity, fingerprintFields),
+          fingerprint: reviewFingerprint(item.entity),
           reviewedAt: new Date().toISOString(),
         };
         resultById.set(item.key, r);

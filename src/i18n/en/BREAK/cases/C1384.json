@@ -1,21 +1,16 @@
 {
   "C1384": {
-    "title": "Firmware Backdoor Implantation in the Lebanon Pager Explosion Incident",
+    "title": "Supply-Chain Tampering Risk in the Lebanon Pager Explosions",
     "keywords": [
       "pager explosion",
-      "firmware backdoor",
       "supply chain attack",
       "remote detonation",
       "Hezbollah",
       "hardware tampering",
       "physical destruction"
     ],
-    "summary": "On September 17, 2024, thousands of pagers used by Hezbollah members exploded across Lebanon, killing 12 people and injuring nearly 3,000 in the first wave; walkie-talkie explosions followed the next day. Reporting and expert analysis indicated that explosives may have been inserted during production or distribution and triggered by received signals, demonstrating how communications-device supply-chain tampering can cause direct physical casualties.",
+    "summary": "On September 17, 2024, pagers used by Hezbollah members exploded across Lebanon, killing 12 people and injuring nearly 3,000 in the first wave; walkie-talkie explosions followed the next day. United Nations and Reuters reporting documented the two waves of device explosions and casualties. Reporting and expert analysis connected the incident to communication-device supply-chain security risks, showing that tampering with device procurement, delivery, or use chains can cause serious physical harm.",
     "references": [
-      {
-        "title": "Lebanon Pager Explosions: A Wake-Up Call on Cyber Attacks Crossing into the Physical World - Sohu",
-        "link": "https://m.sohu.com/a/810245535_466840"
-      },
       {
         "title": "Attacks in Lebanon: First Pagers, Now Walkie-Talkies",
         "link": "https://www.reuters.com/world/hezbollah-pager-explosions-live-2024-09-17/"
@@ -23,6 +18,10 @@
       {
         "title": "Exploding Pagers and Radios: A Terrifying Violation of International Law, Say UN Experts",
         "link": "https://www.ohchr.org/en/press-releases/2024/09/exploding-pagers-and-radios-terrifying-violation-international-law-say-un"
+      },
+      {
+        "title": "Lebanon Explosions Raise Alarm About Supply Chain Security, Safety Risks",
+        "link": "https://www.aljazeera.com/economy/2024/9/19/lebanon-blasts-raise-alarm-about-supply-chain-security-tech-safety"
       }
     ]
   }

@@ -8,13 +8,17 @@
       "customer service fraud",
       "shipping address exposure",
       "phone number leak",
-      "administrative penalty",
-      "integrity violation"
+      "criminal judgment",
+      "public interest litigation"
     ],
-    "summary": "According to Yu's confession, the stolen information mainly involved customers' names, phone numbers, shipping addresses, purchased items and prices. Almost all customer personal information accessible in the backend was leaked. The case was reported as a typical example in integrity-building initiatives, exposing the risk of internal personnel illegally obtaining and leaking customer privacy data",
+    "summary": "In March 2021, Yu joined a Guangzhou e-commerce company and used a customer-service account and implanted collection software to illegally obtain 21,588 transaction records and 909 personal-information records within two days. The court sentenced Yu to three years and two months in prison and a RMB 5,000 fine for infringing citizens' personal information, while also granting the procuratorate's public-interest claims.",
     "references": [
       {
-        "title": "Credit Guangzhou - [Integrity Construction Journey] Customer Information Leak Leads to Penalties, Personal Information Protection...",
+        "title": "Criminal Incidental Civil Public Interest Indictment: Yu's Infringement of Citizens' Personal Information",
+        "link": "https://guangzhouby.jcy.gov.cn/gyssflws/12681.jhtml"
+      },
+      {
+        "title": "Customer Information Leak Punished as Personal Information Protection Enters Procuratorial Public Interest Litigation",
         "link": "https://credit.gz.gov.cn/csjswlxn/gzdt/content/post_8681161.html"
       }
     ]

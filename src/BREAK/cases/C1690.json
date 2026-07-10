@@ -12,18 +12,26 @@
       "递归供应链风险",
       "恶意包污染"
     ],
-    "summary": "2026年2月，攻击者污染了AI编程工具Cline的npm包，通过postinstall脚本静默安装OpenClaw智能体。由于缺乏SBOM，开发者无法快速发现被植入的额外组件，导致约4000台高价值开发终端被长期控制，揭示了AI工具链中SBOM缺失带来的递归供应链风险。",
+    "summary": "2026年2月，攻击者破坏AI编程工具Cline的npm发布链路，并通过postinstall脚本静默安装OpenClaw智能体。该事件涉及提示注入、CI/CD权限、包发布和不透明传递组件等环节，说明AI自动化工具与软件供应链相互连接后，单点失陷可沿构建和分发流程扩散。",
     "category": "news_report",
     "relatedRisks": [
       "R0229"
     ],
     "references": [
       {
+        "title": "How Clinejection Turned an AI Bot into a Supply Chain Attack - Snyk",
+        "link": "https://snyk.io/blog/cline-supply-chain-attack-prompt-injection-github-actions/"
+      },
+      {
+        "title": "Cline Supply Chain Attack Detected: cline@2.3.0 Silently Installs OpenClaw",
+        "link": "https://www.stepsecurity.io/blog/cline-supply-chain-attack-detected-cline-2-3-0-silently-installs-openclaw"
+      },
+      {
         "title": "OpenClaw:疯狂背后的隐患_腾讯新闻",
         "link": "https://news.qq.com/rain/a/20260310A01SYE00"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-11",
     "incidentTime": "2026-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []

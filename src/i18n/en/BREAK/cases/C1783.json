@@ -1,27 +1,19 @@
 {
   "C1783": {
-    "title": "Humanity Protocol Suffers Identity Infrastructure Breach by North Korean State-Sponsored Hackers",
+    "title": "Humanity Protocol H Token Security Incident",
     "keywords": [
       "Humanity Protocol breach",
-      "decentralized identity attack",
-      "North Korean hackers",
-      "Lazarus Group",
-      "palm print biometrics",
-      "identity forgery",
-      "Quantstamp",
-      "on-chain identity",
-      "$36 million loss",
-      "infrastructure attack"
+      "H token",
+      "cross-chain bridge",
+      "administrator keys",
+      "$32 million loss",
+      "security incident"
     ],
-    "summary": "In June 2026, decentralized identity protocol Humanity Protocol was attacked by a suspected North Korean state-sponsored hacking group, resulting in a loss of approximately $36 million. The attack targeted not only funds but also the infrastructure linking users' palm print biometric data with on-chain identities. Security firm Quantstamp noted that the attackers may have intended to tamper with o",
+    "summary": "In June 2026, Humanity Protocol disclosed an H token security incident in which an attacker used keys associated with cross-chain bridge administration to steal about $32 million. The official update said the H token price fell sharply after the incident and that the team began remediation and adjusted its business direction. The case highlights risks in administrator-key custody and concentrated cross-chain bridge privileges.",
     "references": [
       {
         "title": "Humanity Protocol: H Token Incident Update",
         "link": "https://humanityprotocol.notion.site/H-Token-Incident-Update-37ab0ec467a781d7af06e7dcedd66852"
-      },
-      {
-        "title": "Breaking! Humanity Protocol Hacked for 36 Million, Mastermind Revealed as North Korean State-Sponsored Hackers...",
-        "link": "https://news.qq.com/rain/a/20260615A02ONO00"
       }
     ]
   }

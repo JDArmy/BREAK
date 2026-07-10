@@ -50,7 +50,7 @@ npm run review:changed -- --base HEAD~1  # compare against the previous commit
 
 ### Tier 3: Class C · LLM + scraping (minimal set)
 
-Rules that cannot be fully machine-automated: `review:case-fact` (webpage fact verification, using Scrapingdog first and falling back to direct local fetching with a browser user agent, a 30-second timeout, Chinese-page charset detection, short-body retry, and article-focused snippet selection), `review:field-density` (information density), `review:classification` (category semantic fit).
+Rules that cannot be fully machine-automated: `review:case-fact` (webpage fact verification, using Scrapingdog first, then direct local fetching, and finally search-result snippets derived from the reference title and URL when PDFs, dynamic pages, or empty bodies remain unusable; caches are isolated by review version), `review:field-density` (information density), `review:classification` (category semantic fit).
 
 ## Documentation Freshness Gate
 

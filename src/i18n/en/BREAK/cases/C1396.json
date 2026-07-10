@@ -11,7 +11,7 @@
       "DDoS",
       "embedded devices"
     ],
-    "summary": "On June 25, 2019, an Akamai researcher discovered Silexbot in a honeypot. The malware scanned internet-accessible IoT devices that still used known default login credentials. After gaining access, it deleted system files, network configuration, and firewall rules before halting the device, leaving it unable to boot or connect normally. Recovery generally required manually reflashing the firmware.",
+    "summary": "In 2019, Akamai disclosed that Silexbot scanned internet-accessible IoT devices still using default login credentials. After gaining access, it performed destructive actions that prevented devices from operating or connecting normally. The incident shows how default credentials expose connected devices to automated intrusion and destructive attacks at scale.",
     "references": [
       {
         "title": "Silexbot Bricking Systems With Known Default Login Credentials",

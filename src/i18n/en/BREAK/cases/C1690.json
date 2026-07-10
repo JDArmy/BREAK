@@ -12,8 +12,16 @@
       "recursive supply chain risk",
       "malicious package poisoning"
     ],
-    "summary": "In February 2026, attackers poisoned the npm package of the AI coding tool Cline, silently installing the OpenClaw agent via a postinstall script. Due to the lack of an SBOM, developers could not quickly detect the implanted extra component, resulting in approximately 4,000 high-value development endpoints being persistently compromised, exposing the recursive supply chain risks caused by missing ",
+    "summary": "In February 2026, attackers compromised the npm package of the AI coding tool Cline and used a postinstall script to install the OpenClaw agent silently. The incident affected developer environments and demonstrated how prompt injection, CI/CD permissions, package publishing, and opaque transitive components can combine into a recursive software supply-chain attack.",
     "references": [
+      {
+        "title": "How Clinejection Turned an AI Bot into a Supply Chain Attack - Snyk",
+        "link": "https://snyk.io/blog/cline-supply-chain-attack-prompt-injection-github-actions/"
+      },
+      {
+        "title": "Cline Supply Chain Attack Detected: cline@2.3.0 Silently Installs OpenClaw",
+        "link": "https://www.stepsecurity.io/blog/cline-supply-chain-attack-detected-cline-2-3-0-silently-installs-openclaw"
+      },
       {
         "title": "OpenClaw: The Hidden Dangers Behind the Craze - Tencent News",
         "link": "https://news.qq.com/rain/a/20260310A01SYE00"

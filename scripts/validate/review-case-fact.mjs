@@ -6,6 +6,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { createHash } from 'node:crypto';
 import { projectRoot, ensureDir, writeJson } from '../search/common.mjs';
 import { getChangedEntities, parseArgs } from './changed-entities.mjs';
 import { loadAllEntities } from './llm-review-helpers.mjs';
@@ -20,7 +21,7 @@ const REPORT_PATH = path.join(OUT_DIR, 'review-report.json');
 const PROGRESS_PATH = path.join(OUT_DIR, 'review-progress.json');
 const MD_PATH = path.join(OUT_DIR, 'review-report.md');
 const PENDING_PATH = path.join(OUT_DIR, 'pending-fix.json');
-const REVIEW_PROMPT_VERSION = 'case-fact-v2-snippet-4000';
+const REVIEW_PROMPT_VERSION = 'case-fact-v5-actionable-partial-policy';
 const FACT_SNIPPET_CHARS = 4000;
 ensureDir(SCRAPED_DIR);
 
@@ -65,6 +66,12 @@ function selectRelevantSnippet(text, refTitle = '') {
   return compact.slice(start, start + 4000);
 }
 
+function looksLikePdfBinary(text) {
+  const sample = String(text || '').slice(0, 12000);
+  const markers = (sample.match(/(?:%PDF-|\b\d+\s+\d+\s+obj\b|\bendobj\b|\bxref\b|\bstream\b)/gi) || []).length;
+  return markers >= 2;
+}
+
 function decodeHtml(buffer, contentType = '') {
   const head = buffer.subarray(0, 2048).toString('latin1');
   const declared = `${contentType} ${head}`.match(/charset=["']?([a-zA-Z0-9_-]+)/i)?.[1]?.toLowerCase();
@@ -104,7 +111,7 @@ if (opts.keys) {
 }
 if (opts.limit > 0) items = items.slice(0, opts.limit);
 
-async function directFetchUrl(url) {
+async function directFetchUrl(url, refTitle = '') {
   try {
     const res = await fetch(url, {
       headers: {
@@ -118,8 +125,11 @@ async function directFetchUrl(url) {
     if (!res.ok) return { ok: false, reason: `direct HTTP ${res.status}`, content: '' };
     const buffer = Buffer.from(await res.arrayBuffer());
     const contentType = res.headers.get('content-type') || '';
+    if (/application\/pdf/i.test(contentType) || buffer.subarray(0, 4).toString() === '%PDF') {
+      return { ok: false, reason: 'direct PDF requires metadata fallback', content: '' };
+    }
     const html = decodeHtml(buffer, contentType);
-    const text = selectRelevantSnippet(htmlToText(html), url);
+    const text = selectRelevantSnippet(htmlToText(html), refTitle);
     if (!text) return { ok: false, reason: 'direct empty content', content: '' };
     return { ok: true, reason: 'direct', content: text };
   } catch (e) {
@@ -127,10 +137,33 @@ async function directFetchUrl(url) {
   }
 }
 
+async function searchFallback(ref) {
+  if (!SCRAPINGDOG_KEY) return { ok: false, reason: 'search fallback unavailable', content: '' };
+  try {
+    const apiUrl = new URL('https://api.scrapingdog.com/google');
+    apiUrl.searchParams.set('api_key', SCRAPINGDOG_KEY);
+    apiUrl.searchParams.set('query', `"${ref.title || ''}" ${ref.link || ''}`.trim());
+    apiUrl.searchParams.set('country', 'us');
+    apiUrl.searchParams.set('domain', 'google.com');
+    apiUrl.searchParams.set('combined_output', 'true');
+    const res = await fetch(apiUrl.toString(), { signal: AbortSignal.timeout(30000) });
+    if (!res.ok) return { ok: false, reason: `search HTTP ${res.status}`, content: '' };
+    const data = await res.json();
+    const results = Array.isArray(data.organic_results) ? data.organic_results.slice(0, 5) : [];
+    const content = results
+      .map((item) => [item.title, item.snippet || item.inline_snippet, item.link].filter(Boolean).join(' | '))
+      .join('\n');
+    if (!content) return { ok: false, reason: 'search empty results', content: '' };
+    return { ok: true, reason: 'search fallback', content };
+  } catch (e) {
+    return { ok: false, reason: `search ${String(e.message || e).slice(0, 100)}`, content: '' };
+  }
+}
+
 // Scrapingdog 抓取网页正文（通用 scrape 端点），失败时回退本地直连抓取。
-async function scrapeUrl(url) {
+async function scrapeUrl(url, refTitle = '') {
   if (!SCRAPINGDOG_KEY) {
-    return directFetchUrl(url);
+    return directFetchUrl(url, refTitle);
   }
   try {
     const apiUrl = new URL('https://api.scrapingdog.com/scrape');
@@ -139,41 +172,55 @@ async function scrapeUrl(url) {
     apiUrl.searchParams.set('dynamic', 'false');
     const res = await fetch(apiUrl.toString(), { signal: AbortSignal.timeout(30000) });
     if (!res.ok) {
-      const direct = await directFetchUrl(url);
+      const direct = await directFetchUrl(url, refTitle);
       if (direct.ok) return direct;
       return { ok: false, reason: `HTTP ${res.status}; ${direct.reason}`, content: '' };
     }
     const html = await res.text();
     const text = htmlToText(html);
-    if (!text || text.length < 800) {
-      const direct = await directFetchUrl(url);
+    if (!text || text.length < 800 || looksLikePdfBinary(html) || looksLikePdfBinary(text)) {
+      const direct = await directFetchUrl(url, refTitle);
       if (direct.ok) return direct;
+      if (looksLikePdfBinary(html) || looksLikePdfBinary(text)) {
+        return { ok: false, reason: `scraped PDF binary; ${direct.reason}`, content: '' };
+      }
     }
-    return { ok: true, reason: '', content: selectRelevantSnippet(text, url) };
+    return { ok: true, reason: '', content: selectRelevantSnippet(text, refTitle) };
   } catch (e) {
-    const direct = await directFetchUrl(url);
+    const direct = await directFetchUrl(url, refTitle);
     if (direct.ok) return direct;
     return { ok: false, reason: `${String(e.message || e).slice(0, 100)}; ${direct.reason}`, content: '' };
   }
 }
 
-function cachePath(caseKey, refIndex) {
-  return path.join(SCRAPED_DIR, `${caseKey}-${refIndex}.txt`);
+function cachePath(caseKey, refIndex, ref) {
+  const refHash = createHash('sha256').update(String(ref?.link || '')).digest('hex').slice(0, 12);
+  return path.join(SCRAPED_DIR, `${caseKey}-${refIndex}-${refHash}-v5.txt`);
 }
 
 async function getScrapedContent(caseKey, ref, refIndex) {
   // 用调用方传入的真实 refIndex 作缓存 key，避免第二条 reference 复用第一条的缓存
   // （此前 refIndex 硬编码 0 导致多源核验退化为单源）。
-  const cp = cachePath(caseKey, refIndex);
+  const cp = cachePath(caseKey, refIndex, ref);
   if (fs.existsSync(cp)) {
     return { content: fs.readFileSync(cp, 'utf8'), fromCache: true };
   }
-  const r = await scrapeUrl(ref.link);
+  const r = await scrapeUrl(ref.link, ref.title);
   if (r.ok && String(r.content || '').length < 800) {
-    const direct = await directFetchUrl(ref.link);
+    const direct = await directFetchUrl(ref.link, ref.title);
     if (direct.ok && String(direct.content || '').length > String(r.content || '').length) {
       r.content = direct.content;
       r.reason = direct.reason;
+    }
+  }
+  if (!r.ok || String(r.content || '').length < 200) {
+    const fallback = await searchFallback(ref);
+    if (fallback.ok) {
+      r.ok = true;
+      r.content = fallback.content;
+      r.reason = fallback.reason;
+    } else if (!r.ok) {
+      r.reason = `${r.reason || 'scrape failed'}; ${fallback.reason}`;
     }
   }
   if (r.ok) {
@@ -195,7 +242,10 @@ function buildPrompt(item, scrapedContents) {
    - verdict: 'accurate'(一致/无矛盾) / 'partial'(细节出入但无矛盾) / 'contradicted'(矛盾) / 'fabricated'(summary 编造网页矛盾的事实)
    - conflicts: 矛盾点数组
    - fabrications: summary 与网页矛盾的关键事实（注意：网页未提及 ≠ 编造，仅网页明确反驳才算）
-5. verdict：pass(accurate)/review(partial)/fail(contradicted/fabricated)。
+5. verdict 判定：
+   - pass：核心事件身份（主体/事件或研究主题）已由至少一个可靠来源或搜索摘要确认，且无事实冲突；来源未覆盖次要数字、实现细节或附带结果时，可在 suggestions 提醒，但不得仅因此判 review。
+   - review：核心事件身份无法由任何来源确认、来源主题与 Case 不匹配，或 incidentTime/主体/方法/结果存在需要人工判断的实际出入。
+   - fail：来源明确反驳 summary，或 summary 存在可确认的编造。
 6. reason: 一句话。suggestions: 数组。`;
   const factsText = scrapedContents
     .map((s, i) => `【源${i}】${s.ok ? s.content.slice(0, FACT_SNIPPET_CHARS) : `(抓取失败: ${s.reason})`}`)
@@ -251,7 +301,7 @@ if (fs.existsSync(REPORT_PATH)) {
 }
 const resultById = new Map(results.map((r) => [r.key, r]));
 
-console.log(`[case-fact] 共 ${items.length} 项，待评审 ${items.filter((it) => !progress.done[it.key]).length}`);
+console.log(`[case-fact] 共 ${items.length} 项，待评审 ${items.filter((it) => opts.force || !progress.done[it.key]).length}${opts.force ? '（强制重评）' : ''}`);
 
 let done = 0;
 let failed = 0;
@@ -274,7 +324,11 @@ async function reviewOne(item) {
   // 抓取前 2 条 reference（控制成本）
   const scrapedContents = [];
   for (let i = 0; i < Math.min(2, refs.length); i++) {
-    const s = await getScrapedContent(item.key, refs[i], i);
+    const contextRef = {
+      ...refs[i],
+      title: `${refs[i].title || ''} ${item.entity.title || ''} ${String(item.entity.summary || '').slice(0, 200)}`,
+    };
+    const s = await getScrapedContent(item.key, contextRef, i);
     scrapedContents.push({ ...s, ok: s.ok || !!s.content });
   }
   const allFailed = scrapedContents.every((s) => !s.ok && !s.content);
@@ -309,7 +363,7 @@ async function worker() {
   while (idx < items.length) {
     const item = items[idx++];
     const fp = `${REVIEW_PROMPT_VERSION}:${fingerprintOf(item.entity, ['summary', 'references', 'incidentTime'])}`;
-    if (progress.done[item.key] === fp) {
+    if (!opts.force && progress.done[item.key] === fp) {
       continue;
     }
     try {

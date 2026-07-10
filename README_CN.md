@@ -151,7 +151,7 @@ npm run type-check
 `npm run audit:references-health` 会复用 `scripts/validate/reference-health-history.json` 中 365 天内检查通过的链接，只检查新增、失败、待复核或已过期链接；需要忽略历史记录并强制复测当前范围时使用 `npm run audit:references-health -- --force`。
 `npm run audit:text-length` 会按统一策略检查全库文本上限：中文按去空白字符数、英文按单词数；历史条目允许合理精简，不再受历史长度快照约束。
 `npm run validate:docs-freshness` 会阻断文档滞后：当路由、UI 组件、Schema、验证脚本、公共命令、导出链路或 Skill 数据 / 搜索行为变化时，必须在同一次变更中同步更新对应的使用手册、README 和 Skill 文档。
-`npm run review:changed` 会对变更实体运行语义评审；其中 `review:should-extract` 会用全库实体 title、keywords、aliases 和当前关系作为索引，自动识别已覆盖的抽取建议，减少重复建模误报；脚本也会先归一化结构化 `new*` 建议对象，再判断是否仍有可执行待办。`review:case-fact` 会优先使用 Scrapingdog 抓取正文，失败或正文过短时回退到带浏览器 UA、30 秒超时、中文页面编码识别和正文片段优先截取的本地直连抓取，再把正文送入 LLM。
+`npm run review:changed` 会对变更实体运行语义评审；其中 `review:should-extract` 会用全库实体 title、keywords、aliases 和当前关系作为索引，自动识别已覆盖的抽取建议，减少重复建模误报；脚本也会先归一化结构化 `new*` 建议对象，再判断是否仍有可执行待办。`review:case-fact` 会优先使用 Scrapingdog 抓取正文，失败或正文过短时回退到带浏览器 UA、30 秒超时、中文页面编码识别和正文片段优先截取的本地直连抓取；PDF、动态页面或空正文仍不可用时，再使用 reference 标题与 URL 的搜索结果摘要作为证据上下文。抓取缓存按评审版本隔离，升级回退逻辑后不会复用旧空缓存或 PDF 乱码。
 `npm run build` 会依次完成英文数据预合并、代码检查、数据与文档校验、单元测试、覆盖率门禁、Changelog 与多格式数据导出、站点构建、Service Worker 版本注入、数据包评估和产物校验。以 `package.json` 中的 `build` 脚本为权威来源。
 `npm run test:coverage` 会对关系分析、Sankey 攻击路径、根节点路径洞察、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
 `npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。

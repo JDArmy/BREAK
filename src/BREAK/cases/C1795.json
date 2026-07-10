@@ -1,30 +1,34 @@
 {
   "C1795": {
-    "title": "余某盗取客户个人信息遭处罚案",
+    "title": "余某盗取客户个人信息获刑案",
     "keywords": [
       "余某",
       "盗取客户信息",
       "个人信息泄露",
       "客服工单",
       "内部人员",
-      "行政处罚",
-      "诚信建设",
+      "刑事判决",
+      "公益诉讼",
       "收货地址",
       "电话号码"
     ],
-    "summary": "据余某供述，其盗取的信息主要涉及客户的姓名、电话号码、收货地址、购买的东西与价格等，后台能显示的客户个人信息几乎全部被泄露。该案作为诚信建设典型案例被通报，揭示了客服或后台系统中客户隐私数据被内部人员非法获取并外泄的风险。",
-    "category": "administrative_enforcement",
+    "summary": "2021年3月，余某入职广州一家电商公司后，利用客服账号和植入的信息采集软件，两天内非法获取21588条交易信息及909条个人信息。法院以侵犯公民个人信息罪判处其有期徒刑三年二个月并处罚金五千元，同时支持检察机关提出的公益诉讼请求。",
+    "category": "criminal_verdict",
     "relatedRisks": [
       "R0078-002"
     ],
     "references": [
       {
-        "title": "信用广州网-【诚信建设万里行】泄露客户信息遭处罚,个人信息保护...",
+        "title": "刑事附带民事公益诉讼起诉书：余某某侵犯公民个人信息案",
+        "link": "https://guangzhouby.jcy.gov.cn/gyssflws/12681.jhtml"
+      },
+      {
+        "title": "泄露客户信息遭处罚，个人信息保护纳入检察公益诉讼法定领域",
         "link": "https://credit.gz.gov.cn/csjswlxn/gzdt/content/post_8681161.html"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2022-11",
+    "updated": "2026-07-11",
+    "incidentTime": "2021-03",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0024"

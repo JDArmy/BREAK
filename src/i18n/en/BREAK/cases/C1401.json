@@ -16,12 +16,12 @@
     "summary": "On April 17, 2022, the Beanstalk protocol suffered a governance attack. The attacker used a flash loan to obtain temporary voting power, pushed a previously submitted malicious proposal past the emergency execution threshold, and transferred assets out of the protocol. Security analyses estimated protocol losses at about $181 million, while the attacker obtained roughly $80 million in realizable assets. The incident exposed the risk of governance systems without an execution delay.",
     "references": [
       {
-        "title": "Governance Attack - Cyfrin Glossary",
-        "link": "https://www.cyfrin.io/glossary/governance-attack"
-      },
-      {
         "title": "Hack Analysis: Beanstalk Governance Attack, April 2022",
         "link": "https://medium.com/immunefi/hack-analysis-beanstalk-governance-attack-april-2022-f42788fc821e"
+      },
+      {
+        "title": "Beanstalk Governance Exploit",
+        "link": "https://bean.money/blog/beanstalk-governance-exploit"
       }
     ]
   }

@@ -1,34 +1,27 @@
 {
   "C1783": {
-    "title": "Humanity Protocol 遭朝鲜国家级黑客攻击致身份基础设施受损",
+    "title": "Humanity Protocol H代币安全事件",
     "keywords": [
       "Humanity Protocol",
-      "去中心化身份",
-      "朝鲜黑客",
-      "Lazarus Group",
-      "掌纹生物特征",
-      "身份伪造",
-      "Quantstamp",
-      "链上身份",
-      "3600万美元",
-      "基础设施攻击"
+      "H代币",
+      "跨链桥",
+      "管理员密钥",
+      "3200万美元",
+      "安全事件"
     ],
-    "summary": "2026年6月，去中心化身份协议Humanity Protocol遭疑似朝鲜国家级黑客组织攻击，损失约3600万美元。攻击目标不仅是资金，更涉及用户掌纹生物特征数据与链上身份绑定的基础设施。安全机构Quantstamp指出，攻击者可能意图篡改或伪造身份验证记录，潜在危害远超资金损失，直接动摇了“去中心化身份更安全”的假设。",
+    "summary": "2026年6月，Humanity Protocol披露H代币安全事件，攻击者利用与跨链桥管理权限相关的密钥实施盗窃，造成约3200万美元损失。官方更新称，事件后H代币价格大幅下跌，项目团队启动处置并调整业务方向。该事件反映了管理员密钥保管和跨链桥权限集中带来的风险。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0253"
+      "R0161",
+      "R0162"
     ],
     "references": [
       {
         "title": "Humanity Protocol：H代币安全事件更新",
         "link": "https://humanityprotocol.notion.site/H-Token-Incident-Update-37ab0ec467a781d7af06e7dcedd66852"
-      },
-      {
-        "title": "突发!Humanity Protocol被盗3600万,幕后黑手竟是朝鲜国家级黑客...",
-        "link": "https://news.qq.com/rain/a/20260615A02ONO00"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-11",
     "incidentTime": "2026-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []

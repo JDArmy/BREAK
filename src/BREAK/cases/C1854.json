@@ -1,18 +1,18 @@
 {
   "C1854": {
-    "title": "FTC与Plaid就金融账号聚合数据收集争议达成和解",
+    "title": "Plaid金融账号聚合数据诉讼达成5800万美元和解",
     "keywords": [
-      "FTC与Plaid就金融账号聚合数据收集争议达成和解",
+      "Plaid金融账号聚合数据诉讼达成5800万美元和解",
       "Plaid",
       "账号聚合",
       "金融数据聚合",
       "银行账号连接",
       "消费者数据",
-      "FTC"
+      "集体诉讼"
     ],
-    "summary": "2021年1月，美国联邦贸易委员会宣布与金融技术公司Plaid达成和解。FTC称Plaid通过第三方应用连接消费者银行账户时，使用误导性界面并收集超出部分消费者预期的金融数据。和解要求Plaid披露数据收集范围、限制数据保留并删除不必要数据，体现第三方账号聚合带来的凭据与数据控制风险。",
-    "category": "administrative_enforcement",
-    "incidentTime": "2021-01",
+    "summary": "2021年，金融技术公司Plaid同意以5800万美元解决一项消费者数据隐私集体诉讼。原告指控Plaid在为第三方应用连接银行账户时获取了超出必要范围的金融数据和登录凭据，并使用类似银行登录页面的界面。和解还要求Plaid删除部分数据并调整告知、数据最小化和凭据处理做法。",
+    "category": "news_report",
+    "incidentTime": "2021-08",
     "relatedRisks": [
       "R0037"
     ],
@@ -20,14 +20,14 @@
     "relatedThreatActors": [],
     "references": [
       {
-        "title": "FTC reaches settlement with fintech company Plaid over allegations that it deceived consumers about how it uses and shares their personal financial data",
-        "link": "https://www.ftc.gov/news-events/news/press-releases/2021/01/ftc-reaches-settlement-fintech-company-plaid-over-allegations-it-deceived-consumers-about-how-it-uses"
+        "title": "Plaid Settlement",
+        "link": "https://www.plaidsettlement.com/"
       },
       {
-        "title": "FTC Finalizes Settlement with Plaid Over Allegations that the Company Used Deceptive Tactics to Collect Personal Financial Data",
-        "link": "https://www.ftc.gov/news-events/news/press-releases/2021/05/ftc-finalizes-settlement-plaid-over-allegations-company-used-deceptive-tactics-collect-personal"
+        "title": "Financial Technology Company Reaches $58 Million Settlement to Resolve Data Privacy Litigation",
+        "link": "https://www.privacyworld.blog/2021/08/financial-technology-company-reaches-58-million-settlement-to-resolve-data-privacy-litigations/"
       }
     ],
-    "updated": "2026-07-07"
+    "updated": "2026-07-11"
   }
 }
