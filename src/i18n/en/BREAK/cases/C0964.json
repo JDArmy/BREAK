@@ -11,11 +11,19 @@
       "phishing detection bypass",
       "machine learning attacks"
     ],
-    "summary": "The study Machine Learning-Enabled Attacks on Anti-Phishing Blacklists, indexed in December 2024, analyzes machine-learning-assisted evasion of anti-phishing blacklists. It notes that blacklist defenses suffer from incomplete coverage and update delays, and that attackers can combine feature manipulation, IP rotation, and proxy use to increase the likelihood that phishing sites evade blacklist inclusion.",
+    "summary": "The study, indexed in December 2024, analyzes machine-learning-assisted evasion of anti-phishing blacklists and discusses limits in blacklist coverage and detection latency. It presents feature-driven and TLS-based cloaking attacks that can help phishing sites evade detection without breaking the page's visual appearance.",
     "references": [
       {
         "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists",
         "link": "https://ieeexplore.ieee.org/document/10798104"
+      },
+      {
+        "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists - IEEE PDF",
+        "link": "https://ieeexplore.ieee.org/iel8/6287639/6514899/10798104.pdf"
+      },
+      {
+        "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists - DOI",
+        "link": "https://doi.org/10.1109/ACCESS.2024.3516754"
       }
     ]
   }

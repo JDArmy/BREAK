@@ -12,7 +12,7 @@
       "更新延迟",
       "网络安全防御"
     ],
-    "summary": "2024年12月收录的研究《Machine Learning-Enabled Attacks on Anti-Phishing Blacklists》分析了机器学习辅助的反钓鱼黑名单规避问题。研究指出，反钓鱼黑名单存在覆盖不完整和更新延迟等局限，攻击者可结合特征变换、IP轮换和代理等手段提高钓鱼站点逃避列入黑名单的概率。",
+    "summary": "2024年12月收录的研究分析机器学习辅助的反钓鱼黑名单规避，并讨论黑名单覆盖与检测滞后的局限。论文展示特征驱动与 TLS-based cloaking 两类攻击，可在不破坏页面视觉效果的情况下提高钓鱼站点逃避检测的概率。",
     "category": "academic_research",
     "relatedRisks": [
       "R0099"
@@ -21,6 +21,14 @@
       {
         "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists",
         "link": "https://ieeexplore.ieee.org/document/10798104"
+      },
+      {
+        "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists - IEEE PDF",
+        "link": "https://ieeexplore.ieee.org/iel8/6287639/6514899/10798104.pdf"
+      },
+      {
+        "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists - DOI",
+        "link": "https://doi.org/10.1109/ACCESS.2024.3516754"
       }
     ],
     "updated": "2026-07-10",

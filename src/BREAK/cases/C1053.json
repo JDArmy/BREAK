@@ -11,18 +11,22 @@
       "敏感数据泄露",
       "信息安全"
     ],
-    "summary": "该研究揭示了内部人员（如亲友）对智能手机进行未授权物理访问的风险。攻击者通过物理接触设备，绕过锁屏或利用信任关系，直接获取设备中的敏感数据，构成严重的信息安全隐患。",
+    "summary": "MobileHCI 2013 论文《Know Your Enemy》研究智能手机内部人员未授权访问风险。作者通过22名受访者访谈和724名用户调查发现，用户普遍担心朋友等熟人访问手机中的短信、照片、邮件等敏感数据，并指出内部人员威胁已影响智能手机用户。",
     "category": "academic_research",
     "relatedRisks": [
       "R0112-002"
     ],
     "references": [
       {
+        "title": "Know Your Enemy: The Risk of Unauthorized Access in Smartphones by Insiders - MobileHCI 2013",
+        "link": "https://mobilehci2013.org/program/247.php"
+      },
+      {
         "title": "Know your enemy: the risk of unauthorized access in smartphones by insiders",
         "link": "https://dl.acm.org/doi/abs/10.1145/2493190.2493223"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2013-08-27"

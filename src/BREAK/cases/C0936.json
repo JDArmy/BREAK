@@ -1,6 +1,6 @@
 {
   "C0936": {
-    "title": "维信金科协助警方破获“代理维权”黑灰产涉刑案",
+    "title": "维信金科披露“代理维权”黑灰产治理案例",
     "keywords": [
       "代理维权",
       "黑灰产",
@@ -11,23 +11,23 @@
       "投诉敲诈",
       "消费金融"
     ],
-    "summary": "据2024年1月报道，维信金科协助上海警方办理一起“代理维权”黑灰产涉刑案件。报道披露，徐某等人冒充借款人家属并以投诉施压、索赔为手段牟利，相关人员于2023年8月被警方抓获，10月因敲诈勒索罪获刑。报道同时提到缪某受非法代理组织教唆，以违规催收为由频繁投诉并拒绝偿还多家消金平台债务的关联风险。",
-    "category": "criminal_verdict",
+    "summary": "据维信金科2023年12月披露，徐某收取借款人数千元好处费后，冒充借款人亲属接听催收电话，并以投诉暴力催收等方式向监管部门施压、索要赔偿。维信金科称其向上海虹口警方报案并提交线索后，徐某于2023年8月在江苏被抓。该披露反映非法代理投诉会借监管投诉和身份冒充向金融机构施压。",
+    "category": "news_report",
     "relatedRisks": [
       "R0096-001"
     ],
     "references": [
       {
-        "title": "重拳出击! 维信金科协助警方破获“代理维权”黑灰产涉刑案_手机...",
-        "link": "https://news.sina.cn/sx/2024-01-09/detail-inaaxhfz7581377.d.html?month=$month_msg"
-      },
-      {
         "title": "重拳出击！维信金科协助警方破获“代理维权”黑灰产涉刑案",
         "link": "https://www.vcredit.com/news/media-coverage/%E9%87%8D%E6%8B%B3%E5%87%BA%E5%87%BB-%E7%BB%B4%E4%BF%A1%E9%87%91%E7%A7%91%E5%8D%8F%E5%8A%A9%E8%AD%A6%E6%96%B9%E7%A0%B4%E8%8E%B7-%E4%BB%A3%E7%90%86%E7%BB%B4%E6%9D%83-%E9%BB%91%E7%81%B0%E4%BA%A7%E6%B6%89%E5%88%91%E6%A1%88/"
+      },
+      {
+        "title": "维信金科协助警方破获“代理维权”黑灰产涉刑案_新浪新闻",
+        "link": "https://news.sina.cn/sx/2024-01-09/detail-inaaxhfz7581377.d.html"
       }
     ],
     "updated": "2026-07-10",
-    "incidentTime": "2024-01",
+    "incidentTime": "2023-12",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0029"

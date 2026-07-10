@@ -1,31 +1,31 @@
 {
   "C1060": {
-    "title": "架设“GOIP”设备实施诈骗，3人被抓！",
+    "title": "非法架设GOIP设备，3人被抓！",
     "keywords": [
       "GOIP",
       "电信网络诈骗",
       "未授权设备接入",
       "两部手机一条线",
       "诈骗窝点",
-      "长治市",
+      "宁远县",
       "非法获利",
       "电话卡"
     ],
-    "summary": "2025年2月，长治市公安网侦支队联合长子县公安局，在长子县辖区端掉一个协助境外诈骗团伙架设GOIP设备的窝点。吴某宇等3人使用“两部手机一条线”模式私自搭建GOIP设备，为电信网络诈骗提供帮助，现场扣押19部手机和300余张电话卡，3人非法获利8万余元。",
-    "category": "criminal_verdict",
+    "summary": "2025年7月，湖南宁远警方根据线索查处一起利用GOIP设备为诈骗分子转接电话、发送短信的案件。民警先抓获陈某军并查获电话卡4张，随后在县城某宾馆房间抓获正在运行GOIP设备的周某文、袁某祥。三人因涉嫌帮助信息网络犯罪活动罪被依法采取刑事强制措施，案件仍在进一步办理。",
+    "category": "news_report",
     "relatedRisks": [
-      "R0132"
+      "R0290"
     ],
     "references": [
       {
-        "title": "架设“GOIP”设备实施诈骗,3人被抓!——山西长安网",
-        "link": "https://pingan.gov.cn/article/e9e12318409f4bb7a719789c66bde118"
+        "title": "非法架设GOIP设备，3人被抓！ - 湖南长安网",
+        "link": "https://www.hnzf.gov.cn/content/646942/97/15180805.html"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-02",
+    "updated": "2026-07-10",
+    "incidentTime": "2025-07",
     "relatedAttackTools": [
-      "AT0004"
+      "AT0099"
     ],
     "relatedThreatActors": []
   }

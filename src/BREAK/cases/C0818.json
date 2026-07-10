@@ -12,7 +12,7 @@
       "内部威胁",
       "恶意破坏"
     ],
-    "summary": "北京法院裁判文书显示，金某某因对工作安排不满，多次对公司可视化项目程序数据库中的数据进行删除、修改，导致系统无法正常产出项目质量评估数据，造成严重后果。法院以破坏计算机信息系统罪判处金某某有期徒刑九个月，缓刑一年。",
+    "summary": "北京法院裁判文书及公开报道显示，百度一员工因项目被人接手心生不满，故意删改数据库，被法院认定构成破坏计算机信息系统罪并判刑。该案体现内部人员恶意删改业务数据可能破坏系统运行，造成企业管理、服务稳定和数据完整性风险。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0082"
@@ -21,10 +21,18 @@
       {
         "title": "金某某破坏计算机信息系统罪二审刑事裁定书",
         "link": "https://www.bjcourt.gov.cn/cpws/paperView.htm?id=d9b9eef791a44e1798920d1a896c419e&n=1"
+      },
+      {
+        "title": "因项目被人接手，百度一96年员工对领导心生不满，故意删改数据库被判刑 - 新浪科技",
+        "link": "https://finance.sina.com.cn/tech/2022-06-08/doc-imizmscu5778438.shtml"
+      },
+      {
+        "title": "百度一员工心生不满“删库”被判刑，法院：构成破坏计算机信息系统罪 - 腾讯新闻转载红星新闻",
+        "link": "https://news.qq.com/rain/a/20220608A0BZCQ00"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2022-06",
+    "updated": "2026-07-10",
+    "incidentTime": "2020-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

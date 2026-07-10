@@ -12,10 +12,10 @@
       "网络管理员",
       "身份验证"
     ],
-    "summary": "美国网络安全与基础设施安全局（CISA）发布警报，确认一起网络攻击事件中，不明威胁行为者利用一名前员工的账号，成功获取了网络管理员凭据，进而通过内部VPN访问点进行身份验证，横向渗透至受害组织的本地环境。该案例揭示了离职员工账号未及时注销或凭据被共享/泄露所导致的严重安全风险。",
+    "summary": "2024年2月，CISA 与 MS-ISAC 发布警报称，某州政府组织因含主机和用户信息的文件被发布到暗网经纪站点而接受事件响应评估。分析确认，不明威胁行为者通过前员工账号攻陷网络管理员凭据，并借此认证到内部 VPN 访问点，继续访问受害组织本地环境并执行 LDAP 查询；调查未发现其从本地环境横向移动到 Azure 环境。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0111-001"
+      "R0083-001"
     ],
     "references": [
       {
@@ -23,7 +23,7 @@
         "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-046a"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2024-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []

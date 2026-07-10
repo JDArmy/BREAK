@@ -186,6 +186,8 @@ The 2026-07-10 P1 reference-quality pass further replaces or adds authoritative 
 
 The 2026-07-10 AI data-poisoning relationship review corrects AT0108's direct causal relationship to R0273, removes unrelated avoidance and TA0058 Case / Risk attributions, and aligns TA0058's description across training, feedback, and retrieval knowledge pipelines; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The follow-up 2026-07-10 Case P2 fact-review maintenance strengthens crawlable sources, `summary`, `incidentTime`, and English translations for C1056, C1060, C1064, C1067, C1069, C1077, C1100, C1102, and related cases; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph

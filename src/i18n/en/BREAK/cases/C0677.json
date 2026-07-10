@@ -13,7 +13,7 @@
       "hardcoded credentials",
       "frontend source code leak"
     ],
-    "summary": "In May 2024, a security researcher published a penetration-testing case in which leaked frontend js.map files were used to recover Vue source code. Further API analysis revealed access to Alibaba Cloud OSS-related sensitive information. By using a temporary STS token, the researcher took control of multiple object storage buckets, could create, read, update, and delete files, and found server backups, databases, logs, and other sensitive files in the buckets. The case shows how frontend source exposure can escalate into cloud storage takeover.",
+    "summary": "A security researcher published a penetration-testing case in which leaked frontend js.map files were used to recover Vue source code. API analysis then exposed Alibaba Cloud OSS AccessKey data and a temporary STS token, allowing control of multiple object storage buckets, file operations, and discovery of server backups, databases, and logs. The case shows that source-map exposure can further reveal cloud storage permissions and escalate into cloud resource takeover risk.",
     "references": [
       {
         "title": "From JS Map Leak to OSS Bucket Takeover - sqlsec.com",

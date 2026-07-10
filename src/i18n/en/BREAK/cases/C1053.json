@@ -11,8 +11,12 @@
       "mobile device security",
       "physical attack vector"
     ],
-    "summary": "This study examines the risk of unauthorized physical access to smartphones by insiders such as family members or close acquaintances. Attackers exploit physical contact with the device to bypass lock screens or leverage established trust relationships, directly obtaining sensitive data and posing a significant information security threat.",
+    "summary": "The MobileHCI 2013 paper Know Your Enemy studies unauthorized access to smartphones by insiders. Based on interviews with 22 participants and a survey of 724 users, the authors found that users are generally concerned about insiders such as friends accessing sensitive data on smartphones, including SMS messages, photos, and email, and concluded that insider threat is a real problem affecting smartphone users.",
     "references": [
+      {
+        "title": "Know Your Enemy: The Risk of Unauthorized Access in Smartphones by Insiders - MobileHCI 2013",
+        "link": "https://mobilehci2013.org/program/247.php"
+      },
       {
         "title": "Know your enemy: the risk of unauthorized access in smartphones by insiders",
         "link": "https://dl.acm.org/doi/abs/10.1145/2493190.2493223"
