@@ -168,6 +168,10 @@ The 2026-07-09 Case P2 fact-review maintenance only strengthens or narrows Case 
 
 The second 2026-07-09 Case P2 fact-review checkpoint continues narrowing C0249, C0310, C0401, C0588, C0595, C0635, C0687, C0697, C0705, C0715, C0753, C0755, C0766, C0796, C0797, C0803, C0805, C0819, C0821, C0833, and C0948 `summary`, `incidentTime`, `references`, and English translations; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The 2026-07-10 C0354 reference strengthening only restores a primary court source usable for fact review and syncs the English translation; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
+The 2026-07-10 C0354 maintenance adds a court-system source and changes the Case category to security incident to better match the facts; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph
