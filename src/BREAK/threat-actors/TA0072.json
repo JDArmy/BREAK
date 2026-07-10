@@ -1,0 +1,77 @@
+{
+  "TA0072": {
+    "title": "通信资源滥用服务商",
+    "keywords": [
+      "通信资源滥用服务商",
+      "短信轰炸平台运营者",
+      "呼死你平台",
+      "恶意云呼服务商",
+      "黑卡渠道商",
+      "通信轰炸服务"
+    ],
+    "description": "建设或运营短信轰炸、恶意云呼、批量接码、黑卡分发等服务，为骚扰、催收、电诈、引流和账号滥用提供通信资源的个人或团伙。其通常整合猫池、未实名或冒名电话卡、短信接口、语音专线和自动呼叫平台，将高频呼叫与消息发送能力封装为可购买的黑灰产服务，并通过更换号码、通道和落地线路规避运营商封堵。该角色侧重通信基础设施和服务供给，区别于具体执行诈骗话术的电诈团伙。",
+    "references": [
+      {
+        "title": "广东破获“恶意连续呼叫”案",
+        "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c6150938/content.html"
+      },
+      {
+        "title": "关于依法清理整治涉诈电话卡、物联网卡以及关联互联网账号的通告",
+        "link": "https://news.cpd.com.cn/n3559/824/t_1148717.html"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0004",
+      "AT0006"
+    ],
+    "useAttackTools": [
+      "AT0001-002",
+      "AT0001-003",
+      "AT0004",
+      "AT0006",
+      "AT0053-007"
+    ],
+    "directCauseRisks": [
+      "R0129",
+      "R0290"
+    ],
+    "indirectSupportRisks": [
+      "R0066",
+      "R0032"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0003",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0008",
+        "relation": "co-involved",
+        "note": "共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同建设 2 个攻击工具。"
+      },
+      {
+        "key": "TA0029",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0059",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      }
+    ],
+    "updated": "2026-07-10",
+    "version": 1
+  }
+}

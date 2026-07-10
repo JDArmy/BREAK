@@ -20,7 +20,8 @@
     "directCauseRisks": [
       "R0248",
       "R0032",
-      "R0078"
+      "R0078",
+      "R0084-004"
     ],
     "indirectSupportRisks": [
       "R0051",
@@ -31,7 +32,7 @@
       "移动应用仿冒团伙",
       "移动应用仿冒"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0062",
@@ -63,6 +64,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 2 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

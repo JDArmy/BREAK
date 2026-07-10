@@ -17,7 +17,9 @@
     "directCauseRisks": [
       "R0078",
       "R0067",
-      "R0209"
+      "R0209",
+      "R0085-001",
+      "R0085-002"
     ],
     "indirectSupportRisks": [
       "R0083",
@@ -78,6 +80,7 @@
         "link": "https://attack.mitre.org/techniques/T1486/"
       }
     ],
-    "updated": "2026-06-26"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

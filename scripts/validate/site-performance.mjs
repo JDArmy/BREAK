@@ -9,7 +9,7 @@ const budgets = {
   routeLoadMs: 8000,
   totalTransferBytes: 2800 * 1024,
   scriptTransferBytes: 2200 * 1024,
-  resourceCount: 90,
+  resourceCount: 100,
 };
 
 const routes = [

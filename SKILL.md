@@ -8,17 +8,17 @@ allowed-tools: Bash
 
 # BREAK 知识库 Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3379 条业务安全风险知识条目，涵盖以下实体类型：
+BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3386 条业务安全风险知识条目，涵盖以下实体类型：
 
-| 类型 | 数量 | ID 格式 | 说明 |
-|------|------|---------|------|
-| Risk（风险） | 400 | R0001, R0001-001 | 业务安全风险定义和影响 |
-| Avoidance（规避手段） | 350 | A0001, A0001-001 | 应对风险的防御措施 |
-| AttackTool（攻击工具） | 124 | AT0001, AT0001-001 | 黑灰产使用的工具 |
-| ThreatActor（威胁行为者） | 76 | TA0001, TA0001-001 | 实施攻击的人群 |
-| Term（术语） | 628 | T0001 | 业务安全领域术语 |
-| Case（案例） | 1781 | C0001 | 真实的安全事件案例 |
-| BusinessDomain（业务域） | 20 | BD00 | 行业/业务域分类 |
+| 类型                      | 数量 | ID 格式            | 说明                   |
+| ------------------------- | ---- | ------------------ | ---------------------- |
+| Risk（风险）              | 400  | R0001, R0001-001   | 业务安全风险定义和影响 |
+| Avoidance（规避手段）     | 350  | A0001, A0001-001   | 应对风险的防御措施     |
+| AttackTool（攻击工具）    | 124  | AT0001, AT0001-001 | 黑灰产使用的工具       |
+| ThreatActor（威胁行为者） | 83   | TA0001, TA0001-001 | 实施攻击的人群         |
+| Term（术语）              | 628  | T0001              | 业务安全领域术语       |
+| Case（案例）              | 1781 | C0001              | 真实的安全事件案例     |
+| BusinessDomain（业务域）  | 20   | BD00               | 行业/业务域分类        |
 
 维护说明：本 Skill 的调用方式保持不变，实体统计与知识库案例事实、来源质量及数据关系补强同步更新。
 
@@ -36,13 +36,13 @@ node <skill_dir>/break_search.mjs "<query>" [options]
 
 ### 参数说明
 
-| 参数 | 说明 |
-|------|------|
-| `<query>` | 必填。搜索关键词、实体 ID 或安全问题描述 |
-| `--lang zh\|en` | 语言。默认自动检测：含中文字符→zh，否则→en |
+| 参数             | 说明                                                                                 |
+| ---------------- | ------------------------------------------------------------------------------------ |
+| `<query>`        | 必填。搜索关键词、实体 ID 或安全问题描述                                             |
+| `--lang zh\|en`  | 语言。默认自动检测：含中文字符→zh，否则→en                                           |
 | `--type <types>` | 逗号分隔的实体类型过滤（risks, avoidances, attackTools, threatActors, terms, cases） |
-| `--limit N` | 每类型最大返回数，默认 5 |
-| `--detail` | 详细模式，显示完整字段和关联关系 |
+| `--limit N`      | 每类型最大返回数，默认 5                                                             |
+| `--detail`       | 详细模式，显示完整字段和关联关系                                                     |
 
 ## 工作流程
 
@@ -59,6 +59,7 @@ node <skill_dir>/break_search.mjs "<query>" [options]
 #### ID 查询
 
 直接执行：
+
 ```bash
 node <skill_dir>/break_search.mjs "<ID>" --lang zh
 ```
@@ -72,6 +73,7 @@ node <skill_dir>/break_search.mjs "<关键词>" --lang zh
 ```
 
 如需限定范围：
+
 ```bash
 node <skill_dir>/break_search.mjs "<关键词>" --type risks,avoidances --lang zh
 ```
@@ -85,6 +87,7 @@ node <skill_dir>/break_search.mjs "<关键词>" --type risks,avoidances --lang z
 **步骤 1：提取关键词**
 
 从用户问题中提取 1~3 组搜索关键词。例如：
+
 - "我们公司网站被爬虫爬了" → 关键词："爬虫"、"数据爬取"、"反爬"
 - "用户账号总是被盗" → 关键词："账号盗用"、"撞库"、"凭证填充"
 - "有人在我们平台薅羊毛" → 关键词："薅羊毛"、"营销欺诈"、"黑产"
@@ -158,6 +161,8 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 当 `scripts/skill/` 搜索 / 打包脚本、导出的中英文数据包、实体字段 / 关系结构、Skill 调用参数或搜索结果格式发生变化时，必须同步更新 `SKILL.md` 与 `SKILL_en.md`。`npm run validate:docs-freshness` 已接入 `npm run validate:data`，会在相关变更缺少 Skill 文档更新时阻断。
 
 数据治理改动也会影响 Skill 检索结果。修复 Case 的 `references` / `summary` 事实核验问题或调整 Risk 的 `avoidances` 关系时，应同步维护英文翻译文件，并确保前两条 Case references 尽量指向可抓取正文的稳定页面，避免 Skill 返回的案例事实无法被复核。
+
+2026-07-10 的 ThreatActor 覆盖治理新增物流套利、恶意物流从业者、市场操纵、恶意量化交易、AI 智能体攻击、平台规则滥用经营和通信资源滥用服务角色，并用 `audit:risk-threat-actor-coverage` 区分待补关系与明确豁免风险；不改变 Skill 调用参数、搜索字段或返回格式。
 
 2026-07-10 的实体粒度复核清理了 R0285 的无关 Term 关系及 R0159 的重复 Avoidance 引用；该维护不改变 Skill 调用参数、搜索字段、返回格式或实体结构。
 

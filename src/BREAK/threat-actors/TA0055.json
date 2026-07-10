@@ -28,8 +28,12 @@
     ],
     "directCauseRisks": [
       "R0017-003",
+      "R0055-004",
       "R0235",
-      "R0139"
+      "R0139",
+      "R0137",
+      "R0138",
+      "R0279"
     ],
     "indirectSupportRisks": [
       "R0060",
@@ -71,6 +75,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

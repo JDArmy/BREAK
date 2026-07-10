@@ -19,7 +19,8 @@
       "R0166",
       "R0181",
       "R0182",
-      "R0189"
+      "R0189",
+      "R0213"
     ],
     "indirectSupportRisks": [
       "R0178",
@@ -28,16 +29,12 @@
     ],
     "references": [
       {
-        "title": "Mirai Botnet source code",
-        "link": "https://github.com/jgamblin/Mirai-Source-Code"
+        "title": "USENIX Security：理解 Mirai 僵尸网络",
+        "link": "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/antonakakis"
       },
       {
-        "title": "CISA Securing IoT Devices",
-        "link": "https://www.cisa.gov/news-events/news/securing-internet-things-iot"
-      },
-      {
-        "title": "ENISA Baseline Security Recommendations for IoT",
-        "link": "https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot"
+        "title": "USENIX Security：物联网恶意软件生命周期大规模研究",
+        "link": "https://www.usenix.org/conference/usenixsecurity21/presentation/alrawi"
       }
     ],
     "keywords": [
@@ -47,7 +44,7 @@
       "设备劫持团伙",
       "IoT恶意软件运营者"
     ],
-    "updated": "2026-06-23",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0049",
@@ -79,6 +76,7 @@
         "relation": "co-involved",
         "note": "共同使用 2 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

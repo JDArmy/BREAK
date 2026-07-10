@@ -4,8 +4,12 @@
     "description": "In the gray/black market, scraping gangs are individuals or organizations specializing in writing and deploying web crawlers to scrape not only web data but also app data. Their goal is to obtain large amounts of data through automated programs simulating human behavior, which may include sensitive information, user personal data, or other confidential content for illegal purposes.",
     "references": [
       {
-        "title": "2024 H1 Internet Black-Grey Industry Research Report",
-        "link": "https://www.163.com/dy/article/J7CL1BGM0518STKV.html"
+        "title": "OWASP OAT-011: Scraping as an Automated Threat",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping"
+      },
+      {
+        "title": "USENIX: Impact of Bots on eCommerce and Bot Detection Methods",
+        "link": "https://www.usenix.org/conference/scainet18/presentation/reddy"
       }
     ],
     "keywords": [

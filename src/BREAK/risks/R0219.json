@@ -4,12 +4,7 @@
     "definition": "3D虚拟内容、实时语音互动等新形态内容难以自动化审核，违规内容（色情、暴力、欺诈等）传播风险增加。",
     "complexity": "intermediate",
     "influence": "平台合规风险和用户体验受损",
-    "avoidances": [
-      "A0006",
-      "A0192",
-      "A0044",
-      "A0088"
-    ],
+    "avoidances": ["A0006", "A0192", "A0044", "A0088"],
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -65,7 +60,7 @@
       {
         "key": "R0221",
         "relation": "co-occurrence",
-        "note": "元宇宙内容审核挑战与跨虚实身份关联攻击同属“虚拟身份、XR与沉浸式内容安全”风险场景。"
+        "note": "元宇宙内容审核挑战与跨虚实身份关联攻击均可被威胁行为者“元宇宙/XR黑产团伙”实施。"
       },
       {
         "key": "R0020",

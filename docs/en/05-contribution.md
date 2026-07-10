@@ -62,6 +62,8 @@ When changing business-domain classification validation, also document the maint
 
 As of 2026-07-10, when adding or adjusting Risk / Avoidance entries that affect business-domain classification, also check the corresponding `riskScenes[*].risks` in `src/BREAK/business-domains/*.json` so directly relevant industry scenes or physical-consequence scenes are not missed. If relation-array changes affect derived Avoidance / AttackTool / ThreatActor lateral relations, run `npm run sync:lateral-relations` before committing. When the change only updates entity data and scene classification without changing the maintenance workflow, syncing README / Skill counts and this note is sufficient.
 
+Run `npm run audit:risk-threat-actor-coverage` for a non-blocking Risk-ThreatActor coverage audit. Risks without a meaningful malicious actor, such as compliance, technology-evolution, and functional-safety risks, must record a specific reason in `scripts/validate/risk-threat-actor-coverage-exemptions.json`; other uncovered Risks belong in the relationship-backfill or ThreatActor-creation queue. Do not attach broad actors such as "malicious user" or "malicious hacker" merely to increase coverage.
+
 Entity IDs and automatically matched industry terms share `EntityPopoverContent` for summaries. Keep the combined definition and supplementary description to at most five visible lines so long text does not obscure page content or overflow mobile viewports.
 
 Typical changes that require updating `README.md` and `README_CN.md` include: public commands, build / release gates, CI workflows, data exports, STIX / JSON-LD / npm data package outputs, schema documentation, entity types, or basic project information.
@@ -107,6 +109,7 @@ npm run review:changed             # run B+C review on changed entities
 npm run sync:lateral-relations     # recompute Avoidance/AttackTool/ThreatActor lateral relations
 npm run sync:risk-assessment       # recompute Risk assessment priority
 npm run audit:risk-case-coverage   # audit Risk-Case coverage (non-blocking)
+npm run audit:risk-threat-actor-coverage # audit Risk-ThreatActor coverage and exemptions (non-blocking)
 npm run audit:admission            # admission-standard patrol (report only, non-blocking)
 npm run build                      # full release gate (lint→validate→test→export→build→package→audit)
 ```

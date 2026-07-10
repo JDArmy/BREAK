@@ -4,8 +4,12 @@
     "description": "利用云密钥、过度授权和配置错误访问云资源或挖掘数据价值的攻击者。",
     "references": [
       {
-        "title": "Cloud Breach: Compromising AWS IAM Credentials - Rhino Security Labs",
-        "link": "https://rhinosecuritylabs.com/aws/aws-iam-credentials-get-compromised/"
+        "title": "Unit 42：云计算凭据失陷案例研究",
+        "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/"
+      },
+      {
+        "title": "Google Cloud 威胁报告：挖矿、勒索软件与 APT 瞄准云环境",
+        "link": "https://cloud.google.com/blog/products/identity-security/coin-mining-ransomware-apts-target-cloud-gcat-report"
       }
     ],
     "buildAttackTools": [],
@@ -14,8 +18,10 @@
       "AT0054-005"
     ],
     "directCauseRisks": [
+      "R0069-002",
       "R0230",
       "R0231",
+      "R0250",
       "R0254"
     ],
     "indirectSupportRisks": [
@@ -25,13 +31,19 @@
       "云资源滥用者",
       "云资源滥用"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
+      {
+        "key": "TA0010",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
+      },
       {
         "key": "TA0063",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

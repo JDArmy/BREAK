@@ -1,0 +1,20 @@
+{
+  "TA0071": {
+    "title": "Abusive Platform Rule Operator",
+    "keywords": [
+      "abusive platform rule operator",
+      "noncompliant platform operator",
+      "platform monopoly operator",
+      "algorithmic discrimination operator",
+      "personalized price discrimination",
+      "platform self-preferencing"
+    ],
+    "description": "A platform operator that deliberately uses rule-setting authority, data advantages, algorithmic control, or market dominance to conduct unfair business practices. Typical conduct includes opaque personalized pricing based on user profiles, forcing merchants into exclusive arrangements, favoring self-operated services in rankings or traffic allocation, restricting competitor access, and embedding exclusionary arrangements in algorithms or API rules. The admission boundary is intentional design or continued operation of abusive mechanisms, excluding ordinary organizations whose compliance gaps arise only from general management failures.",
+    "references": [
+      {
+        "title": "Anti-Monopoly Guidelines of the Anti-Monopoly Commission of the State Council for the Platform Economy",
+        "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fldj/art/2023/art_0b23a7253cc94eefb469f4b55ecfb251.html"
+      }
+    ]
+  }
+}

@@ -5,12 +5,7 @@
     "description": "Gas费决定了交易在区块中的优先级。攻击者可通过：设置极高Gas费抢先执行交易（Front-running）、发送大量低Gas交易堵塞网络、利用Gas价格波动进行套利、操纵Gas拍卖机制等方式，使普通用户交易延迟或失败，或强迫用户支付更高手续费。",
     "complexity": "advanced",
     "influence": "用户交易成本飙升，网络拥堵瘫痪，交易顺序被恶意操纵。",
-    "avoidances": [
-      "A0177-001",
-      "A0129",
-      "A0130",
-      "A0177"
-    ],
+    "avoidances": ["A0177-001", "A0129", "A0130", "A0177"],
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",
@@ -79,11 +74,7 @@
     "definition": "矿工或验证者利用交易排序权，通过Gas费竞价抢跑用户交易，或与套利机器人串谋获取MEV收益。",
     "complexity": "advanced",
     "influence": "DeFi用户交易滑点增大，利益受损",
-    "avoidances": [
-      "A0177",
-      "A0177-001",
-      "A0130"
-    ],
+    "avoidances": ["A0177", "A0177-001", "A0130"],
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -134,7 +125,7 @@
       {
         "key": "R0159",
         "relation": "co-occurrence",
-        "note": "Gas费操纵与抢跑与智能合约漏洞均受攻击工具“DeFi攻击脚本”间接支持。"
+        "note": "Gas费操纵与抢跑与智能合约漏洞均可被威胁行为者“DeFi协议攻击者”实施。"
       },
       {
         "key": "R0160",
@@ -149,7 +140,7 @@
       {
         "key": "R0176",
         "relation": "co-occurrence",
-        "note": "Gas费操纵与抢跑与时间戳依赖攻击同属“智能合约与DeFi安全”风险场景。"
+        "note": "Gas费操纵与抢跑与时间戳依赖攻击均可被威胁行为者“DeFi协议攻击者”实施。"
       }
     ]
   }

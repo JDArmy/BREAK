@@ -4,8 +4,12 @@
     "description": "在黑灰产领域，爬虫开发者专门从事编写和部署网络爬虫的个体或组织，不仅局限于网页数据，还包括APP数据的抓取。这些开发者的目标通常是通过自动化程序模拟人类行为，获取大量的数据，其中可能包括敏感信息、用户个人数据或其他机密内容，以用于各种不法目的。爬虫开发者可能通过欺骗性手段绕过网站或应用的安全措施，迅速而大规模地抓取目标数据。",
     "references": [
       {
-        "title": "2024年上半年互联网黑灰产研究报告",
-        "link": "https://www.163.com/dy/article/J7CL1BGM0518STKV.html"
+        "title": "OWASP OAT-011：自动化抓取威胁",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping"
+      },
+      {
+        "title": "USENIX：机器人对电子商务的影响与检测方法",
+        "link": "https://www.usenix.org/conference/scainet18/presentation/reddy"
       }
     ],
     "buildAttackTools": [
@@ -37,6 +41,10 @@
       "R0001-001",
       "R0001-002",
       "R0027",
+      "R0027-002",
+      "R0027-003",
+      "R0027-004",
+      "R0027-005",
       "R0030",
       "R0030-001",
       "R0030-002",
@@ -67,7 +75,7 @@
       "R0051-002",
       "R0001-003"
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-10",
     "keywords": [
       "爬虫团伙",
       "数据爬虫团伙",
@@ -107,6 +115,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 9 个风险，共同建设 1 个攻击工具，共同使用 5 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

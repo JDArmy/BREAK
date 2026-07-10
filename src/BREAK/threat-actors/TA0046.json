@@ -14,7 +14,8 @@
       "R0186",
       "R0187",
       "R0188",
-      "R0175"
+      "R0175",
+      "R0173-001"
     ],
     "indirectSupportRisks": [
       "R0173"
@@ -41,13 +42,14 @@
       "共识攻击者",
       "P2P网络攻击者"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0045",
         "relation": "co-involved",
-        "note": "共同直接造成 1 个风险。"
+        "note": "共同直接造成 2 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

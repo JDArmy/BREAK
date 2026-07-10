@@ -62,6 +62,8 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 
 2026-07-10 起，新增或调整 Risk / Avoidance 并影响业务域归类时，需要同步检查 `src/BREAK/business-domains/*.json` 中对应 `riskScenes[*].risks`，避免遗漏直接对应的行业场景或物理后果场景；若关系数组变化影响 Avoidance / AttackTool / ThreatActor 横向关系，应在提交前运行 `npm run sync:lateral-relations`。仅补充实体数据和场景归类、不改变维护流程时，同步 README / Skill 统计与本文说明即可。
 
+Risk-ThreatActor 覆盖通过 `npm run audit:risk-threat-actor-coverage` 做非阻断审计。合规、技术演进和功能安全等没有明确攻击主体的 Risk，应在 `scripts/validate/risk-threat-actor-coverage-exemptions.json` 中登记具体理由；其他未覆盖 Risk 进入关系补全或 ThreatActor 建设清单。不要为了提高覆盖率把此类风险强行关联到“恶意用户”或“恶意黑客”等泛角色。
+
 实体 ID 与正文行业术语共用 `EntityPopoverContent` 展示摘要。维护该组件时，定义与补充描述合计最多显示 5 行，避免长文本遮挡正文或超出移动端视口。
 
 需要推动 `README.md` 与 `README_CN.md` 更新的典型变更包括：公共命令、构建 / 发布门禁、CI 工作流、数据导出、STIX / JSON-LD / npm 数据包、Schema 文档、实体类型或基础信息。
@@ -107,6 +109,7 @@ npm run review:changed             # 变更实体跑 B+C 类评审
 npm run sync:lateral-relations     # 重算 Avoidance/AttackTool/ThreatActor 横向关系
 npm run sync:risk-assessment       # 重算 Risk 风险分级 priority
 npm run audit:risk-case-coverage   # 审计 Risk-Case 覆盖（非阻断）
+npm run audit:risk-threat-actor-coverage # 审计 Risk-ThreatActor 覆盖与豁免（非阻断）
 npm run audit:admission            # 准入标准巡检（仅报告不阻断）
 npm run build                      # 完整发布门禁（lint→校验→测试→导出→构建→打包→审计）
 ```

@@ -4,12 +4,7 @@
     "definition": "攻击者利用VR/AR头显、手柄等XR设备的固件漏洞，实现设备控制、数据窃取或植入恶意代码。",
     "complexity": "advanced",
     "influence": "XR设备权限高，可获取敏感传感器数据",
-    "avoidances": [
-      "A0110-001",
-      "A0110",
-      "A0111",
-      "A0112"
-    ],
+    "avoidances": ["A0110-001", "A0110", "A0111", "A0112"],
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",
@@ -75,7 +70,7 @@
       {
         "key": "R0218",
         "relation": "co-occurrence",
-        "note": "XR设备固件攻击与空间计算隐私泄露同属“虚拟身份、XR与沉浸式内容安全”风险场景。"
+        "note": "XR设备固件攻击与空间计算隐私泄露均可被威胁行为者“元宇宙/XR黑产团伙”实施。"
       }
     ]
   }

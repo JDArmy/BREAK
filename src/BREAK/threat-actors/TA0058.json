@@ -24,7 +24,10 @@
       "AT0104"
     ],
     "directCauseRisks": [
-      "R0243"
+      "R0243",
+      "R0071-005",
+      "R0273",
+      "R0291"
     ],
     "indirectSupportRisks": [
       "R0117",
@@ -37,6 +40,11 @@
     ],
     "updated": "2026-07-10",
     "relatedThreatActors": [
+      {
+        "key": "TA0070",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
+      },
       {
         "key": "TA0001-001",
         "relation": "co-involved",
@@ -61,12 +69,8 @@
         "key": "TA0035",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
-      },
-      {
-        "key": "TA0036",
-        "relation": "co-involved",
-        "note": "共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -1,0 +1,33 @@
+{
+  "TA0071": {
+    "title": "平台规则滥用经营者",
+    "keywords": [
+      "平台规则滥用经营者",
+      "违规平台运营者",
+      "平台垄断经营者",
+      "算法歧视运营方",
+      "大数据杀熟平台",
+      "平台自我优待",
+      "差异化定价运营方"
+    ],
+    "description": "主动利用平台规则制定权、数据优势、算法控制力或市场支配地位实施不公平经营行为的平台经营主体。其典型行为包括基于用户画像进行不透明差异化定价，强制商家二选一，对自营业务实施流量或排序优待，限制竞争对手接入，以及以算法和接口规则固化排他安排。该角色以蓄意设计或持续运营滥用机制为准入边界，不包括仅因一般管理疏忽产生合规缺口的普通企业。",
+    "references": [
+      {
+        "title": "国务院反垄断委员会关于平台经济领域的反垄断指南",
+        "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fldj/art/2023/art_0b23a7253cc94eefb469f4b55ecfb251.html"
+      }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [],
+    "directCauseRisks": [
+      "R0134",
+      "R0135"
+    ],
+    "indirectSupportRisks": [
+      "R0058"
+    ],
+    "relatedThreatActors": [],
+    "updated": "2026-07-10",
+    "version": 1
+  }
+}

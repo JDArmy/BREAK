@@ -1,0 +1,50 @@
+{
+  "TA0068": {
+    "title": "Logistics Arbitrage Group",
+    "keywords": [
+      "logistics arbitrage group",
+      "logistics fee fraud group",
+      "freight arbitrage group",
+      "delivery subsidy abuse",
+      "logistics gray market",
+      "freight fraud group"
+    ],
+    "description": "A logistics arbitrage group is an organized illicit actor that profits from rules governing express delivery, on-demand delivery, digital freight platforms, and platform after-sales services. Such groups use bulk accounts, fictitious orders, order splitting or consolidation, unsolicited cash-on-delivery parcels, account misuse, forged logistics evidence, or freight-rate discrepancies to obtain payments, compensation, freight fees, pickup and delivery fees, subsidies, and settlement differences. They may recruit fake customers, couriers, drivers, or merchants into a divided operational chain.\n\nThese groups typically understand platform settlement rules and control weaknesses and can repeat their schemes across accounts, addresses, service stations, and carrier resources. When a scheme requires access to routing, weighing, trip, or transfer records, they may recruit logistics workers to supply internal accounts, fabricate events, or process false transactions, indirectly amplifying insider fee fraud, capacity misreporting, and billing-data manipulation.",
+    "references": [
+      {
+        "title": "Case of Mass-Mailed Cash-on-Delivery Empty Parcels Used to Defraud Delivery Fees - Supreme People's Procuratorate",
+        "link": "https://www.spp.gov.cn/spp/zdgz/202401/t20240109_639690.shtml"
+      },
+      {
+        "title": "Over RMB 3 Million Obtained Through Return-Shipping Insurance Fraud - Jiangsu Procuratorate",
+        "link": "https://sqhzh.jsjc.gov.cn/tslm/fzsh/202505/t20250521_1147247.shtml"
+      }
+    ]
+  },
+  "TA0068-001": {
+    "title": "Malicious Logistics Worker",
+    "keywords": [
+      "malicious logistics worker",
+      "logistics insider",
+      "malicious courier",
+      "malicious freight driver",
+      "complicit logistics station",
+      "logistics employee embezzlement"
+    ],
+    "description": "A malicious logistics worker is a courier, freight driver, service-station employee, dispatcher, logistics salesperson, or contracted carrier who abuses job privileges, operational knowledge, or access to internal systems for fraud and fee manipulation. Such actors can fabricate or alter pickup, weighing, routing, transfer, vehicle type, trip, attendance, and settlement records to split heavy shipments into small parcels, understate or overstate weight, create empty trips, forge transfers, exploit accounting-period boundaries, or misreport full-truckload capacity.\n\nThis actor may independently exploit weak controls to misappropriate company funds or collude with external logistics arbitrage groups, merchants, or partner stations by providing internal accounts, shipment-entry access, false tracking events, and improper settlement channels. The defining feature is abuse of permissions and process knowledge legitimately required for the job, making fabricated records appear consistent with normal operational flows and harder to detect from a single order or event.",
+    "references": [
+      {
+        "title": "Case of Using a Borrowed Courier Identity to Profit from Freight Differences - Jiangsu Procuratorate",
+        "link": "https://www.jsjc.gov.cn/jczt/jcpf/202402/t20240206_184739.shtml"
+      },
+      {
+        "title": "Case of a Logistics Employee Defrauding Freight Payments Through Empty Trips - Legal Daily",
+        "link": "https://www.legaldaily.com.cn/index_article/content/2025-03/20/content_9152890.html"
+      },
+      {
+        "title": "Case of a Logistics Salesperson Profiting from Account-Linked Orders and Brokerage Fees - Procuratorate Daily",
+        "link": "http://news.jcrb.com/jsxw/2025/202508/t20250825_7108077.html"
+      }
+    ]
+  }
+}

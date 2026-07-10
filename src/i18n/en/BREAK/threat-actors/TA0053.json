@@ -4,8 +4,12 @@
     "description": "Attackers who use cloud keys, excessive privileges, and misconfiguration to access cloud resources or extract data value.",
     "references": [
       {
-        "title": "Cloud Breach: Compromising AWS IAM Credentials - Rhino Security Labs",
-        "link": "https://rhinosecuritylabs.com/aws/aws-iam-credentials-get-compromised/"
+        "title": "Unit 42: Compromised Cloud Compute Credentials—Case Studies",
+        "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/"
+      },
+      {
+        "title": "Google Cloud Threat Report: Coin Mining, Ransomware, and APTs Target Cloud",
+        "link": "https://cloud.google.com/blog/products/identity-security/coin-mining-ransomware-apts-target-cloud-gcat-report"
       }
     ],
     "keywords": [

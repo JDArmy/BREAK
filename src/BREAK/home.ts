@@ -9,8 +9,8 @@ const entityCounts = {
   subAvoidances: 105,
   attackTools: 124,
   subAttackTools: 39,
-  threatActors: 76,
-  subThreatActors: 14,
+  threatActors: 83,
+  subThreatActors: 16,
   terms: 628,
   cases: 1781,
 } as const;

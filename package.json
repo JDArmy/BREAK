@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.43.0",
+  "version": "2.44.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -86,6 +86,7 @@
     "audit:case-source-quality": "node scripts/validate/case-source-quality.mjs",
     "audit:case-entity-coverage": "node scripts/validate/case-entity-coverage.mjs",
     "audit:risk-case-coverage": "node scripts/validate/risk-case-coverage.mjs",
+    "audit:risk-threat-actor-coverage": "node scripts/validate/risk-threat-actor-coverage.mjs",
     "audit:pending-quality": "node scripts/validate/pending-quality.mjs",
     "audit:case-fact-priority": "node scripts/validate/case-fact-priority.mjs",
     "audit:admission": "node scripts/validate/admission.mjs --audit",

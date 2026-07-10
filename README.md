@@ -14,13 +14,13 @@ JDArmy BREAK stands for **Business Risk Enumeration & Avoidance Knowledge** — 
 
 As information security capabilities increasingly cover business operations and business demands for security deepen, limiting security to the traditional network security domain — merely discovering and patching vulnerabilities — is clearly insufficient to ensure normal business security operations or meet higher business security requirements.
 
-Drawing on years of experience and accumulated understanding of business security, JDArmy introduces BREAK — the *Business Risk Enumeration & Avoidance Knowledge Framework* — to provide guidance and a reference basis for enterprise blue teams conducting business security assessments. The business risk avoidance knowledge in the framework also serves as a guide for building security capabilities, running business security operations, and improving risk control.
+Drawing on years of experience and accumulated understanding of business security, JDArmy introduces BREAK — the _Business Risk Enumeration & Avoidance Knowledge Framework_ — to provide guidance and a reference basis for enterprise blue teams conducting business security assessments. The business risk avoidance knowledge in the framework also serves as a guide for building security capabilities, running business security operations, and improving risk control.
 
 ## Methodology
 
 The framework is organized around **business domains**, **risk dimensions**, **risk scenarios**, and **risk items**. A business domain represents an industry or business area. A risk dimension is a business risk domain that groups risk scenarios into stable areas such as transaction and entitlement, content and ecosystem governance, account and identity, platform/interface automation abuse, data/algorithm/model, virtual assets and emerging technology, device/physical infrastructure, and internal supply-chain compliance. Each risk scenario contains multiple risk items.
 
-The current framework catalogues 400 risk items, 350 avoidance measures, 124 attack tools, 76 threat actors, 628 industry terms, 20 business domains, 4 avoidance categories, and 1781 cases, with ongoing additions, upgrades, and adjustments based on developments and feedback. Each risk item consists of: a risk ID, risk title, risk definition, risk description, risk complexity, risk influence, avoidance measures, references, and associated attack tools. Risk IDs follow the format `R00xx` for unique identification (modeled after MITRE ATT&CK) to facilitate communication and intelligence sharing. Attack descriptions guide blue teams in security capability assessments, while avoidance measures help red teams and business risk control to strengthen security capabilities and reduce business risk.
+The current framework catalogues 400 risk items, 350 avoidance measures, 124 attack tools, 83 threat actors, 628 industry terms, 20 business domains, 4 avoidance categories, and 1781 cases, with ongoing additions, upgrades, and adjustments based on developments and feedback. Each risk item consists of: a risk ID, risk title, risk definition, risk description, risk complexity, risk influence, avoidance measures, references, and associated attack tools. Risk IDs follow the format `R00xx` for unique identification (modeled after MITRE ATT&CK) to facilitate communication and intelligence sharing. Attack descriptions guide blue teams in security capability assessments, while avoidance measures help red teams and business risk control to strengthen security capabilities and reduce business risk.
 
 **Important note:** Business risks and vulnerabilities are not the same thing. Vulnerabilities are generally caused by coding defects and can be fixed by modifying code to remove the defect. Business risks, however, are largely not caused by coding defects — they are unintended exploitations of normal business logic by attackers. As a result, it is usually impossible to completely eliminate business risks; they can only be reduced to an acceptable level. Instead of direct code fixes, business risks typically require added security capabilities and risk control models to slow attacks, reduce attack ROI, and shrink the attack surface.
 
@@ -95,6 +95,7 @@ npm run validate:data
 npm run validate:docs-freshness
 npm run audit:metrics
 npm run audit:references
+npm run audit:risk-threat-actor-coverage
 npm run audit:maintenance
 npm run test
 npm run test:coverage
@@ -141,6 +142,7 @@ npm run type-check
 `npm run test:smoke`, `npm run test:performance`, `npm run test:visual-review`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium. PR CI runs `test:smoke` as a hard-fail browser gate on every pull request. Slower browser regression, visual review, relation stability, and Lighthouse checks run in PR CI only for major/minor version changes, and remain available locally via the same npm scripts. Deploy does not rerun Playwright/Lighthouse.
 `npm run audit:quality-report` regenerates the frontend-consumable quality report JSON.
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business domain coverage baseline.
+`npm run audit:risk-threat-actor-coverage` reports Risk-ThreatActor coverage and separates actionable gaps from explicitly exempt compliance, technology-evolution, and functional-safety risks.
 `npm run audit:bundle` checks the generated `dist/assets` bundle against the current performance budget.
 `npm run audit:maintenance` refreshes the audit reports and writes a unified maintenance summary.
 

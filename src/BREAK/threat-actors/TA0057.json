@@ -13,6 +13,7 @@
       "AT0054-003"
     ],
     "directCauseRisks": [
+      "R0133",
       "R0240",
       "R0241"
     ],
@@ -23,7 +24,7 @@
       "数据经纪与越权使用方",
       "数据经纪与越权使用"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0017",
@@ -45,6 +46,7 @@
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

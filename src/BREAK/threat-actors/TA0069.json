@@ -1,0 +1,161 @@
+{
+  "TA0069": {
+    "title": "市场操纵者",
+    "keywords": [
+      "市场操纵者",
+      "操纵交易者",
+      "证券市场操纵",
+      "期货市场操纵",
+      "盘口操纵",
+      "信息操纵",
+      "Market Manipulator"
+    ],
+    "description": "以获取交易利润、影响价格或误导其他市场参与者为目的，蓄意干预证券、期货、外汇、虚拟资产等交易市场正常价格发现过程的个人或团伙。这类行为者可能通过虚假挂单与快速撤单制造盘口压力，利用关联账户实施对倒或刷量，传播虚假消息和投资叙事吸引跟风资金，操纵榜单、成交量、基准指标与可见流动性，并借助代理网络、身份伪装和跨平台协同隐藏实际控制关系。市场操纵者区别于基于真实供需和公开信息交易的普通投资者，也区别于仅提供宣传服务的网络水军；其核心特征是具有明确交易利益或控制意图，并将交易行为、信息传播或指标污染组合为影响市场价格与交易决策的操纵链路。",
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0021",
+      "AT0050",
+      "AT0053-003",
+      "AT0098"
+    ],
+    "directCauseRisks": [
+      "R0280",
+      "R0282",
+      "R0283",
+      "R0284",
+      "R0285",
+      "R0286"
+    ],
+    "indirectSupportRisks": [
+      "R0281",
+      "R0287"
+    ],
+    "references": [
+      {
+        "title": "CFTC Interpretive Guidance and Policy Statement on Disruptive Trading Practices",
+        "link": "https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2013-12440.html"
+      },
+      {
+        "title": "SEC Charges Eight Social Media Influencers in $100 Million Stock Manipulation Scheme",
+        "link": "https://www.sec.gov/newsroom/press-releases/2022-221"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0069-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0008",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0009",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0010",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0012",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ],
+    "updated": "2026-07-10",
+    "version": 1
+  },
+  "TA0069-001": {
+    "title": "恶意量化交易者",
+    "keywords": [
+      "恶意量化交易者",
+      "恶意算法交易者",
+      "量化操纵者",
+      "算法交易操纵",
+      "高频交易操纵",
+      "交易模型诱导",
+      "Malicious Quantitative Trader"
+    ],
+    "description": "利用量化模型、算法交易系统、高频交易基础设施或投资智能体实施市场操纵的专业交易者或技术团伙，是市场操纵者（TA0069）中以自动化和模型能力为主要手段的子类型。他们能够批量生成、修改和撤销订单以制造虚假深度或流动性，构造污染样本、合成信号和异常市场状态诱导其他量化模型，并通过多账户、多场所策略规避反操纵监测。部分行为者还会针对AI投资顾问、研究助手或交易智能体投放恶意数据和隐藏指令，使模型输出错误建议或执行错误交易。其边界不包含正常的量化投资、做市和高频交易，只有在算法被蓄意用于制造虚假市场状态、误导其他参与者或绕过监管时，才属于该威胁行为者。",
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0021",
+      "AT0053-004",
+      "AT0098"
+    ],
+    "directCauseRisks": [
+      "R0280",
+      "R0281",
+      "R0283",
+      "R0285",
+      "R0286"
+    ],
+    "indirectSupportRisks": [
+      "R0282",
+      "R0284",
+      "R0287"
+    ],
+    "references": [
+      {
+        "title": "FINRA Regulatory Notice 15-09: Equity Trading Initiatives - Supervision and Control Practices for Algorithmic Trading Strategies",
+        "link": "https://www.finra.org/rules-guidance/notices/15-09"
+      },
+      {
+        "title": "IOSCO Artificial Intelligence in Capital Markets: Use Cases, Risks, and Challenges",
+        "link": "https://www.iosco.org/library/pubdocs/pdf/IOSCOPD788.pdf"
+      },
+      {
+        "title": "IOSCO Technological Challenges to Effective Market Surveillance Issues and Regulatory Tools",
+        "link": "https://www.iosco.org/library/pubdocs/pdf/ioscopd412.pdf"
+      }
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0069",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0012",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0031",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ],
+    "updated": "2026-07-10",
+    "version": 1
+  }
+}

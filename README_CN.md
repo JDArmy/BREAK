@@ -20,7 +20,7 @@ JDArmy BREAK 是英文 "Business Risk Enumeration & Avoidance Knowledge" 的缩�
 
 框架整体按照：业务域、风险维度、风险场景、风险点的划分原则组织。业务域对应行业或业务范围；风险维度是业务风险域，用于把风险场景归入交易与权益、内容与生态治理、账号与身份、平台接口与自动化对抗、数据算法与模型、虚拟资产与新兴技术、设备物理与基础设施、内部供应链与合规等稳定分组；每个风险场景包含若干风险点。
 
-目前框架共收集和整理风险点 400 个、规避手段 350 个、攻击工具 124 个、威胁行为者 76 个、行业术语 628 个、业务域 20 个、规避手段分类 4 个、案例 1781 个，后续会根据情况和反馈进行动态添加、升级或调整。每个风险点由风险编号、风险标题、风险定义、风险描述、风险复杂度、风险影响、规避手段、参考资料和攻击工具等组成。风险编号通过 R00xx 的方式来进行唯一编号（效仿Mitre ATT&CK），以便后期交流和情报传递。而攻击描述可以指引企业蓝军更好地进行安全能力评估，规避手段可以帮助企业红军或业务风控来加强安全能力建设，以降低业务风险。
+目前框架共收集和整理风险点 400 个、规避手段 350 个、攻击工具 124 个、威胁行为者 83 个、行业术语 628 个、业务域 20 个、规避手段分类 4 个、案例 1781 个，后续会根据情况和反馈进行动态添加、升级或调整。每个风险点由风险编号、风险标题、风险定义、风险描述、风险复杂度、风险影响、规避手段、参考资料和攻击工具等组成。风险编号通过 R00xx 的方式来进行唯一编号（效仿Mitre ATT&CK），以便后期交流和情报传递。而攻击描述可以指引企业蓝军更好地进行安全能力评估，规避手段可以帮助企业红军或业务风控来加强安全能力建设，以降低业务风险。
 
 **主要注意的是：** 业务风险和漏洞不是一回事情。一般来说漏洞是由于业务编码的缺陷导致的，可以通过修改代码去除缺陷来修复漏洞；而业务风险很大程度上并不是由编码缺陷造成的，只是攻击者对正常业务逻辑的一种非预期的利用。也因此，在大部分情况下，并不能完全消除风险，只能将风险降低到一定的可接受范围。所以并不一定可以通过直接修改代码来修复漏洞，通常业务风险需要外挂安全能力、构造风控模型来减缓攻击、降低攻击ROI或缩小攻击面。
 
@@ -95,6 +95,7 @@ npm run validate:data
 npm run validate:docs-freshness
 npm run audit:metrics
 npm run audit:references
+npm run audit:risk-threat-actor-coverage
 npm run audit:maintenance
 npm run test
 npm run test:coverage
@@ -141,6 +142,7 @@ npm run type-check
 `npm run test:smoke`、`npm run test:performance`、`npm run test:visual-review`、`npm run test:relation-stability` 和 `npm run test:lighthouse` 会使用 Playwright/Chromium 验证生成后的静态站点。PR CI 会在每个 PR 中把 `test:smoke` 作为 hard-fail 浏览器门禁执行；较慢的浏览器回归、视觉复核、关系稳定性和 Lighthouse 检查仅在 major/minor 版本变化时进入 PR CI，也可以通过相同 npm scripts 在本地手动执行。Deploy 不重复运行 Playwright/Lighthouse。
 `npm run audit:quality-report` 会重新生成前端可消费的质量报告 JSON。
 `npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务域覆盖基线报告。
+`npm run audit:risk-threat-actor-coverage` 会审计 Risk-ThreatActor 覆盖，并区分待处理缺口与合规、技术演进、功能安全等显式豁免风险。
 `npm run audit:bundle` 会基于 `dist/assets` 检查构建产物是否超过 bundle 预算。
 `npm run audit:maintenance` 会刷新审计报告并生成统一维护汇总。
 

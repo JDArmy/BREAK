@@ -4,8 +4,12 @@
     "description": "专门枚举和滥用公开API、影子API、Webhook和会话令牌的攻击者。",
     "references": [
       {
-        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/"
+        "title": "OWASP API6:2023：对敏感业务流程的不受限访问",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa6-unrestricted-access-to-sensitive-business-flows/"
+      },
+      {
+        "title": "Red Canary 威胁检测报告：云环境中的 API 滥用",
+        "link": "https://redcanary.com/threat-detection-report/trends/api-abuse/"
       }
     ],
     "buildAttackTools": [],
@@ -19,7 +23,11 @@
       "R0223",
       "R0224",
       "R0225",
-      "R0247"
+      "R0247",
+      "R0126-001",
+      "R0126-002",
+      "R0126-003",
+      "R0293"
     ],
     "indirectSupportRisks": [
       "R0001"
@@ -28,12 +36,17 @@
       "API滥用者",
       "API滥用"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0059",
         "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
+        "note": "共同直接造成 2 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险。"
       },
       {
         "key": "TA0002-001",
@@ -54,12 +67,8 @@
         "key": "TA0011",
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险。"
-      },
-      {
-        "key": "TA0012",
-        "relation": "co-involved",
-        "note": "共同间接支持 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

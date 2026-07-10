@@ -1,0 +1,72 @@
+{
+  "TA0070": {
+    "title": "AI智能体攻击者",
+    "keywords": [
+      "AI智能体攻击者",
+      "智能体攻击者",
+      "Agent攻击者",
+      "AI Agent攻击",
+      "智能体记忆投毒",
+      "智能体目标劫持"
+    ],
+    "description": "专门针对具备长期记忆、工具调用、任务规划和自主执行能力的AI智能体实施攻击的个人或团伙。这类攻击者通过提示注入、恶意知识库内容、受控工具返回值或连续交互污染智能体记忆，劫持其目标与决策过程，使恶意指令跨会话持续生效，或诱导投资、办公和自动化智能体执行越权操作。其攻击面集中在智能体的软件编排、记忆和工具信任链，与主要针对机器人模型层和物理执行机构的具身智能攻击者有所区别。",
+    "references": [
+      {
+        "title": "AI Agent Security - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html"
+      },
+      {
+        "title": "OWASP Agent Memory Guard",
+        "link": "https://owasp.org/www-project-agent-memory-guard/"
+      }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0053-004",
+      "AT0074",
+      "AT0108"
+    ],
+    "directCauseRisks": [
+      "R0287",
+      "R0291"
+    ],
+    "indirectSupportRisks": [
+      "R0272",
+      "R0292"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0041",
+        "relation": "co-involved",
+        "note": "共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0058",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0031",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0042-001",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0069-001",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ],
+    "updated": "2026-07-10",
+    "version": 1
+  }
+}

@@ -8,17 +8,17 @@ allowed-tools: Bash
 
 # BREAK Knowledge Base Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,379 entries across the following entity types:
+BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,386 entries across the following entity types:
 
-| Type | Count | ID Format | Description |
-|------|-------|-----------|-------------|
-| Risk | 400 | R0001, R0001-001 | Business security risk definitions and impact |
-| Avoidance | 350 | A0001, A0001-001 | Defensive measures against risks |
-| AttackTool | 124 | AT0001, AT0001-001 | Tools used by threat actors |
-| ThreatActor | 76 | TA0001, TA0001-001 | Groups that carry out attacks |
-| Term | 628 | T0001 | Business security terminology |
-| Case | 1781 | C0001 | Real-world security incident cases |
-| BusinessDomain | 20 | BD00 | Industry/business domain categories |
+| Type           | Count | ID Format          | Description                                   |
+| -------------- | ----- | ------------------ | --------------------------------------------- |
+| Risk           | 400   | R0001, R0001-001   | Business security risk definitions and impact |
+| Avoidance      | 350   | A0001, A0001-001   | Defensive measures against risks              |
+| AttackTool     | 124   | AT0001, AT0001-001 | Tools used by threat actors                   |
+| ThreatActor    | 83    | TA0001, TA0001-001 | Groups that carry out attacks                 |
+| Term           | 628   | T0001              | Business security terminology                 |
+| Case           | 1781  | C0001              | Real-world security incident cases            |
+| BusinessDomain | 20    | BD00               | Industry/business domain categories           |
 
 Maintenance note: the Skill invocation workflow is unchanged; entity counts stay synchronized with knowledge-base case facts, source-quality updates, and relationship updates.
 
@@ -36,13 +36,13 @@ Where `<skill_dir>` is the directory containing this SKILL file.
 
 ### Parameters
 
-| Parameter | Description |
-|-----------|-------------|
-| `<query>` | Required. Search keywords, entity ID, or security question |
-| `--lang zh\|en` | Language. Auto-detected by default: CJK characters→zh, otherwise→en |
+| Parameter        | Description                                                                                     |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| `<query>`        | Required. Search keywords, entity ID, or security question                                      |
+| `--lang zh\|en`  | Language. Auto-detected by default: CJK characters→zh, otherwise→en                             |
 | `--type <types>` | Comma-separated entity type filter (risks, avoidances, attackTools, threatActors, terms, cases) |
-| `--limit N` | Max results per type, default 5 |
-| `--detail` | Verbose mode, shows all fields and relationships |
+| `--limit N`      | Max results per type, default 5                                                                 |
+| `--detail`       | Verbose mode, shows all fields and relationships                                                |
 
 ## Workflow
 
@@ -71,6 +71,7 @@ node <skill_dir>/break_search.mjs "<keyword>" --lang en
 ```
 
 To narrow scope:
+
 ```bash
 node <skill_dir>/break_search.mjs "<keyword>" --type risks,avoidances --lang en
 ```
@@ -82,6 +83,7 @@ This is the most important usage mode. When users describe a business security p
 **Step 1: Extract Keywords**
 
 Extract 1-3 sets of search keywords from the user's question. For example:
+
 - "Our website is being scraped" → keywords: "scraping", "crawler", "anti-bot"
 - "User accounts keep getting hacked" → keywords: "account takeover", "credential stuffing", "brute force"
 - "Someone is abusing our promotions" → keywords: "promotion abuse", "coupon fraud", "bot attack"
@@ -155,6 +157,8 @@ BREAK recommends the following avoidances for these risks:
 When `scripts/skill/` search / packaging scripts, exported Chinese / English data bundles, entity fields / relationship structure, Skill invocation parameters, or search-result format change, update both `SKILL.md` and `SKILL_en.md` in the same change. `npm run validate:docs-freshness` is wired into `npm run validate:data` and blocks relevant changes when Skill documentation is stale.
 
 Data-quality fixes also affect Skill search results. When fixing Case `references` / `summary` fact-check issues or adjusting Risk `avoidances` relationships, keep the English translation files in sync and make the first two Case references point to stable pages with crawlable article text whenever possible, so Skill-returned case facts remain reviewable.
+
+The 2026-07-10 ThreatActor coverage update adds logistics arbitrage, malicious logistics worker, market manipulation, malicious quantitative trading, AI agent attack, abusive platform rule operation, and communications abuse service roles. The new `audit:risk-threat-actor-coverage` command separates actionable relationship gaps from explicitly exempt risks without changing Skill invocation parameters, search fields, or result formats.
 
 The 2026-07-10 entity-granularity review removes unrelated Term relationships from R0285 and a duplicate Avoidance reference from R0159. This maintenance does not change Skill invocation parameters, search fields, return format, or entity structure.
 

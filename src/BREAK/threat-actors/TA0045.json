@@ -22,7 +22,11 @@
       "R0169",
       "R0170",
       "R0167",
-      "R0173"
+      "R0173",
+      "R0173-001",
+      "R0198",
+      "R0199",
+      "R0200"
     ],
     "indirectSupportRisks": [
       "R0060-001",
@@ -50,8 +54,13 @@
       "MEV搜索者",
       "Web3黑客"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
+      {
+        "key": "TA0046",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险。"
+      },
       {
         "key": "TA0002-001",
         "relation": "co-involved",
@@ -61,11 +70,6 @@
         "key": "TA0064",
         "relation": "co-involved",
         "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
-      },
-      {
-        "key": "TA0046",
-        "relation": "co-involved",
-        "note": "共同直接造成 1 个风险。"
       },
       {
         "key": "TA0017",
@@ -82,6 +86,7 @@
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -16,7 +16,11 @@
       "R0184",
       "R0185",
       "R0191",
-      "R0192"
+      "R0192",
+      "R0216",
+      "R0218",
+      "R0220",
+      "R0221"
     ],
     "indirectSupportRisks": [
       "R0215",
@@ -25,16 +29,12 @@
     ],
     "references": [
       {
-        "title": "XRSI XR环境安全与安保标准",
-        "link": "https://xrsi.org/publication/an-imperative-developing-standards-for-safety-and-security-in-xr-environments"
+        "title": "INTERPOL：执法视角下的元宇宙犯罪",
+        "link": "https://www.interpol.int/content/download/20828/file/Metaverse%20-%20a%20law%20enforcement%20perspective.pdf"
       },
       {
-        "title": "XRSI 研究与标准",
-        "link": "https://xrsi.org/research-standards"
-      },
-      {
-        "title": "Interpol Global Crime Trend Report",
-        "link": "https://www.interpol.int/en/News-and-Events/News"
+        "title": "Humanities and Social Sciences Communications：元宇宙中的身份、犯罪与执法",
+        "link": "https://www.nature.com/articles/s41599-024-04266-w"
       }
     ],
     "keywords": [
@@ -46,7 +46,7 @@
       "虚拟骚扰团伙",
       "元宇宙欺诈"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0047",
@@ -78,6 +78,7 @@
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

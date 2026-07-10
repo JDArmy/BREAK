@@ -4,8 +4,12 @@
     "description": "Attackers focused on enumerating and abusing public APIs, shadow APIs, webhooks, and session tokens.",
     "references": [
       {
-        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/"
+        "title": "OWASP API6:2023: Unrestricted Access to Sensitive Business Flows",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa6-unrestricted-access-to-sensitive-business-flows/"
+      },
+      {
+        "title": "Red Canary Threat Detection Report: API Abuse in the Cloud",
+        "link": "https://redcanary.com/threat-detection-report/trends/api-abuse/"
       }
     ],
     "keywords": [

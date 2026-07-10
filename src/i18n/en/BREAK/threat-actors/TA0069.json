@@ -1,0 +1,54 @@
+{
+  "TA0069": {
+    "title": "Market Manipulator",
+    "keywords": [
+      "market manipulator",
+      "manipulative trader",
+      "securities market manipulation",
+      "futures market manipulation",
+      "order book manipulation",
+      "information-based manipulation"
+    ],
+    "description": "An individual or group that deliberately interferes with normal price discovery in securities, futures, foreign exchange, crypto-asset, or other trading markets to profit from trades, influence prices, or mislead other market participants. These actors may create false order-book pressure through non-bona fide orders and rapid cancellations, use related accounts for wash trading or volume inflation, spread false claims and investment narratives to attract follower capital, manipulate rankings, trading volume, benchmarks, and displayed liquidity, and use proxy networks, identity disguise, and cross-platform coordination to conceal common control. A market manipulator differs from an ordinary investor trading on genuine supply, demand, and public information, and from a publicity operator that merely distributes content: the defining feature is a direct trading interest or control objective combined with trading conduct, information dissemination, or metric pollution intended to distort prices and decisions.",
+    "references": [
+      {
+        "title": "CFTC Interpretive Guidance and Policy Statement on Disruptive Trading Practices",
+        "link": "https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2013-12440.html"
+      },
+      {
+        "title": "SEC Charges Eight Social Media Influencers in $100 Million Stock Manipulation Scheme",
+        "link": "https://www.sec.gov/newsroom/press-releases/2022-221"
+      },
+      {
+        "title": "FINRA Potential Manipulation Report",
+        "link": "https://www.finra.org/compliance-tools/report-center/potential-manipulation-report"
+      }
+    ]
+  },
+  "TA0069-001": {
+    "title": "Malicious Quantitative Trader",
+    "keywords": [
+      "malicious quantitative trader",
+      "malicious algorithmic trader",
+      "quantitative market manipulator",
+      "algorithmic trading manipulation",
+      "high-frequency trading manipulation",
+      "trading model inducement"
+    ],
+    "description": "A professional trader or technical group that uses quantitative models, algorithmic trading systems, high-frequency trading infrastructure, or investment agents to manipulate markets. This is a subtype of market manipulator (TA0069) whose primary capabilities are automation and model-driven execution. These actors can generate, modify, and cancel orders at scale to create false depth or liquidity, construct poisoned samples, synthetic signals, and abnormal market states that induce other quantitative models, and use multi-account and cross-venue strategies to evade manipulation surveillance. Some also place malicious data or hidden instructions in sources consumed by AI investment advisers, research assistants, or trading agents, causing incorrect recommendations or trades. The category excludes legitimate quantitative investing, market making, and high-frequency trading; it applies only when algorithms are deliberately used to fabricate market conditions, mislead participants, or evade regulatory controls.",
+    "references": [
+      {
+        "title": "FINRA Regulatory Notice 15-09: Equity Trading Initiatives - Supervision and Control Practices for Algorithmic Trading Strategies",
+        "link": "https://www.finra.org/rules-guidance/notices/15-09"
+      },
+      {
+        "title": "IOSCO Artificial Intelligence in Capital Markets: Use Cases, Risks, and Challenges",
+        "link": "https://www.iosco.org/library/pubdocs/pdf/IOSCOPD788.pdf"
+      },
+      {
+        "title": "IOSCO Technological Challenges to Effective Market Surveillance Issues and Regulatory Tools",
+        "link": "https://www.iosco.org/library/pubdocs/pdf/ioscopd412.pdf"
+      }
+    ]
+  }
+}

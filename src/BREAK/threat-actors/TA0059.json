@@ -17,7 +17,11 @@
     ],
     "directCauseRisks": [
       "R0246",
-      "R0247"
+      "R0247",
+      "R0035-002",
+      "R0143",
+      "R0207",
+      "R0293"
     ],
     "indirectSupportRisks": [
       "R0032"
@@ -26,12 +30,17 @@
       "账号接管团伙",
       "账号接管"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险。"
+      },
       {
         "key": "TA0051",
         "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
+        "note": "共同直接造成 2 个风险，共同使用 1 个攻击工具。"
       },
       {
         "key": "TA0062",
@@ -52,12 +61,8 @@
         "key": "TA0064",
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险。"
-      },
-      {
-        "key": "TA0067",
-        "relation": "co-involved",
-        "note": "共同间接支持 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }
