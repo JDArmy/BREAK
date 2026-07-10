@@ -1,0 +1,71 @@
+{
+  "AT0108": {
+    "title": "AI数据投毒工具",
+    "description": "用于构造、注入和放大 AI 训练链路污染样本的工具集合。此类工具可批量生成带触发条件的样本、伪造高置信数据标签、改写公开数据集记录，或把污染内容写入模型会摄取的网页、文档和数据源，使模型在目标场景下输出攻击者期望结果。\n\n在黑灰产或对抗场景中，攻击者会结合爬虫、数据集上传接口、众包流程、开源模型微调管线和文档同步流程持续投放污染样本。合法红队也可使用同类工具验证训练数据治理和模型上线前安全测试是否有效。",
+    "directCauseRisks": [
+      "R0243"
+    ],
+    "indirectSupportRisks": [
+      "R0117",
+      "R0244",
+      "R0245",
+      "R0273"
+    ],
+    "avoidances": [
+      "A0213",
+      "A0072",
+      "A0215",
+      "A0178"
+    ],
+    "references": [
+      {
+        "title": "LLM03: Training Data Poisoning - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk2023-24/llm03-training-data-poisoning/"
+      },
+      {
+        "title": "A small number of samples can poison LLMs of any size - Anthropic",
+        "link": "https://www.anthropic.com/research/small-samples-poison"
+      },
+      {
+        "title": "NIST Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf"
+      }
+    ],
+    "updated": "2026-07-10",
+    "keywords": [
+      "AI数据投毒工具",
+      "数据投毒工具",
+      "后门样本生成",
+      "标注投毒工具",
+      "反馈污染工具",
+      "RAG投毒工具"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0100",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0053-004",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0074",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0005",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0104",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      }
+    ]
+  }
+}

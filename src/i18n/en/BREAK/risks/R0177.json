@@ -2,12 +2,20 @@
   "R0177": {
     "title": "Immutable Contract Design Flaws",
     "definition": "Smart contracts cannot be modified or upgraded after deployment; design flaws or vulnerabilities will exist permanently, creating long-term risks.",
-    "description": "The immutability of blockchain smart contracts is a double-edged sword. Contracts deployed without upgrade mechanisms cannot be fixed even when serious vulnerabilities or business logic errors are discovered; they can only be abandoned and redeployed. This leads to: locked assets cannot be retrieved, business logic errors continue to affect operations, inability to adapt to changing requirements. Even using proxy patterns and other upgrade solutions may introduce new centralization risks and upgrade authority abuse issues.",
+    "description": "After deployment, blockchain smart-contract state changes are constrained by on-chain rules. When a contract lacks upgrade, pause, migration, or emergency-response paths, serious vulnerabilities or business-logic errors often cannot be fixed in place and the contract must be abandoned and redeployed. This can leave faulty logic affecting the business for a long time, slow protocol adaptation, and increase later migration and user-coordination costs. Even proxy-based upgrade designs need clear authorization boundaries, audit checks, and governance workflows so the repair path does not weaken the original security assumptions.",
     "influence": "Contract vulnerabilities cannot be fixed, funds permanently locked, business cannot iterate and optimize.",
     "references": [
       {
         "title": "[2407.01493] Immutable in Principle, Upgradeable by Design - arXiv",
         "link": "https://arxiv.org/abs/2407.01493"
+      },
+      {
+        "title": "OWASP Smart Contract Top 10: SC10 Proxy & Upgradeability Vulnerabilities",
+        "link": "https://scs.owasp.org/sctop10/SC10-ProxyAndUpgradeabilityVulnerabilities/"
+      },
+      {
+        "title": "OpenZeppelin Docs: Upgrading Smart Contracts",
+        "link": "https://docs.openzeppelin.com/contracts/5.x/learn/upgrading-smart-contracts"
       }
     ],
     "keywords": [

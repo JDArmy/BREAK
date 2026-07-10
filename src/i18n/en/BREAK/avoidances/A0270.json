@@ -1,12 +1,12 @@
 {
   "A0270": {
     "title": "Rug Pull Loss Compensation and Fund Recovery",
-    "definition": "Compensating victims or recovering funds after a Rug Pull through DeFi insurance claims, asset freezing and tracing, and recovery protocols.",
-    "description": "After an incident is confirmed, responders use policy coverage terms, on-chain loss evidence, and governance decisions to initiate claims and compensate eligible policyholders. They also trace the movement of attack proceeds, coordinate with exchanges to freeze identifiable assets, and use cross-chain recovery protocols or governance mechanisms to return funds. This measure addresses the post-loss response stage and aims to reduce net losses rather than replace preventive audits or real-time alerts.",
-    "limitation": "Insurance only covers the protocols, events, and limits explicitly listed in a policy, so uninsured users or claims without sufficient evidence may receive no compensation. Recovery also depends on asset traceability, exchange cooperation, and governance decisions. Success rates decline sharply once attackers use mixers, cross-chain bridges, or rapid cash-out channels.",
+    "definition": "Compensating victims or recovering funds after a Rug Pull through post-incident compensation, fund-flow tracing, and coordinated response.",
+    "description": "After an incident is confirmed, responders use compensation rules, on-chain loss records, and governance decisions to initiate compensation workflows and pay eligible victims. They also trace the movement of attack proceeds and use platform cooperation, law-enforcement cooperation, or project-governance channels to restrict further movement of identifiable assets and return funds when conditions are met. This measure addresses the post-loss response stage and aims to reduce net losses rather than replace preventive audits or real-time alerts.",
+    "limitation": "Compensation only covers the protocols, events, and limits specified by the applicable rules, so users outside the scope or claims without sufficient evidence may receive no payment. Recovery also depends on asset traceability, platform cooperation, and governance decisions. Success rates decline sharply once attackers use mixers, cross-chain bridges, or rapid cash-out channels.",
     "keywords": [
       "Rug Pull Loss Compensation and Fund Recovery",
-      "DeFi insurance claims",
+      "on-chain loss compensation",
       "Rug Pull compensation",
       "on-chain fund tracing",
       "stolen fund recovery"
@@ -15,6 +15,14 @@
       {
         "title": "Rugsafe: A multichain protocol for recovering from rug pulls",
         "link": "https://arxiv.org/html/2507.06423v1"
+      },
+      {
+        "title": "Nexus Mutual Claim Assessment Documentation",
+        "link": "https://docs.nexusmutual.io/protocol/claims-assessment/"
+      },
+      {
+        "title": "TRM Labs: Seize, Burn, Block, Reissue - Legal Tools Behind Crypto Asset Recovery",
+        "link": "https://www.trmlabs.com/resources/blog/seize-burn-block-reissue-understanding-the-legal-tools-behind-crypto-asset-recovery"
       }
     ]
   }

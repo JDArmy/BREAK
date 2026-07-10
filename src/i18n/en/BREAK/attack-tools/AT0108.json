@@ -1,0 +1,28 @@
+{
+  "AT0108": {
+    "title": "AI Data Poisoning Tool",
+    "description": "A toolset for constructing, injecting, and amplifying poisoned samples in AI training pipelines. These tools can generate samples with trigger conditions at scale, forge high-confidence data labels, rewrite public dataset records, or place poisoned content in web pages, documents, and data sources consumed by models so that models produce attacker-desired outputs in target scenarios.\n\nIn adversarial or black-market use, attackers combine crawlers, dataset upload interfaces, crowdsourcing workflows, open-model fine-tuning pipelines, and document synchronization processes to continuously inject poisoned samples. Legitimate red teams may use similar tools to validate training-data governance and pre-release model security testing.",
+    "references": [
+      {
+        "title": "LLM03: Training Data Poisoning - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk2023-24/llm03-training-data-poisoning/"
+      },
+      {
+        "title": "A small number of samples can poison LLMs of any size - Anthropic",
+        "link": "https://www.anthropic.com/research/small-samples-poison"
+      },
+      {
+        "title": "NIST Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf"
+      }
+    ],
+    "keywords": [
+      "AI Data Poisoning Tool",
+      "data poisoning tool",
+      "backdoor sample generation",
+      "label poisoning tool",
+      "feedback poisoning tool",
+      "RAG poisoning tool"
+    ]
+  }
+}

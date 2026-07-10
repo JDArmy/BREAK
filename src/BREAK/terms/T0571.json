@@ -15,8 +15,12 @@
       "R0245"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedAttackTools": [
+      "AT0108"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ],
     "relatedBusinessDomains": [
       "BD00"
     ],
@@ -30,7 +34,7 @@
         "link": "https://www.ibm.com/think/topics/data-poisoning"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "version": 2
   }
 }

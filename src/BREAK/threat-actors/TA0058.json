@@ -1,29 +1,72 @@
 {
   "TA0058": {
     "title": "AI数据投毒者",
-    "description": "通过污染训练数据、反馈数据、知识库和提示上下文影响模型行为。",
+    "description": "通过构造并投放 AI 训练链路污染样本影响模型行为，常结合爬虫或UI自动化流程扩大投放规模。",
     "references": [
       {
         "title": "A small number of samples can poison LLMs of any size - Anthropic",
         "link": "https://www.anthropic.com/research/small-samples-poison"
+      },
+      {
+        "title": "OWASP ML02:2023 Data Poisoning Attack",
+        "link": "https://owasp.org/www-project-machine-learning-security-top-10/docs/ML02_2023-Data_Poisoning_Attack"
+      },
+      {
+        "title": "NIST Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf"
       }
     ],
-    "buildAttackTools": [],
-    "useAttackTools": [],
+    "buildAttackTools": [
+      "AT0108"
+    ],
+    "useAttackTools": [
+      "AT0005",
+      "AT0104"
+    ],
     "directCauseRisks": [
-      "R0242",
-      "R0243",
-      "R0244",
-      "R0245"
+      "R0243"
     ],
     "indirectSupportRisks": [
-      "R0117"
+      "R0117",
+      "R0244",
+      "R0245"
     ],
     "keywords": [
       "AI数据投毒者",
       "AI数据投毒"
     ],
     "updated": "2026-07-10",
-    "relatedThreatActors": []
+    "relatedThreatActors": [
+      {
+        "key": "TA0001-001",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0020",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0023",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0031",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0035",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0036",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

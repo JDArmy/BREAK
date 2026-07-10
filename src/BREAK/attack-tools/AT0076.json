@@ -31,8 +31,12 @@
         "link": "https://github.com/foundry-rs/foundry"
       },
       {
-        "title": "Consensys Smart Contract Best Practices",
-        "link": "https://consensys.github.io/smart-contract-best-practices/"
+        "title": "Trail of Bits Echidna: Ethereum smart contract fuzzer",
+        "link": "https://github.com/crytic/echidna"
+      },
+      {
+        "title": "ConsenSys Diligence Mythril: EVM bytecode security analysis tool",
+        "link": "https://github.com/ConsenSysDiligence/mythril"
       }
     ],
     "keywords": [

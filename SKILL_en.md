@@ -182,6 +182,8 @@ The fourth 2026-07-10 Case P2 fact-review maintenance continues narrowing C0654,
 
 The 2026-07-10 P1 reference-quality and follow-up P2 fact-review maintenance strengthens R0081, R0196, TA0030, C0484, C0493, C0502, C0508, C0518, C0538, C0802, C0810, C0812, C0813, C0816, C0851, C0878, C0938, C0996, C1050, C1061, C1062, C1075, C1079, C1084, C1090, C1160, C1198, and related `references`, `summary`, `incidentTime`, and English translations, and synchronizes source / avoidance-relation fixes for A0225 and R0267; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The 2026-07-10 P1 reference-quality pass further replaces or adds authoritative sources for AT0076, A0124, A0270, R0168, R0177, and TA0058, removes the weak forum source from R0168, and syncs the English translations; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph

@@ -1,17 +1,25 @@
 {
   "TA0058": {
     "title": "AI Data Poisoners",
-    "description": "Attackers who influence model behavior by poisoning training data, feedback data, knowledge bases, and prompt context.",
+    "description": "Attackers who influence model behavior by creating and injecting poisoned samples into AI training pipelines, often using crawlers or UI automation to scale delivery.",
     "references": [
       {
         "title": "A small number of samples can poison LLMs of any size - Anthropic",
         "link": "https://www.anthropic.com/research/small-samples-poison"
+      },
+      {
+        "title": "OWASP ML02:2023 Data Poisoning Attack",
+        "link": "https://owasp.org/www-project-machine-learning-security-top-10/docs/ML02_2023-Data_Poisoning_Attack"
+      },
+      {
+        "title": "NIST Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "link": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf"
       }
     ],
     "keywords": [
       "AI Data Poisoners",
       "training data poisoner",
-      "RAG poisoning actor",
+      "data poisoning actor",
       "feedback poisoning",
       "prompt injection actor",
       "model manipulation"
