@@ -1,33 +1,33 @@
 {
   "R0109": {
-    "title": "Privilege Escalation / Unauthorized Access",
-    "definition": "Unauthorized access or privilege escalation risk refers to users or processes obtaining or attempting to obtain access to resources, data, functions, or systems in an unauthorized manner. Unauthorized access generally falls into two types: horizontal privilege escalation (accessing other users' resources at the same permission level) and vertical privilege escalation (lower-privilege users gaining higher-privilege capabilities).",
-    "description": "This risk may arise from weak passwords, vulnerability exploitation, lack of access controls, misconfiguration, or unauthorized system or application access. Privilege escalation attacks typically occur at the application logic level, such as accessing other users' data by tampering with request parameters (horizontal privilege escalation), or performing high-privilege operations with low-privilege accounts (vertical privilege escalation). Unauthorized access refers to accessing protected resources without authentication. These risks may allow malicious users, attackers, or unauthorized personnel to bypass normal security controls and access sensitive information or perform certain operations.",
-    "influence": "Unauthorized access may lead to serious security issues including but not limited to data leakage, privacy violations, denial of service, and system crashes.",
+    "title": "Broken Authorization Risk",
+    "definition": "An authenticated user or process accesses resources, data objects, or administrative interfaces beyond its assigned role, tenant, object, or operation permissions, or performs unauthorized business functions, administrative actions, or cross-tenant operations because post-authentication authorization checks fail. Typical forms include horizontal privilege escalation, vertical privilege escalation, missing object-level authorization, and server-side permission checks bypassed through parameter tampering.",
+    "description": "Broken authorization occurs after a principal has logged in or otherwise authenticated, but the application fails to verify permission for the requested object or action. Attackers may tamper with user, order, or tenant identifiers to read peer users' data, causing horizontal privilege escalation, or invoke administrative endpoints and alter role parameters to gain higher privileges, causing vertical privilege escalation.\n\nThe defining condition is authenticated access without correct authorization. It differs from R0293, where effective authentication is absent or the target interface has no authentication control. Servers must enforce authorization for every request and resource rather than relying on hidden UI elements, unpredictable identifiers, or login state alone.",
+    "influence": "Broken authorization can expose cross-user or cross-tenant data, let low-privilege accounts perform administrative actions, enable business-data tampering, and amplify losses from stolen accounts.",
     "references": [
       {
-        "title": "Privilege escalation - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Privilege_escalation"
+        "title": "CWE-639: Authorization Bypass Through User-Controlled Key",
+        "link": "https://cwe.mitre.org/data/definitions/639.html"
       },
       {
-        "title": "T1078 Valid Accounts - MITRE ATT&CK",
-        "link": "https://attack.mitre.org/techniques/T1078/"
+        "title": "OWASP Top 10: Broken Access Control",
+        "link": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/"
       }
     ],
     "keywords": [
-      "Privilege Escalation / Unauthorized Access",
-      "privilege escalation",
-      "unauthorized access",
+      "Broken Authorization Risk",
+      "broken authorization",
       "broken access control",
       "IDOR",
       "horizontal privilege escalation",
-      "vertical privilege escalation"
+      "vertical privilege escalation",
+      "authorization bypass"
     ],
     "riskAssessment": {
       "observables": [
         "The same account frequently enumerates or tampers with user IDs/order IDs/resource IDs in requests to access others' data",
         "A low-privilege account attempts to call high-privilege admin endpoints or perform privilege-escalation operations",
-        "Unauthenticated requests directly hit protected resource endpoints and return normal business data"
+        "A low-privilege account gains unavailable operations after changing role, tenant, or permission parameters"
       ]
     }
   }

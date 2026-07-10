@@ -1,19 +1,16 @@
 {
   "R0235": {
-    "title": "Chargeback and Refund Abuse",
-    "definition": "Users or organized groups obtain improper refunds through chargebacks, empty-package claims, or fabricated after-sales evidence.",
+    "title": "Refund Abuse Risk",
+    "definition": "Users or organized groups exploit merchant or platform return, refund, and after-sales rules to obtain money, goods, or compensation through false reasons or evidence.",
     "keywords": [
-      "chargeback fraud",
+      "Refund Abuse Risk",
+      "return and refund abuse",
       "refund abuse",
       "empty package refund",
       "fake after-sales evidence",
-      "friendly fraud"
+      "returning a cheaper item"
     ],
     "references": [
-      {
-        "title": "Fraud Detection Data Analytics - PayPal",
-        "link": "https://www.paypal.com/us/brc/article/data-analytics-fraud-management"
-      },
       {
         "title": "Typed Assessment of Buy-Genuine-Return-Fake Conduct - Supreme People’s Procuratorate",
         "link": "https://www.spp.gov.cn/spp/llyj/202206/t20220620_560235.shtml"
@@ -27,14 +24,14 @@
         "link": "https://stripe.com/zh-my/resources/more/refund-fraud"
       }
     ],
-    "description": "Chargeback and refund abuse uses payment disputes, after-sales policies, logistics conflicts, or fake evidence to obtain improper refunds. Common patterns include empty packages, item swaps, forged delivery issues, and repeated complaints.\n\nThe risk creates direct losses for platforms, merchants, and payment providers, while undermining fair after-sales rules. Detection must combine logistics evidence, history, device linkage, and dispute handling strategy.",
-    "influence": "Refund and chargeback abuse causes direct merchandise and payment losses, merchant disputes, channel penalties, and higher support cost.",
+    "description": "Refund abuse occurs in merchant- or platform-controlled return, refund, refund-without-return, and after-sales compensation processes. Attackers may return empty parcels, cheaper substitutes, or damaged goods, fabricate delivery or defect evidence, or use linked accounts for repeated claims while retaining the product or consumed benefit.\n\nDetection depends on consistency across orders, logistics, products, submitted evidence, and account history. It differs from R0139 friendly fraud, where a cardholder disputes a payment with the issuing bank and triggers a reversal outside the merchant's normal refund approval flow.",
+    "influence": "Refund abuse causes losses of payments, goods, subsidies, and compensation, increases logistics verification and manual review costs, and undermines fair after-sales service.",
     "riskAssessment": {
       "observables": [
-        "The same user or ring initiates high-frequency chargebacks or refunds accompanied by empty-package or swap-out evidence",
+        "The same user or ring initiates high-frequency refunds accompanied by empty-package, swap-out, or item-mismatch evidence",
         "Refund appeals cluster on related devices or delivery addresses",
         "Fake sign-off anomalies or repeated appeal patterns are triggered in bulk",
-        "Payment-channel penalties and merchant disputes spike anomalously in a short window",
+        "Refund-without-return, mismatched returns, or abnormal compensation spikes in a short window",
         "Dispute handling shows an abnormally high share of users with historical anomalous behavior"
       ]
     }

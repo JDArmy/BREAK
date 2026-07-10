@@ -13,11 +13,15 @@
       "fare arbitrage",
       "black market"
     ],
-    "summary": "Black market operators use virtual phone numbers to register or hijack ride-hailing platform accounts, placing low-price proxy orders for passengers and profiting from the fare difference. This scheme relies on fake device environments or stolen credentials to bypass platform risk controls, representing a typical proxy ordering fraud operation.",
+    "summary": "In April 2024, media reported a “Didi proxy ride-hailing” black market: operators used virtual phone numbers to register ride-hailing accounts, or stole existing accounts, then recruited passengers on social media and trading platforms and offered ride-hailing service below the actual fare to profit from the difference. The report noted that stolen-account remote orders could harm the platform, drivers, and account holders at the same time.",
     "references": [
       {
         "title": "Ride-hailing fake orders may constitute crime, a battle against black market forces unfolds - Shanghai Observer",
         "link": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=691680&sid=200"
+      },
+      {
+        "title": "Inside the Didi proxy-ordering black market: any destination for a flat 10 yuan - 36Kr",
+        "link": "https://36kr.com/p/2729005825741447"
       }
     ]
   }

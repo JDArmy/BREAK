@@ -15,14 +15,19 @@
  * 核心 DOM 扫描逻辑提取至 autoLinkerCore.ts，便于单元测试覆盖。
  */
 import { onMounted, onUnmounted, ref, computed, nextTick } from "vue";
+import { useI18n } from "vue-i18n";
 import { useEntityResolver, type EntitySummary } from "@/composables/useEntityResolver";
 import EntityPopoverContent from "./EntityPopoverContent.vue";
 import {
   ATTR,
   CLS,
   EXCLUDE_ZONE,
+  TEXT_ROOT_CLS,
+  TEXT_SOURCE_CLS,
+  createTermMatcher,
   processTextNode,
   scanSubtree,
+  type TermCandidate,
 } from "./autoLinkerCore";
 
 // ─── 配置 ───────────────────────────────────────────────
@@ -36,6 +41,38 @@ const triggerRef = ref<HTMLElement | null>(null);
 let hideTimer: ReturnType<typeof setTimeout> | null = null;
 
 const { resolve } = useEntityResolver();
+const { locale, messages } = useI18n();
+
+type TermTextRecord = {
+  title?: unknown;
+  aliases?: unknown;
+  keywords?: unknown;
+};
+
+const termMatcher = computed(() => {
+  const localeMessages = messages.value[locale.value] as Record<string, unknown> | undefined;
+  const breakMessages = localeMessages?.BREAK as Record<string, unknown> | undefined;
+  const terms = breakMessages?.terms as Record<string, TermTextRecord> | undefined;
+  const candidates: TermCandidate[] = [];
+
+  for (const [id, term] of Object.entries(terms ?? {})) {
+    if (typeof term.title === "string") {
+      candidates.push({ id, text: term.title, source: "title" });
+    }
+    if (Array.isArray(term.aliases)) {
+      for (const alias of term.aliases) {
+        if (typeof alias === "string") candidates.push({ id, text: alias, source: "alias" });
+      }
+    }
+    if (Array.isArray(term.keywords)) {
+      for (const keyword of term.keywords) {
+        if (typeof keyword === "string") candidates.push({ id, text: keyword, source: "keyword" });
+      }
+    }
+  }
+
+  return createTermMatcher(candidates);
+});
 
 let showTimer: ReturnType<typeof setTimeout> | null = null;
 
@@ -99,16 +136,31 @@ function processBatch() {
   pendingMutations = [];
   for (const mutation of batch) {
     if (mutation.type === "childList") {
+      if (
+        mutation.target instanceof HTMLElement &&
+        mutation.target.classList.contains(TEXT_SOURCE_CLS)
+      ) {
+        const sourceText = Array.from(mutation.target.childNodes).find(
+          (node): node is Text => node.nodeType === Node.TEXT_NODE,
+        );
+        if (sourceText) {
+          processed.delete(sourceText);
+          processTextNode(sourceText, processed, termMatcher.value);
+        } else {
+          mutation.target.closest(`.${TEXT_ROOT_CLS}`)?.remove();
+        }
+        continue;
+      }
       for (const node of mutation.addedNodes) {
         if (node.nodeType === Node.TEXT_NODE) {
-          processTextNode(node as Text, processed);
+          processTextNode(node as Text, processed, termMatcher.value);
         } else if (node.nodeType === Node.ELEMENT_NODE) {
-          scanSubtree(node, processed);
+          scanSubtree(node, processed, termMatcher.value);
         }
       }
     } else if (mutation.type === "characterData" && mutation.target.nodeType === Node.TEXT_NODE) {
       processed.delete(mutation.target as Text);
-      processTextNode(mutation.target as Text, processed);
+      processTextNode(mutation.target as Text, processed, termMatcher.value);
     }
   }
 }
@@ -158,7 +210,7 @@ onMounted(() => {
 
   // 初始扫描
   nextTick(() => {
-    scanSubtree(root, processed);
+    scanSubtree(root, processed, termMatcher.value);
   });
 
   // 观察 DOM 变化

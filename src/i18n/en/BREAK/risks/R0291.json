@@ -1,0 +1,36 @@
+{
+  "R0291": {
+    "title": "AI Agent Long-Term Memory Poisoning Risk",
+    "keywords": [
+      "AI agent long-term memory poisoning risk",
+      "AI agent memory poisoning",
+      "long-term memory poisoning",
+      "persistent memory attack",
+      "memory backdoor",
+      "cross-session manipulation",
+      "agent memory poisoning"
+    ],
+    "definition": "The risk that an attacker uses prompt injection, malicious interaction, or compromised tools to write false facts, rules, or experiences into an AI agent's persistent memory, causing malicious content to be retrieved in later sessions and continuously manipulate decisions.",
+    "description": "AI agents with long-term memory store user preferences, task history, tool results, successful experiences, and environmental knowledge, then use semantic retrieval to add relevant records to later reasoning. Attackers can use direct or indirect prompt injection, malicious web pages and documents, compromised tool output, or repeated conversation to write trigger-bearing false experiences into memory. Once retrieved, poisoned records can induce the agent to select malicious tools, disclose data, alter goals, or perform operations that deviate from the task, even after the original attack input has left the current context.\n\nThis differs from R0071-005 (AI model poisoning risk), which changes training data or model parameters, while this risk corrupts persistent memory and experience stores that remain writable after deployment. It also differs from R0117 (LLM prompt injection risk), which primarily affects the current reasoning context; this risk persists the injected result and reactivates it during future tasks. Research such as AgentPoison shows that a very small number of poisoned records can reliably retrieve malicious experiences under trigger conditions while preserving benign task performance.",
+    "influence": "A one-time prompt injection can become cross-session persistent control, causing the agent to repeatedly invoke malicious tools, disclose sensitive data, execute incorrect business operations, or reliably deviate from its normal objective under specific trigger conditions.",
+    "references": [
+      {
+        "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases - NeurIPS 2024",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html"
+      },
+      {
+        "title": "Agent Security Bench: Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents - ICLR 2025",
+        "link": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5750f91d8fb9d5c02bd8ad2c3b44456b-Abstract-Conference.html"
+      }
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A specific phrase or context repeatedly triggers historical tool calls or action plans unrelated to the current task",
+        "Persistent-memory writes cannot be attributed to a trusted user, tool, or data source",
+        "A small set of new memory records contains unusually concentrated trigger phrases, tool parameters, or target instructions",
+        "The agent retrieves historical experiences that do not semantically match a benign task",
+        "Abnormal behavior continues in later sessions after the current conversation is deleted"
+      ]
+    }
+  }
+}

@@ -27,8 +27,12 @@
     },
     "references": [
       {
-        "link": "https://xueqiu.com/2642768288/362355777",
-        "title": "量子威胁下的区块链安全挑战"
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+        "title": "NIST Post-Quantum Cryptography Project"
+      },
+      {
+        "link": "https://csrc.nist.gov/pubs/fips/204/final",
+        "title": "NIST FIPS 204: Module-Lattice-Based Digital Signature Standard"
       },
       {
         "link": "https://ethereum.org/en/roadmap/security/",
@@ -64,7 +68,7 @@
       {
         "key": "R0235",
         "relation": "co-occurrence",
-        "note": "量子计算威胁与拒付与退款滥用共享规避手段“交易风险监控”。"
+        "note": "量子计算威胁与退款滥用风险共享规避手段“交易风险监控”。"
       },
       {
         "key": "R0137",

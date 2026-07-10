@@ -4,16 +4,29 @@
     "keywords": [
       "physical-world prompt injection detection",
       "physical prompt injection",
+      "multimodal prompt injection detection",
       "visual prompt injection detection",
+      "voice prompt injection detection",
+      "covert audio command detection",
+      "voice clone detection",
+      "QR code prompt injection detection",
       "VLA prompt injection detection",
       "environment consistency check",
       "action intent audit",
       "embodied prompt injection detection"
     ],
-    "definition": "Detection of physical-world prompt-injection attacks against embodied-intelligence VLA models via environment-consistency checking, anomalous-visual-cue identification, and action-intent auditing.",
-    "description": "Physical-world prompt injection detection targets attack vectors where adversaries place visual cues (stickers, printed patterns, occlusions, projections) in the robot's operating environment to mislead VLA models into misinterpreting instructions. It establishes detection capabilities across three dimensions. First, environmental consistency verification compares instructions parsed by the VLM against registered legitimate instruction sources (operator voice/text/predefined tasks), downgrading or rejecting instructions from unverified origins. Second, anomalous visual cue recognition detects suddenly appearing high-contrast text, unnaturally arranged patterns, task-irrelevant signage, and other suspicious injection carriers in the scene. Third, action intent auditing validates whether the VLA's output action sequence aligns with the current task context and safety boundaries before execution, triggering secondary confirmation for intent deviations. This approach is a key differentiator for embodied intelligence compared to pure software prompt injection defense, as injection carriers exist in the physical world and cannot be fully eliminated by input filtering alone, requiring defense-in-depth that combines environmental perception with action-layer validation. It complements A0178 (AIoT model security protection) and A0014 (tamper-proof mechanisms), with the former focusing on model-layer robustness while this measure targets injection carrier identification in the physical world.",
-    "limitation": "It is infeasible to exhaustively enumerate all injection forms, as novel adversarial examples can bypass the detector. Dynamic physical environment variations (illumination, occlusion, viewpoint) lead to high false positive rates. The detector itself may be deceived by adversarial attacks. A trade-off exists between real-time requirements and detection overhead, making deployment infeasible in all scenarios.",
+    "definition": "Detection of visual, voice, and covert-audio prompt-injection attacks against embodied-intelligence VLA models in physical environments through instruction-source verification, multimodal injection-carrier recognition, and action-intent auditing.",
+    "description": "Physical-world prompt injection detection targets attacks that use environmental text, QR codes, printed patterns, projections, screen content, speaker audio, cloned speech, ultrasound, or covert-audio payloads to make a VLA model misinterpret instructions. It establishes detection capabilities across three dimensions. First, instruction-source and environmental-consistency verification binds operator speech, control terminals, and predefined tasks to trusted identities and channels; collects source, time, location, and task context; and downgrades, isolates, or rejects semantic instructions that cannot be attributed or conflict across channels. Second, multimodal injection-carrier recognition detects suddenly appearing high-contrast text, QR codes, unnatural patterns, and task-irrelevant signs in the visual channel, while analyzing speech transcripts, source location, speaker characteristics, ultrasonic-band energy, and covert-audio anomalies in the audio channel, using rules, thresholds, or models to classify suspicious payloads. Third, action-intent auditing validates whether the VLA output action sequence aligns with the current task context and safety boundaries before execution, triggering secondary confirmation for intent deviations.\n\nThis measure detects physical payloads that a model can interpret as instructions or semantic content. Signals that only cause sensor distortion, noise, or erroneous measurements should instead be handled by perception defenses such as sensor-anomaly detection and multisensor consistency checks. This measure combines environmental perception, trusted instruction sources, and action-layer validation as defense in depth, and complements A0178 (AIoT model security protection) and A0014 (tamper-proof mechanisms).",
+    "limitation": "It is infeasible to enumerate injection forms across visual, voice, and covert-audio channels. Payloads transformed through font deformation, QR encoding, reverberation masking, cloned speech, or frequency modulation may bypass detectors. Television broadcasts, public signs, legitimate ultrasonic equipment, and authorized far-field speech may also produce false positives. Speaker verification and source localization degrade under noise, occlusion, and multi-speaker conditions, while real-time multimodal analysis adds inference latency and compute overhead.",
     "references": [
+      {
+        "title": "CHAI: Command Hijacking against embodied AI - arXiv",
+        "link": "https://arxiv.org/abs/2510.00181"
+      },
+      {
+        "title": "Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms - arXiv",
+        "link": "https://arxiv.org/abs/2604.23775"
+      },
       {
         "title": "Misleading text in the physical world can hijack AI-enabled robots - UC Santa Cruz",
         "link": "https://news.ucsc.edu/2026/01/misleading-text-can-hijack-ai-enabled-robots/"

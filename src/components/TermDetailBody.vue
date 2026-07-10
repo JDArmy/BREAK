@@ -6,6 +6,7 @@ import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
+import BusinessDomainImpactBlock from "@/components/BusinessDomainImpactBlock.vue";
 
 import { TopRight } from "@element-plus/icons-vue";
 
@@ -159,6 +160,13 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
       <h3>{{ $t("usageExample") }}</h3>
       <p v-html="highlightedUsageExample" />
     </section>
+
+    <BusinessDomainImpactBlock
+      v-if="!isDrawer"
+      entity-type="term"
+      :entity-id="tKey"
+      :entity-title="$t(`BREAK.terms.${tKey}.title`)"
+    />
 
     <!-- 关联实体表格（统一用 EntityLinkSection，抽屉传 onNavigate） -->
     <EntityLinkSection

@@ -14,7 +14,7 @@
     "summary": "用于私有化部署大模型的工具Ollama默认配置存在未授权访问漏洞。其服务默认开放11434端口且无任何鉴权机制，导致未授权用户能够随意访问模型，通过特定接口调用模型服务、获取模型信息，甚至删除模型文件或窃取数据，存在数据泄露和算力盗取风险。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
-      "R0109"
+      "R0293"
     ],
     "references": [
       {
@@ -22,7 +22,7 @@
         "link": "https://hdc.cczu.edu.cn/hdxxzx/2025/0423/c8768a389006/page.htm"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2025-04",
     "relatedAttackTools": [],
     "relatedThreatActors": [

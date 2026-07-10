@@ -15,7 +15,7 @@
     "summary": "美国联邦贸易委员会（FTC）与佛罗里达州联合起诉Chargebacks911公司，指控其不公平地阻挠消费者通过信用卡拒付流程对交易提出争议。该案涉及拒付流程被滥用以损害消费者权益。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0235"
+      "R0139"
     ],
     "references": [
       {
@@ -23,7 +23,7 @@
         "link": "https://www.ftc.gov/legal-library/browse/cases-proceedings/2023009-chargebacks-911"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-10",
     "incidentTime": "2023",
     "relatedAttackTools": [],
     "relatedThreatActors": []

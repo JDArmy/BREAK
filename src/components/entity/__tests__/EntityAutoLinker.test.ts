@@ -2,10 +2,12 @@ import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import {
   ATTR,
   CLS,
+  createTermMatcher,
   isInsideSkipZone,
   extractEntityId,
   processTextNode,
   scanSubtree,
+  TEXT_RENDERED_CLS,
 } from "../autoLinkerCore";
 
 /**
@@ -116,8 +118,11 @@ describe("processTextNode", () => {
     const textNode = appendText(container, "参见 R0001 获取详情");
     processTextNode(textNode, processed);
 
-    // 原文本节点被替换，容器内应有：文本 "参见 " + span(R0001) + 文本 " 获取详情"
-    const children = container.childNodes;
+    // 可见副本应为：文本 "参见 " + span(R0001) + 文本 " 获取详情"；
+    // 原始文本节点保留在隐藏容器中，供 Vue 后续更新。
+    const rendered = container.querySelector(`.${TEXT_RENDERED_CLS}`);
+    expect(rendered).not.toBeNull();
+    const children = rendered!.childNodes;
     expect(children.length).toBe(3);
     expect(children[0].textContent).toBe("参见 ");
 
@@ -179,10 +184,131 @@ describe("processTextNode", () => {
     expect(container.childNodes.length).toBe(childCountAfterFirst);
   });
 
+  it("Vue 更新原始文本节点后应刷新已包裹的可见文本", () => {
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "未授权访问", source: "title" },
+    ]);
+    const textNode = appendText(container, "R0292 · 提示注入风险");
+
+    processTextNode(textNode, processed, matcher);
+    const visibleText = () => container.querySelector(`.${TEXT_RENDERED_CLS}`)?.textContent;
+    expect(visibleText()).toBe("R0292 · 提示注入风险");
+
+    // Vue 的虚拟 DOM 仍持有原始 Text 引用，并直接更新其 data。
+    textNode.data = "R0293 · 未授权访问风险";
+    processed.delete(textNode);
+    processTextNode(textNode, processed, matcher);
+
+    expect(visibleText()).toBe("R0293 · 未授权访问风险");
+    const rendered = container.querySelector(`.${TEXT_RENDERED_CLS}`);
+    expect(rendered?.querySelector(`[${ATTR}="R0293"]`)?.textContent).toBe("R0293");
+    expect(rendered?.querySelector(`[${ATTR}="T0001"]`)?.textContent).toBe("未授权访问");
+    expect(rendered?.querySelector(`[${ATTR}="R0292"]`)).toBeNull();
+  });
+
+  it("Vue 更新为不含实体或术语的文本后不应保留旧内容", () => {
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "未授权访问", source: "title" },
+    ]);
+    const textNode = appendText(container, "R0293 · 未授权访问风险");
+
+    processTextNode(textNode, processed, matcher);
+    textNode.data = "普通风险说明";
+    processed.delete(textNode);
+    processTextNode(textNode, processed, matcher);
+
+    const rendered = container.querySelector(`.${TEXT_RENDERED_CLS}`);
+    expect(rendered?.textContent).toBe("普通风险说明");
+    expect(rendered?.querySelector(`[${ATTR}]`)).toBeNull();
+  });
+
   it("短文本（< 5 字符）不触发正则匹配", () => {
     const textNode = appendText(container, "R001"); // 4 字符，不匹配 \d{4}
     const result = processTextNode(textNode, processed);
     expect(result).toBe(false);
+  });
+
+  it("识别术语标题、别名和关键词并复用实体 ID 标记", () => {
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "撞库", source: "title" },
+      { id: "T0002", text: "凭证填充", source: "alias" },
+      { id: "T0003", text: "自动化攻击", source: "keyword" },
+    ]);
+    const textNode = appendText(container, "撞库与凭证填充都可能形成自动化攻击");
+
+    processTextNode(textNode, processed, matcher);
+
+    const spans = container.querySelectorAll(`.${CLS}`);
+    expect(Array.from(spans).map((span) => span.getAttribute(ATTR))).toEqual([
+      "T0001",
+      "T0002",
+      "T0003",
+    ]);
+    expect(Array.from(spans).map((span) => span.textContent)).toEqual([
+      "撞库",
+      "凭证填充",
+      "自动化攻击",
+    ]);
+  });
+
+  it("术语匹配优先采用最长词，且不覆盖实体 ID", () => {
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "设备", source: "title" },
+      { id: "T0002", text: "设备指纹", source: "title" },
+      { id: "T0003", text: "R0001", source: "title" },
+    ]);
+    const textNode = appendText(container, "设备指纹用于防护 R0001");
+
+    processTextNode(textNode, processed, matcher);
+
+    const spans = container.querySelectorAll(`.${CLS}`);
+    expect(Array.from(spans).map((span) => span.getAttribute(ATTR))).toEqual([
+      "T0002",
+      "R0001",
+    ]);
+  });
+});
+
+describe("createTermMatcher", () => {
+  it("同名冲突按标题、别名、关键词优先级确定归属", () => {
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "接码平台", source: "title" },
+      { id: "T0002", text: "接码平台", source: "keyword" },
+    ]);
+
+    expect(matcher.find("使用接码平台")).toEqual([
+      { id: "T0001", start: 2, end: 6 },
+    ]);
+  });
+
+  it("最高优先级仍有歧义时不生成错误链接", () => {
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "身份风险", source: "keyword" },
+      { id: "T0002", text: "身份风险", source: "keyword" },
+    ]);
+
+    expect(matcher.find("身份风险需要治理")).toEqual([]);
+  });
+
+  it("英文术语忽略大小写但遵守单词边界", () => {
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "Bot", source: "title" },
+    ]);
+
+    expect(matcher.find("BOT management")).toEqual([
+      { id: "T0001", start: 0, end: 3 },
+    ]);
+    expect(matcher.find("robot management")).toEqual([]);
+  });
+
+  it("过滤单字、过短英文和两字关键词", () => {
+    const matcher = createTermMatcher([
+      { id: "T0001", text: "卡", source: "title" },
+      { id: "T0002", text: "AI", source: "title" },
+      { id: "T0003", text: "模型", source: "keyword" },
+    ]);
+
+    expect(matcher.find("卡 AI 模型")).toEqual([]);
   });
 });
 

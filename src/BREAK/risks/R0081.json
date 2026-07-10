@@ -15,8 +15,12 @@
     ],
     "references": [
       {
-        "title": "Supply chain attack - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+        "title": "NIST SP 800-161 Rev. 1: Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations",
+        "link": "https://csrc.nist.gov/pubs/sp/800/161/r1/final"
+      },
+      {
+        "title": "ENISA Threat Landscape for Supply Chain Attacks",
+        "link": "https://www.enisa.europa.eu/publications/threat-landscape-for-supply-chain-attacks"
       }
     ],
     "updated": "2026-07-10",
@@ -89,8 +93,12 @@
     ],
     "references": [
       {
-        "title": "Supply chain attack - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+        "title": "NIST SP 800-218: Secure Software Development Framework (SSDF) Version 1.1",
+        "link": "https://csrc.nist.gov/pubs/sp/800/218/final"
+      },
+      {
+        "title": "CISA: NIST SP 800-218 Secure Software Development Framework Recommendations for Mitigating the Risk of Software Vulnerabilities",
+        "link": "https://www.cisa.gov/resources-tools/resources/nist-sp-800-218-secure-software-development-framework-v11-recommendations-mitigating-risk-software"
       }
     ],
     "updated": "2026-07-10",

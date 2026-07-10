@@ -1,0 +1,59 @@
+{
+  "R0291": {
+    "title": "AI智能体长期记忆投毒风险",
+    "definition": "攻击者通过提示注入、恶意交互或受控工具向AI智能体的持久记忆写入虚假事实、规则或经验，使恶意内容在后续会话中被召回并持续操纵决策的风险。",
+    "description": "带有长期记忆的AI智能体会保存用户偏好、任务历史、工具结果、成功经验和环境知识，并通过语义检索把相关记录重新加入后续推理。攻击者可借助直接或间接提示注入、恶意网页与文档、受控工具返回或反复对话，把带触发条件的虚假经验写入记忆库。污染记录被召回后，可诱导智能体选择恶意工具、泄露数据、修改目标或执行偏离任务的操作，即使原始攻击输入已经离开当前上下文仍能跨会话生效。\n\n该风险区别于R0071-005（AI模型投毒风险）：模型投毒改变训练数据或模型参数，本风险污染的是部署后持续读写的记忆与经验库；也区别于R0117（LLM提示注入风险），后者主要影响当前推理上下文，本风险把注入结果持久化并在未来任务中重新激活。AgentPoison等研究表明，极少量投毒记录即可在保持正常任务表现的同时，使特定触发条件稳定召回恶意经验。",
+    "complexity": "advanced",
+    "influence": "可将一次性提示注入转化为跨会话的持久控制，导致智能体长期调用恶意工具、泄露敏感数据、执行错误业务操作或在特定触发条件下稳定偏离正常目标。",
+    "avoidances": [
+      "A0268",
+      "A0087",
+      "A0215",
+      "A0216"
+    ],
+    "keywords": [
+      "AI智能体长期记忆投毒风险",
+      "AI智能体记忆投毒",
+      "长期记忆投毒",
+      "持久记忆攻击",
+      "记忆后门",
+      "跨会话操纵",
+      "agent memory poisoning",
+      "persistent memory attack"
+    ],
+    "references": [
+      {
+        "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases - NeurIPS 2024",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html"
+      },
+      {
+        "title": "Agent Security Bench: Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents - ICLR 2025",
+        "link": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5750f91d8fb9d5c02bd8ad2c3b44456b-Abstract-Conference.html"
+      }
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0292",
+        "relation": "escalation",
+        "note": "AI智能体长期记忆投毒风险可升级为具身智能授权漂移风险。"
+      }
+    ],
+    "updated": "2026-07-10",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "priority": "P1",
+      "observables": [
+        "特定短语或上下文反复触发与当前任务无关的历史工具调用或动作方案",
+        "长期记忆写入来源无法归因于可信用户、工具或数据源",
+        "少量新记忆记录出现异常集中的触发词、工具参数或目标指令",
+        "智能体在正常输入下召回与任务语义不相称的历史经验",
+        "删除当前会话后异常行为仍在后续会话中持续出现"
+      ],
+      "assessedAt": "2026-07-10"
+    }
+  }
+}

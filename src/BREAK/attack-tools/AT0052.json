@@ -79,13 +79,13 @@
       "A0078"
     ],
     "directCauseRisks": [
-      "R0109",
+      "R0293",
       "R0112-003"
     ],
     "indirectSupportRisks": [
       "R0067"
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "keywords": [
       "KON-Boot",
       "Kon Boot",
@@ -280,7 +280,7 @@
       "A0062"
     ],
     "directCauseRisks": [
-      "R0109",
+      "R0293",
       "R0164",
       "R0112-002"
     ],

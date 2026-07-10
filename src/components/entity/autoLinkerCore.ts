@@ -2,7 +2,7 @@
  * EntityAutoLinker 核心 DOM 扫描逻辑。
  *
  * 从 EntityAutoLinker.vue 提取的纯 DOM 函数，用于：
- * - 文本节点中实体 ID 的识别与包裹
+ * - 文本节点中实体 ID、行业术语的识别与包裹
  * - Skip zone 判断（跳过表单、代码块、ECharts、下拉列表等区域）
  * - DOM 子树扫描
  *
@@ -17,6 +17,45 @@ import { ENTITY_ID_PATTERN, inferEntityType } from "@/utils/entityRoute";
 export const ATTR = "data-entity-id";
 /** 自动添加的 CSS 类 */
 export const CLS = "entity-id-auto";
+/** 自动链接文本的容器与 Vue 原始文本节点容器 */
+export const TEXT_ROOT_CLS = "entity-auto-linked-text";
+export const TEXT_SOURCE_CLS = "entity-auto-link-source";
+export const TEXT_RENDERED_CLS = "entity-auto-link-rendered";
+
+export type TermSource = "title" | "alias" | "keyword";
+
+export interface TermCandidate {
+  id: string;
+  text: string;
+  source: TermSource;
+}
+
+export interface TermMatch {
+  id: string;
+  start: number;
+  end: number;
+}
+
+export interface TermMatcher {
+  find(text: string): TermMatch[];
+}
+
+interface ResolvedTerm {
+  id: string;
+  text: string;
+  rank: number;
+}
+
+interface TrieNode {
+  children: Map<string, TrieNode>;
+  terms: ResolvedTerm[];
+}
+
+const TERM_SOURCE_RANK: Record<TermSource, number> = {
+  title: 0,
+  alias: 1,
+  keyword: 2,
+};
 
 /**
  * 交互元素选择器列表。
@@ -98,6 +137,7 @@ export function isInsideSkipZone(node: Node): boolean {
       parent.hasAttribute(ATTR) ||
       parent.hasAttribute("_echarts_instance_") ||
       parent.classList.contains(CLS) ||
+      parent.classList.contains(TEXT_ROOT_CLS) ||
       parent.classList.contains("el-popover") ||
       parent.classList.contains("entity-popover") ||
       parent.classList.contains("entity-card") ||
@@ -130,10 +170,113 @@ export function extractEntityId(text: string): string | null {
   return inferEntityType(id) ? id : null;
 }
 
+function isAsciiWordChar(char: string | undefined): boolean {
+  return Boolean(char && /[A-Za-z0-9_]/.test(char));
+}
+
+function hasValidTermBoundary(text: string, start: number, end: number, term: string): boolean {
+  const first = term[0];
+  const last = term[term.length - 1];
+  if (isAsciiWordChar(first) && isAsciiWordChar(text[start - 1])) return false;
+  if (isAsciiWordChar(last) && isAsciiWordChar(text[end])) return false;
+  return true;
+}
+
+/**
+ * 构建术语匹配器。
+ *
+ * 同一词指向多个实体时按 title > alias > keyword 消解；若最高优先级仍有
+ * 多个实体则放弃自动链接，避免把歧义词随机指向某一术语。
+ */
+export function createTermMatcher(candidates: TermCandidate[]): TermMatcher {
+  const ownership = new Map<string, Map<string, ResolvedTerm>>();
+
+  for (const candidate of candidates) {
+    const text = candidate.text.trim();
+    const length = Array.from(text).length;
+    // 单字及过短英文极易在正文中误匹配；keywords 使用更严格的长度门槛。
+    if (!text || length < 2 || (/^[\x00-\x7F]+$/.test(text) && length < 3)) continue;
+    if (candidate.source === "keyword" && length < 3) continue;
+    const exactEntityId = new RegExp(`^(?:${ENTITY_ID_PATTERN.source})$`).test(text);
+    if (!/[\p{L}\p{N}]/u.test(text) || exactEntityId) continue;
+
+    const normalized = text.toLocaleLowerCase();
+    const byEntity = ownership.get(normalized) ?? new Map<string, ResolvedTerm>();
+    const current = byEntity.get(candidate.id);
+    const next = { id: candidate.id, text, rank: TERM_SOURCE_RANK[candidate.source] };
+    if (!current || next.rank < current.rank) byEntity.set(candidate.id, next);
+    ownership.set(normalized, byEntity);
+  }
+
+  const resolved: ResolvedTerm[] = [];
+  for (const byEntity of ownership.values()) {
+    const terms = Array.from(byEntity.values());
+    const bestRank = Math.min(...terms.map((term) => term.rank));
+    const best = terms.filter((term) => term.rank === bestRank);
+    if (best.length === 1) resolved.push(best[0]);
+  }
+
+  const root: TrieNode = { children: new Map(), terms: [] };
+  for (const term of resolved) {
+    let node = root;
+    for (const char of term.text.toLocaleLowerCase()) {
+      let child = node.children.get(char);
+      if (!child) {
+        child = { children: new Map(), terms: [] };
+        node.children.set(char, child);
+      }
+      node = child;
+    }
+    node.terms.push(term);
+  }
+
+  return {
+    find(text: string): TermMatch[] {
+      const normalized = text.toLocaleLowerCase();
+      const matches: TermMatch[] = [];
+      let cursor = 0;
+
+      while (cursor < normalized.length) {
+        let node = root;
+        let index = cursor;
+        let best: ResolvedTerm | null = null;
+        let bestEnd = cursor;
+
+        while (index < normalized.length) {
+          const child = node.children.get(normalized[index]);
+          if (!child) break;
+          node = child;
+          index += 1;
+          for (const term of node.terms) {
+            if (
+              hasValidTermBoundary(text, cursor, index, term.text) &&
+              (!best || term.text.length > best.text.length ||
+                (term.text.length === best.text.length && term.rank < best.rank))
+            ) {
+              best = term;
+              bestEnd = index;
+            }
+          }
+        }
+
+        if (best) {
+          matches.push({ id: best.id, start: cursor, end: bestEnd });
+          cursor = bestEnd;
+        } else {
+          cursor += 1;
+        }
+      }
+
+      return matches;
+    },
+  };
+}
+
 /** 扫描单个文本节点，将其中的实体 ID 包裹为 <span>。返回是否发生了替换。 */
 export function processTextNode(
   textNode: Text,
   processed: WeakSet<Text>,
+  termMatcher?: TermMatcher,
 ): boolean {
   if (processed.has(textNode)) return false;
   processed.add(textNode);
@@ -141,51 +284,95 @@ export function processTextNode(
   const text = textNode.textContent;
   if (!text) return false;
 
-  // 快速预检
-  if (!/[RATC]\d{4}/.test(text)) return false;
+  const sourceHolder = textNode.parentElement?.classList.contains(TEXT_SOURCE_CLS)
+    ? textNode.parentElement
+    : null;
 
-  // 跳过不应拆分的区域
-  if (isInsideSkipZone(textNode)) return false;
+  // 首次扫描时可快速排除无实体 ID 的文本；已建立可见副本的源节点仍需刷新，
+  // 包括新文本不再含任何匹配项的情况。
+  if (!sourceHolder && !termMatcher && !/[RATC]\d{4}/.test(text)) return false;
+
+  // 自动链接后仍保留 Vue 管理的原始文本节点。Vue 更新该节点时，
+  // MutationObserver 会再次进入这里并刷新可见副本，避免 SPA 路由切换后文本陈旧。
+  if (!sourceHolder && isInsideSkipZone(textNode)) return false;
 
   const regex = new RegExp(ENTITY_ID_PATTERN.source, "g");
-  const fragments: (string | { id: string })[] = [];
+  const matches: TermMatch[] = [];
+  const occupiedRanges: Array<{ start: number; end: number }> = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
-  let hasMatch = false;
 
   while ((match = regex.exec(text)) !== null) {
     const id = match[1];
     if (!inferEntityType(id)) continue;
+    matches.push({ id, start: match.index, end: regex.lastIndex });
+    occupiedRanges.push({ start: match.index, end: regex.lastIndex });
+  }
 
-    hasMatch = true;
-    if (match.index > lastIndex) {
-      fragments.push(text.slice(lastIndex, match.index));
+  if (termMatcher) {
+    for (const termMatch of termMatcher.find(text)) {
+      const overlapsId = occupiedRanges.some(
+        (range) => termMatch.start < range.end && termMatch.end > range.start,
+      );
+      if (!overlapsId) matches.push(termMatch);
     }
-    fragments.push({ id });
-    lastIndex = regex.lastIndex;
   }
 
-  if (!hasMatch) return false;
-
-  if (lastIndex < text.length) {
-    fragments.push(text.slice(lastIndex));
+  if (matches.length === 0) {
+    const rendered = sourceHolder?.nextElementSibling;
+    if (rendered?.classList.contains(TEXT_RENDERED_CLS)) {
+      rendered.textContent = text;
+      return true;
+    }
+    return false;
   }
+  matches.sort((a, b) => a.start - b.start || b.end - a.end);
 
-  // 用 DocumentFragment 替换原文本节点
-  const frag = document.createDocumentFragment();
+  const fragments: (string | { id: string; text: string })[] = [];
+  for (const item of matches) {
+    if (item.start < lastIndex) continue;
+    if (item.start > lastIndex) fragments.push(text.slice(lastIndex, item.start));
+    fragments.push({ id: item.id, text: text.slice(item.start, item.end) });
+    lastIndex = item.end;
+  }
+  if (lastIndex < text.length) fragments.push(text.slice(lastIndex));
+
+  const rendered = sourceHolder?.nextElementSibling;
+  const renderedHolder =
+    rendered?.classList.contains(TEXT_RENDERED_CLS) === true
+      ? (rendered as HTMLElement)
+      : document.createElement("span");
+  renderedHolder.className = TEXT_RENDERED_CLS;
+  renderedHolder.replaceChildren();
+
   for (const part of fragments) {
     if (typeof part === "string") {
-      frag.appendChild(document.createTextNode(part));
+      renderedHolder.appendChild(document.createTextNode(part));
     } else {
       const span = document.createElement("span");
       span.className = CLS;
       span.setAttribute(ATTR, part.id);
-      span.textContent = part.id;
-      frag.appendChild(span);
+      span.textContent = part.text;
+      renderedHolder.appendChild(span);
     }
   }
 
-  textNode.parentNode?.replaceChild(frag, textNode);
+  if (!sourceHolder) {
+    const parent = textNode.parentNode;
+    if (!parent) return false;
+
+    const root = document.createElement("span");
+    root.className = TEXT_ROOT_CLS;
+    const source = document.createElement("span");
+    source.className = TEXT_SOURCE_CLS;
+    source.hidden = true;
+    source.setAttribute("aria-hidden", "true");
+
+    parent.replaceChild(root, textNode);
+    source.appendChild(textNode);
+    root.append(source, renderedHolder);
+  }
+
   return true;
 }
 
@@ -193,6 +380,7 @@ export function processTextNode(
 export function scanSubtree(
   root: Node,
   processed: WeakSet<Text>,
+  termMatcher?: TermMatcher,
 ): void {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode(node: Text) {
@@ -210,6 +398,6 @@ export function scanSubtree(
   }
 
   for (const tn of textNodes) {
-    processTextNode(tn, processed);
+    processTextNode(tn, processed, termMatcher);
   }
 }

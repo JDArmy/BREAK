@@ -10,7 +10,7 @@
     "description": "拒付是支付争议后的资金撤销机制，既保护消费者，也可能被恶意用户用于“先消费后拒付”。风控需要结合交易证据、物流签收、账号历史、设备行为和商户风险，区分真实争议、友好欺诈和有组织薅羊毛。",
     "usageExample": "诈骗分子用盗刷的信用卡购买高价商品后，持卡人发起拒付，商户既失去商品又被扣回货款。",
     "relatedRisks": [
-      "R0235"
+      "R0139"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],
@@ -24,7 +24,7 @@
         "link": "https://en.wikipedia.org/wiki/Chargeback"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "version": 2
   }
 }

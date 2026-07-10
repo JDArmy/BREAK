@@ -1,0 +1,27 @@
+{
+  "A0269": {
+    "title": "Planning-Execution Separation and Runtime Action Arbitration",
+    "keywords": [
+      "planning-execution separation and runtime action arbitration",
+      "planner safety isolation",
+      "action policy arbitration",
+      "runtime execution governance",
+      "per-action safety validation",
+      "robot safety guardrail",
+      "runtime action shielding"
+    ],
+    "definition": "Separate task planning, safety policy, and low-level control into independent authority domains, continuously validate policy, capability, and environmental state before and during execution, and block, degrade, or route hazardous actions for human confirmation.",
+    "description": "Planning-execution separation and runtime action arbitration prevents a VLA model, LLM, or task planner from obtaining final authority over motors and skill APIs. The planner only decomposes a high-level objective into candidate actions. An independent safety-policy or governance layer decides whether each action may execute based on user permission, object type, spatial area, action risk, and current environment. The controller operates only within approved speed, force, path, and capability limits. Validation occurs per action rather than only at the high-level objective, preventing a seemingly safe task such as cleaning a kitchen from being decomposed into hazardous subtasks involving knives, children, or heat sources.\n\nThe execution pipeline performs policy checking and capability admission before an action, then monitors trajectory, torque, environmental changes, and policy drift during execution. It rejects unauthorized or increasingly risky actions, enters a safe state, revokes temporary capabilities, or requests human confirmation. Arbitration and control logs record candidate actions, matched rules, approving authorities, and actual outcomes, preventing the planning model from bypassing the independent governance layer by changing prompts, memory, or tool parameters.",
+    "limitation": "Policy rules and world state may be incomplete. Attackers may split a dangerous operation into multiple apparently low-risk steps to evade per-action checks, or use sensor deception to make the governance layer misjudge the environment. Independent arbitration adds reasoning and control latency, while false positives interrupt legitimate tasks. If the governance layer, capability registry, or low-level controller is compromised, separation can still fail and must be backed by hardware emergency stops and safety controllers.",
+    "references": [
+      {
+        "title": "Harnessing Embodied Agents: Runtime Governance for Policy-Constrained Execution",
+        "link": "https://arxiv.org/abs/2604.07833"
+      },
+      {
+        "title": "Safe Reinforcement Learning via Shielding - AAAI",
+        "link": "https://ojs.aaai.org/index.php/AAAI/article/view/11797"
+      }
+    ]
+  }
+}

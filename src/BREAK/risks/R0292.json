@@ -1,0 +1,66 @@
+{
+  "R0292": {
+    "title": "具身智能授权漂移风险",
+    "definition": "攻击者利用长期交互、记忆污染或身份伪造，使具身智能体逐步错误提升或持续保留其命令权限，进而执行未经所有者授权的物理动作。",
+    "description": "家庭与服务机器人通常需要区分所有者、家庭成员、儿童、访客和远程操作员，并根据身份、空间位置、任务场景和动作风险分配不同权限。攻击者可反复声称自己获得所有者授权、污染历史关系记录、利用克隆语音或伪造人脸通过弱认证，或者借助共享用户权限逐步请求更敏感的动作。当系统把长期熟悉度、历史交互成功或单一生物特征错误等同于高权限身份时，原本只能查询信息或执行低风险任务的主体可能逐渐获得开门、递药、进入卧室、接近儿童或操作危险物品的权限。\n\n该风险的核心不是一次认证失败，而是权限判断随交互历史和记忆状态持续偏移，并在后续会话中保留错误授权。它与R0098（虚假身份认证）相比更强调具身设备的持续关系建模、动作分级与物理后果；与R0291（AI智能体长期记忆投毒风险）相比，本风险关注污染或伪造最终造成的身份和动作权限变化，记忆投毒只是其中一种前置路径。",
+    "complexity": "advanced",
+    "influence": "可导致访客、儿童或远程攻击者被长期视为高权限用户，未经授权地控制门锁、药品、摄像头、机械臂和危险物品，破坏家庭信任并直接威胁人身与财产安全。",
+    "avoidances": [
+      "A0268",
+      "A0269",
+      "A0230",
+      "A0017",
+      "A0023",
+      "A0066"
+    ],
+    "keywords": [
+      "具身智能授权漂移风险",
+      "机器人授权漂移",
+      "命令权限漂移",
+      "错误提权",
+      "所有者身份伪造",
+      "机器人命令源冒用",
+      "embodied authorization drift",
+      "robot command impersonation"
+    ],
+    "references": [
+      {
+        "title": "Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses",
+        "link": "https://arxiv.org/abs/2605.02900"
+      },
+      {
+        "title": "Secure by Design Smart Authentication for Care Robots to Support the Elderly - IEEE",
+        "link": "https://ieeexplore.ieee.org/document/10541033"
+      }
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0291",
+        "relation": "prerequisite",
+        "note": "具身智能授权漂移风险是AI智能体长期记忆投毒风险的前置条件。"
+      },
+      {
+        "key": "R0272",
+        "relation": "escalation",
+        "note": "具身智能授权漂移风险可升级为具身智能体越狱与过度自主风险。"
+      }
+    ],
+    "updated": "2026-07-10",
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "critical",
+      "attackCost": "medium",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "low",
+      "priority": "P1",
+      "observables": [
+        "访客、儿童或共享用户在无正式授权记录时获得高风险动作权限",
+        "机器人仅凭声纹、人脸或长期熟悉度执行开门、递药等敏感动作",
+        "用户关系与权限记录在普通对话后被提升且跨会话保留",
+        "低风险查询权限逐步扩展为物理控制、禁区进入或危险物品操作权限",
+        "同一主体在不同认证通道中的身份和权限结论长期不一致"
+      ],
+      "assessedAt": "2026-07-10"
+    }
+  }
+}

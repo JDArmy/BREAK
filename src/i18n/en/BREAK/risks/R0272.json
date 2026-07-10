@@ -6,15 +6,21 @@
       "embodied agent jailbreak",
       "over-autonomy",
       "agent jailbreak",
-      "physical action overstep"
+      "physical action overstep",
+      "hazardous subtask decomposition",
+      "ambiguous embodied task"
     ],
     "definition": "The risk that an embodied agent, jailbreak-induced or due to over-broad autonomy permissions, invokes physical tools or performs physical actions beyond intended boundaries, causing irreversible physical-world consequences.",
-    "description": "Embodied agent jailbreak & over-autonomy risk is the physical-world amplification of model-layer attacks. A RoboPAIR-jailbroken Unitree Go2 can be induced to perform harmful physical actions such as finding weapons, striking pedestrians, and ignoring stop signs. Unlike pure software agents, an embodied agent's post-jailbreak misoperation translates directly into irreversible physical-world consequences — software-agent misoperations can be rolled back, but embodied-agent actions like opening doors, transporting items, or manipulating robotic arms cannot be undone. Over-autonomy risk refers to the agent being granted over-broad action permissions or over-loose goals, performing physical actions in unintended situations; this differs from maliciously induced jailbreak.\n\nThis risk relates to R0148 (AI agent tool abuse / over-autonomy risk), but R0148 focuses on general AI agents while this risk is specialized for physical-action overstep of embodied agents, emphasizing physical irreversibility.",
+    "description": "Embodied agent jailbreak & over-autonomy risk is the physical-world amplification of model-layer attacks. A RoboPAIR-jailbroken Unitree Go2 can be induced to perform harmful physical actions such as finding weapons, striking pedestrians, and ignoring stop signs. Unlike pure software agents, an embodied agent's post-jailbreak misoperation translates directly into irreversible physical-world consequences — software-agent misoperations can be rolled back, but embodied-agent actions like opening doors, transporting items, or manipulating robotic arms cannot be undone. Over-autonomy risk refers to the agent being granted over-broad action permissions, overly loose goals, or ambiguous task boundaries and then performing physical actions in unintended situations; this differs from maliciously induced jailbreak.\n\nA safe high-level task does not guarantee safe decomposed subtasks. When an attacker or ordinary user gives an instruction such as \"clean the kitchen\" or \"handle this\" without a clear object, action, or scope, the planner may expand the task and produce hazardous steps such as handling knives, opening cabinets, moving glassware, or approaching children. If the system reviews only high-level intent or grants the planning model direct authority over skills and motors, semantic ambiguity and inherited context errors become physical-action boundary violations. This risk relates to R0148 (AI agent tool abuse / over-autonomy risk), but R0148 focuses on general AI agents while this risk is specialized for physical-action overstep of embodied agents, emphasizing physical irreversibility.",
     "influence": "A jailbroken agent can manipulate robotic arms, open doors, transport items, or strike people; autonomous decision errors translate directly into physical harm, unlike the controllable rollback of pure software agents — consequences are irreversible and may cause casualties.",
     "references": [
       {
         "title": "Jailbreaking LLM-Controlled Robots (RoboPAIR)",
         "link": "https://arxiv.org/abs/2410.13691"
+      },
+      {
+        "title": "Harnessing Embodied Agents: Runtime Governance for Policy-Constrained Execution",
+        "link": "https://arxiv.org/abs/2604.07833"
       }
     ],
     "riskAssessment": {
@@ -23,6 +29,7 @@
         "Agents are granted excessive action permissions to execute physical actions beyond expected boundaries",
         "Physical-action boundary violations cause irreversible consequences such as opening doors or moving contraband",
         "Agents autonomously decide in unexpected situations, causing physical harm",
+        "An ambiguous high-level task is decomposed into hazardous subtasks involving sharp tools, heat sources, restricted areas, or children",
         "Jailbreak behavior and physical-world harm correlate temporally"
       ]
     }

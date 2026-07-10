@@ -4,6 +4,7 @@ import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
+import BusinessDomainImpactBlock from "@/components/BusinessDomainImpactBlock.vue";
 import { Link, TopRight } from "@element-plus/icons-vue";
 import { useCases } from "@/composables/useCases";
 import { entityDetailHref } from "@/utils/entityRoute";
@@ -120,6 +121,13 @@ const onNavigate = (event: "navigate-risk" | "navigate-attackTool" | "navigate-t
         <span v-for="keyword in selectedKeywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
       </div>
     </section>
+    <BusinessDomainImpactBlock
+      v-if="!isDrawer"
+      entity-type="case"
+      :entity-id="cKey"
+      :entity-title="selectedCase.title"
+      :case-related-risks="selectedCase.relatedRisks ?? []"
+    />
     <EntityLinkSection
       :keys="selectedCase.relatedRisks ?? []"
       title="risks"

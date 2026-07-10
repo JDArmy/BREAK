@@ -14,7 +14,7 @@
 }
 
 /**
- * 全局自动识别的实体 ID 行内样式。
+ * 全局自动识别的实体 ID 与行业术语行内样式。
  * 由 EntityAutoLinker.vue 的 DOM 操作动态添加 class="entity-id-auto"。
  */
 .entity-id-auto {

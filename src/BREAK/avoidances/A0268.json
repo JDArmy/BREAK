@@ -1,0 +1,62 @@
+{
+  "A0268": {
+    "title": "AI智能体记忆分级与写入治理",
+    "category": "AC01",
+    "keywords": [
+      "AI智能体记忆分级与写入治理",
+      "AI智能体记忆安全",
+      "长期记忆写入鉴权",
+      "记忆来源追踪",
+      "安全记忆隔离",
+      "记忆透明管理",
+      "agent memory guard"
+    ],
+    "definition": "按公共、个人、敏感、安全和系统等等级隔离AI智能体记忆，并对记忆的读写改删实施身份鉴权、来源追踪、内容校验和用户透明管理。",
+    "description": "AI智能体记忆分级与写入治理把持久记忆按用途和敏感度划分为公共记忆、个人偏好、敏感数据、安全规则与系统约束等区域，分别定义哪些用户、工具和运行组件可以读取、写入、修改或删除。账号关系、支付权限、工具凭据以及具身场景中的禁区、危险物品和儿童权限等高影响记忆，应使用独立命名空间与不可由普通对话覆盖的策略存储；写入前校验操作者身份、指令来源、任务上下文和内容冲突，必要时要求所有者二次确认。\n\n系统应记录每条记忆的来源、写入主体、时间、证据和版本，支持异常写入审计、回滚、过期清理与跨用户隔离；对模型自动总结形成的记忆设置置信度阈值和待确认状态，不让一次对话直接固化为长期授权。用户界面应允许所有者查看、纠正和删除可见记忆，同时把系统级安全规则置于受保护存储，由独立策略组件维护。",
+    "limitation": "攻击者可利用长期正常交互逐步积累看似可信的虚假记录，绕过单次写入校验；受控工具或高权限账户被攻陷后仍可能写入带合法来源标记的污染内容。过严的确认和隔离会降低个性化体验，自动摘要还可能把正常用户的口语、玩笑或临时安排误判为长期规则，造成误拒绝或记忆缺失。",
+    "references": [
+      {
+        "title": "OWASP Agent Memory Guard",
+        "link": "https://owasp.org/www-project-agent-memory-guard/"
+      },
+      {
+        "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases - NeurIPS 2024",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html"
+      }
+    ],
+    "updated": "2026-07-10",
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0023",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0066",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0087",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0215",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0216",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

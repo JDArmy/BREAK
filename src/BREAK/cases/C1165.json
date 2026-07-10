@@ -16,7 +16,7 @@
     "summary": "渗透测试中，攻击者使用Dirsearch、御剑等工具对目标网站进行路径爆破，批量枚举后台路径、备份文件、数据库文件等敏感资源。通过构造URL+后缀名请求，根据状态码判断路径是否存在，从而发现未授权访问的敏感文件，如config.php配置文件及.sql数据库备份。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0109"
+      "R0293"
     ],
     "references": [
       {
@@ -24,7 +24,7 @@
         "link": "https://www.freebuf.com/articles/web/263211.html"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "incidentTime": "2021-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []

@@ -4,7 +4,9 @@
     "aliases": [
       "Embodied Intelligence",
       "具身AI",
-      "Embodied AI"
+      "Embodied AI",
+      "Physical AI",
+      "Physical AI Agent"
     ],
     "category": "人工智能",
     "definition": "具备物理实体与感知决策能力，能在物理世界中通过传感器感知环境、通过执行器执行动作并与环境交互的智能体系统，涵盖人形机器人、服务机器人、自动驾驶具身系统等。",
@@ -19,6 +21,8 @@
       "具身智能",
       "具身AI",
       "Embodied Intelligence",
+      "Physical AI",
+      "Physical AI Agent",
       "物理智能体",
       "embodied agent"
     ],
@@ -42,6 +46,6 @@
         "link": "https://www.nvidia.com/en-us/glossary/embodied-ai/"
       }
     ],
-    "updated": "2026-07-09"
+    "updated": "2026-07-10"
   }
 }

@@ -6,6 +6,7 @@ import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
+import BusinessDomainImpactBlock from "@/components/BusinessDomainImpactBlock.vue";
 
 import { TopRight } from "@element-plus/icons-vue";
 
@@ -137,6 +138,13 @@ const onNavigate = (event: "navigate-threatActor" | "navigate-risk" | "navigate-
         <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
       </div>
     </section>
+
+    <BusinessDomainImpactBlock
+      v-if="!isDrawer"
+      entity-type="threatActor"
+      :entity-id="taKey"
+      :entity-title="$t(`BREAK.threatActors.${taKey}.title`)"
+    />
 
     <!-- 关联威胁行为者 relation-list（同类嵌套） -->
     <section v-if="relatedThreatActorRelations.length" class="detail-section">

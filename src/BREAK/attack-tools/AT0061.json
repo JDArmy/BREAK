@@ -260,7 +260,8 @@
     ],
     "directCauseRisks": [
       "R0017-003",
-      "R0235"
+      "R0235",
+      "R0139"
     ],
     "indirectSupportRisks": [
       "R0005"
@@ -275,7 +276,7 @@
       "支付欺诈自动化工具",
       "支付欺诈自动化"
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [
       {
         "key": "AT0038",

@@ -6,6 +6,7 @@ import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
+import BusinessDomainImpactBlock from "@/components/BusinessDomainImpactBlock.vue";
 
 import { TopRight } from "@element-plus/icons-vue";
 
@@ -141,6 +142,13 @@ const onNavigate = (event: "navigate-attackTool" | "navigate-risk" | "navigate-a
         <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
       </div>
     </section>
+
+    <BusinessDomainImpactBlock
+      v-if="!isDrawer"
+      entity-type="attackTool"
+      :entity-id="atKey"
+      :entity-title="$t(`BREAK.attackTools.${atKey}.title`)"
+    />
 
     <!-- AttackTool→Risk 走新窗口（不嵌套回主抽屉），emit navigate-risk 由调用方开新窗口 -->
     <EntityLinkSection

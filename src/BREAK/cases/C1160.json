@@ -1,6 +1,6 @@
 {
   "C1160": {
-    "title": "Amazon 因违反 GDPR 被罚 7.46 亿欧元",
+    "title": "Amazon GDPR 7.46 亿欧元罚款部分被撤销并需重新评估",
     "keywords": [
       "Amazon",
       "GDPR",
@@ -13,19 +13,23 @@
       "数据处理合法性",
       "透明度"
     ],
-    "summary": "2021年，卢森堡数据保护机构 CNPD 对 Amazon Europe Core S.à r.l. 作出 GDPR 行政处罚决定，罚款金额为 7.46 亿欧元，是 GDPR 执法中的标志性高额罚款。Amazon 提起上诉后，卢森堡行政法院在2025年驳回上诉并维持 CNPD 原决定，罚款与更正措施均予以保留；该案成为大型跨境电商平台个人数据处理合规的重要执法案例。",
+    "summary": "2021年，卢森堡数据保护机构 CNPD 对 Amazon Europe Core S.à r.l. 作出 GDPR 行政处罚决定，罚款金额为 7.46 亿欧元，并要求整改在线行为广告相关处理。2025年卢森堡行政法庭维持原决定；2026年3月12日，卢森堡行政法院确认 CNPD 多项实质认定，但因罚款需结合欧盟法院后续判例重新评估主观过错与比例性，撤销罚款部分并由 CNPD 继续处理。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0125"
     ],
     "references": [
       {
+        "title": "Administrative Court ruling in the case between Amazon and the CNPD - CNPD",
+        "link": "https://cnpd.public.lu/en/actualites/national/2026/03/arret-ca-amazon-cnpd.html"
+      },
+      {
         "title": "CNPD decision regarding Amazon Europe Core S.à r.l.",
         "link": "https://cnpd.public.lu/en/actualites/national/2025/03/amazon-decision.html"
       },
       {
-        "title": "Unprecedented €746,000,000 Amazon fine for GDPR breaches confirmed by ...",
-        "link": "https://rjgaito.com/fines-and-penalties-imposed-on-amazon/"
+        "title": "Amazon.com, Inc. 2021 Annual Report",
+        "link": "https://s2.q4cdn.com/299287126/files/doc_financials/2022/ar/Amazon-2021-Annual-Report.pdf"
       }
     ],
     "updated": "2026-07-10",

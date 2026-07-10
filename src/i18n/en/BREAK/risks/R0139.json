@@ -2,16 +2,16 @@
   "R0139": {
     "title": "Friendly Fraud / Chargeback Fraud",
     "definition": "A consumer maliciously initiates a chargeback with their bank or payment institution after legitimately receiving goods or services, falsely claiming non-receipt or unauthorized transaction, to obtain a refund while retaining the goods.",
-    "description": "Friendly fraud (Chargeback Fraud) is a consumer-initiated fraud distinct from malicious returns (R0054). Its core characteristic is that the consumer bypasses the merchant and initiates a chargeback directly through the bank or payment institution's dispute resolution mechanism. Main forms include: (1) False non-receipt claims: consumers claiming non-receipt to their bank after receiving goods. (2) Unauthorized transaction claims: consumers claiming a transaction they completed themselves was unauthorized. (3) Service dissatisfaction chargebacks: consumers initiating chargebacks without communicating with the merchant. (4) Family member consumption: cardholders disputing charges made by family members (such as children) as unauthorized. (5) Buyer's remorse: consumers obtaining refunds through chargebacks rather than normal return processes. (6) Professional chargeback fraudsters: organized fraudsters repeatedly exploiting chargeback mechanisms.",
-    "influence": "Merchants bear product losses and chargeback fees, excessively high chargeback rates lead to payment channel closure, and operational costs increase.",
+    "description": "Friendly fraud, also called chargeback fraud, is consumer-initiated payment dispute abuse. The consumer bypasses the merchant's normal after-sales approval and asks an issuer, acquirer, or payment platform to reverse the funds. Common patterns include falsely claiming non-delivery after receiving goods, denying a transaction completed by the cardholder or a family member, disputing a service without first contacting the merchant, and organized actors spreading repeated disputes across linked accounts, devices, and cards.\n\nIt differs from R0235 refund abuse: R0235 exploits merchant- or platform-controlled return, refund-without-return, and compensation processes, while friendly fraud exploits bank and payment-network dispute rules. Attackers may exploit difficult delivery proof for digital goods, confusing merchant descriptors, delayed cross-border tracking, or short response windows to increase dispute success. Controls require payment-authentication, device, login, delivery, service-fulfillment, and support evidence, followed by representment within card-network deadlines.",
+    "influence": "Merchants may lose both goods and payment while paying dispute fees and card-network penalties; persistently high chargeback ratios can worsen acquiring terms or terminate payment access.",
     "references": [
       {
-        "title": "Chargeback Fraud - Visa",
-        "link": "https://usa.visa.com/support/small-business/dispute-resolution.html"
+        "title": "Chargeback Fraud 101: What Businesses Need to Know - Stripe",
+        "link": "https://stripe.com/resources/more/chargeback-fraud-101"
       },
       {
-        "title": "Case Study: Stay Vigilant, Build Defenses, Jointly Prevent and Combat Financial Black-Grey Market",
-        "link": "https://mp.weixin.qq.com/s?__biz=MzA3NzAzNTY4MA==&mid=2651202715&idx=5&sn=d95acdfe6192cebdaf726a7143ba0ec1&chksm=85edf6ba99a1bdda669d92bdf957bdf01a8cecb98d95a4130ebe8876e728d7b9469edf694b3a&scene=27"
+        "title": "Friendly Fraud Explained: Risks and Prevention - Mastercard",
+        "link": "https://www.mastercard.com/us/en/news-and-trends/Insights/2024/what-is-friendly-fraud.html"
       }
     ],
     "keywords": [

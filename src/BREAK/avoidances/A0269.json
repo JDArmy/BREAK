@@ -1,0 +1,62 @@
+{
+  "A0269": {
+    "title": "规划执行分权与运行时动作仲裁",
+    "category": "AC01",
+    "keywords": [
+      "规划执行分权与运行时动作仲裁",
+      "规划器安全隔离",
+      "动作策略仲裁",
+      "运行时执行治理",
+      "逐动作安全校验",
+      "机器人安全护栏",
+      "runtime action shielding"
+    ],
+    "definition": "将任务规划、安全策略与底层控制拆分为独立权限主体，在动作执行前及执行过程中持续校验策略、能力和环境状态，并对危险动作阻断、降级或转人工确认。",
+    "description": "规划执行分权与运行时动作仲裁禁止VLA、LLM或任务Planner直接取得电机与技能接口的最终执行权。Planner只负责把高层目标拆解为候选动作；独立的Safety Policy或治理层根据用户权限、物体类型、空间区域、动作风险和当前环境判断动作能否执行；Controller仅在已批准的速度、力度、路径和能力范围内完成控制。系统应逐动作校验，而不是只判断“整理厨房”等高层任务是否安全，防止安全目标被拆解成拿刀、接近儿童或操作火源等危险子任务。\n\n执行管线应在动作前进行策略检查和能力准入，在动作过程中监测轨迹、力矩、环境变化与策略漂移，对未经授权或风险升高的动作即时拒绝、切换安全状态、撤销临时能力或请求人工确认。仲裁与控制日志应记录候选动作、命中规则、批准主体和实际执行结果，确保规划模型无法通过修改提示词、记忆或工具参数绕过独立治理层。",
+    "limitation": "策略规则和世界状态可能不完整，攻击者可把危险动作拆成多个表面低风险步骤规避逐动作校验，或通过传感器欺骗让治理层误判环境。独立仲裁增加推理与控制延迟，误报会中断正常任务；若治理层、能力清单或底层控制器本身被攻陷，分权机制仍可能失效，因此还需硬件急停与安全控制器兜底。",
+    "references": [
+      {
+        "title": "Harnessing Embodied Agents: Runtime Governance for Policy-Constrained Execution",
+        "link": "https://arxiv.org/abs/2604.07833"
+      },
+      {
+        "title": "Safe Reinforcement Learning via Shielding - AAAI",
+        "link": "https://ojs.aaai.org/index.php/AAAI/article/view/11797"
+      }
+    ],
+    "updated": "2026-07-10",
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0230",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0023",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0066",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0072",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0225",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  }
+}

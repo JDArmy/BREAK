@@ -1,6 +1,6 @@
 {
   "C1160": {
-    "title": "Amazon Fined €746 Million for GDPR Violations",
+    "title": "Amazon's €746 Million GDPR Fine Partly Annulled and Requiring Reassessment",
     "keywords": [
       "Amazon GDPR fine",
       "CNPD penalty",
@@ -11,15 +11,19 @@
       "Luxembourg data protection",
       "data processing lawfulness"
     ],
-    "summary": "In 2021, Luxembourg's data protection authority CNPD issued a GDPR administrative decision against Amazon Europe Core S.à r.l., imposing a €746 million fine, a landmark high-value penalty in GDPR enforcement. After Amazon appealed, Luxembourg's Administrative Tribunal rejected the appeal in 2025 and upheld the CNPD decision, keeping both the fine and corrective measures in place, making the case a major enforcement example for personal-data compliance by large cross-border e-commerce platforms.",
+    "summary": "In 2021, Luxembourg's data protection authority CNPD issued a GDPR administrative decision against Amazon Europe Core S.à r.l., imposing a €746 million fine and ordering changes to online behavioural advertising practices. Luxembourg's Administrative Tribunal upheld the decision in 2025. On March 12, 2026, the Administrative Court confirmed several substantive CNPD findings but annulled the fine component because the penalty required reassessment of intent or negligence and proportionality under later CJEU case law, leaving the CNPD to continue handling the matter.",
     "references": [
+      {
+        "title": "Administrative Court ruling in the case between Amazon and the CNPD - CNPD",
+        "link": "https://cnpd.public.lu/en/actualites/national/2026/03/arret-ca-amazon-cnpd.html"
+      },
       {
         "title": "CNPD decision regarding Amazon Europe Core S.à r.l.",
         "link": "https://cnpd.public.lu/en/actualites/national/2025/03/amazon-decision.html"
       },
       {
-        "title": "Unprecedented €746,000,000 Amazon fine for GDPR breaches confirmed by ...",
-        "link": "https://rjgaito.com/fines-and-penalties-imposed-on-amazon/"
+        "title": "Amazon.com, Inc. 2021 Annual Report",
+        "link": "https://s2.q4cdn.com/299287126/files/doc_financials/2022/ar/Amazon-2021-Annual-Report.pdf"
       }
     ]
   }

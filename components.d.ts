@@ -14,6 +14,7 @@ declare module 'vue' {
     AttackToolDetailBody: typeof import('./src/components/AttackToolDetailBody.vue')['default']
     AvoidanceDetail: typeof import('./src/components/AvoidanceDetail.vue')['default']
     AvoidanceDetailBody: typeof import('./src/components/AvoidanceDetailBody.vue')['default']
+    BusinessDomainImpactBlock: typeof import('./src/components/BusinessDomainImpactBlock.vue')['default']
     CaseDetail: typeof import('./src/components/CaseDetail.vue')['default']
     CaseDetailBody: typeof import('./src/components/CaseDetailBody.vue')['default']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']

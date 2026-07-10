@@ -1,0 +1,66 @@
+{
+  "R0293": {
+    "title": "未授权访问风险",
+    "keywords": [
+      "未授权访问风险",
+      "未授权访问",
+      "缺失鉴权",
+      "匿名访问",
+      "认证绕过"
+    ],
+    "definition": "攻击者在未完成有效身份认证或目标资源缺少鉴权控制的情况下，直接访问本应受保护的数据、接口、服务或设备。",
+    "description": "未授权访问发生在管理端口、业务接口、文件目录、云服务或设备控制面未设置身份认证，认证配置被错误关闭，或者攻击者绕过认证流程后直接进入受保护资源的场景。攻击者无需拥有合法低权限账号，即可读取数据、调用模型与算力、修改配置、删除资源或进一步植入恶意载荷。\n\n该风险的核心是访问入口没有建立有效身份门槛，与 R0109 越权访问风险中“主体已认证但超出授权范围”不同。治理应优先确认所有外部和内部入口均默认拒绝匿名请求，并对认证绕过、公开端口和敏感路径暴露进行持续验证。",
+    "complexity": "basic",
+    "influence": "未授权访问可直接暴露敏感数据和管理能力，导致服务被滥用、资源被删除、设备被控制，并成为后续横向移动和持久化入口。",
+    "avoidances": [
+      "A0017",
+      "A0018",
+      "A0055",
+      "A0056",
+      "A0028"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0109",
+        "relation": "variant",
+        "note": "未授权访问风险与越权访问风险是相关变体。"
+      },
+      {
+        "key": "R0078",
+        "relation": "escalation",
+        "note": "未授权访问风险可升级为数据泄露。"
+      },
+      {
+        "key": "R0028",
+        "relation": "escalation",
+        "note": "未授权访问风险可升级为数据渗出风险。"
+      }
+    ],
+    "riskAssessment": {
+      "likelihood": "high",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "medium",
+      "defenseMaturity": "medium",
+      "observables": [
+        "未携带会话、令牌或客户端证书的请求获得受保护业务数据",
+        "管理端口、模型接口或设备控制接口对公网开放且没有认证挑战",
+        "敏感目录、备份文件或配置文件可通过直接构造路径下载",
+        "认证失败后更换请求方法、路径或参数即可继续访问同一资源"
+      ],
+      "assessedAt": "2026-07-10",
+      "priority": "P1"
+    },
+    "references": [
+      {
+        "title": "CWE-306: Missing Authentication for Critical Function",
+        "link": "https://cwe.mitre.org/data/definitions/306.html"
+      },
+      {
+        "title": "OWASP Top 10: Broken Access Control",
+        "link": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/"
+      }
+    ],
+    "updated": "2026-07-10"
+  }
+}

@@ -6,6 +6,7 @@ import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import FeedbackLink from "@/components/FeedbackLink.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
+import BusinessDomainImpactBlock from "@/components/BusinessDomainImpactBlock.vue";
 
 import { TopRight } from "@element-plus/icons-vue";
 
@@ -200,6 +201,13 @@ const onNavigate = (event: "navigate-risk" | "navigate-avoidance" | "navigate-at
         <span v-for="keyword in keywords" :key="keyword" class="keyword-tag">{{ keyword }}</span>
       </div>
     </section>
+
+    <BusinessDomainImpactBlock
+      v-if="!isDrawer"
+      entity-type="risk"
+      :entity-id="rKey"
+      :entity-title="$t(`BREAK.risks.${rKey}.title`)"
+    />
 
     <!-- 关联风险 relation-list -->
     <section v-if="relatedRiskRelations.length" class="detail-section">

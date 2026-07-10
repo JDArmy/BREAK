@@ -6,8 +6,12 @@
     "influence": "Supply-chain risk can propagate weaknesses in upstream components, build environments, delivery processes, or supplier accounts into many downstream systems, causing malicious-code implantation, persistent backdoors, sensitive data exposure, and business disruption. Because affected organizations usually trust suppliers and delivered artifacts, discovery is often delayed and response may require emergency component replacement, version rollback, service suspension, or a full supplier-security review.",
     "references": [
       {
-        "title": "Supply chain attack - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+        "title": "NIST SP 800-161 Rev. 1: Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations",
+        "link": "https://csrc.nist.gov/pubs/sp/800/161/r1/final"
+      },
+      {
+        "title": "ENISA Threat Landscape for Supply Chain Attacks",
+        "link": "https://www.enisa.europa.eu/publications/threat-landscape-for-supply-chain-attacks"
       }
     ],
     "keywords": [
@@ -34,8 +38,12 @@
     "influence": "Software supply-chain poisoning can introduce malicious dependencies, backdoor code, or tampered build artifacts into many downstream applications, causing credential exposure, remote control of business systems, customer data exfiltration, and service disruption. Because these issues often appear as normal version updates or trusted components, investigation and rollback are costly, and affected organizations must re-audit dependency sources, build pipelines, and release signatures.",
     "references": [
       {
-        "title": "Supply chain attack - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+        "title": "NIST SP 800-218: Secure Software Development Framework (SSDF) Version 1.1",
+        "link": "https://csrc.nist.gov/pubs/sp/800/218/final"
+      },
+      {
+        "title": "CISA: NIST SP 800-218 Secure Software Development Framework Recommendations for Mitigating the Risk of Software Vulnerabilities",
+        "link": "https://www.cisa.gov/resources-tools/resources/nist-sp-800-218-secure-software-development-framework-v11-recommendations-mitigating-risk-software"
       }
     ],
     "keywords": [

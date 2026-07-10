@@ -7,16 +7,21 @@
       "permission convergence",
       "hazardous action confirmation",
       "least-privilege execution",
+      "tiered action capability",
       "force and speed limit",
       "embodied action safety boundary"
     ],
     "definition": "Setting physical action safety boundaries (workspace, speed, force limits) for embodied agents, with human confirmation for hazardous actions and least-privilege execution, to prevent jailbreak or over-autonomy from causing irreversible physical consequences.",
-    "description": "Action safety boundaries and permission minimization for embodied agents establish a hard constraint layer to prevent irreversible physical consequences from jailbreak-induced or over-autonomous execution of dangerous physical actions. First, physical action safety boundaries enforce hard limits on the manipulator's workspace, movement speed, and gripper force; any action command exceeding these boundaries is intercepted at the hardware level and cannot be overridden by VLA or LLM. Second, dangerous action human confirmation requires real-time operator approval for high-risk actions such as opening doors, handling sharp tools, or carrying heavy loads. Third, least-privilege execution grants the agent only the minimum action permissions necessary for the current task, with permissions automatically revoked upon task completion. This mechanism is a critical safety distinction between embodied and purely software-based agents—software agent misoperations are reversible, whereas physical actions of embodied agents are irreversible and must be safeguarded by hardware-level hard constraints. It complements A0225 (physical-world prompt injection detection) and A0072 (algorithmic audit mechanisms): the former detects injections, while this measure limits consequences after a successful injection.",
+    "description": "Action safety boundaries and permission minimization for embodied agents establish a hard constraint layer to prevent irreversible physical consequences from jailbreak-induced or over-autonomous execution of dangerous physical actions. First, physical action safety boundaries enforce hard limits on the manipulator's workspace, movement speed, and gripper force; any action command exceeding these boundaries is intercepted at the hardware level and cannot be overridden by VLA or LLM. Second, dangerous-action confirmation requires real-time operator approval for high-risk actions such as opening doors, handling sharp tools, or carrying heavy loads. Third, least-privilege execution grants the agent only the minimum action permissions necessary for the current task, with permissions automatically revoked upon task completion. Fourth, tiered capability tokens ensure that low-risk perception or navigation permission cannot automatically escalate into unlocking doors, delivering medication, or operating heat sources.\n\nThis measure focuses on the hard boundaries of how far an allowed action may go, where it may operate, and which capabilities it may use. A0269 (planning-execution separation and runtime action arbitration) focuses on who may approve an action and how it is continuously governed during execution. Together, the independent governance layer rejects unauthorized actions produced by the planner, while the low-level controller limits residual consequences through speed, force, workspace, and capability constraints. It also complements A0225 (physical-world prompt injection detection) and A0072 (algorithmic audit mechanisms): the former detects injections, while this measure limits consequences after a successful injection.",
     "limitation": "Overly strict boundaries can limit task capability and impair agent autonomy and efficiency. Human confirmation in emergency scenarios introduces latency that may cause missed optimal intervention windows. Boundary configurations require per-task tuning, as generic boundaries struggle to accommodate all scenarios. The hardware constraint layer itself may be bypassed via firmware vulnerabilities and must be paired with secure boot.",
     "references": [
       {
         "title": "ISO 10218 & ISO/TS 15066 Explained: Robot Safety Standards - AMD Machines",
         "link": "https://amdmachines.com/blog/robot-safety-standards-iso-10218-and-ts-15066-explained/"
+      },
+      {
+        "title": "Harnessing Embodied Agents: Runtime Governance for Policy-Constrained Execution",
+        "link": "https://arxiv.org/abs/2604.07833"
       }
     ]
   }

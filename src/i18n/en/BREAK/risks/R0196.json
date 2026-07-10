@@ -11,8 +11,12 @@
     ],
     "references": [
       {
-        "title": "Blockchain security challenges under quantum threats",
-        "link": "https://xueqiu.com/2642768288/362355777"
+        "title": "NIST Post-Quantum Cryptography Project",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography"
+      },
+      {
+        "title": "NIST FIPS 204: Module-Lattice-Based Digital Signature Standard",
+        "link": "https://csrc.nist.gov/pubs/fips/204/final"
       },
       {
         "title": "Ethereum Quantum Resistance Roadmap",

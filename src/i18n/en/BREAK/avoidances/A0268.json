@@ -1,0 +1,27 @@
+{
+  "A0268": {
+    "title": "AI Agent Memory Classification and Write Governance",
+    "keywords": [
+      "AI agent memory classification and write governance",
+      "AI agent memory security",
+      "long-term memory write authorization",
+      "memory provenance tracking",
+      "safety memory isolation",
+      "transparent memory management",
+      "agent memory guard"
+    ],
+    "definition": "Classify AI-agent memory into public, personal, sensitive, safety, and system tiers, and govern memory read, write, update, and deletion through identity authorization, provenance tracking, content validation, and transparent user control.",
+    "description": "AI-agent memory classification and write governance separates persistent memory by purpose and sensitivity into areas such as public memory, personal preferences, sensitive data, safety rules, and system constraints. Each area defines which users, tools, and runtime components may read, write, modify, or delete records. High-impact memories involving account relationships, payment permissions, tool credentials, and, in embodied settings, restricted areas, hazardous objects, and child permissions should use separate namespaces and policy stores that ordinary conversation cannot overwrite. Before a write is committed, the system verifies operator identity, instruction source, task context, and content conflicts, requiring owner reconfirmation when necessary.\n\nEach memory record should retain its source, writer, timestamp, evidence, and version to support abnormal-write auditing, rollback, expiration, and cross-user isolation. Memories generated through model summarization should use confidence thresholds and pending-confirmation states so one conversation cannot immediately become durable authorization. Owners should be able to inspect, correct, and delete visible memories, while system-level safety rules remain in protected storage maintained by an independent policy component.",
+    "limitation": "Attackers may build apparently credible false records through long-term benign-looking interaction and bypass per-write validation. If a trusted tool or privileged account is compromised, poisoned content may still carry legitimate provenance. Excessive confirmation and isolation reduce personalization, while automatic summarization may misclassify jokes, colloquial speech, or temporary arrangements from normal users as durable rules, causing false denials or missing memories.",
+    "references": [
+      {
+        "title": "OWASP Agent Memory Guard",
+        "link": "https://owasp.org/www-project-agent-memory-guard/"
+      },
+      {
+        "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases - NeurIPS 2024",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html"
+      }
+    ]
+  }
+}

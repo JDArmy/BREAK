@@ -1,0 +1,33 @@
+{
+  "R0293": {
+    "title": "Unauthorized Access Risk",
+    "keywords": [
+      "Unauthorized Access Risk",
+      "unauthorized access",
+      "missing authentication",
+      "anonymous access",
+      "authentication bypass"
+    ],
+    "definition": "An attacker directly accesses protected data, APIs, services, or devices without completing effective authentication or because the target lacks authentication controls.",
+    "description": "Unauthorized access occurs when administrative ports, business APIs, file directories, cloud services, or device control planes have no authentication, authentication is mistakenly disabled, or an attacker bypasses the authentication flow and directly reaches a protected resource. Without a legitimate low-privilege account, the attacker may read data, consume models or compute resources, alter configuration, delete assets, or plant malicious payloads.\n\nThe defining condition is the absence of an effective identity gate. It differs from R0109, where an authenticated principal exceeds its authorization scope. Controls should default all internal and external entry points to deny anonymous requests and continuously test for authentication bypass, exposed ports, and sensitive-path exposure.",
+    "influence": "Unauthorized access can directly expose sensitive data and administrative capabilities, enable service abuse, resource deletion, or device takeover, and provide an entry point for lateral movement and persistence.",
+    "references": [
+      {
+        "title": "CWE-306: Missing Authentication for Critical Function",
+        "link": "https://cwe.mitre.org/data/definitions/306.html"
+      },
+      {
+        "title": "OWASP Top 10: Broken Access Control",
+        "link": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/"
+      }
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Requests without a session, token, or client certificate receive protected business data",
+        "Administrative ports, model APIs, or device-control interfaces are internet-exposed without an authentication challenge",
+        "Sensitive directories, backup files, or configuration files can be downloaded through directly constructed paths",
+        "After authentication fails, changing the request method, path, or parameters still reaches the same resource"
+      ]
+    }
+  }
+}

@@ -8,16 +8,16 @@ allowed-tools: Bash
 
 # BREAK Knowledge Base Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,369 entries across the following entity types:
+BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,383 entries across the following entity types:
 
 | Type | Count | ID Format | Description |
 |------|-------|-----------|-------------|
-| Risk | 394 | R0001, R0001-001 | Business security risk definitions and impact |
-| Avoidance | 347 | A0001, A0001-001 | Defensive measures against risks |
-| AttackTool | 120 | AT0001, AT0001-001 | Tools used by threat actors |
+| Risk | 401 | R0001, R0001-001 | Business security risk definitions and impact |
+| Avoidance | 351 | A0001, A0001-001 | Defensive measures against risks |
+| AttackTool | 124 | AT0001, AT0001-001 | Tools used by threat actors |
 | ThreatActor | 76 | TA0001, TA0001-001 | Groups that carry out attacks |
-| Term | 626 | T0001 | Business security terminology |
-| Case | 1782 | C0001 | Real-world security incident cases |
+| Term | 628 | T0001 | Business security terminology |
+| Case | 1783 | C0001 | Real-world security incident cases |
 | BusinessDomain | 20 | BD00 | Industry/business domain categories |
 
 Maintenance note: the Skill invocation workflow is unchanged; entity counts stay synchronized with knowledge-base case facts, source-quality updates, and relationship updates.
@@ -175,6 +175,8 @@ The 2026-07-10 C0446 maintenance adds the Shimen County People's Court official 
 The third 2026-07-10 Case P2 fact-review checkpoint continues strengthening or narrowing C0463, C0521, C0522, C0558, C0565, C0571, C0577, C0579, C0593, C0630, C0642-C0720, C0728, C0735, C0744, C0749, C0772, C0781, C0785, C0791, and related Case `summary`, `references`, `incidentTime`, and English translations, and expands R0290 avoidance coverage; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
 The fourth 2026-07-10 Case P2 fact-review maintenance continues narrowing C0654, C0657, C0684, C1160, C1198, C1235, and related Case `summary`, `incidentTime`, and English translations, and records C0226, C0410, C0792, C0798, and similar items as resolved when already supported by stable existing sources; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
+The 2026-07-10 P1 reference-quality and follow-up P2 fact-review maintenance strengthens R0081, R0196, TA0030, C0484, C0493, C0502, C0508, C0518, C0538, C0802, C0810, C0812, C0813, C0816, C0851, C0878, C0938, C0996, C1050, C1061, C1062, C1075, C1079, C1084, C1090, C1160, C1198, and related `references`, `summary`, `incidentTime`, and English translations, and synchronizes source / avoidance-relation fixes for A0225 and R0267; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 

@@ -1,0 +1,37 @@
+{
+  "R0292": {
+    "title": "Embodied Intelligence Authorization Drift Risk",
+    "keywords": [
+      "embodied intelligence authorization drift risk",
+      "robot authorization drift",
+      "command permission drift",
+      "erroneous privilege escalation",
+      "owner identity spoofing",
+      "robot command-source impersonation",
+      "embodied authorization drift",
+      "robot command impersonation"
+    ],
+    "definition": "The risk that an attacker uses long-term interaction, memory poisoning, or identity spoofing to make an embodied agent gradually grant or retain incorrect command privileges and then perform physical actions without owner authorization.",
+    "description": "Home and service robots must distinguish owners, family members, children, visitors, and remote operators, assigning different privileges based on identity, spatial location, task context, and action risk. Attackers can repeatedly claim owner authorization, corrupt historical relationship records, use cloned speech or forged faces against weak authentication, or expand a shared user's privileges through progressively more sensitive requests. When the system treats familiarity, successful interaction history, or a single biometric signal as equivalent to a high-privilege identity, a subject initially limited to information queries or low-risk tasks may gradually gain permission to unlock doors, deliver medication, enter bedrooms, approach children, or handle hazardous objects.\n\nThe core risk is not a single authentication failure, but a permission decision that drifts with interaction history and memory state and preserves incorrect authorization across sessions. Compared with R0098 (false identity authentication), this risk emphasizes persistent relationship modeling, action tiers, and physical consequences in embodied devices. Compared with R0291 (AI agent long-term memory poisoning risk), this risk concerns the resulting change in identity and action permissions; memory poisoning is only one possible prerequisite.",
+    "influence": "Visitors, children, or remote attackers may be persistently treated as privileged users and gain unauthorized control over locks, medication, cameras, robotic arms, and hazardous objects, undermining household trust and directly threatening personal and property safety.",
+    "references": [
+      {
+        "title": "Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses",
+        "link": "https://arxiv.org/abs/2605.02900"
+      },
+      {
+        "title": "Secure by Design Smart Authentication for Care Robots to Support the Elderly - IEEE",
+        "link": "https://ieeexplore.ieee.org/document/10541033"
+      }
+    ],
+    "riskAssessment": {
+      "observables": [
+        "A visitor, child, or shared user receives high-risk action privileges without a formal authorization record",
+        "The robot executes sensitive actions such as unlocking or delivering medication based only on voice, face, or familiarity",
+        "User relationships and permission records are elevated after ordinary conversation and persist across sessions",
+        "Low-risk query permission gradually expands into physical control, restricted-area entry, or hazardous-object access",
+        "Identity and permission conclusions for the same subject remain inconsistent across authentication channels"
+      ]
+    }
+  }
+}
