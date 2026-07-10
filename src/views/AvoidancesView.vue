@@ -56,7 +56,7 @@ const avoidanceItems = computed(() =>
       return {
         id: aKey,
         title,
-        badge: `${category}: ${categoryTitle}`,
+        badge: categoryTitle,
         badgeType: category.toLowerCase(),
         subtitle: definition.slice(0, 50),
         searchText: [title, ...keywords, definition, description, limitation, category, categoryTitle]
