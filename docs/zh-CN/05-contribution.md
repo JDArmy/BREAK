@@ -64,6 +64,8 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 
 修改 `review:*` 评审脚本时，需要在使用手册中说明评审口径变化；若影响公共命令、提交门禁或维护流程，也要同步 README。
 
+`review:references` 会按实体内容、references 以及 Case `category` 生成缓存指纹。修改 Case 分类时，即使引用链接未变化，也会触发重新评审，避免从高价值 Case 降为普通 `news_report` 后继续复用旧的两源 / primary 要求判断。
+
 需要推动 `SKILL.md` 与 `SKILL_en.md` 更新的典型变更包括：`scripts/skill/` 搜索或打包脚本、Skill 可消费的数据结构、实体字段 / 关系、导出的中英文数据包。
 
 ## 关键内容规范

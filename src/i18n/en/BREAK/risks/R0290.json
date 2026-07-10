@@ -1,0 +1,36 @@
+{
+  "R0290": {
+    "title": "Black SIM Card Abuse Risk",
+    "definition": "Attackers use unregistered, impersonated, or improperly bulk-issued phone cards to conduct fraud, OTP receiving, traffic diversion, or account abuse.",
+    "description": "Black SIM card abuse risk occurs when mobile phone cards, virtual carrier numbers, IoT SIMs, or overseas phone cards are improperly issued, resold, or supplied in bulk to black-market operators. Attackers or upstream SIM suppliers may abuse identities, lax agent controls, poorly governed virtual carriers, illegal IoT SIM resale, or overseas numbers to bypass real-name registration and build pools of communication resources that can place calls, send or receive SMS, and receive verification codes at scale.\n\nThis risk focuses on business abuse after communication identity and real-name controls are bypassed; it is not merely account registration. Black SIM cards can directly support telecom-fraud calls, SMS bombing, OTP-based registration, fraudulent traffic diversion, account farming, and financial-account verification, making it difficult for platforms, carriers, and regulators to trace the real user.",
+    "influence": "Black SIM cards reduce the traceability of communication identities and amplify telecom fraud, OTP-based registration, account farming, and black-market traffic diversion. They can expose carriers, platforms, and partners to regulatory penalties, real-name registration remediation, higher risk-control costs, and more user complaints.",
+    "references": [
+      {
+        "title": "Notice on Lawfully Cleaning Up Fraud-Related Phone Cards, IoT Cards, and Associated Internet Accounts",
+        "link": "https://news.cpd.com.cn/n3559/824/t_1148717.html"
+      },
+      {
+        "title": "First National Judgment: Cutting Off the Behind-the-Scenes Operators of Telecom Network Fraud",
+        "link": "http://zfw.km.gov.cn/c/2021-04-29/5125773.shtml"
+      }
+    ],
+    "keywords": [
+      "Black SIM Card Abuse Risk",
+      "black SIM card",
+      "black phone card",
+      "non-real-name SIM",
+      "virtual carrier black card",
+      "fraud-related phone card",
+      "IoT SIM abuse",
+      "communication real-name bypass"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Numbers from the same agent, range, or virtual carrier trigger fraud, OTP receiving, or registration risks in a short period",
+        "Phone-card registration identity does not match actual devices, locations, call targets, or business usage over time",
+        "Newly issued SIMs or IoT cards show abnormal SMS verification, short-duration calling, or bulk messaging behavior",
+        "Police, anti-fraud, or platform blocklist feedback shows the same batch of numbers reused across fraud, diversion, or account-abuse incidents"
+      ]
+    }
+  }
+}

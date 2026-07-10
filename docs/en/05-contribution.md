@@ -64,6 +64,8 @@ Typical changes that require updating `README.md` and `README_CN.md` include: pu
 
 When changing a `review:*` script, document the changed review policy in the user manual. If the change affects public commands, commit gates, or maintenance workflow, update the README files as well.
 
+`review:references` fingerprints entity content, references, and the Case `category`. Changing a Case category therefore triggers a fresh review even when links stay the same, so an entry downgraded from a high-value Case to ordinary `news_report` does not reuse stale two-source / primary-source judgments.
+
 Typical changes that require updating `SKILL.md` and `SKILL_en.md` include: `scripts/skill/` search or packaging scripts, Skill-consumable data shape, entity fields / relationships, and exported Chinese / English data bundles.
 
 ## Key Content Conventions

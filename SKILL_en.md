@@ -170,6 +170,8 @@ The second 2026-07-09 Case P2 fact-review checkpoint continues narrowing C0249, 
 
 The 2026-07-10 C0354 maintenance adds a court-system source and changes the Case category to security incident to better match the facts; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The 2026-07-10 C0446 maintenance adds the Shimen County People's Court official WeChat source and syncs the English translation; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph

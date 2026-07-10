@@ -1,6 +1,6 @@
 {
   "C0410": {
-    "title": "攻击者结合假IT支持电话实施MFA疲劳攻击",
+    "title": "Uber 2022年MFA疲劳攻击事件",
     "keywords": [
       "MFA疲劳攻击",
       "推送轰炸",
@@ -9,22 +9,27 @@
       "社会工程学",
       "凭证盗窃",
       "Push Bombing",
-      "MFA Fatigue"
+      "MFA Fatigue",
+      "Uber安全事件"
     ],
-    "summary": "攻击者通过反复发送MFA推送请求制造压力，并配合假冒IT支持的电话或消息，声称需要用户批准请求以停止通知，利用用户对技术支持的信任和急于解决问题的心理，诱导其完成认证批准。",
-    "category": "news_report",
+    "summary": "2022年9月，Uber披露一起安全事件。攻击者购买外部承包商账号凭据后反复发起MFA登录请求，承包商最终批准其中一次请求，导致攻击者进入Uber内部系统。Uber称事件与Lapsus$有关，未发现用户账户或敏感数据被访问。",
+    "category": "security_incident",
     "relatedRisks": [
-      "R0036-001"
+      "R0246"
     ],
     "references": [
       {
-        "title": "MFA Fatigue: A Growing Security Concern",
-        "link": "https://www.okta.com/blog/identity-security/mfa-fatigue-growing-security-concern/"
+        "title": "Security update",
+        "link": "https://www.uber.com/newsroom/security-update/"
+      },
+      {
+        "title": "Uber says Lapsus$ behind cyberattack, no user data exposed",
+        "link": "https://www.bleepingcomputer.com/news/security/uber-says-lapsus-behind-cyberattack-no-user-data-exposed/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2022-09-28"
+    "incidentTime": "2022-09"
   }
 }

@@ -80,7 +80,7 @@ const results = await runSubagentReview({
   prepareContext,
   buildPrompt,
   validateResult,
-  fingerprintFields: ['references', 'definition', 'summary'],
+  fingerprintFields: ['references', 'definition', 'summary', 'category'],
   model: 'text',
   concurrency: 3,
   limit: opts.limit,

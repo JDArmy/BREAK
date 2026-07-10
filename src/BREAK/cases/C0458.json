@@ -14,7 +14,7 @@
     "summary": "2019年，云南警方侦破一起电信诈骗案，发现犯罪团伙使用的电话“黑卡”来自虚拟运营商远特（北京）通信技术有限公司。该公司明知代理商亚飞达公司违规大量贩卖电话卡用于犯罪活动，仍放任不管并为其提供大量电话卡。2021年4月，远特公司董事长及高管因拒不履行信息网络安全管理义务罪被判刑。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0026"
+      "R0290"
     ],
     "references": [
       {
@@ -22,15 +22,11 @@
         "link": "http://zfw.km.gov.cn/c/2021-04-29/5125773.shtml"
       },
       {
-        "title": "全国首判！虚拟运营商明知电话卡被用于诈骗仍放任，董事长获刑",
-        "link": "http://legal.people.com.cn/n1/2021/0428/c42510-32090948.html"
-      },
-      {
-        "title": "全国首例！电信诈骗幕后黑手——虚拟运营商被判了",
-        "link": "https://www.secrss.com/articles/30792"
+        "title": "全国首起电信运营商拒不履行信息网络安全管理义务案在云南宣判",
+        "link": "https://www.chinanews.com.cn/sh/2021/04-26/9464353.shtml"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "incidentTime": "2021-04",
     "relatedAttackTools": [
       "AT0001"

@@ -1,29 +1,35 @@
 {
   "C0470": {
-    "title": "离职员工盗取商场积分套现被判刑",
+    "title": "离职员工盗取37万商场积分套现被刑拘",
     "keywords": [
       "积分套现",
       "离职员工",
-      "管理员权限",
+      "账号密码",
       "商场积分",
-      "盗窃罪",
+      "刑事拘留",
       "系统篡改",
       "网络转卖",
       "上海静安"
     ],
-    "summary": "2021年11月至2022年2月，上海静安区某商场离职员工刁某利用管理员权限，多次潜入商场篡改系统虚增近370万积分，用于兑换商品并在网络平台转卖获利，造成商场损失约3.6万元。刁某因盗窃罪被刑事拘留并获刑。",
-    "category": "criminal_verdict",
+    "summary": "2022年3月，上观新闻和中国青年报客户端报道上海静安一起积分盗取案。2021年11月24日至2022年2月13日，离职员工刁某多次潜入商场，登录后台系统虚增约36.9万积分，用于兑换商品、折价券并转卖获利3.3万余元，造成商场约3.6万元损失。刁某因涉嫌盗窃被刑事拘留。",
+    "category": "news_report",
     "relatedRisks": [
-      "R0045-001"
+      "R0045-001",
+      "R0062-002",
+      "R0087"
     ],
     "references": [
       {
-        "title": "离职员工盗取近370万积分 获刑一年四个月",
-        "link": "https://www.jingan.gov.cn/dynamic/videopush-detail.html?param=d89b54ba-44ba-4cd3-8610-7dfa599edd2c"
+        "title": "视频丨离职员工盗取37万积分，换取现金3.5万被刑拘 - 上观新闻",
+        "link": "https://sghexport.shobserver.com/html/baijiahao/2022/03/05/675844.html"
+      },
+      {
+        "title": "“积分套现”能发财？上海一男子非法获取商家积分获利被刑拘 - 中国青年报客户端",
+        "link": "https://m.cyol.com/gb/articles/2022-03/05/content_VAn2qivBV.html"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2022-02",
+    "updated": "2026-07-10",
+    "incidentTime": "2021-11",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

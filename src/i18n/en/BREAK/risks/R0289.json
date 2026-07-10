@@ -1,0 +1,36 @@
+{
+  "R0289": {
+    "title": "Tax Compliance Risk",
+    "definition": "Enterprises evade tax obligations through concealed income, false costs, related-party transactions, false invoices, or similar practices, leading to tax enforcement penalties.",
+    "description": "Tax compliance risk occurs across enterprise operations, transaction settlement, inventory management, invoice issuance, expense recognition, and related-party transactions. Companies may underpay taxes by concealing income, fabricating inventory or costs, using low-price related-party transactions, improperly deducting accrued expenses, issuing false invoices, splitting revenue, or operating off the books to reduce tax burdens or hide the true state of operations.\n\nThis risk focuses on the use of business processes, accounting treatments, and internal-control gaps to evade tax obligations, not ordinary differences in tax policy. At scale it can lead to back taxes, late fees, fines, credit downgrades, administrative penalties, criminal exposure, and restrictions in financing, bidding, payment settlement, and partner onboarding.",
+    "influence": "It can cause tax authorities to recover underpaid taxes, impose late fees and fines, and in severe cases trigger criminal liability, credit penalties, restricted business access, reduced partner trust, and polluted financial data across operations, inventory, income, and expenses.",
+    "references": [
+      {
+        "title": "Law of the People's Republic of China on the Administration of Tax Collection",
+        "link": "https://www.gov.cn/banshi/2005-08/19/content_24850.htm"
+      },
+      {
+        "title": "Guizhou Tax Authorities Expose Three Tax-Related Violation Cases and Crack Down on Tax Violations",
+        "link": "https://guizhou.chinatax.gov.cn/wjjb/yasf/202508/t20250821_88501795.html"
+      }
+    ],
+    "keywords": [
+      "Tax Compliance Risk",
+      "tax compliance",
+      "tax evasion",
+      "concealed income",
+      "false costs",
+      "related-party tax avoidance",
+      "false invoices",
+      "tax audit"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "Inventory, revenue, cost, and invoice data remain mismatched over time, with gaps concentrated in specific business lines or affiliates",
+        "Related-party transactions materially deviate from market prices, shifting profits or tax burdens abnormally",
+        "Accrued expenses, cost deductions, or invoice flows do not match real contracts, logistics, and fund flows",
+        "Tax inspection, audit, or financial reconciliation finds underpaid taxes, off-book income, or abnormal invoice chains"
+      ]
+    }
+  }
+}
