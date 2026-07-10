@@ -15,12 +15,16 @@
     "summary": "In May 2019, Australian design platform Canva suffered a data breach. Have I Been Pwned loaded the incident in August 2019 and records approximately 137.3 million affected accounts. The currently verifiable sources support the fact that Canva account data was illegally accessed and later appeared in breach datasets, but they do not directly prove that the attack method was credential stuffing or credential cracking, so the summary no longer attributes the incident to a specific bulk account-checking technique.",
     "references": [
       {
-        "title": "Have I Been Pwned: Canva",
-        "link": "https://haveibeenpwned.com/Breach/Canva"
+        "title": "Canva data breach: What you need to know - Miami University",
+        "link": "https://miamioh.edu/it-services/news/2020/02/canva-breach.html"
       },
       {
         "title": "Canva data breach - Huntress Threat Library",
         "link": "https://www.huntress.com/threat-library/data-breach/canva-data-breach"
+      },
+      {
+        "title": "Have I Been Pwned: Canva",
+        "link": "https://haveibeenpwned.com/Breach/Canva"
       },
       {
         "title": "A Case Study of Credential Stuffing Attack: Canva Data Breach",

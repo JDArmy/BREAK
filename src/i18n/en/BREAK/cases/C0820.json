@@ -1,18 +1,19 @@
 {
   "C0820": {
-    "title": "Verizon DBIR 2023 Highlights Expanding ATO Attack Surface",
+    "title": "Verizon DBIR 2023 Highlights Credential Abuse and Ransomware as Major Breach Risks",
     "keywords": [
       "Verizon DBIR",
-      "account takeover",
-      "ATO attacks",
+      "credential abuse",
       "credential theft",
       "ransomware deployment",
       "cryptocurrency theft",
       "initial access",
       "financially motivated",
-      "2023 data breach report"
+      "2023 data breach report",
+      "account takeover",
+      "data theft extortion"
     ],
-    "summary": "The 2023 Verizon Data Breach Investigations Report reveals that account takeover (ATO) attacks are no longer confined to financial institutions; any organization with a customer login interface can be targeted. Attackers, typically financially motivated, use stolen credentials for initial access to deploy ransomware or steal cryptocurrency, causing significant impact on economies, governments, and",
+    "summary": "Verizon's 2023 Data Breach Investigations Report states that financial motivation continued to dominate data breaches, the use of stolen credentials remained a prominent breach path, and ransomware was still an important cross-industry threat. The report also discusses cryptocurrency theft, ransomware, and data theft extortion, showing how credential abuse can support follow-on intrusion, extortion, and asset theft.",
     "references": [
       {
         "title": "2023 Data Breach Investigations Report (DBIR) - Verizon",

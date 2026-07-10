@@ -11,7 +11,7 @@
       "vulnerability exploitation",
       "unauthorized access"
     ],
-    "summary": "Zscaler disclosed that in August 2025 it became aware of a campaign targeting the Salesloft Drift marketing SaaS platform and affecting many customers. Attackers stole OAuth tokens connected to Salesloft Drift and gained limited access to some Zscaler Salesforce information, including business contact details, product licensing and commercial information, and selected support case header fields. Zscaler said the incident was confined to the Salesloft Drift app and did not involve its products, services, or underlying systems.",
+    "summary": "Zscaler disclosed that in August 2025 it experienced limited data exposure after a third-party marketing SaaS platform was affected by a supply chain attack. Attackers accessed some Salesforce business contacts, commercial information, and support case fields. Zscaler said the incident was limited to data associated with the third-party app and did not affect its products, services, or underlying systems.",
     "references": [
       {
         "title": "Salesloft Drift Supply Chain Incident: Key Details and Zscaler's Response",

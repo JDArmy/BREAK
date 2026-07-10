@@ -1,6 +1,6 @@
 {
   "C0746": {
-    "title": "Stolen Hospital Laptop Causes Heartburn",
+    "title": "NIST Stolen Hospital Laptop Scenario Case",
     "keywords": [
       "stolen laptop",
       "healthcare data breach",
@@ -11,8 +11,12 @@
       "medical records",
       "physical security"
     ],
-    "summary": "A case published by NIST: A healthcare executive left a work laptop in a vehicle, which was then stolen. The device had access to over 40,000 medical records. The incident exposed patient data to potential breach, triggering compliance reviews and remediation at the healthcare organization.",
+    "summary": "The small-business cybersecurity scenario Stolen Hospital Laptop Causes Heartburn describes a healthcare executive leaving a work laptop with access to patient medical records in a vehicle, after which it was stolen. The organization then had to address sensitive data exposure risk and remediation. This entry is recorded as an instructional scenario case, not as a disclosed real security incident.",
     "references": [
+      {
+        "title": "Stolen Hospital Laptop Causes Sensitive Data Breached - Ambit IT",
+        "link": "https://www.ambit-it.com/case-study-001"
+      },
       {
         "title": "[PDF] Stolen Hospital Laptop Causes Heartburn",
         "link": "https://www.nist.gov/document/case-3-stolen-hospital-laptop-causes-heartburn"

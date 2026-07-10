@@ -13,19 +13,23 @@
       "Taylor Swift",
       "程序抢票"
     ],
-    "summary": "英国上诉法院摘要显示，Peter Hunter 和 David Smith 是票务黄牛，使用部分购自暗网的复杂软件批量购买热门体育、音乐和文化活动门票，并在二级票务网站高价转售。两人因经营欺诈性票务转售业务相关罪名被定罪，上诉法院在2021年维持核心定罪。该案体现了自动化抢票和虚假身份批量购票对普通消费者购票机会的破坏。",
+    "summary": "英国媒体报道，票务黄牛 Peter Hunter 和 David Smith 通过批量购买热门演出和体育赛事门票后在二级票务平台高价转售获利。公开报道显示，两人相关非法票务转售获利约900万英镑，并被要求偿还610万英镑犯罪收益。该案体现了自动化购票和批量倒卖对普通消费者购票机会的破坏。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0070"
     ],
     "references": [
       {
+        "title": "Ticket touts who made £9m by reselling Ed Sheeran tickets with bots ordered to repay £6.1 million - The Independent",
+        "link": "https://www.independent.co.uk/news/uk/crime/peter-hunter-david-smith-ed-sheeran-ticket-tout-b2245321.html"
+      },
+      {
         "title": "R v Hunter and Smith Court of Appeal Press Summary - UK Judiciary",
         "link": "https://www.judiciary.uk/wp-content/uploads/2022/07/R-v-Hunter-Smith-summary-261121.pdf"
       }
     ],
     "updated": "2026-07-10",
-    "incidentTime": "2021-11",
+    "incidentTime": "2022-12",
     "relatedAttackTools": [
       "AT0045"
     ],

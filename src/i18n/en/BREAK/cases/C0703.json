@@ -11,7 +11,7 @@
       "inventory hoarding",
       "API abuse"
     ],
-    "summary": "A North American online retailer endured a month-long bot attack. Scalping bots exploited vulnerabilities in its public API to bypass normal purchasing flows, automating the buying and hoarding of high-demand items, which drove up server costs and prevented legitimate customers from making purchases.",
+    "summary": "Imperva reported that a North American online retailer endured a scalping bot attack lasting about one month. The attackers exploited a vulnerability in the retailer's public API to bypass normal shopping flows, automate purchasing, and hoard high-demand items, increasing server costs and making it difficult for real customers to complete purchases.",
     "references": [
       {
         "title": "How Scalping Bots Exploited a Vulnerable API to Disrupt Online Retail Sales - Imperva",

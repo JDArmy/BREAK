@@ -23,7 +23,7 @@
       "版权数据训练",
       "数据来源不明"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",
@@ -45,16 +45,6 @@
         "key": "R0243",
         "relation": "co-occurrence",
         "note": "训练数据版权与授权风险与训练数据投毒风险共享规避手段“AI训练数据治理”。"
-      },
-      {
-        "key": "R0244",
-        "relation": "co-occurrence",
-        "note": "训练数据版权与授权风险与RAG越权召回均可被威胁行为者“AI数据投毒者”实施。"
-      },
-      {
-        "key": "R0245",
-        "relation": "co-occurrence",
-        "note": "训练数据版权与授权风险与模型输出泄露敏感信息均可被威胁行为者“AI数据投毒者”实施。"
       },
       {
         "key": "R0240",

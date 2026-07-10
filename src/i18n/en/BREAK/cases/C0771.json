@@ -1,19 +1,27 @@
 {
   "C0771": {
-    "title": "IoT Device Misinterpretation of SM Cryptographic Algorithm Compliance",
+    "title": "Release of GB/T 39786-2021 Basic Requirements for Commercial Cryptography Application",
     "keywords": [
-      "IoT device",
+      "GB/T 39786-2021",
+      "commercial cryptography",
+      "cryptography application",
+      "information system",
       "SM4-CBC",
       "SM3-HMAC",
       "SM2 certificate",
-      "firmware signature",
-      "GM/T 0015-2012",
-      "GB/T 39786-2021",
-      "key derivation",
-      "MCU"
+      "security assessment",
+      "State Cryptography Administration"
     ],
-    "summary": "Some IoT manufacturers port SM4-CBC to MCUs and claim 'national cryptography support,' but overlook critical requirements such as key derivation not using SM3-HMAC, device unique identity not bound to SM2 certificates, and firmware signatures not following GM/T 0015-2012 specifications. While functional, such implementations fail the integrity assessment under GB/T 39786-2021 regarding trusted key",
+    "summary": "In March 2021, the national standard GB/T 39786-2021 Information Security Technology - Baseline Requirements for Cryptographic Application of Information Systems was officially released and scheduled to take effect on October 1, 2021. The State Cryptography Administration stated that the standard guides commercial cryptography application and security assessment, helping information systems apply cryptography in a compliant, correct, and effective manner. It also provides baseline reference for commercial cryptography deployment in IoT and industry systems, including key management, cryptographic services, and assessment boundaries.",
     "references": [
+      {
+        "title": "National Standard GB/T 39786-2021 Basic Requirements for Cryptography Application in Information Systems Released - State Cryptography Administration",
+        "link": "https://www.oscca.gov.cn/sca/xxgk/2021-03/19/content_1060852.shtml"
+      },
+      {
+        "title": "GB/T 39786-2021 - National Public Service Platform for Standards Information",
+        "link": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=53282C88712CE157043B7A2C590278FC"
+      },
       {
         "title": "[PDF] Report on the Development of the Commercial Cryptography Industry in Liaoning Province",
         "link": "https://gxt.ln.gov.cn/gxt/zhzx/xyxx/2026041309423171444/2026041309414728242.pdf"

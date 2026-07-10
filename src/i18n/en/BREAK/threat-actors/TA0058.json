@@ -1,7 +1,7 @@
 {
   "TA0058": {
     "title": "AI Data Poisoners",
-    "description": "Attackers who influence model behavior by creating and injecting poisoned samples into AI training pipelines, often using crawlers or UI automation to scale delivery.",
+    "description": "Attackers who influence AI model behavior by creating and injecting poisoned samples into training, feedback, or retrieval knowledge pipelines, often using crawlers or UI automation to scale delivery.",
     "references": [
       {
         "title": "A small number of samples can poison LLMs of any size - Anthropic",

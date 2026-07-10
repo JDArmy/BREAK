@@ -8,13 +8,13 @@ allowed-tools: Bash
 
 # BREAK Knowledge Base Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,378 entries across the following entity types:
+BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,379 entries across the following entity types:
 
 | Type | Count | ID Format | Description |
 |------|-------|-----------|-------------|
 | Risk | 400 | R0001, R0001-001 | Business security risk definitions and impact |
 | Avoidance | 350 | A0001, A0001-001 | Defensive measures against risks |
-| AttackTool | 123 | AT0001, AT0001-001 | Tools used by threat actors |
+| AttackTool | 124 | AT0001, AT0001-001 | Tools used by threat actors |
 | ThreatActor | 76 | TA0001, TA0001-001 | Groups that carry out attacks |
 | Term | 628 | T0001 | Business security terminology |
 | Case | 1781 | C0001 | Real-world security incident cases |
@@ -183,6 +183,8 @@ The fourth 2026-07-10 Case P2 fact-review maintenance continues narrowing C0654,
 The 2026-07-10 P1 reference-quality and follow-up P2 fact-review maintenance strengthens R0081, R0196, TA0030, C0484, C0493, C0502, C0508, C0518, C0538, C0802, C0810, C0812, C0813, C0816, C0851, C0878, C0938, C0996, C1050, C1061, C1062, C1075, C1079, C1084, C1090, C1160, C1198, and related `references`, `summary`, `incidentTime`, and English translations, and synchronizes source / avoidance-relation fixes for A0225 and R0267; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
 The 2026-07-10 P1 reference-quality pass further replaces or adds authoritative sources for AT0076, A0124, A0270, R0168, R0177, and TA0058, removes the weak forum source from R0168, and syncs the English translations; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
+The 2026-07-10 AI data-poisoning relationship review corrects AT0108's direct causal relationship to R0273, removes unrelated avoidance and TA0058 Case / Risk attributions, and aligns TA0058's description across training, feedback, and retrieval knowledge pipelines; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 

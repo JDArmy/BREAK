@@ -13,7 +13,7 @@
       "one-time password interception",
       "bank impersonation"
     ],
-    "summary": "In May 2025, Spain's Guardia Civil carried out coordinated searches and arrested “GoogleXcoder,” dismantling the GXC Team banking phishing tool network. The group operated a Crime-as-a-Service model that supplied other criminals with phishing kits capable of cloning Spanish banks, international institutions, and government portals, together with customization, technical support, and updates. Group-IB reported that the ecosystem also included Android SMS-stealing malware disguised as banking apps and AI-powered voice scam tooling integrated into phishing kits to trick victims into revealing two-factor authentication codes, with related phishing campaigns causing millions of euros in losses.",
+    "summary": "Group-IB disclosed that Spains Guardia Civil dismantled the GXC Team network with its intelligence support and arrested the main developer. The network allegedly operated as Crime-as-a-Service, providing banking phishing and credential-theft tools to criminals and supporting impersonation of financial institutions, government portals, and other targets for fraud. Public materials also described Android malware disguised as banking apps and voice-fraud capability used to induce victims to disclose verification codes, weakening an active banking phishing ecosystem in Spain. The case shows how phishing kits, mobile malware, and voice social engineering can be packaged as a service against bank customer authentication flows, especially second-factor verification steps.",
     "references": [
       {
         "title": "Guardia Civil dismantles a banking phishing network and arrests the main developer of credential theft kits in Spain",

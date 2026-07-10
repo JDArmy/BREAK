@@ -1,7 +1,7 @@
 {
   "TA0058": {
     "title": "AI数据投毒者",
-    "description": "通过构造并投放 AI 训练链路污染样本影响模型行为，常结合爬虫或UI自动化流程扩大投放规模。",
+    "description": "通过构造并投放污染样本影响 AI 模型行为，目标可覆盖训练、反馈或检索知识链路，常结合爬虫或UI自动化流程扩大投放规模。",
     "references": [
       {
         "title": "A small number of samples can poison LLMs of any size - Anthropic",

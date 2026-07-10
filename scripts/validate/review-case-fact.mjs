@@ -27,7 +27,13 @@ ensureDir(SCRAPED_DIR);
 const SCRAPINGDOG_KEY = process.env.SCRAPINGDOG_API_KEY;
 
 function htmlToText(html) {
-  return html
+  const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || '';
+  const article =
+    html.match(/<article[^>]*>([\s\S]*?)<\/article>/i)?.[1] ||
+    html.match(/<div[^>]+class=["'][^"']*(?:TRS_Editor|article|content|DocText|doc|main)[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)?.[1] ||
+    '';
+  const source = article ? `${title}\n${article}` : html;
+  return source
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '')
     .replace(/<[^>]+>/g, ' ')
@@ -37,6 +43,48 @@ function htmlToText(html) {
     .replace(/&gt;/g, '>')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function selectRelevantSnippet(text, refTitle = '') {
+  const compact = String(text || '').replace(/\s+/g, ' ').trim();
+  if (compact.length <= 4000) return compact;
+  const titleTokens = String(refTitle || '')
+    .replace(/[^\u4e00-\u9fffA-Za-z0-9]+/g, ' ')
+    .split(/\s+/)
+    .filter((t) => t.length >= 2);
+  let bestIndex = -1;
+  for (const token of titleTokens) {
+    const idx = compact.indexOf(token);
+    if (idx >= 0 && (bestIndex < 0 || idx < bestIndex)) bestIndex = idx;
+  }
+  if (bestIndex < 0) {
+    bestIndex = compact.search(/(来源|发布时间|时间|案情|法院|检察|警方|通报|判决|处罚|案例)/);
+  }
+  if (bestIndex < 0) return compact.slice(0, 4000);
+  const start = Math.max(0, bestIndex - 500);
+  return compact.slice(start, start + 4000);
+}
+
+function decodeHtml(buffer, contentType = '') {
+  const head = buffer.subarray(0, 2048).toString('latin1');
+  const declared = `${contentType} ${head}`.match(/charset=["']?([a-zA-Z0-9_-]+)/i)?.[1]?.toLowerCase();
+  if (declared && ['gbk', 'gb2312', 'gb18030'].includes(declared)) {
+    return new TextDecoder('gb18030').decode(buffer);
+  }
+  if (declared && declared !== 'utf-8' && declared !== 'utf8') {
+    try {
+      return new TextDecoder(declared).decode(buffer);
+    } catch {}
+  }
+
+  const utf8 = new TextDecoder('utf-8').decode(buffer);
+  const gb = new TextDecoder('gb18030').decode(buffer);
+  const score = (text) => {
+    const cjk = (text.match(/[\u4e00-\u9fff]/g) || []).length;
+    const replacement = (text.match(/\uFFFD/g) || []).length;
+    return cjk - replacement * 20;
+  };
+  return score(gb) > score(utf8) ? gb : utf8;
 }
 
 // 收集待审 Case
@@ -70,13 +118,10 @@ async function directFetchUrl(url) {
     if (!res.ok) return { ok: false, reason: `direct HTTP ${res.status}`, content: '' };
     const buffer = Buffer.from(await res.arrayBuffer());
     const contentType = res.headers.get('content-type') || '';
-    const head = buffer.subarray(0, 2048).toString('latin1');
-    const declared = `${contentType} ${head}`.match(/charset=["']?([a-zA-Z0-9_-]+)/i)?.[1]?.toLowerCase();
-    const charset = declared && ['gbk', 'gb2312', 'gb18030'].includes(declared) ? 'gb18030' : 'utf-8';
-    const html = new TextDecoder(charset).decode(buffer);
-    const text = htmlToText(html);
+    const html = decodeHtml(buffer, contentType);
+    const text = selectRelevantSnippet(htmlToText(html), url);
     if (!text) return { ok: false, reason: 'direct empty content', content: '' };
-    return { ok: true, reason: 'direct', content: text.slice(0, 4000) };
+    return { ok: true, reason: 'direct', content: text };
   } catch (e) {
     return { ok: false, reason: `direct ${String(e.message || e).slice(0, 100)}`, content: '' };
   }
@@ -100,11 +145,11 @@ async function scrapeUrl(url) {
     }
     const html = await res.text();
     const text = htmlToText(html);
-    if (!text) {
+    if (!text || text.length < 800) {
       const direct = await directFetchUrl(url);
       if (direct.ok) return direct;
     }
-    return { ok: true, reason: '', content: text.slice(0, 4000) };
+    return { ok: true, reason: '', content: selectRelevantSnippet(text, url) };
   } catch (e) {
     const direct = await directFetchUrl(url);
     if (direct.ok) return direct;
@@ -124,6 +169,13 @@ async function getScrapedContent(caseKey, ref, refIndex) {
     return { content: fs.readFileSync(cp, 'utf8'), fromCache: true };
   }
   const r = await scrapeUrl(ref.link);
+  if (r.ok && String(r.content || '').length < 800) {
+    const direct = await directFetchUrl(ref.link);
+    if (direct.ok && String(direct.content || '').length > String(r.content || '').length) {
+      r.content = direct.content;
+      r.reason = direct.reason;
+    }
+  }
   if (r.ok) {
     fs.writeFileSync(cp, r.content);
   }

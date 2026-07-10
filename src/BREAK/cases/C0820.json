@@ -1,19 +1,19 @@
 {
   "C0820": {
-    "title": "Verizon DBIR 2023 报告指出 ATO 攻击扩大",
+    "title": "Verizon DBIR 2023 报告指出凭证滥用和勒索软件仍是主要泄露风险",
     "keywords": [
       "Verizon DBIR",
-      "账户接管",
-      "ATO攻击",
+      "凭证滥用",
       "凭证盗窃",
       "勒索软件",
       "加密货币窃取",
-      "金融机构",
       "初始访问权限",
       "经济动机",
-      "2023数据泄露报告"
+      "2023数据泄露报告",
+      "账户接管",
+      "数据窃取勒索"
     ],
-    "summary": "2023年Verizon数据泄露调查报告指出，账户接管（ATO）攻击不再局限于金融机构，任何拥有客户登录界面的组织都可能成为目标。攻击者通常出于经济动机，利用被盗凭证获取初始访问权限，进而部署勒索软件或窃取加密货币，对经济、政府和基础设施造成巨大影响。",
+    "summary": "Verizon《2023 Data Breach Investigations Report》指出，经济动机仍主导数据泄露，被盗凭证使用在泄露路径中持续突出，勒索软件也仍是跨行业的重要威胁。报告同时提到加密货币窃取、勒索软件和数据窃取勒索等事件，说明凭证滥用可被用于后续入侵、勒索和资产窃取。",
     "category": "news_report",
     "relatedRisks": [
       "R0083-001"
@@ -28,7 +28,7 @@
         "link": "https://www.qianxin.com/news/detail?news_id=10020"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2023",
     "relatedAttackTools": [
       "AT0042",

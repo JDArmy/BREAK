@@ -12,7 +12,7 @@
       "Microsoft Defender",
       "Sensitive Data Exposure"
     ],
-    "summary": "2023年12月，背景调查和欺诈预防服务商National Public Data遭到恶意攻击，导致数据泄露。泄露信息在2024年4月至夏季期间被发布到暗网，涉及多达29亿条记录，包含1.7亿人的全名、社会安全号码、地址、电子邮件和电话号码等高度敏感数据。",
+    "summary": "Microsoft 支持页面称，背景调查和欺诈预防服务商 National Public Data 在2024年初发生重大数据泄露；该公司称恶意行为者于2023年12月访问其系统，并在2024年4月至夏季期间将敏感数据泄露到暗网，可能涉及多达29亿条记录和1.7亿人。",
     "category": "security_incident",
     "relatedRisks": [
       "R0078"
@@ -23,7 +23,7 @@
         "link": "https://support.microsoft.com/en-us/defender/national-public-data-breach-what-you-need-to-know"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2024-04",
     "relatedAttackTools": [
       "AT0010"

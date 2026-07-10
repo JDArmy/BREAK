@@ -1,6 +1,6 @@
 {
   "C0800": {
-    "title": "Third-Party Contractor Leaks Bank Customer Information",
+    "title": "21st Century Business Herald Reports Third-Party Contractor Leak of Bank Customer Information",
     "keywords": [
       "bank customer information leak",
       "outsourced personnel",
@@ -9,14 +9,18 @@
       "third-party contractor",
       "mobile phone number",
       "Karamay",
-      "suspended sentence",
-      "position exploitation"
+      "position exploitation",
+      "21st Century Business Herald"
     ],
-    "summary": "Meng, an employee at a company's Karamay office, was assigned to assist bank staff with e-banking marketing. Meng exploited this role to illegally provide customer mobile phone numbers and verification codes to others through platforms such as Douyin and WeChat groups, selling more than 2,500 records and earning 17,658 yuan. Karamay District People's Court convicted Meng of infringing citizens' personal information and sentenced Meng to ten months in prison, suspended for one year, with an 18,000 yuan fine.",
+    "summary": "A May 2026 21st Century Business Herald report on bank data security risks cited a case in which Xiaomeng, an employee of a company office in Karamay, was assigned to assist a bank with electronic banking marketing. She used that position to provide customer mobile numbers and verification codes to others through Douyin and WeChat groups for profit, selling more than 2,500 pieces of information and causing multiple bank customers information to leak. The court held her criminally liable for infringing citizens personal information. The case shows why third-party staff access to verification codes and marketing data needs least privilege and audit logging.",
     "references": [
       {
         "title": "Providing Customer Mobile Phone Numbers and Verification Codes to Others for Profit",
         "link": "https://xjfy.xjcourt.gov.cn/article/detail/2023/04/id/7261691.shtml"
+      },
+      {
+        "title": "Bank Data Security Fines Exceed RMB 70 Million, 71% Target Rural Commercial Banks - Tencent News",
+        "link": "https://new.qq.com/rain/a/20260527A02BL400"
       }
     ]
   }

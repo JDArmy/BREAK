@@ -11,7 +11,7 @@
       "产品许可信息",
       "漏洞利用"
     ],
-    "summary": "Zscaler披露，2025年8月其获悉Salesloft Drift营销SaaS平台遭攻击并影响大量客户。攻击者窃取与Salesloft Drift连接的OAuth令牌，进而有限访问Zscaler的部分Salesforce信息，包括业务联系人详情、产品许可和商业信息，以及部分支持工单头部字段；Zscaler称事件范围限于Salesloft Drift应用，未涉及其产品、服务或底层系统。",
+    "summary": "Zscaler披露，2025年8月其因第三方营销SaaS平台遭供应链攻击而发生有限数据泄露，攻击者访问了部分Salesforce业务联系人、商业信息和支持工单相关字段。Zscaler称事件范围限于第三方应用关联数据，未影响其产品、服务或底层系统。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081"

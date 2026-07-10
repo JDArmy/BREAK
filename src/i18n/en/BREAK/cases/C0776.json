@@ -11,7 +11,7 @@
       "remote access trojan",
       "parcel data"
     ],
-    "summary": "From April 2022, the Yuyao Public Security Bureau in Zhejiang cracked China's first case of using Trojan software to steal express delivery waybill data from e-commerce cloud warehouses. A gang led by Bao and Gao, with Ma as the installer and Xie as the upstream supplier, infiltrated delivery cloud warehouses nationwide by temporary hiring or sneaking in at night, implanting Trojans on waybill-printing computers to steal label data in real time. The data was packaged by 'material brokers' and resold to overseas fraud rings, with a single label marked up to 5.5-7 yuan. 35 suspects were arrested with over 30 million yuan involved.",
+    "summary": "In 2022, Yuyao police in Zhejiang disclosed a case involving Trojan malware used to steal waybill data from express delivery origin cloud warehouses. The group entered express cloud warehouses, installed Trojan programs on waybill-printing computers to steal waybill data, and resold the data through material brokers to overseas fraud groups. The case shows how compromised warehouse printing endpoints can lead to bulk waybill data leakage and telecom fraud use.",
     "references": [
       {
         "title": "National First: Zhejiang Yuyao Police Dismantle a New Type of Internet Fraud Black-Gray Industry Chain — CNR",

@@ -14,7 +14,7 @@
       "一次性密码拦截",
       "银行欺诈"
     ],
-    "summary": "2025年5月，西班牙国民警卫队在多地同步搜查并抓获“GoogleXcoder”，捣毁其运营的 GXC Team 银行钓鱼工具网络。该团伙以 Crime-as-a-Service 模式向其他犯罪分子提供可克隆西班牙银行、国际机构和政府门户的钓鱼套件，并提供定制、技术支持和更新。Group-IB 披露，该生态还包含伪装成银行应用的 Android 短信窃取木马，以及集成在钓鱼套件中的 AI 语音诈骗工具，用自动语音电话诱导受害者泄露双因素认证验证码，相关钓鱼活动造成数百万欧元损失。",
+    "summary": "Group-IB披露，西班牙国民警卫队在其情报协助下捣毁GXC Team网络，并逮捕主要开发者。该网络以 Crime-as-a-Service 方式向犯罪分子提供银行钓鱼和凭证窃取工具，支持仿冒金融机构、政府门户等目标实施欺诈。公开材料还提到相关生态包含伪装成银行应用的 Android 恶意软件和用于诱导受害者泄露验证码的语音诈骗能力，相关行动削弱了西班牙活跃的银行钓鱼犯罪生态。该案体现钓鱼套件、移动木马和语音社工组合化服务对银行客户认证链路的威胁，尤其影响二次验证环节。",
     "category": "security_incident",
     "relatedRisks": [
       "R0084-001"
@@ -29,7 +29,7 @@
         "link": "https://www.group-ib.com/media-center/press-releases/guardia-civil-gxc-team-takedown/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2025-05",
     "relatedAttackTools": [
       "AT0053-004",

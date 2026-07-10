@@ -1,26 +1,22 @@
 {
   "C0863": {
-    "title": ".wxx Ransomware Attackers Adopt Double/Triple Extortion Tactics",
+    "title": "360 Report Details June 2025 Double/Multiple Extortion Trends and wxx Family Delivery Methods",
     "keywords": [
       ".wxx ransomware",
+      "Weaxor",
       "double extortion",
-      "triple extortion",
-      "RaaS",
-      "Ransomware-as-a-Service",
       "data leak threat",
-      "infrastructure disruption",
+      "vulnerability-based delivery",
+      "remote desktop brute force",
       "file encryption",
-      "extortion attack"
+      "extortion attack",
+      "multi-extortion"
     ],
-    "summary": "As of June 7, 2025, attackers behind the .wxx ransomware have adopted a double extortion strategy, threatening to publicly leak stolen data in addition to encrypting files. They have even escalated to triple extortion, threatening to disrupt the victim's infrastructure to increase payment pressure. The attackers operate through a Ransomware-as-a-Service (RaaS) model, making attacks more widespread",
+    "summary": "A 360 Security Guard ransomware trend report published on July 9, 2025 said that WarLock, Kawa4096, TeamXXX, and other double-extortion ransomware families newly appeared worldwide in June 2025, and that 478 organizations were listed as victims of double or multiple extortion. In its keyword ranking, wxx was identified as part of the Weaxor family, mainly delivered through software vulnerability exploitation and manual deployment after brute-forcing Remote Desktop passwords.",
     "references": [
       {
         "title": "June 2025 Ransomware Trends Analysis - 360 Digital Security",
         "link": "https://weishi.360.cn/dnzs/12715.html"
-      },
-      {
-        "title": "Ransomware Detection Tool: Ransom Note Extraction Feature Launch - Qi An Xin Research Institute",
-        "link": "https://research.qianxin.com/archives/1781"
       }
     ]
   }

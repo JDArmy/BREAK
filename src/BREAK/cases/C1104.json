@@ -12,18 +12,22 @@
       "刑事判决",
       "生物特征伪造"
     ],
-    "summary": "2022年4月，被告人李某某等人通过学习AI换脸技术，利用他人肖像照片实现“AI换脸”，破解平台认证系统，非法获取计算机信息系统数据并牟取暴利。法院以非法获取计算机信息系统数据罪判处五人有期徒刑三年八个月至三年三个月不等。",
+    "summary": "2024年7月，中国新闻网发布《五男子使用“AI换脸”篡改系统数据牟利被判刑》。报道主题指向使用 AI 换脸绕过平台认证、篡改系统数据并牟利的刑事案件，可作为生物特征伪造和人脸识别绕过风险案例；具体被告人、金额和刑期以原文正文为准。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0071-010"
     ],
     "references": [
       {
+        "title": "五男子使用“AI换脸”篡改系统数据牟利被判刑 - 中国新闻网",
+        "link": "https://www.chinanews.com.cn/sh/2024/07-24/10256675.shtml"
+      },
+      {
         "title": "广东省高级人民法院：强化科技创新司法保护典型案例",
         "link": "https://www.gipc.gov.cn/res/pdfFile/6a7f6b6d-f68c-4a22-903a-480c8acc53cc.pdf"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2024-07",
     "relatedAttackTools": [],
     "relatedThreatActors": [

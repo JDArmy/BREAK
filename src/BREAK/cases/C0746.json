@@ -1,6 +1,6 @@
 {
   "C0746": {
-    "title": "被盗医院笔记本电脑引发隐忧",
+    "title": "NIST 被盗医院笔记本电脑场景案例",
     "keywords": [
       "笔记本电脑被盗",
       "医疗数据泄露",
@@ -11,18 +11,22 @@
       "医疗记录",
       "物理安全"
     ],
-    "summary": "美国NIST发布的一起案例：一名医疗系统高管将工作笔记本电脑遗留在车内被盗，该设备可访问超过4万份医疗记录。事件导致患者数据面临泄露风险，引发了对医疗机构的合规审查和整改。",
-    "category": "security_incident",
+    "summary": "《Stolen Hospital Laptop Causes Heartburn》作为小企业网络安全教学案例，描述一名医疗系统高管将可访问患者医疗记录的工作笔记本留在车内后被盗，机构需要应对敏感数据泄露风险并采取整改措施。该条按教学场景案例收录，不表述为已披露真实安全事件。",
+    "category": "news_report",
     "relatedRisks": [
       "R0073"
     ],
     "references": [
       {
+        "title": "Stolen Hospital Laptop Causes Sensitive Data Breached - Ambit IT",
+        "link": "https://www.ambit-it.com/case-study-001"
+      },
+      {
         "title": "[PDF] Stolen Hospital Laptop Causes Heartburn",
         "link": "https://www.nist.gov/document/case-3-stolen-hospital-laptop-causes-heartburn"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2020-09-30"
