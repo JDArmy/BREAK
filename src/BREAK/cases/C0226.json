@@ -18,7 +18,7 @@
       "Google索引",
       "色情跳转"
     ],
-    "summary": "2025年12月，美国多州及地方政府的.gov域名遭遇大规模SEO污染攻击。攻击者利用政府网站公开的文件上传功能，上传含恶意链接的PDF文件。这些文件被搜索引擎索引后，用户点击官方域名链接会被重定向至色情广告等不良页面，涉及38个.gov域名和18个州。",
+    "summary": "2025年12月，Cybernews 与 SC Media 报道称，美国多州及地方政府的 .gov 域名遭遇 SEO 污染攻击。攻击者通过政府站点的公共表单或文件上传功能投放含恶意链接的 PDF 等内容，这些附件被 Google 等搜索引擎索引后，用户点击官方域名结果会被引向 AI 色情广告、聊天机器人、成人用品或其他不良页面。报道提到至少 38 个 .gov 站点、18 个州受影响，第三方政府网站服务商 Granicus 表示已阻断公开访问上传文档。",
     "category": "security_incident",
     "relatedRisks": [
       "R0018"
@@ -29,15 +29,15 @@
         "link": "https://x.com/AlvieriD/status/1999403353466421320"
       },
       {
-        "title": "美国政府网站遭SEO污染攻击：官方域名被篡改为色情内容入口",
-        "link": "https://www.securitylab.ru/news/567187.php"
+        "title": "AI-generated porn pushed via hijacked State.gov sites - SC Media",
+        "link": "https://www.scworld.com/brief/ai-generated-porn-pushed-via-hijacked-state-gov-sites"
       },
       {
-        "title": "中本聪消失十五年:百万枚比特币沉睡之谜;GPT-5.2登场:OpenAI正面迎 ...",
-        "link": "https://www.163.com/dy/article/KGR8MPF90511ALHJ.html"
+        "title": "Hackers hijack dozens State.gov websites to push AI Porn - Cybernews",
+        "link": "https://cybernews.com/news/ai-porn-state-gov-websites-hijacked/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2025-12",
     "relatedAttackTools": [],
     "relatedThreatActors": []

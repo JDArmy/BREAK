@@ -12,17 +12,21 @@
       "美国证券交易委员会"
     ],
     "summary": "2011年9月29日，美国证券交易委员会（SEC）合规检查与审查办公室发布主/子账户风险警示，说明该交易结构可能被用于洗钱、内幕交易、市场操纵、账户入侵、信息安全问题、未注册经纪商活动及过度杠杆等违法违规风险。警示还指出，部分主账户客户可能通过这种结构规避或降低监管义务与监督。",
-    "category": "vulnerability_advisory",
+    "category": "news_report",
     "relatedRisks": [
       "R0031"
     ],
     "references": [
       {
+        "title": "SEC Staff Issues Risk Alert on Master/Sub-account Risks",
+        "link": "https://www.sec.gov/news/press/2011/2011-198.htm"
+      },
+      {
         "title": "[PDF] National Exam Risk Alert on Master/Sub-accounts - SEC.gov",
         "link": "https://www.sec.gov/about/offices/ocie/riskalert-mastersubaccounts.pdf"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2011-09-29"

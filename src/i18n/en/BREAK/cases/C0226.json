@@ -19,19 +19,19 @@
       "government website attack",
       "search engine manipulation"
     ],
-    "summary": "In December 2025, a large-scale SEO poisoning attack targeted .gov domains across multiple US states and local governments. Attackers exploited public file upload functions on government websites to upload PDF files containing malicious links. Once these files were indexed by search engines, users clicking on official domain links were redirected to pages containing pornographic advertisements and",
+    "summary": "In December 2025, Cybernews and SC Media reported that .gov domains across multiple U.S. states and local governments were affected by an SEO poisoning attack. Attackers used public forms or file-upload functions on government sites to place PDFs and similar content containing malicious links. After those attachments were indexed by search engines such as Google, users clicking official-domain results were redirected to AI-porn ads, chatbots, adult products, or other illicit pages. The reports cited at least 38 .gov sites across 18 states, and government website vendor Granicus said it had blocked public access to uploaded documents.",
     "references": [
       {
         "title": "Dominic Alvieri Original Disclosure of a .gov PDF SEO Poisoning Campaign",
         "link": "https://x.com/AlvieriD/status/1999403353466421320"
       },
       {
-        "title": "U.S. government website hit by SEO poisoning attack: Official domain tampered to redirect to pornographic content entry",
-        "link": "https://www.securitylab.ru/news/567187.php"
+        "title": "AI-generated porn pushed via hijacked State.gov sites - SC Media",
+        "link": "https://www.scworld.com/brief/ai-generated-porn-pushed-via-hijacked-state-gov-sites"
       },
       {
-        "title": "Satoshi Nakamoto disappears for 15 years: The mystery of a million dormant bitcoins; GPT-5.2 debuts: OpenAI confronts...",
-        "link": "https://www.163.com/dy/article/KGR8MPF90511ALHJ.html"
+        "title": "Hackers hijack dozens State.gov websites to push AI Porn - Cybernews",
+        "link": "https://cybernews.com/news/ai-porn-state-gov-websites-hijacked/"
       }
     ]
   }

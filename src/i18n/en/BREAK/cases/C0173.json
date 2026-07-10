@@ -9,11 +9,15 @@
       "anti-adblock circumvention",
       "website detection"
     ],
-    "summary": "The CV-INSPECTOR study proposes an automated method for detecting adblock circumvention services. It analyzes differences in page execution when an adblocker is enabled or disabled to identify whether a site deploys anti-adblock logic. The paper reports about 93% accuracy on labeled data and applies the method to measure the top 20,000 websites, aiming to help the adblock community find circumvention sites and maintain filter rules at scale.",
+    "summary": "The 2021 NDSS paper introduces CV-INSPECTOR, which uses differential execution analysis and machine learning to automate adblock circumvention detection. The paper reports 93% accuracy on labeled data and measurement of the top 20,000 sites; the GitHub page documents the crawler, data collection, differential analysis, and labeling workflow.",
     "references": [
       {
-        "title": "Cv-Inspector: Towards Automating Detection of Adblock Circumvention",
-        "link": "https://par.nsf.gov/servlets/purl/10288360"
+        "title": "CV-Inspector: Towards Automating Detection of Adblock Circumvention",
+        "link": "https://doi.org/10.14722/ndss.2021.24055"
+      },
+      {
+        "title": "CV-Inspector GitHub Repository",
+        "link": "https://github.com/UCI-Networking-Group/cv-inspector"
       }
     ]
   }

@@ -12,11 +12,19 @@
       "deceptive advertising",
       "email security"
     ],
-    "summary": "In 2019, Heliyon published \"Machine learning for email spam filtering: review, approaches and open research problems.\" The paper reviews machine learning approaches, feature extraction, and classification evaluation for email spam filtering, and discusses dataset issues, adversarial changes, and open research problems in spam detection.",
+    "summary": "Heliyon published this review paper in 2019. It surveys machine learning methods, feature extraction, classification evaluation, common datasets, and experimental metrics for email spam filtering, covering supervised learning, text classification, content analysis, and security detection. It also discusses dataset shift, adversarial changes, malicious links, deceptive content evolution, model generalization, and other open research problems in spam detection.",
     "references": [
       {
         "title": "Machine learning for email spam filtering: review, approaches and open research problems",
         "link": "https://doi.org/10.1016/j.heliyon.2019.e01802"
+      },
+      {
+        "title": "Machine learning for email spam filtering: review, approaches and open research problems - PubMed",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/31211254/"
+      },
+      {
+        "title": "Machine learning for email spam filtering: review, approaches and open research problems - PMC",
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6562150/"
       }
     ]
   }

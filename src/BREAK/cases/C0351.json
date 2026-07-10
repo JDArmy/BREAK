@@ -19,16 +19,20 @@
     ],
     "references": [
       {
-        "title": "通用汽车遭撞库攻击被暴露车主个人信息 - FreeBuf网络安全行业门户",
-        "link": "https://m.freebuf.com/news/334080.html"
-      },
-      {
         "title": "加州司法部：通用汽车数据泄露通知样本",
         "link": "https://oag.ca.gov/ecrime/databreach/reports/sb24-553442"
+      },
+      {
+        "title": "General Motors credential stuffing attack exposes car owners info - BleepingComputer",
+        "link": "https://www.bleepingcomputer.com/news/security/general-motors-credential-stuffing-attack-exposes-car-owners-info/"
+      },
+      {
+        "title": "General Motors suffers credential stuffing attack - Malwarebytes",
+        "link": "https://www.malwarebytes.com/blog/news/2022/05/general-motors-suffers-credential-stuffing-attack"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2022-05",
+    "updated": "2026-07-10",
+    "incidentTime": "2022-04",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

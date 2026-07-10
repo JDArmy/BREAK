@@ -11,11 +11,11 @@
       "connection blocking",
       "entropy-based algorithm"
     ],
-    "summary": "This algorithm applies information entropy theory to detect Challenge Collapsar (CC) attacks in real time, identify attack sources, and block malicious connections. It addresses application-layer DDoS attacks that flood servers with forged HTTP requests by providing an online protection mechanism.",
+    "summary": "This 2012 conference paper proposes an information-entropy-based algorithm for real-time CC attack detection and defense, including attack detection, attack-source identification, and connection blocking. It describes CC attacks as application-layer denial-of-service attacks that consume server resources through large numbers of forged HTTP requests.",
     "references": [
       {
         "title": "An Algorithm of Detecting and Defending CC Attack in Real Time",
-        "link": "https://ieeexplore.ieee.org/document/6322767/"
+        "link": "https://doi.org/10.1109/ICICEE.2012.477"
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
   "C0314": {
-    "title": "DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron",
+    "title": "DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron Classification Algorithm",
     "keywords": [
       "DNS amplification attack",
       "DDoS detection",
@@ -12,11 +12,11 @@
       "DNS resolver",
       "network traffic analysis"
     ],
-    "summary": "Focusing on DNS amplification attacks, this study employs a multi-layer perceptron (MLP) classifier to analyze network traffic data for detection. Attackers exploit DNS resolvers to amplify small queries into large traffic volumes, overwhelming the victim's network and causing denial of service. The research incorporates optimization techniques such as ADAM and SGD to enhance detection performance",
+    "summary": "This 2024 IEEE AIC conference paper studies DNS DDoS amplification attack detection using a multi-layer perceptron (MLP) classification algorithm to analyze network traffic and identify abnormal traffic patterns with machine learning. It focuses on attacks that abuse DNS resolvers to amplify small queries into high-volume traffic and cause denial of service; the source page verifies the paper title, conference, and DOI.",
     "references": [
       {
-        "title": "DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron ...",
-        "link": "https://ieeexplore.ieee.org/document/10730978"
+        "title": "DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron Classification Algorithm",
+        "link": "https://doi.org/10.1109/AIC61668.2024.10730978"
       }
     ]
   }

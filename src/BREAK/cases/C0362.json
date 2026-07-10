@@ -11,7 +11,7 @@
       "批量破解",
       "中国法院网"
     ],
-    "summary": "被告人李某搭建网站提供破解程序，被他人使用218万余次。卓某在此基础上自写脚本实现批量破解提取，非法获取1.5万余组分享链接及对应的提取密码，李某因提供侵入计算机信息系统程序被判刑。",
+    "summary": "2022年11月中国法院网披露，被告人李某搭建网站提供自编破密程序，该程序被他人使用218万余次。卓某在此基础上自写脚本批量破解提取密码，非法获取1.5万余组分享链接及对应提取密码。法院以提供侵入计算机信息系统程序罪追究李某刑责，案件反映破解工具平台化传播造成的批量账号和资源访问风险。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0032-003"
@@ -20,9 +20,17 @@
       {
         "title": "自编破密程序被他人使用218万余次-中国法院网",
         "link": "https://www.chinacourt.org/article/detail/2022/11/id/7016488.shtml"
+      },
+      {
+        "title": "自编破密程序被他人使用218万余次-福建法院网",
+        "link": "https://fjfy.fjcourt.gov.cn/article/detail/2022/11/id/7016967.shtml"
+      },
+      {
+        "title": "自编破密程序被他人使用218万余次 - 人民网",
+        "link": "https://society.people.com.cn/n1/2022/1115/c1008-32566292.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2022-11",
     "relatedAttackTools": [],
     "relatedThreatActors": []

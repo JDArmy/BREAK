@@ -11,18 +11,22 @@
       "广告屏蔽规避",
       "网站检测"
     ],
-    "summary": "CV-INSPECTOR 研究提出一种自动检测广告屏蔽规避服务的方法，通过对开启和关闭广告屏蔽器时的页面执行差异进行分析，识别网站是否部署反广告屏蔽逻辑。论文报告该方法在标注数据上取得约93%的准确率，并将其用于排名前2万网站的测量，旨在帮助广告屏蔽社区更规模化地发现规避站点并维护过滤规则。",
+    "summary": "2021年NDSS论文提出 CV-INSPECTOR，用差分执行分析和机器学习自动检测广告屏蔽规避。论文报告其在标注数据上达到93%准确率，并用于排名前2万网站测量，GitHub项目页提供爬取、采集、差分分析和标注工具说明。",
     "category": "academic_research",
     "relatedRisks": [
       "R0013"
     ],
     "references": [
       {
-        "title": "Cv-inspector: Towards automating detection of adblock circumvention",
-        "link": "https://par.nsf.gov/servlets/purl/10288360"
+        "title": "CV-Inspector: Towards Automating Detection of Adblock Circumvention",
+        "link": "https://doi.org/10.14722/ndss.2021.24055"
+      },
+      {
+        "title": "CV-Inspector GitHub Repository",
+        "link": "https://github.com/UCI-Networking-Group/cv-inspector"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "incidentTime": "2021-01",
     "relatedAttackTools": [],
     "relatedThreatActors": []

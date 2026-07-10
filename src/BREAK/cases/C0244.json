@@ -11,7 +11,7 @@
       "恶意链接",
       "欺诈信息"
     ],
-    "summary": "2019年Heliyon发表《Machine learning for email spam filtering: review, approaches and open research problems》。论文综述电子邮件垃圾过滤中的机器学习方法、特征提取和分类评估，讨论垃圾邮件识别的数据集、对抗变化与开放研究问题。",
+    "summary": "2019年 Heliyon 发表该综述论文，系统梳理电子邮件垃圾过滤中的机器学习方法、特征提取、分类评估、常用数据集和实验指标，涵盖监督学习、文本分类、内容分析与安全检测等方向。论文还讨论垃圾邮件识别面临的数据漂移、对抗变化、恶意链接、欺诈内容演化与模型泛化等开放研究问题。",
     "category": "academic_research",
     "relatedRisks": [
       "R0021"
@@ -20,9 +20,17 @@
       {
         "title": "Machine learning for email spam filtering: review, approaches and open research problems",
         "link": "https://doi.org/10.1016/j.heliyon.2019.e01802"
+      },
+      {
+        "title": "Machine learning for email spam filtering: review, approaches and open research problems - PubMed",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/31211254/"
+      },
+      {
+        "title": "Machine learning for email spam filtering: review, approaches and open research problems - PMC",
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6562150/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2019-06-10"

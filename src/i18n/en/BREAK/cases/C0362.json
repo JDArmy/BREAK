@@ -10,11 +10,19 @@
       "decryption tool",
       "credential extraction"
     ],
-    "summary": "Defendant Li built a website offering a cracking program, which was used over 2.18 million times. Zhuo further wrote scripts for batch cracking and extraction, illegally obtaining over 15,000 sets of share links and their extraction passwords. Li was sentenced for providing programs used to invade computer information systems.",
+    "summary": "In November 2022, China Court Network reported that defendant Li built a website offering a self-developed password-cracking program, which was used over 2.18 million times by others. Zhuo then wrote scripts on that basis to batch-crack extraction passwords, illegally obtaining more than 15,000 sets of share links and matching passwords. Li was held criminally liable for providing programs used to intrude into computer information systems, reflecting the batch account and resource-access risks caused by platformized cracking tools.",
     "references": [
       {
         "title": "Self-made decryption program used over 2.18 million times by others - China Court Network",
         "link": "https://www.chinacourt.org/article/detail/2022/11/id/7016488.shtml"
+      },
+      {
+        "title": "Self-made decryption program used over 2.18 million times by others - Fujian Court Network",
+        "link": "https://fjfy.fjcourt.gov.cn/article/detail/2022/11/id/7016967.shtml"
+      },
+      {
+        "title": "Self-made decryption program used over 2.18 million times by others - People's Daily Online",
+        "link": "https://society.people.com.cn/n1/2022/1115/c1008-32566292.html"
       }
     ]
   }
