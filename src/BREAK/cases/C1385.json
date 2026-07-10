@@ -13,18 +13,22 @@
       "硬编码凭证",
       "网络服务配置"
     ],
-    "summary": "NVD记录显示，CVE-2025-7503已作为漏洞条目收录，但当前NVD页面未给出完整分析细节。该案例暂作为V380 IP摄像头相关漏洞披露记录保留，用于提示固件后门、硬编码配置或默认凭证类问题可能导致设备被未授权访问；具体成因和影响范围仍需补充厂商公告或研究报告核验。",
+    "summary": "2025年7月，CVE-2025-7503披露深圳联点通信技术有限公司V380 OEM IP摄像头默认开启未公开的Telnet服务，并内置未公开的硬编码凭据。具备网络访问条件的攻击者可登录并获得root shell，远程执行命令及控制设备。受影响固件为AppFHE1_V1.0.6.0，披露时无官方修复。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
-      "R0164"
+      "R0166"
     ],
     "references": [
       {
         "title": "CVE-2025-7503 Detail",
         "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-7503"
+      },
+      {
+        "title": "Research on V380 CCTV IP Camera",
+        "link": "https://github.com/AounShAh/Research-on-v380-cctv-ip-camera"
       }
     ],
-    "updated": "2026-07-08",
+    "updated": "2026-07-10",
     "incidentTime": "2025-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

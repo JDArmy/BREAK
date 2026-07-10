@@ -11,8 +11,8 @@
       "400公斤黄金",
       "内部员工盗窃"
     ],
-    "summary": "2023年4月17日，一批从瑞士苏黎世运抵加拿大多伦多皮尔逊国际机场的约400公斤黄金和250万美元外币被盗。Peel Regional Police 通报称，Project 24K 调查涉及多名嫌疑人和航空货运环节，案件中包括前加拿大航空员工被通缉或被捕，暴露出高价值货物运输中内部人员和流程凭证被滥用的风险。",
-    "category": "criminal_verdict",
+    "summary": "2023年4月17日，一批从瑞士苏黎世运抵加拿大多伦多皮尔逊国际机场的约400公斤黄金和250万美元外币被盗。Peel Regional Police 通报称，Project 24K 调查涉及多名嫌疑人和航空货运环节，案件中包括前加拿大航空员工被通缉或被捕。该案显示，高价值货物运输中航空货运流程、提货凭证和内部人员权限一旦被滥用，可能放大实物资产盗窃风险。",
+    "category": "security_incident",
     "relatedRisks": [
       "R0072-001"
     ],
@@ -22,8 +22,8 @@
         "link": "https://www.peelpolice.ca/news-feed/posts/project-24k-additional-arrest-made-in-20-million-gold-heist/"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-01",
+    "updated": "2026-07-10",
+    "incidentTime": "2023-04",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

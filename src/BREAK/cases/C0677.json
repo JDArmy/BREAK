@@ -20,11 +20,15 @@
     ],
     "references": [
       {
-        "title": "从 js map 泄露到接管 OSS 对象存储的一次经典案例分享-先知社区",
+        "title": "从 js map 泄露到接管 OSS 对象存储 - 国光",
+        "link": "https://www.sqlsec.com/2024/05/jsmap.html"
+      },
+      {
+        "title": "从 js map 泄露到接管 OSS 对象存储的一次经典案例分享 - 先知社区",
         "link": "https://xz.aliyun.com/news/14031"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2024-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [

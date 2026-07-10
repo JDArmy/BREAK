@@ -13,11 +13,15 @@
       "hardcoded credentials",
       "network service configuration"
     ],
-    "summary": "NVD records CVE-2025-7503 as a vulnerability entry, but the current NVD page does not provide full analytical details. This case is retained as a disclosure record related to V380 IP cameras, indicating that firmware backdoors, hardcoded configurations, or default-credential issues may lead to unauthorized device access. The exact root cause and impact scope still require verification from a vendor advisory or research report.",
+    "summary": "In July 2025, CVE-2025-7503 disclosed that a V380 OEM IP camera made by Shenzhen Liandian Communication Technology LTD enabled an undocumented Telnet service by default and embedded undocumented hard-coded credentials. An attacker with network access could authenticate, obtain a root shell, execute commands remotely, and control the device. Firmware AppFHE1_V1.0.6.0 was affected, and no official fix was available when disclosed.",
     "references": [
       {
         "title": "CVE-2025-7503 Detail",
         "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-7503"
+      },
+      {
+        "title": "Research on V380 CCTV IP Camera",
+        "link": "https://github.com/AounShAh/Research-on-v380-cctv-ip-camera"
       }
     ]
   }

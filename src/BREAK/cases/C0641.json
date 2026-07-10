@@ -13,19 +13,24 @@
       "退单",
       "恶意投诉"
     ],
-    "summary": "男子陈某在某电商购物平台对900多家商户实施恶意下单2700余次，涉案交易流水高达1030余万元。其通过恶意下单后以投诉、差评等胁迫商家支付“和解费”，形成一种非正常的退单套利模式，最终被警方查获。",
+    "summary": "2026年5月，央视新闻报道陈某先申请“仅退款”，被商家拒绝后投诉店铺、恶意下单并索要“和解费”。经查，陈某针对900余家电商平台店铺恶意下单2700余次，累计恶意下单金额1000余万元，造成平台商铺技术服务费损失6万余元。检察机关以破坏生产经营罪提起公诉，江阴市人民法院判处陈某有期徒刑一年六个月，判决已生效。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0015"
+      "R0054",
+      "R0068"
     ],
     "references": [
+      {
+        "title": "敲诈900多家网店，恶意下单“仅退款”2700多次！法院判了 - 新浪财经",
+        "link": "https://finance.sina.com.cn/roll/2026-05-13/doc-inhxteis9386733.shtml"
+      },
       {
         "title": "男子对900余家网店恶意下单2700余次，涉案交易流水超千万元，判了！",
         "link": "http://www.haneixiang.jcy.gov.cn/sitesources/nxxjcy/page_pc/yasf/articlee5744986e19c45009f2773be89d96e4b.html"
       }
     ],
-    "updated": "2026-07-05",
-    "incidentTime": "2026-03",
+    "updated": "2026-07-10",
+    "incidentTime": "2026-05",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0035"

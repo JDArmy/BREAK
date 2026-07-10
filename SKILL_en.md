@@ -172,6 +172,8 @@ The 2026-07-10 C0354 maintenance adds a court-system source and changes the Case
 
 The 2026-07-10 C0446 maintenance adds the Shimen County People's Court official WeChat source and syncs the English translation; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The third 2026-07-10 Case P2 fact-review checkpoint continues strengthening or narrowing C0463, C0521, C0522, C0558, C0565, C0571, C0577, C0579, C0593, C0630, C0642-C0720, C0728, C0735, C0744, C0749, C0772, C0781, C0785, C0791, and related Case `summary`, `references`, `incidentTime`, and English translations, and expands R0290 avoidance coverage; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph

@@ -5,13 +5,13 @@
       "GitHub",
       "代码库泄露",
       "员工设备被黑",
-      "恶意载荷",
-      "投放器",
-      "第二阶段载荷",
-      "guardrails-ai",
+      "TeamPCP",
+      "内部代码库",
+      "Visual Studio Code扩展",
+      "密钥轮换",
       "数据泄露"
     ],
-    "summary": "2026年5月，GitHub遭入侵，攻击者通过攻破员工设备获取内部访问权限，导致3800个代码库数据被泄露。攻击中植入的恶意载荷为投放器，配置为从外部服务器获取第二阶段载荷，被评估为与之前guardrails-ai包遭入侵相关的恶意软件变种。",
+    "summary": "2026年5月，GitHub调查 TeamPCP 声称出售其内部源代码和组织数据的事件。The Hacker News 报道称，GitHub 后续说明其发现并遏制一起员工设备被投毒 Visual Studio Code 扩展攻破的事件，并已轮换关键密钥；相关数据包被称含约4000个内部代码库。",
     "category": "security_incident",
     "relatedRisks": [
       "R0080"
@@ -26,7 +26,7 @@
         "link": "https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

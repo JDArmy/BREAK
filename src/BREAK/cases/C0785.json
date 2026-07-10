@@ -22,9 +22,13 @@
       {
         "title": "Guidance for detecting, investigating, and defending against the Trivy ...",
         "link": "https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/"
+      },
+      {
+        "title": "Trivy Hack Spreads Infostealer via Docker, Triggers Worm and Kubernetes Wiper - The Hacker News",
+        "link": "https://thehackernews.com/2026/03/trivy-hack-spreads-infostealer-via.html"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

@@ -13,11 +13,15 @@
       "AIGC security",
       "default configuration vulnerability"
     ],
-    "summary": "The National Cybersecurity Notification Center has issued a warning that the default configuration of the open-source large language model tool Ollama contains vulnerabilities such as unauthorized access and model theft, potentially leading to data leakage, computational resource hijacking, and service disruption. As many users deploy the tool privately without modifying default settings, it poses",
+    "summary": "In March 2025, China's National Cybersecurity Notification Center issued a notice on security risks in the Ollama LLM tool, stating that Ollama's default configuration creates risks such as unauthorized access and model theft. The notice said that users privately deploying large models such as DeepSeek without changing default settings may face data leakage, computational resource theft, and service disruption, and recommended limiting listening scope, configuring firewalls, implementing authentication, and patching historical vulnerabilities.",
     "references": [
       {
-        "title": "Industrial Internet Weekly | National Cybersecurity Notification Center Alert: Large Model Tool Ollama...",
-        "link": "https://view.inews.qq.com/k/20250311A095QK00"
+        "title": "National Cybersecurity Notification Center: Ollama LLM Tool Has Security Risks - CLS",
+        "link": "https://www.cls.cn/detail/1959670"
+      },
+      {
+        "title": "Notice on Security Risks in the Ollama LLM Tool - Nantong University Information Center",
+        "link": "https://met.ntu.edu.cn/2025/0304/c9375a260499/page.htm"
       },
       {
         "title": "Models, More ProbLLMs: New Vulnerabilities in Ollama",

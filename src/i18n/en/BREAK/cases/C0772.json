@@ -1,6 +1,6 @@
 {
   "C0772": {
-    "title": "Hybrid SM2/SM3/SM4 Encryption Framework for Instant Messaging Compliance",
+    "title": "Hybrid SM2/SM3/SM4 Encryption Framework Aligning Instant Messaging with Commercial Cryptography Requirements",
     "keywords": [
       "SM2",
       "SM3",
@@ -11,13 +11,22 @@
       "commercial cryptography",
       "data integrity",
       "key exchange",
-      "cryptographic compliance"
+      "cryptographic compliance",
+      "Cryptography Law"
     ],
-    "summary": "A study proposes a hybrid cryptographic framework applying SM2 for key exchange and authentication, SM4 for message encryption, and SM3 for integrity verification to address security threats in instant messaging systems. The framework aims to meet the requirements of China's Cryptography Law for commercial cryptographic applications, ensuring data confidentiality, integrity, and availability.",
+    "summary": "A PLOS One paper proposes a hybrid cryptographic framework for instant messaging systems, applying SM2 for key exchange and authentication, SM4 for message encryption, and SM3 for integrity verification to improve confidentiality, integrity, and availability of communications data. Read together with China's Cryptography Law requirements for legally using commercial cryptography to protect networks and information security, the study is an exploration of national cryptographic algorithms in instant messaging security rather than standalone proof that a system has completed compliance assessment.",
     "references": [
       {
-        "title": "Enhancing Security in Instant Messaging Systems with a Hybrid SM2 Encryption Approach",
-        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12435676/"
+        "title": "Enhancing Security in Instant Messaging Systems with a Hybrid SM2, SM3, and SM4 Encryption Framework - PLOS One",
+        "link": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0332665"
+      },
+      {
+        "title": "Six Things to Know About the Cryptography Law of the People's Republic of China - CAC",
+        "link": "https://www.cac.gov.cn/2019-10/29/c_1573880702680488.htm"
+      },
+      {
+        "title": "Measures for Commercial Cryptography Application Security Assessment - State Cryptography Administration",
+        "link": "https://www.oscca.gov.cn/sca/xxgk/2023-10/07/1061109/files/c32620ca4f414f2fb837edda024c8ea0.pdf"
       }
     ]
   }

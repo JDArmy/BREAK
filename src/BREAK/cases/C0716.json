@@ -12,22 +12,26 @@
       "国家网络安全通报中心",
       "AIGC安全"
     ],
-    "summary": "国家网络安全通报中心通报，开源大模型工具Ollama默认配置存在未授权访问与模型窃取等安全隐患，可能导致数据泄露、算力盗取、服务中断。鉴于大量用户私有化部署该工具且未修改默认配置，极易引发网络和数据安全事件，建议用户立即进行安全加固。",
+    "summary": "2025年3月，国家网络安全通报中心发布关于大模型工具Ollama存在安全风险的情况通报，指出Ollama默认配置存在未授权访问与模型窃取等安全隐患。通报称，用户私有化部署DeepSeek等大模型时若未修改默认配置，可能面临数据泄露、算力盗取、服务中断等风险，并建议限制监听范围、配置防火墙、实施认证和修复历史漏洞。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0071"
     ],
     "references": [
       {
-        "title": "【产业互联网周报】国家网络安全通报中心通报:大模型工具Ollama...",
-        "link": "https://view.inews.qq.com/k/20250311A095QK00"
+        "title": "国家网络安全通报中心：大模型工具Ollama存在安全风险 - 财联社",
+        "link": "https://www.cls.cn/detail/1959670"
+      },
+      {
+        "title": "关于大模型工具Ollama存在安全风险的情况通报 - 南通大学信息化中心",
+        "link": "https://met.ntu.edu.cn/2025/0304/c9375a260499/page.htm"
       },
       {
         "title": "Models, More ProbLLMs: New Vulnerabilities in Ollama",
         "link": "https://www.oligo.security/blog/more-models-more-probllms"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2025-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

@@ -1,6 +1,6 @@
 {
   "C0772": {
-    "title": "即时通讯系统采用SM2/SM3/SM4混合加密框架满足合规要求",
+    "title": "即时通讯系统采用SM2/SM3/SM4混合加密框架对齐商用密码应用要求",
     "keywords": [
       "SM2",
       "SM3",
@@ -10,20 +10,29 @@
       "国密算法",
       "商用密码",
       "数据安全",
-      "合规"
+      "合规",
+      "密码法"
     ],
-    "summary": "一项研究提出混合加密框架，将SM2用于密钥交换和认证，SM4用于消息加密，SM3用于完整性验证，以应对即时通讯系统中的安全威胁。该框架旨在满足中国密码法对商用密码应用的要求，确保数据机密性、完整性和可用性，是国密算法合规应用的正面案例。",
+    "summary": "PLOS One 论文提出一种面向即时通讯系统的混合加密框架，将SM2用于密钥交换和认证，SM4用于消息加密，SM3用于完整性验证，以提升通信数据的机密性、完整性和可用性。结合《密码法》关于依法使用商用密码保护网络与信息安全的要求，该研究可作为国密算法在即时通讯安全场景中的应用探索，而非单独证明某系统已完成合规评估。",
     "category": "academic_research",
     "relatedRisks": [
       "R0079"
     ],
     "references": [
       {
-        "title": "Enhancing security in instant messaging systems with a hybrid SM2 ...",
-        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12435676/"
+        "title": "Enhancing security in instant messaging systems with a hybrid SM2, SM3, and SM4 encryption framework - PLOS One",
+        "link": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0332665"
+      },
+      {
+        "title": "《中华人民共和国密码法》发布这六个问题你需要知道 - 中国网信网",
+        "link": "https://www.cac.gov.cn/2019-10/29/c_1573880702680488.htm"
+      },
+      {
+        "title": "商用密码应用安全性评估管理办法 - 国家密码管理局",
+        "link": "https://www.oscca.gov.cn/sca/xxgk/2023-10/07/1061109/files/c32620ca4f414f2fb837edda024c8ea0.pdf"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-10",
     "incidentTime": "2025-09",
     "relatedAttackTools": [],
     "relatedThreatActors": []

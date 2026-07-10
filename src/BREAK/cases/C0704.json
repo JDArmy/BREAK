@@ -13,19 +13,19 @@
       "Taylor Swift",
       "程序抢票"
     ],
-    "summary": "Peter Hunter 和 David Smith 通过自动化软件、多个虚假身份和大量支付工具批量购买热门演出门票，并在二级票务平台高价转售。英国法院上诉摘要确认，两人因与大规模抢票和转售有关的欺诈犯罪被定罪，案件涉及利用软件绕过正常购票机会、造成普通消费者难以按原价购票的风险。",
+    "summary": "英国上诉法院摘要显示，Peter Hunter 和 David Smith 是票务黄牛，使用部分购自暗网的复杂软件批量购买热门体育、音乐和文化活动门票，并在二级票务网站高价转售。两人因经营欺诈性票务转售业务相关罪名被定罪，上诉法院在2021年维持核心定罪。该案体现了自动化抢票和虚假身份批量购票对普通消费者购票机会的破坏。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0070"
     ],
     "references": [
       {
-        "title": "英国司法机构：R v Hunter and Smith 上诉法院摘要",
+        "title": "R v Hunter and Smith Court of Appeal Press Summary - UK Judiciary",
         "link": "https://www.judiciary.uk/wp-content/uploads/2022/07/R-v-Hunter-Smith-summary-261121.pdf"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2020-02",
+    "updated": "2026-07-10",
+    "incidentTime": "2021-11",
     "relatedAttackTools": [
       "AT0045"
     ],

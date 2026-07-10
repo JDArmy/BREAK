@@ -15,7 +15,15 @@
     "summary": "A government employee, seeking convenience, improperly used an internet-connected scanning application to digitize classified meeting minutes, causing the files to be automatically backed up to a cloud drive. The cloud drive account credentials were subsequently brute-forced, allowing an attacker to obtain 127 classified documents scanned over a three-year period. These documents were later dissem",
     "references": [
       {
-        "title": "Beware of Scanning Software Becoming a Driver of Classified Information Leaks",
+        "title": "Agency Employee Illegally Scanned Classified Meeting Minutes, Causing Major Leak - Jiefang Daily",
+        "link": "https://www.jfdaily.com/wx/detail.do?id=896641"
+      },
+      {
+        "title": "Employee Scanned Meeting Minutes and Automatic Cloud Backup Exposed 127 Classified Files - Sina Finance",
+        "link": "https://finance.sina.cn/2025-04-21/detail-inetwzqc6429470.d.html?cid=76675&node_id=76675&vt=4"
+      },
+      {
+        "title": "Illegal Use of Scanning Software Caused Classified Files to Be Uploaded to Cloud Storage - China Legal Service Network",
         "link": "https://legalinfo.moj.gov.cn/zxxfyasf/202504/t20250421_517810.html"
       }
     ]

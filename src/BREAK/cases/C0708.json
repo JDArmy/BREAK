@@ -20,15 +20,19 @@
     ],
     "references": [
       {
-        "title": "【产业互联网周报】国家网络安全通报中心通报:大模型工具Ollama...",
-        "link": "https://news.qq.com/rain/a/20250311A095QK00"
+        "title": "国家网络安全通报中心：大模型工具Ollama存在安全风险 - 财联社",
+        "link": "https://www.cls.cn/detail/1959670"
+      },
+      {
+        "title": "关于大模型工具Ollama存在安全风险的情况通报 - 安全内参",
+        "link": "https://www.secrss.com/articles/76245"
       },
       {
         "title": "Detecting Exposed LLM Servers: Shodan Case Study on Ollama",
         "link": "https://blogs.cisco.com/security/detecting-exposed-llm-servers-shodan-case-study-on-ollama"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "incidentTime": "2025-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

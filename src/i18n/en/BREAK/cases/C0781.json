@@ -5,13 +5,13 @@
       "GitHub breach",
       "code repository leak",
       "employee device compromise",
-      "malicious payload",
-      "dropper malware",
-      "second-stage payload",
-      "guardrails-ai",
+      "TeamPCP",
+      "internal repositories",
+      "Visual Studio Code extension",
+      "secret rotation",
       "data exfiltration"
     ],
-    "summary": "In May 2026, GitHub suffered a breach where attackers compromised an employee device to gain internal access, resulting in the leak of data from 3,800 code repositories. The malicious payload implanted was a dropper configured to fetch a second-stage payload from an external server, assessed as a malware variant linked to the previous guardrails-ai package compromise.",
+    "summary": "In May 2026, GitHub said it was investigating TeamPCP's claim that it was selling GitHub source code and internal organization data. The Hacker News reported that GitHub later said it had detected and contained a compromised employee device involving a poisoned Visual Studio Code extension and had rotated critical secrets. The claimed data dump was described as containing about 4,000 internal repositories.",
     "references": [
       {
         "title": "GitHub official statement on TeamPCP claims involving about 3,800 internal repositories",
