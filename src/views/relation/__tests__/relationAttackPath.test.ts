@@ -269,7 +269,7 @@ describe("relationAttackPath", () => {
     const proxyPaths = attackPath.selectedNodeAttackPathExplanations.value
       .filter(
         (path) =>
-          path.threatActors.some((actor) => actor.id === "TA0038") &&
+          path.threatActors.some((actor) => actor.id === "TA0001") &&
           path.attackToolId === "AT0034-001" &&
           path.riskId === "R0001",
       )
@@ -378,7 +378,7 @@ describe("relationAttackPath", () => {
 
     const initialPathCount = attackPath.filteredAttackPaths.value.length;
     attackPath.attackPathFilters.value = {
-      [RelationType.threatActor]: "TA0038",
+      [RelationType.threatActor]: "TA0001",
       [RelationType.attackTool]: "AT0034-001",
       [RelationType.risk]: "R0001",
       [RelationType.avoidance]: "A0016-001",
@@ -398,8 +398,8 @@ describe("relationAttackPath", () => {
     ).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          key: "TA0038",
-          label: "BREAK.threatActors.TA0038.title",
+          key: "TA0001",
+          label: "BREAK.threatActors.TA0001.title",
           count: expect.any(Number),
         }),
       ]),
@@ -422,7 +422,7 @@ describe("relationAttackPath", () => {
         id: selectedPathId,
         nodes: expect.arrayContaining([
           expect.objectContaining({
-            key: "TA0038",
+            key: "TA0001",
             type: RelationType.threatActor,
           }),
           expect.objectContaining({
@@ -464,7 +464,7 @@ describe("relationAttackPath", () => {
     );
 
     attackPath.attackPathFilters.value = {
-      [RelationType.threatActor]: "TA0038",
+      [RelationType.threatActor]: "TA0001",
       [RelationType.attackTool]: "missing-tool",
       [RelationType.avoidance]: "missing-avoidance",
     };
@@ -472,7 +472,7 @@ describe("relationAttackPath", () => {
     attackPath.normalizeAttackPathFilters();
 
     expect(attackPath.attackPathFilters.value).toEqual({
-      [RelationType.threatActor]: "TA0038",
+      [RelationType.threatActor]: "TA0001",
     });
     expect(attackPath.selectedAttackPathDetail.value?.id).not.toBe(
       "missing-path",

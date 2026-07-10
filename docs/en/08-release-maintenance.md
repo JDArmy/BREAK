@@ -53,3 +53,5 @@ Pull-request CI runs static checks, unit tests, data exports, the site build, an
 ## 2.45.0 Category Migration Check
 
 For the Term category enum migration, verify localized category labels, list filters, search, static datasets, STIX/JSON-LD, and npm data-package output in addition to the normal build. Legacy free-text categories and the separate allowlist must not remain in source or generated artifacts.
+
+When an LLM gate is skipped because of an external service failure, do not leave the evidence only in terminal output. Check the pending rerun list in `research/search-reports/llm-gate-retry/`, execute its recorded command after service recovery, and retain the result before continuing the release process.

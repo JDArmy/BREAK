@@ -135,3 +135,5 @@ For broad same-class issues (e.g. a batch of entities with placeholder limitatio
 ## Maintaining Term Categories
 
 Starting with 2.45.0, adding or changing a Term category requires updating the authoritative enum definition and both localized labels, then checking schema validation, search filters, static exports, STIX/JSON-LD, and data-package type declarations. Run `npm run validate:data` before committing to ensure every `Term.category` uses a valid key and English translation files do not duplicate structural fields.
+
+When `BREAK_REVIEW_ON_COMMIT=0` is used because the LLM service is unavailable, pre-commit records affected entities, the reason, and a rerun command in local `research/search-reports/llm-gate-retry/`. Run the recorded `review:changed` command once service is restored. Per-entity call failures are also preserved in each review directory's `review-progress.json.failed` and are retried automatically when the fingerprint is reviewed again.

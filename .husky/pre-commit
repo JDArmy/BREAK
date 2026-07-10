@@ -29,4 +29,8 @@ if [ "$BREAK_REVIEW_ON_COMMIT" != "0" ]; then
       exit $status
     fi
   fi
+else
+  if git diff --cached --name-only -- src/BREAK/ | grep -q '\.json$'; then
+    node scripts/validate/record-llm-gate-skip.mjs --staged-only --reason="BREAK_REVIEW_ON_COMMIT=0"
+  fi
 fi
