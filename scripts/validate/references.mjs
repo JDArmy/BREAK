@@ -11,7 +11,11 @@ import {
   writeJson,
   matchesDomain,
 } from '../search/common.mjs';
-import { weakDomains as sourceWeakDomains, classifySource } from './source-classify.mjs';
+import {
+  weakDomains as sourceWeakDomains,
+  classifySource,
+  isGenericReferenceLandingPage,
+} from './source-classify.mjs';
 
 const entityTypes = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'cases'];
 // 统一用 source-classify.mjs 的 weakDomains（11 个），替换原 6 个 lowQualityDomains
@@ -23,10 +27,10 @@ const CVE_RE = /\bCVE-\d{4}-\d{4,}\b/i;
 const TITLE_DOMAIN_SIGNALS = [
   { titleRe: /\bCVE-\d{4}-\d{4,}\b/i, domains: ['cve.org', 'nvd.nist.gov', 'mitre.org', 'github.com', 'gist.github.com'], label: 'CVE' },
   { titleRe: /判决书|裁定书|刑初|刑事判决|一审|二审/, domains: ['gov.cn', 'chinacourt.cn', 'chinacourt.org', 'courtlistener.com', 'bjcourt.gov.cn', 'hshfy.sh.cn', 'elawcn.com', '055110.com', 'indiankanoon.org'], label: '判决书' },
-  { titleRe: /警情通报|警方通报|公安通报|通报/, domains: ['gov.cn', 'news.qq.com', 'mp.weixin.qq.com'], label: '通报' },
+  { titleRe: /警情通报|警方通报|公安通报|通报/, domains: ['gov.cn', 'cert.org.cn', 'news.qq.com', 'mp.weixin.qq.com'], label: '通报' },
 ];
 const ROOT_DOMAIN_HOMEPAGES = new Set([
-  'miit.gov.cn', 'owasp.org', 'cisa.gov', 'nist.gov', 'iso.org', 'w3.org', 'owasp.org',
+  'miit.gov.cn', 'owasp.org', 'cisa.gov', 'nist.gov', 'iso.org', 'w3.org',
 ]);
 
 function containsCjk(text) {
@@ -135,7 +139,10 @@ function checkEntityReferences(entityType, records, issues) {
 
       // 根域首页占位（pathname 为空或仅 /）
       const url = safeUrl(link);
-      if (url && (!url.pathname || url.pathname === '/' || url.pathname === '/index.html') && ROOT_DOMAIN_HOMEPAGES.has(domain)) {
+      const isKnownRootHomepage = url
+        && (!url.pathname || url.pathname === '/' || url.pathname === '/index.html')
+        && ROOT_DOMAIN_HOMEPAGES.has(domain);
+      if (isKnownRootHomepage || isGenericReferenceLandingPage(link)) {
         addIssue(issues, {
           type: 'root_homepage_link',
           ...context,

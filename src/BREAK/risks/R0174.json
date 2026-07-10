@@ -37,18 +37,18 @@
     "references": [
       {
         "link": "https://dl.acm.org/doi/10.1145/3716323",
-        "title": "Blockchain Security and Privacy: Threats, Challenges, Applications ..."
+        "title": "Blockchain Security and Privacy: Threats, Challenges, Applications, and Tools"
       },
       {
         "link": "https://arxiv.org/abs/1904.05234",
         "title": "An Empirical Analysis of Privacy in the Lightning Network"
       },
       {
-        "link": "https://www.chainalysis.com/",
-        "title": "Chainalysis: The Blockchain Data Platform"
+        "link": "https://www.chainalysis.com/blog/blockchain-analysis-trace-through-service-exchange/",
+        "title": "Why You Can't Trace Funds Through Services Using Blockchain Analysis - Chainalysis"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "链上隐私泄露",
       "链上数据隐私泄露",
@@ -104,6 +104,7 @@
         "relation": "co-occurrence",
         "note": "链上隐私泄露与虚拟资产跨平台转移风险同属“链上隐私、NFT与虚拟资产交易”风险场景。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

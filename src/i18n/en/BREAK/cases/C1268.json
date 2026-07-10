@@ -1,31 +1,27 @@
 {
   "C1268": {
-    "title": "Microsoft 365 OAuth Token Theft Attack Wave",
+    "title": "Microsoft Discloses Storm-2372 Device Code Phishing Campaign",
     "keywords": [
       "OAuth device authorization flow",
       "token theft",
-      "Microsoft Entra ID",
-      "malicious OAuth application",
+      "Storm-2372",
+      "device code phishing",
       "phishing",
       "MFA bypass",
       "persistent access",
-      "Microsoft 365",
-      "APT29",
+      "Microsoft cloud services",
+      "Russia-aligned actor",
       "refresh token hijacking"
     ],
-    "summary": "Attackers exploit the OAuth device authorization flow to register malicious OAuth applications in Microsoft Entra ID, using phishing to trick users into completing authorization and hijacking access and refresh tokens, achieving persistent control over Microsoft 365 accounts that bypasses MFA to access email, files, and other core data long-term.",
+    "summary": "In February 2025, Microsoft disclosed that Storm-2372 had conducted device code phishing since August 2024 against governments, NGOs, and multiple industries. The actor sent lures resembling meeting or messaging-app invitations and induced victims to enter attacker-generated device codes on legitimate sign-in pages. This interaction yielded valid access tokens that could be used to enter accounts and access data while the tokens remained valid.",
     "references": [
-      {
-        "title": "Research on the Mechanism and Defense of Microsoft 365 Phishing Attacks Under OAuth Device Code Flow Abuse",
-        "link": "https://developer.aliyun.com/article/1738867"
-      },
       {
         "title": "Storm-2372 conducts device code phishing campaign - Microsoft Threat Intelligence",
         "link": "https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/"
       },
       {
-        "title": "Microsoft OAuth App Impersonation Campaign Leads to MFA Phishing - Proofpoint",
-        "link": "https://www.proofpoint.com/us/blog/threat-insight/microsoft-oauth-app-impersonation-campaign-leads-mfa-phishing"
+        "title": "Microsoft: Hackers Steal Emails in Device Code Phishing Attacks - BleepingComputer",
+        "link": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-steal-emails-in-device-code-phishing-attacks/"
       }
     ]
   }

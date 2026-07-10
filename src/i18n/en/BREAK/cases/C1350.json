@@ -11,7 +11,7 @@
       "CPU hijacking",
       "process masquerading"
     ],
-    "summary": "A cybersecurity student discovered abnormal CPU usage reaching 48% on a Windows laptop. Investigation revealed that attackers exploited the legitimate Microsoft AddInProcess.exe process to inject a Monero miner, connecting to the Nanopool mining pool for cryptocurrency mining. The malware achieved persistence by masquerading as a system process, and a total of 1997 malicious files were detected, i",
+    "summary": "In April 2026, a cybersecurity student noticed that a personal Windows laptop was using 48% CPU despite no heavy workloads running. An investigation lasting about three hours confirmed a Monero cryptominer and a password stealer on the device, and cleanup tools ultimately removed 1,997 malicious files. The public incident-response write-up documents unauthorized cryptomining that consumed the endpoint's computing resources.",
     "references": [
       {
         "title": "gagandeep-codes/cryptojacking-incident-response - GitHub",

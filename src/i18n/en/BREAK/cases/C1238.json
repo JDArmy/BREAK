@@ -1,21 +1,25 @@
 {
   "C1238": {
-    "title": "Synthetic Identity Fraud Losses in the U.S. Exceed $33 Billion in First Half of 2025",
+    "title": "TransUnion Reports More Than $3.3 Billion in U.S. Synthetic Identity Exposure",
     "keywords": [
       "synthetic identity fraud",
-      "generative AI",
-      "deepfake",
-      "biometric bypass",
+      "TransUnion",
+      "public data",
+      "risk exposure",
       "new account fraud",
       "U.S. lenders",
       "digital identity",
-      "Proofpoint"
+      "TruValidate"
     ],
-    "summary": "U.S. lenders suffered over $33 billion in losses from synthetic identity fraud in the first half of 2025. Attackers used generative AI to mass-create synthetic digital identities, employing deepfake images and videos to bypass biometric verification and automatically register accounts across multiple financial platforms. The average loss per confirmed synthetic fraud case reached $15,000, with mor",
+    "summary": "On September 17, 2025, TransUnion reported that U.S. lenders had more than $3.3 billion in exposure tied to suspected synthetic identities in newly opened accounts for the year ending 2024. The research examined identity traits and behavioral clues in public records to identify applications assembled from data that appears individually valid and described a corresponding detection model.",
     "references": [
       {
-        "title": "What Is Synthetic Identity Fraud & Theft? Definition | Proofpoint US",
-        "link": "https://www.proofpoint.com/us/threat-reference/synthetic-identity-fraud"
+        "title": "TransUnion Research Highlights Power of Public Data in Uncovering $3.3B Synthetic Identity Threat",
+        "link": "https://newsroom.transunion.com/transunion-research-highlights-power-of-public-data-in-uncovering-33b-synthetic-identity-threat/"
+      },
+      {
+        "title": "TransUnion Research Highlights Rise in Synthetic Identity Fraud - Crowdfund Insider",
+        "link": "https://www.crowdfundinsider.com/2025/09/251628-transunion-research-highlights-rise-in-synthetic-identity-fraud/"
       }
     ]
   }

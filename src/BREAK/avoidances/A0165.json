@@ -8,11 +8,19 @@
     "limitation": "工具成本高且依赖专业人员，隐私技术（混币器、隐私币）可对抗追踪导致漏报；地址标签库更新滞后易产生误报，正常用户共用交易所热钱包地址易被误判误伤。",
     "references": [
       {
-        "title": "Blockchain Analytics Tools",
-        "link": "https://www.chainalysis.com/"
+        "title": "如何评估区块链分析工具 - Chainalysis",
+        "link": "https://www.chainalysis.com/blog/how-to-evaluate-blockchain-analysis-tools/"
+      },
+      {
+        "title": "Trafficking: Use of Online Marketplaces and Virtual Currencies in Drug and Human Trafficking - U.S. GAO",
+        "link": "https://www.gao.gov/assets/gao-22-105101.pdf"
+      },
+      {
+        "title": "Report to Congress on Innovative Technologies to Counter Illicit Finance Involving Digital Assets - U.S. Department of the Treasury",
+        "link": "https://home.treasury.gov/system/files/246/GENIUS-Act-Illicit-Finance-Innovation-Congressional-Report-March-2026.pdf"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "区块链分析工具应用",
       "链分析",
@@ -52,6 +60,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

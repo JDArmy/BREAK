@@ -115,6 +115,13 @@ const primaryDomainSuffixes = [
   'github.com',
   'gitlab.com',
   'owasp.org',
+  'rfc-editor.org',
+  'docs.aws.amazon.com',
+  'sre.google',
+  'developer.android.com',
+  'developers.google.com',
+  'dev.maxmind.com',
+  'docs.fingerprint.com',
   'cloudflare.com',
   'geetest.com',
   'hackthebox.com',
@@ -234,6 +241,7 @@ const primaryDomainSuffixes = [
   'visa.com',
   'cgbchina.com.cn',
   'autoriteitpersoonsgegevens.nl',
+  'garanteprivacy.it',
   'dataprotection.ie',
   'cnpd.public.lu',
   'humanrights.go.kr',
@@ -243,6 +251,7 @@ const primaryDomainSuffixes = [
   'wuhua.gov.cn',
   'ankr.com',
   'qianxin.com',
+  'brave.com',
   'forcepoint.com',
   'flare.io',
   'sharkteam.org',
@@ -263,10 +272,10 @@ const primaryDomainSuffixes = [
   'incidentdatabase.ai', // AI/机器人事故数据库原始记录
   'icrc.org', // 国际红十字委员会官方
   'stopkillerrobots.org', // 国际机器人军控倡议组织原始报告
-  'en.wikipedia.org', // 百科概览，视为可靠稳定来源
 ];
 
 const secondaryDomainSuffixes = [
+  'wikipedia.org', // 百科仅作为二手背景资料，不应计为一手权威来源
   'thepaper.cn',
   'news.qq.com',
   'new.qq.com',
@@ -314,6 +323,7 @@ const secondaryDomainSuffixes = [
 
 const mirrorDomainSuffixes = ['mp.weixin.qq.com', 'm.gmw.cn', 'toutiao.com', 'web.toutiao.com'];
 const primaryReferenceLinks = new Set([
+  'https://www.freebuf.com/articles/network/216918.html', // 原作者发布的无文件挖矿攻击应急响应复盘
   'https://web.archive.org/web/20180221031903/https://blog.redlock.io/cryptojacking-tesla', // RedLock CSI Team 原始研究存档
   'https://www.douyin.com/video/7646680404434504998', // 抖音黑板报官方治理公告
   'https://www.xinhuanet.com/politics/2016-12/20/c_1120149364.htm', // 新华网转载法院审理结果，高校学生利用境外隐藏网络传播儿童淫秽视频案
@@ -516,6 +526,8 @@ const primaryReferenceLinks = new Set([
   'https://viewpoints.dji.com/blog/security-and-continuous-improvement-romos-path-forward', // DJI 官方安全博客，确认 Romo 后端验证缺陷及修复（C1819）
   'https://mp.weixin.qq.com/s?__biz=mzixnjm2ntq2ng==&mid=2247504249&idx=1&sn=726901c65f2416c7c0f568cf06063233&chksm=96a90f2cd4915408ae7fad1c3bdd39c620c8ad1713f6dcedee740e20551f2a36c0e3497c9bfa&scene=27', // 衡阳网警政务微信，衡山公安 AI 伪造证据诈骗案官方通报（C1800）
   'https://mp.weixin.qq.com/s?__biz=mzixmtu0mtyxmw==&mid=2247536552&idx=5&sn=85616f7d40fa85c10c343a452d38465f&chksm=9751c4aaa0264dbcbd2d58ec7800e2ed0ad8bcd4ee751acf08271da0669bf9c954ea69308b64&scene=27', // 咸阳政法政务微信，广州白云法院 17 岁少年 DDoS 攻击南航购票系统案以案释法（C1803）
+  'https://finance.sina.com.cn/roll/2026-06-13/doc-inicfzuu8325587.shtml', // 新浪完整转载上海市网信办执法通报，携程数据出境违法行政处罚案（C0757）
+  'https://m.voc.com.cn/xhn/news/202412/21479922.html', // 新湖南记者基于长沙雨花法院案件披露的原创判决报道，短信轰炸服务经营者获刑案（C1193）
   "https://m.gmw.cn/2023-01/04/content_1303243232.htm", // 平安鹿邑警方通报，警车遭破坏案官方通报（光明网托管）（C1065）
   "https://3g.china.com/act/news/1007/20170511/30514620.html", // 中华网转载人民公安报原文，老干妈商业秘密案官方通报（C0597）
   "https://m.thepaper.cn/rss_newsDetail_18497057", // 澎湃新闻标注素材来源上海青浦法院，超市员工加价案（C0686）
@@ -605,6 +617,33 @@ export function normalizeSlash(link) {
   return String(link || "").trim().replace(/\/+$/, "");
 }
 
+// 已确认只能落到机构首页、新闻索引或研究目录的通用链接。
+// 使用精确 URL，避免误伤 RoboPAIR 等本身以项目首页作为正式成果页的来源。
+const genericReferenceLandingPages = new Set([
+  'https://www.ic3.gov/',
+  'https://unit42.paloaltonetworks.com/',
+  'https://www.microsoft.com/en-us/security/blog/',
+  'https://www.cac.gov.cn/',
+  'https://www.interpol.int/',
+  'http://www.npc.gov.cn/',
+  'https://www.court.gov.cn/',
+  'https://www.samr.gov.cn/',
+  'https://www.ncac.gov.cn/',
+  'https://www.nfra.gov.cn/',
+  'https://www.pbc.gov.cn/',
+  'https://www.chainalysis.com/',
+  'https://securelist.com/',
+  'https://www.unodc.org/',
+  'https://www.interpol.int/en/News-and-Events/News',
+  'https://www.trendmicro.com/en_us/research.html',
+  'https://group-ib.com/resources/threat-research/',
+  'https://www.europol.europa.eu/crime-areas-and-statistics',
+].map(normalizeSlash));
+
+function isGenericReferenceLandingPage(link) {
+  return genericReferenceLandingPages.has(normalizeSlash(link));
+}
+
 export {
   highValueCategories,
   weakDomains,
@@ -614,6 +653,8 @@ export {
   primaryReferenceLinks,
   normalizedPrimaryReferenceLinks,
   primaryWechatBizIds,
+  genericReferenceLandingPages,
+  isGenericReferenceLandingPage,
   matchesDomain,
   classifySource,
   strongestSourceType,

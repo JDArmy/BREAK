@@ -12,8 +12,17 @@ const mocks = vi.hoisted(() => {
     push: vi.fn(),
     replace: vi.fn(),
   };
-  return { locale: undefined as unknown as Ref<string>, route, router };
+  const mermaid = {
+    initialize: vi.fn(),
+    render: vi.fn(async (id: string) => ({
+      svg: `<svg data-mermaid-id="${id}"><text>diagram</text></svg>`,
+      bindFunctions: vi.fn(),
+    })),
+  };
+  return { locale: undefined as unknown as Ref<string>, route, router, mermaid };
 });
+
+vi.mock("mermaid", () => ({ default: mocks.mermaid }));
 
 vi.mock("vue-i18n", () => ({
   useI18n: () => ({
@@ -181,5 +190,25 @@ describe("DocsView", () => {
       params: { slug: "guide" },
       hash: "",
     });
+  });
+
+  it("将 Mermaid 代码块渲染为 SVG 图表", async () => {
+    const mermaidHtml = '<h1>快速上手</h1><pre><code class="language-mermaid">flowchart LR\nA--&gt;B</code></pre>';
+    vi.stubGlobal("fetch", createFetchMock({
+      "docs/zh-CN/index.html": okResponse(mermaidHtml),
+    }));
+
+    const wrapper = await mountDocsView();
+    await flushPromises();
+    await flushPromises();
+    await flushPromises();
+
+    expect(mocks.mermaid.initialize).toHaveBeenCalled();
+    expect(mocks.mermaid.render).toHaveBeenCalledWith(
+      expect.stringMatching(/^docs-mermaid-/),
+      "flowchart LR\nA-->B",
+    );
+    expect(wrapper.find(".mermaid-diagram svg").exists()).toBe(true);
+    expect(wrapper.find("pre code.language-mermaid").exists()).toBe(false);
   });
 });

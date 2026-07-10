@@ -9,9 +9,13 @@
       {
         "title": "设备指纹 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
+      },
+      {
+        "title": "Play Integrity API 概览 - Android Developers",
+        "link": "https://developer.android.com/google/play/integrity/overview"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "终端异常环境检测",
       "设备环境检测",
@@ -53,7 +57,8 @@
         "relation": "complement",
         "note": "共同覆盖 43 个风险，共同限制 10 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0010-001": {
     "title": "模拟器检测",
@@ -116,14 +121,14 @@
     "category": "AC02",
     "definition": "识别APP是否运行在云手机中并采集特征进行判定",
     "description": "可以通过识别手机模拟器（A0010-001）的方式来进行云手机识别，此外设备指纹、异常环境监测、出网IP等也可用来进行云手机识别。由于云手机通常不能修改ROM，大部分甚至不能获得ROOT权限，所以对抗效果通常会好于手机模拟器检测（A0010-001）",
-    "limitation": "随着云手机、云游戏的不断发展和普及，APP厂商将不能采用\"云\"即是\"黑\"的一棒子打死的策略，否则将面临大量用户投诉，这为未来黑产利用云手机留下了空间。",
+    "limitation": "随着云手机、云游戏普及，APP厂商若采用“云即黑”的统一拦截会误伤大量正常用户；黑产也可租用合规云手机、模拟正常使用轨迹或混入云游戏流量绕过检测，使云环境信号只能作为风险因子而不能单独定性。",
     "references": [
       {
         "title": "NIST Guidelines for Managing the Security of Mobile Devices",
         "link": "https://csrc.nist.gov/pubs/sp/800/124/r2/final"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "云手机检测",
       "云机检测",

@@ -1,20 +1,20 @@
 {
   "C1364": {
-    "title": "Thetanuts Finance闪电贷攻击事件",
+    "title": "Thetanuts Finance旧金库算术漏洞攻击事件",
     "keywords": [
       "Thetanuts Finance",
-      "闪电贷攻击",
+      "算术精度漏洞",
       "DeFi漏洞",
       "指数代币",
       "白帽黑客",
       "资金追回",
       "数学缺陷",
-      "闪电贷"
+      "整数除法截断"
     ],
-    "summary": "2026年6月15日，Thetanuts Finance遭遇闪电贷攻击，损失约210万美元。攻击者利用其指数代币系统中的数学缺陷，通过闪电贷在单笔交易内完成攻击，但大部分资金据报已被白帽黑客追回。",
+    "summary": "2026年6月15日，Thetanuts Finance一个已停用并迁移多年的旧金库遭到攻击，涉及约210万美元资产。安全分析认为，旧合约铸币函数的整数除法截断使存款公式在低供应量时归零，攻击者借此免费铸造代币。白帽防守方随后追回约200万美元期权代币，攻击者仍保留部分资产。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0160"
+      "R0159"
     ],
     "references": [
       {
@@ -22,11 +22,15 @@
         "link": "https://www.cryptotimes.io/2026/06/15/2-1m-exploit-hits-thetanuts-inside-the-latest-defi-flash-loan/"
       },
       {
+        "title": "Deprecated Thetanuts Vault Exploited for $2.1 Million in Latest DeFi Attack",
+        "link": "https://finance.yahoo.com/markets/crypto/articles/deprecated-thetanuts-vault-exploited-2-042138909.html"
+      },
+      {
         "title": "Thetanuts Finance preliminary investigation statement",
         "link": "https://x.com/ThetanutsFi/status/2066569315961454925"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []

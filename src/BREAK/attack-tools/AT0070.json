@@ -17,15 +17,15 @@
     ],
     "references": [
       {
-        "title": "Chainalysis 2026 Crypto Crime Report",
-        "link": "https://www.chainalysis.com/"
+        "title": "2026 Crypto Crime Report Introduction: Illicit Crypto Transaction Volume Reached Record Highs in 2025, Amid Increasing Nation-State, Sanctions, and Criminal Exploitation of Digital Assets",
+        "link": "https://www.chainalysis.com/blog/2026-crypto-crime-report-introduction/"
       },
       {
-        "title": "UNODC Transnational Organized Fraud Report",
-        "link": "https://www.unodc.org/"
+        "title": "Transnational Organized Crime and the Convergence of Cyber-Enabled Fraud, Underground Banking and Technological Innovation in Southeast Asia: A Shifting Threat Landscape",
+        "link": "https://www.unodc.org/roseap/uploads/documents/Publications/2024/TOC_Convergence_Report_2024.pdf"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "欺诈即服务(FaaS)平台",
       "FaaS",
@@ -66,6 +66,7 @@
         "relation": "co-used",
         "note": "共同关联 1 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

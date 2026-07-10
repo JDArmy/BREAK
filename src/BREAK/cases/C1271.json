@@ -6,28 +6,32 @@
       "FortiGate",
       "FortiCloud SSO",
       "认证绕过",
-      "CVE-2026",
-      "OAuth滥用",
+      "CVE-2026-24858",
+      "访问控制不当",
       "SSO漏洞",
       "在野利用",
-      "会话验证缺失"
+      "FortiCloud账户"
     ],
-    "summary": "Fortinet FortiGate设备存在SSO认证绕过漏洞，攻击者利用FortiCloud SSO会话验证逻辑缺失，通过合法FortiCloud账户绕过认证，登录其他用户设备。漏洞评分9.8，已发现针对已完全修补设备的在野利用活动。",
+    "summary": "2026年1月，Fortinet披露CVE-2026-24858：当设备启用FortiCloud SSO时，拥有FortiCloud账户及已注册设备的攻击者可绕过认证，登录其他账户注册的设备。该漏洞CVSS评分为9.4，官方确认已有两个恶意FortiCloud账户在野利用。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0143"
     ],
     "references": [
       {
-        "title": "Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched ...",
-        "link": "https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html"
-      },
-      {
         "title": "Fortinet PSIRT：FortiCloud SSO 认证绕过漏洞",
         "link": "https://www.fortiguard.com/psirt/FG-IR-26-060"
+      },
+      {
+        "title": "CISA：Fortinet 发布 CVE-2026-24858 持续利用处置指南",
+        "link": "https://www.cisa.gov/news-events/alerts/2026/01/28/fortinet-releases-guidance-address-ongoing-exploitation-authentication-bypass-vulnerability-cve-2026"
+      },
+      {
+        "title": "Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched Systems",
+        "link": "https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "incidentTime": "2026-01",
     "relatedAttackTools": [],
     "relatedThreatActors": []

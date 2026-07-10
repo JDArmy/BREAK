@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, nextTick, onMounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+import { useTheme } from "@/composables/useTheme";
 
 interface DocEntry {
   slug: string;
@@ -17,6 +18,7 @@ const { t } = useI18n();
 const { locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
+const { isDark } = useTheme();
 
 const manifest = ref<Record<string, DocEntry[]>>({});
 const docs = ref<DocEntry[]>([]);
@@ -25,10 +27,12 @@ const detailLoading = ref(false);
 const manifestError = ref(false);
 const detailError = ref(false);
 const bodyHtml = ref("");
+const docsBodyRef = ref<HTMLElement>();
 const selectedSlug = ref("");
 const SITE_TITLE = "JDArmy BREAK";
 let manifestRequestSeq = 0;
 let htmlRequestSeq = 0;
+let mermaidRenderSeq = 0;
 
 const docsLocale = computed(() => (locale.value === "en" ? "en" : "zh-CN"));
 
@@ -114,6 +118,63 @@ const loadSelectedHtml = async (entry?: DocEntry) => {
   }
 };
 
+const renderMermaidDiagrams = async () => {
+  await nextTick();
+  const container = docsBodyRef.value;
+  if (!container) return;
+
+  const targets = [
+    ...Array.from(container.querySelectorAll<HTMLElement>("pre > code.language-mermaid")).map((code) => ({
+      source: code.textContent?.trim() || "",
+      element: code.parentElement as HTMLElement,
+    })),
+    ...Array.from(container.querySelectorAll<HTMLElement>(".mermaid-diagram[data-mermaid-source]")).map((element) => ({
+      source: element.dataset.mermaidSource || "",
+      element,
+    })),
+  ].filter((target) => target.source);
+
+  if (!targets.length) return;
+
+  const renderId = ++mermaidRenderSeq;
+  const { default: mermaid } = await import("mermaid");
+  if (renderId !== mermaidRenderSeq) return;
+
+  mermaid.initialize({
+    startOnLoad: false,
+    securityLevel: "strict",
+    theme: isDark.value ? "dark" : "default",
+    flowchart: { htmlLabels: true, curve: "linear" },
+  });
+
+  for (const [index, target] of targets.entries()) {
+    if (renderId !== mermaidRenderSeq || !container.contains(target.element)) return;
+    try {
+      const { svg, bindFunctions } = await mermaid.render(`docs-mermaid-${renderId}-${index}`, target.source);
+      if (renderId !== mermaidRenderSeq || !container.contains(target.element)) return;
+
+      const diagram = document.createElement("div");
+      diagram.className = "mermaid-diagram";
+      diagram.dataset.mermaidSource = target.source;
+      diagram.innerHTML = svg;
+      target.element.replaceWith(diagram);
+      bindFunctions?.(diagram);
+    } catch {
+      if (target.element.matches("pre")) {
+        target.element.classList.add("mermaid-source-error");
+        if (!target.element.previousElementSibling?.classList.contains("mermaid-error-message")) {
+          const message = document.createElement("p");
+          message.className = "mermaid-error-message";
+          message.textContent = docsLocale.value === "en"
+            ? "The diagram could not be rendered. Mermaid source is shown below."
+            : "图表渲染失败，下面保留 Mermaid 源码。";
+          target.element.before(message);
+        }
+      }
+    }
+  }
+};
+
 onMounted(() => loadManifest());
 
 // 切换语言时重新加载对应语言的文档，并校正当前 slug。
@@ -179,6 +240,11 @@ watch(
   { immediate: true },
 );
 
+watch([bodyHtml, isDark, detailLoading], () => {
+  if (detailLoading.value) return;
+  void renderMermaidDiagrams();
+}, { flush: "post" });
+
 // KnowledgeSplitView 传了 detail-route-name，组件内部会自行 router.push 到
 // docs-detail 路由，这里只更新本地选中态供 list 态兜底。
 const handleSelect = (key: string) => {
@@ -228,7 +294,7 @@ const handleDocsBodyClick = (event: MouseEvent) => {
           <p>{{ t("error.dataLoadFailed") }}</p>
           <button type="button" class="docs-detail-retry" @click="retryLoad">{{ t("error.retry") }}</button>
         </div>
-        <div v-else class="docs-body" @click="handleDocsBodyClick" v-html="bodyHtml" />
+        <div ref="docsBodyRef" v-else class="docs-body" @click="handleDocsBodyClick" v-html="bodyHtml" />
       </section>
     </article>
   </KnowledgeSplitView>
@@ -343,6 +409,35 @@ const handleDocsBodyClick = (event: MouseEvent) => {
   color: var(--break-text-primary);
   font-size: 0.86em;
   line-height: 1.6;
+}
+
+.docs-body :deep(.mermaid-diagram) {
+  width: 100%;
+  margin: 16px 0;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.docs-body :deep(.mermaid-diagram svg) {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.docs-body :deep(.mermaid-error-message) {
+  color: var(--break-danger, #f56c6c);
+}
+
+.docs-body :deep(.mermaid-source-error) {
+  border-color: var(--break-danger, #f56c6c);
+}
+
+@media (max-width: 640px) {
+  .docs-body :deep(.mermaid-diagram svg) {
+    min-width: 480px;
+  }
 }
 
 .docs-body :deep(blockquote) {

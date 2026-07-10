@@ -21,9 +21,13 @@
       {
         "title": "Data breach - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Data_breach"
+      },
+      {
+        "title": "Guidelines for Managing the Security of Mobile Devices in the Enterprise - NIST SP 800-124 Rev. 2",
+        "link": "https://www.nist.gov/publications/guidelines-managing-security-mobile-devices-enterprise-0"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",
@@ -79,6 +83,7 @@
         "relation": "co-occurrence",
         "note": "设备丢失与合作方数据泄露共享规避手段“数据泄露保护”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -8,6 +8,10 @@
       {
         "title": "Device Fingerprint - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
+      },
+      {
+        "title": "Overview of the Play Integrity API - Android Developers",
+        "link": "https://developer.android.com/google/play/integrity/overview"
       }
     ],
     "keywords": [
@@ -43,7 +47,7 @@
     "title": "Cloud Phone Detection",
     "definition": "Identifying whether an APP is running on a cloud phone and collecting features for determination.",
     "description": "Cloud phone detection can be performed using the same methods as mobile emulator detection (A0010-001). Additionally, device fingerprinting, abnormal environment monitoring, and outbound IP can also be used for cloud phone detection. Since cloud phones typically cannot modify the ROM and most cannot even obtain root access, the countermeasure effectiveness is generally better than mobile emulator detection (A0010-001).",
-    "limitation": "As cloud phones and cloud gaming continue to develop and become more widespread, APP vendors will not be able to adopt a blanket 'cloud equals blacklisted' policy, otherwise they will face a large number of user complaints. This leaves room for the black-gray industry to exploit cloud phones in the future.",
+    "limitation": "As cloud phones and cloud gaming become widespread, treating every cloud environment as malicious would falsely block many legitimate users. Attackers can also rent compliant cloud phones, imitate normal usage, or blend into cloud-gaming traffic to bypass detection, so cloud-environment signals cannot determine abuse on their own.",
     "references": [
       {
         "title": "NIST Guidelines for Managing the Security of Mobile Devices",

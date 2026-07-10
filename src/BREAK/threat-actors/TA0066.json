@@ -26,11 +26,20 @@
       {
         "title": "How vulnerable Ecovacs robot vacuums are being hacked - Kaspersky",
         "link": "https://www.kaspersky.com/blog/ecovacs-robot-vacuums-hacked-in-real-life/52837/"
+      },
+      {
+        "title": "DEF CON 32：Ecovacs机器人逆向工程与入侵研究",
+        "link": "https://media.defcon.org/DEF%20CON%2032/DEF%20CON%2032%20villages/DEF%20CON%2032%20-%20Embedded%20Systems%20Village%20-%20Dennis%20Giese%20%26%20Braelynn%20Hacker%20-%20Reverse%20engineering%20and%20hacking%20Ecovacs%20robots.pdf"
       }
     ],
     "relatedThreatActors": [
       {
         "key": "TA0029",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0064",
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险。"
       },
@@ -53,13 +62,9 @@
         "key": "TA0060",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
-      },
-      {
-        "key": "TA0062",
-        "relation": "co-involved",
-        "note": "共同使用 1 个攻击工具。"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

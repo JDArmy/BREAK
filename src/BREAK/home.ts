@@ -7,11 +7,11 @@ import businessDomains from "./business-domains";
 const entityCounts = {
   avoidances: 350,
   subAvoidances: 105,
-  attackTools: 124,
+  attackTools: 125,
   subAttackTools: 39,
   threatActors: 83,
   subThreatActors: 16,
-  terms: 628,
+  terms: 632,
   cases: 1781,
 } as const;
 

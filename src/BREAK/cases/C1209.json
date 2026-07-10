@@ -11,7 +11,7 @@
       "电信诈骗",
       "手机号码劫持"
     ],
-    "summary": "美国司法部披露，Nicholas Truglia 因参与 SIM 卡交换攻击窃取受害者超过2000万美元加密货币，被纽约南区联邦法院判处18个月监禁，并被责令在60日内赔偿20,379,007美元。该案显示，攻击者可通过劫持手机号绕过短信双因素认证并接管加密资产账户。",
+    "summary": "美国司法部2022年12月通报，Nicholas Truglia 因参与SIM卡交换计划、协助窃取受害者逾2000万美元加密货币，被纽约南区联邦法院判处18个月监禁。法院同时责令其在60日内支付20,379,007美元赔偿金。该案说明手机号被劫持后，短信验证和加密资产账户可能随之被接管。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0132"
@@ -20,9 +20,13 @@
       {
         "title": "Florida Man Sentenced To 18 Months For Theft Of Over $20 Million In SIM Swap Scheme",
         "link": "https://www.justice.gov/usao-sdny/pr/florida-man-sentenced-18-months-theft-over-20-million-sim-swap-scheme"
+      },
+      {
+        "title": "SIM swapper jailed for 18 months over crypto heist - Malwarebytes",
+        "link": "https://www.malwarebytes.com/blog/news/2022/12/sim-swapper-jailed-for-18-months-over-crypto-heist"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2022-12",
     "relatedAttackTools": [
       "AT0062"

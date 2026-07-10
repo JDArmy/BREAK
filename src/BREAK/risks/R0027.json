@@ -196,9 +196,13 @@
       {
         "title": "Digital Watermarking - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Digital_watermarking"
+      },
+      {
+        "title": "A Survey on Proactive Deepfake Defense: Disruption and Watermarking",
+        "link": "https://dl.acm.org/doi/10.1145/3771296"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "数字水印去除与伪造",
       "水印去除",
@@ -221,7 +225,8 @@
       ],
       "assessedAt": "2026-07-03",
       "priority": "P3"
-    }
+    },
+    "version": 2
   },
   "R0027-005": {
     "title": "业务蜜罐识别与规避",

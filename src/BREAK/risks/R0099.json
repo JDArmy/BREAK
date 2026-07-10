@@ -18,6 +18,14 @@
       {
         "title": "Proxy server - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Proxy_server"
+      },
+      {
+        "title": "Multi-hop Proxy, Sub-technique T1090.003 | MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/003/"
+      },
+      {
+        "title": "External Proxy, Sub-technique T1090.002 | MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/002/"
       }
     ],
     "riskAssessment": {
@@ -36,7 +44,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P2"
     },
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "黑IP识别绕过",
       "代理IP绕过",
@@ -77,6 +85,7 @@
         "relation": "co-occurrence",
         "note": "黑IP识别绕过与优惠券枚举共享规避手段“设备指纹”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -1,7 +1,7 @@
 {
   "TA0053": {
     "title": "云资源滥用者",
-    "description": "利用云密钥、过度授权和配置错误访问云资源或挖掘数据价值的攻击者。",
+    "description": "利用泄露的云API密钥、服务账号凭证、过度授权和配置错误访问云资源或窃取数据的攻击者。攻击者可调用云API创建计算实例、读取存储和修改配置，造成API密钥滥用、云IAM越权和算力盗用，也可能维持对云环境的持续访问。",
     "references": [
       {
         "title": "Unit 42：云计算凭据失陷案例研究",
@@ -19,6 +19,8 @@
     ],
     "directCauseRisks": [
       "R0069-002",
+      "R0086-001",
+      "R0149",
       "R0230",
       "R0231",
       "R0250",
@@ -34,14 +36,34 @@
     "updated": "2026-07-10",
     "relatedThreatActors": [
       {
+        "key": "TA0002-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
+      },
+      {
         "key": "TA0010",
         "relation": "co-involved",
         "note": "共同直接造成 1 个风险。"
       },
       {
-        "key": "TA0063",
+        "key": "TA0012",
         "relation": "co-involved",
-        "note": "共同使用 1 个攻击工具。"
+        "note": "共同直接造成 1 个风险。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
+      },
+      {
+        "key": "TA0024",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
+      },
+      {
+        "key": "TA0048",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
       }
     ],
     "version": 2

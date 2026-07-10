@@ -6,21 +6,25 @@
       "FortiGate",
       "FortiCloud SSO",
       "authentication bypass",
-      "CVE-2026",
-      "OAuth abuse",
+      "CVE-2026-24858",
+      "improper access control",
       "SSO vulnerability",
       "in-the-wild exploitation",
-      "session validation missing"
+      "FortiCloud account"
     ],
-    "summary": "An SSO authentication bypass vulnerability exists in Fortinet FortiGate devices due to missing session validation logic in FortiCloud SSO. Attackers can leverage a legitimate FortiCloud account to bypass authentication and log into other users' devices. The vulnerability has a severity score of 9.8, and in-the-wild exploitation has been observed targeting fully patched appliances.",
+    "summary": "In January 2026, Fortinet disclosed CVE-2026-24858. When FortiCloud SSO is enabled, an attacker with a FortiCloud account and a registered device can bypass authentication and log into devices registered to other accounts. The vulnerability has a CVSS score of 9.4, and Fortinet confirmed in-the-wild exploitation by two malicious FortiCloud accounts.",
     "references": [
-      {
-        "title": "Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched Systems",
-        "link": "https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html"
-      },
       {
         "title": "Fortinet PSIRT: FortiCloud SSO Authentication Bypass",
         "link": "https://www.fortiguard.com/psirt/FG-IR-26-060"
+      },
+      {
+        "title": "CISA: Fortinet Releases Guidance on Ongoing Exploitation of CVE-2026-24858",
+        "link": "https://www.cisa.gov/news-events/alerts/2026/01/28/fortinet-releases-guidance-address-ongoing-exploitation-authentication-bypass-vulnerability-cve-2026"
+      },
+      {
+        "title": "Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched Systems",
+        "link": "https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html"
       }
     ]
   }

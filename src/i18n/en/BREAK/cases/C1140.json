@@ -1,6 +1,6 @@
 {
   "C1140": {
-    "title": "Analysis of NFT Rug Pull Fraud",
+    "title": "Behavioral Study of NFT Rug-Pull Creators",
     "keywords": [
       "NFT rug pull",
       "cryptocurrency crime",
@@ -10,11 +10,15 @@
       "on-chain scam",
       "rug pull analysis"
     ],
-    "summary": "Academic research identifies repetitive rug pull schemes as a significant driver of NFT-related cryptocurrency crime. Project teams attract investor funds through false promotion, then abandon the project and abscond with the money, leaving investors with total losses.",
+    "summary": "On October 11, 2023, Trishie Sharma, Rachit Agarwal, and Sandeep Kumar Shukla published a study in ACM Transactions on the Web. The team analyzed 760 rug pulls across ten NFT marketplaces, classified projects into twenty groups based on links among creator accounts, and found that one creator attempted thirty-seven rug pulls within three months.",
     "references": [
       {
         "title": "An In-depth Behavioral Analysis of Fraudulent NFT Creators",
         "link": "https://dl.acm.org/doi/abs/10.1145/3623376"
+      },
+      {
+        "title": "Understanding Rug Pulls: An In-depth Behavioral Analysis of Fraudulent NFT Creators",
+        "link": "https://arxiv.org/abs/2304.07598"
       }
     ]
   }

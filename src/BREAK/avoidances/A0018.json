@@ -9,9 +9,13 @@
       {
         "title": "身份验证 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Authentication"
+      },
+      {
+        "title": "认证保证等级 - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-4/sp800-63b/aal/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "身份认证（登录）",
       "登录认证",
@@ -55,7 +59,8 @@
         "relation": "complement",
         "note": "共同覆盖 20 个风险，共同限制 2 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0018-001": {
     "title": "零知识证明",

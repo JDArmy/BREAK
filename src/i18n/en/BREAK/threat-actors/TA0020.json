@@ -1,11 +1,15 @@
 {
   "TA0020": {
     "title": "Personal Data Traffickers",
-    "description": "Criminals who illegally obtain and bulk-resell citizens' personal information.",
+    "description": "Personal-data middlemen who purchase, organize, and resell real-name accounts and citizens' personal information, such as names, phone numbers, and addresses. Their core role is supplying and trading data, not personally conducting downstream attacks such as credential stuffing, password spraying, or auction sniping.",
     "references": [
       {
         "title": "Two Departments Jointly Expose Financial Black-Grey Market Typical Cases",
         "link": "https://www.163.com/dy/article/KA38FG2O051481US.html"
+      },
+      {
+        "title": "Typical Cases on Strengthening Judicial Protection of People's Livelihoods",
+        "link": "https://www.spp.gov.cn/spp/xwfbh/dxal/202502/t20250220_684436.shtml"
       }
     ],
     "keywords": [

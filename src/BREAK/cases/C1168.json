@@ -1,6 +1,6 @@
 {
   "C1168": {
-    "title": "API枚举攻击检测与BOLA/IDOR利用监控",
+    "title": "API枚举攻击检测指南项目",
     "keywords": [
       "API enumeration",
       "BOLA",
@@ -12,20 +12,20 @@
       "anomaly detection",
       "authorization failure"
     ],
-    "summary": "该文档指出API枚举攻击是攻击者通过顺序或可预测标识符系统性地探测API端点，以发现和访问未授权资源。攻击者常操纵对象标识符（如用户ID、订单号）绕过授权访问他人数据，这属于OWASP API安全Top 10中的BOLA漏洞。检测需监控快速顺序访问模式、授权失败及异常API使用行为。",
-    "category": "security_incident",
+    "summary": "2026年2月25日，mukul975在GitHub发布API枚举攻击检测指南。文档把顺序标识符访问、401/403授权失败和异常请求速率列为监测信号，并给出Splunk、Elastic SIEM及自定义脚本示例；其内容是检测方法资料，不是一次已发生的安全事件。",
+    "category": "academic_research",
     "relatedRisks": [
       "R0126-001"
     ],
     "references": [
       {
-        "title": "Detecting API Enumeration Attacks - GitHub",
-        "link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/detecting-api-enumeration-attacks/SKILL.md"
+        "title": "Detecting API Enumeration Attacks - Initial GitHub Revision",
+        "link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/22a7ab1462aa0ed29a08f73e8faa2cba2dd9ba5c/skills/detecting-api-enumeration-attacks/SKILL.md"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2026-02"
+    "incidentTime": "2026-02-25"
   }
 }

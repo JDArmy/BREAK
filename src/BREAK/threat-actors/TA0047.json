@@ -36,8 +36,8 @@
         "link": "https://support.metamask.io/privacy-and-security/staying-safe-in-web3/"
       },
       {
-        "title": "FBI Cryptocurrency Investment Fraud",
-        "link": "https://www.ic3.gov/"
+        "title": "FBI IC3：犯罪分子冒充NFT开发者诱导连接钱包清空资产",
+        "link": "https://www.ic3.gov/PSA/2023/psa230804"
       }
     ],
     "keywords": [
@@ -48,7 +48,7 @@
       "加密钱包诈骗",
       "虚拟资产盗窃"
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0050",
@@ -80,6 +80,7 @@
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

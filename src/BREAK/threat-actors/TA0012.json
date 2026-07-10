@@ -4,8 +4,12 @@
     "description": "恶意软件开发者是黑灰产链条中负责木马、勒索软件、挖矿程序、远控、键盘记录器等恶意代码编写、定制与维护的技术角色，向上对接黑产团伙的需求（如针对某支付App的木马、某游戏的辅助外挂），向下通过暗网论坛、电报群或地推渠道分发。\n\n其产出物常具备免杀、加壳、反调试、动态加载与C2通信能力，能绕过杀软与安全沙箱检测，并通过伪装成系统更新、破解版软件、外挂插件等方式诱导用户安装。该角色是数据窃取（R0051）、勒索（R0012-002）、远控劫持（R0080）等风险的直接制造者，常与黑产组织（TA0017）、勒索团伙（TA0018）分工协作，在攻击工具开发环节形成专业化外包市场。",
     "references": [
       {
-        "title": "奇安信《2024人工智能安全报告》",
-        "link": "https://www.qianxin.com/news/detail?news_id=12355"
+        "title": "Europol《网络攻击：犯罪即服务的顶点》",
+        "link": "https://www.europol.europa.eu/cms/sites/default/files/documents/Spotlight%20Report%20-%20Cyber-attacks%20the%20apex%20of%20crime-as-a-service.pdf"
+      },
+      {
+        "title": "Europol：恶意软件攻击与勒索软件团伙商业结构专题报告",
+        "link": "https://www.europol.europa.eu/media-press/newsroom/news/iocta-spotlight-report-malware-based-cyber-attacks-published"
       }
     ],
     "buildAttackTools": [
@@ -60,7 +64,7 @@
       "R0050",
       "R0001-003"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "恶意软件开发者",
       "木马作者",
@@ -100,6 +104,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 7 个风险，共同使用 4 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

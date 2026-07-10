@@ -182,6 +182,14 @@
       {
         "title": "Ransomware - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Ransomware"
+      },
+      {
+        "title": "#StopRansomware Guide | CISA",
+        "link": "https://www.cisa.gov/stopransomware/ransomware-guide"
+      },
+      {
+        "title": "2021 Trends Show Increased Globalized Threat of Ransomware | CISA",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-040a"
       }
     ],
     "riskAssessment": {
@@ -200,7 +208,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P0"
     },
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "双重/三重勒索",
       "双重勒索",
@@ -241,6 +249,7 @@
         "relation": "co-occurrence",
         "note": "双重/三重勒索与员工违规操作共享规避手段“数据泄露保护”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

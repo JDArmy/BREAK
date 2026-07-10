@@ -13,18 +13,22 @@
       "网络秩序",
       "网安局"
     ],
-    "summary": "南都记者从公安部网安局获悉，山西大同网民邢某非法使用中国国民党主席郑丽文形象的AI数字人直播带货，严重干扰正常网络秩序。该行为违反《治安管理处罚法》，属地公安局已依法对其作出行政拘留。",
+    "summary": "公安部网安局通报，山西大同网民邢某未经授权使用郑丽文形象制作AI数字人并用于直播带货，借公众人物热度吸引流量和销售商品，干扰正常网络秩序。属地公安机关认定该行为违反治安管理规定，依法对邢某作出行政拘留处罚，并提醒不得利用AI仿冒他人身份牟利。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0071-008"
     ],
     "references": [
       {
-        "title": "利用AI仿冒名人直播带货，借热度赢销量 邢某被依法行拘",
+        "title": "利用AI仿冒名人直播带货，借热度赢销量，邢某被依法行拘！ - 公安部网安局",
         "link": "https://mp.weixin.qq.com/s?__biz=MjM5Nzc5MzMwMg==&mid=2657509714&idx=1&sn=ea2791b3a16cd87c205a988970e63d9f&chksm=bca72fc0e30cef6f8cca4d60cabf4574670190e0eb8736e5a8a402373d0fc786bb7fef3a4f08&scene=27"
+      },
+      {
+        "title": "非法使用郑丽文形象的数字人直播带货，山西大同一网民被行拘 - 澎湃新闻",
+        "link": "https://m.thepaper.cn/newsDetail_forward_33105057"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-10",
     "incidentTime": "2026-05",
     "relatedAttackTools": [
       "AT0053-003",

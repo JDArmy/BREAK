@@ -144,19 +144,15 @@
     ],
     "references": [
       {
-        "title": "FBI: Cloud Computing Fraud and Resource Abuse",
-        "link": "https://www.ic3.gov/"
+        "title": "Sysdig：LLMjacking利用被盗云凭据滥用AI算力",
+        "link": "https://www.sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack"
       },
       {
-        "title": "Unit 42: GPU Compute Abuse and Cloud Account Takeover",
-        "link": "https://unit42.paloaltonetworks.com/"
-      },
-      {
-        "title": "Microsoft: GPU Supply Chain and Black Market Report",
-        "link": "https://www.microsoft.com/en-us/security/blog/"
+        "title": "Microsoft：云端加密货币挖矿与计算资源滥用",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/07/25/cryptojacking-understanding-and-defending-against-cloud-compute-resource-abuse/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "算力黄牛/算力黑产",
       "GPU黄牛",
@@ -198,6 +194,7 @@
         "relation": "co-involved",
         "note": "共同直接造成 1 个风险，共同间接支持 1 个风险，共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

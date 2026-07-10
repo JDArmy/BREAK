@@ -1,6 +1,6 @@
 {
   "C1118": {
-    "title": "Indirect Prompt Injection Payloads Found on 10 Active Websites by Forcepoint X-Labs",
+    "title": "Forcepoint X-Labs Discloses 10 Indirect Prompt Injection Payloads Found in the Wild",
     "keywords": [
       "indirect prompt injection",
       "Forcepoint X-Labs",
@@ -13,7 +13,7 @@
       "AI agent",
       "prompt injection payload"
     ],
-    "summary": "Forcepoint X-Labs identified 10 verified indirect prompt injection payloads on active websites during proactive threat hunting across public infrastructure. Attackers embedded malicious instructions in HTML comments of web pages, which are ingested and executed when AI agents crawl or summarize these pages. The discovered payloads involve intents such as financial fraud, data destruction, API key ",
+    "summary": "On April 22, 2026, Forcepoint X-Labs published threat-hunting findings describing 10 verified indirect prompt injection payloads on active websites. The payloads were concealed in HTML comments, hidden elements, or metadata and pursued goals including API-key exfiltration, unauthorized transactions, data destruction, and denial of service. The report characterized them as observations in the wild rather than laboratory demonstrations.",
     "references": [
       {
         "title": "10 Indirect Prompt Injection Payloads Caught in the Wild - Forcepoint",

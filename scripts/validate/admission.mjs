@@ -4,20 +4,19 @@
  * 卡控新增条目的内容下限与 references 质量，防止低质/占位/泛泛内容入库：
  *   1. references 禁止使用 10 种框架首页占位链接（黑名单精确匹配）
  *   2. keywords 数量下限（按类型 ≥3 / Term ≥4）
- *   3. 文本字段长度下限（definition/description/influence/limitation/summary，去空白字符）
+ *   3. 新增条目的文本字段长度下限（definition/description/influence/limitation/summary，去空白字符）
  *   4. 高价值 Case（criminal_verdict 等 4 类）需 ≥2 源且含 ≥1 primary 来源
- *   5. 内容退化保护：历史条目（在 baseline exemptIds 内）若 keywords/长度低于快照值 → 报错
  *
  * 作用范围（baseline 豁免机制）：
  *   - exemptIds：2.39.0 发布时已存在的全部实体 ID。新增条目（不在 exemptIds）严格执行 1-4。
  *   - placeholderExempt：含占位 link 的历史 ID。这些条目跳过占位禁令（技术债，由历史修复工单处理）。
- *   - fieldSnapshots：每条 ID 的 keywords 数 + 各文本字段长度。baseline 条目内容退化 → 报错（防劣化）。
  *
  * 与现有门禁分工：
  *   - require-references.mjs 管「references ≥1 + 合法 URL」，本脚本不重复，只管占位/分级/下限/退化。
  *   - case-source-quality.mjs 是 Case 来源质量审计报告（exit 0），本脚本把高价值 Case 的 primary 要求提升为门禁。
  *   - avoidance-content.mjs（--strict，已接入 build 链）管 avoidance 的 description≥40/limitation≥30 全库；
  *     本脚本对新增 avoidance 更严（description≥60），两者不冲突。
+ *   - entity-text-length.mjs 管全部中英文实体的宽松上限。
  *
  * 用法：
  *   node scripts/validate/admission.mjs                 # 门禁模式（有 error 则 exit 1），接入 validate:data
@@ -29,61 +28,58 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { classifySource, highValueCategories, normalizeSlash } from "./source-classify.mjs";
+import {
+  classifySource,
+  highValueCategories,
+  isGenericReferenceLandingPage,
+  normalizeSlash,
+} from "./source-classify.mjs";
+import { countZhChars, TEXT_LENGTH_POLICY } from "./text-length-policy.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const breakDir = path.join(__dirname, "../../src/BREAK");
 const baselinePath = path.join(__dirname, "admission-baseline.json");
 
 // ── 6 类实体配置 ──
-// textFields: [{ field, minLen }] 文本字段及去空白字符数下限（仅对新增条目强制）
+// textFields 从统一策略派生中文最小长度，仅对新增条目强制。
 // keywordsMin: keywords 数量下限（仅对新增条目强制）
 const ENTITY_CONFIGS = [
   {
     dir: "risks",
     name: "Risk",
-    textFields: [
-      { field: "definition", minLen: 20 },
-      { field: "description", minLen: 60 },
-      { field: "influence", minLen: 15 },
-    ],
+    textFields: Object.entries(TEXT_LENGTH_POLICY.risks).map(([field, policy]) => ({ field, minLen: policy.minZh })),
     keywordsMin: 3,
   },
   {
     dir: "avoidances",
     name: "Avoidance",
-    textFields: [
-      { field: "definition", minLen: 20 },
-      { field: "description", minLen: 60 },
-      { field: "limitation", minLen: 30 },
-    ],
+    textFields: Object.entries(TEXT_LENGTH_POLICY.avoidances).map(([field, policy]) => ({ field, minLen: policy.minZh })),
     keywordsMin: 3,
   },
   {
     dir: "attack-tools",
     name: "AttackTool",
-    textFields: [{ field: "description", minLen: 80 }],
+    textFields: Object.entries(TEXT_LENGTH_POLICY["attack-tools"]).map(([field, policy]) => ({ field, minLen: policy.minZh })),
     keywordsMin: 3,
   },
   {
     dir: "threat-actors",
     name: "ThreatActor",
-    textFields: [{ field: "description", minLen: 80 }],
+    textFields: Object.entries(TEXT_LENGTH_POLICY["threat-actors"]).map(([field, policy]) => ({ field, minLen: policy.minZh })),
     keywordsMin: 3,
   },
   {
     dir: "terms",
     name: "Term",
-    textFields: [
-      { field: "definition", minLen: 20 },
-      { field: "description", minLen: 60 },
-    ],
+    textFields: Object.entries(TEXT_LENGTH_POLICY.terms)
+      .filter(([, policy]) => policy.minZh)
+      .map(([field, policy]) => ({ field, minLen: policy.minZh })),
     keywordsMin: 4,
   },
   {
     dir: "cases",
     name: "Case",
-    textFields: [{ field: "summary", minLen: 80 }],
+    textFields: Object.entries(TEXT_LENGTH_POLICY.cases).map(([field, policy]) => ({ field, minLen: policy.minZh })),
     keywordsMin: 3,
   },
 ];
@@ -108,26 +104,23 @@ const isPlaceholderLink = (link) => PLACEHOLDER_LINKS.includes(normalizeSlash(li
 
 // ── 工具函数 ──
 // 去除所有空白字符（含空格/换行/制表符/全角空格）后的长度
-function strippedLen(value) {
-  return String(value || "").replace(/\s+/g, "").replace(/　/g, "").length;
-}
+const strippedLen = countZhChars;
 
 function loadBaseline() {
   if (!fs.existsSync(baselinePath)) {
-    return { exemptIds: new Set(), placeholderExempt: new Set(), fieldSnapshots: new Map(), missing: true };
+    return { exemptIds: new Set(), placeholderExempt: new Set(), missing: true };
   }
   const raw = JSON.parse(fs.readFileSync(baselinePath, "utf8"));
   return {
     exemptIds: new Set(raw.exemptIds || []),
     placeholderExempt: new Set(raw.placeholderExempt || []),
-    fieldSnapshots: new Map(Object.entries(raw.fieldSnapshots || {})),
     missing: false,
   };
 }
 
 // 遍历某类目录，返回 [{ id, entity, filePath }]
 // 一个实体文件可能内嵌多个子实体（如 R0001.json 含 R0001 + R0001-001），
-// 必须遍历文件内所有 key，否则子实体的准入下限/占位禁令/退化保护会全部漏检。
+// 必须遍历文件内所有 key，否则子实体的准入下限和占位禁令会漏检。
 function loadDir(config) {
   const dir = path.join(breakDir, config.dir);
   if (!fs.existsSync(dir)) return [];
@@ -145,16 +138,22 @@ function loadDir(config) {
 // ── 检查项 ──
 function checkPlaceholderReferences(entity, id, config, baseline, issues) {
   if (baseline.placeholderExempt.has(id)) return; // 历史占位豁免
+  const isNew = !baseline.exemptIds.has(id);
   const refs = entity.references || [];
   refs.forEach((ref, i) => {
-    if (ref && ref.link && isPlaceholderLink(ref.link)) {
+    const isKnownPlaceholder = ref && ref.link && isPlaceholderLink(ref.link);
+    const isNewGenericLandingPage = isNew
+      && ref
+      && ref.link
+      && isGenericReferenceLandingPage(ref.link);
+    if (isKnownPlaceholder || isNewGenericLandingPage) {
       issues.push({
         severity: "error",
         id,
         type: config.name,
         file: config.dir,
         rule: "placeholder_link",
-        message: `references[${i}] 使用框架首页占位链接（禁止）：${ref.link}`,
+        message: `references[${i}] 使用首页或栏目页占位链接（禁止）：${ref.link}`,
       });
     }
   });
@@ -162,7 +161,7 @@ function checkPlaceholderReferences(entity, id, config, baseline, issues) {
 
 function checkKeywordsCount(entity, id, config, baseline, issues) {
   const isNew = !baseline.exemptIds.has(id);
-  if (!isNew) return; // 历史条目豁免初始下限（退化由 detectDeterioration 管）
+  if (!isNew) return; // 历史条目豁免新增条目下限，全库上限由 entity-text-length 管。
   const kws = entity.keywords || [];
   if (kws.length < config.keywordsMin) {
     issues.push({
@@ -240,39 +239,6 @@ function checkCaseSourceQuality(entity, id, config, baseline, issues) {
   }
 }
 
-// 内容退化保护：baseline 条目的 keywords/文本长度不得低于快照值
-function detectDeterioration(entity, id, config, baseline, issues) {
-  if (!baseline.exemptIds.has(id)) return; // 仅历史条目
-  const snap = baseline.fieldSnapshots.get(id);
-  if (!snap) return; // 快照缺失（可能是 baseline 生成后新增但误入 exemptIds，不报）
-  const kws = entity.keywords || [];
-  if (kws.length < snap.keywords) {
-    issues.push({
-      severity: "error",
-      id,
-      type: config.name,
-      file: config.dir,
-      rule: "deterioration_keywords",
-      message: `内容退化：keywords 从 ${snap.keywords} 降至 ${kws.length}`,
-    });
-  }
-  for (const { field } of config.textFields) {
-    const snapLen = snap.fields?.[field];
-    if (snapLen === undefined) continue;
-    const len = strippedLen(entity[field]);
-    if (len < snapLen) {
-      issues.push({
-        severity: "error",
-        id,
-        type: config.name,
-        file: config.dir,
-        rule: "deterioration_text",
-        message: `内容退化：${field} 从 ${snapLen} 字降至 ${len} 字`,
-      });
-    }
-  }
-}
-
 // ── 聚合 ──
 function collectIssues(baseline) {
   const issues = [];
@@ -287,7 +253,6 @@ function collectIssues(baseline) {
       checkKeywordsCount(entity, id, config, baseline, issues);
       checkTextLength(entity, id, config, baseline, issues);
       checkCaseSourceQuality(entity, id, config, baseline, issues);
-      detectDeterioration(entity, id, config, baseline, issues);
     }
   }
   return { issues, stats };
@@ -328,19 +293,10 @@ function renderReport(issues, stats) {
 function generateBaseline() {
   const exemptIds = [];
   const placeholderExempt = [];
-  const fieldSnapshots = {};
   for (const config of ENTITY_CONFIGS) {
     const entries = loadDir(config);
     for (const { id, entity } of entries) {
       exemptIds.push(id);
-      const kws = entity.keywords || [];
-      const fields = {};
-      for (const { field } of config.textFields) {
-        if (entity[field] !== undefined && entity[field] !== null) {
-          fields[field] = strippedLen(entity[field]);
-        }
-      }
-      fieldSnapshots[id] = { keywords: kws.length, fields };
       // 标记含占位 link 的条目
       const refs = entity.references || [];
       if (refs.some((r) => r && r.link && isPlaceholderLink(r.link))) {
@@ -351,16 +307,14 @@ function generateBaseline() {
   const baseline = {
     generatedAt: new Date().toISOString(),
     version: "2.39.0",
-    description: "新条目准入 baseline 快照：exemptIds 豁免初始下限（防误伤历史），placeholderExempt 豁免占位禁令（历史技术债），fieldSnapshots 用于退化保护。新增条目不在 exemptIds 内，严格执行所有下限。",
+    description: "新条目准入 baseline：exemptIds 豁免新增条目下限，placeholderExempt 豁免历史占位引用。文本上限由 entity-text-length.mjs 全库校验，不再使用历史长度快照阻止内容精简。",
     exemptIds,
     placeholderExempt,
-    fieldSnapshots,
   };
   fs.writeFileSync(baselinePath, JSON.stringify(baseline, null, 2) + "\n", "utf8");
   console.log(`已生成 ${baselinePath}`);
   console.log(`  exemptIds: ${exemptIds.length}`);
   console.log(`  placeholderExempt: ${placeholderExempt.length}`);
-  console.log(`  fieldSnapshots: ${Object.keys(fieldSnapshots).length}`);
 }
 
 // ── main ──

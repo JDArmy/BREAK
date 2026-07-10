@@ -15,7 +15,7 @@ The defender's typical BREAK workflow is reverse inference: first locate the ris
 
 ## Step 1: Locate Relevant Risks via Business Domains
 
-Don't start by browsing 600+ risks. First identify your business category — finance, e-commerce, transportation, Web3, IoT, metaverse, etc. BREAK organizes business domains and risk scenarios in three layers:
+Don't start by reading all 400 risks one by one. First identify your business category — finance, e-commerce, transportation, Web3, IoT, metaverse, etc. BREAK organizes business domains and risk scenarios in three layers:
 
 - **BusinessDomain**: an industry / business-domain container, e.g. "Finance", "E-commerce"
 - **RiskDimension**: an upper grouping within a scene, e.g. "Transaction dimension", "Identity dimension", "Adversarial dimension"
@@ -34,6 +34,11 @@ On the risk detail page (`/knowledges/risk/list#R0001`), every risk has an `avoi
 ## Step 3: Arrange Defense-in-Depth Across AC01–AC04
 
 Avoidance's `category` field groups all measures into the four phases of "prevent → sense → identify → dispose", which is also the standard skeleton for defense-in-depth:
+
+```mermaid
+flowchart LR
+  P["Prevent<br/>AC01"] --> S["Sense<br/>AC02"] --> I["Identify<br/>AC03"] --> D["Dispose<br/>AC04"]
+```
 
 | Phase | category | What it does | Signal traits |
 |-------|----------|--------------|---------------|
@@ -61,11 +66,11 @@ Every Risk is recommended to have at least one high-quality Case as factual supp
 A Case's `category` indicates the event nature:
 
 - `criminal_verdict` — criminal judgment, the hardest fact, with court-admitted techniques
-- `administrative_enforcement` — administrative law enforcement
-- `security_incident` — security incident
-- `vulnerability_advisory` — vulnerability advisory
-- `academic_research` — academic research
-- `news_report` — news report
+- `administrative_enforcement` — records violations established by regulators or enforcement agencies, the legal basis, and the resulting action
+- `security_incident` — presents the attack process, scope of impact, and the response and remediation measures taken
+- `vulnerability_advisory` — explains the root cause, affected scope, exploitation conditions, and remediation guidance
+- `academic_research` — uses systematic analysis or experiments to reveal attack methods, risk mechanisms, and defense effectiveness
+- `news_report` — records the event time, parties involved, course of events, and broader impact
 
 Criminal-verdict Cases are most valuable to defenders: they record facts admitted by a court, which you can directly compare against your own defense posture — "the court admitted this technique; am I defended against it?"
 

@@ -6,6 +6,10 @@
       {
         "title": "关于\"水房\"，你了解多少？",
         "link": "https://mp.weixin.qq.com/s/7_9NKsdVvggtosaaa5nRyw"
+      },
+      {
+        "title": "法律监督案件追踪｜四川成都：“8·25”特大跨境电信诈骗案开庭",
+        "link": "https://www.spp.gov.cn/spp/zdgz/201804/t20180423_376046.shtml"
       }
     ],
     "buildAttackTools": [
@@ -36,7 +40,7 @@
       "R0092",
       "R0098"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "水房（洗钱团伙）",
       "水房",
@@ -76,7 +80,8 @@
         "relation": "co-involved",
         "note": "共同直接造成 3 个风险，共同间接支持 4 个风险，共同建设 1 个攻击工具，共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "TA0014-001": {
     "title": "车手",

@@ -348,9 +348,13 @@
       {
         "title": "Credential stuffing - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
+      },
+      {
+        "title": "Additional 2025 DBIR research on credential stuffing - Verizon",
+        "link": "https://www.verizon.com/business/resources/articles/credential-stuffing-attacks-2025-dbir-research/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "自动化登录风险",
       "撞库登录",
@@ -405,6 +409,7 @@
       ],
       "assessedAt": "2026-07-03",
       "priority": "P1"
-    }
+    },
+    "version": 2
   }
 }

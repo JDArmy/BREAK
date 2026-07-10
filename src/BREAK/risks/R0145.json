@@ -28,15 +28,15 @@
     },
     "references": [
       {
-        "title": "Content Farm Detection and Prevention",
+        "title": "Spam Policies for Google Web Search",
         "link": "https://developers.google.com/search/docs/essentials/spam-policies"
       },
       {
-        "title": "互联网信息内容生态治理规定",
-        "link": "https://www.cac.gov.cn/"
+        "title": "网络信息内容生态治理规定 - 中国网信网",
+        "link": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "内容农场风险",
       "内容农场",
@@ -76,6 +76,7 @@
         "relation": "co-occurrence",
         "note": "内容农场风险与合成身份欺诈共享规避手段“图计算/关联分析”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

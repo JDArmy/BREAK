@@ -1,23 +1,27 @@
 {
   "C1120": {
-    "title": "Lakera Reveals Real-World Indirect Prompt Injection Attacks",
+    "title": "Brave Discloses Indirect Prompt Injection Vulnerability in Perplexity Comet",
     "keywords": [
       "indirect prompt injection",
-      "Lakera",
+      "Brave",
       "AI security",
-      "browser agent attack",
-      "Copilot",
       "Perplexity Comet",
-      "CVE-2025-59944",
-      "MCP IDE",
-      "zero-click RCE",
-      "Agent Breaker"
+      "browser agent",
+      "hidden Reddit instructions",
+      "one-time password",
+      "account takeover",
+      "cross-origin access",
+      "agentic browser vulnerability"
     ],
-    "summary": "In an April 2026 article, the Lakera team summarized real-world indirect prompt injection attacks, including browsers tricked into leaking credentials when summarizing web pages, Copilot taking actions based on poisoned emails or metadata, and agent tools executing attacker-controlled commands after reading compromised documents. The article also covered the Perplexity Comet leak, a zero-click RCE",
+    "summary": "On August 20, 2025, Brave disclosed an indirect prompt injection vulnerability in the Perplexity Comet browser. Researchers hid malicious instructions in a Reddit comment. When a user asked Comet to summarize the page, the agent retrieved an email address and one-time password and sent them back, enabling takeover of the Perplexity account. Brave's post-publication tests found that this attack class was not fully mitigated.",
     "references": [
       {
-        "title": "Indirect Prompt Injection: The Hidden Threat Breaking Modern AI ...",
-        "link": "https://www.lakera.ai/blog/indirect-prompt-injection"
+        "title": "Agentic Browser Security: Indirect Prompt Injection in Perplexity Comet - Brave",
+        "link": "https://brave.com/blog/comet-prompt-injection/"
+      },
+      {
+        "title": "Perplexity's Comet browser faced prompt injection vuln - The Register",
+        "link": "https://www.theregister.com/software/2025/08/20/perplexitys-comet-browser-faced-prompt-injection-vuln/1267776"
       }
     ]
   }

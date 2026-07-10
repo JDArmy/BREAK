@@ -1,6 +1,6 @@
 {
   "C1136": {
-    "title": "全国首例泰达币跑分洗钱案",
+    "title": "惠州警方侦破泰达币跑分案",
     "keywords": [
       "泰达币",
       "USDT",
@@ -11,18 +11,18 @@
       "资金结算",
       "广东警方"
     ],
-    "summary": "2020年6月，广东惠州警方破获全国首例利用泰达币（USDT）进行跑分洗钱的案件。该平台运营近15个月，为境外120个赌博网站及70家投资诈骗平台提供资金结算服务，涉案金额达1.2亿元。该模式利用稳定币代替法币进行保证金和兑付，增加了追踪难度。",
-    "category": "criminal_verdict",
+    "summary": "腾讯金融科技研究院2021年文章援引警方信息称，广东惠州警方于2020年6月侦破一宗泰达币“跑分”案。经初步核实，该平台运营近15个月，为境外120个赌博网站和70家投资诈骗平台提供资金结算，涉案金额1.2亿元；参与者以USDT作为保证金并完成收付。",
+    "category": "news_report",
     "relatedRisks": [
       "R0060-001"
     ],
     "references": [
       {
         "title": "林海峰：虚拟货币洗钱风险的监测实践与相关建议",
-        "link": "https://tfri.tencent.com/archives/564"
+        "link": "https://tfri.tencent.com/archives/564/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2020-06",
     "relatedAttackTools": [
       "AT0026"

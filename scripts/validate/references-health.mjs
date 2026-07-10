@@ -1,15 +1,22 @@
 import fs from 'fs';
 import path from 'path';
 import { domainOf, loadEntities, normalizeLink, projectRoot, writeJson } from '../search/common.mjs';
+import {
+  isReusableOkResult,
+  mergeHistoryResults,
+  reuseHistoryResult,
+} from './reference-health-history.mjs';
 
 const entityTypes = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'cases'];
 const reportDir = path.join(projectRoot, 'research/search-reports');
+const reportPath = path.join(reportDir, 'reference-health.json');
+const historyPath = path.join(projectRoot, 'scripts/validate/reference-health-history.json');
 const timeoutMs = Number(process.env.REFERENCE_HEALTH_TIMEOUT_MS || 10000);
 const concurrency = Number(process.env.REFERENCE_HEALTH_CONCURRENCY || 8);
+const successTtlDays = Number(process.env.REFERENCE_HEALTH_OK_TTL_DAYS || 365);
 const strict = process.argv.includes('--strict');
 const fromCache = process.argv.includes('--from-cache');
-// --force：强制全量复测（不读取缓存的 domainGroups 收窄检查范围）。
-// 默认即全量；--force 仅作显式语义占位，便于在脚本/CI 中表达意图。
+// --force：忽略一年内通过的历史记录，强制复测本次筛选范围内的全部链接。
 const forceFull = process.argv.includes('--force');
 const maxDomainExamples = 5;
 
@@ -219,9 +226,13 @@ function buildDomainGroups(results) {
     });
 }
 
-function filterResultsByOptions(results, allowedDomainSet) {
-  // 无任何 filter 参数时，不收窄检查范围（全量复测），
-  // 避免缓存的"问题域名"列表导致曾 ok 的链接永远不再被检查（失效永久漏报）。
+function filterResultsByOptions(
+  results,
+  allowedDomainSet,
+  domainPriorityByDomain = new Map(),
+  domainActionByDomain = new Map(),
+) {
+  // 无任何 filter 参数时覆盖全部当前引用；网络请求层再按成功缓存有效期决定是否复测。
   if (filterDomains.size === 0 && !filterPriority && !filterAction && limit === 0) {
     return results;
   }
@@ -380,8 +391,10 @@ function renderMarkdown(report) {
 
 let results;
 let cachedReport = null;
+let checkedResults = [];
+let reusedResults = [];
 if (fromCache) {
-  const cachePath = path.join(reportDir, 'reference-health.json');
+  const cachePath = reportPath;
   if (!fs.existsSync(cachePath)) {
     console.error(`缺少缓存报告: ${cachePath}`);
     process.exit(1);
@@ -396,19 +409,20 @@ if (fromCache) {
   console.log(`使用缓存引用健康报告重新生成域名分组: ${cachePath}`);
 } else {
   const references = collectReferences();
-  // 非缓存路径：全量复测。绝不读取缓存的 domainGroups 收窄检查范围——
-  // 否则曾返回 ok 的链接永远不再被检查，后来失效会永久漏报。
-  // 仅当用户显式传 --domains/--priority/--action/--limit 时才收窄，
-  // 且基底是"全量 references 的所有域名"，而非缓存的问题域名。
+  // 仅当用户显式传 --domains/--priority/--action/--limit 时收窄当前引用范围。
   // priority/action filter 需要域名的 strategy，从上次缓存的 domainGroups 读取（仅用于查询，不影响检查范围）；
   // 无缓存时 priority/action filter 不生效（提示用户）。
   let cachedGroupsForStrategy = [];
-  const cachedGroupsPath = path.join(reportDir, 'reference-health.json');
+  const cachedGroupsPath = reportPath;
+  let fallbackResults = [];
   if (fs.existsSync(cachedGroupsPath)) {
     try {
-      cachedGroupsForStrategy = JSON.parse(fs.readFileSync(cachedGroupsPath, 'utf8')).domainGroups || [];
+      const previousReport = JSON.parse(fs.readFileSync(cachedGroupsPath, 'utf8'));
+      cachedGroupsForStrategy = previousReport.domainGroups || [];
+      fallbackResults = previousReport.results || [];
     } catch {
       cachedGroupsForStrategy = [];
+      fallbackResults = [];
     }
   }
   const domainPriorityByDomain = new Map(cachedGroupsForStrategy.map((g) => [g.domain, g.strategy?.priority]));
@@ -417,11 +431,48 @@ if (fromCache) {
     console.log('⚠️ --priority/--action filter 需要上次的缓存报告来查询域名 strategy，但未找到缓存；将全量检查。');
   }
   const filteredReferences = filterResultsByOptions(references, new Set(references.map((r) => r.domain).filter(Boolean)), domainPriorityByDomain, domainActionByDomain);
-  console.log(`准备检查 ${filteredReferences.length}/${references.length} 个唯一引用链接，并发 ${concurrency}，超时 ${timeoutMs}ms${forceFull ? '（--force 全量）' : ''}`);
-  results = await runPool(filteredReferences, checkLink);
+  let historyResults = fallbackResults;
+  if (fs.existsSync(historyPath)) {
+    try {
+      const persistedResults = JSON.parse(fs.readFileSync(historyPath, 'utf8')).results || [];
+      historyResults = mergeHistoryResults(fallbackResults, persistedResults);
+    } catch {
+      historyResults = fallbackResults;
+    }
+  }
+  const historyByLink = new Map(historyResults.map((item) => [item.link, item]));
+  const pendingReferences = [];
+  for (const reference of filteredReferences) {
+    const historyItem = historyByLink.get(reference.link);
+    if (!forceFull && isReusableOkResult(historyItem, { ttlDays: successTtlDays })) {
+      reusedResults.push(reuseHistoryResult(reference, historyItem));
+    } else {
+      pendingReferences.push(reference);
+    }
+  }
+
+  console.log(
+    `当前引用 ${filteredReferences.length}/${references.length}，复用一年内通过记录 ${reusedResults.length}，` +
+    `本次实测 ${pendingReferences.length}，并发 ${concurrency}，超时 ${timeoutMs}ms${forceFull ? '（--force）' : ''}`,
+  );
+  checkedResults = await runPool(pendingReferences, checkLink);
+  const resultByLink = new Map([...reusedResults, ...checkedResults].map((item) => [item.link, item]));
+  results = filteredReferences.map((reference) => resultByLink.get(reference.link)).filter(Boolean);
+
+  if (checkedResults.length > 0) {
+    const mergedHistory = mergeHistoryResults(historyResults, checkedResults);
+    writeJson(historyPath, {
+      schemaVersion: 1,
+      updatedAt: new Date().toISOString(),
+      successTtlDays,
+      results: mergedHistory,
+    });
+  }
 }
 const stats = {
   uniqueLinks: results.length,
+  checkedNow: checkedResults.length,
+  reusedOk: reusedResults.length,
   ok: results.filter((item) => item.issue === 'ok').length,
   review: results.filter((item) => item.issue === 'review').length,
   broken: results.filter((item) => item.issue === 'broken').length,
@@ -433,6 +484,11 @@ const report = {
   generatedAt: fromCache ? cachedReport.generatedAt : new Date().toISOString(),
   timeoutMs: fromCache ? cachedReport.timeoutMs : timeoutMs,
   concurrency: fromCache ? cachedReport.concurrency : concurrency,
+  cachePolicy: {
+    successTtlDays,
+    forceFull,
+    historyFile: path.relative(projectRoot, historyPath),
+  },
   filters: {
     domains: [...filterDomains],
     priority: filterPriority || '',

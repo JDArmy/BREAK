@@ -12,19 +12,23 @@
       "订单数据泄露",
       "OAuth"
     ],
-    "summary": "某APP的SSO单点登录流程存在缺陷，子应用未正确使用SSO颁发的凭证，而是自建加密认证系统。攻击者通过破解JS加密获取用户手机号等参数，构造请求绕过认证，实现任意用户登录，获取订单记录等敏感数据。",
+    "summary": "2024年3月，一篇渗透测试复盘披露某APP子应用未使用SSO颁发的授权凭据，而是通过自建加密接口认证。测试人员逆向前端SM4、AES及签名逻辑后发现，注册接口只需手机号正确、其他身份字段格式合法即可返回令牌，进而登录任意用户并读取其订单记录。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0143"
     ],
     "references": [
       {
-        "title": "从SSO认证缺陷到任意用户登录漏洞-先知社区",
+        "title": "从SSO认证缺陷到任意用户登录漏洞 - 腾讯云开发者社区",
+        "link": "https://cloud.tencent.com/developer/article/2394621"
+      },
+      {
+        "title": "从SSO认证缺陷到任意用户登录漏洞 - 先知社区",
         "link": "https://xz.aliyun.com/news/13288"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2024-02",
+    "updated": "2026-07-10",
+    "incidentTime": "2024-03",
     "relatedAttackTools": [
       "AT0028",
       "AT0014-001",

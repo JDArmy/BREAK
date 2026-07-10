@@ -1,22 +1,26 @@
 {
   "C1265": {
-    "title": "Man-in-the-Middle Attack Types Explained: Wi-Fi Spoofing, HTTPS Spoofing, SSL Hijacking, and DNS Spoofing",
+    "title": "Australian Man Charged over 'Evil Twin' WiFi Networks",
     "keywords": [
       "man-in-the-middle attack",
       "Wi-Fi spoofing",
-      "HTTPS spoofing",
-      "SSL hijacking",
-      "DNS spoofing",
-      "email hijacking",
-      "ARP spoofing",
-      "traffic interception",
+      "Australian Federal Police",
+      "airport WiFi",
+      "in-flight WiFi",
+      "credential theft",
+      "phishing login page",
+      "personal data",
       "rogue access point"
     ],
-    "summary": "A CSDN article outlines five common man-in-the-middle attack types: Wi-Fi spoofing creates a rogue access point with the same SSID to hijack user traffic; HTTPS spoofing tricks the browser into visiting a fake trusted site; SSL hijacking intercepts the HTTP-to-HTTPS redirect to inject malicious links; DNS spoofing forces the browser to visit a forged address under attacker control; and email hijac",
+    "summary": "On June 28, 2024, the Australian Federal Police announced charges against a Western Australian man. Police alleged that he created 'evil twin' WiFi networks mimicking legitimate free services at airports in Perth, Melbourne, and Adelaide, on domestic flights, and elsewhere. Users were directed to fake pages requesting email or social-media credentials, and investigators found dozens of other people's credentials on his devices.",
     "references": [
       {
-        "title": "An Article to Understand Man-in-the-Middle (MITM) Attacks, Never Be a Network Puppet Again! - Tencent Cloud",
-        "link": "https://cloud.tencent.com/developer/article/2488645"
+        "title": "Man Charged over Creation of 'Evil Twin' Free WiFi Networks to Access Personal Data - Australian Federal Police",
+        "link": "https://www.afp.gov.au/news-centre/media-release/man-charged-over-creation-evil-twin-free-wifi-networks-access-personal"
+      },
+      {
+        "title": "WA Man Set Up Fake Free WiFi at Australian Airports and on Flights to Steal Data - The Guardian",
+        "link": "https://www.theguardian.com/technology/article/2024/jun/28/wa-man-fake-free-wifi-airports-data-theft-ntwnfb"
       }
     ]
   }

@@ -10,8 +10,12 @@
       "mobile app authentication bypass",
       "order data exposure"
     ],
-    "summary": "A mobile app's SSO flow had a flaw where the sub-application did not properly use the SSO-issued credentials, instead building its own encrypted authentication system. By reverse-engineering the JavaScript encryption, an attacker could obtain parameters like user phone numbers and craft requests to bypass authentication, enabling arbitrary user login and access to sensitive data such as order reco",
+    "summary": "A March 2024 penetration-testing write-up described a mobile app sub-application that ignored the authorization credential issued by SSO and used a custom encrypted authentication interface. After reversing its frontend SM4, AES, and signature logic, the tester found that a correct phone number plus format-valid identity fields could obtain a token, enabling login as another user and access to order records.",
     "references": [
+      {
+        "title": "From SSO Authentication Flaws to Arbitrary User Login Vulnerability - Tencent Cloud Developer Community",
+        "link": "https://cloud.tencent.com/developer/article/2394621"
+      },
       {
         "title": "From SSO Authentication Flaws to Arbitrary User Login Vulnerability - Xianzhi Community",
         "link": "https://xz.aliyun.com/news/13288"

@@ -1,0 +1,15 @@
+{
+  "T0653": {
+    "title": "AI Agent",
+    "aliases": ["Artificial Intelligence Agent", "Agentic AI System", "Autonomous AI Agent"],
+    "category": "Artificial Intelligence",
+    "keywords": ["AI Agent", "Artificial Intelligence Agent", "autonomous agent", "tool-using agent", "Agentic AI", "agent workflow"],
+    "definition": "An AI agent is an artificial intelligence system that perceives task context, plans steps, invokes tools or external systems, and continues making decisions from execution results to achieve a goal.",
+    "description": "An AI agent commonly combines a model, task planner, memory, tool interfaces, credentials, and an execution loop. After receiving a goal, it can decompose the task, retrieve information, call browsers, code executors, databases, business APIs, or MCP services, and adjust later actions from tool results. Unlike an application that produces a single model response, an agent can preserve state across multiple steps and cause real changes in external systems.\n\nThis autonomy creates new trust boundaries. Malicious pages or documents can alter goals through indirect prompt injection, compromised tool results can manipulate decisions, long-term memory can preserve hostile instructions, and excessive permissions can amplify errors. Governance requires tool allowlists, least privilege, credential lifecycle controls, separation of instructions from data, confirmation for high-risk actions, execution sandboxes, and traceable audit logs.",
+    "usageExample": "The AI Agent reads support tickets, calls business APIs, and issues refunds, so the platform requires human approval for high-value transactions.",
+    "references": [
+      {"title": "AI Agent Standards Initiative - NIST", "link": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative"},
+      {"title": "OWASP Top 10 for Agentic Applications", "link": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"}
+    ]
+  }
+}

@@ -16,6 +16,14 @@
       {
         "title": "Cryptojacking - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Cryptojacking"
+      },
+      {
+        "title": "Defending Against Illicit Cryptocurrency Mining Activity | CISA",
+        "link": "https://www.cisa.gov/news-events/news/defending-against-illicit-cryptocurrency-mining-activity"
+      },
+      {
+        "title": "Resource Hijacking, Technique T1496 | MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1496/"
       }
     ],
     "riskAssessment": {
@@ -34,7 +42,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P3"
     },
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "服务器挖矿",
       "挖矿木马",
@@ -75,7 +83,8 @@
         "relation": "co-occurrence",
         "note": "服务器挖矿与用户隐私泄露共享规避手段“漏洞识别”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0086-001": {
     "title": "算力盗用风险",

@@ -6,6 +6,10 @@
       {
         "title": "Insider Threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      },
+      {
+        "title": "Insider Threat Mitigation Guide - CISA",
+        "link": "https://www.cisa.gov/resources-tools/resources/insider-threat-mitigation-guide"
       }
     ],
     "buildAttackTools": [],
@@ -71,6 +75,6 @@
         "note": "共同直接造成 3 个风险。"
       }
     ],
-    "version": 2
+    "version": 3
   }
 }

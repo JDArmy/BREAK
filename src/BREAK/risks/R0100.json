@@ -17,6 +17,14 @@
       {
         "title": "Cheating in video games - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
+      },
+      {
+        "title": "Away From Keyboard (AFK) FAQ | League of Legends Support",
+        "link": "https://support.riotgames.com/league-of-legends/penalties/away-from-keyboard-afk-faq"
+      },
+      {
+        "title": "/dev: Tackling AFKs | League of Legends",
+        "link": "https://www.leagueoflegends.com/en-us/news/dev/dev-tackling-afks/"
       }
     ],
     "riskAssessment": {
@@ -35,7 +43,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P2"
     },
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "挂机",
       "自动挂机",
@@ -76,6 +84,7 @@
         "relation": "co-occurrence",
         "note": "挂机与自动化模拟器共享规避手段“人机验证技术”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

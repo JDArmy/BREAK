@@ -9,9 +9,13 @@
       {
         "title": "防篡改 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Tamper_resistance"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5：软件、固件与信息完整性控制 SI-7",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "防篡改机制",
       "完整性保护",
@@ -53,7 +57,8 @@
         "relation": "complement",
         "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0014-001": {
     "title": "终端防篡改",
@@ -65,9 +70,13 @@
       {
         "title": "代码混淆 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Code_obfuscation"
+      },
+      {
+        "title": "MASVS-RESILIENCE-2：应用防篡改机制 - OWASP",
+        "link": "https://mas.owasp.org/MASVS/controls/MASVS-RESILIENCE-2/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "终端防篡改",
       "客户端防篡改",
@@ -109,7 +118,8 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0014-002": {
     "title": "服务器防篡改",
@@ -121,9 +131,13 @@
       {
         "title": "文件完整性监控 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/File_integrity_monitoring"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5：软件、固件与信息完整性控制 SI-7",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "服务器防篡改",
       "文件完整性监控",
@@ -165,6 +179,7 @@
         "relation": "complement",
         "note": "共同覆盖 3 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

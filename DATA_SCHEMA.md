@@ -11,9 +11,9 @@ This document describes the committed JSON data model used by the BREAK knowledg
 |--------|-----------|--------------|------------|-----------------|
 | Risk | `src/BREAK/risks` | `R0001.json` | `R0001 or R0001-001` | 400 total (275 main, 125 sub) |
 | Avoidance | `src/BREAK/avoidances` | `A0001.json` | `A0001 or A0001-001` | 350 total (245 main, 105 sub) |
-| AttackTool | `src/BREAK/attack-tools` | `AT0001.json` | `AT0001 or AT0001-001` | 124 total (85 main, 39 sub) |
+| AttackTool | `src/BREAK/attack-tools` | `AT0001.json` | `AT0001 or AT0001-001` | 125 total (86 main, 39 sub) |
 | ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 83 total (67 main, 16 sub) |
-| Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 628 total (564 main, 64 sub) |
+| Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 632 total (568 main, 64 sub) |
 | BusinessDomain | `src/BREAK/business-domains` | `BD00.json` | `BD00` | 20 total (20 main, 0 sub) |
 | Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1781 total (1781 main, 0 sub) |
 
@@ -153,7 +153,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 |-------|------|-------------|-------------|
 | `title` | string | required | 展示标题。 |
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
-| `summary` | string | required | 案例摘要，80-150 字事实性描述。 |
+| `summary` | string | required | 案例摘要，中文 80-300 字事实性描述；英文不超过 180 个单词。 |
 | `category` | string | required | 分类 ID。 |
 | `incidentTime` | string | optional | 案例发生时间，YYYY、YYYY-MM 或 YYYY-MM-DD。 |
 | `relatedRisks` | string | required | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |

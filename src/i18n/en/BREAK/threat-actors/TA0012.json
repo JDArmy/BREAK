@@ -4,8 +4,12 @@
     "description": "Malware developers are the technical role in the illicit chain responsible for writing, customizing, and maintaining trojans, ransomware, cryptominers, RATs, and keyloggers. Upstream they take orders from illicit teams (e.g., a trojan targeting a specific payment app, or a cheat for a specific game); downstream they distribute via dark-web forums, Telegram groups, or street-promotion channels.\n\nTheir outputs typically feature AV evasion, packing, anti-debugging, dynamic loading, and C2 communication to bypass antivirus and sandbox detection, and are disguised as system updates, cracked software, or cheat plugins to trick users into installation. They directly cause data theft (R0051), ransomware (R0012-002), and remote-control hijacking (R0080), and routinely collaborate with black-market organizations (TA0017) and ransomware groups (TA0018), forming a specialized outsourcing market for attack-tool development.",
     "references": [
       {
-        "title": "Qianxin 2024 AI Security Report",
-        "link": "https://www.qianxin.com/news/detail?news_id=12355"
+        "title": "Europol: Cyber-Attacks, the Apex of Crime-as-a-Service",
+        "link": "https://www.europol.europa.eu/cms/sites/default/files/documents/Spotlight%20Report%20-%20Cyber-attacks%20the%20apex%20of%20crime-as-a-service.pdf"
+      },
+      {
+        "title": "Europol Spotlight Report on Malware Attacks and Ransomware Business Structures",
+        "link": "https://www.europol.europa.eu/media-press/newsroom/news/iocta-spotlight-report-malware-based-cyber-attacks-published"
       }
     ],
     "keywords": [

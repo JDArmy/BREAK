@@ -1,22 +1,23 @@
 {
   "C1215": {
-    "title": "SIM Swap Attackers Often Strike at Night to Evade Detection",
+    "title": "FBI Reports a Surge in U.S. SIM Swap Complaints and Losses",
     "keywords": [
       "SIM swap attack",
-      "nighttime attacks",
-      "evade detection",
-      "carrier",
-      "number porting",
-      "NJCCIC",
-      "New Jersey",
+      "FBI",
+      "IC3",
+      "complaint statistics",
+      "financial losses",
+      "carrier social engineering",
+      "number hijacking",
+      "virtual currency accounts",
       "account takeover",
-      "delayed discovery"
+      "U.S. SIM swap fraud"
     ],
-    "summary": "The New Jersey Cybersecurity and Communications Integration Cell notes that SIM swap attackers sometimes deliberately transfer numbers at night while victims sleep and carrier stores are closed, delaying discovery and preventing victims from contacting carriers in time to stop the loss.",
+    "summary": "On February 8, 2022, the FBI Internet Crime Complaint Center reported 320 SIM swapping complaints and about $12 million in adjusted losses from 2018 through 2020. In 2021 alone, complaints rose to 1,611 with losses exceeding $68 million. The bulletin said criminals use social engineering, insiders, or phishing to induce carriers to transfer victims' phone numbers.",
     "references": [
       {
-        "title": "SIM Swapping Attacks - NJCCIC",
-        "link": "https://www.cyber.nj.gov/threat-landscape/phishing-online-scams/telephone-scams/sim-swapping-attacks"
+        "title": "Criminals Increasing SIM Swap Schemes to Steal Millions of Dollars from US Public - FBI IC3",
+        "link": "https://www.ic3.gov/PSA/2022/PSA220208"
       }
     ]
   }

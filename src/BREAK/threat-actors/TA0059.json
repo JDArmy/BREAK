@@ -6,6 +6,10 @@
       {
         "title": "Implementing Phishing-Resistant MFA - CISA",
         "link": "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
+      },
+      {
+        "title": "Scattered Spider - CISA",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a"
       }
     ],
     "buildAttackTools": [
@@ -63,6 +67,6 @@
         "note": "共同间接支持 1 个风险。"
       }
     ],
-    "version": 2
+    "version": 3
   }
 }

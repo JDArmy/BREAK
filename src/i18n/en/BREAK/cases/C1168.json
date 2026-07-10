@@ -1,6 +1,6 @@
 {
   "C1168": {
-    "title": "Detecting API Enumeration Attacks and Monitoring BOLA/IDOR Exploitation",
+    "title": "API Enumeration Attack Detection Guide Project",
     "keywords": [
       "API enumeration",
       "BOLA",
@@ -12,11 +12,11 @@
       "anomaly detection",
       "authorization failure"
     ],
-    "summary": "This document describes how API enumeration attacks involve adversaries systematically probing API endpoints using sequential or predictable identifiers to discover and access unauthorized resources. Attackers often manipulate object identifiers such as user IDs or order numbers to bypass authorization and access others' data, corresponding to the BOLA vulnerability in the OWASP API Security Top 1",
+    "summary": "On February 25, 2026, mukul975 published an API enumeration attack detection guide on GitHub. The document identifies sequential object-identifier access, 401 and 403 authorization failures, and abnormal request rates as monitoring signals, and provides examples for Splunk, Elastic SIEM, and a custom detector. It is a detection-method resource rather than a record of a specific security incident.",
     "references": [
       {
-        "title": "Detecting API Enumeration Attacks - GitHub",
-        "link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/detecting-api-enumeration-attacks/SKILL.md"
+        "title": "Detecting API Enumeration Attacks - Initial GitHub Revision",
+        "link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/22a7ab1462aa0ed29a08f73e8faa2cba2dd9ba5c/skills/detecting-api-enumeration-attacks/SKILL.md"
       }
     ]
   }

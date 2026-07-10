@@ -59,3 +59,6 @@ The site is bilingual. The language switcher in the top-right toggles the entire
 - **Red team / attackers**: read the [Red Team Guide](/docs/redteam-guide)
 - **To understand the data model**: read the [Data Model & Field Reference](/docs/data-model)
 - **To contribute**: read the [Contribution & Maintenance](/docs/contribution)
+- **To understand the code and data flow**: read [Architecture & Data Pipeline](/docs/architecture)
+- **To consume the public datasets**: read the [Data Consumption Guide](/docs/data-consumption)
+- **To manage releases**: read [Release & Maintenance](/docs/release-maintenance)

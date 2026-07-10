@@ -9,9 +9,13 @@
       {
         "title": "代理服务器 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Proxy_server"
+      },
+      {
+        "title": "GeoIP 匿名 IP 数据库：代理、VPN 与匿名地址识别 - MaxMind",
+        "link": "https://dev.maxmind.com/geoip/docs/databases/anonymous-ip/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "代理识别",
       "代理检测",
@@ -53,7 +57,8 @@
         "relation": "complement",
         "note": "共同覆盖 15 个风险，共同限制 7 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0038-001": {
     "title": "网页访问代理识别",

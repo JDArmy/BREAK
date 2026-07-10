@@ -1,0 +1,22 @@
+{
+  "T0653": {
+    "title": "AI智能体",
+    "aliases": ["人工智能智能体", "智能体AI", "AI Agent", "Agentic AI"],
+    "category": "人工智能",
+    "keywords": ["AI智能体", "人工智能智能体", "自主智能体", "工具调用智能体", "AI Agent", "Agentic AI"],
+    "definition": "AI智能体是能够感知任务上下文、规划步骤、调用工具或外部系统，并根据执行结果持续决策以完成目标的人工智能系统。",
+    "description": "AI智能体通常由模型、任务规划器、记忆、工具接口、权限凭证和执行循环组成。它接收目标后可拆解任务，检索信息，调用浏览器、代码执行器、数据库、业务API或MCP服务，并根据工具返回值调整后续行动。与只生成一次内容的模型应用相比，智能体能够跨多个步骤保存状态并对外部系统产生实际影响。\n\n智能体的自主性带来新的信任边界：恶意网页或文档可通过间接提示注入改变目标，受控工具返回值可污染决策，长期记忆可保存错误指令，过宽权限则会放大误操作。治理需要明确工具白名单、最小权限、凭证生命周期、输入与指令隔离、高风险操作确认、执行沙箱以及可追溯审计。",
+    "usageExample": "该AI智能体会读取工单、调用业务API并自动执行退款，因此平台要求高金额操作必须经过人工确认。",
+    "relatedRisks": ["R0148", "R0291"],
+    "relatedAvoidances": ["A0087", "A0089", "A0268"],
+    "relatedAttackTools": ["AT0074"],
+    "relatedThreatActors": ["TA0070"],
+    "relatedBusinessDomains": [],
+    "references": [
+      {"title": "AI Agent Standards Initiative - NIST", "link": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative"},
+      {"title": "OWASP Top 10 for Agentic Applications", "link": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"}
+    ],
+    "updated": "2026-07-10",
+    "version": 1
+  }
+}

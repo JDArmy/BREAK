@@ -32,9 +32,13 @@
       {
         "title": "Data breach - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Data_breach"
+      },
+      {
+        "title": "2025 Data Breach Investigations Report - Verizon",
+        "link": "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "数据泄露",
       "数据外泄",
@@ -75,7 +79,8 @@
         "relation": "co-occurrence",
         "note": "数据泄露与开源组件投毒风险共享规避手段“合规治理”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0078-001": {
     "title": "合作方数据泄露",
@@ -109,9 +114,13 @@
       {
         "title": "Data breach - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Data_breach"
+      },
+      {
+        "title": "Greek SA: Fines on a Telecommunications Company and Data Processor for a Personal Data Breach - EDPB",
+        "link": "https://www.edpb.europa.eu/news/national-news/2025/greek-sa-imposition-fines-telecommunications-company-and-data-processor_en"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "keywords": [
       "合作方数据泄露",
       "第三方数据泄露",
@@ -151,7 +160,8 @@
         "relation": "co-occurrence",
         "note": "合作方数据泄露与未成年人保护合规风险共享规避手段“合同条款限制”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0078-002": {
     "title": "客户成功与客服工单数据泄露",
@@ -258,9 +268,13 @@
       {
         "title": "Privacy breach - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Privacy_breach"
+      },
+      {
+        "title": "Security of Processing and Data Breach Notification: One-Stop-Shop Case Digest - EDPB",
+        "link": "https://www.edpb.europa.eu/system/files/2024-01/one_stop_shop_case_digest_security_data_breach_en.pdf"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "用户隐私泄露",
       "个人信息泄露",
@@ -301,6 +315,7 @@
         "relation": "co-occurrence",
         "note": "用户隐私泄露与批量小号作弊均可被威胁行为者“卡商（手机号）”实施。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

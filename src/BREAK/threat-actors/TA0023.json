@@ -6,6 +6,10 @@
       {
         "title": "Insider Threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      },
+      {
+        "title": "NIST SP 800-161 Rev. 1：系统与组织的网络安全供应链风险管理实践",
+        "link": "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final"
       }
     ],
     "buildAttackTools": [
@@ -51,7 +55,7 @@
       "R0078-003",
       "R0090"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "风险第三合作方",
       "风险合作方",
@@ -91,6 +95,7 @@
         "relation": "co-involved",
         "note": "共同直接造成 5 个风险，共同间接支持 2 个风险，共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

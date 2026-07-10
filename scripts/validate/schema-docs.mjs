@@ -93,7 +93,7 @@ const fieldDescriptions = {
   useAttackTools: '行为者会使用的攻击工具 ID 列表。',
   aliases: '别名列表。',
   usageExample: '使用示例。',
-  summary: '案例摘要，80-150 字事实性描述。',
+  summary: '案例摘要，中文 80-300 字事实性描述；英文不超过 180 个单词。',
   incidentTime: '案例发生时间，YYYY、YYYY-MM 或 YYYY-MM-DD。',
   relatedAvoidances: '相关规避手段列表；Avoidance 中为规避手段间关联对象列表。',
   relatedAttackTools: '相关攻击工具列表；AttackTool 中为攻击工具间关联对象列表。',

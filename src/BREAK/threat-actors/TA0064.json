@@ -10,44 +10,24 @@
       "数据交易平台",
       "犯罪即服务"
     ],
-    "description": "运营暗网地下交易市场的组织或个人，提供犯罪即服务（CaaS）基础设施。这类平台托管并促成各类非法商品和服务的交易，包括被盗数据（信用卡信息、个人身份信息、企业凭据）、恶意软件和漏洞利用工具、攻击服务（DDoS-for-hire、RaaS）、虚假证件和银行卡套件等。平台通过加密货币支付和混币服务实现匿名交易，使用 Tor 或 I2P 网络隐藏基础设施。代表性案例包括 Hydra Market、Genesis Market、BreachForums 等。",
+    "description": "依托 Tor、I2P 等现成匿名网络运营地下交易市场的组织或个人，负责市场规则、商品上架、交易撮合和托管机制，但不建设匿名网络或通用攻击工具。这类平台促成被盗数据、恶意软件、漏洞利用工具、攻击服务、虚假证件等非法商品和服务交易，并通过加密货币支付、混币服务及匿名网络隐藏交易双方和资金流向。代表性案例包括 Hydra Market、Genesis Market、BreachForums 等。",
     "directCauseRisks": [
-      "R0078",
-      "R0169"
+      "R0060"
     ],
     "indirectSupportRisks": [
       "R0032",
-      "R0051",
-      "R0083"
+      "R0078"
     ],
-    "buildAttackTools": [
-      "AT0010"
-    ],
+    "buildAttackTools": [],
     "useAttackTools": [
       "AT0010",
-      "AT0012",
       "AT0060"
     ],
     "relatedThreatActors": [
       {
-        "key": "TA0060",
-        "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
-      },
-      {
-        "key": "TA0062",
-        "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
-      },
-      {
-        "key": "TA0063",
-        "relation": "co-involved",
-        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
-      },
-      {
         "key": "TA0017",
         "relation": "co-involved",
-        "note": "共同使用 3 个攻击工具。"
+        "note": "共同直接造成 1 个风险，共同使用 2 个攻击工具。"
       },
       {
         "key": "TA0029",
@@ -55,9 +35,24 @@
         "note": "共同间接支持 2 个风险。"
       },
       {
+        "key": "TA0004",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0016",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
         "key": "TA0033",
         "relation": "co-involved",
-        "note": "共同间接支持 1 个风险，共同使用 1 个攻击工具。"
+        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0038",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
       }
     ],
     "references": [
@@ -67,9 +62,10 @@
       },
       {
         "title": "UNODC Darknet Cybercrime Threats to Southeast Asia",
-        "link": "https://www.unodc.org/"
+        "link": "https://www.unodc.org/roseap/uploads/archive/documents/Publications/2021/Darknet_Cybercrime_Threats_to_Southeast_Asia_report.pdf"
       }
     ],
-    "updated": "2026-06-26"
+    "updated": "2026-07-10",
+    "version": 2
   }
 }

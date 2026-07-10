@@ -14,6 +14,14 @@
       {
         "title": "Video game boosting - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Video_game_boosting"
+      },
+      {
+        "title": "Community Pact | Riot Games",
+        "link": "https://www.riotgames.com/en/community-pact"
+      },
+      {
+        "title": "/dev: Banning Bots, Boosters & More in 2025 | League of Legends",
+        "link": "https://www.leagueoflegends.com/en-us/news/dev/dev-banning-bots-boosters-and-more-in-2025/"
       }
     ],
     "riskAssessment": {
@@ -32,7 +40,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P2"
     },
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "带老板",
       "坐挂车",
@@ -72,6 +80,7 @@
         "relation": "co-occurrence",
         "note": "带老板与游戏外挂共享规避手段“风控策略”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

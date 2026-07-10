@@ -113,9 +113,13 @@
       {
         "title": "Account Sharing - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Account_sharing"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5：共享账号风险与个体身份认证控制",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "员工账号共享",
       "共享账号",
@@ -169,7 +173,8 @@
         "relation": "co-occurrence",
         "note": "员工账号共享与智能家居隐私窃听共享规避手段“单设备登录”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0111-002": {
     "title": "员工业务级后门",
@@ -189,9 +194,17 @@
       {
         "title": "Insider Threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      },
+      {
+        "title": "CWE-912：隐藏功能",
+        "link": "https://cwe.mitre.org/data/definitions/912.html"
+      },
+      {
+        "title": "CWE-506：嵌入恶意代码",
+        "link": "https://cwe.mitre.org/data/definitions/506.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "员工业务级后门",
       "业务后门",
@@ -245,6 +258,7 @@
         "relation": "co-occurrence",
         "note": "员工业务级后门与未授权设备接入共享规避手段“安全意识培训”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

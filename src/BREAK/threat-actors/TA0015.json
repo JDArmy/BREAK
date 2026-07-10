@@ -106,6 +106,10 @@
       {
         "title": "...两部门联手曝光金融“黑灰产”典型案例|违法|犯罪活动|犯罪行为...",
         "link": "https://www.163.com/dy/article/KA38FG2O051481US.html"
+      },
+      {
+        "title": "依法惩治跨境电信网络诈骗及其关联犯罪典型案例",
+        "link": "https://www.spp.gov.cn/xwfbh/wsfbh/202407/t20240726_661524.shtml"
       }
     ],
     "buildAttackTools": [
@@ -132,7 +136,7 @@
       "R0030-006",
       "R0060"
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-10",
     "keywords": [
       "金主",
       "诈骗金主",
@@ -172,6 +176,7 @@
         "relation": "co-involved",
         "note": "共同直接造成 1 个风险，共同间接支持 6 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

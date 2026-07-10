@@ -27,9 +27,17 @@
       {
         "title": "Malvertising - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Malvertising"
+      },
+      {
+        "title": "保护浏览器并防御恶意广告指南 - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/publications/Capacity_Enhancement_Guide-Securing_Web_Browsers_and_Defending_Against_Malvertising_for_Federal_Agencies.pdf"
+      },
+      {
+        "title": "恶意广告攻击基础设施 - MITRE ATT&CK T1583.008",
+        "link": "https://attack.mitre.org/techniques/T1583/008/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "恶意广告投放",
       "恶意投放",
@@ -84,6 +92,7 @@
         "relation": "co-occurrence",
         "note": "恶意广告投放与干扰搜索结果均可被威胁行为者“狗推”实施。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

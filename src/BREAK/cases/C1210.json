@@ -11,23 +11,23 @@
       "身份验证绕过",
       "高管账号安全"
     ],
-    "summary": "2019年，时任推特CEO的Jack Dorsey遭遇SIM卡交换攻击。攻击者通过欺骗或贿赂移动运营商，将其手机号码转移到受控SIM卡上，从而劫持了Dorsey的推特账号并发布不当内容。该事件是SIM卡交换攻击针对高知名度个人账户的典型案例。",
+    "summary": "BBC报道及Twitter官方2019年8月声明确认，时任首席执行官Jack Dorsey的账号因与移动运营商相关的手机号安全问题被攻陷。攻击者利用被控制的号码通过短信发布不当内容，随后由平台恢复账号。该事件表明，依赖运营商号码和短信能力的平台账号可能因号码接管而失守。",
     "category": "security_incident",
     "relatedRisks": [
       "R0132"
     ],
     "references": [
       {
-        "title": "Understanding and Preventing SIM Swapping Attacks - Bitsight",
-        "link": "https://www.bitsight.com/blog/what-is-sim-swapping"
+        "title": "Twitter chief Jack Dorsey's account hacked - BBC News",
+        "link": "https://www.bbc.com/news/technology-49532244"
       },
       {
         "title": "Twitter Comms statement on Jack Dorsey's compromised account",
         "link": "https://x.com/TwitterComms/status/1167559184410431488"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2019",
+    "updated": "2026-07-10",
+    "incidentTime": "2019-08",
     "relatedAttackTools": [
       "AT0062"
     ],

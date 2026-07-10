@@ -1,21 +1,24 @@
 {
   "C1150": {
-    "title": "Deadline for Filing: Algorithm Registration Still Undone? A Sanya Company Has Been Summoned for Talks!",
+    "title": "Italian Regulator Fined Foodinho Over Rider-Management Algorithm Violations",
     "keywords": [
-      "algorithm registration",
-      "algorithm security responsibility",
-      "cyberspace administration summons",
-      "Sanya",
-      "algorithm compliance",
-      "unregistered rectification",
-      "algorithm governance",
-      "filing obligation"
+      "Foodinho",
+      "Glovo",
+      "rider-management algorithms",
+      "automated decision-making",
+      "algorithmic transparency",
+      "algorithmic discrimination",
+      "Italian Data Protection Authority"
     ],
-    "summary": "In March 2026, a company in Sanya was summoned for talks and ordered to rectify by the cyberspace administration for failing to fulfill its primary responsibility for algorithm security and not completing the required algorithm registration. This case shows that regulators have begun taking concrete action against enterprises that neglect their algorithm filing obligations, and non-compliance will",
+    "summary": "In July 2021, Italy's Data Protection Authority announced a EUR 2.6 million fine against Foodinho, a Glovo group company. The investigation found that the platform used algorithms to manage about 19,000 riders without adequately explaining its data processing and automated decision logic or implementing sufficient safeguards against discriminatory or inaccurate outcomes. The regulator ordered changes to its algorithmic and data-management practices and required protections for riders seeking to challenge decisions.",
     "references": [
       {
-        "title": "Algorithm Filing Query - China Cyberspace Network",
-        "link": "https://beian.cac.gov.cn/"
+        "title": "Rider: Garante privacy, no a discriminazioni basate sugli algoritmi",
+        "link": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677377"
+      },
+      {
+        "title": "Italian watchdog takes aim at delivery firm's gig-worker algorithms",
+        "link": "https://www.reuters.com/technology/italian-watchdog-takes-aim-delivery-firms-gig-worker-algorithms-2021-07-05/"
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
   "C1190": {
-    "title": "Capital One Data Breach Caused by Cloud Misconfiguration",
+    "title": "Capital One 2019 Data Breach",
     "keywords": [
       "Capital One",
       "data breach",
@@ -11,15 +11,15 @@
       "AWS S3",
       "cloud security"
     ],
-    "summary": "In 2019, a cloud infrastructure misconfiguration at Capital One, including improperly set storage bucket permissions, exposed the personal data of over 100 million customers. The incident became a landmark case of how cloud configuration flaws can lead to severe consequences, highlighting the critical importance of IAM permission management and storage security.",
+    "summary": "On July 19, 2019, Capital One confirmed that an outside individual had gained unauthorized access to personal information associated with credit-card applications, affecting about 100 million people in the United States and 6 million in Canada. The company said credit-card account numbers and login credentials were not compromised and fewer than one percent of Social Security numbers were affected. The FBI arrested the suspect, and the government said it believed the data had been recovered.",
     "references": [
       {
-        "title": "Seattle Tech Worker Arrested for Data Theft Involving Large Financial Services Company - U.S. Department of Justice",
-        "link": "https://www.justice.gov/usao-wdwa/pr/seattle-tech-worker-arrested-data-theft-involving-large-financial-services-company"
+        "title": "Capital One Announces Data Security Incident",
+        "link": "https://www.capitalone.com/about/newsroom/capital-one-announces-data-security-incident"
       },
       {
-        "title": "2019 Capital One Cyber Incident | What Happened - Capital One",
-        "link": "https://www.capitalone.com/digital/facts2019/"
+        "title": "Capital One Announces Data Security Incident - Official Release Text Mirror",
+        "link": "https://r.jina.ai/https://www.capitalone.com/about/newsroom/capital-one-announces-data-security-incident"
       }
     ]
   }

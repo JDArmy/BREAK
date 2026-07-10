@@ -14,9 +14,13 @@
       {
         "title": "Malware - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Malware"
+      },
+      {
+        "title": "Malware, Phishing, and Ransomware - CISA",
+        "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/malware-phishing-and-ransomware"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -72,6 +76,7 @@
         "relation": "co-occurrence",
         "note": "设备中马与监控与窃听均可由攻击工具“木马病毒”直接造成。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

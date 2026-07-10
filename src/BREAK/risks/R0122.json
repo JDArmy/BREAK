@@ -15,11 +15,19 @@
     ],
     "references": [
       {
-        "title": "NFT市场欺诈分析 - Chainalysis",
-        "link": "https://www.chainalysis.com/"
+        "title": "NFT Money Laundering and Wash Trading - Chainalysis",
+        "link": "https://www.chainalysis.com/blog/2022-crypto-crime-report-preview-nft-wash-trading-money-laundering/"
+      },
+      {
+        "title": "Non-Fungible Tokens and Intellectual Property: A Report to Congress - U.S. Copyright Office and USPTO",
+        "link": "https://www.copyright.gov/policy/nft-study/Joint-USPTO-USCO-Report-on-NFTs-and-Intellectual-Property.pdf"
+      },
+      {
+        "title": "Criminals Pose as Non-Fungible Token Developers to Target Internet Users with an Interest in NFT Acquisition - FBI IC3",
+        "link": "https://www.ic3.gov/PSA/2023/psa230804"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "NFT欺诈风险",
       "NFT诈骗",
@@ -73,6 +81,7 @@
         "relation": "co-occurrence",
         "note": "NFT欺诈风险与转账欺诈共享规避手段“威胁情报”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -1,0 +1,15 @@
+{
+  "T0654": {
+    "title": "Empty-Run Order Fraud",
+    "aliases": ["Ghost Freight Order", "Fictitious Trip Fraud", "Empty-Run Scheme"],
+    "category": "Business Fraud",
+    "keywords": ["Empty-Run Order Fraud", "ghost freight order", "fictitious trip", "fake freight order", "location spoofing", "freight subsidy fraud"],
+    "definition": "Empty-run order fraud is logistics slang for fabricating an order, trip, route, or transport process to obtain freight payments, subsidies, coupons, or settlement funds without performing real transportation.",
+    "description": "Empty-run schemes occur on freight platforms and in logistics settlement workflows. Participants may post and accept their own fictitious orders, use location-spoofing tools to simulate movement, fabricate vehicle arrival, loading, unloading, or transfer records, or have insiders enter trips that never occurred. The system then treats the transport as completed and releases freight payments, subsidies, coupons, or performance commissions.\n\nThe term specifically describes records that appear complete despite the absence of real transport, distinguishing it from exaggerating vehicle type, weight, or distance after a genuine delivery. Detection correlates shipper-driver relationships, devices and accounts, GPS and cell-tower traces, loading evidence, vehicle passage records, order density, and fund flows.",
+    "usageExample": "The platform found that drivers used location spoofing to create Empty-Run Order Fraud and repeatedly claim coupon differences without any loading records.",
+    "references": [
+      {"title": "Logistics Employee Used Empty-Run Orders to Defraud Freight Payments - Legal Daily", "link": "https://www.legaldaily.com.cn/index_article/content/2025-03/20/content_9152890.html"},
+      {"title": "Freight Drivers Spoofed Locations and Routes to Fabricate Orders - Xinmin Evening News", "link": "https://wap.xinmin.cn/content/32118892.html"}
+    ]
+  }
+}

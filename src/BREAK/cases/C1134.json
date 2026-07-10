@@ -1,6 +1,6 @@
 {
   "C1134": {
-    "title": "英国钱志敏案：6万余枚比特币洗钱案",
+    "title": "英国钱志敏比特币洗钱案判刑",
     "keywords": [
       "钱志敏",
       "蓝天格锐",
@@ -11,7 +11,7 @@
       "加密货币洗钱案",
       "温简"
     ],
-    "summary": "英国皇家检控署披露，钱志敏（又名 Yadi Zhang）因持有非法取得的加密货币并洗钱，在南华克刑事法院认罪后被判11年8个月监禁。伦敦警察厅调查中查获6万余枚比特币，是英国规模最大的加密货币查扣之一；此前温简因参与相关洗钱安排被判6年8个月。",
+    "summary": "2025年11月11日，英国皇家检控署通报，钱志敏（又名Yadi Zhang）在南华克刑事法院承认持有非法所得加密货币及洗钱两项罪名，被判监禁11年8个月。伦敦警察厅调查查扣逾6万枚比特币，检方称这是英国历来最大规模的比特币查扣。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0060-001"
@@ -19,10 +19,14 @@
     "references": [
       {
         "title": "Two people imprisoned for their key roles in a largescale money laundering case",
-        "link": "https://www.cps.gov.uk/cps/news/two-people-imprisoned-their-key-roles-largescale-money-laundering-case"
+        "link": "https://www.cps.gov.uk/node/27668"
+      },
+      {
+        "title": "Chinese fraudster's luxury life on the run ends in London jail",
+        "link": "https://www.reuters.com/world/china/chinese-fraudsters-luxury-life-run-ends-london-jail-2025-11-11/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2025-11",
     "relatedAttackTools": [
       "AT0060"

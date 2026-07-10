@@ -3,7 +3,7 @@
     "title": "Digital Watermark/Text Watermark",
     "definition": "Embedding specific information into digital signals — including text, audio, files, images, or video — for copyright protection, integrity verification, copy prevention, or traceability tracking",
     "description": "Also known as a digital watermark. When a watermarked signal is copied, the embedded information is copied along with it. Digital watermarks can be divided into visible and invisible types. Visible watermarks contain information that can be seen while viewing an image or video. Invisible watermarks are added to audio, images, or video as digital data but cannot normally be seen. In general, visible watermarks are primarily used for deterrence and copyright declaration; invisible watermarks are primarily used for traceability and copyright determination.",
-    "limitation": "Watermarks may disappear or become unrecoverable when the digital signal is edited, such as through image cropping, video editing, or audio editing.",
+    "limitation": "Attackers can bypass tracing by damaging watermarks through image cropping, audio or video editing, transcoding, and heavy recompression. Legitimate platform conversion may also make a watermark unrecoverable and cause false negatives, while incorrect matching against similar content can produce false positives.",
     "references": [
       {
         "title": "[PDF] enhancing personal identity verification with digital watermarks ...",
@@ -24,7 +24,7 @@
     "title": "Text Watermark",
     "definition": "Adding invisible or imperceptible information to text content to verify document authenticity, protect intellectual property, or manage digital rights.",
     "description": "Text watermarks can be visible — for example, replacing certain digits, letters, or symbols with homoglyphs — or invisible, such as inserting invisible characters like Unicode control characters into the text.",
-    "limitation": "The limitations of text watermarking include visibility issues, ease of removal, inapplicability to all text types, stealth requirements, inability to prevent copying, inapplicability to encrypted text, difficulty scaling to large deployments, and legal and privacy concerns.",
+    "limitation": "Attackers can bypass text watermarks by paraphrasing, reordering, translating, or deleting markers, and watermarking cannot prevent copying. Legitimate formatting, encoding conversion, and short text may invalidate markers or cause false negatives, while feature collisions can falsely flag unrelated text; large-scale use also faces privacy and performance constraints.",
     "references": [
       {
         "title": "JD.Army Open Source Text Watermark Solution",

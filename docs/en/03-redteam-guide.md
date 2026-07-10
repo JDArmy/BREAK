@@ -15,6 +15,11 @@ This page is for red team / penetration testing / attack-defense exercise operat
 
 The red team's BREAK workflow is forward inference: starting from a Risk, follow `directCauseRisks` to find the AttackTool that creates it, follow `useAttackTools` to find the ThreatActor that uses these tools, and reproduce real techniques with Cases. This is exactly the direction visualized by the home page's "Attack Path" perspective.
 
+```mermaid
+flowchart LR
+  R["Risk"] --> AT["Attack Tool"] --> TA["Threat Actor"] --> C["Case"]
+```
+
 ## Step 1: Pick a Low-Bar Entry with complexity
 
 The red team's target priority is the reverse of the defender's — defenders defend basic first, red team also attacks basic first. Filter by complexity=basic on the risk list page; these are low-bar, no-special-resource attack points, ideal as entry points.

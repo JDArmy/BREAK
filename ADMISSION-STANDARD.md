@@ -12,12 +12,12 @@
 |---|---|---|
 | ① 是否值得录入 | — | ✅ 评审关第1项 |
 | ② 是否与现有重复 | — | ✅ 评审关第3项 |
-| ③ 是否泛泛（内容单薄） | ✅ 文本长度下限 | ✅ 评审关第1项 |
+| ③ 是否泛泛（内容单薄） | ✅ 新增条目文本长度下限 | ✅ 评审关第1项 |
 | ④ keywords 数量下限 | ✅ ≥3 / Term ≥4 | — |
 | ⑤ references 占位污染 | ✅ 禁框架首页占位 | — |
 | ⑥ 高价值 Case 来源质量 | ✅ ≥2源且含1primary | — |
 
-**作用范围**：admission.mjs 全量扫描 6 类，历史条目由 `admission-baseline.json` 豁免初始下限（防误伤），但**内容退化保护**——历史条目若 keywords/文本长度低于快照值仍报错（防劣化）。新增条目（不在 baseline `exemptIds` 内）严格执行所有下限。
+**作用范围**：admission.mjs 全量扫描 6 类，历史条目由 `admission-baseline.json` 豁免新增条目下限；新增条目（不在 baseline `exemptIds` 内）严格执行所有下限。全库中英文宽松上限由 `entity-text-length.mjs` 独立校验，历史条目允许合理精简，不再与历史长度快照比较。
 
 ## 1. 通用准入门槛（全类型适用）
 
@@ -35,9 +35,9 @@
 - 是否更适合做某现有实体的子实体（子风险 `-NNN` / 子手段）而非独立条目？
 - discover 评审关第3/4项负责，machine 层无跨实体语义去重。
 
-### 1.3 内容下限：keywords 数量 + 文本字段长度（机器卡）
+### 1.3 内容长度：合理下限 + 宽松上限（机器卡）
 
-见 §2 各类型阈值表。文本长度按**去空白字符数**计。
+见 §2 各类型阈值表。中文按**去空白 Unicode 字符数**计，英文按单词数计。新增中文条目执行下限，全部中英文实体执行上限。
 
 ### 1.4 references 质量：禁占位首页 + 来源分级（机器卡）
 
@@ -57,65 +57,66 @@
 
 ### 2.1 Risk（业务风险点）
 
-| 字段 | 下限（去空白字符） |
-|---|---|
-| keywords | ≥3（含 title 本身） |
-| definition | ≥20 字 |
-| description | ≥60 字 |
-| influence | ≥15 字 |
+| 字段 | 中文下限（新增） | 中文上限（全库） | 英文上限（全库） |
+|---|---:|---:|---:|
+| keywords | ≥3（含 title 本身） | - | - |
+| definition | 20 字 | 160 字 | 80 词 |
+| description | 60 字 | 600 字 | 300 词 |
+| influence | 15 字 | 250 字 | 120 词 |
 | references | ≥1 合法 + 禁占位 |
 
 **必要性**：业务逻辑被非预期利用的具体风险点，有可观测攻击手法。非 CVE 通报/趋势报告/具体事件（→Case）。
 
 ### 2.2 Avoidance（规避手段）
 
-| 字段 | 下限 |
-|---|---|
-| keywords | ≥3 |
-| definition | ≥20 字 |
-| description | ≥60 字 |
-| limitation | ≥30 字 |
+| 字段 | 中文下限（新增） | 中文上限（全库） | 英文上限（全库） |
+|---|---:|---:|---:|
+| keywords | ≥3 | - | - |
+| definition | 20 字 | 160 字 | 80 词 |
+| description | 60 字 | 600 字 | 300 词 |
+| limitation | 30 字 | 200 字 | 150 词 |
 | references | ≥1 合法 + 禁占位 |
 
 **必要性**：可落地的具体防御/风控/检测手段。泛泛"AI 防御""反欺诈"概念无具体落地 → 不录入。
 
 ### 2.3 AttackTool（攻击工具）
 
-| 字段 | 下限 |
-|---|---|
-| keywords | ≥3 |
-| description | ≥80 字 |
+| 字段 | 中文下限（新增） | 中文上限（全库） | 英文上限（全库） |
+|---|---:|---:|---:|
+| keywords | ≥3 | - | - |
+| description | 80 字 | 600 字 | 300 词 |
 | references | ≥1 合法 + 禁占位 |
 
 **必要性**：可识别的具体工具/平台/资源。泛泛"恶意软件"概念无可识别工具实体 → 不录入。
 
 ### 2.4 ThreatActor（威胁行为者）
 
-| 字段 | 下限 |
-|---|---|
-| keywords | ≥3 |
-| description | ≥80 字 |
+| 字段 | 中文下限（新增） | 中文上限（全库） | 英文上限（全库） |
+|---|---:|---:|---:|
+| keywords | ≥3 | - | - |
+| description | 80 字 | 450 字 | 220 词 |
 | references | ≥1 合法 + 禁占位 |
 
 **必要性**：可归类的**角色类型**（如羊毛党、卡商、内鬼）。具体组织名（APT28/Lazarus）不归 TA，归 Case。仅有具体组织名而无角色归类价值 → 不录入。
 
 ### 2.5 Term（行业术语）
 
-| 字段 | 下限 |
-|---|---|
-| keywords | ≥4 |
-| definition | ≥20 字 |
-| description | ≥60 字 |
+| 字段 | 中文下限（新增） | 中文上限（全库） | 英文上限（全库） |
+|---|---:|---:|---:|
+| keywords | ≥4 | - | - |
+| definition | 20 字 | 100 字 | 60 词 |
+| description | 60 字 | 400 字 | 220 词 |
+| usageExample | - | 120 字 | 80 词 |
 | references | ≥1 合法 + 禁占位 |
 
 **必要性**：行业稳定使用的具体术语/黑话/缩写，有明确定义。临时新闻用语/泛泛词组/产品名 → 不录入。
 
 ### 2.6 Case（典型案例）
 
-| 字段 | 下限 |
-|---|---|
-| keywords | ≥3 |
-| summary | ≥80 字 |
+| 字段 | 中文下限（新增） | 中文上限（全库） | 英文上限（全库） |
+|---|---:|---:|---:|
+| keywords | ≥3 | - | - |
+| summary | 80 字 | 300 字 | 180 词 |
 | references | 高价值类别≥2源且含≥1primary；其余≥1合法+禁占位 |
 
 **高价值 Case 类别**（复用 `highValueCategories`）：`criminal_verdict` / `administrative_enforcement` / `security_incident` / `vulnerability_advisory`。
@@ -167,10 +168,11 @@
 | `case-source-quality.mjs` | Case 来源质量审计报告（分级统计） | ❌ exit 0 |
 | `keywords.mjs` + `data-integrity.test.ts` | keywords 非空/去重/含 title/无纯 ID | ✅ |
 | `avoidance-content.mjs --strict` | avoidance description≥40/limitation≥30 全库 + 套话/信号词 | ✅ build 链 |
+| `entity-text-length.mjs` | 全库中文字符数与英文单词数宽松上限 | ✅ build 链 |
 | `check-entity-relations.mjs` | 交叉引用有效性/孤儿检测/关系合法性 | ✅ |
-| **`admission.mjs`（本标准）** | 占位禁令 + keywords≥3/4 + 文本长度下限（新增条目）+ 高价值 Case ≥2源含primary + 内容退化保护（历史条目） | ✅ build 链 |
+| **`admission.mjs`（本标准）** | 占位禁令 + keywords≥3/4 + 文本长度下限（新增条目）+ 高价值 Case ≥2源含primary | ✅ build 链 |
 
-分工：admission 不重复查"references ≥1 + 合法 URL"（require-references 管）；不重复查 keywords 含 title（test 管）；不重复查 avoidance 全库 description≥40（avoidance-content 管，admission 对新增 avoidance 更严 ≥60）。admission 只补：占位禁令、数量/长度下限、高价值 Case 源质量、退化保护。
+分工：admission 不重复查"references ≥1 + 合法 URL"（require-references 管）；不重复查 keywords 含 title（test 管）；不重复查 avoidance 全库 description≥40（avoidance-content 管，admission 对新增 avoidance 更严 ≥60）。admission 只补：占位禁令、数量/长度下限和高价值 Case 源质量；全库上限统一由 entity-text-length 管理。
 
 ## 7. discover 衔接
 

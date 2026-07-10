@@ -1,6 +1,6 @@
 {
   "C1251": {
-    "title": "五名史坦顿岛居民利用盗取信息获取苹果礼品卡诈骗百万美元案",
+    "title": "五名史坦顿岛居民被控参与百万美元苹果礼品卡诈骗",
     "keywords": [
       "礼品卡欺诈",
       "美国运通",
@@ -10,11 +10,11 @@
       "华人犯罪团伙",
       "百万美元诈骗",
       "洗钱变现",
-      "刑事判决",
-      "缓刑监禁"
+      "刑事指控",
+      "搜查扣押"
     ],
-    "summary": "2021年10月，纽约里士满县地方检察官办公室宣布，五名史坦顿岛居民因涉嫌参与百万美元礼品卡诈骗被逮捕并提审。检方称，被告利用从美国运通账户持有人处窃取的信息取得合法苹果礼品卡，并在史坦顿岛购物中心 Apple Store 购买产品变现；搜查中查获超过78.7万美元未使用苹果礼品卡、11.8万美元现金和多件苹果产品。",
-    "category": "criminal_verdict",
+    "summary": "2021年10月，纽约里士满县地方检察官办公室宣布逮捕并提审五名史坦顿岛居民。检方指控其利用从美国运通账户持有人处窃取的信息获得苹果礼品卡，再购买苹果产品变现；搜查人员查获超过78.7万美元未使用礼品卡、11.8万美元现金及多件苹果产品。",
+    "category": "news_report",
     "relatedRisks": [
       "R0138"
     ],
@@ -22,15 +22,15 @@
       {
         "title": "DA McMahon Arrests and Charges Five Individuals for Participating in Million-Dollar Gift Card Fraud Scheme",
         "link": "https://www.statenislandda.org/wp-content/uploads/2021/10/DA-McMahon-Arrests-and-Charges-Five-Individuals-for-Participating-in-Million-Dollar-Gift-Card-Fraud-Scheme_compressed.pdf"
+      },
+      {
+        "title": "Five charged in million-dollar gift card scheme, says D.A. McMahon - Staten Island Advance",
+        "link": "https://www.silive.com/crime-safety/2021/10/five-charged-in-million-dollar-gift-card-scheme-says-da-mcmahon.html"
       }
     ],
-    "updated": "2026-06-26",
+    "updated": "2026-07-10",
     "incidentTime": "2021-10",
     "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0014",
-      "TA0055"
-    ]
+    "relatedThreatActors": []
   }
 }

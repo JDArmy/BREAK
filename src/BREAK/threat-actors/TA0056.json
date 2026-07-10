@@ -4,8 +4,12 @@
     "description": "通过安装农场、点击注入和虚假转化骗取广告预算或佣金。",
     "references": [
       {
-        "title": "What is Mobile Ad Fraud? - HUMAN Security",
-        "link": "https://www.humansecurity.com/learn/topics/what-is-mobile-ad-fraud/"
+        "title": "HUMAN Satori威胁情报：SlopAds通过多层混淆实施广告与点击欺诈",
+        "link": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-alert-slopads-covers-fraud-with-layers-of-obfuscation/"
+      },
+      {
+        "title": "AppsFlyer：移动广告欺诈现状与应用安装欺诈损失",
+        "link": "https://www.appsflyer.com/infograms/mobile-fraud-report-2020-state/"
       }
     ],
     "buildAttackTools": [
@@ -27,7 +31,7 @@
       "广告归因作弊团伙",
       "广告归因作弊"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0010",
@@ -59,6 +63,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

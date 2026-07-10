@@ -1,6 +1,6 @@
 {
   "C1144": {
-    "title": "Research on Suspicious NFT Transactions",
+    "title": "Study on Identifying Suspicious NFT Trading",
     "keywords": [
       "NFT",
       "wash trading",
@@ -11,11 +11,15 @@
       "unregulated markets",
       "self-transfer"
     ],
-    "summary": "The study indicates that a wash trade occurs when an NFT owner or creator transfers their own NFT to another wallet they control. This type of fraudulent activity is difficult to eliminate in unregulated NFT markets.",
+    "summary": "On November 25, 2023, Imtiaz Sifat, Syed Ahzam Tariq, and Denise van Donselaar released a study of suspicious NFT trading online; the article later appeared in the January 2024 issue of Information & Management. The research treats manipulation in NFT transactions as an identification problem and examines how transaction data can distinguish suspicious activity, rather than equating every self-transfer between wallets with fraud.",
     "references": [
       {
         "title": "Suspicious trading in nonfungible tokens (NFTs) - ScienceDirect.com",
         "link": "https://www.sciencedirect.com/science/article/pii/S0378720623001465"
+      },
+      {
+        "title": "Suspicious Trading in Nonfungible Tokens (NFTs) - Radboud Repository",
+        "link": "https://hdl.handle.net/2066/297710"
       }
     ]
   }

@@ -29,9 +29,13 @@
       {
         "title": "Social engineering (security) - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
+      },
+      {
+        "title": "2025 Data Breach Investigations Report - Verizon",
+        "link": "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -87,7 +91,8 @@
         "relation": "co-occurrence",
         "note": "员工安全意识不足与员工违规操作共享规避手段“USB Key数字证书”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0083-001": {
     "title": "员工账号被盗",
@@ -118,9 +123,13 @@
       {
         "title": "Credential stuffing - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
+      },
+      {
+        "title": "Additional 2025 DBIR research on credential stuffing - Verizon",
+        "link": "https://www.verizon.com/business/resources/articles/credential-stuffing-attacks-2025-dbir-research/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -176,7 +185,8 @@
         "relation": "co-occurrence",
         "note": "员工账号被盗与自带设备办公风险均可由攻击工具“木马病毒”直接造成。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0083-002": {
     "title": "社交欺骗风险",
@@ -193,9 +203,17 @@
       {
         "title": "Social engineering (security) - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
+      },
+      {
+        "title": "Avoiding Social Engineering and Phishing Attacks - CISA",
+        "link": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
+      },
+      {
+        "title": "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud - FBI IC3",
+        "link": "https://www.ic3.gov/PSA/2024/PSA241203"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -251,6 +269,7 @@
         "relation": "co-occurrence",
         "note": "社交欺骗风险与平台诈骗风险共享规避手段“身份实名认证”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

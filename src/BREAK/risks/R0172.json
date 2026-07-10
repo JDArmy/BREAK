@@ -29,9 +29,17 @@
       {
         "title": "Sybil Attack on Blockchain",
         "link": "https://en.wikipedia.org/wiki/Sybil_attack"
+      },
+      {
+        "title": "The Sybil Attack 原始论文 - Microsoft Research",
+        "link": "https://www.microsoft.com/en-us/research/publication/the-sybil-attack/"
+      },
+      {
+        "title": "The Sybil Attack - Peer-to-Peer Systems 正式出版页",
+        "link": "https://link.springer.com/chapter/10.1007/3-540-45748-8_24"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "女巫攻击（Sybil Attack）",
       "女巫攻击",
@@ -72,6 +80,7 @@
         "relation": "co-occurrence",
         "note": "女巫攻击（Sybil Attack）与虚拟世界资产盗窃共享规避手段“链上声誉与信用体系”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

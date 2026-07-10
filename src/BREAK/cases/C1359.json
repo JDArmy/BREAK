@@ -1,9 +1,9 @@
 {
   "C1359": {
-    "title": "Venus Protocol 第7次闪电贷攻击",
+    "title": "Venus Protocol THE市场供应上限操纵攻击",
     "keywords": [
       "Venus Protocol",
-      "闪电贷攻击",
+      "供应上限操纵",
       "BNB Chain",
       "THE代币",
       "价格操纵",
@@ -13,10 +13,10 @@
       "CAKE",
       "BNB"
     ],
-    "summary": "2026年3月，Venus Protocol在BNB Chain上托管的Thena(THE)市场遭遇攻击。攻击者提前9个月囤积THE代币控制约84%供给上限，并部署恶意合约利用Venus智能合约的捐赠漏洞与getCashPrior读取余额的设计，将THE兑换率膨胀3.81倍、价格从0.263美元拉升至0.51美元以上，反复借贷并捐回THE放大借币能力。最终清算潮使协议产生约218万美元坏账。",
+    "summary": "2026年3月15日，Venus Protocol在BNB Chain上的THE市场遭供应上限操纵。攻击者用9个月积累约84%的正常供应上限，再将THE直接转入合约，以捐赠攻击绕过上限并把兑换率抬高3.81倍，随后通过递归借贷提取约370万美元资产。头寸崩溃后，协议留下约215万美元坏账。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0160"
+      "R0159"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://rekt.news/venus-protocol-rekt4"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []

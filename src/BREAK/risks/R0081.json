@@ -257,9 +257,13 @@
       {
         "title": "Supply chain attack - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+      },
+      {
+        "title": "NIST SP 800-161 Rev. 1 Update 1: Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations",
+        "link": "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -314,7 +318,8 @@
         "relation": "co-occurrence",
         "note": "云服务供应链风险与数据泄露共享规避手段“合规治理”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0081-004": {
     "title": "外包人员风险",
@@ -333,9 +338,13 @@
       {
         "title": "Insider threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      },
+      {
+        "title": "Defining Insider Threats - CISA",
+        "link": "https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -391,7 +400,8 @@
         "relation": "co-occurrence",
         "note": "外包人员风险与数据泄露共享规避手段“合规治理”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0081-005": {
     "title": "开源组件投毒风险",

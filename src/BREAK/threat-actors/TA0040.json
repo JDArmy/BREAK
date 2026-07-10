@@ -31,19 +31,19 @@
     ],
     "references": [
       {
-        "title": "Europol: Internet Organised Crime Threat Assessment",
-        "link": "https://www.europol.europa.eu/crime-areas-and-statistics"
+        "title": "Europol：窃取、交易、循环——网络犯罪分子如何从个人数据获利",
+        "link": "https://www.europol.europa.eu/media-press/newsroom/news/steal-deal-repeat-cybercriminals-cash-in-your-data"
       },
       {
-        "title": "FBI IC3 Annual Report",
-        "link": "https://www.ic3.gov/"
+        "title": "Europol《2025互联网有组织犯罪威胁评估：窃取、交易、循环》",
+        "link": "https://www.europol.europa.eu/cms/sites/default/files/documents/Steal-deal-repeat-IOCTA_2025.pdf"
       },
       {
-        "title": "Kaspersky: Data Broker Activities on the Dark Web",
-        "link": "https://securelist.com/"
+        "title": "Kaspersky：巴西地下网络中的数据经纪服务滥用",
+        "link": "https://securelist.com/beaches-carnivals-and-cybercrime-a-look-inside-the-brazilian-underground/72652/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "数据掮客",
       "数据中间商",
@@ -84,6 +84,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 6 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

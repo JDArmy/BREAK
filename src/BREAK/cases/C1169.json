@@ -1,6 +1,6 @@
 {
   "C1169": {
-    "title": "利用HTTP/2多路复用与请求管线化绕过速率限制",
+    "title": "HackTricks记录HTTP/2多路复用绕过速率限制方法",
     "keywords": [
       "HTTP/2",
       "多路复用",
@@ -12,22 +12,18 @@
       "速率限制器",
       "HackTricks"
     ],
-    "summary": "现代速率限制器实现常基于TCP连接或HTTP/1.1请求计数，而非HTTP/2流数量。攻击者可在同一TLS连接上复用数百个并行流，使大量请求在速率限制器看来仅为一个连接，从而绕过限制。该技术于2023至2025年间被广泛记录。",
-    "category": "security_incident",
+    "summary": "HackTricks在速率限制绕过技术文档中记录，部分网关按TCP连接而非HTTP/2流数量计数。测试者可复用同一TLS连接并发发送大量独立请求，使网关只扣减一次配额；该方法还可与路径混淆组合，用于高速尝试验证码或凭据。",
+    "category": "academic_research",
     "relatedRisks": [
       "R0126-002"
     ],
     "references": [
       {
-        "title": "HTTP/2: The Sequel is Always Worse - PortSwigger Research",
-        "link": "https://portswigger.net/research/http2"
-      },
-      {
-        "title": "Rate Limit Bypass - HackTricks",
-        "link": "https://hacktricks.wiki/en/pentesting-web/rate-limit-bypass.html"
+        "title": "Rate Limit Bypass - HackTricks Source",
+        "link": "https://raw.githubusercontent.com/HackTricks-wiki/hacktricks/master/src/pentesting-web/rate-limit-bypass.md"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-07-10",
     "incidentTime": "2023",
     "relatedAttackTools": [],
     "relatedThreatActors": []

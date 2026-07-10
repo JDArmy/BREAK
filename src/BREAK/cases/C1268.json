@@ -1,42 +1,37 @@
 {
   "C1268": {
-    "title": "微软365 OAuth令牌窃取攻击潮",
+    "title": "微软披露Storm-2372设备码钓鱼活动",
     "keywords": [
       "OAuth设备授权流",
       "令牌窃取",
-      "Microsoft Entra ID",
-      "恶意OAuth应用",
+      "Storm-2372",
+      "设备码钓鱼",
       "钓鱼攻击",
       "MFA绕过",
       "持久化控制",
-      "微软365",
-      "APT29",
+      "微软云服务",
+      "俄罗斯利益相关行为者",
       "刷新令牌劫持"
     ],
-    "summary": "攻击者利用OAuth设备授权流，在Microsoft Entra ID中注册恶意OAuth应用，通过钓鱼诱导用户完成授权并劫持访问令牌与刷新令牌，实现对微软365账号的持久化控制，可绕过MFA长期访问邮件、文件等核心数据。",
+    "summary": "2025年2月，微软披露Storm-2372自2024年8月起开展设备码钓鱼活动，目标覆盖政府、非政府组织及多个行业。攻击者发送仿冒会议或消息应用邀请，诱导受害者在合法登录页面输入攻击者生成的设备码，由此取得有效访问令牌并进入账户；令牌有效期间可持续访问相关数据和服务。",
     "category": "news_report",
     "relatedRisks": [
       "R0143"
     ],
     "references": [
       {
-        "title": "OAuth 设备码流滥用下Microsoft 365 钓鱼攻击机理与防御研究",
-        "link": "https://developer.aliyun.com/article/1738867"
-      },
-      {
         "title": "Storm-2372 conducts device code phishing campaign - Microsoft Threat Intelligence",
         "link": "https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/"
       },
       {
-        "title": "Microsoft OAuth App Impersonation Campaign Leads to MFA Phishing - Proofpoint",
-        "link": "https://www.proofpoint.com/us/blog/threat-insight/microsoft-oauth-app-impersonation-campaign-leads-mfa-phishing"
+        "title": "Microsoft: Hackers steal emails in device code phishing attacks - BleepingComputer",
+        "link": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-steal-emails-in-device-code-phishing-attacks/"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-02",
+    "updated": "2026-07-10",
+    "incidentTime": "2025-02",
     "relatedAttackTools": [
-      "AT0061-003",
-      "AT0063"
+      "AT0061-003"
     ],
     "relatedThreatActors": [
       "TA0054"

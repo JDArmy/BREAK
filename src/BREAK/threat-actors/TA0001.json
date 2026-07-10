@@ -5,7 +5,11 @@
     "references": [
       {
         "title": "2024年上半年互联网黑灰产研究报告",
-        "link": "https://www.163.com/dy/article/J7CL1BGM0518STKV.html"
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "工商银行发布《2024网络金融黑产研究报告》",
+        "link": "https://www.secrss.com/articles/79910"
       }
     ],
     "buildAttackTools": [
@@ -110,7 +114,7 @@
         "note": "共同直接造成 12 个风险，共同间接支持 2 个风险。"
       }
     ],
-    "version": 2
+    "version": 3
   },
   "TA0001-001": {
     "title": "羊头",
@@ -186,11 +190,6 @@
         "note": "共同直接造成 8 个风险，共同使用 1 个攻击工具。"
       },
       {
-        "key": "TA0020",
-        "relation": "co-involved",
-        "note": "共同直接造成 5 个风险，共同间接支持 3 个风险，共同使用 1 个攻击工具。"
-      },
-      {
         "key": "TA0018",
         "relation": "co-involved",
         "note": "共同直接造成 5 个风险，共同间接支持 1 个风险，共同使用 3 个攻击工具。"
@@ -204,6 +203,11 @@
         "key": "TA0013",
         "relation": "co-involved",
         "note": "共同直接造成 2 个风险，共同间接支持 2 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0035",
+        "relation": "co-involved",
+        "note": "共同间接支持 4 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
       }
     ],
     "version": 2

@@ -1,10 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { loadEntities, projectRoot, writeJson } from '../search/common.mjs';
+import { TEXT_LENGTH_POLICY } from './text-length-policy.mjs';
 
 // 长度阈值
 const DESC_MIN = 40; // 所有类别 description 最小长度
-const LIM_MIN = 30; // 所有类别 limitation 最小长度
+const LIM_MIN = TEXT_LENGTH_POLICY.avoidances.limitation.minZh; // 所有类别 limitation 最小长度
 const LIM_SIGNAL_MIN = 40; // AC02/AC03 limitation 弱约束+长度补强阈值
 
 // 词集（精确使用，不要增减）

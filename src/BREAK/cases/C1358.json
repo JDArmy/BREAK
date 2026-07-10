@@ -1,32 +1,36 @@
 {
   "C1358": {
-    "title": "Badger DAO权限漏洞攻击事件",
+    "title": "BadgerDAO前端恶意授权攻击事件",
     "keywords": [
       "Badger DAO",
       "DeFi",
-      "权限漏洞",
+      "前端劫持",
       "恶意钱包请求",
       "代币授权",
       "前端攻击",
       "1.2亿美元",
       "智能合约安全"
     ],
-    "summary": "2021年12月，DeFi协议Badger DAO遭受攻击，损失约1.2亿美元。攻击者通过在用户界面植入恶意钱包请求，诱骗用户为恶意地址批准代币使用权限，从而控制用户金库资金并转移。",
+    "summary": "2021年12月2日，BadgerDAO前端遭植入恶意脚本，用户在执行正常交易时被诱导向攻击者地址授予无限代币支出权限。攻击者提前数周收集授权后集中转移受害者钱包资产，造成约1.2亿美元损失。事件根因在协议前端及相关基础设施受损，而非智能合约自身漏洞。",
     "category": "security_incident",
     "relatedRisks": [
       "R0203"
     ],
     "references": [
       {
-        "title": "DeFi 协议安全事故汇总|损失最二大的黑客攻击事件就发生在上个月...",
-        "link": "https://new.qq.com/rain/a/20220420A06ZDY00"
+        "title": "The BadgerDAO Front-End Attack: $120M Drained Through One Injected Script",
+        "link": "https://namefi.io/r/en/blog/the-badgerdao-frontend-attack"
       },
       {
         "title": "Explained: The BadgerDAO Hack (December 2021)",
         "link": "https://www.halborn.com/blog/post/explained-the-badgerdao-hack-december-2021"
+      },
+      {
+        "title": "DeFi 协议安全事故汇总",
+        "link": "https://new.qq.com/rain/a/20220420A06ZDY00"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2021-12",
     "relatedAttackTools": [
       "AT0079"

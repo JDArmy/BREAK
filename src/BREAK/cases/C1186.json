@@ -12,18 +12,22 @@
       "美国国家安全局",
       "软件供应链安全"
     ],
-    "summary": "2020年12月，SolarWinds公司发布的Orion平台软件更新包中被植入后门，导致数千家机构客户被入侵，包括美国国家安全局等政府部门和大型企业。攻击者通过在官方更新渠道注入恶意代码，实现了对下游用户的长期潜伏和大规模数据窃取，成为软件供应链安全领域的标志性事件。",
+    "summary": "2020年12月，CISA通报高级持续性威胁组织通过SolarWinds Orion软件供应链入侵美国政府机构、关键基础设施和私营组织。攻击者篡改Orion产品使用的动态链接库，并借受信任更新进入受害环境。CISA要求受影响机构隔离相关版本、重置凭据并排查后续活动。",
     "category": "security_incident",
     "relatedRisks": [
       "R0127"
     ],
     "references": [
       {
-        "title": "SUNBURST Additional Technical Details",
+        "title": "Advanced Persistent Threat Compromise of Government Agencies, Critical Infrastructure, and Private Sector Organizations - CISA",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-352a"
+      },
+      {
+        "title": "Analyzing Solorigate, the Compromised DLL File That Started a Sophisticated Cyberattack - Microsoft",
         "link": "https://www.microsoft.com/en-us/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2020-12",
     "relatedAttackTools": [],
     "relatedThreatActors": []

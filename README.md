@@ -8,7 +8,7 @@ English | [中文](./README_CN.md)
 
 JDArmy BREAK stands for **Business Risk Enumeration & Avoidance Knowledge** — an open framework for enumerating and mitigating business risks. By systematically classifying, describing, and cataloguing a wide range of business risks, it provides a comprehensive risk landscape and offers practical avoidance guidance to help organizations build security capabilities and reduce business risk.
 
-> BREAK is created, owned, and managed by JD.Army — a professional red team focused on identifying and resolving enterprise security operational risks. JD.Army reserves the right to update BREAK and this documentation periodically at its sole discretion. While JD.Army owns all rights and interests in BREAK, it licenses the public to use it freely under the relevant open source license.
+> BREAK is created, owned, and managed by JD.Army — a professional red team focused on identifying and resolving enterprise security operational risks. JD.Army reserves the right to update BREAK and this documentation periodically at its sole discretion. The project is available to the public under the Apache License 2.0.
 
 ## Background
 
@@ -20,7 +20,7 @@ Drawing on years of experience and accumulated understanding of business securit
 
 The framework is organized around **business domains**, **risk dimensions**, **risk scenarios**, and **risk items**. A business domain represents an industry or business area. A risk dimension is a business risk domain that groups risk scenarios into stable areas such as transaction and entitlement, content and ecosystem governance, account and identity, platform/interface automation abuse, data/algorithm/model, virtual assets and emerging technology, device/physical infrastructure, and internal supply-chain compliance. Each risk scenario contains multiple risk items.
 
-The current framework catalogues 400 risk items, 350 avoidance measures, 124 attack tools, 83 threat actors, 628 industry terms, 20 business domains, 4 avoidance categories, and 1781 cases, with ongoing additions, upgrades, and adjustments based on developments and feedback. Each risk item consists of: a risk ID, risk title, risk definition, risk description, risk complexity, risk influence, avoidance measures, references, and associated attack tools. Risk IDs follow the format `R00xx` for unique identification (modeled after MITRE ATT&CK) to facilitate communication and intelligence sharing. Attack descriptions guide blue teams in security capability assessments, while avoidance measures help red teams and business risk control to strengthen security capabilities and reduce business risk.
+The current framework catalogues 400 risk items, 350 avoidance measures, 125 attack tools, 83 threat actors, 632 industry terms, 20 business domains, 4 avoidance categories, and 1781 cases, with ongoing additions, upgrades, and adjustments based on developments and feedback. Each risk item consists of: a risk ID, risk title, risk definition, risk description, risk complexity, risk influence, avoidance measures, references, and associated attack tools. Risk IDs follow the format `R00xx` for unique identification (modeled after MITRE ATT&CK) to facilitate communication and intelligence sharing. Attack descriptions guide blue teams in security capability assessments, while avoidance measures help red teams and business risk control to strengthen security capabilities and reduce business risk.
 
 **Important note:** Business risks and vulnerabilities are not the same thing. Vulnerabilities are generally caused by coding defects and can be fixed by modifying code to remove the defect. Business risks, however, are largely not caused by coding defects — they are unintended exploitations of normal business logic by attackers. As a result, it is usually impossible to completely eliminate business risks; they can only be reduced to an acceptable level. Instead of direct code fixes, business risks typically require added security capabilities and risk control models to slow attacks, reduce attack ROI, and shrink the attack surface.
 
@@ -78,15 +78,34 @@ Contributors are welcome to collaborate by directly editing the JSON files. Data
 ## Links
 
 - GitHub: <https://github.com/JDArmy/BREAK>
+- License: [Apache License 2.0](./LICENSE)
+
+## Documentation
+
+- Online manual: <https://break.jd.army/#/docs>
+- [Contribution guide](./CONTRIBUTING.md)
+- [Security reporting](./SECURITY.md)
+- [Data Schema](./DATA_SCHEMA.md)
+- [Admission Standard](./ADMISSION-STANDARD.md)
+- [Quality Governance](./QUALITY-GOVERNANCE.md)
+- [STIX 2.1 Mapping](./STIX_MAPPING.md)
 
 ## Development
 
-Requires Node.js 24.0+.
+Requires Node.js 24.0+. Use the version declared in `.nvmrc` when possible.
 
 ```shell
-npm install
+npm ci
 npm run dev
 ```
+
+Install Chromium before running the Playwright browser checks:
+
+```shell
+npx playwright install chromium
+```
+
+LLM semantic reviews and web scraping are optional maintenance capabilities. See [`.env.example`](./.env.example) and [`scripts/llm/README.md`](./scripts/llm/README.md) for their environment variables. Normal site development, data validation, and unit tests do not require these credentials.
 
 ### Validation
 
@@ -101,17 +120,20 @@ npm run test
 npm run test:coverage
 npm run validate:schema-docs
 npm run schema:docs:write
+npm run validate:docs
 npm run export:data
 npm run export:data-en
 npm run export:stix
 npm run export:jsonld
 npm run validate:stix
-npm run version:bump
+npm run entity:version:bump
+npm run version:sync -- --bump=patch --note="description"
 npm run export:data-package
 npm run validate:data-export
 npm run validate:data-package
 npm run test:smoke
 npm run test:performance
+npm run test:visual-review
 npm run test:relation-stability
 npm run test:lighthouse
 npm run build
@@ -123,9 +145,10 @@ npm run type-check
 ```
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, business domain checks, reference coverage, content quality checks, and generated schema documentation checks. The BusinessDomain sub-risk check only blocks duplicate display cases where a parent risk and its sub-risk are listed in the same `riskScene`.
+`npm run audit:references` treats Wikipedia as secondary background material and flags confirmed organization homepages, news indexes, and research-directory placeholder links. References should point to specific pages whose titles match and whose content directly supports the entity behavior or fact.
 `npm run validate:docs-freshness` blocks documentation drift: when routes, UI components, schemas, validation scripts, public commands, export pipelines, or Skill data/search behavior change, the matching user manual, README, and Skill docs must be updated in the same change.
 `npm run review:changed` runs semantic review on changed entities; `review:should-extract` indexes existing entity titles, keywords, aliases, and current relations so already-covered extraction suggestions are suppressed instead of producing duplicate-modeling noise. The extraction reviewer also normalizes structured `new*` suggestion objects before deciding whether a finding is actionable. `review:case-fact` uses Scrapingdog first and falls back to direct local fetching with a browser user agent, a 30-second timeout, Chinese-page charset detection, short-body retry, and article-focused snippet selection before sending text to the LLM.
-`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:home-counts`, `export:data`, `export:data-en`, `export:stix`, `export:jsonld`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, `validate:data-package`, and `validate:stix`.
+`npm run build` performs English-data generation, code checks, data and documentation validation, unit and coverage tests, changelog and multi-format exports, site compilation, service-worker version injection, data-package evaluation, and output validation. The `build` script in `package.json` is authoritative.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, Sankey attack paths, root/path insights, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
@@ -135,11 +158,12 @@ npm run type-check
 `npm run export:stix` exports STIX 2.1 Bundles (`public/data/break-stix-zh.json` and `public/data/break-stix-en.json`) mapping all BREAK entities and relationships to STIX SDOs/SROs with Extension Definitions for BREAK-specific fields.
 `npm run export:jsonld` exports JSON-LD documents (`public/data/break-ld-zh.jsonld` and `public/data/break-ld-en.jsonld`) for semantic web and knowledge graph consumption, with `stixId` cross-references to the STIX Bundle.
 `npm run validate:stix` runs three-layer STIX validation (structural schema, referential integrity, business-rule cross-checks) plus JSON-LD expansion validation.
-`npm run version:bump` detects substantive entity file changes via `git diff` and auto-increments the `version` field (also updates `updated`).
+`npm run entity:version:bump` detects substantive entity changes via `git diff`, increments each entity's `version`, and updates `updated`.
+`npm run version:sync -- --bump=patch|minor|major --note="description"` synchronizes `package.json`, `src/BREAK/basic-info/main.json`, and `CHANGELOG.md`. `version:bump` is only a compatibility alias for this project-version command.
 `npm run export:data-package` writes an npm package evaluation artifact to `dist/break-data-package`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
 `npm run validate:data-package` checks the npm package boundary, runtime entry, type declarations, README, manifest hash, and version alignment.
-`npm run test:smoke`, `npm run test:performance`, `npm run test:visual-review`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium. PR CI runs `test:smoke` as a hard-fail browser gate on every pull request. Slower browser regression, visual review, relation stability, and Lighthouse checks run in PR CI only for major/minor version changes, and remain available locally via the same npm scripts. Deploy does not rerun Playwright/Lighthouse.
+`npm run test:smoke`, `npm run test:performance`, `npm run test:visual-review`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium. The current PR CI runs all five browser checks on every pull request. Deploy does not rerun Playwright/Lighthouse.
 `npm run audit:quality-report` regenerates the frontend-consumable quality report JSON.
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business domain coverage baseline.
 `npm run audit:risk-threat-actor-coverage` reports Risk-ThreatActor coverage and separates actionable gaps from explicitly exempt compliance, technology-evolution, and functional-safety risks.
@@ -167,7 +191,7 @@ BREAK provides standardized export formats for integration with external CTI/SIE
 
 **JSON-LD** — Entities are exported as a `@graph` of linked data nodes using `schema.org` vocabulary and BREAK-specific terms. Each entity carries a `stixId` field for bidirectional cross-referencing with the STIX Bundle. Entity URIs follow the pattern `https://break.jd.army/entity/{ID}`.
 
-**Entity Version** — All knowledge entities carry an integer `version` field (default `1`) that auto-increments on substantive content changes. This enables downstream consumers to detect and track entity-level evolution. Run `npm run version:bump` before committing entity changes to auto-increment versions.
+**Entity Version** — All knowledge entities carry an integer `version` field (default `1`) that auto-increments on substantive content changes. This enables downstream consumers to detect and track entity-level evolution. Run `npm run entity:version:bump` before committing entity changes.
 
 ### npm Data Package Evaluation
 

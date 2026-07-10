@@ -11,18 +11,22 @@
       "端口扫描",
       "应急响应"
     ],
-    "summary": "2019年9月，某内网服务器遭遇无文件挖矿攻击。攻击者利用SMB匿名登录与口令爆破进行病毒投放，通过PowerShell在内存中执行挖矿代码，无本地文件落地，导致CPU占用100%。攻击还利用定时任务下载恶意文件，并涉及端口扫描与横向渗透行为。",
+    "summary": "2019年9月10日，某内网服务器遭遇无文件挖矿攻击。攻击者通过SMB口令爆破投放载荷，再利用PowerShell让挖矿代码驻留内存执行。分析还发现针对445、65529等端口的扫描、横向传播、定时下载恶意文件及利用MS17-010漏洞传播的行为。",
     "category": "security_incident",
     "relatedRisks": [
       "R0152"
     ],
     "references": [
       {
-        "title": "应急响应系列之无文件攻击分析 - FreeBuf网络安全行业门户",
+        "title": "应急响应系列之无文件攻击分析 - FreeBuf",
         "link": "https://www.freebuf.com/articles/network/216918.html"
+      },
+      {
+        "title": "应急响应系列之无文件攻击分析 - 搜狐",
+        "link": "https://www.sohu.com/a/349141712_354899"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2019-09",
     "relatedAttackTools": [
       "AT0068"

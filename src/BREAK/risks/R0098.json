@@ -16,6 +16,14 @@
       {
         "title": "Know your customer - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Know_your_customer"
+      },
+      {
+        "title": "Identity Proofing Requirements | NIST SP 800-63A",
+        "link": "https://pages.nist.gov/800-63-4/sp800-63a/ial-general/"
+      },
+      {
+        "title": "Glossary | NIST SP 800-63A",
+        "link": "https://pages.nist.gov/800-63-4/sp800-63a/glossary/"
       }
     ],
     "riskAssessment": {
@@ -34,7 +42,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P1"
     },
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "虚假身份认证",
       "伪造身份认证",
@@ -75,6 +83,7 @@
         "relation": "co-occurrence",
         "note": "虚假身份认证与批量注册均可由攻击工具“拦截卡”直接造成。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

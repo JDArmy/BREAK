@@ -40,6 +40,10 @@
       {
         "title": "Account Sharing - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Account_sharing"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5: Shared Account Risk and Individual Authentication Controls",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
     "keywords": [
@@ -67,6 +71,14 @@
       {
         "title": "Insider Threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      },
+      {
+        "title": "CWE-912: Hidden Functionality",
+        "link": "https://cwe.mitre.org/data/definitions/912.html"
+      },
+      {
+        "title": "CWE-506: Embedded Malicious Code",
+        "link": "https://cwe.mitre.org/data/definitions/506.html"
       }
     ],
     "keywords": [

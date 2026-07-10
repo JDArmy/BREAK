@@ -9,9 +9,13 @@
       {
         "title": "高可用性 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/High_availability"
+      },
+      {
+        "title": "Amazon EC2 Auto Scaling 的弹性能力 - AWS",
+        "link": "https://docs.aws.amazon.com/autoscaling/ec2/userguide/disaster-recovery-resiliency.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-10",
     "keywords": [
       "提升服务可用性",
       "高可用",
@@ -53,7 +57,8 @@
         "relation": "complement",
         "note": "共同覆盖 3 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0008-001": {
     "title": "增加计算资源",
@@ -65,9 +70,13 @@
       {
         "title": "自动扩展 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Autoscaling"
+      },
+      {
+        "title": "自动扩展对应用架构的益处 - AWS",
+        "link": "https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-benefits.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "增加计算资源",
       "扩容",
@@ -109,21 +118,26 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0008-002": {
     "title": "DDoS防护",
     "category": "AC01",
-    "definition": "通过DDoS防护系统识别和过滤攻击流量，保障正常业务请求。",
-    "description": "通过DDoS防护系统过滤攻击流量可以使得更少的更真实的用户流量被服务器响应，是在系统遭受大规模攻击情况下的一种行之有效的办法。",
-    "limitation": "现有的DDoS防护系统对CC攻击的防御效果不佳，需结合云端反爬（A0003）等手段",
+    "definition": "通过高防接入、流量清洗、路由牵引和访问控制识别并过滤DDoS攻击流量，保障源站与正常业务请求可用。",
+    "description": "DDoS防护通常在业务入口部署高防IP、Anycast或清洗中心，通过BGP牵引将异常流量导入防护集群，结合连接速率、协议特征、源地址信誉和流量基线区分攻击流量与正常请求。对大流量攻击可采用流量清洗、黑洞路由和弹性带宽吸收，对SYN Flood、UDP反射等协议攻击可使用连接验证与协议限速，并通过隐藏源站地址、防止绕过高防直连来保护后端服务。",
+    "limitation": "大规模清洗和弹性带宽成本较高，黑洞路由还会同时中断正常访问；对请求语义接近正常用户的CC攻击，攻击者可利用住宅代理、低频分布式请求或直接探测源站地址绕过边界清洗，因此仍需结合云端反爬、应用层限频和源站访问控制。",
     "references": [
       {
         "title": "拒绝服务攻击 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Denial-of-service_attack"
+      },
+      {
+        "title": "理解和响应分布式拒绝服务攻击 - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/2024-03/understanding-and-responding-to-distributed-denial-of-service-attacks_508c.pdf"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "keywords": [
       "DDoS防护",
       "抗DDoS",
@@ -165,7 +179,8 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0008-003": {
     "title": "前置CDN",
@@ -233,9 +248,13 @@
       {
         "title": "业务连续性 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Business_continuity"
+      },
+      {
+        "title": "处理系统过载 - Google SRE",
+        "link": "https://sre.google/sre-book/handling-overload/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "keywords": [
       "业务系统优化",
       "系统优化",
@@ -277,7 +296,8 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0008-005": {
     "title": "增加业务资源",
@@ -289,9 +309,13 @@
       {
         "title": "云计算 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Cloud_computing"
+      },
+      {
+        "title": "使用自动化获取或扩展资源 - AWS Well-Architected",
+        "link": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_adapt_to_changes_autoscale_adapt.html"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "增加业务资源",
       "增加库存",
@@ -333,6 +357,7 @@
         "relation": "complement",
         "note": "共同覆盖 4 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

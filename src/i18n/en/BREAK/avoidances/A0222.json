@@ -26,11 +26,15 @@
     "title": "Trusted-Merchant Targeted Inspection",
     "definition": "Low-frequency targeted inspection of trusted-list merchants to verify fulfillment goods and declaration consistency.",
     "description": "Trusted merchants typically enjoy inspection exemption or fast-track benefits. Directed spot checks use low-frequency sampling to verify that trust is not abused, focusing on whether the actual goods, weight, and category declarations match the order. While safeguarding trusted merchants' fulfillment efficiency, this measure identifies behaviors such as false shipments, product switching, or declaration discrepancies carried out under the guise of trust credentials. The governance direction is 'trust admission + sampling review + trust downgrade.'",
-    "limitation": "Low-frequency sampling has limited capture rate for single-instance violations and must be supplemented by reports and anomaly monitoring to trigger additional inspections. The feedback loop from inspection results to trust ratings must be closed.",
+    "limitation": "Low-frequency sampling has limited capture of isolated violations. Merchants can bypass checks by concentrating abuse outside inspection windows or in low-risk orders; unrepresentative samples cause false negatives, while biased risk scores may falsely flag legitimate merchants. Reports and anomaly monitoring are needed to trigger additional inspections.",
     "references": [
       {
-        "title": "NIST SP 800-53 AU-6 Audit Record Review, Analysis, and Reporting",
-        "link": "https://csrc.nist.gov/projects/cprt/catalog/cprt-catalog/details?ol=04&ct=10&cs=11"
+        "title": "Product Quality and Safety Supervision Department - State Administration for Market Regulation",
+        "link": "https://www.samr.gov.cn/zljds/"
+      },
+      {
+        "title": "2024 National Product Quality Supervision and Spot-Check Report - State Administration for Market Regulation",
+        "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_02676c16ac634fd9a48ec6ea10eb000d.html"
       }
     ],
     "keywords": [

@@ -1,9 +1,9 @@
 {
   "C1359": {
-    "title": "Venus Protocol Suffers 7th Flash Loan Attack",
+    "title": "Venus Protocol THE Market Supply-Cap Manipulation Attack",
     "keywords": [
       "Venus Protocol",
-      "flash loan attack",
+      "supply cap manipulation",
       "BNB Chain",
       "THE token",
       "price manipulation",
@@ -13,7 +13,7 @@
       "CAKE",
       "BNB"
     ],
-    "summary": "In March 2026, the Thena (THE) market hosted on Venus Protocol (BNB Chain) was exploited. The attacker accumulated THE tokens over nine months to control about 84% of the supply cap, then deployed a malicious contract exploiting a donation flaw in the Venus smart contracts and the getCashPrior balance-reading design to inflate THE's exchange rate by 3.81x, pushing its price from $0.263 to over $0.51, repeatedly borrowing and donating THE back to amplify borrowing power. The resulting liquidation cascade left the protocol with about $2.18 million in bad debt.",
+    "summary": "On March 15, 2026, the THE market on Venus Protocol on BNB Chain was manipulated. After spending nine months accumulating about 84% of the normal supply cap, the attacker transferred THE directly to the contract, used a donation attack to bypass the cap, and inflated the exchange rate by 3.81 times. A recursive borrowing loop extracted about $3.7 million in assets before the position collapsed, leaving roughly $2.15 million in bad debt.",
     "references": [
       {
         "title": "Explained: The Venus Protocol Hack (March 2026) - Halborn",

@@ -11,7 +11,7 @@
       "adversary-in-the-middle attack",
       "credential harvesting"
     ],
-    "summary": "In April 2025, Proofpoint detected a large-scale AiTM phishing attack leveraging the Tycoon 2FA platform, targeting thousands of organizations globally. The attack used highly realistic Microsoft 365 authentication pages to capture user credentials, 2FA tokens, and session cookies in real time, successfully bypassing MFA. Evasion techniques included invisible Unicode characters and custom CAPTCHAs",
+    "summary": "In April 2025, Proofpoint detected multiple AiTM campaigns using the Tycoon 2FA phishing-as-a-service platform against thousands of organizations worldwide. Spoofed Microsoft 365 authentication pages stole usernames, passwords, 2FA tokens, and session cookies to bypass MFA. The campaigns also used invisible Unicode characters, custom CAPTCHAs, and anti-debugging features to evade detection.",
     "references": [
       {
         "title": "Evolving Threat: Microsoft AiTM Phishing Attacks | Proofpoint US",

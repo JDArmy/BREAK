@@ -1,31 +1,35 @@
 {
   "C1120": {
-    "title": "Lakera揭示间接提示注入在真实系统中的攻击案例",
+    "title": "Brave披露Perplexity Comet间接提示注入漏洞",
     "keywords": [
       "间接提示注入",
-      "Lakera",
+      "Brave",
       "AI安全",
-      "浏览器代理攻击",
-      "Copilot",
       "Perplexity Comet",
-      "CVE-2025-59944",
-      "MCP IDE",
-      "零点击RCE",
-      "Agent Breaker"
+      "浏览器代理",
+      "Reddit隐藏指令",
+      "一次性密码",
+      "账户接管",
+      "跨域访问",
+      "代理浏览器漏洞"
     ],
-    "summary": "Lakera团队在2026年4月的文章中总结了间接提示注入的实际攻击案例，包括浏览器总结网页时被诱骗泄露凭证、Copilot根据中毒邮件或元数据采取行动、代理工具在阅读被攻陷的文档后执行攻击者控制的命令。文章还提到了Perplexity Comet泄露事件、MCP IDE中的零点击RCE漏洞（CVE-2025-59944）以及Agent Breaker场景，展示了中毒内容如何升级为系统攻陷。",
-    "category": "news_report",
+    "summary": "2025年8月20日，Brave公开Perplexity Comet浏览器的间接提示注入漏洞。研究人员在Reddit评论中隐藏恶意指令；用户让Comet总结页面后，代理读取邮箱地址和一次性密码并回传，使攻击者可接管Perplexity账户。Brave在公开后复测发现同类攻击仍未完全缓解。",
+    "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0117-002"
     ],
     "references": [
       {
-        "title": "Indirect Prompt Injection: The Hidden Threat Breaking Modern AI ...",
-        "link": "https://www.lakera.ai/blog/indirect-prompt-injection"
+        "title": "Agentic Browser Security: Indirect Prompt Injection in Perplexity Comet - Brave",
+        "link": "https://brave.com/blog/comet-prompt-injection/"
+      },
+      {
+        "title": "Perplexity's Comet browser faced prompt injection vuln - The Register",
+        "link": "https://www.theregister.com/software/2025/08/20/perplexitys-comet-browser-faced-prompt-injection-vuln/1267776"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-04",
+    "updated": "2026-07-10",
+    "incidentTime": "2025-08-20",
     "relatedAttackTools": [
       "AT0074"
     ],

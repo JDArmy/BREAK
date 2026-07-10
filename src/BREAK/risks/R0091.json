@@ -16,6 +16,14 @@
       {
         "title": "Cheating in video games - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
+      },
+      {
+        "title": "CFPB Report Identifies Financial and Privacy Risks to Consumers in Video Gaming Marketplaces",
+        "link": "https://www.consumerfinance.gov/archive/newsroom/cfpb-report-identifies-financial-and-privacy-risks-to-consumers-in-video-gaming-marketplaces/"
+      },
+      {
+        "title": "Theft of virtual items in online multiplayer computer games: an ontological and moral analysis",
+        "link": "https://link.springer.com/article/10.1007/s10676-011-9285-3"
       }
     ],
     "riskAssessment": {
@@ -34,7 +42,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P1"
     },
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "游戏洗号风险",
       "盗号洗号",
@@ -75,6 +83,7 @@
         "relation": "co-occurrence",
         "note": "游戏洗号风险与带老板共享规避手段“风控策略”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

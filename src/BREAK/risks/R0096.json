@@ -14,6 +14,14 @@
       {
         "title": "Identity theft - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Identity_theft"
+      },
+      {
+        "title": "最高人民检察院 公安部关于公安机关管辖的刑事案件立案追诉标准的规定（二）",
+        "link": "https://www.spp.gov.cn/spp/xwfbh/wsfbt/202204/t20220429_555906.shtml"
+      },
+      {
+        "title": "Crime and crisis in China's P2P online lending market: a comparative analysis of fraud",
+        "link": "https://link.springer.com/article/10.1007/s10611-022-10053-y"
       }
     ],
     "riskAssessment": {
@@ -32,7 +40,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P0"
     },
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "平台网贷欺诈",
       "骗贷",
@@ -73,7 +81,8 @@
         "relation": "co-occurrence",
         "note": "平台网贷欺诈与支付渠道滥用共享规避手段“身份实名认证”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0096-001": {
     "title": "反催收风险",

@@ -1,11 +1,11 @@
 {
   "TA0038": {
     "title": "Underground Money Houses",
-    "description": "Underground money houses are underground organizations that illegally engage in cross-border fund transfers, currency exchange, and other financial businesses without approval from national financial regulators. Unlike TA0014 money laundering rooms which primarily handle domestic criminal fund laundering, underground money houses focus on cross-border illegal fund flows. Main operating models include: mirror transfer, cross-border e-commerce channels, cryptocurrency channels, underground insurance policies, fake investments, and multi-layer nesting.",
+    "description": "Underground money houses are organizations that provide illegal currency exchange, cross-border fund transfer, and money-laundering services without approval from financial regulators. Unlike TA0014 money laundering rooms, which primarily split, aggregate, and move criminal proceeds within one country, these actors organize settlement between domestic and overseas fund pools for a fee; they do not directly conduct their clients' fraud, automation attacks, or denial-of-service attacks. Typical methods include mirror settlement between separately controlled fund pools, sham trade or cross-border e-commerce transactions, over-the-counter cryptocurrency conversion and mixing services, and layered transfers through personal accounts, corporate accounts, and intermediaries. Their operations directly create money-laundering risk and can support cryptocurrency laundering and illegal cash-out activities.",
     "references": [
       {
-        "title": "Anti-Money Laundering Law - People's Bank of China",
-        "link": "https://www.pbc.gov.cn/"
+        "title": "People's Bank of China: Advancing Remediation Following the International AML Evaluation",
+        "link": "https://wuhan.pbc.gov.cn/fanxiqianju/articleFileDir/2021-12/23/4427834/2021122309125230038.pdf"
       },
       {
         "title": "Underground Money House Crime Crackdown - Ministry of Public Security",

@@ -1,6 +1,6 @@
 {
   "C1263": {
-    "title": "SSLStrip攻击：HTTPS降级为HTTP的中间人劫持",
+    "title": "Moxie Marlinspike在Black Hat DC公开SSLStrip攻击",
     "keywords": [
       "SSLStrip",
       "HTTPS降级",
@@ -11,8 +11,8 @@
       "登录凭据",
       "网络安全"
     ],
-    "summary": "SSLStrip是一种典型的中间人攻击，攻击者利用客户端从HTTP到HTTPS的过渡阶段，阻止客户端与服务器建立HTTPS连接，强制维持不安全的HTTP连接。攻击者与客户端建立HTTP连接，同时与服务器建立正常的HTTPS连接，从而在中间拦截并读取所有明文通信内容，窃取登录凭据和敏感数据。",
-    "category": "vulnerability_advisory",
+    "summary": "2009年2月，Moxie Marlinspike在Black Hat DC演讲中公开SSLStrip工具与攻击方法。该方法利用用户最初访问HTTP页面再跳转HTTPS的过程，在中间位置阻止升级：攻击者对服务器保持HTTPS连接，却向受害者提供HTTP页面，从而读取应受TLS保护的凭据和通信内容。",
+    "category": "academic_research",
     "relatedRisks": [
       "R0142"
     ],
@@ -22,19 +22,13 @@
         "link": "https://blackhat.com/presentations/bh-dc-09/Marlinspike/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf"
       },
       {
-        "title": "CVE-2009-3507 - NVD (National Vulnerability Database)",
-        "link": "https://nvd.nist.gov/vuln/detail/CVE-2009-3507"
-      },
-      {
-        "title": "moxie0/sslstrip - A tool for exploiting Moxie Marlinspike's SSL stripping attack (GitHub)",
-        "link": "https://github.com/moxie0/sslstrip"
+        "title": "Performing and Preventing SSL Stripping: A Plain-English Primer - Cloudflare",
+        "link": "https://blog.cloudflare.com/performing-preventing-ssl-stripping-a-plain-english-primer/"
       }
     ],
-    "updated": "2026-07-06",
-    "relatedAttackTools": [
-      "AT0072"
-    ],
+    "updated": "2026-07-10",
+    "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2019-07"
+    "incidentTime": "2009-02"
   }
 }

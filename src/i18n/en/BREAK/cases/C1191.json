@@ -1,22 +1,26 @@
 {
   "C1191": {
-    "title": "Alibaba Cloud Container Service and Security Center Named CAICT Cloud-Native Security Benchmark Case",
+    "title": "IngressNightmare Exposes Unauthenticated Remote Code Execution in Ingress NGINX",
     "keywords": [
-      "Alibaba Cloud",
-      "Container Service",
-      "Cloud Security Center",
-      "CAICT",
-      "cloud-native security benchmark",
-      "container escape",
-      "image vulnerabilities",
-      "runtime protection",
-      "cloud-native runtime security"
+      "IngressNightmare",
+      "CVE-2025-1974",
+      "Ingress NGINX",
+      "Kubernetes",
+      "remote code execution",
+      "admission controller",
+      "cluster takeover",
+      "cloud-native security",
+      "webhook command injection"
     ],
-    "summary": "In January 2025, a joint solution from Alibaba Cloud Container Service and Cloud Security Center was recognized as a “Cloud-Native Security Benchmark Case” by the China Academy of Information and Communications Technology (CAICT). The solution focuses on building an integrated cloud-native runtime protection system to address runtime threats such as container escape and image vulnerabilities.",
+    "summary": "On March 24, 2025, Wiz and the Kubernetes project disclosed the IngressNightmare vulnerability set. CVE-2025-1974 could enable unauthenticated remote code execution through an exposed Ingress NGINX admission controller. Successful exploitation could expose Secrets across all namespaces and lead to cluster takeover. The project advised immediate upgrades or restricting access to the admission-controller port.",
     "references": [
       {
-        "title": "Relevant Content on Alibaba Cloud Cloud-Native Security Cases",
-        "link": "https://www.aliyun.com/sswb/1764038.html"
+        "title": "Ingress-nginx CVE-2025-1974: What You Need to Know - Kubernetes",
+        "link": "https://kubernetes.io/blog/2025/03/24/ingress-nginx-cve-2025-1974/"
+      },
+      {
+        "title": "IngressNightmare: CVE-2025-1974 Unauthenticated Remote Code Execution Vulnerabilities in Ingress NGINX - Wiz",
+        "link": "https://www.wiz.io/blog/ingress-nginx-kubernetes-vulnerabilities"
       }
     ]
   }

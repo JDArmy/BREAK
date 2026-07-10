@@ -205,9 +205,13 @@
       {
         "title": "Drop shipping - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Drop_shipping"
+      },
+      {
+        "title": "没有货源就能卖货，“躺赢”式开店靠谱吗？ - 北京市朝阳区人民政府",
+        "link": "http://www.bjchy.gov.cn/xychy/xxgs/xyfxts/4028805a84c6ce130184d174a7b505ad.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "medium",
@@ -263,7 +267,8 @@
         "relation": "co-occurrence",
         "note": "无货源店铺与自动化登录风险均受攻击工具“秒杀工具”间接支持。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0070-003": {
     "title": "店群",

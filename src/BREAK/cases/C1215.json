@@ -1,36 +1,36 @@
 {
   "C1215": {
-    "title": "SIM 卡交换攻击者通常在夜间实施攻击以逃避检测",
+    "title": "FBI通报美国SIM卡交换诈骗投诉与损失激增",
     "keywords": [
       "SIM卡交换攻击",
-      "夜间攻击",
-      "逃避检测",
-      "运营商",
-      "号码转移",
-      "NJCCIC",
-      "新泽西州",
-      "网络安全",
+      "FBI",
+      "IC3",
+      "投诉统计",
+      "经济损失",
+      "运营商社工",
+      "号码劫持",
+      "虚拟货币账户",
       "账户接管",
-      "延迟发现"
+      "美国SIM卡诈骗"
     ],
-    "summary": "新泽西州网络安全与通信集成中心指出，SIM 卡交换攻击者有时故意在夜间受害者睡觉且运营商门店关闭时实施号码转移，以延迟受害者发现并阻止其及时联系运营商止损。",
+    "summary": "2022年2月8日，美国联邦调查局互联网犯罪投诉中心发布公告称，2018至2020年收到320起SIM卡交换投诉，损失约1200万美元；2021年投诉增至1611起，损失超过6800万美元。公告指出，攻击者会通过社工、内部人员或钓鱼手段促使运营商转移受害者号码。",
     "category": "news_report",
     "relatedRisks": [
       "R0132"
     ],
     "references": [
       {
-        "title": "SIM Swapping Attacks - NJCCIC",
-        "link": "https://www.cyber.nj.gov/threat-landscape/phishing-online-scams/telephone-scams/sim-swapping-attacks"
+        "title": "Criminals Increasing SIM Swap Schemes to Steal Millions of Dollars from US Public - FBI IC3",
+        "link": "https://www.ic3.gov/PSA/2022/PSA220208"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [
       "AT0062"
     ],
     "relatedThreatActors": [
       "TA0059"
     ],
-    "incidentTime": "2023-02-22"
+    "incidentTime": "2022-02-08"
   }
 }

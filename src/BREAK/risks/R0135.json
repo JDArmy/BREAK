@@ -28,15 +28,15 @@
     },
     "references": [
       {
-        "title": "中华人民共和国反垄断法（2022修正）",
-        "link": "https://www.samr.gov.cn/"
+        "title": "中华人民共和国反垄断法 - 国家市场监督管理总局",
+        "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_f0fae9eb3a684fc39e84d89eabfc2caa.html"
       },
       {
         "title": "关于平台经济领域的反垄断指南",
         "link": "https://scjgj.cq.gov.cn/zt_225/cjscjz/zcfg/gfxwj/202312/t20231215_12710745.html"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "平台垄断滥用风险",
       "二选一",
@@ -76,6 +76,7 @@
         "relation": "co-occurrence",
         "note": "平台垄断滥用风险与联盟营销佣金欺诈同属“算法、定价与平台治理”风险场景。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

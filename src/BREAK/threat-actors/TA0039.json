@@ -31,19 +31,19 @@
     ],
     "references": [
       {
-        "title": "FBI IC3 Cryptocurrency Fraud Report",
-        "link": "https://www.ic3.gov/"
+        "title": "FBI IC3 2024年度报告",
+        "link": "https://www.ic3.gov/AnnualReport/Reports/2024_ic3report.pdf"
       },
       {
-        "title": "Chainalysis 2026 Crypto Crime Report",
-        "link": "https://www.chainalysis.com/"
+        "title": "Chainalysis《2026加密货币犯罪报告》",
+        "link": "https://www.chainalysis.com/reports/crypto-crime-2026/"
       },
       {
-        "link": "https://globalinvestigationsreview.com/review/the-investigations-review-of-the-americas/2026/article/doj-and-sec-crypto-exchange-enforcement-in-the-united-states",
-        "title": "DOJ and SEC crypto exchange enforcement in the United States"
+        "title": "Chainalysis《2026加密货币犯罪报告》：诈骗",
+        "link": "https://www.chainalysis.com/blog/crypto-scams-2026/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "加密货币诈骗团伙",
       "币圈诈骗",
@@ -85,6 +85,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 3 个风险。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

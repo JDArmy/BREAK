@@ -1,28 +1,32 @@
 {
   "C1150": {
-    "title": "限期备案！算法备案还没做？三亚已有公司被约谈！",
+    "title": "意大利监管机构因骑手管理算法违规罚款Foodinho",
     "keywords": [
-      "算法备案",
-      "算法安全主体责任",
-      "网信部门约谈",
-      "三亚",
-      "算法合规风险",
-      "未备案整改",
-      "算法治理"
+      "Foodinho",
+      "Glovo",
+      "骑手管理算法",
+      "自动化决策",
+      "算法透明度",
+      "算法歧视",
+      "意大利数据保护局"
     ],
-    "summary": "2026年3月，三亚一家公司因未履行算法安全主体责任，未按规定进行算法备案，被网信部门约谈整改。该案例表明，监管部门已开始对未履行算法备案义务的企业采取实际行动，未备案将面临合规风险。",
+    "summary": "意大利数据保护局2021年7月通报，对Glovo集团旗下Foodinho罚款260万欧元。监管调查发现，该平台通过算法管理约1.9万名骑手，却未充分说明数据处理和自动化决策逻辑，也未采取足够措施防止歧视性或不准确结果。监管机构要求其整改算法与数据管理，并保障骑手质疑决定的权利。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0123"
     ],
     "references": [
       {
-        "title": "算法备案查询 - 中国网信网",
-        "link": "https://beian.cac.gov.cn/"
+        "title": "Rider: Garante privacy, no a discriminazioni basate sugli algoritmi",
+        "link": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677377"
+      },
+      {
+        "title": "Italian watchdog takes aim at delivery firm's gig-worker algorithms",
+        "link": "https://www.reuters.com/technology/italian-watchdog-takes-aim-delivery-firms-gig-worker-algorithms-2021-07-05/"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2026-03",
+    "updated": "2026-07-10",
+    "incidentTime": "2021-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

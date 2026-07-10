@@ -8,6 +8,10 @@
       {
         "title": "High Availability - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/High_availability"
+      },
+      {
+        "title": "Resilience in Amazon EC2 Auto Scaling - AWS",
+        "link": "https://docs.aws.amazon.com/autoscaling/ec2/userguide/disaster-recovery-resiliency.html"
       }
     ],
     "keywords": [
@@ -28,6 +32,10 @@
       {
         "title": "Auto Scaling - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Autoscaling"
+      },
+      {
+        "title": "Auto Scaling Benefits for Application Architecture - AWS",
+        "link": "https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-benefits.html"
       }
     ],
     "keywords": [
@@ -41,13 +49,17 @@
   },
   "A0008-002": {
     "title": "DDoS Protection",
-    "definition": "Identifying and filtering attack traffic through a DDoS protection system to safeguard legitimate business requests.",
-    "description": "Filtering attack traffic through a DDoS protection system allows fewer, more legitimate user requests to be served by the server. This is an effective approach when the system is under large-scale attack.",
-    "limitation": "Existing DDoS protection systems have limited effectiveness against CC attacks and need to be combined with cloud-side anti-crawling (A0003) and other measures.",
+    "definition": "Use protected ingress, traffic scrubbing, route diversion, and access controls to identify and filter DDoS traffic while preserving origin availability and legitimate requests.",
+    "description": "DDoS protection commonly places protected IPs, Anycast capacity, or scrubbing centers in front of a service. BGP diversion sends suspicious traffic through mitigation clusters, where connection rates, protocol features, source reputation, and traffic baselines distinguish attacks from legitimate requests. Volumetric attacks can be handled with scrubbing, blackhole routing, and elastic bandwidth, while SYN floods and UDP reflection can be reduced through connection validation and protocol rate limits. Hiding origin addresses and restricting direct origin access prevents attackers from bypassing the protected edge.",
+    "limitation": "Large-scale scrubbing and elastic bandwidth are expensive, and blackhole routing also interrupts legitimate access. Application-layer floods that resemble normal requests may bypass edge filtering through residential proxies, low-rate distributed traffic, or direct discovery of the origin address, so cloud bot mitigation, application rate limits, and origin access controls are still required.",
     "references": [
       {
         "title": "Denial of Service Attack - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Denial-of-service_attack"
+      },
+      {
+        "title": "Understanding and Responding to Distributed Denial-of-Service Attacks - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/2024-03/understanding-and-responding-to-distributed-denial-of-service-attacks_508c.pdf"
       }
     ],
     "keywords": [
@@ -88,6 +100,10 @@
       {
         "title": "Business Continuity - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Business_continuity"
+      },
+      {
+        "title": "Handling Overload - Google SRE",
+        "link": "https://sre.google/sre-book/handling-overload/"
       }
     ],
     "keywords": [
@@ -108,6 +124,10 @@
       {
         "title": "Cloud Computing - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Cloud_computing"
+      },
+      {
+        "title": "REL07-BP01 Use Automation When Obtaining or Scaling Resources - AWS Well-Architected",
+        "link": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_adapt_to_changes_autoscale_adapt.html"
       }
     ],
     "keywords": [

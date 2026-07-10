@@ -1,6 +1,6 @@
 {
   "C1240": {
-    "title": "LexisNexis揭示两类合成身份制造方法",
+    "title": "LexisNexis推出合成身份欺诈检测评分产品",
     "keywords": [
       "合成身份欺诈",
       "操纵型合成身份",
@@ -13,19 +13,23 @@
       "无效SSN",
       "金融犯罪"
     ],
-    "summary": "LexisNexis Risk Solutions分析指出，合成身份欺诈分为两类：操纵型合成身份基于真实身份进行有限改动以隐藏不良历史；制造型合成身份则从多个身份中拼凑有效数据，或使用与SSA随机发放号码相同范围的无效SSN创建全新身份，后者极难被现有技术检测。",
+    "summary": "2021年7月，LexisNexis Risk Solutions宣布推出Fraud Intelligence Synthetic Score。该产品分析数百项身份特征和事件，识别新账户申请资料中的不一致与合成身份欺诈模式，并输出001至998的三位风险分值，帮助调查团队优先复核高风险申请。",
     "category": "news_report",
     "relatedRisks": [
       "R0136"
     ],
     "references": [
       {
-        "title": "Synthetic Identity Fraud - LexisNexis Risk Solutions",
-        "link": "https://risk.lexisnexis.com/insights-resources/article/synthetic-identity-fraud"
+        "title": "LexisNexis Risk Solutions Introduces Fraud Intelligence Synthetic Score",
+        "link": "https://risk.lexisnexis.com/about-us/press-room/press-release/20210721-fraud-intelligence-synthetic-score"
+      },
+      {
+        "title": "LexisNexis Risk Solutions introduces Fraud Intelligence Synthetic Score - The Paypers",
+        "link": "https://thepaypers.com/fraud-and-fincrime/news/lexisnexis-risk-solutions-introduces-fraud-intelligence-synthetic-score"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2011-07",
+    "updated": "2026-07-10",
+    "incidentTime": "2021-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

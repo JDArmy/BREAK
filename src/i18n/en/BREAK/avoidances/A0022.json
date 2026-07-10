@@ -8,6 +8,10 @@
       {
         "title": "Transport Layer Security - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
+      },
+      {
+        "title": "Guidelines for the Selection, Configuration, and Use of TLS Implementations - NIST SP 800-52 Rev. 2",
+        "link": "https://csrc.nist.gov/pubs/sp/800/52/r2/final"
       }
     ],
     "keywords": [
@@ -21,13 +25,21 @@
   },
   "A0022-001": {
     "title": "Transport Protocol Encryption",
-    "definition": "Encrypting the entire transport layer or application layer communication data using custom algorithms or modified standard encryption algorithms.",
-    "description": "Transport layer encryption refers to encrypting data at the transport layer to prevent interception or tampering during transmission, such as by modifying SSL/TLS. Application layer encryption refers to encrypting data at the application layer to prevent interception or tampering during transmission, such as by modifying HTTPS. Because the data transmission protocol itself is directly encrypted, it can ignore the specific upper-layer business scenarios and achieve full coverage of all business scenarios under the application.",
-    "limitation": "Not applicable to scenarios where a browser is used for web page access. Additionally, modified protocols can still be cracked and reversed by attackers through packet capture tools, hooking remote request functions, or protocol-layer reverse engineering. Once the custom encryption algorithm is reversed, all traffic encryption protection can be bypassed.",
+    "definition": "Using standard TLS 1.2 or TLS 1.3 to protect data in transit, with mutual TLS or standard application-layer encryption where stronger peer authentication or sensitive-field protection is required.",
+    "description": "Transport protocol encryption should use publicly reviewed TLS 1.2 or TLS 1.3, correctly validate the server certificate, hostname, and certificate chain, and disable obsolete protocols, weak cipher suites, and insecure downgrade paths. Mutual TLS (mTLS) can validate client certificates when service-to-service interfaces require mutual authentication. Sensitive fields that must remain confidential across proxies, gateways, or intermediate processing stages can use a standard, mature application-layer encryption scheme in addition to TLS, backed by separate key generation, storage, rotation, and revocation controls. Custom cryptographic algorithms, proprietary handshakes, and modified SSL/TLS/HTTPS must not replace standard protocols because they lack adequate public review and can introduce hidden design and implementation flaws.",
+    "limitation": "TLS primarily protects the confidentiality and integrity of data while it traverses the network. If an endpoint, server, or trusted proxy is compromised, plaintext may still be stolen before encryption or after decryption. Certificate-validation errors, protocol downgrade, weak cipher suites, and poor key management can weaken or nullify the protection. Encrypted traffic also exposes metadata such as endpoints, timing, and volume that can support traffic analysis. mTLS and application-layer encryption add certificate and key lifecycle overhead, and application-layer encryption does not replace correctly configured TLS.",
     "references": [
       {
-        "title": "Transport Layer Security - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
+        "title": "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3",
+        "link": "https://www.rfc-editor.org/info/rfc8446/"
+      },
+      {
+        "title": "Guidelines for the Selection, Configuration, and Use of TLS Implementations - NIST SP 800-52 Rev. 2",
+        "link": "https://csrc.nist.gov/pubs/sp/800/52/r2/final"
+      },
+      {
+        "title": "Transport Layer Security Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"
       }
     ],
     "keywords": [

@@ -566,15 +566,15 @@
     ],
     "references": [
       {
-        "title": "AI语音克隆诈骗案例 - FBI",
-        "link": "https://www.ic3.gov/"
+        "title": "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud - FBI IC3",
+        "link": "https://www.ic3.gov/PSA/2024/PSA241203"
       },
       {
         "title": "语音深度伪造检测技术综述",
         "link": "https://arxiv.org/abs/2308.14970"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",
@@ -629,7 +629,8 @@
         "relation": "co-occurrence",
         "note": "AI语音克隆欺诈与AI深度伪造风险均可由攻击工具“AI深度伪造工具”直接造成。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0071-008": {
     "title": "数字人直播欺诈",
@@ -648,15 +649,15 @@
     ],
     "references": [
       {
-        "title": "关于加强网络直播规范管理工作的指导意见",
-        "link": "https://www.cac.gov.cn/"
+        "title": "互联网信息服务深度合成管理规定 - 中国网信网",
+        "link": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm"
       },
       {
-        "title": "AI数字人直播合规指引",
-        "link": "https://www.mct.gov.cn/"
+        "title": "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud - FBI IC3",
+        "link": "https://www.ic3.gov/PSA/2024/PSA241203"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -711,7 +712,8 @@
         "relation": "co-occurrence",
         "note": "数字人直播欺诈与流程自动化共享规避手段“账号处罚”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0071-009": {
     "title": "AI深度伪造风险",
@@ -891,9 +893,13 @@
       {
         "title": "Deepfake - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Deepfake"
+      },
+      {
+        "title": "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud - FBI IC3",
+        "link": "https://www.ic3.gov/PSA/2024/PSA241203"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
@@ -948,6 +954,7 @@
         "relation": "co-occurrence",
         "note": "AI合成视频欺诈与钓鱼攻击均可由攻击工具“AI深度伪造工具”直接造成。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

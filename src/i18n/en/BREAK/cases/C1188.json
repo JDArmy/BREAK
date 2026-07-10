@@ -11,11 +11,11 @@
       "cloud-native",
       "container startup parameters"
     ],
-    "summary": "CVE-2024-21626 allows an attacker to exploit leaked file descriptors via container startup parameters such as --entrypoint, directly overwriting executable files on the host and achieving full container escape to the host. This vulnerability involves scenarios where a privileged user executes a malicious container image.",
+    "summary": "CVE-2024-21626, disclosed on January 31, 2024, stems from leaked internal file descriptors in runc. An attacker able to start or execute a container can place the container process working directory inside the host filesystem namespace and read host files. A malicious image can also use the leaked descriptors to overwrite host binaries and escape the container.",
     "references": [
       {
-        "title": "runc File Descriptor Leak Vulnerability (CVE-2024-21626) - Alibaba Cloud Vulnerability Database",
-        "link": "https://avd.aliyun.com/detail?id=AVD-2024-21626"
+        "title": "runc Vulnerable to Container Breakout Through process.cwd Trickery and Leaked FDs - GitHub Advisory Database",
+        "link": "https://github.com/advisories/GHSA-xr7r-f8xq-vfvv"
       },
       {
         "title": "NVD: CVE-2024-21626 runc Container Escape Detail",

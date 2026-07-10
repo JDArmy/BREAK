@@ -17,6 +17,10 @@
       {
         "title": "Cheating in video games - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
+      },
+      {
+        "title": "Unfair advantages - How we moderate spectator and stream cheating | Beyond All Reason",
+        "link": "https://www.beyondallreason.info/microblogs/unfair-advantages-how-we-moderate-spectator-and-stream-cheating"
       }
     ],
     "riskAssessment": {
@@ -35,7 +39,7 @@
       "assessedAt": "2026-07-03",
       "priority": "P2"
     },
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "观战透视",
       "OB透视",
@@ -75,6 +79,7 @@
         "relation": "co-occurrence",
         "note": "观战透视与挂机均可由攻击工具“游戏外挂”直接造成。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

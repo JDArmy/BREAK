@@ -12,18 +12,26 @@
       "监管职责",
       "价格歧视"
     ],
-    "summary": "浙江省绍兴市柯桥区人民法院审理胡女士诉上海携程商务有限公司侵权责任纠纷案。胡女士通过携程 App 预订舟山希尔顿豪华湖景大床房支付 2889 元，后发现酒店实际房款为 1377.63 元。法院一审判令携程赔偿未完全赔付差价 243.37 元及订房差价三倍 4534.11 元，并要求携程 App 增加不同意服务协议和隐私政策仍可继续使用的选项或修订相关条款。",
+    "summary": "2021年7月，绍兴市柯桥区法院一审认定携程在胡女士订房交易中存在虚假宣传、价格欺诈和欺骗行为。胡女士支付2889元，酒店实际收款1377.63元；法院判令携程支付未退差价243.37元及三倍赔偿4534.11元，并整改App协议相关选项。",
     "category": "news_report",
     "relatedRisks": [
       "R0058"
     ],
     "references": [
       {
-        "title": "携程被判退一赔三，反“大数据杀熟”迈出标志性一步",
-        "link": "https://www.chinacourt.org/article/detail/2021/07/id/6157482.shtml"
+        "title": "平台采集个人信息进行大数据“杀熟”，订房价格竟比实际高出1倍 - 中国长安网",
+        "link": "http://www.chinapeace.gov.cn/chinapeace/c100047/2021-07/14/content_12509482.shtml"
+      },
+      {
+        "title": "携程涉嫌“大数据杀熟”，一审被判退一赔三 - 界面新闻",
+        "link": "https://m.jiemian.com/article/6357433.html"
+      },
+      {
+        "title": "以司法裁判向大数据杀熟说不 - 南阳市中级人民法院",
+        "link": "https://nyzy.hncourt.gov.cn/public/detail.php?id=27598"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "incidentTime": "2021-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

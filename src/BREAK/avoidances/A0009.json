@@ -9,9 +9,13 @@
       {
         "title": "速率限制 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Rate_limiting"
+      },
+      {
+        "title": "会话管理：整体超时与非活动超时 - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-4/sp800-63b/session/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "时间限制",
       "冷却时间",
@@ -53,6 +57,7 @@
         "relation": "complement",
         "note": "共同覆盖 23 个风险，共同限制 8 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -8,7 +8,7 @@
       "Data Trading Platform",
       "Crime-as-a-Service"
     ],
-    "description": "Organizations or individuals operating underground dark web trading marketplaces, providing Crime-as-a-Service (CaaS) infrastructure. These platforms host and facilitate trading of illegal goods and services, including stolen data, malware and exploit tools, attack services (DDoS-for-hire, RaaS), forged documents, and banking card kits. Platforms achieve anonymous transactions through cryptocurrency payments and mixing services, using Tor or I2P networks to conceal infrastructure.",
+    "description": "Organizations or individuals that operate underground marketplaces over existing anonymity networks such as Tor or I2P. They manage listing rules, product approval, transaction matching, and escrow mechanisms, but do not build the anonymity networks or general-purpose attack tools. These platforms facilitate trade in stolen data, malware, exploit tools, attack services, forged documents, and other illegal goods, while using cryptocurrency payments, mixing services, and anonymity networks to conceal participants and fund flows.",
     "references": [
       {
         "title": "Europol Internet Organised Crime Threat Assessment (IOCTA)",
@@ -16,7 +16,7 @@
       },
       {
         "title": "UNODC Darknet Cybercrime Threats to Southeast Asia",
-        "link": "https://www.unodc.org/"
+        "link": "https://www.unodc.org/roseap/uploads/archive/documents/Publications/2021/Darknet_Cybercrime_Threats_to_Southeast_Asia_report.pdf"
       }
     ]
   }

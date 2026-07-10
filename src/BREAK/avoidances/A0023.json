@@ -9,9 +9,13 @@
       {
         "title": "生物识别技术 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Biometric_authentication"
+      },
+      {
+        "title": "认证器要求：生物特征的有限使用 - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "生物特征识别",
       "生物识别",
@@ -53,7 +57,8 @@
         "relation": "complement",
         "note": "共同覆盖 15 个风险，共同限制 7 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0023-001": {
     "title": "人脸识别",
@@ -65,9 +70,13 @@
       {
         "title": "面部识别系统 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Facial_recognition"
+      },
+      {
+        "title": "人脸识别技术评测 1:1 验证 - NIST",
+        "link": "https://pages.nist.gov/frvt/html/frvt11.html"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "人脸识别",
       "面部识别",
@@ -82,7 +91,7 @@
       {
         "key": "A0024",
         "relation": "complement",
-        "note": "共同覆盖 22 个风险，共同限制 4 个攻击工具。"
+        "note": "共同覆盖 21 个风险，共同限制 4 个攻击工具。"
       },
       {
         "key": "A0044",
@@ -92,7 +101,7 @@
       {
         "key": "A0015",
         "relation": "complement",
-        "note": "共同覆盖 13 个风险，共同限制 2 个攻击工具。"
+        "note": "共同覆盖 12 个风险，共同限制 2 个攻击工具。"
       },
       {
         "key": "A0007",
@@ -102,13 +111,14 @@
       {
         "key": "A0020",
         "relation": "complement",
-        "note": "共同覆盖 10 个风险。"
+        "note": "共同覆盖 9 个风险。"
       },
       {
-        "key": "A0021",
+        "key": "A0016-003",
         "relation": "complement",
-        "note": "共同覆盖 9 个风险。"
+        "note": "共同覆盖 8 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

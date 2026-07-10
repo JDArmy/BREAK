@@ -12,10 +12,14 @@
       "software supply chain compromise",
       "malicious code injection"
     ],
-    "summary": "In December 2020, a backdoor was implanted into the software update package for SolarWinds' Orion platform, compromising thousands of institutional customers, including U.S. government agencies such as the National Security Agency and major enterprises. Attackers injected malicious code through the official update channel, enabling long-term persistence and large-scale data exfiltration from downs",
+    "summary": "In December 2020, CISA reported that an advanced persistent threat actor had used a SolarWinds Orion software supply-chain compromise to intrude into U.S. government agencies, critical infrastructure entities, and private organizations. The actor altered a dynamic-link library used by Orion products and entered victim environments through trusted updates. CISA directed affected organizations to isolate vulnerable versions, reset credentials, and investigate follow-on activity.",
     "references": [
       {
-        "title": "SUNBURST Additional Technical Details",
+        "title": "Advanced Persistent Threat Compromise of Government Agencies, Critical Infrastructure, and Private Sector Organizations - CISA",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-352a"
+      },
+      {
+        "title": "Analyzing Solorigate, the Compromised DLL File That Started a Sophisticated Cyberattack - Microsoft",
         "link": "https://www.microsoft.com/en-us/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/"
       }
     ]

@@ -1,31 +1,35 @@
 {
   "C1265": {
-    "title": "中间人攻击类型详解：Wi-Fi欺骗、HTTPS欺骗、SSL劫持、DNS欺骗",
+    "title": "澳大利亚男子因搭建“邪恶双胞胎”WiFi被起诉",
     "keywords": [
       "中间人攻击",
       "Wi-Fi欺骗",
-      "HTTPS欺骗",
-      "SSL劫持",
-      "DNS欺骗",
-      "电子邮件劫持",
-      "ARP欺骗",
-      "流量劫持",
+      "澳大利亚联邦警察",
+      "机场WiFi",
+      "航班WiFi",
+      "凭据窃取",
+      "钓鱼登录页",
+      "个人数据",
       "伪造接入点",
       "网络安全"
     ],
-    "summary": "CSDN文章列举了五种典型中间人攻击类型：Wi-Fi欺骗通过创建虚假同名Wi-Fi接入点劫持用户流量；HTTPS欺骗通过欺骗浏览器让用户访问伪造的可信站点；SSL劫持拦截HTTP到HTTPS的重定向过程植入恶意链接；DNS欺骗迫使浏览器在攻击者控制下访问伪造地址；电子邮件劫持通过获取邮件服务器权限拦截通信。",
-    "category": "academic_research",
+    "summary": "2024年6月28日，澳大利亚联邦警察通报起诉一名西澳男子。警方称其在珀斯、墨尔本和阿德莱德机场、国内航班等地点搭建模仿合法免费网络的“邪恶双胞胎”WiFi，诱导用户进入伪造页面并提交邮箱或社交账号凭据；调查人员从其设备中发现数十组他人凭据。",
+    "category": "news_report",
     "relatedRisks": [
       "R0142"
     ],
     "references": [
       {
-        "title": "一文带你了解中间人攻击MITM，从此不做网络的“傀儡”！ - 腾讯云",
-        "link": "https://cloud.tencent.com/developer/article/2488645"
+        "title": "Man charged over creation of 'evil twin' free WiFi networks to access personal data - Australian Federal Police",
+        "link": "https://www.afp.gov.au/news-centre/media-release/man-charged-over-creation-evil-twin-free-wifi-networks-access-personal"
+      },
+      {
+        "title": "WA man set up fake free WiFi at Australian airports and on flights to steal data - The Guardian",
+        "link": "https://www.theguardian.com/technology/article/2024/jun/28/wa-man-fake-free-wifi-airports-data-theft-ntwnfb"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2025-07",
+    "updated": "2026-07-10",
+    "incidentTime": "2024-06-28",
     "relatedAttackTools": [
       "AT0069"
     ],

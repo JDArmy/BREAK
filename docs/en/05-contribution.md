@@ -24,7 +24,7 @@ Adding any entity entry (Risk / Avoidance / AttackTool / ThreatActor / Term / Ca
 
 ## Adding an Entity Type (rare)
 
-If you need to add a 7th entity type, 11 places must change (see `CLAUDE.md` "New entity type checklist"): the data directory, `src/BREAK/index.ts`, `breakSchema.ts`, `entityRoute.ts`, `router/index.ts`, the View component, `useSearch.ts`, `useEntityResolver.ts`, `autoLinkkerCore.ts`, the i18n directory, and validation scripts. Only consider extracting an Entity Registry pattern when adding 3+ types per year; the current manual cost is manageable.
+Entity metadata is centralized in `src/BREAK/entityRegistry.ts`. Routes, ID-prefix inference, i18n paths, search, and detail navigation are derived from this registry. Add the registry entry first, then add the data directory and aggregation, Zod schema, list view, English i18n, any required lazy-loading strategy, and validation scripts. Do not add new hard-coded entity maps in consumers; see [Architecture & Data Pipeline](/docs/architecture) for the ownership boundaries.
 
 ## Three-Tier Quality Gates
 
@@ -58,6 +58,8 @@ Rules that cannot be fully machine-automated: `review:case-fact` (webpage fact v
 
 Typical changes that require updating both `docs/zh-CN/` and `docs/en/` include: routes / menus / view components, `KnowledgeSplitView`, search and entity-resolution composables, `src/validation/` schemas, the Entity Registry, `DATA_SCHEMA.md`, `scripts/validate/*.mjs`, and `package.json` build or validation scripts.
 
+The documentation supports Mermaid diagrams. Use a `mermaid` code block when a process, sequence, or relationship among three or more nodes is materially clearer as a diagram. Keep simple mappings, field comparisons, and short lists as tables or prose, and avoid expressing the same information twice.
+
 When changing business-domain classification validation, also document the maintenance rule for cross-domain / cross-risk-scene reuse: cross-linking is not a multi-select tag. Add it only when a risk is genuinely reused across multiple industries or problem domains, and record an auditable cross-scene reason.
 
 As of 2026-07-10, when adding or adjusting Risk / Avoidance entries that affect business-domain classification, also check the corresponding `riskScenes[*].risks` in `src/BREAK/business-domains/*.json` so directly relevant industry scenes or physical-consequence scenes are not missed. If relation-array changes affect derived Avoidance / AttackTool / ThreatActor lateral relations, run `npm run sync:lateral-relations` before committing. When the change only updates entity data and scene classification without changing the maintenance workflow, syncing README / Skill counts and this note is sufficient.
@@ -81,13 +83,13 @@ Typical changes that require updating `SKILL.md` and `SKILL_en.md` include: `scr
 - **description** ≥40 chars. AC02 (sense) / AC03 (identify) must hit a detection-signal keyword (collection side: collect/telemetry/fingerprint/log/traffic; judgment side: threshold/rule/model/baseline). Just writing "detect/identify" self-referential words is insufficient.
 - **limitation** required, ≥30 chars, no placeholder clichés. AC02/AC03 must contain a "bypass method" (bypass/crack/forgery/simulate) or "false-positive scenario" (false-positive/false-negative/misjudge).
 
-### keywords取舍
+### Choosing `keywords`
 
 Chinese keywords must verbatim include the title, supplemented with common search terms, aliases, jargon, and abbreviations. Do not use bare entity IDs as keywords, and do not force adjacent concepts into unrelated entities. English keywords should prefer real search phrases, avoiding overly broad words (security/risk/fraud spreading indiscriminately) and templated placeholders.
 
 ### references
 
-Array elements only allow `title` + a valid URL `link`. URLs should point to a specific accessible page, avoiding root-domain / homepage placeholder links. The 10 framework-homepage placeholder links (nist.gov/cyberframework, etc.) are banned for new entries.
+Array elements only allow `title` + a valid URL `link`. Each URL must point to a specific page whose title matches and whose content directly supports the entity behavior or fact; root domains, news indexes, research directories, and similar placeholders are not acceptable. The 10 framework-homepage placeholders and confirmed generic organization landing pages are banned for new entries. Wikipedia is classified only as secondary background material and cannot replace government, judicial, academic, or original security-research evidence.
 
 ## Admission Standard
 
@@ -111,12 +113,15 @@ npm run sync:risk-assessment       # recompute Risk assessment priority
 npm run audit:risk-case-coverage   # audit Risk-Case coverage (non-blocking)
 npm run audit:risk-threat-actor-coverage # audit Risk-ThreatActor coverage and exemptions (non-blocking)
 npm run audit:admission            # admission-standard patrol (report only, non-blocking)
+npm run entity:version:bump        # bump version/updated for substantively changed entities
+npm run version:sync -- --bump=patch --note="description" # sync project version, basic info, and CHANGELOG
 npm run build                      # full release gate (lint→validate→test→export→build→package→audit)
 ```
 
 ## Version & Commit Conventions
 
 - **Bump the version before every commit**: small changes are a patch (2.42.40 → 2.42.41), larger changes a minor (→ 2.43.0), major changes a major (→ 3.0.0). Use `npm run version:sync -- --bump=patch|minor|major --note="description"`.
+- **Keep entity and project versions separate**: run `npm run entity:version:bump` for substantive entity changes. `npm run version:bump` is a compatibility alias of `version:sync`; it does not bump entity versions.
 - **Run `npm run build` before every commit** to ensure the build passes.
 - **The CHANGELOG filename must be all-uppercase**: `CHANGELOG.md`.
 - pre-commit enables `review:changed` by default (only when there are `src/BREAK/*.json` changes); set `BREAK_REVIEW_ON_COMMIT=0` to skip temporarily.

@@ -5,14 +5,14 @@
     "definition": "对智能合约代码进行系统性的人工审查和专业分析，识别潜在的安全漏洞和逻辑缺陷",
     "description": "智能合约安全审计由专业团队对合约代码进行系统性人工审查与规则匹配，运用权限校验、重入检测、整数溢出比对、序列校验等判定逻辑识别安全漏洞和逻辑缺陷，审计报告按严重/高危/中危/低危分级并给出修复建议。",
     "complexity": "中级",
-    "limitation": "人工审计依赖审计人员的经验和专业水平，可能遗漏复杂的逻辑漏洞；审计成本较高，周期较长；审计只能针对特定版本的代码，后续修改需要重新审计",
+    "limitation": "人工审计依赖审计人员经验，攻击者可借助代码混淆、跨合约调用和部署后升级绕过既有审计范围，复杂逻辑漏洞也可能漏报；审计只覆盖特定版本且成本高、周期长，结论被过度解读还会形成错误安全感。",
     "references": [
       {
         "title": "Smart Contract Vulnerabilities and Mitigation Strategies",
         "link": "https://www.nethermind.io/blog/smart-contract-vulnerabilities-and-mitigation-strategies"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "智能合约安全审计",
       "智能合约",
@@ -60,14 +60,14 @@
     "definition": "在项目发布前进行第三方代码审计，并在区块链浏览器上公开验证合约源代码",
     "description": "通过透明度和专业审查降低Rug Pull风险。实施要点：聘请知名审计公司（如CertiK、Quantstamp）进行全面代码审计，公开发布审计报告；在Etherscan等区块链浏览器上验证并公开合约源代码，让投资者可以检查；重点审查是否存在隐藏的铸币函数、暂停交易函数、owner特权、流动性撤回后门等Rug Pull常见手法；检查代理合约的升级权限，确保无法恶意替换实现；审计后的代码不应再修改，如需修改需重新审计。Coinbase等平台建议投资者优先选择经过审计的项目。",
     "complexity": "中级",
-    "limitation": "审计无法保证发现所有漏洞，且成本高（数万至数十万美元）；审计报告可能被造假或断章取义；即使通过审计的项目也可能通过其他方式Rug Pull（如社交工程）；代码开源不等于安全",
+    "limitation": "审计无法保证发现所有漏洞，攻击者可通过代理合约升级、未审计组件或社交工程绕过已公开验证的代码范围；审计报告还可能被伪造或断章取义，导致用户误判安全性，即使代码开源并通过审计仍可能发生Rug Pull。",
     "references": [
       {
         "title": "Rugsafe: A multichain protocol for recovering from rug pulls",
         "link": "https://arxiv.org/html/2507.06423v1"
       }
     ],
-    "updated": "2026-06-16",
+    "updated": "2026-07-10",
     "keywords": [
       "智能合约代码审计与公开验证",
       "代码审计",

@@ -11,11 +11,15 @@
       "port scanning",
       "incident response"
     ],
-    "summary": "In September 2019, an internal network server was hit by a fileless cryptomining attack. The attacker leveraged SMB anonymous login and password brute-forcing to deliver the malware, executing mining code in memory via PowerShell without dropping files to disk, causing 100% CPU usage. The attack also used scheduled tasks to download malicious files and involved port scanning and lateral movement.",
+    "summary": "On September 10, 2019, an internal server was hit by a fileless cryptomining attack. The attacker used SMB password brute force to deliver the payload and kept mining code running in memory through PowerShell. Analysis also found scanning of ports 445 and 65529, lateral propagation, scheduled downloads of malicious files, and exploitation of MS17-010 for further spread.",
     "references": [
       {
-        "title": "Emergency Response Series: Analysis of Fileless Attacks - FreeBuf Cybersecurity Industry Portal",
+        "title": "Incident Response Series: Fileless Attack Analysis - FreeBuf",
         "link": "https://www.freebuf.com/articles/network/216918.html"
+      },
+      {
+        "title": "Incident Response Series: Fileless Attack Analysis - Sohu",
+        "link": "https://www.sohu.com/a/349141712_354899"
       }
     ]
   }

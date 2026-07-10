@@ -9,9 +9,13 @@
       {
         "title": "会话管理 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Session_(computer_science)"
+      },
+      {
+        "title": "会话管理安全指南 - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "踢出登录态",
       "强制下线",
@@ -53,6 +57,7 @@
         "relation": "complement",
         "note": "共同覆盖 14 个风险，共同限制 3 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

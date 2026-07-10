@@ -13,23 +13,23 @@
       "凭据窃取",
       "无文件攻击"
     ],
-    "summary": "2017年全球爆发的Petya/NotPetya攻击大量利用Living off the Land技术。攻击者使用Mimikatz从内存转储凭据，并利用窃取的账户凭据通过PsExec和WMI命令行工具在网络上远程执行自身，实现横向移动。攻击者将系统内置工具与合法管理软件滥用为传播载体，但同时仍以DLL文件等形式投放恶意组件完成初始感染与载荷执行。",
+    "summary": "2017年6月，NotPetya最初经乌克兰财务应用M.E.Doc遭篡改的更新过程进入企业网络，随后使用凭据转储工具获取账户信息，并通过PsExec在内网远程执行和横向传播。该事件将受损软件供应链与合法系统管理工具滥用结合，成为Living off the Land技术扩大破坏范围的典型案例。",
     "category": "security_incident",
     "relatedRisks": [
       "R0152"
     ],
     "references": [
       {
-        "title": "什么是Living off the Land? - 努力奋斗小青年 - 博客园",
-        "link": "https://www.cnblogs.com/taoyuanming/p/12929307.html"
+        "title": "New ransomware, old techniques: Petya adds worm capabilities - Microsoft Security Blog",
+        "link": "https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/"
       },
       {
         "title": "Advanced Threat Analytics security research network technical analysis: NotPetya - Microsoft Security Blog",
         "link": "https://www.microsoft.com/en-us/security/blog/2017/10/03/advanced-threat-analytics-security-research-network-technical-analysis-notpetya/"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2017",
+    "updated": "2026-07-10",
+    "incidentTime": "2017-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

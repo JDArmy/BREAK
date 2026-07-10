@@ -8,15 +8,15 @@ allowed-tools: Bash
 
 # BREAK Knowledge Base Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,386 entries across the following entity types:
+BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,391 entries across the following entity types:
 
 | Type           | Count | ID Format          | Description                                   |
 | -------------- | ----- | ------------------ | --------------------------------------------- |
 | Risk           | 400   | R0001, R0001-001   | Business security risk definitions and impact |
 | Avoidance      | 350   | A0001, A0001-001   | Defensive measures against risks              |
-| AttackTool     | 124   | AT0001, AT0001-001 | Tools used by threat actors                   |
+| AttackTool     | 125   | AT0001, AT0001-001 | Tools used by threat actors                   |
 | ThreatActor    | 83    | TA0001, TA0001-001 | Groups that carry out attacks                 |
-| Term           | 628   | T0001              | Business security terminology                 |
+| Term           | 632   | T0001              | Business security terminology                 |
 | Case           | 1781  | C0001              | Real-world security incident cases            |
 | BusinessDomain | 20    | BD00               | Industry/business domain categories           |
 
@@ -159,6 +159,8 @@ When `scripts/skill/` search / packaging scripts, exported Chinese / English dat
 Data-quality fixes also affect Skill search results. When fixing Case `references` / `summary` fact-check issues or adjusting Risk `avoidances` relationships, keep the English translation files in sync and make the first two Case references point to stable pages with crawlable article text whenever possible, so Skill-returned case facts remain reviewable.
 
 The 2026-07-10 ThreatActor coverage update adds logistics arbitrage, malicious logistics worker, market manipulation, malicious quantitative trading, AI agent attack, abusive platform rule operation, and communications abuse service roles. The new `audit:risk-threat-actor-coverage` command separates actionable relationship gaps from explicitly exempt risks without changing Skill invocation parameters, search fields, or result formats.
+
+The 2026-07-10 ThreatActor reference audit reclassifies Wikipedia as secondary background material, flags generic organization homepages, news indexes, and research directories, and strengthens actor evidence with government, judicial, academic, and original security-research sources. It does not change Skill invocation parameters, search fields, result formats, or entity structure.
 
 The 2026-07-10 entity-granularity review removes unrelated Term relationships from R0285 and a duplicate Avoidance reference from R0159. This maintenance does not change Skill invocation parameters, search fields, return format, or entity structure.
 

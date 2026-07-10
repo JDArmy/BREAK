@@ -1,21 +1,25 @@
 {
   "C1124": {
-    "title": "Gemini AI Weaponized as PhaaS: The Industrial Evolution of Intelligent Phishing Attacks",
+    "title": "Google Sues Outsider Enterprise for Abusing Gemini in Phishing Operations",
     "keywords": [
       "Gemini AI phishing",
-      "PhaaS automation",
+      "Outsider Enterprise",
       "AI weaponization",
-      "Google Gemini bypass",
+      "phishing-as-a-service",
       "social engineering automation",
       "phishing page generation",
-      "LLM guardrail bypass",
-      "intelligent phishing industrialization"
+      "fake websites",
+      "malicious URLs"
     ],
-    "summary": "Cybercriminals bypassed Google Gemini's safety guardrails to deeply embed large model capabilities into the full PhaaS (Phishing-as-a-Service) chain. Attackers can leverage Gemini to automate reconnaissance and generate highly customized social engineering scripts and phishing page code, enabling fully automated, mass-produced phishing attacks that compress the per-target attack cost from hours to",
+    "summary": "In June 2026, Google sued the cybercrime group Outsider Enterprise. The group operated a phishing-as-a-service platform through Telegram and abused Gemini to generate spoofed website code and scam copy. By the time of the lawsuit, the operation had created more than 9,000 fake websites and over one million malicious URLs and had sent 2.5 million scam texts to Android users during one two-week period.",
     "references": [
       {
         "title": "Research on Large-Scale Phishing Attacks and Defense Technologies Empowered by Generative AI - Tencent Cloud",
         "link": "https://cloud.tencent.com/developer/article/2688865"
+      },
+      {
+        "title": "How Google is combatting AI scams and dismantling the Outsider Enterprise - Google",
+        "link": "https://blog.google/innovation-and-ai/technology/safety-security/combatting-ai-scams/"
       }
     ]
   }

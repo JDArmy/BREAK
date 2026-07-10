@@ -9,18 +9,18 @@
       "智能合约漏洞",
       "区块链安全"
     ],
-    "summary": "Warp Finance协议遭受闪电贷攻击事件被作为典型案例进行分析。攻击者利用闪电贷机制进行攻击，研究提出了闪电贷攻击分析框架（FAA），以帮助分析此类DeFi攻击事件。",
+    "summary": "2022年12月，研究团队在线发表以Warp Finance攻击为案例的论文，基于该事件的数据提出闪电贷攻击分析框架（FAA）。该框架用于拆解DeFi系统中的攻击步骤、资产变化和损害模型，帮助安全从业者理解闪电贷攻击影响，并评估适用于同类事件的预防措施。",
     "category": "academic_research",
     "relatedRisks": [
       "R0160"
     ],
     "references": [
       {
-        "title": "The flash loan attack analysis (FAA) framework—A case study of the warp finance exploitation",
-        "link": "https://www.mdpi.com/2227-9709/10/1/3"
+        "title": "The Flash Loan Attack Analysis (FAA) Framework—A Case Study of the Warp Finance Exploitation - ProQuest",
+        "link": "https://search.proquest.com/openview/0f409b01691c00a6d327c6fc2b8c1aff/1?pq-origsite=gscholar&cbl=2032385"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2022-12-30"

@@ -6,6 +6,10 @@
       {
         "title": "Gold Farming - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Gold_farming"
+      },
+      {
+        "title": "Understanding ‘Gold Farming’ and Real-Money Trading as the Intersection of Real and Virtual Economies",
+        "link": "https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/868/633"
       }
     ],
     "buildAttackTools": [
@@ -53,7 +57,7 @@
       "R0034",
       "R0050"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "打金工作室",
       "游戏打金",
@@ -94,7 +98,8 @@
         "relation": "co-involved",
         "note": "共同直接造成 2 个风险，共同间接支持 5 个风险，共同使用 5 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "TA0025-001": {
     "title": "点券金币商",
@@ -103,6 +108,10 @@
       {
         "title": "Real-Money Trading - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Real-money_trading"
+      },
+      {
+        "title": "Understanding ‘Gold Farming’ and Real-Money Trading as the Intersection of Real and Virtual Economies",
+        "link": "https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/868/633"
       }
     ],
     "buildAttackTools": [
@@ -133,7 +142,7 @@
       "R0051",
       "R0051-001"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "点券金币商",
       "游戏币商",
@@ -174,7 +183,8 @@
         "relation": "co-involved",
         "note": "共同直接造成 1 个风险，共同间接支持 6 个风险，共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "TA0025-002": {
     "title": "游戏代练员",
@@ -183,6 +193,10 @@
       {
         "title": "Boosting (Video Games) - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Boosting_(video_games)"
+      },
+      {
+        "title": "MMR / Elo Boosting - Rank Manipulation - Riot Games Support",
+        "link": "https://support.riotgames.com/zh-cn/league-of-legends/penalties/mmr-elo-boosting-rank-manipulation"
       }
     ],
     "buildAttackTools": [
@@ -217,7 +231,7 @@
       "R0050",
       "R0001-003"
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-10",
     "keywords": [
       "游戏代练员",
       "代练",
@@ -245,11 +259,6 @@
         "note": "共同直接造成 3 个风险，共同间接支持 6 个风险，共同建设 1 个攻击工具，共同使用 3 个攻击工具。"
       },
       {
-        "key": "TA0025-003",
-        "relation": "co-involved",
-        "note": "共同间接支持 8 个风险，共同使用 3 个攻击工具。"
-      },
-      {
         "key": "TA0012",
         "relation": "co-involved",
         "note": "共同间接支持 7 个风险，共同使用 4 个攻击工具。"
@@ -258,8 +267,14 @@
         "key": "TA0028",
         "relation": "co-involved",
         "note": "共同直接造成 3 个风险，共同间接支持 4 个风险，共同使用 4 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 5 个风险，共同使用 5 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "TA0025-003": {
     "title": "游戏演员",
@@ -268,16 +283,17 @@
       {
         "title": "Match Fixing - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Match_fixing"
+      },
+      {
+        "title": "/dev：2025 年封禁机器人、代练及其他违规行为",
+        "link": "https://www.leagueoflegends.com/en-us/news/dev/dev-banning-bots-boosters-and-more-in-2025/"
       }
     ],
-    "buildAttackTools": [
-      "AT0049"
-    ],
+    "buildAttackTools": [],
     "useAttackTools": [
       "AT0002",
       "AT0034-001",
-      "AT0048",
-      "AT0049"
+      "AT0048"
     ],
     "directCauseRisks": [
       "R0107"
@@ -294,7 +310,7 @@
       "R0050",
       "R0001-003"
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "keywords": [
       "游戏演员",
       "送分演员",
@@ -314,17 +330,17 @@
       {
         "key": "TA0025-002",
         "relation": "co-involved",
-        "note": "共同间接支持 8 个风险，共同使用 3 个攻击工具。"
-      },
-      {
-        "key": "TA0025",
-        "relation": "co-involved",
-        "note": "共同间接支持 6 个风险，共同建设 1 个攻击工具，共同使用 4 个攻击工具。"
+        "note": "共同间接支持 8 个风险，共同使用 2 个攻击工具。"
       },
       {
         "key": "TA0012",
         "relation": "co-involved",
         "note": "共同间接支持 7 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0025",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险，共同使用 3 个攻击工具。"
       },
       {
         "key": "TA0002",
@@ -336,6 +352,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 5 个风险，共同使用 2 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

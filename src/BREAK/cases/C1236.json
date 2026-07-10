@@ -1,6 +1,6 @@
 {
   "C1236": {
-    "title": "2021年反垄断大年：阿里、美团、腾讯接连遭处罚",
+    "title": "新京报盘点2021年互联网平台反垄断处罚",
     "keywords": [
       "反垄断",
       "阿里巴巴",
@@ -13,18 +13,26 @@
       "互联网平台",
       "国家市场监督管理总局"
     ],
-    "summary": "2021年，中国反垄断执法进入“大年”。阿里巴巴因滥用市场支配地位被罚182.28亿元，美团因“二选一”被罚34.42亿元，腾讯、京东等因未依法申报经营者集中被顶格处罚50万元。监管层对互联网平台的反垄断监管措施不断加强。",
-    "category": "administrative_enforcement",
+    "summary": "2021年12月，新京报回顾当年互联网平台反垄断执法：阿里巴巴因滥用市场支配地位被罚182.28亿元，美团因实施“二选一”被罚34.42亿元；腾讯等平台企业还因未依法申报经营者集中受到处罚。报道将2021年称为中国反垄断“大年”。",
+    "category": "news_report",
     "relatedRisks": [
       "R0135"
     ],
     "references": [
       {
-        "title": "银川市市场监管局托管：《中国反垄断执法年度报告（2021）》",
-        "link": "https://scjg.yinchuan.gov.cn/scjgzt/scjggz/fgjd2020/202206/P020220615574245104789.pdf"
+        "title": "2021：中国反垄断“大年” - 新京报",
+        "link": "https://m.bjnews.com.cn/detail/164009242014784.html"
+      },
+      {
+        "title": "市场监管总局依法对阿里巴巴集团实施“二选一”垄断行为作出行政处罚 - 国家药品监督管理局转载",
+        "link": "https://www.nmpa.gov.cn/yaowen/shchjgyw/20210413083653103.html?type=pc&m="
+      },
+      {
+        "title": "市场监管总局依法对美团实施“二选一”垄断行为作出行政处罚 - 河北省市场监督管理局转载",
+        "link": "https://scjg.hebei.gov.cn/info/74027"
       }
     ],
-    "updated": "2026-06-25",
+    "updated": "2026-07-10",
     "incidentTime": "2021-12",
     "relatedAttackTools": [],
     "relatedThreatActors": []

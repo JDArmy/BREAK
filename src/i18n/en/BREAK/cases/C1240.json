@@ -1,6 +1,6 @@
 {
   "C1240": {
-    "title": "LexisNexis Reveals Two Methods of Synthetic Identity Creation",
+    "title": "LexisNexis Launches a Synthetic Identity Fraud Detection Score",
     "keywords": [
       "synthetic identity fraud",
       "manipulated synthetic identity",
@@ -13,11 +13,15 @@
       "invalid SSN",
       "financial crime"
     ],
-    "summary": "LexisNexis Risk Solutions analysis identifies two categories of synthetic identity fraud: manipulated synthetic identities, which make limited alterations to real identities to conceal adverse history, and manufactured synthetic identities, which assemble valid data from multiple identities or create entirely new identities using invalid SSNs within the same range as SSA randomly issued numbers. T",
+    "summary": "In July 2021, LexisNexis Risk Solutions announced Fraud Intelligence Synthetic Score. The product analyzes hundreds of identity characteristics and events to identify inconsistencies and synthetic fraud patterns in new-account applications. It produces a three-digit risk score from 001 to 998 to help investigation teams prioritize higher-risk applications.",
     "references": [
       {
-        "title": "Synthetic Identity Fraud - LexisNexis Risk Solutions",
-        "link": "https://risk.lexisnexis.com/insights-resources/article/synthetic-identity-fraud"
+        "title": "LexisNexis Risk Solutions Introduces Fraud Intelligence Synthetic Score",
+        "link": "https://risk.lexisnexis.com/about-us/press-room/press-release/20210721-fraud-intelligence-synthetic-score"
+      },
+      {
+        "title": "LexisNexis Risk Solutions Introduces Fraud Intelligence Synthetic Score - The Paypers",
+        "link": "https://thepaypers.com/fraud-and-fincrime/news/lexisnexis-risk-solutions-introduces-fraud-intelligence-synthetic-score"
       }
     ]
   }

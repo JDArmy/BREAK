@@ -1,6 +1,6 @@
 {
   "C1190": {
-    "title": "Capital One因配置错误导致数据泄露事件",
+    "title": "Capital One 2019年数据泄露事件",
     "keywords": [
       "Capital One",
       "数据泄露",
@@ -11,23 +11,23 @@
       "云安全",
       "AWS S3"
     ],
-    "summary": "2019年，Capital One因云基础设施配置错误（如存储桶权限不当）导致超过1亿客户数据泄露。该事件是云配置漏洞引发严重后果的标志性案例，凸显了IAM权限管理及存储安全的重要性。",
+    "summary": "2019年7月19日，Capital One确认一名外部人员未经授权获取信用卡申请相关个人信息，影响美国约1亿人和加拿大约600万人。公司称信用卡账号和登录凭据未被泄露，社会安全号码受影响比例低于1%；FBI随后抓获涉案人员，政府认为数据已被找回。",
     "category": "security_incident",
     "relatedRisks": [
       "R0128"
     ],
     "references": [
       {
-        "title": "Seattle Tech Worker Arrested for Data Theft Involving Large Financial Services Company - U.S. Department of Justice",
-        "link": "https://www.justice.gov/usao-wdwa/pr/seattle-tech-worker-arrested-data-theft-involving-large-financial-services-company"
+        "title": "Capital One Announces Data Security Incident",
+        "link": "https://www.capitalone.com/about/newsroom/capital-one-announces-data-security-incident"
       },
       {
-        "title": "2019 Capital One Cyber Incident | What Happened - Capital One",
-        "link": "https://www.capitalone.com/digital/facts2019/"
+        "title": "Capital One Announces Data Security Incident - Official Release Text Mirror",
+        "link": "https://r.jina.ai/https://www.capitalone.com/about/newsroom/capital-one-announces-data-security-incident"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2019",
+    "updated": "2026-07-10",
+    "incidentTime": "2019-07-19",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

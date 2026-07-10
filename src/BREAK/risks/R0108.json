@@ -6,6 +6,8 @@
     "complexity": "basic",
     "influence": "影响平台营收。大量的虚拟货币或物品的流通可能破坏游戏内部经济平衡，导致通货膨胀，影响正常玩家的游戏体验。",
     "avoidances": [
+      "A0001",
+      "A0021",
       "A0015",
       "A0029-001",
       "A0061"
@@ -14,9 +16,17 @@
       {
         "title": "Gold farming - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Gold_farming"
+      },
+      {
+        "title": "理解游戏打金与现实货币交易：现实与虚拟经济的交汇",
+        "link": "https://research.manchester.ac.uk/en/publications/understanding-gold-farming-and-real-money-trading-as-the-intersec/"
+      },
+      {
+        "title": "游戏打金与现实货币交易研究论文",
+        "link": "https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/868/633"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "游戏打金",
       "打金币",
@@ -49,7 +59,7 @@
       {
         "key": "R0001-002",
         "relation": "co-occurrence",
-        "note": "游戏打金与自动化模拟器共享规避手段“风控策略”。"
+        "note": "游戏打金与自动化模拟器共享规避手段“人机验证技术”。"
       },
       {
         "key": "R0012",
@@ -71,6 +81,7 @@
         "relation": "co-occurrence",
         "note": "游戏打金与带老板共享规避手段“风控策略”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

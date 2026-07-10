@@ -10,11 +10,11 @@
       "blockchain exploitation",
       "DeFi attack analysis"
     ],
-    "summary": "The Warp Finance protocol incident is analyzed as a representative case of flash loan attacks. The attacker exploited flash loan mechanisms to carry out the attack, and the study proposes a Flash Loan Attack Analysis (FAA) framework to assist in examining such DeFi attack events.",
+    "summary": "In December 2022, researchers published an online study using the Warp Finance exploit as a case study and proposed the Flash Loan Attack Analysis (FAA) framework from its data. The framework breaks down attack steps, asset changes, and damage models in DeFi systems, helping security practitioners understand the effects of flash loan attacks and assess preventive measures for similar incidents.",
     "references": [
       {
-        "title": "The Flash Loan Attack Analysis (FAA) Framework—A Case Study of the Warp Finance Exploitation",
-        "link": "https://www.mdpi.com/2227-9709/10/1/3"
+        "title": "The Flash Loan Attack Analysis (FAA) Framework—A Case Study of the Warp Finance Exploitation - ProQuest",
+        "link": "https://search.proquest.com/openview/0f409b01691c00a6d327c6fc2b8c1aff/1?pq-origsite=gscholar&cbl=2032385"
       }
     ]
   }

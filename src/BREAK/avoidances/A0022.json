@@ -9,9 +9,13 @@
       {
         "title": "传输层安全性协议 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
+      },
+      {
+        "title": "TLS 协议选择、配置和使用指南 - NIST SP 800-52 Rev. 2",
+        "link": "https://csrc.nist.gov/pubs/sp/800/52/r2/final"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "流量加密",
       "传输加密",
@@ -53,21 +57,30 @@
         "relation": "complement",
         "note": "共同覆盖 6 个风险，共同限制 7 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0022-001": {
     "title": "传输协议加密",
     "category": "AC01",
-    "definition": "对整个传输层或应用层通信数据采用自定义算法加密或魔改通用加密算法。",
-    "description": "传输层加密是指在传输层对数据进行加密，以保证数据在传输过程中不被窃取或篡改，譬如魔改SSL、TLS等。应用层加密是指在应用层对数据进行加密，以保证数据在传输过程中不被窃取或篡改，譬如魔改HTTPS等。因直接对数据传输协议进行加密，所以可以忽略上层的具体业务域范围，实现对应用下面的全业务域范围覆盖。",
-    "limitation": "无法适用于使用浏览器进行网页访问的场景；且魔改协议仍可被攻击者通过抓包工具、HOOK远程请求函数、协议层逆向等方式破解还原，自定义加密算法一旦被还原即可规避全部流量加密防护。",
+    "definition": "使用标准 TLS 1.2 或 TLS 1.3 保护传输中的通信数据，并在必要时通过双向 TLS 或标准应用层加密增强身份认证与敏感字段保护。",
+    "description": "传输协议加密应采用经过公开审查的 TLS 1.2 或 TLS 1.3，正确验证服务端证书、主机名和证书链，禁用过时协议、弱密码套件与不安全降级；服务间接口需要双向身份认证时，可使用双向 TLS（mTLS）校验客户端证书。对必须跨代理、网关或中间处理环节保持机密的敏感字段，可在 TLS 之外使用标准、成熟的应用层加密方案，并建立独立的密钥生成、存储、轮换和吊销机制。不得以自研密码算法、私有握手流程或魔改 SSL/TLS/HTTPS 替代标准协议，因为其安全性缺乏充分公开验证，且容易引入不可见的设计与实现缺陷。",
+    "limitation": "TLS 主要保护数据在传输链路中的机密性和完整性，终端、服务端或受信代理一旦失陷，明文仍可能在加密前或解密后被窃取。证书校验错误、协议降级、弱套件或密钥管理不当会削弱甚至使防护失效；加密流量仍会暴露地址、时序和流量大小等元数据，可能被用于流量分析。mTLS 与应用层加密还会增加证书和密钥生命周期管理成本，应用层加密也不能替代正确配置的 TLS。",
     "references": [
       {
-        "title": "传输层安全性协议 - 维基百科",
-        "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
+        "title": "RFC 8446：传输层安全协议 TLS 1.3",
+        "link": "https://www.rfc-editor.org/info/rfc8446/"
+      },
+      {
+        "title": "TLS 协议选择、配置和使用指南 - NIST SP 800-52 Rev. 2",
+        "link": "https://csrc.nist.gov/pubs/sp/800/52/r2/final"
+      },
+      {
+        "title": "Transport Layer Security Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "传输协议加密",
       "TLS加密",
@@ -75,7 +88,7 @@
       "协议层加密",
       "传输层加密",
       "应用层加密",
-      "私有TLS"
+      "双向TLS"
     ],
     "effectiveness": "high",
     "relatedAvoidances": [
@@ -109,7 +122,8 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0022-002": {
     "title": "请求数据加密",

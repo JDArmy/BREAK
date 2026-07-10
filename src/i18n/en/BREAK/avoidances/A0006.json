@@ -24,7 +24,7 @@
     "title": "Manual Content Review",
     "definition": "Reviewing user-generated content for compliance through human review.",
     "description": "Manual review is most commonly used for reviewing images, videos, and video streams, or to supplement automated machine identification with stronger judgment. Reviewers manually adjudicate suspicious content according to platform rules, make final disposition decisions on borderline scenarios and high-risk samples such as political or pornographic content that machines struggle to judge, and continuously feed labeled samples back into the detection model.",
-    "limitation": "Due to human resource and efficiency constraints, multi-account, large-scale automated requests can be used to achieve a denial-of-service attack against human reviewers. This can result in prolonged downtime for pre-publication review, or significantly extended response times for post-publication removal of malicious content.",
+    "limitation": "Because human review capacity and throughput are limited, attackers can use many accounts and high-volume automated submissions to exhaust reviewers, bypass pre-publication checks, or substantially delay post-publication removal. Legitimate traffic spikes may also consume review capacity and cause false negatives or delayed handling.",
     "references": [
       {
         "title": "Provisions on the Governance of the Online Information Content Ecosystem",
@@ -86,7 +86,7 @@
     "title": "Automated Malicious Video Detection",
     "definition": "Identifying malicious video content in user-generated content, including keyframe and audio track recognition.",
     "description": "The current general approach to malicious video detection is to extract key frames as images and then perform malicious image detection (A0006-002), and to extract the audio track for automated malicious audio detection (A0006-003). With the development of AI-generated content, multi-modal large models have gained the ability to understand video content, and detection effectiveness is being significantly improved.",
-    "limitation": "This is equally subject to the limitations of automated malicious image detection (A0006-002) and automated malicious audio detection (A0006-003).",
+    "limitation": "This control inherits the limitations of automated malicious image detection (A0006-002) and automated malicious audio detection (A0006-003): adversarial examples, video re-encoding, and audio replacement can bypass detection, while complex backgrounds, dialects, or legitimate editing may cause false positives and false negatives.",
     "references": [
       {
         "title": "TRECVID - NIST",

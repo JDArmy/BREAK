@@ -1,18 +1,18 @@
 {
   "C1124": {
-    "title": "Gemini AI武器化PhaaS：智能钓鱼攻击的工业化演进",
+    "title": "Google起诉Outsider Enterprise滥用Gemini实施钓鱼",
     "keywords": [
       "Gemini",
-      "PhaaS",
+      "Outsider Enterprise",
       "钓鱼即服务",
       "AI武器化",
       "自动化攻击",
       "社会工程学",
       "Google",
-      "安全护栏绕过",
-      "智能钓鱼"
+      "虚假网站",
+      "恶意URL"
     ],
-    "summary": "黑产通过技术手段绕过Google Gemini的安全护栏，将大模型能力深度嵌入钓鱼即服务（PhaaS）全链路。攻击者可利用Gemini自动完成情报侦察、生成高度定制化的社工话术和钓鱼页面代码，实现钓鱼攻击的全自动化、规模化量产，将单目标攻击成本从数小时压缩至秒级。",
+    "summary": "2026年6月，Google起诉网络犯罪团伙Outsider Enterprise。该团伙通过Telegram经营钓鱼即服务平台，滥用Gemini生成仿冒网站代码和诈骗文案；截至起诉时已搭建9000余个虚假网站、生成逾100万个恶意URL，并曾在两周内向Android用户推送250万条诈骗短信。",
     "category": "news_report",
     "relatedRisks": [
       "R0118"
@@ -21,14 +21,18 @@
       {
         "title": "生成式AI 赋能下大规模网络钓鱼攻击与防御技术研究 - 腾讯云",
         "link": "https://cloud.tencent.com/developer/article/2688865"
+      },
+      {
+        "title": "How Google is combatting AI scams and dismantling the Outsider Enterprise - Google",
+        "link": "https://blog.google/innovation-and-ai/technology/safety-security/combatting-ai-scams/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [
       "AT0053-004",
       "AT0063-001"
     ],
     "relatedThreatActors": [],
-    "incidentTime": "2024-11-01"
+    "incidentTime": "2026-06"
   }
 }

@@ -24,7 +24,7 @@
     "title": "User Profiling",
     "definition": "Labeling users and describing their characteristics and behavior through various tags.",
     "description": "User profiling refers to labeled user models abstracted from user attributes, preferences, lifestyle habits, and behavior. In plain terms, it means assigning tags to users — tags are highly refined characteristic identifiers derived from analyzing user information. Through labeling, users can be described using highly summarized, easy-to-understand characteristics, making it easier for people to understand users and for computers to process them.",
-    "limitation": "Data quality issues: user profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: user profiling requires collecting large amounts of user data; if not handled properly, it will involve user privacy concerns. Timeliness issues: user profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
+    "limitation": "User profiling depends on extensive, high-quality historical data, so cold starts, missing data, and stale records can cause false positives and false negatives. Attackers may bypass anomaly detection by aging accounts, imitating normal spending patterns, and distributing activity to poison baselines. Predictions decay as business contexts and user habits change, requiring continuous label and model calibration. Large-scale collection, cross-platform linkage, and long-term retention also face privacy, data-silo, and leakage constraints.",
     "references": [
       {
         "title": "Personal Information Protection Law of the People’s Republic of China - Cyberspace Administration of China",
@@ -66,7 +66,7 @@
     "title": "Device Profiling",
     "definition": "Labeling devices and describing their characteristics and operating environment through various tags.",
     "description": "Device profiling labels devices by abstracting device attributes, device fingerprints, operating environments, and behavioral characteristics into a tag-based device model. It performs risk assessment and anomaly deviation identification through rule matching, cluster classification, and statistical baseline comparison, serving as an extension of device fingerprinting (A0021).",
-    "limitation": "Device profiling is an extension of device fingerprinting (A0021). If the device fingerprint is inaccurate, the device profile will also be affected. Additionally, the accuracy of device profiling is influenced by the device profiling algorithm.",
+    "limitation": "Device profiling depends on device fingerprints (A0021) and behavioral history. Attackers can bypass linkage by falsifying fingerprint fields, resetting environments, or using device pools, while shared devices, operating-system upgrades, and factory resets can cause false positives for legitimate users or false negatives for malicious devices.",
     "references": [
       {
         "title": "Never Trust Risky Users: Device Fingerprint Anti-Tampering Guide - Sohu",

@@ -1,7 +1,7 @@
 {
   "TA0048": {
     "title": "IoT Botnet Operators",
-    "description": "Attackers who control large numbers of IoT devices through vulnerability exploitation, default-credential attacks, firmware backdoors, and malware infection. Their goals include DDoS, proxy forwarding, mining, lateral movement, data tampering, and device extortion, and they may also use industrial, medical, or connected-vehicle devices to create physical-world impact.",
+    "description": "Attackers who control large numbers of IoT devices through vulnerability exploitation, default-credential attacks, firmware backdoors, and malware infection. They primarily organize compromised devices into IoT botnets for DDoS or steal CPU and GPU resources for cryptocurrency mining, and may use industrial, medical, or connected-vehicle devices to expand the impact. Their defining capability is large-scale device control and orchestration rather than any single payload.",
     "references": [
       {
         "title": "USENIX Security: Understanding the Mirai Botnet",

@@ -8,11 +8,15 @@
     "limitation": "跨链数据整合困难、隐私币难以追踪，新链接入滞后导致漏报；黑产可借助跨链桥混币、隐私协议混淆流转路径绕过追踪，正常跨链兑换、聚合交易易被误判为异常误报。",
     "references": [
       {
-        "title": "Cross-Chain Asset Tracking",
-        "link": "https://www.chainalysis.com/"
+        "title": "Chainalysis Reactor 跨链调查功能介绍",
+        "link": "https://www.chainalysis.com/blog/cross-chain-investigations/"
+      },
+      {
+        "title": "A Survey of Transaction Tracing Techniques for Blockchain Systems",
+        "link": "https://arxiv.org/abs/2510.09624"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "多链资产映射追踪",
       "跨链追踪",
@@ -51,6 +55,7 @@
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -8,7 +8,7 @@
       "agent goal hijacking",
       "AI agent exploitation"
     ],
-    "description": "An individual or group that targets AI agents with persistent memory, tool access, task planning, and autonomous execution capabilities. These attackers use prompt injection, malicious knowledge-base content, controlled tool outputs, or repeated interactions to poison agent memory and hijack goals and decisions, allowing hostile instructions to persist across sessions or inducing investment, workplace, and automation agents to perform unauthorized actions. Their focus is the software orchestration, memory, and tool trust chain of agents, distinguishing them from embodied-intelligence attackers that primarily target robot models and physical actuators.",
+    "description": "An individual or group that targets AI Agents with persistent memory, tool access, task planning, and autonomous execution capabilities. An AI Agent plans steps and invokes external tools to achieve a goal. Attackers use prompt injection, malicious knowledge-base content, controlled tool outputs, or repeated interactions to poison memory and hijack goals and decisions, allowing hostile instructions to persist across sessions or inducing investment, workplace, and automation agents to perform unauthorized actions. Their focus is the software orchestration, memory, and tool trust chain rather than robot models and physical actuators.",
     "references": [
       {
         "title": "AI Agent Security - OWASP Cheat Sheet Series",

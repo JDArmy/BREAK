@@ -8,15 +8,15 @@ allowed-tools: Bash
 
 # BREAK 知识库 Skill
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3386 条业务安全风险知识条目，涵盖以下实体类型：
+BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3391 条业务安全风险知识条目，涵盖以下实体类型：
 
 | 类型                      | 数量 | ID 格式            | 说明                   |
 | ------------------------- | ---- | ------------------ | ---------------------- |
 | Risk（风险）              | 400  | R0001, R0001-001   | 业务安全风险定义和影响 |
 | Avoidance（规避手段）     | 350  | A0001, A0001-001   | 应对风险的防御措施     |
-| AttackTool（攻击工具）    | 124  | AT0001, AT0001-001 | 黑灰产使用的工具       |
+| AttackTool（攻击工具）    | 125  | AT0001, AT0001-001 | 黑灰产使用的工具       |
 | ThreatActor（威胁行为者） | 83   | TA0001, TA0001-001 | 实施攻击的人群         |
-| Term（术语）              | 628  | T0001              | 业务安全领域术语       |
+| Term（术语）              | 632  | T0001              | 业务安全领域术语       |
 | Case（案例）              | 1781 | C0001              | 真实的安全事件案例     |
 | BusinessDomain（业务域）  | 20   | BD00               | 行业/业务域分类        |
 
@@ -163,6 +163,8 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 数据治理改动也会影响 Skill 检索结果。修复 Case 的 `references` / `summary` 事实核验问题或调整 Risk 的 `avoidances` 关系时，应同步维护英文翻译文件，并确保前两条 Case references 尽量指向可抓取正文的稳定页面，避免 Skill 返回的案例事实无法被复核。
 
 2026-07-10 的 ThreatActor 覆盖治理新增物流套利、恶意物流从业者、市场操纵、恶意量化交易、AI 智能体攻击、平台规则滥用经营和通信资源滥用服务角色，并用 `audit:risk-threat-actor-coverage` 区分待补关系与明确豁免风险；不改变 Skill 调用参数、搜索字段或返回格式。
+
+2026-07-10 的 ThreatActor 引用审计将 Wikipedia 降为二手背景来源，标记机构首页、新闻索引和研究栏目等通用占位链接，并补强威胁行为者的政府、司法、学术及原始安全研究证据；不改变 Skill 调用参数、搜索字段、返回格式或实体结构。
 
 2026-07-10 的实体粒度复核清理了 R0285 的无关 Term 关系及 R0159 的重复 Avoidance 引用；该维护不改变 Skill 调用参数、搜索字段、返回格式或实体结构。
 

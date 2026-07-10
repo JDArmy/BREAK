@@ -16,9 +16,13 @@
       {
         "title": "Physical Security - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Physical_security"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5：物理与环境保护控制",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "办公环境风险",
       "办公安全",
@@ -72,7 +76,8 @@
         "relation": "variant",
         "note": "无线网络风险是办公环境风险的细分变体。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0112-001": {
     "title": "自带设备办公风险",
@@ -182,9 +187,17 @@
       {
         "title": "Physical Security - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Physical_security"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5：物理访问控制 PE-3",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      },
+      {
+        "title": "电子物理访问控制系统安全控制叠加指南 - NIST",
+        "link": "https://csrc.nist.gov/CSRC/media/Projects/risk-management/documents/overlayRepo/Electronic%20Physical%20Access%20Control%20Systems/ePACS%20Overlay_v1_SP800-53rev5-April2021.pdf"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "未授权物理访问",
       "未经授权进入",
@@ -238,7 +251,8 @@
         "relation": "variant",
         "note": "未授权物理访问与自带设备办公风险同属父办公环境风险下的细分变体。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0112-003": {
     "title": "未授权设备接入",
@@ -259,9 +273,13 @@
       {
         "title": "Physical Security - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Physical_security"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5：系统组件清单与未授权设备治理 CM-8",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "未授权设备接入",
       "私接设备",
@@ -315,7 +333,8 @@
         "relation": "variant",
         "note": "未授权设备接入与未授权物理访问同属父办公环境风险下的细分变体。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0112-004": {
     "title": "物理损害与破坏",
@@ -334,9 +353,17 @@
       {
         "title": "Sabotage - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Sabotage"
+      },
+      {
+        "title": "信息系统应急规划指南 - NIST SP 800-34 Rev. 1",
+        "link": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5：火灾、水害与物理环境保护控制",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "物理损害与破坏",
       "设备破坏",
@@ -390,7 +417,8 @@
         "relation": "variant",
         "note": "物理损害与破坏与未授权设备接入同属父办公环境风险下的细分变体。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0112-005": {
     "title": "监控与窃听",
@@ -410,9 +438,13 @@
       {
         "title": "Eavesdropping - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Eavesdropping"
+      },
+      {
+        "title": "NIST SP 800-53 Rev. 5：信息泄露与传输保密性控制",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "监控与窃听",
       "窃听设备",
@@ -466,7 +498,8 @@
         "relation": "variant",
         "note": "监控与窃听与物理损害与破坏同属父办公环境风险下的细分变体。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0112-006": {
     "title": "无线网络风险",
@@ -478,6 +511,8 @@
       "A0017",
       "A0017-001",
       "A0018",
+      "A0037",
+      "A0028",
       "A0051",
       "A0052"
     ],
@@ -485,9 +520,17 @@
       {
         "title": "Wireless Security - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Wireless_security"
+      },
+      {
+        "title": "无线局域网安全指南 - NIST SP 800-153",
+        "link": "https://csrc.nist.gov/pubs/sp/800/153/final"
+      },
+      {
+        "title": "保护企业无线网络 - CISA",
+        "link": "https://www.cisa.gov/news-events/news/securing-enterprise-wireless-networks"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "keywords": [
       "无线网络风险",
       "WiFi安全",
@@ -541,7 +584,8 @@
         "relation": "variant",
         "note": "无线网络风险与监控与窃听同属父办公环境风险下的细分变体。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0112-007": {
     "title": "无线门禁信号重放与克隆",

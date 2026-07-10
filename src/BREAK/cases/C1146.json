@@ -1,6 +1,6 @@
 {
   "C1146": {
-    "title": "美国司法部指控NFT欺诈与洗钱案",
+    "title": "美国司法部起诉Frosties NFT欺诈案两名被告",
     "keywords": [
       "NFT",
       "欺诈",
@@ -11,18 +11,22 @@
       "投资者损失",
       "NFT rug pull"
     ],
-    "summary": "美国司法部宣布对两名被告提起指控，他们涉嫌实施NFT欺诈和洗钱计划。检察官指出，NFT资产看似是致富的好机会，但最终只会导致投资者损失钱财。",
-    "category": "criminal_verdict",
+    "summary": "2022年3月24日，美国纽约南区检察官办公室通报，Ethan Nguyen和Andre Llacuna因Frosties NFT项目被控电信欺诈共谋及洗钱共谋。起诉指两人在项目售罄后关闭网站，并将约110万美元收入转移至多个加密货币钱包；两项罪名各最高可判20年监禁。",
+    "category": "news_report",
     "relatedRisks": [
       "R0122"
     ],
     "references": [
       {
+        "title": "The DOJ Pulls the Rug on the Frosties NFT Founders - Nelson Mullins",
+        "link": "https://www.nelsonmullins.com/insights/blogs/investigations/doj/the-doj-pulls-the-rug-on-the-frosties-nft-founders"
+      },
+      {
         "title": "Two Defendants Charged In Non-Fungible Token (\"NFT\") Fraud And Money ...",
         "link": "https://www.justice.gov/usao-sdny/pr/two-defendants-charged-non-fungible-token-nft-fraud-and-money-laundering-scheme-0"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2022-03-24"

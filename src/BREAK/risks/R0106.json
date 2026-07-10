@@ -10,17 +10,23 @@
       "A0021",
       "A0021-001",
       "A0015",
-      "A0023-001",
-      "A0001-004",
       "A0020"
     ],
     "references": [
       {
         "title": "Video game boosting - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Video_game_boosting"
+      },
+      {
+        "title": "封禁机器人、代练及更多违规行为：代练的定义与治理 - Riot Games",
+        "link": "https://www.leagueoflegends.com/en-us/news/dev/dev-banning-bots-boosters-and-more-in-2025/"
+      },
+      {
+        "title": "Riot Games 服务条款：账号与登录凭据不得共享",
+        "link": "https://www.riotgames.com/en/terms-of-service"
       }
     ],
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "keywords": [
       "游戏代练",
       "代打",
@@ -47,7 +53,7 @@
       {
         "key": "R0108",
         "relation": "co-occurrence",
-        "note": "游戏代练与游戏打金共享规避手段“风控策略”。"
+        "note": "游戏代练与游戏打金共享规避手段“设备指纹”。"
       },
       {
         "key": "R0114",
@@ -74,6 +80,7 @@
         "relation": "co-occurrence",
         "note": "游戏代练与恶意抢购共享规避手段“身份实名认证”。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

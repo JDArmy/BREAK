@@ -1,6 +1,6 @@
 {
   "C1263": {
-    "title": "SSLStrip Attack: Man-in-the-Middle Downgrade from HTTPS to HTTP",
+    "title": "Moxie Marlinspike Discloses the SSLStrip Attack at Black Hat DC",
     "keywords": [
       "SSLStrip",
       "HTTPS downgrade",
@@ -11,19 +11,15 @@
       "credential theft",
       "network security"
     ],
-    "summary": "SSLStrip is a classic man-in-the-middle attack that exploits the transition phase from HTTP to HTTPS. The attacker prevents the client from establishing an HTTPS connection with the server, forcibly maintaining an insecure HTTP connection. The attacker establishes an HTTP connection with the client while maintaining a normal HTTPS connection with the server, intercepting and reading all plaintext ",
+    "summary": "In February 2009, Moxie Marlinspike presented the SSLStrip tool and attack method at Black Hat DC. The technique exploits the initial HTTP visit before a site redirects a user to HTTPS. A man-in-the-middle prevents that upgrade, maintains an HTTPS connection to the server, and serves HTTP to the victim, exposing credentials and communications that would otherwise be protected by TLS.",
     "references": [
       {
         "title": "New Tricks For Defeating SSL In Practice - Moxie Marlinspike (Black Hat DC 2009)",
         "link": "https://blackhat.com/presentations/bh-dc-09/Marlinspike/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf"
       },
       {
-        "title": "CVE-2009-3507 - NVD (National Vulnerability Database)",
-        "link": "https://nvd.nist.gov/vuln/detail/CVE-2009-3507"
-      },
-      {
-        "title": "moxie0/sslstrip - A tool for exploiting Moxie Marlinspike's SSL stripping attack (GitHub)",
-        "link": "https://github.com/moxie0/sslstrip"
+        "title": "Performing and Preventing SSL Stripping: A Plain-English Primer - Cloudflare",
+        "link": "https://blog.cloudflare.com/performing-preventing-ssl-stripping-a-plain-english-primer/"
       }
     ]
   }

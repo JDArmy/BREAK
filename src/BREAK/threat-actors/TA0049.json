@@ -84,6 +84,10 @@
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
         "link": "https://www.iso.org/standard/70918.html"
+      },
+      {
+        "title": "Tesla Gateway ECU Vulnerability - CISA",
+        "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-16-341-01"
       }
     ],
     "buildAttackTools": [
@@ -104,13 +108,14 @@
       "车联网攻击者",
       "车联网攻击"
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedThreatActors": [
       {
         "key": "TA0049",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

@@ -11,7 +11,7 @@
       "身份盗窃",
       "赔偿金"
     ],
-    "summary": "Amir Hossein Golshan，25岁，因实施一系列SIM卡交换诈骗和欺诈活动，被美国地区法官Otis D. Wright II判处8年监禁，并被责令支付超过121万美元的赔偿金。该判决体现了司法部门对SIM卡交换犯罪的严厉打击。",
+    "summary": "美国司法部2023年11月通报，25岁的Amir Hossein Golshan因实施SIM卡交换、账号接管及其他欺诈活动，被加利福尼亚州联邦法院判处8年监禁，并被责令支付约120万美元赔偿金。案件材料显示，其还冒充苹果客服并劫持社交媒体账户，受害者超过500人。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0132"
@@ -20,9 +20,13 @@
       {
         "title": "'SIM Swapper' Sentenced to Eight Years in Prison for Campaign of ...",
         "link": "https://www.justice.gov/usao-cdca/pr/sim-swapper-sentenced-eight-years-prison-campaign-fraud-and-deception-including"
+      },
+      {
+        "title": "LA Man Gets 8 Years for Impersonating Apple, Stealing NFTs and Other Cybercrimes - Bitdefender",
+        "link": "https://www.bitdefender.com/en-us/blog/hotforsecurity/la-man-gets-8-years-for-impersonating-apple-stealing-nfts-threatening-influencer-and-other-cybercrimes"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [
       "AT0062"
     ],

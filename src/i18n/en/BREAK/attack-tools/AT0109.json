@@ -1,0 +1,11 @@
+{
+  "AT0109": {
+    "title": "Automated Calling Platform",
+    "keywords": ["Automated Calling Platform", "cloud calling platform", "malicious robocalling", "call bombing", "automatic redial system", "bulk dialer"],
+    "description": "An automated calling platform uses the internet to control voice trunks, modem pools, connected handsets, or VoIP gateways and place bulk or repeated calls to specified numbers. Underground services sell accounts, prepaid cards, or call credits and distribute target numbers, frequency, and duration to many endpoints. These platforms are also known as cloud-calling, call-bombing, or automatic redial systems.\n\nMalicious operators use them for coercive debt collection, harassment, extortion, communications disruption, or large-scale screening of reachable numbers for telecom fraud. They rotate caller numbers, voice routes, and call exits to evade blocking and use distributed phones or gateways to increase concurrency. Legitimate contact centers also use automated dialing; the abusive distinction is high-frequency calling without consent, concealed identity, or an intent to disrupt communications.",
+    "references": [
+      {"title": "Operating Malicious Calling Software Constitutes the Crime of Damaging Computer Information Systems - Guangzhou Courts", "link": "http://www.gzcourt.org.cn/ck487/ck335/ck490/2021/08/05101707814.html"},
+      {"title": "China Dismantles Its First Major Call-Bombing Criminal Network - CNR", "link": "https://www.cnr.cn/hubei/bk/sh/20180619/t20180619_524274233_1.shtml"}
+    ]
+  }
+}

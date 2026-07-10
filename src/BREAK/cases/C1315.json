@@ -12,7 +12,7 @@
       "中间人攻击",
       "凭证窃取"
     ],
-    "summary": "2025年4月，Proofpoint检测到利用Tycoon 2FA平台针对全球数千家组织的大规模AiTM钓鱼攻击。攻击者通过高度仿真的Microsoft 365认证页面，实时捕获用户凭证、2FA令牌及会话Cookie，成功绕过MFA。该攻击使用了隐形Unicode字符和自定义CAPTCHA等规避技术。",
+    "summary": "2025年4月，Proofpoint检测到多轮利用Tycoon 2FA平台的AiTM活动，目标涉及全球数千家组织。仿冒Microsoft 365认证页面可窃取用户名、密码、2FA令牌和会话Cookie，从而绕过MFA；攻击还使用隐形Unicode字符、自定义CAPTCHA及反调试功能规避检测。",
     "category": "security_incident",
     "relatedRisks": [
       "R0036"
@@ -23,7 +23,7 @@
         "link": "https://www.proofpoint.com/us/blog/email-and-cloud-threats/aitm-phishing-attacks-evolving-threat-microsoft-365"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "incidentTime": "2025-04",
     "relatedAttackTools": [
       "AT0072",

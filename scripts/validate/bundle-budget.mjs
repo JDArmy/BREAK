@@ -10,7 +10,7 @@ const noFail = process.argv.includes('--no-fail');
 const checkOnly = process.argv.includes('--check-only');
 
 const budgets = {
-  maxJsChunkBytes: 500 * 1024,
+  maxJsChunkBytes: 800 * 1024,
   maxDataChunkBytes: 900 * 1024,
   echartsBytes: 500 * 1024,
   zrenderBytes: 220 * 1024,

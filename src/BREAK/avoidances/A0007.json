@@ -125,9 +125,13 @@
       {
         "title": "多因素身份验证 - 维基百科",
         "link": "https://en.wikipedia.org/wiki/Multi-factor_authentication"
+      },
+      {
+        "title": "邮箱地址验证与确认指南 - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Email_Validation_and_Verification_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-10",
     "keywords": [
       "邮箱验证",
       "邮箱验证码",
@@ -169,7 +173,8 @@
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   },
   "A0007-003": {
     "title": "一次性密码",

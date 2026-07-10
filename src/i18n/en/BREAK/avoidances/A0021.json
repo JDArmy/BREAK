@@ -31,11 +31,19 @@
     "title": "Device Tagging",
     "definition": "Tagging terminals using device characteristics, persistent cookies, and other methods.",
     "description": "Also called terminal tagging or device labeling. Device tagging can typically be implemented through covert tracking markers and special device characteristic collection. Device tagging generally serves two purposes: one is to assign a unique identifier to the device so that the device's identity is known when the tag is present; the other is to assign a special label to the device (such as 'clean device' or 'blacklisted device') so that even after the device changes its fingerprint, the device's security status can still be continuously identified and tracked.",
-    "limitation": "Due to the inability to guarantee terminal data integrity, combined with legal and regulatory requirements for user privacy, terminal tagging has significant constraints and is only effective under certain conditions.",
+    "limitation": "Endpoint data integrity cannot be fully guaranteed, so attackers can bypass device tags by altering local markers, resetting devices, or falsifying reported fields. Shared devices, resale, and factory resets may also cause legitimate users to inherit stale labels and be falsely flagged, while privacy rules limit collectible signals.",
     "references": [
       {
         "title": "Device Fingerprint - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
+      },
+      {
+        "title": "Introduction to Device Visitor Identification - Fingerprint",
+        "link": "https://docs.fingerprint.com/docs/introduction"
+      },
+      {
+        "title": "The Web Never Forgets: Persistent Tracking Mechanisms in the Wild",
+        "link": "https://dl.acm.org/doi/10.1145/2660267.2660347"
       }
     ],
     "keywords": [

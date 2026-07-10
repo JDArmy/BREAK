@@ -9,7 +9,11 @@
       },
       {
         "title": "移动互联网应用程序信息服务管理规定",
-        "link": "https://www.cac.gov.cn/"
+        "link": "http://www.cac.gov.cn/2022-06/14/c_1656821626455324.htm"
+      },
+      {
+        "title": "Cyber Criminals Targeting Victims through Mobile Beta-Testing Applications - FBI IC3",
+        "link": "https://www.ic3.gov/PSA/2023/PSA230814"
       }
     ],
     "avoidances": [
@@ -27,7 +31,7 @@
     "indirectSupportRisks": [
       "R0143"
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "虚假APP",
       "仿冒APP",
@@ -68,6 +72,7 @@
         "relation": "co-used",
         "note": "共同关联 3 个风险，共享 2 个规避手段。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

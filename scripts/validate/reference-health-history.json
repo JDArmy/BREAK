@@ -1,0 +1,4011 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-10T13:19:26.304Z",
+  "successTtlDays": 365,
+  "results": [
+    {
+      "link": "http://ah.anhuinews.com/hn/xq/sx/202203/t20220304_5847645.html",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "http://ah.anhuinews.com/hn/xq/sx/202203/t20220304_5847645.html",
+      "issue": "ok",
+      "checkedAt": "2026-07-10T13:19:11.591Z"
+    },
+    {
+      "link": "http://mp.weixin.qq.com/s?__biz=MjM5MjMyNTA0MQ==&mid=2650472879&idx=3&sn=4e98f407454e3bacc31c1098e2f7463e",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:38.368Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "http://www.mps.gov.cn:8080/n2254314/n6409334/c8987025/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "http://www.mps.gov.cn:8080/n2254314/n6409334/c8987025/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.660Z"
+    },
+    {
+      "link": "https://about.gitlab.com/blog/pipeline-security-lessons-from-march-supply-chain-incidents/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:42.011Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://archives.fbi.gov/archives/newark/press-releases/2013/eighteen-people-charged-in-international-200-million-credit-card-fraud-scam",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://archives.fbi.gov/archives/newark/press-releases/2013/eighteen-people-charged-in-international-200-million-credit-card-fraud-scam",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.374Z"
+    },
+    {
+      "link": "https://beincrypto.com/solana-meme-coin-south-korea-dex-indictment/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://beincrypto.com/solana-meme-coin-south-korea-dex-indictment/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.375Z"
+    },
+    {
+      "link": "https://blackhat.com/docs/us-17/thursday/us-17-Nie-Free-Fall-Hacking-Tesla-From-Wireless-To-CAN-Bus-wp.pdf",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://blackhat.com/docs/us-17/thursday/us-17-Nie-Free-Fall-Hacking-Tesla-From-Wireless-To-CAN-Bus-wp.pdf",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:38.389Z"
+    },
+    {
+      "link": "https://blackhat.com/us-14/video/badusb-on-accessories-that-turn-evil.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://blackhat.com/us-14/video/badusb-on-accessories-that-turn-evil.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.375Z"
+    },
+    {
+      "link": "https://cdgaj.chengdu.gov.cn/cdsgaj/gayw/2026-06/04/content_d90c96cc84f94d11a0a9f3b81b1416e9.shtml",
+      "ok": false,
+      "status": 412,
+      "finalUrl": "https://cdgaj.chengdu.gov.cn/cdsgaj/gayw/2026-06/04/content_d90c96cc84f94d11a0a9f3b81b1416e9.shtml",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.261Z"
+    },
+    {
+      "link": "https://cdgaj.chengdu.gov.cn/cdsgaj/jfts/2026-03/27/content_a7ecc16ba36849859a7d235ba1515735.shtml",
+      "ok": false,
+      "status": 412,
+      "finalUrl": "https://cdgaj.chengdu.gov.cn/cdsgaj/jfts/2026-03/27/content_a7ecc16ba36849859a7d235ba1515735.shtml",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.387Z"
+    },
+    {
+      "link": "https://cryptonews.com/news/south-korea-first-dex-rug-pull-criminal-case/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://cryptonews.com/news/south-korea-first-dex-rug-pull-criminal-case/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.693Z"
+    },
+    {
+      "link": "https://developer.volcengine.com/articles/7381538072443715594",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:49:48.378Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1007/978-3-642-39235-1_10",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1007/978-3-642-39235-1_10",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.696Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1016/j.jnca.2025.104416",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1016/j.jnca.2025.104416",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.695Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1109/COMM48946.2020.9142035",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1109/COMM48946.2020.9142035",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.696Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/2133601.2133640",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/2133601.2133640",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.696Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/2580723.2580730",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/2580723.2580730",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.935Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3203422.3203426",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3203422.3203426",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.776Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3236454.3236512",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3236454.3236512",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.772Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3291842.3291905",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3291842.3291905",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.776Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3626782",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3626782",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.777Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3638769",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3638769",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.852Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3658644.3670290",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3658644.3670290",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.858Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3696429",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3696429",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.854Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3716323",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3716323",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.857Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3719027.3765082",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3719027.3765082",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.937Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3744736.3749355",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3744736.3749355",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.936Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3746452",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3746452",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.939Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3769013",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3769013",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:38.938Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.1145/3787205",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.1145/3787205",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.017Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/10.5555/2831143.2831152",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/10.5555/2831143.2831152",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.017Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1109/TMC.2024.3426046",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1109/TMC.2024.3426046",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.016Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/1866307.1866391",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/1866307.1866391",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.018Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/2420950.2420954",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/2420950.2420954",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.019Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/2493190.2493223",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/2493190.2493223",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.133Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/2815675.2815720",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/2815675.2815720",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.134Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3052973.3053038",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3052973.3053038",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.134Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3091478.3091514",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3091478.3091514",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.134Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3131365.3131383",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3131365.3131383",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.134Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3131365.3131387",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3131365.3131387",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.223Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3290605.3300819",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3290605.3300819",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.224Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3290688.3290729",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3290688.3290729",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.222Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3319535.3354222",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3319535.3354222",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.224Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3327960.3332391",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3327960.3332391",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.224Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3340531.3412690",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3340531.3412690",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.301Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3341161.3345306",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3341161.3345306",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.301Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3359185",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3359185",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.306Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3394788.3394789",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3394788.3394789",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.305Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3427477.3429772",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3427477.3429772",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.303Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3460120.3484546",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3460120.3484546",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.379Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3460120.3484547",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3460120.3484547",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.380Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3476107",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3476107",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.382Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3543507.3583319",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3543507.3583319",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.385Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3548606.3559342",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3548606.3559342",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.385Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3551349.3559520",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3551349.3559520",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.460Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3560832.3563433",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3560832.3563433",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.461Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3577923.3583636",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3577923.3583636",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.462Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3589335.3651964",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3589335.3651964",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.463Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3623376",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3623376",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.468Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3627508.3638303",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3627508.3638303",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.541Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3634737.3657023",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3634737.3657023",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.540Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3663761",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3663761",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.539Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3671016.3674808",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3671016.3674808",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.541Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3678890.3678894",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3678890.3678894",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.547Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3689931.3694911",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3689931.3694911",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.659Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3689944.3696164",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3689944.3696164",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.660Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3719027.3765082",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3719027.3765082",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.660Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3733799.3762976",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3733799.3762976",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.660Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3748522.3779999",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3748522.3779999",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.661Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3757548",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3757548",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.739Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/abs/10.1145/3772318.3790497",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/abs/10.1145/3772318.3790497",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.736Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/full/10.1145/3546068",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/full/10.1145/3546068",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.740Z"
+    },
+    {
+      "link": "https://dl.acm.org/doi/full/10.1145/3708635.3708643",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://dl.acm.org/doi/full/10.1145/3708635.3708643",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.740Z"
+    },
+    {
+      "link": "https://docs.aave.com/developers/guides/flash-loans",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:46.837Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://ethereum.stackexchange.com/questions/99427/is-timestamp-manipulation-still-possible-and-if-yes-can-users-spot-that-and-di",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://ethereum.stackexchange.com/questions/99427/is-timestamp-manipulation-still-possible-and-if-yes-can-users-spot-that-and-di",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.912Z"
+    },
+    {
+      "link": "https://gaj.sh.gov.cn/shga/wzXxfbGj/detail?pa=f41aa3d5accbfad14fcbf784730c1c7f0c16683653e0ed4cb4e78d424dae91da6933a5be36c5a0d66b48ea3362539009f89cd8d0bb43e938",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://gaj.sh.gov.cn/shga/wzXxfbGj/detail?pa=f41aa3d5accbfad14fcbf784730c1c7f0c16683653e0ed4cb4e78d424dae91da6933a5be36c5a0d66b48ea3362539009f89cd8d0bb43e938",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.908Z"
+    },
+    {
+      "link": "https://gaj.sh.gov.cn/shga/wzXxfbGj/detail?pa=f41aa3d5accbfad14fcbf784730c1c7f3246599c78cf0fe4980d7c82a795cfca17db973f300791a977db8991aa079c31f89cd8d0bb43e938",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://gaj.sh.gov.cn/shga/wzXxfbGj/detail?pa=f41aa3d5accbfad14fcbf784730c1c7f3246599c78cf0fe4980d7c82a795cfca17db973f300791a977db8991aa079c31f89cd8d0bb43e938",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.901Z"
+    },
+    {
+      "link": "https://gaj.sh.gov.cn/shga/wzXxfbGj/detail?pa=f41aa3d5accbfad14fcbf784730c1c7f3246599c78cf0fe4980d7c82a795cfca9320b031897fef982314c5ee4631dc29f89cd8d0bb43e938",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://gaj.sh.gov.cn/shga/wzXxfbGj/detail?pa=f41aa3d5accbfad14fcbf784730c1c7f3246599c78cf0fe4980d7c82a795cfca9320b031897fef982314c5ee4631dc29f89cd8d0bb43e938",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:39.943Z"
+    },
+    {
+      "link": "https://github.com/0x9reedark/cloud-credential-incident-response-playbook",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/0x9reedark/cloud-credential-incident-response-playbook",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:40.804Z"
+    },
+    {
+      "link": "https://github.com/26zl/cybersec-toolkit/blob/main/.claude/skills/detecting-api-enumeration-attacks/SKILL.md",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/26zl/cybersec-toolkit/blob/main/.claude/skills/detecting-api-enumeration-attacks/SKILL.md",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:40.912Z"
+    },
+    {
+      "link": "https://github.com/abund4nt/bypass-waf",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/abund4nt/bypass-waf",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:40.734Z"
+    },
+    {
+      "link": "https://github.com/advisories/GHSA-f8q5-h5qh-33mh",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/advisories/GHSA-f8q5-h5qh-33mh",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:40.603Z"
+    },
+    {
+      "link": "https://github.com/advisories/GHSA-gqfx-jp8p-5v6q",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/advisories/GHSA-gqfx-jp8p-5v6q",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:40.707Z"
+    },
+    {
+      "link": "https://github.com/AmazingAng/WTF-Solidity/blob/main/S15_OracleManipulation/readme.md",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/AmazingAng/WTF-Solidity/blob/main/S15_OracleManipulation/readme.md",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:41.344Z"
+    },
+    {
+      "link": "https://github.com/ANTONINAOTIENO/GCP-IAM-Hardening-From-Overprivileged-Access-to-Least-Privilege-with-Audit-JIT-Simulation",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/ANTONINAOTIENO/GCP-IAM-Hardening-From-Overprivileged-Access-to-Least-Privilege-with-Audit-JIT-Simulation",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:41.356Z"
+    },
+    {
+      "link": "https://github.com/appknox/vapi",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/appknox/vapi",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:41.758Z"
+    },
+    {
+      "link": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:41.403Z"
+    },
+    {
+      "link": "https://github.com/avechuch0/telegram-bigbang",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/avechuch0/telegram-bigbang",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:41.623Z"
+    },
+    {
+      "link": "https://github.com/calvwang9/oracle-manipulation",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/calvwang9/oracle-manipulation",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:41.967Z"
+    },
+    {
+      "link": "https://github.com/casualsnek/waydroid_script/issues/198",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/casualsnek/waydroid_script/issues/198",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:42.010Z"
+    },
+    {
+      "link": "https://github.com/chloekentebe/physics-aware-platoon-ids",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/chloekentebe/physics-aware-platoon-ids",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:42.175Z"
+    },
+    {
+      "link": "https://github.com/code-423n4/2023-10-nextgen-findings/issues/1254",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/code-423n4/2023-10-nextgen-findings/issues/1254",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:42.492Z"
+    },
+    {
+      "link": "https://github.com/CodeMongerrr/MEV-Shield",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/CodeMongerrr/MEV-Shield",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:42.501Z"
+    },
+    {
+      "link": "https://github.com/coinspect/learn-evm-attacks/tree/master/test/Business_Logic/TornadoCash_Governance",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/coinspect/learn-evm-attacks/tree/master/test/Business_Logic/TornadoCash_Governance",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:42.676Z"
+    },
+    {
+      "link": "https://github.com/crytic/building-secure-contracts",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/crytic/building-secure-contracts",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:42.669Z"
+    },
+    {
+      "link": "https://github.com/crytic/slither",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/crytic/slither",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:42.956Z"
+    },
+    {
+      "link": "https://github.com/danielmiessler/SecLists",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/danielmiessler/SecLists",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:42.806Z"
+    },
+    {
+      "link": "https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:43.089Z"
+    },
+    {
+      "link": "https://github.com/datawhalechina/base-llm/blob/main/docs/chapter16/02_threat_modeling_analysis.md",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/datawhalechina/base-llm/blob/main/docs/chapter16/02_threat_modeling_analysis.md",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:43.332Z"
+    },
+    {
+      "link": "https://github.com/demining/Dao-Exploit",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/demining/Dao-Exploit",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:43.353Z"
+    },
+    {
+      "link": "https://github.com/eastmountyxz/Reverse-Analysis-Case",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/eastmountyxz/Reverse-Analysis-Case",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:43.472Z"
+    },
+    {
+      "link": "https://github.com/ecosyste-ms/typosquatting-dataset",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/ecosyste-ms/typosquatting-dataset",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:43.593Z"
+    },
+    {
+      "link": "https://github.com/ericevenchick/canard",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/linklayer/pyvit",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.097Z"
+    },
+    {
+      "link": "https://github.com/eth-infinitism/account-abstraction/releases",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/eth-infinitism/account-abstraction/releases",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:43.877Z"
+    },
+    {
+      "link": "https://github.com/ethereum/consensus-specs",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/ethereum/consensus-specs",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.003Z"
+    },
+    {
+      "link": "https://github.com/fakhrulfaiz/bid-bot-detection",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/fakhrulfaiz/bid-bot-detection",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:43.941Z"
+    },
+    {
+      "link": "https://github.com/foundry-rs/foundry",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/foundry-rs/foundry",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.196Z"
+    },
+    {
+      "link": "https://github.com/FoxIO-LLC/ja4",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/FoxIO-LLC/ja4",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.279Z"
+    },
+    {
+      "link": "https://github.com/frostbits-security/MITM-cheatsheet",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/frostbits-security/MITM-cheatsheet",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.660Z"
+    },
+    {
+      "link": "https://github.com/FrostyIsBored/FH6-Auction-House-Sniper",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/FrostyIsBored/FH6-Auction-House-Sniper",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.551Z"
+    },
+    {
+      "link": "https://github.com/gabriellewald/auction-fraud-detection",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/gabriellewald/auction-fraud-detection",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.713Z"
+    },
+    {
+      "link": "https://github.com/gagandeep-codes/cryptojacking-incident-response",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/gagandeep-codes/cryptojacking-incident-response",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.903Z"
+    },
+    {
+      "link": "https://github.com/github/dmca/blob/master/2026/03/2026-03-31-anthropic.md",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/github/dmca/blob/master/2026/03/2026-03-31-anthropic.md",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.752Z"
+    },
+    {
+      "link": "https://github.com/gnosis/MultiSigWallet",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/gnosis/MultiSigWallet",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:44.923Z"
+    },
+    {
+      "link": "https://github.com/goudanwang/miniblockchain2",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/goudanwang/miniblockchain2",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:45.320Z"
+    },
+    {
+      "link": "https://github.com/iamtutu/OTP_bruteforce_payloads",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/iamtutu/OTP_bruteforce_payloads",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:45.273Z"
+    },
+    {
+      "link": "https://github.com/InfoSec-DB/ModBusPwn",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/InfoSec-DB/ModBusPwn",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:45.509Z"
+    },
+    {
+      "link": "https://github.com/iperov/DeepFaceLab",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/iperov/DeepFaceLab",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:45.448Z"
+    },
+    {
+      "link": "https://github.com/jgamblin/Mirai-Source-Code",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/jgamblin/Mirai-Source-Code",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:45.587Z"
+    },
+    {
+      "link": "https://github.com/jmcoded0/AWS-IAM-Privilege-Escalation-Detection",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/jmcoded0/AWS-IAM-Privilege-Escalation-Detection",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:45.772Z"
+    },
+    {
+      "link": "https://github.com/keycloak/keycloak/issues/46164",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/keycloak/keycloak/issues/46164",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:46.293Z"
+    },
+    {
+      "link": "https://github.com/lenucksi/aur-malware-check",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/lenucksi/aur-malware-check",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:45.966Z"
+    },
+    {
+      "link": "https://github.com/lsky-org/lsky-pro",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/lsky-org/lsky-pro",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:46.191Z"
+    },
+    {
+      "link": "https://github.com/master-coder1998/cloud-security-ctf/tree/main/challenges/02-overprivileged-iam/writeup",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/master-coder1998/cloud-security-ctf/tree/Backup/challenges/02-overprivileged-iam/writeup",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:46.485Z"
+    },
+    {
+      "link": "https://github.com/mastodon/mastodon/security/advisories/GHSA-c2r5-cfqr-c553",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/mastodon/mastodon/security/advisories/GHSA-c2r5-cfqr-c553",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:46.186Z"
+    },
+    {
+      "link": "https://github.com/Meirzv/TLS_MITM-Attack",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/Meirzv/TLS_MITM-Attack",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:46.535Z"
+    },
+    {
+      "link": "https://github.com/Ms-dev3/EmulatorDetectionByPass/blob/main/README.md",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/Ms-dev3/EmulatorDetectionByPass/blob/main/README.md",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:46.722Z"
+    },
+    {
+      "link": "https://github.com/Mujidatdada/credential-stuffing-mitigation",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/Mujidatdada/credential-stuffing-mitigation",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:46.830Z"
+    },
+    {
+      "link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/detecting-api-enumeration-attacks/SKILL.md",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/detecting-api-enumeration-attacks/SKILL.md",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.002Z"
+    },
+    {
+      "link": "https://github.com/n8n-io/n8n/security/advisories/GHSA-38c7-23hj-2wgq",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/n8n-io/n8n/security/advisories/GHSA-38c7-23hj-2wgq",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:46.856Z"
+    },
+    {
+      "link": "https://github.com/n8n-io/n8n/security/advisories/GHSA-mqpr-49jj-32rc",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/n8n-io/n8n/security/advisories/GHSA-mqpr-49jj-32rc",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.074Z"
+    },
+    {
+      "link": "https://github.com/OPCFoundation/UA-.NETStandard/security/advisories/GHSA-h958-fxgg-g7w3",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/OPCFoundation/UA-.NETStandard/security/advisories/GHSA-h958-fxgg-g7w3",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.104Z"
+    },
+    {
+      "link": "https://github.com/orgs/community/discussions/136297",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/orgs/community/discussions/136297",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.249Z"
+    },
+    {
+      "link": "https://github.com/orgs/supabase/discussions/36548",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/orgs/supabase/discussions/36548",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.526Z"
+    },
+    {
+      "link": "https://github.com/ossf/package-analysis",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/ossf/package-analysis",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.789Z"
+    },
+    {
+      "link": "https://github.com/OWASP/QRLJacking",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/OWASP/QRLJacking",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.545Z"
+    },
+    {
+      "link": "https://github.com/ParveetKumar/GPS-Spoofing-Simulation-Detection-Framework",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/ParveetKumar/GPS-Spoofing-Simulation-Detection-Framework",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.609Z"
+    },
+    {
+      "link": "https://github.com/pushsecurity/saas-attacks/blob/main/techniques/consent_phishing/description.md",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/pushsecurity/browser-identity-attacks-matrix/blob/main/techniques/consent_phishing/description.md",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.096Z"
+    },
+    {
+      "link": "https://github.com/QuantumNous/new-api/security/advisories/GHSA-xff3-5c9p-2mr4",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/QuantumNous/new-api/security/advisories/GHSA-xff3-5c9p-2mr4",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:47.647Z"
+    },
+    {
+      "link": "https://github.com/quic/vasp",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/quic/vasp",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.066Z"
+    },
+    {
+      "link": "https://github.com/ReFirmLabs/binwalk",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/ReFirmLabs/binwalk",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.199Z"
+    },
+    {
+      "link": "https://github.com/rickyma18/api-pentest-otp-business-logic",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/rickyma18/api-pentest-otp-business-logic",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.278Z"
+    },
+    {
+      "link": "https://github.com/SahilHaiHum/llm-prompt-attacks-extended.",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/SahilHaiHum/llm-prompt-attacks-extended.",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.253Z"
+    },
+    {
+      "link": "https://github.com/scriptingxss/owasp-fstm",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/scriptingxss/owasp-fstm",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.357Z"
+    },
+    {
+      "link": "https://github.com/SEA-ME/MCS_Secure-OTA",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/SEA-ME/MCS_Secure-OTA",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.683Z"
+    },
+    {
+      "link": "https://github.com/search?q=captcha",
+      "ok": false,
+      "status": 429,
+      "finalUrl": "https://github.com/search?q=captcha",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:48.383Z"
+    },
+    {
+      "link": "https://github.com/smart-cloud/smart-cloud-examples#%E4%BA%8C%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/smart-cloud/smart-cloud-examples",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.911Z"
+    },
+    {
+      "link": "https://github.com/SmileZXLee/iOSSignatureAnalysis",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/SmileZXLee/iOSSignatureAnalysis",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.095Z"
+    },
+    {
+      "link": "https://github.com/socalit/supply_backdoor",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/socalit/supply_backdoor",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.985Z"
+    },
+    {
+      "link": "https://github.com/thomasruegg/android-repackaging-attack",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/thomasruegg/android-repackaging-attack",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:48.956Z"
+    },
+    {
+      "link": "https://github.com/titanmesh-io/creator-standard",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/titanmesh-io/creator-standard",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.175Z"
+    },
+    {
+      "link": "https://github.com/Vuseghesa/Detection_Compromise_Nodes",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/Vuseghesa/Detection_Compromise_Nodes",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.200Z"
+    },
+    {
+      "link": "https://github.com/weezyjs/MEV--Detection-Tool",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/weezyjs/MEV--Detection-Tool",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.130Z"
+    },
+    {
+      "link": "https://github.com/wufengxue/android-reverse",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/wufengxue/android-reverse",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.395Z"
+    },
+    {
+      "link": "https://github.com/xn0tsa/dji-romo-video-control",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://github.com/xn0tsa/dji-romo-video-control",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.729Z"
+    },
+    {
+      "link": "https://hackenproof.com/blog/prevent-flash-loan-attacks-defi",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://hackenproof.com/blog/prevent-flash-loan-attacks-defi",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:49.341Z"
+    },
+    {
+      "link": "https://hca.miit.gov.cn/jactpub/front/mailpubdetail.do?transactId=1032624&sysid=87",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://hca.miit.gov.cn/jactpub/front/mailpubdetail.do?transactId=1032624&sysid=87",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:49.264Z"
+    },
+    {
+      "link": "https://journals.sagepub.com/doi/10.1177/09266801241295886",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:49:59.097Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://m.jfdaily.com/wx/detail.do?id=882540",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://m.jfdaily.com/wx/detail.do?id=882540",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:49.319Z"
+    },
+    {
+      "link": "https://m.jfdaily.com/wx/detail.do?id=890093",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://m.jfdaily.com/wx/detail.do?id=890093",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:49.344Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/baijiahao_14534771",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/baijiahao_14534771",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.447Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/baijiahao_28782951",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/baijiahao_28782951",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.522Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/baijiahao_6536240",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/baijiahao_6536240",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.622Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_10303132",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_10303132",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:49.624Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_10431398",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_10431398",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.623Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_12268363",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_12268363",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.642Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_16416351",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_16416351",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.504Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_17589464",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_17589464",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.623Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_20536442",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_20536442",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.697Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_20634291",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_20634291",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.688Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_24383058",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_24383058",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.720Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_27349764",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_27349764",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.681Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_29286429",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_29286429",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.686Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_30736095",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_30736095",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.748Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_30782061",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_30782061",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.788Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_31179929",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_31179929",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:50.034Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_31371398",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_31371398",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:50.018Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_31838646",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_31838646",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.813Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_33183066",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_33183066",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.813Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_6016636",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_6016636",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:49.958Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/newsDetail_forward_6018135",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://m.thepaper.cn/newsDetail_forward_6018135",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:49.888Z"
+    },
+    {
+      "link": "https://m.thepaper.cn/rss_newsDetail_18497057",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://m.thepaper.cn/rss_newsDetail_18497057",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:49.927Z"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjAzMDQwNTU0MQ==&mid=2653000171&idx=1&sn=3c2a6b6f9da032c1df95330f763093d5&chksm=4b7a5d4a81092891c6e0b10cb742fb5b0b6d25060326fd33ab8ec5eaf6cff8e908bb5194e5f9&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.146Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5Mjk2ODM2MA==&mid=2652737162&idx=5&sn=9b044f853f0bcacdd13c0f24218565de&chksm=bce87f0d81468ad5857e16c6e43a77ee8a6809d162a627524fe86a69d5a98bc3ddc9c671cc8b&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.995Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MTczODg0MA==&mid=2649821281&idx=1&sn=4c5cfd23a22fa9563581871847f89863&chksm=bfd3905763b3ba9d7dfed20dc74856a586350043733c7cdb9c8af73c163ab6d015f264768f97&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.150Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MTIwMjY1Mg==&mid=2650074669&idx=1&sn=df2777e4c5a07e8b62a2ec98b12b4c6f&chksm=bf14ee27f795e8d2f1ca2b37d65972e134a6f6b8f89ff592b4c46d18b5f78404910ea62caf87&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.149Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MTM4NjE3OQ==&mid=2650479550&idx=1&sn=432da050d8b20ec945080da05f3e9005",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.218Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NDE3NTU0MQ==&mid=2652093696&idx=1&sn=b1d8fb888828f232bf34d27688591238&chksm=bc70b6704ffe113a9b6fe0bfe2f052c579b452ee01539e52c7e47379bb767b78b921f31c607c&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.996Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458549899&idx=3&sn=bf93e17da3a7bc1e769a3df836767cb9&chksm=b00a692c5f0614829e486b2dfef40a7316e74efc41ed3d04819e4960cf690f0494ac47d40f57&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.996Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5Nzc5MzMwMg==&mid=2657509714&idx=1&sn=ea2791b3a16cd87c205a988970e63d9f&chksm=bca72fc0e30cef6f8cca4d60cabf4574670190e0eb8736e5a8a402373d0fc786bb7fef3a4f08&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.996Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODcxMjg4Ng==&mid=2657399507&idx=1&sn=b3b68d3f3dce66dba3ea00456950f0d7&chksm=bc5d5fd74304dd965b6a65ac4fcb9b694655a8110285af82f610d82d3361214451f7a03e75ac&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.996Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODEzNDEzNw==&mid=2247530198&idx=1&sn=37f8f913498f7ace19a30a9dfbad3f7c&chksm=a713847592847e143fcb38a7bff5ef12a5d837e6c3412dc32c6f975cfd7944a1b25e6304464c&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.996Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTUzMjcwNA==&mid=2650603417&idx=3&sn=12f2667a518ef704caee132b0859d5f2&chksm=bf325e568845d7405adb49b1649e3baf2b1f9bd92a63f807ab1d064f393ccac15adf6c48cd63&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.996Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3MjA3NzE3MA==&mid=2651941136&idx=1&sn=a88e4ebe8610d33dea6321009ddd97e8&chksm=85cfee244bbd3387740c38e50e28095ccc1048400d1181fec8b26eca05d0a58514783af24528&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.996Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3MTM5ODc4OQ==&mid=2650704873&idx=2&sn=8e3743b992069ccf00ad6809bd960249&chksm=86109499ec04490202647267022f328a06b7e065e122fe40b7a7fdbd26b29b004eaa0aa904c5&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.997Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3NDI5MzUwNg==&mid=2651611390&idx=1&sn=597c559f4fee79e60dd841e9d159cb60&chksm=85e3ad3755b27c772a1bb0ded98b5c487eb38d1979df2a7ac361d4cca97133cf2c205fc8f847&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.997Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3NjA0NTg3NQ==&mid=2651201134&idx=3&sn=9e7d94b4a243515cd6ab8cabb6369558&chksm=85e9e9dfb1976238b87f91b96100f60ba1451eac3a89a45a9a9728f0c12f16f5ff7d9a516c3d&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.997Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3NTQ4ODg4OA==&mid=2650897131&idx=3&sn=9650bfae4d8aa56563d1dc51246e5113&chksm=849a11fcb3ed98ea80f7633fc6917330fe1de9f99ae9d1f98752b230d36cdeb4b126c0ad904f&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.997Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3NzAzNTY4MA==&mid=2651202715&idx=5&sn=d95acdfe6192cebdaf726a7143ba0ec1&chksm=85edf6ba99a1bdda669d92bdf957bdf01a8cecb98d95a4130ebe8876e728d7b9469edf694b3a&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.997Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODgwMzczMg==&mid=2650590288&idx=1&sn=f2782a269623aecfaa1e7abb4735d3d7&chksm=869ac6f50a53448bc566fbc22d3c2d2336ae6c34e38ece545057b7fa1dac5b8d6f6b20285132&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.997Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODY0NjQzMA==&mid=2650284888&idx=1&sn=a48ed16d4c3feb2abfe101fb778108f9&chksm=87b31ea9b0c497bf2295c0506f0b9adb1618bad1e445662eefe8423764371d94786a591701e9&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.997Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MDgzNjkxMg==&mid=2651458409&idx=2&sn=eaa6447dc6d7188ee500617be73f548e&chksm=84608b36b3170220181caa467d6ddde742b8099221a6db324d7a5ac8febd7b82ab9998ffc246&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.997Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjM2MDgxMA==&mid=2815589226&idx=1&sn=c615c7d8e2379c2f810510be3d38c060&chksm=bda03bef8ad7b2f9e03d473fab25d8704483eb38992f11279ba068bad676526c608653e04e9d&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.998Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjY5MDIyMA==&mid=2652007605&idx=1&sn=8a33943fcbb314610310aabe8aa44749",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.998Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA5MzgzODYwOA==&mid=2650506064&idx=3&sn=6f1ab6601fe507fea783c3da8235ab61&chksm=8914f041678c84c260dabbab50587d08dfbbea7248fc01300674a473343172e066f62f2bd993&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.998Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAwMTU1ODAwNQ==&mid=2650670258&idx=4&sn=115d31346e5a6671f91921b2bd1597c6&chksm=82dd7028b5aaf93eba9ba66f686d8fad00b96ea480d9cd30a8b77277c3a3d09b55571658b53b&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.998Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAwNTgwNjY0NQ==&mid=2909647260&idx=1&sn=724da208d4480ad7ac2e411282b0556f",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.998Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAwNzAxNDAwOQ==&mid=2650527827&idx=1&sn=d9af9d114c9d525f71a4857cc75297d9&chksm=820b5a76b2fd332640f6dd1a48eccc6b20e0994a63b8c15c5e03c9a207570e3520e355983f2e&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAwNzg1OTI4Mw==&mid=2676817869&idx=2&sn=fc3193716827d44022b63b50912959f8&chksm=80d202c18d5547befba3507e0ae878277af68d8fa58c83ce9ca6e19799fdf130f95ffbcd1711&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAwOTEwMjQ3NQ==&mid=2650577774&idx=1&sn=ccd2fe0b62c58b9682e6af550e6ff41f&chksm=836c8e8ab41b079c9a01445a7747b424bddde58433a973b1fbeea68bee8b3fce06ba9da9ea14&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAwOTU4MTc1MQ==&mid=2652165685&idx=4&sn=1e6dd5c7e3e75354a806d144b73b33b0&chksm=814db434717258d045f0f806de643549a1d610b40aa5f76519583303db74dcc70bfeddcacf24&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAxOTE3Nzc5MQ==&mid=2650805014&idx=1&sn=f2da7f16d9431b33ba42148525423eae&chksm=803fbb46b748325096c865731e35848ed0bb924ce706060c3f12073b614a3bf8b0de1c9c2903&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg4NTA2MDU0OQ==&mid=2247530131&idx=1&sn=69682338439f50044b36db5956286c8b",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI0NzE0NTQyNQ==&mid=2656181735&idx=2&sn=2c64c69ad7066c40676e3c704b1c75c3&chksm=f3ae4d6a509a31ce7963b692356d48f1f426a502969559c7afa9de473083c556f97c23e0dc5f&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI0NzQwNzY1Mw==&mid=2247944095&idx=3&sn=c237244af82a135331a870a2bfa43632&chksm=e9b832d5decfbbc39143c28fd3a49dbb946ef253ee8deab1d48800408634a44ebcf5f93eda98&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzi1MDE2OTEyNQ==&mid=2651575022&idx=1&sn=adacaec3ecf7ff07d111d5b00d07e4bc&chksm=f378f513b9d6f9b9abcdd0a175a8023e855453160fdfa587ba8c166bfa9faff20736064dc02b&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:49.999Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI1MDE2OTEyNQ==&mid=2651575022&idx=1&sn=adacaec3ecf7ff07d111d5b00d07e4bc&chksm=f378f513b9d6f9b9abcdd0a175a8023e855453160fdfa587ba8c166bfa9faff20736064dc02b&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI1NjI5NjU4MQ==&mid=2247515266&idx=1&sn=4c6c087308a789b4669772ec8f2aef63&chksm=ebb9ea1c5e83f82dcf46c7304595a7abc3ee3d420411372888f73739ee36d90e19404816526b&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI1Njk3MTAwNg==&mid=2247503610&idx=1&sn=ab43866c836515f50f298c46e0e1ad2c&chksm=ea1c176bdd6b9e7ddb4a0bee4ee2cd2d2d2caf423aaa338931718ad7434650dfdb08c5e4a454&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI2MTE4NDM0NA==&mid=2653393655&idx=4&sn=206a354893ee2cb257839b2f67ada42e&chksm=f062a237957c8a8be86e574ea2b7c324487bfc5885bb3eb445bb60208ce3cba91989db7dff92&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTQzNjYxNw==&mid=2247942229&idx=1&sn=60015b68761a105e0f52e046a045e0b0&chksm=eb23a3265ba293db1f219b1ce7328244489cb07e98df0a228bd981f419b7ec820f1515bb599a&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI3NjE5ODgwOA==&mid=2657370304&idx=1&sn=1978bb9fa9c165d17616e56615b18d08&chksm=f1fc59feac3ed499523ed4fc8c1801b597b369ccd3586915c9a5a6184a725d85b30dee6b08f8&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIwMjg4OTI2NQ==&mid=2247597756&idx=1&sn=751c1ea5b214ae6e14a208c04ae05e3d&chksm=976a9115a2f2a7d3a131e573f1ace2322d97ec1a77abf668a1224ac8d977e046968f5c7cad71&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIwNzExNTI5MA==&mid=2649895992&idx=1&sn=2db768454308aea8661283b04870a38d&chksm=8e40cffb5980f6350bf9e907cc441b820572068c2b4b5e6215a0f98ae38e4b465829b53ca1a4&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIwODc0ODY2MQ==&mid=2247532906&idx=3&sn=1bfdaa9f5f25cde34b1f4aa22696e974&chksm=977c6870a00be1662ad5f9f97df7049c18451255eb86ee163aee000219bf5be3220ae8fafe7e&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIwOTIxNTY0MQ==&mid=2650363457&idx=1&sn=5da31d6062602002a9efe40b898df485&chksm=8f7abfb7b80d36a12c2a7de21d4b404bf60087dcff9b5641499a19ae74acc33ec769952b1443&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.000Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIxMTU0MTYxMw==&mid=2247536552&idx=5&sn=85616f7d40fa85c10c343a452d38465f&chksm=9751c4aaa0264dbcbd2d58ec7800e2ed0ad8bcd4ee751acf08271da0669bf9c954ea69308b64&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIxMzcxNjEwMA==&mid=2247494267&idx=3&sn=e09c8ac801465af2f64f12606b04b3c6&chksm=97b03790a0c7be86b3fef9507468ddcd44ba1f70cf42503f60e307fcde956dc7d7de5809860b&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIxNjM2NTQ2Ng==&mid=2247504249&idx=1&sn=726901c65f2416c7c0f568cf06063233&chksm=96a90f2cd4915408ae7fad1c3bdd39c620c8ad1713f6dcedee740e20551f2a36c0e3497c9bfa&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIxNTAzODg3OA==&mid=2651228803&idx=1&sn=71cad1e585f04d147e288ac25e93a3f7&chksm=8d9aa4e8f29da5503bd31542e0298049dc31ba45f7dd9e92f52d76debc2b9d7f8c66fdfe6d1b&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIyMDAyNTkwNg==&mid=2650992261&idx=1&sn=fba8918f991218575d534cc6474bb224&chksm=8d3a2c381f29662b9e0cab8535a05336d1cd1123a10001f14b1be81e1430718d909d8ff7ca85&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIyMDMxMzY1Ng==&mid=2247520289&idx=1&sn=d044d264d5fe84ae95d702fbfc7d53d1",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIyMTk1NDkzMg==&mid=2247533157&idx=2&sn=27cc5dbb20b7d0500b59088f46c3f6ff&chksm=e836d47edf415d68d183b1dcbd10f684f5e4ebaeaea49c02209103ed06a95f24d32e7faee253&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIyNDE3OTA2Nw==&mid=2655601128&idx=1&sn=97e598b54d0c4ee00db3c422cadeb18b&chksm=f2f6a54e89ede5702fd10ad116d1b7e220d781be208b2ff3f716fc6cfc5bb9c4c8bd2b489a36&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIyOTAyMjYyNg==&mid=2650559154&idx=1&sn=09b817d995126acdf25c3dca552ac662&chksm=f041fc7fc7367569868f18818e306b0c5566798c7d43df51844d7e13cda1f644f7fa507fb96a&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU0MTA3OTU5Ng==&mid=2247500269&idx=1&sn=8f12a6a214ec007a6c4b576c77921b04&chksm=fb2de0aecc5a69b8ddf2a66b87116a8e018f48d1e54258032e56925cca82742fd45231fa5b08&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.001Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU1MTE1MjU5Nw==&mid=2247485363&idx=1&sn=76a86685d32ca24ebff66be37165fdf3",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.002Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU2Mjc2ODA5Mw==&mid=2247540570&idx=1&sn=7177dbd96b2327b899d78d6306d15b91&chksm=fc666ee8cb11e7fea80de38c970b6044a5e94a02fc0f8577a5678408a5aedb6981071d1f55dc&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.002Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s?__biz=MzUzNDYxOTA1NA==&mid=2247531598&idx=2&sn=90528ddfe77497d33195162ef0d1c991&chksm=fa93ca8fcde44399087442a7d026985811995e0b9adffb1cd12c5d7371f5657e99024c85c21f&scene=27",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.002Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/_Xynz_Qy0UTwHWEkMTeEVg",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.002Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/-4rBqFafNygl6Uz2L8MK1A",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.002Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/7_9NKsdVvggtosaaa5nRyw",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/8oLzGvwKc7QhQZKMA1iXIA",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/Az4jgSR42S-qjtRmJTC2Dg",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/blui1fvmlxx8-zzzvaqnjq",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/bLuI1FVmLXx8-zZzVAqnJQ",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/dJhCQmpejY-GTE_a1ZpPsg",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/Ivnvm37snzpzAJRGimPy-A",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/ksXeV9fT7I4SuicefuyZXg",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/mKzzQOGpgzb9dtgEnlU6jA",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/Ml4m1WNvnRh90RQKHvxUrA",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/MmAWdyoNQFfbBDzexX-qAA",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.003Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/nhIwxQY5QxJ_xSxTZGPyBA",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.004Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/O9cuy24acZeytA73z0IQdA",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.004Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/tcDg7zap3pX4MivKt6JkoA",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.004Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/wsRO3I0l02fKu9Gr0O9gfw",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.004Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/xJq1SbDM5_2NjZfcf3G3tQ",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.004Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/Z3r0RY2S3AiTpxCMWYufzQ",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.004Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/zI8Yf94a9yLQKDgB_yJqVQ",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.004Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://mp.weixin.qq.com/s/Zm3kcGVF3BSelnSmgDCglQ",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.004Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/int.22656",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://onlinelibrary.wiley.com/doi/abs/10.1002/int.22656",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.318Z"
+    },
+    {
+      "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4492919",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:50.254Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://peerj.com/articles/cs-830/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://peerj.com/articles/cs-830/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.319Z"
+    },
+    {
+      "link": "https://support.exodus.com/support/en/articles/8598706-what-is-a-replay-attack",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:00.148Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/oauth-consent-phishing-explained-and-prevented/4423357",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/oauth-consent-phishing-explained-and-prevented/4423357",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.953Z"
+    },
+    {
+      "link": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/enhance-ai-security-and-governance-across-multi-model-and-multi-cloud-environmen/4395593",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/enhance-ai-security-and-governance-across-multi-model-and-multi-cloud-environmen/4395593",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.958Z"
+    },
+    {
+      "link": "https://techcommunity.microsoft.com/discussions/microsoftdefendercloudapps/file-shared-with-unauthorized-domain/3901560",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://techcommunity.microsoft.com/discussions/microsoftdefendercloudapps/file-shared-with-unauthorized-domain/3901560",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.954Z"
+    },
+    {
+      "link": "https://thehackernews.com/2024/09/session-hijacking-20-latest-way-that.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2024/09/session-hijacking-20-latest-way-that.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.672Z"
+    },
+    {
+      "link": "https://thehackernews.com/2024/10/microsoft-detects-growing-use-of-file.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2024/10/microsoft-detects-growing-use-of-file.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.672Z"
+    },
+    {
+      "link": "https://thehackernews.com/2024/12/thousands-download-malicious-npm.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2024/12/thousands-download-malicious-npm.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.672Z"
+    },
+    {
+      "link": "https://thehackernews.com/2025/06/malicious-pypi-package-masquerades-as.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2025/06/malicious-pypi-package-masquerades-as.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.751Z"
+    },
+    {
+      "link": "https://thehackernews.com/2025/07/3500-websites-hijacked-to-secretly-mine.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2025/07/3500-websites-hijacked-to-secretly-mine.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.751Z"
+    },
+    {
+      "link": "https://thehackernews.com/2025/09/40-npm-packages-compromised-in-supply.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2025/09/40-npm-packages-compromised-in-supply.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.753Z"
+    },
+    {
+      "link": "https://thehackernews.com/2025/10/europol-dismantles-sim-farm-network.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2025/10/europol-dismantles-sim-farm-network.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.831Z"
+    },
+    {
+      "link": "https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.833Z"
+    },
+    {
+      "link": "https://thehackernews.com/2025/11/cybercriminals-exploit-remote.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2025/11/cybercriminals-exploit-remote.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.833Z"
+    },
+    {
+      "link": "https://thehackernews.com/2025/11/large-scale-clickfix-phishing-attacks.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2025/11/large-scale-clickfix-phishing-attacks.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.908Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.911Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/02/keenadu-firmware-backdoor-infects.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/02/keenadu-firmware-backdoor-infects.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.919Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/03/doj-disrupts-3-million-device-iot.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/03/doj-disrupts-3-million-device-iot.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.991Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/03/microsoft-reveals-clickfix-campaign.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/03/microsoft-reveals-clickfix-campaign.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.989Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/03/teampcp-hacks-checkmarx-github-actions.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/03/teampcp-hacks-checkmarx-github-actions.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:50.997Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/03/trivy-security-scanner-github-actions.html",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://thehackernews.com/2026/03/trivy-security-scanner-github-actions.html",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:51.720Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/04/36-malicious-npm-packages-exploited.html",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://thehackernews.com/2026/04/36-malicious-npm-packages-exploited.html",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:51.537Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/04/drift-loses-285-million-in-durable.html",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://thehackernews.com/2026/04/drift-loses-285-million-in-durable.html",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:52.244Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/04/operation-poweroff-seizes-53-ddos.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/04/operation-poweroff-seizes-53-ddos.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:51.070Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:51.070Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:51.079Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/06/hades-pypi-attack-19-packages-poisoned.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/06/hades-pypi-attack-19-packages-poisoned.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:51.197Z"
+    },
+    {
+      "link": "https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:51.198Z"
+    },
+    {
+      "link": "https://trustedcomputinggroup.org/resource/tcg-guidance-for-secure-update-of-software-and-firmware-on-embedded-systems/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://trustedcomputinggroup.org/resource/tcg-guidance-for-secure-update-of-software-and-firmware-on-embedded-systems/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:51.364Z"
+    },
+    {
+      "link": "https://www.abc.net.au/chinese/2022-09-28/what-we-know-about-optus-cyber-attack-user-data-leak-security/101479560",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:01.198Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.abc.net.au/news/2024-10-11/robot-vacuum-yells-racial-slurs-at-family-after-being-hacked/104445408",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:01.199Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.amnesty.org/en/latest/news/2025/06/cambodia-government-allows-slavery-torture-flourish-inside-scamming-compounds/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:01.365Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.caict.ac.cn/",
+      "ok": false,
+      "status": 412,
+      "finalUrl": "https://www.caict.ac.cn/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:51.855Z"
+    },
+    {
+      "link": "https://www.caict.ac.cn/kxyj/qwfb/bps/202601/P020260109784447548497.pdf",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.caict.ac.cn/kxyj/qwfb/bps/202601/P020260109784447548497.pdf",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:51.971Z"
+    },
+    {
+      "link": "https://www.cdqingyang.gov.cn/qygafj/bmdt/2026-03/20/content_e626d87651cc45c7bd26e95abf53c7ab.shtml",
+      "ok": false,
+      "status": 412,
+      "finalUrl": "https://www.cdqingyang.gov.cn/qygafj/bmdt/2026-03/20/content_e626d87651cc45c7bd26e95abf53c7ab.shtml",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.022Z"
+    },
+    {
+      "link": "https://www.cfr.org/cyber-operations/targeting-of-harmony-cryptocurrency-bridge",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:52.500Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.court.gov.cn/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.court.gov.cn/index.html",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:52.494Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/shenpan/xiangqing/283891.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/shenpan/xiangqing/283891.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.458Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/shenpan/xiangqing/440691.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/shenpan/xiangqing/440691.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.619Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/shenpan/xiangqing/449581.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/shenpan/xiangqing/449581.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.662Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/137071.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/137071.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.659Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/304771.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/304771.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.768Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/304781.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/304781.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.926Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/454581.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/454581.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.933Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/459331.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/459331.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:52.953Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/459621.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/459621.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.085Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/469031.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/469031.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.108Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/472111.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/472111.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.178Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/472901.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/472901.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.293Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/474151.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/474151.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.294Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/499271.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/499271.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.441Z"
+    },
+    {
+      "link": "https://www.court.gov.cn/zixun/xiangqing/499321.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/499321.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.477Z"
+    },
+    {
+      "link": "https://www.cyber.nj.gov/threat-landscape/phishing-online-scams/telephone-scams/sim-swapping-attacks",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.cyber.nj.gov/threat-landscape/phishing-online-scams/telephone-scams/sim-swapping-attacks",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.706Z"
+    },
+    {
+      "link": "https://www.ebrun.com/20170712/237968.shtml",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.ebrun.com/20170712/237968.shtml",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:54.577Z"
+    },
+    {
+      "link": "https://www.emerald.com/ribs/article/35/5/613/1269248/Metaverse-governance-in-international-business-a",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.emerald.com/ribs/article/35/5/613/1269248/Metaverse-governance-in-international-business-a",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:53.981Z"
+    },
+    {
+      "link": "https://www.experian.com/blogs/insights/bring-your-own-device-data-breaches/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.experian.com/blogs/insights/bring-your-own-device-data-breaches/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.390Z"
+    },
+    {
+      "link": "https://www.facebook.com/100084504854473/videos/a-statement-on-the-recent-upload-of-ai-music-impersonating-my-voice-onto-major-s/892417137070162/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:54.074Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.facebook.com/groups/fh5group/posts/4025243374400719/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:54.161Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.facebook.com/groups/forzacommunity/posts/2247392315677641/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:49:54.249Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.fatf-gafi.org/en/topics/virtual-assets.html",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fatf-gafi.org/en/topics/virtual-assets.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:54.580Z"
+    },
+    {
+      "link": "https://www.fbi.gov/about/faqs/what-is-economic-espionage",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fbi.gov/about/faqs/what-is-economic-espionage",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:54.867Z"
+    },
+    {
+      "link": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/ransomware",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/ransomware",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:54.867Z"
+    },
+    {
+      "link": "https://www.fbi.gov/investigate/cyber/alerts/2025/account-takeover-fraud-via-impersonation-of-financial-institution-support",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fbi.gov/investigate/cyber/alerts/2025/account-takeover-fraud-via-impersonation-of-financial-institution-support",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:54.949Z"
+    },
+    {
+      "link": "https://www.fbi.gov/investigate/cyber/alerts/2026/evading-residential-proxy-networks-protecting-your-devices-from-becoming-a-tool-for-criminals",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fbi.gov/investigate/cyber/alerts/2026/evading-residential-proxy-networks-protecting-your-devices-from-becoming-a-tool-for-criminals",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:54.950Z"
+    },
+    {
+      "link": "https://www.fbi.gov/news/press-releases/fbi-confirms-lazarus-group-cyber-actors-responsible-for-harmonys-horizon-bridge-currency-theft",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fbi.gov/news/press-releases/fbi-confirms-lazarus-group-cyber-actors-responsible-for-harmonys-horizon-bridge-currency-theft",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.029Z"
+    },
+    {
+      "link": "https://www.fbi.gov/news/press-releases/fbi-statement-on-compromise-of-colonial-pipeline-networks",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fbi.gov/news/press-releases/fbi-statement-on-compromise-of-colonial-pipeline-networks",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.038Z"
+    },
+    {
+      "link": "https://www.fbi.gov/video-repository/asac-maxwell-764-psa-final-with-audio-and-captions.mp4/view",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fbi.gov/video-repository/asac-maxwell-764-psa-final-with-audio-and-captions.mp4/view",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.110Z"
+    },
+    {
+      "link": "https://www.fcc.gov/call-authentication",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.fcc.gov/call-authentication",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.487Z"
+    },
+    {
+      "link": "https://www.gsma.com/esim/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.gsma.com/esim/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.392Z"
+    },
+    {
+      "link": "https://www.gsma.com/get-involved/working-groups/content-type/article/what-is-sim-swap/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.gsma.com/get-involved/working-groups/content-type/article/what-is-sim-swap/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.636Z"
+    },
+    {
+      "link": "https://www.gsma.com/solutions-and-impact/technologies/esim/compliance/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.gsma.com/solutions-and-impact/technologies/esim/compliance/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.472Z"
+    },
+    {
+      "link": "https://www.gwng.edu.cn/wlzx/2026/0427/c800a106737/page.htm",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.gwng.edu.cn/wlzx/2026/0427/c800a106737/page.htm",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.715Z"
+    },
+    {
+      "link": "https://www.icann.org/compliance/complaint",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:05.487Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.investopedia.com/terms/1/51-attack.asp",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.investopedia.com/terms/1/51-attack.asp",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.947Z"
+    },
+    {
+      "link": "https://www.jfdaily.com/sgh/detail?id=1656963",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.jfdaily.com/sgh/detail?id=1656963",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.805Z"
+    },
+    {
+      "link": "https://www.jfdaily.com/sgh/detail?id=1683434",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.jfdaily.com/sgh/detail?id=1683434",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:55.969Z"
+    },
+    {
+      "link": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=1026522&sid=200",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=1026522&sid=200",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:56.106Z"
+    },
+    {
+      "link": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=1026526&sid=200",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=1026526&sid=200",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:56.057Z"
+    },
+    {
+      "link": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=691680&sid=200",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=691680&sid=200",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:56.134Z"
+    },
+    {
+      "link": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=973187&sid=11",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=973187&sid=11",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:49:56.240Z"
+    },
+    {
+      "link": "https://www.jfdaily.com/wx/detail.do?id=373530",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.jfdaily.com/wx/detail.do?id=373530",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:49:56.218Z"
+    },
+    {
+      "link": "https://www.justice.gov/archives/opa/pr/justice-department-announces-charges-and-guilty-pleas-three-computer-crime-cases-involving",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:06.218Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.justice.gov/archives/opa/pr/russian-nationals-charged-hacking-one-cryptocurrency-exchange-and-illicitly-operating-another",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:00.472Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.justice.gov/archives/opa/pr/two-brothers-arrested-attacking-ethereum-blockchain-and-stealing-25m-cryptocurrency",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:09.099Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.justice.gov/usao-ak/pr/authorities-disrupt-worlds-largest-iot-ddos-botnets-responsible-record-breaking-attacks",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:10.148Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.justice.gov/usao-cdca/pr/sim-swapper-sentenced-eight-years-prison-campaign-fraud-and-deception-including",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:10.474Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.justice.gov/usao-edmi/pr/nine-individuals-connected-hacking-group-charged-online-identity-theft-and-other",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:08.381Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.justice.gov/usao-mdfl/pr/two-individuals-charged-non-fungible-token-rug-pull-and-laundering-proceeds-through",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:05.380Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.justice.gov/usao-nj/pr/computer-hacker-who-launched-attacks-rutgers-university-ordered-pay-86m-restitution",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:08.547Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.justice.gov/usao-sdny/pr/florida-man-sentenced-18-months-theft-over-20-million-sim-swap-scheme",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:09.560Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.justice.gov/usao-sdny/pr/two-defendants-charged-non-fungible-token-nft-fraud-and-money-laundering-scheme-0",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:10.668Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2020/0110/2020011019916.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:06.304Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2021/1013/2021101336167.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:06.473Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2022/0507/2022050740805.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:06.556Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2022/1208/2022120845474.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:06.635Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2022/1214/2022121445556.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:06.719Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2023/0412/2023041247757.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:06.795Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2023/0922/2023092252159.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:06.961Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2024/0508/2024050857013.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.050Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2024/0807/2024080759070.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.136Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2024/1028/2024102860561.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.217Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2025/0107/2025010761920.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.304Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2025/0228/2025022862753.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.445Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2025/0508/2025050864062.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.534Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2025/0515/2025051564199.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.620Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2025/1204/2025120468016.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.701Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.jxzfw.gov.cn/2026/0507/2026050770691.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:07.785Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.linkedin.com/posts/oxorio_non-obvious-precautions-for-dao-security-activity-7070394785034825728-ggnQ",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:17.787Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.linkedin.com/pulse/1-4-installs-often-fraudulent-bigger-loss-starts-after-fake-install-b2buc",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:18.383Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.linkedin.com/pulse/tiktoks-530-million-gdpr-fine-unpacking-unlawful-data-ilia-dubovtsev-dx84e",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:18.549Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.lmlphp.com/user/58076/article/item/637693/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:19.101Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.maijia.com/article/485973",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:19.562Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.maijia.com/article/558778",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:20.151Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.mct.gov.cn/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:20.474Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.mdpi.com/2227-9709/10/1/3",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:20.668Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.mee.gov.cn/zcwj/gwywj/202108/t20210817_858013.shtml",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:27.789Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.meipian.cn/3bi6huhr",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:28.384Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.meipian.cn/3t5ulsc2",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:28.551Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.meipian.cn/4b7q536d",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:29.102Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.meipian.cn/57uw5xm6",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:29.563Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.meta.com/safety-center/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:30.153Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/msrc/blog/2022/10/investigation-regarding-misconfigured-microsoft-storage-location-2",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:30.476Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:30.670Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:37.789Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2022/03/22/dev-0537-criminal-actor-targeting-organizations-for-data-exfiltration-and-destruction/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:38.385Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:38.552Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2023/07/25/cryptojacking-understanding-and-defending-against-cloud-compute-resource-abuse/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:39.104Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2023/11/20/social-engineering-attacks-lure-indian-users-to-install-android-banking-trojans/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:39.563Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2023/12/12/threat-actors-misuse-oauth-applications-to-automate-financially-driven-attacks/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:40.156Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2025/04/16/cyber-signals-issue-9-ai-powered-deception-emerging-fraud-threats-and-countermeasures/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:40.476Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:40.671Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:40.819Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:40.903Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/03/02/oauth-redirection-abuse-enables-phishing-malware-delivery/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/03/02/oauth-redirection-abuse-enables-phishing-malware-delivery/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:40.837Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:40.887Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:41.087Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/04/07/soho-router-compromise-leads-to-dns-hijacking-and-adversary-in-the-middle-attacks/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/04/07/soho-router-compromise-leads-to-dns-hijacking-and-adversary-in-the-middle-attacks/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:41.001Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:41.346Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.106Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.233Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/18/storm-2949-turned-compromised-identity-into-cloud-wide-breach/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/18/storm-2949-turned-compromised-identity-into-cloud-wide-breach/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.126Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/22/from-edge-appliance-to-enterprise-compromise-multi-stage-linux-intrusion-via-f5-and-confluence/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/22/from-edge-appliance-to-enterprise-compromise-multi-stage-linux-intrusion-via-f5-and-confluence/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.219Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.155Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/28/typosquatted-npm-packages-used-steal-cloud-ci-cd-secrets/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/28/typosquatted-npm-packages-used-steal-cloud-ci-cd-secrets/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.317Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/29/33-malicious-npm-packages-abuse-dependency-confusion-profile-developer-environments/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/29/33-malicious-npm-packages-abuse-dependency-confusion-profile-developer-environments/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.335Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.613Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/06/05/securing-ci-cd-in-agentic-world-claude-code-github-action-case/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/blog/2026/06/05/securing-ci-cd-in-agentic-world-claude-code-github-action-case/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:43.510Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/security/security-insider/threat-landscape/microsoft-digital-defense-report-2024",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:43.100Z"
+    },
+    {
+      "link": "https://www.microsoft.com/en-us/securityengineering/sdl/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.microsoft.com/en-us/securityengineering/sdl/",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:42.308Z"
+    },
+    {
+      "link": "https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/201311/t20131119_145359.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:43.421Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/202104/t20210423_357848.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:43.375Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.moj.gov.cn/pub/sfbgw/zwgkztzl/2025nianzhuanti/2025mfdxcy/2025mfdxcy_mfdql/202505/t20250507_518708.html",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "connection_error",
+      "checkedAt": "2026-07-04T05:50:43.467Z",
+      "error": "fetch failed"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2253534/n2253535/c6200936/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2253534/n2253535/c6200936/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.416Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2253534/n2253535/c7589207/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2253534/n2253535/c7589207/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.438Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2253534/n2253535/c7880211/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2253534/n2253535/c7880211/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.603Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2253534/n2253535/c8653048/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2253534/n2253535/c8653048/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.607Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2253534/n2253535/c9717552/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2253534/n2253535/c9717552/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.698Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2253534/n2253535/c9881482/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2253534/n2253535/c9881482/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.705Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2253534/n2253543/c8487604/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2253534/n2253543/c8487604/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.716Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254098/n4904352/c10114438/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254098/n4904352/c10114438/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.799Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254098/n4904352/c10237071/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254098/n4904352/c10237071/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.807Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254098/n4904352/c10267710/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254098/n4904352/c10267710/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.813Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254098/n4904352/c8382333/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254098/n4904352/c8382333/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.895Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254098/n4904352/c9545872/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254098/n4904352/c9545872/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.901Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254098/n4904352/c9933851/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254098/n4904352/c9933851/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.908Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n7586063/n7586084/c7592266/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n7586063/n7586084/c7592266/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.998Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n9146910/index.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n9146910/index.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:42.996Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n9146910/n9146917/index.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n9146910/n9146917/index.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.001Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n9309244/n9309283/c9312129/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n9309244/n9309283/c9312129/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.173Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c10167148/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c10167148/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.193Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c8187464/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c8187464/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.190Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c9713371/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c9713371/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.200Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c10099089/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c10099089/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.271Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c10109061/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c10109061/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.289Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c10460193/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c10460193/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.292Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c6205614/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c6205614/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.296Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9080969/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9080969/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.371Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9260916/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9260916/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.394Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9601260/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9601260/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.390Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9690233/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9690233/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.389Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9956179/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841074/c9956179/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.473Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n4876594/n5104076/n5104080/c7487793/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n4876594/n5104076/n5104080/c7487793/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.477Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n5137689/n5414444/n5414574/c9560883/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n5137689/n5414444/n5414574/c9560883/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.479Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n2255079/n5967516/n6203051/n6203341/c8682834/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n2255079/n5967516/n6203051/n6203341/c8682834/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.482Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n6557558/c8681178/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n6557558/c8681178/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.495Z"
+    },
+    {
+      "link": "https://www.mps.gov.cn/n6935718/n6936559/c9901088/content.html",
+      "ok": false,
+      "status": 521,
+      "finalUrl": "https://www.mps.gov.cn/n6935718/n6936559/c9901088/content.html",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.526Z"
+    },
+    {
+      "link": "https://www.namecheap.com/blog/hidden-threats-of-iot-devices-and-side-channel-attacks/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.namecheap.com/blog/hidden-threats-of-iot-devices-and-side-channel-attacks/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.876Z"
+    },
+    {
+      "link": "https://www.nccoe.nist.gov/mobile-device-security",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.nccoe.nist.gov/mobile-device-security",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:44.399Z"
+    },
+    {
+      "link": "https://www.reddit.com/r/bigcommerce/comments/1oqalfa/carding_attack_on_bigcommerce_unable_to_stop_due/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.reddit.com/r/bigcommerce/comments/1oqalfa/carding_attack_on_bigcommerce_unable_to_stop_due/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.949Z"
+    },
+    {
+      "link": "https://www.reddit.com/r/chinalife/comments/l377bn/is_china_telecom_trying_to_scam_me/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.reddit.com/r/chinalife/comments/l377bn/is_china_telecom_trying_to_scam_me/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.947Z"
+    },
+    {
+      "link": "https://www.reddit.com/r/solana/comments/1c24vgk/how_to_spot_rug_pulls_when_everything_looks_good/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.reddit.com/r/solana/comments/1c24vgk/how_to_spot_rug_pulls_when_everything_looks_good/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.948Z"
+    },
+    {
+      "link": "https://www.reddit.com/r/virtualreality/comments/sbkaot/is_anyone_else_tired_of_the_bullshit_metaverse/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.reddit.com/r/virtualreality/comments/sbkaot/is_anyone_else_tired_of_the_bullshit_metaverse/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.949Z"
+    },
+    {
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S0167404818313798",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0167404818313798",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.975Z"
+    },
+    {
+      "link": "https://www.sciencedirect.com/science/article/pii/S0378720623001465",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.sciencedirect.com/science/article/pii/S0378720623001465",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:43.962Z"
+    },
+    {
+      "link": "https://www.sciencedirect.com/science/article/pii/S2405844018353404",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.sciencedirect.com/science/article/pii/S2405844018353404",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:44.149Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_10024890",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_10024890",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.279Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_10140661",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_10140661",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.147Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_12530671",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_12530671",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.250Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_1383678",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_1383678",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.148Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_14923193",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_14923193",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.258Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_15387456",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_15387456",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:44.151Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_1552051",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_1552051",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.230Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_19979837",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_19979837",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.238Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_20812450",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_20812450",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.291Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_21124056",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_21124056",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.188Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_22664429",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_22664429",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.416Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_22969480",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_22969480",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.260Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_2706550",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_2706550",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.301Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_27709551",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_27709551",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.320Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_28991401",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_28991401",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.329Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_2921336",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_2921336",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:44.361Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_29380156",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_29380156",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.358Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_32220392",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_32220392",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.365Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_32415589",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_32415589",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.331Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_32978873",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_32978873",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.399Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/newsDetail_forward_33164885",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/newsDetail_forward_33164885",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.404Z"
+    },
+    {
+      "link": "https://www.thepaper.cn/tag/7200885",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.thepaper.cn/tag/7200885",
+      "issue": "ok",
+      "checkedAt": "2026-07-04T05:50:44.490Z"
+    },
+    {
+      "link": "https://www.thesslstore.com/blog/heres-what-happens-when-your-private-key-gets-compromised/",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://www.thesslstore.com/blog/heres-what-happens-when-your-private-key-gets-compromised/",
+      "issue": "review",
+      "checkedAt": "2026-07-04T05:50:44.672Z"
+    },
+    {
+      "link": "https://z.cash/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:54.361Z",
+      "error": "This operation was aborted"
+    },
+    {
+      "link": "https://z.cash/technology/",
+      "ok": false,
+      "status": 0,
+      "finalUrl": "",
+      "issue": "timeout",
+      "checkedAt": "2026-07-04T05:50:54.365Z",
+      "error": "This operation was aborted"
+    }
+  ]
+}

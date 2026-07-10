@@ -123,19 +123,15 @@
     ],
     "references": [
       {
-        "title": "INTERPOL: Operation First Light Targets Social Engineering Fraud",
-        "link": "https://www.interpol.int/en/News-and-Events/News"
+        "title": "INTERPOL《2024亚太地区网络威胁评估报告》",
+        "link": "https://www.interpol.int/content/download/22308/file/Asia%20and%20South%20Pacific%20Cyberthreat%20Assessment%20Report%202024-4.pdf"
       },
       {
-        "title": "Trend Micro: Cybercriminals Behind Southeast Asian Scam Operations",
-        "link": "https://www.trendmicro.com/en_us/research.html"
-      },
-      {
-        "title": "Group-IB: Scam Centers in Southeast Asia Technical Report",
-        "link": "https://group-ib.com/resources/threat-research/"
+        "title": "UNODC：东南亚诈骗农场作为犯罪服务提供商",
+        "link": "https://www.unodc.org/unodc/frontpage/2024/July/crushing-scam-farms--southeast-asias-criminal-service-providers.html"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-10",
     "keywords": [
       "电诈技术员",
       "诈骗技术员",
@@ -177,6 +173,7 @@
         "relation": "co-involved",
         "note": "共同间接支持 6 个风险，共同使用 1 个攻击工具。"
       }
-    ]
+    ],
+    "version": 2
   }
 }

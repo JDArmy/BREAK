@@ -26,11 +26,15 @@
     "title": "IP Intelligence",
     "definition": "Labeling IP addresses with risk scores, types, attribution, and other attributes.",
     "description": "IP intelligence refers to various information about IP addresses. In a narrow sense, IP intelligence may only include the risk score of an IP. In a broad sense, IP intelligence also includes: geographic location, ISP (Internet Service Provider) information, ASN (Autonomous System Number), malicious activity history, user information, proxy detection, network traffic analysis, etc.",
-    "limitation": "The limitations of IP threat intelligence are that it can only provide limited information and cannot provide a complete threat picture. Additionally, since network attackers constantly change their attack methods and techniques, the effectiveness of IP intelligence can also be affected. Therefore, when using IP intelligence, it needs to be combined with other security technologies and measures to improve the effectiveness of network security protection.",
+    "limitation": "IP threat intelligence provides limited and potentially stale indicators. Attackers can bypass matches by using residential proxies, cloud hosts, or frequent address rotation, while shared NAT, dynamic addresses, and compromised hosts can cause false positives against legitimate users. Device, account, and behavioral signals are therefore also required. Differences in update frequency, geographic coverage, and vendor labeling standards further affect the completeness and stability of risk conclusions.",
     "references": [
       {
         "title": "Threat Intelligence - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Threat_intelligence"
+      },
+      {
+        "title": "GeoIP IP Risk Databases - MaxMind",
+        "link": "https://dev.maxmind.com/geoip/docs/databases/ip-risk/"
       }
     ],
     "keywords": [
@@ -66,7 +70,7 @@
     "title": "Phone Number Intelligence",
     "definition": "Labeling black-market phone numbers, recycled numbers, MVNO numbers, etc., and marking their risk.",
     "description": "Black-market phone numbers are mostly generated from risk control systems and risk device identification countermeasures. Recycled numbers (numbers reassigned to new users) typically come from carriers; by connecting to carrier interfaces, businesses can promptly obtain the active status and secondary identity binding status of phone numbers.",
-    "limitation": "Black-market actors can obtain phone numbers by renting real people's phone numbers. Additionally, interception SIM cards (real phones with malware installed to intercept SMS messages) have a high market share in the black-market industry and have become the most mainstream type of malicious phone number. Although these phone numbers are used for black-gray market activities, they cannot be directly blocked as blacklisted numbers.",
+    "limitation": "Attackers can rent genuine subscribers' numbers or use malware-infected interception SIMs, preserving real-name registration and normal communication history to bypass blacklists and static intelligence. Blocking solely on historical associations can also create false positives when numbers are recycled, resold, or shared by legitimate users. Carrier number reuse, roaming, and intelligence-update delays further weaken the timeliness of reputation labels.",
     "references": [
       {
         "title": "Number Marking Service - China Academy of Information and Communications Technology",

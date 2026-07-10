@@ -1,25 +1,29 @@
 {
   "C1358": {
-    "title": "Badger DAO Permission Vulnerability Attack Incident",
+    "title": "BadgerDAO Frontend Malicious Approval Attack",
     "keywords": [
       "Badger DAO",
       "DeFi",
-      "permission vulnerability",
+      "frontend compromise",
       "malicious wallet request",
       "token approval",
       "frontend attack",
       "smart contract security",
       "$120 million"
     ],
-    "summary": "In December 2021, the DeFi protocol Badger DAO suffered an attack resulting in a loss of approximately $120 million. The attacker injected malicious wallet requests into the user interface, tricking users into approving token spending permissions for a malicious address, thereby gaining control of user vault funds and transferring them.",
+    "summary": "On December 2, 2021, malicious scripts injected into the BadgerDAO frontend induced users conducting normal transactions to grant unlimited token-spending approvals to the attacker's address. After collecting approvals for weeks, the attacker drained victim wallets, causing about $120 million in losses. The incident stemmed from compromised frontend infrastructure rather than a vulnerability in the protocol's smart contracts.",
     "references": [
       {
-        "title": "DeFi Protocol Security Incident Roundup: The Second-Largest Hack Just Happened Last Month...",
-        "link": "https://new.qq.com/rain/a/20220420A06ZDY00"
+        "title": "The BadgerDAO Front-End Attack: $120M Drained Through One Injected Script",
+        "link": "https://namefi.io/r/en/blog/the-badgerdao-frontend-attack"
       },
       {
         "title": "Explained: The BadgerDAO Hack (December 2021)",
         "link": "https://www.halborn.com/blog/post/explained-the-badgerdao-hack-december-2021"
+      },
+      {
+        "title": "DeFi Protocol Security Incident Roundup",
+        "link": "https://new.qq.com/rain/a/20220420A06ZDY00"
       }
     ]
   }

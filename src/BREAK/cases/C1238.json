@@ -1,38 +1,35 @@
 {
   "C1238": {
-    "title": "美国2025年上半年合成身份欺诈损失超33亿美元",
+    "title": "TransUnion披露美国合成身份风险敞口超33亿美元",
     "keywords": [
       "合成身份欺诈",
-      "生成式AI",
-      "深度伪造",
-      "生物识别绕过",
+      "TransUnion",
+      "公共数据",
+      "风险敞口",
       "金融欺诈",
       "美国贷款机构",
       "数字身份",
       "新账户欺诈",
-      "Proofpoint"
+      "TruValidate"
     ],
-    "summary": "2025年上半年，美国贷款机构因合成身份欺诈遭受超33亿美元损失。攻击者利用生成式AI技术批量创建合成数字身份，使用深度伪造图像和视频绕过生物识别验证，自动化注册多个金融平台账户。平均每起确认的合成欺诈案件损失达1.5万美元，超80%的新账户欺诈归因于此。",
+    "summary": "2025年9月17日，TransUnion发布研究称，截至2024年末，美国贷款机构新开账户中与疑似合成身份相关的风险敞口超过33亿美元。研究分析公共记录中的身份特征和行为线索，用于识别信息看似真实、实际由多源数据拼合而成的申请，并介绍相应检测模型。",
     "category": "news_report",
     "relatedRisks": [
       "R0136"
     ],
     "references": [
       {
-        "title": "What Is Synthetic Identity Fraud & Theft? Definition | Proofpoint US",
-        "link": "https://www.proofpoint.com/us/threat-reference/synthetic-identity-fraud"
+        "title": "TransUnion Research Highlights Power of Public Data in Uncovering $3.3B Synthetic Identity Threat",
+        "link": "https://newsroom.transunion.com/transunion-research-highlights-power-of-public-data-in-uncovering-33b-synthetic-identity-threat/"
+      },
+      {
+        "title": "TransUnion Research Highlights Rise In Synthetic Identity Fraud - Crowdfund Insider",
+        "link": "https://www.crowdfundinsider.com/2025/09/251628-transunion-research-highlights-rise-in-synthetic-identity-fraud/"
       }
     ],
-    "updated": "2026-07-09",
-    "incidentTime": "2025-06",
-    "relatedAttackTools": [
-      "AT0053-003",
-      "AT0053-004",
-      "AT0053-005"
-    ],
-    "relatedThreatActors": [
-      "TA0031",
-      "TA0055"
-    ]
+    "updated": "2026-07-10",
+    "incidentTime": "2025-09-17",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
   }
 }
