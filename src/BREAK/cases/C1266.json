@@ -16,7 +16,7 @@
     "summary": "2021年6月起，犯罪嫌疑人刘某迢利用网络炒作信息，获取部分交往信息后，分别冒充都美竹和吴亦凡律师身份进行沟通并诱导转账，索要300万元和解赔偿并骗取转账18万元。该过程可作为中间人攻击教学类比，说明身份冒充、信息不对称和双向欺骗会制造类似“中间人”的信任劫持效果，但不宜表述为警方已确认其在真实通信中实施网络截获和篡改。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0142"
+      "R0083-002"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://weibo.com/ttarticle/p/show?id=2309634662440871985293"
       }
     ],
-    "updated": "2026-07-08",
+    "updated": "2026-07-10",
     "incidentTime": "2021-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

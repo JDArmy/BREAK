@@ -11,12 +11,8 @@
       "92GB compressed data theft",
       "National Cybersecurity Notification Center"
     ],
-    "summary": "In April 2026, the National Cybersecurity Notification Center reported multiple supply chain poisoning incidents, including a confirmed Trivy supply chain attack that led to a data breach at the European Commission, resulting in the theft of 92GB of compressed data.",
+    "summary": "CERT-EU disclosed that the European Commission detected abnormal alerts involving an AWS account on March 24, 2026, notified CERT-EU on March 25, and publicly disclosed the incident on March 27. CERT-EU assessed that initial access came from the Trivy supply chain compromise attributed to TeamPCP, and that about 91.7 GB of compressed data was exfiltrated from the affected AWS account, including personal data such as names, email addresses, and email content.",
     "references": [
-      {
-        "title": "Comprehensive Analysis of TeamPCP's 2025-2026 Global Software Supply Chain Attack Campaign - Security Inner Circle",
-        "link": "https://www.secrss.com/articles/91229"
-      },
       {
         "title": "European Commission cloud breach: a supply-chain compromise",
         "link": "https://cert.europa.eu/blog/european-commission-cloud-breach-trivy-supply-chain"

@@ -12,24 +12,28 @@
       "凭证填充",
       "自动化攻击"
     ],
-    "summary": "23andMe遭遇的数据泄露事件中，攻击者采用相对简单但高效的暴力破解和撞库技术，通过自动化手段大规模尝试登录用户账号，成功访问并窃取了大量用户的基因和健康数据。",
+    "summary": "2023年10月披露的23andMe数据泄露事件中，攻击者通过撞库方式取得约1.4万个用户账号访问权，并借助DNA Relatives和Family Tree等共享功能扩大影响范围，访问约550万份DNA亲属资料和约140万份家族树资料。事件说明复用密码、弱认证和社交化数据共享会放大账号接管的外溢风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0090"
     ],
     "references": [
       {
-        "title": "The 23andMe Data Breach: Analyzing Credential Stuffing Attacks ...",
-        "link": "https://arxiv.org/pdf/2502.04303"
+        "title": "Addressing Data Security Concerns - 23andMe Blog",
+        "link": "https://blog.23andme.com/articles/addressing-data-security-concerns"
+      },
+      {
+        "title": "The 23andMe Data Breach: Analyzing Credential Stuffing Attacks, Security Vulnerabilities, and Mitigation Strategies",
+        "link": "https://arxiv.org/abs/2502.04303"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "relatedAttackTools": [
       "AT0042",
       "AT0023",
       "AT0068"
     ],
     "relatedThreatActors": [],
-    "incidentTime": "2025-02"
+    "incidentTime": "2023-10"
   }
 }

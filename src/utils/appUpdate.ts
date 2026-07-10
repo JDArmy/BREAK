@@ -3,6 +3,7 @@ import { ElMessage } from "element-plus";
 const ACTIVITY_IDLE_MS = 8000;
 const UPDATE_NOTICE_DELAY_MS = 90000;
 const RETRY_DELAY_MS = 2000;
+const DEV_SW_RELOAD_KEY = "break-dev-sw-cleanup-reloaded";
 
 type WaitingWorker = ServiceWorker & { postMessage(message: unknown): void };
 
@@ -29,8 +30,40 @@ const hasActiveOverlay = () =>
     ),
   );
 
+export async function cleanupDevelopmentServiceWorker(
+  reload = () => window.location.reload(),
+) {
+  if (!("serviceWorker" in navigator)) return;
+
+  const registrations = await navigator.serviceWorker.getRegistrations();
+  const breakCacheKeys =
+    "caches" in window
+      ? (await caches.keys()).filter((key) => key.startsWith("break-"))
+      : [];
+
+  await Promise.all([
+    ...registrations.map((registration) => registration.unregister()),
+    ...breakCacheKeys.map((key) => caches.delete(key)),
+  ]);
+
+  if (!navigator.serviceWorker.controller) {
+    sessionStorage.removeItem(DEV_SW_RELOAD_KEY);
+    return;
+  }
+  if (sessionStorage.getItem(DEV_SW_RELOAD_KEY) === "1") return;
+
+  sessionStorage.setItem(DEV_SW_RELOAD_KEY, "1");
+  reload();
+}
+
 export function setupAppUpdate() {
   if (!("serviceWorker" in navigator)) return;
+  if (import.meta.env.DEV) {
+    void cleanupDevelopmentServiceWorker().catch((err) => {
+      console.warn("[BREAK] 开发环境 Service Worker 清理失败:", err);
+    });
+    return;
+  }
 
   let lastActivityAt = Date.now();
   let noticeTimer: ReturnType<typeof setTimeout> | null = null;

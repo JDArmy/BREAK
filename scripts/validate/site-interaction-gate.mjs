@@ -10,7 +10,7 @@ const minCanvasPaintedPixels = 1200;
 const entities = [
   { type: 'risk', relationKey: 'risk', listPath: '/#/knowledges/risk/list', detailPath: '/#/knowledges/risk/detail/R0001', homePath: '/#/home/risk/R0001', id: 'R0001', drawerText: /R0001|流程自动化|Process Automation/i },
   { type: 'avoidance', relationKey: 'avoidance', listPath: '/#/knowledges/avoidance/list', detailPath: '/#/knowledges/avoidance/detail/A0001', homePath: '/#/home/avoidance/A0001', id: 'A0001', drawerText: /A0001|人机验证|CAPTCHA/i },
-  { type: 'attackTool', relationKey: 'attack-tool', listPath: '/#/knowledges/attack-tool/list', detailPath: '/#/knowledges/attack-tool/detail/AT0001', homePath: '/#/home/attack-tool/AT0001', id: 'AT0001', drawerText: /AT0001|电话黑卡|SIM/i },
+  { type: 'attackTool', relationKey: 'attack-tool', listPath: '/#/knowledges/attack-tool/list', detailPath: '/#/knowledges/attack-tool/detail/AT0077', homePath: '/#/home/attack-tool/AT0077', id: 'AT0077', drawerText: /AT0077|DeFi攻击脚本|DeFi Attack Scripts/i },
   { type: 'threatActor', relationKey: 'threat-actor', listPath: '/#/knowledges/threat-actor/list', detailPath: '/#/knowledges/threat-actor/detail/TA0001', homePath: '/#/home/threat-actor/TA0001', id: 'TA0001', drawerText: /TA0001|羊毛党|Freebie/i },
   { type: 'term', relationKey: 'term', listPath: '/#/knowledges/term/list', detailPath: '/#/knowledges/term/detail/T0001', homePath: '/#/home/term/T0001', id: 'T0001', drawerText: /T0001|账号|Account/i },
   { type: 'case', relationKey: 'case', listPath: '/#/knowledges/case/list', detailPath: '/#/knowledges/case/detail/C0001', homePath: '/#/home/case/C0001', id: 'C0001', drawerText: /C0001|案例|Case|Login/i },
@@ -212,6 +212,38 @@ async function assertDrawerDetailLayout(page, entity, viewport) {
     assert(Math.abs(meta.category.top - meta.effectiveness.top) <= 4, '规避手段抽屉分类和有效性未同排');
   }
 
+  if (entity.type === 'attackTool') {
+    const relationLayout = await page.evaluate(() => {
+      const list = document.querySelector('.attack-tool-relation-list');
+      const items = [...document.querySelectorAll('.attack-tool-relation-item')];
+      const first = items[0];
+      const second = items[1];
+      const badge = first?.querySelector('.attack-tool-relation-type');
+      const rect = (element) => {
+        if (!element) return null;
+        const bounds = element.getBoundingClientRect();
+        return { top: Math.round(bounds.top), left: Math.round(bounds.left) };
+      };
+      const itemStyle = first ? getComputedStyle(first) : null;
+      const badgeStyle = badge ? getComputedStyle(badge) : null;
+      return {
+        listDisplay: list ? getComputedStyle(list).display : '',
+        itemCount: items.length,
+        first: rect(first),
+        second: rect(second),
+        itemDisplay: itemStyle?.display ?? '',
+        itemBorderTopWidth: itemStyle?.borderTopWidth ?? '',
+        badgeBorderRadius: badgeStyle?.borderRadius ?? '',
+      };
+    });
+    assert(relationLayout.itemCount >= 2, '攻击工具抽屉缺少关联攻击工具测试数据');
+    assert(relationLayout.listDisplay === 'grid' && relationLayout.itemDisplay === 'grid', '关联攻击工具卡片网格样式丢失');
+    assert(relationLayout.itemBorderTopWidth !== '0px', '关联攻击工具卡片边框样式丢失');
+    assert(relationLayout.badgeBorderRadius !== '0px', '关联攻击工具关系类型 badge 样式丢失');
+    assert(relationLayout.first && relationLayout.second, '关联攻击工具卡片布局数据不足');
+    assert(relationLayout.second.top > relationLayout.first.top, '窄抽屉关联攻击工具未降为单列');
+  }
+
   if (entity.type === 'case') {
     const meta = await page.evaluate(() => {
       const get = (selector) => {
@@ -347,6 +379,23 @@ async function assertKnowledgePages(page, baseUrl, viewport) {
         assert(Math.abs(meta.first.top - meta.second.top) <= 4, '知识库风险优先级和复杂度未同排');
       }
       assert(meta.impact, '知识库风险影响缺失');
+
+      const relationStyles = await page.evaluate(() => {
+        const list = document.querySelector('.knowledge-detail .risk-relation-list');
+        const item = document.querySelector('.knowledge-detail .risk-relation-item');
+        if (!list || !item) return null;
+        const listStyle = getComputedStyle(list);
+        const itemStyle = getComputedStyle(item);
+        return {
+          listDisplay: listStyle.display,
+          itemDisplay: itemStyle.display,
+          itemBorderTopWidth: itemStyle.borderTopWidth,
+          itemPadding: itemStyle.padding,
+        };
+      });
+      assert(relationStyles, '知识库相关风险测试数据或区域缺失');
+      assert(relationStyles.listDisplay === 'grid' && relationStyles.itemDisplay === 'grid', '知识库相关风险卡片网格样式丢失');
+      assert(relationStyles.itemBorderTopWidth !== '0px' && relationStyles.itemPadding !== '0px', '知识库相关风险卡片边框或内边距样式丢失');
     }
 
     if (entity.type === 'avoidance') {

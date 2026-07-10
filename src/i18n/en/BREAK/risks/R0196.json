@@ -1,7 +1,7 @@
 {
   "R0196": {
     "title": "Quantum Computing Threat",
-    "definition": "Quantum computers may break the Elliptic Curve Cryptography (ECC) used by blockchains before 2028, threatening private key security and transaction integrity.",
+    "definition": "If sufficiently large, fault-tolerant quantum computers become practical, they could weaken the Elliptic Curve Cryptography (ECC) used by blockchains and threaten private key security and transaction integrity, although the timeline remains highly uncertain.",
     "keywords": [
       "quantum computing threat",
       "post-quantum cryptography",
@@ -19,8 +19,8 @@
         "link": "https://ethereum.org/en/roadmap/security/"
       }
     ],
-    "description": "Quantum computing threat means that sufficiently mature quantum capability could weaken the elliptic curve cryptography assumptions used by blockchains, wallets, and identity systems. Long-lived public keys, signature algorithms, and key management processes become migration pressure points.\n\nLarge-scale practical quantum computing remains uncertain, but high-value assets and long-lived credentials should plan for post-quantum migration, address rotation, signature upgrades, and ecosystem compatibility testing.\n\nLimitation: Quantum computing technology is not yet mature",
-    "influence": "Quantum advances could undermine long-lived blockchain keys and signatures, forcing costly ecosystem migration and threatening high-value assets.",
+    "description": "Quantum computing threat means that sufficiently mature quantum capability could weaken the elliptic curve cryptography assumptions used by blockchains, wallets, and identity systems. Long-lived public keys, signature algorithms, and key management processes become migration pressure points.\n\nLarge-scale practical quantum computing remains uncertain, but high-value assets and long-lived credentials should plan for post-quantum migration, address rotation, signature upgrades, and ecosystem compatibility testing.\n\nThe limitation is that current quantum computing remains far from reliably breaking mainstream ECC in practice: qubit coherence time, gate error rates, error-correction overhead, and the number of usable logical qubits still constrain real attack capability. NIST has released the first post-quantum cryptography standards, but signature migration, compatibility testing, and governance upgrades across blockchain wallets, bridges, hardware wallets, and node clients are not yet broadly deployed, so this is best treated as a forward-looking high-impact governance risk in the near term.",
+    "influence": "Mature quantum capability could recover ECC private keys from long-exposed public keys, letting attackers steal assets from high-value addresses, forge historical signatures, or front-run pending transactions. Cross-chain bridges, wallet custody systems, validator identities, and long-lived authorization contracts using similar signatures would face systemic risk if migration lags, forcing large-scale address rotation, signature upgrades, and compatibility remediation across the ecosystem.",
     "riskAssessment": {
       "observables": [
         "High-value addresses with long-exposed public keys and un-upgraded signature schemes keep receiving funds",

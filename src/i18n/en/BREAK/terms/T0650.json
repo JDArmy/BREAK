@@ -1,0 +1,32 @@
+{
+  "T0650": {
+    "title": "DMA Attack",
+    "aliases": [
+      "Direct Memory Access Attack",
+      "PCIe DMA attack",
+      "peripheral memory attack"
+    ],
+    "category": "Attack Technique",
+    "keywords": [
+      "DMA Attack",
+      "Direct Memory Access Attack",
+      "PCIe DMA attack",
+      "peripheral memory attack",
+      "Kernel DMA Protection",
+      "DMA memory access"
+    ],
+    "definition": "A DMA attack uses a peripheral or bus with direct memory access capability to read or modify physical memory while bypassing ordinary CPU-mediated access controls on the target.",
+    "description": "A DMA attack uses the direct memory access capability of PCIe, Thunderbolt, FireWire, USB4, or programmable FPGA devices to reach target physical memory from outside the operating system. When hardware, firmware, and platform configuration permit it, an attacker can read process, kernel, credential, and session data, alter authentication flows or code, or map memory to another computer for analysis. The same capability supports legitimate digital forensics, crash analysis, and security research.\n\nSuccess depends on exposed interfaces, device trust, boot and lock-screen policy, IOMMU and DMA-remapping configuration, and driver compatibility. Game cheats use DMA hardware to parse game memory on a secondary computer and reduce driver and process indicators on the target host. Effective defense combines IOMMU, Kernel DMA Protection, trusted boot, external-port governance, and server-side behavior detection.",
+    "usageExample": "Investigators determined that the attacker used a PCIe DMA attack to read session and process information from memory without running a debugging agent on the target system.",
+    "references": [
+      {
+        "title": "Kernel DMA Protection - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/windows/security/hardware-security/kernel-dma-protection-for-thunderbolt"
+      },
+      {
+        "title": "PCILeech: Direct Memory Access Attack Software - GitHub",
+        "link": "https://github.com/ufrisk/pcileech"
+      }
+    ]
+  }
+}

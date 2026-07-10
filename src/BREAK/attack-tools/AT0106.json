@@ -1,0 +1,74 @@
+{
+  "AT0106": {
+    "title": "PCILeech",
+    "description": "PCILeech是一套通过PCIe、Thunderbolt、FireWire及兼容FPGA设备访问目标物理内存的开源DMA工具。它可配合LeechCore和MemProcFS采集内存、枚举进程与模块、分析注册表和网络状态，也支持在满足条件时读取或写入指定内存区域，因此同时被用于数字取证、安全研究和故障分析。\n\n在未授权场景中，攻击者可借助PCILeech绕过目标操作系统上的常规进程访问控制，读取凭据、会话和业务进程数据，修改内存或加载内核模块；DMA游戏外挂也会复用类似FPGA硬件和内存解析链路，在副机读取坐标后通过外部输入设备执行操作，以降低传统反作弊软件的可见性。",
+    "references": [
+      {
+        "title": "PCILeech: Direct Memory Access Attack Software - GitHub",
+        "link": "https://github.com/ufrisk/pcileech"
+      },
+      {
+        "title": "Memory Forensics and DMA Attacks with MemProcFS and PCILeech",
+        "link": "https://raw.githubusercontent.com/ufrisk/presentations/master/CS3STHLM-2019-Ulf-Frisk-Memory-Forensics-and-DMA-Attacks-with-MemProcFS-and-PCILeech.pdf"
+      }
+    ],
+    "avoidances": [
+      "A0266",
+      "A0110",
+      "A0112",
+      "A0078",
+      "A0041"
+    ],
+    "directCauseRisks": [
+      "R0109",
+      "R0012-002"
+    ],
+    "indirectSupportRisks": [
+      "R0067",
+      "R0078",
+      "R0032"
+    ],
+    "updated": "2026-07-10",
+    "keywords": [
+      "PCILeech",
+      "DMA攻击工具",
+      "PCIe内存访问",
+      "MemProcFS",
+      "LeechCore",
+      "FPGA DMA"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0052-004",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 3 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0052-001",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0033-002",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0052-003",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0013",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，被 2 个相同行为者使用或建设。"
+      }
+    ],
+    "version": 1
+  }
+}

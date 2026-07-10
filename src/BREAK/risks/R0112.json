@@ -542,5 +542,71 @@
         "note": "无线网络风险与监控与窃听同属父办公环境风险下的细分变体。"
       }
     ]
+  },
+  "R0112-007": {
+    "title": "无线门禁信号重放与克隆",
+    "definition": "攻击者截获、复制或重放无线遥控器、RFID门禁卡等凭证信号，绕过物理门禁并取得未经授权的场所或设备访问权限。",
+    "description": "无线门禁信号重放与克隆发生在车库门、园区闸机、办公门禁、仓库卷帘门和设备遥控器使用固定码、低安全RFID凭证或缺少双向认证的无线协议时。攻击者可在合法用户开门时记录射频信号或读取凭证数据，随后复制卡片、模拟遥控器或直接重放原始信号，使接收端把旧的合法指令误认为新的授权操作。\n\n使用滚动码或挑战响应可以降低直接重放风险，但实现缺陷、共享密钥、过宽的同步窗口、信号干扰与截获组合、中继攻击或读卡器被替换仍可能破坏认证边界。该风险关注的是攻击者借无线凭证绕过物理访问控制，不等同于一般Wi-Fi入侵或单纯的无线信号干扰。",
+    "complexity": "intermediate",
+    "influence": "攻击者可能绕过门禁进入办公区、机房、仓库或设备控制区域，进一步实施设备植入、资料窃取、破坏和内网渗透，并削弱门禁日志的身份归因能力。",
+    "avoidances": [
+      "A0017",
+      "A0041",
+      "A0062",
+      "A0112",
+      "A0267"
+    ],
+    "references": [
+      {
+        "title": "Guidelines for Securing Radio Frequency Identification Systems - NIST SP 800-98",
+        "link": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-98.pdf"
+      },
+      {
+        "title": "A Security Analysis of Garage Door Remotes and the Danger of DOR Attacks - Trend Micro Research",
+        "link": "https://www.trendmicro.com/content/dam/trendmicro/global/en/research/21/j/forced-entry-a-security-test-for-automatic-garage-doors/TechnicalBrief-A-Security-Analysis-of-Garage-Door-Remotes-and-the-Danger-of-DOR-Attacks.pdf"
+      }
+    ],
+    "updated": "2026-07-10",
+    "keywords": [
+      "无线门禁信号重放与克隆",
+      "无线门禁重放",
+      "门禁信号克隆",
+      "RFID门禁克隆",
+      "固定码重放",
+      "遥控器重放攻击"
+    ],
+    "riskAssessment": {
+      "likelihood": "medium",
+      "businessLoss": "high",
+      "attackCost": "low",
+      "detectionDifficulty": "high",
+      "defenseMaturity": "medium",
+      "priority": "P2",
+      "observables": [
+        "同一无线门禁凭证在不可能的时间间隔或相距较远的入口重复使用",
+        "门禁接收器附近出现异常Sub-GHz信号录制、干扰或高频认证失败",
+        "固定码遥控器在原始凭证未丢失的情况下出现未授权开门记录",
+        "RFID凭证标识相同但射频特征、使用设备或人员视频记录不一致"
+      ],
+      "assessedAt": "2026-07-10"
+    },
+    "relatedRisks": [
+      {
+        "key": "R0112",
+        "relation": "variant",
+        "note": "办公环境风险是无线门禁信号重放与克隆的上层风险。"
+      },
+      {
+        "key": "R0112-002",
+        "relation": "escalation",
+        "note": "无线门禁信号重放与克隆可升级为未授权物理访问。"
+      },
+      {
+        "key": "R0112-006",
+        "relation": "variant",
+        "note": "无线门禁信号重放与克隆与无线网络风险同属父办公环境风险下的细分变体。"
+      }
+    ],
+    "version": 1
   }
 }

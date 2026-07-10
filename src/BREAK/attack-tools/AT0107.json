@@ -1,0 +1,73 @@
+{
+  "AT0107": {
+    "title": "Flipper Zero",
+    "description": "Flipper Zero是一款便携式多协议硬件与无线安全研究设备，集成Sub-GHz收发、125 kHz RFID、NFC、红外、iButton和USB等接口。官方固件可读取、保存和模拟部分受支持的遥控器与凭证信号，并提供频率分析、RAW信号记录和BadUSB脚本执行等功能，常用于门禁、遥控器和物联网设备的授权安全测试。\n\n在未授权场景中，攻击者可能利用其复制低安全RFID凭证、记录并重放固定码无线门禁信号、爆破弱协议或模拟USB键盘输入。其能力受频段法规、协议支持、加密与滚动码设计限制，不能据此推断能够直接破解所有无线门禁或动态凭证。",
+    "references": [
+      {
+        "title": "Sub-GHz - Flipper Zero Documentation",
+        "link": "https://docs.flipper.net/zero/sub-ghz"
+      },
+      {
+        "title": "Reading RAW Sub-GHz Signals - Flipper Zero Documentation",
+        "link": "https://docs.flipper.net/zero/sub-ghz/read-raw"
+      }
+    ],
+    "avoidances": [
+      "A0267",
+      "A0017",
+      "A0041",
+      "A0062"
+    ],
+    "directCauseRisks": [
+      "R0112-002",
+      "R0112-003",
+      "R0112-007"
+    ],
+    "indirectSupportRisks": [
+      "R0112-003",
+      "R0112-006"
+    ],
+    "updated": "2026-07-10",
+    "keywords": [
+      "Flipper Zero",
+      "多协议安全测试设备",
+      "Sub-GHz重放",
+      "RFID克隆",
+      "无线门禁测试",
+      "便携式硬件工具"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0033-001",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0033",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0033-002",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0052-002",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0052-003",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0052",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      }
+    ],
+    "version": 1
+  }
+}

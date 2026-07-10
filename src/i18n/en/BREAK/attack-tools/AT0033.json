@@ -36,5 +36,23 @@
       "body-worn recorder",
       "mini DVR"
     ]
+  },
+  "AT0033-002": {
+    "title": "Telescreen Hardware Screen Recorder",
+    "description": "Telescreen is an open-source hardware screen recorder installed between a computer's HDMI output and its display. It can capture screen images on a schedule and store them on a MicroSD card, and can provide live streaming, remote viewing, and downloads over Wi-Fi. The device filters blank frames and removes near-duplicate captures, operating as independent hardware without installing recording software or drivers on the target operating system.\n\nWhen implanted without authorization, Telescreen can continuously collect meeting materials, business-application screens, chat content, verification codes, and other visually sensitive information, while its network interface enables remote retrieval. An attacker needs physical access to the display path and a power source; device appearance, HDMI-link anomalies, and wireless network activity can provide detection clues.",
+    "references": [
+      {
+        "title": "Telescreen Hardware Screen Recorder - GitHub",
+        "link": "https://github.com/Push3AX/Telescreen"
+      }
+    ],
+    "keywords": [
+      "Telescreen Hardware Screen Recorder",
+      "Telescreen",
+      "hardware screen recorder",
+      "HDMI capture device",
+      "screen theft device",
+      "hardware display monitoring"
+    ]
   }
 }

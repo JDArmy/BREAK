@@ -1,0 +1,58 @@
+{
+  "T0650": {
+    "title": "DMA攻击",
+    "aliases": [
+      "直接内存访问攻击",
+      "PCIe DMA攻击",
+      "Direct Memory Access Attack"
+    ],
+    "category": "攻击手段",
+    "keywords": [
+      "DMA攻击",
+      "直接内存访问攻击",
+      "PCIe DMA攻击",
+      "外设内存攻击",
+      "内核DMA保护",
+      "Direct Memory Access Attack"
+    ],
+    "definition": "DMA攻击是利用具备直接内存访问能力的外设或总线，在绕过目标CPU常规访问控制的情况下读取或修改物理内存的攻击技术。",
+    "description": "DMA攻击利用PCIe、Thunderbolt、FireWire、USB4或可编程FPGA设备的直接内存访问能力，从操作系统之外访问目标物理内存。攻击者在硬件、固件和平台配置允许时，可读取进程、内核、凭据和会话数据，修改认证流程或代码，也可将内存映射到另一台计算机进行分析。相同能力在授权场景中可用于数字取证、崩溃分析和安全研究。\n\n该技术的成功条件取决于接口是否暴露、设备是否受信任、启动或锁屏阶段的策略、IOMMU与DMA重映射配置以及驱动兼容性。游戏外挂会使用DMA硬件在副机解析游戏内存，以减少目标主机上的驱动和进程特征；防护通常需要IOMMU、内核DMA保护、可信启动、外部端口治理和服务端行为检测协同。",
+    "usageExample": "调查人员发现攻击者通过PCIe接口实施DMA攻击，在未启动目标系统调试代理的情况下读取了内存中的会话和进程信息。",
+    "relatedRisks": [
+      "R0012-002",
+      "R0032",
+      "R0067",
+      "R0078",
+      "R0109"
+    ],
+    "relatedAvoidances": [
+      "A0010-004",
+      "A0041",
+      "A0078",
+      "A0110",
+      "A0112",
+      "A0266"
+    ],
+    "relatedAttackTools": [
+      "AT0106"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD06",
+      "BD09"
+    ],
+    "references": [
+      {
+        "title": "Kernel DMA Protection - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/windows/security/hardware-security/kernel-dma-protection-for-thunderbolt"
+      },
+      {
+        "title": "PCILeech: Direct Memory Access Attack Software - GitHub",
+        "link": "https://github.com/ufrisk/pcileech"
+      }
+    ],
+    "updated": "2026-07-10",
+    "version": 1
+  }
+}

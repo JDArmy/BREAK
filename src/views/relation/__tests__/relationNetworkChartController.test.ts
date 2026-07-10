@@ -179,7 +179,7 @@ const createController = (options?: {
     interactionsBridge,
   });
 
-  const element = options?.networkChartElement ?? document.createElement("div");
+  const element = options?.networkChartElement ?? sizedElement();
   controller.setNetworkChartElement(element);
 
   return {
@@ -246,6 +246,38 @@ describe("relationNetworkChartController", () => {
     );
     expect(chart.dispatchAction).toHaveBeenCalledWith({ type: "hideTip" });
     expect(chart.resize).toHaveBeenCalled();
+  });
+
+  it("waits for a non-zero container size before initializing ECharts", async () => {
+    const requestAnimationFrameSpy = vi
+      .spyOn(window, "requestAnimationFrame")
+      .mockImplementation((callback) => {
+        callback(0);
+        return 1;
+      });
+    let width = 0;
+    let height = 0;
+    const element = document.createElement("div");
+    Object.defineProperties(element, {
+      clientWidth: { configurable: true, get: () => width },
+      clientHeight: { configurable: true, get: () => height },
+    });
+    const { chart, controller } = createController({ networkChartElement: element });
+
+    controller.renderNetworkChart();
+    await flushPromises();
+
+    expect(loadNetworkECharts).not.toHaveBeenCalled();
+    expect(chart.setOption).not.toHaveBeenCalled();
+
+    width = 800;
+    height = 420;
+    resizeObserverInstances[0].callback();
+    await flushPromises();
+
+    expect(requestAnimationFrameSpy).toHaveBeenCalled();
+    expect(loadNetworkECharts).toHaveBeenCalledTimes(1);
+    expect(chart.setOption).toHaveBeenCalledTimes(1);
   });
 
   it("skips rendering when inactive, missing element, or async render becomes stale", async () => {
@@ -485,7 +517,7 @@ describe("relationNetworkChartController", () => {
         callback(0);
         return 1;
       });
-    const chartElement = document.createElement("div");
+    const chartElement = sizedElement();
     const paneElement = document.createElement("div");
     const scrollerElement = document.createElement("div");
     const { chart, controller } = createController({

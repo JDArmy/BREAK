@@ -10,7 +10,7 @@
       "communication management system failure",
       "IoT device sabotage"
     ],
-    "summary": "In April 2023, the Jing'an Branch of the Shanghai Public Security Bureau received a report from a Shanghai-based technology company that its unmanned self-service coffee machine communication management system had malfunctioned, causing dozens of the city's unmanned coffee machines to be paralyzed for several days. Investigation revealed that the communication codes for the terminals of dozens of ",
+    "summary": "In April 2023, the Jing'an Branch of the Shanghai Public Security Bureau received a report from a Shanghai-based technology company that its unmanned self-service coffee machine communication management system had malfunctioned, causing dozens of the city's unmanned coffee machines to be paralyzed for several days. Investigation found that communication code for dozens of terminals in the company's backend system had been deliberately deleted, causing the offline terminals to stop functioning.",
     "references": [
       {
         "title": "Shanghai cracks a case involving sabotage of a computer information system",

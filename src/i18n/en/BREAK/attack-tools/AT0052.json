@@ -72,5 +72,27 @@
       "keystroke injection USB",
       "Rubber Ducky"
     ]
+  },
+  "AT0052-004": {
+    "title": "GrabAccess",
+    "description": "GrabAccess is a Windows login-bypass and UEFI Bootkit toolkit that runs from bootable USB media when an operator has physical access. It writes a Windows Platform Binary Table (WPBT) entry during the UEFI phase so that a Native Application executes before logon, allowing it to bypass selected local-account password, PIN, or picture-password checks or provide SYSTEM-level file, account, and command-management access.\n\nThe toolkit can also embed a payload in motherboard UEFI firmware so that the designated program is written and executed again during Windows startup, restoring persistence even after operating-system reinstallation or disk replacement. Its USB mode requires external-media boot access, while firmware implantation generally requires Secure Boot to be disabled and the ability to read, modify, and flash firmware.",
+    "references": [
+      {
+        "title": "GrabAccess - Bootkit and Windows Login Password Bypass Tool - GitHub",
+        "link": "https://github.com/Push3AX/GrabAccess"
+      },
+      {
+        "title": "Device firmware configuration interface settings for Windows devices - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/intune/device-configuration/templates/ref-dfci-settings-windows"
+      }
+    ],
+    "keywords": [
+      "GrabAccess",
+      "Windows login bypass",
+      "WPBT exploitation tool",
+      "UEFI Bootkit",
+      "boot-media password bypass",
+      "firmware persistence tool"
+    ]
   }
 }

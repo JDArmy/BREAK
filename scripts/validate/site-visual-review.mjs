@@ -1020,8 +1020,10 @@ try {
       runtimeErrors.push(`${viewport.label}: ${error.message}`);
     });
     page.on('console', (message) => {
-      if (message.type() === 'error' && !message.text().startsWith('Failed to load resource:')) {
-        runtimeErrors.push(`${viewport.label}: ${message.text()}`);
+      const text = message.text();
+      const isZeroSizeEChartsWarning = message.type() === 'warning' && text.includes("[ECharts] Can't get DOM width or height");
+      if ((message.type() === 'error' && !text.startsWith('Failed to load resource:')) || isZeroSizeEChartsWarning) {
+        runtimeErrors.push(`${viewport.label}: ${text}`);
       }
     });
     page.on('requestfailed', (request) => {
@@ -1106,8 +1108,10 @@ try {
       runtimeErrors.push(`${scenario.label}: ${error.message}`);
     });
     page.on('console', (message) => {
-      if (message.type() === 'error' && !message.text().startsWith('Failed to load resource:')) {
-        runtimeErrors.push(`${scenario.label}: ${message.text()}`);
+      const text = message.text();
+      const isZeroSizeEChartsWarning = message.type() === 'warning' && text.includes("[ECharts] Can't get DOM width or height");
+      if ((message.type() === 'error' && !text.startsWith('Failed to load resource:')) || isZeroSizeEChartsWarning) {
+        runtimeErrors.push(`${scenario.label}: ${text}`);
       }
     });
     page.on('requestfailed', (request) => {

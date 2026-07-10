@@ -11,7 +11,7 @@
       "network administrator credentials",
       "internal network breach"
     ],
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) issued an alert confirming a cyberattack where unidentified threat actors used a former employee's account to obtain network administrator credentials. They then authenticated via an internal VPN access point and moved laterally into the victim organization's on-premises environment. This incident highlights the severe security risk ",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) issued an alert confirming a cyberattack where unidentified threat actors used a former employee's account to obtain network administrator credentials. They then authenticated via an internal VPN access point and navigated the victim organization's on-premises environment. This incident highlights the severe security risk created when departed-employee accounts and privileged credentials are not promptly removed or protected with MFA.",
     "references": [
       {
         "title": "Threat Actor Leverages Compromised Account of Former Employee to ... - CISA",

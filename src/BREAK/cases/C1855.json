@@ -1,0 +1,37 @@
+{
+  "C1855": {
+    "title": "苏联在美国驻莫斯科使馆打字机中植入无线窃密装置",
+    "keywords": [
+      "GUNMAN计划",
+      "美国驻莫斯科使馆",
+      "IBM Selectric打字机",
+      "硬件键盘记录器",
+      "无线窃密装置",
+      "硬件供应链植入"
+    ],
+    "summary": "1976年至1984年间，苏联情报机构在美国驻莫斯科使馆使用的IBM Selectric电动打字机中植入隐蔽传感与无线发射装置，记录击键对应的机械运动并向附近接收点回传。美国在盟友情报提示后于1984年启动代号GUNMAN的撤换与分析行动，最终在多台打字机中发现植入物，事件揭示了运输、维护或部署环节硬件植入可长期绕过常规通信加密与软件安全控制。",
+    "category": "security_incident",
+    "incidentTime": "1984",
+    "relatedRisks": [
+      "R0081-002",
+      "R0112-005",
+      "R0059"
+    ],
+    "relatedAttackTools": [
+      "AT0064-001"
+    ],
+    "relatedThreatActors": [],
+    "references": [
+      {
+        "title": "Learning from the Enemy: The GUNMAN Project - GovInfo",
+        "link": "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo58656/pdf/GOVPUB-D-PURL-gpo58656.pdf"
+      },
+      {
+        "title": "Soviet Selectric typewriter bugs - Crypto Museum",
+        "link": "https://www.cryptomuseum.com/covert/bugs/selectric/index.htm"
+      }
+    ],
+    "updated": "2026-07-10",
+    "version": 1
+  }
+}

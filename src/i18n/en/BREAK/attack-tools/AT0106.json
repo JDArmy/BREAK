@@ -1,0 +1,24 @@
+{
+  "AT0106": {
+    "title": "PCILeech",
+    "description": "PCILeech is an open-source DMA toolkit that accesses target physical memory through PCIe, Thunderbolt, FireWire, and compatible FPGA devices. Together with LeechCore and MemProcFS, it can acquire memory, enumerate processes and modules, inspect registry and network state, and, when platform conditions permit, read or write selected memory regions. These capabilities support digital forensics, security research, and troubleshooting.\n\nIn unauthorized use, an attacker can employ PCILeech to bypass ordinary process-access controls on the target operating system, extract credentials, sessions, and business-process data, modify memory, or load kernel modules. DMA game cheats reuse similar FPGA hardware and memory-analysis pipelines, parsing coordinates on a secondary computer and issuing actions through external input devices to reduce visibility to conventional anti-cheat software.",
+    "references": [
+      {
+        "title": "PCILeech: Direct Memory Access Attack Software - GitHub",
+        "link": "https://github.com/ufrisk/pcileech"
+      },
+      {
+        "title": "Memory Forensics and DMA Attacks with MemProcFS and PCILeech",
+        "link": "https://raw.githubusercontent.com/ufrisk/presentations/master/CS3STHLM-2019-Ulf-Frisk-Memory-Forensics-and-DMA-Attacks-with-MemProcFS-and-PCILeech.pdf"
+      }
+    ],
+    "keywords": [
+      "PCILeech",
+      "DMA attack toolkit",
+      "PCIe memory access",
+      "MemProcFS",
+      "LeechCore",
+      "FPGA DMA"
+    ]
+  }
+}

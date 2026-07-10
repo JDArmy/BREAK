@@ -13,10 +13,12 @@
       "全球组织",
       "钓鱼攻击"
     ],
-    "summary": "Microsoft Defender Research观察到一场大规模凭证窃取活动，攻击者利用“行为准则”主题的诱饵和多步骤攻击链，通过合法电子邮件服务分发来自攻击者控制域名的完全认证邮件，针对26个国家超过13,000个组织的35,000多名用户，窃取身份验证令牌。",
+    "summary": "Microsoft Defender Research披露，2026年4月14日至16日观察到一系列“行为准则”主题的多阶段钓鱼活动。攻击者通过合法邮件服务发送来自攻击者控制域名的完全认证邮件，影响26个国家超过13,000个组织的35,000多名用户，最终将用户引向AiTM钓鱼流程以捕获身份验证令牌并接管账户。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0084"
+      "R0084",
+      "R0142",
+      "R0247"
     ],
     "references": [
       {
@@ -24,7 +26,7 @@
         "link": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
       }
     ],
-    "updated": "2026-07-06",
+    "updated": "2026-07-10",
     "incidentTime": "2026-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

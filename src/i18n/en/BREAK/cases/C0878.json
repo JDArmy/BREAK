@@ -11,7 +11,7 @@
       "web application vulnerability",
       "IDOR"
     ],
-    "summary": "In a password change function, an attacker intercepted Bob's password change request and altered the UserID parameter from Bob's ID (e.g., 2) to Alice's ID (e.g., 1). Because the backend did not verify the relationship between the requester and the target account, the system directly changed Alice's account password, resulting in cross-account data tampering.",
+    "summary": "A Qi-An-Xin offensive and defensive community Q&A lists common test points for password change functions: if the server does not effectively verify the user's identity or ownership of the target object, an attacker may modify ID parameters to change another account's password. Weak old-password checks, SMS-code binding, CSRF protection, or input validation may also lead to arbitrary password reset, verification-code abuse, or logic-bypass risks.",
     "references": [
       {
         "title": "Qi-An-Xin Offensive and Defensive Community: Logic Issues in Password Modification During Penetration Testing",

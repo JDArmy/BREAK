@@ -11,11 +11,15 @@
       "health data",
       "automated attack"
     ],
-    "summary": "The 23andMe data breach involved attackers using relatively simple yet effective brute force and credential stuffing techniques to systematically attempt logins at scale, successfully accessing and exfiltrating a large volume of user genetic and health data.",
+    "summary": "In the 23andMe data breach disclosed in October 2023, attackers used credential stuffing to gain access to about 14,000 user accounts and then amplified the impact through DNA Relatives and Family Tree sharing features, accessing about 5.5 million DNA Relatives profiles and about 1.4 million Family Tree profiles. The incident shows how password reuse, weak authentication, and social data-sharing features can magnify account-takeover risk.",
     "references": [
       {
-        "title": "The 23andMe Data Breach: Analyzing Credential Stuffing Attacks...",
-        "link": "https://arxiv.org/pdf/2502.04303"
+        "title": "Addressing Data Security Concerns - 23andMe Blog",
+        "link": "https://blog.23andme.com/articles/addressing-data-security-concerns"
+      },
+      {
+        "title": "The 23andMe Data Breach: Analyzing Credential Stuffing Attacks, Security Vulnerabilities, and Mitigation Strategies",
+        "link": "https://arxiv.org/abs/2502.04303"
       }
     ]
   }

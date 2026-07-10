@@ -1,0 +1,24 @@
+{
+  "C1855": {
+    "title": "Soviet Wireless Implants Found in U.S. Embassy Moscow Typewriters",
+    "keywords": [
+      "GUNMAN Project",
+      "U.S. Embassy Moscow",
+      "IBM Selectric typewriter",
+      "hardware keylogger",
+      "wireless espionage implant",
+      "hardware supply-chain implant"
+    ],
+    "summary": "Between 1976 and 1984, Soviet intelligence services implanted covert sensing and radio-transmission devices in IBM Selectric electric typewriters used by the U.S. Embassy in Moscow. The implants captured mechanical movements corresponding to keystrokes and transmitted them to nearby receivers. After receiving allied intelligence, the United States launched the GUNMAN replacement and analysis operation in 1984 and found implants in multiple typewriters, demonstrating how hardware interdiction during transport, maintenance, or deployment can bypass communications encryption and software security controls for years.",
+    "references": [
+      {
+        "title": "Learning from the Enemy: The GUNMAN Project - GovInfo",
+        "link": "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo58656/pdf/GOVPUB-D-PURL-gpo58656.pdf"
+      },
+      {
+        "title": "Soviet Selectric typewriter bugs - Crypto Museum",
+        "link": "https://www.cryptomuseum.com/covert/bugs/selectric/index.htm"
+      }
+    ]
+  }
+}

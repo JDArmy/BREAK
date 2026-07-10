@@ -1,0 +1,64 @@
+{
+  "T0649": {
+    "title": "近源渗透",
+    "aliases": [
+      "近源攻击",
+      "近源渗透测试",
+      "Proximity Attack",
+      "Proximal Penetration Testing"
+    ],
+    "category": "攻击手段",
+    "keywords": [
+      "近源渗透",
+      "近源攻击",
+      "近源渗透测试",
+      "物理接触攻击",
+      "无线近场攻击",
+      "Proximity Attack"
+    ],
+    "definition": "近源渗透是攻击者或测试人员靠近目标设施、进入目标建筑或直接接触设备后，利用无线通信、物理接口、硬件和人员流程实施渗透的攻击方式。",
+    "description": "近源渗透突破了仅从互联网远程攻击目标的边界，要求实施者在目标建筑周边、办公区域、机房、停车场或设备附近活动。常见入口包括Wi-Fi和蓝牙等无线网络、RFID与Sub-GHz门禁信号、USB和PCIe等物理接口、UART/JTAG调试口、启动介质、恶意外设、硬件或固件植入，以及尾随、肩窥和身份冒充等社会工程手法。\n\n其核心特征是攻击距离短、接触机会有限但可绕开部分网络边界防护。近源渗透通常需要现场侦察、设备适配和撤离规划，并可能与内网横向移动、凭据窃取、数据外带和长期硬件驻留结合，因此评估时应同时覆盖人员、场地、无线频谱、终端接口、固件和供应链控制。",
+    "usageExample": "红队在获得授权后开展近源渗透测试，通过办公区周边无线侦察和闲置网口检查验证物理边界是否能够被绕过。",
+    "relatedRisks": [
+      "R0112-002",
+      "R0112-003",
+      "R0112-005",
+      "R0112-006",
+      "R0112-007",
+      "R0164"
+    ],
+    "relatedAvoidances": [
+      "A0017",
+      "A0041",
+      "A0062",
+      "A0078",
+      "A0110",
+      "A0112",
+      "A0266",
+      "A0267"
+    ],
+    "relatedAttackTools": [
+      "AT0052",
+      "AT0064-001",
+      "AT0106",
+      "AT0107"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [
+      "BD00",
+      "BD09"
+    ],
+    "references": [
+      {
+        "title": "红蓝对抗中的近源渗透 - 腾讯安全应急响应中心",
+        "link": "https://security.tencent.com/index.php/blog/msg/167"
+      },
+      {
+        "title": "《黑客大揭秘：近源渗透测试》图书介绍 - 图灵社区",
+        "link": "https://www.ituring.com.cn/book/miniarticle/28677"
+      }
+    ],
+    "updated": "2026-07-10",
+    "version": 1
+  }
+}

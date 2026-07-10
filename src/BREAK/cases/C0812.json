@@ -11,23 +11,19 @@
       "92GB压缩数据",
       "国家网络安全通报中心"
     ],
-    "summary": "2026年4月，国家网络安全通报中心通报近期多起供应链投毒事件，其中欧委会确认Trivy供应链攻击导致数据泄露，被盗92GB压缩数据。攻击者通过污染安全工具Trivy的供应链，窃取敏感数据。",
+    "summary": "CERT-EU披露，欧委会2026年3月24日发现与AWS账户有关的异常告警，3月25日向CERT-EU通报，并于3月27日公开披露。CERT-EU评估初始访问来自被归因于TeamPCP的Trivy供应链妥协，受影响AWS账户中约91.7GB压缩数据被外传，包含姓名、邮箱地址和邮件内容等个人数据。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081"
     ],
     "references": [
       {
-        "title": "TeamPCP组织2025-2026全球软件供应链攻击活动综合分析- 安全内参",
-        "link": "https://www.secrss.com/articles/91229"
-      },
-      {
         "title": "European Commission cloud breach: a supply-chain compromise",
         "link": "https://cert.europa.eu/blog/european-commission-cloud-breach-trivy-supply-chain"
       }
     ],
-    "updated": "2026-07-06",
-    "incidentTime": "2026-04",
+    "updated": "2026-07-10",
+    "incidentTime": "2026-03",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

@@ -1,18 +1,27 @@
 {
   "C0899": {
-    "title": "Canva Data Breach: Hackers Access 139 Million User Records via Credential Stuffing",
+    "title": "Canva Data Breach: About 137 Million Account Records Exposed",
     "keywords": [
       "Canva data breach",
-      "credential stuffing",
-      "credential cracking",
       "GnosticPlayers",
-      "bulk account checking",
-      "139 million users",
+      "137 million accounts",
       "Australia",
-      "personal information leak"
+      "personal information leak",
+      "Have I Been Pwned",
+      "account exposure",
+      "breach dataset",
+      "password hashes"
     ],
-    "summary": "In May 2019, hacker GnosticPlayers breached Australian tech company Canva using credential stuffing and cracking techniques, compromising login credentials and personal information of 139 million users. The hacker had previously stolen nearly 1 billion user records from various platforms.",
+    "summary": "In May 2019, Australian design platform Canva suffered a data breach. Have I Been Pwned loaded the incident in August 2019 and records approximately 137.3 million affected accounts. The currently verifiable sources support the fact that Canva account data was illegally accessed and later appeared in breach datasets, but they do not directly prove that the attack method was credential stuffing or credential cracking, so the summary no longer attributes the incident to a specific bulk account-checking technique.",
     "references": [
+      {
+        "title": "Have I Been Pwned: Canva",
+        "link": "https://haveibeenpwned.com/Breach/Canva"
+      },
+      {
+        "title": "Canva data breach - Huntress Threat Library",
+        "link": "https://www.huntress.com/threat-library/data-breach/canva-data-breach"
+      },
       {
         "title": "A Case Study of Credential Stuffing Attack: Canva Data Breach",
         "link": "https://ieeexplore.ieee.org/document/9799087/"

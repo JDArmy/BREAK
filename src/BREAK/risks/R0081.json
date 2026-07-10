@@ -4,7 +4,7 @@
     "definition": "供应链风险指的是在软件、硬件、云服务等产品的开发、交付、部署和维护过程中，由于供应链中的组件或环节存在潜在的威胁，导致产品受到安全威胁的可能性。",
     "description": "供应链风险贯穿软件、硬件、云服务和外包交付的全生命周期。攻击者可能利用上游组件、构建环境、供应商账号或交付流程中的薄弱环节，把恶意代码、后门配置或脆弱组件带入组织环境。\n\n这类风险通常不只影响单一系统，而会沿着依赖关系向下游扩散。组织需要同时关注供应商准入、组件来源、构建完整性、交付验签、运行时监测和应急替换能力。",
     "complexity": "intermediate",
-    "influence": "危害涉及到可能的业务中断、敏感信息曝露、系统漏洞暴露，对组织的信任和可靠性造成重大影响。",
+    "influence": "供应链风险会把上游组件、构建环境、交付流程或服务商账号中的问题传导到大量下游系统，造成恶意代码植入、后门持久化、敏感数据外泄和业务中断。由于受害组织通常信任供应商和交付物，问题发现滞后，处置时还可能需要紧急替换组件、回滚版本、暂停业务或重新审计供应商体系。",
     "avoidances": [
       "A0054",
       "A0055",
@@ -19,7 +19,7 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",
@@ -81,7 +81,7 @@
     "definition": "软件供应链风险指的是在软件开发、交付、部署和维护过程中，由于供应链中的组件或环节存在潜在的威胁，导致软件系统受到安全威胁的可能性。",
     "description": "场景包括第三方组件受到攻击、供应商遭受数据泄露、软件开发工具被篡改等，可能导致恶意代码注入、后门存在、或数据泄露等危害。",
     "complexity": "intermediate",
-    "influence": "危害涉及到可能的业务中断、敏感信息曝露、系统漏洞暴露，对组织的信任和可靠性造成重大影响。",
+    "influence": "软件供应链投毒可能把恶意依赖、后门代码或被篡改构建产物带入大量下游应用，导致账号凭据泄露、业务系统被远程控制、客户数据外传和服务中断。由于问题常伪装成正常版本更新或可信组件，排查和回滚成本高，受影响组织还需要重新审计依赖来源、构建链路和发布签名。",
     "avoidances": [
       "A0054",
       "A0055",
@@ -93,7 +93,7 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",
@@ -154,21 +154,28 @@
   "R0081-002": {
     "title": "硬件供应链风险",
     "definition": "硬件供应链风险指的是在硬件开发、交付、部署和维护过程中，由于供应链中的组件或环节存在潜在的威胁，导致硬件系统受到安全威胁的可能性。",
-    "description": "场景包括第三方组件受到攻击、供应商遭受数据泄露、硬件开发工具被篡改等，可能导致恶意代码注入、后门存在、或数据泄露等危害。",
+    "description": "硬件供应链风险贯穿芯片、主板、固件、整机制造、物流运输、维修翻新和部署维护环节。攻击者、恶意供应商或受控中间环节可能替换元器件、修改BIOS/UEFI与设备固件、预装恶意软件，或植入键盘记录器、无线发射器和硬件网络跳板，使设备在交付时已经带有隐蔽访问能力。\n\n这类植入通常位于操作系统和常规端点安全软件之外，可能在重装系统、更换硬盘后继续存在，并利用合法设备外观和供应链信任长期潜伏。治理需要供应商准入、运输与交接防拆封、物料和固件溯源、签名验证、到货抽检、固件完整性监测以及异常无线与外连行为排查协同。",
     "complexity": "intermediate",
-    "influence": "危害涉及到可能的业务中断、敏感信息曝露、系统漏洞暴露，对组织的信任和可靠性造成重大影响。",
+    "influence": "硬件供应链植入可能在设备交付前写入固件后门、硬件木马或隐蔽窃听模块，使攻击者获得低层持久化控制。此类威胁可能在重装系统、更换硬盘后仍然存在，造成长期数据外传、凭据窃取、关键设备被远程接管，甚至在核心基础设施中引发难以定位的业务中断和物理安全事故。",
     "avoidances": [
       "A0054",
       "A0055",
-      "A0056"
+      "A0056",
+      "A0110",
+      "A0111",
+      "A0112"
     ],
     "references": [
       {
-        "title": "Supply chain attack - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+        "title": "ICT Supply Chain Risk Management Task Force Threat Scenarios Report - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/publications/ict-scrm-task-force-threat-scenarios-report-v3.pdf"
+      },
+      {
+        "title": "Learning from the Enemy: The GUNMAN Project - GovInfo",
+        "link": "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo58656/pdf/GOVPUB-D-PURL-gpo58656.pdf"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-10",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "critical",
@@ -224,7 +231,8 @@
         "relation": "co-occurrence",
         "note": "硬件供应链风险与数据泄露共享规避手段“合规治理”。"
       }
-    ]
+    ],
+    "version": 2
   },
   "R0081-003": {
     "title": "云服务供应链风险",

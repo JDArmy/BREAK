@@ -1,0 +1,33 @@
+{
+  "T0649": {
+    "title": "Proximity Penetration",
+    "aliases": [
+      "proximity attack",
+      "proximal penetration testing",
+      "near-target penetration",
+      "close-access attack"
+    ],
+    "category": "Attack Technique",
+    "keywords": [
+      "Proximity Penetration",
+      "proximity attack",
+      "proximal penetration testing",
+      "physical-contact attack",
+      "near-field wireless attack",
+      "close-access intrusion"
+    ],
+    "definition": "Proximity penetration is an attack approach in which an attacker or tester operates near a target facility, enters the building, or physically contacts a device to exploit wireless communications, physical interfaces, hardware, and human procedures.",
+    "description": "Proximity penetration extends beyond attacks launched solely from the public internet and requires activity around a target building, office, data center, parking area, or device. Common entry points include Wi-Fi and Bluetooth networks, RFID and Sub-GHz access-control signals, USB and PCIe interfaces, UART or JTAG debug ports, boot media, malicious peripherals, hardware or firmware implants, and social-engineering techniques such as tailgating, shoulder surfing, and impersonation.\n\nIts defining characteristics are short operating distance and limited access windows, offset by an ability to bypass some network-perimeter controls. A proximity operation commonly requires site reconnaissance, device adaptation, and an exit plan, and may be combined with internal lateral movement, credential theft, data exfiltration, or persistent hardware presence. Assessments should therefore cover personnel, facilities, radio spectrum, endpoint interfaces, firmware, and supply-chain controls together.",
+    "usageExample": "During an authorized proximity penetration assessment, the red team used wireless reconnaissance around the office and inspected unused network ports to test whether the physical perimeter could be bypassed.",
+    "references": [
+      {
+        "title": "Proximity Penetration in Red-Team and Blue-Team Exercises - Tencent Security Response Center",
+        "link": "https://security.tencent.com/index.php/blog/msg/167"
+      },
+      {
+        "title": "Book Introduction: Proximity Penetration Testing",
+        "link": "https://www.ituring.com.cn/book/miniarticle/28677"
+      }
+    ]
+  }
+}

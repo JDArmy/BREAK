@@ -11,8 +11,8 @@
       "Web安全",
       "账户劫持"
     ],
-    "summary": "在密码修改功能中，攻击者拦截Bob发起的修改密码请求数据包，将其中代表用户身份的UserID参数从Bob的ID（如2）修改为Alice的ID（如1）。由于后端未校验请求者与操作对象的归属关系，系统直接修改了Alice的账户密码，实现了跨账户的数据篡改。",
-    "category": "security_incident",
+    "summary": "奇安信攻防社区问答列举了密码修改功能常见测试点：当服务端未有效校验用户身份或操作对象归属关系时，攻击者可能通过修改ID等参数越权修改其他账户密码；若旧密码校验、短信验证码绑定、CSRF防护或输入校验不足，也可能引发任意密码重置、验证码滥用或逻辑绕过风险。",
+    "category": "news_report",
     "relatedRisks": [
       "R0087"
     ],
@@ -22,8 +22,8 @@
         "link": "https://mdr.skyeye.qianxin.com/forum/question/385?sort=created_at"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2021-04",
+    "updated": "2026-07-10",
+    "incidentTime": "2022-02",
     "relatedAttackTools": [
       "AT0014-001"
     ],

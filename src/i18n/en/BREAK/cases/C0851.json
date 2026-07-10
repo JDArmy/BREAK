@@ -13,7 +13,7 @@
       "global organizations",
       "phishing attack"
     ],
-    "summary": "Microsoft Defender Research observed a large-scale credential harvesting campaign using 'code of conduct'-themed lures and a multi-stage attack chain. The attackers distributed fully authenticated emails from attacker-controlled domains via legitimate email services, targeting over 35,000 users across more than 13,000 organizations in 26 countries to steal authentication tokens.",
+    "summary": "Microsoft Defender Research disclosed that it observed a series of multi-stage, code-of-conduct-themed phishing campaigns between April 14 and 16, 2026. The attackers sent fully authenticated emails from attacker-controlled domains through legitimate email services, affecting more than 35,000 users across over 13,000 organizations in 26 countries, and ultimately routed users into an AiTM phishing flow designed to capture authentication tokens and compromise accounts.",
     "references": [
       {
         "title": "Breaking the Code: Multi-stage 'Code of Conduct' Phishing Campaign",

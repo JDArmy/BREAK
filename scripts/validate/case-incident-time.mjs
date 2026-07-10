@@ -4,7 +4,7 @@
  *
  * Case 定义为"真实发生的具体事件"，时间是案例可信度的一部分。本脚本：
  * 1. 校验 incidentTime 格式（YYYY / YYYY-MM / YYYY-MM-DD）—— 与 schema 一致，这里做冗余硬检测
- * 2. 校验年份合理性（2000 ~ 当前年，不允许未来日期、不允许早于 2000）
+ * 2. 校验年份合理性（默认 2000 ~ 当前年，不允许未来日期；少量高价值历史安全事件可登记早年例外）
  * 3. 校验 YYYY-MM-DD 形式的日历合法性（如 2023-02-30 非法）
  * 4. 统计覆盖率（总数 / 有 incidentTime / 缺失），按 category 分组，输出缺失清单
  *
@@ -42,6 +42,10 @@ const CURRENT_YEAR = NOW.getFullYear();
 const CURRENT_YMD =
   `${NOW.getFullYear()}-${String(NOW.getMonth() + 1).padStart(2, "0")}-${String(NOW.getDate()).padStart(2, "0")}`;
 const MIN_YEAR = 2000;
+const earlyYearAllowlist = new Set([
+  // GUNMAN 是有 NSA 一手材料支撑的历史硬件植入案例，早于现代案例默认下限。
+  "C1855",
+]);
 
 // 校验日历合法性（仅对 YYYY-MM-DD）
 function isValidCalendar(dateStr) {
@@ -99,7 +103,7 @@ for (const file of files) {
   }
   // 年份下限
   const year = Number(t.slice(0, 4));
-  if (year < MIN_YEAR) {
+  if (year < MIN_YEAR && !earlyYearAllowlist.has(id)) {
     invalid.push({ id, cat, t, reason: `年份 ${year} 早于 ${MIN_YEAR}` });
     continue;
   }

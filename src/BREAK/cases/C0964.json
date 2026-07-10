@@ -12,7 +12,7 @@
       "更新延迟",
       "网络安全防御"
     ],
-    "summary": "该研究指出，反钓鱼黑名单作为主要防御机制，存在覆盖不完整和更新延迟的局限性，使其易被复杂攻击者规避。攻击者利用黑名单的这些弱点，通过不断变化的 IP 地址和代理等技术手段，绕过基于黑名单的钓鱼网站检测系统。",
+    "summary": "2024年12月收录的研究《Machine Learning-Enabled Attacks on Anti-Phishing Blacklists》分析了机器学习辅助的反钓鱼黑名单规避问题。研究指出，反钓鱼黑名单存在覆盖不完整和更新延迟等局限，攻击者可结合特征变换、IP轮换和代理等手段提高钓鱼站点逃避列入黑名单的概率。",
     "category": "academic_research",
     "relatedRisks": [
       "R0099"
@@ -23,7 +23,7 @@
         "link": "https://ieeexplore.ieee.org/document/10798104"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2024-12-13"

@@ -1,0 +1,24 @@
+{
+  "AT0107": {
+    "title": "Flipper Zero",
+    "description": "Flipper Zero is a portable multi-protocol hardware and wireless security-research device with Sub-GHz radio, 125 kHz RFID, NFC, infrared, iButton, and USB interfaces. Its official firmware can read, save, and emulate selected supported remote-control and credential signals, and provides frequency analysis, RAW signal recording, and BadUSB script execution for authorized testing of access-control, remote-control, and IoT devices.\n\nIn unauthorized use, an attacker may use it to copy low-security RFID credentials, record and replay fixed-code wireless access signals, test weak protocols, or emulate USB keyboard input. Its capabilities remain limited by radio regulations, protocol support, encryption, and rolling-code design; possession of the device does not imply an ability to defeat every wireless access-control or dynamic-credential system.",
+    "references": [
+      {
+        "title": "Sub-GHz - Flipper Zero Documentation",
+        "link": "https://docs.flipper.net/zero/sub-ghz"
+      },
+      {
+        "title": "Reading RAW Sub-GHz Signals - Flipper Zero Documentation",
+        "link": "https://docs.flipper.net/zero/sub-ghz/read-raw"
+      }
+    ],
+    "keywords": [
+      "Flipper Zero",
+      "multi-protocol security device",
+      "Sub-GHz replay",
+      "RFID cloning",
+      "wireless access testing",
+      "portable hardware tool"
+    ]
+  }
+}

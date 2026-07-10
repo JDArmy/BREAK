@@ -10,7 +10,7 @@
       "cyber extortion",
       "victim guidance"
     ],
-    "summary": "FBI明确表示不支持向勒索软件攻击者支付赎金，并指出支付赎金并不能保证受害者或其组织能够取回任何数据。",
+    "summary": "FBI在勒索软件安全提示中明确表示不支持向勒索软件攻击者支付赎金，并提醒受害者支付赎金并不能保证本人或组织能够取回任何数据。该提示同时建议受害者及时向FBI报告勒索软件事件，以便执法机构追踪攻击者、识别攻击基础设施并协助其他潜在受害者。",
     "category": "news_report",
     "relatedRisks": [
       "R0085"
@@ -21,7 +21,7 @@
         "link": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/ransomware"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "incidentTime": "2020-04-03"

@@ -1,0 +1,26 @@
+{
+  "A0266": {
+    "title": "IOMMU and Kernel DMA Protection",
+    "keywords": [
+      "IOMMU and Kernel DMA Protection",
+      "IOMMU",
+      "Kernel DMA Protection",
+      "DMA remapping",
+      "peripheral memory isolation",
+      "DMA access control"
+    ],
+    "definition": "Use IOMMU-based DMA address remapping and operating-system policy to restrict the memory regions peripherals can access, preventing unauthorized DMA devices from reading or modifying system memory.",
+    "description": "IOMMU and Kernel DMA Protection establish peripheral-memory isolation across firmware and the operating system. The system assigns controlled address spaces to DMA-capable PCIe, Thunderbolt, and USB4 devices, blocks newly attached or untrusted devices from directly accessing physical memory that contains kernel data, credentials, or business processes, and grants only minimal mappings after a device driver completes secure initialization.\n\nImplementation should enable IOMMU capabilities such as Intel VT-d or AMD-Vi in UEFI, turn on Windows Kernel DMA Protection or the platform's equivalent DMA-remapping mechanism, restrict external DMA devices during boot and lock-screen states, and block, isolate, or upgrade drivers that are incompatible with DMA remapping. Game anti-cheat deployments can also combine Secure Boot, device enumeration, and server-side behavior detection to reduce the value of DMA cheats.",
+    "limitation": "Legacy motherboards, firmware, and drivers may not support IOMMU or DMA remapping, and enforcing it can break peripheral compatibility. An attacker may still bypass protection by compromising firmware, exploiting a trusted driver, impersonating an authorized device, or using a bus that is not governed by the IOMMU. This control therefore does not replace trusted boot, firmware-integrity monitoring, or endpoint behavior detection.",
+    "references": [
+      {
+        "title": "Kernel DMA Protection - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/windows/security/hardware-security/kernel-dma-protection-for-thunderbolt"
+      },
+      {
+        "title": "Kernel DMA Protection (Memory Access Protection) for OEMs - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-kernel-dma-protection"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "A0266": {
+    "title": "IOMMU与内核DMA保护",
+    "category": "AC01",
+    "keywords": [
+      "IOMMU与内核DMA保护",
+      "IOMMU",
+      "内核DMA保护",
+      "Kernel DMA Protection",
+      "DMA重映射",
+      "外设内存隔离"
+    ],
+    "definition": "通过IOMMU进行DMA地址重映射并由操作系统限制外设可访问的内存范围，阻止未经授权的DMA设备读取或修改系统内存。",
+    "description": "IOMMU与内核DMA保护在固件和操作系统之间建立外设内存访问隔离。系统为PCIe、Thunderbolt、USB4等具备DMA能力的设备分配受控地址空间，默认阻止新接入或未受信任设备直接访问内核、凭据和业务进程所在的物理内存，并在设备驱动完成安全初始化后按最小范围授权映射。\n\n落地时应在UEFI中启用Intel VT-d或AMD-Vi等IOMMU能力，开启Windows内核DMA保护或对应平台的DMA重映射机制，限制锁屏和启动阶段的外部DMA设备，并将不兼容DMA重映射的驱动纳入阻断、隔离或升级清单。对游戏反作弊场景，还可结合Secure Boot、设备枚举和服务端行为检测降低DMA外挂收益。",
+    "limitation": "老旧主板、固件或驱动可能不支持IOMMU和DMA重映射，强制开启后可能造成外设不可用或兼容性问题。攻击者若已控制固件、利用受信任驱动缺陷、伪装成已授权设备，或通过不受IOMMU管理的总线实施访问，仍可能绕过保护，因此不能替代可信启动、固件完整性监控和终端行为检测。",
+    "references": [
+      {
+        "title": "Kernel DMA Protection - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/windows/security/hardware-security/kernel-dma-protection-for-thunderbolt"
+      },
+      {
+        "title": "Kernel DMA Protection (Memory Access Protection) for OEMs - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-kernel-dma-protection"
+      }
+    ],
+    "updated": "2026-07-10",
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0019",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ],
+    "version": 1
+  }
+}

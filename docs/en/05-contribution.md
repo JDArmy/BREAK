@@ -92,6 +92,8 @@ New entries must meet `ADMISSION-STANDARD.md`:
 - **High-value Case sources**: criminal_verdict and 3 other categories need ≥2 sources including ≥1 primary first-hand source
 - **Degradation protection**: historical entries are exempt from the initial floor, but falling below the snapshot value still errors
 
+Case `incidentTime` normally must be a real event time in 2000 or later. For high-value historical security incidents backed by first-hand sources such as NSA, court, or regulator material, do not invent a modern date just to pass validation; explicitly register the entry in the early-year allowlist in `scripts/validate/case-incident-time.mjs` and document the reason.
+
 ## Common Command Cheatsheet
 
 ```bash

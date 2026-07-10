@@ -1,0 +1,26 @@
+{
+  "A0267": {
+    "title": "Rolling-Code and Challenge-Response Access Authentication",
+    "keywords": [
+      "Rolling-Code and Challenge-Response Access Authentication",
+      "rolling code",
+      "challenge-response authentication",
+      "replay-resistant access control",
+      "code hopping",
+      "dynamic access credential"
+    ],
+    "definition": "Use one-time rolling codes, randomized challenge-response exchanges, and credential-key authentication so captured wireless access-control or remote-control signals cannot be reused directly.",
+    "description": "Rolling-code and challenge-response access authentication replaces fixed-code remotes, easily cloned low-security RFID cards, and long-lived wireless unlock commands. A rolling-code design keeps synchronized counters at the transmitter and receiver and generates a different encrypted code for each operation. A challenge-response design has the reader issue a random value and the credential compute a response with a protected key, while the receiver validates the key, counter, random challenge, validity window, and device identity.\n\nDeployments should use publicly reviewed modern cryptography and sufficiently long keys, unique per-device keys, secure key injection, failure limits, tightly controlled resynchronization windows, credential revocation, and abnormal-entry alerts. High-value areas should also combine two-factor access, staff verification, anti-tailgating facilities, and access-event auditing so that one wireless credential is not the sole authorization factor.",
+    "limitation": "Rolling codes do not inherently stop RollJam-style attacks that combine jamming and capture, and an overly broad resynchronization window can be abused. Challenge-response systems can still be exposed to relay attacks, key extraction, reader replacement, or supply-chain key leakage. Legacy fixed-code equipment often cannot be upgraded in place and requires replacement of both credentials and receivers, creating transition risk while old and new systems operate together.",
+    "references": [
+      {
+        "title": "An Introduction to KeeLoq Code Hopping - Microchip Technology",
+        "link": "https://ww1.microchip.com/downloads/en/AppNotes/91002a.pdf"
+      },
+      {
+        "title": "Guidelines for Securing Radio Frequency Identification Systems - NIST SP 800-98",
+        "link": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-98.pdf"
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@
       "phishing detection bypass",
       "machine learning attacks"
     ],
-    "summary": "This study examines how anti-phishing blacklists, a primary defense mechanism, suffer from incomplete coverage and update delays that make them vulnerable to sophisticated evasion. Attackers exploit these weaknesses by using techniques such as rotating IP addresses and proxies to bypass blacklist-based phishing site detection systems.",
+    "summary": "The study Machine Learning-Enabled Attacks on Anti-Phishing Blacklists, indexed in December 2024, analyzes machine-learning-assisted evasion of anti-phishing blacklists. It notes that blacklist defenses suffer from incomplete coverage and update delays, and that attackers can combine feature manipulation, IP rotation, and proxy use to increase the likelihood that phishing sites evade blacklist inclusion.",
     "references": [
       {
         "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists",

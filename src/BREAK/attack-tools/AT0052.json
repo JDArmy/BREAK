@@ -115,14 +115,14 @@
         "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0052-002",
+        "key": "AT0033-002",
         "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 2 个规避手段，被 3 个相同行为者使用或建设。"
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0013",
+        "key": "AT0052-004",
         "relation": "co-used",
-        "note": "共同关联 2 个风险，被 3 个相同行为者使用或建设。"
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
       }
     ]
   },
@@ -182,14 +182,14 @@
         "note": "共同关联 2 个风险，共享 2 个规避手段，被 3 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0052-001",
+        "key": "AT0033-002",
         "relation": "co-used",
-        "note": "共同关联 1 个风险，共享 2 个规避手段，被 3 个相同行为者使用或建设。"
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0013",
+        "key": "AT0107",
         "relation": "co-used",
-        "note": "共同关联 2 个风险，被 3 个相同行为者使用或建设。"
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
       }
     ]
   },
@@ -249,15 +249,87 @@
         "note": "共同关联 5 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
+        "key": "AT0033-002",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
         "key": "AT0052-002",
         "relation": "co-used",
         "note": "共同关联 3 个风险，共享 2 个规避手段，被 3 个相同行为者使用或建设。"
+      }
+    ]
+  },
+  "AT0052-004": {
+    "title": "GrabAccess",
+    "description": "GrabAccess是一套在物理接触条件下从可启动U盘运行的Windows登录绕过与UEFI Bootkit工具。它通过在UEFI阶段写入Windows Platform Binary Table（WPBT）条目，使Native Application在登录前执行，可绕过部分本地账号密码、PIN或图片密码校验，或提供SYSTEM权限的文件、账户和命令管理入口。\n\n该工具还支持将载荷植入主板UEFI固件，使指定程序在Windows启动时重新写入并执行，即使重装系统或更换硬盘仍可恢复持久化。其U盘模式需要能够从外部介质启动，固件植入通常需要关闭Secure Boot并具备固件读取、修改和刷写条件。",
+    "references": [
+      {
+        "title": "GrabAccess - Bootkit and Windows Login Password Bypass Tool - GitHub",
+        "link": "https://github.com/Push3AX/GrabAccess"
+      },
+      {
+        "title": "Device firmware configuration interface settings for Windows devices - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/intune/device-configuration/templates/ref-dfci-settings-windows"
+      }
+    ],
+    "avoidances": [
+      "A0110",
+      "A0112",
+      "A0041",
+      "A0062"
+    ],
+    "directCauseRisks": [
+      "R0109",
+      "R0164",
+      "R0112-002"
+    ],
+    "indirectSupportRisks": [
+      "R0067",
+      "R0078",
+      "R0032"
+    ],
+    "updated": "2026-07-10",
+    "keywords": [
+      "GrabAccess",
+      "Windows登录绕过",
+      "WPBT利用工具",
+      "UEFI Bootkit",
+      "启动盘密码绕过",
+      "固件持久化工具"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0106",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 3 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0033-002",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0033",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
         "key": "AT0052-001",
         "relation": "co-used",
-        "note": "共同关联 2 个风险，共享 3 个规避手段，被 3 个相同行为者使用或建设。"
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0052-003",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0033-001",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
       }
-    ]
+    ],
+    "version": 1
   }
 }

@@ -11,22 +11,26 @@
       "产品许可信息",
       "漏洞利用"
     ],
-    "summary": "全球网络安全公司Zscaler因第三方平台遭到供应链攻击，导致其数据被窃取。攻击者利用第三方平台的漏洞或权限，非法访问了Zscaler的系统，窃取了包括产品许可信息、客户支持工单等在内的敏感数据，凸显了网络安全公司自身也难以避免供应链风险。",
+    "summary": "Zscaler披露，2025年8月其获悉Salesloft Drift营销SaaS平台遭攻击并影响大量客户。攻击者窃取与Salesloft Drift连接的OAuth令牌，进而有限访问Zscaler的部分Salesforce信息，包括业务联系人详情、产品许可和商业信息，以及部分支持工单头部字段；Zscaler称事件范围限于Salesloft Drift应用，未涉及其产品、服务或底层系统。",
     "category": "security_incident",
     "relatedRisks": [
       "R0081"
     ],
     "references": [
       {
+        "title": "Salesloft Drift Supply Chain Incident: Key Details and Zscaler's Response",
+        "link": "https://www.zscaler.com/blogs/company-news/salesloft-drift-supply-chain-incident-key-details-and-zscaler-s-response"
+      },
+      {
         "title": "网络空间安全动态(202533期)-教育数字化建设与服务中心",
         "link": "https://metc.njtc.edu.cn/info/1141/5902.htm"
       }
     ],
-    "updated": "2026-07-04",
+    "updated": "2026-07-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0023"
     ],
-    "incidentTime": "2020-11"
+    "incidentTime": "2025-08"
   }
 }

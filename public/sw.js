@@ -15,6 +15,8 @@
 const CACHE_NAME = "break-__SW_VERSION__";
 const CACHE_PREFIX = "break-";
 const PRECACHE_URLS = ["./", "./manifest.webmanifest", "./favicon.ico", "./logo.png", "./icons/icon-192x192.png", "./icons/icon-512x512.png"];
+const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, "");
+const ASSET_PATH_PREFIX = `${SCOPE_PATH}/assets/`;
 
 // ─── Install：预缓存核心资源 ───
 self.addEventListener("install", (event) => {
@@ -64,7 +66,7 @@ self.addEventListener("fetch", (event) => {
   const pathname = url.pathname;
 
   // 构建静态资源（JS/CSS）：cache-first。Vite/Rolldown hash 不是纯十六进制，不能用 [\da-f] 限定。
-  if (/\/assets\/.+\.(js|css)$/i.test(pathname)) {
+  if (pathname.startsWith(ASSET_PATH_PREFIX) && /\.(js|css)$/i.test(pathname)) {
     event.respondWith(cacheFirst(request));
     return;
   }

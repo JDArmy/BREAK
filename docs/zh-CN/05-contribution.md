@@ -92,6 +92,8 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 - **高价值 Case 来源**：criminal_verdict 等 4 类需 ≥ 2 源且含 ≥ 1 primary 一手来源
 - **退化保护**：历史条目豁免初始下限，但低于快照值仍报错
 
+Case 的 `incidentTime` 默认必须为 2000 年及之后的真实事件时间；确有 NSA、法院、监管机构等一手来源支撑的高价值历史安全事件，不能为了通过门禁伪造现代日期，应在 `scripts/validate/case-incident-time.mjs` 的早年例外清单中显式登记并写明理由。
+
 ## 常用命令速查
 
 ```bash

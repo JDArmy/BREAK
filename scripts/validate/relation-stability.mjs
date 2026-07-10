@@ -220,8 +220,10 @@ try {
       runtimeErrors.push(`${fixture.type}/${fixture.key}: ${error.message}`);
     });
     page.on('console', (message) => {
-      if (message.type() === 'error' && !message.text().startsWith('Failed to load resource:')) {
-        runtimeErrors.push(`${fixture.type}/${fixture.key}: ${message.text()}`);
+      const text = message.text();
+      const isZeroSizeEChartsWarning = message.type() === 'warning' && text.includes("[ECharts] Can't get DOM width or height");
+      if ((message.type() === 'error' && !text.startsWith('Failed to load resource:')) || isZeroSizeEChartsWarning) {
+        runtimeErrors.push(`${fixture.type}/${fixture.key}: ${text}`);
       }
     });
     page.on('requestfailed', (request) => {

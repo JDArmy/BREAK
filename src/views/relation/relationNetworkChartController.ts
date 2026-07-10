@@ -57,6 +57,7 @@ export const createNetworkChartController = ({
   let bodyOverflowBeforeAppFullscreen: string | null = null;
   let resizeObserver: ResizeObserver | undefined;
   let resizeFrameId: number | undefined;
+  let pendingRenderNotMerge: boolean | undefined;
 
   const escapeTooltipHtml = (value: unknown) =>
     String(value ?? "")
@@ -88,12 +89,26 @@ export const createNetworkChartController = ({
     networkChart?.dispatchAction({ type: "hideTip" });
   };
 
+  const hasRenderableChartSize = (element?: HTMLElement) =>
+    Boolean(element && element.clientWidth > 0 && element.clientHeight > 0);
+
   const resizeNetworkChartOnNextFrame = () => {
     if (resizeFrameId !== undefined) {
       cancelAnimationFrame(resizeFrameId);
     }
     resizeFrameId = requestAnimationFrame(() => {
       resizeFrameId = undefined;
+      if (
+        !networkChart &&
+        pendingRenderNotMerge !== undefined &&
+        activeView.value === "network" &&
+        hasRenderableChartSize(networkChartRef.value)
+      ) {
+        const notMerge = pendingRenderNotMerge;
+        pendingRenderNotMerge = undefined;
+        renderNetworkChart(notMerge);
+        return;
+      }
       networkChart?.resize();
       if (isMobile.value) {
         centerSelectedNodeInScroller();
@@ -322,6 +337,11 @@ export const createNetworkChartController = ({
 
   const renderNetworkChart = (notMerge = false) => {
     if (activeView.value !== "network" || !networkChartRef.value) return;
+    if (!hasRenderableChartSize(networkChartRef.value)) {
+      pendingRenderNotMerge = notMerge;
+      resizeNetworkChartOnNextFrame();
+      return;
+    }
     const requestId = ++renderRequestId;
 
     const applyNetworkOption = async () => {
@@ -340,6 +360,11 @@ export const createNetworkChartController = ({
           requestId !== renderRequestId
         )
           return;
+        if (!hasRenderableChartSize(networkChartRef.value)) {
+          pendingRenderNotMerge = notMerge;
+          resizeNetworkChartOnNextFrame();
+          return;
+        }
         networkChart = init(networkChartRef.value);
         networkChart
           .getDom()
@@ -514,6 +539,7 @@ export const createNetworkChartController = ({
 
   const releaseNetworkChart = () => {
     renderRequestId += 1;
+    pendingRenderNotMerge = undefined;
     if (resizeFrameId !== undefined) {
       cancelAnimationFrame(resizeFrameId);
       resizeFrameId = undefined;

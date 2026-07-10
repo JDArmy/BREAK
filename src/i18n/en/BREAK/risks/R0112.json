@@ -197,5 +197,37 @@
         "After endpoints connect to unauthorized access points, traffic is hijacked or redirected by a man-in-the-middle"
       ]
     }
+  },
+  "R0112-007": {
+    "title": "Wireless Access-Control Signal Replay and Cloning",
+    "definition": "Attackers capture, copy, or replay credential signals from wireless remotes or RFID access cards to bypass physical access controls and obtain unauthorized access to facilities or equipment.",
+    "description": "Wireless access-control signal replay and cloning affects garage doors, campus gates, office access systems, warehouse shutters, and equipment remotes that rely on fixed codes, low-security RFID credentials, or wireless protocols without mutual authentication. An attacker can record radio signals or read credential data while a legitimate user opens a door, then clone a card, emulate the remote, or replay the original signal so that the receiver accepts an old legitimate command as a new authorization event.\n\nRolling codes and challenge-response mechanisms reduce direct replay risk, but implementation flaws, shared keys, overly broad synchronization windows, combined jamming and capture, relay attacks, or reader replacement can still undermine the authentication boundary. This risk concerns bypassing physical access control with wireless credentials rather than general Wi-Fi intrusion or radio interference alone.",
+    "influence": "Attackers may bypass access controls and enter offices, data centers, warehouses, or equipment-control areas to implant devices, steal documents, cause damage, or penetrate internal networks, while weakening identity attribution in access logs.",
+    "references": [
+      {
+        "title": "Guidelines for Securing Radio Frequency Identification Systems - NIST SP 800-98",
+        "link": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-98.pdf"
+      },
+      {
+        "title": "A Security Analysis of Garage Door Remotes and the Danger of DOR Attacks - Trend Micro Research",
+        "link": "https://www.trendmicro.com/content/dam/trendmicro/global/en/research/21/j/forced-entry-a-security-test-for-automatic-garage-doors/TechnicalBrief-A-Security-Analysis-of-Garage-Door-Remotes-and-the-Danger-of-DOR-Attacks.pdf"
+      }
+    ],
+    "keywords": [
+      "Wireless Access-Control Signal Replay and Cloning",
+      "wireless access replay",
+      "access signal cloning",
+      "RFID access cloning",
+      "fixed-code replay",
+      "remote-control replay attack"
+    ],
+    "riskAssessment": {
+      "observables": [
+        "The same wireless credential is used at distant entrances or within an impossible time interval",
+        "Abnormal Sub-GHz recording, interference, or repeated authentication failures appear near the access-control receiver",
+        "A fixed-code remote opens a door without authorization even though the original credential was not lost",
+        "RFID events share the same credential identifier but conflict with radio characteristics, device context, or surveillance records"
+      ]
+    }
   }
 }

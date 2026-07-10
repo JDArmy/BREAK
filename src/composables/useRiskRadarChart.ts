@@ -24,6 +24,10 @@ export function useRiskRadarChart(
 } {
   const radarChartRef = ref<HTMLElement | null>(null);
   let radarChart: ECharts | null = null;
+  let resizeObserver: ResizeObserver | undefined;
+  let resizeFrameId: number | undefined;
+  let renderRequestId = 0;
+  let pendingRender = false;
 
   const RISK_DIMENSIONS = [
     "likelihood",
@@ -34,13 +38,45 @@ export function useRiskRadarChart(
   ] as const;
   const SEVERITY_VALUE: Record<string, number> = { low: 1, medium: 2, high: 3, critical: 4 };
 
+  const hasRenderableSize = (element: HTMLElement | null) =>
+    Boolean(element && element.clientWidth > 0 && element.clientHeight > 0);
+
+  const scheduleLayoutCheck = () => {
+    if (resizeFrameId !== undefined) cancelAnimationFrame(resizeFrameId);
+    resizeFrameId = requestAnimationFrame(() => {
+      resizeFrameId = undefined;
+      if (pendingRender && hasRenderableSize(radarChartRef.value)) {
+        void renderRadar();
+        return;
+      }
+      radarChart?.resize();
+    });
+  };
+
   async function renderRadar() {
     const a = assessmentRef.value;
-    if (!a || !radarChartRef.value) return;
+    const element = radarChartRef.value;
+    if (!a || !element) return;
+    if (!hasRenderableSize(element)) {
+      pendingRender = true;
+      scheduleLayoutCheck();
+      return;
+    }
+    pendingRender = false;
+    const requestId = ++renderRequestId;
     const initFn = await loadRiskRadarECharts();
-    if (!radarChartRef.value) return; // 切换期间可能已卸载
+    if (
+      requestId !== renderRequestId ||
+      radarChartRef.value !== element ||
+      !assessmentRef.value
+    ) return;
+    if (!hasRenderableSize(element)) {
+      pendingRender = true;
+      scheduleLayoutCheck();
+      return;
+    }
     if (!radarChart) {
-      radarChart = initFn(radarChartRef.value);
+      radarChart = initFn(element);
     }
     // echarts canvas 不支持 CSS 变量，从根元素读取实际颜色值
     const styles = getComputedStyle(document.documentElement);
@@ -83,6 +119,8 @@ export function useRiskRadarChart(
   }
 
   function disposeRadar() {
+    renderRequestId += 1;
+    pendingRender = false;
     if (radarChart) {
       radarChart.dispose();
       radarChart = null;
@@ -104,9 +142,18 @@ export function useRiskRadarChart(
   );
 
   onMounted(() => {
-    nextTick(() => assessmentRef.value && renderRadar());
+    nextTick(() => {
+      if (radarChartRef.value && typeof ResizeObserver !== "undefined") {
+        resizeObserver = new ResizeObserver(scheduleLayoutCheck);
+        resizeObserver.observe(radarChartRef.value);
+      }
+    });
   });
-  onBeforeUnmount(disposeRadar);
+  onBeforeUnmount(() => {
+    if (resizeFrameId !== undefined) cancelAnimationFrame(resizeFrameId);
+    resizeObserver?.disconnect();
+    disposeRadar();
+  });
 
   return { radarChartRef };
 }

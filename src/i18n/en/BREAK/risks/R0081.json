@@ -3,7 +3,7 @@
     "title": "Supply Chain Risk",
     "definition": "Supply chain risk refers to the possibility that products such as software, hardware, and cloud services are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
     "description": "Supply chain risk spans the development, delivery, deployment, and maintenance of software, hardware, cloud services, and outsourced operations. Attackers may abuse upstream components, build environments, vendor accounts, or delivery processes to introduce malicious code, backdoor settings, or vulnerable components.\n\nThis risk rarely stays within a single system. It can propagate through dependency chains and downstream customers, so organizations need supplier governance, component provenance, build integrity, release signing, runtime monitoring, and emergency replacement plans.",
-    "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
+    "influence": "Supply-chain risk can propagate weaknesses in upstream components, build environments, delivery processes, or supplier accounts into many downstream systems, causing malicious-code implantation, persistent backdoors, sensitive data exposure, and business disruption. Because affected organizations usually trust suppliers and delivered artifacts, discovery is often delayed and response may require emergency component replacement, version rollback, service suspension, or a full supplier-security review.",
     "references": [
       {
         "title": "Supply chain attack - Wikipedia",
@@ -31,7 +31,7 @@
     "title": "Software Supply Chain Risk",
     "definition": "Software supply chain risk refers to the possibility that software systems are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
     "description": "Scenarios include third-party components being attacked, suppliers suffering data breaches, and software development tools being tampered with, potentially leading to malicious code injection, backdoors, or data leakage.",
-    "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
+    "influence": "Software supply-chain poisoning can introduce malicious dependencies, backdoor code, or tampered build artifacts into many downstream applications, causing credential exposure, remote control of business systems, customer data exfiltration, and service disruption. Because these issues often appear as normal version updates or trusted components, investigation and rollback are costly, and affected organizations must re-audit dependency sources, build pipelines, and release signatures.",
     "references": [
       {
         "title": "Supply chain attack - Wikipedia",
@@ -58,12 +58,16 @@
   "R0081-002": {
     "title": "Hardware Supply Chain Risk",
     "definition": "Hardware supply chain risk refers to the possibility that hardware systems are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
-    "description": "Scenarios include third-party components being attacked, suppliers suffering data breaches, and hardware development tools being tampered with, potentially leading to malicious code injection, backdoors, or data leakage.",
-    "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
+    "description": "Hardware supply chain risk spans chips, motherboards, firmware, system assembly, logistics, refurbishment, deployment, and maintenance. Attackers, malicious suppliers, or compromised intermediaries may replace components, modify BIOS, UEFI, or device firmware, preload malware, or implant keyloggers, radio transmitters, and hardware network pivots so that a device arrives with covert access capability already present.\n\nThese implants often sit below the operating system and conventional endpoint security, may survive operating-system reinstallation or disk replacement, and can remain hidden behind legitimate device appearance and supply-chain trust. Governance requires supplier qualification, tamper-evident shipping and custody, bill-of-materials and firmware provenance, signature validation, incoming inspection, firmware-integrity monitoring, and investigation of anomalous radio and outbound-network activity.",
+    "influence": "Hardware supply-chain implants can place firmware backdoors, hardware trojans, or covert eavesdropping modules into devices before delivery, giving attackers low-level persistent control. Such threats may survive operating-system reinstallation or disk replacement, enabling long-term data exfiltration, credential theft, remote takeover of critical devices, and hard-to-trace outages or physical safety incidents in core infrastructure.",
     "references": [
       {
-        "title": "Supply chain attack - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+        "title": "ICT Supply Chain Risk Management Task Force Threat Scenarios Report - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/publications/ict-scrm-task-force-threat-scenarios-report-v3.pdf"
+      },
+      {
+        "title": "Learning from the Enemy: The GUNMAN Project - GovInfo",
+        "link": "https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo58656/pdf/GOVPUB-D-PURL-gpo58656.pdf"
       }
     ],
     "keywords": [

@@ -1,0 +1,52 @@
+{
+  "A0267": {
+    "title": "滚动码与挑战响应门禁认证",
+    "category": "AC01",
+    "keywords": [
+      "滚动码与挑战响应门禁认证",
+      "滚动码",
+      "挑战响应认证",
+      "防重放门禁",
+      "Code Hopping",
+      "动态门禁凭证"
+    ],
+    "definition": "通过一次性滚动码、随机挑战响应和凭证密钥认证，使已截获的无线门禁或遥控信号无法被直接重复使用。",
+    "description": "滚动码与挑战响应门禁认证用于替代固定码遥控器、可直接复制的低安全RFID卡和长期不变的无线开门指令。滚动码方案让发射端与接收端维护同步计数器，每次操作生成不同的加密码；挑战响应方案则由读卡器产生随机数，凭证使用受保护密钥计算响应，接收端同时校验密钥、计数器、随机数、有效时间和设备身份。\n\n部署时应选用公开评估的现代密码算法和足够长度的密钥，实施每设备唯一密钥、安全密钥注入、失败次数限制、重同步窗口控制、凭证吊销和异常开门告警。高价值区域还应结合双因素门禁、人员核验、反尾随设施和门禁事件审计，避免单一无线凭证成为唯一授权依据。",
+    "limitation": "滚动码不能天然阻止信号干扰与截获组合形成的RollJam类攻击，过宽的重同步窗口也可能被利用；挑战响应仍可能受到中继攻击、密钥提取、读卡器被替换或供应链泄密影响。遗留固定码设备通常无法原地升级，需要整体更换凭证和接收器，并妥善处理兼容期内的新旧系统并行风险。",
+    "references": [
+      {
+        "title": "An Introduction to KeeLoq Code Hopping - Microchip Technology",
+        "link": "https://ww1.microchip.com/downloads/en/AppNotes/91002a.pdf"
+      },
+      {
+        "title": "Guidelines for Securing Radio Frequency Identification Systems - NIST SP 800-98",
+        "link": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-98.pdf"
+      }
+    ],
+    "updated": "2026-07-10",
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0041",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0062",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0112",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ],
+    "version": 1
+  }
+}

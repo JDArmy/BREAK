@@ -26,11 +26,15 @@
   },
   "AT0064-001": {
     "title": "Keyloggers",
-    "description": "A keylogger is a monitoring tool that records user keyboard input, used to steal passwords, credit card numbers, chat content, and other sensitive information. Keyloggers come in software and hardware types. Software keylogger implementations include API hooking (intercepting keyboard messages via SetWindowsHookEx), kernel-level drivers, form grabbing directly from browser form submissions, and screen recording assistance. Hardware keyloggers include USB interface devices and wireless keyboard signal interceptors. Modern keyloggers typically exist as functional modules within infostealers or may be embedded in legitimate software as spyware.",
+    "description": "A keylogger records keyboard input to steal passwords, payment data, chat content, and other sensitive information. Major software implementations include API hooks such as SetWindowsHookEx, kernel drivers that capture input below user space, form grabbing before browser submission, and screen-recording assistance for virtual keyboards, verification codes, or input positions. Modern software keyloggers commonly operate as modules in infostealers or are embedded in legitimate applications as spyware, and can exfiltrate results through email, FTP, HTTP, or messaging bots.\n\nHardware keyloggers can sit between a USB keyboard and a computer or be embedded inside a keyboard enclosure or USB hub, parsing HID data outside the target operating system. Some open-source devices provide circular flash storage, Wi-Fi management, AES-encrypted logs, scheduled remote delivery, and automatic attempts to use open wireless networks. Because they do not need to create a process, driver, or file on the target host, antivirus and EDR products may not directly observe the recording activity. Peripheral inventory, USB-port seals, cable and keyboard inspection, rogue-hotspot scanning, anomalous network connections, and physical office inspections can still reveal an implant.",
     "references": [
       {
         "title": "Keylogger - MITRE ATT&CK T1056.001",
         "link": "https://attack.mitre.org/techniques/T1056/001/"
+      },
+      {
+        "title": "USBKeylogger Hardware-Based Keylogger - GitHub",
+        "link": "https://github.com/Push3AX/USBKeylogger"
       }
     ],
     "keywords": [

@@ -173,7 +173,8 @@
       "A0013",
       "A0015",
       "A0019",
-      "A0020"
+      "A0020",
+      "A0266"
     ],
     "riskAssessment": {
       "likelihood": "high",
@@ -201,7 +202,7 @@
         "link": "https://hnxxfy.hncourt.gov.cn/public/detail.php?id=2240"
       }
     ],
-    "updated": "2026-07-05",
+    "updated": "2026-07-10",
     "keywords": [
       "游戏外挂",
       "游戏辅助",
@@ -241,6 +242,7 @@
         "relation": "co-occurrence",
         "note": "游戏外挂与虚假评价均可由攻击工具“AI黑应用”直接造成。"
       }
-    ]
+    ],
+    "version": 2
   }
 }
