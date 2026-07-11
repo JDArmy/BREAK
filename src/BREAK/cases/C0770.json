@@ -16,7 +16,7 @@
     "summary": "2017年2月，上海公安机关查处首起侵入物联网公司案件。某电气设备公司老板指使员工利用黑客手段恶意入侵被害公司的智能电表系统，导致900余台智能电表被强行关闭。警方指出，黑客入侵企业系统非法获取信息数据已成为公民个人信息泄露源头之一，企业物联网系统安全防护不足会放大业务中断和数据泄露风险。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0078"
+      "R0163"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
         "link": "https://m.sohu.com/a/193553145_119707"
       }
     ],
-    "updated": "2026-07-08",
+    "updated": "2026-07-11",
     "incidentTime": "2017-02",
     "relatedAttackTools": [],
     "relatedThreatActors": []

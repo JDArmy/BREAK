@@ -68,6 +68,8 @@ scripts/skill/package_skill.sh
 - `attack-tools` 文件夹中存放攻击工具列表
 - `threat-actors` 文件夹中存放威胁行为者列表
 - `terms` 文件夹中存放行业术语与黑话词汇表
+
+术语分类使用集中注册表中的稳定语义 key。分类评审发现错分时，仅修改中文结构源的 `category`，同步更新实体 `updated`/`version`；英文文件不重复维护结构字段。
 - `cases` 文件夹中存放典型案例条目（与风险关联的真实案例）
 - `utils.ts` 提供了通用的数据加载工具函数
 

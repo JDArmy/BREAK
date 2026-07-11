@@ -11,7 +11,7 @@
       "资产安全"
     ],
     "summary": "Exodus知识库于2024年更新重放攻击说明：区块链发生硬分叉后，若新旧链没有实施重放保护，同一笔已签名交易可能在两条链上都被视为有效。攻击者可复制一条链上的交易并在另一条链广播，使用户原本只打算转移一侧的资产也随之被转走。",
-    "category": "news_report",
+    "category": "vulnerability_advisory",
     "relatedRisks": [
       "R0175"
     ],
@@ -21,9 +21,10 @@
         "link": "https://support.exodus.com/support/en/articles/8598706-what-is-a-replay-attack"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "incidentTime": "2024-10-25"
+    "incidentTime": "2024-10-25",
+    "version": 2
   }
 }

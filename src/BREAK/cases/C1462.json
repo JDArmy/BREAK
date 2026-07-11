@@ -13,9 +13,9 @@
       "IoT设备安全"
     ],
     "summary": "2022年麻省理工学院团队提出DAGguise，用于降低共享内存控制器泄露程序访问时序的风险。该方案以有向无环图组织请求，按固定计划发送真实或伪造的内存访问，从而隐藏程序实际行为。研究模拟显示其能抵御内存时序侧信道，同时比独占控制器方案保留更高共享效率。",
-    "category": "news_report",
+    "category": "academic_research",
     "relatedRisks": [
-      "R0178"
+      "R0078"
     ],
     "references": [
       {
@@ -27,9 +27,10 @@
         "link": "https://news.mit.edu/2022/cyber-security-attackers-0223"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "incidentTime": "2022-02-23",
     "relatedAttackTools": [],
-    "relatedThreatActors": []
+    "relatedThreatActors": [],
+    "version": 2
   }
 }

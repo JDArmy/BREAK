@@ -13,7 +13,7 @@
       "盗刷"
     ],
     "aliases": [],
-    "category": "telecom_fraud",
+    "category": "trading_security",
     "definition": "无需实体银行卡，仅凭账户信息和验证码即可完成扣款的盗刷手法。",
     "description": "在掌握持卡人银行卡号、姓名、身份证号、手机号及短信验证码后，黑产人员可绕过实体卡和密码，直接发起无卡支付交易。这种手法常见于钓鱼网站或木马程序窃取信息后的盗刷环节，资金转移迅速，受害人往往在收到扣款短信后才察觉异常。",
     "usageExample": "他点了个链接填了信息，卡扣就发生了，卡里钱被分三笔转走，银行发来短信才知道。",
@@ -65,7 +65,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-07-10",
-    "version": 2
+    "updated": "2026-07-11",
+    "version": 3
   }
 }

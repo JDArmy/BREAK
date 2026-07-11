@@ -15,7 +15,7 @@
     "summary": "2023年8月，Clorox发现部分IT系统存在未授权活动并采取下线措施。公司向美国证交会披露，事件造成大范围运营中断，订单处理一度转为人工，生产降至较低水平并引发产品供应短缺。公开文件称多数制造基地随后恢复生产，但没有把事件定性为勒索软件或确认IIoT系统被攻陷。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0179"
+      "R0293"
     ],
     "references": [
       {
@@ -27,7 +27,7 @@
         "link": "https://www.sec.gov/Archives/edgar/data/21076/000002107623000048/clx-20230930.htm"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "incidentTime": "2023-08",
     "relatedAttackTools": [],
     "relatedThreatActors": []

@@ -168,6 +168,8 @@ The 2026-07-10 entity-granularity review removes unrelated Term relationships fr
 
 The 2026-07-10 atomic-entity cleanup splits A0124 into Rug Pull on-chain detection and loss compensation / fund recovery, consolidates and removes duplicate A0142/A0160 entries, and removes AT0093 because it does not satisfy the concrete-tool admission boundary. Relationships are migrated to existing atomic entities without changing Skill invocation parameters or result formats.
 
+Term categories use centralized registry keys. Classification fixes update only the Chinese structural source and the entity version; Skill search and display merge English text at runtime, so English entity files do not repeat `category`.
+
 When clearing Case fact-review items, keep each `summary` limited to the subject, time, conduct, enforcement outcome, and impact directly supported by the referenced article text. Details such as amounts, counts, judgments, or regulatory measures that are only title-supported, fail to crawl, or are not covered by the source should be backed by a stable source before being retained, or rewritten as a more conservative factual statement.
 
 When strengthening references for high-value Cases, first look for primary sources such as enforcement agencies, courts, prosecutors, regulators, or vendor advisories. If the original public page is unavailable, use crawlable authoritative media, local justice / police channels, or stable reposts for cross-checking, and avoid retaining details in `summary` that only the unavailable original source would support. Items whose original source is confirmed unavailable but are backed by multiple stable sources can be recorded in the resolved pending list instead of inventing a source to satisfy the gate.

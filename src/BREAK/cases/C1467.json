@@ -15,7 +15,7 @@
     "summary": "2021年5月，Colonial Pipeline发现网络遭入侵后主动暂停管道运营。FBI确认DarkSide勒索软件对事件负责。公开调查显示受影响的是企业IT网络，未证明攻击者进入管道OT控制系统；但预防性停运仍中断美国东海岸燃油配送，并引发部分地区短缺与抢购。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0179"
+      "R0085"
     ],
     "references": [
       {
@@ -27,7 +27,7 @@
         "link": "https://www.fbi.gov/news/press-releases/fbi-statement-on-compromise-of-colonial-pipeline-networks"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "incidentTime": "2021-05",
     "relatedAttackTools": [],
     "relatedThreatActors": []

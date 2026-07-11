@@ -6,7 +6,7 @@
       "对抗样本贴纸",
       "Adversarial Sticker"
     ],
-    "category": "artificial_intelligence",
+    "category": "ai_security",
     "definition": "攻击者制作的物理对抗样本，打印后贴在物体或场景中，让机器人的视觉感知认错物体、抓错东西或避让错误目标的攻击载体。",
     "description": "对抗补丁是物理世界对抗攻击的主要载体，需克服光照、视角、距离变化在物理世界打印后仍生效。针对VLA的补丁攻击通过劫持文本-视觉注意力(Patch Attention Dominance)或破坏视觉-文本潜表示对齐，可在黑盒、未知架构、sim-to-real迁移场景下持续干扰机器人操控决策。UPA-RFAS(CVPR 2026)实现单一补丁黑盒跨模型迁移，任务成功率最高降100%。VLA-Attacker实现空间基础无目标/目标攻击。经典研究如Evtimov的RP2算法用黑白贴纸让停车标志消失。对抗补丁是R0267(物理世界提示注入)与R0271(VLA对抗攻击)的核心攻击载体。",
     "usageExample": "攻击者在分拣机器人工位贴一张对抗补丁，可能让机器人持续抓取错误物料造成生产事故。",
@@ -34,7 +34,7 @@
         "link": "https://en.wikipedia.org/wiki/Adversarial_machine_learning"
       }
     ],
-    "updated": "2026-07-10",
-    "version": 2
+    "updated": "2026-07-11",
+    "version": 3
   }
 }

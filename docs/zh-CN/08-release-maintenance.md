@@ -60,4 +60,6 @@ LLM 门禁因外部服务故障跳过时，不得只记录在终端输出。检�
 
 `review:should-extract` 的失败实体会写入 `should-extract-review/review-progress.json.failed`。批量重跑应复用检查点，只重试失败或指纹变化的实体；结构化候选策略变化时需同步更新策略版本，并重新生成当前质量待办审计。
 
+历史 LLM 门禁关闭前，应确认各 `pending-fix.json` 无 fail、各评审当前指纹均有成功结果，并完成 `case-fact` 的格式错误重试。确认后可删除被 Git 忽略的 `research/`，后续审计脚本会按需重建目录。
+
 `review:case-fact` 的正文抓取、直连和搜索摘要回退均属于门禁证据链。调整回退策略时应同步递增评审指纹和缓存版本，防止旧空缓存或不可读 PDF 内容掩盖新的抓取结果。

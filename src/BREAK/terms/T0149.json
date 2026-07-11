@@ -13,7 +13,7 @@
       "测试单"
     ],
     "aliases": [],
-    "category": "telecom_fraud",
+    "category": "underground_ecosystem",
     "definition": "黑产组织在结算时剔除用于监控的虚假数据，以惩罚或测试下线。",
     "description": "黑产上线为检验下线推广或刷量工作的真实性，会在任务名单中混入虚构的监控数据，即“雷”。结算时，若发现下线提交的成果中包含这些无效数据，上线便会执行扣雷，即扣除相应报酬或施以其他惩罚，以此确保下线不敢弄虚作假。",
     "usageExample": "这批量跑完，上头说雷太多，要扣雷结算，等于我们白干三天。",
@@ -43,7 +43,7 @@
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
       }
     ],
-    "updated": "2026-07-10",
-    "version": 2
+    "updated": "2026-07-11",
+    "version": 3
   }
 }

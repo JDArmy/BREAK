@@ -19,11 +19,15 @@
     ],
     "references": [
       {
+        "title": "Eclipse-based Stake-Bleeding Attacks in PoS Blockchain Systems - ACM Digital Library",
+        "link": "https://dl.acm.org/doi/10.1145/3327960.3332391"
+      },
+      {
         "title": "Eclipse-based stake-bleeding attacks in PoS blockchain systems",
         "link": "https://www.semanticscholar.org/paper/Eclipse-based-Stake-Bleeding-Attacks-in-PoS-Systems-Zhang-Lee/5d074b833e98471b1cf998714b7d45fb95765079"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "incidentTime": "2019-07",
     "relatedAttackTools": [],
     "relatedThreatActors": []

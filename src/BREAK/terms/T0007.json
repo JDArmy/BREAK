@@ -12,7 +12,7 @@
       "自动售货"
     ],
     "aliases": [],
-    "category": "marketing_fraud",
+    "category": "underground_ecosystem",
     "definition": "指专门用于交易各类黑产虚拟物料、账号及作案工具的自动化在线寄售平台。",
     "description": "发卡平台是黑产的基础设施，商户在此上架社交账号、手机黑卡、钓鱼工具等非法商品，买家可全自动下单购买。它极大地降低了黑产交易的门槛，使得各类欺诈资源能像普通商品一样快速流转，是黑产洗钱和物料分销的核心枢纽。",
     "relatedRisks": [
@@ -53,8 +53,8 @@
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "usageExample": "新手羊毛党通过某\"发卡\"平台自动化购买了批量的首单立减券和虚拟身份账号，准备用于下一轮针对生鲜电商的集中薅羊毛活动。",
-    "version": 2
+    "version": 3
   }
 }

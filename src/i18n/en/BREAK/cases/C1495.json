@@ -14,6 +14,10 @@
     "summary": "This 2019 study introduces a stake-bleeding attack against Proof-of-Stake blockchains. An attacker first isolates a target node through an eclipse attack, builds a private fork from an earlier block, and exploits the low cost of generating historical PoS blocks to accumulate stake until the target accepts the alternative chain. The paper relates this technique to long-range attacks and discusses mitigations such as checkpointing.",
     "references": [
       {
+        "title": "Eclipse-based Stake-Bleeding Attacks in PoS Blockchain Systems - ACM Digital Library",
+        "link": "https://dl.acm.org/doi/10.1145/3327960.3332391"
+      },
+      {
         "title": "Eclipse-based Stake-Bleeding Attacks in PoS Blockchain Systems",
         "link": "https://www.semanticscholar.org/paper/Eclipse-based-Stake-Bleeding-Attacks-in-PoS-Systems-Zhang-Lee/5d074b833e98471b1cf998714b7d45fb95765079"
       }

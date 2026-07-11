@@ -164,6 +164,8 @@ node <skill_dir>/break_search.mjs A0003 --lang zh
 
 数据治理改动也会影响 Skill 检索结果。修复 Case 的 `references` / `summary` 事实核验问题或调整 Risk 的 `avoidances` 关系时，应同步维护英文翻译文件，并确保前两条 Case references 尽量指向可抓取正文的稳定页面，避免 Skill 返回的案例事实无法被复核。
 
+Term 分类使用集中注册表 key；分类修正只改中文结构源并同步实体版本，Skill 的搜索与展示会在运行时合并英文文本，无需在英文实体文件重复写入 `category`。
+
 2026-07-10 的 ThreatActor 覆盖治理新增物流套利、恶意物流从业者、市场操纵、恶意量化交易、AI 智能体攻击、平台规则滥用经营和通信资源滥用服务角色，并用 `audit:risk-threat-actor-coverage` 区分待补关系与明确豁免风险；不改变 Skill 调用参数、搜索字段或返回格式。
 
 2026-07-10 的 ThreatActor 引用审计将 Wikipedia 降为二手背景来源，标记机构首页、新闻索引和研究栏目等通用占位链接，并补强威胁行为者的政府、司法、学术及原始安全研究证据；不改变 Skill 调用参数、搜索字段、返回格式或实体结构。

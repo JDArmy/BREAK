@@ -13,7 +13,7 @@
       "查档担保机构"
     ],
     "aliases": [],
-    "category": "data_leakage",
+    "category": "underground_ecosystem",
     "definition": "非法数据交易中充当交易中介、为买卖双方提供信任背书和资金托管的角色。",
     "description": "黑产数据市场为降低跑路和欺诈风险，衍生出类似担保机构的中间人。担保方负责核验卖家资质、暂管资金，待买家确认数据无误后再放款，并从中抽成。这种模式让非法数据交易更“规范化”，吸引更多参与者，但也增加了追踪打击的难度。",
     "usageExample": "“防骗温馨提示 交易请注意防骗,建议走头部担保机构”",
@@ -47,7 +47,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "updated": "2026-07-10",
-    "version": 2
+    "updated": "2026-07-11",
+    "version": 3
   }
 }

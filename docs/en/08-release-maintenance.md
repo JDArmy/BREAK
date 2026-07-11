@@ -60,4 +60,6 @@ When an LLM gate is skipped because of an external service failure, do not leave
 
 Failed `review:should-extract` entities are stored in `should-extract-review/review-progress.json.failed`. Bulk reruns must reuse checkpoints and retry only failed entities or entries whose fingerprints changed. When the structured-candidate policy changes, update its strategy version and regenerate the current quality-backlog audit.
 
+Before closing a historical LLM gate, confirm that every `pending-fix.json` has no fail, every current review fingerprint has a successful result, and all `case-fact` format errors have been retried. The Git-ignored `research/` directory may then be deleted; audit scripts recreate it when needed.
+
 The body-fetch, direct-fetch, and search-snippet fallbacks in `review:case-fact` form part of the gate's evidence chain. When changing fallback behavior, bump both the review fingerprint and cache version so stale empty files or unreadable PDF content cannot mask new evidence.
