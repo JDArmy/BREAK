@@ -139,3 +139,5 @@ npm run build                      # 完整发布门禁（lint→校验→测试
 2.45.0 起新增或调整 Term 分类时，需维护权威枚举定义及中英文标签，并同步检查 schema、搜索筛选、静态导出、STIX/JSON-LD 和数据包类型声明。提交前运行 `npm run validate:data`，确认所有 Term.category 均使用合法 key 且英文翻译文件不重复维护结构字段。
 
 若因 LLM 服务不可用而设置 `BREAK_REVIEW_ON_COMMIT=0`，pre-commit 会将受影响实体、原因和重跑命令记录到本地 `research/search-reports/llm-gate-retry/`。服务恢复后必须执行记录中的 `review:changed` 命令；实体逐项调用失败也会保存在各评审目录的 `review-progress.json.failed`，下次同指纹评审会自动重试。
+
+`review:should-extract` 只把带有明确名称、实体类型和独立定义边界的结构化候选纳入质量待办。实现步骤、组件能力、协议参数、同义词和过细子技术不单独建模，自由文本建议不能作为唯一待办依据；调整该判定策略时必须递增策略指纹，避免复用旧评审结论。

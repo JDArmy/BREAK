@@ -1,0 +1,37 @@
+{
+  "T0676": {
+    "title": "灵魂绑定代币",
+    "aliases": [
+      "SBT",
+      "Soulbound Token"
+    ],
+    "category": "blockchain",
+    "keywords": [
+      "灵魂绑定代币",
+      "SBT",
+      "Soulbound Token",
+      "不可转让代币"
+    ],
+    "definition": "灵魂绑定代币是绑定到特定链上账户、原则上不可自由转让的凭证型代币。",
+    "description": "灵魂绑定代币用于表达学历、成员资格、信誉记录或其他不可简单买卖的身份属性。它通过限制转让降低凭证交易和身份租借，但仍需解决发行方可信度、错误凭证撤销、账户恢复、隐私泄露以及批量创建账户形成虚假信誉等问题。",
+    "usageExample": "社区向通过贡献审核的钱包签发灵魂绑定代币，作为参与特定治理流程的链上资格凭证。",
+    "relatedRisks": [
+      "R0172",
+      "R0253"
+    ],
+    "relatedAvoidances": [
+      "A0156"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Decentralized Society: Finding Web3's Soul",
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

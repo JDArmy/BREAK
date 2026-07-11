@@ -58,4 +58,6 @@ PR CI 会运行静态检查、单元测试、数据导出、站点构建，以�
 
 LLM 门禁因外部服务故障跳过时，不得只记录在终端输出。检查 `research/search-reports/llm-gate-retry/` 的待重跑清单，待服务恢复后执行记录的命令并保留结果，再继续发布流程。
 
+`review:should-extract` 的失败实体会写入 `should-extract-review/review-progress.json.failed`。批量重跑应复用检查点，只重试失败或指纹变化的实体；结构化候选策略变化时需同步更新策略版本，并重新生成当前质量待办审计。
+
 `review:case-fact` 的正文抓取、直连和搜索摘要回退均属于门禁证据链。调整回退策略时应同步递增评审指纹和缓存版本，防止旧空缓存或不可读 PDF 内容掩盖新的抓取结果。

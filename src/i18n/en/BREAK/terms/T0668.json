@@ -1,0 +1,23 @@
+{
+  "T0668": {
+    "title": "Time-Weighted Average Price",
+    "aliases": [
+      "TWAP"
+    ],
+    "keywords": [
+      "Time-Weighted Average Price",
+      "TWAP",
+      "TWAP oracle",
+      "price window"
+    ],
+    "definition": "A time-weighted average price is an average price calculated over a defined time window according to how long each price persists.",
+    "description": "TWAP uses accumulated prices over time instead of a single block or instantaneous trade, reducing the influence of short-lived large trades on oracle inputs. DeFi protocols commonly derive TWAP from DEX cumulative prices and apply window and deviation thresholds. Short windows may remain manipulable, while long windows can lag fast market moves.",
+    "usageExample": "A lending protocol used a 30-minute TWAP to value collateral so one-block flash-loan trades could not directly change borrowing limits.",
+    "references": [
+      {
+        "title": "Uniswap V2 Oracles",
+        "link": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles"
+      }
+    ]
+  }
+}

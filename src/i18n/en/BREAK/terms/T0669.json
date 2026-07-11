@@ -1,0 +1,23 @@
+{
+  "T0669": {
+    "title": "Circuit Breaker",
+    "aliases": [
+      "automatic circuit breaker"
+    ],
+    "keywords": [
+      "Circuit Breaker",
+      "automatic circuit breaker",
+      "emergency pause",
+      "risk threshold"
+    ],
+    "definition": "A circuit breaker automatically pauses transactions, calls, or dependency access when abnormal metrics cross a threshold, limiting fault or attack propagation.",
+    "description": "Circuit breakers monitor price deviation, error rate, latency, fund outflow, or dependency health and reject new work, pause contract functions, or switch to a degraded path when thresholds are exceeded. They are used in trading, microservices, and smart contracts. Low thresholds cause false shutdowns, high thresholds react too late, and attackers may deliberately trigger the breaker to cause denial of service.",
+    "usageExample": "When oracle deviation crossed the threshold, the circuit breaker paused new borrowing while leaving repayment and liquidation available.",
+    "references": [
+      {
+        "title": "Circuit Breaker Pattern - Microsoft Azure Architecture Center",
+        "link": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker"
+      }
+    ]
+  }
+}

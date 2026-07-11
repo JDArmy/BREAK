@@ -1,0 +1,23 @@
+{
+  "T0665": {
+    "title": "MCP",
+    "aliases": [
+      "Model Context Protocol"
+    ],
+    "keywords": [
+      "MCP",
+      "Model Context Protocol",
+      "MCP server",
+      "MCP client"
+    ],
+    "definition": "MCP is an open protocol that lets AI applications connect to external tools, data sources, and prompt resources through a common interface.",
+    "description": "MCP separates hosts, clients, and servers and standardizes tool invocation, resource access, and prompt templates. It reduces integration effort for agents but expands the attack surface for excessive permissions, tool poisoning, prompt injection, and sensitive-data exposure, requiring explicit trust boundaries, least privilege, approval, and audit controls.",
+    "usageExample": "The security team allowlisted MCP servers and blocked the agent from invoking unapproved high-risk tools.",
+    "references": [
+      {
+        "title": "Model Context Protocol Introduction",
+        "link": "https://modelcontextprotocol.io/introduction"
+      }
+    ]
+  }
+}

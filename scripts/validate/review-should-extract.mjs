@@ -6,7 +6,7 @@ import { loadAllEntities, normalizeTitle } from './llm-review-helpers.mjs';
 import { runSubagentReview, exitCodeFor } from '../llm/subagent-review.mjs';
 
 const opts = parseArgs(process.argv.slice(2));
-const REVIEW_POLICY_VERSION = 'entity-index-v4';
+const REVIEW_POLICY_VERSION = 'entity-index-v5-independent-structured-only';
 const ENTITY_TYPES = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'terms'];
 const STRUCTURED_SUGGESTION_FIELDS = {
   newRisks: 'risks',
@@ -102,8 +102,10 @@ function buildPrompt(item) {
    - 每条建议需检查 existingTitles、matchedExistingEntities、referencedExistingEntities，若 title/keywords/aliases 已覆盖则标注 existing:true，不要把它作为 review/fail 的理由
 3. shouldAbstractTerm：该实体文本是否反复出现某概念但无对应 Term？给候选 term title。
 4. 只有存在“未被现有实体覆盖”的候选实体时，verdict 才能是 review/fail。
-5. verdict：pass(无需提炼或候选已由现有实体覆盖)/review(有未覆盖的提炼建议)/fail(明显应提炼未做)。
-6. reason: 一句话。suggestions: 数组。`;
+5. 新候选必须同时满足：有明确 suggestedTitle 和实体类型；能写出区别于来源实体的独立定义；不是来源实体的实现步骤、组件能力、协议参数、产品功能、示例、同义词或过细子技术。仅“可以考虑”“建议评估”或罗列若干关键词时必须 pass。
+6. 所有未覆盖候选必须写入 shouldExtractNew 对应的结构化数组；自由文本 suggestions 只用于解释，不得作为新增实体待办的唯一依据。
+7. verdict：pass(无需提炼、候选已覆盖或不具独立建模价值)/review(存在结构化、未覆盖且边界独立的候选)/fail(明显应提炼未做)。
+8. reason: 一句话。suggestions: 数组。`;
   const user = `【实体】${item.type} ${item.key} ${entity.title}
 【definition】${entity.definition || ''}
 【description】${String(entity.description || '').slice(0, 500)}
@@ -289,6 +291,15 @@ function suppressCoveredSuggestions(data, item) {
   const actionableStructured = countActionableStructuredSuggestions(data);
   const coveredByExistingEntities = dedupeEntityHints([...(data.coveredByExistingEntities || []), ...covered]);
   if (coveredByExistingEntities.length) data.coveredByExistingEntities = coveredByExistingEntities;
+
+  if (actionableStructured === 0) {
+    data.verdict = 'pass';
+    data.reason = coveredByExistingEntities.length
+      ? `建议提炼的概念已由现有实体覆盖：${coveredByExistingEntities.map((r) => `${r.key} ${r.title}`).join('、')}`
+      : '未给出结构化、边界独立且未被现有实体覆盖的新增候选。';
+    data.suggestions = [];
+    return;
+  }
 
   if (data.verdict === 'review' && keptSuggestions.length === 0 && actionableStructured === 0) {
     data.verdict = 'pass';

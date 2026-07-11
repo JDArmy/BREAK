@@ -1,0 +1,23 @@
+{
+  "T0667": {
+    "title": "Cryptographic Agility",
+    "aliases": [
+      "Crypto Agility"
+    ],
+    "keywords": [
+      "Cryptographic Agility",
+      "Crypto Agility",
+      "algorithm migration",
+      "cryptographic replacement"
+    ],
+    "definition": "Cryptographic agility is the ability to discover, replace, and migrate algorithms and keys without large-scale system redesign.",
+    "description": "Crypto agility requires an inventory of cryptographic assets, separation of algorithms and certificate policy from business logic, version negotiation, compatibility testing, and staged rotation. It supports emergency replacement after algorithm failures, standards updates, and post-quantum migration. Without it, legacy algorithms persist and dependent systems cannot upgrade within an acceptable response window.",
+    "usageExample": "A centralized cryptographic policy service let the platform stage a signature-algorithm migration and roll back incompatible releases.",
+    "references": [
+      {
+        "title": "Considerations for Achieving Crypto Agility - NIST CSWP 39",
+        "link": "https://csrc.nist.gov/pubs/cswp/39/considerations-for-achieving-crypto-agility/final"
+      }
+    ]
+  }
+}

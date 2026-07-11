@@ -1,0 +1,39 @@
+{
+  "T0670": {
+    "title": "命令与控制",
+    "aliases": [
+      "C&C",
+      "C2",
+      "Command and Control"
+    ],
+    "category": "network_attack",
+    "keywords": [
+      "命令与控制",
+      "C&C",
+      "C2",
+      "Command and Control",
+      "C&C服务器",
+      "控制通道"
+    ],
+    "definition": "命令与控制是攻击者通过通信基础设施向受控主机下发指令并接收结果的控制机制。",
+    "description": "命令与控制通道连接攻击者与木马、僵尸网络或已入侵设备，可用于下发任务、更新配置、窃取数据和维持持久化。其通信可能使用HTTP、DNS、即时通信、P2P或云服务，并通过加密、域名生成算法和快速切换基础设施规避检测。防御通常结合流量基线、威胁情报、DNS分析和终端隔离。",
+    "usageExample": "网关检测到IoT设备周期性连接命令与控制域名后，立即阻断外联并隔离受感染设备。",
+    "relatedRisks": [
+      "R0165"
+    ],
+    "relatedAvoidances": [
+      "A0113"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Command and Control - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/tactics/TA0011/"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

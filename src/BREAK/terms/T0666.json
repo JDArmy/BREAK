@@ -1,0 +1,38 @@
+{
+  "T0666": {
+    "title": "后量子密码学",
+    "aliases": [
+      "PQC",
+      "Post-Quantum Cryptography",
+      "抗量子密码"
+    ],
+    "category": "security_defense",
+    "keywords": [
+      "后量子密码学",
+      "PQC",
+      "Post-Quantum Cryptography",
+      "抗量子密码",
+      "量子安全算法"
+    ],
+    "definition": "后量子密码学是面向经典与量子计算攻击均保持安全性的公钥密码算法体系。",
+    "description": "后量子密码学主要使用格、哈希、编码等数学结构替代可能被Shor算法攻破的RSA和椭圆曲线方案。NIST已标准化ML-KEM、ML-DSA和SLH-DSA等算法。迁移需要处理更大的密钥与签名、协议兼容性、性能开销和实现侧信道，并通常采用经典算法与PQC算法组合的混合部署降低过渡风险。",
+    "usageExample": "组织在TLS密钥交换中试点后量子密码学混合方案，以降低长期敏感数据面临的量子解密风险。",
+    "relatedRisks": [
+      "R0196"
+    ],
+    "relatedAvoidances": [
+      "A0091"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Post-Quantum Cryptography - NIST",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

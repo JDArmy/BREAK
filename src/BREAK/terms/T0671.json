@@ -1,0 +1,37 @@
+{
+  "T0671": {
+    "title": "双重治理",
+    "aliases": [
+      "Dual Governance",
+      "双层治理"
+    ],
+    "category": "blockchain",
+    "keywords": [
+      "双重治理",
+      "Dual Governance",
+      "双层治理",
+      "DAO治理",
+      "治理委员会"
+    ],
+    "definition": "双重治理是要求两个相互制衡的治理主体共同批准重大决策的去中心化治理模式。",
+    "description": "双重治理通常把代币持有者投票与安全委员会、多签委员会或另一类治理权结合，重大升级、资金转移和紧急操作需同时满足两套授权条件。它可降低闪电贷夺取投票权或单一委员会被攻破的风险，但也会增加决策延迟、责任边界和治理僵局，需要明确否决权、紧急权限与恢复流程。",
+    "usageExample": "协议采用双重治理，合约升级必须同时获得代币投票通过和安全委员会多签批准。",
+    "relatedRisks": [
+      "R0167"
+    ],
+    "relatedAvoidances": [
+      "A0120"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Lido Dual Governance",
+        "link": "https://docs.lido.fi/guides/dual-governance/"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

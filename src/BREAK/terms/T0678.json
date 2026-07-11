@@ -1,0 +1,38 @@
+{
+  "T0678": {
+    "title": "内存池",
+    "aliases": [
+      "Mempool",
+      "交易池"
+    ],
+    "category": "blockchain",
+    "keywords": [
+      "内存池",
+      "Mempool",
+      "交易池",
+      "待确认交易"
+    ],
+    "definition": "内存池是区块链节点暂存已接收但尚未写入区块的有效交易集合。",
+    "description": "节点验证交易的基本格式、签名和费用条件后，会将其放入本地内存池并向网络传播，出块者再从中选择交易排序打包。公开内存池提高了交易传播效率和透明度，也会暴露待确认交易的内容与报价，使抢跑、三明治攻击、审查和交易复制成为可能。",
+    "usageExample": "套利机器人监听内存池中的大额兑换交易，并在其前后插入交易构造三明治攻击。",
+    "relatedRisks": [
+      "R0170",
+      "R0173-001"
+    ],
+    "relatedAvoidances": [
+      "A0177",
+      "A0177-001"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Transactions - Ethereum.org",
+        "link": "https://ethereum.org/en/developers/docs/transactions/"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

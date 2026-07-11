@@ -1,0 +1,38 @@
+{
+  "T0665": {
+    "title": "MCP",
+    "aliases": [
+      "Model Context Protocol",
+      "模型上下文协议"
+    ],
+    "category": "ai_security",
+    "keywords": [
+      "MCP",
+      "Model Context Protocol",
+      "模型上下文协议",
+      "MCP服务器",
+      "MCP客户端"
+    ],
+    "definition": "MCP是用于让AI应用以统一方式连接外部工具、数据源和提示资源的开放协议。",
+    "description": "MCP采用客户端、服务器与宿主分工，为AI应用提供工具调用、资源读取和提示模板等标准接口。它降低了智能体接入外部系统的适配成本，也扩大了权限滥用、工具投毒、提示注入和敏感数据外泄的攻击面，因此部署时需要明确服务器信任边界、最小权限、调用审批和审计策略。",
+    "usageExample": "安全团队为MCP服务器建立白名单和权限清单，阻止智能体调用未经批准的高风险工具。",
+    "relatedRisks": [
+      "R0117",
+      "R0148"
+    ],
+    "relatedAvoidances": [
+      "A0087"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Model Context Protocol Introduction",
+        "link": "https://modelcontextprotocol.io/introduction"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

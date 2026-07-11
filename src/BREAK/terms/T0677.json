@@ -1,0 +1,37 @@
+{
+  "T0677": {
+    "title": "账户抽象",
+    "aliases": [
+      "Account Abstraction",
+      "ERC-4337"
+    ],
+    "category": "blockchain",
+    "keywords": [
+      "账户抽象",
+      "Account Abstraction",
+      "ERC-4337",
+      "智能合约钱包"
+    ],
+    "definition": "账户抽象是将账户验证和交易执行逻辑由固定协议规则扩展为可编程合约逻辑的区块链账户模型。",
+    "description": "账户抽象允许智能合约钱包自定义签名验证、批量调用、费用代付、会话密钥和社交恢复等能力。ERC-4337 通过 UserOperation、EntryPoint、Bundler 和 Paymaster 等组件在不修改以太坊共识协议的情况下实现该模型，同时也引入验证逻辑、费用赞助和打包基础设施的新攻击面。",
+    "usageExample": "账户抽象钱包使用 Paymaster 为用户代付 gas，并通过会话密钥限制某个应用只能执行预先授权的操作。",
+    "relatedRisks": [
+      "R0201",
+      "R0159"
+    ],
+    "relatedAvoidances": [
+      "A0174"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "EIP-4337: Account Abstraction Using Alt Mempool",
+        "link": "https://eips.ethereum.org/EIPS/eip-4337"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

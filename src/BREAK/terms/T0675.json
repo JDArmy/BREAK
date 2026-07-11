@@ -1,0 +1,38 @@
+{
+  "T0675": {
+    "title": "特权账号",
+    "aliases": [
+      "高权限账号",
+      "Privileged Account"
+    ],
+    "category": "identity_security",
+    "keywords": [
+      "特权账号",
+      "高权限账号",
+      "Privileged Account",
+      "管理员账号"
+    ],
+    "definition": "特权账号是拥有系统管理、配置变更、敏感数据访问或权限授予等高影响能力的账号。",
+    "description": "特权账号通常包括操作系统管理员、数据库管理员、云平台主账号、网络设备管理账号和应用服务账号。此类账号一旦被盗用或滥用，攻击者可绕过普通用户权限边界执行配置修改、数据导出、日志清除和持久化操作，因此需要单独纳管、最小授权并持续审计。",
+    "usageExample": "安全团队将 root、DBA 和云平台管理员等特权账号接入密码保险库，并对每次使用进行审批和会话录制。",
+    "relatedRisks": [
+      "R0149",
+      "R0231",
+      "R0254"
+    ],
+    "relatedAvoidances": [
+      "A0079"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "privileged account - NIST Glossary",
+        "link": "https://csrc.nist.gov/glossary/term/privileged_account"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

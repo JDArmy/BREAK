@@ -10,7 +10,7 @@ allowed-tools: Bash
 
 <!-- 2026-07-11: Internal Avoidance-category key migration; no visible Skill invocation change. -->
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,400 entries across the following entity types:
+BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework for business security risks, containing 3,416 entries across the following entity types:
 
 | Type           | Count | ID Format          | Description                                   |
 | -------------- | ----- | ------------------ | --------------------------------------------- |
@@ -18,7 +18,7 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge fra
 | Avoidance      | 350   | A0001, A0001-001   | Defensive measures against risks              |
 | AttackTool     | 125   | AT0001, AT0001-001 | Tools used by threat actors                   |
 | ThreatActor    | 83    | TA0001, TA0001-001 | Groups that carry out attacks                 |
-| Term           | 641   | T0001              | Business security terminology                 |
+| Term           | 657   | T0001              | Business security terminology                 |
 | Case           | 1781  | C0001              | Real-world security incident cases            |
 | BusinessDomain | 20    | BD00               | Industry/business domain categories           |
 

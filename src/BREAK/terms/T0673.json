@@ -1,0 +1,39 @@
+{
+  "T0673": {
+    "title": "Purdue模型",
+    "aliases": [
+      "Purdue Enterprise Reference Architecture",
+      "PERA",
+      "普渡模型"
+    ],
+    "category": "iot_security",
+    "keywords": [
+      "Purdue模型",
+      "Purdue Enterprise Reference Architecture",
+      "PERA",
+      "普渡模型",
+      "工业网络分层"
+    ],
+    "definition": "Purdue模型是按企业、运营管理、控制与现场设备层级划分工业控制系统网络的参考架构。",
+    "description": "Purdue模型将工业环境划分为企业网络、工业隔离区、制造运营、控制系统和现场设备等层级，用于明确数据流、信任边界和安全控制位置。组织可据此实施网络分段、跳板访问、工业防火墙和单向传输。云连接和边缘计算使传统层级边界趋于模糊，应用时需要结合实际资产与通信路径调整。",
+    "usageExample": "工厂依据Purdue模型把企业办公网与控制网分区，并在工业隔离区部署代理和审计设备。",
+    "relatedRisks": [
+      "R0179",
+      "R0210"
+    ],
+    "relatedAvoidances": [
+      "A0146"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Guide to Industrial Control Systems Security - NIST SP 800-82 Rev. 3",
+        "link": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

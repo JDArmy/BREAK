@@ -1,0 +1,36 @@
+{
+  "T0680": {
+    "title": "域间隙",
+    "aliases": [
+      "Reality Gap",
+      "Sim-to-Real Gap"
+    ],
+    "category": "ai_security",
+    "keywords": [
+      "域间隙",
+      "Reality Gap",
+      "Sim-to-Real Gap",
+      "仿真现实差异"
+    ],
+    "definition": "域间隙是仿真训练环境与真实部署环境在观测、动力学和交互条件上的系统性差异。",
+    "description": "机器人和强化学习策略通常先在仿真环境中训练，但现实中的光照、材质、传感器噪声、摩擦、延迟和未建模物理过程无法被完全复现。攻击者可刻意构造落在这些差异上的输入或环境条件，使仿真测试表现良好的策略在现实部署中失效，因此域间隙也是 Sim-to-Real 安全评估的重要对象。",
+    "usageExample": "红队通过改变地面摩擦和视觉纹理放大域间隙，验证机器人策略从仿真迁移到真实仓库后是否仍能稳定运行。",
+    "relatedRisks": [
+      "R0271"
+    ],
+    "relatedAvoidances": [
+      "A0235"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Understanding Domain Randomization for Sim-to-real Transfer",
+        "link": "https://arxiv.org/abs/2110.03239"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

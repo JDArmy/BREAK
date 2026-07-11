@@ -1,0 +1,36 @@
+{
+  "T0679": {
+    "title": "延迟注入",
+    "aliases": [
+      "Delay Injection",
+      "Latency Injection"
+    ],
+    "category": "network_attack",
+    "keywords": [
+      "延迟注入",
+      "Delay Injection",
+      "Latency Injection",
+      "时延操纵"
+    ],
+    "definition": "延迟注入是人为延缓消息、控制指令或反馈到达时间，以破坏实时系统稳定性或决策正确性的攻击手法。",
+    "description": "延迟注入不必修改消息内容，只需选择性缓存、转发或延后关键数据，就可能使遥操作、工业控制、机器人协作和分布式系统基于过期状态执行。它与普通网络拥塞的区别在于延迟由攻击者主动操纵，可能只针对特定指令、方向或时间窗口，从而降低异常的可见性。",
+    "usageExample": "攻击者对远程手术机器人的反馈链路实施延迟注入，使操作员看到的画面落后于机械臂实际状态。",
+    "relatedRisks": [
+      "R0269"
+    ],
+    "relatedAvoidances": [
+      "A0227"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "To Make a Robot Secure: An Experimental Analysis of Cyber Security Threats Against Teleoperated Surgical Robots",
+        "link": "https://arxiv.org/abs/1504.04339"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

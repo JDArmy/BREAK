@@ -58,4 +58,6 @@ For the Term category enum migration, verify localized category labels, list fil
 
 When an LLM gate is skipped because of an external service failure, do not leave the evidence only in terminal output. Check the pending rerun list in `research/search-reports/llm-gate-retry/`, execute its recorded command after service recovery, and retain the result before continuing the release process.
 
+Failed `review:should-extract` entities are stored in `should-extract-review/review-progress.json.failed`. Bulk reruns must reuse checkpoints and retry only failed entities or entries whose fingerprints changed. When the structured-candidate policy changes, update its strategy version and regenerate the current quality-backlog audit.
+
 The body-fetch, direct-fetch, and search-snippet fallbacks in `review:case-fact` form part of the gate's evidence chain. When changing fallback behavior, bump both the review fingerprint and cache version so stale empty files or unreadable PDF content cannot mask new evidence.

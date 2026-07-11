@@ -10,7 +10,7 @@ allowed-tools: Bash
 
 <!-- 2026-07-11：规避分类语义 key 内部迁移，无 Skill 可见调用流程变化。 -->
 
-BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3400 条业务安全风险知识条目，涵盖以下实体类型：
+BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务风险枚举与规避知识框架，包含 3416 条业务安全风险知识条目，涵盖以下实体类型：
 
 | 类型                      | 数量 | ID 格式            | 说明                   |
 | ------------------------- | ---- | ------------------ | ---------------------- |
@@ -18,7 +18,7 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务
 | Avoidance（规避手段）     | 350  | A0001, A0001-001   | 应对风险的防御措施     |
 | AttackTool（攻击工具）    | 125  | AT0001, AT0001-001 | 黑灰产使用的工具       |
 | ThreatActor（威胁行为者） | 83   | TA0001, TA0001-001 | 实施攻击的人群         |
-| Term（术语）              | 641  | T0001              | 业务安全领域术语       |
+| Term（术语）              | 657  | T0001              | 业务安全领域术语       |
 | Case（案例）              | 1781 | C0001              | 真实的安全事件案例     |
 | BusinessDomain（业务域）  | 20   | BD00               | 行业/业务域分类        |
 

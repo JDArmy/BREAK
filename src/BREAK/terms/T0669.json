@@ -1,0 +1,37 @@
+{
+  "T0669": {
+    "title": "熔断机制",
+    "aliases": [
+      "Circuit Breaker",
+      "自动熔断"
+    ],
+    "category": "trading_security",
+    "keywords": [
+      "熔断机制",
+      "Circuit Breaker",
+      "自动熔断",
+      "异常暂停",
+      "风险阈值"
+    ],
+    "definition": "熔断机制是在异常指标达到阈值时自动暂停交易、调用或依赖访问，以限制故障和攻击扩散的控制机制。",
+    "description": "熔断机制持续监测价格偏差、错误率、延迟、资金流出或依赖健康状态，在超过阈值时拒绝新请求、暂停合约功能或切换降级路径。它常用于金融交易、微服务和智能合约。阈值过低会造成误停和可用性损失，阈值过高则无法及时止损，攻击者也可能故意制造异常触发自我拒绝服务。",
+    "usageExample": "预言机价格偏差超过阈值后触发熔断机制，协议暂停新增借款并保留还款和清算通道。",
+    "relatedRisks": [
+      "R0169"
+    ],
+    "relatedAvoidances": [
+      "A0098-003"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessDomains": [],
+    "references": [
+      {
+        "title": "Circuit Breaker Pattern - Microsoft Azure Architecture Center",
+        "link": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker"
+      }
+    ],
+    "updated": "2026-07-11",
+    "version": 1
+  }
+}

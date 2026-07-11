@@ -1,0 +1,24 @@
+{
+  "T0666": {
+    "title": "Post-Quantum Cryptography",
+    "aliases": [
+      "PQC",
+      "quantum-resistant cryptography"
+    ],
+    "keywords": [
+      "Post-Quantum Cryptography",
+      "PQC",
+      "quantum-resistant cryptography",
+      "quantum-safe algorithms"
+    ],
+    "definition": "Post-quantum cryptography is a family of public-key algorithms designed to remain secure against both classical and quantum computers.",
+    "description": "PQC uses structures such as lattices, hashes, and error-correcting codes instead of RSA and elliptic-curve assumptions vulnerable to Shor's algorithm. NIST has standardized algorithms including ML-KEM, ML-DSA, and SLH-DSA. Migration must address larger keys and signatures, compatibility, performance, and implementation side channels, often through hybrid deployment during transition.",
+    "usageExample": "The organization piloted a hybrid PQC key exchange in TLS to reduce the future quantum-decryption risk to long-lived sensitive data.",
+    "references": [
+      {
+        "title": "Post-Quantum Cryptography - NIST",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography"
+      }
+    ]
+  }
+}
