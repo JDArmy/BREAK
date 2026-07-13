@@ -390,6 +390,30 @@ describe("isInsideSkipZone", () => {
     expect(isInsideSkipZone(tn)).toBe(true);
   });
 
+  it("Mermaid SVG 的样式文本被跳过，避免破坏图表 CSS", () => {
+    const diagram = document.createElement("div");
+    diagram.className = "mermaid-diagram";
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+    const styleText = document.createTextNode(".node { fill: black; }");
+    style.appendChild(styleText);
+    svg.appendChild(style);
+    diagram.appendChild(svg);
+    container.appendChild(diagram);
+
+    expect(styleText).toBeInstanceOf(Text);
+    expect(isInsideSkipZone(styleText)).toBe(true);
+  });
+
+  it("Mermaid 容器内的普通文本也不参与实体自动链接", () => {
+    const diagram = document.createElement("div");
+    diagram.className = "mermaid-diagram";
+    container.appendChild(diagram);
+    const tn = appendText(diagram, "English text R0001");
+
+    expect(isInsideSkipZone(tn)).toBe(true);
+  });
+
   it(".el-select-dropdown 内文本被跳过", () => {
     const dropdown = document.createElement("div");
     dropdown.className = "el-select-dropdown";

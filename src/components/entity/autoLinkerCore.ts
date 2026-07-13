@@ -125,7 +125,7 @@ export const EXCLUDE_ZONE =
 export function isInsideSkipZone(node: Node): boolean {
   let parent = node.parentElement;
   while (parent) {
-    const tag = parent.tagName;
+    const tag = parent.tagName.toUpperCase();
     // 表单元素：始终跳过
     if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
       return true;
@@ -134,8 +134,16 @@ export function isInsideSkipZone(node: Node): boolean {
     if (tag === "A" || tag === "BUTTON") {
       return !parent.closest(INTERACTIVE_SELECTOR);
     }
-    // 代码块 / canvas 容器
-    if (tag === "CODE" || tag === "PRE" || tag === "CANVAS") return true;
+    // 代码、样式、脚本与图形内容不能被拆分，否则会破坏 CSS 或 SVG 结构。
+    if (
+      tag === "CODE" ||
+      tag === "PRE" ||
+      tag === "CANVAS" ||
+      tag === "SVG" ||
+      tag === "STYLE" ||
+      tag === "SCRIPT" ||
+      tag === "TEMPLATE"
+    ) return true;
     // 已包裹 / Popover 自身 / 下拉列表 / 选择器 / ECharts / 特殊展示区
     if (
       parent.hasAttribute(ATTR) ||
@@ -153,6 +161,7 @@ export function isInsideSkipZone(node: Node): boolean {
       parent.classList.contains("el-input") ||
       parent.classList.contains("network-chart") ||
       parent.classList.contains("sankey-chart") ||
+      parent.classList.contains("mermaid-diagram") ||
       parent.classList.contains("detail-id")
     ) {
       return true;

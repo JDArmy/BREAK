@@ -11,13 +11,13 @@ BREAK publishes JSON, STIX 2.1, and JSON-LD formats. External consumers should r
 
 ## Public Endpoints
 
-| Format       | URL                                              | Use case                                 |
-| ------------ | ------------------------------------------------ | ---------------------------------------- |
-| Manifest     | `https://break.jd.army/data/break-manifest.json` | Version, counts, hashes, generation time |
-| Chinese JSON | `https://break.jd.army/data/break-data.json`     | Complete Chinese structured data         |
-| English JSON | `https://break.jd.army/data/break-data-en.json`  | English text with the same structure     |
-| STIX 2.1     | `break-stix-zh.json` / `break-stix-en.json`      | CTI, SIEM, and SOAR integration          |
-| JSON-LD      | `break-ld-zh.jsonld` / `break-ld-en.jsonld`      | Knowledge graphs, RDF, and semantic web  |
+| Format       | URL                                                                                                      | Use case                                 |
+| ------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| Manifest     | `https://break.jd.army/data/break-manifest.json`                                                         | Version, counts, hashes, generation time |
+| Chinese JSON | `https://break.jd.army/data/break-data.json`                                                             | Complete Chinese structured data         |
+| English JSON | `https://break.jd.army/data/break-data-en.json`                                                          | English text with the same structure     |
+| STIX 2.1     | `https://break.jd.army/data/break-stix-zh.json` / `https://break.jd.army/data/break-stix-en.json`        | CTI, SIEM, and SOAR integration          |
+| JSON-LD      | `https://break.jd.army/data/break-ld-zh.jsonld` / `https://break.jd.army/data/break-ld-en.jsonld`        | Knowledge graphs, RDF, and semantic web  |
 
 ## Minimal Fetch Example
 

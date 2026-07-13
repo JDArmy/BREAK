@@ -11,13 +11,13 @@ BREAK 提供 JSON、STIX 2.1 和 JSON-LD 三类公开数据格式。外部系统
 
 ## 公开入口
 
-| 格式      | 地址                                             | 适用场景                   |
-| --------- | ------------------------------------------------ | -------------------------- |
-| Manifest  | `https://break.jd.army/data/break-manifest.json` | 版本、计数、哈希与生成时间 |
-| 中文 JSON | `https://break.jd.army/data/break-data.json`     | 完整中文结构数据           |
-| 英文 JSON | `https://break.jd.army/data/break-data-en.json`  | 与中文相同结构的英文文本   |
-| STIX 2.1  | `break-stix-zh.json` / `break-stix-en.json`      | CTI、SIEM、SOAR 集成       |
-| JSON-LD   | `break-ld-zh.jsonld` / `break-ld-en.jsonld`      | 知识图谱、RDF、语义网      |
+| 格式      | 地址                                                                                                     | 适用场景                   |
+| --------- | -------------------------------------------------------------------------------------------------------- | -------------------------- |
+| Manifest  | `https://break.jd.army/data/break-manifest.json`                                                         | 版本、计数、哈希与生成时间 |
+| 中文 JSON | `https://break.jd.army/data/break-data.json`                                                             | 完整中文结构数据           |
+| 英文 JSON | `https://break.jd.army/data/break-data-en.json`                                                          | 与中文相同结构的英文文本   |
+| STIX 2.1  | `https://break.jd.army/data/break-stix-zh.json` / `https://break.jd.army/data/break-stix-en.json`        | CTI、SIEM、SOAR 集成       |
+| JSON-LD   | `https://break.jd.army/data/break-ld-zh.jsonld` / `https://break.jd.army/data/break-ld-en.jsonld`        | 知识图谱、RDF、语义网      |
 
 ## 最小读取示例
 
