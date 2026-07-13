@@ -192,6 +192,29 @@ describe("DocsView", () => {
     });
   });
 
+  it("正文中的子目录部署链接仍使用 router 跳转", async () => {
+    vi.stubGlobal("fetch", createFetchMock({
+      "docs/zh-CN/index.html": okResponse('<h1>快速上手</h1><a href="/BREAK/docs/guide">指南</a>'),
+    }));
+    Object.defineProperty(window, "location", {
+      value: new URL("https://example.com/BREAK/#/docs"),
+      configurable: true,
+    });
+
+    const wrapper = await mountDocsView();
+    await flushPromises();
+    await flushPromises();
+
+    const anchor = wrapper.find(".docs-body a").element;
+    anchor.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true, button: 0 }));
+
+    expect(mocks.router.push).toHaveBeenCalledWith({
+      name: "docs-detail",
+      params: { slug: "guide" },
+      hash: "",
+    });
+  });
+
   it("将 Mermaid 代码块渲染为 SVG 图表", async () => {
     const mermaidHtml = '<h1>快速上手</h1><pre><code class="language-mermaid">flowchart LR\nA--&gt;B</code></pre>';
     vi.stubGlobal("fetch", createFetchMock({

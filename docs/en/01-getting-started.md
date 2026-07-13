@@ -55,6 +55,8 @@ Press `⌘K` (macOS) or `Ctrl+K` (Windows) to invoke global search, which fuzzil
 
 The site is bilingual. The language switcher in the top-right toggles the entire site (including entity titles, descriptions, menus). Chinese is the single source of truth (`src/BREAK/`); English translations live in `src/i18n/en/BREAK/` and are merged with structural fields at runtime. The docs page is also bilingual and switches automatically with the site language.
 
+Internal links in documentation are handled by the client router. They preserve the single-page application and current language state both at the domain root and under a GitHub Pages subdirectory.
+
 ## Where to Read Next
 
 - **Defenders**: read the [Defender Guide](/docs/defender-guide)

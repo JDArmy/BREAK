@@ -138,6 +138,8 @@ Starting with 2.45.0, adding or changing a Term category requires updating the a
 
 When `BREAK_REVIEW_ON_COMMIT=0` is used because the LLM service is unavailable, pre-commit records affected entities, the reason, and a rerun command in local `research/search-reports/llm-gate-retry/`. Run the recorded `review:changed` command once service is restored. Per-entity call failures are also preserved in each review directory's `review-progress.json.failed` and are retried automatically when the fingerprint is reviewed again.
 
+The rerun command uses `--full --keys=... --force`, so it does not depend on the post-commit Git diff; `review:changed` must forward `--force` to every child reviewer. The LLM client uses HTTPS by default and process environment variables override local `.env` values. Do not silently downgrade transport to HTTP to work around a service-side failure.
+
 `review:should-extract` adds only structured candidates with an explicit name, entity type, and independent definition boundary to the quality backlog. Implementation steps, component capabilities, protocol parameters, synonyms, and overly narrow sub-techniques are not modeled separately, and free-text suggestions cannot be the sole basis for a backlog item. Increment the strategy fingerprint whenever this decision policy changes so stale review conclusions are not reused.
 
 A `review:classification` fail means the entity type or category key clearly conflicts with the content boundary. Use existing registry or schema values when fixing Term, Avoidance, or Case categories, and refresh `updated` plus the entity version. English translation files do not maintain structural category fields.

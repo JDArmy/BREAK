@@ -110,6 +110,7 @@ npx playwright install chromium
 ```
 
 LLM 语义评审和网页抓取属于可选维护能力，所需环境变量见 [`.env.example`](./.env.example) 与 [`scripts/llm/README.md`](./scripts/llm/README.md)。普通站点开发、数据校验和单元测试不依赖这些凭据。
+LLM 接口默认使用 HTTPS，进程环境变量优先于本地 `.env`。因服务故障跳过提交门禁时，系统会记录按实体 key 全量强制重评的命令，确保提交完成后仍可准确补跑。
 
 ### 校验
 

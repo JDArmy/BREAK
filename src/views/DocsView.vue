@@ -258,14 +258,14 @@ const handleDocsBodyClick = (event: MouseEvent) => {
   if (!(anchor instanceof HTMLAnchorElement)) return;
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0) return;
 
-  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
-  const docsPrefix = `${basePath}/docs/`;
   const rawHref = anchor.getAttribute("href") || "";
   const url = new URL(rawHref, window.location.href);
-  if (!rawHref.startsWith(docsPrefix) && url.origin !== window.location.origin) return;
-  if (!url.pathname.startsWith(docsPrefix)) return;
+  if (url.origin !== window.location.origin) return;
 
-  const slug = url.pathname.slice(docsPrefix.length).replace(/\/$/, "");
+  // Markdown 文档统一使用 /docs/<slug>。生产构建的 BASE_URL 为 "./"，
+  // 因此不能用 BASE_URL 拼接前缀判断，否则 GitHub Pages 子目录部署会漏拦截。
+  const match = url.pathname.match(/(?:^|\/)docs\/([^/]+)\/?$/);
+  const slug = match?.[1] || "";
   if (!slug) return;
 
   event.preventDefault();

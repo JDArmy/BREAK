@@ -81,7 +81,7 @@ BREAK_REVIEW_ON_COMMIT=1 git commit
 ## 环境配置（.env，gitignored）
 
 ```
-LLM_API_URL=http://ai-api.jdcloud.com/v1/chat/completions
+LLM_API_URL=https://ai-api.jdcloud.com/v1/chat/completions
 LLM_API_KEY=pk-...
 LLM_TEXT_MODEL=GLM-5.2      # 轻量文本判断
 LLM_MULTI_MODEL=GPT-5.5     # 重型跨实体推理（不支持自定义 temperature）

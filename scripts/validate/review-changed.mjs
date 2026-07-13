@@ -71,6 +71,7 @@ for (const [name, script, types] of toRun) {
   if (opts.full) args.push('--full');
   if (opts.keys) args.push('--keys=' + opts.keys.join(','));
   if (opts.limit > 0) args.push('--limit=' + opts.limit);
+  if (opts.force) args.push('--force');
 
   // 读取该子评审的报告 JSON（子脚本已跑完会落盘）
   const reportPath = path.join(projectRoot, `research/search-reports/${name}-review/review-report.json`);

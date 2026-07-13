@@ -40,7 +40,7 @@ const entry = {
   stagedOnly: opts.stagedOnly,
   reason,
   entities,
-  recheckCommand: `npm run review:changed -- --base ${opts.baseRef}`,
+  recheckCommand: `npm run review:changed -- --full --keys=${entities.map((entity) => entity.key).join(',')} --force`,
 };
 entries.push(entry);
 writeJson(outPath, entries);

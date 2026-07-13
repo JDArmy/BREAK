@@ -111,6 +111,7 @@ npx playwright install chromium
 ```
 
 LLM semantic reviews and web scraping are optional maintenance capabilities. See [`.env.example`](./.env.example) and [`scripts/llm/README.md`](./scripts/llm/README.md) for their environment variables. Normal site development, data validation, and unit tests do not require these credentials.
+The LLM endpoint uses HTTPS by default, and process environment variables override local `.env` values. When the commit gate is skipped because the service is unavailable, the recorded rerun command performs a forced full-scope review limited to the affected entity keys, so it remains reproducible after the commit.
 
 ### Validation
 

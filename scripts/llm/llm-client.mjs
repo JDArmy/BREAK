@@ -4,7 +4,7 @@
 //   - MODEL_MULTI (LLM_MULTI_MODEL，默认 jd/glm-5.2)：重型推理（subagent 交叉判断、Case 事实核验）
 //
 // 环境变量（.env，gitignored）：
-//   LLM_API_URL=http://ai-api.jdcloud.com/v1/chat/completions
+//   LLM_API_URL=https://ai-api.jdcloud.com/v1/chat/completions
 //   LLM_API_KEY=pk-...
 //   LLM_TEXT_MODEL=jd/glm-5.2
 //   LLM_MULTI_MODEL=jd/glm-5.2
@@ -15,7 +15,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const DEFAULT_LLM_URL = 'http://ai-api.jdcloud.com/v1/chat/completions';
+const DEFAULT_LLM_URL = 'https://ai-api.jdcloud.com/v1/chat/completions';
 const DEFAULT_MODEL = 'jd/glm-5.2';
 
 function parseEnvValue(raw) {
@@ -38,11 +38,12 @@ function loadLocalEnv() {
   return env;
 }
 
-function resolveUrl(rawUrl) {
-  const value = rawUrl || DEFAULT_LLM_URL;
-  // 当前京东云 HTTPS endpoint 返回 503，HTTP endpoint 可正常进入业务层。
-  if (value === 'https://ai-api.jdcloud.com/v1/chat/completions') return DEFAULT_LLM_URL;
-  return value;
+export function resolveUrl(rawUrl) {
+  return rawUrl || DEFAULT_LLM_URL;
+}
+
+export function resolveSetting(processValue, localValue, fallback) {
+  return processValue || localValue || fallback;
 }
 
 function resolveConfiguredModel(rawModel) {
@@ -52,10 +53,13 @@ function resolveConfiguredModel(rawModel) {
 }
 
 const localEnv = loadLocalEnv();
-const LLM_URL = resolveUrl(process.env.LLM_API_URL || localEnv.LLM_API_URL);
-const LLM_KEY = localEnv.LLM_API_KEY || process.env.LLM_API_KEY || process.env.DIGITALSANG_LLM_API_KEY;
-export const MODEL_TEXT = resolveConfiguredModel(process.env.LLM_TEXT_MODEL || localEnv.LLM_TEXT_MODEL);
-export const MODEL_MULTI = resolveConfiguredModel(process.env.LLM_MULTI_MODEL || localEnv.LLM_MULTI_MODEL);
+const LLM_URL = resolveUrl(resolveSetting(process.env.LLM_API_URL, localEnv.LLM_API_URL));
+const LLM_KEY = resolveSetting(
+  process.env.LLM_API_KEY || process.env.DIGITALSANG_LLM_API_KEY,
+  localEnv.LLM_API_KEY,
+);
+export const MODEL_TEXT = resolveConfiguredModel(resolveSetting(process.env.LLM_TEXT_MODEL, localEnv.LLM_TEXT_MODEL));
+export const MODEL_MULTI = resolveConfiguredModel(resolveSetting(process.env.LLM_MULTI_MODEL, localEnv.LLM_MULTI_MODEL));
 
 const LLM_RATE_MS = 1500; // 限流，保守
 const DEFAULT_TIMEOUT_MS = 60000;
