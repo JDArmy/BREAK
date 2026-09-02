@@ -204,6 +204,8 @@ The 2026-07-11 P2 cleanup batch revises factual summaries and sources for C1190,
 
 The 2026-07-11 follow-up P1 reference-quality maintenance strengthens official or incident-specific sources for C1377, C1384, C1401, C1406, C1414, and C1416, and narrows C1384 to the source-supported supply-chain tampering risk; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The 2026-09-02 Term T0621 (Clearing and Settlement) reference maintenance replaces the China National Clearing Center (cncc.cn) link with the People's Bank of China Law and Regulation Department page for the Measures for Payment and Settlement (Yin Fa [1997] No. 393), with English translation synced; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph
