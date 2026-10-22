@@ -65,3 +65,5 @@ Failed `review:should-extract` entities are stored in `should-extract-review/rev
 Before closing a historical LLM gate, confirm that every `pending-fix.json` has no fail, every current review fingerprint has a successful result, and all `case-fact` format errors have been retried. The Git-ignored `research/` directory may then be deleted; audit scripts recreate it when needed.
 
 The body-fetch, direct-fetch, and search-snippet fallbacks in `review:case-fact` form part of the gate's evidence chain. When changing fallback behavior, bump both the review fingerprint and cache version so stale empty files or unreadable PDF content cannot mask new evidence.
+
+Case-replacement releases (e.g., takedown after a subject's complaint) bump the patch version. The replacement case must pass the full `validate:data` chain and the `review:changed` entity review; if its references include an official domain not yet in the repository, confirm its source classification in the `review:case-fact` primary allowlist so the case review does not get downgraded after release.

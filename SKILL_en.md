@@ -206,6 +206,8 @@ The 2026-07-11 follow-up P1 reference-quality maintenance strengthens official o
 
 The 2026-09-02 Term T0621 (Clearing and Settlement) reference maintenance replaces the China National Clearing Center (cncc.cn) link with the People's Bank of China Law and Regulation Department page for the Measures for Payment and Settlement (Yin Fa [1997] No. 393), with English translation synced; it does not change Skill invocation parameters, search fields, return format, or entity structure.
 
+The 2026-10-22 Case C0422 replacement swaps the former "Zhejiang Tailong Bank TaiHuiShou app flagged by MIIT" case for "DiDi fined RMB 8.026 billion by CAC for excessive collection of personal information" (also an administrative enforcement case under privacy compliance risk R0074, sourced from two primary CAC pages), with English translation synced; it does not change Skill invocation parameters, search fields, return format, or entity structure.
+
 `review:should-extract` uses existing entity titles, keywords, aliases, and the current entity's referenced relations to identify already-covered extraction candidates. When maintaining this script, keep duplicate extraction suggestions suppressed so Skill search results do not gain semantically redundant entities.
 
 ## Entity Relationship Graph

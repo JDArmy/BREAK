@@ -76,6 +76,8 @@ npm run review:changed -- --base HEAD~1  # 对比上一次提交
 
 需要推动 `SKILL.md` 与 `SKILL_en.md` 更新的典型变更包括：`scripts/skill/` 搜索或打包脚本、Skill 可消费的数据结构、实体字段 / 关系、导出的中英文数据包。
 
+案例条目因主体方投诉或合规要求需要下线时，采用同 ID 整条替换而非直接删除：沿用原 `relatedRisks`，选用同 `category`、事实要素完整且有官方一手来源的其他事件，中英文文件、SKILL 维护日志与 CHANGELOG 同步更新，避免 ID 断号与风险案例覆盖缺口。
+
 ## 关键内容规范
 
 ### 规避手段内容规范（由 `avoidance-content.mjs` 校验）

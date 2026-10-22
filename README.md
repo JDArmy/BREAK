@@ -72,6 +72,8 @@ The framework is described in JSON format under the `/src/BREAK` directory:
 Term categories use stable semantic keys from the centralized registry. When classification review finds a mismatch, update `category` only in the Chinese structural source and refresh the entity `updated`/`version`; English files do not duplicate structural fields.
 - `termCategories` — semantic Term category registry and localized display metadata
 - `cases` — typical case catalogue (real cases linked to risks)
+
+Case entries may be replaced wholesale when the original case subject raises a takedown or compliance request. A replacement keeps the same ID and `relatedRisks`, uses another well-documented incident of the same category, and sources primary official pages; both Chinese and English files are updated together.
 - `utils.ts` — common data loading utility functions
 
 Contributors are welcome to collaborate by directly editing the JSON files. Data changes should pass schema validation, i18n synchronization, and tests before submission.

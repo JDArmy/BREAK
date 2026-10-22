@@ -76,6 +76,8 @@ When changing a `review:*` script, document the changed review policy in the use
 
 Typical changes that require updating `SKILL.md` and `SKILL_en.md` include: `scripts/skill/` search or packaging scripts, Skill-consumable data shape, entity fields / relationships, and exported Chinese / English data bundles.
 
+When a case entry must be taken down due to a subject's complaint or compliance request, replace the entry wholesale under the same ID instead of deleting it: keep the original `relatedRisks`, choose another incident of the same `category` with complete factual elements and a primary official source, and update the Chinese / English files, SKILL maintenance log, and CHANGELOG together, so the ID sequence and risk case coverage stay intact.
+
 ## Key Content Conventions
 
 ### Avoidance content (validated by `avoidance-content.mjs`)
